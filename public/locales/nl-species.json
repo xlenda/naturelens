@@ -1,0 +1,314 @@
+{
+  "fishDetails": {
+    "clownfish": {
+      "overview": "Een kleine rifvis uit de Indo-Pacific, meteen herkenbaar aan het oranje lijf met drie witte banden. Hij brengt zijn hele volwassen leven door in één zeeanemoon, waarvan de netelende tentakels de meeste andere vissen zouden doden.",
+      "habitat": "Warme, ondiepe koraalriffen en lagunes van de Rode Zee tot Noord-Australië, altijd samen met een gastheeranemoon.",
+      "curiosity": "Elke anemoonvis wordt als mannetje geboren. In elke anemoon leeft één dominant broedpaar; sterft het vrouwtje, dan verandert het dominante mannetje van geslacht en neemt haar plaats in."
+    },
+    "rainbowTrout": {
+      "overview": "Een koudwatervis die zijn naam dankt aan de iriserende roze streep over zijn flank. Van oorsprong uit rivieren die uitmonden in de Grote Oceaan, in Noord-Amerika en Azië, maar inmiddels gekweekt op elk continent behalve Antarctica.",
+      "habitat": "Heldere, koele, zuurstofrijke rivieren en meren. Populaties die naar zee trekken en weer terugkeren heten steelhead.",
+      "curiosity": "Het roze vlees is geen eigen pigment maar komt van de schaaldiertjes die de vis eet — kweekforel met een ander dieet wordt gewoon wit."
+    },
+    "atlanticSalmon": {
+      "overview": "Een krachtige trekvis die uitkomt in zoet water, jarenlang op zee eet en terugkeert om te paaien in precies de rivier waar hij geboren is.",
+      "habitat": "Als volwassen dier de Noord-Atlantische Oceaan; om te paaien de rivieren van Europa en het oosten van Noord-Amerika.",
+      "curiosity": "De soortnaam salar betekent 'de springer' — op weg stroomopwaarts nemen zalmen watervallen van meer dan drie meter hoog."
+    },
+    "northernPike": {
+      "overview": "Een lange, olijfgroene sluipjager met een platte, eendensnavelachtige snuit en een bek vol naar achteren gerichte tanden. Hij hangt roerloos tussen de waterplanten en slaat toe in een fractie van een seconde.",
+      "habitat": "Plantenrijke, traag stromende rivieren en meren op het noordelijk halfrond, van Ierland tot Siberië en Alaska.",
+      "curiosity": "Rug- en aarsvin zitten ver naar achteren bij de staart — een bouwplan dat volledig gemaakt is voor één explosieve versnelling, niet voor de achtervolging."
+    },
+    "commonCarp": {
+      "overview": "Een zwaargebouwde zoetwatervis met grote schubben en twee paar bekdraden. Al ruim tweeduizend jaar gekweekt: in delen van Europa en Azië een gewaardeerde vis, elders een hardnekkige invasieve plaag.",
+      "habitat": "Warm, traag of stilstaand water met een zachte modderbodem — rivieren, meren, vijvers en kanalen op elk continent behalve Antarctica.",
+      "curiosity": "Karpers zuigen modder op en zeven die uit, waardoor sediment opdwarrelt en het water troebel wordt — de belangrijkste reden dat ze de wateren die ze binnendringen zo beschadigen."
+    },
+    "blueTang": {
+      "overview": "Een felblauwe rifvis met een zwarte 'palet'-tekening en een gele staart. Zoals alle doktersvissen draagt hij vlak bij de staartwortel een vlijmscherpe stekel.",
+      "habitat": "Koraalriffen van de Indo-Pacific, meestal in kleine groepjes vlak bij vertakt koraal waarin hij kan wegduiken.",
+      "curiosity": "Jonge exemplaren zijn helder geel en kleuren blauw naarmate ze volwassen worden — en de staartstekel, die normaal plat ligt, klapt zijwaarts uit zodra de vis zich bedreigd voelt."
+    },
+    "largemouthBass": {
+      "overview": "Een gedrongen groene roofvis met een donkere lengteband, wereldwijd de meest beviste zoetwatersportvis.",
+      "habitat": "Warme meren, vijvers en traag stromende rivieren met dekking — verzonken hout, plantenvelden en steigers.",
+      "curiosity": "Je onderscheidt hem van de kleinbekbaars aan de kaak: bij de forelbaars loopt de bovenkaak door tot voorbij de achterrand van het oog."
+    },
+    "yellowfinTuna": {
+      "overview": "Een grote, torpedovormige oceaanvis met zeer lange, sikkelvormige gele vinnen en een metaalachtig donkerblauwe rug die naar onderen toe zilver wordt.",
+      "habitat": "Warme open oceaan over de hele wereld, meestal in de bovenste 100 meter, maar om te jagen duikt hij veel dieper.",
+      "curiosity": "Hij houdt zijn lichaam warmer dan het water eromheen, waardoor zijn spieren blijven werken in koude diepten waar tragere vissen loom worden — precies daarom kan hij hele oceanen oversteken."
+    },
+    "zebrafish": {
+      "overview": "Een klein gestreept karperachtig visje uit de rivieren van Zuid-Azië dat uitgroeide tot een van de best bestudeerde dieren in de wetenschap.",
+      "habitat": "Ondiep, traag stromend zoet water — rijstvelden, beken en vijvers in India, Bangladesh en Nepal.",
+      "curiosity": "De embryo's zijn doorzichtig, dus onderzoekers kunnen onder de microscoop live volgen hoe een hart of een ruggengraat ontstaat — vandaar dat de zebravis in duizenden medische studies opduikt."
+    },
+    "redLionfish": {
+      "overview": "Een opvallende vis met banden in rood, wit en bruin, en lange waaiervormige vinnen die giftige stekels verbergen. Prachtig, traag en beter niet aan te raken.",
+      "habitat": "Van oorsprong de riffen van de Indo-Pacific; inmiddels een ernstige invasieve soort in de hele Caraïbische Zee en de westelijke Atlantische Oceaan.",
+      "curiosity": "In zijn nieuwe leefgebied heeft hij vrijwel geen vijanden en eet hij zowat alles wat in zijn bek past — daarom moedigen sommige landen actief aan om hem te harpoeneren en op te eten."
+    }
+  },
+  "birdDetails": {
+    "barnSwallow": {
+      "overview": "Een slanke vogel met een glanzend blauwe bovenzijde, een diep gevorkte staart en een roestrode keel, bijna altijd te zien in snelle, lage, wendbare vlucht boven open terrein.",
+      "habitat": "Boerenland, weiden en waterkanten op het noordelijk halfrond; overwintert op het zuidelijk halfrond.",
+      "curiosity": "Het is de meest verspreide zwaluw ter wereld, en hij eet volledig in de vlucht — zelfs drinken doet hij scherend over het wateroppervlak."
+    },
+    "houseSparrow": {
+      "overview": "Een compacte bruingrijze vogel: het mannetje herkenbaar aan de zwarte bef en kastanjebruine nek, het vrouwtje effen zandbruin met een lichte wenkbrauwstreep.",
+      "habitat": "Overal waar mensen zijn: steden, dorpen, boerderijen en havens op vrijwel elk continent.",
+      "curiosity": "Duizenden jaren geleden volgde hij de landbouw vanuit het Midden-Oosten de wereld in, en nu leeft hij bijna nergens meer waar geen mensen wonen."
+    },
+    "commonKingfisher": {
+      "overview": "Een klein vogeltje met een dolkvormige snavel, elektrisch blauw en oranjebruin, meestal alleen te zien als een flits van kleur laag boven het water.",
+      "habitat": "Traag stromende, heldere rivieren, beken en kanalen met overhangende takken om op te zitten, in Europa, Azië en Noord-Afrika.",
+      "curiosity": "Hij duikt kopvoorover en haalt een visje tot een meter onder water op, slaat het daarna tegen een tak en slikt het met de kop eerst door, zodat de vinstekels plat blijven liggen."
+    },
+    "peregrineFalcon": {
+      "overview": "Een krachtige valk met scherp gepunte vleugels, leigrijs van boven en gebandeerd van onderen, met een opvallende donkere 'baardstreep' onder het oog.",
+      "habitat": "Elk continent behalve Antarctica — kliffen, kusten en steeds vaker wolkenkrabbers en kathedraaltorens.",
+      "curiosity": "In zijn jachtduik haalt hij meer dan 300 km/u, sneller dan welk dier ook. Schotjes in zijn neusgaten zorgen dat hij bij die snelheid kan ademen zonder dat zijn longen scheuren."
+    },
+    "greatBlueHeron": {
+      "overview": "Een grote, langpotige grijsblauwe waadvogel met een zware, speervormige snavel en een zwarte sierveer achter het oog.",
+      "habitat": "Ondiep zoet en zout water in Noord- en Midden-Amerika — moerassen, meeroevers, rivieren en kustlijnen.",
+      "curiosity": "Hij staat minutenlang roerloos en stoot dan sneller toe dan het oog kan volgen. In de vlucht vouwt hij zijn hals tot een strakke S — daaraan herken je een reiger van een kraanvogel."
+    },
+    "rockPigeon": {
+      "overview": "De vertrouwde stadsduif: grijs lijf, glanzend groenpaarse hals, twee donkere vleugelstrepen. Het verenkleed varieert enorm door eeuwen van domesticatie.",
+      "habitat": "Oorspronkelijk zeekliffen en rotskloven; nu steden over de hele wereld, waar richels en vensterbanken de rotsen vervangen.",
+      "curiosity": "Beide ouders maken kropmelk, een eiwitrijke afscheiding waarmee ze de jongen voeren — iets wat maar een handvol andere vogels ook doet."
+    },
+    "europeanRobin": {
+      "overview": "Een klein, rond, bruin vogeltje met een feloranje borst en gezicht, dat mensen graag van een tak vlakbij nauwlettend in de gaten houdt.",
+      "habitat": "Bossen, heggen en tuinen in Europa en West-Azië.",
+      "curiosity": "Hij volgt tuiniers omdat omgewoelde aarde wormen blootlegt — een gewoonte die ooit begon bij wilde zwijnen die de bosbodem omwroeten. Beide geslachten dragen de oranje borst en verdedigen het hele jaar door zingend hun territorium."
+    },
+    "mallard": {
+      "overview": "De klassieke grondeleend: de woerd met glanzend groene kop en witte halsring, het vrouwtje bruin gevlekt met een blauwe vleugelspiegel.",
+      "habitat": "Vrijwel elk zoet of brak water op het noordelijk halfrond, van wilde moerassen tot vijvers in het stadspark.",
+      "curiosity": "Hij is de voorouder van bijna elk tam eendenras. Het bekende luide kwaken komt alleen van het vrouwtje — het mannetje maakt een zacht, schor ratelend geluid."
+    },
+    "scarletMacaw": {
+      "overview": "Een zeer grote papegaai in fel scharlaken, geel en blauw, met een lange spitse staart en een krachtige haaksnavel.",
+      "habitat": "Vochtig laaglandregenwoud van Zuid-Mexico tot het Amazonebekken, meestal hoog in het kronendak.",
+      "curiosity": "Hij blijft zijn hele leven bij dezelfde partner en kan ruim vijftig jaar oud worden. Zijn snavel kraakt noten die voor elke andere bosvogel te hard zijn, en groepen verzamelen zich bij kleiwanden langs rivieren om mineraalrijke aarde te eten."
+    },
+    "emperorPenguin": {
+      "overview": "De grootste pinguïn, ruim een meter hoog, zwart-wit met een goudoranje vlek aan weerszijden van de hals.",
+      "habitat": "Het zee-ijs van Antarctica — de enige vogel die midden in de Antarctische winter broedt.",
+      "curiosity": "Het mannetje balanceert het enige ei twee maanden lang onder een huidplooi op zijn voeten, in duisternis en sneeuwstormen en zonder iets te eten, terwijl het vrouwtje naar zee terugkeert om te foerageren."
+    }
+  },
+  "insectDetails": {
+    "sevenSpotLadybird": {
+      "overview": "Een bolle kever van 5 tot 8 mm, glanzend rood met drie zwarte stippen op elk dekschild en een zevende op de naad ertussen. Zowel de volwassen kevers als hun grijze, krokodilachtige larven jagen op bladluizen, en daarom vinden tuiniers ze steeds terug op aangetaste stengels. De soort komt van nature in heel Eurazië voor en is al lang geleden in Noord-Amerika geïntroduceerd; het is de kever die de meeste mensen voor zich zien bij het woord lieveheersbeestje.",
+      "habitat": "Brandnetelvelden, houtwallen, volkstuinen en elke plant met bladluizen. In het najaar kruipen de volwassen kevers in dichte klitten bij elkaar om buiten te overwinteren: in bladstrooisel, pollen dood gras, onderaan hagen, onder loszittende schors en in holle stengels, vaak jaar na jaar op dezelfde beschutte plek.",
+      "curiosity": "Die verdediging heet reflexbloeden: bij stevige druk perst het dier druppels van zijn eigen hemolymfe naar buiten via de gewrichten van zijn poten, vol alkaloïden die zo bitter zijn dat een vogel het meestal ongeschonden uitspuugt."
+    },
+    "commonEarwig": {
+      "overview": "Een plat, glanzend bruin insect van zo'n 12 tot 15 mm met een tang aan het achterlijf, sterk gekromd bij mannetjes en vrijwel recht bij vrouwtjes. Onder de korte leerachtige dekschilden zitten grote waaiervormige achtervleugels, gekreukt en opgeborgen als een papieren puzzel. Ondanks de naam heeft hij niets met oren; de tang dient om zich te verdedigen, om te versieren en om die vleugels weer uit te pakken.",
+      "habitat": "Overdag in vochtige, nauwe kieren: onder bloempotten, in bladstrooisel, tussen schuttingplanken, in dahliabloemen en in dichtgeklapte tuinstoelen. 's Nachts komt hij tevoorschijn om bladluizen, stuifmeel en zacht fruit te eten.",
+      "curiosity": "Hij is een van de weinige insecten die zijn eieren bewaakt: het vrouwtje draait en poetst ze wekenlang schoon om schimmel te weren, en blijft de jongen ook na het uitkomen voeren."
+    },
+    "commonPillWoodlouse": {
+      "overview": "Een leigrijze, gepantserde pissebed tot ongeveer 18 mm die zich bij verstoring tot een strakke bol oprolt. De overlappende platen en dat oprollen onderscheiden hem van de plattere pissebedden, die alleen maar kunnen wegrennen. Van oorsprong mediterraan, maar inmiddels in tuinen op elk bewoond continent te vinden.",
+      "habitat": "Onder stenen, potten, boomstammen en vochtig karton, overal waar het vochtig blijft. Zijn kieuwachtige ademhalingsorganen moeten nat blijven, dus op droge open grond houdt hij het niet lang vol.",
+      "curiosity": "Hij drinkt via zijn achterste: water kruipt door capillaire werking omhoog in twee buisvormige staartaanhangsels. En zijn bloed is blauw, want het vervoert zuurstof met kopergebonden hemocyanine in plaats van ijzergebonden hemoglobine."
+    },
+    "houseFly": {
+      "overview": "Een grijze vlieg van 6 tot 7 mm met vier donkere strepen over het borststuk en een sponsachtig kussentje in plaats van kaken. Kauwen kan ze niet: ze spuugt speeksel op vast voedsel, lost het op en dept de vloeistof weer op. Met de mens meegereisd over de hele wereld, leeft ze nu op elk continent waar mensen wonen.",
+      "habitat": "Overal waar het warm is en vochtig organisch materiaal ligt om eitjes in af te zetten: composthopen, vuilnisbakken, mest, afvoerputjes. In de zomerwarmte duurt de hele cyclus van ei tot volwassen vlieg ongeveer een week.",
+      "curiosity": "Haar achtervleugels zijn teruggebracht tot twee knotsvormige halters die zo'n 200 keer per seconde in tegenfase met de vleugels bewegen, als gyroscopen. Haal ze weg en de vlieg kan zichzelf in de lucht niet meer rechthouden."
+    },
+    "gardenSnail": {
+      "overview": "Een weekdier met een gerimpeld bruin-met-crème huisje van zo'n 3 cm doorsnee, van oorsprong mediterraan en inmiddels gevestigd in Europa, Noord- en Zuid-Amerika, Australië, Zuid-Afrika en Oost-Azië. Ze raspt aan planten met de radula, een buigzame band met duizenden minuscule chitinetandjes. Elk exemplaar is tegelijk mannetje en vrouwtje.",
+      "habitat": "Muren, hagen, bloempotten en de schaduwkant van gebouwen; actief op vochtige nachten. Bij droogte of kou sluit ze de opening van het huisje af met een kalkachtig vlies en wacht ze soms maandenlang.",
+      "curiosity": "Voor de paring schiet elke slak een harde pijl van kalk in het lichaam van de partner; het slijm op die pijl verandert de voortplantingsorganen van de ontvanger, zodat meer zaad van de schutter de eitjes bereikt."
+    },
+    "westernHoneyBee": {
+      "overview": "Een gestreepte bij van 12 tot 15 mm die in volken van tienduizenden leeft, van nature in Europa, Afrika en West-Azië en door mensen bijna overal elders gehouden. Een haalbij die van een goede bloemenplek terugkomt, doet op de verticale raat een kwispeldans: de hoek geeft de richting ten opzichte van de zon aan, de duur de afstand. Zomerwerksters leven zo'n zes weken; een koningin kan het jaren volhouden.",
+      "habitat": "Wilde volken bouwen wasraten in holle bomen, spouwmuren en zolders, gehouden volken zitten in kasten; haalbijen werken routineus op bloemen twee tot drie kilometer van huis.",
+      "curiosity": "Het volk houdt geen winterslaap. Het vormt een strakke tros en laat zijn vliegspieren trillen, waarbij de kern rond de 20 tot 30 °C blijft terwijl het buiten vriest — en die kern gaat naar zo'n 35 °C zodra het broeden laat in de winter weer begint, met opgeslagen honing als brandstof."
+    },
+    "paintedLady": {
+      "overview": "Een oranje-zwarte vlinder met een spanwijdte van 5 tot 6 cm en witte vlekjes op donkere vleugelpunten, een van de wijdst verspreide vlinders ter wereld. De rupsen eten distels, kaasjeskruid en brandnetels, en de vlinders verschijnen het ene jaar in enorme aantallen en ontbreken het volgende bijna helemaal. Radaronderzoek volgde ze tijdens de trek op honderden meters hoogte.",
+      "habitat": "Open, bloemrijk terrein van vrijwel elke soort: braakland, bermen, tuinen, woestijnen na regen, in Europa, Azië, Afrika, Australië en Noord-Amerika. Zuid-Amerika is naast Antarctica het enige continent waar ze niet voorkomt.",
+      "curiosity": "De volledige jaarlijkse route beslaat zo'n 12.000 tot 15.000 km inclusief een oversteek van de Sahara, en elke etappe wordt gevlogen door insecten die de reis nooit eerder maakten."
+    },
+    "cellarSpider": {
+      "overview": "Een bleke spin met extreem lange poten, een lijf van 8 tot 10 mm en een pootspanning tot 7 cm, meestal ondersteboven hangend in een losse wirwar van draden. Het web plakt niet; prooi wordt van een afstand verstrikt in draden die ze er met haar achterpoten naartoe slingert. Ze woont nu vrijwel wereldwijd in gebouwen, meegelift met vracht.",
+      "habitat": "Plafondhoeken, kelders, trappenhuizen, garages en de ruimte achter meubels: binnen, ongestoord en warm, want buiten overleeft ze koude winters slecht.",
+      "curiosity": "Bij verstoring draait ze zo snel rond in haar web dat haar omtrek vervaagt en een belager nauwelijks kan mikken; en ze doodt geregeld spinnen die groter zijn dan zijzelf."
+    },
+    "argentineAnt": {
+      "overview": "Een kleine, effen bruine mier van 2 tot 3 mm die dichte sporen trekt langs stoepranden, plinten en aanrechtbladen. Haar nesten hebben veel koninginnen en verdedigen geen grenzen, dus buurnesten versmelten in plaats van te concurreren. Van oorsprong uit het stroomgebied van de Paraná in Zuid-Amerika, inmiddels met aarde, potplanten en vracht naar zes continenten versleept.",
+      "habitat": "Ondiepe nesten onder stoeptegels, bloempotten, schors en drempels in warme en mediterrane klimaten, altijd dicht bij vocht, met sporen die naar binnen lopen naar elke suikerbron.",
+      "curiosity": "Langs de Middellandse Zeekust vormt de geïntroduceerde populatie een superkolonie van zo'n 6.000 km, en werksters van verschillende continenten herkennen elkaar nog steeds als nestgenoten in plaats van als rivalen."
+    },
+    "commonEarthworm": {
+      "overview": "Een roodbruine worm tot zo'n 25 cm lang, met een afgeplat lichter staarteinde en een verdikte gordel, het clitellum, op een derde van het lichaam. Hij houdt een permanente verticale gang aan tot wel twee meter diep en komt 's nachts naar boven om bladeren naar beneden te trekken. Van Europese oorsprong, maar geïntroduceerd in Noord-Amerika, Azië en op het zuidelijk halfrond.",
+      "habitat": "Vochtige, niet te zure grond in tuinen, parken en weiland. Hij heeft geen longen en neemt zuurstof op door zijn huid, die vochtig moet blijven voor de gasuitwisseling — op heet droog asfalt is hij dus snel dood, en zijn tochten bovengronds maakt hij op natte nachten, wanneer een vochtig oppervlak hem veel verder brengt dan graven ooit zou doen.",
+      "curiosity": "Darwin testte hoe wormen met bladeren omgaan door ze papieren driehoekjes voor te leggen, en zag dat ze die bij de punt pakten — de hoek die het makkelijkst een gang in glijdt."
+    }
+  },
+  "fungiDetails": {
+    "flyAgaric": {
+      "overview": "Een grote paddenstoel met een scharlaken tot oranje hoed bezaaid met witte vlokken, restanten van het velum dat het jonge vruchtlichaam omhulde. Hij is giftig; de werkzame stoffen zijn iboteenzuur en muscimol, die heel anders op de hersenen inwerken dan de psilocybine van de zogenoemde paddo's.",
+      "habitat": "Leeft in symbiose met de wortels van berk, den en spar op het noordelijk halfrond, en reisde met aangeplante naaldbomen mee naar Nieuw-Zeeland, Australië, Chili en Zuid-Afrika.",
+      "curiosity": "Muscarine werd voor het eerst uit deze soort geïsoleerd en ernaar vernoemd, terwijl de zwam er slechts sporen van bevat; de naam vliegenzwam komt van de middeleeuwse gewoonte om stukjes in melk te leggen om vliegen te bedwelmen."
+    },
+    "deathCap": {
+      "overview": "Een middelgrote paddenstoel met een bleek olijf- tot groenige hoed, witte plaatjes, een ring om de steel en een bekervormige zak aan de voet. De amatoxinen leggen RNA-polymerase II stil, het enzym waarmee elke cel haar eigen genen afleest, en de lever krijgt de zwaarste klappen. Een halve hoed kan voor een volwassene dodelijk zijn.",
+      "habitat": "Van huis uit uit de eiken-, beuken- en kastanjebossen van Europa, maar met de kluiten van kweekbomen over de wereld verspreid; hij groeit nu ook in Californië, het oosten van de VS, Australië en Zuid-Amerika.",
+      "curiosity": "De vergiftiging is verraderlijk: de klachten beginnen meestal pas zes tot twaalf uur na de maaltijd en zakken daarna een dag of langer af, terwijl de lever ondertussen verder wordt gesloopt."
+    },
+    "buttonMushroom": {
+      "overview": "Een van de meest gekweekte paddenstoelen ter wereld en de ruggengraat van de westerse paddenstoelindustrie, met miljoenen tonnen per jaar uit donkere klimaatcellen op bedden van gecomposteerd stro en mest in plaats van uit het veld. China en de Verenigde Staten zijn de grootste producenten, en er wordt binnen, met de hand, het hele jaar door geoogst.",
+      "habitat": "In het wild duikt hij op in grasland, duinen en wegbermen in Europa en Noord-Amerika; commercieel ziet hij nooit daglicht en vruchtdraagt hij op een compostbed met een dekaarde van veen.",
+      "curiosity": "De naam bisporus is een beschrijving. De meeste plaatjeszwammen schieten vier sporen af per basidium, maar deze maakt er meestal twee, zodat elke spore een compleet paar kernen meekrijgt en in zijn eentje tot een vruchtbaar mycelium kan uitgroeien."
+    },
+    "brewersYeast": {
+      "overview": "Een microscopisch kleine schimmel die zich vermeerdert door dochtercellen van haar flank te knoppen en die, zonder zuurstof, suiker omzet in ethanol en koolzuurgas. Dezelfde soort laat brood rijzen en vergist bier, wijn en sake, terwijl gemodificeerde stammen in tanks insuline en vaccineiwitten produceren.",
+      "habitat": "In het wild leeft ze op rijp fruit en op de bast en het uitvloeiende sap van eiken; de gedomesticeerde lijnen wonen in bakkerijen, brouwerijen en industriële fermentoren.",
+      "curiosity": "Gist en mens delen nog altijd zoveel basale celmachinerie dat in één experiment ongeveer de helft van een reeks essentiële gistgenen door hun menselijke tegenhangers kon worden vervangen zonder dat de cellen stopten met groeien."
+    },
+    "zombieAntFungus": {
+      "overview": "Een parasiet van houtmieren, tegenwoordig opgevat als een complex van soorten die elk op een bepaalde gastheermier zijn afgestemd. Besmette werksters verlaten de kolonie, klemmen hun kaken om een bladnerf of twijgje en sterven daar; dagen later barst een steel uit de achterkant van hun kop en regenen er sporen op de looppaden beneden.",
+      "habitat": "Vochtige tropische en subtropische bossen in Thailand, Brazilië, Japan en West-Afrika, waar besmette mieren dichte kerkhoven vormen op lage begroeiing.",
+      "curiosity": "In Thaise bossen bijten de mieren zich zo'n 25 cm boven de grond vast, waar de luchtvochtigheid de schimmel goed uitkomt, en onder de microscoop blijken schimmeldraden de spiervezels van de mier te omwikkelen terwijl de hersenen onaangetast blijven."
+    },
+    "humongousFungus": {
+      "overview": "Een honingkleurige plaatjeszwam die in het najaar in bosjes rond naaldboomstammen verschijnt, maar bijna zijn hele leven doorbrengt als witte vellen mycelium onder de schors en als zwarte, veterachtige strengen die rhizomorfen heten. Hij doodt bomen, en bosbeheerders zien hem eerder als ziekteverwekker dan als wonder.",
+      "habitat": "Naaldbossen in Noord-Amerika, Europa en Azië, waar hij spar, zilverspar en den aantast; het recordexemplaar groeit in het Malheur National Forest in het oosten van Oregon.",
+      "curiosity": "Genetisch onderzoek liet zien dat paddenstoelen kilometers uit elkaar tot één kloon behoorden van zo'n 965 hectare, met leeftijdsschattingen vanaf ruwweg 2.500 jaar."
+    },
+    "bitterOyster": {
+      "overview": "Een taaie, lichtbruine waaiervormige zwam van enkele centimeters die in dakpansgewijze rijen op dood loofhout groeit en dat tot bleke vezel verteert. Exemplaren uit het oosten van Noord-Amerika lichten op; Europese van dezelfde soort meestal niet, een verschil in chemie en niet in identiteit.",
+      "habitat": "Dood hout van eik, berk en beuk in gematigde bossen van Noord-Amerika, Europa en Azië, vaak jaren achtereen vruchtend op dezelfde omgevallen stam.",
+      "curiosity": "Het licht piekt in het groen rond 520 nanometer en is zo zwak dat je ogen er minuten volledige duisternis voor nodig hebben; het luciferine erachter, 3-hydroxyhispidine, blijkt bij alle lichtgevende schimmels hetzelfde te zijn."
+    },
+    "penicilliumMould": {
+      "overview": "Een alledaagse schimmel die fluweelachtige blauwgroene kolonies met een bleke groeirand vormt en sporen loslaat van kwastvormige stelen; penicillus is Latijn voor kwastje. Ze scheidt penicilline uit, dat bacteriën belet hun celwand af te maken, en de toevallige ontdekking ervan luidde het antibioticatijdperk in.",
+      "habitat": "Bodem, vochtige oppervlakken binnenshuis en bedervend voedsel, overal ter wereld; de kweek die het verschil maakte kwam door de lucht binnen, als één verdwaalde spore die in een Londens laboratorium neerstreek.",
+      "curiosity": "Flemings stam heette decennialang Penicillium notatum, tot DNA-onderzoek aan enkele merkergenen hem in 2011 herbenoemde; de spore is vermoedelijk komen aandwarrelen uit een mycologielab één verdieping onder het zijne."
+    },
+    "chytridFungus": {
+      "overview": "Een chytride, lid van een oude schimmellijn die nog steeds zwemt en sporen met een zweepstaart in het water loslaat. Hij koloniseert de keratinerijke huid van kikkers, padden en salamanders en ontregelt de zout- en waterhuishouding daarvan, wat bij gevoelige soorten eindigt in een hartstilstand.",
+      "habitat": "Beken, poelen en vochtig bos op elk continent waar amfibieën leven; genetisch werk wijst Oost-Azië aan als oorsprong, van waaruit de wereldwijde handel in levende dieren hem heeft verspreid.",
+      "curiosity": "Een overzichtsstudie uit 2019 bracht hem in verband met de achteruitgang van meer dan 500 amfibieënsoorten en het vermoedelijke uitsterven van zo'n 90 daarvan: het grootste gedocumenteerde biodiversiteitsverlies door één ziekteverwekker."
+    },
+    "whiteTruffle": {
+      "overview": "Een bleke, knobbelige, aardappelvormige zwam die zich 5 tot 30 cm onder de oppervlakte ontwikkelt en de haarwortels van eik, populier, hazelaar en wilg omhult in een ruil van bodemmineralen tegen boomsuikers. Omdat hij nooit boven de grond komt, moet hij het van geur hebben in plaats van van wind om zijn sporen door dieren te laten verspreiden.",
+      "habitat": "Kalkrijke grond in Noord- en Midden-Italië, vooral de heuvels van Piemonte rond Alba, plus Istrië en delen van de Balkan; zoekers gebruiken afgerichte honden, die minder geneigd zijn de vondst op te eten dan varkens.",
+      "curiosity": "Zwarte truffels worden in boomgaarden op geënte jonge bomen geteeld, maar deze soort weerstond een eeuw lang elke poging; de eerste bevestigde gekweekte vruchtlichamen werden pas in 2019 uit Frankrijk gemeld."
+    }
+  },
+  "cropDetails": {
+    "maize": {
+      "overview": "Het qua tonnage productiefste graan ter wereld, een reusachtig eenjarig gras dat wordt geteeld voor korrels die mensen, vee en brandstoffabrieken voeden. Eén kolf kan honderden korrels dragen, verpakt in schutbladen. Het wordt op elk continent behalve Antarctica verbouwd.",
+      "habitat": "Verbouwd van zeeniveau tot boven 3.000 m in de Andes en van Canada tot zuidelijk Afrika; de wilde verwant teosinte groeit nog steeds op seizoensdroge hellingen in het zuidwesten van Mexico.",
+      "curiosity": "Mais werd zo'n 9.000 jaar geleden gedomesticeerd in het dal van de Balsas in Mexico en kan zonder mensen niet meer overleven: de omhulde kolf valt niet uiteen, dus de korrels kunnen zichzelf nergens verspreiden."
+    },
+    "cassava": {
+      "overview": "Een houtige struik die wordt geteeld voor gezwollen zetmeelrijke opslagwortels die elk kilo's kunnen wegen. Hij verdraagt arme, zure grond en lange droogtes waar mais direct aan bezwijkt. De rauwe wortels bevatten cyanideverbindingen en moeten altijd bewerkt worden.",
+      "habitat": "Laaggelegen tropen wereldwijd, van de zuidrand van het Amazonebekken waar hij begon tot West-Afrika en Zuidoost-Azië, vaak op grond die voor granen te uitgeput is.",
+      "curiosity": "Genetisch onderzoek herleidt alle gekweekte cassave tot wilde populaties in het zuidwesten van Brazilië en in Bolivia; Portugese schepen brachten hem in de zestiende eeuw naar Afrika, en Nigeria is nu de grootste producent ter wereld."
+    },
+    "arabicaCoffee": {
+      "overview": "Een groenblijvende struik of kleine boom waarvan de bonen de zaden zijn van een rode, kersachtige vrucht, meestal twee per vrucht. Hij levert ruwweg 60% van de wereldkoffie; de rest is grotendeels robusta. Brazilië verbouwt er meer van dan welk ander land ook.",
+      "habitat": "Koele, mistige tropische hooglanden, meestal tussen 1.000 en 2.000 m; wilde populaties groeien nog altijd in de schaduwrijke onderlaag van bergbossen in het zuidwesten van Ethiopië.",
+      "curiosity": "Coffea arabica ontstond in Ethiopië toen robusta en Coffea eugenioides kruisten en hun chromosomen verdubbelden; een handvol planten die naar Jemen en later naar Europese kassen ging, vormt de basis van een groot deel van de huidige teelt."
+    },
+    "soybean": {
+      "overview": "Een struikachtige eenjarige vlinderbloem met behaarde peulen met twee tot vier zaden. Die zaden zijn ongewoon rijk aan zowel eiwit als olie, en daarom domineert soja de wereldhandel in oliezaden. De plant bindt via wortelknolletjes haar eigen stikstof.",
+      "habitat": "Warm gematigd en subtropisch bouwland, vooral de Braziliaanse cerrado, de Argentijnse pampa en het Amerikaanse Midwesten; de wilde voorouder is een dunne klimplant van Oost-Aziatische oevers en akkerranden.",
+      "curiosity": "De wilde Glycine soja is een slanke slingerplant met kleine, harde, zwarte zaden, ruim 5.000 jaar geleden in China gedomesticeerd. Brazilië verbouwde vóór de jaren zestig vrijwel geen soja en is nu de grootste producent ter wereld."
+    },
+    "sugarcane": {
+      "overview": "Een reusachtig tropisch gras waarvan de stengels drie tot vijf meter halen en de sucrose opslaan in de stengel in plaats van in het zaad. Commercieel riet is een kruising met het taaiere wilde Saccharum spontaneum en wordt geplant uit stengelstukken, nooit uit zaad. Het levert het grootste deel van de wereldsuiker.",
+      "habitat": "Hete laaglanden met veel regen of irrigatie, ruwweg tussen 30° noorder- en 30° zuiderbreedte; Brazilië en India hebben veruit het grootste areaal.",
+      "curiosity": "Zo'n 8.000 jaar geleden in Nieuw-Guinea gedomesticeerd, verspreidde riet zich westwaarts via India, waar suiker voor het eerst werd gekristalliseerd, en vandaar naar de Atlantische plantages; Brazilië verwerkt nu ongeveer de helft van zijn rietoogst tot ethanol."
+    },
+    "breadWheat": {
+      "overview": "Een eenjarig gras van gematigde streken dat op meer landbouwgrond wordt gezaaid dan vrijwel elk ander gewas. Elke aar draagt ruwweg 30 tot 50 korrels, waarvan de gluteneiwitten deeg gas laten vasthouden en laten rijzen. Ze heeft zes sets chromosomen, geërfd van drie verschillende grassoorten.",
+      "habitat": "Gematigd en mediterraan bouwland op elk continent behalve Antarctica, van de Canadese prairies tot de Punjab; de wilde voorouder Aegilops tauschii groeit nog steeds op hellingen van de Vruchtbare Halvemaan tot aan de Kaspische Zee.",
+      "curiosity": "Zo'n 8.000 tot 9.000 jaar geleden kruiste gedomesticeerde emmertarwe met het onkruidgras Aegilops tauschii — een onopvallende plant met brosse, uiteenvallende aren, waarvan het genoom broodtarwe haar rekbare deeg meegeeft."
+    },
+    "asianRice": {
+      "overview": "Een eenjarig gras dat dankzij luchtkanalen in stengels en wortels tegen permanent water kan. Het is het directe hoofdvoedsel van ongeveer de helft van de wereldbevolking. De korrels worden gepeld uit een kaf- en zemellaag rond het zetmeelrijke endosperm.",
+      "habitat": "Ondergelopen rijstvelden en regenafhankelijke akkers in het moessongebied van Azië, plus West-Afrika, de Mississippivallei en Zuid-Brazilië; de wilde Oryza rufipogon groeit nog in Aziatische moerassen en sloten.",
+      "curiosity": "Aziatische rijst werd zo'n 9.000 jaar geleden uit Oryza rufipogon gedomesticeerd in het Chinese Jangtsebekken, terwijl Afrikaanse rijst, Oryza glaberrima, zo'n 3.000 jaar geleden onafhankelijk werd getemd in de binnendelta van de Niger en later met tot slaaf gemaakte West-Afrikaanse boeren de Atlantische Oceaan overstak."
+    },
+    "potato": {
+      "overview": "Een lid van de nachtschadefamilie dat wordt geteeld voor knollen, die verdikte ondergrondse stengels zijn en geen wortels. Bovengronds is het een bladerige plant met witte tot paarse bloemen en kleine groene vruchten die op minitomaten lijken en giftig zijn. Groene of uitgelopen knollen hopen dezelfde bittere glycoalkaloïden op.",
+      "habitat": "Koele klimaten wereldwijd, van de Andesaltiplano boven 3.500 m tot akkers in China en India; China oogst nu meer aardappelen dan welk ander land ook.",
+      "curiosity": "Zo'n 8.000 jaar geleden in het zuiden van Peru gedomesticeerd uit bittere wilde soorten, bereikte de aardappel Europa in de zestiende eeuw via een piepklein genetisch monster, terwijl Andesboeren in één regio nog altijd duizenden verschillende benoemde rassen in stand houden."
+    },
+    "banana": {
+      "overview": "Geen boom maar een reuzenkruid: de stam is een strakke koker van opgerolde bladvoeten, en de plant sterft af na één keer vruchtdragen. De meeste exportbananen zijn één steriel triploïd ras, Cavendish, vermeerderd uit uitlopers en weefselkweek.",
+      "habitat": "Natte tropische laaglanden wereldwijd; India en China telen het meest, Ecuador exporteert het meest, en wilde Musa-soorten met zaden groeien nog in de bossen van Zuidoost-Azië en Nieuw-Guinea.",
+      "curiosity": "Opgravingen in het Kukmoeras in het hoogland van Nieuw-Guinea dateren bananenteelt op zo'n 7.000 jaar geleden. Omdat elke Cavendishplant genetisch identiek is, bedreigt de bodemschimmel Fusarium Tropical Race 4 de hele exportteelt, net zoals een eerdere variant vorige eeuw het ras Gros Michel wegvaagde."
+    },
+    "sweetOrange": {
+      "overview": "Een groenblijvende boom met geurige witte bloemen en vruchten waarvan het sap uit haren komt die zich tot met vocht gevulde zakjes ontwikkelden. Vrijwel elke commerciële boom is een geënte kloon op een onderstam die niet om zijn vrucht maar om zijn ziekteresistentie is gekozen.",
+      "habitat": "Subtropische gordels met zachte winters: zuidoostelijk Brazilië, Florida, het Middellandse Zeegebied en Zuid-China; de oudersoorten komen uit bossen in Zuid- en Zuidoost-Azië.",
+      "curiosity": "De kruising ontstond in Zuid-China, reisde met handelaren westwaarts en bereikte Brazilië in de zestiende eeuw op Portugese schepen; Brazilië produceert nu meer sinaasappels dan welk ander land ook. Citruszaden bevatten vaak extra embryo's die klonen zijn van de moederboom, zodat een zaailing een exacte kopie van haar ouder kan zijn."
+    }
+  },
+  "soundDetails": {
+    "tawnyOwl": {
+      "overview": "Een gedrongen bosuil met ronde kop van zo'n 40 cm, bruin gemarmerd en tegen schors praktisch onzichtbaar. Hij jaagt op gehoor in bijna volledige duisternis en brengt de dag plat tegen een stam of weggedoken in een holte door. In zijn hele verspreidingsgebied is hij een van de meest gehoorde en minst geziene vogels.",
+      "habitat": "Oud loofbos, parken, kerkhoven en oudere stadswijken met grote bomen, van Groot-Brittannië en Iberië door Europa tot Iran en West-Siberië, plus Noord-Afrika; in Ierland ontbreekt hij.",
+      "curiosity": "Het territoriumroepen piekt in het najaar en opnieuw laat in de winter, wanneer kale bomen het geluid honderden meters ver dragen, en een paar kan tien jaar lang hetzelfde stukje bos bezetten."
+    },
+    "commonCuckoo": {
+      "overview": "Een slanke grijze vogel met lange staart, ongeveer zo groot als een sperwer, waarvan de gebandeerde onderkant en lage rechte vlucht zo op die sperwer lijken dat zangvogels van hun nest schrikken. Vrouwtjes leggen hun eieren in de nesten van andere soorten en vertrekken; er zijn meer dan honderd waardsoorten vastgelegd. De meeste mensen kennen de stem jarenlang voordat ze de vogel bewust zien.",
+      "habitat": "Bosranden, rietvelden, heide en open boerenland in Europa en Noord-Azië; overwintert in Afrika ten zuiden van de Sahara en in Zuid-Azië.",
+      "curiosity": "De tweetonige roep is ongeveer een dalende kleine terts en draagt in open land een kilometer of meer; afspeelproeven laten zien dat waardvogels op de borrelende lach van het vrouwtje net zo reageren als op een jagende sperwer."
+    },
+    "commonNightingale": {
+      "overview": "Een onopvallende bruine zanger, nauwelijks groter dan een roodborst, die zich vrijwel nooit laat zien en diep uit dicht struweel zingt. Eén mannetje beheerst ruwweg 180 tot 260 verschillende strofen, gebracht als abrupte fluittonen, diepe rollers en lange crescendo's. Hij broedt in Europa, Noord-Afrika en West-Azië en overwintert in Afrika.",
+      "habitat": "Struwelen, hakhout en ruige bosranden met dichte dekking vlak boven de grond, vaak langs water of langs verwilderde akkerranden.",
+      "curiosity": "Opnames in lawaaiige Berlijnse straten vingen mannetjes op met pieken boven 95 decibel, gemeten op een meter afstand: ze zetten hun stem harder om boven het verkeer uit te komen."
+    },
+    "europeanTreeFrog": {
+      "overview": "Een kleine, gladde, felgroene kikker met een donkere streep langs elke flank en hechtschijfjes aan zijn tenen om te klimmen. In het voorjaar verzamelen mannetjes zich bij voortplantingspoelen en roepen ze in overlappende koren, vooral na donker. Buiten het voortplantingsseizoen is hij een klimmer die je zelden op de grond ziet.",
+      "habitat": "Zonnige poelen, sloten en overstroomde weilanden met randen van riet en braam in Midden- en Zuidoost-Europa; tussen de seizoenen zit hij meters hoog in struiken en hagen.",
+      "curiosity": "De roep piekt rond 2,5 kHz en een mannetje kan hem duizenden keren per nacht herhalen — roepen hoort bij de duurste activiteiten die ooit bij een gewerveld dier zijn gemeten, en mannetjes vallen door het seizoen heen af."
+    },
+    "americanBullfrog": {
+      "overview": "De grootste kikker van Noord-Amerika, tot zo'n 20 cm van neus tot cloaca, olijfgroen en zwaargebouwd. Mannetjes houden de hele zomer oevers bezet en roepen dag en nacht. Elders veel geïntroduceerd, geldt hij inmiddels op meerdere continenten als invasieve exoot.",
+      "habitat": "Permanent warm water: oevers van meren, trage rivieren, stuwmeren en boerensloten. Van nature in het oosten van Noord-Amerika, gevestigd in Brazilië, Japan, China en delen van Zuid-Europa.",
+      "curiosity": "De toonhoogte volgt de lichaamsgrootte, dus de diepste stem in een koor hoort meestal bij het grootste mannetje; en mannetjes herken je aan een trommelvlies dat veel breder is dan hun oog."
+    },
+    "cicadaOrni": {
+      "overview": "Een grijsbruine mediterrane cicade van zo'n 3 cm met heldere vleugels met donkere vlekjes, veel makkelijker op zang dan op zicht te benoemen. Mannetjes maken een herhaald, droog zip-zip-zip met gelijkmatige pauzes, gezongen vanaf stammen en takken. Vrouwtjes zingen helemaal niet.",
+      "habitat": "Pijnbomen, olijven, platanen en boomgaarden rond de Middellandse Zee, van Iberië en Noord-Afrika via Italië en Griekenland tot Turkije.",
+      "curiosity": "Het geluid komt van een paar geribbelde plaatjes, tymbalen, die honderden keren per seconde klikken als het deksel van een blik, en het achterlijf erachter is grotendeels hol: een zingend mannetje is vooral versterker."
+    },
+    "houseCricket": {
+      "overview": "Een lichtgele krekel van zo'n 2 cm, oorspronkelijk uit Zuidwest-Azië en nu wereldwijd overal waar gebouwen warm blijven. Mannetjes tsjirpen; vrouwtjes, herkenbaar aan een lange naaldvormige legboor, zwijgen. Het is een van de meest gekweekte insecten ter wereld.",
+      "habitat": "Warme menselijke ruimtes: stookruimtes, bakkerijen, vuilstorten, verwarmde schuren en kweekfarms. Buiten haalt hij in gematigde streken de warme maanden en in de tropen het hele jaar.",
+      "curiosity": "Zijn oren zitten op zijn voorpoten, net onder de knie, en het tempo van het tsjirpen loopt op met de temperatuur: dezelfde kamer klinkt op een warme nacht sneller dan op een koele."
+    },
+    "greatGreenBushCricket": {
+      "overview": "Een grasgroene sabelsprinkhaan tot zo'n 7 cm met sprieten langer dan zijn lijf — een groot insect dat je toch nauwelijks uit een haag kunt pikken. Mannetjes zingen vanaf de toppen van struiken en hoge begroeiing, vaak het grootste deel van de nacht. Hij komt voor in Europa, Noord-Afrika en tot in Centraal-Azië.",
+      "habitat": "Hoge ruige vegetatie: braam, houtwallen, struweel, wegbermen en wijngaardranden, meestal zingend een meter of twee boven de grond.",
+      "curiosity": "Veel van de energie in de zang zit boven 20 kHz, precies op de rand van het menselijk gehoor, waardoor kinderen een mannetje vaak luid en duidelijk horen terwijl de volwassenen naast hen er nauwelijks iets van opvangen."
+    },
+    "blackHowlerMonkey": {
+      "overview": "Een Zuid-Amerikaanse aap met een opvallend verschil tussen de seksen: volwassen mannetjes zijn zwart, vrouwtjes en jongen goudblond. Groepen brullen bij zonsopgang en zonsondergang om te laten weten waar ze zitten, zodat naburige troepen elkaar zonder contact ontlopen. Het lijf is zo'n 60 cm, plus een grijpstaart van vergelijkbare lengte.",
+      "habitat": "Galerijbos, seizoensgebonden overstroomd bos en bospercelen in Brazilië, Bolivia, Paraguay en Noord-Argentinië, meestal hoog in de kruinen.",
+      "curiosity": "Het gebrul wordt versterkt door een vergroot, uitgehold tongbeen in de keel, en een vergelijkende studie uit 2015 vond dat brulaapsoorten met de grootste tongbeenderen de kleinste testikels hebben."
+    },
+    "redFox": {
+      "overview": "Het wijdst verspreide wilde roofdier ter wereld, zo'n 5 tot 7 kg zwaar en vooral 's nachts actief waar veel mensen wonen. Er zijn zo'n twintig verschillende roeptypen beschreven, van korte contactblafjes tot de lange gil. In steden hoor je hem veel vaker dan je hem ziet.",
+      "habitat": "Zo goed als overal: arctische toendra, boerenland, woestijnrand, bos en drukke binnenstad, waar de burchten onder schuurtjes, langs spoortaluds en in tuinen liggen.",
+      "curiosity": "Het gillen piekt in december en januari, wanneer vossen paren vormen, en is grotendeels voorbij tegen de tijd dat de welpen in het voorjaar geboren worden — vandaar dat het geluid volgens een strak schema lijkt te komen en te gaan."
+    }
+  }
+}

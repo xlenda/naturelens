@@ -1,0 +1,2288 @@
+{
+  "common": {
+    "overview": "Overview",
+    "details": "Details",
+    "readMore": "Read more",
+    "confidence": "Confidence",
+    "nativeOrigin": "Native Origin",
+    "save": "Save to My Collection",
+    "saved": "Saved to Collection",
+    "cancel": "Cancel",
+    "next": "Next",
+    "goBack": "Go back",
+    "shareThisResult": "Share this result",
+    "removeFromCollection": "Remove from collection",
+    "saveToCollection": "Save to collection",
+    "tabCollection": "Collection",
+    "tabDiscover": "Fun Facts",
+    "tabBotanist": "Botanist",
+    "saveErrorTitle": "Couldn't save",
+    "saveErrorBody": "Something went wrong saving to your collection. Please try again.",
+    "ok": "OK",
+    "showPassword": "Show password",
+    "hidePassword": "Hide password",
+    "close": "Close",
+    "tabProfile": "Profile",
+    "identified": "Identified",
+    "yourPhoto": "Your photo",
+    "referencePhoto": "Reference",
+    "technicalDescription": "Technical description",
+    "vendorEnglishNote": "From the identification service, in English.",
+    "translate": "Translate",
+    "translating": "Translating…",
+    "translateFailed": "Could not translate right now."
+  },
+  "auth": {
+    "title": "Sign in to identify",
+    "subtitle": "One free identification per category. Sign in with your email to get started — no password needed.",
+    "emailPlaceholder": "you@example.com",
+    "sendLink": "Send magic link",
+    "sending": "Sending…",
+    "checkEmailTitle": "Check your email",
+    "checkEmailBody": "We sent a sign-in link to {{email}}. Open it on this device to continue.",
+    "signOut": "Sign out",
+    "signedInAs": "Signed in as {{email}}",
+    "notReady": "Sign-in is being set up and will be available soon."
+  },
+  "paywall": {
+    "title": "Free use already used",
+    "body": "You've already used your free {{category}} identification. Subscribe to keep identifying without limits.",
+    "subscribe": "Subscribe",
+    "subscribing": "Redirecting…",
+    "subscribed": "Subscribed",
+    "manage": "Manage subscription",
+    "annualPlan": "Annual",
+    "perYear": "/year",
+    "saveBadge": "Save {{percent}}%",
+    "genericTitle": "Unlock everything",
+    "genericBody": "Unlimited identifications for plants, insects, mushrooms and crops, plus full access to medicinal herb details.",
+    "subscriptionConfirmedTitle": "You're subscribed!",
+    "subscriptionConfirmedBody": "Thanks for subscribing — you now have unlimited identifications. Enjoy!",
+    "subscriptionPendingTitle": "Payment received",
+    "subscriptionPendingBody": "Payment received. Open Profile → Restore access and confirm the email you paid with to unlock this device.",
+    "checkoutFailedTitle": "Checkout failed",
+    "checkoutFailedBody": "We couldn't start checkout. Please try again in a moment.",
+    "monthlyPlan": "Monthly",
+    "quarterlyPlan": "Quarterly",
+    "perMonth": "per month",
+    "perQuarter": "per quarter",
+    "notAvailableYet": "Checkout is being set up — try again shortly."
+  },
+  "restore": {
+    "title": "Sign in",
+    "emailStepTitle": "Sign in to your account",
+    "emailStepBody": "Use the email you signed up with. We send a one-time code - no password to remember.",
+    "emailPlaceholder": "you@example.com",
+    "sendCode": "Send code",
+    "codeStepTitle": "Enter your code",
+    "codeStepBody": "We sent a code to {{email}}. Enter it below to finish signing in.",
+    "codePlaceholder": "6-digit code",
+    "verifyCode": "Verify",
+    "changeEmail": "Use a different email",
+    "doneTitleActive": "You are signed in",
+    "doneBodyActive": "This device is now linked to your account, and your subscription is active on it.",
+    "doneTitleOther": "Signed in",
+    "doneBodyOther": "This device is linked to your account. There is no active subscription on it right now.",
+    "backToProfile": "Back to Profile",
+    "genericError": "Something went wrong. Please try again.",
+    "modeCode": "Email code",
+    "modePassword": "Password",
+    "passwordStepTitle": "Sign in with your password",
+    "passwordStepBody": "Enter your email and password to sign in on this device.",
+    "passwordPlaceholder": "Password",
+    "signIn": "Sign in",
+    "signInWithGoogle": "Continue with Google",
+    "googleSignInErrorTitle": "Sign-in failed",
+    "googleSignInErrorBody": "We couldn't complete Google sign-in. Please try again."
+  },
+  "achievements": {
+    "title": "Achievements",
+    "streakLabel": "Day Streak",
+    "longestStreakLabel": "Longest Streak",
+    "totalLabel": "Identifications",
+    "unlockedTitle": "Achievement Unlocked!",
+    "progressLabel": "{{unlocked}}/{{total}} unlocked",
+    "firstScan": {
+      "title": "First Discovery",
+      "body": "Identify your first species"
+    },
+    "collector10": {
+      "title": "Collector",
+      "body": "Save 10 species to your collection"
+    },
+    "collector50": {
+      "title": "Naturalist",
+      "body": "Save 50 species to your collection"
+    },
+    "collector100": {
+      "title": "Master Naturalist",
+      "body": "Save 100 species to your collection"
+    },
+    "allCategories": {
+      "title": "Explorer",
+      "body": "Save at least one species from every category"
+    },
+    "streak3": {
+      "title": "Getting Started",
+      "body": "Identify something 3 days in a row"
+    },
+    "streak7": {
+      "title": "Committed",
+      "body": "Identify something 7 days in a row"
+    },
+    "streak30": {
+      "title": "Dedicated",
+      "body": "Identify something 30 days in a row"
+    },
+    "sharedFirst": {
+      "title": "Sharing is Caring",
+      "body": "Share your first identification result"
+    },
+    "subscriber": {
+      "title": "Premium Member",
+      "body": "Subscribed for unlimited identifications"
+    },
+    "tokensLabel": "Tokens",
+    "tokensEarned": "+{{count}} tokens"
+  },
+  "categories": {
+    "plant": {
+      "label": "Plant",
+      "tabLabel": "Plants",
+      "title": "Identify Plants & Trees Instantly",
+      "subtitle": "Point your camera at any plant, leaf, flower or tree and get a detailed profile in seconds.",
+      "scanHint": "For best results, frame a single leaf, flower or the overall shape in good light."
+    },
+    "insect": {
+      "label": "Insect",
+      "tabLabel": "Insects",
+      "title": "Identify Insects Instantly",
+      "subtitle": "Point your camera at any bug, beetle, spider or butterfly and get an instant species profile.",
+      "scanHint": "For best results, get close to the insect with good lighting and a steady hand."
+    },
+    "mushroom": {
+      "label": "Mushroom",
+      "tabLabel": "Mushrooms",
+      "title": "Identify Mushrooms Instantly",
+      "subtitle": "Point your camera at any mushroom or fungus to identify the species and check edibility.",
+      "scanHint": "Photograph the cap, gills and stem for the most accurate identification."
+    },
+    "crop": {
+      "label": "Crop",
+      "tabLabel": "Crops",
+      "title": "Crop Health Check",
+      "subtitle": "Point your camera at a crop leaf to check for diseases, pests or nutrient issues.",
+      "scanHint": "Frame the affected leaf or area closely for the most accurate diagnosis."
+    },
+    "tree": {
+      "label": "Tree",
+      "tabLabel": "Trees",
+      "title": "Identify Trees Instantly",
+      "subtitle": "Point your camera at any tree, trunk, leaf or canopy and get a detailed profile in seconds.",
+      "scanHint": "For best results, frame the leaves, bark or overall shape with good lighting."
+    },
+    "fish": {
+      "label": "Fish",
+      "tabLabel": "Fish",
+      "title": "Identify Fish Instantly",
+      "subtitle": "Point your camera at any fish and get a detailed profile in seconds.",
+      "scanHint": "For best results, capture the whole fish from the side in good light."
+    },
+    "bird": {
+      "label": "Bird",
+      "tabLabel": "Birds",
+      "title": "Identify Birds Instantly",
+      "subtitle": "Point your camera at any bird and get an instant identification.",
+      "scanHint": "For best results, get the whole bird in frame, sharp and well lit."
+    },
+    "sound": {
+      "label": "Sound",
+      "tabLabel": "Sounds",
+      "title": "Identify by Sound",
+      "subtitle": "Record a bird, frog or insect calling and find out what it is."
+    }
+  },
+  "identify": {
+    "identifierTitle": "{{category}} Identifier",
+    "subtitle": "Identify {{category}}s instantly with AI",
+    "readyToScan": "Ready to scan",
+    "didYouKnowTitle": "Did you know?",
+    "continueLabel": "Continue",
+    "analyzing": "Analyzing {{category}}…",
+    "tapToIdentify": "Tap to identify",
+    "identifying": "Identifying…",
+    "uploadPhoto": "Upload Photo",
+    "myCollection": "My Collection",
+    "switchCategoryLabel": "Switch identification category",
+    "switchCategoryTitle": "Switch category",
+    "switchCategoryMessage": "What would you like to identify?",
+    "takePhotoLabel": "Take photo to identify {{category}}",
+    "uploadPhotoLabel": "Upload photo to identify",
+    "goToCollectionLabel": "Go to My Collection",
+    "cameraPermissionTitle": "Camera permission needed",
+    "cameraPermissionMessage": "Enable camera access to scan a {{category}}.",
+    "libraryPermissionTitle": "Photo library permission needed",
+    "libraryPermissionMessage": "Enable photo access to upload an image.",
+    "identificationFailedTitle": "Identification failed",
+    "identificationFailedDefault": "Please try again.",
+    "notFoundError": "No {{category}} was recognized in this photo. Try a clearer, closer shot.",
+    "photoProcessingFailed": "Could not process that photo. Please try a different photo, or take a new one with your camera.",
+    "lowConfidence": "This is our best guess ({{confidence}}% confident). Compare it with the reference photos before relying on it.",
+    "lowConfidenceWithAlternatives": "Only {{confidence}}% confident. Check the other possible matches below before relying on this.",
+    "referenceImagesTitle": "Reference photos",
+    "referenceImagesHint": "Compare these with your own photo to confirm the match.",
+    "referenceImageLabel": "Reference photo {{index}}",
+    "alternativesTitle": "Other possible matches",
+    "alternativesHint": "If the result above does not look right, one of these may be your species.",
+    "lowConfidenceBare": "Only {{confidence}}% confident — treat this as a starting point, not a final answer.",
+    "addAngle": "Add another angle",
+    "addAnotherAngle": "Add one more",
+    "anglesHint": "{{count}} photos of the same specimen — better accuracy",
+    "removeAngleLabel": "Remove angle {{index}}",
+    "offlineTitle": "You are offline",
+    "offlineBody": "Identification needs an internet connection. Your collection and the Discover tab still work offline.",
+    "serviceDownTitle": "Service unavailable",
+    "serviceDownBody": "This identification service is having a moment. Please try again in a few minutes - it is not your photo."
+  },
+  "detail": {
+    "profileTitle": "{{category}} Profile",
+    "readMoreLabel": "Read more online about this {{category}}",
+    "markAsWatered": "Mark as Watered",
+    "markAsWateredLabel": "Mark as watered",
+    "wateringSection": "Watering",
+    "checkForDiseases": "Check for Diseases",
+    "checkingForDiseases": "Checking…",
+    "checkForDiseasesLabel": "Check for diseases",
+    "checkingForDiseasesLabel": "Checking for diseases",
+    "healthCheckSection": "Health Check",
+    "edibleParts": "Edible Parts",
+    "propagation": "Propagation",
+    "wateringNeeds": "Watering Needs",
+    "conservationStatus": "Conservation Status",
+    "safetySection": "Safety",
+    "ecologicalRoleSection": "Ecological Role",
+    "frequentlyConfusedWith": "Frequently Confused With",
+    "psychoactiveWarning": "This mushroom may be psychoactive and can affect the nervous system.",
+    "cropHealthReportTitle": "Crop Health Report",
+    "cropMatch": "Crop match",
+    "cropPill": "Crop",
+    "wateringGuideSection": "Watering Guide",
+    "lightSection": "Light",
+    "soilSection": "Soil",
+    "commonUsesSection": "Common Uses",
+    "culturalSignificanceSection": "Cultural Significance",
+    "installNudgeTitle": "Install NatureLens",
+    "installNudgeBody": "Add it to your home screen to identify faster next time.",
+    "commonNames": "Common names",
+    "synonyms": "Scientific synonyms",
+    "referencePhoto": "Reference photo",
+    "referencePhotoAlt": "Reference photo of {{name}}",
+    "coverageNoteTitle": "About this result",
+    "birdCoverageNote": "Bird identification covers 291 species, mostly North American. Birds outside that list may be identified incorrectly even with high confidence - treat the result as a starting point."
+  },
+  "disease": {
+    "overviewSection": "Overview",
+    "symptomsSection": "Symptoms",
+    "treatmentSection": "Treatment",
+    "biological": "Biological",
+    "chemical": "Chemical",
+    "prevention": "Prevention",
+    "spreadingSection": "How It Spreads",
+    "healthStatusSection": "Health Status",
+    "noDiseaseDetected": "No disease or pest was confidently detected in this photo.",
+    "match": "Match",
+    "severitySuffix": "{{severity}} severity"
+  },
+  "collection": {
+    "title": "My Collection",
+    "subtitle_one": "{{count}} item discovered",
+    "subtitle_other": "{{count}} items discovered",
+    "emptyTitle": "Nothing saved yet",
+    "emptyBody": "Identify a plant, insect, mushroom or crop and save it to build your collection.",
+    "startIdentifying": "Start Identifying",
+    "goToProfileLabel": "Go to profile",
+    "switchToGridLabel": "Switch to grid view",
+    "switchToListLabel": "Switch to list view",
+    "viewDetailsLabel": "View details for {{name}}",
+    "removeLabel": "Remove {{name}} from collection",
+    "assignRoomTitle": "Assign to a room",
+    "assignRoomMessage": "Choose a room for {{name}}.",
+    "roomLivingRoom": "Living Room",
+    "roomBedroom": "Bedroom",
+    "roomKitchen": "Kitchen",
+    "roomBalcony": "Balcony",
+    "roomOffice": "Office",
+    "roomNone": "None",
+    "searchPlaceholder": "Search your collection…",
+    "clearSearchLabel": "Clear search",
+    "filterAll": "All",
+    "noSearchResults": "Nothing matches your search."
+  },
+  "profile": {
+    "title": "My Profile",
+    "itemsIdentified_one": "item identified",
+    "itemsIdentified_other": "items identified",
+    "byCategory": "By Category",
+    "privacyPolicy": "Privacy Policy",
+    "language": "Language",
+    "installApp": "Install app",
+    "installAppIOSTitle": "Install NatureLens",
+    "installAppIOSBody": "Tap the Share button, then \"Add to Home Screen\" to install NatureLens on your phone.",
+    "createPasswordTitle": "Create a password",
+    "createPasswordBody": "Optional — sign in with a password on other devices to sync your subscription, instead of requesting a new email code every time.",
+    "createPasswordButton": "Create password",
+    "creatingPassword": "Creating…",
+    "passwordTooShortTitle": "Password too short",
+    "passwordTooShortBody": "Please use at least 8 characters.",
+    "passwordCreatedTitle": "Password created",
+    "passwordCreatedBody": "Check {{email}} to confirm it, then you can sign in with this password on any device.",
+    "passwordCreatedFailedTitle": "Couldn't create password",
+    "passwordCreatedFailedBody": "Something went wrong. Please try again.",
+    "changePhoto": "Change profile photo",
+    "version": "Version {{version}}",
+    "termsOfUse": "Terms of Use",
+    "helpAndSupport": "Help & Support",
+    "deleteAccount": "Delete account",
+    "deletingAccount": "Deleting…",
+    "deleteAccountConfirmTitle": "Delete your account?",
+    "deleteAccountConfirmBody": "This permanently deletes your saved collection, password (if any), and cancels your active subscription if you have one. This cannot be undone.",
+    "deleteAccountConfirmButton": "Delete",
+    "deleteAccountDoneTitle": "Account deleted",
+    "deleteAccountDoneBody": "Your data has been deleted and any active subscription has been canceled.",
+    "deleteAccountFailedTitle": "Couldn't delete account",
+    "deleteAccountFailedBody": "Something went wrong. Please try again.",
+    "rewardsStore": "Rewards store",
+    "naturalistBadge": "Naturalist",
+    "deleteAccountDoneBillingBody": "Your account and data were deleted. IMPORTANT: this does not cancel your subscription — you must cancel it in your Hotmart account, or the charge continues.",
+    "locationRow": "Use my approximate location",
+    "locationHint": "Improves accuracy by narrowing the answer to species found near you. Rounded to about 1 km and never stored.",
+    "emptyTitle": "Your collection starts here",
+    "emptyBody": "Point the camera at any plant, insect, mushroom, fish or bird - or record a call - and it lands here.",
+    "emptyCta": "Identify something"
+  },
+  "terms": {
+    "title": "Terms of Use",
+    "acceptanceTitle": "Acceptance of terms",
+    "acceptanceBody": "By using NatureLens, you agree to these Terms of Use. If you don't agree, please don't use the app.",
+    "serviceTitle": "What this app does",
+    "serviceBody": "NatureLens lets you photograph plants, insects, mushrooms, crops and trees to identify them using third-party AI services (Plant.id, Insect.id, Mushroom.id, Crop.health, all built by Kindwise). Results are generated automatically and are not reviewed by a human expert.",
+    "accuracyTitle": "Identification accuracy — please read",
+    "accuracyBody": "AI identification can be wrong, including about whether a plant or mushroom is edible, poisonous, or safe to touch. Never eat, forage, or use any wild plant, mushroom or fungus based solely on this app's result. Always confirm with a qualified expert (a mycologist, botanist, or poison control service) before consuming or using anything you found in the wild. We are not responsible for harm caused by relying on an identification made by this app.",
+    "billingTitle": "Subscriptions and billing",
+    "billingBody": "Paid subscriptions are billed through Stripe at the price shown in the app when you subscribe, and renew automatically until you cancel. You can cancel anytime; your access continues until the end of the period you already paid for. We don't offer prorated refunds for unused time, except where required by law.",
+    "accountTitle": "Accounts and passwords",
+    "accountBody": "You don't need an account to use the free features. Subscribers may optionally create a password to sign in and sync their subscription across devices. You're responsible for keeping your password secure and for anything that happens through your account.",
+    "liabilityTitle": "No warranty, limitation of liability",
+    "liabilityBody": "This app is provided \"as is,\" without warranties of any kind. To the maximum extent permitted by law, we are not liable for any damages arising from your use of the app, including reliance on any identification result.",
+    "changesTitle": "Changes to these terms",
+    "changesBody": "We may update these terms from time to time. Continuing to use the app after a change means you accept the updated terms.",
+    "contactTitle": "Contact",
+    "contactBody": "Questions about these terms can be directed to the app's developer."
+  },
+  "help": {
+    "title": "Help & Support",
+    "identificationTitle": "How does identification work?",
+    "identificationBody": "Take a photo of a plant, insect, mushroom, crop, or tree, and our AI compares it against a large database to suggest the most likely species, along with its scientific name, description, and other details.",
+    "accuracyTitle": "Is the identification always accurate?",
+    "accuracyBody": "No identification app is 100% accurate, especially for mushrooms and plants that can be toxic. Never eat, forage, or use any species based solely on this app's result — always confirm with a qualified expert first.",
+    "freeTitle": "Is NatureLens free?",
+    "freeBody": "You get one free identification per category (plants, insects, mushrooms, crops, trees). After that, a subscription unlocks unlimited identifications in every category.",
+    "cancelTitle": "How do I cancel my subscription?",
+    "cancelBody": "Go to Profile and delete your account — this cancels any active subscription automatically, along with removing your data. There's no separate cancel button today; deleting your account is the current way to stop billing.",
+    "restoreTitle": "I switched phones or cleared my browser — how do I get my subscription back?",
+    "restoreBody": "Go to Profile → Restore Access. You can either request a one-time code by email or, if you created one, sign in with a password or your Google account.",
+    "tokensTitle": "What are tokens? Can I redeem them for something?",
+    "tokensBody": "You earn tokens automatically every time you identify a species or unlock an achievement. Redeeming tokens for rewards isn't available yet, but is planned for the future — your balance keeps building in the meantime.",
+    "privacyTitle": "Is my data private?",
+    "privacyBody": "NatureLens doesn't require an account to use. Most of your data (collection, photos) stays only on your device. See the full Privacy Policy for details.",
+    "deleteTitle": "How do I delete my account and data?",
+    "deleteBody": "Go to Profile and tap Delete Account at the bottom. This cancels any active subscription, removes your saved data from our servers, and clears everything stored on this device.",
+    "offlineTitle": "Does the app work offline?",
+    "offlineBody": "No — identifying a species requires an internet connection to reach our AI service.",
+    "languageTitle": "Can I use the app in another language?",
+    "languageBody": "Yes, NatureLens supports 17 languages. Go to Profile → Language to switch at any time."
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "collectTitle": "What we collect",
+    "collectBody": "This app lets you photograph plants, insects, mushrooms, or crops to identify them. To do this, it uses third-party AI identification services — Plant.id, Insect.id, Mushroom.id, and Crop.health, all built by Kindwise.",
+    "thirdPartyTitle": "Third-party AI services",
+    "thirdPartyBody": "When you take or upload a photo to identify something, that photo is sent directly to the relevant Kindwise identification service to produce a result. We do not store your photos on any server we control.",
+    "localStorageTitle": "Local storage only",
+    "localStorageBody": "Your saved collection — identified species, notes, and timestamps — is stored only locally on your own device using browser or app local storage. It is never uploaded to any cloud server we run, and it is never shared with other users.",
+    "noAccountsTitle": "No accounts, no tracking",
+    "noAccountsBody": "This app doesn't require an account to use — your device is given a random anonymous identifier (stored only on your device) so we can tell when its one free identification per category has been used. If you subscribe, Stripe collects your email and payment details directly to process the charge — we only receive your subscription status, linked to that same anonymous identifier. Subscribers can optionally create a password to sign in and sync their subscription across other devices; this is never required to use the app. We do not use analytics or advertising trackers.",
+    "dataLossTitle": "Data loss risk",
+    "dataLossBody": "If you clear your browser data or uninstall the app, your locally saved collection will be permanently lost, since nothing is backed up remotely.",
+    "contactTitle": "Contact",
+    "contactBody": "Questions about this policy can be directed to the app's developer."
+  },
+  "discover": {
+    "title": "Discover",
+    "subtitle": "Feed your curiosity about the natural world",
+    "dailyFact": "Daily Plant Fact",
+    "tapForAnotherFact": "Tap for another fact",
+    "exploreCollections": "Explore Collections",
+    "trendingSpecies": "Trending Species",
+    "showNextFactLabel": "Show next plant fact",
+    "openCollectionLabel": "Open {{title}} collection",
+    "viewSpeciesLabel": "View {{name}}",
+    "facts": [
+      "The Corpse Flower (Amorphophallus titanum) can grow over 3 meters tall and smells of rotting flesh to attract pollinators.",
+      "Bamboo is the fastest-growing plant on earth — some species add up to 90 centimeters in a single day.",
+      "A single honeybee visits around 5,000 flowers a day, yet produces only a twelfth of a teaspoon of honey in its whole life.",
+      "Mushrooms are more closely related to animals than to plants — they share a common ancestor with us from about a billion years ago.",
+      "The oldest known living tree is a bristlecone pine in California, estimated at over 4,800 years old.",
+      "Sunflowers track the sun while young, but once mature they settle facing east — which warms them earlier and attracts more pollinators.",
+      "Some orchids mimic the appearance and scent of female insects so precisely that males try to mate with them, pollinating the flower by accident.",
+      "A dragonfly catches around 95% of the prey it chases — one of the highest hunting success rates of any animal.",
+      "Ants have been farming fungi for over 50 million years, long before humans invented agriculture.",
+      "The Amazon rainforest produces roughly 20% of the oxygen released by land plants, and much of its rain falls from water the forest itself exhaled.",
+      "Butterflies taste with their feet — they step on a leaf to know whether their caterpillars can eat it.",
+      "A honey fungus in Oregon spans nearly 10 square kilometers, making it one of the largest living organisms on the planet.",
+      "The peregrine falcon exceeds 300 km/h in a hunting dive, making it the fastest animal alive.",
+      "Fish do not have eyelids — most simply never close their eyes, even while resting.",
+      "The Venus flytrap counts: a trigger hair must be touched twice within about 20 seconds before the trap closes, so rain does not waste it.",
+      "Trees in a forest share nutrients through underground fungal networks — a mother tree can feed a struggling seedling metres away.",
+      "The Arctic tern migrates from pole to pole every year, covering more than 70,000 kilometers — the longest migration of any animal.",
+      "Coffee, chocolate and vanilla all come from plants that depend on animals for pollination — no bees or midges, no morning coffee.",
+      "Some cicadas stay underground for 17 years before emerging, all at once, in the billions.",
+      "A pineapple is not one fruit but dozens of berries fused together around a single core.",
+      "Owls cannot move their eyes — their eyeballs are tubes fixed in place, which is why they rotate their heads up to 270 degrees instead.",
+      "The seeds of the sacred lotus can germinate after more than a thousand years of dormancy.",
+      "Salmon return to spawn in the exact river where they hatched, navigating by smell across thousands of kilometers of open ocean.",
+      "Fungi were the first complex organisms to colonise land — long before any plant did.",
+      "Fig trees do not flower outwardly: each fig is an inside-out cluster of flowers, pollinated by a wasp that enters through a tiny hole.",
+      "A hummingbird's heart beats over 1,200 times per minute in flight, and it must eat every 10 to 15 minutes to survive.",
+      "The strangler fig begins life on a branch high in the canopy, sends roots to the ground, and eventually kills the tree that hosted it.",
+      "Moss has no roots — it absorbs water directly through its leaves, which is why it thrives on rock and bark.",
+      "The mantis shrimp sees with 12 to 16 colour receptors; humans have three.",
+      "Aspen groves are often a single organism: thousands of trunks sharing one root system, some over 10,000 years old.",
+      "Ladybugs eat up to 5,000 aphids in their lifetime, which is why gardeners release them instead of spraying.",
+      "The seed of the coco de mer palm weighs up to 25 kilograms — the heaviest of any plant.",
+      "Electric eels are not eels but knifefish, and their shock can exceed 800 volts.",
+      "Lichens are not one organism but two — a fungus and an alga living as one, able to survive in outer space.",
+      "The male emperor penguin balances a single egg on his feet through the Antarctic winter, going two months without eating.",
+      "Nettles sting through tiny glass-like hairs that break off in the skin, and the antidote often grows nearby: dock leaves.",
+      "Some deep-sea fish are transparent, using invisibility as camouflage where there is nowhere to hide.",
+      "A mature oak can drop 10,000 acorns in a good year, and roughly one in ten thousand becomes a tree.",
+      "Crows recognise individual human faces, hold grudges, and teach their young who to avoid.",
+      "The world's smallest flowering plant, a watermeal, is the size of a grain of sand — a dozen fit on a fingertip."
+    ],
+    "topics": {
+      "airPurifying": {
+        "title": "Air-Purifying Plants",
+        "desc": "NASA studied these species for cleaning indoor air.",
+        "intro": "In the late 1980s, NASA tested dozens of common houseplants to find which ones could help scrub pollutants from the sealed air of spacecraft cabins — and discovered that many everyday favorites are surprisingly good at absorbing toxins like formaldehyde, benzene, and carbon monoxide. This collection rounds up the species that performed best in that research and have since become classics of home air-quality lore. They're no substitute for opening a window, but a few well-placed pots are an easy, low-effort way to help freshen the air in the rooms you spend the most time in.",
+        "species": [
+          {
+            "name": "Snake Plant",
+            "sci": "Dracaena trifasciata (syn. Sansevieria trifasciata)",
+            "note": "One of NASA's top performers, converting CO2 to oxygen even overnight, unlike most houseplants."
+          },
+          {
+            "name": "Spider Plant",
+            "sci": "Chlorophytum comosum",
+            "note": "NASA ranked it among the best at scrubbing formaldehyde and xylene from ordinary household air."
+          },
+          {
+            "name": "Peace Lily",
+            "sci": "Spathiphyllum wallisii",
+            "note": "Topped NASA's original study for stripping benzene, formaldehyde, and trichloroethylene from indoor air."
+          },
+          {
+            "name": "English Ivy",
+            "sci": "Hedera helix",
+            "note": "NASA's highest scorer overall, prized for clearing formaldehyde and even airborne mold spores."
+          },
+          {
+            "name": "Boston Fern",
+            "sci": "Nephrolepis exaltata",
+            "note": "A NASA-tested formaldehyde remover that also raises humidity in dry, heated indoor rooms."
+          },
+          {
+            "name": "Golden Pothos",
+            "sci": "Epipremnum aureum",
+            "note": "Nearly indestructible and documented to filter formaldehyde, benzene, and carbon monoxide from indoor air."
+          },
+          {
+            "name": "Rubber Plant",
+            "sci": "Ficus elastica",
+            "note": "A NASA Clean Air Study standout, steadily pulling formaldehyde out of everyday living spaces."
+          }
+        ]
+      },
+      "beginnerSucculents": {
+        "title": "Beginner Succulents",
+        "desc": "Low-water plants that thrive on a little neglect.",
+        "intro": "Succulents earned their beginner-friendly reputation honestly: their thick, water-storing leaves and stems let them shrug off a forgotten watering or two without sulking. This lineup leans into the toughest, most forgiving varieties out there — plants built to tolerate the classic rookie mistakes of overwatering, underwatering, and inconsistent light. Give any one of these a bright windowsill and a little patience, and you've got a nearly foolproof entry point into growing your own plant collection.",
+        "species": [
+          {
+            "name": "Jade Plant",
+            "sci": "Crassula ovata",
+            "note": "Stores water in thick stems and leaves, so a missed watering or two won't faze it."
+          },
+          {
+            "name": "Snake Plant",
+            "sci": "Dracaena trifasciata",
+            "note": "Thrives on total neglect, tolerating low light and weeks of dry soil without complaint."
+          },
+          {
+            "name": "Zebra Plant",
+            "sci": "Haworthiopsis fasciata",
+            "note": "Stays compact and slow-growing, making it nearly impossible to overwhelm with too much care."
+          },
+          {
+            "name": "Aloe Vera",
+            "sci": "Aloe vera",
+            "note": "Forgives inconsistent watering thanks to gel-filled leaves built to survive drought on their own."
+          },
+          {
+            "name": "Panda Plant",
+            "sci": "Kalanchoe tomentosa",
+            "note": "Fuzzy, water-storing leaves shrug off dry spells, making this a nearly foolproof first succulent."
+          },
+          {
+            "name": "Burro's Tail",
+            "sci": "Sedum morganianum",
+            "note": "Plump trailing leaves hold their own water reserves, rewarding hands-off owners who resist overwatering."
+          },
+          {
+            "name": "Mexican Hens and Chicks",
+            "sci": "Echeveria elegans",
+            "note": "Classic rosette shape stores water efficiently and multiplies easily, forgiving beginners' inevitable missteps."
+          }
+        ]
+      },
+      "petSafe": {
+        "title": "Pet-Safe Houseplants",
+        "desc": "Non-toxic greenery for homes with cats and dogs.",
+        "intro": "Sharing a home with cats and dogs doesn't mean giving up on houseplants, but plenty of popular species are genuinely harmful if nibbled. This collection rounds up well-documented, non-toxic favorites, cross-checked against ASPCA safety data, so you can fill windowsills and shelves without worrying about a curious paw or an exploratory bite. From trailing vines to flowering favorites, each pick here earns its spot for being safe first and beautiful second.",
+        "species": [
+          {
+            "name": "Spider Plant",
+            "sci": "Chlorophytum comosum",
+            "note": "ASPCA-listed non-toxic to cats and dogs, and its cascading leaves give curious paws something safe to bat at."
+          },
+          {
+            "name": "Boston Fern",
+            "sci": "Nephrolepis exaltata",
+            "note": "This lush, textured fern is non-toxic to pets, making it a safe way to add jungly volume to any room."
+          },
+          {
+            "name": "Parlor Palm",
+            "sci": "Chamaedorea elegans",
+            "note": "A classic Victorian houseplant that's non-toxic to cats and dogs, tolerating low light without posing any risk."
+          },
+          {
+            "name": "Prayer Plant",
+            "sci": "Maranta leuconeura",
+            "note": "Its leaves fold up at night like praying hands, and it's completely safe if a curious cat takes a nibble."
+          },
+          {
+            "name": "Watermelon Peperomia",
+            "sci": "Peperomia argyreia",
+            "note": "Compact and non-toxic, its striped leaves make a striking, pet-safe accent for shelves and side tables."
+          },
+          {
+            "name": "Zebra Haworthia",
+            "sci": "Haworthia attenuata",
+            "note": "A pet-safe alternative to toxic aloe and jade, this striped succulent delivers the look without the risk."
+          },
+          {
+            "name": "African Violet",
+            "sci": "Saintpaulia ionantha",
+            "note": "One of the few flowering houseplants confirmed non-toxic, so pets can share a windowsill with the blooms."
+          }
+        ]
+      },
+      "medicinalHerbs": {
+        "title": "Medicinal Herbs",
+        "desc": "Plants with a long history of healing uses.",
+        "intro": "Long before modern medicine cabinets, home gardens were the original pharmacy: herbs like lavender, peppermint, and echinacea have been grown, brewed, and applied for centuries to ease everyday discomforts. This collection highlights plants with well-documented roles in folk and traditional medicine systems around the world, from Mediterranean kitchen staples to Ayurvedic classics. Most thrive on a sunny windowsill, letting you grow a living piece of herbal history at home.",
+        "species": [
+          {
+            "name": "Aloe Vera",
+            "sci": "Aloe vera",
+            "note": "Its gel-filled leaves have soothed burns and minor skin irritations across cultures for thousands of years.",
+            "id": "aloeVera",
+            "tags": [
+              "skin",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Lavender",
+            "sci": "Lavandula angustifolia",
+            "note": "Long prized for its calming scent, traditionally used to ease stress and promote restful sleep.",
+            "id": "lavender",
+            "tags": [
+              "sleep",
+              "stress",
+              "headache"
+            ]
+          },
+          {
+            "name": "Peppermint",
+            "sci": "Mentha x piperita",
+            "note": "Menthol-rich leaves have soothed upset stomachs and headaches in folk medicine for centuries.",
+            "id": "peppermint",
+            "tags": [
+              "digestion",
+              "headache"
+            ]
+          },
+          {
+            "name": "German Chamomile",
+            "sci": "Matricaria chamomilla",
+            "note": "Its daisy-like flowers brew into a gentle tea long used to calm nerves and aid digestion.",
+            "id": "germanChamomile",
+            "tags": [
+              "sleep",
+              "digestion",
+              "stress"
+            ]
+          },
+          {
+            "name": "Purple Coneflower",
+            "sci": "Echinacea purpurea",
+            "note": "Native to North America, its roots and flowers were used by Indigenous peoples to support immune health.",
+            "id": "purpleConeflower",
+            "tags": [
+              "immunity"
+            ]
+          },
+          {
+            "name": "Rosemary",
+            "sci": "Salvia rosmarinus (syn. Rosmarinus officinalis)",
+            "note": "This fragrant Mediterranean shrub carries an ancient reputation for sharpening memory and aiding circulation.",
+            "id": "rosemary",
+            "tags": [
+              "headache",
+              "energy",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Holy Basil (Tulsi)",
+            "sci": "Ocimum tenuiflorum",
+            "note": "Revered in Ayurvedic tradition for centuries, its leaves are steeped as an adaptogenic tea for stress.",
+            "id": "holyBasil",
+            "tags": [
+              "stress",
+              "immunity",
+              "respiratory"
+            ]
+          },
+          {
+            "name": "Turmeric",
+            "sci": "Curcuma longa",
+            "note": "Ayurvedic medicine has used this golden root for centuries to calm inflammation and support digestion and wound healing.",
+            "id": "turmeric",
+            "tags": [
+              "painInflammation",
+              "digestion",
+              "skin"
+            ]
+          },
+          {
+            "name": "Ginger",
+            "sci": "Zingiber officinale",
+            "note": "Chinese and Ayurvedic healers have long chewed or brewed this rhizome to settle nausea and warm the digestion.",
+            "id": "ginger",
+            "tags": [
+              "digestion",
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "Ginseng",
+            "sci": "Panax ginseng",
+            "note": "Prized in Traditional Chinese Medicine for over two thousand years as a restorative tonic for energy and vitality.",
+            "id": "ginseng",
+            "tags": [
+              "energy",
+              "stress"
+            ]
+          },
+          {
+            "name": "Ashwagandha",
+            "sci": "Withania somnifera",
+            "note": "An Ayurvedic staple for millennia, its root is traditionally taken to ease stress and rebuild strength and stamina.",
+            "id": "ashwagandha",
+            "tags": [
+              "stress",
+              "energy",
+              "sleep"
+            ]
+          },
+          {
+            "name": "Elderberry",
+            "sci": "Sambucus nigra",
+            "note": "European folk healers have brewed its dark berries into syrups for centuries to fight colds and flu.",
+            "id": "elderberry",
+            "tags": [
+              "immunity",
+              "respiratory"
+            ]
+          },
+          {
+            "name": "Valerian",
+            "sci": "Valeriana officinalis",
+            "note": "European herbalists have dried this pungent root since ancient times as a traditional remedy for restless sleep.",
+            "id": "valerian",
+            "tags": [
+              "sleep",
+              "stress"
+            ]
+          },
+          {
+            "name": "Witch Hazel",
+            "sci": "Hamamelis virginiana",
+            "note": "Native American tribes distilled its bark and leaves into an astringent wash for bruises, swelling, and skin irritation.",
+            "id": "witchHazel",
+            "tags": [
+              "skin",
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "Goldenseal",
+            "sci": "Hydrastis canadensis",
+            "note": "Cherokee and other Native healers used this bitter root to treat sores, infections, and digestive ailments.",
+            "id": "goldenseal",
+            "tags": [
+              "digestion",
+              "immunity",
+              "skin"
+            ]
+          },
+          {
+            "name": "Devil's Claw",
+            "sci": "Harpagophytum procumbens",
+            "note": "Traditional healers of the Kalahari have long used this hook-fruited root to relieve joint pain and arthritis.",
+            "id": "devilsClaw",
+            "tags": [
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "African Wormwood",
+            "sci": "Artemisia afra",
+            "note": "One of southern Africa's most widely used traditional medicines, steamed or brewed to relieve coughs and congestion.",
+            "id": "africanWormwood",
+            "tags": [
+              "respiratory",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Yerba Mate",
+            "sci": "Ilex paraguariensis",
+            "note": "The Guaraní people of South America have long brewed its leaves as a stimulating, digestion-aiding daily tea.",
+            "id": "yerbaMate",
+            "tags": [
+              "energy",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Gotu Kola",
+            "sci": "Centella asiatica",
+            "note": "Revered in Ayurvedic and traditional Southeast Asian medicine as a wound-healing herb said to sharpen memory and calm the mind.",
+            "id": "gotuKola",
+            "tags": [
+              "skin",
+              "stress"
+            ]
+          },
+          {
+            "name": "Licorice Root",
+            "sci": "Glycyrrhiza glabra",
+            "note": "Used across Chinese, Ayurvedic, and Middle Eastern medicine for centuries to soothe coughs, sore throats, and upset stomachs.",
+            "id": "licoriceRoot",
+            "tags": [
+              "respiratory",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Neem",
+            "sci": "Azadirachta indica",
+            "note": "Bitter neem leaves, bark, and oil are Ayurveda's classic remedy for skin eruptions, wounds, and parasitic infections.",
+            "id": "neem",
+            "tags": [
+              "skin",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Amla (Indian Gooseberry)",
+            "sci": "Phyllanthus emblica",
+            "note": "Richest natural source of vitamin C in Ayurveda, amla anchors rasayana tonics prized for rejuvenation and digestion.",
+            "id": "amla",
+            "tags": [
+              "digestion",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Brahmi",
+            "sci": "Bacopa monnieri",
+            "note": "Ayurvedic Medhya Rasayana herb traditionally taken to sharpen memory, calm the mind, and support learning.",
+            "id": "brahmi",
+            "tags": [
+              "stress",
+              "sleep"
+            ]
+          },
+          {
+            "name": "Guduchi (Giloy)",
+            "sci": "Tinospora cordifolia",
+            "note": "Called Amrita, 'root of immortality,' this stem decoction is Ayurveda's go-to for fevers and building immunity.",
+            "id": "guduchi",
+            "tags": [
+              "immunity",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Shatavari",
+            "sci": "Asparagus racemosus",
+            "note": "Root tonic revered in Ayurveda as the premier female rejuvenative, traditionally used to support lactation and hormonal balance.",
+            "id": "shatavari",
+            "tags": [
+              "energy",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Arjuna",
+            "sci": "Terminalia arjuna",
+            "note": "Bark powder long used in Ayurvedic cardiology to strengthen the heart muscle and support healthy circulation.",
+            "id": "arjuna",
+            "tags": [
+              "energy"
+            ]
+          },
+          {
+            "name": "Haritaki",
+            "sci": "Terminalia chebula",
+            "note": "Called the 'king of medicines' in Ayurveda, this fruit anchors Triphala for digestion, detoxification, and elimination.",
+            "id": "haritaki",
+            "tags": [
+              "digestion",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Bibhitaki",
+            "sci": "Terminalia bellirica",
+            "note": "One of Triphala's three fruits, traditionally used in Ayurveda to clear excess mucus and support respiratory health.",
+            "id": "bibhitaki",
+            "tags": [
+              "respiratory",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Fenugreek",
+            "sci": "Trigonella foenum-graecum",
+            "note": "Seeds soaked and eaten across South Asian households to ease digestion, support lactation, and balance blood sugar.",
+            "id": "fenugreek",
+            "tags": [
+              "digestion",
+              "energy"
+            ]
+          },
+          {
+            "name": "Long Pepper (Pippali)",
+            "sci": "Piper longum",
+            "note": "Pungent fruit in Ayurvedic Trikatu blends, traditionally used to kindle digestive fire and clear respiratory congestion.",
+            "id": "longPepper",
+            "tags": [
+              "digestion",
+              "respiratory"
+            ]
+          },
+          {
+            "name": "Sandalwood",
+            "sci": "Santalum album",
+            "note": "Cooling paste applied in Ayurveda to soothe inflamed skin, fevers, and calm the mind during meditation.",
+            "id": "sandalwood",
+            "tags": [
+              "skin",
+              "stress"
+            ]
+          },
+          {
+            "name": "Indian Sarsaparilla (Anantamul)",
+            "sci": "Hemidesmus indicus",
+            "note": "Sweet-rooted vine used in classical Ayurvedic formulas to cool the blood, purify skin, and ease joint pain.",
+            "id": "indianSarsaparilla",
+            "tags": [
+              "skin",
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "Bael (Bengal Quince)",
+            "sci": "Aegle marmelos",
+            "note": "Unripe fruit pulp is a traditional Ayurvedic staple for soothing chronic diarrhea and dysentery.",
+            "id": "bael",
+            "tags": [
+              "digestion"
+            ]
+          },
+          {
+            "name": "Guggul",
+            "sci": "Commiphora wightii",
+            "note": "Resin at the heart of Ayurveda's Guggulu formulas, traditionally used to manage cholesterol and joint inflammation.",
+            "id": "guggul",
+            "tags": [
+              "painInflammation",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Manjistha (Indian Madder)",
+            "sci": "Rubia cordifolia",
+            "note": "Root long used in Ayurveda as a blood purifier for clear skin, wound healing, and lymphatic support.",
+            "id": "manjistha",
+            "tags": [
+              "skin",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Jatamansi (Spikenard)",
+            "sci": "Nardostachys jatamansi",
+            "note": "Fragrant root long used in Ayurveda to calm the nervous system and promote restful sleep.",
+            "id": "jatamansi",
+            "tags": [
+              "sleep",
+              "stress"
+            ]
+          },
+          {
+            "name": "Astragalus",
+            "sci": "Astragalus membranaceus",
+            "note": "Huang qi root is decocted to fortify wei qi, boost stamina, and support wound healing.",
+            "id": "astragalus",
+            "tags": [
+              "immunity",
+              "energy"
+            ]
+          },
+          {
+            "name": "Reishi Mushroom",
+            "sci": "Ganoderma lucidum",
+            "note": "Ling zhi mushroom was prized by Daoist herbalists to calm shen, ease insomnia, and lengthen life.",
+            "id": "reishiMushroom",
+            "tags": [
+              "sleep",
+              "stress",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Dong Quai",
+            "sci": "Angelica sinensis",
+            "note": "Dang gui, the 'female ginseng,' has nourished blood and eased menstrual complaints for two millennia.",
+            "id": "dongQuai",
+            "tags": [
+              "energy",
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "Goji Berry",
+            "sci": "Lycium barbarum",
+            "note": "Gou qi zi berries are steeped or eaten to nourish liver and kidney yin, brightening the eyes.",
+            "id": "gojiBerry",
+            "tags": [
+              "immunity",
+              "energy"
+            ]
+          },
+          {
+            "name": "Schisandra",
+            "sci": "Schisandra chinensis",
+            "note": "Wu wei zi, the 'five-flavor fruit,' astringes the lungs, calms the mind, and protects the liver.",
+            "id": "schisandra",
+            "tags": [
+              "respiratory",
+              "stress",
+              "sleep"
+            ]
+          },
+          {
+            "name": "Chinese Skullcap",
+            "sci": "Scutellaria baicalensis",
+            "note": "Huang qin root clears damp-heat and has treated fevers, coughs, and dysentery since ancient formularies.",
+            "id": "chineseSkullcap",
+            "tags": [
+              "respiratory",
+              "digestion",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Rehmannia",
+            "sci": "Rehmannia glutinosa",
+            "note": "Steamed di huang tonifies kidney yin and blood, a cornerstone ingredient of many classical formulas.",
+            "id": "rehmannia",
+            "tags": [
+              "energy",
+              "sleep"
+            ]
+          },
+          {
+            "name": "Chrysanthemum",
+            "sci": "Chrysanthemum morifolium",
+            "note": "Ju hua flowers are brewed as tea to clear heat, soothe red eyes, and ease headaches.",
+            "id": "chrysanthemum",
+            "tags": [
+              "headache",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Japanese Honeysuckle",
+            "sci": "Lonicera japonica",
+            "note": "Jin yin hua flower clears heat-toxin and has long treated fevers, sores, and throat infections.",
+            "id": "japaneseHoneysuckle",
+            "tags": [
+              "immunity",
+              "respiratory",
+              "skin"
+            ]
+          },
+          {
+            "name": "Chinese Cinnamon (Cassia)",
+            "sci": "Cinnamomum cassia",
+            "note": "Rou gui bark warms kidney yang and moves stagnant blood to relieve cold-type pain.",
+            "id": "chineseCinnamon",
+            "tags": [
+              "painInflammation",
+              "energy"
+            ]
+          },
+          {
+            "name": "Poria",
+            "sci": "Wolfiporia extensa",
+            "note": "Fu ling, a fungal sclerotium, drains dampness, calms the spirit, and strengthens the spleen in decoctions.",
+            "id": "poria",
+            "tags": [
+              "sleep",
+              "digestion",
+              "stress"
+            ]
+          },
+          {
+            "name": "Chinese Yam",
+            "sci": "Dioscorea polystachya",
+            "note": "Shan yao tuber tonifies spleen, lung, and kidney qi, traditionally simmered into tonic porridges.",
+            "id": "chineseYam",
+            "tags": [
+              "digestion",
+              "energy",
+              "respiratory"
+            ]
+          },
+          {
+            "name": "Bupleurum",
+            "sci": "Bupleurum chinense",
+            "note": "Chai hu root harmonizes the liver and disperses heat, key for alternating fever and chills.",
+            "id": "bupleurum",
+            "tags": [
+              "stress",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Notoginseng",
+            "sci": "Panax notoginseng",
+            "note": "San qi root is applied to stop bleeding and bruising while invigorating blood circulation.",
+            "id": "notoginseng",
+            "tags": [
+              "painInflammation",
+              "skin"
+            ]
+          },
+          {
+            "name": "Codonopsis",
+            "sci": "Codonopsis pilosula",
+            "note": "Dang shen root serves as a gentler ginseng substitute, tonifying qi and strengthening digestion.",
+            "id": "codonopsis",
+            "tags": [
+              "energy",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Fo-Ti (He Shou Wu)",
+            "sci": "Reynoutria multiflora",
+            "note": "He shou wu root is prepared to nourish liver and kidney, said to blacken graying hair.",
+            "id": "foti",
+            "tags": [
+              "energy",
+              "skin"
+            ]
+          },
+          {
+            "name": "Yarrow",
+            "sci": "Achillea millefolium",
+            "note": "Known as soldier's woundwort, used since antiquity to stop bleeding and speed healing of battlefield wounds.",
+            "id": "yarrow",
+            "tags": [
+              "skin",
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "St. John's Wort",
+            "sci": "Hypericum perforatum",
+            "note": "European folk remedy for melancholy and nerve pain, its yellow flowers steeped in oil for wound-healing salves.",
+            "id": "stJohnsWort",
+            "tags": [
+              "stress",
+              "painInflammation",
+              "skin"
+            ]
+          },
+          {
+            "name": "Sage",
+            "sci": "Salvia officinalis",
+            "note": "Latin salvere, to heal, reflects its age-old use gargled for sore throats and taken to ease digestion.",
+            "id": "sage",
+            "tags": [
+              "digestion",
+              "respiratory"
+            ]
+          },
+          {
+            "name": "Thyme",
+            "sci": "Thymus vulgaris",
+            "note": "Mediterranean cough and chest remedy, its volatile oils long used in syrups to loosen stubborn phlegm.",
+            "id": "thyme",
+            "tags": [
+              "respiratory",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Marshmallow",
+            "sci": "Althaea officinalis",
+            "note": "Root and leaf mucilage soothed sore throats, coughs, and irritated gut linings across centuries of European apothecary use.",
+            "id": "marshmallow",
+            "tags": [
+              "respiratory",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Pot Marigold",
+            "sci": "Calendula officinalis",
+            "note": "Bright petals crushed into salves to clean cuts and calm inflamed, slow-healing skin.",
+            "id": "potMarigold",
+            "tags": [
+              "skin",
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "Milk Thistle",
+            "sci": "Silybum marianum",
+            "note": "Mediterranean seeds traditionally chewed or brewed to protect and tonify the liver after heavy feasting.",
+            "id": "milkThistle",
+            "tags": [
+              "digestion"
+            ]
+          },
+          {
+            "name": "Fennel",
+            "sci": "Foeniculum vulgare",
+            "note": "Aniseed-scented seeds chewed after meals to ease colic, bloating, and infant wind for generations.",
+            "id": "fennel",
+            "tags": [
+              "digestion"
+            ]
+          },
+          {
+            "name": "Stinging Nettle",
+            "sci": "Urtica dioica",
+            "note": "Stinging leaves brewed as a spring tonic tea to cleanse the blood and relieve joint aches.",
+            "id": "stingingNettle",
+            "tags": [
+              "painInflammation",
+              "skin",
+              "immunity"
+            ]
+          },
+          {
+            "name": "White Horehound",
+            "sci": "Marrubium vulgare",
+            "note": "Bitter Mediterranean herb boiled into candies and syrups as a classic remedy for coughs and bronchitis.",
+            "id": "whiteHorehound",
+            "tags": [
+              "respiratory",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Comfrey",
+            "sci": "Symphytum officinale",
+            "note": "Nicknamed knitbone, its mashed root and leaves were poulticed onto fractures, sprains, and bruises for centuries.",
+            "id": "comfrey",
+            "tags": [
+              "painInflammation",
+              "skin"
+            ]
+          },
+          {
+            "name": "Feverfew",
+            "sci": "Tanacetum parthenium",
+            "note": "Bitter-leaved herb chewed fresh or brewed as tea, a long-standing folk answer to migraines and headaches.",
+            "id": "feverfew",
+            "tags": [
+              "headache",
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "Mullein",
+            "sci": "Verbascum thapsus",
+            "note": "Downy leaves and flowers infused into oil or tea for coughs, sore throats, and earaches.",
+            "id": "mullein",
+            "tags": [
+              "respiratory",
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "Hawthorn",
+            "sci": "Crataegus monogyna",
+            "note": "Berries, flowers, and leaves steeped as Europe's classic heart tonic for a failing or anxious pulse.",
+            "id": "hawthorn",
+            "tags": [
+              "stress",
+              "sleep"
+            ]
+          },
+          {
+            "name": "Linden (Lime Flower)",
+            "sci": "Tilia cordata",
+            "note": "Fragrant flowers steeped as a calming tea to break fevers and soothe restless nerves.",
+            "id": "linden",
+            "tags": [
+              "sleep",
+              "stress",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Meadowsweet",
+            "sci": "Filipendula ulmaria",
+            "note": "Fragrant flowering herb long used for fevers and joint pain, later yielding the chemical blueprint for aspirin.",
+            "id": "meadowsweet",
+            "tags": [
+              "painInflammation",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Osha Root",
+            "sci": "Ligusticum porteri",
+            "note": "Root chewed or brewed by Rocky Mountain tribes like the Navajo and Ute to ease sore throats and respiratory infections.",
+            "id": "oshaRoot",
+            "tags": [
+              "respiratory",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Black Cohosh",
+            "sci": "Actaea racemosa",
+            "note": "Root used by Cherokee and other Eastern Woodland peoples to ease menstrual cramps and support childbirth.",
+            "id": "blackCohosh",
+            "tags": [
+              "painInflammation",
+              "stress"
+            ]
+          },
+          {
+            "name": "Devil's Club",
+            "sci": "Oplopanax horridus",
+            "note": "Inner bark used by Tlingit, Haida, and other Pacific Northwest Coast peoples to treat arthritis, infections, and diabetes symptoms.",
+            "id": "devilsClub",
+            "tags": [
+              "painInflammation",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Wild Bergamot",
+            "sci": "Monarda fistulosa",
+            "note": "Blackfeet and other Plains tribes brewed leaf tea from this thymol-rich mint to treat colds and respiratory infections.",
+            "id": "wildBergamot",
+            "tags": [
+              "respiratory",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Bearberry (Uva Ursi)",
+            "sci": "Arctostaphylos uva-ursi",
+            "note": "Leaves brewed by numerous Native American tribes as a diuretic and remedy for urinary tract infections.",
+            "id": "bearberry",
+            "tags": [
+              "immunity",
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "Slippery Elm",
+            "sci": "Ulmus rubra",
+            "note": "Cherokee and Iroquois peoples used the mucilaginous inner bark to soothe sore throats and heal wounds.",
+            "id": "slipperyElm",
+            "tags": [
+              "digestion",
+              "respiratory",
+              "skin"
+            ]
+          },
+          {
+            "name": "Cascara Sagrada",
+            "sci": "Frangula purshiana",
+            "note": "Pacific Northwest tribes dried and aged the bark of this buckthorn as a reliable natural laxative.",
+            "id": "cascaraSagrada",
+            "tags": [
+              "digestion"
+            ]
+          },
+          {
+            "name": "Cinchona",
+            "sci": "Cinchona officinalis",
+            "note": "Andean Quechua peoples used the bitter bark to treat fevers long before it became the source of quinine.",
+            "id": "cinchona",
+            "tags": [
+              "immunity",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Cat's Claw",
+            "sci": "Uncaria tomentosa",
+            "note": "Asháninka and other Peruvian Amazon peoples brewed this woody vine's bark for arthritis and immune support.",
+            "id": "catsClaw",
+            "tags": [
+              "painInflammation",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Coca",
+            "sci": "Erythroxylum coca",
+            "note": "Quechua and Aymara peoples of the Andes have chewed the leaves for millennia to combat altitude sickness and fatigue.",
+            "id": "coca",
+            "tags": [
+              "energy",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Dragon's Blood",
+            "sci": "Croton lechleri",
+            "note": "Amazonian peoples apply this tree's red latex sap directly to cuts and wounds as a natural antiseptic.",
+            "id": "dragonsBlood",
+            "tags": [
+              "skin",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Pau d'Arco",
+            "sci": "Tabebuia impetiginosa",
+            "note": "Inner bark brewed as tea by Indigenous Amazonian peoples to treat infections, fevers, and skin conditions.",
+            "id": "pauDarco",
+            "tags": [
+              "immunity",
+              "skin"
+            ]
+          },
+          {
+            "name": "Boldo",
+            "sci": "Peumus boldus",
+            "note": "Mapuche healers in Chile have long used boldo leaf tea to support liver function and ease digestion.",
+            "id": "boldo",
+            "tags": [
+              "digestion"
+            ]
+          },
+          {
+            "name": "Copaiba",
+            "sci": "Copaifera officinalis",
+            "note": "Amazonian peoples tap this tree's resin and apply it topically to wounds as an anti-inflammatory remedy.",
+            "id": "copaiba",
+            "tags": [
+              "painInflammation",
+              "skin"
+            ]
+          },
+          {
+            "name": "Guarana",
+            "sci": "Paullinia cupana",
+            "note": "Sateré-Mawé people of the Brazilian Amazon domesticated this vine, roasting its seeds for sustained energy and focus.",
+            "id": "guarana",
+            "tags": [
+              "energy"
+            ]
+          },
+          {
+            "name": "Black Seed",
+            "sci": "Nigella sativa",
+            "note": "Known as 'the seed of blessing' in Prophetic medicine, its oil treats asthma, digestive upset, and skin infections.",
+            "id": "blackSeed",
+            "tags": [
+              "respiratory",
+              "digestion",
+              "skin"
+            ]
+          },
+          {
+            "name": "Frankincense",
+            "sci": "Boswellia sacra",
+            "note": "Tapped from Arabian trees for millennia, its resin treats joint inflammation, wounds, and respiratory complaints.",
+            "id": "frankincense",
+            "tags": [
+              "painInflammation",
+              "respiratory",
+              "skin"
+            ]
+          },
+          {
+            "name": "Myrrh",
+            "sci": "Commiphora myrrha",
+            "note": "Harvested across the Horn of Africa and Arabia, its resin disinfects wounds and soothes sore gums and throats.",
+            "id": "myrrh",
+            "tags": [
+              "skin",
+              "respiratory"
+            ]
+          },
+          {
+            "name": "Senna",
+            "sci": "Senna alexandrina",
+            "note": "Egyptian physicians since antiquity have relied on its pods and leaves as a powerful, reliable laxative.",
+            "id": "senna",
+            "tags": [
+              "digestion"
+            ]
+          },
+          {
+            "name": "Hibiscus (Karkade)",
+            "sci": "Hibiscus sabdariffa",
+            "note": "Steeped as karkade across Sudan and Egypt, its calyces are a folk remedy for high blood pressure and fever.",
+            "id": "hibiscus",
+            "tags": [
+              "immunity"
+            ]
+          },
+          {
+            "name": "Moringa",
+            "sci": "Moringa oleifera",
+            "note": "Long used across Sub-Saharan Africa, its leaves treat malnutrition and inflammation and support nursing mothers' milk supply.",
+            "id": "moringa",
+            "tags": [
+              "immunity",
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "Baobab",
+            "sci": "Adansonia digitata",
+            "note": "Africa's 'tree of life' yields fruit pulp and bark traditionally used against fever, diarrhea, and malaria.",
+            "id": "baobab",
+            "tags": [
+              "immunity",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Rooibos",
+            "sci": "Aspalathus linearis",
+            "note": "South Africa's Khoisan and Cape Dutch settlers brewed this reddish bush as a remedy for allergies and colic.",
+            "id": "rooibos",
+            "tags": [
+              "immunity",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Buchu",
+            "sci": "Agathosma betulina",
+            "note": "Khoisan healers in the Cape used its pungent leaves to treat urinary tract infections and kidney ailments.",
+            "id": "buchu",
+            "tags": [
+              "immunity"
+            ]
+          },
+          {
+            "name": "Cancer Bush (Sutherlandia)",
+            "sci": "Lessertia frutescens",
+            "note": "Known to the Khoi as 'kankerbos,' this Southern African shrub is a traditional tonic for stress, fatigue, and immune support.",
+            "id": "cancerBush",
+            "tags": [
+              "stress",
+              "energy",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Umckaloabo (African Geranium)",
+            "sci": "Pelargonium sidoides",
+            "note": "Xhosa and Zulu healers in South Africa used its tuberous root to treat coughs, bronchitis, and tuberculosis.",
+            "id": "umckaloabo",
+            "tags": [
+              "respiratory"
+            ]
+          },
+          {
+            "name": "Hoodia",
+            "sci": "Hoodia gordonii",
+            "note": "San hunters of the Kalahari chewed this spiny succulent to suppress hunger and thirst on long treks.",
+            "id": "hoodia",
+            "tags": [
+              "energy"
+            ]
+          },
+          {
+            "name": "Henna",
+            "sci": "Lawsonia inermis",
+            "note": "Beyond body art, Middle Eastern and North African folk medicine applies its leaf paste to treat fungal skin infections.",
+            "id": "henna",
+            "tags": [
+              "skin"
+            ]
+          },
+          {
+            "name": "Mastic",
+            "sci": "Pistacia lentiscus",
+            "note": "Chewed since antiquity across the Eastern Mediterranean, this tree resin soothes stomach ulcers and digestive complaints.",
+            "id": "mastic",
+            "tags": [
+              "digestion"
+            ]
+          },
+          {
+            "name": "Carob",
+            "sci": "Ceratonia siliqua",
+            "note": "Middle Eastern folk medicine ground its pods into a remedy for childhood diarrhea and digestive upset.",
+            "id": "carob",
+            "tags": [
+              "digestion"
+            ]
+          }
+        ]
+      },
+      "floweringPerennials": {
+        "title": "Flowering Perennials",
+        "desc": "Blooms that return year after year.",
+        "intro": "Flowering perennials are the backbone of a garden that keeps giving: unlike annuals, they die back in winter and regrow from the same roots, rhizomes, or tubers each spring. Many settle in and spread into fuller clumps over the years, so one planting can reward you with more blooms every season. This collection gathers well-loved, easy-to-find perennials that anchor beds and borders with reliable, repeat-blooming color.",
+        "species": [
+          {
+            "name": "Peony",
+            "sci": "Paeonia lactiflora",
+            "note": "Long-lived tuberous roots can bloom in the same spot for fifty years or more, largely undisturbed."
+          },
+          {
+            "name": "Daylily",
+            "sci": "Hemerocallis fulva",
+            "note": "Despite the name, each fan multiplies into thick clumps that flower reliably for generations."
+          },
+          {
+            "name": "Purple Coneflower",
+            "sci": "Echinacea purpurea",
+            "note": "This prairie native returns from a sturdy taproot, self-seeding into ever-larger colonies over time."
+          },
+          {
+            "name": "Bearded Iris",
+            "sci": "Iris germanica",
+            "note": "Fleshy rhizomes spread just below the soil surface, splitting into new fans that rebloom each spring."
+          },
+          {
+            "name": "Black-eyed Susan",
+            "sci": "Rudbeckia fulgida",
+            "note": "Spreads by rhizomes and self-seeding to form dependable golden drifts that return each summer."
+          },
+          {
+            "name": "Garden Phlox",
+            "sci": "Phlox paniculata",
+            "note": "Sturdy clumping stems die back to the roots each fall, then resurface fuller the next year."
+          },
+          {
+            "name": "English Lavender",
+            "sci": "Lavandula angustifolia",
+            "note": "Woody perennial stems survive winter dormancy and leaf back out to flower again every summer."
+          }
+        ]
+      },
+      "oceanAndRiverFish": {
+        "title": "Ocean & River Fish",
+        "desc": "Sixteen waters, one lens",
+        "intro": "From coral reefs to cold mountain rivers, these are the fish people most often photograph and ask about. Scientific names stay in Latin worldwide, so a name you learn here works on any coast.",
+        "species": [
+          {
+            "name": "Clownfish",
+            "sci": "Amphiprion ocellaris",
+            "note": "Lives inside sea anemones whose sting it is immune to, trading protection for cleaning. Every clownfish is born male and the dominant one becomes female.",
+            "id": "clownfish"
+          },
+          {
+            "name": "Rainbow Trout",
+            "sci": "Oncorhynchus mykiss",
+            "note": "Native to cold rivers of the Pacific coast and now farmed on every continent except Antarctica. Its pink flesh comes from the crustaceans it eats.",
+            "id": "rainbowTrout"
+          },
+          {
+            "name": "Atlantic Salmon",
+            "sci": "Salmo salar",
+            "note": "Hatches in freshwater, spends years at sea, then finds the exact river it was born in to spawn. Its species name means \"the leaper\".",
+            "id": "atlanticSalmon"
+          },
+          {
+            "name": "Northern Pike",
+            "sci": "Esox lucius",
+            "note": "An ambush hunter that stays motionless among weeds then strikes in a fraction of a second. The duck-bill snout and rear-set fins are its giveaway.",
+            "id": "northernPike"
+          },
+          {
+            "name": "Common Carp",
+            "sci": "Cyprinus carpio",
+            "note": "Farmed for over two thousand years and now found on every continent but Antarctica — prized food in some countries, an invasive pest in others.",
+            "id": "commonCarp"
+          },
+          {
+            "name": "Blue Tang",
+            "sci": "Paracanthurus hepatus",
+            "note": "A reef surgeonfish with a scalpel-sharp spine near the tail it flicks out in defence. Bright blue as an adult, bright yellow as a juvenile.",
+            "id": "blueTang"
+          },
+          {
+            "name": "Largemouth Bass",
+            "sci": "Micropterus salmoides",
+            "note": "The most targeted freshwater sport fish in the world. You can tell it from the smallmouth because its jaw extends past the eye.",
+            "id": "largemouthBass"
+          },
+          {
+            "name": "Yellowfin Tuna",
+            "sci": "Thunnus albacares",
+            "note": "Crosses whole oceans and can hold its body warmer than the water around it, which is why it swims fast in cold depths.",
+            "id": "yellowfinTuna"
+          },
+          {
+            "name": "Zebrafish",
+            "sci": "Danio rerio",
+            "note": "A small striped river fish from South Asia that became one of science's most studied animals — its transparent embryos let researchers watch organs form.",
+            "id": "zebrafish"
+          },
+          {
+            "name": "Red Lionfish",
+            "sci": "Pterois volitans",
+            "note": "Beautiful and venomous, with spines that deliver a painful sting. Native to the Indo-Pacific and a serious invader in the Atlantic and Caribbean.",
+            "id": "redLionfish"
+          }
+        ]
+      },
+      "birdsOfTheWorld": {
+        "title": "Birds of the World",
+        "desc": "Ten you will actually meet",
+        "intro": "Birds are the wildlife most people can photograph from a window. These ten span six continents and are among the most widely recognised species on earth — good practice for a sharp eye.",
+        "species": [
+          {
+            "name": "Barn Swallow",
+            "sci": "Hirundo rustica",
+            "note": "The most widespread swallow on earth, breeding across the northern hemisphere and wintering in the south. Its deeply forked tail is unmistakable in flight.",
+            "id": "barnSwallow"
+          },
+          {
+            "name": "House Sparrow",
+            "sci": "Passer domesticus",
+            "note": "Followed humans out of the Middle East into nearly every city on the planet. Males wear a black bib; females are plain sandy brown.",
+            "id": "houseSparrow"
+          },
+          {
+            "name": "Common Kingfisher",
+            "sci": "Alcedo atthis",
+            "note": "A flash of electric blue over slow rivers across Europe, Asia and North Africa. It dives head-first and can take fish from a metre underwater.",
+            "id": "commonKingfisher"
+          },
+          {
+            "name": "Peregrine Falcon",
+            "sci": "Falco peregrinus",
+            "note": "The fastest animal alive, exceeding 300 km/h in a hunting dive. Found on every continent except Antarctica, increasingly nesting on skyscrapers.",
+            "id": "peregrineFalcon"
+          },
+          {
+            "name": "Great Blue Heron",
+            "sci": "Ardea herodias",
+            "note": "Stands motionless in shallow water for minutes, then spears a fish with a strike too fast to follow. Flies with its neck folded into an S.",
+            "id": "greatBlueHeron"
+          },
+          {
+            "name": "Rock Pigeon",
+            "sci": "Columba livia",
+            "note": "The city pigeon, descended from cliff-nesting birds — which is why ledges and window sills suit it so well. Both parents feed the young on \"crop milk\".",
+            "id": "rockPigeon"
+          },
+          {
+            "name": "European Robin",
+            "sci": "Erithacus rubecula",
+            "note": "Bold enough to follow a gardener for turned-up worms. The orange breast is worn by both sexes and defended year-round with song.",
+            "id": "europeanRobin"
+          },
+          {
+            "name": "Mallard",
+            "sci": "Anas platyrhynchos",
+            "note": "The ancestor of almost every domestic duck. The green-headed male is famous, but only the female makes the classic loud quack.",
+            "id": "mallard"
+          },
+          {
+            "name": "Scarlet Macaw",
+            "sci": "Ara macao",
+            "note": "A large parrot of Central and South American rainforests that can live over fifty years and pairs for life. Its beak cracks nuts no other bird can open.",
+            "id": "scarletMacaw"
+          },
+          {
+            "name": "Emperor Penguin",
+            "sci": "Aptenodytes forsteri",
+            "note": "Breeds through the Antarctic winter, the males huddling in the dark with a single egg balanced on their feet for two months without eating.",
+            "id": "emperorPenguin"
+          }
+        ]
+      },
+      "gardenInsects": {
+        "title": "Neighbours Underfoot",
+        "desc": "Ten common invertebrates, properly looked at",
+        "intro": "The ten animals here live within a few metres of most front doors, and nearly everyone has looked at all of them without ever being told what they were doing. Underneath the familiarity sits chemical warfare, folded origami wings, intercontinental navigation and an ant colony 6,000 kilometres long.",
+        "species": [
+          {
+            "name": "Seven-spot Ladybird",
+            "sci": "Coccinella septempunctata",
+            "note": "Squeeze one and it bleeds from its knees on purpose — a bitter yellow fluid that makes birds drop it.",
+            "id": "sevenSpotLadybird"
+          },
+          {
+            "name": "Common Earwig",
+            "sci": "Forficula auricularia",
+            "note": "Its hindwings unfold to more than ten times their packed size, one of the tightest folds in nature — and it barely ever flies.",
+            "id": "commonEarwig"
+          },
+          {
+            "name": "Common Pill Woodlouse",
+            "sci": "Armadillidium vulgare",
+            "note": "Not an insect at all but a crustacean — a land-living relative of crabs that still breathes with modified gills.",
+            "id": "commonPillWoodlouse"
+          },
+          {
+            "name": "House Fly",
+            "sci": "Musca domestica",
+            "note": "It tastes with its feet, so it already knows what it has landed on before its mouthparts get there.",
+            "id": "houseFly"
+          },
+          {
+            "name": "Garden Snail",
+            "sci": "Cornu aspersum",
+            "note": "It feeds by dragging a toothed ribbon across leaves, and grows replacement teeth from the back as the front row wears away.",
+            "id": "gardenSnail"
+          },
+          {
+            "name": "Western Honey Bee",
+            "sci": "Apis mellifera",
+            "note": "A queen mates in the air over a few days, never again, and lays from that stored sperm for the rest of her life.",
+            "id": "westernHoneyBee"
+          },
+          {
+            "name": "Painted Lady",
+            "sci": "Vanessa cardui",
+            "note": "No individual completes the migration circuit; it takes roughly six generations to get from tropical Africa to Europe and back.",
+            "id": "paintedLady"
+          },
+          {
+            "name": "Cellar Spider",
+            "sci": "Pholcus phalangioides",
+            "note": "It hunts other spiders by plucking their webs like a trapped insect, then attacks the owner that comes to investigate.",
+            "id": "cellarSpider"
+          },
+          {
+            "name": "Argentine Ant",
+            "sci": "Linepithema humile",
+            "note": "Workers from Spain, California and Japan, thousands of kilometres apart, meet without fighting: they are treated as one colony.",
+            "id": "argentineAnt"
+          },
+          {
+            "name": "Common Earthworm",
+            "sci": "Lumbricus terrestris",
+            "note": "Darwin spent his last years studying earthworms and published a book about them six months before he died.",
+            "id": "commonEarthworm"
+          }
+        ]
+      },
+      "fungiOfTheWorld": {
+        "title": "Neither Plant Nor Animal",
+        "desc": "Ten fungi that quietly run the world",
+        "intro": "Fungi sit closer to animals than to plants on the tree of life, and the mushroom you see is only the fruit of a network of threads spreading unseen through soil, wood or a living insect. These ten include the one that kills more people than any other mushroom, an organism covering nine square kilometres of Oregon, and the mould that started the antibiotic era.",
+        "species": [
+          {
+            "name": "Fly agaric",
+            "sci": "Amanita muscaria",
+            "note": "The red-and-white toadstool of every fairy tale is real, is poisonous, and contains almost none of the toxin that was named after it.",
+            "id": "flyAgaric"
+          },
+          {
+            "name": "Death cap",
+            "sci": "Amanita phalloides",
+            "note": "Responsible for the large majority of fatal mushroom poisonings worldwide, and cooking, drying or freezing does nothing at all to its toxin.",
+            "id": "deathCap"
+          },
+          {
+            "name": "Button mushroom",
+            "sci": "Agaricus bisporus",
+            "note": "White button, cremini and portobello are not three mushrooms but one species, separated only by strain and by how long it was left to grow.",
+            "id": "buttonMushroom"
+          },
+          {
+            "name": "Brewer's yeast",
+            "sci": "Saccharomyces cerevisiae",
+            "note": "A single-celled fungus behind bread, beer and wine, and the first organism with a nucleus to have its entire genome sequenced, in 1996.",
+            "id": "brewersYeast"
+          },
+          {
+            "name": "Zombie-ant fungus",
+            "sci": "Ophiocordyceps unilateralis",
+            "note": "It walks an infected ant to a specific height above the forest floor, makes it bite down and die there, then grows a stalk out of its head.",
+            "id": "zombieAntFungus"
+          },
+          {
+            "name": "Dark honey fungus",
+            "sci": "Armillaria ostoyae",
+            "note": "A single individual in eastern Oregon covers roughly nine square kilometres, making it by area the largest organism ever measured.",
+            "id": "humongousFungus"
+          },
+          {
+            "name": "Bitter oyster",
+            "sci": "Panellus stipticus",
+            "note": "A small, tough, fan-shaped gill fungus whose gills glow green in the dark, but only if it came from the right side of the Atlantic.",
+            "id": "bitterOyster"
+          },
+          {
+            "name": "Penicillium mould",
+            "sci": "Penicillium rubens",
+            "note": "The blue-green mould that contaminated Alexander Fleming's plate in 1928 was only correctly identified as this species in 2011.",
+            "id": "penicilliumMould"
+          },
+          {
+            "name": "Amphibian chytrid",
+            "sci": "Batrachochytrium dendrobatidis",
+            "note": "A fungus too small to see has driven more species toward extinction than any other disease ever documented.",
+            "id": "chytridFungus"
+          },
+          {
+            "name": "Alba white truffle",
+            "sci": "Tuber magnatum",
+            "note": "It fruits entirely underground, has defeated growers for decades, and a single 1.5 kg specimen went for about US$330,000 at a charity auction in 2007.",
+            "id": "whiteTruffle"
+          }
+        ]
+      },
+      "fromFieldToPlate": {
+        "title": "Where Dinner Began",
+        "desc": "Ten staples and where they really began",
+        "intro": "Almost nothing on a plate grows where it was born. These ten crops were domesticated in river valleys, highland forests and swamps thousands of years ago, then carried across oceans until the biggest harvests ended up on the wrong continent entirely.",
+        "species": [
+          {
+            "name": "Maize",
+            "sci": "Zea mays",
+            "note": "Its wild ancestor carries about a dozen kernels, each sealed in a stone-hard case — nothing like a cob.",
+            "id": "maize"
+          },
+          {
+            "name": "Cassava",
+            "sci": "Manihot esculenta",
+            "note": "Domesticated on the edge of the Amazon, it now feeds more people in Africa than in South America.",
+            "id": "cassava"
+          },
+          {
+            "name": "Arabica Coffee",
+            "sci": "Coffea arabica",
+            "note": "Arabica is not an ancient species but a natural hybrid of two other coffees, with startlingly little genetic variation.",
+            "id": "arabicaCoffee"
+          },
+          {
+            "name": "Soybean",
+            "sci": "Glycine max",
+            "note": "Most of the world's soy never reaches a human plate directly — it is crushed into oil and livestock feed.",
+            "id": "soybean"
+          },
+          {
+            "name": "Sugarcane",
+            "sci": "Saccharum officinarum",
+            "note": "It was first grown in New Guinea as a stem to chew; sugar refining and ethanol came thousands of years later.",
+            "id": "sugarcane"
+          },
+          {
+            "name": "Bread Wheat",
+            "sci": "Triticum aestivum",
+            "note": "Bread wheat never existed in the wild — it appeared in farmers' fields when a cultivated wheat crossed with a roadside grass.",
+            "id": "breadWheat"
+          },
+          {
+            "name": "Asian Rice",
+            "sci": "Oryza sativa",
+            "note": "Rice was domesticated twice on two continents — once beside the Yangtze, and again from a different wild grass in West Africa.",
+            "id": "asianRice"
+          },
+          {
+            "name": "Potato",
+            "sci": "Solanum tuberosum",
+            "note": "Every potato grown in Europe, Asia and Africa traces back to the highlands around Lake Titicaca.",
+            "id": "potato"
+          },
+          {
+            "name": "Banana",
+            "sci": "Musa acuminata",
+            "note": "Wild bananas are packed with hard, pea-sized seeds; the seedless fruit exists only because people keep replanting sterile clones.",
+            "id": "banana"
+          },
+          {
+            "name": "Sweet Orange",
+            "sci": "Citrus × sinensis",
+            "note": "The sweet orange is not a wild species: it is a pomelo-mandarin cross that has been copied by grafting ever since.",
+            "id": "sweetOrange"
+          }
+        ]
+      },
+      "heardNotSeen": {
+        "title": "Heard Before Seen",
+        "desc": "Ten animals you meet by ear first",
+        "intro": "Most wildlife encounters begin as a noise coming from somewhere you cannot see. These ten — owls and frogs, a cicada, two singing insects, a monkey and a fox — are all far easier to find by ear than by eye, and every one of them is saying something specific.",
+        "species": [
+          {
+            "name": "Tawny Owl",
+            "sci": "Strix aluco",
+            "note": "The famous 'twit-twoo' is two owls talking: the female's sharp ke-wick answered by the male's quavering hoot.",
+            "id": "tawnyOwl"
+          },
+          {
+            "name": "Common Cuckoo",
+            "sci": "Cuculus canorus",
+            "note": "Only the male says cuck-oo; the female answers with a bubbling water-chuckle that sends small birds into a panic.",
+            "id": "commonCuckoo"
+          },
+          {
+            "name": "Common Nightingale",
+            "sci": "Luscinia megarhynchos",
+            "note": "Sings hardest between midnight and 3 a.m., and only unpaired males do it — once a female stays, the night song stops.",
+            "id": "commonNightingale"
+          },
+          {
+            "name": "European Tree Frog",
+            "sci": "Hyla arborea",
+            "note": "A five-centimetre frog with a throat sac wider than its own head, and a chorus that carries close to a kilometre on a still night.",
+            "id": "europeanTreeFrog"
+          },
+          {
+            "name": "American Bullfrog",
+            "sci": "Lithobates catesbeianus",
+            "note": "A roughly 200-hertz bass jug-o-rum that travels the better part of a kilometre over open water.",
+            "id": "americanBullfrog"
+          },
+          {
+            "name": "Ash Cicada",
+            "sci": "Cicada orni",
+            "note": "Sings only when hot enough: the chorus builds as the morning heats up and cuts out when a cloud crosses the sun.",
+            "id": "cicadaOrni"
+          },
+          {
+            "name": "House Cricket",
+            "sci": "Acheta domesticus",
+            "note": "The chirp is two wings sawing together — a scraper dragged across a file of over a hundred teeth, at around 4–5 kHz.",
+            "id": "houseCricket"
+          },
+          {
+            "name": "Great Green Bush-cricket",
+            "sci": "Tettigonia viridissima",
+            "note": "A dry, unbroken rattle from dusk until well after midnight, sometimes running for hours with no real pause.",
+            "id": "greatGreenBushCricket"
+          },
+          {
+            "name": "Black Howler",
+            "sci": "Alouatta caraya",
+            "note": "The dawn roar carries up to about five kilometres through forest, among the loudest calls made by any land animal.",
+            "id": "blackHowlerMonkey"
+          },
+          {
+            "name": "Red Fox",
+            "sci": "Vulpes vulpes",
+            "note": "The winter scream usually blamed on vixens comes from both sexes, and it is a mating call rather than distress.",
+            "id": "redFox"
+          }
+        ]
+      }
+    },
+    "species": {
+      "fiddleLeafFig": {
+        "name": "Fiddle Leaf Fig",
+        "sci": "Ficus lyrata",
+        "light": "Bright, indirect light",
+        "water": "Weekly; let the top 1-2 inches of soil dry out",
+        "difficulty": "Challenging",
+        "overview": "Native to the lowland tropical rainforests of West Africa, the fiddle leaf fig is prized for its large, glossy, violin-shaped leaves with dramatic veining that made it an interior-design icon. It's grown as a dramatic floor plant that can reach ceiling height indoors, but it's famously particular about consistency in light, water, and temperature.",
+        "funFact": "In its native habitat, Ficus lyrata can grow into a full-sized tree over 40 feet tall with leaves nearly twice the size of the ones we see indoors, and it can even produce small, inedible figs pollinated by a specific species of fig wasp - something it essentially never does as a houseplant."
+      },
+      "bostonFern": {
+        "name": "Boston Fern",
+        "sci": "Nephrolepis exaltata",
+        "light": "Bright to medium, indirect light",
+        "water": "Keep soil evenly moist; never let it fully dry out",
+        "difficulty": "Moderate",
+        "overview": "Boston fern is a lush, arching cultivar of the sword fern, a species found in humid tropical regions worldwide. Its feathery, cascading fronds made it a favorite for hanging baskets and shaded porches since the Victorian era, though it demands steady moisture and high humidity to stay happy.",
+        "funFact": "The 'Bostoniensis' cultivar wasn't bred on purpose - it was a natural mutation discovered in 1894 in a shipment of sword ferns sent from Philadelphia to a Boston florist, and it was propagated from that single sport into the houseplant we know today."
+      },
+      "jadePlant": {
+        "name": "Jade Plant",
+        "sci": "Crassula ovata",
+        "light": "Full sun to bright light",
+        "water": "Sparingly; let soil dry out completely between waterings",
+        "difficulty": "Easy",
+        "overview": "Jade plant is a hardy succulent native to the semi-arid regions of South Africa and Mozambique, recognizable by its thick, glossy oval leaves and woody, branching stems that give it a miniature-tree look. It's a beloved beginner plant and is often passed down as a family heirloom, sometimes nicknamed the 'lucky plant' in feng shui traditions.",
+        "funFact": "Given the right conditions, jade plants can live for 50 to 100 years, and mature specimens will occasionally reward growers with clusters of small, star-shaped white or pink flowers, usually triggered by cool nights and a dry spell."
+      },
+      "calathea": {
+        "name": "Calathea",
+        "sci": "Goeppertia orbifolia",
+        "light": "Medium, indirect light",
+        "water": "Keep lightly moist with filtered or distilled water",
+        "difficulty": "Challenging",
+        "overview": "Native to the rainforests of Bolivia, this striking member of the prayer-plant family (Marantaceae) is grown for its oversized, rounded leaves striped in silvery and dark green tones. Like its relatives, its leaves rise and fold at night and lower again during the day, a movement called nyctinasty that makes it feel almost alive.",
+        "funFact": "This species used to be classified as Calathea orbifolia, but in 2012 genetic and morphological research split most Calathea species off into the genus Goeppertia - though nurseries and plant lovers still overwhelmingly use the old 'Calathea' name."
+      }
+    },
+    "topicSpeciesSectionTitle": "Species in This Collection",
+    "symptomFilterTitle": "What's bothering you?",
+    "symptomFilterAll": "All",
+    "symptomFilterEmpty": "No herbs tagged for this yet.",
+    "viewHerbLabel": "View {{name}}",
+    "herbDisclaimer": "Informational content based on traditional and folk-medicine use. Not medical advice - consult a doctor before using any herb to treat a health condition.",
+    "herbDetailsLoadError": "Could not load this herb's details. Please try again.",
+    "preparationLabel": "How to Prepare",
+    "benefitsLabel": "Benefits",
+    "herbSubscribeCtaTitle": "Enjoying this guide?",
+    "herbSubscribeCtaBody": "Subscribe to unlock unlimited plant, insect, mushroom and crop identifications.",
+    "herbAlreadySubscribedCheck": "Already subscribed? Tap to check again",
+    "symptoms": {
+      "headache": "Headache",
+      "digestion": "Digestion",
+      "sleep": "Sleep",
+      "stress": "Stress & Anxiety",
+      "immunity": "Immune Support",
+      "painInflammation": "Pain & Inflammation",
+      "respiratory": "Cough & Respiratory",
+      "skin": "Skin & Wounds",
+      "energy": "Energy & Fatigue"
+    },
+    "speciesLightLabel": "Light",
+    "speciesWaterLabel": "Water",
+    "speciesDifficultyLabel": "Difficulty",
+    "funFactLabel": "Fun Fact"
+  },
+  "botanist": {
+    "headerTitle": "Dr. Helena Marques",
+    "headerSubtitle": "Agronomist · Botany professor",
+    "intro": "Hello! I am Helena, agronomist and botany professor. Tell me what is going on with your plant — or ask me anything about soil, pests, watering or nature in general.",
+    "placeholder": "Ask Helena…",
+    "typing": "Helena is typing…",
+    "sendLabel": "Send message",
+    "askLabel": "Ask: {{question}}",
+    "suggestions": [
+      "My leaves are turning yellow",
+      "How often should I water it?",
+      "Is this plant safe for cats?",
+      "What soil should I use?"
+    ],
+    "errorOffline": "You are offline. I will be right here when the connection comes back.",
+    "errorRateLimited": "Give me a moment — too many questions at once. Try again in a few minutes.",
+    "errorNotConfigured": "The specialist is not available yet. It is being set up.",
+    "errorGeneric": "I could not answer just now. Please try again in a moment."
+  },
+  "store": {
+    "title": "Rewards",
+    "intro": "Spend the tokens you earn identifying species. Every reward here works the moment you redeem it.",
+    "owned": "Owned",
+    "open": "Open",
+    "redeem": "Redeem",
+    "redeemLabel": "Redeem for {{cost}} tokens",
+    "redeemedTitle": "Redeemed!",
+    "notEnoughTitle": "Not enough tokens",
+    "notEnoughBody": "You need {{cost}} tokens for this one. Keep identifying to earn more.",
+    "shieldsHeld": "{{count}} shield(s) saved",
+    "earnHint": "You earn 5 tokens per identification and 15 per achievement unlocked.",
+    "download": "Download",
+    "downloadErrorTitle": "Download failed",
+    "downloadErrorBody": "Could not save the file. Try again from a browser.",
+    "items": {
+      "streakShield": {
+        "title": "Streak Shield",
+        "description": "Protects your streak if you miss one day. Stacks — buy more than one.",
+        "redeemedBody": "Your streak is protected. If you miss a day, the shield covers it automatically."
+      },
+      "wallpapers": {
+        "title": "Botanical Wallpapers",
+        "description": "Three exclusive 1080×1920 wallpapers to set on your phone.",
+        "redeemedBody": "Your wallpapers are ready. Tap Download on the one you want."
+      },
+      "naturalistBadge": {
+        "title": "Naturalist Badge",
+        "description": "A permanent badge on your profile. Shows you have been at this a while.",
+        "redeemedBody": "Your badge is now on your profile.",
+        "ownedBody": "You already carry this badge — it appears on your profile."
+      }
+    }
+  },
+  "missions": {
+    "title": "Today’s missions",
+    "rewardEach": "+{{tokens}} each",
+    "allDone": "All done for today — come back tomorrow!",
+    "pool": {
+      "scanAny2": "Identify 2 species today",
+      "scanAny3": "Identify 3 species today",
+      "scanPlant": "Identify a plant or tree",
+      "scanInsect": "Identify an insect",
+      "scanMushroom": "Identify a mushroom",
+      "scanFish": "Identify a fish",
+      "scanBird": "Identify a bird",
+      "saveOne": "Save a find to your collection",
+      "saveTwo": "Save 2 finds to your collection",
+      "shareOne": "Share an identification",
+      "openDiscover": "Visit the Discover tab"
+    }
+  },
+  "share": {
+    "message": "I identified a {{category}} with NatureLens: {{name}}{{scientific}}{{confidence}}\n\nIdentify plants, insects, mushrooms, fish and birds from a photo:\n{{url}}",
+    "confidenceLine": "{{confidence}}% confidence"
+  },
+  "onboarding": {
+    "skip": "Skip",
+    "next": "Next",
+    "start": "Start identifying",
+    "what": {
+      "title": "Point. Shoot. Know.",
+      "body": "Photograph anything alive and NatureLens tells you what it is in seconds — with reference photos so you can confirm it yourself."
+    },
+    "collect": {
+      "title": "Build your own field journal",
+      "body": "Every find can be saved to your collection, tagged and revisited later. Earn tokens and unlock rewards as you go."
+    },
+    "free": {
+      "title": "Your first scan is free",
+      "body": "Try one identification in each category at no cost. Subscribe only when you want unlimited scans."
+    }
+  },
+  "recap": {
+    "title": "Your month in nature",
+    "entrySubtitle": "See your recap and share it",
+    "headline": "You met {{count}} different species",
+    "emptyTitle": "Nothing to recap yet",
+    "emptyBody": "Identify and save something this month and your recap will appear here.",
+    "byCategory": "By category",
+    "highlight": "Highlight of the month",
+    "share": "Share my recap",
+    "shareTitle": "My month in nature",
+    "shareMessage": "In {{month}} I identified {{total}} finds — {{species}} different species — with NatureLens 🌿\n\nIdentify plants, insects, mushrooms, fish and birds from a photo:\n{{url}}",
+    "streakLine": "Current streak: {{current}} days · best ever: {{longest}}",
+    "stats": {
+      "total": "Finds saved",
+      "species": "Species",
+      "categories": "Categories",
+      "days": "Active days"
+    }
+  },
+  "subscription": {
+    "title": "My subscription",
+    "entrySubtitle": "Status, plans and cancellation",
+    "activeTitle": "Premium active",
+    "activeBody": "Unlimited identifications in every category. Thank you for supporting NatureLens.",
+    "freeTitle": "Free plan",
+    "freeBody": "One free identification per category. Subscribe for unlimited scans.",
+    "unknownTitle": "Could not check right now",
+    "unknownBody": "We could not reach the server. If you are subscribed, your access is unaffected — try again in a moment.",
+    "plansTitle": "Plans",
+    "manageTitle": "Manage or cancel",
+    "manageBody": "Your subscription is billed by Hotmart, so cancellation happens in your Hotmart account — not here. Cancelling there stops future charges and your access stays active until the end of the paid period.",
+    "openHotmart": "Open my Hotmart account"
+  },
+  "notifications": {
+    "row": "Notifications",
+    "on": "On",
+    "off": "Off",
+    "enabledTitle": "Notifications on",
+    "enabledBody": "You will get reminders to water your plants and to keep your streak alive.",
+    "deniedTitle": "Notifications blocked",
+    "deniedBody": "You blocked notifications for this site. To turn them back on, allow notifications in your browser settings for naturelensapp.cloud.",
+    "errorTitle": "Could not enable",
+    "errorBody": "Something went wrong turning notifications on. Try again in a moment."
+  },
+  "fieldGuide": {
+    "habitat": "Habitat",
+    "curiosity": "Did you know",
+    "identifyCta": "Identify one with the camera",
+    "photoCredit": "Photo: Wikimedia Commons · tap to see the source",
+    "textCredit": "Text: Wikipedia · tap to read more"
+  },
+  "backup": {
+    "exportRow": "Back up my collection",
+    "importRow": "Restore from a backup",
+    "exportEmptyTitle": "Nothing to back up yet",
+    "exportEmptyBody": "Save your first find and the backup will have something to keep.",
+    "importDoneTitle": "Collection restored",
+    "importDoneBody": "{{added}} item(s) added. {{skipped}} were already here.",
+    "importFailedTitle": "Could not restore",
+    "errorWrongFile": "That file is not a NatureLens backup.",
+    "errorNewerVersion": "That backup was made by a newer version of the app. Update and try again.",
+    "errorStorageFull": "There is not enough space on this device to add those items.",
+    "errorGeneric": "Something went wrong reading that file."
+  },
+  "sound": {
+    "tapToRecord": "Tap to record",
+    "recording": "Recording… {{seconds}}s left",
+    "analysing": "Listening…",
+    "startLabel": "Start recording",
+    "stopLabel": "Stop and identify",
+    "tipsTitle": "For a better result",
+    "tip1": "Get closer if you can — distance is the biggest factor.",
+    "tip2": "Point the phone towards the sound and stay still.",
+    "tip3": "Record while it is actually calling, not the silence between calls.",
+    "scopeNote": "Covers birds, frogs, crickets, grasshoppers and some mammals. It is trained on wild recordings, so pets and traffic will confuse it.",
+    "identifiedBySound": "Identified by sound · {{group}}",
+    "groupAmphibian": "Amphibian",
+    "groupMammal": "Mammal",
+    "permissionTitle": "Microphone blocked",
+    "permissionBody": "Allow microphone access for this site in your browser settings, then try again.",
+    "unsupportedTitle": "Recording not available",
+    "unsupportedBody": "This browser cannot record audio. Try Chrome on Android, or install the app to your home screen on iPhone.",
+    "tooShortTitle": "Recording too short",
+    "tooShortBody": "Record for at least two seconds, while the animal is actually calling.",
+    "failedTitle": "Could not identify",
+    "failedBody": "Something went wrong with that recording. Please try again.",
+    "decodeFailedBody": "That recording could not be read. Try again.",
+    "notFoundBody": "Nothing recognisable in that recording. Try getting closer, or record while it is calling.",
+    "noContentBody": "No description available for this species yet.",
+    "notWildlifeBody": "That sounds like a vehicle, a machine or a voice rather than an animal. Try recording again somewhere quieter."
+  },
+  "login": {
+    "signInRow": "Sign in",
+    "signInSubtitle": "Sync your subscription across devices",
+    "accountRow": "My account"
+  }
+}

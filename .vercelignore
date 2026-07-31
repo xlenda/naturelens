@@ -1,0 +1,16 @@
+# Nada de segredo sobe para a Vercel.
+#
+# scripts/verify-live.js precisa das credenciais de produção para checar se o
+# banco aceita todas as categorias (ver o comentário do check 13 lá), e a forma
+# normal de obtê-las é `npx vercel env pull .env.check`. Esse arquivo fica na
+# raiz do projeto e contém a service role key do Supabase em texto puro.
+#
+# A Vercel já ignora .env* por padrão, mas isso não está escrito em lugar nenhum
+# do projeto - deixar explícito custa uma linha e remove a dúvida.
+.env
+.env.*
+!.env.example
+
+# Saídas de build e dependências não precisam ser enviadas.
+node_modules
+.expo

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>NatureLens Premium — identificações ilimitadas</title>
+<meta name="description" content="Identifique plantas, insetos, cogumelos, culturas, peixes e pássaros por foto. Assinatura a partir de US$ 5. Cancele quando quiser." />
+
+<!--
+  Landing page de conversão para tráfego pago.
+
+  Existe por dois motivos concretos:
+
+  1. Mandar anúncio frio direto para a câmera do app converte mal - a pessoa
+     chega sem saber o que o app faz, sem prova e sem preço.
+  2. A política do Google Ads para produtos por assinatura EXIGE que preço,
+     periodicidade, renovação automática e como cancelar estejam visíveis na
+     página de destino. Sem isso o anúncio é reprovado.
+
+  É HTML estático puro dentro de public/, servido em /premium/ - fora do bundle
+  do app de propósito: carrega instantâneo, funciona sem JavaScript e não
+  depende do Expo. Cada segundo de carregamento aqui é dinheiro de anúncio.
+-->
+
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://naturelensapp.cloud/premium/" />
+<meta property="og:title" content="NatureLens Premium — identificações ilimitadas" />
+<meta property="og:description" content="Identifique plantas, insetos, cogumelos, culturas, peixes e pássaros por foto." />
+<meta property="og:image" content="https://naturelensapp.cloud/og-image.png" />
+<link rel="icon" href="/icons/favicon-32.png" sizes="32x32" />
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5XB5TSQW');</script>
+
+<style>
+  :root{
+    --bg:#0E1512; --surface:#161F1B; --card:#1A241F; --border:#26332C;
+    --accent:#4E9F6B; --accent-light:#7FC79A; --accent-dark:#3B7A52;
+    --text:#F2F5F3; --text-2:#B4C2BA; --muted:#6E7F76; --warn:#E0A951;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    background:var(--bg); color:var(--text);
+    font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    line-height:1.6; -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+  a{color:inherit;text-decoration:none}
+
+  /* --- hero --- */
+  header{padding:26px 0}
+  .brand{display:flex;align-items:center;gap:12px;font-weight:800;font-size:19px}
+  .brand img{width:38px;height:38px;border-radius:10px}
+
+  .hero{padding:48px 0 56px;text-align:center}
+  .hero h1{font-size:clamp(30px,6vw,52px);font-weight:800;line-height:1.15;letter-spacing:-.5px}
+  .hero h1 span{color:var(--accent-light)}
+  .hero p{color:var(--text-2);font-size:clamp(16px,2.4vw,19px);margin:18px auto 0;max-width:620px}
+
+  .cta{
+    display:inline-flex;align-items:center;gap:10px;background:var(--accent);
+    color:#fff;font-weight:700;font-size:16px;padding:16px 34px;border-radius:15px;
+    margin-top:30px;border:none;cursor:pointer;transition:transform .12s ease,background .12s ease;
+  }
+  .cta:hover{background:var(--accent-dark);transform:translateY(-1px)}
+  .cta-note{color:var(--muted);font-size:13px;margin-top:12px}
+
+  /* --- categorias --- */
+  .cats{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:34px}
+  .cat{
+    display:flex;align-items:center;gap:7px;background:var(--surface);
+    border:1px solid var(--border);border-radius:22px;padding:9px 16px;
+    font-size:14px;font-weight:600;color:var(--text-2);
+  }
+  .cat b{font-size:16px}
+
+  /* --- seções --- */
+  section{padding:52px 0;border-top:1px solid var(--border)}
+  h2{font-size:clamp(22px,3.4vw,30px);font-weight:800;text-align:center;margin-bottom:12px}
+  .sub{color:var(--text-2);text-align:center;max-width:600px;margin:0 auto 36px}
+
+  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+  .step{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:24px}
+  .step .n{
+    width:34px;height:34px;border-radius:50%;background:var(--accent);color:#fff;
+    display:flex;align-items:center;justify-content:center;font-weight:800;font-size:15px;margin-bottom:14px;
+  }
+  .step h3{font-size:17px;margin-bottom:7px}
+  .step p{color:var(--text-2);font-size:14.5px}
+
+  /* --- planos --- */
+  .plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;align-items:stretch}
+  .plan{
+    background:var(--card);border:1.5px solid var(--border);border-radius:18px;
+    padding:26px 22px;text-align:center;display:flex;flex-direction:column;position:relative;
+  }
+  .plan.best{border-color:var(--accent);background:linear-gradient(180deg,rgba(78,159,107,.10),transparent)}
+  .badge{
+    position:absolute;top:-12px;left:50%;transform:translateX(-50%);
+    background:var(--accent);color:#fff;font-size:11.5px;font-weight:800;
+    padding:5px 13px;border-radius:11px;white-space:nowrap;
+  }
+  .plan .name{color:var(--text-2);font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:.6px}
+  .plan .price{font-size:40px;font-weight:800;margin:10px 0 2px}
+  .plan .price small{font-size:17px;font-weight:600;color:var(--muted)}
+  .plan .per{color:var(--muted);font-size:13.5px}
+  .plan .equiv{color:var(--accent-light);font-size:13px;font-weight:600;margin-top:8px;min-height:20px}
+  .plan .go{
+    margin-top:20px;background:var(--surface);border:1px solid var(--border);
+    color:var(--text);font-weight:700;padding:13px;border-radius:12px;display:block;
+  }
+  .plan.best .go{background:var(--accent);border-color:var(--accent);color:#fff}
+
+  /* Exigência de política do Google Ads para assinaturas: renovação automática,
+     periodicidade e cancelamento têm que estar legíveis na página. */
+  .terms{
+    background:var(--surface);border:1px solid var(--border);border-radius:14px;
+    padding:20px 22px;margin-top:26px;color:var(--text-2);font-size:14px;
+  }
+  .terms b{color:var(--text)}
+  .terms ul{margin:10px 0 0 18px}
+  .terms li{margin-bottom:6px}
+
+  /* --- faq --- */
+  details{
+    background:var(--card);border:1px solid var(--border);border-radius:13px;
+    padding:16px 18px;margin-bottom:10px;
+  }
+  summary{cursor:pointer;font-weight:700;font-size:15.5px;list-style:none}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";float:right;color:var(--accent-light);font-weight:800}
+  details[open] summary::after{content:"–"}
+  details p{color:var(--text-2);font-size:14.5px;margin-top:11px}
+
+  footer{padding:38px 0;border-top:1px solid var(--border);text-align:center;color:var(--muted);font-size:13.5px}
+  footer a{color:var(--text-2);text-decoration:underline}
+  .final{text-align:center}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <a class="brand" href="/"><img src="/icons/icon-192.png" alt="" />NatureLens</a>
+  </header>
+
+  <div class="hero">
+    <h1>Descubra <span>o que é</span><br />em uma foto</h1>
+    <p>
+      Aponte a câmera para qualquer ser vivo e saiba o nome, a espécie e os cuidados
+      em segundos — com fotos de referência para você mesmo confirmar.
+    </p>
+
+    <div class="cats">
+      <span class="cat"><b>🌿</b> Plantas e árvores</span>
+      <span class="cat"><b>🐛</b> Insetos</span>
+      <span class="cat"><b>🍄</b> Cogumelos</span>
+      <span class="cat"><b>🌾</b> Culturas e doenças</span>
+      <span class="cat"><b>🐟</b> Peixes</span>
+      <span class="cat"><b>🐦</b> Pássaros</span>
+    </div>
+
+    <a class="cta" href="/" data-cta="hero">Começar grátis agora →</a>
+    <p class="cta-note">Sem cadastro. A primeira identificação de cada categoria é gratuita.</p>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <h2>Como funciona</h2>
+    <p class="sub">Três passos. Sem cadastro para começar.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="n">1</div>
+        <h3>Fotografe</h3>
+        <p>Tire a foto direto no app ou escolha da galeria. Pode adicionar mais de um ângulo para aumentar a precisão.</p>
+      </div>
+      <div class="step">
+        <div class="n">2</div>
+        <h3>Receba a identificação</h3>
+        <p>Nome popular, nome científico, grau de confiança e outras possibilidades quando houver dúvida — nunca um palpite disfarçado de certeza.</p>
+      </div>
+      <div class="step">
+        <div class="n">3</div>
+        <h3>Guarde e acompanhe</h3>
+        <p>Cada achado entra na sua coleção, com lembrete de rega, conquistas e sua retrospectiva mensal.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Planos</h2>
+    <p class="sub">Comece de graça. Assine só quando quiser identificações ilimitadas.</p>
+
+    <div class="plans">
+      <div class="plan">
+        <div class="name">Mensal</div>
+        <div class="price"><small>US$</small> 5</div>
+        <div class="per">por mês</div>
+        <div class="equiv"></div>
+        <a class="go" href="/" data-cta="plan-monthly">Assinar</a>
+      </div>
+
+      <div class="plan best">
+        <div class="badge">MELHOR VALOR — 35% OFF</div>
+        <div class="name">Anual</div>
+        <div class="price"><small>US$</small> 39</div>
+        <div class="per">por ano</div>
+        <div class="equiv">equivale a US$ 3,25/mês</div>
+        <a class="go" href="/" data-cta="plan-annual">Assinar</a>
+      </div>
+
+      <div class="plan">
+        <div class="name">Trimestral</div>
+        <div class="price"><small>US$</small> 12</div>
+        <div class="per">a cada 3 meses</div>
+        <div class="equiv">equivale a US$ 4/mês</div>
+        <a class="go" href="/" data-cta="plan-quarterly">Assinar</a>
+      </div>
+    </div>
+
+    <div class="terms">
+      <b>Informações da assinatura</b>
+      <ul>
+        <li>Cobrança em dólar (US$), processada pela <b>Hotmart</b> — aceita Pix, boleto e cartão nacional.</li>
+        <li><b>Renovação automática</b> ao fim de cada período (mensal, trimestral ou anual), pelo mesmo valor.</li>
+        <li><b>Cancele quando quiser</b>, direto na sua conta da Hotmart. Ao cancelar, as próximas cobranças param e o acesso continua até o fim do período já pago.</li>
+        <li>Sem multa e sem fidelidade.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Perguntas frequentes</h2>
+    <p class="sub"></p>
+
+    <details>
+      <summary>Preciso pagar para testar?</summary>
+      <p>Não. A primeira identificação de <em>cada</em> categoria é gratuita e não pede cadastro — dá para experimentar plantas, insetos, cogumelos, culturas, peixes e pássaros sem gastar nada.</p>
+    </details>
+
+    <details>
+      <summary>Como funciona a identificação?</summary>
+      <p>Sua foto é analisada por modelos de reconhecimento de espécies treinados para cada grupo. O app mostra o grau de confiança e, quando há dúvida, apresenta as outras possibilidades junto com fotos de referência para você comparar e decidir.</p>
+    </details>
+
+    <details>
+      <summary>O resultado é sempre certo?</summary>
+      <p>Não, e nós dizemos isso claramente na tela. Quando a confiança é baixa, o app avisa e sugere alternativas. <strong>Nunca coma um cogumelo ou planta se baseando apenas neste ou em qualquer outro aplicativo.</strong></p>
+    </details>
+
+    <details>
+      <summary>Como cancelo?</summary>
+      <p>Pela sua conta na Hotmart, em consumer.hotmart.com. O cancelamento interrompe as próximas cobranças e seu acesso continua válido até o fim do período que você já pagou. Também há um atalho dentro do app, em Perfil → Minha assinatura.</p>
+    </details>
+
+    <details>
+      <summary>Preciso instalar alguma coisa?</summary>
+      <p>Não. O NatureLens funciona direto no navegador do celular. Se quiser, dá para adicioná-lo à tela de início e usar como um aplicativo comum — sem passar por loja.</p>
+    </details>
+
+    <details>
+      <summary>Em quais idiomas funciona?</summary>
+      <p>Em 17 idiomas: português, inglês, espanhol, alemão, francês, italiano, holandês, polonês, tcheco, sueco, dinamarquês, turco, hindi, árabe, coreano, chinês simplificado e chinês tradicional. O app detecta o idioma do seu aparelho automaticamente e você pode trocar a qualquer momento no Perfil.</p>
+    </details>
+  </div>
+</section>
+
+<section>
+  <div class="wrap final">
+    <h2>Comece agora, de graça</h2>
+    <p class="sub">Sua primeira identificação de cada categoria não custa nada.</p>
+    <a class="cta" href="/" data-cta="footer">Abrir o NatureLens →</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <a href="/">Abrir o app</a> · <a href="/">Termos</a> · <a href="/">Privacidade</a><br />
+    <span style="opacity:.7">© NatureLens · naturelensapp.cloud</span>
+  </div>
+</footer>
+
+<script>
+  // Funil: mede qual CTA trouxe a pessoa para o app. Sem isto não dá para saber
+  // se quem converte vem do topo, do preço ou do rodapé - e a página vira chute.
+  document.querySelectorAll('[data-cta]').forEach(function (el) {
+    el.addEventListener('click', function () {
+      if (window.dataLayer) {
+        window.dataLayer.push({ event: 'landing_cta_click', cta: el.dataset.cta });
+      }
+    });
+  });
+  if (window.dataLayer) window.dataLayer.push({ event: 'landing_view' });
+</script>
+
+</body>
+</html>

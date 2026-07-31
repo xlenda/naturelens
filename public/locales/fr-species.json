@@ -1,0 +1,314 @@
+{
+  "fishDetails": {
+    "clownfish": {
+      "overview": "Petit poisson de récif de l'Indo-Pacifique, reconnaissable au premier coup d'œil à son corps orange barré de trois bandes blanches. Il passe toute sa vie adulte au sein d'une même anémone de mer, dont les tentacules urticants tueraient la plupart des autres poissons.",
+      "habitat": "Récifs coralliens et lagons chauds et peu profonds, de la mer Rouge au nord de l'Australie, toujours associé à une anémone hôte.",
+      "curiosity": "Tous les poissons-clowns naissent mâles. Chaque anémone abrite un couple reproducteur dominant ; à la mort de la femelle, le mâle dominant change de sexe et prend sa place."
+    },
+    "rainbowTrout": {
+      "overview": "Poisson d'eau froide qui doit son nom à la bande rose irisée courant le long de ses flancs. Originaire des rivières du versant pacifique d'Amérique du Nord et d'Asie, il est aujourd'hui élevé sur tous les continents sauf l'Antarctique.",
+      "habitat": "Rivières et lacs clairs, frais et bien oxygénés. Les populations qui descendent en mer avant de revenir sont appelées steelheads.",
+      "curiosity": "Sa chair rose ne vient pas d'un pigment naturel mais des crustacés qu'elle consomme : les truites d'élevage nourries autrement ont une chair blanche."
+    },
+    "atlanticSalmon": {
+      "overview": "Puissant migrateur qui éclot en eau douce, passe des années à se nourrir en mer, puis revient frayer dans la rivière même où il est né.",
+      "habitat": "L'océan Atlantique Nord à l'âge adulte ; les rivières d'Europe et de l'est de l'Amérique du Nord pour la reproduction.",
+      "curiosity": "Son nom d'espèce, salar, signifie « le sauteur » : le saumon peut franchir des chutes de plus de trois mètres en remontant le courant."
+    },
+    "northernPike": {
+      "overview": "Long prédateur vert olive à l'affût, museau aplati en bec de canard et gueule hérissée de dents tournées vers l'arrière. Il reste immobile dans les herbiers et frappe en une fraction de seconde.",
+      "habitat": "Rivières lentes et lacs envahis de végétation dans tout l'hémisphère nord, de l'Irlande à la Sibérie en passant par l'Alaska.",
+      "curiosity": "Ses nageoires dorsale et anale sont placées très en arrière, près de la queue : un corps entièrement conçu pour une seule accélération explosive, pas pour la poursuite."
+    },
+    "commonCarp": {
+      "overview": "Poisson d'eau douce au corps massif, aux grandes écailles et aux deux paires de barbillons. Élevée depuis plus de deux mille ans, elle est un mets recherché dans certaines régions d'Europe et d'Asie, et un envahisseur redoutable ailleurs.",
+      "habitat": "Eaux chaudes, lentes ou stagnantes à fond vaseux : rivières, lacs, étangs et canaux de tous les continents sauf l'Antarctique.",
+      "curiosity": "La carpe se nourrit en aspirant la vase pour la filtrer, ce qui remet les sédiments en suspension et trouble l'eau : la principale raison des dégâts qu'elle cause dans les lacs qu'elle colonise."
+    },
+    "blueTang": {
+      "overview": "Éclatant poisson de récif bleu roi, marqué d'une tache noire en forme de palette et doté d'une queue jaune. Comme tous les chirurgiens, il porte une épine tranchante comme un scalpel à la base de la queue.",
+      "habitat": "Récifs coralliens de l'Indo-Pacifique, généralement en petits groupes près des coraux branchus où il peut se réfugier.",
+      "curiosity": "Les juvéniles sont jaune vif et virent au bleu en grandissant. L'épine caudale, normalement repliée à plat, se déploie latéralement dès que le poisson se sent menacé."
+    },
+    "largemouthBass": {
+      "overview": "Prédateur vert et trapu barré d'une bande latérale sombre, le poisson sportif d'eau douce le plus recherché au monde.",
+      "habitat": "Lacs, étangs et rivières lentes des régions chaudes, là où il y a du couvert : bois immergés, herbiers et pontons.",
+      "curiosity": "On le distingue de l'achigan à petite bouche à sa mâchoire : chez l'achigan à grande bouche, la mâchoire supérieure dépasse l'arrière de l'œil."
+    },
+    "yellowfinTuna": {
+      "overview": "Grand poisson océanique en forme de torpille, aux très longues nageoires jaunes en faux et au dos bleu foncé métallique s'éclaircissant en argenté vers le ventre.",
+      "habitat": "Haute mer chaude du monde entier, généralement dans les 100 premiers mètres, mais il plonge bien plus profond pour se nourrir.",
+      "curiosity": "Il maintient son corps plus chaud que l'eau environnante, ce qui garde ses muscles efficaces dans les profondeurs froides où d'autres poissons s'engourdissent : c'est ainsi qu'il traverse des océans entiers."
+    },
+    "zebrafish": {
+      "overview": "Petit cyprinidé rayé venu des rivières d'Asie du Sud, devenu l'un des animaux les plus étudiés de la science.",
+      "habitat": "Eaux douces peu profondes et lentes : rizières, ruisseaux et mares de l'Inde, du Bangladesh et du Népal.",
+      "curiosity": "Ses embryons sont transparents : les chercheurs peuvent observer au microscope la formation d'un cœur ou d'une colonne vertébrale en temps réel, d'où sa présence dans des milliers d'études médicales."
+    },
+    "redLionfish": {
+      "overview": "Poisson spectaculaire zébré de rouge, de blanc et de brun, aux longues nageoires en éventail qui dissimulent des épines venimeuses. Magnifique, lent, et à ne surtout pas toucher.",
+      "habitat": "Originaire des récifs de l'Indo-Pacifique ; aujourd'hui espèce invasive très problématique dans toutes les Caraïbes et l'Atlantique Ouest.",
+      "curiosity": "Dans les zones qu'il a envahies, il n'a presque aucun prédateur et avale à peu près tout ce qui tient dans sa bouche : certains pays encouragent activement à le harponner et à le manger."
+    }
+  },
+  "birdDetails": {
+    "barnSwallow": {
+      "overview": "Oiseau élancé au dos bleu lustré, à la queue profondément fourchue et à la gorge rousse, presque toujours vu en vol rapide, bas et virevoltant au-dessus des espaces ouverts.",
+      "habitat": "Champs, prairies et abords des points d'eau de l'hémisphère nord ; il hiverne dans l'hémisphère sud.",
+      "curiosity": "C'est l'hirondelle la plus répandue au monde, et elle se nourrit entièrement en vol : elle boit même en effleurant la surface d'un étang sans se poser."
+    },
+    "houseSparrow": {
+      "overview": "Petit oiseau compact brun et gris : le mâle arbore une bavette noire et une nuque marron, la femelle est d'un beige uni avec un sourcil clair.",
+      "habitat": "Partout où il y a des humains : villes, villages, fermes et ports de presque tous les continents.",
+      "curiosity": "Il a suivi l'agriculture humaine depuis le Proche-Orient il y a des milliers d'années et ne vit pratiquement nulle part où l'homme est absent."
+    },
+    "commonKingfisher": {
+      "overview": "Minuscule oiseau au bec en poignard, bleu électrique et orange brûlé, le plus souvent aperçu comme un éclair de couleur rasant l'eau.",
+      "habitat": "Rivières, ruisseaux et canaux clairs et lents, bordés de perchoirs surplombants, en Europe, en Asie et en Afrique du Nord.",
+      "curiosity": "Il plonge tête la première et peut saisir un poisson à un mètre sous l'eau, puis l'assomme contre une branche avant de l'avaler par la tête, pour que les épines se couchent."
+    },
+    "peregrineFalcon": {
+      "overview": "Faucon puissant aux ailes effilées, gris ardoise dessus et rayé dessous, reconnaissable à la moustache sombre qui descend sous l'œil.",
+      "habitat": "Tous les continents sauf l'Antarctique : falaises, littoraux et, de plus en plus, gratte-ciel et tours de cathédrales.",
+      "curiosity": "En piqué de chasse il dépasse les 300 km/h, un record absolu chez les animaux. Des déflecteurs dans ses narines lui permettent de respirer à cette vitesse sans que ses poumons éclatent."
+    },
+    "greatBlueHeron": {
+      "overview": "Grand échassier gris-bleu aux longues pattes, doté d'un lourd bec en forme de lance et d'une aigrette noire derrière l'œil.",
+      "habitat": "Eaux douces et salées peu profondes d'Amérique du Nord et centrale : marais, berges de lacs, rivières et côtes.",
+      "curiosity": "Il reste immobile plusieurs minutes puis frappe plus vite que l'œil ne peut suivre. En vol, il replie le cou en un S serré : c'est ainsi qu'on distingue un héron d'une grue."
+    },
+    "rockPigeon": {
+      "overview": "Le pigeon des villes que tout le monde connaît : corps gris, cou vert et violet irisé, deux barres alaires sombres. Son plumage varie énormément, fruit de siècles de domestication.",
+      "habitat": "À l'origine les falaises côtières et les gorges rocheuses ; aujourd'hui les villes du monde entier, où corniches et rebords de fenêtres remplacent les falaises.",
+      "curiosity": "Les deux parents produisent du lait de jabot, une sécrétion riche en protéines dont ils nourrissent les petits : un trait que très peu d'autres oiseaux partagent."
+    },
+    "europeanRobin": {
+      "overview": "Petit oiseau rond et brun à la poitrine et à la face orange vif, qui a pris l'habitude d'observer les gens de près depuis une branche voisine.",
+      "habitat": "Bois, haies et jardins d'Europe et de l'ouest de l'Asie.",
+      "curiosity": "Il suit les jardiniers parce que la terre retournée met les vers à découvert, un comportement né du fouissage des sangliers dans le sous-bois. Mâles et femelles portent la poitrine orange et défendent leur territoire par le chant toute l'année."
+    },
+    "mallard": {
+      "overview": "Le canard barboteur par excellence : le mâle à tête vert lustré et collier blanc, la femelle brune tachetée avec un miroir bleu sur l'aile.",
+      "habitat": "Presque toutes les eaux douces ou saumâtres de l'hémisphère nord, des zones humides sauvages aux bassins des parcs urbains.",
+      "curiosity": "Il est l'ancêtre de presque toutes les races de canards domestiques. Le fameux coin-coin sonore ne vient que de la femelle : le mâle, lui, émet un râle discret et éraillé."
+    },
+    "scarletMacaw": {
+      "overview": "Très grand perroquet écarlate, jaune et bleu, à la longue queue effilée et au puissant bec crochu.",
+      "habitat": "Forêts tropicales humides de plaine, du sud du Mexique au bassin amazonien, le plus souvent haut dans la canopée.",
+      "curiosity": "Il s'unit pour la vie et peut vivre plus de cinquante ans. Son bec brise des noix trop dures pour tout autre oiseau de la forêt, et les groupes se rassemblent sur les argiles des berges pour avaler une terre riche en minéraux."
+    },
+    "emperorPenguin": {
+      "overview": "Le plus grand des manchots, plus d'un mètre de haut, noir et blanc avec une tache orange doré de chaque côté du cou.",
+      "habitat": "La banquise antarctique : c'est le seul oiseau à se reproduire en plein hiver austral.",
+      "curiosity": "Le mâle tient l'unique œuf en équilibre sur ses pattes, sous un repli de peau, pendant deux mois d'obscurité et de blizzard, sans rien manger, tandis que la femelle repart se nourrir en mer."
+    }
+  },
+  "insectDetails": {
+    "sevenSpotLadybird": {
+      "overview": "Un coléoptère bombé de 5 à 8 mm, rouge vernis, avec trois points noirs sur chaque élytre et un septième à cheval sur la jointure. Les adultes comme leurs larves grises, taillées en petits alligators, chassent les pucerons : d'où leur présence constante sur les tiges infestées. Originaire de toute l'Eurasie et introduite depuis longtemps en Amérique du Nord, c'est la coccinelle que tout le monde a en tête.",
+      "habitat": "Orties, haies, jardins ouvriers et toute plante couverte de pucerons. À l'automne, les adultes se rassemblent en grappes serrées pour hiverner dehors : litière de feuilles, touffes d'herbe sèche, pied des haies, écorces décollées, tiges creuses — souvent aux mêmes abris d'une année sur l'autre.",
+      "curiosity": "On appelle cela le saignement réflexe : sous pression, elle expulse par les articulations des pattes des gouttes de sa propre hémolymphe, chargées d'alcaloïdes assez amers pour que l'oiseau la recrache, indemne."
+    },
+    "commonEarwig": {
+      "overview": "Un insecte plat et brun luisant de 12 à 15 mm, muni d'une pince à l'arrière, franchement recourbée chez le mâle et presque droite chez la femelle. Sous les courts étuis coriaces se cachent de grandes ailes en éventail, pliées et rangées comme un casse-tête en papier. Malgré son nom, il ne s'intéresse pas aux oreilles : les pinces servent à se défendre, à faire la cour et à déplier ces ailes.",
+      "habitat": "Des recoins humides et étroits le jour — sous les pots de fleurs, dans la litière, entre les lames d'une clôture, au cœur des dahlias, dans le mobilier de jardin replié — puis la nuit dehors, à manger pucerons, pollen et fruits mous.",
+      "curiosity": "C'est un des rares insectes à veiller sur ses œufs : la mère les retourne et les nettoie pendant des semaines pour empêcher les moisissures, et continue de nourrir les jeunes après l'éclosion."
+    },
+    "commonPillWoodlouse": {
+      "overview": "Un isopode cuirassé gris ardoise, jusqu'à 18 mm environ, qui se roule en boule parfaite au moindre dérangement. Ses plaques imbriquées et cette faculté le distinguent des cloportes plus plats, condamnés eux à fuir en courant. Méditerranéen d'origine, on le trouve aujourd'hui dans les jardins de tous les continents habités.",
+      "habitat": "Sous les pierres, les pots, les bûches et les cartons humides, partout où l'air reste saturé. Ses organes respiratoires, proches de branchies, doivent rester mouillés : il ne tient pas longtemps sur un sol sec et découvert.",
+      "curiosity": "Il boit par l'arrière, remontant l'eau par capillarité le long de deux uropodes en tube, et son sang est bleu : l'oxygène y voyage sur de l'hémocyanine à base de cuivre, pas sur de l'hémoglobine à base de fer."
+    },
+    "houseFly": {
+      "overview": "Une mouche grise de 6 à 7 mm, quatre bandes sombres sur le thorax et, en guise de mâchoires, un tampon spongieux. Elle ne peut rien mastiquer : elle crache sa salive sur les aliments solides, les dissout, puis éponge le liquide. Transportée partout avec l'habitat humain, elle vit sur tous les continents où vivent des gens.",
+      "habitat": "Partout où il fait chaud et où traîne de la matière organique humide pour pondre — compost, poubelles, fumier, siphons — là où le cycle complet, de l'œuf à l'adulte, boucle en une semaine de chaleur estivale.",
+      "curiosity": "Ses ailes postérieures sont réduites à deux balanciers en massue qui battent en opposition de phase avec les ailes, environ 200 fois par seconde, comme des gyroscopes : privée d'eux, la mouche ne tient plus droit en vol."
+    },
+    "gardenSnail": {
+      "overview": "Un mollusque à coquille brune et crème plissée d'environ 3 cm, méditerranéen d'origine, aujourd'hui installé en Europe, dans les Amériques, en Australie, en Afrique du Sud et en Asie de l'Est. Il râpe les plantes avec sa radula, une bande souple portant des milliers de minuscules dents de chitine. Chaque individu est mâle et femelle à la fois.",
+      "habitat": "Murs, pieds de haies, pots de fleurs et façades à l'ombre ; il sort les nuits humides. En cas de sécheresse ou de froid, il ferme sa coquille d'une membrane calcaire et attend, parfois des mois.",
+      "curiosity": "Avant l'accouplement, chaque escargot plante dans le corps de son partenaire un dard durci de carbonate de calcium ; le mucus qu'il transporte modifie l'appareil reproducteur du receveur, si bien qu'une plus grande part des spermatozoïdes du tireur survit jusqu'à la fécondation."
+    },
+    "westernHoneyBee": {
+      "overview": "Une abeille rayée de 12 à 15 mm vivant en colonies de dizaines de milliers d'individus, originaire d'Europe, d'Afrique et d'Asie occidentale, élevée par l'homme à peu près partout ailleurs. De retour d'un bon massif de fleurs, une butineuse exécute sur le rayon vertical une danse frétillante dont l'angle code la direction par rapport au soleil, et la durée, la distance. Les ouvrières d'été vivent environ six semaines ; une reine peut tenir plusieurs années.",
+      "habitat": "Les colonies sauvages bâtissent leurs rayons de cire dans des troncs creux, des murs et des combles, les colonies gérées dans des ruches ; les butineuses travaillent couramment des fleurs à deux ou trois kilomètres de la maison.",
+      "curiosity": "La colonie n'hiberne pas. L'hiver, elle forme une boule serrée et fait vibrer ses muscles de vol pour maintenir le cœur de la grappe autour de 20-30 °C alors qu'il gèle dehors — puis monte à environ 35 °C quand l'élevage du couvain reprend en fin d'hiver, en brûlant le miel stocké comme carburant."
+    },
+    "paintedLady": {
+      "overview": "Un papillon orange et noir de 5 à 6 cm d'envergure, taches blanches sur des apex sombres, parmi les plus largement répandus de la planète. Ses chenilles mangent chardons, mauves et orties, et les adultes surgissent par nuées certaines années pour manquer presque totalement les suivantes. Les radars les ont suivis en migration à plusieurs centaines de mètres d'altitude.",
+      "habitat": "Tout terrain ouvert et fleuri — friches, bords de route, jardins, déserts après la pluie — en Europe, en Asie, en Afrique, en Australie et en Amérique du Nord. L'Amérique du Sud est, avec l'Antarctique, le seul continent où il manque.",
+      "curiosity": "Le circuit annuel complet couvre environ 12 000 à 15 000 km, traversée du Sahara comprise, et chaque étape est volée par des insectes qui n'ont jamais fait le trajet."
+    },
+    "cellarSpider": {
+      "overview": "Une araignée pâle aux pattes démesurées, corps de 8 à 10 mm pour une envergure atteignant 7 cm, suspendue le plus souvent à l'envers dans un enchevêtrement lâche de soie. Sa toile ne colle pas : la proie est ligotée à distance par de la soie projetée avec les pattes arrière. Elle occupe aujourd'hui les bâtiments du monde entier, déplacée avec les marchandises.",
+      "habitat": "Angles de plafond, caves, cages d'escalier, garages et arrière des meubles — à l'intérieur, au calme et au chaud, car elle supporte mal les hivers dehors.",
+      "curiosity": "Dérangée, elle fait tournoyer son corps dans la toile assez vite pour brouiller sa propre silhouette, ce qui rend la visée difficile pour un prédateur ; elle tue aussi régulièrement des araignées plus grosses qu'elle."
+    },
+    "argentineAnt": {
+      "overview": "Une petite fourmi brune sans ornement, de 2 à 3 mm, qui forme des pistes denses le long des trottoirs, des plinthes et des plans de travail. Ses nids abritent de nombreuses reines et ne défendent aucune frontière : les nids voisins fusionnent au lieu de se concurrencer. Originaire du bassin du Paraná, en Amérique du Sud, elle a gagné six continents dans la terre, les plantes en pot et le fret.",
+      "habitat": "Nids superficiels sous les dalles, les pots, le paillis et les seuils de porte, en climat chaud ou méditerranéen, toujours près d'un point d'humidité, avec des pistes qui filent à l'intérieur vers la moindre source de sucre.",
+      "curiosity": "Le long de la côte méditerranéenne, sa population introduite forme une supercolonie d'environ 6 000 km, et des ouvrières prélevées sur des continents différents se reconnaissent encore comme membres du même nid."
+    },
+    "commonEarthworm": {
+      "overview": "Un ver brun-rouge atteignant 25 cm, à queue aplatie et plus claire, avec un anneau renflé, le clitellum, au tiers du corps. Il entretient un terrier vertical permanent pouvant descendre à deux mètres et remonte la nuit tirer des feuilles à l'intérieur. Européen d'origine, il a été introduit en Amérique du Nord, en Asie et dans l'hémisphère sud.",
+      "habitat": "Sols humides et non acides des jardins, parcs et pâtures. Sans poumons, il absorbe l'oxygène par la peau, qui doit rester moite pour les échanges gazeux : il meurt vite sur un trottoir chaud et sec, et voyage en surface les nuits de pluie, quand le sol mouillé lui permet de couvrir bien plus de terrain qu'en creusant.",
+      "curiosity": "Darwin a testé la façon dont les vers manipulent les feuilles en leur offrant des triangles de papier : ils les saisissaient par la pointe — l'angle qui glisse le plus facilement dans un terrier."
+    }
+  },
+  "fungiDetails": {
+    "flyAgaric": {
+      "overview": "Un gros champignon au chapeau écarlate à orangé, semé de flocons blancs, restes du voile qui enveloppait le jeune carpophore. Il est toxique, et ses principes actifs sont l'acide iboténique et le muscimol, dont l'action sur le cerveau n'a rien à voir avec la psilocybine des champignons dits hallucinogènes.",
+      "habitat": "Vit en symbiose avec les racines des bouleaux, des pins et des épicéas dans tout l'hémisphère nord, et a suivi les conifères plantés jusqu'en Nouvelle-Zélande, en Australie, au Chili et en Afrique du Sud.",
+      "curiosity": "La muscarine a été isolée pour la première fois de cette espèce, à laquelle elle doit son nom, alors que le champignon n'en contient que des traces ; son nom, lui, vient de l'habitude médiévale d'en tremper des morceaux dans du lait pour étourdir les mouches."
+    },
+    "deathCap": {
+      "overview": "Un champignon de taille moyenne, chapeau vert olive pâle, lames blanches, anneau sur le pied et volve en sac à la base. Ses amatoxines bloquent l'ARN polymérase II, l'enzyme avec laquelle chaque cellule lit ses propres gènes, et c'est le foie qui encaisse le pire. Un demi-chapeau peut suffire à tuer un adulte.",
+      "habitat": "Native des chênaies, hêtraies et châtaigneraies d'Europe, elle a voyagé partout sur les mottes racinaires des arbres de pépinière et pousse aujourd'hui en Californie, dans l'est des États-Unis, en Australie et en Amérique du Sud.",
+      "curiosity": "L'empoisonnement est trompeur : les symptômes n'apparaissent que six à douze heures après le repas, puis s'apaisent un jour ou plus pendant que la destruction du foie se poursuit en dessous."
+    },
+    "buttonMushroom": {
+      "overview": "L'un des champignons les plus cultivés au monde et le pilier de la filière occidentale, produit par millions de tonnes chaque année dans des salles obscures à climat contrôlé, sur des lits de paille et de fumier compostés plutôt que dans les champs. La Chine et les États-Unis en sont les premiers producteurs, et la récolte se fait à la main, à l'abri, toute l'année.",
+      "habitat": "À l'état sauvage, il apparaît dans les prairies, les dunes et les bords de route d'Europe et d'Amérique du Nord ; en culture, il ne voit jamais le jour et fructifie sur un compost recouvert de tourbe.",
+      "curiosity": "Le nom bisporus est une description. La plupart des champignons à lames projettent quatre spores par baside, celui-ci n'en fait généralement que deux : chaque spore hérite donc d'une paire complète de noyaux et peut à elle seule donner un mycélium fertile."
+    },
+    "brewersYeast": {
+      "overview": "Un champignon microscopique qui se reproduit en bourgeonnant des cellules filles sur son flanc et qui, privé d'oxygène, transforme le sucre en éthanol et en gaz carbonique. La même espèce fait lever le pain et fermenter la bière, le vin et le saké, tandis que des souches modifiées sont cultivées en cuve pour produire de l'insuline et des protéines vaccinales.",
+      "habitat": "À l'état sauvage, elle vit sur les fruits mûrs, l'écorce et les coulées de sève des chênes ; les lignées domestiquées vivent dans les boulangeries, les brasseries et les fermenteurs industriels.",
+      "curiosity": "La levure et l'humain partagent encore tant de machinerie cellulaire de base qu'une expérience a pu remplacer environ la moitié d'un jeu de gènes essentiels de levure par leurs équivalents humains sans que les cellules cessent de croître."
+    },
+    "zombieAntFungus": {
+      "overview": "Un parasite des fourmis charpentières, considéré aujourd'hui comme un complexe d'espèces, chacune ajustée à une fourmi hôte particulière. Les ouvrières infectées quittent la colonie, mordent une nervure ou une brindille et meurent sur place ; quelques jours plus tard, une tige jaillit de l'arrière de la tête et laisse tomber ses spores sur les pistes en dessous.",
+      "habitat": "Forêts tropicales et subtropicales humides de Thaïlande, du Brésil, du Japon et d'Afrique de l'Ouest, où les fourmis infectées s'entassent en véritables cimetières sur la végétation basse.",
+      "curiosity": "Dans les forêts thaïlandaises, les fourmis mordent à environ 25 cm du sol, là où l'humidité convient au champignon, et la microscopie montre des cellules fongiques enveloppant les fibres musculaires de la fourmi sans jamais envahir son cerveau."
+    },
+    "humongousFungus": {
+      "overview": "Un champignon à lames couleur miel qui apparaît en touffes automnales au pied des conifères, mais passe presque toute sa vie en nappes blanches de mycélium sous l'écorce et en cordons noirs, les rhizomorphes, semblables à des lacets de chaussure. Il tue les arbres, et les forestiers le traitent en pathogène plutôt qu'en merveille.",
+      "habitat": "Forêts de conifères d'Amérique du Nord, d'Europe et d'Asie, où il s'attaque aux épicéas, sapins et pins ; l'individu record pousse dans la forêt nationale de Malheur, dans l'est de l'Oregon.",
+      "curiosity": "L'analyse génétique a montré que des champignons distants de plusieurs kilomètres appartenaient à un seul clone d'environ 965 hectares, dont l'âge est estimé à 2 500 ans au minimum."
+    },
+    "bitterOyster": {
+      "overview": "Un champignon coriace, fauve, en éventail de quelques centimètres, qui pousse en tuiles superposées sur le bois mort des feuillus et le réduit en fibre pâle. Les récoltes de l'est de l'Amérique du Nord sont bioluminescentes ; les européennes de la même espèce ne le sont généralement pas — une différence de chimie, pas d'identité.",
+      "habitat": "Chênes, bouleaux et hêtres morts des forêts tempérées d'Amérique du Nord, d'Europe et d'Asie, souvent sur le même tronc tombé plusieurs années de suite.",
+      "curiosity": "La lueur culmine dans le vert vers 520 nanomètres et reste si faible qu'il faut plusieurs minutes d'obscurité totale avant de la percevoir ; la luciférine responsable, la 3-hydroxyhispidine, se révèle commune à tous les champignons lumineux."
+    },
+    "penicilliumMould": {
+      "overview": "Une moisissure commune formant des colonies veloutées bleu-vert bordées d'un liseré pâle, qui libère ses spores depuis des supports en forme de pinceau — penicillus, en latin, c'est le petit pinceau. Elle sécrète la pénicilline, qui empêche les bactéries d'achever leur paroi, et sa découverte accidentelle a ouvert l'ère des antibiotiques.",
+      "habitat": "Sol, surfaces humides des habitations et aliments avariés du monde entier ; la culture qui a tout changé est arrivée par l'air, sur une seule spore égarée qui s'est posée dans un laboratoire londonien.",
+      "curiosity": "La souche de Fleming a porté le nom de Penicillium notatum pendant des décennies, jusqu'à ce que le séquençage de plusieurs gènes marqueurs la reclasse en 2011 ; la spore serait montée d'un laboratoire de mycologie situé un étage plus bas."
+    },
+    "chytridFungus": {
+      "overview": "Un chytride, membre d'une lignée fongique ancienne qui nage encore, en libérant dans l'eau des spores à flagelle. Il colonise la peau riche en kératine des grenouilles, crapauds et salamandres, détraque sa régulation des sels et de l'eau et provoque, chez les espèces sensibles, un arrêt cardiaque.",
+      "habitat": "Ruisseaux, mares et forêts humides de tous les continents qui abritent des amphibiens ; la génétique situe son origine en Asie de l'Est, d'où le commerce mondial d'animaux vivants l'a diffusé.",
+      "curiosity": "Une synthèse de 2019 l'a relié au déclin de plus de 500 espèces d'amphibiens et à l'extinction présumée d'environ 90 d'entre elles : la plus grosse perte de biodiversité jamais attribuée à un seul agent pathogène."
+    },
+    "whiteTruffle": {
+      "overview": "Un champignon pâle et bosselé, en forme de pomme de terre, qui se développe entre 5 et 30 cm sous la surface et gaine les racines fines des chênes, peupliers, noisetiers et saules, échangeant les minéraux du sol contre les sucres de l'arbre. Comme elle ne perce jamais la surface, elle compte sur l'odeur, et non sur le vent, pour faire transporter ses spores par les animaux.",
+      "habitat": "Sols calcaires du nord et du centre de l'Italie, surtout les collines du Piémont autour d'Alba, ainsi que l'Istrie et une partie des Balkans ; les caveurs la localisent avec des chiens dressés, moins tentés que les cochons de manger la trouvaille.",
+      "curiosity": "La truffe noire se cultive en truffières sur des plants inoculés, mais cette espèce a résisté à toutes les tentatives pendant un siècle : les premiers carpophores cultivés confirmés n'ont été annoncés qu'en 2019, en France."
+    }
+  },
+  "cropDetails": {
+    "maize": {
+      "overview": "La céréale la plus productive au monde en tonnage, une graminée annuelle géante cultivée pour un grain qui nourrit les humains, le bétail et les raffineries de carburant. Un seul épi peut porter plusieurs centaines de grains serrés sur une rafle et enveloppés de spathes. On le cultive sur tous les continents sauf l'Antarctique.",
+      "habitat": "Cultivé du niveau de la mer à plus de 3 000 m dans les Andes, et du Canada à l'Afrique australe ; son parent sauvage, la téosinte, pousse encore sur les coteaux saisonnièrement secs du sud-ouest du Mexique.",
+      "curiosity": "Le maïs a été domestiqué dans la vallée du Balsas, au Mexique, il y a environ 9 000 ans, et ne survit plus sans l'homme : l'épi enveloppé ne se disloque pas, les grains n'ont donc aucun moyen de se disperser."
+    },
+    "cassava": {
+      "overview": "Un arbuste ligneux cultivé pour ses racines de réserve gorgées d'amidon, qui pèsent chacune plusieurs kilos. Il supporte les sols pauvres et acides et des sécheresses qui tueraient le maïs sur pied. Crues, les racines contiennent des composés cyanogènes et exigent toujours une transformation.",
+      "habitat": "Basses terres tropicales du monde entier, du sud du bassin amazonien où tout a commencé jusqu'à l'Afrique de l'Ouest et l'Asie du Sud-Est, souvent sur des sols trop épuisés pour les céréales.",
+      "curiosity": "La génétique rattache tous les maniocs cultivés à des populations sauvages du sud-ouest du Brésil et de Bolivie ; les navires portugais l'ont porté en Afrique au XVIe siècle, et le Nigeria en est aujourd'hui le premier producteur mondial."
+    },
+    "arabicaCoffee": {
+      "overview": "Un arbuste ou petit arbre à feuillage persistant dont les grains sont les graines d'un fruit rouge, semblable à une cerise, généralement deux par fruit. Il fournit environ 60 % du café mondial, le reste étant surtout du robusta. Le Brésil en produit plus que tout autre pays.",
+      "habitat": "Hautes terres tropicales fraîches et brumeuses, en général entre 1 000 et 2 000 m ; des populations sauvages poussent encore dans le sous-bois ombragé des forêts de montagne du sud-ouest de l'Éthiopie.",
+      "curiosity": "Coffea arabica est né en Éthiopie du croisement du robusta et de Coffea eugenioides, suivi d'un doublement des chromosomes ; un très petit nombre de plants emportés au Yémen puis dans les serres européennes est à l'origine d'une grande partie de la culture actuelle."
+    },
+    "soybean": {
+      "overview": "Une légumineuse annuelle buissonnante aux gousses velues contenant deux à quatre graines. Ces graines sont exceptionnellement riches à la fois en protéines et en huile, d'où la domination du soja sur le marché mondial des oléagineux. La plante fixe son propre azote grâce à des nodules racinaires.",
+      "habitat": "Terres agricoles tempérées chaudes et subtropicales, avant tout le cerrado brésilien, la pampa argentine et le Midwest américain ; l'ancêtre sauvage est une liane grêle des berges et lisières de champs d'Asie de l'Est.",
+      "curiosity": "Glycine soja, l'espèce sauvage, est une liane volubile à petites graines noires et dures, domestiquée en Chine il y a environ 5 000 ans. Le Brésil ne cultivait presque pas de soja avant les années 1960 et en est aujourd'hui le premier producteur mondial."
+    },
+    "sugarcane": {
+      "overview": "Une graminée tropicale géante dont les tiges atteignent trois à cinq mètres et stockent le saccharose dans la tige plutôt que dans la graine. La canne commerciale est un hybride avec la sauvage et plus coriace Saccharum spontaneum, plantée par boutures de tige et jamais par semis. Elle fournit l'essentiel du sucre mondial.",
+      "habitat": "Basses terres chaudes à fortes pluies ou irriguées, grosso modo entre 30° de latitude nord et sud ; le Brésil et l'Inde en cultivent de très loin les plus grandes surfaces.",
+      "curiosity": "Domestiquée en Nouvelle-Guinée il y a quelque 8 000 ans, la canne a gagné l'ouest par l'Inde, où le sucre a été cristallisé pour la première fois, puis les plantations de l'Atlantique ; le Brésil détourne aujourd'hui environ la moitié de sa récolte vers l'éthanol carburant."
+    },
+    "breadWheat": {
+      "overview": "Une graminée annuelle des régions tempérées, semée sur plus de surfaces que presque toute autre culture. Chaque épi porte environ 30 à 50 grains, dont les protéines de gluten permettent à la pâte de retenir le gaz et de lever. Il possède six jeux de chromosomes, hérités de trois espèces de graminées différentes.",
+      "habitat": "Terres tempérées et méditerranéennes de tous les continents sauf l'Antarctique, des prairies canadiennes au Pendjab ; l'égilope sauvage dont il descend pousse encore sur les coteaux, du Croissant fertile à la Caspienne.",
+      "curiosity": "Il y a 8 000 à 9 000 ans, l'amidonnier domestiqué s'est hybridé avec l'égilope Aegilops tauschii — une herbe insignifiante aux épis cassants, dont le génome apporte pourtant l'élasticité de la pâte à pain."
+    },
+    "asianRice": {
+      "overview": "Une graminée annuelle qui survit sous l'eau grâce à des canaux à air parcourant ses tiges et ses racines. Elle constitue l'aliment de base direct d'environ la moitié de l'humanité. Le grain est débarrassé de la balle et du son qui entourent l'albumen amylacé.",
+      "habitat": "Rizières inondées et champs pluviaux de toute l'Asie des moussons, plus l'Afrique de l'Ouest, la vallée du Mississippi et le sud du Brésil ; Oryza rufipogon, l'espèce sauvage, pousse toujours dans les marais et les fossés asiatiques.",
+      "curiosity": "Le riz asiatique a été domestiqué à partir d'Oryza rufipogon dans le bassin du Yangtsé il y a environ 9 000 ans, tandis que le riz africain, Oryza glaberrima, l'a été indépendamment dans le delta intérieur du Niger il y a quelque 3 000 ans, avant de traverser l'Atlantique avec les agriculteurs ouest-africains réduits en esclavage."
+    },
+    "potato": {
+      "overview": "Une solanacée cultivée pour ses tubercules, qui sont des tiges souterraines renflées et non des racines. En surface, c'est une plante feuillue à fleurs blanches ou violettes et à petits fruits verts, semblables à de minuscules tomates et toxiques. Les tubercules verdis ou germés accumulent les mêmes glycoalcaloïdes amers.",
+      "habitat": "Climats frais du monde entier, de l'altiplano andin au-dessus de 3 500 m aux campagnes de Chine et d'Inde ; la Chine en récolte aujourd'hui plus que tout autre pays.",
+      "curiosity": "Domestiquée dans le sud du Pérou il y a quelque 8 000 ans à partir d'espèces sauvages amères, la pomme de terre a atteint l'Europe au XVIe siècle via un échantillon génétique minuscule, alors que les paysans andins entretiennent toujours des milliers de variétés nommées dans une seule région."
+    },
+    "banana": {
+      "overview": "Ce n'est pas un arbre mais une herbe géante : le tronc n'est qu'une colonne serrée de bases de feuilles enroulées, et la plante meurt après avoir fructifié une seule fois. La quasi-totalité des bananes exportées appartient à une unique variété triploïde stérile, la Cavendish, multipliée par rejets et culture in vitro.",
+      "habitat": "Basses terres tropicales humides du monde entier ; l'Inde et la Chine produisent le plus, l'Équateur exporte le plus, et les Musa sauvages à graines poussent encore dans les forêts d'Asie du Sud-Est et de Nouvelle-Guinée.",
+      "curiosity": "Les fouilles du marais de Kuk, sur les hauts plateaux de Nouvelle-Guinée, datent la culture de la banane d'environ 7 000 ans. Comme tous les Cavendish sont génétiquement identiques, le champignon du sol Fusarium Tropical Race 4 menace toute la production d'exportation, comme une souche antérieure avait anéanti la variété Gros Michel au siècle dernier."
+    },
+    "sweetOrange": {
+      "overview": "Un arbre à feuillage persistant, aux fleurs blanches parfumées, dont le jus provient de poils devenus des sacs remplis de liquide. Presque tous les arbres commerciaux sont des clones greffés sur un porte-greffe choisi pour sa résistance aux maladies, pas pour ses fruits.",
+      "habitat": "Ceintures subtropicales à hivers doux — sud-est du Brésil, Floride, bassin méditerranéen, sud de la Chine ; ses espèces parentes viennent des forêts d'Asie méridionale et du Sud-Est.",
+      "curiosity": "L'hybride est apparu dans le sud de la Chine, a voyagé vers l'ouest avec les marchands et atteint le Brésil sur les navires portugais au XVIe siècle ; le Brésil produit aujourd'hui plus d'oranges que tout autre pays. Les pépins d'agrumes contiennent souvent des embryons surnuméraires clonés de l'arbre mère : un semis peut donc être la copie exacte de son parent."
+    }
+  },
+  "soundDetails": {
+    "tawnyOwl": {
+      "overview": "Une chouette forestière trapue à tête ronde, d'environ 40 cm, brun marbré et pratiquement invisible contre une écorce. Elle chasse à l'oreille dans le noir presque total et passe la journée plaquée contre un tronc ou calée dans une cavité. Sur toute son aire, c'est l'un des oiseaux les plus entendus et les moins vus.",
+      "habitat": "Futaies de feuillus, parcs, cimetières et vieux quartiers pourvus de grands arbres, de la Grande-Bretagne et de la péninsule Ibérique jusqu'à l'Iran et la Sibérie occidentale, ainsi qu'en Afrique du Nord ; elle est absente d'Irlande.",
+      "curiosity": "Les hululements territoriaux culminent à l'automne puis en fin d'hiver, quand les arbres nus laissent porter le son sur plusieurs centaines de mètres, et un couple peut tenir le même carré de bois pendant dix ans."
+    },
+    "commonCuckoo": {
+      "overview": "Un oiseau gris, mince et à longue queue, de la taille d'un épervier, dont les parties inférieures barrées et le vol bas et direct imitent ce rapace d'assez près pour faire fuir les passereaux de leur nid. Les femelles pondent dans les nids d'autres espèces et s'en vont ; plus de 100 espèces hôtes ont été recensées. La plupart des gens connaissent la voix des années avant de voir l'oiseau en connaissance de cause.",
+      "habitat": "Lisières, roselières, landes et campagnes ouvertes d'Europe et du nord de l'Asie ; il hiverne en Afrique subsaharienne et en Asie du Sud.",
+      "curiosity": "Le chant à deux notes descend d'environ une tierce mineure et porte à plus d'un kilomètre en terrain découvert ; les expériences de repasse montrent que les hôtes réagissent au gloussement de la femelle à peu près comme à un épervier en chasse."
+    },
+    "commonNightingale": {
+      "overview": "Un passereau brun terne à peine plus grand qu'un rougegorge, qui ne se montre presque jamais et chante depuis le cœur des fourrés. Un seul mâle dispose d'un répertoire d'environ 180 à 260 types de chant, livrés en sifflements abrupts, en raclements graves et en longs crescendos. Il niche en Europe, en Afrique du Nord et en Asie occidentale, et hiverne en Afrique.",
+      "habitat": "Fourrés, taillis et lisières broussailleuses à couvert dense près du sol, souvent au bord de l'eau ou le long de bordures de champs en friche.",
+      "curiosity": "Des enregistrements faits dans les rues bruyantes de Berlin ont capté des mâles dépassant 95 décibels mesurés à un mètre : ils poussent le volume pour couvrir la circulation."
+    },
+    "europeanTreeFrog": {
+      "overview": "Une petite grenouille lisse, vert vif, avec une bande sombre le long de chaque flanc et des disques adhésifs au bout des doigts pour grimper. Au printemps, les mâles se rassemblent aux mares de reproduction et chantent en rangs superposés, surtout après la tombée de la nuit. Hors saison, c'est une grimpeuse qu'on voit rarement au ras du sol.",
+      "habitat": "Mares, fossés et prairies inondées bien exposés, bordés de roseaux et de ronces, en Europe centrale et du Sud-Est ; entre deux saisons de reproduction, elle se tient à plusieurs mètres de hauteur dans les buissons et les haies.",
+      "curiosity": "Le cri culmine vers 2,5 kHz et un mâle peut le répéter des milliers de fois en une nuit : chanter compte parmi les activités les plus coûteuses en énergie jamais mesurées chez un vertébré, et les mâles perdent du poids au fil de la saison."
+    },
+    "americanBullfrog": {
+      "overview": "La plus grande grenouille d'Amérique du Nord, jusqu'à 20 cm du museau au cloaque, vert olive et massive. Les mâles tiennent des territoires de berge tout l'été et chantent de jour comme de nuit. Largement introduite ailleurs, elle est aujourd'hui une invasive bien installée sur plusieurs continents.",
+      "habitat": "Eaux chaudes permanentes — bords de lacs, rivières lentes, retenues et mares de ferme — native de l'est de l'Amérique du Nord et implantée au Brésil, au Japon, en Chine et dans une partie du sud de l'Europe.",
+      "curiosity": "La hauteur du chant suit la taille du corps : la voix la plus grave d'un chœur appartient presque toujours au plus gros mâle, reconnaissable aussi à un tympan bien plus large que l'œil."
+    },
+    "cicadaOrni": {
+      "overview": "Une cigale méditerranéenne gris-brun d'environ 3 cm, aux ailes transparentes ponctuées de taches sombres, bien plus facile à nommer au chant qu'à la vue. Les mâles produisent un zip-zip-zip sec et répété, entrecoupé de pauses régulières, depuis les troncs et les branches. Les femelles, elles, ne chantent pas du tout.",
+      "habitat": "Pins, oliviers, platanes et vergers du pourtour méditerranéen, de la péninsule Ibérique et de l'Afrique du Nord à l'Italie, la Grèce et la Turquie.",
+      "curiosity": "Le son vient d'une paire de plaques nervurées, les cymbales, qui claquent comme un couvercle de boîte de conserve des centaines de fois par seconde, et l'abdomen derrière elles est en grande partie creux : un mâle qui chante est surtout un amplificateur."
+    },
+    "houseCricket": {
+      "overview": "Un grillon brun paille clair d'environ 2 cm, originaire du sud-ouest de l'Asie et présent aujourd'hui partout où les bâtiments restent chauds. Les mâles stridulent ; les femelles, reconnaissables à leur long oviscapte en aiguille, sont muettes. C'est l'un des insectes les plus élevés au monde.",
+      "habitat": "Espaces humains chauds — chaufferies, boulangeries, décharges, hangars chauffés et fermes d'élevage ; dehors, il passe la belle saison sous les climats tempérés et vit toute l'année sous les tropiques.",
+      "curiosity": "Ses oreilles sont sur ses pattes avant, juste sous le genou, et la cadence du cri monte avec la température : la même pièce sonne plus vite par nuit chaude que par nuit fraîche."
+    },
+    "greatGreenBushCricket": {
+      "overview": "Une sauterelle vert prairie atteignant 7 cm, avec des antennes plus longues que son corps — un gros insecte pourtant presque impossible à repérer dans une haie. Les mâles chantent depuis le sommet des buissons et des hautes herbes, souvent une bonne partie de la nuit. On la trouve en Europe, en Afrique du Nord et jusqu'en Asie centrale.",
+      "habitat": "Végétation haute et rude — ronciers, haies, broussailles, bords de route et lisières de vignes — le chant venant généralement d'un ou deux mètres au-dessus du sol.",
+      "curiosity": "Une bonne part de l'énergie du chant se situe au-dessus de 20 kHz, à la limite de l'audition humaine : les enfants entendent souvent très nettement un mâle que les adultes à côté d'eux perçoivent à peine."
+    },
+    "blackHowlerMonkey": {
+      "overview": "Un singe sud-américain au dimorphisme sexuel spectaculaire : les mâles adultes sont noirs, les femelles et les jeunes blond fauve. Les groupes rugissent à l'aube et au crépuscule pour annoncer leur position, ce qui tient les troupes voisines à distance sans contact. Le corps mesure environ 60 cm, plus une queue préhensile de longueur comparable.",
+      "habitat": "Forêts-galeries, forêts inondables saisonnières et bosquets du Brésil, de Bolivie, du Paraguay et du nord de l'Argentine, le plus souvent haut dans la canopée.",
+      "curiosity": "Le rugissement est amplifié par un os hyoïde élargi et creusé dans la gorge, et une étude comparative de 2015 a montré que les espèces de hurleurs aux plus gros hyoïdes ont les plus petits testicules."
+    },
+    "redFox": {
+      "overview": "Le carnivore sauvage le plus largement répandu de la planète, 5 à 7 kg, largement nocturne partout où les humains sont nombreux. On a décrit une vingtaine de types de cris différents, du jappement de contact bref au long hurlement. En ville, on l'entend bien plus souvent qu'on ne le voit.",
+      "habitat": "À peu près tout : toundra arctique, campagne, marges désertiques, forêt et centres-villes denses, où les terriers se glissent sous les cabanons, le long des talus de voie ferrée et dans les jardins.",
+      "curiosity": "Les cris culminent en décembre et janvier, quand les renards s'apparient, et ont largement cessé à la naissance des renardeaux au printemps : d'où cette impression d'un vacarme qui arrive et repart à date fixe."
+    }
+  }
+}

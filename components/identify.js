@@ -1,0 +1,157 @@
+import { CATEGORIES } from './categories';
+import { getDeviceId } from './deviceId';
+import { getApproximateLocation } from './deviceLocation';
+import i18n from '../i18n';
+import { API_BASE } from './apiBase';
+
+
+/**
+ * `photos` may be a single base64 string or an array of up to 3 photos of the
+ * SAME specimen. Kindwise uses every angle it is given for one identification,
+ * which measurably improves accuracy - a leaf close-up plus the whole plant
+ * beats either on its own. Fish and bird vendors take one image and ignore the
+ * extras (handled server-side).
+ */
+export async function identify(category, photos) {
+  const meta = CATEGORIES[category] || CATEGORIES.plant;
+  const deviceId = await getDeviceId();
+  const list = Array.isArray(photos) ? photos.filter(Boolean) : [photos].filter(Boolean);
+
+  // Offline check before spending a tap. An identification is a live API
+  // call - offline it can only fail, and failing with "could not reach the
+  // service" reads as a broken app rather than as "you have no signal".
+  if (typeof navigator !== 'undefined' && navigator.onLine === false) {
+    const err = new Error(i18n.t('identify.offlineBody'));
+    err.offline = true;
+    throw err;
+  }
+
+  // Roughly where and when, which measurably narrows the answer - the same photo
+  // of a small brown mushroom means different things in São Paulo and in Norway.
+  // Awaited, but it can never stall a scan: getApproximateLocation resolves null
+  // within 6 seconds whatever happens, and returns null immediately when the
+  // feature is off or was refused.
+  const place = await getApproximateLocation();
+
+  // Every category goes through one merged serverless handler (api/identify.js)
+  // rather than one endpoint per category - see that file for why (Vercel Hobby
+  // caps a deployment at 12 functions). The category travels in the body; the
+  // old /api/identify-<category> URLs still resolve here via a rewrite in
+  // vercel.json, so cached bundles and installed PWAs keep working.
+  const response = await fetch(`${API_BASE}/api/identify`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      category: meta.key,
+      // `image` kept alongside `images` so a server running older code (or a
+      // rollback) still receives something usable.
+      image: list[0],
+      images: list,
+      language: i18n.language,
+      deviceId,
+      ...(place || {}),
+    }),
+  });
+
+  // Vercel's own error pages (504 timeout, 413 payload-too-large) are HTML,
+  // not JSON - an unconditional .json() here turned those into a raw
+  // "SyntaxError: Unexpected token <" shown to the user (Fable review
+  // finding). Parse defensively and let the status code drive the message.
+  let data = null;
+  try {
+    data = await response.json();
+  } catch (e) {
+    data = null;
+  }
+
+  if (!response.ok) {
+    // A server-side outage - the vendor is down, or the owner's credit ran out -
+    // is not the user's fault and not something they can fix by trying a better
+    // photo. It gets its own translated message rather than the English sentence
+    // the API happens to send.
+    if (data?.reason === 'serviceUnavailable' || data?.reason === 'vendorError') {
+      const err = new Error(i18n.t('identify.serviceDownBody'));
+      err.serviceDown = true;
+      throw err;
+    }
+    const err = new Error(data?.error || i18n.t('identify.serviceDownBody'));
+    if (response.status === 402) err.paymentRequired = true;
+    throw err;
+  }
+
+  if (!data) {
+    throw new Error('Could not reach the identification service.');
+  }
+
+  if (data.notFound) {
+    const label = i18n.t(`categories.${meta.key}.label`).toLowerCase();
+    throw new Error(i18n.t('identify.notFoundError', { category: label }));
+  }
+
+  return data.entity;
+}
+
+/**
+ * Identification by SOUND. Separate export rather than a branch inside
+ * identify() because the payload is fundamentally different - float32 PCM plus
+ * a sample rate, no photo - and folding it in would mean a function whose
+ * arguments contradict each other depending on the category.
+ */
+export async function identifySound(audioBase64, sampleRate) {
+  const deviceId = await getDeviceId();
+
+  if (typeof navigator !== 'undefined' && navigator.onLine === false) {
+    const err = new Error(i18n.t('identify.offlineBody'));
+    err.offline = true;
+    throw err;
+  }
+
+  const response = await fetch(`${API_BASE}/api/identify`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      category: 'sound',
+      audio: audioBase64,
+      sampleRate,
+      language: i18n.language,
+      deviceId,
+    }),
+  });
+
+  let data = null;
+  try {
+    data = await response.json();
+  } catch (e) {
+    data = null;
+  }
+
+  if (!response.ok) {
+    // A server-side outage - the vendor is down, or the owner's credit ran out -
+    // is not the user's fault and not something they can fix by trying a better
+    // photo. It gets its own translated message rather than the English sentence
+    // the API happens to send.
+    if (data?.reason === 'serviceUnavailable' || data?.reason === 'vendorError') {
+      const err = new Error(i18n.t('identify.serviceDownBody'));
+      err.serviceDown = true;
+      throw err;
+    }
+    const err = new Error(data?.error || i18n.t('identify.serviceDownBody'));
+    if (response.status === 402) err.paymentRequired = true;
+    throw err;
+  }
+
+  if (!data) throw new Error('Could not reach the identification service.');
+
+  if (data.notFound) {
+    // The server distinguishes "no animal in this recording" from "this is a car
+    // / applause / speech". Telling someone to get closer to a passing bus is
+    // useless advice, so the two get different messages.
+    throw new Error(
+      data.reason === 'notWildlife'
+        ? i18n.t('sound.notWildlifeBody')
+        : i18n.t('sound.notFoundBody')
+    );
+  }
+
+  return data.entity;
+}

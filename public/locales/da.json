@@ -1,0 +1,2288 @@
+{
+  "common": {
+    "overview": "Oversigt",
+    "details": "Detaljer",
+    "readMore": "Læs mere",
+    "confidence": "Sikkerhed",
+    "nativeOrigin": "Naturlig oprindelse",
+    "save": "Gem i min samling",
+    "saved": "Gemt i samlingen",
+    "cancel": "Annuller",
+    "goBack": "Gå tilbage",
+    "shareThisResult": "Del dette resultat",
+    "removeFromCollection": "Fjern fra samling",
+    "saveToCollection": "Gem i samling",
+    "tabCollection": "Samling",
+    "tabDiscover": "Kuriosa",
+    "tabBotanist": "Botaniker",
+    "saveErrorTitle": "Kunne ikke gemme",
+    "saveErrorBody": "Der opstod en fejl, da der skulle gemmes i din samling. Prøv igen.",
+    "ok": "OK",
+    "next": "Næste",
+    "showPassword": "Vis adgangskode",
+    "hidePassword": "Skjul adgangskode",
+    "close": "Luk",
+    "tabProfile": "Profil",
+    "identified": "Bestemt",
+    "yourPhoto": "Dit foto",
+    "referencePhoto": "Reference",
+    "technicalDescription": "Teknisk beskrivelse",
+    "vendorEnglishNote": "Fra bestemmelsestjenesten, på engelsk.",
+    "translate": "Oversæt",
+    "translating": "Oversætter…",
+    "translateFailed": "Kunne ikke oversætte lige nu."
+  },
+  "auth": {
+    "title": "Log ind for at identificere",
+    "subtitle": "Én gratis identifikation pr. kategori. Log ind med din e-mail for at komme i gang — intet kodeord nødvendigt.",
+    "emailPlaceholder": "dig@eksempel.dk",
+    "sendLink": "Send magisk link",
+    "sending": "Sender…",
+    "checkEmailTitle": "Tjek din e-mail",
+    "checkEmailBody": "Vi har sendt et login-link til {{email}}. Åbn det på denne enhed for at fortsætte.",
+    "signOut": "Log ud",
+    "signedInAs": "Logget ind som {{email}}",
+    "notReady": "Login er ved at blive sat op og bliver tilgængeligt snart."
+  },
+  "paywall": {
+    "title": "Gratis brug er allerede brugt",
+    "body": "Du har allerede brugt din gratis {{category}}-identifikation. Abonner for at blive ved med at identificere uden begrænsninger.",
+    "subscribe": "Abonner",
+    "subscribing": "Omdirigerer…",
+    "subscribed": "Abonneret",
+    "manage": "Administrer abonnement",
+    "annualPlan": "Årlig",
+    "perYear": "/år",
+    "saveBadge": "Spar {{percent}}%",
+    "genericTitle": "Lås alt op",
+    "genericBody": "Ubegrænsede identifikationer af planter, insekter, svampe og afgrøder, plus fuld adgang til oplysninger om lægeplanter.",
+    "subscriptionConfirmedTitle": "Du abonnerer nu!",
+    "subscriptionConfirmedBody": "Tak for dit abonnement – du har nu ubegrænsede identifikationer. God fornøjelse!",
+    "subscriptionPendingTitle": "Betaling modtaget",
+    "subscriptionPendingBody": "Betaling modtaget. Åbn Profil → Gendan adgang, og bekræft den e-mail, du betalte med, for at låse denne enhed op.",
+    "checkoutFailedTitle": "Betaling mislykkedes",
+    "checkoutFailedBody": "Vi kunne ikke starte betalingen. Prøv igen om lidt.",
+    "monthlyPlan": "Månedligt",
+    "quarterlyPlan": "Kvartalsvis",
+    "perMonth": "pr. måned",
+    "perQuarter": "pr. kvartal",
+    "notAvailableYet": "Betalingen er ved at blive sat op — prøv igen om lidt."
+  },
+  "restore": {
+    "title": "Log ind",
+    "emailStepTitle": "Log ind på din konto",
+    "emailStepBody": "Brug den e-mail, du oprettede dig med. Vi sender en engangskode - ingen adgangskode at huske.",
+    "emailPlaceholder": "dig@eksempel.dk",
+    "sendCode": "Send kode",
+    "codeStepTitle": "Indtast din kode",
+    "codeStepBody": "Vi sendte en kode til {{email}}. Indtast den nedenfor for at fuldføre login.",
+    "codePlaceholder": "6-cifret kode",
+    "verifyCode": "Bekræft",
+    "changeEmail": "Brug en anden e-mail",
+    "doneTitleActive": "Du er logget ind",
+    "doneBodyActive": "Denne enhed er nu forbundet til din konto, og dit abonnement er aktivt på den.",
+    "doneTitleOther": "Konto forbundet",
+    "doneBodyOther": "Denne enhed er forbundet til din konto. Der er ikke et aktivt abonnement på den lige nu.",
+    "backToProfile": "Tilbage til profil",
+    "genericError": "Noget gik galt. Prøv venligst igen.",
+    "modeCode": "E-mailkode",
+    "modePassword": "Adgangskode",
+    "passwordStepTitle": "Log ind med adgangskode",
+    "passwordStepBody": "Indtast din e-mail og adgangskode for at logge ind på denne enhed.",
+    "passwordPlaceholder": "Adgangskode",
+    "signIn": "Log ind",
+    "signInWithGoogle": "Fortsæt med Google",
+    "googleSignInErrorTitle": "Login mislykkedes",
+    "googleSignInErrorBody": "Vi kunne ikke gennemføre login med Google. Prøv igen."
+  },
+  "categories": {
+    "plant": {
+      "label": "Plante",
+      "tabLabel": "Planter",
+      "title": "Identificér planter og træer med det samme",
+      "subtitle": "Ret kameraet mod en plante, et blad, en blomst eller et træ, og få en detaljeret profil på få sekunder.",
+      "scanHint": "For det bedste resultat skal du fotografere et enkelt blad, en blomst eller den samlede form i godt lys."
+    },
+    "insect": {
+      "label": "Insekt",
+      "tabLabel": "Insekter",
+      "title": "Identificer insekter på et øjeblik",
+      "subtitle": "Ret kameraet mod en bille, edderkop eller sommerfugl, og få en øjeblikkelig artsprofil.",
+      "scanHint": "For de bedste resultater, kom tæt på insektet med godt lys og en stabil hånd."
+    },
+    "mushroom": {
+      "label": "Svamp",
+      "tabLabel": "Svampe",
+      "title": "Identificer svampe på et øjeblik",
+      "subtitle": "Ret kameraet mod en svamp for at identificere arten og tjekke, om den er spiselig.",
+      "scanHint": "Fotografer hatten, lamellerne og stokken for den mest præcise identifikation."
+    },
+    "crop": {
+      "label": "Afgrøde",
+      "tabLabel": "Afgrøder",
+      "title": "Sundhedstjek for afgrøder",
+      "subtitle": "Ret kameraet mod et afgrødeblad for at tjekke for sygdomme, skadedyr eller næringsmangel.",
+      "scanHint": "Fokuser tæt på det berørte blad eller område for den mest præcise diagnose."
+    },
+    "tree": {
+      "label": "Træ",
+      "tabLabel": "Træer",
+      "title": "Identificer træer med det samme",
+      "subtitle": "Ret kameraet mod et træ, en stamme, et blad eller en krone, og få en detaljeret profil på få sekunder.",
+      "scanHint": "For de bedste resultater, indram bladene, barken eller den overordnede form i godt lys."
+    },
+    "fish": {
+      "label": "Fisk",
+      "tabLabel": "Fisk",
+      "title": "Identificér fisk med det samme",
+      "subtitle": "Ret kameraet mod en hvilken som helst fisk, og få en detaljeret profil på få sekunder.",
+      "scanHint": "For det bedste resultat skal du fotografere hele fisken fra siden i godt lys."
+    },
+    "bird": {
+      "label": "Fugl",
+      "tabLabel": "Fugle",
+      "title": "Identificér fugle med det samme",
+      "subtitle": "Ret kameraet mod en hvilken som helst fugl, og få en identifikation med det samme.",
+      "scanHint": "For det bedste resultat skal hele fuglen være med i billedet, skarp og godt belyst."
+    },
+    "sound": {
+      "label": "Lyd",
+      "tabLabel": "Lyde",
+      "title": "Identificér via lyd",
+      "subtitle": "Optag en fugl, frø eller insekt, og find ud af hvad det er."
+    }
+  },
+  "identify": {
+    "identifierTitle": "{{category}}-identifikator",
+    "subtitle": "Identificer {{category}} på et øjeblik med AI",
+    "readyToScan": "Klar til at scanne",
+    "didYouKnowTitle": "Vidste du det?",
+    "continueLabel": "Fortsæt",
+    "analyzing": "Analyserer {{category}}…",
+    "tapToIdentify": "Tryk for at identificere",
+    "identifying": "Identificerer…",
+    "uploadPhoto": "Upload foto",
+    "myCollection": "Min samling",
+    "switchCategoryLabel": "Skift identifikationskategori",
+    "switchCategoryTitle": "Skift kategori",
+    "switchCategoryMessage": "Hvad vil du gerne identificere?",
+    "takePhotoLabel": "Tag foto for at identificere {{category}}",
+    "uploadPhotoLabel": "Upload foto for at identificere",
+    "goToCollectionLabel": "Gå til Min samling",
+    "cameraPermissionTitle": "Kameraadgang påkrævet",
+    "cameraPermissionMessage": "Aktiver kameraadgang for at scanne en {{category}}.",
+    "libraryPermissionTitle": "Adgang til fotobibliotek påkrævet",
+    "libraryPermissionMessage": "Aktiver fotoadgang for at uploade et billede.",
+    "identificationFailedTitle": "Identifikation mislykkedes",
+    "identificationFailedDefault": "Prøv venligst igen.",
+    "notFoundError": "Der blev ikke genkendt nogen {{category}} på dette foto. Prøv et tydeligere billede taget tættere på.",
+    "photoProcessingFailed": "Dette foto kunne ikke behandles. Prøv et andet foto, eller tag et nyt med dit kamera.",
+    "lowConfidence": "Det er vores bedste bud ({{confidence}}% sikkerhed). Sammenlign det med referencefotoene, før du stoler på det.",
+    "lowConfidenceWithAlternatives": "Kun {{confidence}}% sikkerhed. Se de andre mulige match nedenfor, før du stoler på dette.",
+    "referenceImagesTitle": "Referencefotos",
+    "referenceImagesHint": "Sammenlign dem med dit eget foto for at bekræfte.",
+    "referenceImageLabel": "Referencefoto {{index}}",
+    "alternativesTitle": "Andre mulige match",
+    "alternativesHint": "Hvis resultatet ovenfor ikke ser rigtigt ud, kan din art være en af disse.",
+    "lowConfidenceBare": "Kun {{confidence}}% sikkerhed — betragt det som et udgangspunkt, ikke et endeligt svar.",
+    "addAngle": "Tilføj en vinkel mere",
+    "addAnotherAngle": "Tilføj én mere",
+    "anglesHint": "{{count}} fotos af samme eksemplar — bedre præcision",
+    "removeAngleLabel": "Fjern vinkel {{index}}",
+    "offlineTitle": "Du er offline",
+    "offlineBody": "Identifikation kræver internet. Din samling og Opdag-fanen virker stadig.",
+    "serviceDownTitle": "Tjenesten er utilgængelig",
+    "serviceDownBody": "Denne bestemmelsestjeneste har et problem lige nu. Prøv igen om et par minutter - det er ikke dit foto."
+  },
+  "detail": {
+    "profileTitle": "{{category}}-profil",
+    "readMoreLabel": "Læs mere online om denne {{category}}",
+    "markAsWatered": "Marker som vandet",
+    "markAsWateredLabel": "Marker som vandet",
+    "wateringSection": "Vanding",
+    "checkForDiseases": "Tjek for sygdomme",
+    "checkingForDiseases": "Tjekker…",
+    "checkForDiseasesLabel": "Tjek for sygdomme",
+    "checkingForDiseasesLabel": "Tjekker for sygdomme",
+    "healthCheckSection": "Sundhedstjek",
+    "edibleParts": "Spiselige dele",
+    "propagation": "Formering",
+    "wateringNeeds": "Vandbehov",
+    "conservationStatus": "Bevaringsstatus",
+    "safetySection": "Sikkerhed",
+    "ecologicalRoleSection": "Økologisk rolle",
+    "frequentlyConfusedWith": "Forveksles ofte med",
+    "psychoactiveWarning": "Denne svamp kan være psykoaktiv og kan påvirke nervesystemet.",
+    "cropHealthReportTitle": "Rapport om afgrødens sundhed",
+    "cropMatch": "Afgrødematch",
+    "cropPill": "Afgrøde",
+    "wateringGuideSection": "Vandingsguide",
+    "lightSection": "Lys",
+    "soilSection": "Jord",
+    "commonUsesSection": "Almindelige anvendelser",
+    "culturalSignificanceSection": "Kulturel betydning",
+    "installNudgeTitle": "Installer NatureLens",
+    "installNudgeBody": "Føj den til din startskærm, så du kan identificere hurtigere næste gang.",
+    "commonNames": "Almindelige navne",
+    "synonyms": "Videnskabelige synonymer",
+    "referencePhoto": "Referencefoto",
+    "referencePhotoAlt": "Referencefoto af {{name}}",
+    "coverageNoteTitle": "Om dette resultat",
+    "birdCoverageNote": "Fugleidentifikation dækker 291 arter, hovedsageligt nordamerikanske. Fugle uden for listen kan blive identificeret forkert selv ved høj sikkerhed - brug resultatet som udgangspunkt."
+  },
+  "disease": {
+    "overviewSection": "Oversigt",
+    "symptomsSection": "Symptomer",
+    "treatmentSection": "Behandling",
+    "biological": "Biologisk",
+    "chemical": "Kemisk",
+    "prevention": "Forebyggelse",
+    "spreadingSection": "Sådan spredes den",
+    "healthStatusSection": "Sundhedsstatus",
+    "noDiseaseDetected": "Der blev ikke sikkert registreret nogen sygdom eller skadedyr på dette foto.",
+    "match": "Match",
+    "severitySuffix": "{{severity}} sværhedsgrad"
+  },
+  "collection": {
+    "title": "Min samling",
+    "subtitle_one": "{{count}} element opdaget",
+    "subtitle_other": "{{count}} elementer opdaget",
+    "emptyTitle": "Intet gemt endnu",
+    "emptyBody": "Identificer en plante, et insekt, en svamp eller en afgrøde, og gem den for at opbygge din samling.",
+    "startIdentifying": "Begynd at identificere",
+    "goToProfileLabel": "Gå til profil",
+    "switchToGridLabel": "Skift til gittervisning",
+    "switchToListLabel": "Skift til listevisning",
+    "viewDetailsLabel": "Se detaljer for {{name}}",
+    "removeLabel": "Fjern {{name}} fra samlingen",
+    "assignRoomTitle": "Tildel til et rum",
+    "assignRoomMessage": "Vælg et rum til {{name}}.",
+    "roomLivingRoom": "Stue",
+    "roomBedroom": "Soveværelse",
+    "roomKitchen": "Køkken",
+    "roomBalcony": "Altan",
+    "roomOffice": "Kontor",
+    "roomNone": "Ingen",
+    "searchPlaceholder": "Søg i din samling…",
+    "clearSearchLabel": "Ryd søgning",
+    "filterAll": "Alle",
+    "noSearchResults": "Intet matcher din søgning."
+  },
+  "profile": {
+    "title": "Min profil",
+    "itemsIdentified_one": "element identificeret",
+    "itemsIdentified_other": "elementer identificeret",
+    "byCategory": "Efter kategori",
+    "privacyPolicy": "Privatlivspolitik",
+    "language": "Sprog",
+    "installApp": "Installer app",
+    "installAppIOSTitle": "Installer NatureLens",
+    "installAppIOSBody": "Tryk på knappen Del, og tryk derefter på \"Føj til hjemmeskærm\" for at installere NatureLens på din telefon.",
+    "createPasswordTitle": "Opret en adgangskode",
+    "createPasswordBody": "Valgfrit — log ind med adgangskode på andre enheder for at synkronisere dit abonnement i stedet for at anmode om en ny e-mailkode hver gang.",
+    "createPasswordButton": "Opret adgangskode",
+    "creatingPassword": "Opretter…",
+    "passwordTooShortTitle": "Adgangskoden er for kort",
+    "passwordTooShortBody": "Brug mindst 8 tegn.",
+    "passwordCreatedTitle": "Adgangskode oprettet",
+    "passwordCreatedBody": "Tjek {{email}} for at bekræfte, derefter kan du logge ind med denne adgangskode på enhver enhed.",
+    "passwordCreatedFailedTitle": "Kunne ikke oprette adgangskode",
+    "passwordCreatedFailedBody": "Noget gik galt. Prøv venligst igen.",
+    "changePhoto": "Skift profilbillede",
+    "version": "Version {{version}}",
+    "termsOfUse": "Brugsvilkår",
+    "deleteAccount": "Slet konto",
+    "deletingAccount": "Sletter…",
+    "deleteAccountConfirmTitle": "Slet din konto?",
+    "deleteAccountConfirmBody": "Dette sletter permanent din gemte samling, din adgangskode (hvis nogen) og annullerer dit aktive abonnement, hvis du har et. Dette kan ikke fortrydes.",
+    "deleteAccountConfirmButton": "Slet",
+    "deleteAccountDoneTitle": "Konto slettet",
+    "deleteAccountDoneBody": "Dine data er blevet slettet, og eventuelle aktive abonnementer er blevet annulleret.",
+    "deleteAccountFailedTitle": "Kunne ikke slette konto",
+    "deleteAccountFailedBody": "Noget gik galt. Prøv venligst igen.",
+    "helpAndSupport": "Hjælp og support",
+    "rewardsStore": "Belønningsbutik",
+    "naturalistBadge": "Naturalist",
+    "deleteAccountDoneBillingBody": "Din konto og dine data er slettet. VIGTIGT: dette opsiger ikke dit abonnement — du skal opsige det i din Hotmart-konto, ellers fortsætter betalingen.",
+    "locationRow": "Brug min omtrentlige placering",
+    "locationHint": "Forbedrer præcisionen ved kun at medregne arter i nærheden af dig. Afrundet til cirka 1 km og gemmes aldrig.",
+    "emptyTitle": "Din samling starter her",
+    "emptyBody": "Ret kameraet mod en plante, et insekt, en svamp, en fisk eller fugl - eller optag et kald - så lander den her.",
+    "emptyCta": "Bestem noget"
+  },
+  "terms": {
+    "title": "Brugsvilkår",
+    "acceptanceTitle": "Accept af vilkårene",
+    "acceptanceBody": "Ved at bruge NatureLens accepterer du disse Brugsvilkår. Hvis du ikke er enig, bedes du ikke bruge appen.",
+    "serviceTitle": "Hvad denne app gør",
+    "serviceBody": "Med NatureLens kan du fotografere planter, insekter, svampe, afgrøder og træer for at identificere dem ved hjælp af tredjeparts AI-tjenester (Plant.id, Insect.id, Mushroom.id, Crop.health, alle fra Kindwise). Resultater genereres automatisk og gennemgås ikke af en menneskelig ekspert.",
+    "accuracyTitle": "Identifikationens nøjagtighed — læs venligst",
+    "accuracyBody": "AI-identifikation kan tage fejl, også om hvorvidt en plante eller svamp er spiselig, giftig eller sikker at røre ved. Spis, saml eller brug aldrig en vild plante, svamp eller organisme udelukkende baseret på resultatet fra denne app. Bekræft altid med en kvalificeret ekspert (mykolog, botaniker eller giftlinje), før du indtager eller bruger noget, du har fundet i naturen. Vi er ikke ansvarlige for skader forårsaget af at stole på en identifikation lavet af denne app.",
+    "billingTitle": "Abonnementer og fakturering",
+    "billingBody": "Betalte abonnementer opkræves via Stripe til den pris, der vises i appen på tidspunktet for abonnementet, og fornyes automatisk, indtil du opsiger dem. Du kan opsige når som helst; din adgang fortsætter til udgangen af den allerede betalte periode. Vi tilbyder ikke forholdsmæssig refusion for ubrugt tid, medmindre loven kræver det.",
+    "accountTitle": "Konti og adgangskoder",
+    "accountBody": "Du behøver ikke en konto for at bruge de gratis funktioner. Abonnenter kan valgfrit oprette en adgangskode for at logge ind og synkronisere deres abonnement på tværs af enheder. Du er ansvarlig for at holde din adgangskode sikker og for alt, der sker via din konto.",
+    "liabilityTitle": "Ingen garanti, ansvarsbegrænsning",
+    "liabilityBody": "Denne app leveres \"som den er\", uden nogen form for garanti. I det maksimale omfang loven tillader, er vi ikke ansvarlige for skader, der opstår som følge af din brug af appen, herunder det at stole på et identifikationsresultat.",
+    "changesTitle": "Ændringer af disse vilkår",
+    "changesBody": "Vi kan opdatere disse vilkår fra tid til anden. Fortsat brug af appen efter en ændring betyder, at du accepterer de opdaterede vilkår.",
+    "contactTitle": "Kontakt",
+    "contactBody": "Spørgsmål om disse vilkår kan rettes til appens udvikler."
+  },
+  "privacy": {
+    "title": "Privatlivspolitik",
+    "collectTitle": "Hvad vi indsamler",
+    "collectBody": "Denne app giver dig mulighed for at fotografere planter, insekter, svampe eller afgrøder for at identificere dem. For at gøre dette bruger den tredjeparts AI-identifikationstjenester — Plant.id, Insect.id, Mushroom.id og Crop.health, som alle er udviklet af Kindwise.",
+    "thirdPartyTitle": "AI-tjenester fra tredjepart",
+    "thirdPartyBody": "Når du tager eller uploader et foto for at identificere noget, sendes fotoet direkte til den relevante Kindwise-identifikationstjeneste for at generere et resultat. Vi gemmer ikke dine fotos på nogen server, vi kontrollerer.",
+    "localStorageTitle": "Kun lokal lagring",
+    "localStorageBody": "Din gemte samling — identificerede arter, noter og tidsstempler — gemmes kun lokalt på din egen enhed ved hjælp af browserens eller appens lokale lager. Den bliver aldrig uploadet til nogen skyserver, vi driver, og den bliver aldrig delt med andre brugere.",
+    "noAccountsTitle": "Ingen konti, ingen sporing",
+    "noAccountsBody": "Denne app kræver ingen konto for at blive brugt — din enhed får tildelt et tilfældigt anonymt id (der kun gemmes på din enhed), så vi kan se, hvornår den ene gratis identifikation pr. kategori er blevet brugt. Hvis du abonnerer, indsamler Stripe din e-mail og betalingsoplysninger direkte for at behandle betalingen — vi modtager kun din abonnementsstatus, knyttet til det samme anonyme id. Abonnenter kan valgfrit oprette en adgangskode for at logge ind og synkronisere deres abonnement på andre enheder; det er aldrig påkrævet for at bruge appen. Vi bruger ikke analyseværktøjer eller annoncesporing.",
+    "dataLossTitle": "Risiko for datatab",
+    "dataLossBody": "Hvis du rydder dine browserdata eller afinstallerer appen, går din lokalt gemte samling permanent tabt, da intet bliver sikkerhedskopieret eksternt.",
+    "contactTitle": "Kontakt",
+    "contactBody": "Spørgsmål til denne politik kan rettes til appens udvikler."
+  },
+  "discover": {
+    "title": "Opdag",
+    "subtitle": "Nær din nysgerrighed på naturens verden",
+    "dailyFact": "Dagens plantefakta",
+    "tapForAnotherFact": "Tryk for endnu en fakta",
+    "exploreCollections": "Udforsk samlinger",
+    "trendingSpecies": "Populære arter",
+    "showNextFactLabel": "Vis næste plantefakta",
+    "openCollectionLabel": "Åbn samlingen {{title}}",
+    "viewSpeciesLabel": "Se {{name}}",
+    "facts": [
+      "Ligblomsten (Amorphophallus titanum) kan blive over 3 meter høj og lugter af rådnende kød for at lokke bestøvere til.",
+      "Bambus er verdens hurtigst voksende plante — visse arter lægger op til 90 centimeter til på et enkelt døgn.",
+      "En enkelt honningbi besøger omkring 5.000 blomster om dagen, men laver kun en tolvtedel af en teskefuld honning i hele sit liv.",
+      "Svampe er nærmere beslægtet med dyr end med planter — vi deler en fælles forfader med dem for omkring en milliard år siden.",
+      "Det ældste kendte levende træ er en børstekoglefyr i Californien, anslået til over 4.800 år.",
+      "Solsikker følger solen, mens de er unge, men når de er udvoksede, står de fast vendt mod øst — det varmer dem op tidligere og tiltrækker flere bestøvere.",
+      "Nogle orkideer efterligner hunlige insekters udseende og duft så præcist, at hannerne forsøger at parre sig med dem og bestøver blomsten helt uforvarende.",
+      "En guldsmed fanger omkring 95 % af det bytte, den går efter — en af de højeste jagtsuccesrater i hele dyreriget.",
+      "Myrer har dyrket svampe i over 50 millioner år, længe før mennesket fandt på landbrug.",
+      "Amazonas regnskov leverer cirka 20 % af den ilt, landplanter frigiver, og en stor del af regnen falder fra vand, som skoven selv har åndet ud.",
+      "Sommerfugle smager med fødderne — de træder på et blad for at finde ud af, om deres larver kan spise det.",
+      "En honningsvamp i Oregon dækker næsten 10 kvadratkilometer og er dermed en af klodens største levende organismer.",
+      "Vandrefalken kommer over 300 km/t i sit jagtdyk og er verdens hurtigste dyr.",
+      "Fisk har ingen øjenlåg — de fleste lukker simpelthen aldrig øjnene, heller ikke når de hviler.",
+      "Venus fluefanger kan tælle: et følehår skal røres to gange inden for cirka 20 sekunder, før fælden klapper i, så en regnbyge ikke spilder den.",
+      "Træer i en skov deler næring gennem underjordiske svampenetværk — et modertræ kan fodre en svækket spire flere meter væk.",
+      "Havternen trækker fra pol til pol hvert år og tilbagelægger mere end 70.000 kilometer — dyrerigets længste træk.",
+      "Kaffe, chokolade og vanilje kommer alle fra planter, der er afhængige af dyr for at blive bestøvet — ingen bier eller myg, ingen morgenkaffe.",
+      "Nogle cikader bliver under jorden i 17 år, før de kommer frem på én gang, i milliardvis.",
+      "En ananas er ikke én frugt, men snesevis af bær, der er vokset sammen om en fælles kerne.",
+      "Ugler kan ikke bevæge øjnene — deres øjne er rørformede og sidder fast, og derfor drejer de i stedet hovedet op til 270 grader.",
+      "Frøene fra den indiske lotus kan stadig spire efter mere end tusind år i dvale.",
+      "Laks vender tilbage for at gyde i præcis den flod, hvor de blev klækket, og navigerer efter lugt over tusinder af kilometer åbent hav.",
+      "Svampe var de første komplekse organismer, der indtog landjorden — længe før nogen plante gjorde det.",
+      "Figentræer blomstrer ikke udad: hver figen er en vrangvendt klase af blomster, bestøvet af en hveps, der kravler ind gennem et bittelille hul.",
+      "En kolibris hjerte slår over 1.200 gange i minuttet under flyvning, og den skal spise hvert tiende til femtende minut for at overleve.",
+      "Kvælerfigen begynder livet på en gren højt i kronetaget, sender rødder ned til jorden og slår til sidst det træ ihjel, der husede den.",
+      "Mos har ingen rødder — det suger vandet direkte ind gennem bladene, og derfor trives det på sten og bark.",
+      "Mantisrejen ser med 12 til 16 farvereceptorer; mennesket har tre.",
+      "Aspelunde er ofte én eneste organisme: tusindvis af stammer, der deler ét rodsystem, nogle over 10.000 år gamle.",
+      "Mariehøns spiser op til 5.000 bladlus i løbet af deres liv, og derfor sætter gartnere dem ud i stedet for at sprøjte.",
+      "Frøet fra coco de mer-palmen vejer op til 25 kilo — planterigets tungeste.",
+      "Elektriske ål er slet ikke ål, men knivfisk, og deres stød kan overstige 800 volt.",
+      "Laver er ikke én organisme, men to — en svamp og en alge, der lever som ét, og de kan overleve i det ydre rum.",
+      "Hankejserpingvinen balancerer et enkelt æg på fødderne gennem hele den antarktiske vinter og går to måneder uden mad.",
+      "Brændenælder stikker med bittesmå glasagtige hår, der knækker af inde i huden, og modgiften vokser ofte lige ved siden af: skræppeblade.",
+      "Nogle dybhavsfisk er gennemsigtige og bruger usynlighed som camouflage, dér hvor der ikke er noget at gemme sig bag.",
+      "Et voksent egetræ kan tabe 10.000 agern i et godt år, og cirka ét ud af ti tusind bliver til et træ.",
+      "Krager kan kende de enkelte menneskeansigter, de bærer nag, og de lærer deres unger, hvem de skal holde sig fra.",
+      "Verdens mindste blomstrende plante, dværgandemaden, er på størrelse med et sandkorn — et dusin af dem kan ligge på en fingerspids."
+    ],
+    "topics": {
+      "airPurifying": {
+        "title": "Luftrensende planter",
+        "desc": "NASA undersøgte disse arter til rensning af indendørs luft.",
+        "intro": "I slutningen af 1980'erne testede NASA snesevis af almindelige stueplanter for at finde ud af, hvilke der kunne hjælpe med at fjerne forurenende stoffer fra den lukkede luft i rumfartøjers kabiner — og opdagede, at mange velkendte favoritter er overraskende gode til at optage giftstoffer som formaldehyd, benzen og kulilte. Denne samling præsenterer de arter, der klarede sig bedst i den undersøgelse, og som siden er blevet klassikere inden for hjemmets luftkvalitet. De kan ikke erstatte det at åbne et vindue, men et par velplacerede potter er en nem og enkel måde at friske luften op i de rum, du opholder dig mest i.",
+        "species": [
+          {
+            "name": "Svigermors tunge",
+            "sci": "Dracaena trifasciata (syn. Sansevieria trifasciata)",
+            "note": "En af NASA's bedste præstationer, der omdanner CO2 til ilt selv om natten, i modsætning til de fleste stueplanter."
+          },
+          {
+            "name": "Edderkopplante",
+            "sci": "Chlorophytum comosum",
+            "note": "NASA rangerede den blandt de bedste til at fjerne formaldehyd og xylen fra almindelig husholdningsluft."
+          },
+          {
+            "name": "Fredslilje",
+            "sci": "Spathiphyllum wallisii",
+            "note": "Var i toppen af NASA's oprindelige undersøgelse for at fjerne benzen, formaldehyd og trichlorethylen fra indendørs luft."
+          },
+          {
+            "name": "Vedbend",
+            "sci": "Hedera helix",
+            "note": "NASA's højest scorende plante samlet set, værdsat for at fjerne formaldehyd og endda luftbårne skimmelsporer."
+          },
+          {
+            "name": "Bostonbregne",
+            "sci": "Nephrolepis exaltata",
+            "note": "En NASA-testet fjerner af formaldehyd, der også øger luftfugtigheden i tørre, opvarmede rum."
+          },
+          {
+            "name": "Guldranke",
+            "sci": "Epipremnum aureum",
+            "note": "Næsten umulig at slå ihjel og dokumenteret til at filtrere formaldehyd, benzen og kulilte fra indendørs luft."
+          },
+          {
+            "name": "Gummifigen",
+            "sci": "Ficus elastica",
+            "note": "Et fremtrædende resultat fra NASA's Clean Air Study, der støt fjerner formaldehyd fra almindelige boligmiljøer."
+          }
+        ]
+      },
+      "beginnerSucculents": {
+        "title": "Sukkulenter for begyndere",
+        "desc": "Planter med lavt vandbehov, der trives med lidt forsømmelse.",
+        "intro": "Sukkulenter har opnået deres ry som begyndervenlige planter med rette: deres tykke, vandlagrende blade og stængler gør, at de kan klare en glemt vanding eller to uden at tage skade. Denne samling fokuserer på de mest hårdføre og tilgivende varianter derude — planter, der er bygget til at tåle de klassiske begynderfejl med for meget vanding, for lidt vanding og ustabilt lys. Giv en af disse en lys vindueskarm og lidt tålmodighed, og du har en næsten fejlsikker indgang til at dyrke din egen plantesamling.",
+        "species": [
+          {
+            "name": "Pengetræ",
+            "sci": "Crassula ovata",
+            "note": "Lagrer vand i tykke stængler og blade, så en overset vanding eller to ikke gør nogen skade."
+          },
+          {
+            "name": "Svigermors tunge",
+            "sci": "Dracaena trifasciata",
+            "note": "Trives med total forsømmelse og tåler svagt lys og uger med tør jord uden at kny."
+          },
+          {
+            "name": "Zebraplante",
+            "sci": "Haworthiopsis fasciata",
+            "note": "Forbliver kompakt og langsomtvoksende, hvilket gør det næsten umuligt at ødelægge den med for meget pleje."
+          },
+          {
+            "name": "Aloe vera",
+            "sci": "Aloe vera",
+            "note": "Tilgiver ustabil vanding takket være geléfyldte blade, der er skabt til at overleve tørke på egen hånd."
+          },
+          {
+            "name": "Pandaplante",
+            "sci": "Kalanchoe tomentosa",
+            "note": "Buttede, vandlagrende blade med fnug klarer tørkeperioder, hvilket gør den til en næsten fejlsikker første sukkulent."
+          },
+          {
+            "name": "Æselhale",
+            "sci": "Sedum morganianum",
+            "note": "Buttede, hængende blade rummer deres egne vandreserver og belønner ejere, der undlader at overvande."
+          },
+          {
+            "name": "Mexicansk stenrose",
+            "sci": "Echeveria elegans",
+            "note": "Den klassiske rosetform lagrer vand effektivt og formerer sig let, hvilket tilgiver begynderes uundgåelige fejltrin."
+          }
+        ]
+      },
+      "petSafe": {
+        "title": "Kæledyrsvenlige stueplanter",
+        "desc": "Ugiftig grønt til hjem med katte og hunde.",
+        "intro": "At dele hjem med katte og hunde betyder ikke, at man skal give afkald på stueplanter, men mange populære arter er reelt skadelige, hvis de bliver tygget på. Denne samling samler veldokumenterede, ugiftige favoritter, krydstjekket mod ASPCA's sikkerhedsdata, så du kan fylde vindueskarme og hylder uden at bekymre dig om en nysgerrig pote eller et udforskende bid. Fra hængende ranker til blomstrende favoritter fortjener hvert valg her sin plads ved først og fremmest at være sikkert og dernæst smukt.",
+        "species": [
+          {
+            "name": "Edderkopplante",
+            "sci": "Chlorophytum comosum",
+            "note": "ASPCA-listet som ugiftig for katte og hunde, og dens hængende blade giver nysgerrige poter noget sikkert at boltre sig med."
+          },
+          {
+            "name": "Bostonbregne",
+            "sci": "Nephrolepis exaltata",
+            "note": "Denne frodige, teksturerede bregne er ugiftig for kæledyr, hvilket gør den til en sikker måde at tilføje jungleagtigt volumen til ethvert rum."
+          },
+          {
+            "name": "Bordpalme",
+            "sci": "Chamaedorea elegans",
+            "note": "En klassisk viktoriansk stueplante, der er ugiftig for katte og hunde, og som tåler svagt lys uden at udgøre nogen risiko."
+          },
+          {
+            "name": "Bederplante",
+            "sci": "Maranta leuconeura",
+            "note": "Dens blade folder sig sammen om natten som bedende hænder, og den er helt sikker, hvis en nysgerrig kat tager en bid."
+          },
+          {
+            "name": "Vandmelon-peperomia",
+            "sci": "Peperomia argyreia",
+            "note": "Kompakt og ugiftig, dens stribede blade giver et flot, kæledyrsvenligt islæt til hylder og sideborde."
+          },
+          {
+            "name": "Zebra-haworthia",
+            "sci": "Haworthia attenuata",
+            "note": "Et kæledyrsvenligt alternativ til giftig aloe og pengetræ, denne stribede sukkulent giver udseendet uden risikoen."
+          },
+          {
+            "name": "Afrikansk viol",
+            "sci": "Saintpaulia ionantha",
+            "note": "En af de få blomstrende stueplanter, der er bekræftet ugiftige, så kæledyr kan dele vindueskarmen med blomsterne."
+          }
+        ]
+      },
+      "medicinalHerbs": {
+        "title": "Lægeplanter",
+        "desc": "Planter med en lang historie inden for helbredende brug.",
+        "intro": "Længe før moderne medicinskabe var private haver det oprindelige apotek: urter som lavendel, pebermynte og purpursolhat er blevet dyrket, brygget og anvendt i århundreder for at lindre hverdagens gener. Denne samling fremhæver planter med veldokumenterede roller i folkemedicin og traditionelle medicinsystemer verden over, fra middelhavskøkkenets faste ingredienser til klassiske ayurvediske urter. De fleste trives på en solrig vindueskarm, så du kan dyrke et levende stykke urtehistorie derhjemme.",
+        "species": [
+          {
+            "name": "Aloe vera",
+            "sci": "Aloe vera",
+            "note": "Dens geléfyldte blade har lindret forbrændinger og mindre hudirritationer på tværs af kulturer i tusindvis af år.",
+            "id": "aloeVera",
+            "tags": [
+              "skin",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Lavendel",
+            "sci": "Lavandula angustifolia",
+            "note": "Længe værdsat for sin beroligende duft, traditionelt brugt til at lindre stress og fremme god søvn.",
+            "id": "lavender",
+            "tags": [
+              "sleep",
+              "stress",
+              "headache"
+            ]
+          },
+          {
+            "name": "Pebermynte",
+            "sci": "Mentha x piperita",
+            "note": "Mentholrige blade har lindret ondt i maven og hovedpine i folkemedicinen i århundreder.",
+            "id": "peppermint",
+            "tags": [
+              "digestion",
+              "headache"
+            ]
+          },
+          {
+            "name": "Kamille",
+            "sci": "Matricaria chamomilla",
+            "note": "Dens tusindfryd-lignende blomster brygges til en mild te, der længe har været brugt til at berolige nerverne og hjælpe fordøjelsen.",
+            "id": "germanChamomile",
+            "tags": [
+              "sleep",
+              "digestion",
+              "stress"
+            ]
+          },
+          {
+            "name": "Purpursolhat",
+            "sci": "Echinacea purpurea",
+            "note": "Naturligt hjemmehørende i Nordamerika, dens rødder og blomster blev brugt af oprindelige folk til at understøtte immunforsvaret.",
+            "id": "purpleConeflower",
+            "tags": [
+              "immunity"
+            ]
+          },
+          {
+            "name": "Rosmarin",
+            "sci": "Salvia rosmarinus (syn. Rosmarinus officinalis)",
+            "note": "Denne duftende middelhavsbusk har et gammelt ry for at skærpe hukommelsen og fremme blodcirkulationen.",
+            "id": "rosemary",
+            "tags": [
+              "headache",
+              "energy",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Hellig basilikum (tulsi)",
+            "sci": "Ocimum tenuiflorum",
+            "note": "Højt agtet i ayurvedisk tradition i århundreder, dens blade trækkes som en adaptogen te mod stress.",
+            "id": "holyBasil",
+            "tags": [
+              "stress",
+              "immunity",
+              "respiratory"
+            ]
+          },
+          {
+            "name": "Gurkemeje",
+            "sci": "Curcuma longa",
+            "note": "Ayurvedisk medicin har i århundreder brugt denne gyldne rod til at dæmpe betændelse og understøtte fordøjelsen og sårheling.",
+            "id": "turmeric",
+            "tags": [
+              "painInflammation",
+              "digestion",
+              "skin"
+            ]
+          },
+          {
+            "name": "Ingefær",
+            "sci": "Zingiber officinale",
+            "note": "Kinesiske og ayurvediske healere har længe tygget denne rodstok eller brygget te af den for at berolige kvalme og varme fordøjelsen.",
+            "id": "ginger",
+            "tags": [
+              "digestion",
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "Ginseng",
+            "sci": "Panax ginseng",
+            "note": "Værdsat i traditionel kinesisk medicin i over to tusind år som en styrkende tonic for energi og vitalitet.",
+            "id": "ginseng",
+            "tags": [
+              "energy",
+              "stress"
+            ]
+          },
+          {
+            "name": "Ashwagandha",
+            "sci": "Withania somnifera",
+            "note": "En ayurvedisk grundplante gennem årtusinder, hvis rod traditionelt indtages for at lindre stress og genopbygge styrke og udholdenhed.",
+            "id": "ashwagandha",
+            "tags": [
+              "stress",
+              "energy",
+              "sleep"
+            ]
+          },
+          {
+            "name": "Hyldebær",
+            "sci": "Sambucus nigra",
+            "note": "Europæiske folkehealere har i århundreder brygget de mørke bær til saft og sirup for at bekæmpe forkølelse og influenza.",
+            "id": "elderberry",
+            "tags": [
+              "immunity",
+              "respiratory"
+            ]
+          },
+          {
+            "name": "Baldrian",
+            "sci": "Valeriana officinalis",
+            "note": "Europæiske urtekyndige har siden oldtiden tørret denne skarpt duftende rod som et traditionelt middel mod urolig søvn.",
+            "id": "valerian",
+            "tags": [
+              "sleep",
+              "stress"
+            ]
+          },
+          {
+            "name": "Troldnød",
+            "sci": "Hamamelis virginiana",
+            "note": "Nordamerikanske oprindelige stammer destillerede dens bark og blade til en sammentrækkende skylning mod blå mærker, hævelser og hudirritation.",
+            "id": "witchHazel",
+            "tags": [
+              "skin",
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "Goldenseal",
+            "sci": "Hydrastis canadensis",
+            "note": "Cherokee og andre oprindelige folks healere brugte denne bitre rod til at behandle sår, infektioner og fordøjelsesbesvær.",
+            "id": "goldenseal",
+            "tags": [
+              "digestion",
+              "immunity",
+              "skin"
+            ]
+          },
+          {
+            "name": "Djævleklo",
+            "sci": "Harpagophytum procumbens",
+            "note": "Traditionelle healere fra Kalahari har længe brugt denne krogfrugtede rod til at lindre ledsmerter og gigt.",
+            "id": "devilsClaw",
+            "tags": [
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "Afrikansk malurt",
+            "sci": "Artemisia afra",
+            "note": "Et af det sydlige Afrikas mest udbredte folkemedicinske midler, dampet eller brygget for at lindre hoste og tilstoppet næse.",
+            "id": "africanWormwood",
+            "tags": [
+              "respiratory",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Yerba mate",
+            "sci": "Ilex paraguariensis",
+            "note": "Guaraní-folket i Sydamerika har længe brygget bladene til en opkvikkende, fordøjelsesfremmende daglig te.",
+            "id": "yerbaMate",
+            "tags": [
+              "energy",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Asiatisk vandnavle",
+            "sci": "Centella asiatica",
+            "note": "Højt anset i ayurvedisk og traditionel sydøstasiatisk medicin som en sårhelende urt, der siges at skærpe hukommelsen og berolige sindet.",
+            "id": "gotuKola",
+            "tags": [
+              "skin",
+              "stress"
+            ]
+          },
+          {
+            "name": "Lakridsrod",
+            "sci": "Glycyrrhiza glabra",
+            "note": "Brugt i kinesisk, ayurvedisk og mellemøstlig medicin gennem århundreder til at lindre hoste, ondt i halsen og dårlig mave.",
+            "id": "licoriceRoot",
+            "tags": [
+              "respiratory",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Neem",
+            "sci": "Azadirachta indica",
+            "note": "De bitre neem-blade, -bark og -olie er ayurvedaens klassiske middel mod hududslæt, sår og parasitinfektioner.",
+            "id": "neem",
+            "tags": [
+              "skin",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Amla (indisk stikkelsbær)",
+            "sci": "Phyllanthus emblica",
+            "note": "Ayurvedaens rigeste naturlige kilde til C-vitamin – amla er grundstenen i rasayana-toniske midler, der er skattet for foryngelse og god fordøjelse.",
+            "id": "amla",
+            "tags": [
+              "digestion",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Brahmi",
+            "sci": "Bacopa monnieri",
+            "note": "Ayurvedisk Medhya Rasayana-urt, der traditionelt tages for at skærpe hukommelsen, berolige sindet og understøtte indlæring.",
+            "id": "brahmi",
+            "tags": [
+              "stress",
+              "sleep"
+            ]
+          },
+          {
+            "name": "Guduchi (Giloy)",
+            "sci": "Tinospora cordifolia",
+            "note": "Kaldet Amrita, 'udødelighedens rod' – denne stængelafkog er ayurvedaens foretrukne middel mod feber og til at styrke immunforsvaret.",
+            "id": "guduchi",
+            "tags": [
+              "immunity",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Shatavari",
+            "sci": "Asparagus racemosus",
+            "note": "Rodtonikum, der i ayurvedaen æres som det fornemste kvindelige forynger-middel, traditionelt brugt til at understøtte amning og hormonel balance.",
+            "id": "shatavari",
+            "tags": [
+              "energy",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Arjuna",
+            "sci": "Terminalia arjuna",
+            "note": "Barkpulver, der længe har været brugt i ayurvedisk kardiologi til at styrke hjertemusklen og understøtte et sundt kredsløb.",
+            "id": "arjuna",
+            "tags": [
+              "energy"
+            ]
+          },
+          {
+            "name": "Haritaki",
+            "sci": "Terminalia chebula",
+            "note": "Kaldet 'medicinens konge' i ayurvedaen – denne frugt er kernen i Triphala til fordøjelse, afgiftning og udrensning.",
+            "id": "haritaki",
+            "tags": [
+              "digestion",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Bibhitaki",
+            "sci": "Terminalia bellirica",
+            "note": "En af Triphalas tre frugter, traditionelt brugt i ayurvedaen til at fjerne overskydende slim og understøtte luftvejene.",
+            "id": "bibhitaki",
+            "tags": [
+              "respiratory",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Bukkehornskløver",
+            "sci": "Trigonella foenum-graecum",
+            "note": "Frø, der udblødes og spises i sydasiatiske hjem for at lette fordøjelsen, understøtte amning og balancere blodsukkeret.",
+            "id": "fenugreek",
+            "tags": [
+              "digestion",
+              "energy"
+            ]
+          },
+          {
+            "name": "Lang peber (Pippali)",
+            "sci": "Piper longum",
+            "note": "Skarp frugt i ayurvediske Trikatu-blandinger, traditionelt brugt til at tænde fordøjelsens ild og løsne slim i luftvejene.",
+            "id": "longPepper",
+            "tags": [
+              "digestion",
+              "respiratory"
+            ]
+          },
+          {
+            "name": "Sandeltræ",
+            "sci": "Santalum album",
+            "note": "Kølende pasta, der i ayurvedaen påføres for at lindre betændt hud og feber og berolige sindet under meditation.",
+            "id": "sandalwood",
+            "tags": [
+              "skin",
+              "stress"
+            ]
+          },
+          {
+            "name": "Indisk sarsaparilla (Anantamul)",
+            "sci": "Hemidesmus indicus",
+            "note": "Sødrodet slyngplante brugt i klassiske ayurvediske formler til at køle blodet, rense huden og lindre ledsmerter.",
+            "id": "indianSarsaparilla",
+            "tags": [
+              "skin",
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "Bael (bengalsk kvæde)",
+            "sci": "Aegle marmelos",
+            "note": "Den umodne frugts frugtkød er en traditionel ayurvedisk grundpille mod kronisk diarré og dysenteri.",
+            "id": "bael",
+            "tags": [
+              "digestion"
+            ]
+          },
+          {
+            "name": "Guggul",
+            "sci": "Commiphora wightii",
+            "note": "Harpiks i centrum af ayurvedaens Guggulu-formler, traditionelt brugt til at regulere kolesterol og ledbetændelse.",
+            "id": "guggul",
+            "tags": [
+              "painInflammation",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Manjistha (indisk krap)",
+            "sci": "Rubia cordifolia",
+            "note": "Rod, der længe er brugt i ayurvedaen som blodrensende middel for klar hud, sårheling og understøttelse af lymfesystemet.",
+            "id": "manjistha",
+            "tags": [
+              "skin",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Jatamansi (nardus)",
+            "sci": "Nardostachys jatamansi",
+            "note": "Duftende rod, der længe er brugt i ayurvedaen til at berolige nervesystemet og fremme god søvn.",
+            "id": "jatamansi",
+            "tags": [
+              "sleep",
+              "stress"
+            ]
+          },
+          {
+            "name": "Astragalus",
+            "sci": "Astragalus membranaceus",
+            "note": "Huang qi-roden koges til afkog for at styrke wei qi, øge udholdenheden og fremme sårheling.",
+            "id": "astragalus",
+            "tags": [
+              "immunity",
+              "energy"
+            ]
+          },
+          {
+            "name": "Reishi-svamp",
+            "sci": "Ganoderma lucidum",
+            "note": "Ling zhi-svampen blev skattet af daoistiske urtekyndige til at berolige shen, lindre søvnløshed og forlænge livet.",
+            "id": "reishiMushroom",
+            "tags": [
+              "sleep",
+              "stress",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Dong Quai",
+            "sci": "Angelica sinensis",
+            "note": "Dang gui, 'den kvindelige ginseng', har i to årtusinder næret blodet og lindret menstruationsbesvær.",
+            "id": "dongQuai",
+            "tags": [
+              "energy",
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "Gojibær",
+            "sci": "Lycium barbarum",
+            "note": "Gou qi zi-bær trækkes eller spises for at nære lever- og nyre-yin og give øjnene glans.",
+            "id": "gojiBerry",
+            "tags": [
+              "immunity",
+              "energy"
+            ]
+          },
+          {
+            "name": "Schisandra",
+            "sci": "Schisandra chinensis",
+            "note": "Wu wei zi, 'frugten med de fem smage', sammendrager lungerne, beroliger sindet og beskytter leveren.",
+            "id": "schisandra",
+            "tags": [
+              "respiratory",
+              "stress",
+              "sleep"
+            ]
+          },
+          {
+            "name": "Kinesisk hjelmurt",
+            "sci": "Scutellaria baicalensis",
+            "note": "Huang qin-roden fjerner fugtig hede og har siden oldtidens formelsamlinger behandlet feber, hoste og dysenteri.",
+            "id": "chineseSkullcap",
+            "tags": [
+              "respiratory",
+              "digestion",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Rehmannia",
+            "sci": "Rehmannia glutinosa",
+            "note": "Dampet di huang styrker nyre-yin og blod og er en hjørnesten i mange klassiske formler.",
+            "id": "rehmannia",
+            "tags": [
+              "energy",
+              "sleep"
+            ]
+          },
+          {
+            "name": "Krysantemum",
+            "sci": "Chrysanthemum morifolium",
+            "note": "Ju hua-blomster brygges som te for at fjerne hede, lindre røde øjne og dæmpe hovedpine.",
+            "id": "chrysanthemum",
+            "tags": [
+              "headache",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Japansk kaprifolium",
+            "sci": "Lonicera japonica",
+            "note": "Jin yin hua-blomsten fjerner hede-toksin og har længe behandlet feber, sår og halsinfektioner.",
+            "id": "japaneseHoneysuckle",
+            "tags": [
+              "immunity",
+              "respiratory",
+              "skin"
+            ]
+          },
+          {
+            "name": "Kinesisk kanel (cassia)",
+            "sci": "Cinnamomum cassia",
+            "note": "Rou gui-barken varmer nyre-yang og sætter gang i stagneret blod for at lindre kuldebetinget smerte.",
+            "id": "chineseCinnamon",
+            "tags": [
+              "painInflammation",
+              "energy"
+            ]
+          },
+          {
+            "name": "Poria",
+            "sci": "Wolfiporia extensa",
+            "note": "Fu ling, en svampesklerotium, dræner fugt, beroliger sindet og styrker milten, når den koges i afkog.",
+            "id": "poria",
+            "tags": [
+              "sleep",
+              "digestion",
+              "stress"
+            ]
+          },
+          {
+            "name": "Kinesisk yams",
+            "sci": "Dioscorea polystachya",
+            "note": "Shan yao-knolden styrker milt-, lunge- og nyre-qi og er traditionelt simret i nærende grødretter.",
+            "id": "chineseYam",
+            "tags": [
+              "digestion",
+              "energy",
+              "respiratory"
+            ]
+          },
+          {
+            "name": "Bupleurum",
+            "sci": "Bupleurum chinense",
+            "note": "Chai hu-roden harmoniserer leveren og spreder hede, afgørende ved skiftevis feber og kulderystelser.",
+            "id": "bupleurum",
+            "tags": [
+              "stress",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Notoginseng",
+            "sci": "Panax notoginseng",
+            "note": "San qi-roden bruges til at stoppe blødninger og blå mærker, samtidig med at den styrker blodcirkulationen.",
+            "id": "notoginseng",
+            "tags": [
+              "painInflammation",
+              "skin"
+            ]
+          },
+          {
+            "name": "Codonopsis",
+            "sci": "Codonopsis pilosula",
+            "note": "Dang shen-roden fungerer som en mildere ginseng-erstatning, der styrker qi og fordøjelsen.",
+            "id": "codonopsis",
+            "tags": [
+              "energy",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Fo-Ti (He Shou Wu)",
+            "sci": "Reynoutria multiflora",
+            "note": "He shou wu-roden tilberedes for at nære lever og nyrer og siges at gøre gråt hår mørkt igen.",
+            "id": "foti",
+            "tags": [
+              "energy",
+              "skin"
+            ]
+          },
+          {
+            "name": "Røllike",
+            "sci": "Achillea millefolium",
+            "note": "Kendt som soldatens sårurt, brugt siden oldtiden til at stoppe blødninger og fremskynde heling af slagmarkens sår.",
+            "id": "yarrow",
+            "tags": [
+              "skin",
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "Perikon",
+            "sci": "Hypericum perforatum",
+            "note": "Europæisk folkemedicin mod tungsind og nervesmerter – de gule blomster trækkes i olie til sårhelende salver.",
+            "id": "stJohnsWort",
+            "tags": [
+              "stress",
+              "painInflammation",
+              "skin"
+            ]
+          },
+          {
+            "name": "Salvie",
+            "sci": "Salvia officinalis",
+            "note": "Det latinske salvere, at helbrede, afspejler den ældgamle brug som gurgling mod ondt i halsen og som fordøjelsesfremmende middel.",
+            "id": "sage",
+            "tags": [
+              "digestion",
+              "respiratory"
+            ]
+          },
+          {
+            "name": "Timian",
+            "sci": "Thymus vulgaris",
+            "note": "Middelhavets hoste- og brystmiddel – de flygtige olier er længe brugt i saft til at løsne genstridigt slim.",
+            "id": "thyme",
+            "tags": [
+              "respiratory",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Lægestokrose",
+            "sci": "Althaea officinalis",
+            "note": "Slimstoffet fra rod og blad lindrede ondt i halsen, hoste og irriteret tarmslimhinde gennem århundreders europæisk apotekerbrug.",
+            "id": "marshmallow",
+            "tags": [
+              "respiratory",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Morgenfrue",
+            "sci": "Calendula officinalis",
+            "note": "Klare kronblade knust i salver for at rense sår og berolige betændt, langsomt helende hud.",
+            "id": "potMarigold",
+            "tags": [
+              "skin",
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "Mariatidsel",
+            "sci": "Silybum marianum",
+            "note": "Frø fra Middelhavsområdet, traditionelt tygget eller brygget for at beskytte og styrke leveren efter tunge måltider.",
+            "id": "milkThistle",
+            "tags": [
+              "digestion"
+            ]
+          },
+          {
+            "name": "Fennikel",
+            "sci": "Foeniculum vulgare",
+            "note": "Anisduftende frø, der i generationer er tygget efter måltider for at lindre kolik, oppustethed og luft hos spædbørn.",
+            "id": "fennel",
+            "tags": [
+              "digestion"
+            ]
+          },
+          {
+            "name": "Brændenælde",
+            "sci": "Urtica dioica",
+            "note": "De brændende blade brygges som forårskur-te for at rense blodet og lindre ledsmerter.",
+            "id": "stingingNettle",
+            "tags": [
+              "painInflammation",
+              "skin",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Andorn",
+            "sci": "Marrubium vulgare",
+            "note": "Bitter middelhavsurt kogt til bolsjer og saft som klassisk middel mod hoste og bronkitis.",
+            "id": "whiteHorehound",
+            "tags": [
+              "respiratory",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Kulsukker",
+            "sci": "Symphytum officinale",
+            "note": "Kaldet knogleheler – den mosede rod og blade blev i århundreder lagt som omslag på brud, forstuvninger og blå mærker.",
+            "id": "comfrey",
+            "tags": [
+              "painInflammation",
+              "skin"
+            ]
+          },
+          {
+            "name": "Matram",
+            "sci": "Tanacetum parthenium",
+            "note": "Bitter urt, der tygges frisk eller brygges som te – et gammelt folkeligt svar på migræne og hovedpine.",
+            "id": "feverfew",
+            "tags": [
+              "headache",
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "Kongelys",
+            "sci": "Verbascum thapsus",
+            "note": "Dunede blade og blomster trukket i olie eller te mod hoste, ondt i halsen og ørepine.",
+            "id": "mullein",
+            "tags": [
+              "respiratory",
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "Hvidtjørn",
+            "sci": "Crataegus monogyna",
+            "note": "Bær, blomster og blade trukket som Europas klassiske hjertetonikum for en svag eller urolig puls.",
+            "id": "hawthorn",
+            "tags": [
+              "stress",
+              "sleep"
+            ]
+          },
+          {
+            "name": "Lind (lindeblomst)",
+            "sci": "Tilia cordata",
+            "note": "Duftende blomster trukket som beroligende te til at bryde feber og berolige rastløse nerver.",
+            "id": "linden",
+            "tags": [
+              "sleep",
+              "stress",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Mjødurt",
+            "sci": "Filipendula ulmaria",
+            "note": "Duftende blomstrende urt, længe brugt mod feber og ledsmerter, som senere gav den kemiske opskrift på aspirin.",
+            "id": "meadowsweet",
+            "tags": [
+              "painInflammation",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Osha-rod",
+            "sci": "Ligusticum porteri",
+            "note": "Rod tygget eller brygget af Rocky Mountains-stammer som Navajo og Ute for at lindre ondt i halsen og luftvejsinfektioner.",
+            "id": "oshaRoot",
+            "tags": [
+              "respiratory",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Black Cohosh",
+            "sci": "Actaea racemosa",
+            "note": "Rod brugt af cherokeser og andre folk fra de østlige skovområder til at lindre menstruationssmerter og understøtte fødsler.",
+            "id": "blackCohosh",
+            "tags": [
+              "painInflammation",
+              "stress"
+            ]
+          },
+          {
+            "name": "Devil's Club",
+            "sci": "Oplopanax horridus",
+            "note": "Den indre bark brugt af tlingit, haida og andre folk fra Stillehavets nordvestkyst mod gigt, infektioner og diabetessymptomer.",
+            "id": "devilsClub",
+            "tags": [
+              "painInflammation",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Vild bergamot",
+            "sci": "Monarda fistulosa",
+            "note": "Blackfeet-folket og andre præriestammer bryggede bladte af denne thymolrige mynteplante mod forkølelse og luftvejsinfektioner.",
+            "id": "wildBergamot",
+            "tags": [
+              "respiratory",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Melbærris (Uva Ursi)",
+            "sci": "Arctostaphylos uva-ursi",
+            "note": "Blade brygget af talrige nordamerikanske oprindelige folk som vanddrivende middel og mod urinvejsinfektioner.",
+            "id": "bearberry",
+            "tags": [
+              "immunity",
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "Rødelm",
+            "sci": "Ulmus rubra",
+            "note": "Cherokeser og irokesere brugte den slimede indre bark til at lindre ondt i halsen og hele sår.",
+            "id": "slipperyElm",
+            "tags": [
+              "digestion",
+              "respiratory",
+              "skin"
+            ]
+          },
+          {
+            "name": "Cascara Sagrada",
+            "sci": "Frangula purshiana",
+            "note": "Stammer fra Stillehavets nordvestkyst tørrede og modnede barken fra denne vrietornsslægt som et pålideligt naturligt afføringsmiddel.",
+            "id": "cascaraSagrada",
+            "tags": [
+              "digestion"
+            ]
+          },
+          {
+            "name": "Kinabark",
+            "sci": "Cinchona officinalis",
+            "note": "Andernes quechuafolk brugte den bitre bark mod feber længe før den blev kilden til kinin.",
+            "id": "cinchona",
+            "tags": [
+              "immunity",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Katteklo",
+            "sci": "Uncaria tomentosa",
+            "note": "Asháninka og andre folk fra det peruvianske Amazonas bryggede denne træagtige slyngplantes bark mod gigt og til at styrke immunforsvaret.",
+            "id": "catsClaw",
+            "tags": [
+              "painInflammation",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Coca",
+            "sci": "Erythroxylum coca",
+            "note": "Quechua- og aymarafolket i Andesbjergene har i årtusinder tygget bladene for at bekæmpe højdesyge og træthed.",
+            "id": "coca",
+            "tags": [
+              "energy",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Drageblod",
+            "sci": "Croton lechleri",
+            "note": "Amazonas-folk påfører dette træs røde latexsaft direkte på snitsår og sår som naturligt antiseptisk middel.",
+            "id": "dragonsBlood",
+            "tags": [
+              "skin",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Pau d'Arco",
+            "sci": "Tabebuia impetiginosa",
+            "note": "Indre bark brygget som te af oprindelige folk i Amazonas mod infektioner, feber og hudlidelser.",
+            "id": "pauDarco",
+            "tags": [
+              "immunity",
+              "skin"
+            ]
+          },
+          {
+            "name": "Boldo",
+            "sci": "Peumus boldus",
+            "note": "Mapuche-healere i Chile har længe brugt boldo-bladte til at understøtte leverfunktionen og lette fordøjelsen.",
+            "id": "boldo",
+            "tags": [
+              "digestion"
+            ]
+          },
+          {
+            "name": "Copaiba",
+            "sci": "Copaifera officinalis",
+            "note": "Amazonas-folk tapper dette træs harpiks og påfører den direkte på sår som betændelseshæmmende middel.",
+            "id": "copaiba",
+            "tags": [
+              "painInflammation",
+              "skin"
+            ]
+          },
+          {
+            "name": "Guarana",
+            "sci": "Paullinia cupana",
+            "note": "Sateré-mawé-folket fra det brasilianske Amazonas tæmmede denne slyngplante og ristede dens frø for vedvarende energi og fokus.",
+            "id": "guarana",
+            "tags": [
+              "energy"
+            ]
+          },
+          {
+            "name": "Sortkommen",
+            "sci": "Nigella sativa",
+            "note": "Kendt som 'velsignelsens frø' i profetisk medicin – olien behandler astma, fordøjelsesbesvær og hudinfektioner.",
+            "id": "blackSeed",
+            "tags": [
+              "respiratory",
+              "digestion",
+              "skin"
+            ]
+          },
+          {
+            "name": "Røgelse",
+            "sci": "Boswellia sacra",
+            "note": "Tappet fra arabiske træer i årtusinder – harpiksen behandler ledbetændelse, sår og luftvejsbesvær.",
+            "id": "frankincense",
+            "tags": [
+              "painInflammation",
+              "respiratory",
+              "skin"
+            ]
+          },
+          {
+            "name": "Myrra",
+            "sci": "Commiphora myrrha",
+            "note": "Høstet i Afrikas Horn og på den Arabiske Halvø – harpiksen desinficerer sår og lindrer ømme tandkød og hals.",
+            "id": "myrrh",
+            "tags": [
+              "skin",
+              "respiratory"
+            ]
+          },
+          {
+            "name": "Senna",
+            "sci": "Senna alexandrina",
+            "note": "Egyptiske læger har siden oldtiden brugt dens bælge og blade som et kraftfuldt og pålideligt afføringsmiddel.",
+            "id": "senna",
+            "tags": [
+              "digestion"
+            ]
+          },
+          {
+            "name": "Hibiscus (Karkade)",
+            "sci": "Hibiscus sabdariffa",
+            "note": "Trukket som karkade i Sudan og Egypten – dens bæger er et folkeligt middel mod forhøjet blodtryk og feber.",
+            "id": "hibiscus",
+            "tags": [
+              "immunity"
+            ]
+          },
+          {
+            "name": "Moringa",
+            "sci": "Moringa oleifera",
+            "note": "Længe brugt i Afrika syd for Sahara – dens blade behandler underernæring og betændelse og understøtter ammende mødres mælkeproduktion.",
+            "id": "moringa",
+            "tags": [
+              "immunity",
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "Baobab",
+            "sci": "Adansonia digitata",
+            "note": "Afrikas 'livets træ' giver frugtkød og bark, traditionelt brugt mod feber, diarré og malaria.",
+            "id": "baobab",
+            "tags": [
+              "immunity",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Rooibos",
+            "sci": "Aspalathus linearis",
+            "note": "Sydafrikas khoisanfolk og kap-hollandske nybyggere bryggede denne rødlige busk som middel mod allergi og kolik.",
+            "id": "rooibos",
+            "tags": [
+              "immunity",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Buchu",
+            "sci": "Agathosma betulina",
+            "note": "Khoisan-healere i Kapregionen brugte dens skarpe blade mod urinvejsinfektioner og nyrelidelser.",
+            "id": "buchu",
+            "tags": [
+              "immunity"
+            ]
+          },
+          {
+            "name": "Kræftbusk (Sutherlandia)",
+            "sci": "Lessertia frutescens",
+            "note": "Kendt af khoi-folket som 'kankerbos' – denne sydafrikanske busk er et traditionelt tonikum mod stress, træthed og til at styrke immunforsvaret.",
+            "id": "cancerBush",
+            "tags": [
+              "stress",
+              "energy",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Umckaloabo (afrikansk pelargonie)",
+            "sci": "Pelargonium sidoides",
+            "note": "Xhosa- og zulu-healere i Sydafrika brugte dens knoldede rod mod hoste, bronkitis og tuberkulose.",
+            "id": "umckaloabo",
+            "tags": [
+              "respiratory"
+            ]
+          },
+          {
+            "name": "Hoodia",
+            "sci": "Hoodia gordonii",
+            "note": "San-jægere i Kalahari tyggede denne tornede sukkulent for at dæmpe sult og tørst på lange vandringer.",
+            "id": "hoodia",
+            "tags": [
+              "energy"
+            ]
+          },
+          {
+            "name": "Henna",
+            "sci": "Lawsonia inermis",
+            "note": "Ud over kropskunst bruger mellemøstlig og nordafrikansk folkemedicin bladpastaen mod svampeinfektioner i huden.",
+            "id": "henna",
+            "tags": [
+              "skin"
+            ]
+          },
+          {
+            "name": "Mastiks",
+            "sci": "Pistacia lentiscus",
+            "note": "Tygget siden oldtiden i det østlige Middelhavsområde – dette træs harpiks lindrer mavesår og fordøjelsesbesvær.",
+            "id": "mastic",
+            "tags": [
+              "digestion"
+            ]
+          },
+          {
+            "name": "Johannesbrød",
+            "sci": "Ceratonia siliqua",
+            "note": "Mellemøstlig folkemedicin malede dens bælge til et middel mod børns diarré og fordøjelsesbesvær.",
+            "id": "carob",
+            "tags": [
+              "digestion"
+            ]
+          }
+        ]
+      },
+      "floweringPerennials": {
+        "title": "Blomstrende stauder",
+        "desc": "Blomster, der vender tilbage år efter år.",
+        "intro": "Blomstrende stauder er rygraden i en have, der bliver ved med at give: i modsætning til étårige planter visner de om vinteren og gror frem igen fra de samme rødder, rhizomer eller rodknolde hvert forår. Mange sætter sig godt til rette og breder sig til fyldigere buske gennem årene, så én enkelt plantning kan belønne dig med flere blomster hver sæson. Denne samling samler elskede, letfindelige stauder, der er faste holdepunkter i bede og rabatter med pålidelig, tilbagevendende farve.",
+        "species": [
+          {
+            "name": "Pæon",
+            "sci": "Paeonia lactiflora",
+            "note": "Langtlevende rodknolde kan blomstre på samme sted i halvtreds år eller mere, stort set uforstyrret."
+          },
+          {
+            "name": "Daglilje",
+            "sci": "Hemerocallis fulva",
+            "note": "På trods af navnet formerer hver plante sig til tætte klumper, der blomstrer pålideligt i generationer."
+          },
+          {
+            "name": "Purpursolhat",
+            "sci": "Echinacea purpurea",
+            "note": "Denne præriehjemmehørende plante vender tilbage fra en solid pælerod og selvsår sig til stadig større kolonier over tid."
+          },
+          {
+            "name": "Skægiris",
+            "sci": "Iris germanica",
+            "note": "Kødfulde rhizomer breder sig lige under jordoverfladen og deler sig i nye skud, der blomstrer igen hvert forår."
+          },
+          {
+            "name": "Rudbeckia",
+            "sci": "Rudbeckia fulgida",
+            "note": "Breder sig ved hjælp af rhizomer og selvsåning til pålidelige, gyldne tæpper, der vender tilbage hver sommer."
+          },
+          {
+            "name": "Phlox",
+            "sci": "Phlox paniculata",
+            "note": "Robuste, klumpdannende stængler visner ned til rødderne hvert efterår og springer frem igen fuldere året efter."
+          },
+          {
+            "name": "Almindelig lavendel",
+            "sci": "Lavandula angustifolia",
+            "note": "Forvedede staudestængler overlever vinterdvalen og springer ud igen for at blomstre hver sommer."
+          }
+        ]
+      },
+      "oceanAndRiverFish": {
+        "title": "Fisk i hav og flod",
+        "desc": "Seksten vande, én linse",
+        "intro": "Fra koralrev til kolde bjergfloder er det her de fisk, folk oftest fotograferer og spørger om. Videnskabelige navne står på latin over hele verden, så et navn, du lærer her, holder ved enhver kyst.",
+        "species": [
+          {
+            "name": "Klovnfisk",
+            "sci": "Amphiprion ocellaris",
+            "note": "Lever inde i søanemoner, hvis nældeceller den er immun over for, og bytter rengøring for beskyttelse. Alle klovnfisk fødes som hanner, og den dominerende bliver til hun.",
+            "id": "clownfish"
+          },
+          {
+            "name": "Regnbueørred",
+            "sci": "Oncorhynchus mykiss",
+            "note": "Stammer fra kolde floder ved Stillehavskysten og opdrættes i dag på alle kontinenter undtagen Antarktis. Det lyserøde kød kommer fra de krebsdyr, den spiser.",
+            "id": "rainbowTrout"
+          },
+          {
+            "name": "Atlanterhavslaks",
+            "sci": "Salmo salar",
+            "note": "Klækkes i ferskvand, tilbringer år på havet og finder så præcis den flod, den blev født i, for at gyde. Artsnavnet betyder »springeren«.",
+            "id": "atlanticSalmon"
+          },
+          {
+            "name": "Gedde",
+            "sci": "Esox lucius",
+            "note": "En bagholdsjæger, der ligger helt stille mellem vandplanterne og hugger på en brøkdel af et sekund. Andenæbbet og de bagudsiddende finner afslører den.",
+            "id": "northernPike"
+          },
+          {
+            "name": "Karpe",
+            "sci": "Cyprinus carpio",
+            "note": "Opdrættet i over to tusind år og findes nu på alle kontinenter undtagen Antarktis – eftertragtet mad i nogle lande, invasiv plage i andre.",
+            "id": "commonCarp"
+          },
+          {
+            "name": "Blå kirurgfisk",
+            "sci": "Paracanthurus hepatus",
+            "note": "En kirurgfisk fra revet med en knivskarp pig nær halen, som den slår ud i forsvar. Klar blå som voksen, klar gul som ungfisk.",
+            "id": "blueTang"
+          },
+          {
+            "name": "Stormundet black bass",
+            "sci": "Micropterus salmoides",
+            "note": "Verdens mest eftertragtede sportsfisk i ferskvand. Du kender den fra den småmundede på kæben, der rækker længere bagud end øjet.",
+            "id": "largemouthBass"
+          },
+          {
+            "name": "Gulfinnet tun",
+            "sci": "Thunnus albacares",
+            "note": "Krydser hele oceaner og kan holde kroppen varmere end vandet omkring sig – derfor svømmer den stærkt selv på kolde dybder.",
+            "id": "yellowfinTuna"
+          },
+          {
+            "name": "Zebrafisk",
+            "sci": "Danio rerio",
+            "note": "En lille stribet flodfisk fra Sydasien, som er blevet et af videnskabens mest studerede dyr – de gennemsigtige æg lader forskerne se organerne blive dannet.",
+            "id": "zebrafish"
+          },
+          {
+            "name": "Rød dragefisk",
+            "sci": "Pterois volitans",
+            "note": "Smuk og giftig, med pigge der giver et smertefuldt stik. Hjemmehørende i Indo-Stillehavet og en alvorlig invasiv art i Atlanterhavet og Caribien.",
+            "id": "redLionfish"
+          }
+        ]
+      },
+      "birdsOfTheWorld": {
+        "title": "Verdens fugle",
+        "desc": "Ti, du rent faktisk møder",
+        "intro": "Fugle er det vilde dyreliv, de fleste kan fotografere fra et vindue. De ti her spænder over seks kontinenter og er blandt de mest genkendte arter på kloden – god træning for et skarpt blik.",
+        "species": [
+          {
+            "name": "Landsvale",
+            "sci": "Hirundo rustica",
+            "note": "Verdens mest udbredte svale, der yngler over hele den nordlige halvkugle og overvintrer i syd. Den dybt kløftede hale er ikke til at tage fejl af i flugten.",
+            "id": "barnSwallow"
+          },
+          {
+            "name": "Gråspurv",
+            "sci": "Passer domesticus",
+            "note": "Fulgte med mennesket ud af Mellemøsten og ind i næsten hver eneste by på kloden. Hannen har en sort hagesmæk; hunnen er ensfarvet sandbrun.",
+            "id": "houseSparrow"
+          },
+          {
+            "name": "Isfugl",
+            "sci": "Alcedo atthis",
+            "note": "Et glimt af elektrisk blåt over stille åer i Europa, Asien og Nordafrika. Den dykker med hovedet først og kan hente fisk en meter nede.",
+            "id": "commonKingfisher"
+          },
+          {
+            "name": "Vandrefalk",
+            "sci": "Falco peregrinus",
+            "note": "Verdens hurtigste dyr, der passerer 300 km/t i styrtdyk efter bytte. Findes på alle kontinenter undtagen Antarktis og yngler i stigende grad på skyskrabere.",
+            "id": "peregrineFalcon"
+          },
+          {
+            "name": "Amerikansk hejre",
+            "sci": "Ardea herodias",
+            "note": "Står ubevægelig i lavt vand i minutvis og spidder så en fisk med et hug, øjet ikke kan følge. Flyver med halsen bøjet i et S.",
+            "id": "greatBlueHeron"
+          },
+          {
+            "name": "Klippedue",
+            "sci": "Columba livia",
+            "note": "Byens due, der nedstammer fra klippeynglende fugle – derfor passer afsatser og vindueskarme den så godt. Begge forældre fodrer ungerne med »kromælk«.",
+            "id": "rockPigeon"
+          },
+          {
+            "name": "Rødhals",
+            "sci": "Erithacus rubecula",
+            "note": "Fræk nok til at følge en havemand rundt efter opgravede orme. Det orange bryst bæres af begge køn og forsvares året rundt med sang.",
+            "id": "europeanRobin"
+          },
+          {
+            "name": "Gråand",
+            "sci": "Anas platyrhynchos",
+            "note": "Stamformen til næsten alle tamænder. Den grønhovedede han er den berømte, men det er kun hunnen, der laver det klassiske høje rap.",
+            "id": "mallard"
+          },
+          {
+            "name": "Rød ara",
+            "sci": "Ara macao",
+            "note": "En stor papegøje fra Mellem- og Sydamerikas regnskove, der kan blive over halvtreds år og lever i par hele livet. Næbbet knækker nødder, ingen anden fugl kan åbne.",
+            "id": "scarletMacaw"
+          },
+          {
+            "name": "Kejserpingvin",
+            "sci": "Aptenodytes forsteri",
+            "note": "Yngler gennem den antarktiske vinter, hvor hannerne står tæt sammen i mørket med et enkelt æg balanceret på fødderne i to måneder uden at spise.",
+            "id": "emperorPenguin"
+          }
+        ]
+      },
+      "gardenInsects": {
+        "title": "Naboer under fødderne",
+        "desc": "Ti almindelige smådyr, set ordentligt efter",
+        "intro": "De ti dyr her lever inden for få meter fra de fleste hoveddøre, og næsten alle har kigget på dem alle sammen uden nogensinde at få at vide, hvad de gik og lavede. Under det velkendte gemmer sig kemisk krigsførelse, origamifoldede vinger, interkontinental navigation og en myrekoloni på 6.000 kilometer.",
+        "species": [
+          {
+            "name": "Syvplettet mariehøne",
+            "sci": "Coccinella septempunctata",
+            "note": "Klem den, og den bløder med vilje fra knæene — en bitter gul væske, der får fugle til at spytte den ud.",
+            "id": "sevenSpotLadybird"
+          },
+          {
+            "name": "Almindelig ørentvist",
+            "sci": "Forficula auricularia",
+            "note": "Bagvingerne folder sig ud til over ti gange deres pakkede størrelse — en af naturens tætteste foldninger — og den flyver næsten aldrig.",
+            "id": "commonEarwig"
+          },
+          {
+            "name": "Kuglebænkebider",
+            "sci": "Armadillidium vulgare",
+            "note": "Slet ikke et insekt, men et krebsdyr — en landlevende slægtning til krabber, der stadig ånder med omdannede gæller.",
+            "id": "commonPillWoodlouse"
+          },
+          {
+            "name": "Stueflue",
+            "sci": "Musca domestica",
+            "note": "Den smager med fødderne og ved altså allerede, hvad den er landet på, længe før munddelene når frem.",
+            "id": "houseFly"
+          },
+          {
+            "name": "Havesnegl",
+            "sci": "Cornu aspersum",
+            "note": "Den æder ved at trække et tandbesat bånd hen over bladene og danner nye tænder bagfra, efterhånden som forreste række slides op.",
+            "id": "gardenSnail"
+          },
+          {
+            "name": "Honningbi",
+            "sci": "Apis mellifera",
+            "note": "Dronningen parrer sig i luften i løbet af få dage, aldrig siden, og lægger æg af den oplagrede sæd resten af sit liv.",
+            "id": "westernHoneyBee"
+          },
+          {
+            "name": "Tidselsommerfugl",
+            "sci": "Vanessa cardui",
+            "note": "Ingen enkelt sommerfugl når hele vejen rundt; der skal cirka seks generationer til fra Afrikas troper til Europa og hjem igen.",
+            "id": "paintedLady"
+          },
+          {
+            "name": "Kælderedderkop",
+            "sci": "Pholcus phalangioides",
+            "note": "Den jager andre edderkopper ved at plukke i deres spind som et fanget insekt og går så løs på ejeren, der kommer for at se efter.",
+            "id": "cellarSpider"
+          },
+          {
+            "name": "Argentinsk myre",
+            "sci": "Linepithema humile",
+            "note": "Arbejdere fra Spanien, Californien og Japan, tusinder af kilometer fra hinanden, mødes uden at slås: de regnes som én koloni.",
+            "id": "argentineAnt"
+          },
+          {
+            "name": "Stor regnorm",
+            "sci": "Lumbricus terrestris",
+            "note": "Darwin brugte sine sidste år på at studere regnorme og udgav en bog om dem et halvt år før sin død.",
+            "id": "commonEarthworm"
+          }
+        ]
+      },
+      "fungiOfTheWorld": {
+        "title": "Hverken plante eller dyr",
+        "desc": "Ti svampe, der i stilhed styrer verden",
+        "intro": "Svampe står tættere på dyr end på planter i livets stamtræ, og den svamp, du kan se, er kun frugten af et net af tråde, der breder sig usynligt gennem jord, ved eller et levende insekt. Blandt disse ti er den, der dræber flere mennesker end nogen anden svamp, en organisme der dækker ni kvadratkilometer i Oregon, og skimlen, der indledte antibiotikaens tidsalder.",
+        "species": [
+          {
+            "name": "Rød fluesvamp",
+            "sci": "Amanita muscaria",
+            "note": "Eventyrenes rød-hvide paddehat findes virkelig, er giftig og indeholder næsten intet af den gift, der er opkaldt efter den.",
+            "id": "flyAgaric"
+          },
+          {
+            "name": "Grøn fluesvamp",
+            "sci": "Amanita phalloides",
+            "note": "Står bag langt de fleste dødelige svampeforgiftninger i verden, og hverken kogning, tørring eller frysning rører dens gift.",
+            "id": "deathCap"
+          },
+          {
+            "name": "Champignon",
+            "sci": "Agaricus bisporus",
+            "note": "Hvid champignon, brun champignon og portobello er ikke tre svampe, men én art — kun stamme og alder skiller dem.",
+            "id": "buttonMushroom"
+          },
+          {
+            "name": "Ølgær",
+            "sci": "Saccharomyces cerevisiae",
+            "note": "Encellet svamp bag brød, øl og vin — og den første organisme med cellekerne, der fik hele sit genom kortlagt, i 1996.",
+            "id": "brewersYeast"
+          },
+          {
+            "name": "Zombiemyresvamp",
+            "sci": "Ophiocordyceps unilateralis",
+            "note": "Den får en smittet myre til at kravle op i en bestemt højde, bide sig fast og dø der — og skyder så en stilk ud af dens hoved.",
+            "id": "zombieAntFungus"
+          },
+          {
+            "name": "Mørk honningsvamp",
+            "sci": "Armillaria ostoyae",
+            "note": "Ét enkelt individ i det østlige Oregon dækker knap ni kvadratkilometer — arealmæssigt den største organisme, der er målt.",
+            "id": "humongousFungus"
+          },
+          {
+            "name": "Bitter østershat",
+            "sci": "Panellus stipticus",
+            "note": "Lille, sej vifteformet svamp med lameller, der lyser grønt i mørke — men kun hvis den kommer fra den rigtige side af Atlanten.",
+            "id": "bitterOyster"
+          },
+          {
+            "name": "Penselskimmel",
+            "sci": "Penicillium rubens",
+            "note": "Den blågrønne skimmel, der forurenede Alexander Flemings plade i 1928, blev først artsbestemt korrekt i 2011.",
+            "id": "penicilliumMould"
+          },
+          {
+            "name": "Chytridsvamp",
+            "sci": "Batrachochytrium dendrobatidis",
+            "note": "En svamp, man ikke kan se med det blotte øje, har drevet flere arter mod udryddelse end nogen anden kendt sygdom.",
+            "id": "chytridFungus"
+          },
+          {
+            "name": "Hvid trøffel",
+            "sci": "Tuber magnatum",
+            "note": "Den frugter helt under jorden, har trodset avlere i årtier, og ét eksemplar på 1,5 kg gik for cirka 330.000 dollar i 2007.",
+            "id": "whiteTruffle"
+          }
+        ]
+      },
+      "fromFieldToPlate": {
+        "title": "Hvor middagen begyndte",
+        "desc": "Ti basisafgrøder og deres sande ophav",
+        "intro": "Næsten intet på en tallerken vokser dér, hvor det blev til. Disse ti afgrøder blev tæmmet i floddale, højlandsskove og sumpe for tusinder af år siden og derefter båret over oceaner, indtil de største høstudbytter endte på et helt forkert kontinent.",
+        "species": [
+          {
+            "name": "Majs",
+            "sci": "Zea mays",
+            "note": "Dens vilde stamform bærer omkring et dusin kerner, hver forseglet i en stenhård skal — intet der ligner en kolbe.",
+            "id": "maize"
+          },
+          {
+            "name": "Kassava",
+            "sci": "Manihot esculenta",
+            "note": "Tæmmet i udkanten af Amazonas, men den mætter i dag flere mennesker i Afrika end i Sydamerika.",
+            "id": "cassava"
+          },
+          {
+            "name": "Arabica-kaffe",
+            "sci": "Coffea arabica",
+            "note": "Arabica er ikke en urgammel art, men en naturlig krydsning af to andre kaffearter — med forbløffende lidt genetisk variation.",
+            "id": "arabicaCoffee"
+          },
+          {
+            "name": "Sojabønne",
+            "sci": "Glycine max",
+            "note": "Det meste soja når aldrig direkte ud på en tallerken — det presses til olie og bliver til foder til husdyr.",
+            "id": "soybean"
+          },
+          {
+            "name": "Sukkerrør",
+            "sci": "Saccharum officinarum",
+            "note": "Det blev først dyrket på Ny Guinea som en stængel at tygge; sukkerraffinering og ethanol kom tusinder af år senere.",
+            "id": "sugarcane"
+          },
+          {
+            "name": "Brødhvede",
+            "sci": "Triticum aestivum",
+            "note": "Brødhvede har aldrig eksisteret vildt — den opstod på markerne, da dyrket hvede krydsede med et græs fra vejkanten.",
+            "id": "breadWheat"
+          },
+          {
+            "name": "Asiatisk ris",
+            "sci": "Oryza sativa",
+            "note": "Ris blev tæmmet to gange på to kontinenter — én gang ved Yangtze og igen fra et andet vildt græs i Vestafrika.",
+            "id": "asianRice"
+          },
+          {
+            "name": "Kartoffel",
+            "sci": "Solanum tuberosum",
+            "note": "Hver eneste kartoffel i Europa, Asien og Afrika stammer fra højlandet omkring Titicacasøen.",
+            "id": "potato"
+          },
+          {
+            "name": "Banan",
+            "sci": "Musa acuminata",
+            "note": "Vilde bananer er fyldt med hårde frø på størrelse med ærter; den kerneløse frugt findes kun, fordi vi genplanter sterile kloner.",
+            "id": "banana"
+          },
+          {
+            "name": "Appelsin",
+            "sci": "Citrus × sinensis",
+            "note": "Appelsinen er ikke en vild art: den er en krydsning af pomelo og mandarin, kopieret med podning lige siden.",
+            "id": "sweetOrange"
+          }
+        ]
+      },
+      "heardNotSeen": {
+        "title": "Hørt før set",
+        "desc": "Ti dyr, du møder med ørerne først",
+        "intro": "De fleste møder med dyrelivet begynder som en lyd fra et sted, man ikke kan se. Disse ti — ugler og frøer, en cikade, to syngende insekter, en abe og en ræv — er alle langt lettere at finde med ørerne end med øjnene, og de siger hver især noget helt bestemt.",
+        "species": [
+          {
+            "name": "Natugle",
+            "sci": "Strix aluco",
+            "note": "Det berømte »ku-vitt, hu-huu« er to ugler i samtale: hunnens skarpe ke-vik besvaret af hannens dirrende tuden.",
+            "id": "tawnyOwl"
+          },
+          {
+            "name": "Gøg",
+            "sci": "Cuculus canorus",
+            "note": "Kun hannen siger kukkuk; hunnen svarer med en boblende vandklukken, der sender småfugle i panik.",
+            "id": "commonCuckoo"
+          },
+          {
+            "name": "Sydlig nattergal",
+            "sci": "Luscinia megarhynchos",
+            "note": "Synger kraftigst mellem midnat og klokken tre, og kun uparrede hanner gør det — bliver en hun hængende, holder natsangen op.",
+            "id": "commonNightingale"
+          },
+          {
+            "name": "Løvfrø",
+            "sci": "Hyla arborea",
+            "note": "En fem centimeter lang frø med en strubesæk bredere end hovedet, og et kor der bærer næsten en kilometer på en stille nat.",
+            "id": "europeanTreeFrog"
+          },
+          {
+            "name": "Oksefrø",
+            "sci": "Lithobates catesbeianus",
+            "note": "Et basbrøl på omkring 200 hertz, der bærer det meste af en kilometer hen over åbent vand.",
+            "id": "americanBullfrog"
+          },
+          {
+            "name": "Cicada orni",
+            "sci": "Cicada orni",
+            "note": "Synger kun når det er varmt nok: koret bygger op, mens formiddagen varmes op, og går i stå, når en sky glider for solen.",
+            "id": "cicadaOrni"
+          },
+          {
+            "name": "Husfårekylling",
+            "sci": "Acheta domesticus",
+            "note": "Sangen er to vinger, der saver mod hinanden — en skraber trukket hen over en fil med over hundrede tænder, ved 4-5 kHz.",
+            "id": "houseCricket"
+          },
+          {
+            "name": "Stor grøn løvgræshoppe",
+            "sci": "Tettigonia viridissima",
+            "note": "En tør, ubrudt raslen fra skumring til længe efter midnat, nogle gange i timevis uden en rigtig pause.",
+            "id": "greatGreenBushCricket"
+          },
+          {
+            "name": "Sort brøleabe",
+            "sci": "Alouatta caraya",
+            "note": "Morgenbrølet bærer op mod fem kilometer gennem skoven og er blandt de kraftigste lyde, noget landdyr laver.",
+            "id": "blackHowlerMonkey"
+          },
+          {
+            "name": "Rød ræv",
+            "sci": "Vulpes vulpes",
+            "note": "Vinterskriget, man plejer at give hunræven skylden for, kommer fra begge køn — og det er et parringskald, ikke nød.",
+            "id": "redFox"
+          }
+        ]
+      }
+    },
+    "species": {
+      "fiddleLeafFig": {
+        "name": "Lyrefigen",
+        "sci": "Ficus lyrata",
+        "light": "Kraftigt, indirekte lys",
+        "water": "Ugentligt; lad de øverste 2-5 cm jord tørre ud",
+        "difficulty": "Udfordrende",
+        "overview": "Lyrefigen stammer oprindeligt fra det tropiske lavlandsregnskov i Vestafrika og er eftertragtet for sine store, blanke, violinformede blade med dramatisk årenettegning, der har gjort den til et ikon inden for interiørdesign. Den dyrkes som en dramatisk gulvplante, der kan nå loftshøjde indendørs, men den er berygtet for at være kræsen med hensyn til konsistens i lys, vand og temperatur.",
+        "funFact": "I sit naturlige habitat kan Ficus lyrata vokse til et fuldvoksent træ på over 12 meter med blade næsten dobbelt så store som dem, vi ser indendørs, og den kan endda producere små, uspiselige figner bestøvet af en bestemt art figenhveps - noget den stort set aldrig gør som stueplante."
+      },
+      "bostonFern": {
+        "name": "Bostonbregne",
+        "sci": "Nephrolepis exaltata",
+        "light": "Kraftigt til middel, indirekte lys",
+        "water": "Hold jorden jævnt fugtig; lad den aldrig tørre helt ud",
+        "difficulty": "Moderat",
+        "overview": "Bostonbregnen er en frodig, buet sort af sværdbregnen, en art, der findes i fugtige troperegioner verden over. Dens fjerlette, nedhængende blade har gjort den til en favorit til hængekurve og skyggefulde verandaer siden den victorianske æra, selvom den kræver stabil fugtighed og høj luftfugtighed for at trives.",
+        "funFact": "'Bostoniensis'-sorten blev ikke avlet med vilje - den var en naturlig mutation, der blev opdaget i 1894 i en forsendelse af sværdbregner sendt fra Philadelphia til en blomsterhandler i Boston, og den blev formeret fra denne ene mutation til den stueplante, vi kender i dag."
+      },
+      "jadePlant": {
+        "name": "Pengetræ",
+        "sci": "Crassula ovata",
+        "light": "Fuld sol til kraftigt lys",
+        "water": "Sparsomt; lad jorden tørre helt ud mellem vandingerne",
+        "difficulty": "Nem",
+        "overview": "Pengetræet er en hårdfør sukkulent, der stammer fra de semi-aride regioner i Sydafrika og Mozambique, og som kendes på sine tykke, blanke, ovale blade og forvedede, forgrenede stængler, der giver den udseende af et miniaturetræ. Det er en elsket plante for begyndere og gives ofte videre som en familiearv, undertiden kaldet 'lykkeplanten' i feng shui-traditionen.",
+        "funFact": "Under de rette forhold kan pengetræer leve i 50 til 100 år, og modne eksemplarer vil af og til belønne dyrkeren med klaser af små, stjerneformede hvide eller lyserøde blomster, som normalt udløses af kølige nætter og en tør periode."
+      },
+      "calathea": {
+        "name": "Calathea",
+        "sci": "Goeppertia orbifolia",
+        "light": "Middel, indirekte lys",
+        "water": "Hold let fugtig med filtreret eller destilleret vand",
+        "difficulty": "Udfordrende",
+        "overview": "Denne slående plante fra bederplante-familien (Marantaceae) stammer fra regnskovene i Bolivia og dyrkes for sine overdimensionerede, runde blade stribet i sølv- og mørkegrønne nuancer. Ligesom sine slægtninge rejser og folder dens blade sig sammen om natten og sænker sig igen om dagen, en bevægelse kaldet nyktinasti, der får den til at føles næsten levende.",
+        "funFact": "Denne art blev tidligere klassificeret som Calathea orbifolia, men i 2012 splittede genetisk og morfologisk forskning de fleste Calathea-arter ud i slægten Goeppertia - selvom planteskoler og planteelskere stadig overvejende bruger det gamle navn 'Calathea'."
+      }
+    },
+    "topicSpeciesSectionTitle": "Arter i denne samling",
+    "speciesLightLabel": "Lys",
+    "speciesWaterLabel": "Vand",
+    "speciesDifficultyLabel": "Sværhedsgrad",
+    "funFactLabel": "Sjov fakta",
+    "symptomFilterTitle": "Hvad generer dig?",
+    "symptomFilterAll": "Alle",
+    "symptomFilterEmpty": "Ingen urter er tagget til dette endnu.",
+    "viewHerbLabel": "Se {{name}}",
+    "herbDisclaimer": "Informativt indhold baseret på traditionel brug og folkemedicin. Ikke en erstatning for lægefaglig rådgivning - kontakt en læge, før du bruger en urt til at behandle en helbredstilstand.",
+    "herbDetailsLoadError": "Kunne ikke indlæse oplysninger om denne urt. Prøv venligst igen.",
+    "preparationLabel": "Sådan tilberedes den",
+    "benefitsLabel": "Fordele",
+    "symptoms": {
+      "headache": "Hovedpine",
+      "digestion": "Fordøjelse",
+      "sleep": "Søvn",
+      "stress": "Stress & Angst",
+      "immunity": "Immunforsvar",
+      "painInflammation": "Smerte & Betændelse",
+      "respiratory": "Hoste & Luftveje",
+      "skin": "Hud & Sår",
+      "energy": "Energi & Træthed"
+    },
+    "herbSubscribeCtaTitle": "Nyder du denne guide?",
+    "herbSubscribeCtaBody": "Abonner for at låse op for ubegrænset identifikation af planter, insekter, svampe og afgrøder.",
+    "herbAlreadySubscribedCheck": "Allerede abonnent? Tryk for at tjekke igen"
+  },
+  "botanist": {
+    "headerTitle": "Dr. Helena Marques",
+    "headerSubtitle": "Agronom · Professor i botanik",
+    "intro": "Hej! Jeg er Helena, agronom og professor i botanik. Fortæl mig, hvad der sker med din plante — eller spørg mig om alt om jord, skadedyr, vanding eller naturen generelt.",
+    "placeholder": "Spørg Helena…",
+    "typing": "Helena skriver…",
+    "sendLabel": "Send besked",
+    "askLabel": "Spørg: {{question}}",
+    "suggestions": [
+      "Mine blade bliver gule",
+      "Hvor ofte skal jeg vande?",
+      "Er den sikker for katte?",
+      "Hvilken jord skal jeg bruge?"
+    ],
+    "errorOffline": "Du er offline. Jeg er her, når forbindelsen er tilbage.",
+    "errorRateLimited": "Et øjeblik — for mange spørgsmål på én gang. Prøv igen om et par minutter.",
+    "errorNotConfigured": "Specialisten er ikke tilgængelig endnu. Hun er ved at blive sat op.",
+    "errorGeneric": "Jeg kunne ikke svare lige nu. Prøv igen om et øjeblik."
+  },
+  "achievements": {
+    "title": "Præstationer",
+    "streakLabel": "Dage i træk",
+    "longestStreakLabel": "Længste stribe",
+    "totalLabel": "Identifikationer",
+    "unlockedTitle": "Præstation låst op!",
+    "progressLabel": "{{unlocked}}/{{total}} låst op",
+    "firstScan": {
+      "title": "Første opdagelse",
+      "body": "Identificér din første art"
+    },
+    "collector10": {
+      "title": "Samler",
+      "body": "Gem 10 arter i din samling"
+    },
+    "collector50": {
+      "title": "Naturkender",
+      "body": "Gem 50 arter i din samling"
+    },
+    "collector100": {
+      "title": "Naturmester",
+      "body": "Gem 100 arter i din samling"
+    },
+    "allCategories": {
+      "title": "Opdagelsesrejsende",
+      "body": "Gem mindst én art fra hver kategori"
+    },
+    "streak3": {
+      "title": "Godt i gang",
+      "body": "Identificér noget 3 dage i træk"
+    },
+    "streak7": {
+      "title": "Engageret",
+      "body": "Identificér noget 7 dage i træk"
+    },
+    "streak30": {
+      "title": "Dedikeret",
+      "body": "Identificér noget 30 dage i træk"
+    },
+    "sharedFirst": {
+      "title": "Del med andre",
+      "body": "Del dit første identifikationsresultat"
+    },
+    "subscriber": {
+      "title": "Premiummedlem",
+      "body": "Abonnér for ubegrænsede identifikationer"
+    },
+    "tokensLabel": "Tokens",
+    "tokensEarned": "+{{count}} tokens"
+  },
+  "help": {
+    "title": "Hjælp og support",
+    "identificationTitle": "Hvordan fungerer identifikation?",
+    "identificationBody": "Tag et billede af en plante, et insekt, en svamp, en afgrøde eller et træ, så sammenligner vores AI det med en stor database for at foreslå den mest sandsynlige art, sammen med dens videnskabelige navn, beskrivelse og andre detaljer.",
+    "accuracyTitle": "Er identifikationen altid præcis?",
+    "accuracyBody": "Ingen identifikationsapp er 100 % præcis, især ikke for svampe og planter, der kan være giftige. Spis, indsaml eller brug aldrig nogen art udelukkende baseret på denne apps resultat — bekræft altid først med en kvalificeret ekspert.",
+    "freeTitle": "Er NatureLens gratis?",
+    "freeBody": "Du får én gratis identifikation pr. kategori (planter, insekter, svampe, afgrøder, træer). Derefter låser et abonnement op for ubegrænsede identifikationer i alle kategorier.",
+    "cancelTitle": "Hvordan opsiger jeg mit abonnement?",
+    "cancelBody": "Gå til Profil, og slet din konto — det opsiger automatisk ethvert aktivt abonnement og fjerner samtidig dine data. Der findes i øjeblikket ingen separat opsigelsesknap; sletning af kontoen er den nuværende måde at stoppe betalingen på.",
+    "restoreTitle": "Jeg har skiftet telefon eller ryddet min browser — hvordan får jeg mit abonnement tilbage?",
+    "restoreBody": "Gå til Profil → Gendan adgang. Du kan enten anmode om en engangskode via e-mail eller, hvis du har oprettet en, logge ind med en adgangskode eller din Google-konto.",
+    "tokensTitle": "Hvad er tokens? Kan jeg indløse dem til noget?",
+    "tokensBody": "Du optjener automatisk tokens, hver gang du identificerer en art eller låser en præstation op. Det er endnu ikke muligt at indløse tokens til belønninger, men det er planlagt til fremtiden — din saldo bliver ved med at vokse i mellemtiden.",
+    "privacyTitle": "Er mine data private?",
+    "privacyBody": "NatureLens kræver ikke en konto for at kunne bruges. Det meste af dine data (samling, billeder) forbliver kun på din enhed. Se hele Privatlivspolitikken for flere detaljer.",
+    "deleteTitle": "Hvordan sletter jeg min konto og mine data?",
+    "deleteBody": "Gå til Profil, og tryk på Slet konto nederst. Dette opsiger ethvert aktivt abonnement, fjerner dine gemte data fra vores servere og rydder alt, der er gemt på denne enhed.",
+    "offlineTitle": "Virker appen offline?",
+    "offlineBody": "Nej — at identificere en art kræver en internetforbindelse for at nå vores AI-tjeneste.",
+    "languageTitle": "Kan jeg bruge appen på et andet sprog?",
+    "languageBody": "Ja, NatureLens understøtter 17 sprog. Gå til Profil → Sprog for at skifte når som helst."
+  },
+  "store": {
+    "title": "Belønninger",
+    "intro": "Brug de tokens, du tjener ved at identificere arter. Alle belønninger her virker med det samme, når du indløser dem.",
+    "owned": "Ejet",
+    "open": "Åbn",
+    "redeem": "Indløs",
+    "redeemLabel": "Indløs for {{cost}} tokens",
+    "redeemedTitle": "Indløst!",
+    "notEnoughTitle": "Ikke nok tokens",
+    "notEnoughBody": "Du skal bruge {{cost}} tokens til denne. Bliv ved med at identificere for at tjene flere.",
+    "shieldsHeld": "{{count}} skjold gemt",
+    "earnHint": "Du får 5 tokens pr. identifikation og 15 pr. oplåst præstation.",
+    "download": "Download",
+    "downloadErrorTitle": "Download mislykkedes",
+    "downloadErrorBody": "Filen kunne ikke gemmes. Prøv igen fra en browser.",
+    "items": {
+      "streakShield": {
+        "title": "Stribe-skjold",
+        "description": "Beskytter din stribe, hvis du springer en dag over. Kan stables — køb flere.",
+        "redeemedBody": "Din stribe er beskyttet. Springer du en dag over, dækker skjoldet automatisk."
+      },
+      "wallpapers": {
+        "title": "Botaniske Baggrunde",
+        "description": "Tre eksklusive baggrunde (1080×1920) til din telefon.",
+        "redeemedBody": "Dine baggrunde er klar. Tryk på Download ved den, du vil have."
+      },
+      "naturalistBadge": {
+        "title": "Naturalist-mærke",
+        "description": "Et permanent mærke på din profil. Viser, at du har været med et stykke tid.",
+        "redeemedBody": "Dit mærke er nu på din profil.",
+        "ownedBody": "Du har allerede dette mærke — det vises på din profil."
+      }
+    }
+  },
+  "missions": {
+    "title": "Dagens missioner",
+    "rewardEach": "+{{tokens}} pr. stk.",
+    "allDone": "Alt klaret — kom tilbage i morgen!",
+    "pool": {
+      "scanAny2": "Identificér 2 arter i dag",
+      "scanAny3": "Identificér 3 arter i dag",
+      "scanPlant": "Identificér en plante eller et træ",
+      "scanInsect": "Identificér et insekt",
+      "scanMushroom": "Identificér en svamp",
+      "scanFish": "Identificér en fisk",
+      "scanBird": "Identificér en fugl",
+      "saveOne": "Gem et fund i din samling",
+      "saveTwo": "Gem 2 fund i din samling",
+      "shareOne": "Del en identifikation",
+      "openDiscover": "Besøg fanen Opdag"
+    }
+  },
+  "share": {
+    "message": "Jeg identificerede en {{category}} med NatureLens: {{name}}{{scientific}}{{confidence}}\n\nIdentificér planter, insekter, svampe, fisk og fugle ud fra et foto:\n{{url}}",
+    "confidenceLine": "{{confidence}}% sikkerhed"
+  },
+  "onboarding": {
+    "skip": "Spring over",
+    "next": "Næste",
+    "start": "Kom i gang",
+    "what": {
+      "title": "Sigt. Tag billedet. Få svaret.",
+      "body": "Fotografér noget levende, og NatureLens fortæller dig på få sekunder, hvad det er — med referencefotos så du selv kan bekræfte det."
+    },
+    "collect": {
+      "title": "Byg din egen feltdagbog",
+      "body": "Hvert fund kan gemmes i din samling, mærkes og ses igen senere. Tjen tokens og lås belønninger op undervejs."
+    },
+    "free": {
+      "title": "Din første identifikation er gratis",
+      "body": "Prøv én identifikation i hver kategori gratis. Abonnér først, når du vil scanne ubegrænset."
+    }
+  },
+  "recap": {
+    "title": "Din måned i naturen",
+    "entrySubtitle": "Se dit tilbageblik og del det",
+    "headline": "Du mødte {{count}} forskellige arter",
+    "emptyTitle": "Der er ikke noget at opsummere endnu",
+    "emptyBody": "Identificér og gem noget denne måned, så dukker dit tilbageblik op her.",
+    "byCategory": "Efter kategori",
+    "highlight": "Månedens højdepunkt",
+    "share": "Del mit tilbageblik",
+    "shareTitle": "Min måned i naturen",
+    "shareMessage": "I {{month}} identificerede jeg {{total}} fund — {{species}} forskellige arter — med NatureLens 🌿\n\nIdentificér planter, insekter, svampe, fisk og fugle ud fra et foto:\n{{url}}",
+    "streakLine": "Nuværende stribe: {{current}} dage · rekord: {{longest}}",
+    "stats": {
+      "total": "Gemte fund",
+      "species": "Arter",
+      "categories": "Kategorier",
+      "days": "Aktive dage"
+    }
+  },
+  "subscription": {
+    "title": "Mit abonnement",
+    "entrySubtitle": "Status, planer og opsigelse",
+    "activeTitle": "Premium aktivt",
+    "activeBody": "Ubegrænsede identifikationer i alle kategorier. Tak fordi du støtter NatureLens.",
+    "freeTitle": "Gratis plan",
+    "freeBody": "Én gratis identifikation pr. kategori. Abonnér for ubegrænsede scanninger.",
+    "unknownTitle": "Kunne ikke tjekke lige nu",
+    "unknownBody": "Vi kunne ikke nå serveren. Hvis du abonnerer, er din adgang uændret — prøv igen om lidt.",
+    "plansTitle": "Planer",
+    "manageTitle": "Administrér eller opsig",
+    "manageBody": "Dit abonnement opkræves af Hotmart, så opsigelsen sker på din Hotmart-konto — ikke her. Opsiger du der, stopper fremtidige betalinger, og din adgang varer perioden ud.",
+    "openHotmart": "Åbn min Hotmart-konto"
+  },
+  "notifications": {
+    "row": "Notifikationer",
+    "on": "Til",
+    "off": "Fra",
+    "enabledTitle": "Notifikationer slået til",
+    "enabledBody": "Du får påmindelser om at vande dine planter og holde din stribe i live.",
+    "deniedTitle": "Notifikationer blokeret",
+    "deniedBody": "Du har blokeret notifikationer for dette websted. Tillad dem i browserens indstillinger for naturelensapp.cloud.",
+    "errorTitle": "Kunne ikke slå til",
+    "errorBody": "Noget gik galt. Prøv igen om lidt."
+  },
+  "fieldGuide": {
+    "habitat": "Levested",
+    "curiosity": "Vidste du",
+    "identifyCta": "Identificér en med kameraet",
+    "photoCredit": "Foto: Wikimedia Commons · tryk for kilden",
+    "textCredit": "Tekst: Wikipedia · tryk for at læse mere"
+  },
+  "backup": {
+    "exportRow": "Sikkerhedskopiér min samling",
+    "importRow": "Gendan fra en sikkerhedskopi",
+    "exportEmptyTitle": "Ingenting at kopiere endnu",
+    "exportEmptyBody": "Gem dit første fund, så har kopien noget at bevare.",
+    "importDoneTitle": "Samling gendannet",
+    "importDoneBody": "{{added}} element(er) tilføjet. {{skipped}} var der allerede.",
+    "importFailedTitle": "Kunne ikke gendanne",
+    "errorWrongFile": "Den fil er ikke en NatureLens-sikkerhedskopi.",
+    "errorNewerVersion": "Den kopi blev lavet med en nyere version af appen. Opdatér og prøv igen.",
+    "errorStorageFull": "Der er ikke plads nok på denne enhed til de elementer.",
+    "errorGeneric": "Noget gik galt under læsning af filen."
+  },
+  "sound": {
+    "tapToRecord": "Tryk for at optage",
+    "recording": "Optager… {{seconds}}s tilbage",
+    "analysing": "Lytter…",
+    "startLabel": "Start optagelse",
+    "stopLabel": "Stop og identificér",
+    "tipsTitle": "For et bedre resultat",
+    "tip1": "Kom tættere på hvis du kan — afstanden betyder mest.",
+    "tip2": "Ret telefonen mod lyden, og stå stille.",
+    "tip3": "Optag mens den faktisk kalder, ikke stilheden imellem.",
+    "scopeNote": "Dækker fugle, frøer, fårekyllinger, græshopper og nogle pattedyr. Trænet på naturoptagelser, så kæledyr og trafik forvirrer den.",
+    "identifiedBySound": "Identificeret via lyd · {{group}}",
+    "groupAmphibian": "Amfibie",
+    "groupMammal": "Pattedyr",
+    "permissionTitle": "Mikrofon blokeret",
+    "permissionBody": "Tillad mikrofonadgang for dette websted i browserindstillingerne, og prøv igen.",
+    "unsupportedTitle": "Optagelse ikke mulig",
+    "unsupportedBody": "Denne browser kan ikke optage lyd. Prøv Chrome på Android, eller føj appen til hjemmeskærmen på iPhone.",
+    "tooShortTitle": "Optagelsen er for kort",
+    "tooShortBody": "Optag i mindst to sekunder, mens dyret kalder.",
+    "failedTitle": "Kunne ikke identificere",
+    "failedBody": "Noget gik galt med den optagelse. Prøv igen.",
+    "decodeFailedBody": "Optagelsen kunne ikke læses. Prøv igen.",
+    "notFoundBody": "Intet genkendeligt i optagelsen. Kom tættere på, eller optag mens den kalder.",
+    "noContentBody": "Der er endnu ingen beskrivelse af denne art.",
+    "notWildlifeBody": "Det lyder som et køretøj, en maskine eller en stemme, ikke et dyr. Prøv at optage igen et mere stille sted."
+  },
+  "login": {
+    "signInRow": "Log ind",
+    "signInSubtitle": "Brug dit abonnement på alle enheder",
+    "accountRow": "Min konto"
+  }
+}

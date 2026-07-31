@@ -1,0 +1,494 @@
+{
+  "common": {
+    "overview": "Panoramica",
+    "details": "Dettagli",
+    "readMore": "Leggi di più",
+    "confidence": "Affidabilità",
+    "nativeOrigin": "Origine Nativa",
+    "save": "Salva nella Mia Collezione",
+    "saved": "Salvato nella Collezione",
+    "cancel": "Annulla",
+    "goBack": "Indietro",
+    "shareThisResult": "Condividi questo risultato",
+    "removeFromCollection": "Rimuovi dalla collezione",
+    "saveToCollection": "Salva nella collezione",
+    "tabCollection": "Collezione",
+    "tabDiscover": "Scopri",
+    "tabBotanist": "Botanico"
+  },
+  "auth": {
+    "title": "Accedi per identificare",
+    "subtitle": "Un'identificazione gratuita per categoria. Accedi con la tua email per iniziare — non è necessaria alcuna password.",
+    "emailPlaceholder": "tu@esempio.com",
+    "sendLink": "Invia link magico",
+    "sending": "Invio in corso…",
+    "checkEmailTitle": "Controlla la tua email",
+    "checkEmailBody": "Abbiamo inviato un link di accesso a {{email}}. Aprilo su questo dispositivo per continuare.",
+    "signOut": "Esci",
+    "signedInAs": "Accesso effettuato come {{email}}",
+    "notReady": "L'accesso è in fase di configurazione e sarà presto disponibile."
+  },
+  "paywall": {
+    "title": "Uso gratuito già utilizzato",
+    "body": "Hai già utilizzato la tua identificazione gratuita per {{category}}. Abbonati per continuare a identificare senza limiti.",
+    "subscribe": "Abbonati",
+    "subscribing": "Reindirizzamento…",
+    "subscribed": "Abbonato",
+    "manage": "Gestisci abbonamento"
+  },
+  "restore": {
+    "entryPoint": "Già abbonato su un altro dispositivo? Ripristina l'accesso",
+    "title": "Ripristina l'Accesso",
+    "emailStepTitle": "Ripristina il tuo abbonamento",
+    "emailStepBody": "Inserisci l'email che hai usato per abbonarti. Ti invieremo un codice monouso per confermare che sei tu.",
+    "emailPlaceholder": "tu@esempio.com",
+    "sendCode": "Invia codice",
+    "codeStepTitle": "Inserisci il codice",
+    "codeStepBody": "Abbiamo inviato un codice a {{email}}. Inseriscilo qui sotto per ripristinare il tuo abbonamento su questo dispositivo.",
+    "codePlaceholder": "Codice a 6 cifre",
+    "verifyCode": "Verifica",
+    "changeEmail": "Usa un'altra email",
+    "doneTitleActive": "Accesso ripristinato",
+    "doneBodyActive": "Il tuo abbonamento è ora attivo su questo dispositivo.",
+    "doneTitleOther": "Nessun abbonamento attivo",
+    "doneBodyOther": "Abbiamo trovato questa email, ma al momento non c'è nessun abbonamento attivo collegato ad essa.",
+    "backToProfile": "Torna al Profilo",
+    "genericError": "Qualcosa è andato storto. Riprova."
+  },
+  "categories": {
+    "plant": {
+      "label": "Pianta",
+      "tabLabel": "Piante",
+      "title": "Identifica le Piante all'Istante",
+      "subtitle": "Inquadra con la fotocamera una pianta, un fiore, un albero o una succulenta e ottieni un profilo botanico dettagliato in pochi secondi.",
+      "scanHint": "Per risultati ottimali, inquadra una singola foglia o un fiore con una buona illuminazione e uno sfondo pulito."
+    },
+    "insect": {
+      "label": "Insetto",
+      "tabLabel": "Insetti",
+      "title": "Identifica gli Insetti all'Istante",
+      "subtitle": "Inquadra con la fotocamera un insetto, un coleottero, un ragno o una farfalla e ottieni subito il profilo della specie.",
+      "scanHint": "Per risultati ottimali, avvicinati all'insetto con una buona illuminazione e mano ferma."
+    },
+    "mushroom": {
+      "label": "Fungo",
+      "tabLabel": "Funghi",
+      "title": "Identifica i Funghi all'Istante",
+      "subtitle": "Inquadra con la fotocamera un fungo per identificarne la specie e verificarne la commestibilità.",
+      "scanHint": "Fotografa il cappello, le lamelle e il gambo per un'identificazione più accurata."
+    },
+    "crop": {
+      "label": "Coltura",
+      "tabLabel": "Colture",
+      "title": "Controllo Salute delle Colture",
+      "subtitle": "Inquadra con la fotocamera la foglia di una coltura per controllare malattie, parassiti o carenze nutritive.",
+      "scanHint": "Inquadra da vicino la foglia o l'area colpita per una diagnosi più accurata."
+    }
+  },
+  "identify": {
+    "identifierTitle": "Identificatore di {{category}}",
+    "subtitle": "Identifica {{category}} all'istante con l'IA",
+    "readyToScan": "Pronto per la scansione",
+    "analyzing": "Analisi di {{category}} in corso…",
+    "tapToIdentify": "Tocca per identificare",
+    "identifying": "Identificazione in corso…",
+    "uploadPhoto": "Carica Foto",
+    "myCollection": "La Mia Collezione",
+    "switchCategoryLabel": "Cambia categoria di identificazione",
+    "switchCategoryTitle": "Cambia categoria",
+    "switchCategoryMessage": "Cosa vorresti identificare?",
+    "takePhotoLabel": "Scatta una foto per identificare {{category}}",
+    "uploadPhotoLabel": "Carica una foto da identificare",
+    "goToCollectionLabel": "Vai alla Mia Collezione",
+    "cameraPermissionTitle": "Permesso fotocamera necessario",
+    "cameraPermissionMessage": "Abilita l'accesso alla fotocamera per scansionare {{category}}.",
+    "libraryPermissionTitle": "Permesso libreria foto necessario",
+    "libraryPermissionMessage": "Abilita l'accesso alle foto per caricare un'immagine.",
+    "identificationFailedTitle": "Identificazione non riuscita",
+    "identificationFailedDefault": "Riprova.",
+    "notFoundError": "Nessun {{category}} è stato riconosciuto in questa foto. Prova con uno scatto più chiaro e ravvicinato."
+  },
+  "detail": {
+    "profileTitle": "Profilo {{category}}",
+    "readMoreLabel": "Leggi di più online su questo {{category}}",
+    "markAsWatered": "Segna come Annaffiata",
+    "markAsWateredLabel": "Segna come annaffiata",
+    "wateringSection": "Annaffiatura",
+    "checkForDiseases": "Controlla le Malattie",
+    "checkingForDiseases": "Controllo…",
+    "checkForDiseasesLabel": "Controlla le malattie",
+    "checkingForDiseasesLabel": "Controllo delle malattie in corso",
+    "healthCheckSection": "Controllo Salute",
+    "edibleParts": "Parti Commestibili",
+    "propagation": "Propagazione",
+    "wateringNeeds": "Esigenze di Annaffiatura",
+    "conservationStatus": "Stato di Conservazione",
+    "safetySection": "Sicurezza",
+    "ecologicalRoleSection": "Ruolo Ecologico",
+    "frequentlyConfusedWith": "Spesso Confuso Con",
+    "psychoactiveWarning": "Questo fungo potrebbe essere psicoattivo e influire sul sistema nervoso.",
+    "cropHealthReportTitle": "Rapporto sulla Salute della Coltura",
+    "cropMatch": "Corrispondenza coltura",
+    "cropPill": "Coltura",
+    "wateringGuideSection": "Guida all'Annaffiatura",
+    "lightSection": "Luce",
+    "soilSection": "Terreno",
+    "commonUsesSection": "Usi Comuni",
+    "culturalSignificanceSection": "Significato Culturale"
+  },
+  "disease": {
+    "overviewSection": "Panoramica",
+    "symptomsSection": "Sintomi",
+    "treatmentSection": "Trattamento",
+    "biological": "Biologico",
+    "chemical": "Chimico",
+    "prevention": "Prevenzione",
+    "spreadingSection": "Come si Diffonde",
+    "healthStatusSection": "Stato di Salute",
+    "noDiseaseDetected": "Nessuna malattia o parassita è stato rilevato con certezza in questa foto.",
+    "match": "Corrispondenza",
+    "severitySuffix": "Gravità {{severity}}"
+  },
+  "collection": {
+    "title": "La Mia Collezione",
+    "subtitle_one": "{{count}} elemento scoperto",
+    "subtitle_other": "{{count}} elementi scoperti",
+    "emptyTitle": "Ancora nulla salvato",
+    "emptyBody": "Identifica una pianta, un insetto, un fungo o una coltura e salvala per costruire la tua collezione.",
+    "startIdentifying": "Inizia a Identificare",
+    "goToProfileLabel": "Vai al profilo",
+    "switchToGridLabel": "Passa alla vista griglia",
+    "switchToListLabel": "Passa alla vista elenco",
+    "viewDetailsLabel": "Visualizza i dettagli di {{name}}",
+    "removeLabel": "Rimuovi {{name}} dalla collezione",
+    "assignRoomTitle": "Assegna a una stanza",
+    "assignRoomMessage": "Scegli una stanza per {{name}}.",
+    "roomLivingRoom": "Soggiorno",
+    "roomBedroom": "Camera da Letto",
+    "roomKitchen": "Cucina",
+    "roomBalcony": "Balcone",
+    "roomOffice": "Ufficio",
+    "roomNone": "Nessuna"
+  },
+  "profile": {
+    "title": "Il Mio Profilo",
+    "itemsIdentified_one": "elemento identificato",
+    "itemsIdentified_other": "elementi identificati",
+    "byCategory": "Per Categoria",
+    "privacyPolicy": "Informativa sulla Privacy",
+    "language": "Lingua"
+  },
+  "privacy": {
+    "title": "Informativa sulla Privacy",
+    "collectTitle": "Cosa raccogliamo",
+    "collectBody": "Questa app ti permette di fotografare piante, insetti, funghi o colture per identificarli. Per farlo, utilizza servizi di identificazione IA di terze parti — Plant.id, Insect.id, Mushroom.id e Crop.health, tutti sviluppati da Kindwise.",
+    "thirdPartyTitle": "Servizi IA di terze parti",
+    "thirdPartyBody": "Quando scatti o carichi una foto per identificare qualcosa, quella foto viene inviata direttamente al relativo servizio di identificazione Kindwise per produrre un risultato. Non conserviamo le tue foto su alcun server sotto il nostro controllo.",
+    "localStorageTitle": "Solo archiviazione locale",
+    "localStorageBody": "La tua collezione salvata — specie identificate, note e date — viene archiviata solo localmente sul tuo dispositivo, tramite l'archiviazione locale del browser o dell'app. Non viene mai caricata su alcun server cloud da noi gestito e non viene mai condivisa con altri utenti.",
+    "noAccountsTitle": "Nessun account, nessun tracciamento",
+    "noAccountsBody": "Questa app non prevede account, accessi o password. Al tuo dispositivo viene assegnato un identificatore anonimo casuale (conservato solo sul tuo dispositivo) così possiamo sapere quando è stata utilizzata l'unica identificazione gratuita per categoria. Se ti abboni, Stripe raccoglie direttamente la tua email e i dati di pagamento per elaborare l'addebito — noi riceviamo solo lo stato del tuo abbonamento, collegato a quello stesso identificatore anonimo. Non utilizziamo strumenti di analisi o tracciamento pubblicitario.",
+    "dataLossTitle": "Rischio di perdita dei dati",
+    "dataLossBody": "Se cancelli i dati del browser o disinstalli l'app, la tua collezione salvata localmente andrà persa in modo permanente, poiché nulla viene salvato da remoto.",
+    "contactTitle": "Contatti",
+    "contactBody": "Per domande su questa informativa, puoi contattare lo sviluppatore dell'app."
+  },
+  "discover": {
+    "title": "Scopri",
+    "subtitle": "Alimenta la tua curiosità per il mondo naturale",
+    "dailyFact": "Curiosità Botanica del Giorno",
+    "tapForAnotherFact": "Tocca per un'altra curiosità",
+    "exploreCollections": "Esplora le Collezioni",
+    "trendingSpecies": "Specie di Tendenza",
+    "showNextFactLabel": "Mostra la prossima curiosità botanica",
+    "openCollectionLabel": "Apri la collezione {{title}}",
+    "viewSpeciesLabel": "Visualizza {{name}}",
+    "facts": [
+      "Il Fiore Cadavere (Amorphophallus titanum) può superare i 3 metri di altezza ed emana un odore di carne in decomposizione per attirare gli impollinatori.",
+      "Il bambù è la pianta a crescita più rapida sulla Terra: alcune specie crescono fino a 91 cm in un solo giorno.",
+      "I girasoli mostrano eliotropismo: i giovani boccioli seguono il sole nel cielo da est a ovest.",
+      "Una singola foglia di Aloe Vera può contenere abbastanza gel da lenire piccole ustioni per settimane.",
+      "La Dionea acchiappamosche sa contare! Si chiude di scatto solo dopo due contatti entro 20 secondi, per evitare falsi allarmi.",
+      "Il muschio non ha radici: assorbe acqua e nutrienti direttamente attraverso le foglie.",
+      "Il profumo della lavanda viene utilizzato da oltre 2.500 anni per favorire la calma e il sonno."
+    ],
+    "topics": {
+      "airPurifying": {
+        "title": "Piante che Purificano l'Aria",
+        "desc": "La NASA ha studiato queste specie per la pulizia dell'aria interna.",
+        "intro": "Alla fine degli anni '80, la NASA testò decine di comuni piante da appartamento per scoprire quali potessero aiutare a eliminare gli inquinanti dall'aria sigillata delle cabine delle navicelle spaziali — e scoprì che molte piante di uso quotidiano sono sorprendentemente brave ad assorbire tossine come formaldeide, benzene e monossido di carbonio. Questa collezione raccoglie le specie che hanno ottenuto i risultati migliori in quella ricerca e che da allora sono diventate dei classici della tradizione sulla qualità dell'aria domestica. Non sostituiscono l'apertura di una finestra, ma qualche vaso ben posizionato è un modo semplice e poco impegnativo per aiutare a rinfrescare l'aria nelle stanze in cui trascorri più tempo.",
+        "species": [
+          {
+            "name": "Sansevieria",
+            "sci": "Dracaena trifasciata (syn. Sansevieria trifasciata)",
+            "note": "Una delle piante con le migliori prestazioni secondo la NASA, converte la CO2 in ossigeno anche di notte, a differenza della maggior parte delle piante da appartamento."
+          },
+          {
+            "name": "Clorofito",
+            "sci": "Chlorophytum comosum",
+            "note": "La NASA l'ha classificata tra le migliori nell'eliminare formaldeide e xilene dall'aria domestica comune."
+          },
+          {
+            "name": "Spatifillo",
+            "sci": "Spathiphyllum wallisii",
+            "note": "Ha primeggiato nello studio originale della NASA per la capacità di eliminare benzene, formaldeide e tricloroetilene dall'aria interna."
+          },
+          {
+            "name": "Edera",
+            "sci": "Hedera helix",
+            "note": "La pianta con il punteggio più alto nello studio NASA, apprezzata per la sua capacità di eliminare la formaldeide e persino le spore di muffa nell'aria."
+          },
+          {
+            "name": "Felce di Boston",
+            "sci": "Nephrolepis exaltata",
+            "note": "Una rimuovitrice di formaldeide testata dalla NASA, che aumenta anche l'umidità negli ambienti interni secchi e riscaldati."
+          },
+          {
+            "name": "Pothos",
+            "sci": "Epipremnum aureum",
+            "note": "Quasi indistruttibile e documentata per la sua capacità di filtrare formaldeide, benzene e monossido di carbonio dall'aria interna."
+          },
+          {
+            "name": "Albero della Gomma",
+            "sci": "Ficus elastica",
+            "note": "Una protagonista del NASA Clean Air Study, che rimuove costantemente la formaldeide dagli spazi abitativi di tutti i giorni."
+          }
+        ]
+      },
+      "beginnerSucculents": {
+        "title": "Succulente per Principianti",
+        "desc": "Piante a basso consumo d'acqua che prosperano con un po' di trascuratezza.",
+        "intro": "Le succulente si sono guadagnate a pieno titolo la loro fama di piante adatte ai principianti: le loro foglie e i loro fusti spessi, capaci di immagazzinare acqua, permettono loro di sopportare senza problemi una o due annaffiature dimenticate. Questa selezione punta sulle varietà più resistenti e indulgenti in circolazione, piante pensate per tollerare i classici errori da principianti: troppa acqua, troppo poca acqua e luce incostante. Basta un davanzale luminoso e un po' di pazienza per avere un punto di partenza quasi infallibile nella costruzione della tua collezione di piante.",
+        "species": [
+          {
+            "name": "Pianta di Giada",
+            "sci": "Crassula ovata",
+            "note": "Immagazzina acqua in fusti e foglie spessi, quindi una o due annaffiature mancate non la turberanno."
+          },
+          {
+            "name": "Sansevieria",
+            "sci": "Dracaena trifasciata",
+            "note": "Prospera con totale trascuratezza, tollerando poca luce e settimane di terreno asciutto senza lamentarsi."
+          },
+          {
+            "name": "Pianta Zebra",
+            "sci": "Haworthiopsis fasciata",
+            "note": "Rimane compatta e a crescita lenta, il che la rende quasi impossibile da sommergere con troppe cure."
+          },
+          {
+            "name": "Aloe Vera",
+            "sci": "Aloe vera",
+            "note": "Perdona le annaffiature incostanti grazie alle foglie piene di gel, pensate per sopravvivere alla siccità da sole."
+          },
+          {
+            "name": "Pianta Panda",
+            "sci": "Kalanchoe tomentosa",
+            "note": "Le foglie pelose e ricche d'acqua resistono ai periodi di siccità, rendendola una prima succulenta quasi infallibile."
+          },
+          {
+            "name": "Coda d'Asino",
+            "sci": "Sedum morganianum",
+            "note": "Le foglie pendenti e carnose conservano riserve d'acqua proprie, premiando i proprietari che resistono alla tentazione di annaffiare troppo."
+          },
+          {
+            "name": "Echeveria Messicana",
+            "sci": "Echeveria elegans",
+            "note": "La classica forma a rosetta immagazzina acqua in modo efficiente e si moltiplica facilmente, perdonando gli inevitabili errori dei principianti."
+          }
+        ]
+      },
+      "petSafe": {
+        "title": "Piante da Appartamento Sicure per gli Animali",
+        "desc": "Piante non tossiche per case con gatti e cani.",
+        "intro": "Condividere la casa con gatti e cani non significa rinunciare alle piante da appartamento, ma molte specie diffuse sono davvero dannose se masticate. Questa collezione raccoglie favorite ben documentate e non tossiche, verificate con i dati di sicurezza dell'ASPCA, così puoi riempire davanzali e mensole senza preoccuparti di una zampa curiosa o di un morso esplorativo. Dalle liane ricadenti alle piante da fiore più amate, ogni scelta qui presente si guadagna il proprio posto perché prima sicura e poi bella.",
+        "species": [
+          {
+            "name": "Clorofito",
+            "sci": "Chlorophytum comosum",
+            "note": "Elencato dall'ASPCA come non tossico per gatti e cani, le sue foglie ricadenti danno alle zampe curiose qualcosa di sicuro da colpire."
+          },
+          {
+            "name": "Felce di Boston",
+            "sci": "Nephrolepis exaltata",
+            "note": "Questa felce lussureggiante e ricca di texture è non tossica per gli animali, un modo sicuro per aggiungere volume tropicale a qualsiasi stanza."
+          },
+          {
+            "name": "Palma da Salotto",
+            "sci": "Chamaedorea elegans",
+            "note": "Una classica pianta da appartamento vittoriana, non tossica per gatti e cani, che tollera la scarsa luce senza alcun rischio."
+          },
+          {
+            "name": "Maranta",
+            "sci": "Maranta leuconeura",
+            "note": "Le sue foglie si ripiegano di notte come mani in preghiera, ed è completamente sicura se un gatto curioso ne assaggia un morso."
+          },
+          {
+            "name": "Peperomia Anguria",
+            "sci": "Peperomia argyreia",
+            "note": "Compatta e non tossica, le sue foglie striate la rendono un accento sorprendente e sicuro per mensole e comodini."
+          },
+          {
+            "name": "Haworthia Zebra",
+            "sci": "Haworthia attenuata",
+            "note": "Un'alternativa sicura per gli animali all'aloe e alla pianta di giada, entrambe tossiche, questa succulenta striata offre lo stesso aspetto senza rischi."
+          },
+          {
+            "name": "Violetta Africana",
+            "sci": "Saintpaulia ionantha",
+            "note": "Una delle poche piante da fiore da appartamento confermate non tossiche, così gli animali possono condividere il davanzale con le fioriture."
+          }
+        ]
+      },
+      "medicinalHerbs": {
+        "title": "Erbe Medicinali",
+        "desc": "Piante con una lunga storia di usi curativi.",
+        "intro": "Molto prima degli armadietti dei medicinali moderni, i giardini domestici erano la farmacia originaria: erbe come lavanda, menta piperita ed echinacea sono state coltivate, infuse e applicate per secoli per alleviare i piccoli disturbi quotidiani. Questa collezione mette in evidenza piante con ruoli ben documentati nei sistemi di medicina popolare e tradizionale in tutto il mondo, dai classici della cucina mediterranea ai grandi classici ayurvedici. La maggior parte prospera su un davanzale soleggiato, permettendoti di coltivare a casa un pezzo vivente di storia erboristica.",
+        "species": [
+          {
+            "name": "Aloe Vera",
+            "sci": "Aloe vera",
+            "note": "Le sue foglie piene di gel hanno lenito ustioni e piccole irritazioni cutanee in tutte le culture per migliaia di anni."
+          },
+          {
+            "name": "Lavanda",
+            "sci": "Lavandula angustifolia",
+            "note": "Apprezzata da tempo per il suo profumo rilassante, tradizionalmente usata per alleviare lo stress e favorire un sonno riposante."
+          },
+          {
+            "name": "Menta Piperita",
+            "sci": "Mentha x piperita",
+            "note": "Le foglie ricche di mentolo hanno lenito mal di stomaco e mal di testa nella medicina popolare per secoli."
+          },
+          {
+            "name": "Camomilla Tedesca",
+            "sci": "Matricaria chamomilla",
+            "note": "I suoi fiori simili a margherite si trasformano in un infuso delicato usato da tempo per calmare i nervi e favorire la digestione."
+          },
+          {
+            "name": "Echinacea Purpurea",
+            "sci": "Echinacea purpurea",
+            "note": "Originaria del Nord America, le sue radici e i suoi fiori venivano usati dai popoli indigeni per sostenere il sistema immunitario."
+          },
+          {
+            "name": "Rosmarino",
+            "sci": "Salvia rosmarinus (syn. Rosmarinus officinalis)",
+            "note": "Questo arbusto mediterraneo profumato porta con sé un'antica reputazione per il rafforzamento della memoria e il miglioramento della circolazione."
+          },
+          {
+            "name": "Basilico Sacro (Tulsi)",
+            "sci": "Ocimum tenuiflorum",
+            "note": "Venerato da secoli nella tradizione ayurvedica, le sue foglie vengono infuse come tè adattogeno contro lo stress."
+          }
+        ]
+      },
+      "floweringPerennials": {
+        "title": "Perenni da Fiore",
+        "desc": "Fioriture che tornano anno dopo anno.",
+        "intro": "Le perenni da fiore sono la spina dorsale di un giardino che continua a dare: a differenza delle annuali, muoiono in inverno e ricrescono dalle stesse radici, rizomi o tuberi ogni primavera. Molte si consolidano e si espandono in ciuffi più pieni nel corso degli anni, così una singola piantagione può ricompensarti con più fioriture ogni stagione. Questa collezione raccoglie perenni amate e facili da trovare, che ancorano aiuole e bordure con colori affidabili e ricorrenti.",
+        "species": [
+          {
+            "name": "Peonia",
+            "sci": "Paeonia lactiflora",
+            "note": "Le radici tuberose longeve possono fiorire nello stesso punto per cinquant'anni o più, per lo più indisturbate."
+          },
+          {
+            "name": "Emerocallide",
+            "sci": "Hemerocallis fulva",
+            "note": "Nonostante il nome, ogni ventaglio si moltiplica in ciuffi fitti che fioriscono in modo affidabile per generazioni."
+          },
+          {
+            "name": "Echinacea Purpurea",
+            "sci": "Echinacea purpurea",
+            "note": "Questa pianta originaria delle praterie ritorna da una robusta radice a fittone, autoseminandosi in colonie sempre più grandi nel tempo."
+          },
+          {
+            "name": "Iris Barbata",
+            "sci": "Iris germanica",
+            "note": "I rizomi carnosi si espandono appena sotto la superficie del terreno, dividendosi in nuovi ventagli che rifioriscono ogni primavera."
+          },
+          {
+            "name": "Rudbeckia",
+            "sci": "Rudbeckia fulgida",
+            "note": "Si diffonde tramite rizomi e autosemina, formando distese dorate affidabili che ritornano ogni estate."
+          },
+          {
+            "name": "Flox da Giardino",
+            "sci": "Phlox paniculata",
+            "note": "I robusti steli a ciuffi muoiono fino alle radici ogni autunno, per poi riemergere più rigogliosi l'anno successivo."
+          },
+          {
+            "name": "Lavanda Inglese",
+            "sci": "Lavandula angustifolia",
+            "note": "Gli steli perenni legnosi sopravvivono alla dormienza invernale e rimettono le foglie per fiorire di nuovo ogni estate."
+          }
+        ]
+      }
+    },
+    "species": {
+      "fiddleLeafFig": {
+        "name": "Ficus Lyrata",
+        "sci": "Ficus lyrata",
+        "light": "Luce intensa e indiretta",
+        "water": "Una volta a settimana; lascia asciugare i primi 2-5 cm di terreno",
+        "difficulty": "Impegnativo",
+        "overview": "Originario delle foreste pluviali di pianura dell'Africa occidentale, il ficus lyrata è apprezzato per le sue foglie grandi, lucide e a forma di violino, con una venatura spettacolare che lo ha reso un'icona del design d'interni. Viene coltivato come una pianta da pavimento imponente che può raggiungere l'altezza del soffitto in casa, ma è famoso per essere particolarmente esigente riguardo alla costanza di luce, acqua e temperatura.",
+        "funFact": "Nel suo habitat naturale, il Ficus lyrata può crescere fino a diventare un albero maestoso alto oltre 12 metri, con foglie quasi due volte più grandi di quelle che vediamo in appartamento, e può persino produrre piccoli fichi non commestibili impollinati da una specifica specie di vespa del fico — qualcosa che, come pianta da interno, non fa praticamente mai."
+      },
+      "bostonFern": {
+        "name": "Felce di Boston",
+        "sci": "Nephrolepis exaltata",
+        "light": "Luce da intensa a media, indiretta",
+        "water": "Mantieni il terreno sempre umido; non lasciarlo mai asciugare completamente",
+        "difficulty": "Moderato",
+        "overview": "La felce di Boston è una cultivar lussureggiante e arcuata della felce spada, una specie diffusa nelle regioni tropicali umide di tutto il mondo. Le sue fronde piumose e ricadenti l'hanno resa una favorita per i cesti pensili e i portici ombreggiati fin dall'epoca vittoriana, anche se richiede umidità costante e alta umidità ambientale per stare bene.",
+        "funFact": "La cultivar 'Bostoniensis' non è stata creata di proposito: è stata una mutazione naturale scoperta nel 1894 in una spedizione di felci spada inviata da Philadelphia a un fiorista di Boston, e da quella singola mutazione è stata propagata la pianta da appartamento che conosciamo oggi."
+      },
+      "jadePlant": {
+        "name": "Pianta di Giada",
+        "sci": "Crassula ovata",
+        "light": "Sole pieno o luce intensa",
+        "water": "Con parsimonia; lascia asciugare completamente il terreno tra un'annaffiatura e l'altra",
+        "difficulty": "Facile",
+        "overview": "La pianta di giada è una succulenta resistente originaria delle regioni semi-aride del Sudafrica e del Mozambico, riconoscibile per le foglie ovali spesse e lucide e i fusti legnosi e ramificati che le conferiscono l'aspetto di un albero in miniatura. È una pianta amatissima dai principianti e viene spesso tramandata come cimelio di famiglia, talvolta soprannominata la 'pianta della fortuna' nelle tradizioni del feng shui.",
+        "funFact": "Nelle giuste condizioni, le piante di giada possono vivere da 50 a 100 anni, e gli esemplari maturi ricompensano occasionalmente chi le coltiva con grappoli di piccoli fiori bianchi o rosa a forma di stella, di solito innescati da notti fresche e un periodo di siccità."
+      },
+      "calathea": {
+        "name": "Calathea",
+        "sci": "Goeppertia orbifolia",
+        "light": "Luce media e indiretta",
+        "water": "Mantieni leggermente umido con acqua filtrata o distillata",
+        "difficulty": "Impegnativo",
+        "overview": "Originario delle foreste pluviali della Bolivia, questo splendido membro della famiglia delle piante della preghiera (Marantaceae) viene coltivato per le sue foglie grandi e arrotondate, striate di toni argentati e verde scuro. Come le sue parenti, le sue foglie si sollevano e si ripiegano di notte e si abbassano di nuovo durante il giorno, un movimento chiamato nictinastia che la fa sembrare quasi viva.",
+        "funFact": "Questa specie era classificata come Calathea orbifolia, ma nel 2012 ricerche genetiche e morfologiche hanno separato la maggior parte delle specie di Calathea nel genere Goeppertia, anche se vivai e appassionati di piante continuano in gran parte a usare il vecchio nome 'Calathea'."
+      }
+    },
+    "topicSpeciesSectionTitle": "Specie in Questa Collezione",
+    "speciesLightLabel": "Luce",
+    "speciesWaterLabel": "Acqua",
+    "speciesDifficultyLabel": "Difficoltà",
+    "funFactLabel": "Curiosità"
+  },
+  "botanist": {
+    "headerTitle": "Botanico IA",
+    "headerSubtitle": "Il tuo esperto di piante tascabile",
+    "intro": "Ciao! Chiedimi qualsiasi cosa sulle piante. 🌱\n\nPosso aiutarti con consigli di cura, programmi di annaffiatura, rinvaso, parassiti e molto altro.",
+    "placeholder": "Scrivi al Botanico IA…",
+    "typing": "Il Botanico sta scrivendo…",
+    "sendLabel": "Invia messaggio",
+    "askLabel": "Chiedi: {{question}}",
+    "suggestions": [
+      "Qual è il miglior mix di terriccio per rinvasare una sansevieria?",
+      "Perché le foglie della mia pianta stanno ingiallendo?",
+      "Con quale frequenza devo annaffiare una succulenta?",
+      "Quali piante sono sicure per i gatti?"
+    ],
+    "replies": {
+      "soil": "Per la maggior parte delle piante da appartamento, il drenaggio è fondamentale! Un ottimo mix universale:\n\n• 50% terriccio universale\n• 30% perlite o pomice (per l'aerazione)\n• 20% corteccia d'orchidea o fibra di cocco\n\nPer succulente e sansevierie, aumenta la perlite fino a circa il 50%. Assicurati sempre che il vaso abbia fori di drenaggio per evitare il marciume radicale. Buon rinvaso!",
+      "yellow": "Le foglie che ingialliscono di solito indicano una di queste cause:\n\n• Eccesso d'acqua (la più comune) — lascia asciugare il primo centimetro di terreno\n• Drenaggio scarso — controlla che non ci sia acqua stagnante\n• Poca luce — sposta la pianta verso una finestra più luminosa\n• Invecchiamento naturale — le foglie basse ingialliscono e cadono nel tempo\n\nInizia controllando l'umidità del terreno prima della prossima annaffiatura.",
+      "water": "L'annaffiatura dipende dalla pianta, ma una regola affidabile è: annaffia abbondantemente, poi lascia asciugare il terreno in modo adeguato prima del turno successivo.\n\n• Succulente e cactus: ogni 2–3 settimane, asciugatura completa\n• Fogliame tropicale: quando i primi 2–5 cm sono asciutti\n• Felci e Spatifilli: mantieni sempre umido\n\nFai la prova del dito nel terreno invece di seguire un programma fisso.",
+      "petSafety": "Ottima domanda — la sicurezza degli animali è importante! Tra le favorite non tossiche troviamo:\n\n• Clorofito\n• Felce di Boston\n• Calathea\n• Palma Areca\n• Maranta\n\nEvita Pothos, Filodendro, Spatifillo e Monstera, che sono tossici se masticati. In caso di dubbio, tieni le piante fuori dalla portata degli animali.",
+      "light": "La luce è il nutrimento di una pianta. Guida rapida:\n\n• Luce diretta intensa: succulente, cactus, aloe\n• Luce indiretta intensa: monstera, ficus lyrata\n• Media/bassa: pothos, sansevieria, pianta ZZ\n\nRuota le tue piante ogni paio di settimane affinché crescano in modo uniforme verso la luce.",
+      "default": "Domanda meravigliosa! Ogni pianta ha la propria personalità, ma i principi fondamentali restano gli stessi: la luce giusta, un'annaffiatura adeguata, un terreno ben drenato e una temperatura costante. Dimmi di quale pianta ti stai occupando e ti darò consigli su misura per annaffiatura, luce, concimazione e problemi comuni."
+    }
+  }
+}

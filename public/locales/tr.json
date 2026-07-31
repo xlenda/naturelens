@@ -1,0 +1,2288 @@
+{
+  "common": {
+    "overview": "Genel Bakış",
+    "details": "Detaylar",
+    "readMore": "Devamını oku",
+    "confidence": "Güven Oranı",
+    "nativeOrigin": "Doğal Yaşam Alanı",
+    "save": "Koleksiyonuma Kaydet",
+    "saved": "Koleksiyona Kaydedildi",
+    "cancel": "İptal",
+    "goBack": "Geri dön",
+    "shareThisResult": "Bu sonucu paylaş",
+    "removeFromCollection": "Koleksiyondan kaldır",
+    "saveToCollection": "Koleksiyona kaydet",
+    "tabCollection": "Koleksiyon",
+    "tabDiscover": "İlginç Bilgiler",
+    "tabBotanist": "Botanikçi",
+    "saveErrorTitle": "Kaydedilemedi",
+    "saveErrorBody": "Koleksiyonunuza kaydedilirken bir sorun oluştu. Lütfen tekrar deneyin.",
+    "ok": "Tamam",
+    "next": "İleri",
+    "showPassword": "Şifreyi göster",
+    "hidePassword": "Şifreyi gizle",
+    "close": "Kapat",
+    "tabProfile": "Profil",
+    "identified": "Tanımlandı",
+    "yourPhoto": "Senin fotoğrafın",
+    "referencePhoto": "Referans",
+    "technicalDescription": "Teknik açıklama",
+    "vendorEnglishNote": "Tanımlama hizmetinden, İngilizce.",
+    "translate": "Çevir",
+    "translating": "Çevriliyor…",
+    "translateFailed": "Şu anda çevrilemedi."
+  },
+  "auth": {
+    "title": "Tanımlamak için giriş yap",
+    "subtitle": "Her kategori için bir ücretsiz tanımlama hakkı. Başlamak için e-postanla giriş yap — şifreye gerek yok.",
+    "emailPlaceholder": "sen@ornek.com",
+    "sendLink": "Sihirli bağlantı gönder",
+    "sending": "Gönderiliyor…",
+    "checkEmailTitle": "E-postanı kontrol et",
+    "checkEmailBody": "{{email}} adresine bir giriş bağlantısı gönderdik. Devam etmek için bu cihazda aç.",
+    "signOut": "Çıkış yap",
+    "signedInAs": "{{email}} olarak giriş yapıldı",
+    "notReady": "Giriş özelliği hazırlanıyor, yakında kullanılabilir olacak."
+  },
+  "paywall": {
+    "title": "Ücretsiz hakkın kullanıldı",
+    "body": "Ücretsiz {{category}} tanımlama hakkını zaten kullandın. Sınırsız tanımlama için abone ol.",
+    "subscribe": "Abone ol",
+    "subscribing": "Yönlendiriliyor…",
+    "subscribed": "Abone olundu",
+    "manage": "Aboneliği yönet",
+    "annualPlan": "Yıllık",
+    "perYear": "/yıl",
+    "saveBadge": "%{{percent}} tasarruf edin",
+    "genericTitle": "Her şeyin kilidini aç",
+    "genericBody": "Bitkiler, böcekler, mantarlar ve ürünler için sınırsız tanımlama, ayrıca şifalı bitki detaylarına tam erişim.",
+    "subscriptionConfirmedTitle": "Abone oldunuz!",
+    "subscriptionConfirmedBody": "Abone olduğunuz için teşekkürler — artık sınırsız tanımlama hakkınız var. Keyfini çıkarın!",
+    "subscriptionPendingTitle": "Ödeme alındı",
+    "subscriptionPendingBody": "Ödeme alındı. Profil → Erişimi geri yükle bölümünü açın ve bu cihazın kilidini açmak için ödeme yaptığınız e-postayı onaylayın.",
+    "checkoutFailedTitle": "Ödeme başarısız oldu",
+    "checkoutFailedBody": "Ödeme işlemini başlatamadık. Lütfen biraz sonra tekrar deneyin.",
+    "monthlyPlan": "Aylık",
+    "quarterlyPlan": "Üç aylık",
+    "perMonth": "ayda",
+    "perQuarter": "üç ayda bir",
+    "notAvailableYet": "Ödeme kurulumu yapılıyor — birazdan tekrar deneyin."
+  },
+  "restore": {
+    "title": "Giriş yap",
+    "emailStepTitle": "Hesabına giriş yap",
+    "emailStepBody": "Kayıt olduğun e-postayı kullan. Tek kullanımlık bir kod gönderiyoruz - hatırlanacak parola yok.",
+    "emailPlaceholder": "sen@ornek.com",
+    "sendCode": "Kod gönder",
+    "codeStepTitle": "Kodunu gir",
+    "codeStepBody": "{{email}} adresine bir kod gönderdik. Girişi tamamlamak için aşağıya yaz.",
+    "codePlaceholder": "6 haneli kod",
+    "verifyCode": "Doğrula",
+    "changeEmail": "Başka e-posta kullan",
+    "doneTitleActive": "Giriş yapıldı",
+    "doneBodyActive": "Bu cihaz artık hesabına bağlı ve aboneliğin bu cihazda etkin.",
+    "doneTitleOther": "Hesap bağlandı",
+    "doneBodyOther": "Bu cihaz hesabına bağlı. Şu anda üzerinde etkin bir abonelik yok.",
+    "backToProfile": "Profile dön",
+    "genericError": "Bir şeyler ters gitti. Lütfen tekrar dene.",
+    "modeCode": "E-posta kodu",
+    "modePassword": "Parola",
+    "passwordStepTitle": "Parolanla giriş yap",
+    "passwordStepBody": "Bu cihazda giriş yapmak için e-postanı ve parolanı gir.",
+    "passwordPlaceholder": "Şifre",
+    "signIn": "Giriş yap",
+    "signInWithGoogle": "Google ile devam et",
+    "googleSignInErrorTitle": "Giriş başarısız",
+    "googleSignInErrorBody": "Google ile giriş tamamlanamadı. Lütfen tekrar deneyin."
+  },
+  "categories": {
+    "plant": {
+      "label": "Bitki",
+      "tabLabel": "Bitkiler",
+      "title": "Bitkileri ve ağaçları anında tanımlayın",
+      "subtitle": "Kameranızı herhangi bir bitkiye, yaprağa, çiçeğe veya ağaca doğrultun ve saniyeler içinde ayrıntılı bir profil alın.",
+      "scanHint": "En iyi sonuç için tek bir yaprağı, çiçeği veya genel formu iyi ışıkta kadraja alın."
+    },
+    "insect": {
+      "label": "Böcek",
+      "tabLabel": "Böcekler",
+      "title": "Böcekleri Anında Tanımla",
+      "subtitle": "Kameranı herhangi bir böceğe, kınkanatlıya, örümceğe veya kelebeğe doğrult, anında tür profili al.",
+      "scanHint": "En iyi sonuç için böceğe yaklaş, iyi ışık kullan ve elini sabit tut."
+    },
+    "mushroom": {
+      "label": "Mantar",
+      "tabLabel": "Mantarlar",
+      "title": "Mantarları Anında Tanımla",
+      "subtitle": "Türü tanımlamak ve yenilebilirliğini kontrol etmek için kameranı herhangi bir mantara doğrult.",
+      "scanHint": "En doğru tanımlama için şapkayı, solungaçları ve sapı fotoğrafla."
+    },
+    "crop": {
+      "label": "Ürün",
+      "tabLabel": "Ürünler",
+      "title": "Ürün Sağlığı Kontrolü",
+      "subtitle": "Hastalık, zararlı veya besin sorunlarını kontrol etmek için kameranı bir ürün yaprağına doğrult.",
+      "scanHint": "En doğru teşhis için etkilenen yaprağı veya alanı yakından kadraja al."
+    },
+    "tree": {
+      "label": "Ağaç",
+      "tabLabel": "Ağaçlar",
+      "title": "Ağaçları Anında Tanımlayın",
+      "subtitle": "Kameranızı herhangi bir ağaca, gövdeye, yaprağa veya tepeye doğrultun ve saniyeler içinde ayrıntılı bir profil edinin.",
+      "scanHint": "En iyi sonuç için yaprakları, kabuğu veya genel şekli iyi ışıkta kadrajlayın."
+    },
+    "fish": {
+      "label": "Balık",
+      "tabLabel": "Balıklar",
+      "title": "Balıkları anında tanımlayın",
+      "subtitle": "Kameranızı herhangi bir balığa doğrultun ve saniyeler içinde ayrıntılı bir profil alın.",
+      "scanHint": "En iyi sonuç için balığın tamamını yandan ve iyi ışıkta çekin."
+    },
+    "bird": {
+      "label": "Kuş",
+      "tabLabel": "Kuşlar",
+      "title": "Kuşları anında tanımlayın",
+      "subtitle": "Kameranızı herhangi bir kuşa doğrultun ve anında tanımlama alın.",
+      "scanHint": "En iyi sonuç için kuşun tamamını net ve iyi aydınlatılmış şekilde kadraja alın."
+    },
+    "sound": {
+      "label": "Ses",
+      "tabLabel": "Sesler",
+      "title": "Sesten tanımla",
+      "subtitle": "Şarkı söyleyen bir kuşu, kurbağayı veya böceği kaydet ve ne olduğunu öğren."
+    }
+  },
+  "identify": {
+    "identifierTitle": "{{category}} Tanımlayıcı",
+    "subtitle": "Yapay zeka ile {{category}} türlerini anında tanımla",
+    "readyToScan": "Taramaya hazır",
+    "didYouKnowTitle": "Biliyor muydunuz?",
+    "continueLabel": "Devam et",
+    "analyzing": "{{category}} analiz ediliyor…",
+    "tapToIdentify": "Tanımlamak için dokun",
+    "identifying": "Tanımlanıyor…",
+    "uploadPhoto": "Fotoğraf Yükle",
+    "myCollection": "Koleksiyonum",
+    "switchCategoryLabel": "Tanımlama kategorisini değiştir",
+    "switchCategoryTitle": "Kategori değiştir",
+    "switchCategoryMessage": "Neyi tanımlamak istersin?",
+    "takePhotoLabel": "{{category}} tanımlamak için fotoğraf çek",
+    "uploadPhotoLabel": "Tanımlamak için fotoğraf yükle",
+    "goToCollectionLabel": "Koleksiyonuma git",
+    "cameraPermissionTitle": "Kamera izni gerekli",
+    "cameraPermissionMessage": "Bir {{category}} taramak için kamera erişimini etkinleştir.",
+    "libraryPermissionTitle": "Fotoğraf kitaplığı izni gerekli",
+    "libraryPermissionMessage": "Bir görsel yüklemek için fotoğraf erişimini etkinleştir.",
+    "identificationFailedTitle": "Tanımlama başarısız oldu",
+    "identificationFailedDefault": "Lütfen tekrar dene.",
+    "notFoundError": "Bu fotoğrafta bir {{category}} tanınamadı. Daha net ve yakın bir çekim dene.",
+    "photoProcessingFailed": "Bu fotoğraf işlenemedi. Lütfen başka bir fotoğraf deneyin veya kameranızla yeni bir fotoğraf çekin.",
+    "lowConfidence": "Bu bizim en iyi tahminimiz (%{{confidence}} güven). Güvenmeden önce referans fotoğraflarla karşılaştırın.",
+    "lowConfidenceWithAlternatives": "Yalnızca %{{confidence}} güven. Bu sonuca güvenmeden önce aşağıdaki diğer olası eşleşmelere bakın.",
+    "referenceImagesTitle": "Referans fotoğrafları",
+    "referenceImagesHint": "Eşleşmeyi doğrulamak için kendi fotoğrafınızla karşılaştırın.",
+    "referenceImageLabel": "Referans fotoğrafı {{index}}",
+    "alternativesTitle": "Diğer olası eşleşmeler",
+    "alternativesHint": "Yukarıdaki sonuç doğru görünmüyorsa türünüz bunlardan biri olabilir.",
+    "lowConfidenceBare": "Yalnızca %{{confidence}} güven — bunu kesin bir yanıt değil, bir başlangıç noktası olarak değerlendirin.",
+    "addAngle": "Başka bir açı ekle",
+    "addAnotherAngle": "Bir tane daha ekle",
+    "anglesHint": "Aynı örneğin {{count}} fotoğrafı — daha yüksek doğruluk",
+    "removeAngleLabel": "{{index}}. açıyı kaldır",
+    "offlineTitle": "Çevrimdışısın",
+    "offlineBody": "Tanımlama internet gerektirir. Koleksiyonun ve Keşfet sekmesi çalışmaya devam eder.",
+    "serviceDownTitle": "Hizmet kullanılamıyor",
+    "serviceDownBody": "Bu tanımlama hizmetinde geçici bir sorun var. Birkaç dakika sonra tekrar dene - sorun fotoğrafında değil."
+  },
+  "detail": {
+    "profileTitle": "{{category}} Profili",
+    "readMoreLabel": "Bu {{category}} hakkında çevrimiçi daha fazla bilgi oku",
+    "markAsWatered": "Sulandı Olarak İşaretle",
+    "markAsWateredLabel": "Sulandı olarak işaretle",
+    "wateringSection": "Sulama",
+    "checkForDiseases": "Hastalık Kontrolü Yap",
+    "checkingForDiseases": "Kontrol ediliyor…",
+    "checkForDiseasesLabel": "Hastalık kontrolü yap",
+    "checkingForDiseasesLabel": "Hastalık kontrolü yapılıyor",
+    "healthCheckSection": "Sağlık Kontrolü",
+    "edibleParts": "Yenilebilir Kısımlar",
+    "propagation": "Çoğaltma",
+    "wateringNeeds": "Sulama İhtiyaçları",
+    "conservationStatus": "Koruma Durumu",
+    "safetySection": "Güvenlik",
+    "ecologicalRoleSection": "Ekolojik Rolü",
+    "frequentlyConfusedWith": "Sıkça Karıştırıldığı Türler",
+    "psychoactiveWarning": "Bu mantar psikoaktif olabilir ve sinir sistemini etkileyebilir.",
+    "cropHealthReportTitle": "Ürün Sağlığı Raporu",
+    "cropMatch": "Ürün eşleşmesi",
+    "cropPill": "Ürün",
+    "wateringGuideSection": "Sulama Rehberi",
+    "lightSection": "Işık",
+    "soilSection": "Toprak",
+    "commonUsesSection": "Yaygın Kullanımlar",
+    "culturalSignificanceSection": "Kültürel Önemi",
+    "installNudgeTitle": "NatureLens'i Yükle",
+    "installNudgeBody": "Bir dahaki sefere daha hızlı tanımlamak için ana ekranına ekle.",
+    "commonNames": "Yaygın adlar",
+    "synonyms": "Bilimsel eş adlar",
+    "referencePhoto": "Referans fotoğrafı",
+    "referencePhotoAlt": "{{name}} referans fotoğrafı",
+    "coverageNoteTitle": "Bu sonuç hakkında",
+    "birdCoverageNote": "Kuş tanımlama, çoğu Kuzey Amerika’ya ait 291 türü kapsar. Bu listenin dışındaki kuşlar yüksek güvenle bile yanlış tanımlanabilir; sonucu bir başlangıç noktası olarak değerlendirin."
+  },
+  "disease": {
+    "overviewSection": "Genel Bakış",
+    "symptomsSection": "Belirtiler",
+    "treatmentSection": "Tedavi",
+    "biological": "Biyolojik",
+    "chemical": "Kimyasal",
+    "prevention": "Önleme",
+    "spreadingSection": "Nasıl Yayılır",
+    "healthStatusSection": "Sağlık Durumu",
+    "noDiseaseDetected": "Bu fotoğrafta güvenle tespit edilebilecek bir hastalık veya zararlı bulunamadı.",
+    "match": "Eşleşme",
+    "severitySuffix": "{{severity}} şiddet"
+  },
+  "collection": {
+    "title": "Koleksiyonum",
+    "subtitle_one": "{{count}} öğe keşfedildi",
+    "subtitle_other": "{{count}} öğe keşfedildi",
+    "emptyTitle": "Henüz bir şey kaydedilmedi",
+    "emptyBody": "Bir bitki, böcek, mantar veya ürün tanımla ve koleksiyonunu oluşturmak için kaydet.",
+    "startIdentifying": "Tanımlamaya Başla",
+    "goToProfileLabel": "Profile git",
+    "switchToGridLabel": "Izgara görünümüne geç",
+    "switchToListLabel": "Liste görünümüne geç",
+    "viewDetailsLabel": "{{name}} için detayları görüntüle",
+    "removeLabel": "{{name}} öğesini koleksiyondan kaldır",
+    "assignRoomTitle": "Bir odaya ata",
+    "assignRoomMessage": "{{name}} için bir oda seç.",
+    "roomLivingRoom": "Oturma Odası",
+    "roomBedroom": "Yatak Odası",
+    "roomKitchen": "Mutfak",
+    "roomBalcony": "Balkon",
+    "roomOffice": "Ofis",
+    "roomNone": "Yok",
+    "searchPlaceholder": "Koleksiyonunda ara…",
+    "clearSearchLabel": "Aramayı temizle",
+    "filterAll": "Tümü",
+    "noSearchResults": "Aramanla eşleşen bir şey yok."
+  },
+  "profile": {
+    "title": "Profilim",
+    "itemsIdentified_one": "öğe tanımlandı",
+    "itemsIdentified_other": "öğe tanımlandı",
+    "byCategory": "Kategoriye Göre",
+    "privacyPolicy": "Gizlilik Politikası",
+    "language": "Dil",
+    "installApp": "Uygulamayı yükle",
+    "installAppIOSTitle": "NatureLens'i Yükle",
+    "installAppIOSBody": "NatureLens'i telefonunuza yüklemek için Paylaş düğmesine, ardından \"Ana Ekrana Ekle\" seçeneğine dokunun.",
+    "createPasswordTitle": "Şifre oluştur",
+    "createPasswordBody": "İsteğe bağlı — her seferinde yeni bir e-posta kodu istemek yerine, aboneliğinizi senkronize etmek için diğer cihazlarda şifreyle giriş yapın.",
+    "createPasswordButton": "Şifre oluştur",
+    "creatingPassword": "Oluşturuluyor…",
+    "passwordTooShortTitle": "Şifre çok kısa",
+    "passwordTooShortBody": "Lütfen en az 8 karakter kullanın.",
+    "passwordCreatedTitle": "Şifre oluşturuldu",
+    "passwordCreatedBody": "Onaylamak için {{email}} adresini kontrol edin, ardından bu şifreyle herhangi bir cihazda giriş yapabilirsiniz.",
+    "passwordCreatedFailedTitle": "Şifre oluşturulamadı",
+    "passwordCreatedFailedBody": "Bir şeyler ters gitti. Lütfen tekrar deneyin.",
+    "changePhoto": "Profil fotoğrafını değiştir",
+    "version": "Sürüm {{version}}",
+    "termsOfUse": "Kullanım Şartları",
+    "deleteAccount": "Hesabı sil",
+    "deletingAccount": "Siliniyor…",
+    "deleteAccountConfirmTitle": "Hesabınızı silmek istiyor musunuz?",
+    "deleteAccountConfirmBody": "Bu işlem, kaydedilmiş koleksiyonunuzu, şifrenizi (varsa) kalıcı olarak siler ve varsa aktif aboneliğinizi iptal eder. Bu işlem geri alınamaz.",
+    "deleteAccountConfirmButton": "Sil",
+    "deleteAccountDoneTitle": "Hesap silindi",
+    "deleteAccountDoneBody": "Verileriniz silindi ve aktif abonelikleriniz varsa iptal edildi.",
+    "deleteAccountFailedTitle": "Hesap silinemedi",
+    "deleteAccountFailedBody": "Bir şeyler ters gitti. Lütfen tekrar deneyin.",
+    "helpAndSupport": "Yardım ve Destek",
+    "rewardsStore": "Ödül mağazası",
+    "naturalistBadge": "Doğa Gözlemcisi",
+    "deleteAccountDoneBillingBody": "Hesabınız ve verileriniz silindi. ÖNEMLİ: bu aboneliğinizi iptal etmez — Hotmart hesabınızdan iptal etmeniz gerekir, aksi halde tahsilat devam eder.",
+    "locationRow": "Yaklaşık konumumu kullan",
+    "locationHint": "Yanıtı çevrendeki türlerle sınırlayarak doğruluğu artırır. Yaklaşık 1 km’ye yuvarlanır ve asla saklanmaz.",
+    "emptyTitle": "Koleksiyonun burada başlıyor",
+    "emptyBody": "Kamerayı bir bitkiye, böceğe, mantara, balığa veya kuşa doğrult - ya da bir ses kaydet - burada belirsin.",
+    "emptyCta": "Bir şey tanımla"
+  },
+  "terms": {
+    "title": "Kullanım Şartları",
+    "acceptanceTitle": "Şartların kabulü",
+    "acceptanceBody": "NatureLens'i kullanarak bu Kullanım Şartları'nı kabul etmiş olursunuz. Kabul etmiyorsanız lütfen uygulamayı kullanmayın.",
+    "serviceTitle": "Bu uygulama ne yapar",
+    "serviceBody": "NatureLens, bitkileri, böcekleri, mantarları, tarımsal ürünleri ve ağaçları tanımlamak için fotoğraflamanıza ve üçüncü taraf yapay zeka hizmetlerini (Plant.id, Insect.id, Mushroom.id, Crop.health, hepsi Kindwise tarafından geliştirilmiştir) kullanmanıza olanak tanır. Sonuçlar otomatik olarak üretilir ve bir insan uzman tarafından incelenmez.",
+    "accuracyTitle": "Tanımlama doğruluğu — lütfen okuyun",
+    "accuracyBody": "Yapay zeka tanımlaması, bir bitkinin veya mantarın yenilebilir, zehirli veya dokunması güvenli olup olmadığı konusunda da dahil olmak üzere yanlış olabilir. Sadece bu uygulamanın sonucuna dayanarak asla yabani bir bitki, mantar veya fungus yemeyin, toplamayın veya kullanmayın. Doğada bulduğunuz bir şeyi tüketmeden veya kullanmadan önce her zaman nitelikli bir uzmana (mikolog, botanikçi veya zehir kontrol merkezi) danışın. Bu uygulama tarafından yapılan bir tanımlamaya güvenmenin neden olduğu zararlardan sorumlu değiliz.",
+    "billingTitle": "Abonelikler ve faturalandırma",
+    "billingBody": "Ücretli abonelikler, abone olduğunuz sırada uygulamada gösterilen fiyat üzerinden Stripe aracılığıyla faturalandırılır ve siz iptal edene kadar otomatik olarak yenilenir. İstediğiniz zaman iptal edebilirsiniz; erişiminiz zaten ödediğiniz dönemin sonuna kadar devam eder. Yasalar gerektirmedikçe kullanılmayan süre için orantılı geri ödeme sunmuyoruz.",
+    "accountTitle": "Hesaplar ve şifreler",
+    "accountBody": "Ücretsiz özellikleri kullanmak için hesaba ihtiyacınız yoktur. Aboneler isterlerse, oturum açmak ve aboneliklerini cihazlar arasında senkronize etmek için bir şifre oluşturabilir. Şifrenizi güvende tutmaktan ve hesabınız aracılığıyla gerçekleşen her şeyden siz sorumlusunuz.",
+    "liabilityTitle": "Garanti yok, sorumluluk sınırlaması",
+    "liabilityBody": "Bu uygulama herhangi bir garanti olmaksızın \"olduğu gibi\" sunulmaktadır. Yasaların izin verdiği azami ölçüde, herhangi bir tanımlama sonucuna güvenmek dahil olmak üzere uygulamayı kullanmanızdan kaynaklanan hiçbir zarardan sorumlu değiliz.",
+    "changesTitle": "Bu şartlardaki değişiklikler",
+    "changesBody": "Bu şartları zaman zaman güncelleyebiliriz. Bir değişiklikten sonra uygulamayı kullanmaya devam etmeniz, güncellenmiş şartları kabul ettiğiniz anlamına gelir.",
+    "contactTitle": "İletişim",
+    "contactBody": "Bu şartlarla ilgili sorular uygulamanın geliştiricisine yöneltilebilir."
+  },
+  "privacy": {
+    "title": "Gizlilik Politikası",
+    "collectTitle": "Neleri topluyoruz",
+    "collectBody": "Bu uygulama, bitkileri, böcekleri, mantarları veya ürünleri tanımlamak için fotoğraflarını çekmene olanak tanır. Bunun için Kindwise tarafından geliştirilen üçüncü taraf yapay zeka tanımlama servislerini kullanır — Plant.id, Insect.id, Mushroom.id ve Crop.health.",
+    "thirdPartyTitle": "Üçüncü taraf yapay zeka servisleri",
+    "thirdPartyBody": "Bir şeyi tanımlamak için fotoğraf çektiğinde veya yüklediğinde, bu fotoğraf sonuç üretmek üzere doğrudan ilgili Kindwise tanımlama servisine gönderilir. Fotoğraflarını kontrolümüz altındaki hiçbir sunucuda saklamıyoruz.",
+    "localStorageTitle": "Sadece yerel depolama",
+    "localStorageBody": "Kayıtlı koleksiyonun — tanımlanan türler, notlar ve zaman damgaları — yalnızca kendi cihazında, tarayıcı veya uygulama yerel depolaması kullanılarak saklanır. Bu veriler bizim işlettiğimiz herhangi bir bulut sunucusuna asla yüklenmez ve başka kullanıcılarla asla paylaşılmaz.",
+    "noAccountsTitle": "Hesap yok, takip yok",
+    "noAccountsBody": "Bu uygulamayı kullanmak için hesap gerekmez — cihazına, kategori başına ücretsiz tanımlama hakkının kullanılıp kullanılmadığını anlayabilmemiz için rastgele ve anonim bir kimlik atanır (yalnızca cihazında saklanır). Abone olursan, ödemeyi işleme koymak için Stripe e-postanı ve ödeme bilgilerini doğrudan kendisi toplar — biz yalnızca aynı anonim kimlikle ilişkilendirilmiş abonelik durumunu alırız. Aboneler isterlerse, diğer cihazlarda oturum açıp aboneliklerini senkronize etmek için bir şifre oluşturabilir; bu, uygulamayı kullanmak için asla zorunlu değildir. Analiz veya reklam takip araçları kullanmıyoruz.",
+    "dataLossTitle": "Veri kaybı riski",
+    "dataLossBody": "Tarayıcı verilerini temizlersen veya uygulamayı kaldırırsan, hiçbir şey uzaktan yedeklenmediği için yerel olarak kaydedilmiş koleksiyonun kalıcı olarak kaybolur.",
+    "contactTitle": "İletişim",
+    "contactBody": "Bu politikayla ilgili sorular uygulamanın geliştiricisine iletilebilir."
+  },
+  "discover": {
+    "title": "Keşfet",
+    "subtitle": "Doğal dünyaya olan merakını besle",
+    "dailyFact": "Günün Bitki Bilgisi",
+    "tapForAnotherFact": "Başka bir bilgi için dokun",
+    "exploreCollections": "Koleksiyonları Keşfet",
+    "trendingSpecies": "Popüler Türler",
+    "showNextFactLabel": "Sıradaki bitki bilgisini göster",
+    "openCollectionLabel": "{{title}} koleksiyonunu aç",
+    "viewSpeciesLabel": "{{name}} türünü görüntüle",
+    "facts": [
+      "Ceset çiçeği (Amorphophallus titanum) 3 metreyi aşan bir boya ulaşabilir ve tozlaştırıcıları çekmek için çürümüş et kokusu yayar.",
+      "Bambu dünyanın en hızlı büyüyen bitkisidir; bazı türleri tek bir günde 90 santime kadar uzayabilir.",
+      "Tek bir bal arısı günde yaklaşık 5.000 çiçeği ziyaret eder, ama ömrü boyunca ancak bir çay kaşığının on ikide biri kadar bal üretir.",
+      "Mantarlar bitkilerden çok hayvanlara yakındır; bizimle ortak ataları yaklaşık bir milyar yıl öncesine dayanır.",
+      "Bilinen en yaşlı canlı ağaç Kaliforniya'daki bir kancalı çamdır; yaşının 4.800'ün üzerinde olduğu tahmin ediliyor.",
+      "Ayçiçekleri gençken güneşi takip eder, ama olgunlaşınca doğuya dönük kalır; bu onları sabah erkenden ısıtır ve daha çok tozlaştırıcı çeker.",
+      "Bazı orkideler dişi böceklerin görünüşünü ve kokusunu o kadar iyi taklit eder ki, erkekler onlarla çiftleşmeye çalışır ve farkında olmadan çiçeği tozlaştırır.",
+      "Bir yusufçuk kovaladığı avın yaklaşık %95'ini yakalar; bu, hayvanlar aleminin en yüksek avlanma başarı oranlarından biridir.",
+      "Karıncalar 50 milyon yıldan uzun süredir mantar yetiştiriyor; yani insan tarımı icat etmeden çok önce.",
+      "Amazon yağmur ormanı, kara bitkilerinin saldığı oksijenin kabaca %20'sini üretir ve yağmurunun büyük kısmı ormanın kendi buharlaştırdığı sudan düşer.",
+      "Kelebekler tadı ayaklarıyla alır; bir yaprağın üstüne basarak tırtıllarının onu yiyip yiyemeyeceğini anlarlar.",
+      "Oregon'daki bir bal mantarı neredeyse 10 kilometrekareye yayılır ve gezegenin en büyük canlı organizmalarından biri sayılır.",
+      "Gökdoğan av dalışında 300 km/s'yi aşar; yaşayan en hızlı hayvan odur.",
+      "Balıkların göz kapağı yoktur; çoğu dinlenirken bile gözlerini hiç kapatmaz.",
+      "Venüs sinekkapanı sayı sayar: tuzağın kapanması için tetik kıllarına yaklaşık 20 saniye içinde iki kez dokunulması gerekir, böylece yağmur damlaları tuzağı boşa harcamaz.",
+      "Ormandaki ağaçlar yeraltındaki mantar ağları üzerinden besin paylaşır; bir ana ağaç metrelerce ötedeki zayıf bir fidanı besleyebilir.",
+      "Kutup sumrusu her yıl kutuptan kutba göç eder ve 70.000 kilometreden fazla yol kat eder; bu, hayvanlar aleminin en uzun göçüdür.",
+      "Kahve, çikolata ve vanilya, tozlaşmak için hayvanlara muhtaç bitkilerden gelir: arı ya da tatarcık yoksa sabah kahvesi de yok.",
+      "Bazı ağustos böcekleri toprak altında 17 yıl bekler, sonra hepsi birden, milyarlarca sayıda yüzeye çıkar.",
+      "Ananas tek bir meyve değildir; tek bir göbeğin çevresinde kaynaşmış onlarca küçük meyveden oluşur.",
+      "Baykuşlar gözlerini oynatamaz; göz küreleri yerine sabitlenmiş birer tüp gibidir, bu yüzden bunun yerine başlarını 270 dereceye kadar çevirirler.",
+      "Kutsal lotusun tohumları bin yıldan uzun bir uyku döneminden sonra bile çimlenebilir.",
+      "Somonlar yumurtlamak için tam da yumurtadan çıktıkları nehre döner; binlerce kilometrelik açık okyanusta yollarını koku ile bulurlar.",
+      "Karaya ilk yerleşen karmaşık organizmalar mantarlardı; hem de herhangi bir bitkiden çok önce.",
+      "İncir ağaçları dışarıya çiçek açmaz: her incir, içe dönmüş bir çiçek salkımıdır ve küçücük bir delikten giren bir arı tarafından tozlaştırılır.",
+      "Sinek kuşunun kalbi uçarken dakikada 1.200 kereden fazla atar; hayatta kalmak için her 10-15 dakikada bir beslenmesi gerekir.",
+      "Boğan incir hayata tepedeki bir dalda başlar, köklerini toprağa indirir ve sonunda kendisini barındıran ağacı öldürür.",
+      "Yosunun kökü yoktur; suyu doğrudan yapraklarından emer, bu yüzden kayada ve ağaç kabuğunda rahatça yaşar.",
+      "Mantis karidesi 12 ila 16 renk almacıyla görür; insanda bu sayı üçtür.",
+      "Titrek kavak korulukları çoğu zaman tek bir organizmadır: tek bir kök sistemini paylaşan binlerce gövde, bazıları 10.000 yaşın üzerinde.",
+      "Uğur böcekleri ömürleri boyunca 5.000'e kadar yaprak biti yer; bahçıvanların ilaç yerine onları salmasının sebebi budur.",
+      "Deniz hindistancevizi palmiyesinin tohumu 25 kiloya kadar çıkar; bitkiler aleminin en ağır tohumudur.",
+      "Elektrikli yılan balıkları aslında yılan balığı değil bıçak balığıdır ve verdikleri şok 800 voltu aşabilir.",
+      "Likenler tek bir organizma değil, ikisidir: tek bir canlı gibi yaşayan bir mantar ile bir alg; uzay boşluğunda bile hayatta kalabilirler.",
+      "Erkek imparator penguen Antarktika kışı boyunca tek bir yumurtayı ayaklarının üstünde dengeler ve iki ay boyunca hiçbir şey yemez.",
+      "Isırgan otu, deriye saplanıp kırılan cam gibi minik kıllarla yakar; panzehri de çoğu zaman hemen yanı başında biter: labada yaprakları.",
+      "Bazı derin deniz balıkları saydamdır; saklanacak hiçbir yerin olmadığı bir dünyada görünmezliği kamuflaj olarak kullanırlar.",
+      "Olgun bir meşe iyi bir yılda 10.000 palamut dökebilir ve bunların kabaca on binde biri ağaca dönüşür.",
+      "Kargalar insan yüzlerini tek tek tanır, kin tutar ve yavrularına kimden uzak duracaklarını öğretir.",
+      "Dünyanın en küçük çiçekli bitkisi olan cüce su mercimeği bir kum tanesi büyüklüğündedir; bir düzinesi parmak ucuna sığar."
+    ],
+    "topics": {
+      "airPurifying": {
+        "title": "Havayı Temizleyen Bitkiler",
+        "desc": "NASA bu türleri iç mekan havasını temizlemek için inceledi.",
+        "intro": "1980'lerin sonlarında NASA, uzay araçlarının kapalı kabin havasından kirleticileri temizlemeye yardımcı olabilecek türleri bulmak için düzinelerce yaygın ev bitkisini test etti — ve pek çok sıradan favorinin formaldehit, benzen ve karbon monoksit gibi toksinleri şaşırtıcı derecede iyi absorbe ettiğini keşfetti. Bu koleksiyon, bu araştırmada en iyi performansı gösteren ve o zamandan beri ev içi hava kalitesi konusunda klasikleşmiş türleri bir araya getiriyor. Pencere açmanın yerini tutmazlar, ama birkaç iyi yerleştirilmiş saksı, en çok vakit geçirdiğin odalardaki havayı tazelemenin kolay ve az emek gerektiren bir yoludur.",
+        "species": [
+          {
+            "name": "Paşa Kılıcı",
+            "sci": "Dracaena trifasciata (syn. Sansevieria trifasciata)",
+            "note": "NASA'nın en iyi performans gösterenlerinden biri, çoğu ev bitkisinin aksine gece boyunca bile CO2'yi oksijene dönüştürür."
+          },
+          {
+            "name": "Örümcek Bitkisi",
+            "sci": "Chlorophytum comosum",
+            "note": "NASA, sıradan ev havasından formaldehit ve ksileni temizlemede en iyiler arasında sıraladı."
+          },
+          {
+            "name": "Barış Çiçeği",
+            "sci": "Spathiphyllum wallisii",
+            "note": "NASA'nın orijinal çalışmasında iç mekan havasından benzen, formaldehit ve trikloretilen temizlemede birinci sırada yer aldı."
+          },
+          {
+            "name": "Duvar Sarmaşığı",
+            "sci": "Hedera helix",
+            "note": "NASA'nın genel olarak en yüksek puan alanı; formaldehiti ve hatta havadaki küf sporlarını temizlemesiyle değerli."
+          },
+          {
+            "name": "Boston Eğreltisi",
+            "sci": "Nephrolepis exaltata",
+            "note": "NASA tarafından test edilmiş bir formaldehit temizleyicisi; aynı zamanda kuru, ısıtılmış iç mekanlarda nemi artırır."
+          },
+          {
+            "name": "Salon Sarmaşığı",
+            "sci": "Epipremnum aureum",
+            "note": "Neredeyse yok edilemez ve iç mekan havasından formaldehit, benzen ve karbon monoksit filtrelediği belgelenmiştir."
+          },
+          {
+            "name": "Kauçuk Ağacı",
+            "sci": "Ficus elastica",
+            "note": "NASA Temiz Hava Çalışması'nın öne çıkanlarından biri; günlük yaşam alanlarından istikrarlı biçimde formaldehit çeker."
+          }
+        ]
+      },
+      "beginnerSucculents": {
+        "title": "Yeni Başlayanlar İçin Sukulentler",
+        "desc": "Biraz ihmali bile kaldırabilen, az suya ihtiyaç duyan bitkiler.",
+        "intro": "Sukulentler, yeni başlayanlar için ideal olma ününü hak ediyor: kalın, su depolayan yaprakları ve gövdeleri sayesinde bir iki unutulmuş sulamayı sorunsuzca atlatabiliyorlar. Bu liste, en dayanıklı ve hoşgörülü çeşitlere odaklanıyor — fazla sulama, az sulama ve tutarsız ışık gibi klasik acemi hatalarına dayanacak şekilde yaratılmış bitkiler. Bunlardan herhangi birine aydınlık bir pencere kenarı ve biraz sabır ver, kendi bitki koleksiyonunu büyütmeye neredeyse hatasız bir başlangıç yapmış olursun.",
+        "species": [
+          {
+            "name": "Yeşim Ağacı",
+            "sci": "Crassula ovata",
+            "note": "Suyu kalın gövde ve yapraklarında depolar, bu yüzden bir iki sulamayı atlamak onu etkilemez."
+          },
+          {
+            "name": "Paşa Kılıcı",
+            "sci": "Dracaena trifasciata",
+            "note": "Tam bir ihmalde bile gelişir, az ışığa ve haftalarca kuru toprağa şikayetsizce dayanır."
+          },
+          {
+            "name": "Zebra Bitkisi",
+            "sci": "Haworthiopsis fasciata",
+            "note": "Kompakt ve yavaş büyür, bu da onu fazla bakımla bunaltmayı neredeyse imkansız kılar."
+          },
+          {
+            "name": "Aloe Vera",
+            "sci": "Aloe vera",
+            "note": "Kuraklığa kendi başına dayanacak şekilde jelle dolu yapraklara sahip olduğu için düzensiz sulamayı tolere eder."
+          },
+          {
+            "name": "Panda Bitkisi",
+            "sci": "Kalanchoe tomentosa",
+            "note": "Tüylü, su depolayan yaprakları kurak dönemleri kolayca atlatır, bu da onu neredeyse hatasız bir ilk sukulent yapar."
+          },
+          {
+            "name": "Eşek Kuyruğu",
+            "sci": "Sedum morganianum",
+            "note": "Dolgun, sarkan yaprakları kendi su rezervini tutar; fazla sulamadan kaçınan, eli hafif sahiplerini ödüllendirir."
+          },
+          {
+            "name": "Meksika Taş Gülü",
+            "sci": "Echeveria elegans",
+            "note": "Klasik gül şekli suyu verimli depolar ve kolayca çoğalır, yeni başlayanların kaçınılmaz hatalarını tolere eder."
+          }
+        ]
+      },
+      "petSafe": {
+        "title": "Evcil Hayvanlar İçin Güvenli Ev Bitkileri",
+        "desc": "Kedi ve köpekli evler için toksik olmayan yeşillikler.",
+        "intro": "Kedi ve köpeklerle aynı evi paylaşmak, ev bitkilerinden vazgeçmek anlamına gelmez; ama popüler türlerin pek çoğu kemirildiğinde gerçekten zararlı olabiliyor. Bu koleksiyon, ASPCA güvenlik verileriyle çapraz kontrol edilmiş, iyi belgelenmiş ve toksik olmayan favorileri bir araya getiriyor; böylece meraklı bir pençe ya da keşif amaçlı bir ısırık için endişelenmeden pencere kenarlarını ve rafları doldurabilirsin. Sarkan sarmaşıklardan çiçekli favorilere kadar, buradaki her seçim önce güvenli, sonra güzel olduğu için yer buluyor.",
+        "species": [
+          {
+            "name": "Örümcek Bitkisi",
+            "sci": "Chlorophytum comosum",
+            "note": "ASPCA tarafından kedi ve köpekler için toksik olmayan bitkiler listesinde yer alır ve sarkan yaprakları meraklı pençelere güvenli bir oyun imkânı sunar."
+          },
+          {
+            "name": "Boston Eğreltisi",
+            "sci": "Nephrolepis exaltata",
+            "note": "Bu gür, dokulu eğrelti evcil hayvanlar için toksik değildir, bu da onu herhangi bir odaya ormanımsı bir hacim katmanın güvenli bir yolu yapar."
+          },
+          {
+            "name": "Salon Palmiyesi",
+            "sci": "Chamaedorea elegans",
+            "note": "Kedi ve köpekler için toksik olmayan klasik bir Viktorya dönemi ev bitkisi; hiçbir risk oluşturmadan az ışığa dayanır."
+          },
+          {
+            "name": "Dua Bitkisi",
+            "sci": "Maranta leuconeura",
+            "note": "Yaprakları geceleri dua eden eller gibi kapanır ve meraklı bir kedi ısırsa bile tamamen güvenlidir."
+          },
+          {
+            "name": "Karpuz Peperomia'sı",
+            "sci": "Peperomia argyreia",
+            "note": "Kompakt ve toksik olmayan çizgili yaprakları, raflar ve sehpalar için evcil hayvan dostu çarpıcı bir aksan oluşturur."
+          },
+          {
+            "name": "Zebra Haworthia'sı",
+            "sci": "Haworthia attenuata",
+            "note": "Toksik aloe ve yeşim bitkisine evcil hayvan dostu bir alternatif olan bu çizgili sukulent, görünümü riske girmeden sunar."
+          },
+          {
+            "name": "Afrika Menekşesi",
+            "sci": "Saintpaulia ionantha",
+            "note": "Toksik olmadığı doğrulanmış nadir çiçekli ev bitkilerinden biri, bu sayede evcil hayvanlar çiçeklerle aynı pencere kenarını paylaşabilir."
+          }
+        ]
+      },
+      "medicinalHerbs": {
+        "title": "Şifalı Bitkiler",
+        "desc": "Uzun bir iyileştirici kullanım geçmişine sahip bitkiler.",
+        "intro": "Modern ilaç dolaplarından çok önce, ev bahçeleri asıl eczaneydi: lavanta, nane ve ekinezya gibi bitkiler yüzyıllardır günlük rahatsızlıkları hafifletmek için yetiştirilip demlendi ve uygulandı. Bu koleksiyon, Akdeniz mutfağının vazgeçilmezlerinden Ayurveda'nın klasiklerine kadar, dünya çapında halk ve geleneksel tıp sistemlerinde iyi belgelenmiş rolleri olan bitkileri öne çıkarıyor. Çoğu güneşli bir pencere kenarında gelişir, böylece evde bitkisel tarihin canlı bir parçasını yetiştirebilirsin.",
+        "species": [
+          {
+            "name": "Aloe Vera",
+            "sci": "Aloe vera",
+            "note": "Jelle dolu yaprakları, binlerce yıldır farklı kültürlerde yanıkları ve küçük cilt tahrişlerini dindirmek için kullanılıyor.",
+            "id": "aloeVera",
+            "tags": [
+              "skin",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Lavanta",
+            "sci": "Lavandula angustifolia",
+            "note": "Sakinleştirici kokusuyla uzun süredir değerli; geleneksel olarak stresi azaltmak ve dinlendirici uykuyu desteklemek için kullanılır.",
+            "id": "lavender",
+            "tags": [
+              "sleep",
+              "stress",
+              "headache"
+            ]
+          },
+          {
+            "name": "Nane",
+            "sci": "Mentha x piperita",
+            "note": "Mentol açısından zengin yaprakları, yüzyıllardır halk hekimliğinde mide bulantısını ve baş ağrılarını hafifletmek için kullanılıyor.",
+            "id": "peppermint",
+            "tags": [
+              "digestion",
+              "headache"
+            ]
+          },
+          {
+            "name": "Alman Papatyası",
+            "sci": "Matricaria chamomilla",
+            "note": "Papatyaya benzeyen çiçekleri, sinirleri yatıştırmak ve sindirime yardımcı olmak için uzun süredir kullanılan hafif bir çaya dönüştürülür.",
+            "id": "germanChamomile",
+            "tags": [
+              "sleep",
+              "digestion",
+              "stress"
+            ]
+          },
+          {
+            "name": "Mor Ekinezya",
+            "sci": "Echinacea purpurea",
+            "note": "Kuzey Amerika'ya özgü olan bu bitkinin kökleri ve çiçekleri, yerli halklar tarafından bağışıklık sağlığını desteklemek için kullanıldı.",
+            "id": "purpleConeflower",
+            "tags": [
+              "immunity"
+            ]
+          },
+          {
+            "name": "Biberiye",
+            "sci": "Salvia rosmarinus (syn. Rosmarinus officinalis)",
+            "note": "Bu kokulu Akdeniz çalısı, hafızayı keskinleştirdiği ve dolaşıma yardımcı olduğu yönünde eski bir üne sahiptir.",
+            "id": "rosemary",
+            "tags": [
+              "headache",
+              "energy",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Kutsal Fesleğen (Tulsi)",
+            "sci": "Ocimum tenuiflorum",
+            "note": "Ayurveda geleneğinde yüzyıllardır saygı görür; yaprakları stres için adaptojenik bir çay olarak demlenir.",
+            "id": "holyBasil",
+            "tags": [
+              "stress",
+              "immunity",
+              "respiratory"
+            ]
+          },
+          {
+            "name": "Zerdeçal",
+            "sci": "Curcuma longa",
+            "note": "Ayurveda tıbbında yüzyıllardır kullanılan bu altın renkli kök, iltihabı yatıştırmak, sindirimi desteklemek ve yaraların iyileşmesine yardımcı olmak için tercih edilir.",
+            "id": "turmeric",
+            "tags": [
+              "painInflammation",
+              "digestion",
+              "skin"
+            ]
+          },
+          {
+            "name": "Zencefil",
+            "sci": "Zingiber officinale",
+            "note": "Çinli ve Ayurvedik şifacılar, mide bulantısını gidermek ve sindirimi ısıtmak için bu kökü uzun zamandır çiğner ya da kaynatıp demlerler.",
+            "id": "ginger",
+            "tags": [
+              "digestion",
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "Ginseng",
+            "sci": "Panax ginseng",
+            "note": "Geleneksel Çin Tıbbı'nda iki bin yılı aşkın süredir enerji ve canlılık kazandıran onarıcı bir tonik olarak değer görür.",
+            "id": "ginseng",
+            "tags": [
+              "energy",
+              "stress"
+            ]
+          },
+          {
+            "name": "Ashwagandha",
+            "sci": "Withania somnifera",
+            "note": "Binlerce yıldır Ayurveda'nın vazgeçilmez bitkilerinden olan Ashwagandha'nın kökü, geleneksel olarak stresi hafifletmek, güç ve dayanıklılığı yeniden kazandırmak için kullanılır.",
+            "id": "ashwagandha",
+            "tags": [
+              "stress",
+              "energy",
+              "sleep"
+            ]
+          },
+          {
+            "name": "Mürver",
+            "sci": "Sambucus nigra",
+            "note": "Avrupalı halk hekimleri, soğuk algınlığı ve gripe karşı yüzyıllardır bu koyu renkli meyveleri kaynatıp şuruba dönüştürür.",
+            "id": "elderberry",
+            "tags": [
+              "immunity",
+              "respiratory"
+            ]
+          },
+          {
+            "name": "Kediotu",
+            "sci": "Valeriana officinalis",
+            "note": "Avrupalı bitki uzmanları, huzursuz uykuya karşı geleneksel bir çare olarak eski çağlardan beri bu keskin kokulu kökü kurutup kullanır.",
+            "id": "valerian",
+            "tags": [
+              "sleep",
+              "stress"
+            ]
+          },
+          {
+            "name": "Cadı Fındığı",
+            "sci": "Hamamelis virginiana",
+            "note": "Yerli Amerikan kabileleri, morarma, şişlik ve cilt tahrişine karşı kabuğunu ve yapraklarını damıtarak yatıştırıcı bir losyon elde ederdi.",
+            "id": "witchHazel",
+            "tags": [
+              "skin",
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "Goldenseal",
+            "sci": "Hydrastis canadensis",
+            "note": "Cherokee ve diğer yerli Amerikan şifacılar, yaraları, enfeksiyonları ve sindirim rahatsızlıklarını iyileştirmek için bu acı kökü kullanırdı.",
+            "id": "goldenseal",
+            "tags": [
+              "digestion",
+              "immunity",
+              "skin"
+            ]
+          },
+          {
+            "name": "Şeytan Pençesi",
+            "sci": "Harpagophytum procumbens",
+            "note": "Kalahari'nin geleneksel şifacıları, eklem ağrılarını ve artriti hafifletmek için çengel şeklindeki meyveleriyle tanınan bu kökü uzun zamandır kullanır.",
+            "id": "devilsClaw",
+            "tags": [
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "Afrika Pelini",
+            "sci": "Artemisia afra",
+            "note": "Güney Afrika'nın en yaygın kullanılan geleneksel bitkilerinden biri olan bu şifalı ot, öksürük ve tıkanıklığı gidermek için buharla ya da demlenerek kullanılır.",
+            "id": "africanWormwood",
+            "tags": [
+              "respiratory",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Yerba Mate",
+            "sci": "Ilex paraguariensis",
+            "note": "Güney Amerika'nın Guaraní halkı, canlandırıcı ve sindirime yardımcı günlük bir çay olarak yapraklarını uzun zamandır demler.",
+            "id": "yerbaMate",
+            "tags": [
+              "energy",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Gotu Kola",
+            "sci": "Centella asiatica",
+            "note": "Ayurveda ve geleneksel Güneydoğu Asya tıbbında saygı duyulan bu bitki, yara iyileştirici özelliğiyle bilinir; hafızayı keskinleştirip zihni sakinleştirdiğine inanılır.",
+            "id": "gotuKola",
+            "tags": [
+              "skin",
+              "stress"
+            ]
+          },
+          {
+            "name": "Meyan Kökü",
+            "sci": "Glycyrrhiza glabra",
+            "note": "Çin, Ayurveda ve Orta Doğu tıbbında yüzyıllardır öksürüğü, boğaz ağrısını ve mide rahatsızlıklarını yatıştırmak için kullanılır.",
+            "id": "licoriceRoot",
+            "tags": [
+              "respiratory",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Nim Ağacı",
+            "sci": "Azadirachta indica",
+            "note": "Acı nim yaprakları, kabuğu ve yağı; Ayurveda'da cilt döküntüleri, yaralar ve parazit enfeksiyonları için klasik bir çaredir.",
+            "id": "neem",
+            "tags": [
+              "skin",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Amla (Hint Bektaşi Üzümü)",
+            "sci": "Phyllanthus emblica",
+            "note": "Ayurveda'nın en zengin doğal C vitamini kaynağı olan amla, gençleştirici ve sindirimi destekleyen rasayana toniklerinin temelini oluşturur.",
+            "id": "amla",
+            "tags": [
+              "digestion",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Brahmi",
+            "sci": "Bacopa monnieri",
+            "note": "Ayurvedik bir Medhya Rasayana bitkisi olan brahmi, geleneksel olarak hafızayı keskinleştirmek, zihni sakinleştirmek ve öğrenmeyi desteklemek için kullanılır.",
+            "id": "brahmi",
+            "tags": [
+              "stress",
+              "sleep"
+            ]
+          },
+          {
+            "name": "Guduchi (Giloy)",
+            "sci": "Tinospora cordifolia",
+            "note": "'Ölümsüzlüğün kökü' anlamına gelen Amrita adıyla da anılan bu gövde kaynatması, Ayurveda'da ateş düşürmek ve bağışıklığı güçlendirmek için başvurulan başlıca çaredir.",
+            "id": "guduchi",
+            "tags": [
+              "immunity",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Shatavari",
+            "sci": "Asparagus racemosus",
+            "note": "Ayurveda'da kadınlar için en üstün gençleştirici bitki olarak saygı gören bu kök toniği, geleneksel olarak süt üretimini ve hormon dengesini desteklemek için kullanılır.",
+            "id": "shatavari",
+            "tags": [
+              "energy",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Arjuna",
+            "sci": "Terminalia arjuna",
+            "note": "Kabuk tozu, kalp kasını güçlendirmek ve sağlıklı dolaşımı desteklemek amacıyla Ayurvedik kardiyolojide uzun zamandır kullanılagelmiştir.",
+            "id": "arjuna",
+            "tags": [
+              "energy"
+            ]
+          },
+          {
+            "name": "Haritaki",
+            "sci": "Terminalia chebula",
+            "note": "Ayurveda'da 'ilaçların kralı' olarak anılan bu meyve, sindirimi, detoksu ve boşaltımı destekleyen Triphala karışımının temel taşıdır.",
+            "id": "haritaki",
+            "tags": [
+              "digestion",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Bibhitaki",
+            "sci": "Terminalia bellirica",
+            "note": "Triphala'yı oluşturan üç meyveden biri olan bibhitaki, Ayurveda'da fazla balgamı gidermek ve solunum sağlığını desteklemek için geleneksel olarak kullanılır.",
+            "id": "bibhitaki",
+            "tags": [
+              "respiratory",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Çemen Otu",
+            "sci": "Trigonella foenum-graecum",
+            "note": "Güney Asya evlerinde ıslatılıp yenen tohumları, sindirimi kolaylaştırmak, süt üretimini desteklemek ve kan şekerini dengelemek için nesillerdir tüketilir.",
+            "id": "fenugreek",
+            "tags": [
+              "digestion",
+              "energy"
+            ]
+          },
+          {
+            "name": "Uzun Biber (Pippali)",
+            "sci": "Piper longum",
+            "note": "Ayurvedik Trikatu karışımlarında yer alan bu keskin tatlı meyve, geleneksel olarak sindirim ateşini canlandırmak ve solunum yollarındaki tıkanıklığı gidermek için kullanılır.",
+            "id": "longPepper",
+            "tags": [
+              "digestion",
+              "respiratory"
+            ]
+          },
+          {
+            "name": "Sandal Ağacı",
+            "sci": "Santalum album",
+            "note": "Ayurveda'da iltihaplı cildi yatıştırmak, ateşi düşürmek ve meditasyon sırasında zihni dinginleştirmek için serinletici bir macun halinde uygulanır.",
+            "id": "sandalwood",
+            "tags": [
+              "skin",
+              "stress"
+            ]
+          },
+          {
+            "name": "Hint Sarsaparillası (Anantamul)",
+            "sci": "Hemidesmus indicus",
+            "note": "Tatlı köklü bu sarmaşık, klasik Ayurvedik formüllerde kanı temizlemek, cildi arındırmak ve eklem ağrısını hafifletmek için kullanılır.",
+            "id": "indianSarsaparilla",
+            "tags": [
+              "skin",
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "Bael (Bengal Ayvası)",
+            "sci": "Aegle marmelos",
+            "note": "Olgunlaşmamış meyve özü, kronik ishal ve dizanteriyi yatıştırmak için geleneksel bir Ayurvedik temel maddedir.",
+            "id": "bael",
+            "tags": [
+              "digestion"
+            ]
+          },
+          {
+            "name": "Guggul",
+            "sci": "Commiphora wightii",
+            "note": "Ayurveda'nın Guggulu formüllerinin kalbinde yer alan bu reçine, geleneksel olarak kolesterolü dengelemek ve eklem iltihabını yönetmek için kullanılır.",
+            "id": "guggul",
+            "tags": [
+              "painInflammation",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Manjistha (Hint Kızılkökü)",
+            "sci": "Rubia cordifolia",
+            "note": "Kökü, Ayurveda'da uzun zamandır kanı arındıran, cildi berraklaştıran, yara iyileşmesini ve lenf sistemini destekleyen bir bitki olarak kullanılır.",
+            "id": "manjistha",
+            "tags": [
+              "skin",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Jatamansi (Hint Sümbülü)",
+            "sci": "Nardostachys jatamansi",
+            "note": "Kokulu kökü, Ayurveda'da sinir sistemini yatıştırmak ve dinlendirici bir uyku sağlamak için uzun zamandır kullanılır.",
+            "id": "jatamansi",
+            "tags": [
+              "sleep",
+              "stress"
+            ]
+          },
+          {
+            "name": "Astragalus",
+            "sci": "Astragalus membranaceus",
+            "note": "Huang qi kökü; wei qi'yi güçlendirmek, dayanıklılığı artırmak ve yara iyileşmesini desteklemek için kaynatılır.",
+            "id": "astragalus",
+            "tags": [
+              "immunity",
+              "energy"
+            ]
+          },
+          {
+            "name": "Reishi Mantarı",
+            "sci": "Ganoderma lucidum",
+            "note": "Ling zhi mantarı, Taocu şifacılar tarafından şeni (ruhu) yatıştırmak, uykusuzluğu gidermek ve ömrü uzatmak için değerli sayılırdı.",
+            "id": "reishiMushroom",
+            "tags": [
+              "sleep",
+              "stress",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Dong Quai",
+            "sci": "Angelica sinensis",
+            "note": "'Kadın ginsengi' olarak bilinen dang gui, iki bin yıldır kanı besleyip adet dönemi şikayetlerini hafifletmek için kullanılır.",
+            "id": "dongQuai",
+            "tags": [
+              "energy",
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "Goji (Kurt Üzümü)",
+            "sci": "Lycium barbarum",
+            "note": "Gou qi zi meyveleri, karaciğer ve böbrek yinini beslemek, gözleri parlatmak amacıyla demlenir ya da doğrudan yenir.",
+            "id": "gojiBerry",
+            "tags": [
+              "immunity",
+              "energy"
+            ]
+          },
+          {
+            "name": "Schisandra (Beş Tat Meyvesi)",
+            "sci": "Schisandra chinensis",
+            "note": "'Beş tatlı meyve' anlamına gelen wu wei zi, akciğerleri sıkılaştırır, zihni yatıştırır ve karaciğeri korur.",
+            "id": "schisandra",
+            "tags": [
+              "respiratory",
+              "stress",
+              "sleep"
+            ]
+          },
+          {
+            "name": "Çin Kaskotu",
+            "sci": "Scutellaria baicalensis",
+            "note": "Huang qin kökü nem-ısıyı giderir; eski formülerlerden bu yana ateş, öksürük ve dizanteri tedavisinde kullanılagelmiştir.",
+            "id": "chineseSkullcap",
+            "tags": [
+              "respiratory",
+              "digestion",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Rehmannia",
+            "sci": "Rehmannia glutinosa",
+            "note": "Buharda pişirilmiş di huang, böbrek yinini ve kanı güçlendirir; birçok klasik formülün temel bileşenidir.",
+            "id": "rehmannia",
+            "tags": [
+              "energy",
+              "sleep"
+            ]
+          },
+          {
+            "name": "Krizantem",
+            "sci": "Chrysanthemum morifolium",
+            "note": "Ju hua çiçekleri, vücut ısısını dengelemek, kızarmış gözleri yatıştırmak ve baş ağrısını hafifletmek için çay olarak demlenir.",
+            "id": "chrysanthemum",
+            "tags": [
+              "headache",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Japon Hanımeli",
+            "sci": "Lonicera japonica",
+            "note": "Jin yin hua çiçeği ısı-zehrini giderir; ateş, çıban ve boğaz enfeksiyonlarının tedavisinde uzun zamandır kullanılır.",
+            "id": "japaneseHoneysuckle",
+            "tags": [
+              "immunity",
+              "respiratory",
+              "skin"
+            ]
+          },
+          {
+            "name": "Çin Tarçını (Kasya)",
+            "sci": "Cinnamomum cassia",
+            "note": "Rou gui kabuğu böbrek yangını ısıtır ve durgunlaşmış kanı harekete geçirerek soğuk kaynaklı ağrıları giderir.",
+            "id": "chineseCinnamon",
+            "tags": [
+              "painInflammation",
+              "energy"
+            ]
+          },
+          {
+            "name": "Poria",
+            "sci": "Wolfiporia extensa",
+            "note": "Mantarsı bir yumru olan fu ling, kaynatmalarda nemi atar, ruhu yatıştırır ve dalağı güçlendirir.",
+            "id": "poria",
+            "tags": [
+              "sleep",
+              "digestion",
+              "stress"
+            ]
+          },
+          {
+            "name": "Çin Yamı",
+            "sci": "Dioscorea polystachya",
+            "note": "Shan yao yumrusu dalak, akciğer ve böbrek qi'sini güçlendirir; geleneksel olarak tonik çorbalarda pişirilir.",
+            "id": "chineseYam",
+            "tags": [
+              "digestion",
+              "energy",
+              "respiratory"
+            ]
+          },
+          {
+            "name": "Bupleurum",
+            "sci": "Bupleurum chinense",
+            "note": "Chai hu kökü karaciğeri dengeler ve ısıyı dağıtır; nöbetleşe gelen ateş-titreme durumlarında önemli bir bileşendir.",
+            "id": "bupleurum",
+            "tags": [
+              "stress",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Notoginseng (San Qi)",
+            "sci": "Panax notoginseng",
+            "note": "San qi kökü kanamayı durdurmak ve morlukları gidermek için uygulanır, aynı zamanda kan dolaşımını canlandırır.",
+            "id": "notoginseng",
+            "tags": [
+              "painInflammation",
+              "skin"
+            ]
+          },
+          {
+            "name": "Codonopsis",
+            "sci": "Codonopsis pilosula",
+            "note": "Dang shen kökü, qi'yi güçlendiren ve sindirimi destekleyen daha yumuşak bir ginseng alternatifi olarak kullanılır.",
+            "id": "codonopsis",
+            "tags": [
+              "energy",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Fo-Ti (He Shou Wu)",
+            "sci": "Reynoutria multiflora",
+            "note": "He shou wu kökü karaciğer ve böbreği beslemek için hazırlanır; ağaran saçları koyulaştırdığına inanılır.",
+            "id": "foti",
+            "tags": [
+              "energy",
+              "skin"
+            ]
+          },
+          {
+            "name": "Civanperçemi",
+            "sci": "Achillea millefolium",
+            "note": "'Asker yarası otu' olarak da bilinen civanperçemi, antik çağlardan beri kanamayı durdurmak ve savaş yaralarının iyileşmesini hızlandırmak için kullanılmıştır.",
+            "id": "yarrow",
+            "tags": [
+              "skin",
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "Sarı Kantaron",
+            "sci": "Hypericum perforatum",
+            "note": "Avrupa halk hekimliğinde melankoli ve sinir ağrısı için kullanılan bu bitkinin sarı çiçekleri, yara iyileştirici merhemler için yağda demlenir.",
+            "id": "stJohnsWort",
+            "tags": [
+              "stress",
+              "painInflammation",
+              "skin"
+            ]
+          },
+          {
+            "name": "Adaçayı",
+            "sci": "Salvia officinalis",
+            "note": "Latince 'salvere', yani 'iyileşmek' kelimesinden gelen adı, boğaz ağrısı için gargara yapılan ve sindirimi kolaylaştıran çok eski kullanımını yansıtır.",
+            "id": "sage",
+            "tags": [
+              "digestion",
+              "respiratory"
+            ]
+          },
+          {
+            "name": "Kekik",
+            "sci": "Thymus vulgaris",
+            "note": "Akdeniz'in öksürük ve göğüs derdine derman olan bu bitkinin uçucu yağları, inatçı balgamı söktürmek için şuruplarda uzun zamandır kullanılır.",
+            "id": "thyme",
+            "tags": [
+              "respiratory",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Hatmi",
+            "sci": "Althaea officinalis",
+            "note": "Kök ve yaprağındaki müsilaj, Avrupa eczacılığında yüzyıllar boyunca boğaz ağrısını, öksürüğü ve tahriş olmuş bağırsak zarını yatıştırmak için kullanıldı.",
+            "id": "marshmallow",
+            "tags": [
+              "respiratory",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Aynısefa (Calendula)",
+            "sci": "Calendula officinalis",
+            "note": "Parlak taç yaprakları ezilerek kesikleri temizleyen ve iltihaplı, geç iyileşen cildi yatıştıran merhemler yapılır.",
+            "id": "potMarigold",
+            "tags": [
+              "skin",
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "Deve Dikeni",
+            "sci": "Silybum marianum",
+            "note": "Akdeniz'in bu tohumları, ağır yemeklerden sonra karaciğeri korumak ve güçlendirmek için geleneksel olarak çiğnenir ya da demlenir.",
+            "id": "milkThistle",
+            "tags": [
+              "digestion"
+            ]
+          },
+          {
+            "name": "Rezene",
+            "sci": "Foeniculum vulgare",
+            "note": "Anason kokulu tohumları, nesillerdir yemeklerden sonra kolik, şişkinlik ve bebeklerdeki gaz sancısını gidermek için çiğnenir.",
+            "id": "fennel",
+            "tags": [
+              "digestion"
+            ]
+          },
+          {
+            "name": "Isırgan Otu",
+            "sci": "Urtica dioica",
+            "note": "Yakıcı yaprakları, kanı temizleyen ve eklem ağrılarını hafifleten bir bahar toniği çayı olarak demlenir.",
+            "id": "stingingNettle",
+            "tags": [
+              "painInflammation",
+              "skin",
+              "immunity"
+            ]
+          },
+          {
+            "name": "White Horehound",
+            "sci": "Marrubium vulgare",
+            "note": "Akdeniz'in bu acı bitkisi, öksürük ve bronşit için klasik bir çare olmak üzere şekerlemelere ve şuruplara kaynatılır.",
+            "id": "whiteHorehound",
+            "tags": [
+              "respiratory",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Karakafes Otu",
+            "sci": "Symphytum officinale",
+            "note": "'Kemik kaynatan' lakaplı bu bitkinin ezilmiş kökü ve yaprakları, yüzyıllar boyunca kırık, burkulma ve morluklara lapa olarak uygulandı.",
+            "id": "comfrey",
+            "tags": [
+              "painInflammation",
+              "skin"
+            ]
+          },
+          {
+            "name": "Feverfew",
+            "sci": "Tanacetum parthenium",
+            "note": "Acı yapraklı bu bitki taze çiğnenir ya da çay olarak demlenir; migren ve baş ağrısına karşı uzun süredir bilinen bir halk çaresidir.",
+            "id": "feverfew",
+            "tags": [
+              "headache",
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "Sığırkuyruğu",
+            "sci": "Verbascum thapsus",
+            "note": "Tüylü yaprak ve çiçekleri, öksürük, boğaz ağrısı ve kulak ağrısı için yağda ya da çayda demlenir.",
+            "id": "mullein",
+            "tags": [
+              "respiratory",
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "Alıç",
+            "sci": "Crataegus monogyna",
+            "note": "Meyveleri, çiçekleri ve yaprakları, Avrupa'nın zayıflamış ya da endişeli bir kalp atışı için klasik kalp toniği olarak demlenir.",
+            "id": "hawthorn",
+            "tags": [
+              "stress",
+              "sleep"
+            ]
+          },
+          {
+            "name": "Ihlamur",
+            "sci": "Tilia cordata",
+            "note": "Kokulu çiçekleri, ateşi düşüren ve huzursuz sinirleri yatıştıran sakinleştirici bir çay olarak demlenir.",
+            "id": "linden",
+            "tags": [
+              "sleep",
+              "stress",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Meadowsweet",
+            "sci": "Filipendula ulmaria",
+            "note": "Kokulu çiçekli bu bitki uzun zamandır ateş ve eklem ağrısı için kullanılmış, daha sonra aspirinin kimyasal temelini oluşturmuştur.",
+            "id": "meadowsweet",
+            "tags": [
+              "painInflammation",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Osha Kökü",
+            "sci": "Ligusticum porteri",
+            "note": "Navajo ve Ute gibi Kayalık Dağlar kabileleri, boğaz ağrısını ve solunum yolu enfeksiyonlarını hafifletmek için bu kökü çiğner ya da demlerdi.",
+            "id": "oshaRoot",
+            "tags": [
+              "respiratory",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Kara Kohosh",
+            "sci": "Actaea racemosa",
+            "note": "Cherokee ve diğer Doğu Ormanlık bölge halkları, adet sancılarını hafifletmek ve doğumu desteklemek için bu kökü kullanırdı.",
+            "id": "blackCohosh",
+            "tags": [
+              "painInflammation",
+              "stress"
+            ]
+          },
+          {
+            "name": "Şeytan Sopası",
+            "sci": "Oplopanax horridus",
+            "note": "Tlingit, Haida ve diğer Pasifik Kuzeybatı Kıyısı halkları, artrit, enfeksiyon ve diyabet belirtilerini tedavi etmek için iç kabuğunu kullanırdı.",
+            "id": "devilsClub",
+            "tags": [
+              "painInflammation",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Yabani Bergamot",
+            "sci": "Monarda fistulosa",
+            "note": "Blackfeet ve diğer Ova kabileleri, timol açısından zengin bu nane familyasından yaprak çayını soğuk algınlığı ve solunum yolu enfeksiyonlarını tedavi etmek için demlerdi.",
+            "id": "wildBergamot",
+            "tags": [
+              "respiratory",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Ayı Üzümü (Uva Ursi)",
+            "sci": "Arctostaphylos uva-ursi",
+            "note": "Pek çok Yerli Amerikan kabilesi yapraklarını idrar söktürücü ve idrar yolu enfeksiyonlarına karşı bir çare olarak demlerdi.",
+            "id": "bearberry",
+            "tags": [
+              "immunity",
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "Kaygan Karaağaç",
+            "sci": "Ulmus rubra",
+            "note": "Cherokee ve İroquois halkları, boğaz ağrısını yatıştırmak ve yaraları iyileştirmek için müsilajlı iç kabuğunu kullanırdı.",
+            "id": "slipperyElm",
+            "tags": [
+              "digestion",
+              "respiratory",
+              "skin"
+            ]
+          },
+          {
+            "name": "Cascara Sagrada",
+            "sci": "Frangula purshiana",
+            "note": "Pasifik Kuzeybatısı kabileleri, bu cehri türünün kabuğunu güvenilir doğal bir müshil olarak kurutup olgunlaştırırdı.",
+            "id": "cascaraSagrada",
+            "tags": [
+              "digestion"
+            ]
+          },
+          {
+            "name": "Kınakına",
+            "sci": "Cinchona officinalis",
+            "note": "And Dağları'nın Keçiya (Quechua) halkları, kinin kaynağı haline gelmeden çok önce ateşi tedavi etmek için bu acı kabuğu kullanırdı.",
+            "id": "cinchona",
+            "tags": [
+              "immunity",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Kedi Tırnağı",
+            "sci": "Uncaria tomentosa",
+            "note": "Asháninka ve diğer Peru Amazon halkları, artrit ve bağışıklık desteği için bu odunsu sarmaşığın kabuğunu demlerdi.",
+            "id": "catsClaw",
+            "tags": [
+              "painInflammation",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Koka",
+            "sci": "Erythroxylum coca",
+            "note": "And Dağları'nın Keçiya ve Aymara halkları, binlerce yıldır rakım hastalığı ve yorgunlukla mücadele etmek için yapraklarını çiğnemiştir.",
+            "id": "coca",
+            "tags": [
+              "energy",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Ejder Kanı",
+            "sci": "Croton lechleri",
+            "note": "Amazon halkları, bu ağacın kırmızı reçinemsi özsuyunu doğal bir antiseptik olarak doğrudan kesik ve yaralara sürer.",
+            "id": "dragonsBlood",
+            "tags": [
+              "skin",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Pau d'Arco",
+            "sci": "Tabebuia impetiginosa",
+            "note": "Yerli Amazon halkları, enfeksiyon, ateş ve cilt rahatsızlıklarını tedavi etmek için iç kabuğunu çay olarak demlerdi.",
+            "id": "pauDarco",
+            "tags": [
+              "immunity",
+              "skin"
+            ]
+          },
+          {
+            "name": "Boldo",
+            "sci": "Peumus boldus",
+            "note": "Şili'deki Mapuche şifacılar, karaciğer işlevini desteklemek ve sindirimi kolaylaştırmak için uzun zamandır boldo yaprağı çayı kullanır.",
+            "id": "boldo",
+            "tags": [
+              "digestion"
+            ]
+          },
+          {
+            "name": "Copaiba",
+            "sci": "Copaifera officinalis",
+            "note": "Amazon halkları bu ağacın reçinesini toplar ve iltihap giderici bir çare olarak doğrudan yaralara sürer.",
+            "id": "copaiba",
+            "tags": [
+              "painInflammation",
+              "skin"
+            ]
+          },
+          {
+            "name": "Guarana",
+            "sci": "Paullinia cupana",
+            "note": "Brezilya Amazon'undaki Sateré-Mawé halkı bu sarmaşığı evcilleştirmiş, sürekli enerji ve odaklanma için tohumlarını kavurmuştur.",
+            "id": "guarana",
+            "tags": [
+              "energy"
+            ]
+          },
+          {
+            "name": "Çörek Otu",
+            "sci": "Nigella sativa",
+            "note": "Peygamber tıbbında 'bereket tohumu' olarak bilinen çörek otunun yağı, astımı, sindirim bozukluklarını ve cilt enfeksiyonlarını tedavi eder.",
+            "id": "blackSeed",
+            "tags": [
+              "respiratory",
+              "digestion",
+              "skin"
+            ]
+          },
+          {
+            "name": "Günlük (Buhur)",
+            "sci": "Boswellia sacra",
+            "note": "Binlerce yıldır Arap topraklarındaki ağaçlardan toplanan bu reçine, eklem iltihabını, yaraları ve solunum yolu şikayetlerini tedavi eder.",
+            "id": "frankincense",
+            "tags": [
+              "painInflammation",
+              "respiratory",
+              "skin"
+            ]
+          },
+          {
+            "name": "Mür",
+            "sci": "Commiphora myrrha",
+            "note": "Afrika Boynuzu ve Arabistan'da toplanan bu reçine, yaraları dezenfekte eder, diş etlerini ve boğazı yatıştırır.",
+            "id": "myrrh",
+            "tags": [
+              "skin",
+              "respiratory"
+            ]
+          },
+          {
+            "name": "Sinameki",
+            "sci": "Senna alexandrina",
+            "note": "Antik çağlardan beri Mısırlı hekimler, kabuklarını ve yapraklarını güçlü ve güvenilir bir müshil olarak kullanmıştır.",
+            "id": "senna",
+            "tags": [
+              "digestion"
+            ]
+          },
+          {
+            "name": "Hibiskus (Karkade)",
+            "sci": "Hibiscus sabdariffa",
+            "note": "Sudan ve Mısır'da karkade adıyla demlenen çanak yaprakları, yüksek tansiyon ve ateş için bir halk çaresidir.",
+            "id": "hibiscus",
+            "tags": [
+              "immunity"
+            ]
+          },
+          {
+            "name": "Moringa",
+            "sci": "Moringa oleifera",
+            "note": "Sahra Altı Afrika'da uzun zamandır kullanılan yaprakları, kötü beslenme ve iltihabı tedavi eder, emziren annelerin süt üretimini destekler.",
+            "id": "moringa",
+            "tags": [
+              "immunity",
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "Baobab",
+            "sci": "Adansonia digitata",
+            "note": "Afrika'nın 'hayat ağacı' olarak bilinen baobab, ateş, ishal ve sıtmaya karşı geleneksel olarak kullanılan meyve özü ve kabuk verir.",
+            "id": "baobab",
+            "tags": [
+              "immunity",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Rooibos",
+            "sci": "Aspalathus linearis",
+            "note": "Güney Afrika'nın Khoisan halkı ve Cape bölgesindeki Hollandalı yerleşimciler, alerji ve kolik için bu kızılımsı çalıyı demlerdi.",
+            "id": "rooibos",
+            "tags": [
+              "immunity",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Buchu",
+            "sci": "Agathosma betulina",
+            "note": "Cape bölgesindeki Khoisan şifacılar, idrar yolu enfeksiyonlarını ve böbrek rahatsızlıklarını tedavi etmek için keskin kokulu yapraklarını kullanırdı.",
+            "id": "buchu",
+            "tags": [
+              "immunity"
+            ]
+          },
+          {
+            "name": "Kanser Çalısı (Sutherlandia)",
+            "sci": "Lessertia frutescens",
+            "note": "Khoi halkı tarafından 'kankerbos' olarak bilinen bu Güney Afrika çalısı, stres, yorgunluk ve bağışıklık desteği için geleneksel bir toniktir.",
+            "id": "cancerBush",
+            "tags": [
+              "stress",
+              "energy",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Umckaloabo (Afrika Sardunyası)",
+            "sci": "Pelargonium sidoides",
+            "note": "Güney Afrika'daki Xhosa ve Zulu şifacılar, öksürük, bronşit ve verem tedavisi için yumrulu kökünü kullanırdı.",
+            "id": "umckaloabo",
+            "tags": [
+              "respiratory"
+            ]
+          },
+          {
+            "name": "Hoodia",
+            "sci": "Hoodia gordonii",
+            "note": "Kalahari'nin San avcıları, uzun yolculuklarda açlığı ve susuzluğu bastırmak için bu dikenli etli bitkiyi çiğnerdi.",
+            "id": "hoodia",
+            "tags": [
+              "energy"
+            ]
+          },
+          {
+            "name": "Kına",
+            "sci": "Lawsonia inermis",
+            "note": "Vücut sanatının ötesinde, Orta Doğu ve Kuzey Afrika halk hekimliğinde mantar kaynaklı cilt enfeksiyonlarını tedavi etmek için yaprak macunu uygulanır.",
+            "id": "henna",
+            "tags": [
+              "skin"
+            ]
+          },
+          {
+            "name": "Sakız (Damla Sakızı)",
+            "sci": "Pistacia lentiscus",
+            "note": "Antik çağlardan beri Doğu Akdeniz'de çiğnenen bu ağaç reçinesi, mide ülserlerini ve sindirim şikayetlerini yatıştırır.",
+            "id": "mastic",
+            "tags": [
+              "digestion"
+            ]
+          },
+          {
+            "name": "Keçiboynuzu",
+            "sci": "Ceratonia siliqua",
+            "note": "Orta Doğu halk hekimliği, çocukluk çağı ishali ve sindirim bozuklukları için meyvelerini öğütüp bir çare haline getirmiştir.",
+            "id": "carob",
+            "tags": [
+              "digestion"
+            ]
+          }
+        ]
+      },
+      "floweringPerennials": {
+        "title": "Çok Yıllık Çiçekli Bitkiler",
+        "desc": "Yıldan yıla tekrar açan çiçekler.",
+        "intro": "Çok yıllık çiçekli bitkiler, vermeye devam eden bir bahçenin belkemiğidir: tek yıllıkların aksine kışın toprak üstü kısımları ölür, ancak her ilkbaharda aynı köklerden, rizomlardan ya da yumrulardan yeniden filizlenirler. Pek çoğu yıllar içinde yerleşip daha gür kümeler haline gelir, böylece tek bir dikim her sezon daha fazla çiçekle seni ödüllendirir. Bu koleksiyon, tarhları ve sınır bitkilerini güvenilir, tekrar çiçek açan renklerle çapalayan, sevilen ve kolay bulunan çok yıllıkları bir araya getiriyor.",
+        "species": [
+          {
+            "name": "Şakayık",
+            "sci": "Paeonia lactiflora",
+            "note": "Uzun ömürlü yumru kökleri, büyük ölçüde rahatsız edilmeden elli yıl veya daha fazla aynı yerde çiçek açabilir."
+          },
+          {
+            "name": "Gün Zambağı",
+            "sci": "Hemerocallis fulva",
+            "note": "İsmine rağmen, her demet nesiller boyunca güvenilir biçimde çiçek açan sık kümelere dönüşür."
+          },
+          {
+            "name": "Mor Ekinezya",
+            "sci": "Echinacea purpurea",
+            "note": "Bu step bitkisi sağlam bir kazık kökten yeniden filizlenir ve zamanla kendiliğinden tohumlanarak giderek büyüyen koloniler oluşturur."
+          },
+          {
+            "name": "Sakallı Süsen",
+            "sci": "Iris germanica",
+            "note": "Etli rizomlar toprak yüzeyinin hemen altında yayılır, her ilkbaharda yeniden çiçeklenen yeni demetlere bölünür."
+          },
+          {
+            "name": "Kara Gözlü Susan",
+            "sci": "Rudbeckia fulgida",
+            "note": "Rizomlarla ve kendiliğinden tohumlanarak yayılır, her yaz geri dönen güvenilir altın rengi yığınlar oluşturur."
+          },
+          {
+            "name": "Bahçe Floksu",
+            "sci": "Phlox paniculata",
+            "note": "Sağlam, kümelenen gövdeleri her sonbahar köklere kadar ölür, ardından ertesi yıl daha gür biçimde yeniden ortaya çıkar."
+          },
+          {
+            "name": "İngiliz Lavantası",
+            "sci": "Lavandula angustifolia",
+            "note": "Odunsu çok yıllık gövdeler kış uykusundan sağ çıkar ve her yaz yeniden çiçek açmak için yapraklanır."
+          }
+        ]
+      },
+      "oceanAndRiverFish": {
+        "title": "Okyanus ve Nehir Balıkları",
+        "desc": "On altı su, tek objektif",
+        "intro": "Mercan resiflerinden soğuk dağ nehirlerine kadar, insanların en çok fotoğrafladığı ve merak ettiği balıklar bunlar. Bilimsel adlar dünyanın her yerinde Latince kaldığı için burada öğrendiğiniz bir ad her kıyıda işinize yarar.",
+        "species": [
+          {
+            "name": "Palyaço balığı",
+            "sci": "Amphiprion ocellaris",
+            "note": "Sokmasına karşı bağışık olduğu deniz anemonlarının içinde yaşar; korunma karşılığında onları temizler. Her palyaço balığı erkek doğar, gruptaki baskın birey dişiye dönüşür.",
+            "id": "clownfish"
+          },
+          {
+            "name": "Gökkuşağı alabalığı",
+            "sci": "Oncorhynchus mykiss",
+            "note": "Pasifik kıyısındaki soğuk nehirlerin yerlisidir, bugün Antarktika dışındaki her kıtada yetiştiriliyor. Pembe eti, beslendiği kabuklulardan gelir.",
+            "id": "rainbowTrout"
+          },
+          {
+            "name": "Atlantik somonu",
+            "sci": "Salmo salar",
+            "note": "Tatlı suda yumurtadan çıkar, yıllarını denizde geçirir, sonra yumurtlamak için doğduğu nehri şaşmadan bulur. Tür adının anlamı “sıçrayan” demektir.",
+            "id": "atlanticSalmon"
+          },
+          {
+            "name": "Turna balığı",
+            "sci": "Esox lucius",
+            "note": "Su bitkilerinin arasında kıpırdamadan bekleyip saniyenin küçücük bir kesrinde saldıran bir pusu avcısı. Ördek gagasını andıran burnu ve gövdenin gerisine kaymış yüzgeçleri onu hemen ele verir.",
+            "id": "northernPike"
+          },
+          {
+            "name": "Sazan",
+            "sci": "Cyprinus carpio",
+            "note": "İki bin yılı aşkın süredir yetiştiriliyor ve Antarktika dışında her kıtada bulunuyor — kimi ülkelerde makbul bir yemek, kimilerinde istilacı bir zararlı.",
+            "id": "commonCarp"
+          },
+          {
+            "name": "Mavi cerrah balığı",
+            "sci": "Paracanthurus hepatus",
+            "note": "Kuyruk dibinde, savunmada dışarı çıkardığı neşter keskinliğinde bir dikeni olan bir resif cerrah balığı. Erişkinken parlak mavi, gençken parlak sarıdır.",
+            "id": "blueTang"
+          },
+          {
+            "name": "Büyük ağızlı levrek",
+            "sci": "Micropterus salmoides",
+            "note": "Dünyada en çok peşine düşülen tatlı su spor balığı. Çenesi gözün gerisine kadar uzandığı için küçük ağızlı akrabasından kolayca ayırt edilir.",
+            "id": "largemouthBass"
+          },
+          {
+            "name": "Sarıkanat orkinos",
+            "sci": "Thunnus albacares",
+            "note": "Okyanusları baştan başa geçer ve vücudunu çevresindeki sudan daha sıcak tutabilir; soğuk derinliklerde bu kadar hızlı yüzmesinin sırrı bu.",
+            "id": "yellowfinTuna"
+          },
+          {
+            "name": "Zebra balığı",
+            "sci": "Danio rerio",
+            "note": "Güney Asya nehirlerinden gelen çizgili küçük bir balık, bilimin en çok incelenen canlılarından biri oldu — saydam embriyoları sayesinde araştırmacılar organların oluşumunu canlı canlı izleyebiliyor.",
+            "id": "zebrafish"
+          },
+          {
+            "name": "Aslan balığı",
+            "sci": "Pterois volitans",
+            "note": "Hem güzel hem zehirli; dikenleri fena acıtan bir sokma bırakır. Hint-Pasifik yerlisidir, Atlantik ve Karayipler'de ise ciddi bir istilacıdır.",
+            "id": "redLionfish"
+          }
+        ]
+      },
+      "birdsOfTheWorld": {
+        "title": "Dünyanın Kuşları",
+        "desc": "Gerçekten karşılaşacağınız on tür",
+        "intro": "Kuşlar, çoğu insanın pencereden bile fotoğraflayabildiği yaban hayattır. Buradaki on tür altı kıtaya yayılıyor ve yeryüzünde en çok tanınan türler arasında — keskin bir göz için iyi bir alıştırma.",
+        "species": [
+          {
+            "name": "Kır kırlangıcı",
+            "sci": "Hirundo rustica",
+            "note": "Yeryüzündeki en yaygın kırlangıç; kuzey yarım kürede kuluçkaya yatar, kışı güneyde geçirir. Derin çatallı kuyruğu uçarken şaşmaz bir işarettir.",
+            "id": "barnSwallow"
+          },
+          {
+            "name": "Serçe",
+            "sci": "Passer domesticus",
+            "note": "İnsanın peşinden Orta Doğu'dan çıkıp gezegendeki hemen her şehre yerleşti. Erkeklerin göğsünde siyah bir önlük vardır; dişiler sade kum rengidir.",
+            "id": "houseSparrow"
+          },
+          {
+            "name": "Yalıçapkını",
+            "sci": "Alcedo atthis",
+            "note": "Avrupa, Asya ve Kuzey Afrika'da ağır akan nehirlerin üzerinde elektrik mavisi bir şimşek. Suya baş aşağı dalar ve bir metre derinden balık çıkarabilir.",
+            "id": "commonKingfisher"
+          },
+          {
+            "name": "Gökdoğan",
+            "sci": "Falco peregrinus",
+            "note": "Yaşayan en hızlı hayvan; av dalışında 300 km/s'i aşar. Antarktika dışında her kıtada bulunur ve giderek daha sık gökdelenlere yuva yapıyor.",
+            "id": "peregrineFalcon"
+          },
+          {
+            "name": "Kanada balıkçılı",
+            "sci": "Ardea herodias",
+            "note": "Sığ suda dakikalarca kıpırdamadan durur, sonra gözle takip edilemeyecek bir hamleyle balığı mızraklar. Uçarken boynunu S biçiminde katlar.",
+            "id": "greatBlueHeron"
+          },
+          {
+            "name": "Kaya güvercini",
+            "sci": "Columba livia",
+            "note": "Şehir güvercini; kayalıklarda yuva yapan kuşların soyundan gelir — çıkıntıların ve pencere pervazlarının ona bu kadar uygun gelmesinin nedeni bu. Yavruları anne ve baba birlikte “kursak sütü” ile besler.",
+            "id": "rockPigeon"
+          },
+          {
+            "name": "Kızılgerdan",
+            "sci": "Erithacus rubecula",
+            "note": "Bahçıvanın peşine takılıp toprağın altından çıkan solucanları alacak kadar cesurdur. Turuncu göğsü hem erkekte hem dişide bulunur ve yıl boyu şarkıyla savunulur.",
+            "id": "europeanRobin"
+          },
+          {
+            "name": "Yeşilbaş",
+            "sci": "Anas platyrhynchos",
+            "note": "Neredeyse bütün evcil ördeklerin atası. Yeşil başlı erkek meşhurdur ama o klasik yüksek vak sesini yalnızca dişi çıkarır.",
+            "id": "mallard"
+          },
+          {
+            "name": "Kırmızı ara papağanı",
+            "sci": "Ara macao",
+            "note": "Orta ve Güney Amerika yağmur ormanlarının iri papağanı; elli yılı aşkın yaşayabilir ve ömür boyu aynı eşle kalır. Gagası, başka hiçbir kuşun açamadığı sert kabukları kırar.",
+            "id": "scarletMacaw"
+          },
+          {
+            "name": "İmparator penguen",
+            "sci": "Aptenodytes forsteri",
+            "note": "Antarktika kışının tam ortasında ürer; erkekler ayaklarının üzerinde dengeledikleri tek yumurtayla iki ay boyunca hiçbir şey yemeden karanlıkta birbirlerine sokulur.",
+            "id": "emperorPenguin"
+          }
+        ]
+      },
+      "gardenInsects": {
+        "title": "Ayak Altındaki Komşular",
+        "desc": "Doğru dürüst bakılmış on sıradan omurgasız",
+        "intro": "Buradaki on hayvan, çoğu evin kapısından birkaç metre ötede yaşıyor; neredeyse herkes hepsini görmüş, ama kimse ne yaptıklarını anlatmamış. Bu tanıdıklığın altında kimyasal savaş, origami gibi katlanmış kanatlar, kıtalar arası navigasyon ve 6.000 kilometre uzunluğunda bir karınca kolonisi duruyor.",
+        "species": [
+          {
+            "name": "Yedi Noktalı Uğur Böceği",
+            "sci": "Coccinella septempunctata",
+            "note": "Sıkıştırırsanız bilerek dizlerinden kanar — kuşlara anında tükürttüren acı, sarı bir sıvı.",
+            "id": "sevenSpotLadybird"
+          },
+          {
+            "name": "Kulağakaçan",
+            "sci": "Forficula auricularia",
+            "note": "Arka kanatları katlı halinin on katından fazlasına açılır — doğadaki en sıkı katlamalardan biri; üstelik neredeyse hiç uçmaz.",
+            "id": "commonEarwig"
+          },
+          {
+            "name": "Tespih Böceği",
+            "sci": "Armadillidium vulgare",
+            "note": "Böcek bile değil, bir kabuklu: yengeçlerin karada yaşayan, hâlâ solungaçla nefes alan akrabası.",
+            "id": "commonPillWoodlouse"
+          },
+          {
+            "name": "Karasinek",
+            "sci": "Musca domestica",
+            "note": "Tadı ayaklarıyla alır; yani ağzı daha oraya varmadan neyin üstüne konduğunu bilir.",
+            "id": "houseFly"
+          },
+          {
+            "name": "Bahçe Salyangozu",
+            "sci": "Cornu aspersum",
+            "note": "Yaprakları dişli bir şeridi sürterek yer; öndeki dişler aşındıkça arkadan yenilerini üretir.",
+            "id": "gardenSnail"
+          },
+          {
+            "name": "Bal Arısı",
+            "sci": "Apis mellifera",
+            "note": "Ana arı birkaç gün boyunca havada çiftleşir, bir daha asla; ömrünün geri kalanında o depoladığı spermle yumurtlar.",
+            "id": "westernHoneyBee"
+          },
+          {
+            "name": "Diken Kelebeği",
+            "sci": "Vanessa cardui",
+            "note": "Hiçbir birey göç turunu tek başına tamamlamaz; tropik Afrika'dan Avrupa'ya gidip dönmek yaklaşık altı kuşak sürer.",
+            "id": "paintedLady"
+          },
+          {
+            "name": "Mahzen Örümceği",
+            "sci": "Pholcus phalangioides",
+            "note": "Başka örümceklerin ağını tuzağa düşmüş bir böcek gibi titreterek avlanır; bakmaya gelen ev sahibine saldırır.",
+            "id": "cellarSpider"
+          },
+          {
+            "name": "Arjantin Karıncası",
+            "sci": "Linepithema humile",
+            "note": "Binlerce kilometre uzaktaki İspanya, Kaliforniya ve Japonya işçileri karşılaşınca kavga etmez: hepsi tek koloni sayılır.",
+            "id": "argentineAnt"
+          },
+          {
+            "name": "Toprak Solucanı",
+            "sci": "Lumbricus terrestris",
+            "note": "Darwin son yıllarını solucanları incelemekle geçirdi ve ölümünden altı ay önce onlar üzerine bir kitap yayımladı.",
+            "id": "commonEarthworm"
+          }
+        ]
+      },
+      "fungiOfTheWorld": {
+        "title": "Ne Bitki Ne Hayvan",
+        "desc": "Dünyayı sessizce yöneten on mantar",
+        "intro": "Mantarlar yaşam ağacında bitkilerden çok hayvanlara yakın durur ve gördüğünüz şapka, toprağın, odunun ya da canlı bir böceğin içinde görünmeden yayılan bir iplik ağının yalnızca meyvesidir. Bu onlunun içinde dünyada en çok insan öldüren mantar, Oregon'da dokuz kilometrekare kaplayan bir canlı ve antibiyotik çağını başlatan küf var.",
+        "species": [
+          {
+            "name": "Sinek Mantarı",
+            "sci": "Amanita muscaria",
+            "note": "Her masaldaki kırmızı-beyaz mantar gerçek, zehirli ve adını ondan alan toksinden neredeyse hiç içermiyor.",
+            "id": "flyAgaric"
+          },
+          {
+            "name": "Köygöçüren",
+            "sci": "Amanita phalloides",
+            "note": "Dünyadaki ölümcül mantar zehirlenmelerinin büyük çoğunluğunun sorumlusu; pişirmek, kurutmak ya da dondurmak toksinine hiçbir şey yapmaz.",
+            "id": "deathCap"
+          },
+          {
+            "name": "Kültür Mantarı",
+            "sci": "Agaricus bisporus",
+            "note": "Beyaz mantar, kremini ve portobello üç ayrı mantar değil, tek tür: fark sadece ırkta ve ne kadar büyütüldüğünde.",
+            "id": "buttonMushroom"
+          },
+          {
+            "name": "Bira Mayası",
+            "sci": "Saccharomyces cerevisiae",
+            "note": "Ekmeğin, biranın ve şarabın arkasındaki tek hücreli mantar; 1996'da genomu tümüyle dizilen ilk çekirdekli canlı.",
+            "id": "brewersYeast"
+          },
+          {
+            "name": "Zombi Karınca Mantarı",
+            "sci": "Ophiocordyceps unilateralis",
+            "note": "Bulaştığı karıncayı belirli bir yüksekliğe yürütür, orada ısırtıp öldürür, sonra kafasından bir sap büyütür.",
+            "id": "zombieAntFungus"
+          },
+          {
+            "name": "Koyu Bal Mantarı",
+            "sci": "Armillaria ostoyae",
+            "note": "Doğu Oregon'daki tek bir birey yaklaşık dokuz kilometrekare kaplıyor: alan olarak ölçülmüş en büyük canlı.",
+            "id": "humongousFungus"
+          },
+          {
+            "name": "Panellus stipticus",
+            "sci": "Panellus stipticus",
+            "note": "Küçük, sert, yelpaze biçimli bir mantar; lamelleri karanlıkta yeşil parlar — ama yalnızca Atlantik'in doğru yakasındansa.",
+            "id": "bitterOyster"
+          },
+          {
+            "name": "Penisilyum Küfü",
+            "sci": "Penicillium rubens",
+            "note": "1928'de Alexander Fleming'in petrisine bulaşan mavi-yeşil küfün hangi tür olduğu ancak 2011'de doğru saptandı.",
+            "id": "penicilliumMould"
+          },
+          {
+            "name": "Amfibi Kitrit Mantarı",
+            "sci": "Batrachochytrium dendrobatidis",
+            "note": "Gözle görülemeyecek kadar küçük bir mantar, kayda geçmiş başka hiçbir hastalığın yapmadığı kadar türü yok oluşun eşiğine getirdi.",
+            "id": "chytridFungus"
+          },
+          {
+            "name": "Alba Beyaz Trüfü",
+            "sci": "Tuber magnatum",
+            "note": "Tümüyle yeraltında meyve verir, yetiştiricileri onlarca yıldır yeniyor; 1,5 kiloluk tek bir örnek 2007'de 330.000 dolara gitti.",
+            "id": "whiteTruffle"
+          }
+        ]
+      },
+      "fromFieldToPlate": {
+        "title": "Akşam Yemeği Nerede Başladı",
+        "desc": "On temel besin ve gerçek doğdukları yer",
+        "intro": "Tabaktaki hemen hiçbir şey doğduğu yerde yetişmiyor. Bu on bitki binlerce yıl önce nehir vadilerinde, yayla ormanlarında ve bataklıklarda evcilleştirildi; sonra okyanuslar aşırı taşındılar ve en büyük hasatları tamamen yanlış kıtada verir oldular.",
+        "species": [
+          {
+            "name": "Mısır",
+            "sci": "Zea mays",
+            "note": "Yabani atası, taş sertliğinde kılıflara mühürlenmiş yaklaşık on iki tane taşır; koçana hiç benzemez.",
+            "id": "maize"
+          },
+          {
+            "name": "Manyok",
+            "sci": "Manihot esculenta",
+            "note": "Amazon'un kıyısında evcilleştirildi; bugün Afrika'da Güney Amerika'dakinden çok daha fazla insanı doyuruyor.",
+            "id": "cassava"
+          },
+          {
+            "name": "Arabika Kahve",
+            "sci": "Coffea arabica",
+            "note": "Arabika kadim bir tür değil, başka iki kahvenin doğal melezi — üstelik şaşırtıcı ölçüde az genetik çeşitliliği var.",
+            "id": "arabicaCoffee"
+          },
+          {
+            "name": "Soya Fasulyesi",
+            "sci": "Glycine max",
+            "note": "Dünyadaki soyanın çoğu insan tabağına doğrudan hiç ulaşmaz: ezilip yağa ve hayvan yemine dönüşür.",
+            "id": "soybean"
+          },
+          {
+            "name": "Şeker Kamışı",
+            "sci": "Saccharum officinarum",
+            "note": "İlk kez Yeni Gine'de çiğnemelik sap olarak yetiştirildi; şeker rafinesi ve etanol binlerce yıl sonra geldi.",
+            "id": "sugarcane"
+          },
+          {
+            "name": "Ekmeklik Buğday",
+            "sci": "Triticum aestivum",
+            "note": "Ekmeklik buğday doğada hiç var olmadı: kültür buğdayı yol kenarındaki bir otla melezlenince çiftçinin tarlasında belirdi.",
+            "id": "breadWheat"
+          },
+          {
+            "name": "Asya Pirinci",
+            "sci": "Oryza sativa",
+            "note": "Pirinç iki kıtada iki kez evcilleştirildi: biri Yangtze kıyısında, biri Batı Afrika'da bambaşka bir yabani ottan.",
+            "id": "asianRice"
+          },
+          {
+            "name": "Patates",
+            "sci": "Solanum tuberosum",
+            "note": "Avrupa, Asya ve Afrika'da yetişen her patatesin izi Titicaca Gölü çevresindeki yaylalara çıkar.",
+            "id": "potato"
+          },
+          {
+            "name": "Muz",
+            "sci": "Musa acuminata",
+            "note": "Yabani muzlar bezelye iriliğinde sert tohumlarla dolu; çekirdeksiz meyve, insanlar kısır klonları yeniden diktiği için var.",
+            "id": "banana"
+          },
+          {
+            "name": "Portakal",
+            "sci": "Citrus × sinensis",
+            "note": "Portakal yabani bir tür değil: pomelo ile mandalinanın melezi ve o günden beri aşıyla çoğaltılan bir kopya.",
+            "id": "sweetOrange"
+          }
+        ]
+      },
+      "heardNotSeen": {
+        "title": "Görülmeden Duyulanlar",
+        "desc": "Önce kulakla tanışılan on hayvan",
+        "intro": "Doğayla karşılaşmaların çoğu, göremediğiniz bir yerden gelen bir sesle başlar. Buradaki on canlı — baykuşlar ve kurbağalar, bir ağustosböceği, iki şarkıcı böcek, bir maymun ve bir tilki — gözle değil kulakla çok daha kolay bulunur ve hepsi son derece belirli bir şey söylüyor.",
+        "species": [
+          {
+            "name": "Alaca Baykuş",
+            "sci": "Strix aluco",
+            "note": "Meşhur \"hu-huu\" aslında iki baykuşun sohbeti: dişinin keskin \"ke-vik\"ine erkeğin titrek ötüşü karşılık verir.",
+            "id": "tawnyOwl"
+          },
+          {
+            "name": "Guguk Kuşu",
+            "sci": "Cuculus canorus",
+            "note": "\"Guguk\" diyen yalnızca erkektir; dişi, küçük kuşları paniğe sokan fokurtulu bir kıkırtıyla karşılık verir.",
+            "id": "commonCuckoo"
+          },
+          {
+            "name": "Bülbül",
+            "sci": "Luscinia megarhynchos",
+            "note": "En çok gece yarısıyla sabahın üçü arasında öter ve bunu yalnızca eşsiz erkekler yapar; dişi kalınca gece şarkısı biter.",
+            "id": "commonNightingale"
+          },
+          {
+            "name": "Avrupa Ağaç Kurbağası",
+            "sci": "Hyla arborea",
+            "note": "Beş santimlik kurbağanın kafasından geniş bir gırtlak kesesi var; korosu durgun bir gecede neredeyse bir kilometre gider.",
+            "id": "europeanTreeFrog"
+          },
+          {
+            "name": "Amerikan Boğa Kurbağası",
+            "sci": "Lithobates catesbeianus",
+            "note": "Yaklaşık 200 hertzlik bas bir böğürtü; açık suyun üstünde neredeyse bir kilometre yol alır.",
+            "id": "americanBullfrog"
+          },
+          {
+            "name": "Dişbudak Ağustosböceği",
+            "sci": "Cicada orni",
+            "note": "Yalnızca hava yeterince sıcaksa öter: sabah ısındıkça koro büyür, güneşin önüne bir bulut geçince kesilir.",
+            "id": "cicadaOrni"
+          },
+          {
+            "name": "Ev Cırcır Böceği",
+            "sci": "Acheta domesticus",
+            "note": "Cırlama iki kanadın testere gibi sürtmesidir: yüzden fazla dişli bir eğede gezdirilen kazıyıcı, 4-5 kHz dolayında.",
+            "id": "houseCricket"
+          },
+          {
+            "name": "Büyük Yeşil Çalı Çekirgesi",
+            "sci": "Tettigonia viridissima",
+            "note": "Alacakaranlıktan gece yarısını epeyce geçene dek süren kuru, kesintisiz bir tıkırtı; bazen saatlerce hiç durmaz.",
+            "id": "greatGreenBushCricket"
+          },
+          {
+            "name": "Kara Uluyan Maymun",
+            "sci": "Alouatta caraya",
+            "note": "Şafak kükremesi ormanda beş kilometreye kadar gider; kara hayvanlarının çıkardığı en yüksek seslerden biri.",
+            "id": "blackHowlerMonkey"
+          },
+          {
+            "name": "Kızıl Tilki",
+            "sci": "Vulpes vulpes",
+            "note": "Kış çığlığı hep dişilere yüklenir ama her iki cinsten de gelir; üstelik bir tehlike sesi değil, çiftleşme çağrısıdır.",
+            "id": "redFox"
+          }
+        ]
+      }
+    },
+    "species": {
+      "fiddleLeafFig": {
+        "name": "Keman Yapraklı İncir",
+        "sci": "Ficus lyrata",
+        "light": "Parlak, dolaylı ışık",
+        "water": "Haftalık; toprağın üst 2-5 cm'lik kısmının kurumasına izin ver",
+        "difficulty": "Zorlu",
+        "overview": "Batı Afrika'nın alçak tropikal yağmur ormanlarına özgü olan keman yapraklı incir, dramatik damarlanmaya sahip büyük, parlak, keman şeklindeki yapraklarıyla bilinir ve bir iç mekan tasarımı ikonu haline gelmiştir. Genellikle iç mekanlarda tavan yüksekliğine ulaşabilen etkileyici bir zemin bitkisi olarak yetiştirilir, ancak ışık, su ve sıcaklıkta tutarlılık konusunda oldukça hassas olduğu bilinir.",
+        "funFact": "Doğal yaşam alanında Ficus lyrata, 12 metreyi aşan tam boyutlu bir ağaca dönüşebilir; yaprakları iç mekanda gördüklerimizin neredeyse iki katı büyüklüğe ulaşabilir ve belirli bir incir arısı türü tarafından tozlaklandığında küçük, yenmeyen incirler bile üretebilir - ki bu, ev bitkisi olarak neredeyse hiç gerçekleşmez."
+      },
+      "bostonFern": {
+        "name": "Boston Eğreltisi",
+        "sci": "Nephrolepis exaltata",
+        "light": "Parlaktan orta düzeye, dolaylı ışık",
+        "water": "Toprağı eşit şekilde nemli tut; asla tamamen kurumasına izin verme",
+        "difficulty": "Orta",
+        "overview": "Boston eğreltisi, dünya genelinde nemli tropikal bölgelerde bulunan kılıç eğreltisinin gür, kavisli bir çeşididir. Tüylü, sarkan yaprakları, Viktorya döneminden bu yana onu asma saksılar ve gölgeli verandalar için gözde bir seçim haline getirdi; ancak mutlu kalabilmesi için sürekli nem ve yüksek hava nemi gerektirir.",
+        "funFact": "'Bostoniensis' çeşidi kasıtlı olarak yetiştirilmedi - 1894 yılında Philadelphia'dan Boston'daki bir çiçekçiye gönderilen bir kılıç eğreltisi sevkiyatında keşfedilen doğal bir mutasyondu ve bugün tanıdığımız ev bitkisi, o tek mutant bitkiden çoğaltıldı."
+      },
+      "jadePlant": {
+        "name": "Yeşim Ağacı",
+        "sci": "Crassula ovata",
+        "light": "Tam güneşten parlak ışığa",
+        "water": "Az miktarda; sulamalar arasında toprağın tamamen kurumasına izin ver",
+        "difficulty": "Kolay",
+        "overview": "Yeşim ağacı, Güney Afrika ve Mozambik'in yarı kurak bölgelerine özgü dayanıklı bir sukulenttir; kalın, parlak oval yapraklarıyla ve ona minyatür bir ağaç görünümü veren odunsu, dallanan gövdeleriyle tanınır. Yeni başlayanların gözde bitkisidir ve genellikle bir aile yadigârı olarak nesilden nesile aktarılır; feng shui geleneklerinde bazen 'şans bitkisi' olarak da anılır.",
+        "funFact": "Doğru koşullar sağlandığında yeşim ağaçları 50 ila 100 yıl yaşayabilir ve olgun örnekler, genellikle serin geceler ve kurak bir dönemle tetiklenen küçük, yıldız şeklinde beyaz veya pembe çiçek kümeleriyle yetiştiricilerini zaman zaman ödüllendirir."
+      },
+      "calathea": {
+        "name": "Kalatea",
+        "sci": "Goeppertia orbifolia",
+        "light": "Orta düzeyde, dolaylı ışık",
+        "water": "Filtrelenmiş veya damıtılmış su ile hafif nemli tut",
+        "difficulty": "Zorlu",
+        "overview": "Bolivya yağmur ormanlarına özgü olan bu dua bitkisi ailesinin (Marantaceae) çarpıcı üyesi, gümüşi ve koyu yeşil tonlarda çizgili, iri ve yuvarlak yapraklarıyla yetiştirilir. Akrabaları gibi, yaprakları geceleri yükselip katlanır ve gündüz tekrar aşağı iner; nictinasti adı verilen bu hareket, bitkiyi neredeyse canlıymış gibi hissettirir.",
+        "funFact": "Bu tür eskiden Calathea orbifolia olarak sınıflandırılıyordu, ancak 2012'de yapılan genetik ve morfolojik araştırmalar Calathea türlerinin çoğunu Goeppertia cinsine ayırdı - yine de fidancılar ve bitki severler hâlâ ağırlıklı olarak eski 'Calathea' adını kullanıyor."
+      }
+    },
+    "topicSpeciesSectionTitle": "Bu Koleksiyondaki Türler",
+    "speciesLightLabel": "Işık",
+    "speciesWaterLabel": "Su",
+    "speciesDifficultyLabel": "Zorluk",
+    "funFactLabel": "İlginç Bilgi",
+    "symptomFilterTitle": "Sizi rahatsız eden nedir?",
+    "symptomFilterAll": "Tümü",
+    "symptomFilterEmpty": "Bunun için henüz etiketlenmiş bitki yok.",
+    "viewHerbLabel": "{{name}} Bitkisini Görüntüle",
+    "herbDisclaimer": "Bu içerik, geleneksel ve halk hekimliğinde kullanıma dayalı bilgilendirme amaçlıdır. Tıbbi tavsiye niteliği taşımaz - bir sağlık sorununu tedavi etmek için herhangi bir bitki kullanmadan önce bir doktora danışın.",
+    "herbDetailsLoadError": "Bu bitkinin detayları yüklenemedi. Lütfen tekrar deneyin.",
+    "preparationLabel": "Nasıl Hazırlanır",
+    "benefitsLabel": "Faydaları",
+    "symptoms": {
+      "headache": "Baş Ağrısı",
+      "digestion": "Sindirim",
+      "sleep": "Uyku",
+      "stress": "Stres ve Kaygı",
+      "immunity": "Bağışıklık Desteği",
+      "painInflammation": "Ağrı ve İltihaplanma",
+      "respiratory": "Öksürük ve Solunum",
+      "skin": "Cilt ve Yaralar",
+      "energy": "Enerji ve Yorgunluk"
+    },
+    "herbSubscribeCtaTitle": "Bu rehberi beğendiniz mi?",
+    "herbSubscribeCtaBody": "Sınırsız bitki, böcek, mantar ve tarımsal ürün tanımlamalarının kilidini açmak için abone olun.",
+    "herbAlreadySubscribedCheck": "Zaten abone misiniz? Tekrar kontrol etmek için dokunun"
+  },
+  "botanist": {
+    "headerTitle": "Dr. Helena Marques",
+    "headerSubtitle": "Ziraat mühendisi · Botanik profesörü",
+    "intro": "Merhaba! Ben Helena, ziraat mühendisi ve botanik profesörüyüm. Bitkinde ne olduğunu anlat — ya da toprak, zararlılar, sulama veya genel olarak doğa hakkında ne istersen sor.",
+    "placeholder": "Helena’ya sor…",
+    "typing": "Helena yazıyor…",
+    "sendLabel": "Mesaj gönder",
+    "askLabel": "Sor: {{question}}",
+    "suggestions": [
+      "Yaprakları sararıyor",
+      "Ne sıklıkla sulamalıyım?",
+      "Kediler için güvenli mi?",
+      "Hangi toprağı kullanmalıyım?"
+    ],
+    "errorOffline": "Çevrimdışısın. Bağlantı döndüğünde buradayım.",
+    "errorRateLimited": "Bir dakika — aynı anda çok fazla soru. Birkaç dakika sonra tekrar dene.",
+    "errorNotConfigured": "Uzman henüz hazır değil. Kurulumu yapılıyor.",
+    "errorGeneric": "Şu an yanıtlayamadım. Birazdan tekrar dene."
+  },
+  "achievements": {
+    "title": "Başarımlar",
+    "streakLabel": "Gün Serisi",
+    "longestStreakLabel": "En Uzun Seri",
+    "totalLabel": "Tanımlamalar",
+    "unlockedTitle": "Başarım Açıldı!",
+    "progressLabel": "{{unlocked}}/{{total}} açıldı",
+    "firstScan": {
+      "title": "İlk Keşif",
+      "body": "İlk türünü tanımla"
+    },
+    "collector10": {
+      "title": "Koleksiyoncu",
+      "body": "Koleksiyonuna 10 tür kaydet"
+    },
+    "collector50": {
+      "title": "Doğa Bilimci",
+      "body": "Koleksiyonuna 50 tür kaydet"
+    },
+    "collector100": {
+      "title": "Usta Doğa Bilimci",
+      "body": "Koleksiyonuna 100 tür kaydet"
+    },
+    "allCategories": {
+      "title": "Kâşif",
+      "body": "Her kategoriden en az bir tür kaydet"
+    },
+    "streak3": {
+      "title": "Başlangıç",
+      "body": "3 gün üst üste bir şey tanımla"
+    },
+    "streak7": {
+      "title": "Kararlı",
+      "body": "7 gün üst üste bir şey tanımla"
+    },
+    "streak30": {
+      "title": "Adanmış",
+      "body": "30 gün üst üste bir şey tanımla"
+    },
+    "sharedFirst": {
+      "title": "Paylaşmak Güzeldir",
+      "body": "İlk tanımlama sonucunu paylaş"
+    },
+    "subscriber": {
+      "title": "Premium Üye",
+      "body": "Sınırsız tanımlama için abone ol"
+    },
+    "tokensLabel": "Tokenlar",
+    "tokensEarned": "+{{count}} token"
+  },
+  "help": {
+    "title": "Yardım ve Destek",
+    "identificationTitle": "Tanımlama nasıl çalışır?",
+    "identificationBody": "Bir bitkinin, böceğin, mantarın, ürünün veya ağacın fotoğrafını çekin; yapay zekamız bunu geniş bir veritabanıyla karşılaştırarak en olası türü, bilimsel adı, açıklaması ve diğer ayrıntılarıyla birlikte önerir.",
+    "accuracyTitle": "Tanımlama her zaman doğru mudur?",
+    "accuracyBody": "Hiçbir tanımlama uygulaması yüzde yüz doğru değildir; özellikle zehirli olabilen mantarlar ve bitkiler için. Yalnızca bu uygulamanın sonucuna dayanarak asla bir türü yemeyin, toplamayın veya kullanmayın — her zaman önce yetkin bir uzmana danışın.",
+    "freeTitle": "NatureLens ücretsiz mi?",
+    "freeBody": "Her kategori (bitkiler, böcekler, mantarlar, ürünler, ağaçlar) için bir ücretsiz tanımlama hakkınız vardır. Bundan sonra bir abonelik tüm kategorilerde sınırsız tanımlamanın kilidini açar.",
+    "cancelTitle": "Aboneliğimi nasıl iptal ederim?",
+    "cancelBody": "Profil bölümüne gidin ve hesabınızı silin — bu, verilerinizi kaldırmanın yanı sıra aktif aboneliğinizi de otomatik olarak iptal eder. Şu anda ayrı bir iptal düğmesi bulunmuyor; ödemeleri durdurmanın mevcut yolu hesabınızı silmektir.",
+    "restoreTitle": "Telefon değiştirdim veya tarayıcımı temizledim — aboneliğimi nasıl geri alabilirim?",
+    "restoreBody": "Profil → Erişimi Geri Yükle bölümüne gidin. E-posta ile tek seferlik bir kod isteyebilir veya daha önce oluşturduysanız bir şifre ya da Google hesabınızla giriş yapabilirsiniz.",
+    "tokensTitle": "Token nedir? Onları bir şeyle değiştirebilir miyim?",
+    "tokensBody": "Bir türü tanımladığınızda veya bir başarım kilidini açtığınızda otomatik olarak token kazanırsınız. Token'ları ödüllerle değiştirme özelliği henüz kullanılabilir değil, ancak gelecekte planlanıyor — bu arada bakiyeniz artmaya devam eder.",
+    "privacyTitle": "Verilerim gizli mi?",
+    "privacyBody": "NatureLens'i kullanmak için hesap gerekmez. Verilerinizin çoğu (koleksiyon, fotoğraflar) yalnızca cihazınızda kalır. Ayrıntılar için tam Gizlilik Politikasına bakın.",
+    "deleteTitle": "Hesabımı ve verilerimi nasıl silerim?",
+    "deleteBody": "Profil bölümüne gidin ve altta yer alan Hesabı Sil seçeneğine dokunun. Bu işlem, aktif aboneliğinizi iptal eder, kaydedilmiş verilerinizi sunucularımızdan kaldırır ve bu cihazda depolanan her şeyi temizler.",
+    "offlineTitle": "Uygulama çevrimdışı çalışır mı?",
+    "offlineBody": "Hayır — bir türü tanımlamak, yapay zeka hizmetimize ulaşmak için internet bağlantısı gerektirir.",
+    "languageTitle": "Uygulamayı başka bir dilde kullanabilir miyim?",
+    "languageBody": "Evet, NatureLens 17 dili destekler. İstediğiniz zaman değiştirmek için Profil → Dil bölümüne gidin."
+  },
+  "store": {
+    "title": "Ödüller",
+    "intro": "Tür tanımlayarak kazandığın tokenleri harca. Buradaki her ödül, aldığın anda çalışır.",
+    "owned": "Sahip olunan",
+    "open": "Aç",
+    "redeem": "Al",
+    "redeemLabel": "{{cost}} token karşılığında al",
+    "redeemedTitle": "Alındı!",
+    "notEnoughTitle": "Yeterli token yok",
+    "notEnoughBody": "Bunun için {{cost}} token gerekiyor. Daha fazla kazanmak için tanımlamaya devam et.",
+    "shieldsHeld": "{{count}} kalkan saklı",
+    "earnHint": "Her tanımlama için 5, açılan her başarım için 15 token kazanırsın.",
+    "download": "İndir",
+    "downloadErrorTitle": "İndirme başarısız",
+    "downloadErrorBody": "Dosya kaydedilemedi. Tarayıcıdan tekrar dene.",
+    "items": {
+      "streakShield": {
+        "title": "Seri Kalkanı",
+        "description": "Bir gün kaçırırsan serini korur. Biriktirilebilir — birden fazla al.",
+        "redeemedBody": "Serin korunuyor. Bir gün kaçırırsan kalkan otomatik devreye girer."
+      },
+      "wallpapers": {
+        "title": "Botanik Duvar Kağıtları",
+        "description": "Telefonun için üç özel 1080×1920 duvar kağıdı.",
+        "redeemedBody": "Duvar kağıtların hazır. İstediğinin üzerindeki İndir’e dokun."
+      },
+      "naturalistBadge": {
+        "title": "Doğa Gözlemcisi Rozeti",
+        "description": "Profilinde kalıcı bir rozet. Bir süredir burada olduğunu gösterir.",
+        "redeemedBody": "Rozetin artık profilinde.",
+        "ownedBody": "Bu rozete zaten sahipsin — profilinde görünüyor."
+      }
+    }
+  },
+  "missions": {
+    "title": "Bugünün görevleri",
+    "rewardEach": "Her biri +{{tokens}}",
+    "allDone": "Bugünlük bitti — yarın tekrar gel!",
+    "pool": {
+      "scanAny2": "Bugün 2 tür tanımla",
+      "scanAny3": "Bugün 3 tür tanımla",
+      "scanPlant": "Bir bitki veya ağaç tanımla",
+      "scanInsect": "Bir böcek tanımla",
+      "scanMushroom": "Bir mantar tanımla",
+      "scanFish": "Bir balık tanımla",
+      "scanBird": "Bir kuş tanımla",
+      "saveOne": "Bir bulguyu koleksiyonuna kaydet",
+      "saveTwo": "2 bulguyu koleksiyonuna kaydet",
+      "shareOne": "Bir tanımlamayı paylaş",
+      "openDiscover": "Keşfet sekmesini ziyaret et"
+    }
+  },
+  "share": {
+    "message": "NatureLens ile bir {{category}} tanımladım: {{name}}{{scientific}}{{confidence}}\n\nBitkileri, böcekleri, mantarları, balıkları ve kuşları fotoğraftan tanımla:\n{{url}}",
+    "confidenceLine": "%{{confidence}} güven"
+  },
+  "onboarding": {
+    "skip": "Atla",
+    "next": "İleri",
+    "start": "Tanımlamaya başla",
+    "what": {
+      "title": "Doğrult. Çek. Öğren.",
+      "body": "Canlı olan her şeyi fotoğrafla; NatureLens saniyeler içinde ne olduğunu söylesin — kendin doğrulayabilmen için referans fotoğraflarla birlikte."
+    },
+    "collect": {
+      "title": "Kendi saha defterini oluştur",
+      "body": "Her bulguyu koleksiyonuna kaydedebilir, etiketleyebilir ve sonra tekrar bakabilirsin. Yol boyunca token kazan ve ödüller aç."
+    },
+    "free": {
+      "title": "İlk tanımlaman ücretsiz",
+      "body": "Her kategoride bir tanımlamayı ücretsiz dene. Sınırsız tarama istediğinde abone ol."
+    }
+  },
+  "recap": {
+    "title": "Doğadaki ayın",
+    "entrySubtitle": "Özetini gör ve paylaş",
+    "headline": "{{count}} farklı türle tanıştın",
+    "emptyTitle": "Henüz özetlenecek bir şey yok",
+    "emptyBody": "Bu ay bir şey tanımlayıp kaydet, özetin burada belirsin.",
+    "byCategory": "Kategoriye göre",
+    "highlight": "Ayın öne çıkanı",
+    "share": "Özetimi paylaş",
+    "shareTitle": "Doğadaki ayım",
+    "shareMessage": "{{month}} ayında NatureLens ile {{total}} bulgu tanımladım — {{species}} farklı tür 🌿\n\nBitkileri, böcekleri, mantarları, balıkları ve kuşları fotoğraftan tanımla:\n{{url}}",
+    "streakLine": "Güncel seri: {{current}} gün · rekor: {{longest}}",
+    "stats": {
+      "total": "Kaydedilen bulgular",
+      "species": "Türler",
+      "categories": "Kategoriler",
+      "days": "Aktif günler"
+    }
+  },
+  "subscription": {
+    "title": "Aboneliğim",
+    "entrySubtitle": "Durum, planlar ve iptal",
+    "activeTitle": "Premium aktif",
+    "activeBody": "Tüm kategorilerde sınırsız tanımlama. NatureLens’i desteklediğin için teşekkürler.",
+    "freeTitle": "Ücretsiz plan",
+    "freeBody": "Kategori başına bir ücretsiz tanımlama. Sınırsız tarama için abone ol.",
+    "unknownTitle": "Şu anda kontrol edilemedi",
+    "unknownBody": "Sunucuya ulaşamadık. Aboneysen erişimin etkilenmedi — birazdan tekrar dene.",
+    "plansTitle": "Planlar",
+    "manageTitle": "Yönet veya iptal et",
+    "manageBody": "Aboneliğin Hotmart tarafından tahsil ediliyor, bu yüzden iptal burada değil Hotmart hesabında yapılır. Orada iptal edersen sonraki tahsilatlar durur ve erişimin ödenmiş dönem sonuna kadar sürer.",
+    "openHotmart": "Hotmart hesabımı aç"
+  },
+  "notifications": {
+    "row": "Bildirimler",
+    "on": "Açık",
+    "off": "Kapalı",
+    "enabledTitle": "Bildirimler açık",
+    "enabledBody": "Bitkilerini sulaman ve serini sürdürmen için hatırlatmalar alacaksın.",
+    "deniedTitle": "Bildirimler engellendi",
+    "deniedBody": "Bu site için bildirimleri engellemişsin. Tarayıcı ayarlarından naturelensapp.cloud için izin ver.",
+    "errorTitle": "Açılamadı",
+    "errorBody": "Bir şeyler ters gitti. Birazdan tekrar dene."
+  },
+  "fieldGuide": {
+    "habitat": "Yaşam alanı",
+    "curiosity": "Biliyor muydunuz",
+    "identifyCta": "Kamerayla birini tanımla",
+    "photoCredit": "Fotoğraf: Wikimedia Commons · kaynak için dokunun",
+    "textCredit": "Metin: Vikipedi · daha fazlası için dokun"
+  },
+  "backup": {
+    "exportRow": "Koleksiyonumu yedekle",
+    "importRow": "Yedekten geri yükle",
+    "exportEmptyTitle": "Henüz yedeklenecek bir şey yok",
+    "exportEmptyBody": "İlk bulgunu kaydet, yedeğin de saklayacak bir şeyi olsun.",
+    "importDoneTitle": "Koleksiyon geri yüklendi",
+    "importDoneBody": "{{added}} öğe eklendi. {{skipped}} tanesi zaten vardı.",
+    "importFailedTitle": "Geri yüklenemedi",
+    "errorWrongFile": "Bu dosya bir NatureLens yedeği değil.",
+    "errorNewerVersion": "Bu yedek uygulamanın daha yeni bir sürümüyle alınmış. Güncelleyip tekrar dene.",
+    "errorStorageFull": "Bu cihazda o öğeleri eklemek için yeterli alan yok.",
+    "errorGeneric": "Dosya okunurken bir şeyler ters gitti."
+  },
+  "sound": {
+    "tapToRecord": "Kaydetmek için dokun",
+    "recording": "Kaydediliyor… {{seconds}}s kaldı",
+    "analysing": "Dinliyor…",
+    "startLabel": "Kaydı başlat",
+    "stopLabel": "Durdur ve tanımla",
+    "tipsTitle": "Daha iyi sonuç için",
+    "tip1": "Mümkünse yaklaş — mesafe en büyük etken.",
+    "tip2": "Telefonu sese doğru tut ve hareket etme.",
+    "tip3": "Gerçekten ses çıkarırken kaydet, aradaki sessizliği değil.",
+    "scopeNote": "Kuşları, kurbağaları, cırcır böceklerini, çekirgeleri ve bazı memelileri kapsar. Doğa kayıtlarıyla eğitildi; evcil hayvan ve trafik onu şaşırtır.",
+    "identifiedBySound": "Sesten tanımlandı · {{group}}",
+    "groupAmphibian": "Amfibi",
+    "groupMammal": "Memeli",
+    "permissionTitle": "Mikrofon engellendi",
+    "permissionBody": "Tarayıcı ayarlarından bu site için mikrofon erişimine izin ver ve tekrar dene.",
+    "unsupportedTitle": "Kayıt yapılamıyor",
+    "unsupportedBody": "Bu tarayıcı ses kaydedemiyor. Android’de Chrome’u dene veya iPhone’da uygulamayı ana ekrana ekle.",
+    "tooShortTitle": "Kayıt çok kısa",
+    "tooShortBody": "Hayvan ses çıkarırken en az iki saniye kaydet.",
+    "failedTitle": "Tanımlanamadı",
+    "failedBody": "Bu kayıtta bir sorun oldu. Tekrar dene.",
+    "decodeFailedBody": "Bu kayıt okunamadı. Tekrar dene.",
+    "notFoundBody": "Bu kayıtta tanınabilir bir şey yok. Daha yaklaş veya ses çıkarırken kaydet.",
+    "noContentBody": "Bu tür için henüz açıklama yok.",
+    "notWildlifeBody": "Bu bir araç, makine veya insan sesi gibi geliyor, hayvan değil. Daha sessiz bir yerde tekrar kaydetmeyi dene."
+  },
+  "login": {
+    "signInRow": "Giriş yap",
+    "signInSubtitle": "Aboneliğini her cihazda kullan",
+    "accountRow": "Hesabım"
+  }
+}

@@ -1,0 +1,314 @@
+{
+  "fishDetails": {
+    "clownfish": {
+      "overview": "En liten revfisk från Indo-Stillahavsområdet, omedelbart igenkännlig på den orange kroppen med tre vita band. Hela sitt vuxna liv tillbringar den i en enda havsanemon, vars brännande tentakler skulle döda de flesta andra fiskar.",
+      "habitat": "Varma, grunda korallrev och laguner från Röda havet till norra Australien, alltid tillsammans med en värdanemon.",
+      "curiosity": "Alla clownfiskar föds som hanar. Varje anemon rymmer ett dominant par; när honan dör byter den dominanta hanen kön och tar hennes plats."
+    },
+    "rainbowTrout": {
+      "overview": "En kallvattenfisk uppkallad efter det skimrande rosa bandet längs sidan. Ursprungligen hemma i floder som mynnar i Stilla havet i Nordamerika och Asien, men odlas i dag på alla kontinenter utom Antarktis.",
+      "habitat": "Klara, svala och syrerika floder och sjöar. De bestånd som vandrar ut i havet och sedan återvänder kallas steelhead.",
+      "curiosity": "Det rosa köttet är inget naturligt pigment utan kommer från kräftdjuren den äter – odlad regnbåge med annat foder växer upp vit."
+    },
+    "atlanticSalmon": {
+      "overview": "En kraftfull vandringsfisk som kläcks i sötvatten, tillbringar flera år på födosök i havet och återvänder för att leka i just den älv där den föddes.",
+      "habitat": "Nordatlanten som vuxen; floder i Europa och östra Nordamerika under leken.",
+      "curiosity": "Artnamnet salar betyder ungefär ”hopparen” – laxen kan ta sig över vattenfall på mer än tre meter på väg uppför älven."
+    },
+    "northernPike": {
+      "overview": "Ett långsträckt, olivgrönt rovdjur med platt ankliknande nos och en mun full av bakåtriktade tänder. Den ligger orörlig bland vattenväxterna och hugger på en bråkdels sekund.",
+      "habitat": "Vegetationsrika, långsamt rinnande vattendrag och sjöar över hela norra halvklotet, från Irland till Sibirien och Alaska.",
+      "curiosity": "Rygg- och analfena sitter långt bak nära stjärten – en kroppsbyggnad helt gjord för en enda explosiv acceleration, inte för långa jakter."
+    },
+    "commonCarp": {
+      "overview": "En kraftigt byggd sötvattensfisk med stora fjäll och två par skäggtömmar vid munnen. Den har odlats i över tvåtusen år och är uppskattad mat i delar av Europa och Asien, men en besvärlig invasiv art på andra håll.",
+      "habitat": "Varma, långsamma eller stillastående vatten med mjuk dybotten – floder, sjöar, dammar och kanaler på alla kontinenter utom Antarktis.",
+      "curiosity": "Karpen äter genom att suga upp dy och sila den, vilket rör upp sediment och grumlar vattnet – huvudskälet till att den skadar de sjöar den invaderar."
+    },
+    "blueTang": {
+      "overview": "En lysande kungsblå revfisk med en svart palettliknande teckning och gul stjärt. Som alla kirurgfiskar bär den en rakbladsvass tagg vid stjärtroten.",
+      "habitat": "Korallrev i Indo-Stillahavsområdet, oftast i små grupper nära grenkoraller som den kan gömma sig i.",
+      "curiosity": "Ungfiskarna är klargula och blir blå när de växer till – och stjärttaggen, som normalt ligger nedfälld, fälls ut åt sidan när fisken känner sig hotad."
+    },
+    "largemouthBass": {
+      "overview": "Ett satt, grönt rovdjur med ett mörkt sidoband, oftast kallad largemouth bass – världens mest eftertraktade sportfisk i sötvatten.",
+      "habitat": "Varma sjöar, dammar och lugnt rinnande vattendrag med skydd: sjunket timmer, vegetationsbälten och bryggor.",
+      "curiosity": "Du skiljer den från smallmouth bass på käken – hos largemouth sträcker sig överkäken förbi ögats bakkant."
+    },
+    "yellowfinTuna": {
+      "overview": "En stor, torpedformad havsfisk med mycket långa, skärformade gula fenor och en metalliskt mörkblå rygg som övergår i silver nedtill.",
+      "habitat": "Varma öppna hav över hela världen, oftast i de översta 100 metrarna men den dyker betydligt djupare för att jaga.",
+      "curiosity": "Den håller kroppen varmare än omgivande vatten, vilket gör att musklerna fungerar på kalla djup där långsammare fiskar blir tröga – därför kan den korsa hela oceaner."
+    },
+    "zebrafish": {
+      "overview": "En liten randig karpfisk från Sydasiens floder som blivit ett av vetenskapens mest studerade djur.",
+      "habitat": "Grunt, långsamt sötvatten – risfält, bäckar och dammar i Indien, Bangladesh och Nepal.",
+      "curiosity": "Embryona är genomskinliga, så forskare kan följa hur ett hjärta eller en ryggrad bildas i realtid under mikroskop – därför dyker den upp i tusentals medicinska studier."
+    },
+    "redLionfish": {
+      "overview": "En slående fisk i band av rött, vitt och brunt, med långa solfjäderslika fenor som döljer giftiga taggar. Vacker, långsam och bäst att inte röra.",
+      "habitat": "Hemma på rev i Indo-Stillahavsområdet; i dag en allvarlig invasiv art i hela Karibien och västra Atlanten.",
+      "curiosity": "I sitt nya utbredningsområde har den nästan inga fiender och äter i stort sett allt som får plats i munnen – därför uppmuntrar flera länder aktivt till att harpunera och äta den."
+    }
+  },
+  "birdDetails": {
+    "barnSwallow": {
+      "overview": "En slank fågel med blåglänsande ovansida, djupt kluven stjärt och roströd strupe, nästan alltid i snabb, låg och krängande flykt över öppen mark.",
+      "habitat": "Jordbruksmark, ängar och strandkanter på norra halvklotet; övervintrar på södra halvklotet.",
+      "curiosity": "Den är världens mest spridda svala och äter uteslutande i flykten – till och med när den dricker gör den det genom att skumma vattenytan i full fart."
+    },
+    "houseSparrow": {
+      "overview": "En satt brun och grå fågel: hanen med svart haklapp och kastanjebrun nacke, honan enfärgat sandbrun med ett ljust ögonbrynsstreck.",
+      "habitat": "Där människor finns – städer, byar, gårdar och hamnar på nästan varje kontinent.",
+      "curiosity": "Den följde med jordbruket ut ur Mellanöstern för tusentals år sedan och lever i dag knappt någonstans där det inte bor människor."
+    },
+    "commonKingfisher": {
+      "overview": "En liten fågel med dolkformad näbb, i elektriskt blått och brändorange, oftast bara skymtad som en färgblixt strax över vattnet.",
+      "habitat": "Lugna, klara floder, bäckar och kanaler med grenar som hänger ut över vattnet, i Europa, Asien och Nordafrika.",
+      "curiosity": "Den dyker med huvudet före och kan ta en fisk en meter under ytan, slår den sedan mot en gren och sväljer den med huvudet först så att fenstrålarna läggs ner."
+    },
+    "peregrineFalcon": {
+      "overview": "En kraftfull falk med spetsiga vingar, skiffergrå ovansida och tvärbandad undersida, med en tydlig mörk ”mustasch” under ögat.",
+      "habitat": "Alla kontinenter utom Antarktis – klippbranter, kuster och allt oftare skyskrapor och kyrktorn.",
+      "curiosity": "I störtdykningen passerar den 300 km/h och är snabbast av alla djur. Små utskott i näsborrarna gör att den kan andas i den farten utan att lungorna skadas."
+    },
+    "greatBlueHeron": {
+      "overview": "En hög, långbent vadarfågel i grått och blått, med grov spjutlik näbb och en svart plym bakom ögat.",
+      "habitat": "Grunt sött och salt vatten i Nord- och Centralamerika – kärr, sjökanter, floder och kuster.",
+      "curiosity": "Den står orörlig i flera minuter och hugger snabbare än ögat hinner följa. I flykten viker den halsen till ett tajt S – så skiljer du en häger från en trana."
+    },
+    "rockPigeon": {
+      "overview": "Den välkända stadsduvan: grå kropp, skimrande grönlila hals och två mörka vingband. Fjäderdräkten varierar enormt efter århundraden av tamavel.",
+      "habitat": "Ursprungligen havsklippor och klippraviner; i dag städer världen över, där avsatser och fönsterbleck fungerar som klipphyllor.",
+      "curiosity": "Båda föräldrarna producerar ”krävmjölk”, en proteinrik sekretion som ungarna matas med – något bara en handfull andra fåglar klarar."
+    },
+    "europeanRobin": {
+      "overview": "En liten, rund brun fågel med lysande orange bröst och ansikte, som gärna sitter på en gren i närheten och studerar människor noga.",
+      "habitat": "Skog, häckar och trädgårdar i Europa och västra Asien.",
+      "curiosity": "Den följer efter trädgårdsmästare eftersom uppvänd jord blottar maskar – ett beteende som från början gällde vildsvin som bökade i skogsbottnen. Båda könen bär det orange bröstet och försvarar revir med sång året om."
+    },
+    "mallard": {
+      "overview": "Den klassiska simanden: hanen med glänsande grönt huvud och vit halsring, honan spräckligt brun med blå vingspegel.",
+      "habitat": "Nästan allt sött eller bräckt vatten på norra halvklotet, från vilda våtmarker till dammar i stadsparker.",
+      "curiosity": "Den är stamfader till nästan alla tamandraser. Det berömda höga snattret kommer bara från honan – hanens läte är ett tyst, raspigt skrammel."
+    },
+    "scarletMacaw": {
+      "overview": "En mycket stor papegoja i intensivt scharlakansrött, gult och blått, med lång avsmalnande stjärt och kraftig krokformad näbb.",
+      "habitat": "Fuktig låglandsregnskog från södra Mexiko till Amazonas, oftast högt uppe i trädkronorna.",
+      "curiosity": "Den lever i par hela livet och kan bli över femtio år. Näbben knäcker nötter som ingen annan fågel i skogen rår på, och flockar samlas vid lerbrinkar längs floderna för att äta mineralrik jord."
+    },
+    "emperorPenguin": {
+      "overview": "Den största pingvinen, över en meter hög, svartvit med en gyllenorange fläck på var sida av halsen.",
+      "habitat": "Antarktis havsis – den enda fågel som häckar mitt i den antarktiska vintern.",
+      "curiosity": "Hanen balanserar det enda ägget på fötterna under ett hudveck i två månader av mörker och snöstormar, helt utan mat, medan honan återvänder till havet för att äta."
+    }
+  },
+  "insectDetails": {
+    "sevenSpotLadybird": {
+      "overview": "En kupolformad skalbagge på 5–8 mm, blankröd med tre svarta prickar på varje täckvinge och en sjunde som ligger över skarven. Både de vuxna och deras grå, krokodilliknande larver jagar bladlöss, vilket är skälet till att trädgårdsodlare ständigt hittar dem på angripna stjälkar. Arten är inhemsk i hela Eurasien och sedan länge införd i Nordamerika, och det är den skalbagge de flesta ser framför sig när de hör ordet nyckelpiga.",
+      "habitat": "Nässelsnår, häckar, kolonilotter och alla växter som bär bladlöss. På hösten samlas de vuxna i täta klungor för att övervintra utomhus – i löv, tuvor av dött gräs, vid häckars bas, under lös bark och inuti ihåliga växtstjälkar, ofta på samma skyddade ställen år efter år.",
+      "curiosity": "Försvaret kallas reflexblödning: pressas den hårt tvingar den ut droppar av sin egen hemolymfa genom benens leder, och vätskan bär alkaloider som är så beska att fågeln oftast spottar ut den oskadd."
+    },
+    "commonEarwig": {
+      "overview": "En platt, blankbrun insekt på ungefär 12–15 mm med en tång längst bak, kraftigt böjd hos hanar och nästan rak hos honor. Under de korta läderartade täckvingarna ligger stora solfjäderformade bakvingar, veckade och hoppackade som ett pappersspussel. Trots gamla skrönor har den inget intresse av öron; tången används till försvar, till uppvaktning och till att packa upp vingarna.",
+      "habitat": "Fuktiga, trånga utrymmen om dagen – under blomkrukor, i löv, mellan staketbrädor, inne i dahliablommor och i hopfällda trädgårdsmöbler – och ute på natten för att äta bladlöss, pollen och mjuk frukt.",
+      "curiosity": "Den är en av få insekter som vaktar sina ägg: honan vänder och putsar varje enskilt ägg i veckor för att hålla mögel borta, och fortsätter mata ungarna efter kläckningen."
+    },
+    "commonPillWoodlouse": {
+      "overview": "En skiffergrå, pansrad gråsugga på upp till cirka 18 mm som rullar ihop sig till en tät kula när den störs. De överlappande plåtarna och förmågan att rulla ihop sig skiljer den från de plattare gråsuggorna, som bara kan springa och gömma sig. Ursprungligen från Medelhavsområdet finns den i dag i trädgårdar på alla bebodda kontinenter.",
+      "habitat": "Under stenar, krukor, vedträn och fuktig kartong, överallt där luftfuktigheten håller sig hög. Dess gälliknande andningsorgan måste hållas fuktiga, så den klarar sig inte länge på torr, öppen mark.",
+      "curiosity": "Den dricker med bakänden och suger upp vatten genom två rörformade uropoder med kapillärkraft, och blodet är blått: syret bärs av kopparbaserat hemocyanin i stället för järnbaserat hemoglobin."
+    },
+    "houseFly": {
+      "overview": "En grå fluga på 6–7 mm med fyra mörka strimmor över mellankroppen och en svampliknande dyna i stället för bitande käkar. Den kan inte tugga något: den spottar saliv på fast föda, löser upp den och suger tillbaka vätskan. Den har följt med människan över hela världen och lever i dag på varje kontinent där vi gör det.",
+      "habitat": "Överallt där det är varmt och finns fuktigt organiskt material att lägga ägg i – komposter, soptunnor, gödsel, avlopp – där hela cykeln från ägg till färdig fluga hinner gå på ungefär en vecka i sommarvärme.",
+      "curiosity": "Bakvingarna är reducerade till två klubbformade svängkolvar som slår i motfas med vingarna omkring 200 gånger i sekunden och fungerar som gyroskop; tas de bort kan flugan inte längre hålla sig upprätt i luften."
+    },
+    "gardenSnail": {
+      "overview": "Ett blötdjur med skrynkligt brunt och gräddvitt skal på cirka 3 cm, ursprungligen från Medelhavsområdet och nu etablerat i Europa, Nord- och Sydamerika, Australien, Sydafrika och Östasien. Den raspar på växter med radulan, ett böjligt band med tusentals små kitintänder. Varje individ är hane och hona på samma gång.",
+      "habitat": "Murar, häckkanter, krukor och skuggsidan av byggnader, aktiv under fuktiga nätter. Vid torka eller kyla förseglar den skalmynningen med ett kalkartat lock och väntar, ibland i månader.",
+      "curiosity": "Före parningen driver varje snäcka in en hårdnad pil av kalciumkarbonat i partnerns kropp; slem på pilen förändrar mottagarens könsorgan så att fler av avsändarens spermier överlever fram till äggen."
+    },
+    "westernHoneyBee": {
+      "overview": "Ett randigt bi på 12–15 mm som lever i samhällen med tiotusentals individer, ursprungligen från Europa, Afrika och västra Asien och hållet av människor nästan överallt annars. Ett bi som kommer hem från en bra blomsteräng dansar en svänsdans på den lodräta vaxkakan, där vinkeln anger riktningen i förhållande till solen och längden anger avståndet. Sommarens arbetsbin lever ungefär sex veckor; en drottning kan bli flera år.",
+      "habitat": "Vilda samhällen bygger vaxkakor i ihåliga träd, murhålrum och vindsutrymmen, medan skötta bin bor i kupor; arbetsbina flyger rutinmässigt två till tre kilometer hemifrån efter föda.",
+      "curiosity": "Samhället går inte i ide. På vintern sluter det sig till ett tätt klot och darrar med flygmusklerna så att kärnan håller omkring 20–30 °C medan luften utanför ligger under noll – och skruvar sedan upp värmen till cirka 35 °C när yngeluppfödningen startar på senvintern, med lagrad honung som bränsle hela vägen."
+    },
+    "paintedLady": {
+      "overview": "En orange- och svartmönstrad fjäril med 5–6 cm vingbredd och vita fläckar i de mörka vingspetsarna, en av jordens mest spridda fjärilar. Larverna äter tistlar, malvor och nässlor, och de vuxna dyker vissa år upp i enorma mängder och saknas nästan helt andra år. Radarstudier har följt dem på flyttning flera hundra meter upp i luften.",
+      "habitat": "Öppen blommande mark av nästan alla slag – ödetomter, vägrenar, trädgårdar, öknar efter regn – i Europa, Asien, Afrika, Australien och Nordamerika. Sydamerika är den enda kontinenten utöver Antarktis där den saknas.",
+      "curiosity": "Hela årsrundan är ungefär 12 000–15 000 km lång och innefattar en passage över Sahara, och varje etapp flygs av insekter som aldrig har gjort resan förut."
+    },
+    "cellarSpider": {
+      "overview": "En blek spindel med extremt långa ben, kropp på 8–10 mm och benspann upp till 7 cm, som oftast hänger upp och ner i ett löst virrvarr av trådar. Nätet är inte klibbigt; bytet trasslas in i silke som spindeln slänger mot det på avstånd med bakbenen. Den lever i dag i byggnader nästan över hela världen, spridd med människans gods.",
+      "habitat": "Takhörn, källare, trapphus, garage och utrymmet bakom möbler – inomhus, ostört och varmt, eftersom den klarar sig dåligt utomhus under kalla vintrar.",
+      "curiosity": "Störd snurrar den kroppen i nätet så snabbt att konturerna suddas ut, vilket gör den svår att sikta på; den dödar också regelbundet spindlar som är större än den själv."
+    },
+    "argentineAnt": {
+      "overview": "En liten, enkelt brun myra på 2–3 mm som bildar täta stråk längs trottoarkanter, golvlister och köksbänkar. Bona har många drottningar och försvarar inga gränser, så grannbon slås ihop i stället för att konkurrera. Ursprungligen från Paranáflodens område i Sydamerika har den förts till sex kontinenter i jord, krukväxter och gods.",
+      "habitat": "Grunda bon under trottoarplattor, krukor, barkflis och trappsteg i varma medelhavsklimat, alltid nära fukt, med stråk som löper inomhus till varje sockerkälla.",
+      "curiosity": "Längs Medelhavskusten bildar den införda populationen en superkoloni på ungefär 600 mil, och arbetare som samlats in på skilda kontinenter känner fortfarande igen varandra som bofränder i stället för rivaler."
+    },
+    "commonEarthworm": {
+      "overview": "En rödbrun mask på upp till cirka 25 cm, med tillplattad ljusare bakände och ett svullet bälte, clitellum, en tredjedel ner på kroppen. Den håller en permanent lodrät gång som kan gå två meter ner och kommer upp till ytan på natten för att dra ner löv i den. Ursprungligen europeisk har den införts i Nordamerika, Asien och på södra halvklotet.",
+      "habitat": "Fuktig, icke-sur jord i trädgårdar, parker och betesmark. Den saknar lungor och tar upp syre genom huden, som måste hållas fuktig för gasutbytet – därför dör den snabbt på het, torr asfalt och gör sina resor ovan jord under blöta nätter, när det fuktiga underlaget låter den täcka mycket längre sträckor än den kunde ha grävt sig.",
+      "curiosity": "Darwin testade hur maskar hanterar löv genom att erbjuda dem papperstrianglar och fann att de tog tag i den spetsiga änden – den vinkel som lättast glider ner i en gång."
+    }
+  },
+  "fungiDetails": {
+    "flyAgaric": {
+      "overview": "En stor svamp med skarlakansröd till orange hatt beströdd med vita vårtor, rester av det hylle som svepte in den unga fruktkroppen. Den är giftig, och de verksamma ämnena är ibotensyra och muscimol, som påverkar hjärnan på ett helt annat sätt än psilocybinet i så kallade magiska svampar.",
+      "habitat": "Lever i symbios med rötterna hos björk, tall och gran över hela norra halvklotet och har följt med planterade barrträd söderut till Nya Zeeland, Australien, Chile och Sydafrika.",
+      "curiosity": "Muskarin isolerades först ur den här arten och fick namn efter den, men svampen innehåller bara spår av ämnet; namnet flugsvamp kommer av den medeltida vanan att lägga bitar i mjölk för att söva flugor."
+    },
+    "deathCap": {
+      "overview": "En medelstor svamp med blekt olivgrön till grönaktig hatt, vita skivor, ring på foten och en säckformad slida vid basen. Dess amatoxiner slår ut RNA-polymeras II, enzymet varje cell använder för att läsa av sina egna gener, och levern tar den värsta skadan. En halv hatt kan vara en dödlig dos för en vuxen.",
+      "habitat": "Ursprungligen hemma i Europas ek-, bok- och kastanjeskogar har den spridits över världen med rotklumpar från plantskolor och växer nu i Kalifornien, östra USA, Australien och Sydamerika.",
+      "curiosity": "Förgiftningen är bedräglig: symtomen kommer oftast först sex till tolv timmar efter måltiden och lättar sedan i ett dygn eller mer medan levern fortsätter att brytas ner i det tysta."
+    },
+    "buttonMushroom": {
+      "overview": "En av världens mest odlade svampar och stommen i den västerländska svampindustrin, som ger miljontals ton om året i mörka klimatstyrda salar på bäddar av komposterad halm och gödsel i stället för ute på fält. Kina och USA är de största producenterna, och skörden sker inomhus, för hand, året runt.",
+      "habitat": "I det vilda dyker den upp på gräsmarker, i sanddyner och längs vägrenar i Europa och Nordamerika; i odling ser den aldrig dagsljus utan växer på en kompostbädd täckt med torv.",
+      "curiosity": "Artnamnet bisporus är en beskrivning. De flesta skivsvampar skjuter iväg fyra sporer från varje basid, men den här gör oftast två, så varje spor ärver ett helt par cellkärnor och kan ensam växa ut till ett fertilt mycel."
+    },
+    "brewersYeast": {
+      "overview": "En mikroskopisk svamp som förökar sig genom att knoppa av dotterceller från sidan och som, utan syre, omvandlar socker till etanol och koldioxid. Samma art får bröd att jäsa och jäser öl, vin och sake, medan modifierade stammar odlas i tankar för att tillverka insulin och vaccinproteiner.",
+      "habitat": "I naturen lever den på mogen frukt och på ekars bark och savflöden; de domesticerade linjerna bor i bagerier, bryggerier och industriella fermentorer.",
+      "curiosity": "Jäst och människa delar fortfarande så mycket grundläggande cellmaskineri att man i ett försök kunde byta ut ungefär hälften av en uppsättning livsviktiga jästgener mot mänskliga motsvarigheter, och cellerna fortsatte växa."
+    },
+    "zombieAntFungus": {
+      "overview": "En parasit på hästmyror, i dag betraktad som ett komplex av arter där var och en är inriktad på en särskild värdmyra. Infekterade arbetare lämnar samhället, biter fast käkarna i en bladnerv eller kvist och dör på plats; några dagar senare bryter en stjälk fram bakom huvudet och strör sporer över stigarna nedanför.",
+      "habitat": "Fuktiga tropiska och subtropiska skogar i Thailand, Brasilien, Japan och Västafrika, där infekterade myror samlas i täta kyrkogårdar på låg vegetation.",
+      "curiosity": "I thailändska skogar biter myrorna fast ungefär 25 cm över marken, där luftfuktigheten passar svampen, och i mikroskop syns svampceller som omsluter myrans muskelfibrer medan hjärnan lämnas orörd."
+    },
+    "humongousFungus": {
+      "overview": "En honungsfärgad skivsvamp som dyker upp i höstliga klasar runt barrträdsstammar, men som tillbringar nästan hela sitt liv som vita mycelskikt under barken och som svarta, skosnöreliknande strängar kallade rhizomorfer. Den dödar träd, och skogsbruket ser den som en patogen snarare än ett under.",
+      "habitat": "Barrskogar i Nordamerika, Europa och Asien, där den angriper gran, ädelgran och tall; rekordindividen växer i Malheur National Forest i östra Oregon.",
+      "curiosity": "Genetisk provtagning visade att svampar flera kilometer isär tillhörde en och samma klon på omkring 965 hektar, med åldersuppskattningar från ungefär 2 500 år och uppåt."
+    },
+    "bitterOyster": {
+      "overview": "En seg, gulbrun, solfjäderformad svamp på några centimeter som växer i överlappande våningar på död lövved och bryter ner den till blek fiber. Fynd från östra Nordamerika lyser; europeiska exemplar av samma art gör det oftast inte, en skillnad i kemi snarare än i artstillhörighet.",
+      "habitat": "Död ek, björk och bok i tempererade skogar i Nordamerika, Europa och Asien, ofta med fruktkroppar på samma fallna stam flera år i rad.",
+      "curiosity": "Ljuset har sin topp i det gröna vid omkring 520 nanometer och är så svagt att ögonen behöver flera minuter i totalt mörker för att uppfatta det; luciferinet bakom, 3-hydroxyhispidin, visar sig vara gemensamt för lysande svampar."
+    },
+    "penicilliumMould": {
+      "overview": "Ett vanligt mögel som bildar sammetsblågröna kolonier med blek växtkant och sprider sporer från penselformade skaft; penicillus är latin för liten pensel. Det utsöndrar penicillin, som hindrar bakterier från att bygga färdigt sina cellväggar, och den oavsiktliga upptäckten inledde antibiotikans tidsålder.",
+      "habitat": "Jord, fuktiga ytor inomhus och skämd mat över hela världen; den odling som betydde något kom med luften, som en enda vilsen spor som landade i ett laboratorium i London.",
+      "curiosity": "Flemings stam kallades Penicillium notatum i decennier tills DNA-sekvensering av flera markörgener flyttade den 2011, och sporen tros ha drivit upp från ett mykologilabb en trappa under hans eget."
+    },
+    "chytridFungus": {
+      "overview": "En chytrid, medlem av en urgammal svampgrupp som fortfarande simmar och släpper ut sporer med svans i vattnet. Den koloniserar den keratinrika huden hos grodor, paddor och salamandrar och slår ut hudens kontroll av salter och vatten, vilket hos känsliga arter slutar med hjärtstillestånd.",
+      "habitat": "Bäckar, dammar och fuktig skog på varje kontinent som har groddjur; genetiken spårar ursprunget till Östasien, varifrån den globala handeln med levande djur har fört den vidare.",
+      "curiosity": "En översikt från 2019 kopplade den till tillbakagång hos mer än 500 groddjursarter och till att omkring 90 av dem sannolikt dött ut – den största dokumenterade artförlust som tillskrivits en enda sjukdomsalstrare."
+    },
+    "whiteTruffle": {
+      "overview": "En blek, knölig, potatisformad svamp som utvecklas 5 till 30 cm under markytan och klär in fina rötter hos ek, poppel, hassel och sälg i ett byte av markmineraler mot trädets socker. Eftersom den aldrig bryter igenom ytan är den beroende av lukt i stället för vind för att få djur att sprida sporerna.",
+      "habitat": "Kalkrika jordar i norra och centrala Italien, framför allt kullarna kring Alba i Piemonte, samt Istrien och delar av Balkan; jägarna hittar den med tränade hundar, som är mindre benägna än grisar att äta upp fyndet.",
+      "curiosity": "Svart tryffel odlas i planteringar med ympade plantor, men den här arten stod emot varje försök i hundra år, och de första bekräftade odlade fruktkropparna rapporterades från Frankrike så sent som 2019."
+    }
+  },
+  "cropDetails": {
+    "maize": {
+      "overview": "Världens mest högavkastande spannmål räknat i ton, ett jättelikt ettårigt gräs som odlas för kärnor som föder människor, boskap och etanolfabriker. En enda kolv kan bära flera hundra kärnor, tätt packade och inlindade i skärmblad. Den odlas på alla kontinenter utom Antarktis.",
+      "habitat": "Odlas från havsnivå till över 3 000 m i Anderna och från Kanada till södra Afrika; den vilda släktingen teosinte växer fortfarande på säsongstorra sluttningar i sydvästra Mexiko.",
+      "curiosity": "Majsen domesticerades i Balsasflodens dal i Mexiko för omkring 9 000 år sedan och klarar sig inte längre utan människan – kolven faller inte sönder, så kärnorna har inget sätt att sprida sig själva."
+    },
+    "cassava": {
+      "overview": "En vedartad buske som odlas för uppsvällda stärkelserika lagringsrötter som var och en kan väga flera kilo. Den tål mager, sur jord och långa torrperioder som skulle ta död på majs direkt. Råa rötter innehåller cyanidbildande ämnen och måste alltid bearbetas.",
+      "habitat": "Tropiska låglandsområden över hela världen, från Amazonasbäckenets södra kant där den började till Västafrika och Sydostasien, ofta på jordar som är för utarmade för spannmål.",
+      "curiosity": "Genetiska studier spårar all odlad kassava till vilda bestånd i sydvästra Brasilien och Bolivia; portugisiska skepp förde den till Afrika på 1500-talet, och Nigeria är i dag världens största producent."
+    },
+    "arabicaCoffee": {
+      "overview": "En städsegrön buske eller ett litet träd vars bönor är fröna i en röd, körsbärsliknande frukt, oftast två per frukt. Den står för ungefär 60 % av världens kaffe; resten är mest robusta. Brasilien odlar mer av den än något annat land.",
+      "habitat": "Svala, dimmiga tropiska högländer, oftast mellan 1 000 och 2 000 m; vilda bestånd växer fortfarande i det skuggiga undre skiktet i bergsskogar i sydvästra Etiopien.",
+      "curiosity": "Coffea arabica uppstod i Etiopien när robusta och Coffea eugenioides korsades och fördubblade sina kromosomer; ett mycket litet antal plantor som fördes till Jemen och sedan till europeiska växthus lade grunden till större delen av dagens odling."
+    },
+    "soybean": {
+      "overview": "En buskig ettårig baljväxt med håriga baljor som rymmer två till fyra frön. Fröna är ovanligt rika på både protein och olja, vilket är skälet till att soja dominerar världens handel med oljeväxter. Plantan fixerar sitt eget kväve i rotknölar.",
+      "habitat": "Varmtempererad och subtropisk odlingsmark, framför allt brasilianska cerradon, argentinska pampas och amerikanska Mellanvästern; den vilda anfadern är en tunn slingerväxt vid östasiatiska flodstränder och åkerkanter.",
+      "curiosity": "Vilda Glycine soja är en spenslig slingerväxt med små, hårda, svarta frön, domesticerad i Kina för ungefär 5 000 år sedan. Brasilien odlade nästan ingen soja före 1960-talet och är i dag världens största producent."
+    },
+    "sugarcane": {
+      "overview": "Ett jättelikt tropiskt gräs vars strån blir tre till fem meter och lagrar sackaros i stjälken i stället för i fröet. Kommersiellt sockerrör är en hybrid med det tåligare vilda Saccharum spontaneum och planteras från stamsticklingar, aldrig från frö. Det står för större delen av världens socker.",
+      "habitat": "Heta låglandsområden med rikligt regn eller bevattning, ungefär mellan 30° nord och 30° syd; Brasilien och Indien har de överlägset största arealerna.",
+      "curiosity": "Sockerröret domesticerades på Nya Guinea för omkring 8 000 år sedan och spreds västerut genom Indien, där socker först kristalliserades, och vidare till plantagerna kring Atlanten; Brasilien gör i dag etanol av ungefär halva sin skörd."
+    },
+    "breadWheat": {
+      "overview": "Ett tempererat ettårigt gräs som sås på mer åkermark än nästan någon annan gröda. Varje ax bär ungefär 30 till 50 kärnor, vars glutenproteiner låter degen fånga gas och jäsa. Det bär sex uppsättningar kromosomer, ärvda från tre olika gräsarter.",
+      "habitat": "Tempererad och medelhavspräglad åkermark på alla kontinenter utom Antarktis, från kanadensiska prärien till Punjab; det vilda getgräs som är en av stamföräldrarna växer fortfarande på sluttningar från Bördiga halvmånen till Kaspiska havet.",
+      "curiosity": "För ungefär 8 000 till 9 000 år sedan korsades det odlade emmervetet med ogräset getgräs, Aegilops tauschii – en oansenlig planta med sköra ax som faller isär, vars arvsmassa ger brödet dess töjbara deg."
+    },
+    "asianRice": {
+      "overview": "Ett ettårigt gräs som klarar stående vatten tack vare luftkanaler genom strån och rötter. Det är basföda för ungefär hälften av världens befolkning. Kärnorna mals fria från det skal och kliskikt som omger den stärkelserika frövitan.",
+      "habitat": "Översvämmade risfält och regnbevattnade åkrar i monsunasien, plus Västafrika, Mississippidalen och södra Brasilien; vildriset Oryza rufipogon växer fortfarande i asiatiska träsk och diken.",
+      "curiosity": "Det asiatiska riset domesticerades ur Oryza rufipogon i Yangtzebäckenet i Kina för omkring 9 000 år sedan, medan det afrikanska riset, Oryza glaberrima, domesticerades oberoende i inlandsdeltat vid Niger för cirka 3 000 år sedan och senare korsade Atlanten med förslavade västafrikanska bönder."
+    },
+    "potato": {
+      "overview": "En medlem av potatisväxterna som odlas för knölar, vilka är uppsvällda underjordiska stjälkar snarare än rötter. Ovan jord är den en bladig planta med vita till lila blommor och små gröna frukter som ser ut som tomater i miniatyr och är giftiga. Gröna eller grodda knölar samlar på sig samma beska glykoalkaloider.",
+      "habitat": "Svala klimat över hela världen, från altiplano i Anderna över 3 500 m till åkermark i Kina och Indien; Kina skördar i dag mer potatis än något annat land.",
+      "curiosity": "Potatisen domesticerades i södra Peru för omkring 8 000 år sedan ur beska vildarter och nådde Europa via ett minimalt genetiskt urval på 1500-talet, medan bönderna i Anderna fortfarande håller tusentals namngivna sorter vid liv inom en enda region."
+    },
+    "banana": {
+      "overview": "Inget träd utan en jättelik ört – stammen är en tät rulle av bladbaser, och plantan dör tillbaka efter att ha burit frukt en gång. De flesta bananer som exporteras är en enda steril triploid sort, Cavendish, förökad med skott och vävnadsodling.",
+      "habitat": "Fuktiga tropiska låglandsområden över hela världen; Indien och Kina odlar mest, Ecuador exporterar mest, och vilda fröbärande Musa-arter växer fortfarande i skogar i Sydostasien och på Nya Guinea.",
+      "curiosity": "Utgrävningar vid Kukträsket på Nya Guineas högland daterar bananodling till för omkring 7 000 år sedan. Eftersom varje Cavendishplanta är genetiskt identisk hotar jordsvampen Fusarium Tropical Race 4 hela exportgrödan, precis som en tidigare stam utplånade sorten Gros Michel förra seklet."
+    },
+    "sweetOrange": {
+      "overview": "Ett städsegrönt träd med doftande vita blommor och frukt vars saft kommer från hår som utvecklats till vätskefyllda säckar. Nästan varje kommersiellt träd är en ympad klon på en grundstam vald för sjukdomsmotstånd snarare än för sin frukt.",
+      "habitat": "Subtropiska bälten med milda vintrar – sydöstra Brasilien, Florida, Medelhavsområdet och södra Kina; föräldraarterna kommer från skogar i södra och sydöstra Asien.",
+      "curiosity": "Hybriden uppstod i södra Kina, färdades västerut med handelsmän och nådde Brasilien med portugisiska skepp på 1500-talet; Brasilien producerar i dag fler apelsiner än något annat land. Citrusfrön innehåller ofta extra embryon som är kloner av moderträdet, så en fröplanta kan bli en exakt kopia av sin förälder."
+    }
+  },
+  "soundDetails": {
+    "tawnyOwl": {
+      "overview": "En satt, rundhövdad skogsuggla på ungefär 40 cm, brunspräcklig och i praktiken osynlig mot bark. Den jagar med hörseln i nästan totalt mörker och tillbringar dagen tryckt mot en stam eller inkilad i en hålighet. I hela sitt utbredningsområde är den en av de mest hörda och minst sedda av alla fåglar.",
+      "habitat": "Äldre lövskog, parklandskap, kyrkogårdar och gamla villaförorter med stora träd, från Storbritannien och Iberiska halvön genom Europa till Iran och västra Sibirien, samt Nordafrika; den saknas på Irland.",
+      "curiosity": "Revirhoandet toppar på hösten och igen på senvintern, när kala träd låter det bära flera hundra meter, och ett par kan hålla samma skogsdunge i ett decennium."
+    },
+    "commonCuckoo": {
+      "overview": "En slank, långstjärtad grå fågel ungefär i sparvhöks storlek, vars tvärbandade undersida och låga raka flykt liknar hökens tillräckligt för att skrämma småfåglar från deras bon. Honan lägger sina ägg i andra arters bon och lämnar dem; över 100 värdarter är kända. De flesta känner rösten i åratal innan de medvetet ser fågeln.",
+      "habitat": "Skogsbryn, vassar, hedar och öppen odlingsmark i Europa och norra Asien, med övervintring i Afrika söder om Sahara och i Sydasien.",
+      "curiosity": "Tvåtonsropet är ungefär en fallande liten ters och bär en kilometer eller mer över öppen mark; uppspelningsförsök visar att värdfåglarna reagerar på honans bubblande skratt ungefär som på en jagande sparvhök."
+    },
+    "commonNightingale": {
+      "overview": "En anspråkslöst brun fågel knappt större än en rödhake som nästan aldrig visar sig utan sjunger djupt inne i täta snår. En enda hanes repertoar omfattar ungefär 180–260 olika strofer, framförda som tvära visslingar, djupa skorrningar och långa crescendon. Den häckar i Europa, Nordafrika och västra Asien och övervintrar i Afrika.",
+      "habitat": "Snår, sly och buskiga skogsbryn med tät växtlighet nära marken, ofta intill vatten eller längs igenvuxna åkerkanter.",
+      "curiosity": "Inspelningar på bullriga gator i Berlin fångade hanar som sjöng med toppar över 95 decibel mätt på en meters avstånd – de skruvar upp volymen för att konkurrera med trafiken."
+    },
+    "europeanTreeFrog": {
+      "overview": "En liten, slät, klargrön groda med ett mörkt streck längs varje sida och klibbiga dynor på tårna för att klättra. Hanarna samlas vid lekvattnen på våren och ropar i överlappande led, mest efter mörkrets inbrott. Utanför leken är den en klättrare och syns sällan nere vid marken.",
+      "habitat": "Soliga dammar, diken och översvämmade ängar kantade av vass och björnbär i Central- och Sydosteuropa; mellan lekperioderna sitter den flera meter upp i buskar och häckar.",
+      "curiosity": "Ropet har sin topp kring 2,5 kHz och en hane kan upprepa det tusentals gånger på en natt – att ropa hör till det mest energikrävande som uppmätts hos något ryggradsdjur, och hanarna tappar vikt under säsongen."
+    },
+    "americanBullfrog": {
+      "overview": "Nordamerikas största groda, upp till ungefär 20 cm från nos till bakände, olivgrön och tungt byggd. Hanarna håller strandrevir hela sommaren och ropar både dag och natt. Den har införts på många håll och är i dag en etablerad invasiv art på flera kontinenter.",
+      "habitat": "Permanent varmt vatten – sjökanter, långsamma floder, dammar och reservoarer – ursprungligen i östra Nordamerika och etablerad i Brasilien, Japan, Kina och delar av södra Europa.",
+      "curiosity": "Tonhöjden följer kroppsstorleken, så den djupaste rösten i kören tillhör oftast den största hanen, och hanar känns igen på en trumhinna som är mycket bredare än ögat."
+    },
+    "cicadaOrni": {
+      "overview": "En gråbrun medelhavscikada på ungefär 3 cm med genomskinliga vingar prickade i mörkt, mycket lättare att artbestämma på sången än på utseendet. Hanarna ger ifrån sig ett upprepat torrt zip-zip-zip med jämna pauser, sjunget från stammar och grenar. Honorna sjunger inte alls.",
+      "habitat": "Tallar, olivträd, platan och fruktodlingar runt Medelhavet, från Iberiska halvön och Nordafrika genom Italien och Grekland till Turkiet.",
+      "curiosity": "Ljudet kommer från ett par räfflade plattor, tymbaler, som knäpper som locket på en konservburk hundratals gånger i sekunden, och bakkroppen bakom dem är till stor del ihålig – en sjungande hane är mest förstärkare."
+    },
+    "houseCricket": {
+      "overview": "En blekt halmbrun syrsa på ungefär 2 cm, ursprungligen från sydvästra Asien och i dag spridd över världen överallt där byggnader hålls varma. Hanarna spelar; honorna, som känns igen på ett långt nålformat äggläggningsrör, är tysta. Den är en av de mest odlade insekterna på jorden.",
+      "habitat": "Varma mänskliga utrymmen – pannrum, bagerier, soptippar, uppvärmda uthus och uppfödningsanläggningar; utomhus klarar den de varma månaderna i tempererade områden och året runt i tropikerna.",
+      "curiosity": "Öronen sitter på frambenen, strax under knät, och spelfrekvensen stiger med temperaturen – samma rum låter snabbare en varm natt än en sval."
+    },
+    "greatGreenBushCricket": {
+      "overview": "En gräsgrön vårtbitare på upp till ungefär 7 cm med antenner längre än kroppen – en stor insekt som ändå är närmast omöjlig att få syn på i en häck. Hanarna spelar från toppen av buskar och hög växtlighet, ofta större delen av natten. Arten finns i Europa, Nordafrika och in i Centralasien.",
+      "habitat": "Hög, ruffig växtlighet – björnbärssnår, häckar, buskmarker, vägrenar och vingårdskanter – oftast med spelet en meter eller två över marken.",
+      "curiosity": "Mycket av sångens energi ligger över 20 kHz, precis vid gränsen för mänsklig hörsel, så barn hör ofta en hane tydligt som de vuxna bredvid dem knappt uppfattar."
+    },
+    "blackHowlerMonkey": {
+      "overview": "En sydamerikansk apa med ovanligt tydliga könsskillnader: vuxna hanar är svarta, honor och ungar ljust gulbeige. Grupperna vrålar i gryning och skymning för att tala om var de befinner sig, vilket håller grannflockarna åtskilda utan kontakt. Kroppslängden är omkring 60 cm, plus en gripsvans av ungefär samma längd.",
+      "habitat": "Galleriskog, säsongsöversvämmad skog och skogsdungar i Brasilien, Bolivia, Paraguay och norra Argentina, mestadels högt uppe i kronorna.",
+      "curiosity": "Vrålet förstärks av ett förstorat, urholkat tungben i strupen, och en jämförande studie från 2015 fann att de vrålapor som har störst tungben har minst testiklar."
+    },
+    "redFox": {
+      "overview": "Världens mest spridda vilda rovdjur, med en vikt kring 5–7 kg och i huvudsak nattaktivt där människor är många. Ett tjugotal olika läten har beskrivits, från korta kontaktskall till det utdragna skriket. I städer hörs den betydligt oftare än den syns.",
+      "habitat": "Nästan allt: arktisk tundra, odlingsmark, ökenkanter, skog och täta stadskärnor, där lyorna ligger under uthus, längs järnvägsbankar och i trädgårdar.",
+      "curiosity": "Skriken toppar i december och januari när rävarna parar sig och har i stort sett upphört när ungarna föds på våren, vilket är skälet till att ljudet tycks komma och försvinna på schema."
+    }
+  }
+}

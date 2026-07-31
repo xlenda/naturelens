@@ -1,0 +1,314 @@
+{
+  "fishDetails": {
+    "clownfish": {
+      "overview": "Malá rybka korálových útesů Indo-Pacifiku, nezaměnitelná díky oranžovému tělu se třemi bílými pruhy. Celý dospělý život tráví v jediné sasance, jejíž žahavá chapadla by většinu ostatních ryb zabila.",
+      "habitat": "Teplé mělké korálové útesy a laguny od Rudého moře po severní Austrálii, vždy ve dvojici s hostitelskou sasankou.",
+      "curiosity": "Každý klaun se rodí jako samec. V každé sasance žije jeden dominantní pár; když samice uhyne, dominantní samec změní pohlaví a zaujme její místo."
+    },
+    "rainbowTrout": {
+      "overview": "Studenomilná ryba pojmenovaná podle duhově růžového pruhu podél boku. Pochází z řek Severní Ameriky a Asie ústících do Pacifiku, dnes se chová na všech kontinentech kromě Antarktidy.",
+      "habitat": "Čisté, chladné a dobře okysličené řeky a jezera. Populacím, které táhnou do moře a zase se vracejí, se říká steelhead.",
+      "curiosity": "Růžová barva masa není přirozeným pigmentem, ale pochází z korýšů, které ryba loví — pstruzi z chovů krmení jinak vyrostou bílí."
+    },
+    "atlanticSalmon": {
+      "overview": "Silná tažná ryba, která se líhne ve sladké vodě, roky se pase v moři a ke tření se vrací přesně do řeky, kde se narodila.",
+      "habitat": "V dospělosti severní Atlantik; ke tření řeky Evropy a východu Severní Ameriky.",
+      "curiosity": "Druhové jméno salar znamená „skokan“ — losos při cestě proti proudu překoná i vodopády vysoké přes tři metry."
+    },
+    "northernPike": {
+      "overview": "Dlouhý olivově zelený dravec číhající v úkrytu, s plochým kachním rypcem a tlamou plnou dozadu zahnutých zubů. Nehnutě visí mezi rostlinami a útočí ve zlomku sekundy.",
+      "habitat": "Zarostlé, pomalu tekoucí řeky a jezera severní polokoule, od Irska přes Sibiř až po Aljašku.",
+      "curiosity": "Hřbetní a řitní ploutev má posunuté daleko dozadu k ocasu — tělo je stavěné na jediný výbušný start, ne na vytrvalé pronásledování."
+    },
+    "commonCarp": {
+      "overview": "Statná sladkovodní ryba s velkými šupinami a dvěma páry vousků u tlamy. Chová se přes dva tisíce let; v části Evropy a Asie je ceněnou potravinou, jinde vážným invazním škůdcem.",
+      "habitat": "Teplé, pomalu tekoucí nebo stojaté vody s měkkým bahnitým dnem — řeky, jezera, rybníky a kanály na všech kontinentech kromě Antarktidy.",
+      "curiosity": "Kapr se živí nasáváním a přebíráním bahna, čímž víří sediment a kalí vodu — to je hlavní důvod, proč škodí jezerům, která obsadí."
+    },
+    "blueTang": {
+      "overview": "Zářivě královsky modrá útesová ryba s černou kresbou připomínající malířskou paletu a se žlutým ocasem. Jako všichni bodloci nese u kořene ocasu trn ostrý jako skalpel.",
+      "habitat": "Korálové útesy Indo-Pacifiku, obvykle v malých skupinkách u větvených korálů, do kterých se může schovat.",
+      "curiosity": "Mláďata jsou jasně žlutá a modrá barva přichází až s dospělostí — a ocasní trn, běžně sklopený, vyskočí do strany, jakmile se ryba cítí ohrožená."
+    },
+    "largemouthBass": {
+      "overview": "Zavalitý zelený dravec s tmavým pruhem podél boku a zároveň nejvyhledávanější sladkovodní sportovní ryba na světě.",
+      "habitat": "Teplá jezera, rybníky a pomalé řeky s úkryty — potopené kmeny, porosty vodních rostlin a mola.",
+      "curiosity": "Od příbuzného okounka černého ho poznáte podle tlamy: u okounka pstruhového sahá horní čelist až za zadní okraj oka."
+    },
+    "yellowfinTuna": {
+      "overview": "Velká torpédovitá mořská ryba s velmi dlouhými srpovitými žlutými ploutvemi a kovově tmavě modrým hřbetem, který dole přechází do stříbrné.",
+      "habitat": "Teplé otevřené oceány celého světa, obvykle v prvních 100 metrech, za potravou se ale noří mnohem hlouběji.",
+      "curiosity": "Dokáže si udržet tělo teplejší než okolní voda, takže mu svaly pracují i v chladných hloubkách, kde ostatní ryby ztěžknou — proto zvládne přeplout celý oceán."
+    },
+    "zebrafish": {
+      "overview": "Malá pruhovaná rybka z řek jižní Asie, ze které se stal jeden z nejzkoumanějších živočichů vědy.",
+      "habitat": "Mělké, pomalu tekoucí sladké vody — rýžová pole, potoky a tůně v Indii, Bangladéši a Nepálu.",
+      "curiosity": "Její zárodky jsou průhledné, takže vědci mohou pod mikroskopem v přímém přenosu sledovat, jak se tvoří srdce nebo páteř — proto se objevuje v tisících lékařských studií."
+    },
+    "redLionfish": {
+      "overview": "Nápadná ryba pruhovaná červenou, bílou a hnědou, s dlouhými vějířovitými ploutvemi, mezi nimiž se skrývají jedovaté ostny. Krásná, pomalá a rozhodně na nedotýkání.",
+      "habitat": "Původem z útesů Indo-Pacifiku; dnes vážný invazní druh v celém Karibiku a v západním Atlantiku.",
+      "curiosity": "V oblastech, které obsadil, nemá téměř žádné predátory a spolyká skoro cokoli, co se mu vejde do tlamy — proto některé země aktivně podporují jeho lov harpunou a konzumaci."
+    }
+  },
+  "birdDetails": {
+    "barnSwallow": {
+      "overview": "Štíhlý pták s lesklým modrým hřbetem, hluboce vykrojeným ocasem a rezavým hrdlem, téměř vždy k vidění v rychlém, nízkém a prudce zatáčejícím letu nad otevřenou krajinou.",
+      "habitat": "Pole, louky a břehy vod po celé severní polokouli; zimuje na jižní polokouli.",
+      "curiosity": "Je nejrozšířenější vlaštovkou na světě a potravu loví výhradně za letu — dokonce i pije tak, že v letu sklouzne po hladině rybníka."
+    },
+    "houseSparrow": {
+      "overview": "Podsaditý hnědošedý pták; samec má černou náprsenku a kaštanový zátylek, samice je nenápadně pískově hnědá se světlým proužkem za okem.",
+      "habitat": "Všude, kde jsou lidé: města, vesnice, statky a přístavy téměř na všech kontinentech.",
+      "curiosity": "Před tisíci lety se vydal za lidským zemědělstvím z Blízkého východu a dnes prakticky nežije tam, kde nejsou lidé."
+    },
+    "commonKingfisher": {
+      "overview": "Drobný pták s dýkovitým zobákem, zbarvený do elektricky modré a pálené oranžové, obvykle jen jako záblesk barvy nízko nad vodou.",
+      "habitat": "Pomalé čisté řeky, potoky a kanály s převislými větvemi, napříč Evropou, Asií a severní Afrikou.",
+      "curiosity": "Vrhá se po hlavě a rybu uloví i metr pod hladinou; pak s ní tluče o větev a polyká ji hlavou napřed, aby se ostny sklopily."
+    },
+    "peregrineFalcon": {
+      "overview": "Silný sokol s ostře špičatými křídly, shora břidlicově šedý a na spodku příčně pruhovaný, s výrazným tmavým „knírem“ pod okem.",
+      "habitat": "Všechny kontinenty kromě Antarktidy — skály, pobřeží a stále častěji i mrakodrapy a věže katedrál.",
+      "curiosity": "Při loveckém střemhlavém letu překonává 300 km/h a je nejrychlejším živočichem vůbec. Přepážky v nozdrách mu umožňují při takové rychlosti dýchat, aniž by si roztrhl plíce."
+    },
+    "greatBlueHeron": {
+      "overview": "Vysoký dlouhonohý brodivý pták v šedomodrém šatu, s mohutným zobákem jako oštěp a černým pérovým chocholem za okem.",
+      "habitat": "Mělké sladké i slané vody Severní a Střední Ameriky — mokřady, břehy jezer, řeky a pobřeží.",
+      "curiosity": "Stojí bez hnutí i několik minut a pak udeří rychleji, než oko stačí sledovat. Za letu skládá krk do těsného S — právě podle toho poznáte volavku od jeřába."
+    },
+    "rockPigeon": {
+      "overview": "Známý městský holub: šedé tělo, duhově zelenofialový krk a dva tmavé pruhy na křídle. Zbarvení se ohromně liší kvůli staletím domestikace.",
+      "habitat": "Původně mořské útesy a skalnaté rokle; dnes města po celém světě, kde skály nahradily římsy a parapety.",
+      "curiosity": "Oba rodiče tvoří „volatinové mléko“, výživný sekret, kterým krmí mláďata — vlastnost, kterou sdílí jen s hrstkou dalších ptáků."
+    },
+    "europeanRobin": {
+      "overview": "Malý zakulacený hnědý pták s jasně oranžovou hrudí a tváří, který si vás se zájmem prohlíží z nedaleké větve.",
+      "habitat": "Lesy, remízky a zahrady po celé Evropě a v západní Asii.",
+      "curiosity": "Za zahradníky chodí proto, že zrytá půda odhalí žížaly — zvyk, který začal u divokých prasat rozrývajících lesní půdu. Oranžovou hruď nosí obě pohlaví a zpěvem hájí teritorium po celý rok."
+    },
+    "mallard": {
+      "overview": "Klasická plovavá kachna: kačer s lesklou zelenou hlavou a bílým proužkem na krku, kachna hnědě skvrnitá s modrým zrcátkem na křídle.",
+      "habitat": "Téměř jakákoli sladká nebo brakická voda severní polokoule, od divokých mokřadů po rybníky v městských parcích.",
+      "curiosity": "Je předkem téměř všech domácích plemen kachen. Slavné hlasité kvákání vydává jen samice — kačer se ozývá tiše a chraptivě."
+    },
+    "scarletMacaw": {
+      "overview": "Velmi velký papoušek v sytě šarlatové, žluté a modré, s dlouhým zužujícím se ocasem a mohutným hákovitým zobákem.",
+      "habitat": "Vlhké nížinné deštné lesy od jižního Mexika po povodí Amazonky, obvykle vysoko v korunách stromů.",
+      "curiosity": "Páruje se na celý život a dožívá se přes padesát let. Zobákem rozlouskne ořechy, na které si žádný jiný pták v lese netroufne, a hejna se slétají na jílovité břehy řek, kde ujídají zeminu bohatou na minerály."
+    },
+    "emperorPenguin": {
+      "overview": "Největší tučňák, vysoký přes metr, černobílý se zlatooranžovou skvrnou po obou stranách krku.",
+      "habitat": "Antarktický mořský led — jediný pták, který hnízdí v průběhu antarktické zimy.",
+      "curiosity": "Samec drží jediné vejce na nohou pod kožní řasou dva měsíce tmy a vánic a nic přitom nejí, zatímco samice se vrací do moře za potravou."
+    }
+  },
+  "insectDetails": {
+    "sevenSpotLadybird": {
+      "overview": "Klenutý brouk 5–8 mm dlouhý, lesklá červená krovka se třemi černými tečkami na každé straně a sedmou rozdělenou švem. Dospělci i jejich šedé larvy podobné malým aligátorům loví mšice, proto je zahrádkáři pořád nacházejí na napadených lodyhách. Původem z celé Eurasie a dávno zavlečené do Severní Ameriky — je to brouk, který se většině lidí vybaví při slově beruška.",
+      "habitat": "Kopřivové houštiny, meze, zahrádkářské kolonie a jakákoli rostlina se mšicemi. Na podzim se dospělci shlukují do hustých chomáčů a zimují venku — v listovém opadu, v trsech suché trávy, na patách živých plotů, pod odchlíplou kůrou a v dutých stoncích, často se rok co rok vracejí na stejná chráněná místa.",
+      "curiosity": "Té obraně se říká reflexní krvácení: při silném stisku vytlačí klouby nohou kapky vlastní hemolymfy s alkaloidy tak hořkými, že je pták obvykle vyplivne a slunéčko odejde nezraněné."
+    },
+    "commonEarwig": {
+      "overview": "Plochý lesklý hnědý hmyz asi 12–15 mm dlouhý s klíšťkami na konci zadečku, u samců silně zahnutými a u samic téměř rovnými. Pod krátkými koženými krovkami se skrývají velká vějířovitá zadní křídla, poskládaná a uklizená jako papírový hlavolam. Navzdory staré pověře nikomu do ucha neleze; klíšťky slouží k obraně, k námluvám a k vybalování těch křídel.",
+      "habitat": "Přes den vlhké těsné skuliny — pod květináči, v listí, mezi prkny plotu, uvnitř květů jiřin a ve složeném zahradním nábytku — v noci vylézá za mšicemi, pylem a měkkým ovocem.",
+      "curiosity": "Patří k mála hmyzu, který hlídá vajíčka: matka je celé týdny obrací a čistí, aby na nich nevyrostla plíseň, a mláďata krmí i po vylíhnutí."
+    },
+    "commonPillWoodlouse": {
+      "overview": "Břidlicově šedý pancéřovaný stejnonožec dlouhý až 18 mm, který se při vyrušení sroluje do těsné kuličky. Překrývající se destičky a schopnost svinout se ho odlišují od plošších stínek, které mohou jen utíkat do úkrytu. Původem ze Středomoří, dnes se objevuje v zahradách na všech obydlených kontinentech.",
+      "habitat": "Pod kameny, květináči, dřevem a vlhkým kartonem, všude, kde zůstává vysoká vlhkost. Dýchací orgány podobné žábrám musí zůstat vlhké, takže na suchém otevřeném prostranství dlouho nevydrží.",
+      "curiosity": "Pije zadním koncem těla — vodu nasává vzlínáním dvěma trubicovitými uropody — a má modrou krev: kyslík přenáší hemocyaninem s mědí místo hemoglobinu se železem."
+    },
+    "houseFly": {
+      "overview": "Šedá moucha 6–7 mm dlouhá se čtyřmi tmavými pruhy na hrudi a houbovitým polštářkem místo kousacích čelistí. Nic nerozkousá: na pevné jídlo vyplivne sliny, rozpustí ho a tekutinu zase vysaje. Rozvezla se po světě s lidskými sídly a dnes žije na všech kontinentech, kde žijí lidé.",
+      "habitat": "Kdekoli je teplo a vlhká organická hmota na kladení vajíček — komposty, popelnice, hnůj, kanály — kde celý cyklus od vajíčka po dospělce proběhne v letním horku zhruba za týden.",
+      "curiosity": "Zadní křídla se zmenšila na dvě paličkovitá kyvadélka, která kmitají v protifázi s křídly asi 200krát za sekundu a fungují jako gyroskopy; bez nich se moucha ve vzduchu neudrží ve správné poloze."
+    },
+    "gardenSnail": {
+      "overview": "Měkkýš s vrásčitou hnědo-krémovou ulitou asi 3 cm širokou, původem ze Středomoří, dnes zabydlený v Evropě, Americe, Austrálii, Jihoafrické republice i východní Asii. Rostliny ohryzává radulou, pružným pásem s tisíci drobných chitinových zoubků. Každý jedinec je zároveň samec i samice.",
+      "habitat": "Zdi, paty živých plotů, květináče a stinné strany budov; aktivní za vlhkých nocí. V suchu nebo mrazu ústí ulity zapečetí vápenatou blankou a čeká, někdy i měsíce.",
+      "curiosity": "Před pářením zabodne každý hlemýžď do těla partnera tvrdý šíp z uhličitanu vápenatého; hlen na šípu změní pohlavní ústrojí příjemce tak, aby k vajíčkům dorazilo víc spermií střelce."
+    },
+    "westernHoneyBee": {
+      "overview": "Pruhovaná včela 12–15 mm dlouhá žijící v koloniích o desítkách tisíc jedinců, původem z Evropy, Afriky a západní Asie a chovaná lidmi téměř všude jinde. Létavka, která se vrátí od bohatého porostu květů, tančí na svislém plástu osmičkový tanec: úhel kóduje směr vůči slunci, délka vzdálenost. Letní dělnice žijí asi šest týdnů, královna i několik let.",
+      "habitat": "Divoké kolonie stavějí voskové plásty v dutinách stromů, ve zdech a na půdách, chované žijí v úlech; létavky běžně sbírají na květech dva až tři kilometry od domova.",
+      "curiosity": "Kolonie nezimuje spánkem. V zimě se stáhne do těsného chomáče a chvěje létacími svaly, jádro chomáče udrží kolem 20–30 °C, zatímco venku mrzne — a koncem zimy, když se znovu rozběhne plodování, ho vyžene asi na 35 °C. Palivem je celou dobu uložený med."
+    },
+    "paintedLady": {
+      "overview": "Oranžovočerný motýl s rozpětím 5–6 cm a bílými skvrnami na tmavých špičkách křídel, jeden z nejrozšířenějších motýlů na Zemi. Housenky žerou bodláky, slézy a kopřivy, dospělci se v některých letech objevují v obrovských počtech a v jiných skoro chybí. Radarová měření je zachytila při tahu stovky metrů nad zemí.",
+      "habitat": "Otevřená kvetoucí místa téměř jakéhokoli druhu — rumiště, krajnice, zahrady, pouště po dešti — v Evropě, Asii, Africe, Austrálii i Severní Americe. Jižní Amerika je vedle Antarktidy jediný kontinent, kde nežije.",
+      "curiosity": "Celý roční okruh měří zhruba 12 000–15 000 km a zahrnuje přelet Sahary, přičemž každou jeho část letí hmyz, který tu cestu nikdy předtím neabsolvoval."
+    },
+    "cellarSpider": {
+      "overview": "Bledý pavouk s extrémně dlouhýma nohama, tělo kolem 8–10 mm a rozpětí nohou až 7 cm, obvykle visí hlavou dolů ve volné spleti vláken. Síť nelepí; kořist zamotá vlákny, která na ni zadníma nohama vrhá z odstupu. Dnes žije v budovách skoro po celém světě, rozvezená s lidským nákladem.",
+      "habitat": "Rohy stropů, sklepy, schodiště, garáže a prostor za nábytkem — uvnitř, v klidu a v teple, protože venku chladné zimy snáší špatně.",
+      "curiosity": "Když ji vyrušíte, roztočí tělo v síti tak rychle, že se její obrys rozmaže a predátor těžko míří; běžně také zabíjí pavouky větší, než je sama."
+    },
+    "argentineAnt": {
+      "overview": "Malý nenápadný hnědý mravenec 2–3 mm dlouhý, který tvoří husté stezky podél obrubníků, soklových lišt a kuchyňských linek. V hnízdech má mnoho královen a nehájí žádné hranice, takže se sousední hnízda místo soupeření slučují. Pochází z povodí Paraná v Jižní Americe a v zemině, květináčích a nákladu se dostal na šest kontinentů.",
+      "habitat": "Mělká hnízda pod dlažbou, květináči, mulčem a prahy v teplých a středomořských oblastech, vždy blízko vlhkosti, se stezkami vedoucími dovnitř k jakémukoli zdroji cukru.",
+      "curiosity": "Podél středomořského pobřeží tvoří zavlečená populace superkolonii dlouhou zhruba 6 000 km a dělnice sebrané na různých kontinentech se pořád poznávají jako členky jednoho hnízda, ne jako soupeřky."
+    },
+    "commonEarthworm": {
+      "overview": "Červenohnědý červ dlouhý až 25 cm, se zploštělým světlejším koncem a s nabobtnalým pásem, opaskem, v první třetině těla. Udržuje si stálou svislou noru hlubokou až dva metry a v noci vylézá na povrch, aby do ní stáhla listí. Původem z Evropy, zavlečena do Severní Ameriky, Asie i na jižní polokouli.",
+      "habitat": "Vlhká nekyselá půda zahrad, parků a pastvin. Nemá plíce a kyslík přijímá kůží, která musí zůstat vlhká — proto na horkém suchém chodníku rychle hyne a po povrchu cestuje za mokrých nocí, kdy po vlhku urazí mnohem víc než hrabáním.",
+      "curiosity": "Darwin zkoušel, jak si žížaly poradí s listy, a nabídl jim papírové trojúhelníky — chytaly je za špičku, tedy pod úhlem, který nejsnáz vklouzne do nory."
+    }
+  },
+  "fungiDetails": {
+    "flyAgaric": {
+      "overview": "Velká houba se šarlatovým až oranžovým kloboukem posetým bílými bradavkami, zbytky plachetky, která obalovala mladou plodnici. Je jedovatá a její účinné látky, kyselina ibotenová a muscimol, působí na mozek úplně jinak než psilocybin z takzvaných lysohlávek.",
+      "habitat": "Žije v soužití s kořeny bříz, borovic a smrků po celé severní polokouli a s vysazovanými jehličnany se dostala i na jih — na Nový Zéland, do Austrálie, Chile a Jihoafrické republiky.",
+      "curiosity": "Muskarin byl poprvé izolován právě z ní a po ní i pojmenován, jenže houba ho obsahuje jen stopy; její jméno pochází ze středověkého zvyku namáčet kousky do mléka, aby otupily mouchy."
+    },
+    "deathCap": {
+      "overview": "Středně velká houba s bledě olivovým až nazelenalým kloboukem, bílými lupeny, prstenem na třeni a pochvou na bázi. Její amatoxiny vyřadí RNA polymerázu II, enzym, kterým každá buňka čte vlastní geny, a nejhůř to odnesou játra. Půlka klobouku může být pro dospělého smrtelná dávka.",
+      "habitat": "Původem z evropských dubových, bukových a kaštanových lesů se rozvezla po světě na kořenových balech školkařských stromků a dnes roste v Kalifornii, na východě USA, v Austrálii i Jižní Americe.",
+      "curiosity": "Otrava je zrádná: příznaky se obvykle objeví až šest až dvanáct hodin po jídle, pak na den i déle poleví, zatímco rozpad jater pod povrchem pokračuje dál."
+    },
+    "buttonMushroom": {
+      "overview": "Jedna z nejpěstovanějších hub světa a základ západního houbařského průmyslu; ročně se ho vyrobí miliony tun v temných klimatizovaných halách na lůžkách z kompostované slámy a hnoje, ne na poli. Největší producenti jsou Čína a Spojené státy, sklízí se ručně, uvnitř, po celý rok.",
+      "habitat": "V přírodě se objevuje na loukách, v dunách a na krajnicích v Evropě a Severní Americe; v pěstírnách nikdy nespatří denní světlo a plodí na kompostu překrytém rašelinou.",
+      "curiosity": "Jméno dvouvýtrusý je popis. Většina lupenatých hub vystřelí z každé bazidie čtyři výtrusy, tahle obvykle dva, takže každý výtrus zdědí celý pár jader a dokáže vyrůst v plodné podhoubí sám."
+    },
+    "brewersYeast": {
+      "overview": "Mikroskopická houba, která se množí pučením dceřiných buněk z boku a bez kyslíku mění cukr na etanol a oxid uhličitý. Týž druh kypří chleba a kvasí pivo, víno i saké, zatímco upravené kmeny se pěstují v tancích na výrobu inzulinu a vakcinačních bílkovin.",
+      "habitat": "V přírodě žije na zralém ovoci a na kůře a výronech mízy dubů; domestikované linie bydlí v pekárnách, pivovarech a průmyslových fermentorech.",
+      "curiosity": "Kvasinka a člověk mají pořád tolik společné buněčné mašinerie, že v jednom pokusu šlo zhruba polovinu souboru nezbytných kvasinkových genů nahradit lidskými protějšky a buňky rostly dál."
+    },
+    "zombieAntFungus": {
+      "overview": "Parazit mravenců rodu Camponotus, dnes chápaný jako komplex druhů, z nichž každý je vyladěný na konkrétního hostitele. Nakažené dělnice opustí kolonii, zakousnou se do žilky listu nebo do větvičky a na místě zemřou; za pár dní jim zpoza hlavy vyrazí stopka a sype výtrusy na stezky pod sebou.",
+      "habitat": "Vlhké tropické a subtropické lesy v Thajsku, Brazílii, Japonsku a západní Africe, kde nakažení mravenci tvoří hustá pohřebiště na nízké vegetaci.",
+      "curiosity": "V thajských lesích se mravenci zakusují asi 25 cm nad zemí, kde houbě vyhovuje vlhkost, a mikroskop ukazuje, že houbové buňky obalují svalová vlákna mravence, ale do mozku nevstupují."
+    },
+    "humongousFungus": {
+      "overview": "Medově zbarvená lupenatá houba, která na podzim vyráží v trsech kolem kmenů jehličnanů, ale skoro celý život tráví jako bílé plachty podhoubí pod kůrou a jako černé provazce podobné tkaničkám, zvané rhizomorfy. Zabíjí stromy, a lesníci ji proto berou spíš jako škůdce než jako div přírody.",
+      "habitat": "Jehličnaté lesy Severní Ameriky, Evropy a Asie, kde napadá smrky, jedle a borovice; rekordní jedinec roste v Malheur National Forest ve východním Oregonu.",
+      "curiosity": "Genetické vzorkování ukázalo, že plodnice vzdálené kilometry patří jedinému klonu o rozloze zhruba 965 hektarů, jehož stáří se odhaduje na 2 500 let a víc."
+    },
+    "bitterOyster": {
+      "overview": "Tuhá okrově hnědá vějířovitá houba několik centimetrů široká, která roste v překrývajících se patrech na mrtvém dřevě listnáčů a rozkládá je na bledá vlákna. Sběry z východu Severní Ameriky bioluminiscují, evropské plodnice téhož druhu většinou ne — rozdíl je v chemii, ne v totožnosti.",
+      "habitat": "Mrtvé duby, břízy a buky v mírných lesích Severní Ameriky, Evropy a Asie, často plodí na témž padlém kmeni několik let po sobě.",
+      "curiosity": "Světlo má vrchol v zelené kolem 520 nanometrů a je tak slabé, že ho oči zachytí až po několika minutách v úplné tmě; luciferin za ním, 3-hydroxyhispidin, se ukázal být společný všem svítícím houbám."
+    },
+    "penicilliumMould": {
+      "overview": "Běžná plíseň tvořící sametové modrozelené kolonie se světlejším rostoucím okrajem; výtrusy uvolňuje ze stopek podobných štětečkům — penicillus je latinsky štěteček. Vylučuje penicilin, který bakteriím zabrání dostavět buněčnou stěnu, a jeho náhodný objev otevřel éru antibiotik.",
+      "habitat": "Půda, vlhké povrchy v interiérech a kazící se jídlo po celém světě; ta jediná důležitá kultura přiletěla vzduchem, jako jedna zbloudilá spora, která přistála v londýnské laboratoři.",
+      "curiosity": "Flemingův kmen se desítky let označoval jako Penicillium notatum, dokud ho v roce 2011 nepřeřadilo sekvenování několika markerových genů, a spora podle všeho připlula z mykologické laboratoře o patro níž."
+    },
+    "chytridFungus": {
+      "overview": "Chytridiomyceta, člen prastaré houbové linie, která dodnes plave — do vody uvolňuje bičíkaté spory. Osidluje keratinem bohatou kůži žab, ropuch a mloků a ničí její schopnost hospodařit se solemi a vodou, což u citlivých druhů končí zástavou srdce.",
+      "habitat": "Potoky, tůně a vlhké lesy na všech kontinentech, kde žijí obojživelníci; genetické práce kladou její původ do východní Asie, odkud ji rozvezl světový obchod se živými zvířaty.",
+      "curiosity": "Přehledová práce z roku 2019 ji spojila s úbytkem víc než 500 druhů obojživelníků a s pravděpodobným vyhynutím asi 90 z nich — největší doložená ztráta biodiverzity způsobená jediným patogenem."
+    },
+    "whiteTruffle": {
+      "overview": "Bledá hrbolatá houba tvaru brambory, která dozrává 5 až 30 cm pod povrchem a obaluje jemné kořínky dubů, topolů, lísek a vrb ve výměně půdních minerálů za stromové cukry. Protože nikdy neprorazí povrch, spoléhá při roznášení výtrusů zvířaty na vůni, ne na vítr.",
+      "habitat": "Vápnité půdy severní a střední Itálie, především piemontské kopce kolem Alby, dále Istrie a části Balkánu; hledači ho vyhledávají cvičenými psy, kteří na rozdíl od prasat nález tak ochotně nesnědí.",
+      "curiosity": "Černé lanýže se pěstují v sadech na naočkovaných sazenicích, jenže tenhle druh sto let vzdoroval každému pokusu a první potvrzené vypěstované plodnice ohlásili ve Francii až v roce 2019."
+    }
+  },
+  "cropDetails": {
+    "maize": {
+      "overview": "Podle sklizené tonáže nejvýnosnější obilnina světa, obrovská jednoletá tráva pěstovaná na zrno, které živí lidi, dobytek i lihovary. Jedna palice unese několik set zrn nasazených na vřetenu a zabalených v listenech. Pěstuje se na všech kontinentech kromě Antarktidy.",
+      "habitat": "Pěstuje se od hladiny moře po výšky přes 3 000 m v Andách a od Kanady po jižní Afriku; její divoký příbuzný teosinte dodnes roste na sezonně vysychajících svazích jihozápadního Mexika.",
+      "curiosity": "Kukuřici zdomácněli v mexickém údolí řeky Balsas asi před 9 000 lety a bez lidí už nepřežije — obalená palice se nerozpadá, takže zrna se nemají jak rozsypat."
+    },
+    "cassava": {
+      "overview": "Dřevnatý keř pěstovaný pro naběhlé škrobnaté zásobní kořeny, z nichž každý může vážit několik kilo. Snáší chudé kyselé půdy a dlouhá sucha, která by kukuřici rovnou zabila. Syrové kořeny obsahují kyanogenní látky a vždycky se musí zpracovat.",
+      "habitat": "Nížinné tropy celého světa, od jižního okraje Amazonské pánve, kde vznikl, po západní Afriku a jihovýchodní Asii, často na půdách příliš vyčerpaných pro obilniny.",
+      "curiosity": "Genetické studie vedou každý pěstovaný maniok k divokým populacím v jihozápadní Brazílii a Bolívii; portugalské lodě ho v 16. století přivezly do Afriky a největším producentem na Zemi je dnes Nigérie."
+    },
+    "arabicaCoffee": {
+      "overview": "Stálezelený keř nebo malý strom, jehož zrna jsou semena červeného plodu podobného třešni, obvykle dvě v jednom plodu. Dodává zhruba 60 % světové kávy, většinu zbytku tvoří robusta. Nejvíc jí pěstuje Brazílie.",
+      "habitat": "Chladné mlhavé tropické vysočiny, typicky mezi 1 000 a 2 000 m; divoké populace dodnes rostou ve stinném podrostu horských lesů jihozápadní Etiopie.",
+      "curiosity": "Kávovník arabský vznikl v Etiopii křížením robusty a druhu Coffea eugenioides se zdvojením chromozomů; velmi malý počet rostlin převezených do Jemenu a odtud do evropských skleníků založil velkou část dnešní produkce."
+    },
+    "soybean": {
+      "overview": "Keřovitá jednoletá luštěnina s chlupatými lusky po dvou až čtyřech semenech. Ta jsou nezvykle bohatá na bílkoviny i olej, a proto sója ovládá světový obchod s olejninami. Rostlina si sama váže dusík v hlízkách na kořenech.",
+      "habitat": "Teplá mírná a subtropická pole, především brazilské cerrado, argentinská pampa a americký Středozápad; divoký předek je tenká popínavá liána z východoasijských břehů řek a mezí.",
+      "curiosity": "Divoká Glycine soja je útlá ovíjivá liána s malými tvrdými černými semeny, zdomácněná v Číně zhruba před 5 000 lety. Brazílie do 60. let sóju téměř nepěstovala a dnes je největším producentem světa."
+    },
+    "sugarcane": {
+      "overview": "Obrovská tropická tráva, jejíž stébla dorůstají tří až pěti metrů a ukládají sacharózu ve stonku, ne v semeni. Komerční třtina je kříženec s odolnější divokou Saccharum spontaneum a sází se z řízků stonku, nikdy ze semen. Dodává většinu světového cukru.",
+      "habitat": "Horké nížiny s vydatnými dešti nebo závlahou, zhruba mezi 30° severní a 30° jižní šířky; zdaleka největší plochy mají Brazílie a Indie.",
+      "curiosity": "Zdomácněla na Nové Guineji asi před 8 000 lety, rozšířila se na západ přes Indii, kde se cukr poprvé krystalizoval, a odtud na atlantické plantáže; Brazílie dnes zhruba polovinu sklizně mění na etanolové palivo."
+    },
+    "breadWheat": {
+      "overview": "Jednoletá tráva mírného pásma, zaseta bývá na větší ploše než skoro jakákoli jiná plodina. Jeden klas nese zhruba 30 až 50 zrn, jejichž lepkové bílkoviny umožňují těstu zadržet plyn a vykynout. Má šest sad chromozomů zděděných po třech různých travách.",
+      "habitat": "Pole mírného a středomořského pásma na všech kontinentech kromě Antarktidy, od kanadských prérií po Paňdžáb; divoká mamutka, předek z matčiny strany, dodnes roste na svazích od Úrodného půlměsíce po Kaspické moře.",
+      "curiosity": "Zhruba před 8 000 až 9 000 lety se pěstovaná pšenice dvouzrnka zkřížila s plevelnou mamutkou Aegilops tauschii — nenápadnou rostlinou s křehkými, rozpadavými klasy, jejíž genom dodává chlebovému těstu tažnost."
+    },
+    "asianRice": {
+      "overview": "Jednoletá tráva, která přežívá ve stojaté vodě díky vzdušným kanálkům procházejícím stébly a kořeny. Je přímou základní potravinou zhruba poloviny lidstva. Zrna se loupou z pluch a otrubové vrstvy obalující škrobnatý endosperm.",
+      "habitat": "Zaplavovaná políčka i pole napájená deštěm napříč monzunovou Asií, dále západní Afrika, údolí Mississippi a jižní Brazílie; divoká Oryza rufipogon dodnes roste v asijských bažinách a příkopech.",
+      "curiosity": "Asijská rýže byla zdomácněna z Oryza rufipogon v čínském povodí Jang-c'-ťiang asi před 9 000 lety, zatímco africká rýže, Oryza glaberrima, vznikla nezávisle ve vnitrozemské deltě Nigeru asi před 3 000 lety a později přeplula Atlantik se zotročenými západoafrickými rolníky."
+    },
+    "potato": {
+      "overview": "Zástupce lilkovitých pěstovaný pro hlízy, což jsou naběhlé podzemní stonky, ne kořeny. Nad zemí je to olistěná rostlina s bílými až fialovými květy a malými zelenými plody, které vypadají jako maličká rajčata a jsou jedovaté. Zelenající nebo klíčící hlízy hromadí tytéž hořké glykoalkaloidy.",
+      "habitat": "Chladné oblasti celého světa, od andského altiplana nad 3 500 m po pole v Číně a Indii; nejvíc brambor dnes sklidí Čína.",
+      "curiosity": "Zdomácněný v jižním Peru asi před 8 000 lety z hořkých divokých druhů se brambor dostal v 16. století do Evropy jen s nepatrným genetickým vzorkem, zatímco andští rolníci dodnes v jediném regionu udržují tisíce pojmenovaných odrůd."
+    },
+    "banana": {
+      "overview": "Není to strom, ale obrovská bylina — kmen je těsný sloupec svinutých listových pochev a rostlina po jediném plození odumře. Většina vyvážených banánů je jediná sterilní triploidní odrůda Cavendish, množená z odnoží a tkáňovými kulturami.",
+      "habitat": "Vlhké tropické nížiny celého světa; nejvíc jich pěstují Indie a Čína, nejvíc vyváží Ekvádor a divoké semenné druhy rodu Musa dodnes rostou v lesích jihovýchodní Asie a Nové Guineje.",
+      "curiosity": "Vykopávky v bažině Kuk na vysočině Nové Guineje kladou pěstování banánů zhruba 7 000 let zpátky. Protože každá rostlina Cavendish je geneticky totožná, ohrožuje celou exportní produkci půdní houba Fusarium Tropical Race 4 — stejně jako dřívější kmen v minulém století vyhladil odrůdu Gros Michel."
+    },
+    "sweetOrange": {
+      "overview": "Stálezelený strom s vonnými bílými květy a plody, jejichž šťáva pochází z chlupů přeměněných ve váčky plné tekutiny. Skoro každý komerční strom je naroubovaný klon na podnoži vybrané kvůli odolnosti vůči chorobám, ne kvůli plodům.",
+      "habitat": "Subtropické pásy s mírnou zimou — jihovýchodní Brazílie, Florida, Středomoří a jižní Čína; rodičovské druhy pocházejí z lesů jižní a jihovýchodní Asie.",
+      "curiosity": "Kříženec vznikl v jižní Číně, s obchodníky putoval na západ a v 16. století dorazil na portugalských lodích do Brazílie, která dnes vypěstuje víc pomerančů než kdokoli jiný. Semena citrusů často obsahují další zárodky naklonované z mateřského stromu, takže semenáč může být přesnou kopií rodiče."
+    }
+  },
+  "soundDetails": {
+    "tawnyOwl": {
+      "overview": "Zavalitá sova s kulatou hlavou, asi 40 cm dlouhá, hnědě mramorovaná a proti kůře prakticky neviditelná. Loví sluchem v téměř úplné tmě a den tráví přitisklá ke kmeni nebo zaklíněná v dutině. V celém svém areálu patří k nejčastěji slyšeným a nejméně viděným ptákům.",
+      "habitat": "Staré listnaté lesy, parky, hřbitovy a starší městské čtvrti s velkými stromy, od Británie a Pyrenejského poloostrova přes Evropu po Írán a západní Sibiř, plus severní Afrika; v Irsku chybí.",
+      "curiosity": "Teritoriální houkání vrcholí na podzim a znovu koncem zimy, kdy ho holé stromy pustí několik set metrů daleko, a pár může držet stejný kus lesa deset let."
+    },
+    "commonCuckoo": {
+      "overview": "Štíhlý dlouhoocasý šedý pták velikosti krahujce, jehož příčně pruhovaná spodina a nízký přímý let se krahujci podobají natolik, že to zahání pěvce z hnízd. Samice snášejí vejce do hnízd jiných druhů a odlétají; zaznamenáno bylo přes 100 hostitelských druhů. Většina lidí zná ten hlas roky, než ptáka vědomě uvidí.",
+      "habitat": "Okraje lesů, rákosiny, vřesoviště a otevřená zemědělská krajina Evropy a severní Asie, zimuje v subsaharské Africe a jižní Asii.",
+      "curiosity": "Dvoutónové volání je zhruba klesající malá tercie a nese se otevřenou krajinou kilometr i dál; pokusy s přehráváním ukazují, že hostitelští ptáci reagují na bublavý klokot samice podobně jako na lovícího krahujce."
+    },
+    "commonNightingale": {
+      "overview": "Nenápadně hnědý pěvec sotva větší než červenka, který se skoro nikdy neukáže a zpívá z hloubi hustého křoví. Repertoár jediného samce čítá zhruba 180–260 různých typů strof, podaných jako prudké hvizdy, hluboké skřeky a dlouhá crescenda. Hnízdí v Evropě, severní Africe a západní Asii, zimuje v Africe.",
+      "habitat": "Houštiny, výmladkové porosty a křovinaté okraje lesů s hustým krytem těsně nad zemí, často u vody nebo podél zarostlých mezí.",
+      "curiosity": "Nahrávky z hlučných berlínských ulic zachytily samce zpívající ve špičkách nad 95 decibelů měřeno z metru — hlasitost zvyšují, aby přehlušili dopravu."
+    },
+    "europeanTreeFrog": {
+      "overview": "Malá hladká zářivě zelená žabka s tmavým pruhem podél každého boku a s lepkavými terčíky na prstech na šplhání. Samci se na jaře scházejí u tůní a volají v překrývajících se řadách, hlavně po setmění. Mimo období rozmnožování je to šplhavec, kterého u země skoro nepotkáte.",
+      "habitat": "Osluněné tůně, příkopy a zaplavené louky lemované rákosím a ostružiním ve střední a jihovýchodní Evropě; mezi sezonami sedí metry vysoko v keřích a živých plotech.",
+      "curiosity": "Hlas má vrchol kolem 2,5 kHz a samec ho za jednu noc zopakuje i tisíckrát — volání patří k energeticky nejnáročnějším činnostem naměřeným u obratlovců a samci během sezony hubnou."
+    },
+    "americanBullfrog": {
+      "overview": "Největší žába Severní Ameriky, od nozder po kloaku až 20 cm, olivově zelená a těžkého těla. Samci drží přes léto teritoria u břehu a volají ve dne i v noci. Široce vysazený jinde je dnes zavedeným invazním druhem na několika kontinentech.",
+      "habitat": "Trvalá teplá voda — okraje jezer, pomalé řeky, přehrady a rybníčky — původem z východu Severní Ameriky, zavedený v Brazílii, Japonsku, Číně a v částech jižní Evropy.",
+      "curiosity": "Výška hlasu odpovídá velikosti těla, takže nejhlubší hlas ve sboru obvykle patří největšímu samci; samce navíc poznáte podle bubínku mnohem širšího, než je oko."
+    },
+    "cicadaOrni": {
+      "overview": "Šedohnědá středomořská cikáda asi 3 cm dlouhá s čirými křídly posetými tmavými skvrnami, kterou je mnohem snazší určit po hlase než po vzhledu. Samci vydávají opakované suché zip-zip-zip přerušované pravidelnými pauzami, zpívají z kmenů a větví. Samice nezpívají vůbec.",
+      "habitat": "Borovice, olivovníky, platany a sady kolem Středozemního moře, od Pyrenejského poloostrova a severní Afriky přes Itálii a Řecko po Turecko.",
+      "curiosity": "Zvuk vzniká v páru žebrovaných destiček zvaných tymbály, které se několik set krát za sekundu prohýbají jako víčko od plechovky, a zadeček za nimi je z velké části dutý — zpívající samec je hlavně zesilovač."
+    },
+    "houseCricket": {
+      "overview": "Světle slámově hnědý cvrček asi 2 cm dlouhý, původem z jihozápadní Asie, dnes žijící po celém světě všude, kde budovy zůstávají teplé. Cvrkají samci; samice, poznatelné podle dlouhého jehlovitého kladélka, mlčí. Patří k nejvíc chovanému hmyzu na Zemi.",
+      "habitat": "Teplé lidské prostory — kotelny, pekárny, skládky, vytápěné kůlny a chovné farmy; venku v mírném pásu přežije teplé měsíce a v tropech celý rok.",
+      "curiosity": "Uši má na předních nohou, kousek pod kolenem, a rychlost cvrkání roste s teplotou — tatáž místnost zní v horké noci rychleji než v chladné."
+    },
+    "greatGreenBushCricket": {
+      "overview": "Trávově zelená kobylka dlouhá až 7 cm s tykadly delšími, než je sama — velký hmyz, který přesto v houští skoro nejde najít. Samci zpívají z vrcholků keřů a vysoké vegetace, často po většinu noci. Vyskytuje se v Evropě, severní Africe a ve střední Asii.",
+      "habitat": "Vysoká hrubá vegetace — ostružiní, meze, křoviny, krajnice a okraje vinic — obvykle zpívá metr až dva nad zemí.",
+      "curiosity": "Velká část energie zpěvu leží nad 20 kHz, přesně na hranici lidského sluchu, takže děti často slyší samce zřetelně, zatímco dospělí vedle nich ho sotva zachytí."
+    },
+    "blackHowlerMonkey": {
+      "overview": "Jihoamerická opice s nezvykle nápadným rozdílem mezi pohlavími: dospělí samci jsou černí, samice a mláďata plavě žlutá. Skupiny řvou za úsvitu a za soumraku, aby daly vědět, kde jsou, což drží sousední tlupy od sebe bez přímého střetu. Tělo měří kolem 60 cm plus chápavý ocas podobné délky.",
+      "habitat": "Galeriové lesy, sezonně zaplavované lesy a lesíky v Brazílii, Bolívii, Paraguayi a severní Argentině, většinou vysoko v korunách.",
+      "curiosity": "Řev zesiluje zvětšená vydutá jazylka v hrdle a srovnávací studie z roku 2015 zjistila, že druhy vřešťanů s největší jazylkou mají nejmenší varlata."
+    },
+    "redFox": {
+      "overview": "Nejrozšířenější divoká šelma na Zemi, váží kolem 5–7 kg a všude, kde je hodně lidí, je převážně noční. Popsáno bylo asi dvacet různých typů hlasů, od úsečného kontaktního štěkotu po dlouhý jekot. Ve městech ji lidé slyší mnohem častěji, než ji vidí.",
+      "habitat": "Skoro všude: arktická tundra, pole, okraje pouští, lesy i husté centrum města, kde si nory hloubí pod kůlnami, podél železničních náspů a v zahradách.",
+      "curiosity": "Jekot vrcholí v prosinci a lednu, kdy se lišky páří, a než se na jaře narodí mláďata, většinou ustane — proto ten zvuk působí, jako by přicházel a mizel podle kalendáře."
+    }
+  }
+}

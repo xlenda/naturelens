@@ -1,0 +1,492 @@
+{
+  "aloeVera": {
+    "overview": "L'aloe vera è una pianta succulenta originaria della Penisola Arabica, apprezzata per il gel trasparente e mucillaginoso contenuto nelle sue foglie spesse e spinose. Per migliaia di anni, nelle culture egizia, greca e in altre tradizioni mediterranee, il gel è stato applicato su ustioni, tagli e irritazioni della pelle, mentre il lattice giallo amaro presente sotto la scorza è stato utilizzato come lassativo tradizionale.",
+    "preparation": "Il gel fresco viene tagliato direttamente dalla foglia e applicato localmente sulla pelle; il lattice giallo viene talvolta assunto per via interna, in piccole quantità diluite, come lassativo tradizionale.",
+    "benefits": "Tradizionalmente usata per lenire scottature solari, piccole ustioni e irritazioni cutanee, e occasionalmente assunta per via interna in piccole quantità per alleviare la stitichezza occasionale."
+  },
+  "lavender": {
+    "overview": "La lavanda è un arbusto fiorito e profumato originario del Mediterraneo, coltivato per le sue spighe di fiori viola e per l'olio essenziale aromatico. La tradizione erboristica europea utilizza da tempo i fiori essiccati e l'olio per calmare i nervi, alleviare la tensione e favorire un sonno ristoratore, e i rimedi popolari applicano anche l'olio diluito sulle tempie contro il mal di testa.",
+    "preparation": "I fiori essiccati si lasciano in infusione come tè per 5-10 minuti, oppure l'olio essenziale si diluisce e si applica sulle tempie o si inala per favorire il rilassamento.",
+    "benefits": "Tradizionalmente usata per alleviare stress e ansia, favorire un sonno ristoratore e lenire il mal di testa da tensione."
+  },
+  "peppermint": {
+    "overview": "La menta piperita è un ibrido di menta originario dell'Europa, apprezzato per le foglie ricche di mentolo e per l'aroma rinfrescante. La medicina popolare europea e mediorientale utilizza da tempo il tè di menta piperita per calmare lo stomaco irritato e la cattiva digestione, mentre l'olio di menta piperita diluito viene massaggiato sulle tempie per alleviare il mal di testa da tensione.",
+    "preparation": "Le foglie fresche o essiccate si lasciano in infusione come tè per 5-10 minuti dopo i pasti; l'olio di menta piperita diluito si massaggia sulle tempie per alleviare il mal di testa.",
+    "benefits": "Tradizionalmente usata per alleviare la cattiva digestione, il gonfiore e lo stomaco irritato, e per lenire il mal di testa da tensione se applicata localmente."
+  },
+  "germanChamomile": {
+    "overview": "La camomilla tedesca è una pianta erbacea fiorita simile a una margherita, originaria d'Europa e dell'Asia occidentale, i cui piccoli fiori bianchi e gialli vengono essiccati per il tè fin dall'antichità. La medicina popolare tradizionale europea utilizza il tè di camomilla come delicato calmante nervino per placare l'irrequietezza e lo stress, e come carminativo per lenire i disturbi digestivi.",
+    "preparation": "I fiori essiccati si lasciano in infusione come tè per 5-10 minuti, spesso assunti prima di coricarsi o dopo i pasti.",
+    "benefits": "Tradizionalmente usata per calmare i nervi e lo stress lieve, favorire il rilassamento prima del sonno e alleviare la cattiva digestione e il disagio di stomaco."
+  },
+  "purpleConeflower": {
+    "overview": "L'echinacea purpurea è un fiore selvatico delle praterie originario del Nord America centrale, le cui radici, foglie e fiori venivano utilizzati dai popoli indigeni delle Pianure per curare infezioni e ferite. Divenne un caposaldo della medicina popolare americana tra il XIX e il XX secolo, come rimedio da assumere ai primi sintomi di raffreddore.",
+    "preparation": "La radice essiccata o le parti aeree si preparano come tè o tintura; la tintura viene generalmente assunta in 20-30 gocce diluite in acqua, più volte al giorno, ai primi segni di malessere.",
+    "benefits": "Tradizionalmente usata per sostenere il sistema immunitario e ridurre la durata e la gravità di raffreddori e infezioni delle vie respiratorie superiori."
+  },
+  "rosemary": {
+    "overview": "Il rosmarino è un arbusto sempreverde dalle foglie aghiformi, originario del Mediterraneo, da sempre associato alla memoria e alla lucidità mentale nella tradizione greca e romana antica. Le sue foglie aromatiche sono state usate anche come amaro digestivo e infuse in tè per alleviare il mal di testa e stimolare la circolazione e la vigilanza.",
+    "preparation": "Le foglie fresche o essiccate si lasciano in infusione come tè per 5-10 minuti, oppure l'olio essenziale si diluisce e si massaggia sulle tempie o sul cuoio capelluto.",
+    "benefits": "Tradizionalmente usato per rafforzare la concentrazione mentale e l'energia e per alleviare il mal di testa, ed assunto come digestivo dopo i pasti."
+  },
+  "holyBasil": {
+    "overview": "Il basilico sacro, o tulsi, è un'erba aromatica sacra originaria del subcontinente indiano, centrale nella medicina ayurvedica e nella pratica religiosa induista. Le sue foglie vengono infuse da sempre come tè adattogeno per aiutare il corpo a fronteggiare lo stress, e sono tradizionalmente usate per alleviare tosse e congestione respiratoria.",
+    "preparation": "Le foglie fresche o essiccate si lasciano in infusione come tè per 5-10 minuti, spesso assunto quotidianamente.",
+    "benefits": "Tradizionalmente usato come adattogeno per aiutare il corpo a gestire lo stress, sostenere la resilienza immunitaria e alleviare tosse e congestione respiratoria."
+  },
+  "turmeric": {
+    "overview": "La curcuma è un rizoma di colore arancio brillante appartenente alla famiglia dello zenzero, originario dell'Asia meridionale, che da millenni colora e insaporisce la medicina ayurvedica e del sud-est asiatico. Il suo composto attivo, la curcumina, è alla base del suo uso tradizionale per calmare l'infiammazione, favorire la digestione e accelerare la guarigione delle ferite.",
+    "preparation": "La radice essiccata e ridotta in polvere si fa sobbollire in acqua o latte (come \"latte d'oro\") oppure si mescola con acqua fino a formare una pasta per l'applicazione topica su ferite e pelle.",
+    "benefits": "Tradizionalmente usata per alleviare dolori articolari e infiammazione, sostenere la digestione, e applicata localmente per favorire la guarigione delle ferite e la salute della pelle."
+  },
+  "ginger": {
+    "overview": "Lo zenzero è un rizoma nodoso e pungente originario del sud-est asiatico, usato da migliaia di anni nella medicina cinese e ayurvedica come rimedio digestivo riscaldante. Fresco o essiccato, viene tradizionalmente masticato, infuso o aggiunto al cibo per calmare la nausea, alleviare la cattiva digestione e lenire piccoli dolori.",
+    "preparation": "La radice fresca si taglia a fette e si lascia in infusione come tè per circa 10 minuti, oppure un piccolo pezzo viene masticato direttamente per calmare lo stomaco.",
+    "benefits": "Tradizionalmente usato per alleviare nausea, mal d'auto e cattiva digestione, e per lenire piccoli dolori muscolari e articolari."
+  },
+  "ginseng": {
+    "overview": "Il ginseng è una radice forestale a crescita lenta, originaria dell'Asia orientale, elemento centrale della Medicina Tradizionale Cinese da oltre duemila anni come tonico ricostituente per eccellenza. È tradizionalmente assunto per ricostruire energia e vitalità dopo malattie o affaticamento, e per aiutare il corpo ad adattarsi allo stress.",
+    "preparation": "La radice essiccata si fa sobbollire come decotto per 20-30 minuti, oppure si assume come tintura standardizzata o estratto in polvere.",
+    "benefits": "Tradizionalmente usato per aumentare energia e resistenza, favorire il recupero dalla stanchezza e aiutare il corpo ad affrontare lo stress fisico e mentale."
+  },
+  "ashwagandha": {
+    "overview": "L'ashwagandha è un piccolo arbusto dalle bacche rossastre, originario dell'India, del Nord Africa e del Medio Oriente, la cui radice è un pilastro della medicina ayurvedica da millenni. È tradizionalmente classificata come rasayana, un tonico ringiovanente, assunta per alleviare lo stress, ricostruire forza e resistenza fisica e favorire un sonno riposante.",
+    "preparation": "La polvere di radice essiccata si mescola in latte o acqua tiepidi, tipicamente circa 1/4-1/2 cucchiaino da tè assunto una o due volte al giorno.",
+    "benefits": "Tradizionalmente usata per alleviare stress e ansia, ricostruire forza e resistenza, e favorire un sonno riposante."
+  },
+  "elderberry": {
+    "overview": "Il sambuco nero è un arbusto dalle bacche scure originario d'Europa, i cui frutti e fiori sono utilizzati nella medicina popolare europea da secoli. Le bacche vengono tradizionalmente cotte in sciroppi e assunte ai primi sintomi di raffreddore o influenza per sostenere il sistema immunitario e alleviare la congestione.",
+    "preparation": "Le bacche mature si cuociono con acqua e miele fino a ottenere uno sciroppo, tradizionalmente assunto a cucchiaiate ai primi sintomi di raffreddore o influenza.",
+    "benefits": "Tradizionalmente usato per ridurre la durata e la gravità di raffreddori e influenza e per alleviare la congestione respiratoria."
+  },
+  "valerian": {
+    "overview": "La valeriana è una pianta perenne fiorita originaria d'Europa e Asia, la cui radice dall'odore pungente viene essiccata e usata fin dall'epoca greca e romana come aiuto per il sonno. Gli erboristi europei si affidano da tempo a questa pianta per calmare l'irrequietezza e la tensione nervosa prima di coricarsi.",
+    "preparation": "La radice essiccata si lascia in infusione come tè per 10-15 minuti oppure si assume come tintura, generalmente 20-30 gocce in acqua poco prima di andare a dormire.",
+    "benefits": "Tradizionalmente usata per alleviare irrequietezza e ansia lieve e per favorire un addormentamento più facile."
+  },
+  "witchHazel": {
+    "overview": "L'amamelide è un arbusto fiorito originario del Nord America orientale, la cui corteccia e le cui foglie venivano distillate dalle tribù dei nativi americani in una lozione astringente. I coloni europei adottarono questa pratica, e da allora l'estratto di amamelide viene tamponato su lividi, gonfiori e pelle irritata.",
+    "preparation": "Corteccia e foglie vengono distillate o decotte in un estratto liquido, che si applica localmente sulla pelle con un batuffolo di cotone.",
+    "benefits": "Tradizionalmente usata come astringente topico per ridurre piccoli gonfiori cutanei, lividi e irritazioni."
+  },
+  "goldenseal": {
+    "overview": "L'idraste è una pianta di sottobosco a crescita bassa, originaria del Nord America orientale, la cui radice giallo brillante veniva usata dai Cherokee e da altri popoli indigeni come tonico amaro. È tradizionalmente applicata su piaghe e infezioni e assunta per via interna per calmare i disturbi digestivi.",
+    "preparation": "La radice essiccata si prepara come decotto o tintura, oppure la polvere si applica direttamente sulle piaghe cutanee; viene assunta per via interna solo in piccole dosi per il suo sapore intensamente amaro.",
+    "benefits": "Tradizionalmente usata per sostenere la salute digestiva e la resistenza alle infezioni, e applicata localmente per lenire piccole piaghe e irritazioni della pelle."
+  },
+  "devilsClaw": {
+    "overview": "L'artiglio del diavolo è una pianta strisciante originaria del deserto del Kalahari e delle savane dell'Africa meridionale, il cui nome deriva dai frutti uncinati che si attaccano agli animali di passaggio. La sua radice tuberosa è usata da tempo dai guaritori tradizionali della regione per alleviare i dolori articolari e la rigidità dell'artrite.",
+    "preparation": "La radice essiccata si prepara come decotto, lasciato in infusione per 10-15 minuti, oppure si assume come tintura o capsula standardizzata.",
+    "benefits": "Tradizionalmente usato per alleviare dolori articolari, rigidità e disagio associati all'artrite."
+  },
+  "africanWormwood": {
+    "overview": "L'assenzio africano è un arbusto amaro e aromatico originario dell'Africa meridionale e orientale, considerato uno dei rimedi tradizionali più diffusi della regione. Le sue foglie vengono tradizionalmente fatte evaporare, infuse o fumate per alleviare tosse, congestione e disturbi respiratori.",
+    "preparation": "Le foglie fresche o essiccate si lasciano in infusione come tè, oppure si inala il vapore delle foglie bollite per alleviare la congestione nasale e toracica.",
+    "benefits": "Tradizionalmente usato per alleviare tosse, raffreddore e congestione, e per calmare i disturbi digestivi."
+  },
+  "yerbaMate": {
+    "overview": "La yerba mate è una specie di agrifoglio sempreverde originaria delle foreste subtropicali del Sud America, le cui foglie il popolo Guaraní infonde da secoli come bevanda stimolante quotidiana. Tradizionalmente condiviso da una zucca comune, il mate è apprezzato da sempre sia come bevanda energizzante sia come aiuto digestivo.",
+    "preparation": "Le foglie essiccate e tagliate si infondono in acqua calda in una zucca (mate) e si sorseggiano con una cannuccia metallica (bombilla), spesso riempita nuovamente durante tutta la giornata.",
+    "benefits": "Tradizionalmente usato per aumentare energia e lucidità mentale e per sostenere una digestione sana dopo i pasti."
+  },
+  "gotuKola": {
+    "overview": "La centella asiatica è una piccola erba strisciante originaria delle zone umide dell'Asia, venerata nella medicina ayurvedica e tradizionale del sud-est asiatico come tonico ringiovanente. Le sue foglie sono tradizionalmente usate per accelerare la guarigione di ferite e condizioni della pelle e per calmare la mente sotto stress.",
+    "preparation": "Le foglie fresche o essiccate si lasciano in infusione come tè, si mangiano fresche in insalata, oppure si trasformano in una pasta da applicare localmente su ferite e pelle.",
+    "benefits": "Tradizionalmente usata per sostenere la guarigione delle ferite e la salute della pelle, e per calmare la mente e alleviare lo stress."
+  },
+  "licoriceRoot": {
+    "overview": "La radice di liquirizia è una radice dal sapore dolce originaria del Mediterraneo e di alcune zone dell'Asia, usata da secoli nella medicina cinese, ayurvedica e mediorientale. È tradizionalmente preparata per lenire tosse e mal di gola e per calmare lo stomaco irritato.",
+    "preparation": "La radice essiccata si fa sobbollire come decotto per 10-15 minuti, oppure si mastica direttamente come bastoncino; viene assunta anche come tintura o pastiglia per la gola.",
+    "benefits": "Tradizionalmente usata per lenire tosse e mal di gola, e per alleviare la cattiva digestione e il disagio di stomaco."
+  },
+  "neem": {
+    "overview": "Il neem è un albero sempreverde a crescita rapida originario del subcontinente indiano; le sue foglie, corteccia e olio dei semi, dal sapore intensamente amaro, sono usati da millenni nella medicina ayurvedica e popolare come agente purificante per pelle e sangue. Rimane una delle piante più utilizzate nella medicina domestica tradizionale indiana.",
+    "preparation": "Le foglie fresche o essiccate si fanno bollire in un decotto per lavaggi topici o si assumono come tè amaro, mentre l'olio spremuto a freddo si applica direttamente sulla pelle o sui capelli interessati.",
+    "benefits": "Tradizionalmente usato per trattare eruzioni cutanee come acne, eczema e foruncoli, per detergere le ferite e per contrastare infezioni parassitarie e fungine."
+  },
+  "amla": {
+    "overview": "L'amla, o uva spina indiana, è un piccolo frutto agro-aspro originario dell'India e del sud-est asiatico, celebrato nell'Ayurveda come una delle fonti naturali più ricche di vitamina C. È alla base di molti tonici rasayana (ringiovanenti), i più famosi dei quali sono il Chyawanprash e il Triphala.",
+    "preparation": "Il frutto essiccato viene macinato in polvere (churna) e mescolato con acqua, miele o ghee, oppure il frutto fresco si mangia crudo, si spreme in succo o si conserva come murabba (frutta candita).",
+    "benefits": "Tradizionalmente usata per rafforzare la digestione, stimolare l'immunità e la vitalità, e sostenere capelli, pelle e ringiovanimento generale."
+  },
+  "brahmi": {
+    "overview": "Il brahmi è una piccola erba strisciante che si trova nelle zone umide dell'India e di altre regioni tropicali, classificata nell'Ayurveda come Medhya Rasayana, un ringiovanente nutriente per il cervello. È tradizionalmente somministrato sia a studenti sia ad anziani per sostenere la lucidità mentale e la calma.",
+    "preparation": "Il succo di foglie fresche o la polvere di foglie essiccate si mescolano con acqua o ghee e si assumono quotidianamente, ed è anche preparato come tè leggero alle foglie o infuso in oli medicati per il massaggio del capo.",
+    "benefits": "Tradizionalmente usato per affinare memoria e concentrazione, calmare una mente iperattiva e alleviare lo stress quotidiano, favorendo un sonno riposante."
+  },
+  "guduchi": {
+    "overview": "Il guduchi è un arbusto rampicante originario dell'India e del sud-est asiatico, il cui fusto è centrale nella medicina ayurvedica, dove viene onorato con il nome di Amrita, ovvero \"radice dell'immortalità\". È stato a lungo considerato un rasayana per eccellenza per costruire resilienza contro le malattie.",
+    "preparation": "Il fusto viene tagliato e fatto sobbollire in un decotto amaro (kashaya), oppure essiccato e ridotto in polvere da mescolare con acqua o miele; estratti concentrati del fusto sono assunti anche in compresse.",
+    "benefits": "Tradizionalmente usato per ridurre la febbre, sostenere la risposta immunitaria dell'organismo e favorire la guarigione da malattie prolungate, oltre ad alleviare il disagio digestivo."
+  },
+  "shatavari": {
+    "overview": "Lo shatavari è una varietà rampicante di asparago originaria dell'India, le cui radici tuberose sono considerate il principale tonico ringiovanente ayurvedico per le donne. Il suo nome, che significa \"colei che possiede cento radici\", riflette la sua reputazione tradizionale legata a fertilità e vitalità.",
+    "preparation": "La radice essiccata viene macinata in polvere e fatta sobbollire in latte o acqua, spesso con ghee e dolcificanti, e assunta quotidianamente come tonico.",
+    "benefits": "Tradizionalmente usato per sostenere l'allattamento, equilibrare i cicli ormonali femminili e lenire il tratto digestivo, rafforzando al contempo vitalità e resistenza generale."
+  },
+  "arjuna": {
+    "overview": "L'arjuna è un grande albero deciduo originario del subcontinente indiano, la cui corteccia è un pilastro della cura cardiaca ayurvedica da secoli. I testi classici la descrivono come una pianta hridya, cioè di sostegno al cuore.",
+    "preparation": "La corteccia essiccata si fa sobbollire in un decotto, spesso bollita con il latte, oppure si assume come polvere o compressa standardizzata.",
+    "benefits": "Tradizionalmente usata per rafforzare il muscolo cardiaco, sostenere una circolazione sana e mantenere la vitalità e la resistenza cardiovascolare generale."
+  },
+  "haritaki": {
+    "overview": "L'haritaki è il frutto di un grande albero originario dell'Asia meridionale, venerato nell'Ayurveda come il \"re delle medicine\" e ingrediente principale della classica formula dei tre frutti, il Triphala. È tradizionalmente usato come delicato ringiovanente quotidiano per il sistema digestivo.",
+    "preparation": "Il frutto essiccato viene ridotto in polvere e assunto con acqua tiepida o miele prima di coricarsi, oppure fatto sobbollire in un decotto leggero.",
+    "benefits": "Tradizionalmente usato per favorire un'evacuazione regolare, aiutare la digestione e sostenere la disintossicazione naturale del corpo e la resilienza immunitaria."
+  },
+  "bibhitaki": {
+    "overview": "Il bibhitaki è il frutto di un albero alto originario dell'Asia meridionale e sud-orientale e, insieme ad amla e haritaki, forma uno dei tre frutti del Triphala. I testi ayurvedici tradizionali lo descrivono come un rimedio essiccante, utile a liberare il muco in eccesso.",
+    "preparation": "Il frutto essiccato viene macinato in polvere e assunto con acqua tiepida o miele, oppure combinato con gli altri frutti del Triphala in un decotto serale.",
+    "benefits": "Tradizionalmente usato per eliminare il muco in eccesso e sostenere la salute respiratoria, oltre ad aiutare la digestione e una delicata disintossicazione."
+  },
+  "fenugreek": {
+    "overview": "Il fieno greco è un'erba annuale originaria del Mediterraneo e dell'Asia occidentale, i cui piccoli semi dorati-brunastri insaporiscono e curano le case del sud Asia da generazioni. È uno dei rimedi domestici più comuni per il sostegno digestivo e dell'allattamento.",
+    "preparation": "I semi vengono messi in ammollo in acqua durante la notte e mangiati, oppure si beve l'acqua di ammollo al mattino, oppure i semi vengono tostati a secco e macinati in polvere per il tè o la cucina.",
+    "benefits": "Tradizionalmente usato per alleviare la cattiva digestione e la perdita di appetito, sostenere la produzione di latte nelle madri che allattano e aiutare a mantenere una glicemia equilibrata e un'energia costante."
+  },
+  "longPepper": {
+    "overview": "Il pepe lungo è una liana rampicante originaria dell'India e del sud-est asiatico, il cui frutto allungato è una delle tre spezie pungenti della classica miscela ayurvedica Trikatu. È da tempo apprezzato per accendere il fuoco digestivo e liberare le vie respiratorie.",
+    "preparation": "Il frutto essiccato viene macinato in polvere e assunto con miele o acqua tiepida, oppure combinato con pepe nero e zenzero nella formula Trikatu.",
+    "benefits": "Tradizionalmente usato per stimolare digestione e appetito, e per sciogliere e liberare la congestione in caso di tosse, raffreddore e disturbi respiratori."
+  },
+  "sandalwood": {
+    "overview": "Il sandalo è un albero dal legno di cuore profumato originario dell'Asia meridionale, la cui pasta rinfrescante e il cui olio sono utilizzati sia nell'Ayurveda sia nei rituali religiosi per calmare il corpo e placare la mente. Il suo profumo è strettamente legato alla pratica tradizionale della meditazione.",
+    "preparation": "Il legno di cuore viene macinato con acqua fino a formare una pasta fine, applicata direttamente sulla pelle o sulla fronte, oppure l'olio essenziale viene diffuso o diluito per uso topico.",
+    "benefits": "Tradizionalmente usato per rinfrescare la pelle infiammata o irritata, alleviare la febbre e calmare la mente durante la meditazione e il riposo."
+  },
+  "indianSarsaparilla": {
+    "overview": "La salsapariglia indiana è una liana dalla radice dolce originaria dell'India, usata da tempo nelle classiche formule ayurvediche come purificante rinfrescante del sangue. È distinta dalla salsapariglia tropicale americana ma condivide una reputazione tradizionale simile.",
+    "preparation": "La radice essiccata si fa sobbollire in un decotto oppure si lascia in infusione in acqua durante la notte, ed è anche ridotta in polvere da mescolare nei tonici.",
+    "benefits": "Tradizionalmente usata per purificare il sangue e favorire una pelle più chiara, e per alleviare dolori articolari e infiammazione."
+  },
+  "bael": {
+    "overview": "Il bael è un albero da frutto originario del subcontinente indiano, sacro nella tradizione induista e da sempre considerato un rimedio digestivo. Il frutto acerbo, in particolare, è un trattamento domestico fondamentale per i disturbi intestinali.",
+    "preparation": "La polpa del frutto acerbo viene essiccata e ridotta in polvere, oppure la polpa fresca si mescola con acqua e si assume come bevanda leggera.",
+    "benefits": "Tradizionalmente usato per lenire diarrea cronica e dissenteria, e per sostenere la salute generale del tratto digestivo."
+  },
+  "guggul": {
+    "overview": "Il guggul è una resina aromatica prelevata da un piccolo albero spinoso originario delle regioni aride dell'India, alla base delle formule Guggulu dell'Ayurveda. È usato da secoli come rimedio purificante e riscaldante per le articolazioni e il metabolismo.",
+    "preparation": "La resina purificata viene assunta come estratto o compressa standardizzata, oppure tradizionalmente fatta sobbollire con decotti erboristici per preparare le classiche formulazioni Guggulu.",
+    "benefits": "Tradizionalmente usato per sostenere livelli sani di colesterolo e gestire infiammazione e rigidità articolare."
+  },
+  "manjistha": {
+    "overview": "Il manjistha è un'erba rampicante originaria dell'India e della regione himalayana, la cui radice rossastra ha servito a lungo nell'Ayurveda come principale purificante del sangue. È un ingrediente comune nelle formule mirate a una pelle chiara e sana.",
+    "preparation": "La radice essiccata viene ridotta in polvere e assunta con acqua o miele, oppure fatta sobbollire in un decotto per uso interno e lavaggi cutanei.",
+    "benefits": "Tradizionalmente usata per purificare il sangue favorendo una pelle chiara e la guarigione delle ferite, e per sostenere il drenaggio linfatico."
+  },
+  "jatamansi": {
+    "overview": "Il jatamansi è una pianta fiorita e profumata originaria delle alte quote himalayane, il cui rizoma è da tempo apprezzato nell'Ayurveda come sedativo nervino. Condivide la sua fama aromatica con il lontano parente nardo, citato nei testi antichi.",
+    "preparation": "Il rizoma essiccato viene ridotto in polvere e assunto con latte o acqua tiepidi, oppure infuso in olio per un massaggio calmante della testa e del cuoio capelluto prima di coricarsi.",
+    "benefits": "Tradizionalmente usato per calmare il sistema nervoso, alleviare stress e ansia, e favorire un sonno riposante."
+  },
+  "astragalus": {
+    "overview": "L'astragalo, noto come huang qi, è una pianta fiorita originaria della Cina settentrionale e della Mongolia, la cui radice essiccata è un tonico di qi fondamentale nella Medicina Tradizionale Cinese. È tradizionalmente usato per fortificare l'energia protettiva del corpo, il \"wei qi\", contro le malattie.",
+    "preparation": "La radice essiccata e tagliata a fette si fa sobbollire in un decotto, spesso insieme ad altre erbe toniche, oppure si assume come estratto in polvere.",
+    "benefits": "Tradizionalmente usato per sostenere la resilienza immunitaria, costruire resistenza ed energia, e favorire la guarigione delle ferite."
+  },
+  "reishiMushroom": {
+    "overview": "Il reishi, o ling zhi, è un fungo legnoso a mensola che cresce su legni duri in decomposizione nell'Asia orientale, venerato dagli erboristi taoisti come il \"fungo dell'immortalità\". È tradizionalmente usato per calmare lo spirito, o shen, e sostenere la longevità.",
+    "preparation": "Il fungo essiccato e legnoso si fa sobbollire a lungo in un decotto o tè, oppure si assume come estratto in polvere o tintura.",
+    "benefits": "Tradizionalmente usato per alleviare insonnia e irrequietezza, ridurre lo stress e sostenere il sistema immunitario e la vitalità generale."
+  },
+  "dongQuai": {
+    "overview": "Il dong quai, o dang gui, è una radice aromatica originaria della Cina, da tempo chiamata il \"ginseng femminile\" per il suo ruolo centrale nel nutrire il sangue e sostenere la salute riproduttiva femminile nella Medicina Tradizionale Cinese. È usato da oltre duemila anni nelle formule classiche.",
+    "preparation": "La radice essiccata viene tagliata a fette e fatta sobbollire in un decotto, spesso combinata con altre erbe nutrienti per il sangue, oppure assunta come tintura o estratto in polvere.",
+    "benefits": "Tradizionalmente usato per nutrire e rivitalizzare il sangue, alleviare crampi e irregolarità mestruali, e sostenere la vitalità generale."
+  },
+  "gojiBerry": {
+    "overview": "Le bacche di goji, o gou qi zi, sono i piccoli frutti rossi di un arbusto originario della Cina, tradizionalmente mangiate per nutrire lo yin del fegato e del rene nella Medicina Tradizionale Cinese. Sono da tempo associate al sostegno della vista e al rallentamento degli effetti dell'invecchiamento.",
+    "preparation": "Le bacche essiccate si mangiano come snack, si lasciano in infusione in acqua calda o tè, oppure si fanno sobbollire in zuppe e brodi tonici.",
+    "benefits": "Tradizionalmente usate per sostenere la funzione immunitaria, aumentare energia e vitalità, e nutrire la salute degli occhi e una vista chiara."
+  },
+  "schisandra": {
+    "overview": "La Schisandra chinensis è una liana legnosa originaria della Cina settentrionale e dell'Estremo Oriente russo, le cui bacche rosse mature (wu wei zi) sono apprezzate nell'erboristeria cinese per racchiudere tutti e cinque i sapori — aspro, amaro, dolce, pungente e salato — in un unico frutto. Tradizionalmente classificata come tonico astringente, è usata da tempo per consolidare l'energia di polmoni e reni, stabilizzare la mente e sostenere il fegato.",
+    "preparation": "Le bacche essiccate si fanno sobbollire in acqua per preparare un decotto, spesso combinate con altre erbe toniche, oppure si macinano in polvere da assumere con acqua tiepida.",
+    "benefits": "Tradizionalmente usata per alleviare tosse cronica e affanno, calmare l'ansia e favorire un sonno riposante, e aiutare il corpo ad adattarsi allo stress."
+  },
+  "chineseSkullcap": {
+    "overview": "La Scutellaria baicalensis è un'erba perenne originaria della Cina e delle regioni limitrofe, la cui radice essiccata (huang qin) è un caposaldo della medicina cinese da oltre duemila anni. È classificata come erba che elimina il calore e asciuga l'umidità, usata nei formulari classici per malattie febbrili e infezioni.",
+    "preparation": "La radice essiccata, spesso saltata in padella, viene tagliata a fette e fatta sobbollire per 20-30 minuti come parte di un decotto a base di più erbe.",
+    "benefits": "Tradizionalmente usata per ridurre la febbre, calmare la tosse con catarro denso, e alleviare diarrea o dissenteria associate a umidità-calore intestinale."
+  },
+  "rehmannia": {
+    "overview": "La Rehmannia glutinosa è una pianta fiorita originaria della Cina, la cui radice (di huang) viene usata sia cruda ed essiccata sia, più tradizionalmente, ripetutamente cotta a vapore nel vino fino a diventare \"shu di huang\". La forma cotta è considerata uno dei principali tonici dello yin renale e del sangue nella medicina cinese.",
+    "preparation": "La radice cotta al vapore e annerita si fa sobbollire in un decotto insieme a erbe toniche complementari, oppure si riduce in pillole e paste.",
+    "benefits": "Tradizionalmente usata per alleviare stanchezza, debolezza lombare e sudorazioni notturne associate a deficienza di yin, e per nutrire il sangue in casi di pallore o vertigini."
+  },
+  "chrysanthemum": {
+    "overview": "Il Chrysanthemum morifolium è una pianta fiorita coltivata in tutta la Cina, i cui fiori gialli o bianchi essiccati (ju hua) sono un'erba rinfrescante ampiamente usata sia nella medicina cinese sia nella cultura popolare del tè. È tradizionalmente classificato come erba che elimina il calore, associata a fegato e polmoni.",
+    "preparation": "I capolini essiccati si lasciano in infusione in acqua calda per alcuni minuti come tè, spesso da soli o miscelati con bacche di goji o tè verde.",
+    "benefits": "Tradizionalmente usato per alleviare mal di testa e vertigini, lenire occhi arrossati o irritati, e rinfrescare gli stati febbrili."
+  },
+  "japaneseHoneysuckle": {
+    "overview": "La Lonicera japonica è una liana rampicante originaria dell'Asia orientale, i cui boccioli essiccati (jin yin hua) sono tra le erbe che eliminano il calore e disintossicano più usate nella medicina cinese. È impiegata da secoli per affrontare infezioni acute e condizioni infiammatorie della pelle.",
+    "preparation": "I boccioli essiccati si lasciano in infusione come tè o si fanno sobbollire in un decotto per 10-15 minuti, spesso combinati con la forsizia.",
+    "benefits": "Tradizionalmente usata per ridurre febbre e mal di gola nei raffreddori in fase iniziale, e per trattare foruncoli, piaghe e altre eruzioni cutanee infiammate."
+  },
+  "chineseCinnamon": {
+    "overview": "Il Cinnamomum cassia è un albero sempreverde originario della Cina meridionale, la cui corteccia interna (rou gui) è considerata nella medicina cinese un'erba fortemente riscaldante che fortifica lo yang renale e disperde il freddo. Si differenzia dalla cannella di Ceylon culinaria per la corteccia più spessa e pungente, tradizionalmente riservata all'uso medicinale.",
+    "preparation": "La corteccia essiccata si fa sobbollire in un decotto, spesso in piccole quantità all'interno di formule toniche, oppure ridotta in polvere e assunta in acqua tiepida o vino.",
+    "benefits": "Tradizionalmente usata per alleviare dolori addominali e articolari di tipo freddo, migliorare la circolazione e contrastare stanchezza e freddo legati a bassa energia vitale."
+  },
+  "poria": {
+    "overview": "Il Wolfiporia extensa (in precedenza Poria cocos) è un fungo che cresce sulle radici dei pini, il cui sclerozio essiccato (fu ling) è una delle sostanze più frequentemente usate nella medicina cinese. È classificato come erba che drena l'umidità e rinforza la milza, apprezzata anche per calmare lo spirito.",
+    "preparation": "Lo sclerozio essiccato e tagliato a dadini si fa sobbollire per 20-30 minuti come parte di un decotto a base di più erbe.",
+    "benefits": "Tradizionalmente usato per alleviare gonfiore e feci molli da umidità digestiva, lenire insonnia e irrequietezza, e sostenere la forza digestiva generale."
+  },
+  "chineseYam": {
+    "overview": "La Dioscorea polystachya è una liana rampicante originaria della Cina, il cui tubero amidaceo (shan yao) è da sempre sia alimento sia delicata erba tonica. È tradizionalmente apprezzato per nutrire contemporaneamente milza, polmoni e reni.",
+    "preparation": "Il tubero essiccato o fresco si taglia a fette e si fa sobbollire in porridge tonici o decotti, spesso insieme ad altre erbe toniche del qi.",
+    "benefits": "Tradizionalmente usato per rafforzare digestione e appetito, alleviare la tosse cronica, e sostenere la resistenza in stati di esaurimento generale."
+  },
+  "bupleurum": {
+    "overview": "Il Bupleurum chinense è un'erba perenne originaria della Cina, la cui radice essiccata (chai hu) è un ingrediente centrale nelle formule classiche per armonizzare il fegato. È usata da secoli per affrontare disturbi caratterizzati da febbre e brividi alternati o costrizione emotiva.",
+    "preparation": "La radice essiccata viene tagliata a fette e fatta sobbollire per 20-30 minuti come parte di un decotto a base di più erbe.",
+    "benefits": "Tradizionalmente usato per alleviare febbre e brividi alternati, calmare irritabilità e tensione legate al ristagno dell'energia del fegato, e sostenere l'equilibrio emotivo sotto stress."
+  },
+  "notoginseng": {
+    "overview": "Il Panax notoginseng è un parente del ginseng coltivato nella Cina sud-occidentale, la cui radice (san qi) è apprezzata come erba d'elezione per affrontare sanguinamenti e traumi. È stato a lungo incluso sia in formule interne sia in polveri topiche per ferite nella medicina cinese.",
+    "preparation": "La radice essiccata viene ridotta in polvere e assunta con acqua tiepida, oppure la polvere viene applicata direttamente su tagli e lividi.",
+    "benefits": "Tradizionalmente usato per arrestare il sanguinamento e ridurre lividi e gonfiore da lesioni, promuovendo al contempo una circolazione sanguigna sana."
+  },
+  "codonopsis": {
+    "overview": "La Codonopsis pilosula è una pianta perenne rampicante originaria della Cina, la cui radice essiccata (dang shen) è usata come alternativa più delicata e più facilmente reperibile al Panax ginseng. È classificata come tonico del qi, tradizionalmente usato per rafforzare la digestione e la vitalità generale.",
+    "preparation": "La radice essiccata si taglia a fette e si fa sobbollire come decotto, spesso inclusa nelle zuppe toniche quotidiane insieme ad altre erbe che costruiscono il qi.",
+    "benefits": "Tradizionalmente usata per alleviare stanchezza e scarso appetito, rafforzare la digestione e sostenere la resistenza durante la ripresa da una malattia."
+  },
+  "foti": {
+    "overview": "La Reynoutria multiflora (in precedenza Polygonum multiflorum) è una liana fiorita originaria della Cina, la cui radice (he shou wu) viene lavorata attraverso ripetute cotture a vapore in liquido di fagioli neri per creare un tonico apprezzato per nutrire l'essenza di fegato e reni. Le forme grezza e lavorata sono usate in modo diverso, con la forma trattata riservata all'uso tonico.",
+    "preparation": "La radice lavorata, cotta a vapore ed essiccata, si fa sobbollire in un decotto o si riduce in pillole, tradizionalmente assunta come tonico a lungo termine.",
+    "benefits": "Tradizionalmente usata per contrastare la stanchezza e l'ingrigimento precoce dei capelli, e per rafforzare la parte bassa della schiena e le ginocchia nell'ambito di regimi tonici anti-invecchiamento."
+  },
+  "yarrow": {
+    "overview": "L'Achillea millefolium è una pianta perenne dalle foglie piumate originaria d'Europa e dell'Asia temperata, da tempo soprannominata \"erba delle ferite del soldato\" per il suo storico uso sui campi di battaglia. Le sue parti aeree sono state usate nelle tradizioni popolari per arrestare il sanguinamento e favorire la guarigione delle ferite, oltre ad alleviare febbre e crampi.",
+    "preparation": "Le foglie e i fiori freschi o essiccati si schiacciano e si applicano direttamente sulle ferite, oppure le parti aeree essiccate si lasciano in infusione come tè per uso interno.",
+    "benefits": "Tradizionalmente usata per arrestare piccoli sanguinamenti e accelerare la guarigione dei tagli, e per alleviare i crampi mestruali e i raffreddori febbrili."
+  },
+  "stJohnsWort": {
+    "overview": "L'iperico è una pianta perenne dai fiori gialli originaria d'Europa, usata da tempo nella medicina popolare per l'umore basso e il disagio legato ai nervi. Le sue sommità fiorite vengono infuse nell'olio per creare una preparazione dalla tinta rossastra, tradizionalmente applicata su ferite, ustioni e dolore nervoso.",
+    "preparation": "Le sommità fiorite fresche si infondono nell'olio per alcune settimane per ottenere un olio topico, oppure i fiori essiccati si lasciano in infusione come tè o si assumono come tintura.",
+    "benefits": "Tradizionalmente usato per sollevare l'umore basso e alleviare la tensione nervosa, e applicato localmente per lenire piccole ferite, ustioni e dolori legati ai nervi."
+  },
+  "sage": {
+    "overview": "La Salvia officinalis è un arbusto mediterraneo il cui nome deriva dal latino salvere, \"essere salvato\" o \"guarire\", a riflettere la sua lunga reputazione di erba curativa. Le sue foglie aromatiche sono state usate fin dall'antichità sia come erba culinaria sia come rimedio per la gola e il tratto digestivo.",
+    "preparation": "Le foglie essiccate si lasciano in infusione come tè, che può essere bevuto o usato come gargarismo, e sono usate anche per insaporire il cibo a sostegno della digestione.",
+    "benefits": "Tradizionalmente usata per lenire mal di gola e infiammazione delle gengive se usata come gargarismo, e per alleviare cattiva digestione e gonfiore se assunta come tè."
+  },
+  "thyme": {
+    "overview": "Il Thymus vulgaris è un arbusto basso e aromatico originario del Mediterraneo, le cui foglie e il cui olio essenziale sono usati da secoli come rimedio per tosse e congestione toracica. È servito anche nella tradizione popolare come antisettico generale ed erba di sostegno immunitario.",
+    "preparation": "Le foglie essiccate si lasciano in infusione come tè o si fanno sobbollire in uno sciroppo con il miele, e l'olio essenziale si usa in frizioni per il petto e inalazioni di vapore.",
+    "benefits": "Tradizionalmente usato per sciogliere il catarro e alleviare tosse e bronchite, e per sostenere il corpo durante raffreddori e piccole infezioni."
+  },
+  "marshmallow": {
+    "overview": "L'Althaea officinalis è un'erba perenne originaria d'Europa e dell'Asia occidentale, la cui radice e le cui foglie contengono abbondante mucillagine che lenisce i tessuti irritati. È stata un pilastro della farmacopea europea per secoli, usata sia per disturbi respiratori sia digestivi.",
+    "preparation": "La radice essiccata viene messa in ammollo in acqua fredda per diverse ore per estrarne la mucillagine, ottenendo un infuso lenitivo, oppure le foglie essiccate si lasciano in infusione come tè più leggero.",
+    "benefits": "Tradizionalmente usata per lenire mal di gola e tosse, e per calmare le mucose irritate di stomaco e intestino."
+  },
+  "potMarigold": {
+    "overview": "La Calendula officinalis è una pianta annuale dai fiori arancio brillante originaria dell'Europa meridionale, i cui petali vengono da tempo infusi in oli e unguenti per la cura della pelle. È una delle erbe più usate nella tradizione popolare occidentale per la guarigione della pelle.",
+    "preparation": "I petali freschi o essiccati si infondono nell'olio per creare un unguento o una crema, applicati localmente sulla pelle.",
+    "benefits": "Tradizionalmente usata per pulire piccoli tagli e abrasioni e calmare la pelle infiammata e a lenta guarigione, come eruzioni cutanee e ustioni lievi."
+  },
+  "milkThistle": {
+    "overview": "Il Silybum marianum è una pianta spinosa dai fiori viola originaria del Mediterraneo, i cui semi contengono silimarina e sono usati fin dall'antichità classica come rimedio per il fegato. Divenne un caposaldo della pratica erboristica europea per sostenere il recupero dopo pasti abbondanti o eccessi di alcol.",
+    "preparation": "I semi maturi vengono schiacciati e lasciati in infusione come tè, oppure macinati in polvere e assunti con acqua; l'uso tradizionale prevedeva anche semplicemente di masticare i semi.",
+    "benefits": "Tradizionalmente usata per sostenere e proteggere la funzione epatica, in particolare dopo eccessi di cibo ricco o alcol."
+  },
+  "fennel": {
+    "overview": "Il Foeniculum vulgare è una pianta aromatica mediterranea i cui semi dall'aroma di anice vengono masticati e infusi da generazioni per calmare il tratto digestivo. Ha una lunga storia d'uso nella medicina popolare europea e mediorientale come delicato carminativo, anche per i neonati.",
+    "preparation": "I semi interi si masticano direttamente dopo i pasti, oppure si lasciano in infusione come tè per circa 10 minuti; un infuso molto diluito e raffreddato è stato tradizionalmente dato ai neonati contro le coliche.",
+    "benefits": "Tradizionalmente usato per alleviare gonfiore, gas e coliche, e per lenire la cattiva digestione dopo i pasti."
+  },
+  "stingingNettle": {
+    "overview": "L'ortica è una pianta perenne molto diffusa, armata di sottili peli urticanti sulle foglie, originaria d'Europa, Asia e Nord America. Le sue parti aeree vengono raccolte ogni primavera da secoli nell'erboristeria popolare europea come tonico depurativo e ricostituente generale.",
+    "preparation": "Le foglie essiccate o sbollentate (che neutralizza il pungiglione) si lasciano in infusione come tè per 10-15 minuti, tradizionalmente assunte come tonico primaverile quotidiano.",
+    "benefits": "Tradizionalmente usata per alleviare dolori articolari e muscolari, sostenere i processi depurativi naturali del corpo e agire come tonico primaverile nutriente per la vitalità generale."
+  },
+  "whiteHorehound": {
+    "overview": "Il marrubio bianco è un'erba amara e vellutata della famiglia della menta, originaria del Mediterraneo e naturalizzata in tutto il mondo, da tempo apprezzata nella medicina popolare europea come espettorante. Le foglie e le sommità fiorite sono le parti tradizionalmente usate, rese famose soprattutto dalle caramelle e dallo sciroppo per la tosse al marrubio.",
+    "preparation": "Foglie e sommità fiorite essiccate vengono decotte e fatte ridurre con miele o zucchero fino a formare uno sciroppo o una caramella dura, oppure infuse come tè amaro.",
+    "benefits": "Tradizionalmente usato per sciogliere il catarro e alleviare tosse, mal di gola e bronchite, e assunto come tonico amaro per stimolare la digestione."
+  },
+  "comfrey": {
+    "overview": "La consolida maggiore, soprannominata \"salda-ossa\", è una pianta perenne europea la cui radice e le cui foglie, ricche di mucillagine, vengono applicate in impacchi sulle lesioni da secoli. Viene usata rigorosamente come rimedio esterno nell'erboristeria tradizionale, apprezzata per il suo ruolo nel lenire i tessuti durante la guarigione.",
+    "preparation": "La radice o le foglie fresche schiacciate si trasformano in un impacco umido o in una pasta da applicare esternamente su pelle integra, oppure vengono infuse in un unguento.",
+    "benefits": "Tradizionalmente usata esternamente per lenire lividi, distorsioni e fratture composte, e per calmare la pelle infiammata o irritata."
+  },
+  "feverfew": {
+    "overview": "Il partenio è un'erba amara simile a una margherita, originaria dei Balcani e naturalizzata da tempo in tutta Europa, tradizionalmente usata come rimedio popolare per il mal di testa e la febbre. Le foglie fresche o essiccate sono la parte usata nella tradizione erboristica occidentale.",
+    "preparation": "Poche foglie fresche masticate quotidianamente, oppure foglie essiccate lasciate in infusione come tè per circa 10 minuti.",
+    "benefits": "Tradizionalmente usato per prevenire e alleviare emicranie e mal di testa ricorrenti, e per lenire i dolori e l'infiammazione associati."
+  },
+  "mullein": {
+    "overview": "Il verbasco è una pianta biennale alta dalle foglie morbide e vellutate e una spiga di fiori gialli, originaria d'Europa e Asia e ampiamente naturalizzata. Le sue foglie e i suoi fiori sono da tempo usati nell'erboristeria popolare europea e degli Appalachi per lenire il tratto respiratorio e le orecchie.",
+    "preparation": "Le foglie essiccate si lasciano in infusione come tè (ben filtrato per rimuovere i peli sottili), oppure i fiori si infondono lentamente nell'olio per alcune settimane, con l'olio usato come gocce per le orecchie.",
+    "benefits": "Tradizionalmente usato per lenire tosse, mal di gola e irritazione bronchiale, con l'olio infuso di fiori tradizionalmente applicato per il disagio del mal d'orecchi."
+  },
+  "hawthorn": {
+    "overview": "Il biancospino è un albero spinoso da siepe originario d'Europa, le cui bacche, fiori e foglie sono infusi fin dall'antichità come classico tonico continentale per il cuore e la circolazione. Occupa un posto centrale nella tradizione erboristica europea come delicato rimedio per un polso debole o \"ansioso\".",
+    "preparation": "Bacche, fiori e foglie essiccati si lasciano in infusione come tè per 10-15 minuti, oppure si assumono come tintura, tipicamente in un percorso quotidiano prolungato.",
+    "benefits": "Tradizionalmente usato per sostenere la funzione cardiaca e la circolazione, e per calmare la tensione nervosa e un battito cardiaco ansioso e irregolare."
+  },
+  "linden": {
+    "overview": "Il tiglio, o fiore di tiglio, proviene dai profumati fiori dell'albero di tiglio europeo, raccolti a inizio estate ed essiccati per il tè nella medicina popolare europea. È da tempo apprezzato come delicato rimedio nervino e per la febbre, specialmente per bambini e anziani.",
+    "preparation": "I fiori essiccati si lasciano in infusione come tè per circa 10 minuti, spesso assunti caldi ai primi sintomi di raffreddore o la sera prima di coricarsi.",
+    "benefits": "Tradizionalmente usato per favorire il rilassamento e un sonno riposante, alleviare stress e tensione nervosa, e aiutare a far scendere la febbre durante i raffreddori."
+  },
+  "meadowsweet": {
+    "overview": "La regina dei prati è un'erba profumata dai fiori color crema, originaria dei prati umidi europei, tradizionalmente usata per febbre, dolori e disturbi di stomaco. Le sue sommità fiorite contengono composti salicilici, successivamente isolati e modificati chimicamente per creare l'aspirina.",
+    "preparation": "Le sommità fiorite e le foglie essiccate si lasciano in infusione come tè per 10-15 minuti, assunte più volte durante la giornata.",
+    "benefits": "Tradizionalmente usata per alleviare dolori articolari, mal di testa e febbre, e per lenire lo stomaco irritato e l'acidità in eccesso."
+  },
+  "oshaRoot": {
+    "overview": "L'osha è una radice aromatica originaria delle alte quote delle Montagne Rocciose, raccolta da tempo dai Navajo, dagli Ute e da altri popoli indigeni della regione. È un pilastro dell'erboristeria popolare del sud-ovest americano per sostenere il sistema respiratorio durante raffreddori e infezioni.",
+    "preparation": "La radice essiccata si mastica direttamente, oppure si fa sobbollire come decotto per 15-20 minuti e si beve come tè; si assume anche come tintura.",
+    "benefits": "Tradizionalmente usata per lenire mal di gola, tosse e infezioni respiratorie, e per sostenere la risposta del corpo durante raffreddori e influenza."
+  },
+  "blackCohosh": {
+    "overview": "Il cimicifuga è una pianta perenne di sottobosco originaria del Nord America orientale, la cui radice veniva usata dai Cherokee e da altri popoli boschivi orientali come rimedio per la salute femminile. Divenne un caposaldo della medicina erboristica americana del XIX secolo per disturbi mestruali e riproduttivi.",
+    "preparation": "La radice essiccata si fa sobbollire come decotto per circa 20 minuti, oppure si assume come tintura in piccole dosi misurate.",
+    "benefits": "Tradizionalmente usato per alleviare crampi e disagio mestruale, e per sostenere il travaglio e il processo del parto."
+  },
+  "devilsClub": {
+    "overview": "L'artiglio del diavolo del Pacifico (Devil's Club) è un arbusto spinoso di sottobosco originario delle foreste pluviali della costa nord-occidentale del Pacifico, considerato dai Tlingit, dagli Haida e da altri popoli costieri una delle piante più importanti della loro farmacia tradizionale. La sua corteccia interna è la parte tradizionalmente usata, preparata come decotto o unguento.",
+    "preparation": "La corteccia interna viene raschiata dal fusto e fatta sobbollire come decotto per 20-30 minuti, oppure essiccata e ridotta in polvere per un unguento applicato sulle articolazioni.",
+    "benefits": "Tradizionalmente usato per alleviare artrite e dolori articolari, aiutare il corpo a resistere alle infezioni, e affrontare sintomi associati allo squilibrio della glicemia."
+  },
+  "wildBergamot": {
+    "overview": "Il bergamotto selvatico è una menta profumata e ricca di timolo originaria delle praterie nordamericane, usata da tempo dai Blackfeet e da altre tribù delle Pianure per trattare disturbi respiratori. Le sue foglie e sommità fiorite vengono tradizionalmente essiccate e infuse come tè.",
+    "preparation": "Foglie e sommità fiorite essiccate si lasciano in infusione come tè per circa 10 minuti, spesso assunto ai primi sintomi di raffreddore.",
+    "benefits": "Tradizionalmente usato per alleviare tosse, raffreddore e infezioni respiratorie, e per calmare lo stomaco irritato."
+  },
+  "bearberry": {
+    "overview": "L'uva ursina è un arbusto sempreverde a crescita bassa originario delle regioni settentrionali del Nord America, Europa e Asia, le cui foglie coriacee venivano infuse da numerose tribù dei nativi americani e successivamente adottate dalla pratica erboristica europea. È da tempo usata come rimedio per il tratto urinario e delicato diuretico.",
+    "preparation": "Le foglie essiccate si lasciano in infusione come tè per 10-15 minuti, tradizionalmente assunte per brevi periodi piuttosto che in uso quotidiano continuativo.",
+    "benefits": "Tradizionalmente usata per alleviare le infezioni delle vie urinarie e il disagio associato, e come delicato diuretico."
+  },
+  "slipperyElm": {
+    "overview": "L'olmo scivoloso è un albero nordamericano la cui corteccia interna, ricca di mucillagine, veniva usata dai Cherokee, dagli Irochesi e da altre nazioni indigene come rimedio lenitivo. Ridotta in polvere, forma un gel scivoloso tradizionalmente usato sia per via interna sia esterna.",
+    "preparation": "La corteccia interna in polvere si mescola con acqua fino a formare una pappa e si assume per bocca, oppure si trasforma in una pasta da applicare come impacco su ferite.",
+    "benefits": "Tradizionalmente usato per lenire mal di gola e tosse, calmare l'irritazione digestiva e sostenere la guarigione di ferite e pelle irritata."
+  },
+  "cascaraSagrada": {
+    "overview": "La cascara sagrada è un albero di spincervino della costa nord-occidentale del Pacifico, la cui corteccia veniva tradizionalmente raccolta e fatta invecchiare per almeno un anno dai popoli indigeni della regione e dai coloni successivi, poiché la corteccia fresca era considerata troppo aggressiva per l'uso. Il suo nome spagnolo, che significa \"corteccia sacra\", riflette la sua lunga reputazione come lassativo affidabile.",
+    "preparation": "La corteccia invecchiata ed essiccata si fa sobbollire come decotto, oppure si assume come tintura o capsula, tipicamente prima di coricarsi.",
+    "benefits": "Tradizionalmente usata come lassativo naturale per alleviare la stitichezza occasionale."
+  },
+  "cinchona": {
+    "overview": "La china è un albero sempreverde originario dei versanti andini di Perù e Bolivia, la cui corteccia amara veniva usata dai popoli Quechua per curare la febbre molto prima che gli europei isolassero il suo alcaloide, la chinina. Divenne in seguito famosa in tutto il mondo come fonte originaria della chinina per il trattamento della malaria.",
+    "preparation": "La corteccia essiccata si fa sobbollire come decotto per 20-30 minuti, storicamente assunta come tonico amaro durante gli stati febbrili.",
+    "benefits": "Tradizionalmente usata per ridurre la febbre e, storicamente, per curare le infezioni malariche, oltre a essere assunta come tonico digestivo amaro."
+  },
+  "catsClaw": {
+    "overview": "L'unghia di gatto è una liana legnosa originaria dell'Amazzonia peruviana, il cui nome deriva dalle spine ricurve a forma di artiglio, e la cui corteccia viene infusa da tempo dagli Asháninka e da altri popoli amazzonici. È un rimedio tradizionale per i disturbi articolari e il sostegno immunitario generale.",
+    "preparation": "La corteccia interna essiccata si fa sobbollire come decotto per 30-45 minuti, oppure si assume come tintura o capsula.",
+    "benefits": "Tradizionalmente usata per alleviare artrite e infiammazione articolare, e per sostenere le difese immunitarie del corpo."
+  },
+  "coca": {
+    "overview": "La coca è un arbusto originario degli altopiani andini del Sud America, le cui foglie vengono masticate e infuse dai popoli Quechua e Aymara da migliaia di anni come parte della vita quotidiana. È tradizionalmente apprezzata ad alta quota per combattere la stanchezza e gli effetti dell'aria rarefatta di montagna.",
+    "preparation": "Le foglie fresche o essiccate si masticano insieme a una piccola quantità di sostanza alcalina, oppure si lasciano in infusione come mate de coca.",
+    "benefits": "Tradizionalmente usata per aumentare energia e resistenza, ridurre stanchezza e fame, e alleviare nausea e disagio da mal di montagna."
+  },
+  "dragonsBlood": {
+    "overview": "Il sangue di drago è la linfa lattiginosa di colore rosso intenso prelevata da un albero originario della foresta pluviale amazzonica, usata da tempo dai popoli indigeni amazzonici come trattamento topico per le ferite. La linfa viene prelevata direttamente dalla corteccia e applicata fresca sulla pelle.",
+    "preparation": "La linfa lattiginosa rossa fresca si applica direttamente in uno strato sottile su tagli, ferite o punture di insetti, dove si asciuga formando una barriera protettiva.",
+    "benefits": "Tradizionalmente usato come antisettico naturale per pulire e proteggere tagli e ferite, e per sostenere la guarigione della pelle."
+  },
+  "pauDarco": {
+    "overview": "Il pau d'arco è un alto albero fiorito originario delle foreste pluviali dell'America Centrale e Meridionale, la cui corteccia interna viene infusa come tè dai popoli indigeni amazzonici da generazioni. È tradizionalmente considerato un ampio rimedio per infezioni, febbre e condizioni della pelle.",
+    "preparation": "La corteccia interna essiccata si fa sobbollire come decotto per 15-20 minuti e si assume come tè.",
+    "benefits": "Tradizionalmente usato per aiutare a combattere infezioni e febbre, e per aiutare a schiarire le condizioni della pelle."
+  },
+  "boldo": {
+    "overview": "Il boldo è un arbusto sempreverde originario del matorral centrale cileno, le cui foglie aromatiche sono usate da tempo dai guaritori Mapuche e nella medicina popolare cilena come amaro tonico digestivo ed epatico. Le foglie contengono oli volatili e l'alcaloide boldina, tradizionalmente ritenuti capaci di stimolare il flusso biliare e calmare lo stomaco.",
+    "preparation": "Le foglie essiccate si lasciano in infusione come tè amaro per 5-10 minuti, generalmente bevuto dopo i pasti.",
+    "benefits": "Tradizionalmente usato per sostenere la funzione epatica, stimolare la produzione di bile e alleviare cattiva digestione, gonfiore e lieve disagio di stomaco."
+  },
+  "copaiba": {
+    "overview": "Il copaiba è un albero alto originario della foresta pluviale amazzonica e del Sud America settentrionale, dal cui tronco viene prelevata direttamente un'oleoresina trasparente. I popoli amazzonici applicano da tempo questa resina localmente come rimedio antinfiammatorio per ferite e disturbi della pelle.",
+    "preparation": "La resina grezza si applica direttamente su tagli e pelle infiammata, oppure si diluisce in un olio vettore per il massaggio topico.",
+    "benefits": "Tradizionalmente usata per ridurre l'infiammazione, disinfettare le ferite e favorire la guarigione di tagli e irritazioni cutanee."
+  },
+  "guarana": {
+    "overview": "Il guaranà è una liana rampicante originaria del bacino amazzonico, addomesticata dal popolo Sateré-Mawé per i suoi semi, che presentano un contenuto naturale di caffeina eccezionalmente alto. Tostati e macinati, i semi sono tradizionalmente pressati in bastoncini o pasta e usati come stimolante.",
+    "preparation": "I semi tostati vengono macinati in una polvere fine e mescolati con acqua, succo, o in una pasta che viene raschiata e sciolta come bevanda.",
+    "benefits": "Tradizionalmente usato per aumentare l'energia, sostenere la vigilanza e favorire la concentrazione mentale durante periodi prolungati di sforzo."
+  },
+  "blackSeed": {
+    "overview": "Il seme nero, o cumino nero, è una pianta fiorita originaria dell'Asia meridionale e del Mediterraneo i cui piccoli semi scuri vengono spremuti per l'olio o usati interi. Chiamato \"il seme della benedizione\" nella medicina profetica, è un elemento fondamentale dei rimedi popolari mediorientali e sud-asiatici da secoli.",
+    "preparation": "L'olio di semi spremuto a freddo si assume a cucchiaini o in capsule, oppure i semi interi si masticano o si mescolano con miele.",
+    "benefits": "Tradizionalmente usato per alleviare asma e congestione respiratoria, calmare i disturbi digestivi e trattare infezioni e irritazioni della pelle."
+  },
+  "frankincense": {
+    "overview": "L'incenso è una resina prelevata da alberi di Boswellia sacra originari della Penisola Arabica e del Corno d'Africa, raccolta incidendo la corteccia e raccogliendo la linfa indurita. Scambiato per millenni lungo le antiche vie dell'incenso, ha servito sia scopi cerimoniali sia medicinali.",
+    "preparation": "La resina viene bruciata come incenso per l'inalazione, oppure trasformata in unguento topico o olio diluito da massaggiare su articolazioni doloranti e pelle.",
+    "benefits": "Tradizionalmente usato per alleviare dolori articolari e infiammazione, favorire la guarigione delle ferite e lenire tosse e congestione respiratoria."
+  },
+  "myrrh": {
+    "overview": "La mirra è una resina aromatica raccolta da alberi di Commiphora in tutto il Corno d'Africa e la Penisola Arabica, raccolta in modo simile all'incenso. È stata apprezzata fin dall'antichità come disinfettante e agente curativo per ferite e disturbi orali o della gola.",
+    "preparation": "La resina si dissolve in alcol o acqua come tintura usata per un colluttorio o gargarismo, oppure si applica direttamente sulle ferite come polvere o pasta.",
+    "benefits": "Tradizionalmente usata per disinfettare e guarire le ferite, lenire le gengive doloranti e alleviare il mal di gola."
+  },
+  "senna": {
+    "overview": "La senna è un arbusto fiorito originario dell'Egitto e del Sudan, le cui foglie e i cui baccelli vengono usati fin dall'antichità dai medici egizi come lassativo affidabile. Rimane uno dei rimedi botanici tradizionali più utilizzati per la stitichezza.",
+    "preparation": "Foglie o baccelli essiccati si lasciano in infusione come tè, tipicamente assunti la sera per produrre un'evacuazione intestinale la mattina seguente.",
+    "benefits": "Tradizionalmente usata per alleviare la stitichezza e stimolare l'evacuazione intestinale."
+  },
+  "hibiscus": {
+    "overview": "L'ibisco, noto come karkadè in Egitto e Sudan, è una pianta tropicale i cui calici rosso intenso vengono essiccati e infusi in un tè aspro. È da tempo un rimedio domestico popolare in tutto il Nord Africa per rinfrescare la febbre e sostenere la circolazione.",
+    "preparation": "I calici essiccati si lasciano in infusione in acqua calda o fredda per 5-10 minuti fino a ottenere un infuso aspro e rosso, spesso addolcito e servito caldo o freddo.",
+    "benefits": "Tradizionalmente usato per aiutare a gestire la pressione alta e ridurre la febbre."
+  },
+  "moringa": {
+    "overview": "La moringa è un albero a crescita rapida coltivato ampiamente in tutta l'Africa subsahariana, apprezzato per le sue foglie estremamente ricche di nutrienti. Tradizionalmente usata per combattere la malnutrizione, viene data anche alle madri che allattano per favorire la produzione di latte.",
+    "preparation": "Le foglie fresche o essiccate si cucinano in stufati, si macinano in polvere da mescolare in porridge o acqua, oppure si lasciano in infusione come tè.",
+    "benefits": "Tradizionalmente usata per combattere la malnutrizione, ridurre l'infiammazione e sostenere la produzione di latte nelle madri che allattano."
+  },
+  "baobab": {
+    "overview": "Il baobab, l'iconico \"albero della vita\" africano, produce un grande frutto la cui polpa secca e aspra e la cui corteccia fibrosa vengono usate in tutto il continente sia come alimento sia come medicina. I guaritori tradizionali si affidano da tempo a esso per affrontare febbre e malattie digestive, tra cui malaria e diarrea.",
+    "preparation": "La polpa essiccata del frutto si scioglie in acqua o latte come bevanda aspra, mentre la corteccia viene bollita per preparare un decotto.",
+    "benefits": "Tradizionalmente usato per ridurre la febbre, alleviare la diarrea e sostenere la ripresa dalla malaria."
+  },
+  "rooibos": {
+    "overview": "Il rooibos è un arbusto rossastro-bruno originario delle montagne Cederberg del Sud Africa, tradizionalmente raccolto e fermentato dal popolo Khoisan e successivamente adottato dai coloni olandesi del Capo come bevanda infusa priva di caffeina. È da tempo un delicato rimedio popolare per i disturbi allergici e le coliche infantili.",
+    "preparation": "Le foglie e i fusti fermentati ed essiccati si lasciano in infusione in acqua bollente per 5-10 minuti come tè rossastro, spesso dato diluito ai neonati per le coliche.",
+    "benefits": "Tradizionalmente usato per alleviare i sintomi allergici e lenire il disagio digestivo e le coliche nei neonati."
+  },
+  "buchu": {
+    "overview": "Il buchu è un piccolo arbusto aromatico originario della regione del Capo in Sud Africa, le cui foglie pungenti e ricche di oli venivano usate dai guaritori Khoisan come trattamento tradizionale per i disturbi urinari e renali. Rimane oggi un noto rimedio popolare del Capo.",
+    "preparation": "Le foglie essiccate si lasciano in infusione come tè o si mettono in ammollo nel brandy per preparare una tradizionale tintura di buchu, assunta per sostenere la salute urinaria.",
+    "benefits": "Tradizionalmente usato per aiutare ad alleviare le infezioni delle vie urinarie e sostenere la salute renale."
+  },
+  "cancerBush": {
+    "overview": "Nota ai Khoi come \"kankerbos\", la Sutherlandia è un arbusto dalle foglie argentate originario delle regioni aride dell'Africa meridionale, da tempo considerato uno dei tonici tradizionali più importanti della regione. È stata usata per aiutare il corpo ad affrontare stress, stanchezza e debilitazione generale.",
+    "preparation": "Le foglie essiccate si lasciano in infusione come tè amaro, oppure si macinano in polvere assunta in capsule per un uso tonico quotidiano.",
+    "benefits": "Tradizionalmente usata per alleviare lo stress, combattere la stanchezza e sostenere la vitalità generale e la resilienza immunitaria."
+  },
+  "umckaloabo": {
+    "overview": "L'umckaloabo proviene dalla spessa radice tuberosa di una specie di geranio originaria delle praterie del Sud Africa, tradizionalmente raccolta e usata dai guaritori Xhosa e Zulu. È da tempo un rimedio per tosse persistente e disturbi toracici.",
+    "preparation": "La radice essiccata viene bollita per preparare un decotto, oppure lavorata in una tintura assunta a gocce per tosse e disturbi toracici.",
+    "benefits": "Tradizionalmente usata per alleviare tosse, bronchite e altre infezioni respiratorie."
+  },
+  "hoodia": {
+    "overview": "L'hoodia è una succulenta spinosa simile a un cactus, originaria del deserto del Kalahari, tradizionalmente masticata fresca dai cacciatori San per resistere a lunghe spedizioni senza cibo né acqua. È usata da generazioni come soppressore naturale dell'appetito e della sete.",
+    "preparation": "Il fusto fresco viene sbucciato e masticato crudo durante lunghe battute di caccia per allontanare fame e sete.",
+    "benefits": "Tradizionalmente usata per sopprimere appetito e sete e aiutare a sostenere l'energia durante uno sforzo fisico prolungato."
+  },
+  "henna": {
+    "overview": "L'henné è un arbusto fiorito originario del Nord Africa, del Medio Oriente e dell'Asia meridionale, noto soprattutto per il colorante rossastro estratto dalle sue foglie essiccate e ridotte in polvere. Oltre alla decorazione corporea, la medicina popolare di queste regioni ha applicato la pasta di henné localmente per trattare condizioni cutanee fungine.",
+    "preparation": "La polvere di foglie essiccate si mescola con acqua fino a formare una pasta, applicata direttamente sulle zone della pelle interessate.",
+    "benefits": "Tradizionalmente usato per trattare le infezioni fungine della pelle e lenire l'irritazione cutanea."
+  },
+  "mastic": {
+    "overview": "Il mastice è una resina aromatica prelevata da incisioni nella corteccia dell'albero del lentisco, coltivato principalmente sull'isola greca di Chios e in tutto il Mediterraneo orientale. Masticato fin dall'antichità, è tradizionalmente usato per lenire lo stomaco e il tratto digestivo.",
+    "preparation": "Le lacrime di resina indurita si masticano direttamente come una gomma, oppure si riducono in polvere e si dissolvono in acqua.",
+    "benefits": "Tradizionalmente usato per lenire le ulcere gastriche, alleviare la cattiva digestione e calmare i disturbi digestivi generali."
+  },
+  "carob": {
+    "overview": "Il carrubo è un albero sempreverde mediterraneo i cui lunghi baccelli dolci sono usati nella medicina popolare mediorientale e nordafricana come delicato rimedio per i disturbi digestivi, in particolare nei bambini. La polpa essiccata del baccello è naturalmente ricca di fibre e tannini.",
+    "preparation": "I baccelli essiccati si macinano in polvere e si mescolano con acqua, latte o porridge, specialmente per i bambini con diarrea.",
+    "benefits": "Tradizionalmente usato per alleviare la diarrea e lenire i disturbi digestivi, specialmente nei bambini."
+  }
+}

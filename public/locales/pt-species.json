@@ -1,0 +1,314 @@
+{
+  "fishDetails": {
+    "clownfish": {
+      "overview": "Um pequeno peixe de recife do Indo-Pacífico, inconfundível pelo corpo laranja cortado por três faixas brancas. Passa toda a vida adulta dentro de uma única anêmona-do-mar, cujos tentáculos urticantes matariam quase qualquer outro peixe.",
+      "habitat": "Recifes de coral rasos e quentes e lagunas, do Mar Vermelho ao norte da Austrália, sempre em dupla com uma anêmona hospedeira.",
+      "curiosity": "Todo peixe-palhaço nasce macho. Cada anêmona abriga um casal reprodutor dominante; quando a fêmea morre, o macho dominante muda de sexo e assume o lugar dela."
+    },
+    "rainbowTrout": {
+      "overview": "Um peixe de água fria que ganhou o nome da faixa rosada iridescente que corre pelo flanco. Nativo dos rios que deságuam no Pacífico, na América do Norte e na Ásia, hoje é criado em todos os continentes, menos na Antártida.",
+      "habitat": "Rios e lagos limpos, frios e bem oxigenados. As populações que descem ao mar e depois voltam são chamadas de steelhead.",
+      "curiosity": "A carne rosada não é pigmento natural: vem dos crustáceos que ela come — trutas de cativeiro com outra dieta crescem brancas."
+    },
+    "atlanticSalmon": {
+      "overview": "Um peixe migrador poderoso, que nasce em água doce, passa anos se alimentando no mar e volta para desovar no mesmo rio onde veio ao mundo.",
+      "habitat": "Oceano Atlântico Norte na fase adulta; rios da Europa e do leste da América do Norte na hora de reproduzir.",
+      "curiosity": "O nome da espécie, salar, significa “o saltador” — na subida do rio, o salmão vence cachoeiras de mais de três metros."
+    },
+    "northernPike": {
+      "overview": "Um predador de emboscada comprido e verde-oliva, de focinho achatado feito bico de pato e boca cheia de dentes voltados para trás. Fica imóvel no meio da vegetação e ataca numa fração de segundo.",
+      "habitat": "Rios e lagos de água lenta e muita vegetação por todo o hemisfério norte, da Irlanda à Sibéria e ao Alasca.",
+      "curiosity": "As nadadeiras dorsal e anal ficam bem atrás, perto da cauda — um corpo desenhado só para uma arrancada explosiva, não para perseguir."
+    },
+    "commonCarp": {
+      "overview": "Um peixe de água doce encorpado, de escamas grandes e dois pares de barbilhões na boca. Criado há mais de dois mil anos, é alimento valorizado em partes da Europa e da Ásia e uma praga invasora séria em outros lugares.",
+      "habitat": "Águas quentes, lentas ou paradas, de fundo mole e lamacento — rios, lagos, açudes e canais em todos os continentes, menos na Antártida.",
+      "curiosity": "A carpa se alimenta sugando lama e peneirando o que vem junto, o que revolve o sedimento e deixa a água turva — o principal motivo de ela estragar os lagos que invade."
+    },
+    "blueTang": {
+      "overview": "Um peixe de recife azul-royal intenso, com uma marca preta em forma de paleta e cauda amarela. Como todo peixe-cirurgião, carrega perto da base da cauda um espinho afiado feito bisturi.",
+      "habitat": "Recifes de coral do Indo-Pacífico, em geral em pequenos grupos perto de corais ramificados onde possa se esconder.",
+      "curiosity": "Os juvenis são amarelo-vivos e ficam azuis ao amadurecer — e o espinho da cauda, normalmente dobrado, salta para o lado quando o peixe se sente ameaçado."
+    },
+    "largemouthBass": {
+      "overview": "Um predador verde e atarracado, com uma faixa escura na lateral: o peixe esportivo de água doce mais procurado do mundo.",
+      "habitat": "Lagos quentes, açudes e rios lentos com abrigo — troncos submersos, moitas de vegetação e trapiches.",
+      "curiosity": "Dá para diferenciá-lo do black bass de boca pequena pela mandíbula: no de boca grande, o maxilar superior passa da linha de trás do olho."
+    },
+    "yellowfinTuna": {
+      "overview": "Um grande peixe oceânico em forma de torpedo, com nadadeiras amarelas longas e curvas como foices e dorso azul-escuro metálico que vai clareando até o prateado embaixo.",
+      "habitat": "Mar aberto e quente no mundo inteiro, normalmente nos primeiros 100 metros, mas mergulhando bem mais fundo para caçar.",
+      "curiosity": "Consegue manter o corpo mais quente que a água ao redor, o que mantém os músculos funcionando nas profundidades frias, onde peixes mais lentos ficam lerdos — é por isso que atravessa oceanos inteiros."
+    },
+    "zebrafish": {
+      "overview": "Um peixinho listrado dos rios do sul da Ásia, conhecido no Brasil como paulistinha, que virou um dos animais mais estudados da ciência.",
+      "habitat": "Água doce rasa e de corrente fraca — arrozais, riachos e lagoas da Índia, de Bangladesh e do Nepal.",
+      "curiosity": "Os embriões são transparentes, então os pesquisadores acompanham a formação de um coração ou de uma coluna em tempo real no microscópio — daí ele aparecer em milhares de estudos médicos."
+    },
+    "redLionfish": {
+      "overview": "Um peixe marcante, listrado em vermelho, branco e marrom, com nadadeiras longas feito leque escondendo espinhos venenosos. Bonito, lento e melhor não encostar.",
+      "habitat": "Nativo dos recifes do Indo-Pacífico; hoje é uma espécie invasora grave em todo o Caribe e no Atlântico ocidental.",
+      "curiosity": "Na região que invadiu quase não tem predadores e come praticamente tudo que couber na boca — por isso alguns países incentivam abertamente arpoá-lo e comê-lo."
+    }
+  },
+  "birdDetails": {
+    "barnSwallow": {
+      "overview": "Uma ave esguia, de dorso azul brilhante, cauda profundamente bifurcada e garganta cor de ferrugem, quase sempre vista em voo rápido, baixo e cheio de curvas sobre o campo aberto.",
+      "habitat": "Áreas rurais, campos e beiras d'água por todo o hemisfério norte; passa o inverno no hemisfério sul.",
+      "curiosity": "É a andorinha mais espalhada do planeta e se alimenta inteiramente em voo — até bebe raspando a superfície do lago sem parar de voar."
+    },
+    "houseSparrow": {
+      "overview": "Uma ave compacta, marrom e cinza: o macho tem babador preto e nuca castanha; a fêmea é de um marrom-areia liso, com uma listra clara junto ao olho.",
+      "habitat": "Onde houver gente: cidades, vilarejos, fazendas e portos em quase todos os continentes.",
+      "curiosity": "Acompanhou a agricultura humana desde o Oriente Médio, milhares de anos atrás, e hoje quase não vive em lugar nenhum onde não haja pessoas."
+    },
+    "commonKingfisher": {
+      "overview": "Uma ave pequenina de bico em forma de adaga, azul elétrico e laranja-queimado, em geral avistada como um lampejo de cor rente à água.",
+      "habitat": "Rios, riachos e canais limpos e de corrente lenta, com galhos debruçados sobre a água, na Europa, na Ásia e no norte da África.",
+      "curiosity": "Mergulha de cabeça e tira um peixe a um metro de profundidade; depois bate a presa num galho e a engole de cabeça, para os espinhos ficarem deitados."
+    },
+    "peregrineFalcon": {
+      "overview": "Um falcão poderoso, de asas pontudas, cinza-ardósia por cima e barrado embaixo, com um inconfundível “bigode” escuro abaixo do olho.",
+      "habitat": "Todos os continentes, menos a Antártida — penhascos, litorais e, cada vez mais, arranha-céus e torres de catedral.",
+      "curiosity": "No mergulho de caça passa dos 300 km/h, o mais rápido de todos os animais. Deflectores dentro das narinas permitem que ele respire nessa velocidade sem que os pulmões se rompam."
+    },
+    "greatBlueHeron": {
+      "overview": "Uma garça alta e pernalta, de tom cinza-azulado, bico pesado feito lança e uma pluma preta atrás do olho.",
+      "habitat": "Águas rasas doces e salgadas da América do Norte e Central — brejos, margens de lago, rios e litorais.",
+      "curiosity": "Fica parada por minutos e dá o bote mais rápido do que o olho acompanha. Em voo, dobra o pescoço num S apertado — é assim que se distingue uma garça de um grou."
+    },
+    "rockPigeon": {
+      "overview": "O pombo de cidade de sempre: corpo cinza, pescoço iridescente entre verde e roxo, duas barras escuras nas asas. A plumagem varia muito por causa de séculos de domesticação.",
+      "habitat": "Originalmente falésias e desfiladeiros rochosos; hoje, cidades do mundo inteiro, onde beirais e peitoris de janela fazem as vezes de penhasco.",
+      "curiosity": "Os dois pais produzem o “leite de papo”, uma secreção rica em proteína dada aos filhotes — característica que pouquíssimas outras aves têm."
+    },
+    "europeanRobin": {
+      "overview": "Um passarinho pequeno e redondo, marrom, de peito e rosto laranja-vivos, com o hábito de observar as pessoas de pertinho, de um galho ao lado.",
+      "habitat": "Bosques, cercas-vivas e jardins da Europa e do oeste da Ásia.",
+      "curiosity": "Segue os jardineiros porque terra revirada expõe minhocas — um comportamento que começou com javalis fuçando o chão da floresta. Macho e fêmea têm o peito laranja e defendem território com canto o ano inteiro."
+    },
+    "mallard": {
+      "overview": "O pato-real clássico: o macho de cabeça verde brilhante e colar branco; a fêmea marrom mesclada, com uma mancha azul na asa.",
+      "habitat": "Praticamente qualquer água doce ou salobra do hemisfério norte, de banhados selvagens a lagos de parque urbano.",
+      "curiosity": "É o ancestral de quase toda raça de pato doméstico. O famoso quá-quá alto vem só da fêmea — o chamado do macho é um chocalhar baixo e rouco."
+    },
+    "scarletMacaw": {
+      "overview": "Uma arara muito grande, em escarlate, amarelo e azul vibrantes, com cauda longa e afilada e um bico curvo poderoso.",
+      "habitat": "Floresta tropical úmida de baixada, do sul do México à bacia amazônica, normalmente no alto da copa.",
+      "curiosity": "Forma casal para a vida toda e pode passar dos cinquenta anos. O bico quebra castanhas duras demais para qualquer outra ave da floresta, e os bandos se reúnem em barreiros nas margens dos rios para comer terra rica em minerais."
+    },
+    "emperorPenguin": {
+      "overview": "O maior dos pinguins, com mais de um metro de altura, preto e branco, com uma mancha amarelo-alaranjada de cada lado do pescoço.",
+      "habitat": "Gelo marinho da Antártida — a única ave que se reproduz durante o inverno antártico.",
+      "curiosity": "O macho equilibra o único ovo sobre os pés, sob uma dobra de pele, por dois meses de escuridão e nevascas, sem comer nada, enquanto a fêmea volta ao mar para se alimentar."
+    }
+  },
+  "insectDetails": {
+    "sevenSpotLadybird": {
+      "overview": "Um besouro abaulado de 5 a 8 mm, vermelho brilhante, com três pintas pretas em cada élitro e uma sétima em cima da junção. Adultos e larvas — cinzentas, com cara de jacaré — caçam pulgões, por isso os jardineiros vivem encontrando as duas em caules infestados. Nativa de toda a Eurásia e introduzida há muito tempo na América do Norte, é o besouro que quase todo mundo imagina ao ouvir a palavra joaninha.",
+      "habitat": "Moitas de urtiga, cercas-vivas, hortas e qualquer planta com pulgões. No outono, os adultos se juntam em aglomerados densos para passar o inverno ao ar livre — na serapilheira, em touceiras de capim seco, no pé das cercas-vivas, sob cascas soltas e dentro de caules ocos, muitas vezes voltando aos mesmos esconderijos ano após ano.",
+      "curiosity": "A defesa se chama sangramento reflexo: sob pressão, ela força gotas da própria hemolinfa pelas articulações das pernas, carregadas de alcaloides tão amargos que o pássaro geralmente cospe a joaninha de volta, ilesa."
+    },
+    "commonEarwig": {
+      "overview": "Um inseto achatado e marrom brilhante de 12 a 15 mm, com um par de pinças na ponta do abdômen, bem curvas nos machos e quase retas nas fêmeas. Sob as capas curtas e coriáceas ficam asas grandes em forma de leque, vincadas e guardadas como um quebra-cabeça de papel. Ao contrário da fama, ela não tem o menor interesse em ouvido de ninguém: as pinças servem para se defender, para o cortejo e para ajudar a desdobrar as asas.",
+      "habitat": "De dia, espaços úmidos e apertados — embaixo de vasos, na serapilheira, entre as tábuas da cerca, dentro de flores de dália e de móveis de jardim dobrados. À noite sai para comer pulgões, pólen e frutas macias.",
+      "curiosity": "É um dos pouquíssimos insetos que cuida dos ovos: a mãe vira e limpa cada um deles durante semanas para não deixar criar mofo, e continua alimentando os filhotes depois que nascem."
+    },
+    "commonPillWoodlouse": {
+      "overview": "Um isópode blindado, cinza-ardósia, de até uns 18 mm, que se enrola numa bolinha perfeita quando é incomodado. As placas sobrepostas e o hábito de enrolar o separam dos tatuzinhos mais achatados, que só conseguem correr para se esconder. De origem mediterrânea, hoje aparece em quintais de todos os continentes habitados.",
+      "habitat": "Sob pedras, vasos, troncos e papelão molhado, em qualquer lugar que mantenha a umidade alta. Suas estruturas respiratórias precisam ficar úmidas, então ele não dura muito em chão seco e aberto.",
+      "curiosity": "Ele bebe pela traseira, puxando água por dois urópodes em forma de tubo por capilaridade, e tem sangue azul: carrega oxigênio com hemocianina à base de cobre, e não com hemoglobina à base de ferro."
+    },
+    "houseFly": {
+      "overview": "Uma mosca cinza de 6 a 7 mm, com quatro listras escuras no tórax e uma almofada esponjosa no lugar das mandíbulas. Ela não consegue mastigar nada: cospe saliva sobre a comida sólida, dissolve e depois enxuga o líquido de volta. Levada pelo mundo junto com os assentamentos humanos, hoje vive em todos os continentes onde há gente.",
+      "habitat": "Qualquer lugar quente com matéria orgânica úmida para pôr ovos — composteira, lixeira, esterco, ralo —, onde o ciclo completo de ovo a adulto se fecha em cerca de uma semana no calor do verão.",
+      "curiosity": "As asas de trás viraram dois halteres em forma de clava que batem em contrafase com as asas umas 200 vezes por segundo, funcionando como giroscópios; sem eles, a mosca não consegue mais se manter equilibrada no ar."
+    },
+    "gardenSnail": {
+      "overview": "Um molusco de concha enrugada em marrom e creme, com uns 3 cm, de origem mediterrânea e hoje estabelecido na Europa, nas Américas, na Austrália, na África do Sul e no Leste Asiático. Ele rala as plantas com a rádula, uma faixa flexível com milhares de dentinhos de quitina. Cada indivíduo é macho e fêmea ao mesmo tempo.",
+      "habitat": "Muros, pé de cerca-viva, vasos e as paredes sombreadas das casas, ativo nas noites úmidas. Na seca ou no frio, ele veda a boca da concha com uma membrana calcária e espera, às vezes por meses.",
+      "curiosity": "Antes de acasalar, cada caracol crava um dardo endurecido de carbonato de cálcio no corpo do parceiro; o muco que vai no dardo altera o trato reprodutivo de quem recebe, de modo que mais espermatozoides de quem atirou sobrevivam até fecundar os ovos."
+    },
+    "westernHoneyBee": {
+      "overview": "Uma abelha listrada de 12 a 15 mm que vive em colônias de dezenas de milhares, nativa da Europa, da África e do oeste da Ásia e criada por gente em quase todo o resto do mundo. A campeira que volta de um bom canteiro faz a dança do requebrado no favo vertical: o ângulo indica a direção em relação ao sol e a duração indica a distância. As operárias de verão vivem cerca de seis semanas; uma rainha pode durar vários anos.",
+      "habitat": "As colônias selvagens constroem favos de cera em ocos de árvore, vãos de parede e forros; as manejadas vivem em caixas. As campeiras trabalham rotineiramente em flores a dois ou três quilômetros de casa.",
+      "curiosity": "A colônia não hiberna. No inverno ela forma uma bola apertada e treme os músculos de voo, mantendo o centro do cacho por volta de 20 a 30 °C enquanto lá fora está abaixo de zero — e depois sobe para uns 35 °C quando a criação recomeça no fim do inverno, queimando mel estocado o tempo todo."
+    },
+    "paintedLady": {
+      "overview": "Uma borboleta laranja e preta com 5 a 6 cm de envergadura e pintas brancas nas pontas escuras das asas, uma das mais amplamente distribuídas do planeta. As lagartas comem cardos, malvas e urtigas, e os adultos aparecem em números enormes em certos anos e somem quase por completo em outros. Estudos de radar já as rastrearam migrando a centenas de metros de altura.",
+      "habitat": "Qualquer terreno aberto e florido — baldios, beiras de estrada, jardins, desertos depois da chuva — na Europa, na Ásia, na África, na Austrália e na América do Norte. A América do Sul é o único continente, além da Antártida, onde ela não ocorre.",
+      "curiosity": "O circuito anual completo cobre algo entre 12.000 e 15.000 km e inclui a travessia do Saara, e cada trecho é voado por insetos que nunca fizeram aquela viagem antes."
+    },
+    "cellarSpider": {
+      "overview": "Uma aranha pálida de pernas larguíssimas, corpo de 8 a 10 mm e vão de pernas chegando a 7 cm, quase sempre pendurada de cabeça para baixo num emaranhado frouxo de seda. A teia não tem cola: a presa é enrolada com seda arremessada de longe pelas pernas de trás. Hoje vive dentro de construções em quase todo o mundo, carregada junto com a carga humana.",
+      "habitat": "Canto de teto, porão, escada, garagem e o vão atrás dos móveis — dentro de casa, sem ser incomodada e no calor, já que ela se sai mal ao ar livre em invernos frios.",
+      "curiosity": "Quando incomodada, ela roda o corpo na teia rápido o bastante para borrar o próprio contorno, o que dificulta a mira de um predador; e mata regularmente aranhas maiores que ela."
+    },
+    "argentineAnt": {
+      "overview": "Uma formiga pequena e marrom sem graça, de 2 a 3 mm, que forma trilhas densas em meio-fio, rodapé e bancada de cozinha. Seus ninhos têm muitas rainhas e não defendem fronteira, então ninhos vizinhos se fundem em vez de competir. Nativa da bacia do rio Paraná, na América do Sul, já foi levada a seis continentes em terra, plantas em vaso e carga.",
+      "habitat": "Ninhos rasos sob lajotas, vasos, cobertura morta e soleiras, em climas quentes e mediterrâneos, sempre perto de umidade, com trilhas entrando em casa atrás de qualquer fonte de açúcar.",
+      "curiosity": "Ao longo da costa do Mediterrâneo, a população introduzida forma uma supercolônia de mais ou menos 6.000 km, e operárias coletadas em continentes diferentes ainda se reconhecem como companheiras de ninho, não como rivais."
+    },
+    "commonEarthworm": {
+      "overview": "Uma minhoca marrom-avermelhada de até uns 25 cm, com a cauda achatada e mais clara e um anel inchado, o clitelo, a um terço do corpo. Ela mantém uma galeria vertical permanente de até dois metros de profundidade e sobe à superfície de noite para arrastar folhas para dentro. De origem europeia, foi introduzida na América do Norte, na Ásia e no hemisfério sul.",
+      "habitat": "Solo úmido e não ácido em quintais, parques e pastagens. Ela não tem pulmão e absorve oxigênio pela pele, que precisa ficar úmida para as trocas gasosas — por isso morre rápido na calçada quente e seca, e faz suas viagens de superfície nas noites de chuva, quando o chão molhado permite cobrir muito mais distância do que escavando.",
+      "curiosity": "Darwin testou como as minhocas lidam com folhas oferecendo triângulos de papel, e descobriu que elas os agarravam pela ponta — o ângulo que desliza com mais facilidade para dentro da galeria."
+    }
+  },
+  "fungiDetails": {
+    "flyAgaric": {
+      "overview": "Um cogumelo grande, de chapéu escarlate a alaranjado salpicado de verrugas brancas, que são restos do véu que envolvia o corpo jovem. É venenoso, e seus compostos ativos são o ácido ibotênico e o muscimol, que agem no cérebro de forma bem diferente da psilocibina dos chamados cogumelos mágicos.",
+      "habitat": "Vive em parceria com as raízes de bétulas, pinheiros e abetos por todo o hemisfério norte, e desceu para o sul junto com coníferas plantadas na Nova Zelândia, na Austrália, no Chile e na África do Sul.",
+      "curiosity": "A muscarina foi isolada pela primeira vez nesta espécie e batizada em homenagem a ela, mas o cogumelo tem apenas traços da substância; o nome popular vem do costume medieval de deixar pedaços no leite para atordoar moscas."
+    },
+    "deathCap": {
+      "overview": "Um cogumelo de porte médio, com chapéu verde-oliva pálido, lâminas brancas, anel no pé e uma bolsa em forma de copo na base. Suas amatoxinas desligam a RNA polimerase II, a enzima que toda célula usa para ler os próprios genes, e o fígado é quem leva a pior. Meio chapéu pode ser dose letal para um adulto.",
+      "habitat": "Nativo dos bosques de carvalho, faia e castanheira da Europa, foi levado para o mundo todo no torrão das mudas de viveiro e hoje cresce na Califórnia, no leste dos Estados Unidos, na Austrália e na América do Sul.",
+      "curiosity": "O envenenamento engana: os sintomas costumam começar só de seis a doze horas depois da refeição e depois aliviam por um dia ou mais, enquanto a destruição do fígado continua por baixo."
+    },
+    "buttonMushroom": {
+      "overview": "Um dos cogumelos mais cultivados do planeta e a base da indústria de cogumelos do Ocidente, produzido aos milhões de toneladas por ano em salas escuras e climatizadas, sobre camas de palha e esterco compostados, e não em campo aberto. China e Estados Unidos são os maiores produtores, e a colheita é feita à mão, sob teto, o ano inteiro.",
+      "habitat": "Na natureza, aparece em campos, dunas e beiras de estrada da Europa e da América do Norte; no cultivo comercial, nunca vê a luz do dia, frutificando sobre composto coberto por uma camada de turfa.",
+      "curiosity": "O nome bisporus é uma descrição. A maioria dos fungos com lâminas dispara quatro esporos de cada basídio, mas este costuma fazer dois, então cada esporo herda um par completo de núcleos e consegue virar um micélio fértil sozinho."
+    },
+    "brewersYeast": {
+      "overview": "Um fungo microscópico que se reproduz brotando células-filhas pela lateral e que, sem oxigênio, transforma açúcar em etanol e gás carbônico. A mesma espécie faz o pão crescer e fermenta cerveja, vinho e saquê, enquanto linhagens modificadas são cultivadas em tanques para produzir insulina e proteínas de vacinas.",
+      "habitat": "Na natureza vive em frutas maduras e na casca e na seiva escorrida dos carvalhos; as linhagens domesticadas vivem em padarias, cervejarias e fermentadores industriais.",
+      "curiosity": "Levedura e gente ainda compartilham tanta maquinaria celular básica que, num experimento, cerca de metade de um conjunto de genes essenciais da levedura pôde ser trocada pelos equivalentes humanos sem que as células parassem de crescer."
+    },
+    "zombieAntFungus": {
+      "overview": "Um parasita de formigas-carpinteiras, hoje tratado como um complexo de espécies, cada uma ajustada a uma formiga hospedeira específica. As operárias infectadas abandonam a colônia, travam as mandíbulas na nervura de uma folha ou num graveto e morrem ali; dias depois, uma haste irrompe atrás da cabeça e derruba esporos sobre as trilhas lá embaixo.",
+      "habitat": "Florestas tropicais e subtropicais úmidas da Tailândia, do Brasil, do Japão e da África ocidental, onde as formigas infectadas se acumulam em verdadeiros cemitérios na vegetação baixa.",
+      "curiosity": "Nas florestas tailandesas, as formigas mordem a uns 25 cm do chão, altura em que a umidade favorece o fungo, e a microscopia mostra células fúngicas envolvendo as fibras musculares da formiga sem invadir o cérebro."
+    },
+    "humongousFungus": {
+      "overview": "Um cogumelo cor de mel, de lâminas, que aparece em touceiras no outono ao redor de troncos de coníferas, mas passa quase toda a vida como lençóis brancos de micélio sob a casca e como cordões pretos parecidos com cadarços, os rizomorfos. Ele mata árvores, e quem cuida de floresta o trata como praga, não como maravilha.",
+      "habitat": "Florestas de coníferas da América do Norte, da Europa e da Ásia, atacando abetos e pinheiros; o indivíduo recordista cresce na Floresta Nacional de Malheur, no leste do Oregon.",
+      "curiosity": "A análise genética mostrou que cogumelos separados por quilômetros pertenciam a um só clone de cerca de 965 hectares, com estimativas de idade a partir de uns 2.500 anos."
+    },
+    "bitterOyster": {
+      "overview": "Um fungo duro, bege, em forma de leque e com poucos centímetros, que cresce em fileiras sobrepostas em madeira morta de folhosas e a apodrece até virar fibra clara. As coletas do leste da América do Norte são bioluminescentes; as europeias, da mesma espécie, em geral não são — diferença de química, não de identidade.",
+      "habitat": "Carvalho, bétula e faia mortos em florestas temperadas da América do Norte, da Europa e da Ásia, muitas vezes frutificando no mesmo tronco caído por vários anos seguidos.",
+      "curiosity": "O brilho tem pico no verde, por volta de 520 nanômetros, e é fraco o bastante para exigir vários minutos de escuridão total até os olhos captarem; a luciferina por trás dele, a 3-hidroxi-hispidina, acabou se revelando comum aos fungos bioluminescentes."
+    },
+    "penicilliumMould": {
+      "overview": "Um bolor comum que forma colônias aveludadas verde-azuladas com a borda clara de crescimento, soltando esporos de hastes em forma de pincel — penicillus é 'pincelzinho' em latim. Ele secreta a penicilina, que impede as bactérias de terminar a parede celular, e sua descoberta acidental abriu a era dos antibióticos.",
+      "habitat": "Solo, superfícies úmidas dentro de casa e comida estragando em qualquer lugar do mundo; a cultura que mudou a história chegou pelo ar, num único esporo perdido que pousou num laboratório de Londres.",
+      "curiosity": "A linhagem de Fleming foi rotulada como Penicillium notatum por décadas, até o sequenciamento de DNA de vários genes marcadores reclassificá-la em 2011, e acredita-se que o esporo tenha subido de um laboratório de micologia um andar abaixo do dele."
+    },
+    "chytridFungus": {
+      "overview": "Um quitrídio, membro de uma linhagem antiga de fungos que ainda nada, liberando esporos com cauda na água. Ele coloniza a pele rica em queratina de rãs, sapos e salamandras, arruinando o controle de sais e de água que a pele faz, o que nas espécies suscetíveis termina em parada cardíaca.",
+      "habitat": "Riachos, poças e floresta úmida em todos os continentes que têm anfíbios; o trabalho genético aponta origem no Leste Asiático, de onde o comércio global de animais vivos o espalhou.",
+      "curiosity": "Uma revisão de 2019 associou o fungo ao declínio de mais de 500 espécies de anfíbios e à provável extinção de cerca de 90 delas — a maior perda de biodiversidade já documentada para um único patógeno."
+    },
+    "whiteTruffle": {
+      "overview": "Um fungo claro, cheio de calombos e com jeito de batata, que se desenvolve de 5 a 30 cm abaixo da superfície, envolvendo as raízes finas de carvalho, choupo, aveleira e salgueiro numa troca de minerais do solo por açúcares da árvore. Como nunca rompe a superfície, ela depende do cheiro, e não do vento, para que animais levem seus esporos.",
+      "habitat": "Solos calcários do norte e do centro da Itália, sobretudo as colinas do Piemonte ao redor de Alba, além da Ístria e de partes dos Bálcãs; os caçadores a localizam com cães treinados, menos propensos que os porcos a comer o achado.",
+      "curiosity": "Trufas-negras são cultivadas em pomares com mudas inoculadas, mas esta espécie resistiu a todas as tentativas por um século, e os primeiros corpos frutíferos cultivados confirmados só foram relatados na França em 2019."
+    }
+  },
+  "cropDetails": {
+    "maize": {
+      "overview": "O cereal de maior produção do mundo em toneladas, um capim anual gigante cultivado por grãos que alimentam gente, criação e refinaria de combustível. Uma única espiga pode ter várias centenas de grãos apertados no sabugo e embrulhados na palha. É plantado em todos os continentes, menos a Antártida.",
+      "habitat": "Cultivado do nível do mar a mais de 3.000 m nos Andes, e do Canadá à África austral; seu parente selvagem, o teosinto, ainda cresce em encostas de seca sazonal no sudoeste do México.",
+      "curiosity": "O milho foi domesticado no vale do rio Balsas, no México, há cerca de 9.000 anos, e já não sobrevive sem gente: a espiga com palha não se desfaz, então os grãos não têm como se espalhar sozinhos."
+    },
+    "cassava": {
+      "overview": "Um arbusto lenhoso cultivado pelas raízes de reserva, inchadas de amido, que podem pesar vários quilos cada. Aguenta solo pobre e ácido e secas longas que matariam o milho na hora. As raízes cruas contêm compostos cianogênicos e sempre precisam de processamento.",
+      "habitat": "Trópicos de baixada no mundo todo, da borda sul da bacia amazônica, onde tudo começou, até a África Ocidental e o Sudeste Asiático, muitas vezes em solos esgotados demais para cereais.",
+      "curiosity": "Estudos genéticos ligam toda mandioca cultivada a populações selvagens do sudoeste do Brasil e da Bolívia; navios portugueses a levaram para a África no século XVI, e a Nigéria é hoje a maior produtora do planeta."
+    },
+    "arabicaCoffee": {
+      "overview": "Um arbusto ou arvoreta perene cujos grãos são as sementes de um fruto vermelho parecido com uma cereja, quase sempre dois por fruto. Responde por cerca de 60% do café do mundo, e quase todo o resto é robusta. O Brasil planta mais café arábica do que qualquer outro país.",
+      "habitat": "Terras altas tropicais, frescas e enevoadas, em geral entre 1.000 e 2.000 m; populações selvagens ainda crescem no sub-bosque sombreado das florestas de montanha do sudoeste da Etiópia.",
+      "curiosity": "O Coffea arabica surgiu na Etiópia quando o robusta e o Coffea eugenioides se cruzaram e duplicaram os cromossomos; um punhado bem pequeno de plantas levadas ao Iêmen e depois a estufas europeias deu origem a boa parte da lavoura de hoje."
+    },
+    "soybean": {
+      "overview": "Uma leguminosa anual e arbustiva, de vagens peludas com duas a quatro sementes. Essas sementes são incomumente ricas em proteína e em óleo, e é por isso que a soja domina o comércio mundial de oleaginosas. A planta fixa o próprio nitrogênio em nódulos nas raízes.",
+      "habitat": "Lavouras de clima temperado quente e subtropical, sobretudo o cerrado brasileiro, os pampas argentinos e o Meio-Oeste americano; a ancestral selvagem é uma trepadeira fina de barranco de rio e beira de roça do Leste Asiático.",
+      "curiosity": "A Glycine soja selvagem é uma trepadeira franzina de sementes pequenas, duras e pretas, domesticada na China há cerca de 5.000 anos. O Brasil quase não plantava soja antes dos anos 1960 e hoje é o maior produtor do mundo."
+    },
+    "sugarcane": {
+      "overview": "Um capim tropical gigante cujos colmos chegam a três ou cinco metros e guardam sacarose no talo, não na semente. A cana comercial é um híbrido com a mais rústica Saccharum spontaneum e é plantada por toletes, nunca por semente. Ela fornece a maior parte do açúcar do mundo.",
+      "habitat": "Baixadas quentes com chuva forte ou irrigação, mais ou menos entre 30°N e 30°S; Brasil e Índia cultivam de longe as maiores áreas.",
+      "curiosity": "Domesticada na Nova Guiné há uns 8.000 anos, a cana se espalhou para o oeste passando pela Índia, onde o açúcar foi cristalizado pela primeira vez, e depois para as plantações do Atlântico; o Brasil hoje desvia cerca de metade da safra para o etanol."
+    },
+    "breadWheat": {
+      "overview": "Um capim anual de clima temperado semeado em mais terra agrícola do que quase qualquer outra cultura. Cada espiga carrega de 30 a 50 grãos, cujas proteínas do glúten permitem que a massa segure gás e cresça. Ele tem seis conjuntos de cromossomos, herdados de três espécies diferentes de capim.",
+      "habitat": "Lavouras temperadas e mediterrâneas em todos os continentes, menos a Antártida, das pradarias canadenses ao Punjab; a gramínea selvagem que o originou ainda cresce em encostas do Crescente Fértil ao Cáspio.",
+      "curiosity": "Há uns 8.000 a 9.000 anos, o trigo emmer domesticado se hibridizou com o capim daninho Aegilops tauschii — uma planta sem graça, de espigas quebradiças, cujo genoma é o que dá à massa de pão a capacidade de esticar."
+    },
+    "asianRice": {
+      "overview": "Um capim anual que sobrevive à água parada graças a canais de ar que percorrem seus caules e raízes. É o alimento básico direto de cerca de metade da população mundial. Os grãos são beneficiados para tirar a casca e a camada de farelo que envolvem o endosperma cheio de amido.",
+      "habitat": "Várzeas alagadas e lavouras de sequeiro por toda a Ásia das monções, além da África Ocidental, do vale do Mississippi e do sul do Brasil; a Oryza rufipogon selvagem ainda cresce em brejos e valas da Ásia.",
+      "curiosity": "O arroz asiático foi domesticado a partir da Oryza rufipogon na bacia do Yangtzé, na China, há cerca de 9.000 anos, enquanto o arroz africano, Oryza glaberrima, foi domesticado de forma independente no delta interior do Níger há uns 3.000 anos e depois cruzou o Atlântico com agricultores da África Ocidental escravizados."
+    },
+    "potato": {
+      "overview": "Uma solanácea cultivada pelos tubérculos, que são caules subterrâneos inchados, não raízes. Acima do solo é uma planta folhosa de flores brancas a roxas e frutinhos verdes parecidos com tomates minúsculos, que são tóxicos. Tubérculos verdes ou brotando acumulam os mesmos glicoalcaloides amargos.",
+      "habitat": "Climas frescos no mundo todo, do altiplano andino acima de 3.500 m às lavouras da China e da Índia; a China hoje colhe mais batata do que qualquer outro país.",
+      "curiosity": "Domesticada no sul do Peru há uns 8.000 anos a partir de espécies selvagens amargas, a batata chegou à Europa no século XVI numa amostra genética minúscula, enquanto os agricultores andinos mantêm até hoje milhares de variedades com nome próprio numa única região."
+    },
+    "banana": {
+      "overview": "Não é árvore, e sim uma erva gigante: o 'tronco' é uma coluna apertada de bainhas de folha enroladas, e a planta morre depois de frutificar uma vez. Quase toda banana exportada é uma única variedade triploide estéril, a Cavendish, multiplicada por mudas e cultura de tecidos.",
+      "habitat": "Baixadas tropicais úmidas no mundo todo; Índia e China plantam mais, o Equador exporta mais, e espécies selvagens de Musa, com sementes, ainda crescem nas florestas do Sudeste Asiático e da Nova Guiné.",
+      "curiosity": "Escavações no brejo de Kuk, nas terras altas da Nova Guiné, datam o cultivo de banana em cerca de 7.000 anos. Como toda planta Cavendish é geneticamente idêntica, o fungo de solo Fusarium Raça Tropical 4 ameaça toda a lavoura de exportação, assim como uma linhagem anterior liquidou a variedade Gros Michel no século passado."
+    },
+    "sweetOrange": {
+      "overview": "Uma árvore perene de flores brancas perfumadas e frutos cujo suco vem de pelos que viraram sacos cheios de líquido. Quase toda árvore comercial é um clone enxertado sobre um porta-enxerto escolhido pela resistência a doenças, e não pela fruta.",
+      "habitat": "Faixas subtropicais de invernos amenos — sudeste do Brasil, Flórida, bacia do Mediterrâneo e sul da China; as espécies que a originaram vêm de florestas do sul e do sudeste da Ásia.",
+      "curiosity": "O híbrido surgiu no sul da China, viajou para o oeste com comerciantes e chegou ao Brasil em navios portugueses no século XVI; o Brasil hoje produz mais laranja do que qualquer outro país. Sementes de citros costumam conter embriões extras clonados da árvore-mãe, então uma muda pode ser cópia exata da planta que a gerou."
+    }
+  },
+  "soundDetails": {
+    "tawnyOwl": {
+      "overview": "Uma coruja de mata atarracada e de cabeça redonda, com uns 40 cm, marrom mesclada e praticamente invisível contra a casca das árvores. Caça pelo som no escuro quase total e passa o dia colada a um tronco ou enfiada num oco. Em toda a área onde ocorre, é uma das aves mais ouvidas e menos vistas.",
+      "habitat": "Bosques maduros de folhosas, parques, cemitérios arborizados e bairros antigos com árvores grandes, da Grã-Bretanha e da Península Ibérica até o Irã e a Sibéria ocidental, além do norte da África; não existe na Irlanda.",
+      "curiosity": "Os pios territoriais têm pico no outono e de novo no fim do inverno, quando as árvores sem folhas deixam o som viajar centenas de metros, e um casal pode manter o mesmo pedaço de mata por uma década."
+    },
+    "commonCuckoo": {
+      "overview": "Uma ave cinza, esguia e de cauda longa, mais ou menos do tamanho de um gavião, cujo peito barrado e voo baixo e reto imitam o gavião o bastante para espantar os passarinhos dos ninhos. As fêmeas põem ovos em ninhos de outras espécies e vão embora; já foram registradas mais de 100 espécies hospedeiras. Muita gente conhece a voz por anos antes de ver o bicho de fato.",
+      "habitat": "Bordas de mata, juncais, charnecas e campos abertos da Europa e do norte da Ásia; passa o inverno na África subsaariana e no sul da Ásia.",
+      "curiosity": "O canto de duas notas é mais ou menos uma terça menor descendente e viaja um quilômetro ou mais em campo aberto; experimentos com gravações mostram que as aves hospedeiras reagem ao gorgolejo da fêmea quase como reagem a um gavião caçando."
+    },
+    "commonNightingale": {
+      "overview": "Um passarinho pardo e sem graça, pouco maior que um pardal, que quase nunca se mostra, cantando lá do fundo do mato fechado. O repertório de um único macho chega a algo entre 180 e 260 tipos de canto, entregues em assobios abruptos, roncos graves e longos crescendos. Reproduz na Europa, no norte da África e no oeste da Ásia e passa o inverno na África.",
+      "habitat": "Moitas fechadas, capoeira e bordas de mata com cobertura densa perto do chão, muitas vezes à beira d'água ou ao longo de divisas de terreno abandonadas.",
+      "curiosity": "Gravações feitas em ruas barulhentas de Berlim flagraram machos cantando com picos acima de 95 decibéis medidos a um metro de distância — eles aumentam o volume para competir com o trânsito."
+    },
+    "europeanTreeFrog": {
+      "overview": "Uma perereca pequena, lisa e verde-brilhante, com uma faixa escura em cada flanco e discos adesivos nos dedos para escalar. Na primavera, os machos se juntam nas poças de reprodução e cantam em fileiras sobrepostas, quase sempre depois do escuro. Fora da época reprodutiva ela é escaladora e raramente aparece no chão.",
+      "habitat": "Lagoas ensolaradas, valas e campos alagados cercados de juncos e amoreiras-silvestres pelo centro e sudeste da Europa; entre uma temporada e outra, ela fica metros acima do chão em arbustos e cercas-vivas.",
+      "curiosity": "O canto tem pico perto de 2,5 kHz e um macho pode repeti-lo milhares de vezes numa única noite — cantar está entre as atividades mais caras em energia já medidas em qualquer vertebrado, e os machos perdem massa corporal ao longo da temporada."
+    },
+    "americanBullfrog": {
+      "overview": "A maior rã da América do Norte, com até uns 20 cm do focinho à cloaca, verde-oliva e de corpo pesado. Os machos defendem territórios de barranco durante o verão inteiro e cantam de dia e de noite. Muito introduzida fora de casa, hoje é invasora estabelecida em vários continentes.",
+      "habitat": "Água quente e permanente — margens de lago, rios lentos, represas e açudes —, nativa do leste da América do Norte e estabelecida no Brasil, no Japão, na China e em partes do sul da Europa.",
+      "curiosity": "O grave acompanha o tamanho do corpo, então a voz mais funda do coro costuma ser do maior macho, e dá para separar machos de fêmeas pelo tímpano bem mais largo que o olho."
+    },
+    "cicadaOrni": {
+      "overview": "Uma cigarra mediterrânea marrom-acinzentada de uns 3 cm, com asas transparentes marcadas por pontos escuros, muito mais fácil de identificar pelo canto do que pela aparência. Os machos produzem um zip-zip-zip seco e repetido, quebrado por pausas regulares, cantado de troncos e galhos. As fêmeas não cantam nada.",
+      "habitat": "Pinheiros, oliveiras, plátanos e pomares ao redor do Mediterrâneo, da Península Ibérica e do norte da África até a Itália, a Grécia e a Turquia.",
+      "curiosity": "O som vem de um par de placas nervuradas, os timbais, que estalam como a tampa de uma lata centenas de vezes por segundo, e o abdômen atrás delas é quase todo oco — um macho cantando é basicamente uma caixa de som."
+    },
+    "houseCricket": {
+      "overview": "Um grilo cor de palha de uns 2 cm, originário do sudoeste da Ásia e hoje presente no mundo todo onde há prédios aquecidos. Os machos cantam; as fêmeas, reconhecíveis pelo longo ovipositor em forma de agulha, são mudas. É um dos insetos mais criados em escala no planeta.",
+      "habitat": "Espaços humanos quentes — casas de caldeira, padarias, aterros, galpões aquecidos e criatórios; ao ar livre, sobrevive aos meses quentes nas regiões temperadas e o ano inteiro nos trópicos.",
+      "curiosity": "Os ouvidos ficam nas pernas dianteiras, logo abaixo do joelho, e o ritmo do canto sobe com a temperatura — a mesma sala soa mais acelerada numa noite quente do que numa fria."
+    },
+    "greatGreenBushCricket": {
+      "overview": "Uma esperança verde-capim de até uns 7 cm, com antenas mais longas que o corpo — um inseto grande que, mesmo assim, é quase impossível de achar numa cerca-viva. Os machos cantam do alto dos arbustos e da vegetação alta, muitas vezes a noite quase inteira. Ocorre pela Europa, pelo norte da África e até a Ásia Central.",
+      "habitat": "Vegetação alta e desgrenhada — amoreira-silvestre, cercas-vivas, capoeira, beiras de estrada e bordas de vinhedo —, cantando em geral a um ou dois metros do chão.",
+      "curiosity": "Boa parte da energia do canto fica acima de 20 kHz, bem no limite da audição humana, então crianças costumam ouvir com clareza um macho que os adultos ao lado delas mal conseguem detectar."
+    },
+    "blackHowlerMonkey": {
+      "overview": "Um macaco sul-americano com diferença entre os sexos incomumente evidente: os machos adultos são pretos, as fêmeas e os jovens são louro-amarelados. Os grupos roncam ao amanhecer e ao anoitecer para anunciar onde estão, o que mantém os bandos vizinhos afastados sem contato. O corpo tem cerca de 60 cm, mais uma cauda preênsil de tamanho parecido.",
+      "habitat": "Matas de galeria, florestas de inundação sazonal e capões de mata no Brasil, na Bolívia, no Paraguai e no norte da Argentina, quase sempre no alto do dossel.",
+      "curiosity": "O ronco é amplificado por um osso hioide aumentado e oco na garganta, e um estudo comparativo de 2015 mostrou que as espécies de bugio com os maiores hioides têm os menores testículos."
+    },
+    "redFox": {
+      "overview": "O carnívoro selvagem de distribuição mais ampla do planeta, com 5 a 7 kg e hábitos basicamente noturnos onde há muita gente. Já foram descritos uns vinte tipos de vocalização, do latido curto de contato ao grito longo. Nas cidades, ela é muito mais ouvida do que vista.",
+      "habitat": "Praticamente tudo: tundra ártica, campo cultivado, borda de deserto, floresta e centro urbano denso, onde as tocas ficam sob galpões, em taludes de ferrovia e em quintais.",
+      "curiosity": "Os gritos têm pico em dezembro e janeiro, quando as raposas formam casais, e já cessaram quando os filhotes nascem na primavera — por isso o barulho parece chegar e sumir seguindo um calendário."
+    }
+  }
+}

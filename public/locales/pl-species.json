@@ -1,0 +1,314 @@
+{
+  "fishDetails": {
+    "clownfish": {
+      "overview": "Niewielka ryba raf Indo-Pacyfiku, rozpoznawalna od pierwszego spojrzenia dzięki pomarańczowemu ciału przeciętemu trzema białymi pasami. Całe dorosłe życie spędza w jednym ukwiale, którego parzące ramiona zabiłyby większość innych ryb.",
+      "habitat": "Ciepłe, płytkie rafy koralowe i laguny od Morza Czerwonego po północną Australię, zawsze w parze z ukwiałem-gospodarzem.",
+      "curiosity": "Każdy błazenek rodzi się samcem. W jednym ukwiale rozmnaża się tylko dominująca para; gdy samica ginie, dominujący samiec zmienia płeć i zajmuje jej miejsce."
+    },
+    "rainbowTrout": {
+      "overview": "Ryba zimnolubna, nazwana od mieniącego się różowego pasa biegnącego wzdłuż boku. Pochodzi z rzek Ameryki Północnej i Azji uchodzących do Pacyfiku, dziś hoduje się ją na każdym kontynencie poza Antarktydą.",
+      "habitat": "Czyste, chłodne i dobrze natlenione rzeki oraz jeziora. Populacje, które wędrują do morza i wracają na tarło, nazywa się pstrągiem stalowogłowym.",
+      "curiosity": "Różowe mięso nie bierze się z naturalnego barwnika, tylko z diety bogatej w skorupiaki — pstrągi hodowlane karmione inaczej wyrastają białe."
+    },
+    "atlanticSalmon": {
+      "overview": "Silna ryba wędrowna: wykluwa się w słodkiej wodzie, przez lata żeruje w morzu i wraca na tarło do tej samej rzeki, w której przyszła na świat.",
+      "habitat": "Dorosłe ryby żyją w północnym Atlantyku; na tarło wchodzą do rzek Europy i wschodniej Ameryki Północnej.",
+      "curiosity": "Nazwa gatunkowa salar znaczy „skoczek” — w drodze w górę rzeki łosoś potrafi pokonać wodospad wyższy niż trzy metry."
+    },
+    "northernPike": {
+      "overview": "Wydłużony, oliwkowozielony drapieżnik zasadzkowy o płaskim, kaczodziobym pysku pełnym zagiętych do tyłu zębów. Czeka bez ruchu wśród roślin i atakuje w ułamku sekundy.",
+      "habitat": "Zarośnięte, wolno płynące rzeki i jeziora półkuli północnej, od Irlandii przez Syberię po Alaskę.",
+      "curiosity": "Płetwa grzbietowa i odbytowa są przesunięte daleko do tyłu, tuż przy ogonie — to ciało zbudowane pod jeden eksplozywny zryw, a nie pod długi pościg."
+    },
+    "commonCarp": {
+      "overview": "Masywna ryba słodkowodna o dużych łuskach i dwóch parach wąsików przy pysku. Hodowana od ponad dwóch tysięcy lat: w części Europy i Azji ceniona na stole, gdzie indziej groźny gatunek inwazyjny.",
+      "habitat": "Ciepłe wody stojące lub wolno płynące o miękkim, mulistym dnie — rzeki, jeziora, stawy i kanały na wszystkich kontynentach poza Antarktydą.",
+      "curiosity": "Karp żeruje, zasysając muł i przesiewając go, przez co wzburza osad i mąci wodę — to główny powód, dla którego szkodzi jeziorom, które opanowuje."
+    },
+    "blueTang": {
+      "overview": "Jaskrawo szafirowa ryba rafowa z czarnym rysunkiem przypominającym paletę malarską i żółtym ogonem. Jak wszystkie ryby chirurgi nosi przy nasadzie ogona kolec ostry niczym skalpel.",
+      "habitat": "Rafy koralowe Indo-Pacyfiku, zwykle w małych grupach przy rozgałęzionych koralowcach, w których może się schować.",
+      "curiosity": "Młode są jaskrawożółte i błękitnieją z wiekiem, a złożony zwykle płasko kolec ogonowy wyskakuje na boki, gdy ryba poczuje zagrożenie."
+    },
+    "largemouthBass": {
+      "overview": "Krępy, zielony drapieżnik z ciemnym pasem wzdłuż boku — najczęściej łowiona wędkarsko ryba słodkowodna świata.",
+      "habitat": "Ciepłe jeziora, stawy i leniwe rzeki z kryjówkami: zatopionymi konarami, łąkami roślin wodnych i pomostami.",
+      "curiosity": "Od bassa małogębowego odróżnisz go po szczęce: u wielkogębowego górna szczęka sięga poza tylną krawędź oka."
+    },
+    "yellowfinTuna": {
+      "overview": "Duża, torpedowata ryba oceaniczna o bardzo długich, sierpowatych żółtych płetwach i metalicznie granatowym grzbiecie przechodzącym w srebrny spód.",
+      "habitat": "Ciepłe wody otwartego oceanu na całym świecie, zwykle w górnych 100 metrach, choć na żer schodzi znacznie głębiej.",
+      "curiosity": "Potrafi utrzymać ciało cieplejsze od otaczającej wody, więc jego mięśnie pracują także w zimnych głębinach, gdzie wolniejsze ryby drętwieją — dlatego przepływa całe oceany."
+    },
+    "zebrafish": {
+      "overview": "Niewielka, pasiasta rybka z rzek Azji Południowej, która stała się jednym z najlepiej przebadanych zwierząt w nauce.",
+      "habitat": "Płytkie, wolno płynące wody słodkie — pola ryżowe, strumienie i stawy Indii, Bangladeszu i Nepalu.",
+      "curiosity": "Jej zarodki są przezroczyste, więc pod mikroskopem można na żywo obserwować, jak powstaje serce albo kręgosłup — stąd obecność danio w tysiącach badań medycznych."
+    },
+    "redLionfish": {
+      "overview": "Efektowna ryba w czerwono-biało-brązowe pasy, z długimi, wachlarzowatymi płetwami skrywającymi jadowe kolce. Piękna, powolna i lepiej jej nie dotykać.",
+      "habitat": "Pochodzi z raf Indo-Pacyfiku; dziś dotkliwy gatunek inwazyjny na całych Karaibach i w zachodnim Atlantyku.",
+      "curiosity": "Na opanowanych terenach nie ma praktycznie żadnych wrogów i zjada niemal wszystko, co mieści się jej w pysku — dlatego niektóre kraje wprost zachęcają, żeby na nią polować z harpunem i podawać ją na stół."
+    }
+  },
+  "birdDetails": {
+    "barnSwallow": {
+      "overview": "Smukły ptak o lśniąco granatowym wierzchu, głęboko wciętym ogonie i rdzawym gardle, niemal zawsze widywany w szybkim, niskim, zwrotnym locie nad otwartą przestrzenią.",
+      "habitat": "Pola, łąki i brzegi wód półkuli północnej; zimuje na półkuli południowej.",
+      "curiosity": "To najszerzej rozprzestrzeniona jaskółka na Ziemi, żerująca wyłącznie w locie — nawet pije, muskając w locie powierzchnię stawu."
+    },
+    "houseSparrow": {
+      "overview": "Zwarty, brązowo-szary ptak: samiec ze śliniakiem i kasztanowym karkiem, samica skromnie piaskowa z jasną brwią.",
+      "habitat": "Wszędzie tam, gdzie są ludzie: miasta, wsie, gospodarstwa i porty niemal na każdym kontynencie.",
+      "curiosity": "Tysiące lat temu ruszył za rolnictwem z Bliskiego Wschodu i dziś prawie nie sposób znaleźć go tam, gdzie nie ma ludzi."
+    },
+    "commonKingfisher": {
+      "overview": "Maleńki ptak o sztyletowatym dziobie, elektrycznie niebieskim wierzchu i rudopomarańczowym spodzie, zwykle widywany jako błysk koloru tuż nad wodą.",
+      "habitat": "Wolno płynące, czyste rzeki, strumienie i kanały z nawisającymi gałęziami — w Europie, Azji i Afryce Północnej.",
+      "curiosity": "Nurkuje głową w dół i potrafi wyjąć rybę z metra pod wodą, a potem obija ją o gałąź i połyka głową naprzód, żeby kolce ułożyły się płasko."
+    },
+    "peregrineFalcon": {
+      "overview": "Potężny sokół o ostro zakończonych skrzydłach, łupkowoszary z wierzchu i prążkowany od spodu, z charakterystycznym ciemnym „wąsem” pod okiem.",
+      "habitat": "Każdy kontynent poza Antarktydą — klify, wybrzeża, a coraz częściej wieżowce i wieże katedr.",
+      "curiosity": "W locie nurkowym przekracza 300 km/h i jest najszybszym zwierzęciem świata. Przegrody w nozdrzach pozwalają mu przy takiej prędkości oddychać bez rozerwania płuc."
+    },
+    "greatBlueHeron": {
+      "overview": "Wysoki, długonogi brodziec w szarobłękitnej szacie, z masywnym, włóczniowatym dziobem i czarnym piórem za okiem.",
+      "habitat": "Płytkie wody słodkie i słone Ameryki Północnej i Środkowej — mokradła, brzegi jezior, rzeki i wybrzeża.",
+      "curiosity": "Stoi bez ruchu całymi minutami i uderza szybciej, niż oko zdąży to zarejestrować. W locie składa szyję w ciasne S — właśnie po tym poznasz czaplę, a nie żurawia."
+    },
+    "rockPigeon": {
+      "overview": "Znajomy gołąb miejski: szare ciało, mieniąca się zielono-fioletowo szyja, dwa ciemne paski na skrzydle. Upierzenie bywa bardzo różne, bo za tym ptakiem stoją stulecia udomowienia.",
+      "habitat": "Pierwotnie klify morskie i skaliste wąwozy; dziś miasta całego świata, w których gzymsy i parapety zastępują skały.",
+      "curiosity": "Oboje rodzice wytwarzają „ptasie mleczko” — bogatą w białko wydzielinę wola, którą karmią młode. Poza gołębiami potrafi to zaledwie garstka ptaków."
+    },
+    "europeanRobin": {
+      "overview": "Mały, okrąglutki brązowy ptak z jaskrawopomarańczową piersią i twarzą, który ma zwyczaj bacznie przyglądać się ludziom z pobliskiej gałęzi.",
+      "habitat": "Lasy, żywopłoty i ogrody Europy oraz zachodniej Azji.",
+      "curiosity": "Chodzi za ogrodnikami, bo przekopana ziemia odsłania dżdżownice — zwyczaj zaczął się od dzików ryjących w leśnej ściółce. Pomarańczową pierś noszą obie płcie, a terytorium bronią śpiewem przez cały rok."
+    },
+    "mallard": {
+      "overview": "Klasyczna kaczka pływająca: samiec z lśniąco zieloną głową i białą obrożą, samica pstrobrązowa z niebieskim lusterkiem na skrzydle.",
+      "habitat": "Niemal każda woda słodka lub słonawa półkuli północnej, od dzikich mokradeł po stawy w miejskich parkach.",
+      "curiosity": "To przodek prawie wszystkich ras kaczek domowych. Słynne głośne kwakanie wydaje wyłącznie samica — głos samca to ciche, chrapliwe klekotanie."
+    },
+    "scarletMacaw": {
+      "overview": "Bardzo duża papuga w intensywnej szkarłatnej, żółtej i niebieskiej szacie, z długim, zwężającym się ogonem i potężnym, hakowatym dziobem.",
+      "habitat": "Wilgotne lasy nizinne od południowego Meksyku po dorzecze Amazonki, zwykle wysoko w koronach drzew.",
+      "curiosity": "Łączy się w pary na całe życie i dożywa ponad pięćdziesięciu lat. Jej dziób rozłupuje orzechy zbyt twarde dla każdego innego ptaka w lesie, a stada zlatują się na gliniaste skarpy nad rzekami, żeby zjadać bogatą w minerały ziemię."
+    },
+    "emperorPenguin": {
+      "overview": "Największy pingwin, ponad metr wysokości, czarno-biały, ze złocistopomarańczową plamą po obu stronach szyi.",
+      "habitat": "Lód morski Antarktydy — jedyny ptak, który wyprowadza lęgi w środku antarktycznej zimy.",
+      "curiosity": "Samiec przez dwa miesiące ciemności i zamieci trzyma jedyne jajo na stopach, pod fałdą skóry, i nic w tym czasie nie je, podczas gdy samica wraca do morza na żer."
+    }
+  },
+  "insectDetails": {
+    "sevenSpotLadybird": {
+      "overview": "Wypukły chrząszcz długości 5–8 mm, błyszcząco czerwony, z trzema czarnymi kropkami na każdej pokrywie i siódmą na ich styku. Zarówno dorosłe owady, jak i ich szare larwy o sylwetce małego krokodyla polują na mszyce — dlatego ogrodnicy wciąż znajdują je na zaatakowanych pędach. Rodzima w całej Eurazji, dawno zawleczona do Ameryki Północnej, to właśnie ten chrząszcz staje ludziom przed oczami na hasło „biedronka”.",
+      "habitat": "Pokrzywy, żywopłoty, działki i każda roślina obsypana mszycami. Jesienią dorosłe osobniki zbierają się w gęste skupiska i zimują na dworze — w ściółce, kępach suchej trawy, u podstawy żywopłotów, pod odstającą korą i w pustych łodygach, często wracając rok po roku w te same osłonięte miejsca.",
+      "curiosity": "To tak zwane krwawienie refleksyjne: mocno ściśnięta wyciska krople własnej hemolimfy przez stawy odnóży, a zawarte w niej alkaloidy są na tyle gorzkie, że ptak zwykle wypuszcza zdobycz bez szwanku."
+    },
+    "commonEarwig": {
+      "overview": "Płaski, błyszcząco brązowy owad długości 12–15 mm, z parą kleszczy z tyłu odwłoka: mocno wygiętych u samców, niemal prostych u samic. Pod krótkimi, skórzastymi pokrywami kryją się duże, wachlarzowate skrzydła tylne, pozałamywane i schowane jak papierowa łamigłówka. Wbrew starym opowieściom uszy zupełnie go nie interesują; kleszcze służą do obrony, do zalotów i do rozpakowywania tych skrzydeł.",
+      "habitat": "Za dnia wilgotne, ciasne szczeliny — pod doniczkami, w ściółce, między deskami płotu, we wnętrzu kwiatów dalii i w złożonych meblach ogrodowych. Nocą wychodzi żerować na mszycach, pyłku i miękkich owocach.",
+      "curiosity": "To jeden z niewielu owadów pilnujących jaj: samica tygodniami obraca i czyści każde z osobna, żeby nie zaszły pleśnią, a po wykluciu nadal karmi młode."
+    },
+    "commonPillWoodlouse": {
+      "overview": "Łupkowoszary, opancerzony równonóg dorastający do około 18 mm, który zaniepokojony zwija się w ciasną kulkę. Zachodzące na siebie płytki i sama zdolność zwijania odróżniają ją od bardziej płaskich stonóg, które potrafią już tylko uciec w kryjówkę. Pochodzi z rejonu Morza Śródziemnego, dziś spotykana w ogrodach na wszystkich zamieszkanych kontynentach.",
+      "habitat": "Pod kamieniami, doniczkami, kłodami i wilgotną tekturą — wszędzie tam, gdzie utrzymuje się wysoka wilgotność. Jej skrzelopodobne narządy oddechowe muszą pozostać mokre, więc na suchym, otwartym gruncie długo nie wytrzyma.",
+      "curiosity": "Pije tylnym końcem ciała, wciągając wodę siłami kapilarnymi dwoma rurkowatymi uropodami, a jej krew jest niebieska: tlen przenosi w niej miedziowa hemocyjanina zamiast żelazowej hemoglobiny."
+    },
+    "houseFly": {
+      "overview": "Szara mucha długości 6–7 mm, z czterema ciemnymi pasami na tułowiu i gąbczastą poduszką zamiast gryzących żuwaczek. Nie potrafi niczego pogryźć: pluje śliną na stały pokarm, rozpuszcza go i zbiera powstały płyn z powrotem. Rozwieziona po świecie razem z ludzkimi osadami, żyje dziś na każdym kontynencie, na którym mieszkają ludzie.",
+      "habitat": "Wszędzie tam, gdzie jest ciepło i jest wilgotna materia organiczna do złożenia jaj — komposty, kubły, obornik, kratki ściekowe — a w letnim upale cały cykl od jaja do dorosłej muchy zamyka się w jakiś tydzień.",
+      "curiosity": "Tylne skrzydła zredukowane są do dwóch maczugowatych przezmianek, które biją w przeciwfazie do skrzydeł około 200 razy na sekundę i działają jak żyroskopy; po ich usunięciu mucha nie potrafi już utrzymać się w powietrzu."
+    },
+    "gardenSnail": {
+      "overview": "Mięczak o pomarszczonej, brązowo-kremowej muszli szerokości około 3 cm, pochodzący znad Morza Śródziemnego, dziś zadomowiony w Europie, obu Amerykach, Australii, RPA i Azji Wschodniej. Rośliny skrobie radulą — elastyczną taśmą z tysiącami drobnych chitynowych ząbków. Każdy osobnik jest jednocześnie samcem i samicą.",
+      "habitat": "Mury, podnóża żywopłotów, doniczki i zacienione ściany budynków; aktywny w wilgotne noce. W suszy albo chłodzie zamyka otwór muszli wapienną błoną i czeka, czasem miesiącami.",
+      "curiosity": "Przed kopulacją każdy ślimak wbija w ciało partnera zesztywniałą strzałkę z węglanu wapnia; niesiony na niej śluz zmienia drogi rodne biorcy tak, że więcej plemników strzelca dożywa zapłodnienia jaj."
+    },
+    "westernHoneyBee": {
+      "overview": "Prążkowana pszczoła długości 12–15 mm, żyjąca w rodzinach liczących dziesiątki tysięcy osobników; rodzima w Europie, Afryce i zachodniej Azji, hodowana przez ludzi niemal wszędzie indziej. Zbieraczka wracająca z dobrego kwietnika tańczy na pionowym plastrze taniec wywijany: kąt koduje kierunek względem słońca, a czas trwania — odległość. Letnie robotnice żyją około sześciu tygodni, matka może przeżyć kilka lat.",
+      "habitat": "Dzikie rodziny budują woskowe plastry w dziuplach, pustkach ściennych i na poddaszach, hodowlane mieszkają w ulach; zbieraczki rutynowo pracują na kwiatach oddalonych o dwa–trzy kilometry od domu.",
+      "curiosity": "Rodzina nie zapada w sen zimowy. Zimą zbija się w ciasną kulę i dygocze mięśniami lotnymi, utrzymując w środku kłębu jakieś 20–30°C, gdy na zewnątrz jest mróz — a pod koniec zimy, kiedy rusza wychów czerwiu, podbija temperaturę do około 35°C, cały czas spalając zgromadzony miód."
+    },
+    "paintedLady": {
+      "overview": "Pomarańczowo-czarny motyl o rozpiętości 5–6 cm, z białymi plamkami na ciemnych wierzchołkach skrzydeł — jeden z najszerzej rozsiedlonych motyli świata. Gąsienice żerują na ostach, ślazach i pokrzywach, a dorosłe w niektórych latach pojawiają się w ogromnych liczbach, by w innych niemal zniknąć. Radary śledziły je w wędrówce setki metrów nad ziemią.",
+      "habitat": "Otwarte, kwietne tereny niemal każdego rodzaju — nieużytki, pobocza, ogrody, pustynie po deszczu — w Europie, Azji, Afryce, Australii i Ameryce Północnej. Ameryka Południowa to jedyny poza Antarktydą kontynent, na którym go nie ma.",
+      "curiosity": "Pełny roczny obieg liczy około 12–15 tysięcy kilometrów i obejmuje przelot nad Saharą, a każdy jego odcinek pokonują owady, które nigdy wcześniej tą trasą nie leciały."
+    },
+    "cellarSpider": {
+      "overview": "Blady pająk o niezwykle długich odnóżach: ciało 8–10 mm, rozpiętość nóg do 7 cm; zwykle wisi głową w dół w luźnym gąszczu jedwabiu. Jego sieć nie klei — ofiarę oplątuje nićmi wyrzucanymi z dystansu tylnymi odnóżami. Rozwieziony ludzkimi transportami, mieszka dziś w budynkach niemal całego świata.",
+      "habitat": "Kąty sufitów, piwnice, klatki schodowe, garaże i przestrzeń za meblami — w środku, spokojnie i ciepło, bo na dworze źle znosi mroźne zimy.",
+      "curiosity": "Zaniepokojony wprawia ciało w sieci w tak szybki wir, że własny zarys mu się rozmywa i drapieżnikowi trudno w niego wycelować; regularnie zabija też pająki większe od siebie."
+    },
+    "argentineAnt": {
+      "overview": "Mała, niepozornie brązowa mrówka długości 2–3 mm, tworząca gęste szlaki wzdłuż krawężników, listew przypodłogowych i kuchennych blatów. W jej gniazdach żyje wiele królowych i nikt nie broni granic, więc sąsiednie gniazda zlewają się zamiast konkurować. Rodzima w dorzeczu Parany w Ameryce Południowej, została przewieziona na sześć kontynentów w ziemi, doniczkach i ładunkach.",
+      "habitat": "Płytkie gniazda pod płytami chodnikowymi, doniczkami, ściółką i progami domów w klimacie ciepłym i śródziemnomorskim, zawsze blisko wilgoci, ze szlakami biegnącymi do wnętrz po każde źródło cukru.",
+      "curiosity": "Wzdłuż wybrzeża Morza Śródziemnego zawleczona populacja tworzy superkolonię ciągnącą się przez jakieś 6000 km, a robotnice zebrane na różnych kontynentach wciąż rozpoznają się jako współtowarzyszki gniazda, nie rywalki."
+    },
+    "commonEarthworm": {
+      "overview": "Czerwonobrązowa dżdżownica dorastająca do około 25 cm, ze spłaszczonym, jaśniejszym ogonem i zgrubiałym siodełkiem w jednej trzeciej długości ciała. Utrzymuje stałą pionową norę sięgającą dwóch metrów i nocą wychodzi na powierzchnię, żeby wciągać do niej liście. Pochodzi z Europy, została zawleczona do Ameryki Północnej, Azji i na półkulę południową.",
+      "habitat": "Wilgotna, niekwaśna gleba w ogrodach, parkach i na pastwiskach. Nie ma płuc i pobiera tlen przez skórę, która do wymiany gazowej musi zostać wilgotna — dlatego na gorącym, suchym chodniku ginie szybko, a naziemne wędrówki odbywa w mokre noce, gdy wilgotne podłoże pozwala jej pokonać dużo większy dystans niż drążenie tuneli.",
+      "curiosity": "Darwin sprawdzał, jak dżdżownice radzą sobie z liśćmi, podsuwając im papierowe trójkąty — i odkrył, że chwytają je za ostry wierzchołek, czyli pod kątem, który najłatwiej wsuwa się do nory."
+    }
+  },
+  "fungiDetails": {
+    "flyAgaric": {
+      "overview": "Duży grzyb o szkarłatnym lub pomarańczowym kapeluszu usianym białymi brodawkami — resztkami osłony, która okrywała młody owocnik. Jest trujący, a jego substancje czynne to kwas ibotenowy i muscymol, działające na mózg zupełnie inaczej niż psylocybina z tak zwanych grzybów halucynogennych.",
+      "habitat": "Żyje w symbiozie z korzeniami brzóz, sosen i świerków na całej półkuli północnej, a wraz z sadzonymi iglakami powędrował na południe: do Nowej Zelandii, Australii, Chile i RPA.",
+      "curiosity": "Muskarynę wyizolowano po raz pierwszy właśnie z tego gatunku i od niego nazwano, choć grzyb zawiera jej tylko ślady; nazwa „muchomor” bierze się ze średniowiecznego zwyczaju moczenia kawałków w mleku, żeby oszołomić muchy."
+    },
+    "deathCap": {
+      "overview": "Średniej wielkości grzyb o bladym, oliwkowozielonkawym kapeluszu, białych blaszkach, pierścieniu na trzonie i workowatej pochwie u podstawy. Jego amatoksyny blokują polimerazę RNA II — enzym, którym każda komórka odczytuje własne geny — a najmocniej obrywa wątroba. Pół kapelusza bywa dla dorosłego dawką śmiertelną.",
+      "habitat": "Rodzimy w europejskich lasach dębowych, bukowych i kasztanowych, został rozwieziony po świecie z bryłami korzeniowymi drzew ze szkółek i rośnie dziś w Kalifornii, na wschodzie USA, w Australii i Ameryce Południowej.",
+      "curiosity": "Zatrucie jest zdradliwe: objawy zaczynają się zwykle dopiero sześć do dwunastu godzin po posiłku, po czym na dobę albo dłużej ustępują, podczas gdy pod spodem trwa niszczenie wątroby."
+    },
+    "buttonMushroom": {
+      "overview": "Jeden z najpowszechniej uprawianych grzybów świata i filar zachodniego rynku pieczarkowego, produkowany w milionach ton rocznie — nie na polach, lecz w ciemnych, klimatyzowanych halach, na złożach kompostowanej słomy i obornika. Najwięcej produkują Chiny i Stany Zjednoczone, a zbiór idzie ręcznie, pod dachem, przez cały rok.",
+      "habitat": "Dziko rośnie na łąkach, wydmach i poboczach dróg w Europie i Ameryce Północnej; w uprawie nigdy nie ogląda światła dziennego i owocuje na kompoście okrytym warstwą torfu.",
+      "curiosity": "Nazwa „dwuzarodnikowa” to opis. Większość grzybów blaszkowych wystrzeliwuje z każdej podstawki cztery zarodniki, ten robi zwykle dwa, więc każdy zarodnik dziedziczy pełną parę jąder i sam potrafi wyrosnąć w płodną grzybnię."
+    },
+    "brewersYeast": {
+      "overview": "Mikroskopijny grzyb, który rozmnaża się, odpączkowując komórki potomne z boku, a pozbawiony tlenu przerabia cukier na etanol i dwutlenek węgla. Ten sam gatunek wyrasta chleb i fermentuje piwo, wino oraz sake, a szczepy zmodyfikowane hoduje się w kadziach, żeby produkowały insulinę i białka szczepionkowe.",
+      "habitat": "W naturze żyje na dojrzałych owocach oraz na korze i wyciekach soku dębów; linie udomowione mieszkają w piekarniach, browarach i przemysłowych fermentorach.",
+      "curiosity": "Drożdże i ludzie mają wciąż tyle wspólnej maszynerii komórkowej, że w jednym eksperymencie mniej więcej połowę zestawu niezbędnych genów drożdży dało się zastąpić ich ludzkimi odpowiednikami, a komórki rosły dalej."
+    },
+    "zombieAntFungus": {
+      "overview": "Pasożyt mrówek gmachówek, uznawany dziś za kompleks gatunków, z których każdy jest dostrojony do konkretnego żywiciela. Zarażone robotnice porzucają kolonię, zaciskają żuwaczki na nerwie liścia albo gałązce i tam giną; po kilku dniach zza głowy wystrzela trzonek, który zrzuca zarodniki na szlaki poniżej.",
+      "habitat": "Wilgotne lasy tropikalne i subtropikalne Tajlandii, Brazylii, Japonii i Afryki Zachodniej, gdzie zarażone mrówki tworzą gęste cmentarzyska na niskiej roślinności.",
+      "curiosity": "W lasach Tajlandii mrówki zaciskają szczęki jakieś 25 cm nad ziemią, gdzie wilgotność odpowiada grzybowi, a mikroskopia pokazuje strzępki oplatające włókna mięśniowe mrówki, ale omijające jej mózg."
+    },
+    "humongousFungus": {
+      "overview": "Miodowo zabarwiony grzyb blaszkowy, który jesienią pojawia się kępami wokół pni drzew iglastych, ale niemal całe życie spędza jako białe płaty grzybni pod korą i czarne, przypominające sznurowadła ryzomorfy. Zabija drzewa, więc leśnicy traktują go jak patogena, nie jak cud natury.",
+      "habitat": "Lasy iglaste Ameryki Północnej, Europy i Azji, gdzie atakuje świerki, jodły i sosny; rekordowy osobnik rośnie w Malheur National Forest we wschodnim Oregonie.",
+      "curiosity": "Badania genetyczne pokazały, że owocniki oddalone o kilometry należą do jednego klonu obejmującego około 965 hektarów, a szacunki jego wieku zaczynają się od jakichś 2500 lat."
+    },
+    "bitterOyster": {
+      "overview": "Twardy, płowy, wachlarzowaty grzyb szerokości kilku centymetrów, rosnący dachówkowato na martwym drewnie liściastym i rozkładający je na jasne włókno. Okazy ze wschodu Ameryki Północnej świecą, europejskie tego samego gatunku zwykle nie — to różnica w chemii, nie w tożsamości.",
+      "habitat": "Martwe dęby, brzozy i buki w lasach strefy umiarkowanej Ameryki Północnej, Europy i Azji; często owocuje na tej samej powalonej kłodzie kilka lat z rzędu.",
+      "curiosity": "Blask ma maksimum w zieleni, przy około 520 nanometrach, i jest tak słaby, że oko potrzebuje kilku minut pełnej ciemności, by go wychwycić; odpowiedzialna za niego lucyferyna, 3-hydroksyhispidyna, okazała się wspólna dla świecących grzybów."
+    },
+    "penicilliumMould": {
+      "overview": "Pospolita pleśń tworząca aksamitne, niebieskozielone kolonie z jasnym brzegiem wzrostu, uwalniająca zarodniki z trzonków w kształcie pędzelków — penicillus to po łacinie „pędzelek”. Wydziela penicylinę, która uniemożliwia bakteriom dokończenie budowy ścian komórkowych, a jej przypadkowe odkrycie otworzyło erę antybiotyków.",
+      "habitat": "Gleba, wilgotne powierzchnie w budynkach i psujące się jedzenie na całym świecie; ta jedna kultura, która coś zmieniła, przyleciała powietrzem — pojedynczym zabłąkanym zarodnikiem, który osiadł w londyńskim laboratorium.",
+      "curiosity": "Szczep Fleminga przez dekady nosił nazwę Penicillium notatum, dopóki sekwencjonowanie kilku genów markerowych nie przypisało go w 2011 roku gdzie indziej; sam zarodnik przywiał prawdopodobnie z pracowni mykologicznej piętro niżej."
+    },
+    "chytridFungus": {
+      "overview": "Skoczkowiec — przedstawiciel prastarej linii grzybów, które wciąż pływają, wypuszczając do wody opatrzone witką zarodniki. Zasiedla bogatą w keratynę skórę żab, ropuch i salamander i rozstraja jej gospodarkę wodno-solną, co u gatunków wrażliwych kończy się zatrzymaniem akcji serca.",
+      "habitat": "Strumienie, stawy i wilgotne lasy na każdym kontynencie, na którym żyją płazy; badania genetyczne wskazują na pochodzenie z Azji Wschodniej, skąd rozniósł go światowy handel żywymi zwierzętami.",
+      "curiosity": "Przegląd z 2019 roku powiązał go ze spadkami liczebności ponad 500 gatunków płazów i domniemanym wymarciem około 90 z nich — to największa udokumentowana strata bioróżnorodności przypisana jednemu patogenowi."
+    },
+    "whiteTruffle": {
+      "overview": "Blady, guzowaty, przypominający ziemniaka grzyb rozwijający się 5 do 30 cm pod powierzchnią, otulający cienkie korzenie dębów, topoli, leszczyn i wierzb w wymianie minerałów gleby za cukry drzewa. Ponieważ nigdy nie przebija powierzchni, w rozsiewaniu zarodników liczy nie na wiatr, lecz na zapach i zwierzęta.",
+      "habitat": "Wapienne gleby północnych i środkowych Włoch, przede wszystkim wzgórza Piemontu wokół Alby, a także Istria i część Bałkanów; szukają jej tresowane psy, mniej niż świnie skłonne zjeść znalezisko.",
+      "curiosity": "Trufle czarne uprawia się w sadach na zaszczepionych sadzonkach, ale ten gatunek przez sto lat opierał się każdej próbie, a pierwsze potwierdzone owocniki z uprawy zgłoszono z Francji dopiero w 2019 roku."
+    }
+  },
+  "cropDetails": {
+    "maize": {
+      "overview": "Najwydajniejsze zboże świata w przeliczeniu na tony, olbrzymia jednoroczna trawa uprawiana na ziarno, które karmi ludzi, zwierzęta i rafinerie paliw. Jedna kolba mieści kilkaset ziaren upakowanych na rdzeniu i owiniętych liśćmi okrywowymi. Uprawia się ją na każdym kontynencie poza Antarktydą.",
+      "habitat": "Pola od poziomu morza po ponad 3000 m w Andach i od Kanady po południe Afryki; jej dziki krewniak teosinte wciąż rośnie na okresowo suchych zboczach południowo-zachodniego Meksyku.",
+      "curiosity": "Kukurydzę udomowiono w meksykańskiej dolinie rzeki Balsas jakieś 9000 lat temu i bez ludzi już nie przetrwa — okryta liśćmi kolba się nie rozpada, więc ziarna nie mają jak się rozsypać."
+    },
+    "cassava": {
+      "overview": "Zdrewniały krzew uprawiany dla nabrzmiałych, skrobiowych korzeni spichrzowych, z których każdy może ważyć kilka kilogramów. Znosi ubogie, kwaśne gleby i długie susze, które kukurydzę zabiłyby na miejscu. Surowe korzenie zawierają związki cyjanogenne i zawsze wymagają obróbki.",
+      "habitat": "Niziny tropikalne całego świata, od południowego skraju dorzecza Amazonki, gdzie się zaczął, po Afrykę Zachodnią i Azję Południowo-Wschodnią, często na glebach zbyt wyjałowionych dla zbóż.",
+      "curiosity": "Badania genetyczne wyprowadzają każdą uprawną odmianę manioku z dzikich populacji południowo-zachodniej Brazylii i Boliwii; portugalskie statki zawiozły go do Afryki w XVI wieku, a największym producentem świata jest dziś Nigeria."
+    },
+    "arabicaCoffee": {
+      "overview": "Wiecznie zielony krzew albo niewielkie drzewo, którego ziarna to nasiona czerwonego, przypominającego wiśnię owocu, zwykle po dwa na owoc. Daje mniej więcej 60% światowej kawy, resztę głównie robusta. Brazylia uprawia jej więcej niż jakikolwiek inny kraj.",
+      "habitat": "Chłodne, zamglone tropikalne wyżyny, zwykle między 1000 a 2000 m; dzikie populacje wciąż rosną w zacienionym podszycie górskich lasów południowo-zachodniej Etiopii.",
+      "curiosity": "Coffea arabica powstała w Etiopii, gdy robusta skrzyżowała się z Coffea eugenioides i podwoiła liczbę chromosomów; garstka roślin wywieziona do Jemenu, a potem do europejskich szklarni dała początek sporej części dzisiejszych upraw."
+    },
+    "soybean": {
+      "overview": "Krzaczasta roślina strączkowa o owłosionych strąkach z dwoma do czterech nasion. Nasiona są wyjątkowo bogate jednocześnie w białko i olej, dlatego soja zdominowała światowy handel roślinami oleistymi. Azot wiąże sama, dzięki brodawkom korzeniowym.",
+      "habitat": "Ciepłe pola strefy umiarkowanej i subtropikalnej, przede wszystkim brazylijskie cerrado, argentyńska pampa i amerykański Środkowy Zachód; dziki przodek to cienkie pnącze z brzegów rzek i miedz Azji Wschodniej.",
+      "curiosity": "Dzika Glycine soja to smukłe, wijące się pnącze o drobnych, twardych, czarnych nasionach, udomowione w Chinach jakieś 5000 lat temu. Brazylia przed latami sześćdziesiątymi XX wieku niemal nie uprawiała soi, a dziś jest jej największym producentem na świecie."
+    },
+    "sugarcane": {
+      "overview": "Olbrzymia trawa tropikalna, której źdźbła sięgają trzech–pięciu metrów i magazynują sacharozę w łodydze, nie w nasieniu. Trzcina towarowa to mieszaniec z twardszą, dziką Saccharum spontaneum, sadzony z sadzonek pędowych, nigdy z nasion. Dostarcza większość cukru świata.",
+      "habitat": "Gorące niziny z obfitymi opadami albo nawadnianiem, mniej więcej między 30°N a 30°S; największe areały mają Brazylia i Indie.",
+      "curiosity": "Udomowiona na Nowej Gwinei jakieś 8000 lat temu, trzcina powędrowała na zachód przez Indie, gdzie po raz pierwszy skrystalizowano cukier, a potem na plantacje atlantyckie; Brazylia przerabia dziś około połowy zbiorów na etanol paliwowy."
+    },
+    "breadWheat": {
+      "overview": "Jednoroczna trawa strefy umiarkowanej, obsiewająca więcej pól niż niemal jakakolwiek inna roślina uprawna. W jednym kłosie dojrzewa mniej więcej 30 do 50 ziaren, a ich białka glutenowe pozwalają ciastu zatrzymać gaz i wyrosnąć. Ma sześć zestawów chromosomów, odziedziczonych po trzech różnych gatunkach traw.",
+      "habitat": "Pola strefy umiarkowanej i śródziemnomorskiej na każdym kontynencie poza Antarktydą, od kanadyjskich prerii po Pendżab; dzika przodkini, kozieniec, wciąż rośnie na zboczach od Żyznego Półksiężyca po Morze Kaspijskie.",
+      "curiosity": "Jakieś 8–9 tysięcy lat temu udomowiona płaskurka skrzyżowała się z chwastowym kozieńcem Aegilops tauschii — niepozorną trawą o kruchych, rozpadających się kłosach, której genom odpowiada dziś za rozciągliwość ciasta chlebowego."
+    },
+    "asianRice": {
+      "overview": "Jednoroczna trawa, która przeżywa w stojącej wodzie dzięki kanałom powietrznym biegnącym przez łodygi i korzenie. Dla mniej więcej połowy ludzkości jest podstawą wyżywienia. Ziarno wyłuskuje się z plewki i warstwy otrębów otaczających skrobiowe bielmo.",
+      "habitat": "Zalewane pola i uprawy deszczowe monsunowej Azji, a także Afryka Zachodnia, dolina Missisipi i południe Brazylii; dziki Oryza rufipogon wciąż rośnie w azjatyckich bagnach i rowach.",
+      "curiosity": "Ryż azjatycki udomowiono z Oryza rufipogon w chińskim dorzeczu Jangcy około 9000 lat temu, a ryż afrykański, Oryza glaberrima, niezależnie w wewnętrznej delcie Nigru jakieś 3000 lat temu, skąd przepłynął Atlantyk razem ze zniewolonymi rolnikami z Afryki Zachodniej."
+    },
+    "potato": {
+      "overview": "Przedstawiciel psiankowatych uprawiany dla bulw, które są zgrubiałymi pędami podziemnymi, nie korzeniami. Nad ziemią to ulistniona roślina o białych lub fioletowych kwiatach i drobnych zielonych owocach, wyglądających jak małe pomidory i trujących. Zzieleniałe albo kiełkujące bulwy gromadzą te same gorzkie glikoalkaloidy.",
+      "habitat": "Chłodne klimaty całego świata, od andyjskiego altiplano powyżej 3500 m po pola Chin i Indii; Chiny zbierają dziś więcej ziemniaków niż jakikolwiek inny kraj.",
+      "curiosity": "Udomowiony w południowym Peru jakieś 8000 lat temu z gorzkich dzikich gatunków, ziemniak trafił do Europy w XVI wieku jako maleńka próbka genetyczna, podczas gdy andyjscy rolnicy do dziś utrzymują w jednym regionie tysiące odrębnych, nazwanych odmian."
+    },
+    "banana": {
+      "overview": "To nie drzewo, tylko olbrzymie ziele — pień jest ciasnym słupem zwiniętych pochew liściowych, a roślina zamiera po jednym owocowaniu. Większość bananów w eksporcie to jedna bezpłodna, triploidalna odmiana, Cavendish, rozmnażana z odrostów i kultur tkankowych.",
+      "habitat": "Wilgotne niziny tropikalne całego świata; najwięcej uprawiają Indie i Chiny, najwięcej eksportuje Ekwador, a dzikie, nasienne gatunki Musa wciąż rosną w lasach Azji Południowo-Wschodniej i Nowej Gwinei.",
+      "curiosity": "Wykopaliska na bagnie Kuk w górach Nowej Gwinei datują uprawę bananów na jakieś 7000 lat temu. Ponieważ każda roślina Cavendisha jest genetycznie identyczna, glebowy grzyb Fusarium rasy tropikalnej 4 zagraża całej produkcji eksportowej — tak jak wcześniejszy szczep wykończył w minionym wieku odmianę Gros Michel."
+    },
+    "sweetOrange": {
+      "overview": "Wiecznie zielone drzewo o pachnących białych kwiatach, którego sok pochodzi z włosków przekształconych w wypełnione płynem woreczki. Niemal każde drzewo towarowe to klon zaszczepiony na podkładce dobranej pod odporność na choroby, a nie pod smak owocu.",
+      "habitat": "Pasy subtropikalne o łagodnych zimach — południowo-wschodnia Brazylia, Floryda, basen Morza Śródziemnego i południe Chin; gatunki rodzicielskie pochodzą z lasów południowej i południowo-wschodniej Azji.",
+      "curiosity": "Mieszaniec powstał w południowych Chinach, powędrował z kupcami na zachód i w XVI wieku dotarł do Brazylii na portugalskich statkach; dziś Brazylia produkuje więcej pomarańczy niż jakikolwiek inny kraj. Nasiona cytrusów często zawierają dodatkowe zarodki sklonowane z drzewa matecznego, więc siewka bywa dokładną kopią rodzica."
+    }
+  },
+  "soundDetails": {
+    "tawnyOwl": {
+      "overview": "Krępa, okrągłogłowa sowa leśna długości około 40 cm, brązowo marmurkowana i praktycznie niewidoczna na tle kory. Poluje słuchem w niemal całkowitej ciemności, a dzień spędza wciśnięta w dziuplę albo przyklejona do pnia. W całym zasięgu to jeden z najczęściej słyszanych i najrzadziej widywanych ptaków.",
+      "habitat": "Stare lasy liściaste, parki, przykościelne cmentarze i starsze przedmieścia z dużymi drzewami, od Wysp Brytyjskich i Iberii przez Europę po Iran i zachodnią Syberię, a także Afryka Północna; nie ma go w Irlandii.",
+      "curiosity": "Terytorialne pohukiwanie nasila się jesienią i ponownie późną zimą, gdy bezlistne drzewa pozwalają mu nieść się na kilkaset metrów, a para potrafi trzymać ten sam kawałek lasu przez dekadę."
+    },
+    "commonCuckoo": {
+      "overview": "Smukły, długoogonowy szary ptak wielkości krogulca, którego prążkowany spód i niski, prosty lot przypominają tego jastrzębia na tyle, że drobne ptaki w popłochu zrywają się z gniazd. Samice składają jaja w cudzych gniazdach i odlatują; opisano ponad 100 gatunków żywicieli. Większość ludzi zna ten głos latami, zanim świadomie zobaczy ptaka.",
+      "habitat": "Skraje lasów, trzcinowiska, wrzosowiska i otwarte pola uprawne Europy i północnej Azji; zimuje w Afryce subsaharyjskiej i południowej Azji.",
+      "curiosity": "Dwunutowe wołanie to mniej więcej opadająca tercja mała, niosąca się w otwartym terenie na kilometr i dalej; eksperymenty z odtwarzaniem nagrań pokazują, że żywiciele reagują na bulgoczący chichot samicy podobnie jak na polującego krogulca."
+    },
+    "commonNightingale": {
+      "overview": "Niepozorny brązowy ptak niewiele większy od rudzika, który niemal nigdy się nie pokazuje i śpiewa z głębi gęstych zarośli. Repertuar jednego samca liczy jakieś 180–260 różnych typów pieśni, podawanych jako urwane gwizdy, głębokie terkoty i długie crescenda. Gniazduje w Europie, Afryce Północnej i zachodniej Azji, zimuje w Afryce.",
+      "habitat": "Gęstwiny, młodniki i zakrzewione skraje lasów z grubą osłoną tuż nad ziemią, często nad wodą albo wzdłuż zarośniętych miedz.",
+      "curiosity": "Nagrania z hałaśliwych ulic Berlina uchwyciły samce śpiewające w szczytach powyżej 95 decybeli mierzonych z metra — podkręcają głośność, żeby przebić się przez ruch uliczny."
+    },
+    "europeanTreeFrog": {
+      "overview": "Mała, gładka, jaskrawozielona żaba z ciemnym pasem po każdym boku i lepkimi przylgami na palcach, którymi się wspina. Wiosną samce zbierają się przy zbiornikach rozrodczych i wołają zachodzącymi na siebie szeregami, głównie po zmroku. Poza sezonem godowym siedzi wysoko i rzadko bywa widywana przy ziemi.",
+      "habitat": "Nasłonecznione stawy, rowy i zalewane łąki obrzeżone trzciną i jeżynami w środkowej i południowo-wschodniej Europie; między sezonami godowymi siedzi metry nad ziemią w krzewach i żywopłotach.",
+      "curiosity": "Głos ma maksimum przy około 2,5 kHz, a samiec potrafi powtórzyć go tysiące razy w ciągu jednej nocy — wołanie należy do najbardziej energochłonnych czynności zmierzonych u kręgowców, i samce tracą przez sezon na masie."
+    },
+    "americanBullfrog": {
+      "overview": "Największa żaba Ameryki Północnej, dorastająca do jakichś 20 cm od pyska do kloaki, oliwkowozielona i masywna. Samce przez całe lato trzymają terytoria na brzegu i wołają dniem i nocą. Szeroko zawleczona, jest dziś gatunkiem inwazyjnym na kilku kontynentach.",
+      "habitat": "Stałe, ciepłe wody — brzegi jezior, wolne rzeki, zbiorniki zaporowe i stawy hodowlane — rodzime we wschodniej Ameryce Północnej; zadomowiła się w Brazylii, Japonii, Chinach i części południowej Europy.",
+      "curiosity": "Wysokość głosu idzie w parze z rozmiarem ciała, więc najgłębszy bas w chórze należy zwykle do największego samca; samce poznać po błonie bębenkowej znacznie szerszej od oka."
+    },
+    "cicadaOrni": {
+      "overview": "Szarobrązowa śródziemnomorska cykada długości około 3 cm, o przezroczystych skrzydłach z ciemnymi plamkami — dużo łatwiejsza do rozpoznania po głosie niż po wyglądzie. Samce wydają powtarzane, suche zip-zip-zip przerywane równymi pauzami, śpiewając z pni i gałęzi. Samice nie śpiewają w ogóle.",
+      "habitat": "Sosny, oliwki, platany i sady wokół Morza Śródziemnego, od Półwyspu Iberyjskiego i Afryki Północnej przez Włochy i Grecję po Turcję.",
+      "curiosity": "Dźwięk powstaje w parze żebrowanych płytek zwanych tymbałami, które kilkaset razy na sekundę zapadają się jak wieczko puszki, a odwłok za nimi jest w większości pusty — śpiewający samiec to głównie wzmacniacz."
+    },
+    "houseCricket": {
+      "overview": "Bladosłomkowy świerszcz długości około 2 cm, pochodzący z południowo-zachodniej Azji, dziś żyjący wszędzie tam, gdzie budynki są ciepłe. Cykają samce; samice, rozpoznawalne po długim, igłowatym pokładełku, milczą. To jeden z najczęściej hodowanych owadów na Ziemi.",
+      "habitat": "Ciepłe ludzkie wnętrza — kotłownie, piekarnie, wysypiska, ogrzewane szopy i fermy hodowlane; na zewnątrz przeżywa ciepłe miesiące w strefie umiarkowanej i cały rok w tropikach.",
+      "curiosity": "Uszy ma na przednich odnóżach, tuż pod kolanem, a tempo cykania rośnie z temperaturą — w gorącą noc ten sam pokój brzmi szybciej niż w chłodną."
+    },
+    "greatGreenBushCricket": {
+      "overview": "Trawiastozielony pasikonik dorastający do jakichś 7 cm, z czułkami dłuższymi od ciała — duży owad, którego i tak niemal nie sposób wypatrzyć w żywopłocie. Samce śpiewają ze szczytów krzewów i wysokich roślin, często przez większość nocy. Zasięg obejmuje Europę, Afrykę Północną i sięga Azji Środkowej.",
+      "habitat": "Wysoka, szorstka roślinność — jeżyny, żywopłoty, zarośla, pobocza dróg i skraje winnic — zwykle śpiewa metr albo dwa nad ziemią.",
+      "curiosity": "Spora część energii pieśni leży powyżej 20 kHz, na samej granicy ludzkiego słuchu, więc dzieci często wyraźnie słyszą samca, którego stojący obok dorośli ledwie wyłapują."
+    },
+    "blackHowlerMonkey": {
+      "overview": "Południowoamerykańska małpa o wyjątkowo wyraźnych różnicach między płciami: dorosłe samce są czarne, samice i młode płowożółte. Grupy ryczą o świcie i o zmierzchu, ogłaszając, gdzie są, co utrzymuje sąsiednie stada z dala od siebie bez żadnego kontaktu. Ciało mierzy około 60 cm, do tego chwytny ogon podobnej długości.",
+      "habitat": "Lasy galeriowe, lasy okresowo zalewane i płaty zadrzewień w Brazylii, Boliwii, Paragwaju i północnej Argentynie, głównie wysoko w koronach.",
+      "curiosity": "Ryk wzmacnia powiększona, wydrążona kość gnykowa w gardle, a badanie porównawcze z 2015 roku wykazało, że gatunki wyjców z największymi kośćmi gnykowymi mają najmniejsze jądra."
+    },
+    "redFox": {
+      "overview": "Najszerzej rozsiedlony dziki drapieżnik świata, ważący jakieś 5–7 kg i wszędzie tam, gdzie jest dużo ludzi, aktywny głównie nocą. Opisano u niego około dwudziestu odrębnych typów głosów, od urywanych szczeknięć kontaktowych po długi wrzask. W miastach słychać go dużo częściej, niż widać.",
+      "habitat": "Praktycznie wszystko: arktyczna tundra, pola uprawne, skraj pustyni, las i ścisłe centrum miasta, gdzie nory bywają pod szopami, wzdłuż nasypów kolejowych i w ogrodach.",
+      "curiosity": "Wrzaski nasilają się w grudniu i styczniu, gdy lisy dobierają się w pary, i w zasadzie ustają, zanim wiosną urodzą się młode — dlatego ten hałas zdaje się pojawiać i znikać według harmonogramu."
+    }
+  }
+}

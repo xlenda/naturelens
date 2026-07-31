@@ -1,0 +1,314 @@
+{
+  "fishDetails": {
+    "clownfish": {
+      "overview": "En lille revfisk fra Indo-Stillehavet, som er til at kende med det samme på den orange krop med tre hvide bånd. Den lever hele sit voksne liv i én enkelt søanemone, hvis nældeceller ville slå de fleste andre fisk ihjel.",
+      "habitat": "Varme, lavvandede koralrev og laguner fra Rødehavet til det nordlige Australien, altid sammen med en værtsanemone.",
+      "curiosity": "Alle klovnfisk fødes som hanner. Hver anemone huser ét dominerende ynglepar, og når hunnen dør, skifter den dominerende han køn og overtager hendes plads."
+    },
+    "rainbowTrout": {
+      "overview": "En koldtvandsfisk opkaldt efter den skinnende lyserøde stribe langs siden. Den stammer fra floder med afløb til Stillehavet i Nordamerika og Asien, men opdrættes i dag på alle kontinenter undtagen Antarktis.",
+      "habitat": "Klare, kølige og iltrige floder og søer. De bestande, der trækker ud i havet og vender tilbage, kaldes stålhovedørred.",
+      "curiosity": "Det lyserøde kød er ikke fiskens eget farvestof, men kommer fra de krebsdyr, den spiser — opdrætsørred på anden foderplan bliver hvid i kødet."
+    },
+    "atlanticSalmon": {
+      "overview": "En kraftfuld vandrefisk, der klækkes i ferskvand, æder sig stor i havet gennem flere år og vender tilbage for at gyde i netop den flod, hvor den blev født.",
+      "habitat": "Det nordlige Atlanterhav som voksen; floder i Europa og det østlige Nordamerika, når den skal yngle.",
+      "curiosity": "Artsnavnet salar betyder »springeren« — laks kan forcere vandfald på over tre meter på vejen op ad floden."
+    },
+    "northernPike": {
+      "overview": "En lang, olivengrøn baghold-rovfisk med fladt andenæb-agtigt snudeparti og et gab fyldt med bagudrettede tænder. Den står ubevægelig i vandplanterne og hugger på en brøkdel af et sekund.",
+      "habitat": "Plantefyldte, langsomt flydende floder og søer over hele den nordlige halvkugle, fra Irland over Sibirien til Alaska.",
+      "curiosity": "Ryg- og gatfinne sidder langt tilbage tæt ved halen — en kropsbygning skabt til ét eksplosivt ryk, ikke til lange forfølgelser."
+    },
+    "commonCarp": {
+      "overview": "En kraftig ferskvandsfisk med store skæl og to par skægtråde ved munden. Den har været opdrættet i over to tusind år og er eftertragtet mad i dele af Europa og Asien — men en alvorlig invasiv skadegører andre steder.",
+      "habitat": "Varmt, langsomt eller stillestående vand med blød mudderbund — floder, søer, damme og kanaler på alle kontinenter undtagen Antarktis.",
+      "curiosity": "Karper æder ved at suge mudder op og si det igennem, hvilket hvirvler bunden op og gør vandet uklart — hovedårsagen til de skader, de gør i de søer, de invaderer."
+    },
+    "blueTang": {
+      "overview": "En strålende kongeblå revfisk med en sort tegning som en malerpalet og gul hale. Som alle kirurgfisk bærer den en knivskarp torn nær haleroden.",
+      "habitat": "Koralrev i Indo-Stillehavet, som regel i små flokke tæt ved forgrenede koraller, den kan søge ly i.",
+      "curiosity": "Ungfiskene er knaldgule og bliver blå, når de vokser til — og haletornen, der normalt ligger fladt ned, vipper ud til siden, når fisken føler sig truet."
+    },
+    "largemouthBass": {
+      "overview": "En kompakt, grøn rovfisk med et mørkt bånd langs siden — verdens mest eftertragtede sportsfisk i ferskvand.",
+      "habitat": "Varme søer, damme og langsomme floder med skjulesteder — nedsunkne træstammer, plantebælter og bådebroer.",
+      "curiosity": "Du kender den fra den småmundede slægtning på kæben: hos den stormundede rækker overkæben længere bagud end øjets bagkant."
+    },
+    "yellowfinTuna": {
+      "overview": "En stor, torpedoformet havfisk med meget lange, seglformede gule finner og en metallisk mørkeblå ryg, der glider over i sølv nedadtil.",
+      "habitat": "Varmt åbent hav over hele kloden, oftest i de øverste 100 meter, men den dykker langt dybere for at æde.",
+      "curiosity": "Den kan holde kroppen varmere end vandet omkring sig, så musklerne bliver ved med at arbejde i kolde dybder, hvor andre fisk bliver træge — derfor kan den krydse hele oceaner."
+    },
+    "zebrafish": {
+      "overview": "En lille stribet karpefisk fra Sydasiens floder, som er blevet et af videnskabens mest studerede dyr.",
+      "habitat": "Lavvandet, langsomt ferskvand — rismarker, vandløb og damme i Indien, Bangladesh og Nepal.",
+      "curiosity": "Æggene er gennemsigtige, så forskere kan følge et hjerte eller en rygsøjle blive dannet i realtid under mikroskopet — derfor optræder den i tusindvis af medicinske studier."
+    },
+    "redLionfish": {
+      "overview": "En iøjnefaldende fisk med bånd i rødt, hvidt og brunt og lange, vifteagtige finner, der skjuler giftige pigge. Smuk, langsom og bedst at lade være med at røre.",
+      "habitat": "Hjemmehørende på rev i Indo-Stillehavet; i dag en alvorlig invasiv art i hele Caribien og det vestlige Atlanterhav.",
+      "curiosity": "I sit nye område har den næsten ingen fjender og æder stort set alt, der kan være i gabet — derfor opfordrer flere lande aktivt til at harpunere og spise den."
+    }
+  },
+  "birdDetails": {
+    "barnSwallow": {
+      "overview": "En slank fugl med blåskinnende ryg, dybt kløftet hale og rustrød strube, næsten altid set i hurtig, lav og drejende flugt hen over åbent land.",
+      "habitat": "Marker, enge og vandkanter over hele den nordlige halvkugle; overvintrer på den sydlige halvkugle.",
+      "curiosity": "Det er den mest udbredte svale på jorden, og den finder al sin føde i luften — den drikker endda ved at stryge hen over vandoverfladen i flugten."
+    },
+    "houseSparrow": {
+      "overview": "En kompakt brun og grå fugl. Hannen kendes på den sorte hagesmæk og kastanjebrune nakke, hunnen er jævnt sandbrun med en lys stribe bag øjet.",
+      "habitat": "Dér hvor mennesker er: byer, landsbyer, gårde og havne på næsten alle kontinenter.",
+      "curiosity": "Den fulgte landbruget ud af Mellemøsten for tusinder af år siden og lever i dag stort set ingen steder, hvor der ikke også bor mennesker."
+    },
+    "commonKingfisher": {
+      "overview": "En lille fugl med dolkeformet næb i elektrisk blåt og brændt orange, oftest kun oplevet som et lyn af farve lavt hen over vandet.",
+      "habitat": "Langsomme, klare åer, floder og kanaler med grene ud over vandet, i Europa, Asien og Nordafrika.",
+      "curiosity": "Den dykker på hovedet og kan hente en fisk en meter nede, banker den derefter mod en gren og sluger den med hovedet først, så finnestrålerne lægger sig fladt ned."
+    },
+    "peregrineFalcon": {
+      "overview": "En kraftig falk med spidse vinger, skifergrå på oversiden og tværstribet nedenunder, med et tydeligt mørkt »overskæg« under øjet.",
+      "habitat": "Alle kontinenter undtagen Antarktis — klipper, kyster og i stigende grad højhuse og domkirketårne.",
+      "curiosity": "I jagtdykket kommer den over 300 km/t og er dermed hurtigere end noget andet dyr. Små knuder i næseborene bremser luften, så lungerne ikke sprænges ved den fart."
+    },
+    "greatBlueHeron": {
+      "overview": "En høj, langbenet gråblå vadefugl med et tungt spydformet næb og en sort fjerpragt bag øjet.",
+      "habitat": "Lavvandede ferske og salte områder i Nord- og Mellemamerika — sumpe, søbredder, floder og kyster.",
+      "curiosity": "Den står ubevægelig i minutter og hugger hurtigere, end øjet kan følge. I flugten trækker den halsen sammen til et stramt S — sådan kender man en hejre fra en trane."
+    },
+    "rockPigeon": {
+      "overview": "Den velkendte bydue: grå krop, grønviolet skinnende hals og to mørke vingebånd. Fjerdragten varierer voldsomt efter århundreders tamavl.",
+      "habitat": "Oprindeligt kystklipper og klippekløfter; i dag byer over hele verden, hvor sålbænke og vinduesrammer træder i stedet for klippehylder.",
+      "curiosity": "Begge forældre danner »kromælk«, en proteinrig afsondring, som ungerne fodres med — noget kun en håndfuld andre fugle kan."
+    },
+    "europeanRobin": {
+      "overview": "En lille, rundkroppet brun fugl med lysende orange bryst og ansigt og en vane med at holde nøje øje med mennesker fra en gren tæt på.",
+      "habitat": "Skov, levende hegn og haver i hele Europa og det vestlige Asien.",
+      "curiosity": "Den følger efter havefolk, fordi vendt jord blotter orme — en adfærd, der begyndte med vildsvin, som rodede i skovbunden. Begge køn bærer det orange bryst og forsvarer territorium med sang året rundt."
+    },
+    "mallard": {
+      "overview": "Den klassiske svømmeand: andrikken med skinnende grønt hoved og hvid halsring, ænderne spættet brune med et blåt vingespejl.",
+      "habitat": "Næsten alt fersk eller brakt vand på den nordlige halvkugle, fra vilde vådområder til damme i byparker.",
+      "curiosity": "Den er stamform til stort set alle tamandracer. Det berømte høje rap kommer kun fra hunnen — hannens stemme er en lav, hæs raslen."
+    },
+    "scarletMacaw": {
+      "overview": "En meget stor papegøje i klar skarlagen, gul og blå, med lang spids hale og et kraftigt krogformet næb.",
+      "habitat": "Fugtig lavlandsregnskov fra det sydlige Mexico til Amazonas, som regel højt oppe i kronetaget.",
+      "curiosity": "Den lever i par hele livet og kan blive over halvtreds år. Næbbet knækker nødder, som ingen anden fugl i skoven kan klare, og flokkene samles ved lerskrænter langs floderne for at æde mineralrig jord."
+    },
+    "emperorPenguin": {
+      "overview": "Den største pingvin, over en meter høj, sort og hvid med en gyldenorange plet på hver side af halsen.",
+      "habitat": "Havisen omkring Antarktis — den eneste fugl, der yngler gennem den antarktiske vinter.",
+      "curiosity": "Hannen balancerer det ene æg på fødderne under en hudfold i to måneders mørke og snestorme uden at spise noget, mens hunnen tager ud i havet for at æde."
+    }
+  },
+  "insectDetails": {
+    "sevenSpotLadybird": {
+      "overview": "En hvælvet bille på 5-8 mm, blank rød med tre sorte pletter på hver dækvinge og en syvende hen over sammenføjningen. Både de voksne og de grå, krokodilleagtige larver jager bladlus, og derfor dukker de hele tiden op på angrebne stængler i haven. Den hører hjemme i hele Eurasien og er for længst indført i Nordamerika, og det er den bille, de fleste ser for sig, når de hører ordet mariehøne.",
+      "habitat": "Brændenældekrat, levende hegn, kolonihaver og enhver plante med bladlus. Om efteråret samler de voksne sig i tætte klynger for at overvintre udendørs — i visne blade, tuer af dødt græs, i bunden af hegn, under løs bark og inde i hule plantestængler, ofte de samme læfyldte steder år efter år.",
+      "curiosity": "Forsvaret hedder refleksblødning: presses den hårdt, tvinger den dråber af sin egen hæmolymfe ud gennem benleddene, og de indeholder alkaloider, der er så bitre, at fuglen som regel spytter den ud i god behold."
+    },
+    "commonEarwig": {
+      "overview": "Et fladt, blankbrunt insekt på 12-15 mm med en tang bagtil, kraftigt buet hos hannen og næsten lige hos hunnen. Under de korte læderagtige dækvinger ligger store vifteformede bagvinger, foldet og pakket sammen som et papirpuslespil. Trods navnet interesserer den sig ikke for ører; tangen bruges til forsvar, til parringsspil og til at pakke vingerne ud.",
+      "habitat": "Fugtige, snævre sprækker om dagen — under urtepotter, i visne blade, mellem hegnsbrædder, inde i dahliablomster og sammenklappede havemøbler — og om natten kommer den frem for at æde bladlus, pollen og bløde frugter.",
+      "curiosity": "Den er et af de få insekter, der passer sine æg: moren vender og pudser hvert eneste æg i ugevis for at holde skimmel væk, og hun bliver ved med at fodre ungerne, efter at de er klækket."
+    },
+    "commonPillWoodlouse": {
+      "overview": "Et skifergråt, pansret krebsdyr på op til omkring 18 mm, der ruller sig sammen til en tæt kugle, når den forstyrres. De overlappende plader og selve kuglerulningen skiller den fra de fladere bænkebidere, der kun kan løbe i skjul. Den stammer fra Middelhavsområdet og findes nu i haver på alle beboede kontinenter.",
+      "habitat": "Under sten, potter, brænde og fugtigt pap, alle steder hvor luftfugtigheden holder sig høj. Dens gælleagtige åndedrætsorganer skal være fugtige, så den klarer sig ikke længe på tør, åben jord.",
+      "curiosity": "Den drikker med bagenden: to rørformede haleben suger vand op ved kapillarkraft. Og blodet er blåt, fordi ilten fragtes af kobberholdigt hæmocyanin i stedet for jernholdigt hæmoglobin."
+    },
+    "houseFly": {
+      "overview": "En grå flue på 6-7 mm med fire mørke striber på brystet og en svampet pude i stedet for bidende kæber. Den kan ikke tygge noget som helst: den spytter på fast føde, opløser den og suger væsken op igen. Den er fulgt med mennesket verden rundt og lever nu på alle kontinenter, hvor vi bor.",
+      "habitat": "Alle varme steder med fugtigt organisk materiale at lægge æg i — kompostbunker, skraldespande, gødning, afløb — hvor hele forløbet fra æg til voksen kan klares på cirka en uge i sommervarme.",
+      "curiosity": "Bagvingerne er reduceret til to kølleformede svingkøller, der slår i modfase med vingerne omkring 200 gange i sekundet og virker som gyroskoper; fjerner man dem, kan fluen ikke længere holde sig oprejst i luften."
+    },
+    "gardenSnail": {
+      "overview": "Et bløddyr med et rynket brun- og cremefarvet hus på omkring 3 cm. Det stammer fra Middelhavsområdet og er nu etableret i Europa, Nord- og Sydamerika, Australien, Sydafrika og Østasien. Den rasper i planterne med radulaen, et bøjeligt bånd med tusindvis af små kitintænder. Hvert eneste dyr er han og hun på én gang.",
+      "habitat": "Mure, hækbunde, urtepotter og skyggesiden af bygninger; aktiv på fugtige nætter. I tørke eller kulde forsegler den husets åbning med en kalkagtig hinde og venter — nogle gange i månedsvis.",
+      "curiosity": "Før parringen jager hver snegl en hærdet pil af kalk ind i partnerens krop; slim på pilen ændrer modtagerens kønsveje, så flere af skyttens sædceller overlever og når frem til æggene."
+    },
+    "westernHoneyBee": {
+      "overview": "En stribet bi på 12-15 mm, der lever i kolonier på titusindvis. Den hører hjemme i Europa, Afrika og Vestasien og holdes af mennesker næsten overalt ellers. En bi, der vender hjem fra et godt blomsterområde, danser en vrikkedans på den lodrette tavle, hvor vinklen angiver retningen i forhold til solen, og varigheden angiver afstanden. Sommerarbejdere lever omkring seks uger; en dronning kan holde flere år.",
+      "habitat": "Vilde kolonier bygger vokstavler i hule træer, murhulrum og tagrum, mens de passede bor i stader; bierne flyver rutinemæssigt to til tre kilometer hjemmefra efter blomster.",
+      "curiosity": "Kolonien går ikke i dvale. Om vinteren samler den sig i en tæt kugle og ryster med flyvemusklerne, så midten holdes omkring 20-30 °C, mens luften udenfor er under frysepunktet — og skruer så op til cirka 35 °C, når yngelplejen går i gang sidst på vinteren, med oplagret honning som brændstof hele vejen."
+    },
+    "paintedLady": {
+      "overview": "En orange og sort sommerfugl med 5-6 cm vingefang og hvide pletter i de mørke vingespidser — en af klodens mest udbredte sommerfugle. Larverne lever på tidsler, katoste og nælder, og de voksne dukker op i enorme mængder nogle år og er næsten fraværende andre. Radarmålinger har fulgt dem på træk flere hundrede meter oppe.",
+      "habitat": "Åbent, blomsterrigt terræn af næsten enhver slags — ruderater, vejkanter, haver, ørkener efter regn — i Europa, Asien, Afrika, Australien og Nordamerika. Sydamerika er det eneste kontinent ud over Antarktis, hvor den ikke findes.",
+      "curiosity": "Hele årets kredsløb dækker omkring 12.000-15.000 km og omfatter en krydsning af Sahara, og hver eneste etape flyves af insekter, der aldrig har gjort turen før."
+    },
+    "cellarSpider": {
+      "overview": "En bleg edderkop med ekstremt lange ben: kroppen er 8-10 mm, benspændet op til 7 cm, og den hænger som regel med bugen opad i et løst virvar af spind. Spindet er ikke klæbrigt; byttet vikles ind i silke, som den slynger mod det på afstand med bagbenene. Den lever nu i bygninger næsten overalt i verden, spredt med menneskers gods.",
+      "habitat": "Loftshjørner, kældre, opgange, garager og rummet bag møbler — indendørs, uforstyrret og varmt, for den klarer sig dårligt udendørs gennem kolde vintre.",
+      "curiosity": "Bliver den forstyrret, svinger den kroppen rundt i spindet så hurtigt, at dens eget omrids sløres, og det gør den svær at sigte på; den dræber også jævnligt edderkopper, der er større end den selv."
+    },
+    "argentineAnt": {
+      "overview": "En lille, ensfarvet brun myre på 2-3 mm, der danner tætte stier langs kantsten, fodpaneler og køkkenborde. Boet har mange dronninger og forsvarer ingen grænser, så nabokolonier smelter sammen i stedet for at bekæmpe hinanden. Den stammer fra Paraná-flodens bassin i Sydamerika og er ført til seks kontinenter i jord, potteplanter og fragt.",
+      "habitat": "Overfladiske boer under fliser, urtepotter, barkflis og dørtrin i varme og middelhavsagtige klimaer, altid tæt på fugt, med stier der løber indendørs til enhver sukkerkilde.",
+      "curiosity": "Langs Middelhavskysten danner den indførte bestand en superkoloni på omkring 6.000 km, og arbejdere indsamlet på hver sit kontinent genkender stadig hinanden som bofæller frem for rivaler."
+    },
+    "commonEarthworm": {
+      "overview": "En rødbrun orm på op til omkring 25 cm med en fladtrykt, lysere hale og et opsvulmet bælte, clitellum, en tredjedel nede ad kroppen. Den holder en permanent lodret gang på op til to meters dybde og kommer op om natten for at trække blade med ned. Den stammer fra Europa og er indført i Nordamerika, Asien og på den sydlige halvkugle.",
+      "habitat": "Fugtig, ikke sur jord i haver, parker og på græsgange. Den har ingen lunger og optager ilt gennem huden, som skal være fugtig, for at gasudvekslingen virker — derfor dør den hurtigt på varm, tør asfalt og rejser kun over jorden på våde nætter, hvor et fugtigt underlag lader den nå langt længere, end den kunne ved at grave.",
+      "curiosity": "Darwin testede ormenes håndtering af blade ved at give dem papirtrekanter og fandt, at de greb dem i den spidse ende — den vinkel, der glider lettest ned i en gang."
+    }
+  },
+  "fungiDetails": {
+    "flyAgaric": {
+      "overview": "En stor svamp med skarlagenrød til orange hat, oversået med hvide vorter — rester af det slør, der pakkede det unge frugtlegeme ind. Den er giftig, og de aktive stoffer er ibotensyre og muscimol, der påvirker hjernen helt anderledes end psilocybinen i de såkaldte magiske svampe.",
+      "habitat": "Lever i samliv med rødderne på birk, fyr og gran over hele den nordlige halvkugle og er fulgt med plantede nåletræer sydpå til New Zealand, Australien, Chile og Sydafrika.",
+      "curiosity": "Muskarin blev første gang isoleret fra netop denne art og opkaldt efter den, men svampen rummer kun spor af stoffet; navnet skyldes en middelalderlig vane med at lægge stykker i mælk for at bedøve fluer."
+    },
+    "deathCap": {
+      "overview": "En mellemstor svamp med bleg oliven- til grønlig hat, hvide lameller, ring på stokken og en poseformet skede ved foden. Dens amatoksiner lammer RNA-polymerase II, det enzym enhver celle bruger til at aflæse sine egne gener, og leveren tager den værste skade. En halv hat kan være dødelig for en voksen.",
+      "habitat": "Den hører hjemme i Europas ege-, bøge- og kastanjeskove, men er ført verden rundt med rodklumper på planteskoletræer og vokser nu i Californien, det østlige USA, Australien og Sydamerika.",
+      "curiosity": "Forgiftningen er lumsk: symptomerne kommer typisk først seks til tolv timer efter måltidet og fortager sig så et døgn eller mere, mens leveren nedbrydes videre nedenunder."
+    },
+    "buttonMushroom": {
+      "overview": "En af verdens mest dyrkede svampe og rygraden i den vestlige svampeindustri. Den produceres i millioner af tons om året i mørke, klimastyrede rum på bede af komposteret halm og gødning, ikke ude på marker. Kina og USA dyrker mest, og den høstes indendørs, i hånden, året rundt.",
+      "habitat": "I naturen dukker den op på græsland, i klitter og langs vejkanter i Europa og Nordamerika; kommercielt ser den aldrig dagslys, men frugter på et kompostbed dækket med spagnum.",
+      "curiosity": "Navnet bisporus er en beskrivelse. De fleste lamelsvampe skyder fire sporer af fra hver basidie, men denne laver som regel to, så hver spore arver et helt par kerner og alene kan vokse op til et frugtbart mycelium."
+    },
+    "brewersYeast": {
+      "overview": "En mikroskopisk svamp, der formerer sig ved at knopskyde datterceller fra siden, og som uden ilt omdanner sukker til ethanol og kuldioxid. Den samme art hæver brød og gærer øl, vin og sake, mens ændrede stammer dyrkes i tanke for at fremstille insulin og vaccineproteiner.",
+      "habitat": "I naturen lever den på moden frugt og på egetræers bark og saftudflåd; de tæmmede linjer bor i bagerier, bryggerier og industrielle gæringstanke.",
+      "curiosity": "Gær og mennesker deler stadig så meget grundlæggende cellemaskineri, at man i ét forsøg kunne udskifte omkring halvdelen af en række livsnødvendige gærgener med de menneskelige udgaver, uden at cellerne holdt op med at vokse."
+    },
+    "zombieAntFungus": {
+      "overview": "En parasit på tømrermyrer, i dag opfattet som et kompleks af arter, der hver især er finjusteret til én bestemt værtsmyre. Smittede arbejdere forlader boet, bider sig fast i en bladribbe eller kvist og dør på stedet; få dage senere bryder en stilk frem bag hovedet og drysser sporer ned på stierne nedenunder.",
+      "habitat": "Fugtige tropiske og subtropiske skove i Thailand, Brasilien, Japan og Vestafrika, hvor de smittede myrer samler sig i tætte kirkegårde på lav vegetation.",
+      "curiosity": "I thailandske skove bider myrerne sig fast omkring 25 cm over jorden, hvor luftfugtigheden passer svampen, og mikroskopi viser, at svampeceller omslutter myrens muskelfibre, mens hjernen forbliver urørt."
+    },
+    "humongousFungus": {
+      "overview": "En honningfarvet lamelsvamp, der dukker op i klynger om efteråret ved foden af nåletræer, men næsten hele livet er hvide myceliehinder under barken og sorte, snørebåndsagtige strenge kaldet rhizomorfer. Den slår træer ihjel, og skovfolk ser den som en skadevolder snarere end et under.",
+      "habitat": "Nåleskove i Nordamerika, Europa og Asien, hvor den angriber gran, ædelgran og fyr; rekordindividet vokser i Malheur National Forest i det østlige Oregon.",
+      "curiosity": "Genetiske prøver viste, at svampe kilometer fra hinanden tilhørte én og samme klon på omkring 965 hektar, med aldersskøn fra cirka 2.500 år og opefter."
+    },
+    "bitterOyster": {
+      "overview": "En sej, lysebrun, vifteformet svamp på nogle få centimeter, der vokser i overlappende etager på dødt løvtræ og nedbryder det til blege fibre. Indsamlinger fra det østlige Nordamerika lyser i mørke; europæiske af samme art gør det som regel ikke — en forskel i kemi, ikke i identitet.",
+      "habitat": "Dødt ved af eg, birk og bøg i tempererede skove i Nordamerika, Europa og Asien, ofte med frugtlegemer på den samme væltede stamme flere år i træk.",
+      "curiosity": "Lyset topper i det grønne omkring 520 nanometer og er så svagt, at øjnene skal have flere minutters fuldstændigt mørke, før de opfanger det; luciferinet bag det, 3-hydroxyhispidin, viser sig at være fælles for lysende svampe."
+    },
+    "penicilliumMould": {
+      "overview": "En almindelig skimmel, der danner fløjlsagtige blågrønne kolonier med en bleg vækstkant og frigiver sporer fra penselformede stilke; penicillus er latin for lille pensel. Den udskiller penicillin, som forhindrer bakterier i at gøre deres cellevægge færdige, og det tilfældige fund indledte antibiotikaens tidsalder.",
+      "habitat": "Jord, fugtige overflader indendørs og fordærvet mad overalt i verden; den kultur, der fik betydning, kom med luften — en enkelt vildfaren spore, der landede i et laboratorium i London.",
+      "curiosity": "Flemings stamme hed Penicillium notatum i årtier, indtil DNA-sekventering af flere markørgener flyttede den i 2011, og sporen menes at være drevet op fra et mykologisk laboratorium en etage under hans eget."
+    },
+    "chytridFungus": {
+      "overview": "En chytrid — medlem af en gammel svampelinje, der stadig svømmer og frigiver halede sporer i vand. Den koloniserer den keratinrige hud hos frøer, tudser og salamandre og ødelægger hudens styring af salte og vand, hvilket hos følsomme arter ender med hjertestop.",
+      "habitat": "Vandløb, damme og fugtig skov på alle kontinenter med padder; genetiske studier sporer oprindelsen til Østasien, hvorfra handlen med levende dyr har båret den ud i verden.",
+      "curiosity": "En oversigt fra 2019 knyttede den til tilbagegang hos over 500 paddearter og formodet udryddelse af omkring 90 af dem — det største dokumenterede tab af biodiversitet tilskrevet en enkelt sygdomsfremkalder."
+    },
+    "whiteTruffle": {
+      "overview": "En bleg, knudret, kartoffelformet svamp, der udvikler sig 5 til 30 cm under overfladen og klæder de fine rødder på eg, poppel, hassel og pil i en handel: mineraler fra jorden mod sukker fra træet. Fordi den aldrig bryder overfladen, må den bruge duft frem for vind til at få dyr til at sprede sporerne.",
+      "habitat": "Kalkholdig jord i Nord- og Midtitalien, frem for alt Piemontes bakker omkring Alba, samt Istrien og dele af Balkan; jægerne finder den med trænede hunde, der er mindre tilbøjelige end grise til at æde fangsten.",
+      "curiosity": "Sorte trøfler dyrkes i plantager på podede træer, men denne art modstod ethvert forsøg i hundrede år, og de første bekræftede dyrkede frugtlegemer blev meldt fra Frankrig så sent som i 2019."
+    }
+  },
+  "cropDetails": {
+    "maize": {
+      "overview": "Verdens mest ydende kornafgrøde målt i tons, et kæmpestort etårigt græs dyrket for kerner, der føder mennesker, husdyr og brændstoffabrikker. Én kolbe kan rumme flere hundrede kerner, tætpakket og svøbt i dækblade. Den dyrkes på alle kontinenter undtagen Antarktis.",
+      "habitat": "Dyrket fra havniveau til over 3.000 m i Andesbjergene og fra Canada til det sydlige Afrika; den vilde slægtning teosinte vokser stadig på sæsontørre skråninger i det sydvestlige Mexico.",
+      "curiosity": "Majs blev tæmmet i Balsas-floddalen i Mexico for omkring 9.000 år siden og kan ikke længere klare sig uden mennesker — den indsvøbte kolbe falder ikke fra hinanden, så kernerne har ingen måde at sprede sig selv på."
+    },
+    "cassava": {
+      "overview": "En træagtig busk, der dyrkes for opsvulmede stivelsesrødder, som hver kan veje flere kilo. Den tåler mager, sur jord og lange tørkeperioder, der ville slå majs helt ihjel. De rå rødder indeholder blåsyredannende stoffer og skal altid forarbejdes.",
+      "habitat": "Troperne i lavlandet verden over, fra Amazonbassinets sydrand, hvor den begyndte, til Vestafrika og Sydøstasien, ofte på jord der er for udpint til korn.",
+      "curiosity": "Genetiske studier fører al dyrket kassava tilbage til vilde bestande i det sydvestlige Brasilien og Bolivia; portugisiske skibe bragte den til Afrika i 1500-tallet, og Nigeria er i dag verdens største producent."
+    },
+    "arabicaCoffee": {
+      "overview": "En stedsegrøn busk eller et lille træ, hvis bønner er frøene i en rød, kirsebærlignende frugt, normalt to per frugt. Den leverer omkring 60 % af verdens kaffe; det meste af resten er robusta. Brasilien dyrker mere af den end noget andet land.",
+      "habitat": "Kølige, tågede tropiske højlande, typisk mellem 1.000 og 2.000 m; vilde bestande vokser stadig i skyggen under bjergskovene i det sydvestlige Etiopien.",
+      "curiosity": "Coffea arabica opstod i Etiopien, da robusta og Coffea eugenioides krydsede og fordoblede deres kromosomtal; ganske få planter, der blev bragt til Yemen og videre til europæiske drivhuse, er ophav til en stor del af nutidens afgrøde."
+    },
+    "soybean": {
+      "overview": "En busket etårig bælgplante med hårede bælge, der rummer to til fire frø. Frøene er usædvanligt rige på både protein og olie, og derfor dominerer soja verdenshandlen med olieafgrøder. Planten binder selv kvælstof gennem knolde på rødderne.",
+      "habitat": "Varmt tempereret og subtropisk landbrugsjord, frem for alt den brasilianske cerrado, den argentinske pampas og det amerikanske Midtvesten; den vilde stamform er en spinkel slyngplante fra østasiatiske flodbredder og markkanter.",
+      "curiosity": "Vilde Glycine soja er en tynd slyngplante med små, hårde, sorte frø, tæmmet i Kina for omkring 5.000 år siden. Brasilien dyrkede næsten ingen soja før 1960'erne og er nu verdens største producent."
+    },
+    "sugarcane": {
+      "overview": "Et kæmpestort tropisk græs, hvis rør bliver tre til fem meter høje og lagrer sukker i stænglen frem for i frøet. Kommercielt sukkerrør er en krydsning med det hårdføre vilde Saccharum spontaneum og plantes med stængelstiklinger, aldrig frø. Det leverer det meste af verdens sukker.",
+      "habitat": "Varmt lavland med kraftig nedbør eller kunstvanding, groft sagt mellem 30° nord og 30° syd; Brasilien og Indien har langt de største arealer.",
+      "curiosity": "Sukkerrør blev tæmmet på Ny Guinea for omkring 8.000 år siden og bredte sig vestpå gennem Indien, hvor sukker først blev krystalliseret, og videre til plantagerne ved Atlanten; Brasilien sender i dag omkring halvdelen af høsten videre til ethanol."
+    },
+    "breadWheat": {
+      "overview": "Et tempereret etårigt græs, der sås på mere landbrugsjord end næsten nogen anden afgrøde. Hvert aks bærer omkring 30 til 50 kerner, hvis glutenproteiner gør, at dej kan holde på luft og hæve. Den har seks sæt kromosomer, arvet fra tre forskellige græsarter.",
+      "habitat": "Tempereret og middelhavsagtig landbrugsjord på alle kontinenter undtagen Antarktis, fra de canadiske prærier til Punjab; den vilde stamform gedehvede vokser stadig på skråninger fra Den Frugtbare Halvmåne til Det Kaspiske Hav.",
+      "curiosity": "For omkring 8.000 til 9.000 år siden krydsede tæmmet emmerhvede med ukrudtsgræsset gedehvede, Aegilops tauschii — en uanselig plante med skøre aks, hvis arvemasse leverer netop den elasticitet, dej har brug for."
+    },
+    "asianRice": {
+      "overview": "Et etårigt græs, der kan stå under vand takket være luftkanaler gennem stængler og rødder. Det er det direkte hovedmåltid for cirka halvdelen af verdens befolkning. Kernerne afskalles fra en avne og et klidlag, der omslutter den stivelsesrige kerne.",
+      "habitat": "Oversvømmede rismarker og regnvandede marker i monsun-Asien, dertil Vestafrika, Mississippidalen og det sydlige Brasilien; vild Oryza rufipogon vokser stadig i asiatiske sumpe og grøfter.",
+      "curiosity": "Asiatisk ris blev tæmmet fra Oryza rufipogon i Yangtzebassinet i Kina for omkring 9.000 år siden, mens afrikansk ris, Oryza glaberrima, blev tæmmet uafhængigt i Nigers indre delta for cirka 3.000 år siden og senere krydsede Atlanten med slavegjorte vestafrikanske bønder."
+    },
+    "potato": {
+      "overview": "Et medlem af natskyggefamilien, der dyrkes for knolde — opsvulmede underjordiske stængler, ikke rødder. Over jorden er den en bladrig plante med hvide til violette blomster og små grønne frugter, der ligner bittesmå tomater og er giftige. Grønne eller spirende knolde ophober de samme bitre glykoalkaloider.",
+      "habitat": "Kølige egne verden over, fra Andeshøjsletten over 3.500 m til marker i Kina og Indien; Kina høster i dag flere kartofler end noget andet land.",
+      "curiosity": "Kartoflen blev tæmmet i det sydlige Peru for omkring 8.000 år siden ud fra bitre vilde arter og nåede Europa gennem en ganske lille genetisk stikprøve i 1500-tallet, mens bønder i Andesbjergene stadig holder tusindvis af navngivne sorter i live i én enkelt region."
+    },
+    "banana": {
+      "overview": "Ikke et træ, men en kæmpe urt — stammen er en tæt søjle af sammenrullede bladbaser, og planten dør tilbage, når den har båret frugt én gang. De fleste eksportbananer er én eneste steril triploid sort, Cavendish, formeret fra rodskud og vævskultur.",
+      "habitat": "Vådt tropisk lavland verden over; Indien og Kina dyrker mest, Ecuador eksporterer mest, og vilde Musa-arter med frø vokser stadig i skovene i Sydøstasien og på Ny Guinea.",
+      "curiosity": "Udgravninger ved Kuk Swamp i Ny Guineas højland daterer banandyrkning til omkring 7.000 år tilbage. Fordi hver eneste Cavendish-plante er genetisk identisk, truer jordsvampen Fusarium Tropical Race 4 hele eksportafgrøden, præcis som en tidligere stamme udslettede sorten Gros Michel i forrige århundrede."
+    },
+    "sweetOrange": {
+      "overview": "Et stedsegrønt træ med duftende hvide blomster og frugter, hvis saft kommer fra hår, der har udviklet sig til væskefyldte sække. Næsten hvert eneste kommercielle træ er en podet klon på en grundstamme, der er valgt for modstandskraft mod sygdom frem for for sin frugt.",
+      "habitat": "Subtropiske bælter med milde vintre — det sydøstlige Brasilien, Florida, Middelhavsområdet og det sydlige Kina; forældrearterne kommer fra skove i det sydlige og sydøstlige Asien.",
+      "curiosity": "Krydsningen opstod i det sydlige Kina, rejste vestpå med handelsfolk og nåede Brasilien med portugisiske skibe i 1500-tallet; Brasilien producerer i dag flere appelsiner end noget andet land. Citrusfrø indeholder ofte ekstra kim, klonet fra modertræet, så en frøplante kan være en nøjagtig kopi af sin forælder."
+    }
+  },
+  "soundDetails": {
+    "tawnyOwl": {
+      "overview": "En kompakt, rundhovedet skovugle på omkring 40 cm, broget brun og reelt usynlig mod bark. Den jager efter lyden i næsten fuldstændigt mørke og tilbringer dagen trykket flad mod en stamme eller klemt inde i et hul. I hele sit udbredelsesområde er den en af de mest hørte og mindst sete af alle fugle.",
+      "habitat": "Gammel løvskov, parker, kirkegårde og ældre bykvarterer med store træer, fra Storbritannien og Iberien gennem Europa til Iran og Vestsibirien, dertil Nordafrika; den mangler på Irland.",
+      "curiosity": "Tudningen fra reviret topper om efteråret og igen sidst på vinteren, hvor bladløse træer lader den bære flere hundrede meter, og et par kan holde den samme lomme af skoven i ti år."
+    },
+    "commonCuckoo": {
+      "overview": "En slank, langhalet grå fugl på størrelse med en spurvehøg, hvis tværstribede underside og lave, direkte flugt ligner høgens nok til at skræmme sangfugle væk fra reden. Hunnen lægger sine æg i andre arters reder og flyver videre; over 100 værtsarter er registreret. De fleste kender stemmen i årevis, før de bevidst ser fuglen.",
+      "habitat": "Skovkanter, rørskove, heder og åbent landbrugsland i Europa og Nordasien; overvintrer syd for Sahara og i Sydasien.",
+      "curiosity": "De to toner er groft sagt en faldende lille terts og bærer en kilometer eller mere over åbent land; afspilningsforsøg viser, at værtsfuglene reagerer på hunnens boblende klukken næsten som på en jagende spurvehøg."
+    },
+    "commonNightingale": {
+      "overview": "En jævn brun sanger, knap større end en rødhals, som næsten aldrig viser sig, men synger dybt inde fra tæt krat. En enkelt hans repertoire løber op i omkring 180-260 forskellige strofetyper, leveret som brat fløjten, dybe snurren og lange crescendoer. Den yngler i Europa, Nordafrika og Vestasien og overvintrer i Afrika.",
+      "habitat": "Tætte krat, stævningsskov og buskede skovbryn med tykt dække helt nede ved jorden, ofte tæt på vand eller langs tilgroede markskel.",
+      "curiosity": "Optagelser i støjende gader i Berlin fangede hanner, der sang med toppe over 95 decibel målt en meter væk — de skruer op for at overdøve trafikken."
+    },
+    "europeanTreeFrog": {
+      "overview": "En lille, glat, klart grøn frø med en mørk stribe langs hver side og klæbende skiver på tæerne til at klatre med. Hannerne samles ved ynglevandhullerne om foråret og kvækker i overlappende rækker, mest efter mørkets frembrud. Uden for yngletiden er den klatrer og ses sjældent nede ved jorden.",
+      "habitat": "Solbeskinnede vandhuller, grøfter og oversvømmede enge med rør og brombær omkring i Central- og Sydøsteuropa; mellem yngletiderne sidder den flere meter oppe i buske og hegn.",
+      "curiosity": "Kvækket topper omkring 2,5 kHz, og en han kan gentage det tusindvis af gange på én nat — kvækning er blandt de mest energikrævende aktiviteter, der er målt hos noget hvirveldyr, og hannerne taber vægt hen over sæsonen."
+    },
+    "americanBullfrog": {
+      "overview": "Nordamerikas største frø, op til omkring 20 cm fra snude til gat, olivengrøn og tungt bygget. Hannerne holder territorier langs bredden hele sommeren og kvækker både dag og nat. Den er indført mange steder og er nu etableret som invasiv art på flere kontinenter.",
+      "habitat": "Permanent varmt vand — søbredder, langsomme floder, reservoirer og gadekær — hjemmehørende i det østlige Nordamerika og etableret i Brasilien, Japan, Kina og dele af Sydeuropa.",
+      "curiosity": "Tonehøjden følger kropsstørrelsen, så den dybeste stemme i et kor tilhører som regel den største han, og hannerne kendes fra hunnerne på en trommehinde, der er langt bredere end øjet."
+    },
+    "cicadaOrni": {
+      "overview": "En gråbrun middelhavscikade på omkring 3 cm med klare vinger tegnet med mørke pletter — langt lettere at artsbestemme på lyden end på synet. Hannerne frembringer et gentaget, tørt zip-zip-zip afbrudt af jævne pauser, sunget fra stammer og grene. Hunnerne synger slet ikke.",
+      "habitat": "Fyr, oliventræer, platantræer og frugtplantager rundt om Middelhavet, fra Iberien og Nordafrika over Italien og Grækenland til Tyrkiet.",
+      "curiosity": "Lyden kommer fra et par ribbede plader kaldet tymbaler, der klikker som låget på en dåse hundredvis af gange i sekundet, og bagkroppen bag dem er stort set hul — en syngende han er mest af alt en forstærker."
+    },
+    "houseCricket": {
+      "overview": "En bleg, halmbrun fårekylling på omkring 2 cm, oprindeligt fra det sydvestlige Asien og nu udbredt overalt, hvor bygninger holdes varme. Hannerne synger; hunnerne, der kendes på et langt, nålespidst læggerør, er tavse. Den er et af de mest opdrættede insekter på kloden.",
+      "habitat": "Varme menneskerum — fyrrum, bagerier, lossepladser, opvarmede skure og opdrætsfarme; udendørs klarer den de varme måneder i tempererede egne og hele året i troperne.",
+      "curiosity": "Ørerne sidder på forbenene, lige under knæet, og tempoet i sangen stiger med temperaturen — det samme rum lyder hurtigere en varm nat end en kølig."
+    },
+    "greatGreenBushCricket": {
+      "overview": "En græsgrøn løvgræshoppe på op til omkring 7 cm med følehorn, der er længere end kroppen — et stort insekt, som alligevel er næsten umuligt at få øje på i en hæk. Hannerne synger fra toppen af buske og høj vegetation, ofte det meste af natten. Den findes i Europa, Nordafrika og ind i Centralasien.",
+      "habitat": "Høj, uslået vegetation — brombær, levende hegn, krat, vejkanter og vinmarkskanter — som regel syngende en meter eller to over jorden.",
+      "curiosity": "Meget af sangens energi ligger over 20 kHz, lige på kanten af menneskets høreevne, så børn hører ofte en han tydeligt, som de voksne ved siden af knap kan opfatte."
+    },
+    "blackHowlerMonkey": {
+      "overview": "En sydamerikansk abe med usædvanligt tydelig kønsforskel: voksne hanner er sorte, hunner og unger lyst gyldenbrune. Flokkene brøler ved daggry og skumring for at fortælle, hvor de er, og det holder nabogrupper fra hinanden uden kontakt. Kroppen er omkring 60 cm, dertil en gribehale af nogenlunde samme længde.",
+      "habitat": "Galleriskov, sæsonoversvømmet skov og skovlommer i Brasilien, Bolivia, Paraguay og det nordlige Argentina, mest højt oppe i kronerne.",
+      "curiosity": "Brølet forstærkes af et forstørret, udhulet tungeben i halsen, og en sammenlignende undersøgelse fra 2015 fandt, at de brøleabearter med de største tungeben har de mindste testikler."
+    },
+    "redFox": {
+      "overview": "Verdens mest udbredte vilde rovdyr, 5-7 kg og overvejende natteaktivt, hvor der er mange mennesker. Omkring tyve forskellige kaldetyper er beskrevet, fra korte kontaktgø til det lange skrig. I byer høres den langt oftere, end den ses.",
+      "habitat": "Næsten alt: arktisk tundra, landbrugsland, ørkenrand, skov og tætte bymidter, hvor gravene ligger under skure, langs jernbaneskråninger og i haver.",
+      "curiosity": "Skrigene topper i december og januar, når rævene finder sammen, og er stort set forstummet, når hvalpene fødes om foråret — derfor virker det, som om lyden kommer og forsvinder efter en kalender."
+    }
+  }
+}

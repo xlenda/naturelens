@@ -1,0 +1,20 @@
+# Segredos. `npx vercel env pull .env.check` grava a service role key do Supabase
+# e todas as chaves de fornecedor em texto puro na raiz do projeto - ela é
+# necessária para o check de banco do scripts/verify-live.js.
+.env
+.env.*
+!.env.example
+
+node_modules/
+dist/
+.expo/
+web-build/
+
+# Ferramentas
+.vercel
+*.log
+npm-debug.log*
+
+# Sistema operacional
+Thumbs.db
+.DS_Store

@@ -1,0 +1,2288 @@
+{
+  "common": {
+    "overview": "Přehled",
+    "details": "Podrobnosti",
+    "readMore": "Přečíst více",
+    "confidence": "Spolehlivost",
+    "nativeOrigin": "Přirozený výskyt",
+    "save": "Uložit do mé sbírky",
+    "saved": "Uloženo do sbírky",
+    "cancel": "Zrušit",
+    "goBack": "Zpět",
+    "shareThisResult": "Sdílet tento výsledek",
+    "removeFromCollection": "Odebrat ze sbírky",
+    "saveToCollection": "Uložit do sbírky",
+    "tabCollection": "Sbírka",
+    "tabDiscover": "Zajímavosti",
+    "tabBotanist": "Botanik",
+    "saveErrorTitle": "Nepodařilo se uložit",
+    "saveErrorBody": "Při ukládání do vaší sbírky se něco pokazilo. Zkuste to prosím znovu.",
+    "ok": "OK",
+    "next": "Další",
+    "showPassword": "Zobrazit heslo",
+    "hidePassword": "Skrýt heslo",
+    "close": "Zavřít",
+    "tabProfile": "Profil",
+    "identified": "Určeno",
+    "yourPhoto": "Tvoje fotka",
+    "referencePhoto": "Referenční",
+    "technicalDescription": "Technický popis",
+    "vendorEnglishNote": "Z určovací služby, anglicky.",
+    "translate": "Přeložit",
+    "translating": "Překládám…",
+    "translateFailed": "Teď se nepodařilo přeložit."
+  },
+  "auth": {
+    "title": "Přihlaste se k identifikaci",
+    "subtitle": "Jedna bezplatná identifikace na kategorii. Přihlaste se pomocí e-mailu a začněte – heslo nepotřebujete.",
+    "emailPlaceholder": "vas@email.cz",
+    "sendLink": "Odeslat magický odkaz",
+    "sending": "Odesílání…",
+    "checkEmailTitle": "Zkontrolujte svůj e-mail",
+    "checkEmailBody": "Odeslali jsme přihlašovací odkaz na {{email}}. Otevřete ho na tomto zařízení a pokračujte.",
+    "signOut": "Odhlásit se",
+    "signedInAs": "Přihlášen jako {{email}}",
+    "notReady": "Přihlašování se právě připravuje a brzy bude dostupné."
+  },
+  "paywall": {
+    "title": "Bezplatné použití již vyčerpáno",
+    "body": "Svou bezplatnou identifikaci kategorie {{category}} jste už využili. Předplaťte si aplikaci a identifikujte bez omezení.",
+    "subscribe": "Předplatit",
+    "subscribing": "Přesměrování…",
+    "subscribed": "Předplaceno",
+    "manage": "Spravovat předplatné",
+    "annualPlan": "Roční",
+    "perYear": "/rok",
+    "saveBadge": "Ušetřete {{percent}} %",
+    "genericTitle": "Odemkněte vše",
+    "genericBody": "Neomezená identifikace rostlin, hmyzu, hub a plodin a plný přístup k informacím o léčivých bylinách.",
+    "subscriptionConfirmedTitle": "Předplatné je aktivní!",
+    "subscriptionConfirmedBody": "Děkujeme za předplatné – nyní máte neomezené rozpoznávání. Užijte si to!",
+    "subscriptionPendingTitle": "Platba přijata",
+    "subscriptionPendingBody": "Platba přijata. Otevřete Profil → Obnovit přístup a potvrďte e-mail, kterým jste platili, abyste odemkli toto zařízení.",
+    "checkoutFailedTitle": "Platba se nezdařila",
+    "checkoutFailedBody": "Nepodařilo se spustit platbu. Zkuste to prosím za chvíli znovu.",
+    "monthlyPlan": "Měsíčně",
+    "quarterlyPlan": "Čtvrtletně",
+    "perMonth": "měsíčně",
+    "perQuarter": "čtvrtletně",
+    "notAvailableYet": "Platba se právě nastavuje — zkuste to prosím za chvíli znovu."
+  },
+  "restore": {
+    "title": "Přihlásit se",
+    "emailStepTitle": "Přihlas se ke svému účtu",
+    "emailStepBody": "Použij e-mail, se kterým ses registroval. Pošleme jednorázový kód - žádné heslo k zapamatování.",
+    "emailPlaceholder": "vas@email.cz",
+    "sendCode": "Poslat kód",
+    "codeStepTitle": "Zadej kód",
+    "codeStepBody": "Poslali jsme kód na {{email}}. Zadej ho níže a dokonči přihlášení.",
+    "codePlaceholder": "6místný kód",
+    "verifyCode": "Ověřit",
+    "changeEmail": "Použít jiný e-mail",
+    "doneTitleActive": "Jsi přihlášen",
+    "doneBodyActive": "Toto zařízení je teď propojené s tvým účtem a předplatné je na něm aktivní.",
+    "doneTitleOther": "Účet propojen",
+    "doneBodyOther": "Toto zařízení je propojené s tvým účtem. Momentálně na něm není aktivní předplatné.",
+    "backToProfile": "Zpět na profil",
+    "genericError": "Něco se pokazilo. Zkuste to prosím znovu.",
+    "modeCode": "Kód e-mailem",
+    "modePassword": "Heslo",
+    "passwordStepTitle": "Přihlásit se heslem",
+    "passwordStepBody": "Zadej e-mail a heslo pro přihlášení na tomto zařízení.",
+    "passwordPlaceholder": "Heslo",
+    "signIn": "Přihlásit se",
+    "signInWithGoogle": "Pokračovat přes Google",
+    "googleSignInErrorTitle": "Přihlášení se nezdařilo",
+    "googleSignInErrorBody": "Přihlášení přes Google se nepodařilo dokončit. Zkuste to prosím znovu."
+  },
+  "categories": {
+    "plant": {
+      "label": "Rostlina",
+      "tabLabel": "Rostliny",
+      "title": "Okamžitě určete rostliny a stromy",
+      "subtitle": "Namiřte fotoaparát na jakoukoli rostlinu, list, květ nebo strom a během několika sekund získáte podrobný profil.",
+      "scanHint": "Nejlepších výsledků dosáhnete, když vyfotíte jeden list, květ nebo celkový tvar při dobrém světle."
+    },
+    "insect": {
+      "label": "Hmyz",
+      "tabLabel": "Hmyz",
+      "title": "Okamžitě identifikujte hmyz",
+      "subtitle": "Namiřte fotoaparát na jakéhokoli brouka, pavouka nebo motýla a získejte okamžitý profil druhu.",
+      "scanHint": "Pro nejlepší výsledek se k hmyzu přibližte, zajistěte dobré osvětlení a pevnou ruku."
+    },
+    "mushroom": {
+      "label": "Houba",
+      "tabLabel": "Houby",
+      "title": "Okamžitě identifikujte houby",
+      "subtitle": "Namiřte fotoaparát na jakoukoli houbu a identifikujte druh i její jedlost.",
+      "scanHint": "Vyfoťte klobouk, lupeny i třeň pro co nejpřesnější identifikaci."
+    },
+    "crop": {
+      "label": "Plodina",
+      "tabLabel": "Plodiny",
+      "title": "Kontrola zdraví plodin",
+      "subtitle": "Namiřte fotoaparát na list plodiny a zkontrolujte nemoci, škůdce nebo problémy s výživou.",
+      "scanHint": "Vyfoťte postižený list nebo oblast zblízka pro co nejpřesnější diagnózu."
+    },
+    "tree": {
+      "label": "Strom",
+      "tabLabel": "Stromy",
+      "title": "Okamžitě určete stromy",
+      "subtitle": "Namiřte fotoaparát na jakýkoli strom, kmen, list nebo korunu a během pár vteřin získáte podrobný profil.",
+      "scanHint": "Pro nejlepší výsledky zaostřete na listy, kůru nebo celkový tvar při dobrém osvětlení."
+    },
+    "fish": {
+      "label": "Ryba",
+      "tabLabel": "Ryby",
+      "title": "Okamžitě určete ryby",
+      "subtitle": "Namiřte fotoaparát na jakoukoli rybu a během několika sekund získáte podrobný profil.",
+      "scanHint": "Nejlepších výsledků dosáhnete, když vyfotíte celou rybu ze strany při dobrém světle."
+    },
+    "bird": {
+      "label": "Pták",
+      "tabLabel": "Ptáci",
+      "title": "Okamžitě určete ptáky",
+      "subtitle": "Namiřte fotoaparát na jakéhokoli ptáka a okamžitě získáte určení.",
+      "scanHint": "Nejlepších výsledků dosáhnete, když bude celý pták ostrý a dobře osvětlený."
+    },
+    "sound": {
+      "label": "Zvuk",
+      "tabLabel": "Zvuky",
+      "title": "Určit podle zvuku",
+      "subtitle": "Nahraj ptáka, žábu nebo hmyz a zjisti, co to je."
+    }
+  },
+  "identify": {
+    "identifierTitle": "Identifikátor: {{category}}",
+    "subtitle": "Identifikujte {{category}} okamžitě pomocí AI",
+    "readyToScan": "Připraveno ke skenování",
+    "didYouKnowTitle": "Věděli jste, že...?",
+    "continueLabel": "Pokračovat",
+    "analyzing": "Analyzuji {{category}}…",
+    "tapToIdentify": "Klepnutím identifikujte",
+    "identifying": "Identifikuji…",
+    "uploadPhoto": "Nahrát fotku",
+    "myCollection": "Moje sbírka",
+    "switchCategoryLabel": "Přepnout kategorii identifikace",
+    "switchCategoryTitle": "Přepnout kategorii",
+    "switchCategoryMessage": "Co byste chtěli identifikovat?",
+    "takePhotoLabel": "Vyfotit pro identifikaci: {{category}}",
+    "uploadPhotoLabel": "Nahrát fotku k identifikaci",
+    "goToCollectionLabel": "Přejít na Moji sbírku",
+    "cameraPermissionTitle": "Je potřeba oprávnění k fotoaparátu",
+    "cameraPermissionMessage": "Povolte přístup k fotoaparátu pro skenování: {{category}}.",
+    "libraryPermissionTitle": "Je potřeba oprávnění k fotogalerii",
+    "libraryPermissionMessage": "Povolte přístup k fotkám pro nahrání obrázku.",
+    "identificationFailedTitle": "Identifikace se nezdařila",
+    "identificationFailedDefault": "Zkuste to prosím znovu.",
+    "notFoundError": "Na této fotce nebyl rozpoznán žádný {{category}}. Zkuste pořídit ostřejší a bližší snímek.",
+    "photoProcessingFailed": "Tuto fotku se nepodařilo zpracovat. Zkuste prosím jinou fotku, nebo si pořiďte novou fotoaparátem.",
+    "lowConfidence": "Tohle je náš nejlepší odhad ({{confidence}}% jistota). Než se na něj spolehnete, porovnejte ho s referenčními fotkami.",
+    "lowConfidenceWithAlternatives": "Jistota jen {{confidence}}%. Než se na to spolehnete, projděte si níže další možné shody.",
+    "referenceImagesTitle": "Referenční fotografie",
+    "referenceImagesHint": "Porovnejte je s vlastní fotkou pro potvrzení.",
+    "referenceImageLabel": "Referenční fotografie {{index}}",
+    "alternativesTitle": "Další možné shody",
+    "alternativesHint": "Pokud výsledek výše nevypadá správně, váš druh může být jeden z těchto.",
+    "lowConfidenceBare": "Jistota jen {{confidence}} % — berte to jako výchozí bod, ne konečnou odpověď.",
+    "addAngle": "Přidat další úhel",
+    "addAnotherAngle": "Přidat ještě jeden",
+    "anglesHint": "{{count}} fotky téhož exempláře — vyšší přesnost",
+    "removeAngleLabel": "Odebrat úhel {{index}}",
+    "offlineTitle": "Jsi offline",
+    "offlineBody": "Určování vyžaduje internet. Tvá sbírka a záložka Objevovat fungují i bez připojení.",
+    "serviceDownTitle": "Služba není dostupná",
+    "serviceDownBody": "Tato určovací služba má problém. Zkus to za pár minut znovu - není to tvou fotkou."
+  },
+  "detail": {
+    "profileTitle": "Profil: {{category}}",
+    "readMoreLabel": "Přečíst více online o tomto {{category}}",
+    "markAsWatered": "Označit jako zalité",
+    "markAsWateredLabel": "Označit jako zalité",
+    "wateringSection": "Zalévání",
+    "checkForDiseases": "Zkontrolovat nemoci",
+    "checkingForDiseases": "Kontroluji…",
+    "checkForDiseasesLabel": "Zkontrolovat nemoci",
+    "checkingForDiseasesLabel": "Kontrola nemocí",
+    "healthCheckSection": "Kontrola zdraví",
+    "edibleParts": "Jedlé části",
+    "propagation": "Množení",
+    "wateringNeeds": "Nároky na zálivku",
+    "conservationStatus": "Stav ochrany",
+    "safetySection": "Bezpečnost",
+    "ecologicalRoleSection": "Ekologická role",
+    "frequentlyConfusedWith": "Často zaměňováno s",
+    "psychoactiveWarning": "Tato houba může být psychoaktivní a může ovlivnit nervovou soustavu.",
+    "cropHealthReportTitle": "Zpráva o zdraví plodiny",
+    "cropMatch": "Shoda plodiny",
+    "cropPill": "Plodina",
+    "wateringGuideSection": "Průvodce zálivkou",
+    "lightSection": "Světlo",
+    "soilSection": "Půda",
+    "commonUsesSection": "Běžné využití",
+    "culturalSignificanceSection": "Kulturní význam",
+    "installNudgeTitle": "Nainstalovat NatureLens",
+    "installNudgeBody": "Přidejte si ji na plochu, abyste příště identifikovali rychleji.",
+    "commonNames": "Běžné názvy",
+    "synonyms": "Vědecká synonyma",
+    "referencePhoto": "Referenční fotografie",
+    "referencePhotoAlt": "Referenční fotografie druhu {{name}}",
+    "coverageNoteTitle": "O tomto výsledku",
+    "birdCoverageNote": "Určování ptáků pokrývá 291 druhů, převážně severoamerických. Ptáci mimo tento seznam mohou být určeni chybně i při vysoké jistotě - berte výsledek jako výchozí bod."
+  },
+  "disease": {
+    "overviewSection": "Přehled",
+    "symptomsSection": "Příznaky",
+    "treatmentSection": "Léčba",
+    "biological": "Biologická",
+    "chemical": "Chemická",
+    "prevention": "Prevence",
+    "spreadingSection": "Jak se šíří",
+    "healthStatusSection": "Zdravotní stav",
+    "noDiseaseDetected": "Na této fotce nebyla s jistotou zjištěna žádná nemoc ani škůdce.",
+    "match": "Shoda",
+    "severitySuffix": "Závažnost: {{severity}}"
+  },
+  "collection": {
+    "title": "Moje sbírka",
+    "subtitle_one": "{{count}} položka objevena",
+    "subtitle_other": "{{count}} položek objeveno",
+    "emptyTitle": "Zatím nic uloženo",
+    "emptyBody": "Identifikujte rostlinu, hmyz, houbu nebo plodinu a uložte si ji do své sbírky.",
+    "startIdentifying": "Začít identifikovat",
+    "goToProfileLabel": "Přejít na profil",
+    "switchToGridLabel": "Přepnout na mřížkové zobrazení",
+    "switchToListLabel": "Přepnout na seznamové zobrazení",
+    "viewDetailsLabel": "Zobrazit podrobnosti o {{name}}",
+    "removeLabel": "Odebrat {{name}} ze sbírky",
+    "assignRoomTitle": "Přiřadit místnost",
+    "assignRoomMessage": "Vyberte místnost pro {{name}}.",
+    "roomLivingRoom": "Obývací pokoj",
+    "roomBedroom": "Ložnice",
+    "roomKitchen": "Kuchyň",
+    "roomBalcony": "Balkon",
+    "roomOffice": "Kancelář",
+    "roomNone": "Žádná",
+    "searchPlaceholder": "Hledat ve sbírce…",
+    "clearSearchLabel": "Vymazat hledání",
+    "filterAll": "Vše",
+    "noSearchResults": "Nic neodpovídá vašemu hledání."
+  },
+  "profile": {
+    "title": "Můj profil",
+    "itemsIdentified_one": "položka identifikována",
+    "itemsIdentified_other": "položek identifikováno",
+    "byCategory": "Podle kategorie",
+    "privacyPolicy": "Zásady ochrany osobních údajů",
+    "language": "Jazyk",
+    "installApp": "Nainstalovat aplikaci",
+    "installAppIOSTitle": "Nainstalovat NatureLens",
+    "installAppIOSBody": "Klepněte na tlačítko Sdílet, poté na „Přidat na plochu“ a nainstalujte NatureLens do telefonu.",
+    "createPasswordTitle": "Vytvořit heslo",
+    "createPasswordBody": "Volitelné – přihlaste se heslem na jiných zařízeních a synchronizujte své předplatné, místo abyste pokaždé žádali o nový kód e-mailem.",
+    "createPasswordButton": "Vytvořit heslo",
+    "creatingPassword": "Vytváření…",
+    "passwordTooShortTitle": "Heslo je příliš krátké",
+    "passwordTooShortBody": "Použijte alespoň 8 znaků.",
+    "passwordCreatedTitle": "Heslo vytvořeno",
+    "passwordCreatedBody": "Zkontrolujte {{email}} a potvrďte ho, poté se můžete přihlásit tímto heslem na jakémkoli zařízení.",
+    "passwordCreatedFailedTitle": "Heslo se nepodařilo vytvořit",
+    "passwordCreatedFailedBody": "Něco se pokazilo. Zkuste to prosím znovu.",
+    "changePhoto": "Změnit profilovou fotku",
+    "version": "Verze {{version}}",
+    "termsOfUse": "Podmínky použití",
+    "deleteAccount": "Smazat účet",
+    "deletingAccount": "Mazání…",
+    "deleteAccountConfirmTitle": "Smazat váš účet?",
+    "deleteAccountConfirmBody": "Tímto trvale smažete svou uloženou sbírku, heslo (pokud existuje) a zrušíte aktivní předplatné, pokud nějaké máte. Tuto akci nelze vrátit zpět.",
+    "deleteAccountConfirmButton": "Smazat",
+    "deleteAccountDoneTitle": "Účet smazán",
+    "deleteAccountDoneBody": "Vaše data byla smazána a jakékoli aktivní předplatné bylo zrušeno.",
+    "deleteAccountFailedTitle": "Účet se nepodařilo smazat",
+    "deleteAccountFailedBody": "Něco se pokazilo. Zkuste to prosím znovu.",
+    "helpAndSupport": "Nápověda a podpora",
+    "rewardsStore": "Obchod s odměnami",
+    "naturalistBadge": "Přírodovědec",
+    "deleteAccountDoneBillingBody": "Váš účet a data byly smazány. DŮLEŽITÉ: tím se předplatné neruší — musíte ho zrušit ve svém účtu Hotmart, jinak bude strhávání pokračovat.",
+    "locationRow": "Používat mou přibližnou polohu",
+    "locationHint": "Zpřesňuje výsledek tím, že bere v úvahu jen druhy z tvého okolí. Zaokrouhlená asi na 1 km a nikdy se neukládá.",
+    "emptyTitle": "Tady začíná tvoje sbírka",
+    "emptyBody": "Namiř foťák na rostlinu, hmyz, houbu, rybu nebo ptáka - nebo nahraj zpěv - a objeví se tady.",
+    "emptyCta": "Něco určit"
+  },
+  "terms": {
+    "title": "Podmínky použití",
+    "acceptanceTitle": "Přijetí podmínek",
+    "acceptanceBody": "Používáním aplikace NatureLens souhlasíte s těmito Podmínkami použití. Pokud nesouhlasíte, aplikaci prosím nepoužívejte.",
+    "serviceTitle": "Co tato aplikace dělá",
+    "serviceBody": "NatureLens vám umožňuje fotografovat rostliny, hmyz, houby, plodiny a stromy a identifikovat je pomocí AI služeb třetích stran (Plant.id, Insect.id, Mushroom.id, Crop.health, vše od Kindwise). Výsledky jsou generovány automaticky a nejsou kontrolovány lidským odborníkem.",
+    "accuracyTitle": "Přesnost identifikace — přečtěte si prosím",
+    "accuracyBody": "Identifikace pomocí AI se může mýlit, včetně toho, zda je rostlina nebo houba jedlá, jedovatá nebo bezpečná na dotek. Nikdy nejezte, nesbírejte ani nepoužívejte žádnou volně rostoucí rostlinu, houbu ani hřib pouze na základě výsledku této aplikace. Vždy si to ověřte u kvalifikovaného odborníka (mykologa, botanika nebo toxikologického centra), než něco nalezeného v přírodě sníte nebo použijete. Neneseme odpovědnost za újmu způsobenou spoléháním na identifikaci provedenou touto aplikací.",
+    "billingTitle": "Předplatné a fakturace",
+    "billingBody": "Placená předplatná jsou účtována přes Stripe za cenu zobrazenou v aplikaci v okamžiku předplacení a automaticky se obnovují, dokud je nezrušíte. Můžete kdykoli zrušit; přístup vám zůstane do konce již zaplaceného období. Nenabízíme poměrné vrácení peněz za nevyužitý čas, pokud to nevyžaduje zákon.",
+    "accountTitle": "Účty a hesla",
+    "accountBody": "K používání bezplatných funkcí nepotřebujete účet. Předplatitelé si mohou volitelně vytvořit heslo, aby se mohli přihlásit a synchronizovat předplatné napříč zařízeními. Jste zodpovědní za zabezpečení svého hesla a za vše, co se stane prostřednictvím vašeho účtu.",
+    "liabilityTitle": "Žádná záruka, omezení odpovědnosti",
+    "liabilityBody": "Tato aplikace je poskytována \"tak, jak je\", bez jakýchkoli záruk. V maximálním rozsahu povoleném zákonem neneseme odpovědnost za žádné škody vzniklé z používání aplikace, včetně spoléhání na jakýkoli výsledek identifikace.",
+    "changesTitle": "Změny těchto podmínek",
+    "changesBody": "Tyto podmínky můžeme čas od času aktualizovat. Další používání aplikace po změně znamená, že přijímáte aktualizované podmínky.",
+    "contactTitle": "Kontakt",
+    "contactBody": "Dotazy k těmto podmínkám lze směřovat na vývojáře aplikace."
+  },
+  "privacy": {
+    "title": "Zásady ochrany osobních údajů",
+    "collectTitle": "Co shromažďujeme",
+    "collectBody": "Tato aplikace vám umožňuje fotografovat rostliny, hmyz, houby nebo plodiny za účelem jejich identifikace. K tomu využívá služby umělé inteligence třetích stran – Plant.id, Insect.id, Mushroom.id a Crop.health, vyvinuté společností Kindwise.",
+    "thirdPartyTitle": "Identifikační služby AI třetích stran",
+    "thirdPartyBody": "Když vyfotíte nebo nahrajete fotku k identifikaci, je tato fotka odeslána přímo příslušné identifikační službě Kindwise, aby vytvořila výsledek. Vaše fotky neukládáme na žádném serveru, který spravujeme.",
+    "localStorageTitle": "Pouze lokální úložiště",
+    "localStorageBody": "Vaše uložená sbírka – identifikované druhy, poznámky a časová razítka – je uložena pouze lokálně ve vašem zařízení pomocí lokálního úložiště prohlížeče nebo aplikace. Nikdy se nenahrává na žádný cloudový server, který provozujeme, a nikdy se nesdílí s jinými uživateli.",
+    "noAccountsTitle": "Žádné účty, žádné sledování",
+    "noAccountsBody": "Tato aplikace nevyžaduje účet k použití – vašemu zařízení je přiřazen náhodný anonymní identifikátor (uložený pouze ve vašem zařízení), abychom mohli poznat, kdy byla využita jedna bezplatná identifikace na kategorii. Pokud si aplikaci předplatíte, Stripe shromažďuje váš e-mail a platební údaje přímo za účelem zpracování platby – my obdržíme pouze stav vašeho předplatného, propojený se stejným anonymním identifikátorem. Předplatitelé si mohou volitelně vytvořit heslo, aby se mohli přihlásit a synchronizovat předplatné na dalších zařízeních; k používání aplikace to nikdy není nutné. Nepoužíváme žádné analytické ani reklamní sledovací nástroje.",
+    "dataLossTitle": "Riziko ztráty dat",
+    "dataLossBody": "Pokud vymažete data prohlížeče nebo aplikaci odinstalujete, vaše lokálně uložená sbírka bude trvale ztracena, protože se nikde vzdáleně nezálohuje.",
+    "contactTitle": "Kontakt",
+    "contactBody": "S dotazy ohledně těchto zásad se můžete obrátit na vývojáře aplikace."
+  },
+  "discover": {
+    "title": "Objevovat",
+    "subtitle": "Podpořte svou zvědavost o přírodě",
+    "dailyFact": "Rostlinný fakt dne",
+    "tapForAnotherFact": "Klepnutím zobrazíte další fakt",
+    "exploreCollections": "Prozkoumat sbírky",
+    "trendingSpecies": "Populární druhy",
+    "showNextFactLabel": "Zobrazit další rostlinný fakt",
+    "openCollectionLabel": "Otevřít sbírku {{title}}",
+    "viewSpeciesLabel": "Zobrazit {{name}}",
+    "facts": [
+      "Zmijovec titánský (Amorphophallus titanum) dorůstá přes 3 metry a páchne jako rozkládající se maso, aby přilákal opylovače.",
+      "Bambus je nejrychleji rostoucí rostlina na světě — některé druhy přirostou až o 90 centimetrů za jediný den.",
+      "Jedna včela medonosná navštíví denně asi 5 000 květů, a přesto za celý život vyrobí jen dvanáctinu čajové lžičky medu.",
+      "Houby jsou příbuznější živočichům než rostlinám — společného předka s námi mají zhruba před miliardou let.",
+      "Nejstarší známý žijící strom je borovice osinatá v Kalifornii, jejíž stáří se odhaduje na více než 4 800 let.",
+      "Mladé slunečnice sledují slunce, ale po dozrání zůstanou natočené na východ — dřív se tak prohřejí a přilákají víc opylovačů.",
+      "Některé orchideje napodobují vzhled i vůni samiček hmyzu tak dokonale, že se s nimi samci pokoušejí pářit a květ přitom mimoděk opylí.",
+      "Vážka uloví asi 95 % kořisti, kterou pronásleduje — patří jí jedna z nejvyšších úspěšností lovu v celé živočišné říši.",
+      "Mravenci pěstují houby už přes 50 milionů let, dávno předtím, než lidé vynalezli zemědělství.",
+      "Amazonský prales vytváří zhruba 20 % kyslíku uvolňovaného suchozemskými rostlinami a velká část jeho dešťů pochází z vody, kterou sám vydýchal.",
+      "Motýli chutnají nohama — stoupnou si na list, aby zjistili, jestli ho jejich housenky mohou jíst.",
+      "Václavka v Oregonu se rozprostírá na téměř 10 čtverečních kilometrech, což z ní dělá jeden z největších živých organismů na planetě.",
+      "Sokol stěhovavý překonává při loveckém střemhlavém letu 300 km/h, a je tak nejrychlejším žijícím živočichem.",
+      "Ryby nemají oční víčka — většina z nich oči nikdy nezavře, ani když odpočívá.",
+      "Mucholapka podivná umí počítat: spouštěcí chloupek musí být zasažen dvakrát během asi 20 sekund, teprve pak past sklapne — déšť ji tak nespustí naprázdno.",
+      "Stromy v lese si vyměňují živiny podzemními houbovými sítěmi — mateřský strom dokáže nakrmit slábnoucí semenáček vzdálený několik metrů.",
+      "Rybák dlouhoocasý každoročně migruje od pólu k pólu a nalétá přes 70 000 kilometrů — nejdelší tah ze všech živočichů.",
+      "Káva, čokoláda i vanilka pocházejí z rostlin závislých na opylení živočichy — bez včel a drobných mušek by nebyla ranní káva.",
+      "Některé cikády stráví 17 let pod zemí a pak se vynoří najednou, v miliardách.",
+      "Ananas není jeden plod, ale desítky bobulí srostlých kolem společného středu.",
+      "Sovy nedokážou pohybovat očima — oči mají jako pevně usazené trubice, a proto místo toho otáčejí hlavou až o 270 stupňů.",
+      "Semena lotosu indického dokážou vyklíčit i po více než tisíci letech spánku.",
+      "Lososi se vracejí ke tření přesně do řeky, kde se vylíhli, a orientují se přitom čichem napříč tisíci kilometry otevřeného oceánu.",
+      "Houby byly prvními složitými organismy, které osídlily souš — dávno před jakoukoli rostlinou.",
+      "Fíkovníky nekvetou navenek: každý fík je dovnitř obrácené květenství, které opyluje drobná vosička vnikající dovnitř nepatrným otvorem.",
+      "Srdce kolibříka bije za letu přes 1 200krát za minutu a pták se musí každých 10 až 15 minut nakrmit, aby přežil.",
+      "Fíkovník škrtič začíná život vysoko v koruně, spustí kořeny až k zemi a strom, který ho hostil, nakonec zardousí.",
+      "Mech nemá kořeny — vodu nasává přímo listy, a proto se mu daří na skále i na kůře.",
+      "Strašek vidí 12 až 16 barevnými receptory; člověk má tři.",
+      "Osikové háje bývají jediným organismem: tisíce kmenů sdílejí jeden kořenový systém a některé jsou přes 10 000 let staré.",
+      "Slunéčka spořádají za život až 5 000 mšic, a proto je zahrádkáři vypouštějí místo postřiků.",
+      "Semeno palmy coco de mer váží až 25 kilogramů — je nejtěžší ze všech rostlin.",
+      "Paúhoř elektrický není úhoř, ale nožovka, a jeho výboj může přesáhnout 800 voltů.",
+      "Lišejník není jeden organismus, ale dva — houba a řasa žijící jako jedno tělo, schopné přežít i ve vesmírném vakuu.",
+      "Samec tučňáka císařského balancuje jediné vejce na nohou celou antarktickou zimu a dva měsíce přitom nic nesní.",
+      "Kopřivy pálí drobnými skleněnými chlupy, které se zalomí v kůži, a protijed často roste hned vedle: listy šťovíku.",
+      "Některé hlubinné ryby jsou průhledné — neviditelnost jim slouží jako maskování tam, kde se není kam schovat.",
+      "Vzrostlý dub shodí v dobrém roce 10 000 žaludů a stromem se z nich stane zhruba jeden z deseti tisíc.",
+      "Vrány si pamatují konkrétní lidské tváře, chovají zášť a učí mláďata, komu se vyhnout.",
+      "Nejmenší kvetoucí rostlina světa, drobnička, je velká jako zrnko písku — na bříško prstu se jich vejde tucet."
+    ],
+    "topics": {
+      "airPurifying": {
+        "title": "Rostliny čistící vzduch",
+        "desc": "NASA tyto druhy zkoumala jako pomocníky při čištění vzduchu v interiérech.",
+        "intro": "Koncem 80. let 20. století NASA testovala desítky běžných pokojových rostlin, aby zjistila, které z nich dokážou pomoci odstranit škodliviny z uzavřeného vzduchu kabin kosmických lodí – a zjistila, že mnohé oblíbené druhy jsou překvapivě dobré v pohlcování toxinů, jako je formaldehyd, benzen a oxid uhelnatý. Tato sbírka shrnuje druhy, které si v daném výzkumu vedly nejlépe a od té doby se staly klasikou mezi rostlinami zlepšujícími kvalitu vzduchu doma. Nenahradí otevřené okno, ale pár správně umístěných květináčů je snadný a nenáročný způsob, jak osvěžit vzduch v místnostech, kde trávíte nejvíce času.",
+        "species": [
+          {
+            "name": "Tchýnin jazyk",
+            "sci": "Dracaena trifasciata (syn. Sansevieria trifasciata)",
+            "note": "Jeden z nejlepších výsledků studie NASA – na rozdíl od většiny pokojových rostlin dokáže přeměňovat CO2 na kyslík i přes noc."
+          },
+          {
+            "name": "Zelenec chocholatý",
+            "sci": "Chlorophytum comosum",
+            "note": "NASA ho zařadila mezi nejlepší v odstraňování formaldehydu a xylenu z běžného vzduchu v domácnosti."
+          },
+          {
+            "name": "Lodětel",
+            "sci": "Spathiphyllum wallisii",
+            "note": "V původní studii NASA se umístil na špici v odstraňování benzenu, formaldehydu a trichlorethylenu z vnitřního vzduchu."
+          },
+          {
+            "name": "Břečťan",
+            "sci": "Hedera helix",
+            "note": "Nejlépe hodnocený druh v celé studii NASA, ceněný pro odstraňování formaldehydu i plísňových spor ve vzduchu."
+          },
+          {
+            "name": "Bostonská kapradina",
+            "sci": "Nephrolepis exaltata",
+            "note": "Prostředek na formaldehyd testovaný NASA, který navíc zvyšuje vlhkost v suchých vytápěných místnostech."
+          },
+          {
+            "name": "Potos zlatý",
+            "sci": "Epipremnum aureum",
+            "note": "Téměř nezničitelný a prokazatelně filtruje formaldehyd, benzen a oxid uhelnatý z vnitřního vzduchu."
+          },
+          {
+            "name": "Fíkus pryžodárný",
+            "sci": "Ficus elastica",
+            "note": "Hvězda studie čistoty vzduchu NASA (Clean Air Study), který soustavně odstraňuje formaldehyd z běžných obytných prostor."
+          }
+        ]
+      },
+      "beginnerSucculents": {
+        "title": "Sukulenty pro začátečníky",
+        "desc": "Nenáročné rostliny, kterým svědčí trocha zanedbávání.",
+        "intro": "Sukulenty si pověst rostlin vhodných pro začátečníky vysloužily po právu: jejich silné listy a stonky ukládající vodu jim umožňují bez potíží přežít jedno nebo dvě zapomenutá zalévání. Tento výběr sází na nejodolnější a nejshovívavější odrůdy – rostliny stavěné na to, aby zvládly klasické začátečnické chyby, jako je přelévání, podlévání i nepravidelné světlo. Stačí kterékoli z nich dopřát světlý parapet a trochu trpělivosti, a máte téměř neomylný vstup do pěstování vlastní sbírky rostlin.",
+        "species": [
+          {
+            "name": "Tlustice vejčitá",
+            "sci": "Crassula ovata",
+            "note": "Ukládá vodu v tlustých stoncích a listech, takže jí nevadí jedno nebo dvě vynechaná zalévání."
+          },
+          {
+            "name": "Tchýnin jazyk",
+            "sci": "Dracaena trifasciata",
+            "note": "Daří se mu i při naprostém zanedbávání, snáší málo světla i týdny suché půdy bez reptání."
+          },
+          {
+            "name": "Zebra Plant",
+            "sci": "Haworthiopsis fasciata",
+            "note": "Zůstává kompaktní a pomalu roste, takže je téměř nemožné ji zahltit přehnanou péčí."
+          },
+          {
+            "name": "Aloe Vera",
+            "sci": "Aloe vera",
+            "note": "Odpouští nepravidelné zalévání – listy plné gelu jsou uzpůsobené k tomu, aby sama přežila sucho."
+          },
+          {
+            "name": "Kalanchoe plstnaté",
+            "sci": "Kalanchoe tomentosa",
+            "note": "Chlupaté listy ukládající vodu snadno přečkají období sucha, díky čemuž je to téměř neomylný první sukulent."
+          },
+          {
+            "name": "Oslí ocásek",
+            "sci": "Sedum morganianum",
+            "note": "Masité převislé listy si drží vlastní zásoby vody a odmění nenáročné pěstitele, kteří odolají přelévání."
+          },
+          {
+            "name": "Mexican Hens and Chicks",
+            "sci": "Echeveria elegans",
+            "note": "Klasický tvar růžice šetrně hospodaří s vodou a snadno se množí, čímž odpouští nevyhnutelné začátečnické chyby."
+          }
+        ]
+      },
+      "petSafe": {
+        "title": "Rostliny bezpečné pro domácí mazlíčky",
+        "desc": "Netoxická zeleň pro domácnosti s kočkami a psy.",
+        "intro": "Sdílet domov s kočkami a psy neznamená vzdát se pokojových rostlin, i když spousta oblíbených druhů je při okusování skutečně škodlivá. Tato sbírka shromažďuje osvědčené, netoxické oblíbence, ověřené podle bezpečnostních dat ASPCA, abyste mohli zaplnit parapety a police bez obav ze zvědavé tlapky nebo průzkumného kousnutí. Od popínavých rostlin až po kvetoucí oblíbence – každý zástupce si zde místo vysloužil především bezpečností a teprve pak krásou.",
+        "species": [
+          {
+            "name": "Zelenec chocholatý",
+            "sci": "Chlorophytum comosum",
+            "note": "ASPCA ho uvádí jako netoxický pro kočky i psy a jeho převislé listy dají zvědavým tlapkám něco bezpečného na hraní."
+          },
+          {
+            "name": "Bostonská kapradina",
+            "sci": "Nephrolepis exaltata",
+            "note": "Tato bujná, texturovaná kapradina je pro domácí mazlíčky netoxická, takže bezpečně přidá do místnosti kus džungle."
+          },
+          {
+            "name": "Chamedorea půvabná",
+            "sci": "Chamaedorea elegans",
+            "note": "Klasická viktoriánská pokojová rostlina, netoxická pro kočky i psy, snáší málo světla bez jakéhokoli rizika."
+          },
+          {
+            "name": "Maranta",
+            "sci": "Maranta leuconeura",
+            "note": "Její listy se v noci skládají jako ruce k modlitbě a je naprosto bezpečná, i kdyby ji zvědavá kočka ochutnala."
+          },
+          {
+            "name": "Peperomie melounová",
+            "sci": "Peperomia argyreia",
+            "note": "Kompaktní a netoxická – její pruhované listy tvoří nápadný, pro mazlíčky bezpečný doplněk na police a stolky."
+          },
+          {
+            "name": "Haworthie pruhovaná",
+            "sci": "Haworthia attenuata",
+            "note": "Bezpečná alternativa k toxické aloe a tlustici – tento pruhovaný sukulent nabízí stejný vzhled bez rizika."
+          },
+          {
+            "name": "Africká fialka",
+            "sci": "Saintpaulia ionantha",
+            "note": "Jedna z mála kvetoucích pokojových rostlin s potvrzenou netoxicitou, takže mazlíčci mohou sdílet parapet i s jejími květy."
+          }
+        ]
+      },
+      "medicinalHerbs": {
+        "title": "Léčivé byliny",
+        "desc": "Rostliny s dlouhou historií léčivého využití.",
+        "intro": "Dávno předtím, než vznikly moderní lékárničky, byly domácí zahrady původní lékárnou: byliny jako levandule, máta peprná a třapatka se po staletí pěstují, spařují a používají ke zmírnění běžných neduhů. Tato sbírka představuje rostliny s dobře zdokumentovanou rolí v lidovém i tradičním léčitelství po celém světě, od středomořských kuchyňských klasik až po ájurvédské skvosty. Většině z nich stačí slunný parapet, takže si doma můžete vypěstovat živý kus bylinné historie.",
+        "species": [
+          {
+            "name": "Aloe Vera",
+            "sci": "Aloe vera",
+            "note": "Její listy plné gelu tisíce let po celém světě zklidňovaly popáleniny a drobná podráždění kůže.",
+            "id": "aloeVera",
+            "tags": [
+              "skin",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Levandule",
+            "sci": "Lavandula angustifolia",
+            "note": "Dlouho ceněná pro svou uklidňující vůni, tradičně používaná ke zmírnění stresu a podpoře klidného spánku.",
+            "id": "lavender",
+            "tags": [
+              "sleep",
+              "stress",
+              "headache"
+            ]
+          },
+          {
+            "name": "Máta peprná",
+            "sci": "Mentha x piperita",
+            "note": "Listy bohaté na mentol po staletí v lidovém léčitelství zklidňovaly bolesti žaludku i hlavy.",
+            "id": "peppermint",
+            "tags": [
+              "digestion",
+              "headache"
+            ]
+          },
+          {
+            "name": "Heřmánek pravý",
+            "sci": "Matricaria chamomilla",
+            "note": "Z jeho kopretinovitých květů se vaří jemný čaj, dlouho používaný ke zklidnění nervů a podpoře trávení.",
+            "id": "germanChamomile",
+            "tags": [
+              "sleep",
+              "digestion",
+              "stress"
+            ]
+          },
+          {
+            "name": "Třapatka nachová",
+            "sci": "Echinacea purpurea",
+            "note": "Pochází ze Severní Ameriky, její kořeny a květy používali domorodí obyvatelé na podporu imunity.",
+            "id": "purpleConeflower",
+            "tags": [
+              "immunity"
+            ]
+          },
+          {
+            "name": "Rozmarýn",
+            "sci": "Salvia rosmarinus (syn. Rosmarinus officinalis)",
+            "note": "Tento vonný středomořský keř má dávnou pověst bylinky zlepšující paměť a podporující krevní oběh.",
+            "id": "rosemary",
+            "tags": [
+              "headache",
+              "energy",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Bazalka posvátná (Tulsí)",
+            "sci": "Ocimum tenuiflorum",
+            "note": "Po staletí uctívaná v ájurvédské tradici, její listy se louhují jako adaptogenní čaj proti stresu.",
+            "id": "holyBasil",
+            "tags": [
+              "stress",
+              "immunity",
+              "respiratory"
+            ]
+          },
+          {
+            "name": "Kurkuma",
+            "sci": "Curcuma longa",
+            "note": "Ajurvédská medicína používá tento zlatavý kořen po staletí k utišení zánětů a podpoře trávení a hojení ran.",
+            "id": "turmeric",
+            "tags": [
+              "painInflammation",
+              "digestion",
+              "skin"
+            ]
+          },
+          {
+            "name": "Zázvor",
+            "sci": "Zingiber officinale",
+            "note": "Čínští a ajurvédští léčitelé odedávna žvýkali nebo vařili tento oddenek, aby utišili nevolnost a prohřáli trávení.",
+            "id": "ginger",
+            "tags": [
+              "digestion",
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "Ženšen",
+            "sci": "Panax ginseng",
+            "note": "Více než dva tisíce let je v tradiční čínské medicíně ceněn jako posilující tonikum pro energii a životní sílu.",
+            "id": "ginseng",
+            "tags": [
+              "energy",
+              "stress"
+            ]
+          },
+          {
+            "name": "Ashwagandha",
+            "sci": "Withania somnifera",
+            "note": "Ajurvédská opora po tisíciletí – její kořen se tradičně užívá ke zmírnění stresu a obnově síly a vytrvalosti.",
+            "id": "ashwagandha",
+            "tags": [
+              "stress",
+              "energy",
+              "sleep"
+            ]
+          },
+          {
+            "name": "Černý bez",
+            "sci": "Sambucus nigra",
+            "note": "Evropští lidoví léčitelé po staletí vařili jeho tmavé bobule na sirupy proti nachlazení a chřipce.",
+            "id": "elderberry",
+            "tags": [
+              "immunity",
+              "respiratory"
+            ]
+          },
+          {
+            "name": "Kozlík lékařský",
+            "sci": "Valeriana officinalis",
+            "note": "Evropští bylinkáři sušili tento vonný kořen už od starověku jako tradiční prostředek na neklidný spánek.",
+            "id": "valerian",
+            "tags": [
+              "sleep",
+              "stress"
+            ]
+          },
+          {
+            "name": "Vilín virginský",
+            "sci": "Hamamelis virginiana",
+            "note": "Domorodí Američané destilovali jeho kůru a listy do svíravého roztoku na modřiny, otoky a podrážděnou pokožku.",
+            "id": "witchHazel",
+            "tags": [
+              "skin",
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "Krevnatec kanadský",
+            "sci": "Hydrastis canadensis",
+            "note": "Čerokíové a další domorodí léčitelé používali tento hořký kořen k léčbě ran, infekcí a trávicích potíží.",
+            "id": "goldenseal",
+            "tags": [
+              "digestion",
+              "immunity",
+              "skin"
+            ]
+          },
+          {
+            "name": "Ďáblův dráp",
+            "sci": "Harpagophytum procumbens",
+            "note": "Tradiční léčitelé z Kalahari odedávna používají tento kořen s háčkovitými plody k úlevě od bolesti kloubů a artritidy.",
+            "id": "devilsClaw",
+            "tags": [
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "Pelyněk africký",
+            "sci": "Artemisia afra",
+            "note": "Jeden z nejrozšířenějších tradičních léků jižní Afriky – užívá se v páře nebo jako odvar k úlevě od kašle a ucpaných dýchacích cest.",
+            "id": "africanWormwood",
+            "tags": [
+              "respiratory",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Yerba maté",
+            "sci": "Ilex paraguariensis",
+            "note": "Jihoamerický kmen Guaraní odedávna vaří jeho listy jako povzbuzující každodenní čaj podporující trávení.",
+            "id": "yerbaMate",
+            "tags": [
+              "energy",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Pupečník asijský",
+            "sci": "Centella asiatica",
+            "note": "Ctěná v ajurvédě i tradiční medicíně jihovýchodní Asie jako bylina hojící rány, která prý bystří paměť a konejší mysl.",
+            "id": "gotuKola",
+            "tags": [
+              "skin",
+              "stress"
+            ]
+          },
+          {
+            "name": "Lékořice lysá",
+            "sci": "Glycyrrhiza glabra",
+            "note": "Po staletí užívaná v čínské, ajurvédské i blízkovýchodní medicíně k utišení kašle, bolavého hrdla a rozladěného žaludku.",
+            "id": "licoriceRoot",
+            "tags": [
+              "respiratory",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Neem",
+            "sci": "Azadirachta indica",
+            "note": "Hořké listy, kůra a olej neemu jsou klasickým ájurvédským prostředkem proti kožním výsevům, ranám a parazitárním infekcím.",
+            "id": "neem",
+            "tags": [
+              "skin",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Amla (indický angrešt)",
+            "sci": "Phyllanthus emblica",
+            "note": "Nejbohatší přírodní zdroj vitaminu C v ájurvédě, amla je základem rasájana tonik ceněných pro omlazení a podporu trávení.",
+            "id": "amla",
+            "tags": [
+              "digestion",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Brahmi",
+            "sci": "Bacopa monnieri",
+            "note": "Ájurvédská bylina Medhya Rasájana, tradičně užívaná k posílení paměti, zklidnění mysli a podpoře učení.",
+            "id": "brahmi",
+            "tags": [
+              "stress",
+              "sleep"
+            ]
+          },
+          {
+            "name": "Guduchi (Giloy)",
+            "sci": "Tinospora cordifolia",
+            "note": "Nazývaná Amrita, 'kořen nesmrtelnosti', odvar z jejích stonků je v ájurvédě první volbou při horečkách a posilování imunity.",
+            "id": "guduchi",
+            "tags": [
+              "immunity",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Šatavari",
+            "sci": "Asparagus racemosus",
+            "note": "Kořenové tonikum ctěné v ájurvédě jako přední ženský omlazující prostředek, tradičně užívané na podporu laktace a hormonální rovnováhy.",
+            "id": "shatavari",
+            "tags": [
+              "energy",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Arjuna",
+            "sci": "Terminalia arjuna",
+            "note": "Prášek z kůry dlouho užívaný v ájurvédské kardiologii k posílení srdečního svalu a podpoře zdravého krevního oběhu.",
+            "id": "arjuna",
+            "tags": [
+              "energy"
+            ]
+          },
+          {
+            "name": "Haritaki",
+            "sci": "Terminalia chebula",
+            "note": "Nazývaná 'král léků' v ájurvédě, tento plod je základem Triphaly pro trávení, detoxikaci a vylučování.",
+            "id": "haritaki",
+            "tags": [
+              "digestion",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Bibhitaki",
+            "sci": "Terminalia bellirica",
+            "note": "Jeden ze tří plodů Triphaly, tradičně užívaný v ájurvédě k odstranění přebytečného hlenu a podpoře zdraví dýchacích cest.",
+            "id": "bibhitaki",
+            "tags": [
+              "respiratory",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Pískavice řecké seno",
+            "sci": "Trigonella foenum-graecum",
+            "note": "Semínka namočená a jedená v jihoasijských domácnostech ke zlepšení trávení, podpoře laktace a vyrovnání hladiny cukru v krvi.",
+            "id": "fenugreek",
+            "tags": [
+              "digestion",
+              "energy"
+            ]
+          },
+          {
+            "name": "Pepř dlouhý (Pippali)",
+            "sci": "Piper longum",
+            "note": "Pálivý plod v ájurvédských směsích Trikatu, tradičně užívaný k rozdmýchání trávicího ohně a uvolnění dýchacích cest.",
+            "id": "longPepper",
+            "tags": [
+              "digestion",
+              "respiratory"
+            ]
+          },
+          {
+            "name": "Santalové dřevo",
+            "sci": "Santalum album",
+            "note": "Chladivá pasta nanášená v ájurvédě ke zklidnění zanícené kůže, horeček a mysli během meditace.",
+            "id": "sandalwood",
+            "tags": [
+              "skin",
+              "stress"
+            ]
+          },
+          {
+            "name": "Indická sarsaparila (Anantamul)",
+            "sci": "Hemidesmus indicus",
+            "note": "Sladce kořenící liána užívaná v klasických ájurvédských formulích k ochlazení krve, očistě pokožky a úlevě od kloubních bolestí.",
+            "id": "indianSarsaparilla",
+            "tags": [
+              "skin",
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "Bael (bengálská kdoule)",
+            "sci": "Aegle marmelos",
+            "note": "Dužina nezralého plodu je tradiční ájurvédskou oporou při zklidňování chronických průjmů a úplavice.",
+            "id": "bael",
+            "tags": [
+              "digestion"
+            ]
+          },
+          {
+            "name": "Guggul",
+            "sci": "Commiphora wightii",
+            "note": "Pryskyřice v srdci ájurvédských formulí Guggulu, tradičně užívaná ke správě hladiny cholesterolu a kloubních zánětů.",
+            "id": "guggul",
+            "tags": [
+              "painInflammation",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Manjištha (indická mořena)",
+            "sci": "Rubia cordifolia",
+            "note": "Kořen dlouho užívaný v ájurvédě jako čistič krve pro čistou pleť, hojení ran a podporu lymfatického systému.",
+            "id": "manjistha",
+            "tags": [
+              "skin",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Jatamansi (nard)",
+            "sci": "Nardostachys jatamansi",
+            "note": "Vonný kořen dlouho užívaný v ájurvédě ke zklidnění nervového systému a navození klidného spánku.",
+            "id": "jatamansi",
+            "tags": [
+              "sleep",
+              "stress"
+            ]
+          },
+          {
+            "name": "Kozinec blanitý",
+            "sci": "Astragalus membranaceus",
+            "note": "Kořen chuang čchi se vaří k posílení obranné energie wej čchi, zvýšení výdrže a podpoře hojení ran.",
+            "id": "astragalus",
+            "tags": [
+              "immunity",
+              "energy"
+            ]
+          },
+          {
+            "name": "Reishi (lesklokorka lesklá)",
+            "sci": "Ganoderma lucidum",
+            "note": "Houba ling č' byla ceněna taoistickými bylinkáři pro zklidnění šen, úlevu od nespavosti a prodloužení života.",
+            "id": "reishiMushroom",
+            "tags": [
+              "sleep",
+              "stress",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Andělika čínská (Dong Quai)",
+            "sci": "Angelica sinensis",
+            "note": "Tang kuej, 'ženský ženšen', po dvě tisíciletí vyživuje krev a mírní menstruační potíže.",
+            "id": "dongQuai",
+            "tags": [
+              "energy",
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "Kustovnice čínská (goji)",
+            "sci": "Lycium barbarum",
+            "note": "Bobule kou čchi c' se louhují nebo jedí k vyživení jinové energie jater a ledvin a rozjasnění zraku.",
+            "id": "gojiBerry",
+            "tags": [
+              "immunity",
+              "energy"
+            ]
+          },
+          {
+            "name": "Klanopraška čínská",
+            "sci": "Schisandra chinensis",
+            "note": "Wu wej c', 'plod pěti chutí', stahuje plíce, uklidňuje mysl a chrání játra.",
+            "id": "schisandra",
+            "tags": [
+              "respiratory",
+              "stress",
+              "sleep"
+            ]
+          },
+          {
+            "name": "Šišák bajkalský",
+            "sci": "Scutellaria baicalensis",
+            "note": "Kořen chuang čchin odvádí vlhké teplo a od starověkých lékopisů léčí horečky, kašel a úplavici.",
+            "id": "chineseSkullcap",
+            "tags": [
+              "respiratory",
+              "digestion",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Rehmannie lepkavá",
+            "sci": "Rehmannia glutinosa",
+            "note": "Napařený kořen ti chuang tonizuje jinovou energii ledvin a krev, klíčová ingredience mnoha klasických formulí.",
+            "id": "rehmannia",
+            "tags": [
+              "energy",
+              "sleep"
+            ]
+          },
+          {
+            "name": "Chryzantéma",
+            "sci": "Chrysanthemum morifolium",
+            "note": "Květy ťü chua se vaří jako čaj k odvedení tepla, zklidnění zarudlých očí a mírnění bolestí hlavy.",
+            "id": "chrysanthemum",
+            "tags": [
+              "headache",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Zimolez japonský",
+            "sci": "Lonicera japonica",
+            "note": "Květ ťin jin chua odvádí horký toxin a odedávna léčí horečky, hnisavé vředy a infekce krku.",
+            "id": "japaneseHoneysuckle",
+            "tags": [
+              "immunity",
+              "respiratory",
+              "skin"
+            ]
+          },
+          {
+            "name": "Skořicovník čínský (kasie)",
+            "sci": "Cinnamomum cassia",
+            "note": "Kůra žou kuej zahřívá jangovou energii ledvin a rozhýbává stagnující krev, čímž mírní bolesti chladového typu.",
+            "id": "chineseCinnamon",
+            "tags": [
+              "painInflammation",
+              "energy"
+            ]
+          },
+          {
+            "name": "Poria (Fu Ling)",
+            "sci": "Wolfiporia extensa",
+            "note": "Fu ling, houbové sklerotium, odvádí vlhkost, uklidňuje ducha a v odvarech posiluje slezinu.",
+            "id": "poria",
+            "tags": [
+              "sleep",
+              "digestion",
+              "stress"
+            ]
+          },
+          {
+            "name": "Čínský jam",
+            "sci": "Dioscorea polystachya",
+            "note": "Hlíza šan jao tonizuje čchi sleziny, plic a ledvin a tradičně se vaří do posilujících kaší.",
+            "id": "chineseYam",
+            "tags": [
+              "digestion",
+              "energy",
+              "respiratory"
+            ]
+          },
+          {
+            "name": "Prorostlík čínský",
+            "sci": "Bupleurum chinense",
+            "note": "Kořen čchaj chu harmonizuje játra a rozptyluje horko, klíčový při střídavých horečkách a zimnici.",
+            "id": "bupleurum",
+            "tags": [
+              "stress",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Notoženšen (San Qi)",
+            "sci": "Panax notoginseng",
+            "note": "Kořen san čchi se používá k zastavení krvácení a modřin a zároveň povzbuzuje krevní oběh.",
+            "id": "notoginseng",
+            "tags": [
+              "painInflammation",
+              "skin"
+            ]
+          },
+          {
+            "name": "Zvonkovec chlupatý",
+            "sci": "Codonopsis pilosula",
+            "note": "Kořen tang šen slouží jako mírnější náhrada ženšenu, tonizuje čchi a posiluje trávení.",
+            "id": "codonopsis",
+            "tags": [
+              "energy",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Fo-Ti (He Shou Wu)",
+            "sci": "Reynoutria multiflora",
+            "note": "Kořen che šou wu se připravuje k vyživení jater a ledvin a údajně černí šedivějící vlasy.",
+            "id": "foti",
+            "tags": [
+              "energy",
+              "skin"
+            ]
+          },
+          {
+            "name": "Řebříček obecný",
+            "sci": "Achillea millefolium",
+            "note": "Znám jako 'vojenská bylina na rány', užívaný od starověku k zastavení krvácení a urychlení hojení bojových zranění.",
+            "id": "yarrow",
+            "tags": [
+              "skin",
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "Třezalka tečkovaná",
+            "sci": "Hypericum perforatum",
+            "note": "Evropský lidový prostředek proti melancholii a nervovým bolestem, jeho žluté květy louhované v oleji tvoří mast na hojení ran.",
+            "id": "stJohnsWort",
+            "tags": [
+              "stress",
+              "painInflammation",
+              "skin"
+            ]
+          },
+          {
+            "name": "Šalvěj lékařská",
+            "sci": "Salvia officinalis",
+            "note": "Latinské salvere, léčit, odráží její odvěké použití při kloktání na bolest v krku a k usnadnění trávení.",
+            "id": "sage",
+            "tags": [
+              "digestion",
+              "respiratory"
+            ]
+          },
+          {
+            "name": "Tymián obecný",
+            "sci": "Thymus vulgaris",
+            "note": "Středomořský prostředek na kašel a hrudní potíže, jeho silice se odedávna používají v sirupech k uvolnění tvrdohlavého hlenu.",
+            "id": "thyme",
+            "tags": [
+              "respiratory",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Proskurník lékařský",
+            "sci": "Althaea officinalis",
+            "note": "Slizovité látky z kořene a listů po staletí konejšily bolavé hrdlo, kašel a podrážděnou střevní sliznici v evropských lékárnách.",
+            "id": "marshmallow",
+            "tags": [
+              "respiratory",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Měsíček lékařský",
+            "sci": "Calendula officinalis",
+            "note": "Zářivé okvětní lístky rozdrcené do mastí čistí řezné rány a tiší zanícenou, pomalu se hojící kůži.",
+            "id": "potMarigold",
+            "tags": [
+              "skin",
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "Ostropestřec mariánský",
+            "sci": "Silybum marianum",
+            "note": "Středomořská semena tradičně žvýkaná nebo vařená k ochraně a posílení jater po vydatných hostinách.",
+            "id": "milkThistle",
+            "tags": [
+              "digestion"
+            ]
+          },
+          {
+            "name": "Fenykl obecný",
+            "sci": "Foeniculum vulgare",
+            "note": "Anýzově vonící semínka žvýkaná po jídle po celé generace k úlevě od koliky, nadýmání a novorozeneckých větrů.",
+            "id": "fennel",
+            "tags": [
+              "digestion"
+            ]
+          },
+          {
+            "name": "Kopřiva dvoudomá",
+            "sci": "Urtica dioica",
+            "note": "Pálivé listy vařené jako jarní tonizující čaj k pročištění krve a úlevě od kloubních bolestí.",
+            "id": "stingingNettle",
+            "tags": [
+              "painInflammation",
+              "skin",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Jablečník obecný",
+            "sci": "Marrubium vulgare",
+            "note": "Hořká středomořská bylina vařená do bonbonů a sirupů jako klasický prostředek na kašel a zánět průdušek.",
+            "id": "whiteHorehound",
+            "tags": [
+              "respiratory",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Kostival lékařský",
+            "sci": "Symphytum officinale",
+            "note": "Přezdívaný 'kost srůst', jeho rozdrcený kořen a listy se po staletí přikládaly jako obklad na zlomeniny, výrony a modřiny.",
+            "id": "comfrey",
+            "tags": [
+              "painInflammation",
+              "skin"
+            ]
+          },
+          {
+            "name": "Řimbaba obecná",
+            "sci": "Tanacetum parthenium",
+            "note": "Hořce chutnající bylina žvýkaná čerstvá nebo vařená jako čaj, dlouhodobě uznávaný lidový prostředek na migrény a bolesti hlavy.",
+            "id": "feverfew",
+            "tags": [
+              "headache",
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "Divizna malokvětá",
+            "sci": "Verbascum thapsus",
+            "note": "Plstnaté listy a květy louhované do oleje či čaje na kašel, bolest v krku a bolesti uší.",
+            "id": "mullein",
+            "tags": [
+              "respiratory",
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "Hloh jednosemenný",
+            "sci": "Crataegus monogyna",
+            "note": "Bobule, květy a listy louhované jako klasické evropské tonikum na srdce při slábnoucím či neklidném pulzu.",
+            "id": "hawthorn",
+            "tags": [
+              "stress",
+              "sleep"
+            ]
+          },
+          {
+            "name": "Lípa srdčitá",
+            "sci": "Tilia cordata",
+            "note": "Vonné květy louhované jako uklidňující čaj ke zlomení horečky a utišení neklidných nervů.",
+            "id": "linden",
+            "tags": [
+              "sleep",
+              "stress",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Tužebník jilmový",
+            "sci": "Filipendula ulmaria",
+            "note": "Vonná kvetoucí bylina dlouho užívaná na horečky a kloubní bolesti, později se stala chemickou předlohou pro aspirin.",
+            "id": "meadowsweet",
+            "tags": [
+              "painInflammation",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Osha (kořen)",
+            "sci": "Ligusticum porteri",
+            "note": "Kořen žvýkaný nebo vařený kmeny Skalnatých hor, jako Navahové a Uteové, k úlevě od bolesti v krku a respiračních infekcí.",
+            "id": "oshaRoot",
+            "tags": [
+              "respiratory",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Ploštičník hroznatý",
+            "sci": "Actaea racemosa",
+            "note": "Kořen užívaný Čerokíi a dalšími kmeny východních lesů k mírnění menstruačních křečí a podpoře při porodu.",
+            "id": "blackCohosh",
+            "tags": [
+              "painInflammation",
+              "stress"
+            ]
+          },
+          {
+            "name": "Ďáblova hůl",
+            "sci": "Oplopanax horridus",
+            "note": "Vnitřní kůra užívaná Tlingity, Haidy a dalšími národy tichomořského severozápadního pobřeží k léčbě artritidy, infekcí a příznaků cukrovky.",
+            "id": "devilsClub",
+            "tags": [
+              "painInflammation",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Monarda trubkovitá",
+            "sci": "Monarda fistulosa",
+            "note": "Kmeny Černonožců a dalších prérijních národů vařily čaj z listů této mátě bohaté na thymol k léčbě nachlazení a respiračních infekcí.",
+            "id": "wildBergamot",
+            "tags": [
+              "respiratory",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Medvědice lékařská",
+            "sci": "Arctostaphylos uva-ursi",
+            "note": "Listy vařené mnoha severoamerickými domorodými kmeny jako močopudný prostředek a lék na infekce močových cest.",
+            "id": "bearberry",
+            "tags": [
+              "immunity",
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "Jilm červený",
+            "sci": "Ulmus rubra",
+            "note": "Čerokíové a Irokézové používali slizovitou vnitřní kůru k utišení bolesti v krku a hojení ran.",
+            "id": "slipperyElm",
+            "tags": [
+              "digestion",
+              "respiratory",
+              "skin"
+            ]
+          },
+          {
+            "name": "Cascara Sagrada (krušina posvátná)",
+            "sci": "Frangula purshiana",
+            "note": "Kmeny tichomořského severozápadu sušily a nechávaly zrát kůru tohoto řešetláku jako spolehlivé přírodní projímadlo.",
+            "id": "cascaraSagrada",
+            "tags": [
+              "digestion"
+            ]
+          },
+          {
+            "name": "Chinovník lékařský",
+            "sci": "Cinchona officinalis",
+            "note": "Andští Kečuové užívali hořkou kůru k léčbě horeček dávno předtím, než se stala zdrojem chininu.",
+            "id": "cinchona",
+            "tags": [
+              "immunity",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Kočičí dráp",
+            "sci": "Uncaria tomentosa",
+            "note": "Ašaninkové a další národy peruánské Amazonie vařili kůru této dřevnaté liány na artritidu a podporu imunity.",
+            "id": "catsClaw",
+            "tags": [
+              "painInflammation",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Koka",
+            "sci": "Erythroxylum coca",
+            "note": "Kečuové a Ajmarové z Andského pohoří žvýkají listy již tisíce let na potlačení výškové nemoci a únavy.",
+            "id": "coca",
+            "tags": [
+              "energy",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Dračí krev",
+            "sci": "Croton lechleri",
+            "note": "Amazonské národy nanášejí červenou latexovou mízu tohoto stromu přímo na řezné rány jako přírodní antiseptikum.",
+            "id": "dragonsBlood",
+            "tags": [
+              "skin",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Pau d'Arco",
+            "sci": "Tabebuia impetiginosa",
+            "note": "Vnitřní kůra vařená jako čaj domorodými národy Amazonie k léčbě infekcí, horeček a kožních onemocnění.",
+            "id": "pauDarco",
+            "tags": [
+              "immunity",
+              "skin"
+            ]
+          },
+          {
+            "name": "Boldo",
+            "sci": "Peumus boldus",
+            "note": "Mapučští léčitelé v Chile dlouho používají čaj z listů boldo na podporu jaterních funkcí a usnadnění trávení.",
+            "id": "boldo",
+            "tags": [
+              "digestion"
+            ]
+          },
+          {
+            "name": "Kopaiva",
+            "sci": "Copaifera officinalis",
+            "note": "Amazonské národy natáčejí pryskyřici tohoto stromu a nanášejí ji na rány jako protizánětlivý prostředek.",
+            "id": "copaiba",
+            "tags": [
+              "painInflammation",
+              "skin"
+            ]
+          },
+          {
+            "name": "Guarana",
+            "sci": "Paullinia cupana",
+            "note": "Národ Sateré-Mawé z brazilské Amazonie tuto liánu zdomácnil a praží její semena pro dlouhotrvající energii a soustředění.",
+            "id": "guarana",
+            "tags": [
+              "energy"
+            ]
+          },
+          {
+            "name": "Černucha setá",
+            "sci": "Nigella sativa",
+            "note": "Známá jako 'símě požehnání' v prorocké medicíně, její olej léčí astma, trávicí potíže a kožní infekce.",
+            "id": "blackSeed",
+            "tags": [
+              "respiratory",
+              "digestion",
+              "skin"
+            ]
+          },
+          {
+            "name": "Kadidlovník posvátný",
+            "sci": "Boswellia sacra",
+            "note": "Získávaný z arabských stromů po tisíciletí, jeho pryskyřice léčí kloubní záněty, rány a potíže dýchacích cest.",
+            "id": "frankincense",
+            "tags": [
+              "painInflammation",
+              "respiratory",
+              "skin"
+            ]
+          },
+          {
+            "name": "Myrha",
+            "sci": "Commiphora myrrha",
+            "note": "Sbíraná napříč Africkým rohem a Arábií, její pryskyřice dezinfikuje rány a konejší bolavé dásně a hrdlo.",
+            "id": "myrrh",
+            "tags": [
+              "skin",
+              "respiratory"
+            ]
+          },
+          {
+            "name": "Senna",
+            "sci": "Senna alexandrina",
+            "note": "Egyptští lékaři se od starověku spoléhali na její lusky a listy jako na silné a spolehlivé projímadlo.",
+            "id": "senna",
+            "tags": [
+              "digestion"
+            ]
+          },
+          {
+            "name": "Ibišek súdánský (karkade)",
+            "sci": "Hibiscus sabdariffa",
+            "note": "Louhovaný jako karkade v Súdánu a Egyptě, jeho kalichy jsou lidovým prostředkem na vysoký krevní tlak a horečku.",
+            "id": "hibiscus",
+            "tags": [
+              "immunity"
+            ]
+          },
+          {
+            "name": "Moringa olejodárná",
+            "sci": "Moringa oleifera",
+            "note": "Odedávna užívaná v subsaharské Africe, její listy léčí podvýživu a záněty a podporují tvorbu mléka u kojících matek.",
+            "id": "moringa",
+            "tags": [
+              "immunity",
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "Baobab",
+            "sci": "Adansonia digitata",
+            "note": "Africký 'strom života' poskytuje dužinu plodů a kůru tradičně užívanou proti horečce, průjmu a malárii.",
+            "id": "baobab",
+            "tags": [
+              "immunity",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Rooibos",
+            "sci": "Aspalathus linearis",
+            "note": "Jihoafričtí Khoisanové a kapští nizozemští osadníci vařili tento červenavý keř jako prostředek proti alergiím a kolice.",
+            "id": "rooibos",
+            "tags": [
+              "immunity",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Buchu",
+            "sci": "Agathosma betulina",
+            "note": "Khoisanští léčitelé na Mysu Dobré naděje používali jeho pronikavě vonící listy k léčbě infekcí močových cest a onemocnění ledvin.",
+            "id": "buchu",
+            "tags": [
+              "immunity"
+            ]
+          },
+          {
+            "name": "Sutherlandia (kankerbos)",
+            "sci": "Lessertia frutescens",
+            "note": "Znám Khoiům jako 'kankerbos', tento jihoafrický keř je tradičním tonikem na stres, únavu a podporu imunity.",
+            "id": "cancerBush",
+            "tags": [
+              "stress",
+              "energy",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Umckaloabo (africký pelargón)",
+            "sci": "Pelargonium sidoides",
+            "note": "Xhoští a zuluští léčitelé v Jižní Africe používali jeho hlíznatý kořen k léčbě kašle, bronchitidy a tuberkulózy.",
+            "id": "umckaloabo",
+            "tags": [
+              "respiratory"
+            ]
+          },
+          {
+            "name": "Hoodia",
+            "sci": "Hoodia gordonii",
+            "note": "Sanové lovci z Kalahari žvýkali tuto trnitou sukulentní rostlinu k potlačení hladu a žízně na dlouhých výpravách.",
+            "id": "hoodia",
+            "tags": [
+              "energy"
+            ]
+          },
+          {
+            "name": "Henna",
+            "sci": "Lawsonia inermis",
+            "note": "Kromě zdobení těla ji lidové léčitelství Blízkého východu a severní Afriky používá ve formě listové pasty k léčbě plísňových kožních infekcí.",
+            "id": "henna",
+            "tags": [
+              "skin"
+            ]
+          },
+          {
+            "name": "Mastix",
+            "sci": "Pistacia lentiscus",
+            "note": "Žvýkaná od starověku po celém východním Středomoří, pryskyřice tohoto stromu tiší žaludeční vředy a trávicí potíže.",
+            "id": "mastic",
+            "tags": [
+              "digestion"
+            ]
+          },
+          {
+            "name": "Rohovník obecný",
+            "sci": "Ceratonia siliqua",
+            "note": "Lidové léčitelství Blízkého východu mlelo jeho lusky na prostředek proti dětským průjmům a trávicím potížím.",
+            "id": "carob",
+            "tags": [
+              "digestion"
+            ]
+          }
+        ]
+      },
+      "floweringPerennials": {
+        "title": "Kvetoucí trvalky",
+        "desc": "Květy, které se vracejí rok co rok.",
+        "intro": "Kvetoucí trvalky jsou páteří zahrady, která se pořád vrací: na rozdíl od jednoletek na zimu odumřou a každé jaro znovu vyraší ze stejných kořenů, oddenků nebo hlíz. Mnohé se postupem let zabydlí a rozrostou do bohatších trsů, takže vás jedna výsadba odmění stále bohatšími květy každou další sezónu. Tato sbírka shromažďuje oblíbené a snadno dostupné trvalky, které tvoří páteř záhonů a rabátek se spolehlivou, opakující se barevností.",
+        "species": [
+          {
+            "name": "Pivoňka",
+            "sci": "Paeonia lactiflora",
+            "note": "Dlouhověké hlízovité kořeny mohou kvést na stejném místě padesát i více let, téměř bez nutnosti zásahu."
+          },
+          {
+            "name": "Denivka",
+            "sci": "Hemerocallis fulva",
+            "note": "Navzdory svému jménu se každý trs rozroste do hustých keřů, které spolehlivě kvetou po generace."
+          },
+          {
+            "name": "Třapatka nachová",
+            "sci": "Echinacea purpurea",
+            "note": "Tato prériová rostlina se vrací díky pevnému kořenu a časem se samovolně vysévá do stále větších porostů."
+          },
+          {
+            "name": "Kosatec bradatý",
+            "sci": "Iris germanica",
+            "note": "Masité oddenky se šíří těsně pod povrchem půdy a rozdělují se do nových trsů, které každé jaro znovu vykvétají."
+          },
+          {
+            "name": "Třapatkovka zářivá",
+            "sci": "Rudbeckia fulgida",
+            "note": "Šíří se oddenky i samovýsevem a vytváří spolehlivé zlatavé porosty, které se vracejí každé léto."
+          },
+          {
+            "name": "Plamenka latnatá",
+            "sci": "Phlox paniculata",
+            "note": "Pevné trsnaté lodyhy na podzim odumřou ke kořenům a příští rok vyraší ještě bohatší."
+          },
+          {
+            "name": "Levandule úzkolistá",
+            "sci": "Lavandula angustifolia",
+            "note": "Dřevnaté trvalé lodyhy přežijí zimní klid a na jaře znovu obrostou listy, aby každé léto znovu vykvetly."
+          }
+        ]
+      },
+      "oceanAndRiverFish": {
+        "title": "Ryby moří a řek",
+        "desc": "Šestnáct vod, jeden objektiv",
+        "intro": "Od korálových útesů po studené horské řeky — tohle jsou ryby, které lidé fotí a na které se ptají nejčastěji. Vědecká jména zůstávají po celém světě latinská, takže jméno, které se naučíte tady, funguje na kterémkoli pobřeží.",
+        "species": [
+          {
+            "name": "Klaun očkatý",
+            "sci": "Amphiprion ocellaris",
+            "note": "Žije uvnitř sasanek, jejichž žahavým buňkám odolává — výměnou za ochranu je čistí. Každý klaun se rodí jako samec a dominantní jedinec se změní v samici.",
+            "id": "clownfish"
+          },
+          {
+            "name": "Pstruh duhový",
+            "sci": "Oncorhynchus mykiss",
+            "note": "Původem ze studených řek tichomořského pobřeží, dnes se chová na všech kontinentech kromě Antarktidy. Růžové maso získává z korýšů, kterými se živí.",
+            "id": "rainbowTrout"
+          },
+          {
+            "name": "Losos obecný",
+            "sci": "Salmo salar",
+            "note": "Líhne se ve sladké vodě, roky tráví v moři a pak si najde přesně tu řeku, ve které se narodil, aby se v ní vytřel. Jeho druhové jméno znamená „skokan“.",
+            "id": "atlanticSalmon"
+          },
+          {
+            "name": "Štika obecná",
+            "sci": "Esox lucius",
+            "note": "Lovec ze zálohy — nehybně vyčkává mezi rostlinami a pak zaútočí ve zlomku vteřiny. Prozradí ji kachní čenich a ploutve posazené hodně vzadu.",
+            "id": "northernPike"
+          },
+          {
+            "name": "Kapr obecný",
+            "sci": "Cyprinus carpio",
+            "note": "Chová se přes dva tisíce let a dnes žije na všech kontinentech kromě Antarktidy — v některých zemích ceněná pochoutka, v jiných invazní škůdce.",
+            "id": "commonCarp"
+          },
+          {
+            "name": "Bodlok pestrý",
+            "sci": "Paracanthurus hepatus",
+            "note": "Útesová ryba s ostrým trnem u ocasu, který při obraně vyklápí jako skalpel. V dospělosti zářivě modrá, jako mládě sytě žlutá.",
+            "id": "blueTang"
+          },
+          {
+            "name": "Okounek pstruhový",
+            "sci": "Micropterus salmoides",
+            "note": "Nejvyhledávanější sportovní sladkovodní ryba na světě. Od okounka černého ho poznáte podle horní čelisti, která přesahuje za oko.",
+            "id": "largemouthBass"
+          },
+          {
+            "name": "Tuňák žlutoploutvý",
+            "sci": "Thunnus albacares",
+            "note": "Přeplouvá celé oceány a dokáže si udržet tělo teplejší než okolní vodu — proto rychle plave i v chladných hlubinách.",
+            "id": "yellowfinTuna"
+          },
+          {
+            "name": "Dánio pruhované",
+            "sci": "Danio rerio",
+            "note": "Malá pruhovaná říční rybka z jižní Asie, ze které se stalo jedno z nejzkoumanějších zvířat vědy — díky průhledným zárodkům lze sledovat, jak se tvoří orgány.",
+            "id": "zebrafish"
+          },
+          {
+            "name": "Perutýn ohnivý",
+            "sci": "Pterois volitans",
+            "note": "Nádherný a jedovatý, s ostny, které způsobují bolestivé bodnutí. Pochází z Indo-Pacifiku a v Atlantiku a Karibiku je vážným invazním druhem.",
+            "id": "redLionfish"
+          }
+        ]
+      },
+      "birdsOfTheWorld": {
+        "title": "Ptáci světa",
+        "desc": "Deset, které opravdu potkáte",
+        "intro": "Ptáci jsou divoká zvířata, která většina lidí vyfotí rovnou z okna. Těchto deset druhů obývá šest kontinentů a patří k nejznámějším na světě — skvělý trénink pro bystré oko.",
+        "species": [
+          {
+            "name": "Vlaštovka obecná",
+            "sci": "Hirundo rustica",
+            "note": "Nejrozšířenější vlaštovka na světě — hnízdí po celé severní polokouli a zimuje na jihu. Za letu ji neomylně prozradí hluboce vykrojený vidličnatý ocas.",
+            "id": "barnSwallow"
+          },
+          {
+            "name": "Vrabec domácí",
+            "sci": "Passer domesticus",
+            "note": "Vydal se s lidmi z Blízkého východu do téměř všech měst planety. Samci nosí černý náprsník, samice jsou nenápadně pískově hnědé.",
+            "id": "houseSparrow"
+          },
+          {
+            "name": "Ledňáček říční",
+            "sci": "Alcedo atthis",
+            "note": "Záblesk zářivé modři nad pomalými řekami Evropy, Asie a severní Afriky. Vrhá se do vody střemhlav a rybu uloví i metr pod hladinou.",
+            "id": "commonKingfisher"
+          },
+          {
+            "name": "Sokol stěhovavý",
+            "sci": "Falco peregrinus",
+            "note": "Nejrychlejší žijící zvíře — při loveckém střemhlavém letu překonává 300 km/h. Žije na všech kontinentech kromě Antarktidy a stále častěji hnízdí na mrakodrapech.",
+            "id": "peregrineFalcon"
+          },
+          {
+            "name": "Volavka velká",
+            "sci": "Ardea herodias",
+            "note": "Stojí bez hnutí v mělké vodě celé minuty a pak probodne rybu tak rychle, že to oko nestačí zachytit. Létá s krkem staženým do písmene S.",
+            "id": "greatBlueHeron"
+          },
+          {
+            "name": "Holub skalní",
+            "sci": "Columba livia",
+            "note": "Městský holub pochází z ptáků hnízdících ve skalách — proto mu tak vyhovují římsy a okenní parapety. Mláďata krmí oba rodiče „volatinovým mlékem“.",
+            "id": "rockPigeon"
+          },
+          {
+            "name": "Červenka obecná",
+            "sci": "Erithacus rubecula",
+            "note": "Je tak smělá, že chodí za zahradníkem pro žížaly vyryté ze země. Oranžovou náprsenku nosí obě pohlaví a celoročně si ji hájí zpěvem.",
+            "id": "europeanRobin"
+          },
+          {
+            "name": "Kachna divoká",
+            "sci": "Anas platyrhynchos",
+            "note": "Předek téměř všech domácích kachen. Slavný je zelenohlavý káčer, ale klasické hlasité kvákání vydává jen samice.",
+            "id": "mallard"
+          },
+          {
+            "name": "Ara arakanga",
+            "sci": "Ara macao",
+            "note": "Velký papoušek deštných pralesů Střední a Jižní Ameriky, který se dožívá přes padesát let a páry si zůstávají věrné celý život. Zobákem rozlouskne oříšky, na které si žádný jiný pták netroufne.",
+            "id": "scarletMacaw"
+          },
+          {
+            "name": "Tučňák císařský",
+            "sci": "Aptenodytes forsteri",
+            "note": "Hnízdí uprostřed antarktické zimy — samci se choulí ve tmě s jediným vejcem na nohou a dva měsíce nic nesnědí.",
+            "id": "emperorPenguin"
+          }
+        ]
+      },
+      "gardenInsects": {
+        "title": "Sousedé pod nohama",
+        "desc": "Deset běžných bezobratlých zblízka",
+        "intro": "Všech deset živočichů odsud žije pár metrů od většiny domovních dveří a skoro každý je už viděl, aniž by mu někdo řekl, co vlastně dělají. Pod tou důvěrnou známostí se skrývá chemická válka, křídla složená jako origami, mezikontinentální navigace a mravenčí kolonie dlouhá 6 000 kilometrů.",
+        "species": [
+          {
+            "name": "Slunéčko sedmitečné",
+            "sci": "Coccinella septempunctata",
+            "note": "Když ho zmáčknete, schválně začne krvácet z kolen — hořká žlutá tekutina, po které ho pták hned pustí.",
+            "id": "sevenSpotLadybird"
+          },
+          {
+            "name": "Škvor obecný",
+            "sci": "Forficula auricularia",
+            "note": "Zadní křídla rozloží na víc než desetinásobek složeného objemu — jeden z nejtěsnějších skladů v přírodě. A skoro nikdy nelétá.",
+            "id": "commonEarwig"
+          },
+          {
+            "name": "Svinka obecná",
+            "sci": "Armadillidium vulgare",
+            "note": "Není to hmyz, ale korýš — suchozemský příbuzný krabů, který pořád dýchá přeměněnými žábrami.",
+            "id": "commonPillWoodlouse"
+          },
+          {
+            "name": "Moucha domácí",
+            "sci": "Musca domestica",
+            "note": "Chutná nohama, takže ještě než k jídlu dorazí ústní ústrojí, dávno ví, na čem přistála.",
+            "id": "houseFly"
+          },
+          {
+            "name": "Hlemýžď kropenatý",
+            "sci": "Cornu aspersum",
+            "note": "Žere tak, že po listech tahá ozubenou pásku, a jak se přední řada zubů obrousí, dorůstají mu vzadu nové.",
+            "id": "gardenSnail"
+          },
+          {
+            "name": "Včela medonosná",
+            "sci": "Apis mellifera",
+            "note": "Královna se páří ve vzduchu během několika dní, pak už nikdy, a z uloženého spermatu klade vajíčka po zbytek života.",
+            "id": "westernHoneyBee"
+          },
+          {
+            "name": "Babočka bodláková",
+            "sci": "Vanessa cardui",
+            "note": "Celý migrační okruh nezvládne žádný jedinec — z tropické Afriky do Evropy a zpět je potřeba asi šest generací.",
+            "id": "paintedLady"
+          },
+          {
+            "name": "Třesavka velká",
+            "sci": "Pholcus phalangioides",
+            "note": "Na jiné pavouky loví tak, že jim brnká do sítě jako chycený hmyz, a pak napadne majitele, který se přijde podívat.",
+            "id": "cellarSpider"
+          },
+          {
+            "name": "Mravenec argentinský",
+            "sci": "Linepithema humile",
+            "note": "Dělnice ze Španělska, Kalifornie a Japonska se potkají bez boje — berou se navzájem jako jedna a tatáž kolonie.",
+            "id": "argentineAnt"
+          },
+          {
+            "name": "Žížala obecná",
+            "sci": "Lumbricus terrestris",
+            "note": "Darwin strávil poslední roky studiem žížal a knihu o nich vydal půl roku před smrtí.",
+            "id": "commonEarthworm"
+          }
+        ]
+      },
+      "fungiOfTheWorld": {
+        "title": "Ani rostlina, ani zvíře",
+        "desc": "Deset hub, které potichu řídí svět",
+        "intro": "Houby stojí na stromě života blíž zvířatům než rostlinám a to, co vidíte, je jen plodnice sítě vláken rozrostlé neviditelně v půdě, dřevě nebo v živém hmyzu. Mezi těmito deseti je ta, která zabíjí víc lidí než kterákoli jiná houba, organismus pokrývající devět čtverečních kilometrů v Oregonu a plíseň, která odstartovala éru antibiotik.",
+        "species": [
+          {
+            "name": "Muchomůrka červená",
+            "sci": "Amanita muscaria",
+            "note": "Červenobílá houba z každé pohádky opravdu existuje, je jedovatá — a jed, který po ní pojmenovali, skoro neobsahuje.",
+            "id": "flyAgaric"
+          },
+          {
+            "name": "Muchomůrka zelená",
+            "sci": "Amanita phalloides",
+            "note": "Má na svědomí většinu smrtelných otrav houbami na světě a jejímu jedu neublíží vaření, sušení ani mražení.",
+            "id": "deathCap"
+          },
+          {
+            "name": "Žampion dvouvýtrusý",
+            "sci": "Agaricus bisporus",
+            "note": "Bílý žampion, cremini i portobello nejsou tři houby, ale jeden druh — liší se jen kmenem a tím, jak dlouho rostl.",
+            "id": "buttonMushroom"
+          },
+          {
+            "name": "Kvasinka pivní",
+            "sci": "Saccharomyces cerevisiae",
+            "note": "Jednobuněčná houba za chlebem, pivem i vínem — a první organismus s jádrem, kterému v roce 1996 přečetli celý genom.",
+            "id": "brewersYeast"
+          },
+          {
+            "name": "Housenice mravenčí",
+            "sci": "Ophiocordyceps unilateralis",
+            "note": "Nakaženého mravence dovede do určité výšky nad zemí, přinutí ho zakousnout se a umřít — a pak mu z hlavy vyroste stopka.",
+            "id": "zombieAntFungus"
+          },
+          {
+            "name": "Václavka smrková",
+            "sci": "Armillaria ostoyae",
+            "note": "Jediný jedinec ve východním Oregonu pokrývá asi devět čtverečních kilometrů — plochou největší změřený organismus vůbec.",
+            "id": "humongousFungus"
+          },
+          {
+            "name": "Pařezník obecný",
+            "sci": "Panellus stipticus",
+            "note": "Malá tuhá vějířovitá houba, jejíž lupeny ve tmě svítí zeleně — ale jen když pochází ze správné strany Atlantiku.",
+            "id": "bitterOyster"
+          },
+          {
+            "name": "Štětičkovec",
+            "sci": "Penicillium rubens",
+            "note": "Modrozelená plíseň, která v roce 1928 znečistila misku Alexandra Fleminga, byla správně určena až v roce 2011.",
+            "id": "penicilliumMould"
+          },
+          {
+            "name": "Chytridie obojživelníků",
+            "sci": "Batrachochytrium dendrobatidis",
+            "note": "Houba, kterou není okem vidět, přivedla k vyhynutí víc druhů než jakákoli jiná zdokumentovaná nemoc.",
+            "id": "chytridFungus"
+          },
+          {
+            "name": "Lanýž bílý",
+            "sci": "Tuber magnatum",
+            "note": "Plodí zcela pod zemí, desítky let vzdoruje pěstitelům a kus o 1,5 kg šel v roce 2007 v dražbě za 330 000 dolarů.",
+            "id": "whiteTruffle"
+          }
+        ]
+      },
+      "fromFieldToPlate": {
+        "title": "Odkud pochází večeře",
+        "desc": "Deset základních plodin a jejich původ",
+        "intro": "Skoro nic na talíři neroste tam, kde se zrodilo. Těchto deset plodin lidé zdomácněli v říčních údolích, horských lesích a bažinách před tisíci lety a pak je rozvezli přes oceány, až největší sklizně skončily na úplně jiném kontinentu.",
+        "species": [
+          {
+            "name": "Kukuřice setá",
+            "sci": "Zea mays",
+            "note": "Její divoký předek nese asi tucet zrn, každé zavřené v kamenně tvrdém pouzdře — s palicí nemá nic společného.",
+            "id": "maize"
+          },
+          {
+            "name": "Maniok jedlý",
+            "sci": "Manihot esculenta",
+            "note": "Zdomácněl na okraji Amazonie, dnes ale živí víc lidí v Africe než v Jižní Americe.",
+            "id": "cassava"
+          },
+          {
+            "name": "Kávovník arabský",
+            "sci": "Coffea arabica",
+            "note": "Arabika není prastarý druh, ale přirozený kříženec dvou jiných kávovníků s překvapivě malou genetickou pestrostí.",
+            "id": "arabicaCoffee"
+          },
+          {
+            "name": "Sója luštinatá",
+            "sci": "Glycine max",
+            "note": "Většina světové sóji se na lidský talíř přímo nedostane — vylisuje se na olej a krmivo pro dobytek.",
+            "id": "soybean"
+          },
+          {
+            "name": "Cukrová třtina",
+            "sci": "Saccharum officinarum",
+            "note": "Na Nové Guineji ji pěstovali jako stonek na žvýkání; rafinace cukru a etanol přišly o tisíce let později.",
+            "id": "sugarcane"
+          },
+          {
+            "name": "Pšenice setá",
+            "sci": "Triticum aestivum",
+            "note": "Pšenice setá v divočině nikdy nerostla — vznikla na polích, když se pěstovaná pšenice zkřížila s trávou z krajnice.",
+            "id": "breadWheat"
+          },
+          {
+            "name": "Rýže setá",
+            "sci": "Oryza sativa",
+            "note": "Rýže byla zdomácněna dvakrát na dvou kontinentech — jednou u Jang-c'-ťiang a znovu z jiné trávy v západní Africe.",
+            "id": "asianRice"
+          },
+          {
+            "name": "Brambor",
+            "sci": "Solanum tuberosum",
+            "note": "Každý brambor pěstovaný v Evropě, Asii i Africe má kořeny ve vysočině kolem jezera Titicaca.",
+            "id": "potato"
+          },
+          {
+            "name": "Banánovník",
+            "sci": "Musa acuminata",
+            "note": "Divoké banány jsou nacpané tvrdými semeny velkými jako hrách; bezsemenné plody drží při životě jen sázení klonů.",
+            "id": "banana"
+          },
+          {
+            "name": "Pomerančovník",
+            "sci": "Citrus × sinensis",
+            "note": "Pomeranč není divoký druh: je to kříženec pomela a mandarinky, který se od té doby jen kopíruje roubováním.",
+            "id": "sweetOrange"
+          }
+        ]
+      },
+      "heardNotSeen": {
+        "title": "Dřív slyšet než vidět",
+        "desc": "Deset zvířat, která poznáte po sluchu",
+        "intro": "Většina setkání s divokou přírodou začíná zvukem odněkud, kam nedohlédnete. Těchhle deset — sovy a žáby, cikáda, dva zpívající hmyzáci, opice a liška — se dá mnohem snáz najít uchem než okem a každý z nich přitom říká něco konkrétního.",
+        "species": [
+          {
+            "name": "Puštík obecný",
+            "sci": "Strix aluco",
+            "note": "Slavné „húú-húú“ jsou ve skutečnosti dvě sovy: ostré ke-vik samice, na které odpoví samec chvějivým houkáním.",
+            "id": "tawnyOwl"
+          },
+          {
+            "name": "Kukačka obecná",
+            "sci": "Cuculus canorus",
+            "note": "„Ku-ku“ volá jen samec; samice odpovídá bublavým klokotem, po kterém malí ptáci propadají panice.",
+            "id": "commonCuckoo"
+          },
+          {
+            "name": "Slavík obecný",
+            "sci": "Luscinia megarhynchos",
+            "note": "Nejvíc zpívá mezi půlnocí a třetí ráno a jen nespáření samci — jakmile u nich zůstane samice, noční zpěv ustane.",
+            "id": "commonNightingale"
+          },
+          {
+            "name": "Rosnička zelená",
+            "sci": "Hyla arborea",
+            "note": "Pěticentimetrová žába s hrdelním vakem širším než vlastní hlava; sbor se za bezvětrné noci nese skoro kilometr.",
+            "id": "europeanTreeFrog"
+          },
+          {
+            "name": "Skokan volský",
+            "sci": "Lithobates catesbeianus",
+            "note": "Basové zahoukání kolem 200 hertzů, které se přes otevřenou vodu nese skoro kilometr daleko.",
+            "id": "americanBullfrog"
+          },
+          {
+            "name": "Cikáda jasanová",
+            "sci": "Cicada orni",
+            "note": "Zpívá, jen když je dost horko: sbor sílí, jak se dopoledne otepluje, a utichne, jakmile slunce zakryje mrak.",
+            "id": "cicadaOrni"
+          },
+          {
+            "name": "Cvrček domácí",
+            "sci": "Acheta domesticus",
+            "note": "Cvrkot vzniká pilováním křídel o sebe — škrabka jede po pilníku se stovkou zoubků, výsledek má kolem 4–5 kHz.",
+            "id": "houseCricket"
+          },
+          {
+            "name": "Kobylka zelená",
+            "sci": "Tettigonia viridissima",
+            "note": "Suché nepřerušované rachocení od soumraku dlouho po půlnoci, které někdy běží hodiny bez opravdové pauzy.",
+            "id": "greatGreenBushCricket"
+          },
+          {
+            "name": "Vřešťan černý",
+            "sci": "Alouatta caraya",
+            "note": "Ranní řev se lesem nese až pět kilometrů — patří k nejhlasitějším zvukům, jaké vydává suchozemské zvíře.",
+            "id": "blackHowlerMonkey"
+          },
+          {
+            "name": "Liška obecná",
+            "sci": "Vulpes vulpes",
+            "note": "Zimní jekot, který se svádí na lišky-samice, vydávají obě pohlaví — a není to nouze, ale svatební volání.",
+            "id": "redFox"
+          }
+        ]
+      }
+    },
+    "species": {
+      "fiddleLeafFig": {
+        "name": "Fíkus lyrovitý",
+        "sci": "Ficus lyrata",
+        "light": "Jasné, nepřímé světlo",
+        "water": "Jednou týdně; nechte svrchní 2,5–5 cm půdy proschnout",
+        "difficulty": "Náročné",
+        "overview": "Fíkus lyrovitý pochází z nížinných tropických deštných lesů západní Afriky a je ceněný pro své velké, lesklé listy ve tvaru houslí s výraznou žilnatinou, díky nimž se stal ikonou interiérového designu. Pěstuje se jako impozantní podlahová rostlina, která uvnitř dokáže dorůst až ke stropu, je ale pověstný svou vybíravostí, pokud jde o stálost světla, zálivky a teploty.",
+        "funFact": "Ve své přirozené domovině dokáže Ficus lyrata vyrůst ve strom vysoký přes 12 metrů s listy téměř dvakrát většími, než jaké známe z pokojového pěstování, a dokonce může vytvářet malé, nejedlé fíky opylované konkrétním druhem fíkovníkové vosičky – což jako pokojová rostlina prakticky nikdy nedělá."
+      },
+      "bostonFern": {
+        "name": "Bostonská kapradina",
+        "sci": "Nephrolepis exaltata",
+        "light": "Jasné až střední, nepřímé světlo",
+        "water": "Udržujte půdu stále vlhkou; nikdy ji nenechte úplně proschnout",
+        "difficulty": "Střední",
+        "overview": "Bostonská kapradina je bujná, obloukovitě rostoucí kultivarová forma kapradiny mečolisté, druhu rozšířeného ve vlhkých tropických oblastech po celém světě. Její pérovité, převislé listy z ní od viktoriánské éry udělaly oblíbenkyni pro závěsné květináče a zastíněné verandy, i když vyžaduje stálou vlhkost a vysokou vzdušnou vlhkost, aby se jí dobře dařilo.",
+        "funFact": "Kultivar 'Bostoniensis' nevznikl záměrným šlechtěním – šlo o přírodní mutaci objevenou v roce 1894 v zásilce kapradin mečolistých poslané z Filadelfie floristovi do Bostonu, a právě z tohoto jediného mutovaného kusu byla rozmnožena pokojová rostlina, kterou známe dnes."
+      },
+      "jadePlant": {
+        "name": "Tlustice vejčitá",
+        "sci": "Crassula ovata",
+        "light": "Plné slunce až jasné světlo",
+        "water": "Střídmě; mezi zálivkami nechte půdu úplně proschnout",
+        "difficulty": "Snadné",
+        "overview": "Tlustice vejčitá je odolný sukulent pocházející z polosuchých oblastí Jižní Afriky a Mosambiku, rozpoznatelný podle silných, lesklých oválných listů a dřevnatých, větvících se stonků, které jí dodávají vzhled miniaturního stromu. Je to oblíbená rostlina pro začátečníky, často se předává jako rodinné dědictví a ve feng shui bývá přezdívána 'rostlina štěstí'.",
+        "funFact": "Při vhodných podmínkách se tlustice dožívá 50 až 100 let a vzrostlé exempláře pěstitele občas odmění hloučky drobných hvězdicovitých bílých nebo růžových květů, obvykle vyvolaných chladnými nocemi a obdobím sucha."
+      },
+      "calathea": {
+        "name": "Kalatea",
+        "sci": "Goeppertia orbifolia",
+        "light": "Střední, nepřímé světlo",
+        "water": "Udržujte lehce vlhkou pomocí filtrované nebo destilované vody",
+        "difficulty": "Náročné",
+        "overview": "Tento nápadný zástupce čeledi maranticovitých (Marantaceae), pocházející z bolivijských deštných lesů, se pěstuje pro své velké, kulaté listy s pruhy stříbrné a tmavě zelené barvy. Podobně jako jeho příbuzní v noci listy vztyčuje a skládá a přes den je znovu sklápí – tento pohyb se nazývá nyktinastie a dodává rostlině téměř živý dojem.",
+        "funFact": "Tento druh byl dříve klasifikován jako Calathea orbifolia, ale v roce 2012 genetický a morfologický výzkum vyčlenil většinu druhů rodu Calathea do rodu Goeppertia – přestože zahradnictví i milovníci rostlin dodnes ve valné většině používají staré jméno 'Calathea'."
+      }
+    },
+    "topicSpeciesSectionTitle": "Druhy v této sbírce",
+    "speciesLightLabel": "Světlo",
+    "speciesWaterLabel": "Voda",
+    "speciesDifficultyLabel": "Náročnost",
+    "funFactLabel": "Zajímavost",
+    "symptomFilterTitle": "Co vás trápí?",
+    "symptomFilterAll": "Vše",
+    "symptomFilterEmpty": "Zatím sem nejsou přiřazeny žádné byliny.",
+    "viewHerbLabel": "Zobrazit {{name}}",
+    "herbDisclaimer": "Informační obsah vychází z tradičního a lidového léčitelství. Nejedná se o lékařskou radu - před použitím jakékoli byliny k léčbě zdravotního stavu se poraďte s lékařem.",
+    "herbDetailsLoadError": "Nepodařilo se načíst podrobnosti o této bylině. Zkuste to prosím znovu.",
+    "preparationLabel": "Jak připravit",
+    "benefitsLabel": "Přínosy",
+    "symptoms": {
+      "headache": "Bolest hlavy",
+      "digestion": "Trávení",
+      "sleep": "Spánek",
+      "stress": "Stres a úzkost",
+      "immunity": "Podpora imunity",
+      "painInflammation": "Bolest a záněty",
+      "respiratory": "Kašel a dýchací cesty",
+      "skin": "Pokožka a rány",
+      "energy": "Energie a únava"
+    },
+    "herbSubscribeCtaTitle": "Líbí se vám tento průvodce?",
+    "herbSubscribeCtaBody": "Předplaťte si aplikaci a odemkněte neomezenou identifikaci rostlin, hmyzu, hub a plodin.",
+    "herbAlreadySubscribedCheck": "Už jste předplatitel? Klepnutím zkontrolujte znovu"
+  },
+  "botanist": {
+    "headerTitle": "Dr. Helena Marques",
+    "headerSubtitle": "Agronomka · Profesorka botaniky",
+    "intro": "Dobrý den! Jsem Helena, agronomka a profesorka botaniky. Řekněte mi, co se děje s vaší rostlinou — nebo se zeptejte na cokoli o půdě, škůdcích, zálivce nebo přírodě obecně.",
+    "placeholder": "Zeptejte se Heleny…",
+    "typing": "Helena píše…",
+    "sendLabel": "Odeslat zprávu",
+    "askLabel": "Zeptat se: {{question}}",
+    "suggestions": [
+      "Listy mi žloutnou",
+      "Jak často zalévat?",
+      "Je bezpečná pro kočky?",
+      "Jakou zeminu použít?"
+    ],
+    "errorOffline": "Jste offline. Budu tu, až se připojení vrátí.",
+    "errorRateLimited": "Chviličku — příliš mnoho dotazů najednou. Zkuste to za pár minut.",
+    "errorNotConfigured": "Specialistka ještě není dostupná. Právě se nastavuje.",
+    "errorGeneric": "Teď jsem nedokázala odpovědět. Zkuste to prosím za chvíli."
+  },
+  "achievements": {
+    "title": "Úspěchy",
+    "streakLabel": "Denní série",
+    "longestStreakLabel": "Nejdelší série",
+    "totalLabel": "Identifikace",
+    "unlockedTitle": "Úspěch odemčen!",
+    "progressLabel": "Odemčeno {{unlocked}}/{{total}}",
+    "firstScan": {
+      "title": "První objev",
+      "body": "Identifikujte svůj první druh"
+    },
+    "collector10": {
+      "title": "Sběratel",
+      "body": "Uložte 10 druhů do své sbírky"
+    },
+    "collector50": {
+      "title": "Přírodovědec",
+      "body": "Uložte 50 druhů do své sbírky"
+    },
+    "collector100": {
+      "title": "Mistr přírodovědec",
+      "body": "Uložte 100 druhů do své sbírky"
+    },
+    "allCategories": {
+      "title": "Průzkumník",
+      "body": "Uložte alespoň jeden druh z každé kategorie"
+    },
+    "streak3": {
+      "title": "Dobrý začátek",
+      "body": "Identifikujte něco 3 dny v řadě"
+    },
+    "streak7": {
+      "title": "Vytrvalost",
+      "body": "Identifikujte něco 7 dní v řadě"
+    },
+    "streak30": {
+      "title": "Oddanost",
+      "body": "Identifikujte něco 30 dní v řadě"
+    },
+    "sharedFirst": {
+      "title": "Radost ze sdílení",
+      "body": "Sdílejte svůj první výsledek identifikace"
+    },
+    "subscriber": {
+      "title": "Prémiový člen",
+      "body": "Předplaťte si neomezené identifikace"
+    },
+    "tokensLabel": "Tokeny",
+    "tokensEarned": "+{{count}} tokenů"
+  },
+  "help": {
+    "title": "Nápověda a podpora",
+    "identificationTitle": "Jak funguje identifikace?",
+    "identificationBody": "Vyfoťte rostlinu, hmyz, houbu, plodinu nebo strom a naše umělá inteligence porovná fotografii s rozsáhlou databází, aby navrhla nejpravděpodobnější druh spolu s jeho vědeckým názvem, popisem a dalšími podrobnostmi.",
+    "accuracyTitle": "Je identifikace vždy přesná?",
+    "accuracyBody": "Žádná aplikace pro identifikaci není přesná na 100 %, zejména u hub a rostlin, které mohou být jedovaté. Nikdy nic nejezte, nesbírejte ani nepoužívejte pouze na základě výsledku z této aplikace — vždy si to nejprve ověřte u kvalifikovaného odborníka.",
+    "freeTitle": "Je NatureLens zdarma?",
+    "freeBody": "Máte k dispozici jednu bezplatnou identifikaci v každé kategorii (rostliny, hmyz, houby, plodiny, stromy). Poté odemkne předplatné neomezené identifikace ve všech kategoriích.",
+    "cancelTitle": "Jak zruším předplatné?",
+    "cancelBody": "Přejděte do Profilu a smažte svůj účet — tím se automaticky zruší jakékoli aktivní předplatné a zároveň se odstraní vaše data. V současnosti neexistuje samostatné tlačítko pro zrušení; smazání účtu je aktuální způsob, jak zastavit fakturaci.",
+    "restoreTitle": "Vyměnil jsem telefon nebo vymazal prohlížeč — jak obnovím své předplatné?",
+    "restoreBody": "Přejděte do Profil → Obnovit přístup. Můžete si nechat poslat jednorázový kód e-mailem, nebo se, pokud jste si ho vytvořili, přihlásit pomocí hesla či účtu Google.",
+    "tokensTitle": "Co jsou tokeny? Můžu je za něco vyměnit?",
+    "tokensBody": "Tokeny získáváte automaticky pokaždé, když identifikujete druh nebo odemknete úspěch. Výměna tokenů za odměny zatím není dostupná, ale je plánována do budoucna — váš zůstatek se mezitím dál zvyšuje.",
+    "privacyTitle": "Jsou moje data soukromá?",
+    "privacyBody": "Používání NatureLens nevyžaduje účet. Většina vašich dat (sbírka, fotografie) zůstává pouze ve vašem zařízení. Podrobnosti najdete v úplných Zásadách ochrany osobních údajů.",
+    "deleteTitle": "Jak smažu svůj účet a data?",
+    "deleteBody": "Přejděte do Profilu a klepněte dole na Smazat účet. Tím se zruší jakékoli aktivní předplatné, odstraní se vaše uložená data z našich serverů a vymaže se vše uložené v tomto zařízení.",
+    "offlineTitle": "Funguje aplikace offline?",
+    "offlineBody": "Ne — identifikace druhu vyžaduje internetové připojení k naší službě AI.",
+    "languageTitle": "Můžu aplikaci používat v jiném jazyce?",
+    "languageBody": "Ano, NatureLens podporuje 17 jazyků. Přejděte do Profil → Jazyk a kdykoli jej změňte."
+  },
+  "store": {
+    "title": "Odměny",
+    "intro": "Utrácej tokeny, které získáváš určováním druhů. Každá odměna zde funguje hned po vyzvednutí.",
+    "owned": "Vlastněno",
+    "open": "Otevřít",
+    "redeem": "Vyzvednout",
+    "redeemLabel": "Vyzvednout za {{cost}} tokenů",
+    "redeemedTitle": "Vyzvednuto!",
+    "notEnoughTitle": "Nedostatek tokenů",
+    "notEnoughBody": "Na tohle potřebuješ {{cost}} tokenů. Určuj dál a získáš víc.",
+    "shieldsHeld": "Uložené štíty: {{count}}",
+    "earnHint": "Získáváš 5 tokenů za určení a 15 za odemčený úspěch.",
+    "download": "Stáhnout",
+    "downloadErrorTitle": "Stažení selhalo",
+    "downloadErrorBody": "Soubor se nepodařilo uložit. Zkus to znovu v prohlížeči.",
+    "items": {
+      "streakShield": {
+        "title": "Štít Série",
+        "description": "Ochrání tvou sérii, když vynecháš jeden den. Sčítá se — kup si víc než jeden.",
+        "redeemedBody": "Tvoje série je chráněná. Když vynecháš den, štít to automaticky pokryje."
+      },
+      "wallpapers": {
+        "title": "Botanické Tapety",
+        "description": "Tři exkluzivní tapety 1080×1920 pro tvůj telefon.",
+        "redeemedBody": "Tvoje tapety jsou připravené. Klepni na Stáhnout u té, kterou chceš."
+      },
+      "naturalistBadge": {
+        "title": "Odznak Přírodovědce",
+        "description": "Trvalý odznak ve tvém profilu. Ukazuje, že u toho už nějakou dobu jsi.",
+        "redeemedBody": "Tvůj odznak je teď v profilu.",
+        "ownedBody": "Tenhle odznak už máš — je vidět v tvém profilu."
+      }
+    }
+  },
+  "missions": {
+    "title": "Dnešní mise",
+    "rewardEach": "+{{tokens}} za každou",
+    "allDone": "Vše hotovo — vrať se zítra!",
+    "pool": {
+      "scanAny2": "Urči dnes 2 druhy",
+      "scanAny3": "Urči dnes 3 druhy",
+      "scanPlant": "Urči rostlinu nebo strom",
+      "scanInsect": "Urči hmyz",
+      "scanMushroom": "Urči houbu",
+      "scanFish": "Urči rybu",
+      "scanBird": "Urči ptáka",
+      "saveOne": "Ulož nález do sbírky",
+      "saveTwo": "Ulož 2 nálezy do sbírky",
+      "shareOne": "Sdílej určení",
+      "openDiscover": "Navštiv záložku Objevovat"
+    }
+  },
+  "share": {
+    "message": "Určil/a jsem {{category}} pomocí NatureLens: {{name}}{{scientific}}{{confidence}}\n\nUrčuj rostliny, hmyz, houby, ryby a ptáky z fotky:\n{{url}}",
+    "confidenceLine": "jistota {{confidence}}%"
+  },
+  "onboarding": {
+    "skip": "Přeskočit",
+    "next": "Další",
+    "start": "Začít určovat",
+    "what": {
+      "title": "Zamiř. Vyfoť. Zjisti.",
+      "body": "Vyfoť cokoli živého a NatureLens ti během několika sekund řekne, co to je — s referenčními fotkami, abys to sám potvrdil."
+    },
+    "collect": {
+      "title": "Vytvoř si vlastní terénní deník",
+      "body": "Každý nález můžeš uložit do sbírky, označit a později se k němu vrátit. Cestou sbíráš tokeny a odemykáš odměny."
+    },
+    "free": {
+      "title": "První určení je zdarma",
+      "body": "Vyzkoušej jedno určení v každé kategorii zdarma. Předplatné až tehdy, když budeš chtít neomezené skenování."
+    }
+  },
+  "recap": {
+    "title": "Tvůj měsíc v přírodě",
+    "entrySubtitle": "Podívej se na shrnutí a sdílej ho",
+    "headline": "Potkal/a jsi {{count}} různých druhů",
+    "emptyTitle": "Zatím není co shrnout",
+    "emptyBody": "Urči a ulož tento měsíc něco a tvé shrnutí se objeví tady.",
+    "byCategory": "Podle kategorie",
+    "highlight": "Highlight měsíce",
+    "share": "Sdílet shrnutí",
+    "shareTitle": "Můj měsíc v přírodě",
+    "shareMessage": "V {{month}} jsem určil/a {{total}} nálezů — {{species}} různých druhů — s NatureLens 🌿\n\nUrčuj rostliny, hmyz, houby, ryby a ptáky z fotky:\n{{url}}",
+    "streakLine": "Aktuální série: {{current}} dní · rekord: {{longest}}",
+    "stats": {
+      "total": "Uložené nálezy",
+      "species": "Druhy",
+      "categories": "Kategorie",
+      "days": "Aktivní dny"
+    }
+  },
+  "subscription": {
+    "title": "Moje předplatné",
+    "entrySubtitle": "Stav, tarify a zrušení",
+    "activeTitle": "Premium aktivní",
+    "activeBody": "Neomezená určování ve všech kategoriích. Díky, že podporuješ NatureLens.",
+    "freeTitle": "Bezplatný tarif",
+    "freeBody": "Jedno určení zdarma v každé kategorii. Předplať si neomezené skenování.",
+    "unknownTitle": "Teď to nešlo ověřit",
+    "unknownBody": "Nepodařilo se spojit se serverem. Pokud máš předplatné, tvůj přístup to neovlivní — zkus to za chvíli znovu.",
+    "plansTitle": "Tarify",
+    "manageTitle": "Spravovat nebo zrušit",
+    "manageBody": "Tvé předplatné účtuje Hotmart, takže zrušení probíhá ve tvém účtu Hotmart, ne tady. Po zrušení tam se další platby zastaví a přístup zůstane do konce zaplaceného období.",
+    "openHotmart": "Otevřít můj účet Hotmart"
+  },
+  "notifications": {
+    "row": "Oznámení",
+    "on": "Zapnuto",
+    "off": "Vypnuto",
+    "enabledTitle": "Oznámení zapnuta",
+    "enabledBody": "Budeš dostávat připomínky na zalévání rostlin a udržení série.",
+    "deniedTitle": "Oznámení blokována",
+    "deniedBody": "Zablokoval/a jsi oznámení pro tento web. Povol je v nastavení prohlížeče pro naturelensapp.cloud.",
+    "errorTitle": "Nepodařilo se zapnout",
+    "errorBody": "Něco se pokazilo. Zkus to za chvíli znovu."
+  },
+  "fieldGuide": {
+    "habitat": "Prostředí",
+    "curiosity": "Věděli jste",
+    "identifyCta": "Určit jednoho fotoaparátem",
+    "photoCredit": "Foto: Wikimedia Commons · klepnutím zobrazíte zdroj",
+    "textCredit": "Text: Wikipedie · klepnutím si přečteš více"
+  },
+  "backup": {
+    "exportRow": "Záloha mé sbírky",
+    "importRow": "Obnovit ze zálohy",
+    "exportEmptyTitle": "Zatím není co zálohovat",
+    "exportEmptyBody": "Ulož první nález a záloha bude mít co uchovat.",
+    "importDoneTitle": "Sbírka obnovena",
+    "importDoneBody": "Přidáno {{added}} položek. {{skipped}} tu už bylo.",
+    "importFailedTitle": "Obnovení se nepodařilo",
+    "errorWrongFile": "Tenhle soubor není záloha NatureLens.",
+    "errorNewerVersion": "Ta záloha vznikla v novější verzi aplikace. Aktualizuj a zkus to znovu.",
+    "errorStorageFull": "Na tomhle zařízení není dost místa na tyto položky.",
+    "errorGeneric": "Při čtení souboru se něco pokazilo."
+  },
+  "sound": {
+    "tapToRecord": "Klepnutím nahrát",
+    "recording": "Nahrávání… zbývá {{seconds}}s",
+    "analysing": "Poslouchám…",
+    "startLabel": "Začít nahrávat",
+    "stopLabel": "Zastavit a určit",
+    "tipsTitle": "Pro lepší výsledek",
+    "tip1": "Přijdi blíž, pokud můžeš — vzdálenost hraje největší roli.",
+    "tip2": "Zamiř telefon na zvuk a nehýbej se.",
+    "tip3": "Nahrávej, když skutečně zpívá, ne ticho mezi tím.",
+    "scopeNote": "Zahrnuje ptáky, žáby, cvrčky, kobylky a některé savce. Trénováno na nahrávkách z přírody — domácí zvířata a doprava ho zmatou.",
+    "identifiedBySound": "Určeno podle zvuku · {{group}}",
+    "groupAmphibian": "Obojživelník",
+    "groupMammal": "Savec",
+    "permissionTitle": "Mikrofon zablokován",
+    "permissionBody": "Povol přístup k mikrofonu pro tento web v nastavení prohlížeče a zkus to znovu.",
+    "unsupportedTitle": "Nahrávání není dostupné",
+    "unsupportedBody": "Tento prohlížeč neumí nahrávat zvuk. Zkus Chrome na Androidu, nebo si na iPhonu přidej aplikaci na plochu.",
+    "tooShortTitle": "Nahrávka je moc krátká",
+    "tooShortBody": "Nahraj alespoň dvě sekundy, zatímco zvíře zpívá.",
+    "failedTitle": "Nepodařilo se určit",
+    "failedBody": "S touto nahrávkou se něco pokazilo. Zkus to znovu.",
+    "decodeFailedBody": "Tuto nahrávku nebylo možné přečíst. Zkus to znovu.",
+    "notFoundBody": "V nahrávce není nic rozpoznatelného. Přijď blíž nebo nahrávej, když zpívá.",
+    "noContentBody": "Pro tento druh zatím není popis.",
+    "notWildlifeBody": "To zní jako vozidlo, stroj nebo hlas, ne jako zvíře. Zkus nahrát znovu na tišším místě."
+  },
+  "login": {
+    "signInRow": "Přihlásit se",
+    "signInSubtitle": "Používej předplatné na jakémkoli zařízení",
+    "accountRow": "Můj účet"
+  }
+}

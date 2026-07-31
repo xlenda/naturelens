@@ -1,0 +1,2288 @@
+{
+  "common": {
+    "overview": "개요",
+    "details": "상세 정보",
+    "readMore": "더 알아보기",
+    "confidence": "신뢰도",
+    "nativeOrigin": "원산지",
+    "save": "내 컬렉션에 저장",
+    "saved": "컬렉션에 저장됨",
+    "cancel": "취소",
+    "goBack": "뒤로 가기",
+    "shareThisResult": "결과 공유하기",
+    "removeFromCollection": "컬렉션에서 삭제",
+    "saveToCollection": "컬렉션에 저장",
+    "tabCollection": "컬렉션",
+    "tabDiscover": "잡학상식",
+    "tabBotanist": "식물학자",
+    "saveErrorTitle": "저장할 수 없습니다",
+    "saveErrorBody": "컬렉션에 저장하는 중 문제가 발생했습니다. 다시 시도해 주세요.",
+    "ok": "확인",
+    "next": "다음",
+    "showPassword": "비밀번호 표시",
+    "hidePassword": "비밀번호 숨기기",
+    "close": "닫기",
+    "tabProfile": "프로필",
+    "identified": "식별됨",
+    "yourPhoto": "내 사진",
+    "referencePhoto": "참고 사진",
+    "technicalDescription": "기술 설명",
+    "vendorEnglishNote": "식별 서비스 제공, 영어입니다.",
+    "translate": "번역",
+    "translating": "번역 중…",
+    "translateFailed": "지금은 번역할 수 없습니다."
+  },
+  "auth": {
+    "title": "로그인하고 식별하기",
+    "subtitle": "카테고리당 무료 식별 1회. 이메일로 로그인하면 바로 시작할 수 있어요 — 비밀번호는 필요 없습니다.",
+    "emailPlaceholder": "you@example.com",
+    "sendLink": "매직 링크 보내기",
+    "sending": "전송 중…",
+    "checkEmailTitle": "이메일을 확인하세요",
+    "checkEmailBody": "{{email}}로 로그인 링크를 보냈습니다. 이 기기에서 링크를 열어 계속 진행하세요.",
+    "signOut": "로그아웃",
+    "signedInAs": "{{email}}(으)로 로그인됨",
+    "notReady": "로그인 기능은 현재 준비 중이며 곧 제공될 예정입니다."
+  },
+  "paywall": {
+    "title": "무료 이용을 이미 사용했습니다",
+    "body": "{{category}} 무료 식별을 이미 사용하셨습니다. 제한 없이 계속 식별하려면 구독하세요.",
+    "subscribe": "구독하기",
+    "subscribing": "이동 중…",
+    "subscribed": "구독 완료",
+    "manage": "구독 관리",
+    "annualPlan": "연간",
+    "perYear": "/년",
+    "saveBadge": "{{percent}}% 절약",
+    "genericTitle": "모든 기능 잠금 해제",
+    "genericBody": "식물, 곤충, 버섯, 작물에 대한 무제한 식별과 약초 상세 정보에 대한 전체 접근 권한을 제공합니다.",
+    "subscriptionConfirmedTitle": "구독이 완료되었습니다!",
+    "subscriptionConfirmedBody": "구독해 주셔서 감사합니다. 이제 무제한으로 식별할 수 있어요. 즐겨보세요!",
+    "subscriptionPendingTitle": "결제 완료",
+    "subscriptionPendingBody": "결제가 확인되었습니다. 프로필 → 액세스 복원에서 결제에 사용한 이메일을 인증하면 이 기기에서 사용할 수 있습니다.",
+    "checkoutFailedTitle": "결제를 시작할 수 없습니다",
+    "checkoutFailedBody": "결제를 시작하지 못했습니다. 잠시 후 다시 시도해 주세요.",
+    "monthlyPlan": "월간",
+    "quarterlyPlan": "분기별",
+    "perMonth": "월",
+    "perQuarter": "분기당",
+    "notAvailableYet": "결제를 준비하는 중입니다 — 잠시 후 다시 시도해 주세요."
+  },
+  "restore": {
+    "title": "로그인",
+    "emailStepTitle": "계정에 로그인",
+    "emailStepBody": "가입할 때 사용한 이메일을 입력하세요. 일회용 코드를 보내드립니다 — 기억할 비밀번호가 없습니다.",
+    "emailPlaceholder": "you@example.com",
+    "sendCode": "코드 보내기",
+    "codeStepTitle": "코드 입력",
+    "codeStepBody": "{{email}}(으)로 코드를 보냈습니다. 아래에 입력해 로그인을 마치세요.",
+    "codePlaceholder": "6자리 코드",
+    "verifyCode": "확인",
+    "changeEmail": "다른 이메일 사용",
+    "doneTitleActive": "로그인되었습니다",
+    "doneBodyActive": "이 기기가 계정에 연결되었고 구독이 활성화되어 있습니다.",
+    "doneTitleOther": "계정 연결됨",
+    "doneBodyOther": "이 기기는 계정에 연결되어 있습니다. 현재 활성 구독은 없습니다.",
+    "backToProfile": "프로필로 돌아가기",
+    "genericError": "문제가 발생했습니다. 다시 시도해 주세요.",
+    "modeCode": "이메일 코드",
+    "modePassword": "비밀번호",
+    "passwordStepTitle": "비밀번호로 로그인",
+    "passwordStepBody": "이 기기에서 로그인하려면 이메일과 비밀번호를 입력하세요.",
+    "passwordPlaceholder": "비밀번호",
+    "signIn": "로그인",
+    "signInWithGoogle": "Google로 계속하기",
+    "googleSignInErrorTitle": "로그인 실패",
+    "googleSignInErrorBody": "Google 로그인을 완료할 수 없습니다. 다시 시도해 주세요."
+  },
+  "categories": {
+    "plant": {
+      "label": "식물",
+      "tabLabel": "식물",
+      "title": "식물과 나무를 즉시 식별하세요",
+      "subtitle": "카메라를 식물, 잎, 꽃 또는 나무에 향하게 하면 몇 초 만에 상세 정보를 받아볼 수 있습니다.",
+      "scanHint": "좋은 결과를 얻으려면 잎 한 장, 꽃 또는 전체 형태를 밝은 곳에서 촬영하세요."
+    },
+    "insect": {
+      "label": "곤충",
+      "tabLabel": "곤충",
+      "title": "곤충 즉시 식별하기",
+      "subtitle": "카메라로 벌레, 딱정벌레, 거미, 나비를 비추면 즉시 종 프로필을 확인할 수 있습니다.",
+      "scanHint": "가장 정확한 결과를 얻으려면 곤충에 가까이 다가가 밝은 조명과 흔들리지 않는 손으로 촬영하세요."
+    },
+    "mushroom": {
+      "label": "버섯",
+      "tabLabel": "버섯",
+      "title": "버섯 즉시 식별하기",
+      "subtitle": "카메라로 버섯이나 균류를 비추면 종을 식별하고 식용 가능 여부를 확인할 수 있습니다.",
+      "scanHint": "가장 정확한 식별을 위해 갓, 주름, 자루(대)를 촬영해 주세요."
+    },
+    "crop": {
+      "label": "작물",
+      "tabLabel": "작물",
+      "title": "작물 건강 점검",
+      "subtitle": "카메라로 작물의 잎을 비추면 질병, 해충 또는 영양 문제를 확인할 수 있습니다.",
+      "scanHint": "가장 정확한 진단을 위해 영향을 받은 잎이나 부위를 가까이서 프레임에 담아주세요."
+    },
+    "tree": {
+      "label": "나무",
+      "tabLabel": "나무",
+      "title": "나무를 즉시 식별하세요",
+      "subtitle": "나무, 줄기, 잎 또는 수관에 카메라를 대면 몇 초 만에 상세한 정보를 받을 수 있습니다.",
+      "scanHint": "가장 좋은 결과를 위해 좋은 조명 아래에서 잎, 나무껍질 또는 전체 모양을 프레임에 담으세요."
+    },
+    "fish": {
+      "label": "물고기",
+      "tabLabel": "물고기",
+      "title": "물고기를 즉시 식별하세요",
+      "subtitle": "카메라를 아무 물고기에나 향하게 하면 몇 초 만에 상세 정보를 받아볼 수 있습니다.",
+      "scanHint": "좋은 결과를 얻으려면 밝은 곳에서 물고기 전체를 옆에서 촬영하세요."
+    },
+    "bird": {
+      "label": "새",
+      "tabLabel": "새",
+      "title": "새를 즉시 식별하세요",
+      "subtitle": "카메라를 아무 새에나 향하게 하면 즉시 식별 결과를 받아볼 수 있습니다.",
+      "scanHint": "좋은 결과를 얻으려면 새 전체가 선명하고 밝게 나오도록 촬영하세요."
+    },
+    "sound": {
+      "label": "소리",
+      "tabLabel": "소리",
+      "title": "소리로 식별",
+      "subtitle": "새, 개구리, 곤충의 울음소리를 녹음해 무엇인지 알아보세요."
+    }
+  },
+  "identify": {
+    "identifierTitle": "{{category}} 식별기",
+    "subtitle": "AI로 {{category}}을(를) 즉시 식별하세요",
+    "readyToScan": "스캔 준비 완료",
+    "didYouKnowTitle": "알고 계셨나요?",
+    "continueLabel": "계속",
+    "analyzing": "{{category}} 분석 중…",
+    "tapToIdentify": "탭하여 식별하기",
+    "identifying": "식별 중…",
+    "uploadPhoto": "사진 업로드",
+    "myCollection": "내 컬렉션",
+    "switchCategoryLabel": "식별 카테고리 전환",
+    "switchCategoryTitle": "카테고리 전환",
+    "switchCategoryMessage": "무엇을 식별하고 싶으신가요?",
+    "takePhotoLabel": "{{category}}을(를) 식별하기 위해 사진 촬영하기",
+    "uploadPhotoLabel": "식별할 사진 업로드하기",
+    "goToCollectionLabel": "내 컬렉션으로 이동",
+    "cameraPermissionTitle": "카메라 권한이 필요합니다",
+    "cameraPermissionMessage": "{{category}}을(를) 스캔하려면 카메라 접근을 허용해 주세요.",
+    "libraryPermissionTitle": "사진 라이브러리 권한이 필요합니다",
+    "libraryPermissionMessage": "이미지를 업로드하려면 사진 접근을 허용해 주세요.",
+    "identificationFailedTitle": "식별 실패",
+    "identificationFailedDefault": "다시 시도해 주세요.",
+    "notFoundError": "이 사진에서 {{category}}을(를) 인식하지 못했습니다. 더 선명하고 가까운 사진으로 다시 시도해 보세요.",
+    "photoProcessingFailed": "이 사진을 처리할 수 없습니다. 다른 사진을 사용해 보거나 카메라로 새 사진을 찍어 주세요.",
+    "lowConfidence": "가장 가능성 높은 추정입니다 (신뢰도 {{confidence}}%). 신뢰하기 전에 참고 사진과 비교해 보세요.",
+    "lowConfidenceWithAlternatives": "신뢰도가 {{confidence}}%에 불과합니다. 이 결과를 신뢰하기 전에 아래의 다른 후보를 확인하세요.",
+    "referenceImagesTitle": "참고 사진",
+    "referenceImagesHint": "직접 찍은 사진과 비교해 일치 여부를 확인하세요.",
+    "referenceImageLabel": "참고 사진 {{index}}",
+    "alternativesTitle": "다른 후보",
+    "alternativesHint": "위 결과가 맞지 않아 보인다면 이 중 하나일 수 있습니다.",
+    "lowConfidenceBare": "신뢰도가 {{confidence}}%에 불과합니다 — 최종 답이 아닌 출발점으로 생각하세요.",
+    "addAngle": "다른 각도 추가",
+    "addAnotherAngle": "하나 더 추가",
+    "anglesHint": "같은 개체 사진 {{count}}장 — 정확도 향상",
+    "removeAngleLabel": "{{index}}번 각도 제거",
+    "offlineTitle": "오프라인 상태입니다",
+    "offlineBody": "식별에는 인터넷이 필요합니다. 컬렉션과 탐색 탭은 오프라인에서도 사용할 수 있습니다.",
+    "serviceDownTitle": "서비스를 사용할 수 없습니다",
+    "serviceDownBody": "이 식별 서비스에 일시적인 문제가 있습니다. 몇 분 뒤에 다시 시도해 주세요. 사진 문제가 아닙니다."
+  },
+  "detail": {
+    "profileTitle": "{{category}} 프로필",
+    "readMoreLabel": "이 {{category}}에 대해 온라인에서 더 알아보기",
+    "markAsWatered": "물주기 완료로 표시",
+    "markAsWateredLabel": "물주기 완료로 표시",
+    "wateringSection": "물주기",
+    "checkForDiseases": "질병 확인하기",
+    "checkingForDiseases": "확인 중…",
+    "checkForDiseasesLabel": "질병 확인하기",
+    "checkingForDiseasesLabel": "질병 확인 중",
+    "healthCheckSection": "건강 점검",
+    "edibleParts": "식용 부위",
+    "propagation": "번식 방법",
+    "wateringNeeds": "물주기 요구사항",
+    "conservationStatus": "보전 상태",
+    "safetySection": "안전 정보",
+    "ecologicalRoleSection": "생태적 역할",
+    "frequentlyConfusedWith": "자주 혼동되는 종",
+    "psychoactiveWarning": "이 버섯은 향정신성 물질을 함유하고 있어 신경계에 영향을 줄 수 있습니다.",
+    "cropHealthReportTitle": "작물 건강 보고서",
+    "cropMatch": "작물 일치도",
+    "cropPill": "작물",
+    "wateringGuideSection": "물주기 가이드",
+    "lightSection": "빛",
+    "soilSection": "토양",
+    "commonUsesSection": "일반적인 용도",
+    "culturalSignificanceSection": "문화적 의미",
+    "installNudgeTitle": "NatureLens 설치",
+    "installNudgeBody": "다음번에 더 빠르게 식별하려면 홈 화면에 추가하세요.",
+    "commonNames": "일반명",
+    "synonyms": "학명 이명",
+    "referencePhoto": "참고 사진",
+    "referencePhotoAlt": "{{name}} 참고 사진",
+    "coverageNoteTitle": "이 결과에 대하여",
+    "birdCoverageNote": "새 식별은 291종을 다루며 대부분 북미 지역 종입니다. 목록에 없는 새는 신뢰도가 높아도 잘못 식별될 수 있으니 결과를 참고 자료로만 활용하세요."
+  },
+  "disease": {
+    "overviewSection": "개요",
+    "symptomsSection": "증상",
+    "treatmentSection": "치료",
+    "biological": "생물학적 방제",
+    "chemical": "화학적 방제",
+    "prevention": "예방",
+    "spreadingSection": "전파 방식",
+    "healthStatusSection": "건강 상태",
+    "noDiseaseDetected": "이 사진에서 질병이나 해충이 확실하게 감지되지 않았습니다.",
+    "match": "일치도",
+    "severitySuffix": "{{severity}} 심각도"
+  },
+  "collection": {
+    "title": "내 컬렉션",
+    "subtitle_one": "{{count}}개 항목 발견됨",
+    "subtitle_other": "{{count}}개 항목 발견됨",
+    "emptyTitle": "아직 저장된 항목이 없습니다",
+    "emptyBody": "식물, 곤충, 버섯 또는 작물을 식별하고 저장하여 나만의 컬렉션을 만들어보세요.",
+    "startIdentifying": "식별 시작하기",
+    "goToProfileLabel": "프로필로 이동",
+    "switchToGridLabel": "그리드 보기로 전환",
+    "switchToListLabel": "목록 보기로 전환",
+    "viewDetailsLabel": "{{name}} 상세 정보 보기",
+    "removeLabel": "컬렉션에서 {{name}} 삭제",
+    "assignRoomTitle": "방 배정하기",
+    "assignRoomMessage": "{{name}}에 배정할 방을 선택하세요.",
+    "roomLivingRoom": "거실",
+    "roomBedroom": "침실",
+    "roomKitchen": "주방",
+    "roomBalcony": "발코니",
+    "roomOffice": "사무실",
+    "roomNone": "없음",
+    "searchPlaceholder": "컬렉션에서 검색…",
+    "clearSearchLabel": "검색 지우기",
+    "filterAll": "전체",
+    "noSearchResults": "검색과 일치하는 항목이 없습니다."
+  },
+  "profile": {
+    "title": "내 프로필",
+    "itemsIdentified_one": "식별된 항목",
+    "itemsIdentified_other": "식별된 항목",
+    "byCategory": "카테고리별",
+    "privacyPolicy": "개인정보처리방침",
+    "language": "언어",
+    "installApp": "앱 설치",
+    "installAppIOSTitle": "NatureLens 설치",
+    "installAppIOSBody": "공유 버튼을 탭한 다음 \"홈 화면에 추가\"를 탭하여 NatureLens를 휴대폰에 설치하세요.",
+    "createPasswordTitle": "비밀번호 만들기",
+    "createPasswordBody": "선택 사항 — 매번 새 이메일 코드를 요청하는 대신, 다른 기기에서 비밀번호로 로그인해 구독을 동기화하세요.",
+    "createPasswordButton": "비밀번호 만들기",
+    "creatingPassword": "생성 중…",
+    "passwordTooShortTitle": "비밀번호가 너무 짧습니다",
+    "passwordTooShortBody": "8자 이상 입력해 주세요.",
+    "passwordCreatedTitle": "비밀번호가 생성되었습니다",
+    "passwordCreatedBody": "{{email}}을(를) 확인해 인증한 후, 어떤 기기에서든 이 비밀번호로 로그인할 수 있습니다.",
+    "passwordCreatedFailedTitle": "비밀번호를 만들 수 없습니다",
+    "passwordCreatedFailedBody": "문제가 발생했습니다. 다시 시도해 주세요.",
+    "changePhoto": "프로필 사진 변경",
+    "version": "버전 {{version}}",
+    "termsOfUse": "이용약관",
+    "deleteAccount": "계정 삭제",
+    "deletingAccount": "삭제 중…",
+    "deleteAccountConfirmTitle": "계정을 삭제하시겠습니까?",
+    "deleteAccountConfirmBody": "저장된 컬렉션과 비밀번호(있는 경우)가 영구적으로 삭제되며, 활성 구독이 있는 경우 취소됩니다. 이 작업은 되돌릴 수 없습니다.",
+    "deleteAccountConfirmButton": "삭제",
+    "deleteAccountDoneTitle": "계정이 삭제되었습니다",
+    "deleteAccountDoneBody": "귀하의 데이터가 삭제되었으며 활성 구독이 있었다면 취소되었습니다.",
+    "deleteAccountFailedTitle": "계정을 삭제할 수 없습니다",
+    "deleteAccountFailedBody": "문제가 발생했습니다. 다시 시도해 주세요.",
+    "helpAndSupport": "도움말 및 지원",
+    "rewardsStore": "보상 상점",
+    "naturalistBadge": "자연주의자",
+    "deleteAccountDoneBillingBody": "계정과 데이터가 삭제되었습니다. 중요: 구독은 해지되지 않습니다 — Hotmart 계정에서 직접 해지하지 않으면 결제가 계속됩니다.",
+    "locationRow": "대략적인 위치 사용",
+    "locationHint": "주변에서 발견되는 종으로 후보를 좁혀 정확도를 높입니다. 약 1km 단위로 반올림되며 저장되지 않습니다.",
+    "emptyTitle": "컬렉션은 여기서 시작합니다",
+    "emptyBody": "식물, 곤충, 버섯, 물고기, 새에 카메라를 향하거나 울음소리를 녹음하면 여기에 담깁니다.",
+    "emptyCta": "무언가 식별하기"
+  },
+  "terms": {
+    "title": "이용약관",
+    "acceptanceTitle": "약관 동의",
+    "acceptanceBody": "NatureLens를 사용함으로써 귀하는 본 이용약관에 동의하게 됩니다. 동의하지 않으시면 앱을 사용하지 마십시오.",
+    "serviceTitle": "이 앱이 하는 일",
+    "serviceBody": "NatureLens를 사용하면 식물, 곤충, 버섯, 작물, 나무를 촬영해 타사 AI 서비스(Plant.id, Insect.id, Mushroom.id, Crop.health, 모두 Kindwise 제작)를 통해 식별할 수 있습니다. 결과는 자동으로 생성되며 사람 전문가의 검토를 거치지 않습니다.",
+    "accuracyTitle": "식별 정확도 — 꼭 읽어주세요",
+    "accuracyBody": "AI 식별은 식물이나 버섯이 식용 가능한지, 독성이 있는지, 만지기에 안전한지를 포함해 틀릴 수 있습니다. 이 앱의 결과만을 근거로 야생 식물, 버섯 또는 균류를 절대 먹거나 채취하거나 사용하지 마십시오. 야생에서 발견한 것을 섭취하거나 사용하기 전에는 항상 자격을 갖춘 전문가(균류학자, 식물학자 또는 중독 관리 센터)의 확인을 받으십시오. 본 앱이 수행한 식별에 의존하여 발생한 피해에 대해 당사는 책임지지 않습니다.",
+    "billingTitle": "구독 및 결제",
+    "billingBody": "유료 구독은 구독 시점에 앱에 표시된 가격으로 Stripe를 통해 청구되며, 취소할 때까지 자동으로 갱신됩니다. 언제든지 취소할 수 있으며, 접근 권한은 이미 결제한 기간이 끝날 때까지 유지됩니다. 법률에서 요구하는 경우를 제외하고, 사용하지 않은 기간에 대한 일할 환불은 제공하지 않습니다.",
+    "accountTitle": "계정 및 비밀번호",
+    "accountBody": "무료 기능을 사용하는 데 계정이 필요하지 않습니다. 구독자는 선택적으로 비밀번호를 만들어 로그인하고 여러 기기에서 구독을 동기화할 수 있습니다. 귀하는 비밀번호를 안전하게 보관하고 귀하의 계정을 통해 발생하는 모든 일에 대한 책임을 집니다.",
+    "liabilityTitle": "보증 없음, 책임 제한",
+    "liabilityBody": "본 앱은 어떠한 종류의 보증도 없이 \"있는 그대로\" 제공됩니다. 법률이 허용하는 최대 범위 내에서, 당사는 식별 결과에 대한 의존을 포함하여 앱 사용으로 인해 발생하는 어떠한 손해에 대해서도 책임지지 않습니다.",
+    "changesTitle": "본 약관의 변경",
+    "changesBody": "당사는 수시로 본 약관을 업데이트할 수 있습니다. 변경 후에도 앱을 계속 사용하는 것은 업데이트된 약관에 동의하는 것을 의미합니다.",
+    "contactTitle": "문의",
+    "contactBody": "본 약관에 대한 질문은 앱 개발자에게 문의할 수 있습니다."
+  },
+  "privacy": {
+    "title": "개인정보처리방침",
+    "collectTitle": "수집하는 정보",
+    "collectBody": "이 앱은 식물, 곤충, 버섯 또는 작물을 사진으로 촬영해 식별할 수 있게 해줍니다. 이를 위해 Kindwise가 개발한 타사 AI 식별 서비스인 Plant.id, Insect.id, Mushroom.id, Crop.health를 사용합니다.",
+    "thirdPartyTitle": "타사 AI 서비스",
+    "thirdPartyBody": "무언가를 식별하기 위해 사진을 촬영하거나 업로드하면, 해당 사진은 결과를 생성하기 위해 관련 Kindwise 식별 서비스로 직접 전송됩니다. 저희가 관리하는 어떤 서버에도 사용자의 사진을 저장하지 않습니다.",
+    "localStorageTitle": "로컬 저장만 사용",
+    "localStorageBody": "식별된 종, 메모, 타임스탬프 등 저장된 컬렉션은 브라우저 또는 앱의 로컬 저장소를 통해 사용자의 기기에만 저장됩니다. 저희가 운영하는 클라우드 서버에는 절대 업로드되지 않으며, 다른 사용자와 공유되지도 않습니다.",
+    "noAccountsTitle": "계정 없음, 추적 없음",
+    "noAccountsBody": "이 앱은 사용을 위해 계정이 필요하지 않습니다. 기기에는 무작위 익명 식별자가 부여되며(기기에만 저장됨), 이를 통해 카테고리당 무료 식별 1회가 사용되었는지 확인합니다. 구독하시면 Stripe가 결제 처리를 위해 이메일과 결제 정보를 직접 수집하며, 저희는 동일한 익명 식별자에 연결된 구독 상태만 전달받습니다. 구독자는 선택적으로 비밀번호를 만들어 로그인하고 다른 기기에서 구독을 동기화할 수 있으며, 이는 앱 사용에 필수는 아닙니다. 분석 도구나 광고 추적기는 사용하지 않습니다.",
+    "dataLossTitle": "데이터 손실 위험",
+    "dataLossBody": "브라우저 데이터를 삭제하거나 앱을 삭제하면, 원격으로 백업되는 내용이 없으므로 로컬에 저장된 컬렉션이 영구적으로 사라집니다.",
+    "contactTitle": "문의하기",
+    "contactBody": "본 정책에 대한 문의는 앱 개발자에게 연락해 주세요."
+  },
+  "discover": {
+    "title": "탐색",
+    "subtitle": "자연에 대한 호기심을 채워보세요",
+    "dailyFact": "오늘의 식물 상식",
+    "tapForAnotherFact": "탭하여 다른 상식 보기",
+    "exploreCollections": "컬렉션 둘러보기",
+    "trendingSpecies": "인기 종",
+    "showNextFactLabel": "다음 식물 상식 보기",
+    "openCollectionLabel": "{{title}} 컬렉션 열기",
+    "viewSpeciesLabel": "{{name}} 보기",
+    "facts": [
+      "시체꽃(Amorphophallus titanum)은 높이 3미터가 넘게 자라며, 썩은 고기 냄새를 풍겨 꽃가루받이 곤충을 불러들인다.",
+      "대나무는 지구에서 가장 빨리 자라는 식물로, 어떤 종은 하루에 90센티미터까지 자란다.",
+      "꿀벌 한 마리는 하루에 약 5,000송이의 꽃을 찾아다니지만, 평생 만드는 꿀은 티스푼 12분의 1에 불과하다.",
+      "버섯은 식물보다 동물에 더 가깝다. 약 10억 년 전 우리와 같은 조상에서 갈라져 나왔다.",
+      "지금까지 알려진 가장 오래 살아 있는 나무는 캘리포니아의 강털소나무로, 나이가 4,800년이 넘는 것으로 추정된다.",
+      "해바라기는 어릴 때만 해를 따라 움직이고, 다 자라면 동쪽을 향한 채 자리를 잡는다. 아침 햇살에 먼저 데워져 꽃가루받이 곤충이 더 많이 모이기 때문이다.",
+      "어떤 난초는 암컷 곤충의 생김새와 냄새를 워낙 정교하게 흉내 내서, 수컷이 짝짓기를 시도하다가 얼떨결에 꽃가루를 옮긴다.",
+      "잠자리는 쫓아간 먹이의 약 95%를 잡는다. 동물 가운데 손꼽히는 사냥 성공률이다.",
+      "개미는 5,000만 년 넘게 균류를 재배해 왔다. 인간이 농사를 시작하기 훨씬 전부터다.",
+      "아마존 열대우림은 육상 식물이 내놓는 산소의 약 20%를 만들어 내고, 그곳에 내리는 비의 상당량은 숲이 스스로 내뿜은 수분이다.",
+      "나비는 발로 맛을 본다. 잎을 밟아 보고 자기 애벌레가 먹을 수 있는 잎인지 판단한다.",
+      "미국 오리건주의 뽕나무버섯 한 개체는 넓이가 10제곱킬로미터에 가까워, 지구에서 가장 큰 생물 중 하나로 꼽힌다.",
+      "매는 사냥할 때 급강하 속도가 시속 300킬로미터를 넘어, 현존하는 가장 빠른 동물이다.",
+      "물고기에게는 눈꺼풀이 없다. 대부분은 쉬는 동안에도 눈을 감지 않는다.",
+      "파리지옥은 셈을 한다. 감각모를 20초 안에 두 번 건드려야 덫이 닫히기 때문에 빗방울에 헛되이 닫히는 일이 없다.",
+      "숲의 나무들은 땅속 균사 네트워크로 양분을 나눈다. 어미나무는 몇 미터 떨어진 곳에서 버티는 어린나무에게 먹을 것을 보내 준다.",
+      "북극제비갈매기는 해마다 극에서 극으로 이동하며 70,000킬로미터 넘게 난다. 동물 중 가장 긴 이동 거리다.",
+      "커피, 초콜릿, 바닐라는 모두 동물의 꽃가루받이에 기대는 식물에서 온다. 벌과 등에가 없으면 아침 커피도 없다.",
+      "어떤 매미는 17년을 땅속에서 보낸 뒤, 수십억 마리가 한꺼번에 지상으로 올라온다.",
+      "파인애플은 하나의 열매가 아니라 심 하나를 중심으로 수십 개의 작은 열매가 붙어 자란 것이다.",
+      "올빼미는 눈을 굴리지 못한다. 눈알이 관 모양으로 고정되어 있어서, 대신 머리를 270도까지 돌린다.",
+      "연꽃 씨앗은 천 년 넘게 잠들어 있다가도 싹을 틔울 수 있다.",
+      "연어는 수천 킬로미터의 망망대해를 냄새로 더듬어, 자기가 태어난 바로 그 강으로 돌아와 알을 낳는다.",
+      "균류는 육지에 처음 자리 잡은 복잡한 생물이다. 어떤 식물보다도 훨씬 먼저였다.",
+      "무화과나무는 밖으로 꽃을 피우지 않는다. 무화과 열매 하나가 안쪽으로 뒤집힌 꽃차례이고, 작은 구멍으로 기어든 무화과말벌이 꽃가루받이를 맡는다.",
+      "벌새의 심장은 날 때 1분에 1,200번 넘게 뛰며, 살아남으려면 10~15분마다 먹어야 한다.",
+      "교살무화과는 높은 나뭇가지 위에서 삶을 시작해 땅으로 뿌리를 내리고, 결국 자기를 품어 준 나무를 죽인다.",
+      "이끼에는 뿌리가 없다. 잎으로 직접 물을 빨아들이기 때문에 바위와 나무껍질 위에서도 잘 자란다.",
+      "갯가재는 색을 받아들이는 수용체가 12~16개다. 사람은 세 개뿐이다.",
+      "사시나무 군락은 대개 하나의 개체다. 수천 그루의 줄기가 뿌리 하나를 공유하며, 나이가 1만 년이 넘는 것도 있다.",
+      "무당벌레는 평생 진딧물을 5,000마리까지 먹어 치운다. 정원사들이 농약 대신 무당벌레를 풀어놓는 이유다.",
+      "코코드메르 야자의 씨앗은 무게가 25킬로그램까지 나간다. 식물의 씨앗 중 가장 무겁다.",
+      "전기뱀장어는 뱀장어가 아니라 칼고기 무리이고, 방전 전압이 800볼트를 넘기도 한다.",
+      "지의류는 하나의 생물이 아니라 둘이다. 균류와 조류가 한 몸으로 살아가며, 우주 공간에서도 살아남는다.",
+      "황제펭귄 수컷은 남극의 겨울 내내 알 하나를 발등에 올려놓고, 두 달 동안 아무것도 먹지 않는다.",
+      "쐐기풀은 유리 같은 잔털로 쏘는데, 이 털이 살갗에 박혀 부러진다. 해독제는 대개 바로 옆에 자란다. 소리쟁이 잎이다.",
+      "심해어 중에는 몸이 아예 투명한 종이 있다. 숨을 곳이 없는 곳에서 투명함 자체를 위장으로 쓰는 것이다.",
+      "다 자란 참나무는 풍년이면 도토리를 1만 개까지 떨어뜨리지만, 나무가 되는 것은 대략 1만 개 중 하나다.",
+      "까마귀는 사람 얼굴을 하나하나 구별하고, 원한을 기억하며, 누구를 피해야 하는지 새끼에게 가르친다.",
+      "세계에서 가장 작은 꽃식물인 분개구리밥은 모래알만 하다. 손가락 끝에 열두 개가 올라간다."
+    ],
+    "topics": {
+      "airPurifying": {
+        "title": "공기 정화 식물",
+        "desc": "NASA가 실내 공기 정화 효과를 연구한 식물들입니다.",
+        "intro": "1980년대 후반, NASA는 밀폐된 우주선 캐빈의 공기에서 오염 물질을 제거할 수 있는 식물을 찾기 위해 수십 종의 흔한 실내 식물을 테스트했습니다. 그 결과 우리에게 익숙한 여러 식물이 포름알데히드, 벤젠, 일산화탄소 같은 독소를 놀라울 만큼 잘 흡수한다는 사실이 밝혀졌습니다. 이 컬렉션은 그 연구에서 가장 뛰어난 성능을 보인 종들을 모은 것으로, 이후 실내 공기질 관리의 고전이 되었습니다. 창문을 여는 것을 대신할 수는 없지만, 화분 몇 개를 알맞게 배치하는 것만으로도 가장 많은 시간을 보내는 공간의 공기를 손쉽게 상쾌하게 만들 수 있습니다.",
+        "species": [
+          {
+            "name": "산세베리아",
+            "sci": "Dracaena trifasciata (syn. Sansevieria trifasciata)",
+            "note": "대부분의 실내 식물과 달리 밤에도 이산화탄소를 산소로 전환하는, NASA 연구에서 가장 뛰어난 성능을 보인 식물 중 하나입니다."
+          },
+          {
+            "name": "접란",
+            "sci": "Chlorophytum comosum",
+            "note": "NASA는 일반 가정의 공기에서 포름알데히드와 자일렌을 제거하는 데 가장 뛰어난 식물 중 하나로 이 식물을 꼽았습니다."
+          },
+          {
+            "name": "스파티필럼",
+            "sci": "Spathiphyllum wallisii",
+            "note": "NASA의 초기 연구에서 실내 공기 중 벤젠, 포름알데히드, 트리클로로에틸렌을 제거하는 능력으로 1위를 차지했습니다."
+          },
+          {
+            "name": "아이비",
+            "sci": "Hedera helix",
+            "note": "NASA 연구에서 전체 1위를 차지했으며, 포름알데히드는 물론 공기 중 곰팡이 포자까지 제거하는 능력으로 높이 평가받았습니다."
+          },
+          {
+            "name": "보스턴고사리",
+            "sci": "Nephrolepis exaltata",
+            "note": "NASA가 테스트한 포름알데히드 제거 식물로, 건조하고 난방이 되는 실내 공간의 습도를 높여주기도 합니다."
+          },
+          {
+            "name": "스킨답서스",
+            "sci": "Epipremnum aureum",
+            "note": "거의 죽지 않을 만큼 강인하며, 실내 공기에서 포름알데히드, 벤젠, 일산화탄소를 걸러내는 것으로 입증되었습니다."
+          },
+          {
+            "name": "고무나무",
+            "sci": "Ficus elastica",
+            "note": "NASA 클린 에어 스터디에서 두각을 나타낸 식물로, 일상적인 생활 공간에서 포름알데히드를 꾸준히 제거합니다."
+          }
+        ]
+      },
+      "beginnerSucculents": {
+        "title": "초보자를 위한 다육식물",
+        "desc": "약간의 방치에도 잘 자라는, 물을 적게 주는 식물들입니다.",
+        "intro": "다육식물이 초보자 친화적이라는 평판을 얻은 데는 그럴 만한 이유가 있습니다. 두툼하게 물을 저장하는 잎과 줄기 덕분에 물 주는 것을 한두 번 잊어도 크게 영향을 받지 않기 때문입니다. 이 목록은 과습, 물 부족, 일관되지 않은 광량 같은 초보자들의 전형적인 실수를 견뎌내도록 만들어진, 가장 강인하고 관대한 품종들로 구성되어 있습니다. 밝은 창가와 약간의 인내심만 있다면, 이 중 어떤 식물이든 나만의 식물 컬렉션을 시작하기에 거의 실패할 수 없는 선택이 될 것입니다.",
+        "species": [
+          {
+            "name": "염좌",
+            "sci": "Crassula ovata",
+            "note": "두꺼운 줄기와 잎에 물을 저장하므로 물 주기를 한두 번 걸러도 끄떡없습니다."
+          },
+          {
+            "name": "산세베리아",
+            "sci": "Dracaena trifasciata",
+            "note": "완전히 방치해도 잘 자라며, 약한 빛과 몇 주간의 마른 흙도 불평 없이 견딥니다."
+          },
+          {
+            "name": "Zebra Plant",
+            "sci": "Haworthiopsis fasciata",
+            "note": "생장이 느리고 아담한 크기를 유지해, 지나친 관리로 망치기가 거의 불가능합니다."
+          },
+          {
+            "name": "알로에 베라",
+            "sci": "Aloe vera",
+            "note": "젤이 가득 찬 잎이 스스로 가뭄을 견디도록 만들어져 있어 불규칙한 물주기도 잘 견뎌냅니다."
+          },
+          {
+            "name": "Panda Plant",
+            "sci": "Kalanchoe tomentosa",
+            "note": "솜털이 보송보송하고 물을 저장하는 잎 덕분에 건조한 시기도 잘 견뎌, 다육식물 입문용으로 거의 실패가 없습니다."
+          },
+          {
+            "name": "버로스 테일",
+            "sci": "Sedum morganianum",
+            "note": "통통하게 늘어지는 잎에 자체적으로 수분을 저장해, 물을 과하게 주지 않는 손이 덜 가는 주인에게 보답합니다."
+          },
+          {
+            "name": "Mexican Hens and Chicks",
+            "sci": "Echeveria elegans",
+            "note": "고전적인 로제트 모양이 효율적으로 물을 저장하고 쉽게 번식하여, 초보자의 실수도 너그럽게 넘어갑니다."
+          }
+        ]
+      },
+      "petSafe": {
+        "title": "반려동물에게 안전한 실내 식물",
+        "desc": "고양이와 개가 있는 가정을 위한 무독성 식물들입니다.",
+        "intro": "고양이, 개와 함께 사는 집이라고 해서 실내 식물을 포기할 필요는 없지만, 인기 있는 식물 중에는 씹으면 정말로 해로운 것들도 많습니다. 이 컬렉션은 ASPCA의 안전성 데이터로 교차 확인된, 잘 알려진 무독성 인기 식물들을 모았습니다. 그러니 호기심 많은 발이나 탐색적인 한 입을 걱정하지 않고 창가와 선반을 채울 수 있습니다. 늘어지는 덩굴부터 꽃을 피우는 인기 식물까지, 여기 소개된 모든 식물은 아름다움보다 안전을 우선시했기에 이 자리를 차지할 자격이 있습니다.",
+        "species": [
+          {
+            "name": "접란",
+            "sci": "Chlorophytum comosum",
+            "note": "ASPCA에서 고양이와 개에게 무독성으로 분류되었으며, 아치형으로 늘어지는 잎은 호기심 많은 발이 안전하게 가지고 놀 수 있습니다."
+          },
+          {
+            "name": "보스턴고사리",
+            "sci": "Nephrolepis exaltata",
+            "note": "풍성하고 질감이 살아있는 이 고사리는 반려동물에게 무독성이라, 안전하게 방 안에 정글 같은 분위기를 더할 수 있습니다."
+          },
+          {
+            "name": "테이블야자",
+            "sci": "Chamaedorea elegans",
+            "note": "고양이와 개에게 무독성인 클래식한 빅토리아 시대 실내 식물로, 약한 빛에서도 위험 없이 잘 견딥니다."
+          },
+          {
+            "name": "마란타",
+            "sci": "Maranta leuconeura",
+            "note": "밤이 되면 잎이 기도하는 손처럼 접히며, 호기심 많은 고양이가 한 입 베어 물어도 완전히 안전합니다."
+          },
+          {
+            "name": "수박페페로미아",
+            "sci": "Peperomia argyreia",
+            "note": "아담한 크기에 무독성이며, 줄무늬 잎이 선반이나 사이드테이블에 반려동물에게 안전한 포인트가 되어줍니다."
+          },
+          {
+            "name": "Zebra Haworthia",
+            "sci": "Haworthia attenuata",
+            "note": "독성이 있는 알로에나 염좌의 안전한 대안으로, 줄무늬가 있는 이 다육식물은 위험 없이 비슷한 매력을 선사합니다."
+          },
+          {
+            "name": "아프리칸 바이올렛",
+            "sci": "Saintpaulia ionantha",
+            "note": "무독성으로 확인된 몇 안 되는 꽃 피는 실내 식물 중 하나로, 반려동물도 꽃과 함께 창가를 안전하게 공유할 수 있습니다."
+          }
+        ]
+      },
+      "medicinalHerbs": {
+        "title": "약용 허브",
+        "desc": "오랜 치유의 역사를 지닌 식물들입니다.",
+        "intro": "현대적인 약 상자가 등장하기 훨씬 전, 가정의 정원은 원조 약국이었습니다. 라벤더, 페퍼민트, 에키네시아 같은 허브는 일상의 불편함을 덜어주기 위해 수 세기 동안 재배되고 우려져 사용되어 왔습니다. 이 컬렉션은 지중해 지역의 주방 필수품부터 아유르베다의 고전에 이르기까지, 전 세계 민간요법과 전통 의학 체계에서 잘 기록된 역할을 해온 식물들을 소개합니다. 대부분 햇볕이 잘 드는 창가에서 잘 자라, 살아있는 허브 역사를 집에서 직접 키울 수 있습니다.",
+        "species": [
+          {
+            "name": "알로에 베라",
+            "sci": "Aloe vera",
+            "note": "젤이 가득 찬 잎은 수천 년 동안 여러 문화권에서 화상과 가벼운 피부 자극을 진정시키는 데 사용되어 왔습니다.",
+            "id": "aloeVera",
+            "tags": [
+              "skin",
+              "digestion"
+            ]
+          },
+          {
+            "name": "라벤더",
+            "sci": "Lavandula angustifolia",
+            "note": "오랫동안 진정 효과가 있는 향으로 사랑받아 왔으며, 전통적으로 스트레스를 줄이고 편안한 수면을 돕는 데 사용되었습니다.",
+            "id": "lavender",
+            "tags": [
+              "sleep",
+              "stress",
+              "headache"
+            ]
+          },
+          {
+            "name": "페퍼민트",
+            "sci": "Mentha x piperita",
+            "note": "멘톨이 풍부한 잎은 수 세기 동안 민간요법에서 속쓰림과 두통을 진정시키는 데 사용되어 왔습니다.",
+            "id": "peppermint",
+            "tags": [
+              "digestion",
+              "headache"
+            ]
+          },
+          {
+            "name": "저먼 캐모마일",
+            "sci": "Matricaria chamomilla",
+            "note": "데이지를 닮은 꽃은 신경을 진정시키고 소화를 돕기 위해 오랫동안 부드러운 차로 우려져 왔습니다.",
+            "id": "germanChamomile",
+            "tags": [
+              "sleep",
+              "digestion",
+              "stress"
+            ]
+          },
+          {
+            "name": "에키네시아",
+            "sci": "Echinacea purpurea",
+            "note": "북미가 원산지인 이 식물은 원주민들이 면역 건강을 위해 뿌리와 꽃을 사용해 온 것으로 알려져 있습니다.",
+            "id": "purpleConeflower",
+            "tags": [
+              "immunity"
+            ]
+          },
+          {
+            "name": "로즈마리",
+            "sci": "Salvia rosmarinus (syn. Rosmarinus officinalis)",
+            "note": "향긋한 이 지중해 관목은 기억력을 높이고 혈액순환을 돕는다는 오랜 명성을 지니고 있습니다.",
+            "id": "rosemary",
+            "tags": [
+              "headache",
+              "energy",
+              "digestion"
+            ]
+          },
+          {
+            "name": "홀리 바질(툴시)",
+            "sci": "Ocimum tenuiflorum",
+            "note": "아유르베다 전통에서 수 세기 동안 신성하게 여겨져 온 식물로, 그 잎은 스트레스 완화를 위한 아답토젠 차로 우려집니다.",
+            "id": "holyBasil",
+            "tags": [
+              "stress",
+              "immunity",
+              "respiratory"
+            ]
+          },
+          {
+            "name": "강황",
+            "sci": "Curcuma longa",
+            "note": "아유르베다 의학에서는 수백 년간 이 황금빛 뿌리를 염증을 가라앉히고 소화와 상처 치유를 돕는 데 사용해 왔어요.",
+            "id": "turmeric",
+            "tags": [
+              "painInflammation",
+              "digestion",
+              "skin"
+            ]
+          },
+          {
+            "name": "생강",
+            "sci": "Zingiber officinale",
+            "note": "중국과 아유르베다 전통 치료사들은 오래전부터 이 뿌리줄기를 씹거나 달여 마시며 메스꺼움을 가라앉히고 속을 따뜻하게 다스려 왔습니다.",
+            "id": "ginger",
+            "tags": [
+              "digestion",
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "인삼",
+            "sci": "Panax ginseng",
+            "note": "중의학에서 2천 년 넘게 기운과 활력을 북돋우는 보양 강장제로 귀하게 여겨져 온 약재예요.",
+            "id": "ginseng",
+            "tags": [
+              "energy",
+              "stress"
+            ]
+          },
+          {
+            "name": "아슈와간다",
+            "sci": "Withania somnifera",
+            "note": "수천 년간 아유르베다의 기본 약재로 쓰여 온 뿌리로, 전통적으로 스트레스를 완화하고 기력과 체력을 되찾는 데 사용되어 왔습니다.",
+            "id": "ashwagandha",
+            "tags": [
+              "stress",
+              "energy",
+              "sleep"
+            ]
+          },
+          {
+            "name": "엘더베리",
+            "sci": "Sambucus nigra",
+            "note": "유럽의 민간 치료사들은 수백 년간 짙은 색 열매를 달여 시럽으로 만들어 감기와 독감을 이겨내는 데 사용해 왔습니다.",
+            "id": "elderberry",
+            "tags": [
+              "immunity",
+              "respiratory"
+            ]
+          },
+          {
+            "name": "쥐오줌풀",
+            "sci": "Valeriana officinalis",
+            "note": "유럽의 허브 치료사들은 예로부터 이 향이 강한 뿌리를 말려 불안한 잠을 다스리는 전통 요법으로 사용해 왔습니다.",
+            "id": "valerian",
+            "tags": [
+              "sleep",
+              "stress"
+            ]
+          },
+          {
+            "name": "위치헤이즐",
+            "sci": "Hamamelis virginiana",
+            "note": "북미 원주민 부족들은 그 나무껍질과 잎을 증류해 멍, 부기, 피부 자극을 가라앉히는 수렴성 세척액으로 사용했습니다.",
+            "id": "witchHazel",
+            "tags": [
+              "skin",
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "골든씰",
+            "sci": "Hydrastis canadensis",
+            "note": "체로키족을 비롯한 원주민 치료사들은 이 쓴 뿌리로 상처, 감염, 소화기 질환을 다스렸습니다.",
+            "id": "goldenseal",
+            "tags": [
+              "digestion",
+              "immunity",
+              "skin"
+            ]
+          },
+          {
+            "name": "악마의 발톱",
+            "sci": "Harpagophytum procumbens",
+            "note": "칼라하리 지역의 전통 치료사들은 오래전부터 갈고리 모양 열매가 달리는 이 뿌리로 관절 통증과 관절염을 완화해 왔습니다.",
+            "id": "devilsClaw",
+            "tags": [
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "아프리카쑥",
+            "sci": "Artemisia afra",
+            "note": "남아프리카에서 가장 널리 쓰이는 전통 약재 중 하나로, 증기로 쐬거나 달여서 기침과 코막힘을 완화하는 데 사용됩니다.",
+            "id": "africanWormwood",
+            "tags": [
+              "respiratory",
+              "digestion"
+            ]
+          },
+          {
+            "name": "예르바 마테",
+            "sci": "Ilex paraguariensis",
+            "note": "남아메리카의 과라니족은 오래전부터 그 잎을 우려내어 활력을 주고 소화를 돕는 일상 차로 즐겨 마셔 왔습니다.",
+            "id": "yerbaMate",
+            "tags": [
+              "energy",
+              "digestion"
+            ]
+          },
+          {
+            "name": "병풀",
+            "sci": "Centella asiatica",
+            "note": "아유르베다와 동남아시아 전통 의학에서는 상처를 치유하고 기억력을 맑게 하며 마음을 안정시켜 주는 약초로 귀하게 여겨져 왔습니다.",
+            "id": "gotuKola",
+            "tags": [
+              "skin",
+              "stress"
+            ]
+          },
+          {
+            "name": "감초",
+            "sci": "Glycyrrhiza glabra",
+            "note": "중국, 아유르베다, 중동 의학에서 수백 년간 기침과 목의 통증, 속쓰림을 달래는 데 두루 사용되어 온 약재입니다.",
+            "id": "licoriceRoot",
+            "tags": [
+              "respiratory",
+              "digestion"
+            ]
+          },
+          {
+            "name": "님",
+            "sci": "Azadirachta indica",
+            "note": "쓴맛이 강한 님 잎과 나무껍질, 오일은 피부 발진, 상처, 기생충 감염에 쓰이는 아유르베다의 대표적인 치료제이다.",
+            "id": "neem",
+            "tags": [
+              "skin",
+              "immunity"
+            ]
+          },
+          {
+            "name": "암라(인도구스베리)",
+            "sci": "Phyllanthus emblica",
+            "note": "아유르베다에서 천연 비타민 C가 가장 풍부한 것으로 알려진 암라는 회춘과 소화를 돕는 라사야나 강장제의 핵심 재료다.",
+            "id": "amla",
+            "tags": [
+              "digestion",
+              "immunity"
+            ]
+          },
+          {
+            "name": "브라미",
+            "sci": "Bacopa monnieri",
+            "note": "아유르베다의 대표적인 메디야 라사야나 약초로, 예로부터 기억력을 높이고 마음을 진정시키며 학습을 돕기 위해 복용해 왔다.",
+            "id": "brahmi",
+            "tags": [
+              "stress",
+              "sleep"
+            ]
+          },
+          {
+            "name": "구두치(길로이)",
+            "sci": "Tinospora cordifolia",
+            "note": "'불멸의 뿌리'라는 뜻의 암리타로 불리는 이 줄기 달인 물은 열을 내리고 면역력을 기르는 아유르베다의 상비약이다.",
+            "id": "guduchi",
+            "tags": [
+              "immunity",
+              "digestion"
+            ]
+          },
+          {
+            "name": "샤타바리",
+            "sci": "Asparagus racemosus",
+            "note": "아유르베다에서 여성을 위한 대표적인 회춘 강장제로 여겨지는 뿌리 보약으로, 전통적으로 수유와 호르몬 균형을 돕기 위해 쓰였다.",
+            "id": "shatavari",
+            "tags": [
+              "energy",
+              "digestion"
+            ]
+          },
+          {
+            "name": "아르주나",
+            "sci": "Terminalia arjuna",
+            "note": "나무껍질 가루는 심장 근육을 강화하고 건강한 혈액순환을 돕기 위해 아유르베다 심장 치료에서 오래도록 쓰여 왔다.",
+            "id": "arjuna",
+            "tags": [
+              "energy"
+            ]
+          },
+          {
+            "name": "하리타키",
+            "sci": "Terminalia chebula",
+            "note": "아유르베다에서 '약의 왕'이라 불리는 이 열매는 소화, 해독, 배출을 돕는 트리팔라의 핵심 재료다.",
+            "id": "haritaki",
+            "tags": [
+              "digestion",
+              "immunity"
+            ]
+          },
+          {
+            "name": "비비타키",
+            "sci": "Terminalia bellirica",
+            "note": "트리팔라를 구성하는 세 가지 열매 중 하나로, 아유르베다에서 과도한 점액을 제거하고 호흡기 건강을 돕는 데 전통적으로 쓰였다.",
+            "id": "bibhitaki",
+            "tags": [
+              "respiratory",
+              "digestion"
+            ]
+          },
+          {
+            "name": "호로파",
+            "sci": "Trigonella foenum-graecum",
+            "note": "남아시아 가정에서는 씨앗을 물에 불려 먹어 소화를 돕고 수유를 촉진하며 혈당을 조절해 왔다.",
+            "id": "fenugreek",
+            "tags": [
+              "digestion",
+              "energy"
+            ]
+          },
+          {
+            "name": "필발(피팔리)",
+            "sci": "Piper longum",
+            "note": "아유르베다의 트리카투 배합에 들어가는 매운 열매로, 전통적으로 소화의 불을 지피고 호흡기의 막힌 기운을 뚫는 데 쓰였다.",
+            "id": "longPepper",
+            "tags": [
+              "digestion",
+              "respiratory"
+            ]
+          },
+          {
+            "name": "백단향",
+            "sci": "Santalum album",
+            "note": "아유르베다에서 염증이 생긴 피부와 열을 가라앉히고 명상 중 마음을 진정시키기 위해 시원한 성질의 페이스트로 발라 왔다.",
+            "id": "sandalwood",
+            "tags": [
+              "skin",
+              "stress"
+            ]
+          },
+          {
+            "name": "인도 사르사파릴라(아난타물)",
+            "sci": "Hemidesmus indicus",
+            "note": "달콤한 향의 뿌리를 가진 이 덩굴 식물은 혈액을 식히고 피부를 맑게 하며 관절 통증을 완화하기 위해 고전 아유르베다 처방에 쓰인다.",
+            "id": "indianSarsaparilla",
+            "tags": [
+              "skin",
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "벨(벵골모과)",
+            "sci": "Aegle marmelos",
+            "note": "덜 익은 열매의 과육은 만성 설사와 이질을 진정시키는 전통 아유르베다의 대표적인 상비약이다.",
+            "id": "bael",
+            "tags": [
+              "digestion"
+            ]
+          },
+          {
+            "name": "구굴",
+            "sci": "Commiphora wightii",
+            "note": "아유르베다 구굴루 처방의 핵심이 되는 수지로, 전통적으로 콜레스테롤 관리와 관절 염증 완화에 쓰였다.",
+            "id": "guggul",
+            "tags": [
+              "painInflammation",
+              "digestion"
+            ]
+          },
+          {
+            "name": "만지스타(인도꼭두서니)",
+            "sci": "Rubia cordifolia",
+            "note": "오래도록 아유르베다에서 혈액 정화제로 쓰여 온 뿌리로, 맑은 피부와 상처 치유, 림프 순환을 돕는다.",
+            "id": "manjistha",
+            "tags": [
+              "skin",
+              "immunity"
+            ]
+          },
+          {
+            "name": "자타만시(감송향)",
+            "sci": "Nardostachys jatamansi",
+            "note": "향기로운 이 뿌리는 아유르베다에서 신경계를 진정시키고 편안한 수면을 돕기 위해 오래전부터 쓰여 왔다.",
+            "id": "jatamansi",
+            "tags": [
+              "sleep",
+              "stress"
+            ]
+          },
+          {
+            "name": "황기",
+            "sci": "Astragalus membranaceus",
+            "note": "황기 뿌리를 달여 위기(衛氣)를 튼튼히 하고 기력을 북돋우며 상처 치유를 돕는 데 써 왔다.",
+            "id": "astragalus",
+            "tags": [
+              "immunity",
+              "energy"
+            ]
+          },
+          {
+            "name": "영지버섯",
+            "sci": "Ganoderma lucidum",
+            "note": "영지버섯은 도교 약초가들이 신(神)을 안정시키고 불면증을 다스리며 수명을 늘리기 위해 귀하게 여겼던 버섯이다.",
+            "id": "reishiMushroom",
+            "tags": [
+              "sleep",
+              "stress",
+              "immunity"
+            ]
+          },
+          {
+            "name": "당귀",
+            "sci": "Angelica sinensis",
+            "note": "'여성 인삼'이라 불리는 당귀는 이천 년 넘도록 혈을 보하고 생리 불편을 다스려 왔다.",
+            "id": "dongQuai",
+            "tags": [
+              "energy",
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "구기자",
+            "sci": "Lycium barbarum",
+            "note": "구기자 열매는 우려내거나 그대로 먹어 간과 신장의 음을 보하고 눈을 밝게 하는 데 쓰인다.",
+            "id": "gojiBerry",
+            "tags": [
+              "immunity",
+              "energy"
+            ]
+          },
+          {
+            "name": "오미자",
+            "sci": "Schisandra chinensis",
+            "note": "'다섯 가지 맛을 지닌 열매'라 불리는 오미자는 폐 기운을 수렴하고 마음을 안정시키며 간을 보호한다.",
+            "id": "schisandra",
+            "tags": [
+              "respiratory",
+              "stress",
+              "sleep"
+            ]
+          },
+          {
+            "name": "황금",
+            "sci": "Scutellaria baicalensis",
+            "note": "황금 뿌리는 습열을 제거하는 효능이 있어 예로부터 처방에서 열, 기침, 이질을 다스리는 데 쓰였다.",
+            "id": "chineseSkullcap",
+            "tags": [
+              "respiratory",
+              "digestion",
+              "immunity"
+            ]
+          },
+          {
+            "name": "지황",
+            "sci": "Rehmannia glutinosa",
+            "note": "쪄서 만든 숙지황은 신음(腎陰)과 혈을 보하는 효능이 있어 수많은 고전 처방의 핵심 재료로 쓰인다.",
+            "id": "rehmannia",
+            "tags": [
+              "energy",
+              "sleep"
+            ]
+          },
+          {
+            "name": "국화",
+            "sci": "Chrysanthemum morifolium",
+            "note": "국화꽃은 차로 우려 마셔 열을 내리고 충혈된 눈을 진정시키며 두통을 완화하는 데 쓴다.",
+            "id": "chrysanthemum",
+            "tags": [
+              "headache",
+              "immunity"
+            ]
+          },
+          {
+            "name": "인동덩굴(금은화)",
+            "sci": "Lonicera japonica",
+            "note": "금은화는 열독을 풀어주는 효능이 있어 오래전부터 열, 종기, 인후염을 치료하는 데 쓰였다.",
+            "id": "japaneseHoneysuckle",
+            "tags": [
+              "immunity",
+              "respiratory",
+              "skin"
+            ]
+          },
+          {
+            "name": "육계",
+            "sci": "Cinnamomum cassia",
+            "note": "육계 나무껍질은 신양(腎陽)을 데우고 어혈을 풀어주어 냉증으로 인한 통증을 완화한다.",
+            "id": "chineseCinnamon",
+            "tags": [
+              "painInflammation",
+              "energy"
+            ]
+          },
+          {
+            "name": "복령",
+            "sci": "Wolfiporia extensa",
+            "note": "균핵인 복령은 달여 마시면 습을 제거하고 정신을 안정시키며 비장을 튼튼하게 한다.",
+            "id": "poria",
+            "tags": [
+              "sleep",
+              "digestion",
+              "stress"
+            ]
+          },
+          {
+            "name": "마(산약)",
+            "sci": "Dioscorea polystachya",
+            "note": "산약(마)은 비장, 폐, 신장의 기운을 보하는 덩이뿌리로, 전통적으로 끓여서 보양죽으로 만들어 먹었다.",
+            "id": "chineseYam",
+            "tags": [
+              "digestion",
+              "energy",
+              "respiratory"
+            ]
+          },
+          {
+            "name": "시호",
+            "sci": "Bupleurum chinense",
+            "note": "시호 뿌리는 간의 기운을 조화롭게 하고 열을 흩어주어 오한과 발열이 번갈아 나타날 때 핵심적으로 쓰인다.",
+            "id": "bupleurum",
+            "tags": [
+              "stress",
+              "immunity"
+            ]
+          },
+          {
+            "name": "삼칠근",
+            "sci": "Panax notoginseng",
+            "note": "삼칠근은 지혈과 어혈 제거에 쓰이며 동시에 혈액순환을 활발하게 한다.",
+            "id": "notoginseng",
+            "tags": [
+              "painInflammation",
+              "skin"
+            ]
+          },
+          {
+            "name": "당삼(만삼)",
+            "sci": "Codonopsis pilosula",
+            "note": "당삼 뿌리는 인삼보다 순한 대용품으로 기운을 보하고 소화력을 강화하는 데 쓰인다.",
+            "id": "codonopsis",
+            "tags": [
+              "energy",
+              "digestion"
+            ]
+          },
+          {
+            "name": "하수오",
+            "sci": "Reynoutria multiflora",
+            "note": "하수오 뿌리는 법제하여 간과 신장을 보하며, 희어지는 머리카락을 다시 검게 한다고 전해진다.",
+            "id": "foti",
+            "tags": [
+              "energy",
+              "skin"
+            ]
+          },
+          {
+            "name": "서양톱풀",
+            "sci": "Achillea millefolium",
+            "note": "'병사의 상처풀'로도 불리며, 고대부터 전쟁터의 상처에서 피를 멎게 하고 치유를 앞당기는 데 쓰였다.",
+            "id": "yarrow",
+            "tags": [
+              "skin",
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "서양고추나물",
+            "sci": "Hypericum perforatum",
+            "note": "우울감과 신경통을 다스리는 유럽 민간요법으로, 노란 꽃을 오일에 우려내 상처를 치유하는 연고로 만들었다.",
+            "id": "stJohnsWort",
+            "tags": [
+              "stress",
+              "painInflammation",
+              "skin"
+            ]
+          },
+          {
+            "name": "세이지",
+            "sci": "Salvia officinalis",
+            "note": "'치유하다'라는 뜻의 라틴어 살베레(salvere)에서 이름을 딴 세이지는 예로부터 인후통에 가글하고 소화를 돕는 데 써 왔다.",
+            "id": "sage",
+            "tags": [
+              "digestion",
+              "respiratory"
+            ]
+          },
+          {
+            "name": "타임",
+            "sci": "Thymus vulgaris",
+            "note": "지중해 지역의 기침, 가슴 답답함 치료제로, 그 정유 성분은 오래전부터 시럽에 넣어 고집스러운 가래를 묽게 하는 데 쓰였다.",
+            "id": "thyme",
+            "tags": [
+              "respiratory",
+              "immunity"
+            ]
+          },
+          {
+            "name": "마시멜로우(약아욱)",
+            "sci": "Althaea officinalis",
+            "note": "뿌리와 잎에서 나오는 점액질은 수백 년간 유럽 약제상에서 인후통, 기침, 자극받은 장 점막을 진정시키는 데 쓰였다.",
+            "id": "marshmallow",
+            "tags": [
+              "respiratory",
+              "digestion"
+            ]
+          },
+          {
+            "name": "금잔화",
+            "sci": "Calendula officinalis",
+            "note": "밝은 빛깔의 꽃잎을 으깨어 연고로 만들어 상처를 소독하고 염증이 있는, 잘 낫지 않는 피부를 진정시켰다.",
+            "id": "potMarigold",
+            "tags": [
+              "skin",
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "밀크시슬(흰무늬엉겅퀴)",
+            "sci": "Silybum marianum",
+            "note": "지중해산 씨앗으로, 전통적으로 씹거나 우려내어 과식한 후 간을 보호하고 회복시키는 데 썼다.",
+            "id": "milkThistle",
+            "tags": [
+              "digestion"
+            ]
+          },
+          {
+            "name": "회향",
+            "sci": "Foeniculum vulgare",
+            "note": "아니스 향이 나는 씨앗을 식후에 씹으면 대대로 산통, 복부 팽만, 아기의 배앓이를 가라앉혀 왔다.",
+            "id": "fennel",
+            "tags": [
+              "digestion"
+            ]
+          },
+          {
+            "name": "쐐기풀",
+            "sci": "Urtica dioica",
+            "note": "따끔거리는 잎을 봄철 강장차로 우려 마셔 혈액을 정화하고 관절 통증을 덜어 왔다.",
+            "id": "stingingNettle",
+            "tags": [
+              "painInflammation",
+              "skin",
+              "immunity"
+            ]
+          },
+          {
+            "name": "호어하운드",
+            "sci": "Marrubium vulgare",
+            "note": "쓴맛의 지중해 약초로, 사탕과 시럽으로 끓여 기침과 기관지염을 다스리는 전통적인 치료제였다.",
+            "id": "whiteHorehound",
+            "tags": [
+              "respiratory",
+              "digestion"
+            ]
+          },
+          {
+            "name": "컴프리",
+            "sci": "Symphytum officinale",
+            "note": "'뼈접착제'라는 별명처럼, 으깬 뿌리와 잎을 골절, 염좌, 타박상에 습포로 붙여 온 지 수백 년이다.",
+            "id": "comfrey",
+            "tags": [
+              "painInflammation",
+              "skin"
+            ]
+          },
+          {
+            "name": "피버퓨(화란국화)",
+            "sci": "Tanacetum parthenium",
+            "note": "쓴맛 나는 잎을 생으로 씹거나 차로 우려 마시는 이 약초는 오래도록 편두통과 두통에 대한 민간요법으로 쓰였다.",
+            "id": "feverfew",
+            "tags": [
+              "headache",
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "우단담배풀(멀레인)",
+            "sci": "Verbascum thapsus",
+            "note": "솜털 덮인 잎과 꽃을 오일이나 차로 우려내어 기침, 인후통, 귀앓이에 썼다.",
+            "id": "mullein",
+            "tags": [
+              "respiratory",
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "산사나무",
+            "sci": "Crataegus monogyna",
+            "note": "열매, 꽃, 잎을 우려낸 것은 유럽의 대표적인 심장 강장제로, 약해지거나 불안정한 맥박을 다스리는 데 쓰였다.",
+            "id": "hawthorn",
+            "tags": [
+              "stress",
+              "sleep"
+            ]
+          },
+          {
+            "name": "린덴(라임꽃)",
+            "sci": "Tilia cordata",
+            "note": "향기로운 꽃을 우려낸 차는 열을 내리고 불안한 신경을 달래는 진정 효과로 마셔 왔다.",
+            "id": "linden",
+            "tags": [
+              "sleep",
+              "stress",
+              "immunity"
+            ]
+          },
+          {
+            "name": "메도우스위트",
+            "sci": "Filipendula ulmaria",
+            "note": "향긋한 이 꽃식물은 오래전부터 열과 관절 통증에 쓰였으며, 훗날 아스피린 개발의 화학적 단서를 제공했다.",
+            "id": "meadowsweet",
+            "tags": [
+              "painInflammation",
+              "digestion"
+            ]
+          },
+          {
+            "name": "오샤 뿌리",
+            "sci": "Ligusticum porteri",
+            "note": "나바호족과 유트족 등 로키산맥 부족들이 인후통과 호흡기 감염을 다스리기 위해 씹거나 달여 마셨던 뿌리다.",
+            "id": "oshaRoot",
+            "tags": [
+              "respiratory",
+              "immunity"
+            ]
+          },
+          {
+            "name": "블랙 코호시",
+            "sci": "Actaea racemosa",
+            "note": "체로키족을 비롯한 동부 삼림지대 원주민들이 생리통을 완화하고 출산을 돕기 위해 써 온 뿌리다.",
+            "id": "blackCohosh",
+            "tags": [
+              "painInflammation",
+              "stress"
+            ]
+          },
+          {
+            "name": "데빌스클럽",
+            "sci": "Oplopanax horridus",
+            "note": "틀링깃족, 하이다족 등 태평양 북서 연안 원주민들이 관절염, 감염, 당뇨 증상을 다스리기 위해 속껍질을 써 왔다.",
+            "id": "devilsClub",
+            "tags": [
+              "painInflammation",
+              "immunity"
+            ]
+          },
+          {
+            "name": "와일드 베르가못",
+            "sci": "Monarda fistulosa",
+            "note": "블랙풋족 등 대평원 부족들은 티몰이 풍부한 이 박하과 식물의 잎을 우려내 감기와 호흡기 감염을 치료했다.",
+            "id": "wildBergamot",
+            "tags": [
+              "respiratory",
+              "digestion"
+            ]
+          },
+          {
+            "name": "베어베리(우바우르시)",
+            "sci": "Arctostaphylos uva-ursi",
+            "note": "수많은 북미 원주민 부족들이 이뇨제이자 요로감염 치료제로 잎을 우려 마셨다.",
+            "id": "bearberry",
+            "tags": [
+              "immunity",
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "슬리퍼리엘름(붉은느릅나무)",
+            "sci": "Ulmus rubra",
+            "note": "체로키족과 이로쿼이족은 점액질이 풍부한 속껍질로 인후통을 가라앉히고 상처를 치유했다.",
+            "id": "slipperyElm",
+            "tags": [
+              "digestion",
+              "respiratory",
+              "skin"
+            ]
+          },
+          {
+            "name": "카스카라 사그라다",
+            "sci": "Frangula purshiana",
+            "note": "태평양 북서부 원주민들은 이 갈매나무과 나무의 껍질을 말리고 숙성시켜 믿을 수 있는 천연 완하제로 썼다.",
+            "id": "cascaraSagrada",
+            "tags": [
+              "digestion"
+            ]
+          },
+          {
+            "name": "기나나무",
+            "sci": "Cinchona officinalis",
+            "note": "안데스의 케추아족은 훗날 퀴닌의 원료가 되기 훨씬 전부터 이 쓴 나무껍질로 열을 다스렸다.",
+            "id": "cinchona",
+            "tags": [
+              "immunity",
+              "digestion"
+            ]
+          },
+          {
+            "name": "캣츠클로",
+            "sci": "Uncaria tomentosa",
+            "note": "아샤닌카족을 비롯한 페루 아마존 원주민들은 이 목질 덩굴의 껍질을 달여 관절염을 다스리고 면역력을 도왔다.",
+            "id": "catsClaw",
+            "tags": [
+              "painInflammation",
+              "immunity"
+            ]
+          },
+          {
+            "name": "코카",
+            "sci": "Erythroxylum coca",
+            "note": "안데스의 케추아족과 아이마라족은 수천 년 동안 고산병과 피로를 이겨내기 위해 코카 잎을 씹어 왔다.",
+            "id": "coca",
+            "tags": [
+              "energy",
+              "digestion"
+            ]
+          },
+          {
+            "name": "용혈수",
+            "sci": "Croton lechleri",
+            "note": "아마존 원주민들은 이 나무에서 나오는 붉은 유액을 상처와 베인 곳에 직접 발라 천연 소독제로 썼다.",
+            "id": "dragonsBlood",
+            "tags": [
+              "skin",
+              "immunity"
+            ]
+          },
+          {
+            "name": "파우다르코",
+            "sci": "Tabebuia impetiginosa",
+            "note": "아마존 원주민들은 속껍질을 차로 달여 감염, 열, 피부 질환을 치료하는 데 썼다.",
+            "id": "pauDarco",
+            "tags": [
+              "immunity",
+              "skin"
+            ]
+          },
+          {
+            "name": "볼도",
+            "sci": "Peumus boldus",
+            "note": "칠레의 마푸체족 치료사들은 오래전부터 볼도 잎차로 간 기능을 돕고 소화를 편하게 해 왔다.",
+            "id": "boldo",
+            "tags": [
+              "digestion"
+            ]
+          },
+          {
+            "name": "코파이바",
+            "sci": "Copaifera officinalis",
+            "note": "아마존 원주민들은 이 나무의 수지를 채취해 상처에 직접 발라 항염 치료제로 썼다.",
+            "id": "copaiba",
+            "tags": [
+              "painInflammation",
+              "skin"
+            ]
+          },
+          {
+            "name": "과라나",
+            "sci": "Paullinia cupana",
+            "note": "브라질 아마존의 사테레마웨족이 길들인 이 덩굴 식물은 씨앗을 볶아 지속적인 활력과 집중력을 얻는 데 썼다.",
+            "id": "guarana",
+            "tags": [
+              "energy"
+            ]
+          },
+          {
+            "name": "블랙시드(흑종초)",
+            "sci": "Nigella sativa",
+            "note": "예언자 의학에서 '축복의 씨앗'이라 불리는 이 씨앗의 오일은 천식, 소화 장애, 피부 감염을 치료한다.",
+            "id": "blackSeed",
+            "tags": [
+              "respiratory",
+              "digestion",
+              "skin"
+            ]
+          },
+          {
+            "name": "유향",
+            "sci": "Boswellia sacra",
+            "note": "수천 년간 아라비아의 나무에서 채취해 온 이 수지는 관절 염증, 상처, 호흡기 질환을 다스린다.",
+            "id": "frankincense",
+            "tags": [
+              "painInflammation",
+              "respiratory",
+              "skin"
+            ]
+          },
+          {
+            "name": "몰약",
+            "sci": "Commiphora myrrha",
+            "note": "아프리카의 뿔 지역과 아라비아 전역에서 채취되는 이 수지는 상처를 소독하고 잇몸과 목의 통증을 가라앉힌다.",
+            "id": "myrrh",
+            "tags": [
+              "skin",
+              "respiratory"
+            ]
+          },
+          {
+            "name": "센나",
+            "sci": "Senna alexandrina",
+            "note": "고대부터 이집트 의사들은 센나의 꼬투리와 잎을 강력하고 믿을 수 있는 완하제로 써 왔다.",
+            "id": "senna",
+            "tags": [
+              "digestion"
+            ]
+          },
+          {
+            "name": "히비스커스(카르카데)",
+            "sci": "Hibiscus sabdariffa",
+            "note": "수단과 이집트 전역에서 카르카데라는 이름으로 우려 마시는 이 꽃받침은 고혈압과 발열을 다스리는 민간요법이다.",
+            "id": "hibiscus",
+            "tags": [
+              "immunity"
+            ]
+          },
+          {
+            "name": "모링가",
+            "sci": "Moringa oleifera",
+            "note": "사하라 이남 아프리카에서 오래도록 써 온 모링가 잎은 영양실조와 염증을 다스리고 수유부의 모유량을 돕는다.",
+            "id": "moringa",
+            "tags": [
+              "immunity",
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "바오바브",
+            "sci": "Adansonia digitata",
+            "note": "아프리카의 '생명의 나무'로 불리는 바오바브는 열매 과육과 나무껍질이 전통적으로 열, 설사, 말라리아에 쓰인다.",
+            "id": "baobab",
+            "tags": [
+              "immunity",
+              "digestion"
+            ]
+          },
+          {
+            "name": "루이보스",
+            "sci": "Aspalathus linearis",
+            "note": "남아프리카의 코이산족과 케이프 더치 정착민들은 이 붉은빛 관목을 알레르기와 산통을 다스리는 치료제로 우려 마셨다.",
+            "id": "rooibos",
+            "tags": [
+              "immunity",
+              "digestion"
+            ]
+          },
+          {
+            "name": "부쿠",
+            "sci": "Agathosma betulina",
+            "note": "케이프 지역의 코이산족 치료사들은 향이 강한 이 잎으로 요로감염과 신장 질환을 다스렸다.",
+            "id": "buchu",
+            "tags": [
+              "immunity"
+            ]
+          },
+          {
+            "name": "캔서부시(수덜랜디아)",
+            "sci": "Lessertia frutescens",
+            "note": "코이족에게 '칸케르보스'라 불리는 이 남아프리카 관목은 스트레스, 피로, 면역력 저하를 위한 전통 강장제다.",
+            "id": "cancerBush",
+            "tags": [
+              "stress",
+              "energy",
+              "immunity"
+            ]
+          },
+          {
+            "name": "움카로아보(아프리카제라늄)",
+            "sci": "Pelargonium sidoides",
+            "note": "남아프리카의 코사족과 줄루족 치료사들은 덩이뿌리로 기침, 기관지염, 결핵을 다스려 왔다.",
+            "id": "umckaloabo",
+            "tags": [
+              "respiratory"
+            ]
+          },
+          {
+            "name": "후디아",
+            "sci": "Hoodia gordonii",
+            "note": "칼라하리의 산족 사냥꾼들은 장거리 이동 중 배고픔과 갈증을 억누르기 위해 이 가시투성이 다육식물을 씹었다.",
+            "id": "hoodia",
+            "tags": [
+              "energy"
+            ]
+          },
+          {
+            "name": "헤나",
+            "sci": "Lawsonia inermis",
+            "note": "문신 이상의 쓰임새로, 중동과 북아프리카 민간의학에서는 헤나 잎 반죽을 곰팡이성 피부 감염 치료에 바른다.",
+            "id": "henna",
+            "tags": [
+              "skin"
+            ]
+          },
+          {
+            "name": "마스틱",
+            "sci": "Pistacia lentiscus",
+            "note": "고대부터 동부 지중해 전역에서 씹어 온 이 나무의 수지는 위궤양과 소화 장애를 진정시킨다.",
+            "id": "mastic",
+            "tags": [
+              "digestion"
+            ]
+          },
+          {
+            "name": "캐롭(구주콩나무)",
+            "sci": "Ceratonia siliqua",
+            "note": "중동 민간의학에서는 그 꼬투리를 갈아 소아 설사와 소화 장애를 다스리는 치료제로 썼다.",
+            "id": "carob",
+            "tags": [
+              "digestion"
+            ]
+          }
+        ]
+      },
+      "floweringPerennials": {
+        "title": "다년생 개화 식물",
+        "desc": "해마다 다시 피어나는 꽃들입니다.",
+        "intro": "다년생 개화 식물은 계속해서 보답을 주는 정원의 근간입니다. 한해살이 식물과 달리 겨울에는 지상부가 시들지만, 매년 봄이면 같은 뿌리, 뿌리줄기 또는 덩이줄기에서 다시 자라납니다. 많은 종이 해를 거듭할수록 더 풍성한 덤불로 자리를 잡고 퍼져나가, 한 번 심으면 계절마다 더 많은 꽃으로 보답합니다. 이 컬렉션은 화단과 경계 화단에 안정적으로 반복해서 피어나는 색채를 더해주는, 사랑받고 구하기 쉬운 다년생 식물들을 모았습니다.",
+        "species": [
+          {
+            "name": "작약",
+            "sci": "Paeonia lactiflora",
+            "note": "오래 사는 덩이뿌리는 거의 손대지 않아도 같은 자리에서 50년 이상 꽃을 피울 수 있습니다."
+          },
+          {
+            "name": "원추리",
+            "sci": "Hemerocallis fulva",
+            "note": "이름과 달리, 각 포기는 굵은 덤불로 번식하며 여러 세대에 걸쳐 안정적으로 꽃을 피웁니다."
+          },
+          {
+            "name": "에키네시아",
+            "sci": "Echinacea purpurea",
+            "note": "이 북미 초원 자생 식물은 튼튼한 곧은뿌리에서 다시 자라나며, 시간이 지나면서 씨앗이 퍼져 점점 더 큰 군락을 이룹니다."
+          },
+          {
+            "name": "저먼 아이리스",
+            "sci": "Iris germanica",
+            "note": "통통한 뿌리줄기가 흙 바로 아래로 퍼지며, 매년 봄 새로운 포기로 갈라져 다시 꽃을 피웁니다."
+          },
+          {
+            "name": "루드베키아",
+            "sci": "Rudbeckia fulgida",
+            "note": "뿌리줄기와 자가 파종으로 퍼져나가, 매년 여름 돌아오는 믿음직한 황금빛 물결을 이룹니다."
+          },
+          {
+            "name": "플록스",
+            "sci": "Phlox paniculata",
+            "note": "튼튼하게 덤불을 이루는 줄기는 가을마다 뿌리까지 시들었다가, 이듬해에는 더 풍성하게 다시 올라옵니다."
+          },
+          {
+            "name": "라벤더",
+            "sci": "Lavandula angustifolia",
+            "note": "목질의 다년생 줄기는 겨울 휴면을 견디고 다시 잎을 내어, 매년 여름 다시 꽃을 피웁니다."
+          }
+        ]
+      },
+      "oceanAndRiverFish": {
+        "title": "바다와 강의 물고기",
+        "desc": "열여섯 물길, 하나의 렌즈",
+        "intro": "산호초부터 차가운 산간 하천까지, 사람들이 가장 자주 사진으로 찍고 궁금해하는 물고기들입니다. 학명은 세계 어디서나 라틴어 그대로이므로, 여기서 익힌 이름은 어느 바닷가에서도 그대로 통합니다.",
+        "species": [
+          {
+            "name": "흰동가리",
+            "sci": "Amphiprion ocellaris",
+            "note": "자신에게는 독이 통하지 않는 말미잘 속에서 살며, 청소를 해 주는 대가로 보호를 받습니다. 모두 수컷으로 태어나고 무리에서 우두머리가 된 개체만 암컷으로 바뀝니다.",
+            "id": "clownfish"
+          },
+          {
+            "name": "무지개송어",
+            "sci": "Oncorhynchus mykiss",
+            "note": "태평양 연안의 차가운 강이 고향이지만 지금은 남극을 제외한 모든 대륙에서 양식됩니다. 살이 분홍빛을 띠는 것은 먹이로 삼는 갑각류 때문입니다.",
+            "id": "rainbowTrout"
+          },
+          {
+            "name": "대서양연어",
+            "sci": "Salmo salar",
+            "note": "민물에서 부화해 바다에서 몇 해를 보낸 뒤, 자신이 태어난 바로 그 강을 찾아 돌아와 알을 낳습니다. 종명 salar는 ‘뛰어오르는 것’이라는 뜻입니다.",
+            "id": "atlanticSalmon"
+          },
+          {
+            "name": "북방강꼬치고기",
+            "sci": "Esox lucius",
+            "note": "수초 사이에서 미동도 없이 기다리다가 순식간에 덮치는 매복형 사냥꾼입니다. 오리 부리를 닮은 주둥이와 몸 뒤쪽에 몰린 지느러미가 확실한 구별 포인트입니다.",
+            "id": "northernPike"
+          },
+          {
+            "name": "잉어",
+            "sci": "Cyprinus carpio",
+            "note": "이천 년 넘게 길러 온 물고기로 지금은 남극을 뺀 모든 대륙에 삽니다 — 어떤 나라에서는 귀한 식재료이고, 어떤 나라에서는 골칫거리 외래종입니다.",
+            "id": "commonCarp"
+          },
+          {
+            "name": "블루탱",
+            "sci": "Paracanthurus hepatus",
+            "note": "꼬리 근처에 메스처럼 날카로운 가시를 숨겼다가 방어할 때 세우는 산호초의 양쥐돔류입니다. 다 자라면 선명한 파란색이지만 어릴 때는 온몸이 샛노랗습니다.",
+            "id": "blueTang"
+          },
+          {
+            "name": "큰입배스",
+            "sci": "Micropterus salmoides",
+            "note": "전 세계에서 낚시꾼이 가장 많이 노리는 민물 어종입니다. 입이 눈 뒤까지 벌어지는 점으로 작은입배스와 구별할 수 있습니다.",
+            "id": "largemouthBass"
+          },
+          {
+            "name": "황다랑어",
+            "sci": "Thunnus albacares",
+            "note": "대양을 통째로 가로지르며, 주변 바닷물보다 체온을 높게 유지할 수 있어 차가운 깊은 바다에서도 빠르게 헤엄칩니다.",
+            "id": "yellowfinTuna"
+          },
+          {
+            "name": "제브라피시",
+            "sci": "Danio rerio",
+            "note": "남아시아 하천에 사는 작은 줄무늬 물고기로, 과학에서 가장 많이 연구된 동물 중 하나가 되었습니다 — 배아가 투명해서 장기가 만들어지는 과정을 그대로 들여다볼 수 있기 때문입니다.",
+            "id": "zebrafish"
+          },
+          {
+            "name": "쏠배감펭",
+            "sci": "Pterois volitans",
+            "note": "아름답지만 독이 있어 가시에 찔리면 몹시 아픕니다. 인도양과 태평양이 원산지이며, 대서양과 카리브해에서는 심각한 침입종입니다.",
+            "id": "redLionfish"
+          }
+        ]
+      },
+      "birdsOfTheWorld": {
+        "title": "세계의 새",
+        "desc": "실제로 마주치게 될 열 종",
+        "intro": "새는 대부분의 사람이 창문 너머로도 사진에 담을 수 있는 야생동물입니다. 여기 소개하는 열 종은 여섯 대륙에 걸쳐 살고 지구에서 가장 널리 알려진 새들이라, 눈썰미를 기르기에 딱 좋습니다.",
+        "species": [
+          {
+            "name": "제비",
+            "sci": "Hirundo rustica",
+            "note": "지구에서 가장 널리 퍼진 제비로, 북반구 전역에서 번식하고 남쪽으로 내려가 겨울을 납니다. 깊게 갈라진 꼬리는 날 때 한눈에 알아볼 수 있습니다.",
+            "id": "barnSwallow"
+          },
+          {
+            "name": "집참새",
+            "sci": "Passer domesticus",
+            "note": "중동에서 사람을 따라 나와 지구상 거의 모든 도시에 자리 잡았습니다. 수컷은 턱 아래 검은 무늬를 두르고, 암컷은 수수한 모래빛 갈색입니다.",
+            "id": "houseSparrow"
+          },
+          {
+            "name": "물총새",
+            "sci": "Alcedo atthis",
+            "note": "유럽과 아시아, 북아프리카의 느린 강 위를 스치는 전기빛 파란 섬광입니다. 머리부터 내리꽂아 수심 1미터 아래의 물고기까지 낚아챕니다.",
+            "id": "commonKingfisher"
+          },
+          {
+            "name": "매",
+            "sci": "Falco peregrinus",
+            "note": "사냥하러 급강하할 때 시속 300km를 넘기는, 살아 있는 가장 빠른 동물입니다. 남극을 제외한 모든 대륙에 살며 요즘은 고층 빌딩에 둥지를 트는 일이 늘고 있습니다.",
+            "id": "peregrineFalcon"
+          },
+          {
+            "name": "큰푸른왜가리",
+            "sci": "Ardea herodias",
+            "note": "얕은 물에 몇 분씩 꼼짝 않고 서 있다가, 눈으로 좇을 수 없을 만큼 빠르게 물고기를 찔러 잡습니다. 날 때는 목을 S자로 접습니다.",
+            "id": "greatBlueHeron"
+          },
+          {
+            "name": "집비둘기",
+            "sci": "Columba livia",
+            "note": "절벽에 둥지를 틀던 새의 후손인 도시 비둘기입니다 — 난간과 창틀이 그렇게 잘 맞는 이유죠. 암수 모두 ‘소낭유’를 만들어 새끼를 먹입니다.",
+            "id": "rockPigeon"
+          },
+          {
+            "name": "유럽울새",
+            "sci": "Erithacus rubecula",
+            "note": "정원사가 흙을 뒤집으면 지렁이를 노리고 졸졸 따라다닐 만큼 겁이 없습니다. 주황색 가슴은 암수 모두 지니며, 일 년 내내 노래로 자기 영역을 지킵니다.",
+            "id": "europeanRobin"
+          },
+          {
+            "name": "청둥오리",
+            "sci": "Anas platyrhynchos",
+            "note": "거의 모든 집오리의 조상입니다. 초록 머리의 수컷이 유명하지만, 우리가 아는 우렁찬 꽥꽥 소리를 내는 쪽은 암컷뿐입니다.",
+            "id": "mallard"
+          },
+          {
+            "name": "금강앵무",
+            "sci": "Ara macao",
+            "note": "중남미 열대우림에 사는 큰 앵무로, 오십 년 넘게 살며 한 짝과 평생을 함께합니다. 다른 새는 열지 못하는 단단한 견과도 부리로 깨뜨립니다.",
+            "id": "scarletMacaw"
+          },
+          {
+            "name": "황제펭귄",
+            "sci": "Aptenodytes forsteri",
+            "note": "남극의 한겨울에 번식하며, 수컷은 알 하나를 발등에 올린 채 어둠 속에서 두 달 동안 아무것도 먹지 않고 서로 몸을 맞대 버팁니다.",
+            "id": "emperorPenguin"
+          }
+        ]
+      },
+      "gardenInsects": {
+        "title": "발밑의 이웃들",
+        "desc": "제대로 들여다본 흔한 무척추동물 열 가지",
+        "intro": "여기 실린 열 종은 대부분의 집 현관에서 몇 미터 안에 산다. 누구나 한 번쯤 봤지만, 그들이 무엇을 하고 있었는지는 아무도 알려주지 않았다. 그 익숙함 아래에는 화학전, 종이접기처럼 접힌 뒷날개, 대륙을 건너는 항법, 그리고 6,000킬로미터에 걸친 개미 군락이 있다.",
+        "species": [
+          {
+            "name": "칠성무당벌레",
+            "sci": "Coccinella septempunctata",
+            "note": "손으로 누르면 일부러 무릎에서 피를 낸다. 새가 곧바로 뱉어낼 만큼 쓴 노란 액체다.",
+            "id": "sevenSpotLadybird"
+          },
+          {
+            "name": "유럽집게벌레",
+            "sci": "Forficula auricularia",
+            "note": "뒷날개는 접힌 상태의 열 배 넘게 펼쳐진다. 자연에서 가장 촘촘한 접기 중 하나인데, 정작 날아다니는 일은 거의 없다.",
+            "id": "commonEarwig"
+          },
+          {
+            "name": "공벌레",
+            "sci": "Armadillidium vulgare",
+            "note": "곤충이 아니라 갑각류다. 육지로 올라온 게의 친척으로, 지금도 아가미가 변한 기관으로 숨을 쉰다.",
+            "id": "commonPillWoodlouse"
+          },
+          {
+            "name": "집파리",
+            "sci": "Musca domestica",
+            "note": "발로 맛을 본다. 그래서 입이 닿기도 전에 자기가 무엇 위에 앉았는지 이미 알고 있다.",
+            "id": "houseFly"
+          },
+          {
+            "name": "정원달팽이",
+            "sci": "Cornu aspersum",
+            "note": "이빨 돋친 띠를 잎에 문질러 먹는다. 앞줄이 닳으면 뒤에서 새 이빨이 밀려 나온다.",
+            "id": "gardenSnail"
+          },
+          {
+            "name": "서양꿀벌",
+            "sci": "Apis mellifera",
+            "note": "여왕은 며칠 동안 공중에서 짝짓기를 하고 다시는 하지 않는다. 남은 평생을 그때 저장한 정자로 알을 낳는다.",
+            "id": "westernHoneyBee"
+          },
+          {
+            "name": "작은멋쟁이나비",
+            "sci": "Vanessa cardui",
+            "note": "한 마리가 왕복을 끝내는 일은 없다. 열대 아프리카에서 유럽을 오가는 데 여섯 세대쯤 걸린다.",
+            "id": "paintedLady"
+          },
+          {
+            "name": "집유령거미",
+            "sci": "Pholcus phalangioides",
+            "note": "다른 거미의 거미줄을 벌레처럼 튕겨 유인한 뒤, 확인하러 나온 주인을 덮친다.",
+            "id": "cellarSpider"
+          },
+          {
+            "name": "아르헨티나개미",
+            "sci": "Linepithema humile",
+            "note": "수천 킬로미터 떨어진 스페인, 캘리포니아, 일본의 일개미가 만나도 싸우지 않는다. 서로를 한 집 식구로 취급한다.",
+            "id": "argentineAnt"
+          },
+          {
+            "name": "지렁이",
+            "sci": "Lumbricus terrestris",
+            "note": "다윈은 말년을 지렁이 연구에 바쳤고, 죽기 여섯 달 전에 지렁이에 관한 책을 냈다.",
+            "id": "commonEarthworm"
+          }
+        ]
+      },
+      "fungiOfTheWorld": {
+        "title": "식물도 동물도 아닌",
+        "desc": "조용히 세상을 굴리는 균류 열 가지",
+        "intro": "균류는 생명의 계통수에서 식물보다 동물 쪽에 가깝다. 눈에 보이는 버섯은 흙과 나무, 심지어 살아 있는 곤충 속을 보이지 않게 뻗어나간 실 그물의 열매일 뿐이다. 여기 실린 열 종에는 세상에서 가장 많은 사람을 죽인 버섯, 오리건주 9제곱킬로미터를 덮은 생물, 그리고 항생제 시대를 연 곰팡이가 있다.",
+        "species": [
+          {
+            "name": "광대버섯",
+            "sci": "Amanita muscaria",
+            "note": "동화 속 빨갛고 흰 버섯은 실제로 있고, 독이 있으며, 정작 제 이름을 딴 독소는 거의 들어 있지 않다.",
+            "id": "flyAgaric"
+          },
+          {
+            "name": "알광대버섯",
+            "sci": "Amanita phalloides",
+            "note": "전 세계 버섯 중독 사망의 대부분을 차지한다. 끓이든 말리든 얼리든 독소는 조금도 사라지지 않는다.",
+            "id": "deathCap"
+          },
+          {
+            "name": "양송이버섯",
+            "sci": "Agaricus bisporus",
+            "note": "화이트버튼, 크레미니, 포토벨로는 서로 다른 버섯이 아니라 한 종이다. 계통과 수확 시기만 다르다.",
+            "id": "buttonMushroom"
+          },
+          {
+            "name": "맥주효모",
+            "sci": "Saccharomyces cerevisiae",
+            "note": "빵과 맥주, 와인 뒤에 있는 단세포 균류. 1996년, 핵을 가진 생물 가운데 처음으로 유전체 전체가 해독됐다.",
+            "id": "brewersYeast"
+          },
+          {
+            "name": "좀비개미곰팡이",
+            "sci": "Ophiocordyceps unilateralis",
+            "note": "감염된 개미를 숲 바닥에서 특정 높이까지 걸어 올린 뒤 잎을 물게 하고 죽인다. 그다음 머리에서 자루가 자란다.",
+            "id": "zombieAntFungus"
+          },
+          {
+            "name": "뽕나무버섯부치",
+            "sci": "Armillaria ostoyae",
+            "note": "오리건주 동부의 한 개체가 약 9제곱킬로미터를 덮는다. 면적으로 재면 지금까지 측정된 가장 큰 생물이다.",
+            "id": "humongousFungus"
+          },
+          {
+            "name": "부채버섯",
+            "sci": "Panellus stipticus",
+            "note": "작고 질긴 부채꼴 버섯인데 주름살이 어둠 속에서 초록빛을 낸다. 단, 대서양 건너편 것만 그렇다.",
+            "id": "bitterOyster"
+          },
+          {
+            "name": "푸른곰팡이",
+            "sci": "Penicillium rubens",
+            "note": "1928년 플레밍의 배지를 오염시킨 청록색 곰팡이가 바로 이 종으로 확인된 것은 2011년이었다.",
+            "id": "penicilliumMould"
+          },
+          {
+            "name": "양서류 항아리곰팡이",
+            "sci": "Batrachochytrium dendrobatidis",
+            "note": "눈에 보이지도 않는 곰팡이가, 기록된 어떤 질병보다 많은 종을 멸종으로 몰았다.",
+            "id": "chytridFungus"
+          },
+          {
+            "name": "흰송로버섯",
+            "sci": "Tuber magnatum",
+            "note": "땅속에서만 열매를 맺는다. 수십 년간 재배를 거부했고, 2007년 자선 경매에서 1.5kg짜리 한 덩이가 약 33만 달러에 팔렸다.",
+            "id": "whiteTruffle"
+          }
+        ]
+      },
+      "fromFieldToPlate": {
+        "title": "저녁 식탁의 출발지",
+        "desc": "주식 열 가지와 그 진짜 고향",
+        "intro": "접시 위에 오른 것 중 태어난 자리에서 그대로 자라는 것은 거의 없다. 여기 실린 열 가지 작물은 수천 년 전 강 유역과 고지대 숲, 늪지에서 길들여진 뒤 바다를 건너 옮겨졌고, 결국 가장 큰 수확은 완전히 엉뚱한 대륙에서 나게 됐다.",
+        "species": [
+          {
+            "name": "옥수수",
+            "sci": "Zea mays",
+            "note": "야생 조상은 낟알이 열두 개 남짓이고 하나하나가 돌처럼 단단한 껍질에 갇혀 있다. 옥수수자루와는 딴판이다.",
+            "id": "maize"
+          },
+          {
+            "name": "카사바",
+            "sci": "Manihot esculenta",
+            "note": "아마존 언저리에서 길들여졌지만, 지금은 남아메리카보다 아프리카에서 더 많은 사람을 먹인다.",
+            "id": "cassava"
+          },
+          {
+            "name": "아라비카 커피",
+            "sci": "Coffea arabica",
+            "note": "아라비카는 오래된 종이 아니라 다른 커피 두 종이 자연에서 교잡한 잡종이며, 놀랄 만큼 유전적 변이가 적다.",
+            "id": "arabicaCoffee"
+          },
+          {
+            "name": "대두",
+            "sci": "Glycine max",
+            "note": "세계 콩의 대부분은 사람 접시에 곧바로 오르지 않는다. 짜서 기름과 가축 사료가 된다.",
+            "id": "soybean"
+          },
+          {
+            "name": "사탕수수",
+            "sci": "Saccharum officinarum",
+            "note": "뉴기니에서 처음 기른 이유는 줄기를 씹기 위해서였다. 설탕 정제와 에탄올은 수천 년 뒤의 일이다.",
+            "id": "sugarcane"
+          },
+          {
+            "name": "빵밀",
+            "sci": "Triticum aestivum",
+            "note": "빵밀은 야생에 존재한 적이 없다. 재배 밀이 길가의 풀과 교배하면서 농부의 밭에서 생겨났다.",
+            "id": "breadWheat"
+          },
+          {
+            "name": "벼",
+            "sci": "Oryza sativa",
+            "note": "쌀은 두 대륙에서 두 번 길들여졌다. 한 번은 양쯔강 가에서, 또 한 번은 서아프리카의 다른 야생 풀에서.",
+            "id": "asianRice"
+          },
+          {
+            "name": "감자",
+            "sci": "Solanum tuberosum",
+            "note": "유럽과 아시아, 아프리카에서 자라는 감자는 모두 티티카카호 주변 고지대로 거슬러 올라간다.",
+            "id": "potato"
+          },
+          {
+            "name": "바나나",
+            "sci": "Musa acuminata",
+            "note": "야생 바나나는 완두콩만 한 단단한 씨로 가득하다. 씨 없는 열매는 사람이 불임 클론을 계속 다시 심어서 존재한다.",
+            "id": "banana"
+          },
+          {
+            "name": "오렌지",
+            "sci": "Citrus × sinensis",
+            "note": "오렌지는 야생종이 아니다. 포멜로와 만다린의 잡종이며, 그 뒤로 줄곧 접붙이기로 복제돼왔다.",
+            "id": "sweetOrange"
+          }
+        ]
+      },
+      "heardNotSeen": {
+        "title": "보기 전에 듣는다",
+        "desc": "귀로 먼저 만나는 동물 열 가지",
+        "intro": "야생과의 만남은 대개 보이지 않는 어딘가에서 나는 소리로 시작된다. 올빼미와 개구리, 매미, 우는 곤충 둘, 원숭이와 여우까지 여기 실린 열 종은 눈보다 귀로 찾는 편이 훨씬 쉽고, 하나같이 구체적인 무언가를 말하고 있다.",
+        "species": [
+          {
+            "name": "갈색올빼미",
+            "sci": "Strix aluco",
+            "note": "유명한 그 '부엉 부엉'은 올빼미 두 마리의 대화다. 암컷의 날카로운 '킥' 소리에 수컷이 떨리는 울음으로 답한다.",
+            "id": "tawnyOwl"
+          },
+          {
+            "name": "뻐꾸기",
+            "sci": "Cuculus canorus",
+            "note": "'뻐꾹' 하고 우는 건 수컷뿐이다. 암컷은 물 끓듯 구르는 소리로 답하는데, 작은 새들은 그 소리에 공황에 빠진다.",
+            "id": "commonCuckoo"
+          },
+          {
+            "name": "나이팅게일",
+            "sci": "Luscinia megarhynchos",
+            "note": "자정에서 새벽 3시 사이에 가장 열심히 부르는데, 짝 없는 수컷만 그런다. 암컷이 머물면 밤 노래는 그친다.",
+            "id": "commonNightingale"
+          },
+          {
+            "name": "유럽청개구리",
+            "sci": "Hyla arborea",
+            "note": "몸길이 5cm짜리 개구리가 제 머리보다 넓은 울음주머니를 부풀린다. 바람 없는 밤이면 합창이 1km 가까이 간다.",
+            "id": "europeanTreeFrog"
+          },
+          {
+            "name": "황소개구리",
+            "sci": "Lithobates catesbeianus",
+            "note": "200헤르츠쯤 되는 저음의 '우웅' 소리가 트인 물 위로 1km 가까이 퍼진다.",
+            "id": "americanBullfrog"
+          },
+          {
+            "name": "Cicada orni",
+            "sci": "Cicada orni",
+            "note": "충분히 더워야만 운다. 아침이 달아오르면 합창이 커지고, 구름이 해를 가리면 뚝 끊긴다.",
+            "id": "cicadaOrni"
+          },
+          {
+            "name": "집귀뚜라미",
+            "sci": "Acheta domesticus",
+            "note": "울음은 날개 두 장을 맞비비는 소리다. 이빨 백 개가 넘는 줄에 긁개를 끌며 4~5kHz쯤을 낸다.",
+            "id": "houseCricket"
+          },
+          {
+            "name": "여치",
+            "sci": "Tettigonia viridissima",
+            "note": "해 질 녘부터 자정을 훌쩍 넘길 때까지 마른 소리가 끊이지 않는다. 쉬는 틈 없이 몇 시간을 이어가기도 한다.",
+            "id": "greatGreenBushCricket"
+          },
+          {
+            "name": "검은고함원숭이",
+            "sci": "Alouatta caraya",
+            "note": "새벽의 포효는 숲을 뚫고 5km까지 간다. 육상 동물이 내는 소리 가운데 가장 큰 축에 든다.",
+            "id": "blackHowlerMonkey"
+          },
+          {
+            "name": "붉은여우",
+            "sci": "Vulpes vulpes",
+            "note": "겨울밤 비명은 흔히 암컷 탓으로 돌리지만 암수 모두 낸다. 괴로워서가 아니라 짝을 부르는 소리다.",
+            "id": "redFox"
+          }
+        ]
+      }
+    },
+    "species": {
+      "fiddleLeafFig": {
+        "name": "떡갈잎고무나무",
+        "sci": "Ficus lyrata",
+        "light": "밝은 간접광",
+        "water": "매주 한 번; 흙 윗부분 2~5cm가 마를 때까지 기다린 후 물주기",
+        "difficulty": "어려움",
+        "overview": "서아프리카의 저지대 열대우림이 원산지인 떡갈잎고무나무는 극적인 잎맥이 도드라진 크고 광택 있는 바이올린 모양의 잎으로 사랑받으며, 인테리어 디자인의 아이콘이 되었습니다. 실내에서 천장 높이까지 자랄 수 있는 웅장한 바닥 식물로 재배되지만, 빛과 물, 온도의 일관성에 매우 까다로운 것으로 유명합니다.",
+        "funFact": "원산지에서 Ficus lyrata는 높이 12미터가 넘는 다 자란 나무로 자랄 수 있으며, 잎은 실내에서 보는 것보다 거의 두 배나 큽니다. 심지어 특정 무화과벌 종에 의해 수분되는 작고 먹을 수 없는 무화과 열매를 맺기도 하는데, 이는 실내 식물로 키울 때는 사실상 전혀 일어나지 않는 일입니다."
+      },
+      "bostonFern": {
+        "name": "보스턴고사리",
+        "sci": "Nephrolepis exaltata",
+        "light": "밝은 빛에서 중간 정도의 간접광",
+        "water": "흙이 항상 고르게 촉촉하도록 유지; 완전히 마르지 않게 하기",
+        "difficulty": "보통",
+        "overview": "보스턴고사리는 전 세계 습한 열대 지역에서 발견되는 종인 검고사리(sword fern)의 풍성하고 아치형으로 자라는 재배종입니다. 깃털 같은 늘어지는 잎은 빅토리아 시대부터 걸이 화분과 그늘진 현관의 인기 식물로 자리 잡았지만, 만족스럽게 자라려면 꾸준한 수분과 높은 습도가 필요합니다.",
+        "funFact": "'보스토니엔시스' 품종은 일부러 육종된 것이 아니라, 1894년 필라델피아에서 보스턴의 한 꽃집으로 보내진 검고사리 화물에서 자연적으로 발견된 돌연변이였습니다. 바로 그 하나의 변이체에서 번식되어 오늘날 우리가 아는 실내 식물이 되었습니다."
+      },
+      "jadePlant": {
+        "name": "염좌",
+        "sci": "Crassula ovata",
+        "light": "완전한 햇빛부터 밝은 빛까지",
+        "water": "적게; 물 주기 사이에 흙이 완전히 마르도록 두기",
+        "difficulty": "쉬움",
+        "overview": "염좌는 남아프리카와 모잠비크의 반건조 지역이 원산지인 강인한 다육식물로, 두껍고 광택 있는 타원형 잎과 나무처럼 가지를 뻗는 목질 줄기로 미니어처 나무 같은 모습을 지녔습니다. 초보자에게 사랑받는 식물이며 가풍처럼 대물림되기도 하고, 풍수에서는 '행운목'이라는 애칭으로 불리기도 합니다.",
+        "funFact": "적절한 환경이 갖춰지면 염좌는 50년에서 100년까지 살 수 있으며, 다 자란 개체는 이따금 별 모양의 작은 흰색 또는 분홍색 꽃송이로 재배자에게 보답하는데, 보통 서늘한 밤과 건조한 시기가 그 계기가 됩니다."
+      },
+      "calathea": {
+        "name": "칼라데아",
+        "sci": "Goeppertia orbifolia",
+        "light": "중간 정도의 간접광",
+        "water": "정수하거나 증류한 물로 가볍게 촉촉한 상태 유지",
+        "difficulty": "어려움",
+        "overview": "볼리비아의 열대우림이 원산지인 이 독특한 마란타과(Marantaceae) 식물은 은빛과 짙은 초록빛 줄무늬가 있는 크고 둥근 잎으로 재배됩니다. 친척 식물들과 마찬가지로 잎이 밤에는 올라가 접히고 낮에는 다시 내려가는데, 이러한 움직임을 취면운동(nyctinasty)이라고 하며 마치 살아있는 것처럼 느껴지게 합니다.",
+        "funFact": "이 종은 예전에 Calathea orbifolia로 분류되었지만, 2012년 유전학 및 형태학 연구를 통해 대부분의 칼라데아 종이 Goeppertia속으로 분리되었습니다. 하지만 화훼 농장과 식물 애호가들은 여전히 압도적으로 예전 이름인 '칼라데아'를 사용합니다."
+      }
+    },
+    "topicSpeciesSectionTitle": "이 컬렉션의 종",
+    "speciesLightLabel": "빛",
+    "speciesWaterLabel": "물",
+    "speciesDifficultyLabel": "난이도",
+    "funFactLabel": "재미있는 사실",
+    "symptomFilterTitle": "어떤 증상이 있으세요?",
+    "symptomFilterAll": "전체",
+    "symptomFilterEmpty": "아직 이 항목에 해당하는 허브가 없습니다.",
+    "viewHerbLabel": "{{name}} 보기",
+    "herbDisclaimer": "전통 및 민간요법 사용에 기반한 정보 제공용 콘텐츠입니다. 의학적 조언이 아니므로, 건강 문제 치료를 위해 허브를 사용하기 전 반드시 의사와 상담하세요.",
+    "herbDetailsLoadError": "이 허브의 상세 정보를 불러올 수 없습니다. 다시 시도해 주세요.",
+    "preparationLabel": "준비 방법",
+    "benefitsLabel": "효능",
+    "symptoms": {
+      "headache": "두통",
+      "digestion": "소화",
+      "sleep": "수면",
+      "stress": "스트레스 및 불안",
+      "immunity": "면역력 증진",
+      "painInflammation": "통증 및 염증",
+      "respiratory": "기침 및 호흡기",
+      "skin": "피부 및 상처",
+      "energy": "에너지 및 피로"
+    },
+    "herbSubscribeCtaTitle": "이 가이드가 마음에 드시나요?",
+    "herbSubscribeCtaBody": "구독하고 식물, 곤충, 버섯, 작물을 무제한으로 식별해보세요.",
+    "herbAlreadySubscribedCheck": "이미 구독 중이신가요? 다시 확인하려면 탭하세요"
+  },
+  "botanist": {
+    "headerTitle": "헬레나 마르케스 박사",
+    "headerSubtitle": "농학자 · 식물학 교수",
+    "intro": "안녕하세요! 저는 농학자이자 식물학 교수인 헬레나입니다. 식물에 무슨 일이 있는지 말씀해 주세요 — 흙, 병해충, 물주기, 자연 전반에 대해 무엇이든 물어보셔도 됩니다.",
+    "placeholder": "헬레나에게 물어보기…",
+    "typing": "헬레나가 입력 중…",
+    "sendLabel": "메시지 보내기",
+    "askLabel": "질문하기: {{question}}",
+    "suggestions": [
+      "잎이 노랗게 변해요",
+      "물은 얼마나 자주 줘야 하나요?",
+      "고양이에게 안전한가요?",
+      "어떤 흙을 써야 하나요?"
+    ],
+    "errorOffline": "오프라인 상태입니다. 연결이 돌아오면 여기 있겠습니다.",
+    "errorRateLimited": "잠시만요 — 질문이 너무 많습니다. 몇 분 후에 다시 시도해 주세요.",
+    "errorNotConfigured": "전문가가 아직 준비되지 않았습니다. 설정 중입니다.",
+    "errorGeneric": "지금은 답변할 수 없었습니다. 잠시 후 다시 시도해 주세요."
+  },
+  "achievements": {
+    "title": "업적",
+    "streakLabel": "연속 일수",
+    "longestStreakLabel": "최장 연속 기록",
+    "totalLabel": "식별 횟수",
+    "unlockedTitle": "업적 달성!",
+    "progressLabel": "{{unlocked}}/{{total}} 달성",
+    "firstScan": {
+      "title": "첫 발견",
+      "body": "첫 번째 종을 식별하세요"
+    },
+    "collector10": {
+      "title": "수집가",
+      "body": "10종을 컬렉션에 저장하세요"
+    },
+    "collector50": {
+      "title": "자연주의자",
+      "body": "50종을 컬렉션에 저장하세요"
+    },
+    "collector100": {
+      "title": "마스터 자연주의자",
+      "body": "100종을 컬렉션에 저장하세요"
+    },
+    "allCategories": {
+      "title": "탐험가",
+      "body": "모든 카테고리에서 최소 한 종씩 저장하세요"
+    },
+    "streak3": {
+      "title": "시작이 반",
+      "body": "3일 연속으로 식별해보세요"
+    },
+    "streak7": {
+      "title": "꾸준함",
+      "body": "7일 연속으로 식별해보세요"
+    },
+    "streak30": {
+      "title": "열정 가득",
+      "body": "30일 연속으로 식별해보세요"
+    },
+    "sharedFirst": {
+      "title": "나눔의 기쁨",
+      "body": "첫 번째 식별 결과를 공유하세요"
+    },
+    "subscriber": {
+      "title": "프리미엄 멤버",
+      "body": "무제한 식별을 위해 구독했어요"
+    },
+    "tokensLabel": "토큰",
+    "tokensEarned": "토큰 +{{count}}개"
+  },
+  "help": {
+    "title": "도움말 및 지원",
+    "identificationTitle": "식별은 어떻게 이루어지나요?",
+    "identificationBody": "식물, 곤충, 버섯, 작물, 나무의 사진을 찍으면 AI가 방대한 데이터베이스와 비교하여 가장 가능성이 높은 종을 학명, 설명 및 기타 세부 정보와 함께 제안해 드립니다.",
+    "accuracyTitle": "식별 결과는 항상 정확한가요?",
+    "accuracyBody": "어떤 식별 앱도 100% 정확하지는 않으며, 특히 독성이 있을 수 있는 버섯과 식물의 경우 더욱 그렇습니다. 이 앱의 결과만을 근거로 어떤 종을 섭취하거나 채집하거나 사용하지 마시고, 반드시 먼저 전문가에게 확인하세요.",
+    "freeTitle": "NatureLens는 무료인가요?",
+    "freeBody": "카테고리(식물, 곤충, 버섯, 작물, 나무)별로 한 번씩 무료로 식별할 수 있습니다. 이후에는 구독을 통해 모든 카테고리에서 무제한 식별을 이용할 수 있습니다.",
+    "cancelTitle": "구독을 취소하려면 어떻게 하나요?",
+    "cancelBody": "프로필로 이동하여 계정을 삭제하세요 — 이렇게 하면 활성 구독이 자동으로 취소되고 데이터도 함께 삭제됩니다. 현재는 별도의 취소 버튼이 없으며, 계정을 삭제하는 것이 현재 결제를 중단하는 방법입니다.",
+    "restoreTitle": "휴대폰을 바꾸거나 브라우저 데이터를 삭제했어요 — 구독을 어떻게 복구하나요?",
+    "restoreBody": "프로필 → 액세스 복원으로 이동하세요. 이메일로 일회용 코드를 요청하거나, 비밀번호를 설정한 경우 비밀번호 또는 Google 계정으로 로그인할 수 있습니다.",
+    "tokensTitle": "토큰이란 무엇인가요? 다른 것으로 교환할 수 있나요?",
+    "tokensBody": "종을 식별하거나 업적을 달성할 때마다 자동으로 토큰을 획득합니다. 토큰을 보상으로 교환하는 기능은 아직 제공되지 않지만 향후 도입할 계획이며, 그동안 토큰 잔액은 계속 쌓입니다.",
+    "privacyTitle": "제 데이터는 비공개로 유지되나요?",
+    "privacyBody": "NatureLens는 사용을 위해 계정이 필요하지 않습니다. 대부분의 데이터(컬렉션, 사진)는 기기에만 저장됩니다. 자세한 내용은 전체 개인정보 처리방침을 참조하세요.",
+    "deleteTitle": "계정과 데이터를 삭제하려면 어떻게 하나요?",
+    "deleteBody": "프로필로 이동하여 하단의 계정 삭제를 탭하세요. 이렇게 하면 활성 구독이 취소되고, 서버에 저장된 데이터가 삭제되며, 이 기기에 저장된 모든 항목이 지워집니다.",
+    "offlineTitle": "앱이 오프라인에서도 작동하나요?",
+    "offlineBody": "아니요 — 종을 식별하려면 AI 서비스에 연결할 인터넷 연결이 필요합니다.",
+    "languageTitle": "다른 언어로 앱을 사용할 수 있나요?",
+    "languageBody": "네, NatureLens는 17개 언어를 지원합니다. 프로필 → 언어에서 언제든지 전환할 수 있습니다."
+  },
+  "store": {
+    "title": "보상",
+    "intro": "종을 식별해 모은 토큰을 사용하세요. 여기 있는 모든 보상은 교환하는 즉시 작동합니다.",
+    "owned": "보유 중",
+    "open": "열기",
+    "redeem": "교환",
+    "redeemLabel": "토큰 {{cost}}개로 교환",
+    "redeemedTitle": "교환 완료!",
+    "notEnoughTitle": "토큰이 부족합니다",
+    "notEnoughBody": "이 보상에는 토큰 {{cost}}개가 필요합니다. 계속 식별해 더 모아보세요.",
+    "shieldsHeld": "보관 중인 보호막 {{count}}개",
+    "earnHint": "식별 1회당 5토큰, 업적 달성당 15토큰을 받습니다.",
+    "download": "다운로드",
+    "downloadErrorTitle": "다운로드 실패",
+    "downloadErrorBody": "파일을 저장하지 못했습니다. 브라우저에서 다시 시도하세요.",
+    "items": {
+      "streakShield": {
+        "title": "연속 기록 보호막",
+        "description": "하루를 놓쳐도 연속 기록을 지켜줍니다. 중첩 가능 — 여러 개 구매할 수 있습니다.",
+        "redeemedBody": "연속 기록이 보호됩니다. 하루를 놓치면 보호막이 자동으로 적용됩니다."
+      },
+      "wallpapers": {
+        "title": "식물 배경화면",
+        "description": "휴대폰용 1080×1920 전용 배경화면 3종.",
+        "redeemedBody": "배경화면이 준비되었습니다. 원하는 항목의 다운로드를 누르세요."
+      },
+      "naturalistBadge": {
+        "title": "자연주의자 배지",
+        "description": "프로필에 영구히 남는 배지. 오랫동안 활동했음을 보여줍니다.",
+        "redeemedBody": "배지가 프로필에 추가되었습니다.",
+        "ownedBody": "이미 이 배지를 보유하고 있습니다 — 프로필에 표시됩니다."
+      }
+    }
+  },
+  "missions": {
+    "title": "오늘의 미션",
+    "rewardEach": "각 +{{tokens}}",
+    "allDone": "오늘은 모두 완료 — 내일 또 만나요!",
+    "pool": {
+      "scanAny2": "오늘 2종 식별하기",
+      "scanAny3": "오늘 3종 식별하기",
+      "scanPlant": "식물 또는 나무 식별하기",
+      "scanInsect": "곤충 식별하기",
+      "scanMushroom": "버섯 식별하기",
+      "scanFish": "물고기 식별하기",
+      "scanBird": "새 식별하기",
+      "saveOne": "발견을 컬렉션에 저장하기",
+      "saveTwo": "발견 2개를 컬렉션에 저장하기",
+      "shareOne": "식별 결과 공유하기",
+      "openDiscover": "발견 탭 방문하기"
+    }
+  },
+  "share": {
+    "message": "NatureLens로 {{category}}을(를) 식별했어요: {{name}}{{scientific}}{{confidence}}\n\n사진으로 식물, 곤충, 버섯, 물고기, 새를 식별해 보세요:\n{{url}}",
+    "confidenceLine": "신뢰도 {{confidence}}%"
+  },
+  "onboarding": {
+    "skip": "건너뛰기",
+    "next": "다음",
+    "start": "식별 시작하기",
+    "what": {
+      "title": "겨누고. 찍고. 알아보세요.",
+      "body": "살아 있는 무엇이든 촬영하면 NatureLens가 몇 초 만에 알려드립니다 — 직접 확인할 수 있도록 참고 사진과 함께."
+    },
+    "collect": {
+      "title": "나만의 관찰 일지 만들기",
+      "body": "모든 발견을 컬렉션에 저장하고 태그를 달아 나중에 다시 볼 수 있습니다. 그 과정에서 토큰을 모아 보상을 잠금 해제하세요."
+    },
+    "free": {
+      "title": "첫 식별은 무료입니다",
+      "body": "각 카테고리에서 한 번씩 무료로 사용해 보세요. 무제한 스캔이 필요할 때만 구독하시면 됩니다."
+    }
+  },
+  "recap": {
+    "title": "자연 속 이번 달",
+    "entrySubtitle": "요약을 보고 공유하세요",
+    "headline": "{{count}}종의 서로 다른 생물을 만났어요",
+    "emptyTitle": "아직 정리할 내용이 없어요",
+    "emptyBody": "이번 달에 무언가를 식별하고 저장하면 여기에 요약이 나타납니다.",
+    "byCategory": "카테고리별",
+    "highlight": "이달의 하이라이트",
+    "share": "요약 공유하기",
+    "shareTitle": "자연 속 나의 한 달",
+    "shareMessage": "{{month}}에 NatureLens로 {{total}}건을 식별했어요 — {{species}}종 🌿\n\n사진으로 식물, 곤충, 버섯, 물고기, 새를 식별해 보세요:\n{{url}}",
+    "streakLine": "현재 연속: {{current}}일 · 최고 기록: {{longest}}",
+    "stats": {
+      "total": "저장한 발견",
+      "species": "종",
+      "categories": "카테고리",
+      "days": "활동한 날"
+    }
+  },
+  "subscription": {
+    "title": "내 구독",
+    "entrySubtitle": "상태, 요금제 및 해지",
+    "activeTitle": "프리미엄 사용 중",
+    "activeBody": "모든 카테고리에서 무제한 식별. NatureLens를 응원해 주셔서 감사합니다.",
+    "freeTitle": "무료 요금제",
+    "freeBody": "카테고리당 무료 식별 1회. 무제한 스캔은 구독으로 이용하세요.",
+    "unknownTitle": "지금은 확인할 수 없습니다",
+    "unknownBody": "서버에 연결하지 못했습니다. 구독 중이시라면 이용에는 영향이 없습니다 — 잠시 후 다시 시도해 주세요.",
+    "plansTitle": "요금제",
+    "manageTitle": "관리 또는 해지",
+    "manageBody": "구독 결제는 Hotmart에서 처리되므로 해지는 이 앱이 아니라 Hotmart 계정에서 진행됩니다. 그곳에서 해지하면 이후 결제가 중단되고, 결제한 기간이 끝날 때까지는 계속 이용하실 수 있습니다.",
+    "openHotmart": "Hotmart 계정 열기"
+  },
+  "notifications": {
+    "row": "알림",
+    "on": "켜짐",
+    "off": "꺼짐",
+    "enabledTitle": "알림이 켜졌습니다",
+    "enabledBody": "식물에 물 주기와 연속 기록 유지 알림을 받게 됩니다.",
+    "deniedTitle": "알림이 차단됨",
+    "deniedBody": "이 사이트의 알림을 차단하셨습니다. 브라우저 설정에서 naturelensapp.cloud의 알림을 허용해 주세요.",
+    "errorTitle": "켤 수 없습니다",
+    "errorBody": "문제가 발생했습니다. 잠시 후 다시 시도해 주세요."
+  },
+  "fieldGuide": {
+    "habitat": "서식지",
+    "curiosity": "알고 계셨나요",
+    "identifyCta": "카메라로 식별해 보기",
+    "photoCredit": "사진: Wikimedia Commons · 출처를 보려면 탭하세요",
+    "textCredit": "글: 위키백과 · 더 읽으려면 탭하세요"
+  },
+  "backup": {
+    "exportRow": "컬렉션 백업",
+    "importRow": "백업에서 복원",
+    "exportEmptyTitle": "아직 백업할 것이 없습니다",
+    "exportEmptyBody": "첫 발견을 저장하면 백업에 담을 것이 생깁니다.",
+    "importDoneTitle": "컬렉션이 복원되었습니다",
+    "importDoneBody": "{{added}}개 항목을 추가했습니다. {{skipped}}개는 이미 있었습니다.",
+    "importFailedTitle": "복원할 수 없습니다",
+    "errorWrongFile": "이 파일은 NatureLens 백업이 아닙니다.",
+    "errorNewerVersion": "이 백업은 더 새로운 버전의 앱에서 만들어졌습니다. 업데이트 후 다시 시도해 주세요.",
+    "errorStorageFull": "이 기기에 해당 항목을 추가할 공간이 부족합니다.",
+    "errorGeneric": "파일을 읽는 중 문제가 발생했습니다."
+  },
+  "sound": {
+    "tapToRecord": "탭하여 녹음",
+    "recording": "녹음 중… {{seconds}}초 남음",
+    "analysing": "듣고 있습니다…",
+    "startLabel": "녹음 시작",
+    "stopLabel": "중지하고 식별",
+    "tipsTitle": "더 좋은 결과를 위해",
+    "tip1": "가능하면 더 가까이 가세요 — 거리가 가장 큰 요인입니다.",
+    "tip2": "휴대폰을 소리 쪽으로 향하게 하고 움직이지 마세요.",
+    "tip3": "실제로 울고 있을 때 녹음하세요. 사이의 침묵이 아니라요.",
+    "scopeNote": "새, 개구리, 귀뚜라미, 여치, 일부 포유류를 다룹니다. 야생 녹음으로 학습했기 때문에 반려동물과 교통 소음은 혼동을 줍니다.",
+    "identifiedBySound": "소리로 식별 · {{group}}",
+    "groupAmphibian": "양서류",
+    "groupMammal": "포유류",
+    "permissionTitle": "마이크가 차단됨",
+    "permissionBody": "브라우저 설정에서 이 사이트의 마이크 접근을 허용한 뒤 다시 시도해 주세요.",
+    "unsupportedTitle": "녹음할 수 없습니다",
+    "unsupportedBody": "이 브라우저는 오디오를 녹음할 수 없습니다. 안드로이드에서는 Chrome을, iPhone에서는 앱을 홈 화면에 추가해 보세요.",
+    "tooShortTitle": "녹음이 너무 짧습니다",
+    "tooShortBody": "동물이 울고 있는 동안 최소 2초 이상 녹음해 주세요.",
+    "failedTitle": "식별할 수 없습니다",
+    "failedBody": "이 녹음에 문제가 있었습니다. 다시 시도해 주세요.",
+    "decodeFailedBody": "이 녹음을 읽을 수 없었습니다. 다시 시도해 주세요.",
+    "notFoundBody": "이 녹음에서 알아볼 수 있는 것이 없습니다. 더 가까이 가거나 울고 있을 때 녹음해 보세요.",
+    "noContentBody": "이 종에 대한 설명이 아직 없습니다.",
+    "notWildlifeBody": "동물이 아니라 차량, 기계 또는 사람 목소리처럼 들립니다. 더 조용한 곳에서 다시 녹음해 보세요."
+  },
+  "login": {
+    "signInRow": "로그인",
+    "signInSubtitle": "어느 기기에서나 구독 사용",
+    "accountRow": "내 계정"
+  }
+}

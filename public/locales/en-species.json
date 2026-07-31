@@ -1,0 +1,314 @@
+{
+  "fishDetails": {
+    "clownfish": {
+      "overview": "A small reef fish of the Indo-Pacific, instantly recognisable by its orange body crossed with three white bands. It lives its entire adult life within a single sea anemone, whose stinging tentacles would kill most other fish.",
+      "habitat": "Warm, shallow coral reefs and lagoons from the Red Sea to northern Australia, always paired with a host anemone.",
+      "curiosity": "Every clownfish is born male. Each anemone holds one dominant breeding pair; when the female dies, the dominant male changes sex and takes her place."
+    },
+    "rainbowTrout": {
+      "overview": "A cold-water fish named for the iridescent pink stripe running along its flank. Native to Pacific-draining rivers of North America and Asia, it is now farmed on every continent except Antarctica.",
+      "habitat": "Clear, cool, well-oxygenated rivers and lakes. Populations that migrate to the sea and return are called steelhead.",
+      "curiosity": "Its pink flesh is not natural pigment but comes from the crustaceans it eats — farmed trout fed a different diet grow up white."
+    },
+    "atlanticSalmon": {
+      "overview": "A powerful migratory fish that hatches in freshwater, spends years feeding at sea, and returns to spawn in the very river where it was born.",
+      "habitat": "North Atlantic ocean as an adult; rivers of Europe and eastern North America to breed.",
+      "curiosity": "Its species name, salar, means 'the leaper' — salmon can clear waterfalls over three metres high on the way upriver."
+    },
+    "northernPike": {
+      "overview": "A long, olive-green ambush predator with a flattened duck-bill snout and a mouth full of backward-pointing teeth. It hangs motionless among weeds and strikes in a fraction of a second.",
+      "habitat": "Weedy, slow-moving rivers and lakes across the northern hemisphere, from Ireland to Siberia to Alaska.",
+      "curiosity": "Its dorsal and anal fins sit far back near the tail — a body plan built entirely for one explosive burst of acceleration, not for chasing."
+    },
+    "commonCarp": {
+      "overview": "A heavy-bodied freshwater fish with large scales and two pairs of barbels at the mouth. Farmed for over two thousand years, it is prized food in parts of Europe and Asia and a serious invasive pest elsewhere.",
+      "habitat": "Warm, slow or still waters with soft muddy bottoms — rivers, lakes, ponds and canals on every continent but Antarctica.",
+      "curiosity": "Carp feed by sucking up mud and sifting it, which stirs sediment and clouds the water — the main reason they damage the lakes they invade."
+    },
+    "blueTang": {
+      "overview": "A brilliant royal-blue reef fish with a black 'palette' marking and a yellow tail. Like all surgeonfish it carries a scalpel-sharp spine near the base of the tail.",
+      "habitat": "Coral reefs of the Indo-Pacific, usually in small groups near branching coral it can hide in.",
+      "curiosity": "Juveniles are bright yellow and turn blue as they mature — and the tail spine, normally folded flat, flicks out sideways when the fish is threatened."
+    },
+    "largemouthBass": {
+      "overview": "A stocky green predator with a dark lateral band, the most targeted freshwater sport fish in the world.",
+      "habitat": "Warm lakes, ponds and slow rivers with cover — submerged timber, weed beds and docks.",
+      "curiosity": "You can separate it from a smallmouth bass by the jaw: on a largemouth, the upper jaw extends past the back of the eye."
+    },
+    "yellowfinTuna": {
+      "overview": "A large, torpedo-shaped ocean fish with very long, sickle-shaped yellow fins and a metallic dark blue back fading to silver below.",
+      "habitat": "Warm open ocean worldwide, usually in the upper 100 metres but diving far deeper to feed.",
+      "curiosity": "It can hold its body warmer than the surrounding water, which keeps its muscles working in cold depths where slower fish become sluggish — the reason it can cross entire oceans."
+    },
+    "zebrafish": {
+      "overview": "A small striped minnow from the rivers of South Asia that became one of the most studied animals in science.",
+      "habitat": "Shallow, slow-moving fresh water — rice paddies, streams and ponds across India, Bangladesh and Nepal.",
+      "curiosity": "Its embryos are transparent, so researchers can watch a heart or a spine form in real time under a microscope — which is why it appears in thousands of medical studies."
+    },
+    "redLionfish": {
+      "overview": "A striking fish banded in red, white and brown, with long fan-like fins hiding venomous spines. Beautiful, slow-moving and best not touched.",
+      "habitat": "Native to Indo-Pacific reefs; now a severe invasive species throughout the Caribbean and western Atlantic.",
+      "curiosity": "In its invaded range it has almost no predators and eats nearly anything that fits in its mouth, which is why some countries actively encourage spearing and eating it."
+    }
+  },
+  "birdDetails": {
+    "barnSwallow": {
+      "overview": "A slender, glossy blue-backed bird with a deeply forked tail and rust-coloured throat, almost always seen in fast, low, twisting flight over open ground.",
+      "habitat": "Farmland, meadows and water margins across the northern hemisphere; winters in the southern hemisphere.",
+      "curiosity": "It is the most widespread swallow on earth, and it feeds entirely on the wing — even drinking by skimming the surface of a pond in flight."
+    },
+    "houseSparrow": {
+      "overview": "A compact brown and grey bird, the male marked by a black bib and chestnut nape, the female plain sandy brown with a pale eye stripe.",
+      "habitat": "Wherever people are: cities, villages, farms and ports on nearly every continent.",
+      "curiosity": "It followed human agriculture out of the Middle East thousands of years ago and now lives almost nowhere that people do not."
+    },
+    "commonKingfisher": {
+      "overview": "A tiny, dagger-billed bird of electric blue and burnt orange, usually seen as a flash of colour low over the water.",
+      "habitat": "Slow, clear rivers, streams and canals with overhanging perches, across Europe, Asia and North Africa.",
+      "curiosity": "It dives head-first and can take a fish from a metre underwater, then beats it against a branch before swallowing it head-first so the spines fold flat."
+    },
+    "peregrineFalcon": {
+      "overview": "A powerful, sharp-winged falcon, slate-grey above and barred below, with a distinctive dark 'moustache' below the eye.",
+      "habitat": "Every continent except Antarctica — cliffs, coasts, and increasingly skyscrapers and cathedral towers.",
+      "curiosity": "In its hunting stoop it exceeds 300 km/h, the fastest of any animal. Baffles in its nostrils let it breathe at that speed without its lungs being ruptured."
+    },
+    "greatBlueHeron": {
+      "overview": "A tall, long-legged grey-blue wading bird with a heavy spear-like bill and a black plume behind the eye.",
+      "habitat": "Shallow fresh and salt water across North and Central America — marshes, lake edges, rivers and coastlines.",
+      "curiosity": "It stands motionless for minutes and strikes faster than the eye can follow. In flight it folds its neck into a tight S, which is how you tell a heron from a crane."
+    },
+    "rockPigeon": {
+      "overview": "The familiar city pigeon: grey body, iridescent green-purple neck, two dark wing bars. Plumage varies enormously because of centuries of domestication.",
+      "habitat": "Originally sea cliffs and rocky gorges; now cities worldwide, where ledges and window sills stand in for cliffs.",
+      "curiosity": "Both parents produce 'crop milk', a protein-rich secretion fed to the young — a trait shared with only a handful of other birds."
+    },
+    "europeanRobin": {
+      "overview": "A small, round, brown bird with a bright orange breast and face, and a habit of watching people closely from a nearby branch.",
+      "habitat": "Woodland, hedgerows and gardens across Europe and western Asia.",
+      "curiosity": "It follows gardeners because turned soil exposes worms — a behaviour that began with wild boar rooting through the forest floor. Both sexes wear the orange breast and defend territory with song year-round."
+    },
+    "mallard": {
+      "overview": "The classic dabbling duck: the drake with a glossy green head and white neck ring, the hen mottled brown with a blue wing patch.",
+      "habitat": "Almost any fresh or brackish water in the northern hemisphere, from wild wetlands to city park ponds.",
+      "curiosity": "It is the ancestor of almost every domestic duck breed. The famous loud quack comes only from the female — the male's call is a quiet, rasping rattle."
+    },
+    "scarletMacaw": {
+      "overview": "A very large parrot in vivid scarlet, yellow and blue, with a long tapering tail and a powerful hooked bill.",
+      "habitat": "Humid lowland rainforest from southern Mexico to the Amazon basin, usually high in the canopy.",
+      "curiosity": "It pairs for life and can live over fifty years. Its bill cracks nuts too hard for any other bird in the forest, and flocks gather at riverbank clay licks to eat mineral-rich earth."
+    },
+    "emperorPenguin": {
+      "overview": "The largest penguin, standing over a metre tall, black and white with a golden-orange patch on each side of the neck.",
+      "habitat": "Antarctic sea ice — the only bird that breeds through the Antarctic winter.",
+      "curiosity": "The male balances the single egg on his feet under a fold of skin for two months of darkness and blizzards, eating nothing, while the female returns to the sea to feed."
+    }
+  },
+  "insectDetails": {
+    "sevenSpotLadybird": {
+      "overview": "A domed beetle 5-8 mm long, glossy red with three black spots on each wing case and a seventh straddling the join. Adults and their grey, alligator-shaped larvae both hunt aphids, which is why gardeners keep finding them on infested stems. Native across Eurasia and long since introduced to North America, it is the beetle most people picture when they hear the word ladybird.",
+      "habitat": "Nettle patches, hedgerows, allotments and any plant carrying aphids. In autumn the adults gather in dense clusters to overwinter outdoors — in leaf litter, tussocks of dead grass, at the base of hedges, under loose bark and inside hollow plant stems, often returning to the same sheltered spots year after year.",
+      "curiosity": "The defence is called reflex bleeding: pressed hard, it forces droplets of its own haemolymph out through the joints of its legs, carrying alkaloids bitter enough that a bird usually spits it out unharmed."
+    },
+    "commonEarwig": {
+      "overview": "A flat, glossy brown insect about 12-15 mm long with a pair of forceps at the rear, strongly curved in males and nearly straight in females. Beneath the short leathery wing covers sit large fan-shaped hindwings, creased and packed away like a paper puzzle. Despite the name it has no interest in ears; the forceps are used for defence, for courtship, and for helping unpack those wings.",
+      "habitat": "Damp, tight spaces by day — under flowerpots, in leaf litter, between fence boards, inside dahlia flowers and folded garden furniture — coming out at night to feed on aphids, pollen and soft fruit.",
+      "curiosity": "It is one of the few insects that guards its eggs: the mother turns and cleans each one for weeks to keep mould off them, and goes on feeding the young after they hatch."
+    },
+    "commonPillWoodlouse": {
+      "overview": "A slate-grey armoured isopod up to about 18 mm long that rolls into a tight sphere when disturbed. The overlapping plates and the rolling habit separate it from the flatter woodlice that can only run for cover. Mediterranean in origin, it now turns up in gardens on every inhabited continent.",
+      "habitat": "Under stones, pots, logs and damp cardboard, anywhere the humidity stays high. Its gill-like breathing structures must stay moist, so it cannot last long in dry open ground.",
+      "curiosity": "It drinks through its back end, drawing water up two tube-shaped uropods by capillary action, and its blood is blue: it carries oxygen with copper-based haemocyanin instead of iron-based haemoglobin."
+    },
+    "houseFly": {
+      "overview": "A grey fly 6-7 mm long with four dark stripes along the thorax and a spongy pad instead of biting jaws. It cannot chew anything: it spits saliva onto solid food, dissolves it, and mops the liquid back up. Carried around the world with human settlement, it now lives on every continent where people do.",
+      "habitat": "Anywhere warm with damp organic matter to lay eggs in — compost heaps, bins, manure, drains — where the full cycle from egg to adult can run in about a week of summer heat.",
+      "curiosity": "Its hindwings are reduced to two club-shaped halteres that beat in antiphase with the wings around 200 times a second, working as gyroscopes; remove them and the fly can no longer keep itself upright in the air."
+    },
+    "gardenSnail": {
+      "overview": "A mollusc with a wrinkled brown-and-cream shell about 3 cm across, Mediterranean by origin and now established across Europe, the Americas, Australia, South Africa and East Asia. It rasps at plants with the radula, a flexible band carrying thousands of tiny chitinous teeth. Every individual is male and female at once.",
+      "habitat": "Walls, hedge bottoms, plant pots and the shaded sides of buildings, active on damp nights. In drought or cold it seals the shell opening with a chalky membrane and waits, sometimes for months.",
+      "curiosity": "Before mating, each snail drives a hardened dart of calcium carbonate into its partner's body; mucus carried on the dart alters the recipient's reproductive tract so that more of the shooter's sperm survives to fertilise eggs."
+    },
+    "westernHoneyBee": {
+      "overview": "A banded bee 12-15 mm long living in colonies of tens of thousands, native to Europe, Africa and western Asia and kept by people nearly everywhere else. A forager returning from a good patch of flowers performs a waggle dance on the vertical comb, its angle encoding direction relative to the sun and its duration encoding distance. Summer workers live about six weeks; a queen can last several years.",
+      "habitat": "Wild colonies build wax combs in tree hollows, wall cavities and roof spaces, while managed ones live in boxes; foragers routinely work flowers two to three kilometres from home.",
+      "curiosity": "The colony does not hibernate. In winter it forms a tight ball and shivers its flight muscles, holding the core of the cluster somewhere around 20-30°C while the air outside sits below freezing — then pushes it up to about 35°C when brood rearing restarts in late winter, burning stored honey as fuel throughout."
+    },
+    "paintedLady": {
+      "overview": "An orange-and-black butterfly with a 5-6 cm wingspan and white flecks on dark wingtips, among the most widely distributed butterflies on Earth. Its caterpillars feed on thistles, mallows and nettles, and the adults appear in enormous numbers in some years and are almost absent in others. Radar studies have tracked them migrating hundreds of metres above the ground.",
+      "habitat": "Open flowery ground of almost any kind — wasteland, verges, gardens, deserts after rain — across Europe, Asia, Africa, Australia and North America. South America is the one continent besides Antarctica where it does not occur.",
+      "curiosity": "The full annual circuit covers roughly 12,000-15,000 km and includes a crossing of the Sahara, and every leg of it is flown by insects that have never made the journey before."
+    },
+    "cellarSpider": {
+      "overview": "A pale, extremely long-legged spider with a body around 8-10 mm and a leg span reaching 7 cm, usually hanging upside down in a loose tangle of silk. The web has no glue; prey is entangled with silk flicked at it from a distance by the hind legs. It now lives in buildings almost worldwide, moved around with human freight.",
+      "habitat": "Ceiling corners, cellars, stairwells, garages and the space behind furniture — indoors, undisturbed and warm, since it fares badly outdoors through cold winters.",
+      "curiosity": "Disturbed, it whirls its body in the web fast enough to blur its own outline, which makes it hard for a predator to aim at; it also regularly kills spiders larger than itself."
+    },
+    "argentineAnt": {
+      "overview": "A small, plain brown ant 2-3 mm long that forms dense trails along kerbs, skirting boards and kitchen counters. Its nests hold many queens and defend no borders, so neighbouring nests merge instead of competing. Native to the Paraná river basin of South America, it has been carried to six continents in soil, potted plants and cargo.",
+      "habitat": "Shallow nests under paving slabs, plant pots, mulch and doorsteps in warm and Mediterranean climates, always near moisture, with trails running indoors to any sugar source.",
+      "curiosity": "Along the Mediterranean coast its introduced population forms a supercolony stretching roughly 6,000 km, and workers collected from separate continents still recognise one another as nestmates rather than rivals."
+    },
+    "commonEarthworm": {
+      "overview": "A reddish-brown worm up to about 25 cm long, with a flattened paler tail and a swollen band, the clitellum, a third of the way down the body. It maintains a permanent vertical burrow up to two metres deep and comes to the surface at night to drag leaves down into it. European in origin, it has been introduced across North America, Asia and the southern hemisphere.",
+      "habitat": "Moist, non-acid soil in gardens, parks and pasture. It has no lungs and takes in oxygen through its skin, which must stay damp for gas exchange — so it dies quickly on hot dry pavement, and does its overground travelling on wet nights, when a damp surface lets it cover far more ground than it could by tunnelling.",
+      "curiosity": "Darwin tested how worms handle leaves by offering them paper triangles, and found they seized them by the pointed end — the angle that slides most easily into a burrow."
+    }
+  },
+  "fungiDetails": {
+    "flyAgaric": {
+      "overview": "A large mushroom with a scarlet to orange cap flecked with white warts, which are leftovers of the veil that wrapped the young fruit body. It is poisonous, and its active compounds are ibotenic acid and muscimol, which act on the brain quite differently from the psilocybin of so-called magic mushrooms.",
+      "habitat": "Lives in partnership with the roots of birch, pine and spruce across the Northern Hemisphere, and has travelled south with planted conifers into New Zealand, Australia, Chile and South Africa.",
+      "curiosity": "Muscarine was first isolated from this species and named for it, yet the mushroom holds only traces of it; the common name comes from a medieval habit of setting pieces in milk to stupefy flies."
+    },
+    "deathCap": {
+      "overview": "A medium-sized mushroom with a pale olive to greenish cap, white gills, a ring on the stem and a cup-shaped sac at the base. Its amatoxins shut down RNA polymerase II, the enzyme every cell uses to read its own genes, and the liver takes the worst of the damage. Half a cap can be a lethal dose for an adult.",
+      "habitat": "Native to the oak, beech and chestnut woods of Europe, it has been carried worldwide on the root balls of nursery trees and now grows in California, the eastern United States, Australia and South America.",
+      "curiosity": "The poisoning is deceptive: symptoms usually begin only six to twelve hours after a meal, then ease for a day or more while liver destruction continues underneath."
+    },
+    "buttonMushroom": {
+      "overview": "One of the world's most widely cultivated mushrooms and the mainstay of the Western mushroom industry, produced by the millions of tonnes each year in dark, climate-controlled rooms on beds of composted straw and manure rather than in fields. China and the United States are the largest growers, and the crop is harvested indoors, by hand, all year round.",
+      "habitat": "In the wild it turns up in grassland, dunes and roadside verges across Europe and North America; commercially it never sees daylight, fruiting on a peat-cased compost bed.",
+      "curiosity": "The name bisporus is a description. Most gilled fungi fire four spores from each basidium, but this one usually makes two, so each spore inherits a full pair of nuclei and can grow into a fertile mycelium alone."
+    },
+    "brewersYeast": {
+      "overview": "A microscopic fungus that reproduces by budding daughter cells off its flank and, starved of oxygen, converts sugar into ethanol and carbon dioxide. The same species raises bread and ferments beer, wine and sake, while engineered strains are grown in tanks to make insulin and vaccine proteins.",
+      "habitat": "In the wild it lives on ripe fruit and on the bark and sap flows of oaks; the domesticated lineages live in bakeries, breweries and industrial fermenters.",
+      "curiosity": "Yeast and humans still share so much basic cellular machinery that in one experiment roughly half of a set of essential yeast genes could be replaced with their human equivalents and the cells kept growing."
+    },
+    "zombieAntFungus": {
+      "overview": "A parasite of carpenter ants, treated today as a complex of species each tuned to a particular host ant. Infected workers abandon the colony, clamp their jaws onto a leaf vein or twig and die in place; days later a stalk erupts from behind the head and drops spores onto the trails below.",
+      "habitat": "Humid tropical and subtropical forests across Thailand, Brazil, Japan and west Africa, where infected ants cluster in dense graveyards on low vegetation.",
+      "curiosity": "In Thai forests the ants bite down about 25 cm above the ground, where humidity suits the fungus, and microscopy shows fungal cells wrapping the ant's muscle fibres while leaving the brain uninvaded."
+    },
+    "humongousFungus": {
+      "overview": "A honey-coloured gilled mushroom that appears in autumn clusters around conifer trunks, but spends nearly all its life as white sheets of mycelium under bark and as black, bootlace-like cords called rhizomorphs. It kills trees, and forest managers treat it as a pathogen rather than a marvel.",
+      "habitat": "Conifer forests across North America, Europe and Asia, attacking spruce, fir and pine; the record individual grows in the Malheur National Forest in eastern Oregon.",
+      "curiosity": "Genetic sampling showed that mushrooms kilometres apart belonged to one clone spanning about 965 hectares, with age estimates running from roughly 2,500 years upwards."
+    },
+    "bitterOyster": {
+      "overview": "A tough, tan, fan-shaped fungus a few centimetres across that grows in overlapping tiers on dead hardwood and rots it to pale fibre. Collections from eastern North America are bioluminescent; European ones of the same species generally are not, a difference in chemistry rather than in identity.",
+      "habitat": "Dead oak, birch and beech in temperate forests of North America, Europe and Asia, often fruiting on the same fallen log for several years running.",
+      "curiosity": "The glow peaks in the green at about 520 nanometres and is faint enough to need several minutes of full darkness before your eyes pick it up; the luciferin behind it, 3-hydroxyhispidin, turns out to be shared across bioluminescent fungi."
+    },
+    "penicilliumMould": {
+      "overview": "A common mould forming velvety blue-green colonies with a pale growing rim, releasing spores from brush-shaped stalks; penicillus is Latin for little brush. It secretes penicillin, which stops bacteria from finishing their cell walls, and its accidental discovery opened the antibiotic era.",
+      "habitat": "Soil, damp indoor surfaces and spoiling food anywhere in the world; the culture that mattered arrived through the air, on a single stray spore that settled in a London laboratory.",
+      "curiosity": "Fleming's strain was labelled Penicillium notatum for decades until DNA sequencing of several marker genes reassigned it in 2011, and the spore is thought to have drifted up from a mycology lab one floor below his own."
+    },
+    "chytridFungus": {
+      "overview": "A chytrid, a member of an ancient fungal lineage that still swims, releasing tailed spores into water. It colonises the keratin-rich skin of frogs, toads and salamanders, wrecking the skin's control of salts and water, which in susceptible species ends in cardiac arrest.",
+      "habitat": "Streams, ponds and damp forest on every continent that has amphibians; genetic work traces its origin to East Asia, from where the global trade in live animals carried it outwards.",
+      "curiosity": "A 2019 review tied it to declines in more than 500 amphibian species and the presumed extinction of around 90 of them, the largest documented biodiversity loss attributed to a single pathogen."
+    },
+    "whiteTruffle": {
+      "overview": "A pale, knobbly, potato-shaped fungus that develops 5 to 30 cm below the surface, sheathing the fine roots of oak, poplar, hazel and willow in a trade of soil minerals for tree sugars. Because it never breaks the surface, it relies on smell rather than wind to get its spores moved by animals.",
+      "habitat": "Chalky soils of northern and central Italy, above all the Piedmont hills around Alba, plus Istria and parts of the Balkans; hunters locate it with trained dogs, which are less inclined than pigs to eat the find.",
+      "curiosity": "Black truffles are farmed in orchards on inoculated seedlings, but this species resisted every attempt for a century, and the first confirmed cultivated fruit bodies were reported from France only in 2019."
+    }
+  },
+  "cropDetails": {
+    "maize": {
+      "overview": "The world's highest-yielding cereal by tonnage, a giant annual grass grown for grain that feeds people, livestock and fuel refineries. A single ear can hold several hundred kernels packed on a cob and wrapped in husks. It is grown on every continent except Antarctica.",
+      "habitat": "Farmed from sea level to above 3,000 m in the Andes and from Canada to southern Africa; its wild relative teosinte still grows on seasonally dry hillsides in southwest Mexico.",
+      "curiosity": "Maize was domesticated in Mexico's Balsas River valley around 9,000 years ago and can no longer survive without people — the husked cob does not shatter, so the kernels have no way to scatter themselves."
+    },
+    "cassava": {
+      "overview": "A woody shrub grown for swollen starchy storage roots that can each weigh several kilograms. It tolerates poor, acidic soils and long dry spells that would kill maize outright. The raw roots contain cyanogenic compounds and always require processing.",
+      "habitat": "Lowland tropics worldwide, from the southern rim of the Amazon basin where it began to West Africa and Southeast Asia, often on soils too depleted for cereals.",
+      "curiosity": "Genetic studies trace every cultivated cassava to wild populations in southwestern Brazil and Bolivia; Portuguese ships carried it to Africa in the 1500s, and Nigeria is now the largest producer on Earth."
+    },
+    "arabicaCoffee": {
+      "overview": "An evergreen shrub or small tree whose beans are the seeds of a red, cherry-like fruit, usually two per fruit. It supplies roughly 60% of world coffee, most of the rest being robusta. Brazil grows more of it than any other country.",
+      "habitat": "Cool, misty tropical highlands, typically between 1,000 and 2,000 m; wild populations still grow in the shaded understorey of montane forests in southwestern Ethiopia.",
+      "curiosity": "Coffea arabica arose in Ethiopia when robusta and Coffea eugenioides crossed and doubled their chromosomes; a very small number of plants taken to Yemen and then to European greenhouses founded much of the crop grown today."
+    },
+    "soybean": {
+      "overview": "A bushy annual legume with hairy pods holding two to four seeds. Those seeds are unusually rich in both protein and oil, which is why soy dominates global oilseed trade. The plant fixes its own nitrogen through root nodules.",
+      "habitat": "Warm temperate and subtropical farmland, above all the Brazilian cerrado, the Argentine pampas and the US Midwest; the wild ancestor is a thin climbing vine of East Asian riverbanks and field edges.",
+      "curiosity": "Wild Glycine soja is a slender twining vine with small, hard, black seeds, domesticated in China roughly 5,000 years ago. Brazil grew almost no soy before the 1960s and is now the world's largest producer."
+    },
+    "sugarcane": {
+      "overview": "A giant tropical grass whose canes reach three to five metres and store sucrose in the stem rather than the seed. Commercial cane is a hybrid with the tougher wild Saccharum spontaneum and is planted from stem cuttings, never seed. It supplies most of the world's sugar.",
+      "habitat": "Hot lowlands with heavy rainfall or irrigation, roughly between 30°N and 30°S; Brazil and India grow by far the largest areas.",
+      "curiosity": "Domesticated in New Guinea some 8,000 years ago, cane spread west through India, where sugar was first crystallised, and then to the Atlantic plantations; Brazil now diverts around half its cane harvest into ethanol fuel."
+    },
+    "breadWheat": {
+      "overview": "A temperate annual grass sown across more farmland than almost any other crop. Each head carries roughly 30 to 50 grains, whose gluten proteins let dough trap gas and rise. It carries six sets of chromosomes, inherited from three different grass species.",
+      "habitat": "Temperate and Mediterranean farmland on every continent except Antarctica, from the Canadian prairies to the Punjab; the wild goatgrass ancestor still grows on hillsides from the Fertile Crescent to the Caspian.",
+      "curiosity": "About 8,000 to 9,000 years ago, domesticated emmer wheat hybridised with the weedy goatgrass Aegilops tauschii — an unremarkable plant with brittle, shattering ears whose genome supplies the dough-stretching quality of bread."
+    },
+    "asianRice": {
+      "overview": "An annual grass that survives standing water thanks to air channels running through its stems and roots. It is the direct staple food of roughly half the world's population. Grains are milled from a husk and bran layer that surround the starchy endosperm.",
+      "habitat": "Flooded paddies and rain-fed fields across monsoon Asia, plus West Africa, the Mississippi valley and southern Brazil; wild Oryza rufipogon still grows in Asian swamps and ditches.",
+      "curiosity": "Asian rice was domesticated from Oryza rufipogon in China's Yangtze basin around 9,000 years ago, while African rice, Oryza glaberrima, was domesticated independently in the inland Niger delta about 3,000 years ago and later crossed the Atlantic with enslaved West African farmers."
+    },
+    "potato": {
+      "overview": "A member of the nightshade family grown for tubers, which are swollen underground stems rather than roots. Above ground it is a leafy plant with white to purple flowers and small green fruits that look like tiny tomatoes and are toxic. Green or sprouting tubers accumulate the same bitter glycoalkaloids.",
+      "habitat": "Cool climates worldwide, from the Andean altiplano above 3,500 m to farmland across China and India; China now harvests more potatoes than any other country.",
+      "curiosity": "Domesticated in southern Peru some 8,000 years ago from bitter wild species, the potato reached Europe through a tiny genetic sample in the 1500s, while Andean farmers still maintain thousands of distinct named varieties in a single region."
+    },
+    "banana": {
+      "overview": "Not a tree but a giant herb — the trunk is a tight column of rolled leaf bases, and the plant dies back after fruiting once. Most exported bananas are a single sterile triploid variety, Cavendish, multiplied from suckers and tissue culture.",
+      "habitat": "Wet tropical lowlands worldwide; India and China grow the most, Ecuador exports the most, and wild seeded Musa species still grow in Southeast Asian and New Guinean forest.",
+      "curiosity": "Excavations at Kuk Swamp in the New Guinea highlands date banana cultivation to roughly 7,000 years ago. Because every Cavendish plant is genetically identical, the soil fungus Fusarium Tropical Race 4 threatens the entire export crop, just as an earlier strain wiped out the Gros Michel variety last century."
+    },
+    "sweetOrange": {
+      "overview": "An evergreen tree with fragrant white flowers and fruit whose juice comes from hairs that developed into liquid-filled sacs. Nearly every commercial tree is a grafted clone on a rootstock chosen for disease resistance rather than for its fruit.",
+      "habitat": "Subtropical belts with mild winters — southeastern Brazil, Florida, the Mediterranean basin and southern China; its parent species come from forests in southern and southeastern Asia.",
+      "curiosity": "The hybrid arose in southern China, travelled west with traders and reached Brazil on Portuguese ships in the 1500s; Brazil now produces more oranges than any other country. Citrus seeds often contain extra embryos cloned from the mother tree, so a seedling can be an exact copy of its parent."
+    }
+  },
+  "soundDetails": {
+    "tawnyOwl": {
+      "overview": "A stocky, round-headed woodland owl about 40 cm long, mottled brown and effectively invisible against bark. It hunts by sound in near-total darkness and spends the day pressed flat against a trunk or wedged in a hollow. Across its range it is one of the most heard and least seen of all birds.",
+      "habitat": "Mature broadleaf woodland, parkland, churchyards and older city suburbs with large trees, from Britain and Iberia across Europe to Iran and western Siberia, plus North Africa; it is absent from Ireland.",
+      "curiosity": "Territorial hooting peaks in autumn and again in late winter, when bare trees let it carry several hundred metres, and a pair may hold the same patch of wood for a decade."
+    },
+    "commonCuckoo": {
+      "overview": "A slim, long-tailed grey bird about the size of a sparrowhawk, whose barred underparts and low direct flight resemble that hawk closely enough to scare songbirds off their nests. Females lay their eggs in the nests of other species and leave; more than 100 host species have been recorded. Most people know the voice for years before they knowingly see the bird.",
+      "habitat": "Woodland edge, reedbeds, moorland and open farmland across Europe and northern Asia, wintering in sub-Saharan Africa and South Asia.",
+      "curiosity": "The two-note call is roughly a falling minor third and carries a kilometre or more across open country; playback experiments show host birds react to the female's bubbling chuckle much as they react to a hunting sparrowhawk."
+    },
+    "commonNightingale": {
+      "overview": "A plain brown chat barely larger than a robin that almost never shows itself, singing from deep inside dense scrub. A single male's repertoire runs to roughly 180–260 distinct song types, delivered as abrupt whistles, deep churrs and long crescendos. It breeds across Europe, North Africa and western Asia and winters in Africa.",
+      "habitat": "Thickets, coppice and scrubby woodland edge with thick cover close to the ground, often beside water or along overgrown field margins.",
+      "curiosity": "Recordings made in noisy Berlin streets caught males singing at peaks above 95 decibels measured a metre away — they raise their volume to compete with traffic."
+    },
+    "europeanTreeFrog": {
+      "overview": "A small, smooth, bright green frog with a dark stripe running along each flank and sticky discs on its toes for climbing. Males gather at breeding pools in spring and call in overlapping ranks, mostly after dark. Outside the breeding season it is a climber and rarely seen at ground level.",
+      "habitat": "Sunlit ponds, ditches and flooded meadows fringed with reeds and bramble across central and southeastern Europe; between breeding seasons it sits metres up in shrubs and hedges.",
+      "curiosity": "The call peaks near 2.5 kHz and a male may repeat it thousands of times in one night — calling is among the most energy-expensive activities measured in any vertebrate, and males lose body mass across the season."
+    },
+    "americanBullfrog": {
+      "overview": "The largest frog in North America, up to about 20 cm from nose to vent, olive-green and heavy-bodied. Males hold bank territories through the summer and call by day and night. Widely introduced elsewhere, it is now an established invasive on several continents.",
+      "habitat": "Permanent warm water — lake margins, slow rivers, reservoirs and farm ponds — native to eastern North America and established in Brazil, Japan, China and parts of southern Europe.",
+      "curiosity": "Pitch tracks body size, so the deepest voice in a chorus usually belongs to the largest male, and males can be told apart from females by an eardrum far wider than the eye."
+    },
+    "cicadaOrni": {
+      "overview": "A grey-brown Mediterranean cicada about 3 cm long with clear wings marked by dark spots, far easier to name by song than by sight. Males produce a repeated dry zip-zip-zip broken by even pauses, sung from trunks and branches. Females make no song at all.",
+      "habitat": "Pines, olives, plane trees and orchards around the Mediterranean, from Iberia and North Africa through Italy and Greece to Turkey.",
+      "curiosity": "The sound comes from a pair of ribbed plates called tymbals that buckle like the lid of a tin can hundreds of times a second, and the abdomen behind them is largely hollow — a singing male is mostly amplifier."
+    },
+    "houseCricket": {
+      "overview": "A pale straw-brown cricket about 2 cm long, originally from southwest Asia and now living worldwide wherever buildings stay warm. Males chirp; females, recognisable by a long needle-like ovipositor, are silent. It is one of the most widely farmed insects on earth.",
+      "habitat": "Warm human spaces — boiler rooms, bakeries, landfill sites, heated sheds and rearing farms; outdoors it survives the warm months in temperate regions and year-round in the tropics.",
+      "curiosity": "Its ears are on its front legs, just below the knee, and chirp rate climbs with temperature — the same room sounds faster on a hot night than a cool one."
+    },
+    "greatGreenBushCricket": {
+      "overview": "A grass-green katydid up to about 7 cm long with antennae longer than its body — a large insect that is still nearly impossible to pick out of a hedge. Males sing from the tops of bushes and tall vegetation, often through most of the night. It ranges across Europe, North Africa and into Central Asia.",
+      "habitat": "Tall rough vegetation — bramble, hedgerows, scrub, road verges and vineyard edges — usually singing a metre or two above the ground.",
+      "curiosity": "Much of the song's energy sits above 20 kHz, right at the edge of human hearing, so children often hear a male clearly that the adults standing beside them can barely detect."
+    },
+    "blackHowlerMonkey": {
+      "overview": "A South American monkey with unusually obvious sex differences: adult males are black, females and young are buff-blonde. Groups roar at dawn and dusk to broadcast where they are, which keeps neighbouring troops apart without contact. Body length is around 60 cm, plus a gripping tail of similar length.",
+      "habitat": "Gallery forest, seasonally flooded forest and woodland patches in Brazil, Bolivia, Paraguay and northern Argentina, mostly high in the canopy.",
+      "curiosity": "The roar is amplified by an enlarged, hollowed hyoid bone in the throat, and a 2015 comparative study found that howler species with the largest hyoids have the smallest testes."
+    },
+    "redFox": {
+      "overview": "The most widely distributed wild carnivore on earth, weighing around 5–7 kg and largely nocturnal wherever people are common. Around twenty distinct call types have been described, from clipped contact barks to the long scream. In towns it is heard far more often than it is seen.",
+      "habitat": "Almost everything: Arctic tundra, farmland, desert edge, forest and dense city centre, where dens sit under sheds, along railway embankments and in gardens.",
+      "curiosity": "Screaming peaks in December and January when foxes pair up and has largely stopped by the time cubs are born in spring, which is why the noise seems to arrive and vanish on a schedule."
+    }
+  }
+}

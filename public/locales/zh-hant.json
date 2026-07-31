@@ -1,0 +1,2288 @@
+{
+  "common": {
+    "overview": "總覽",
+    "details": "詳細資料",
+    "readMore": "閱讀更多",
+    "confidence": "信心指數",
+    "nativeOrigin": "原生地區",
+    "save": "儲存到我的收藏",
+    "saved": "已儲存至收藏",
+    "cancel": "取消",
+    "goBack": "返回",
+    "shareThisResult": "分享這個結果",
+    "removeFromCollection": "從收藏中移除",
+    "saveToCollection": "加入收藏",
+    "tabCollection": "收藏",
+    "tabDiscover": "冷知識",
+    "tabBotanist": "植物專家",
+    "saveErrorTitle": "無法儲存",
+    "saveErrorBody": "儲存到收藏時發生錯誤，請再試一次。",
+    "ok": "確定",
+    "next": "下一步",
+    "showPassword": "顯示密碼",
+    "hidePassword": "隱藏密碼",
+    "close": "關閉",
+    "tabProfile": "我的",
+    "identified": "已辨識",
+    "yourPhoto": "你的照片",
+    "referencePhoto": "參考圖",
+    "technicalDescription": "技術描述",
+    "vendorEnglishNote": "來自辨識服務，英文原文。",
+    "translate": "翻譯",
+    "translating": "翻譯中…",
+    "translateFailed": "目前無法翻譯。"
+  },
+  "auth": {
+    "title": "登入以開始辨識",
+    "subtitle": "每個類別可免費辨識一次。輸入電子郵件即可開始——不需要密碼。",
+    "emailPlaceholder": "you@example.com",
+    "sendLink": "傳送登入連結",
+    "sending": "傳送中…",
+    "checkEmailTitle": "請查看您的電子郵件",
+    "checkEmailBody": "我們已將登入連結傳送至 {{email}}。請在此裝置上開啟該連結以繼續。",
+    "signOut": "登出",
+    "signedInAs": "目前登入帳號：{{email}}",
+    "notReady": "登入功能正在設定中，即將推出。"
+  },
+  "paywall": {
+    "title": "免費次數已使用",
+    "body": "您已使用過 {{category}} 的免費辨識次數。訂閱即可無限次辨識。",
+    "subscribe": "訂閱",
+    "subscribing": "跳轉中…",
+    "subscribed": "已訂閱",
+    "manage": "管理訂閱",
+    "annualPlan": "年付",
+    "perYear": "/年",
+    "saveBadge": "節省 {{percent}}%",
+    "genericTitle": "解鎖全部功能",
+    "genericBody": "無限識別植物、昆蟲、菇類和農作物，並可完整查看藥用植物詳情。",
+    "subscriptionConfirmedTitle": "訂閱成功！",
+    "subscriptionConfirmedBody": "感謝您的訂閱，現在您可以無限次辨識了。盡情探索吧！",
+    "subscriptionPendingTitle": "已收到付款",
+    "subscriptionPendingBody": "已收到付款。請開啟「我的 → 恢復存取」並確認你付款時使用的信箱，以解鎖此裝置。",
+    "checkoutFailedTitle": "結帳失敗",
+    "checkoutFailedBody": "無法開始結帳，請稍後再試一次。",
+    "monthlyPlan": "月付",
+    "quarterlyPlan": "季付",
+    "perMonth": "每月",
+    "perQuarter": "每季",
+    "notAvailableYet": "支付功能正在設定中——請稍後再試。"
+  },
+  "restore": {
+    "title": "登入",
+    "emailStepTitle": "登入你的帳戶",
+    "emailStepBody": "使用註冊時的信箱。我們會寄送一次性驗證碼——不需要記住密碼。",
+    "emailPlaceholder": "you@example.com",
+    "sendCode": "寄送驗證碼",
+    "codeStepTitle": "輸入驗證碼",
+    "codeStepBody": "我們已寄驗證碼到 {{email}}。在下方輸入以完成登入。",
+    "codePlaceholder": "6 位數驗證碼",
+    "verifyCode": "驗證",
+    "changeEmail": "換一個信箱",
+    "doneTitleActive": "已登入",
+    "doneBodyActive": "此裝置已連結你的帳戶，訂閱在此裝置上有效。",
+    "doneTitleOther": "帳戶已連結",
+    "doneBodyOther": "此裝置已連結你的帳戶。目前裝置上沒有有效訂閱。",
+    "backToProfile": "返回個人檔案",
+    "genericError": "發生錯誤，請再試一次。",
+    "modeCode": "信箱驗證碼",
+    "modePassword": "密碼",
+    "passwordStepTitle": "使用密碼登入",
+    "passwordStepBody": "輸入信箱和密碼以在此裝置登入。",
+    "passwordPlaceholder": "密碼",
+    "signIn": "登入",
+    "signInWithGoogle": "透過 Google 繼續",
+    "googleSignInErrorTitle": "登入失敗",
+    "googleSignInErrorBody": "無法完成使用 Google 登入。請再試一次。"
+  },
+  "categories": {
+    "plant": {
+      "label": "植物",
+      "tabLabel": "植物",
+      "title": "即刻辨識植物與樹木",
+      "subtitle": "將相機對準任何植物、葉片、花朵或樹木，幾秒內即可獲得詳細檔案。",
+      "scanHint": "為獲得最佳效果，請在光線充足處拍攝單片葉子、花朵或整體形態。"
+    },
+    "insect": {
+      "label": "昆蟲",
+      "tabLabel": "昆蟲",
+      "title": "立即辨識昆蟲",
+      "subtitle": "將鏡頭對準任何昆蟲、甲蟲、蜘蛛或蝴蝶，即可立即獲得物種檔案。",
+      "scanHint": "為獲得最佳效果，請在光線充足、手部穩定的情況下靠近昆蟲拍攝。"
+    },
+    "mushroom": {
+      "label": "蕈菇",
+      "tabLabel": "蕈菇",
+      "title": "立即辨識蕈菇",
+      "subtitle": "將鏡頭對準任何蕈菇或真菌，即可辨識物種並檢查是否可食用。",
+      "scanHint": "拍攝菌傘、菌褶與菌柄，以獲得最準確的辨識結果。"
+    },
+    "crop": {
+      "label": "作物",
+      "tabLabel": "作物",
+      "title": "作物健康檢查",
+      "subtitle": "將鏡頭對準作物葉片，檢查是否有病害、蟲害或養分問題。",
+      "scanHint": "請靠近拍攝受影響的葉片或部位，以獲得最準確的診斷。"
+    },
+    "tree": {
+      "label": "樹木",
+      "tabLabel": "樹木",
+      "title": "立即辨識樹木",
+      "subtitle": "將相機對準任何樹木、樹幹、樹葉或樹冠，幾秒鐘內取得詳細資料。",
+      "scanHint": "為獲得最佳效果，請在光線充足的情況下拍攝樹葉、樹皮或整體外形。"
+    },
+    "fish": {
+      "label": "魚",
+      "tabLabel": "魚類",
+      "title": "即刻辨識魚類",
+      "subtitle": "將相機對準任何魚類，幾秒內即可獲得詳細檔案。",
+      "scanHint": "為獲得最佳效果，請在光線充足處從側面拍攝整條魚。"
+    },
+    "bird": {
+      "label": "鳥",
+      "tabLabel": "鳥類",
+      "title": "即刻辨識鳥類",
+      "subtitle": "將相機對準任何鳥類，立即獲得辨識結果。",
+      "scanHint": "為獲得最佳效果，請讓整隻鳥清晰且光線充足地入鏡。"
+    },
+    "sound": {
+      "label": "聲音",
+      "tabLabel": "聲音",
+      "title": "透過聲音辨識",
+      "subtitle": "錄下鳥、蛙或昆蟲的鳴叫，看看牠是什麼。"
+    }
+  },
+  "identify": {
+    "identifierTitle": "{{category}}辨識器",
+    "subtitle": "使用 AI 立即辨識{{category}}",
+    "readyToScan": "準備掃描",
+    "didYouKnowTitle": "你知道嗎？",
+    "continueLabel": "繼續",
+    "analyzing": "正在分析{{category}}…",
+    "tapToIdentify": "點擊以辨識",
+    "identifying": "辨識中…",
+    "uploadPhoto": "上傳照片",
+    "myCollection": "我的收藏",
+    "switchCategoryLabel": "切換辨識類別",
+    "switchCategoryTitle": "切換類別",
+    "switchCategoryMessage": "您想辨識什麼？",
+    "takePhotoLabel": "拍照以辨識{{category}}",
+    "uploadPhotoLabel": "上傳照片以進行辨識",
+    "goToCollectionLabel": "前往我的收藏",
+    "cameraPermissionTitle": "需要相機權限",
+    "cameraPermissionMessage": "請啟用相機存取權限以掃描{{category}}。",
+    "libraryPermissionTitle": "需要照片圖庫權限",
+    "libraryPermissionMessage": "請啟用照片存取權限以上傳圖片。",
+    "identificationFailedTitle": "辨識失敗",
+    "identificationFailedDefault": "請再試一次。",
+    "notFoundError": "這張照片中未能辨識出任何{{category}}。請嘗試拍攝更清晰、更靠近的照片。",
+    "photoProcessingFailed": "無法處理該照片。請嘗試其他照片，或用相機拍攝一張新照片。",
+    "lowConfidence": "這是我們的最佳推測（信心度 {{confidence}}%）。在採信之前請與參考照片比對。",
+    "lowConfidenceWithAlternatives": "信心度僅 {{confidence}}%。採信前請查看下方的其他可能結果。",
+    "referenceImagesTitle": "參考照片",
+    "referenceImagesHint": "與你自己的照片比對以確認。",
+    "referenceImageLabel": "參考照片 {{index}}",
+    "alternativesTitle": "其他可能結果",
+    "alternativesHint": "如果上面的結果看起來不對，你的物種可能是其中之一。",
+    "lowConfidenceBare": "信心度僅 {{confidence}}%——請把它當作起點，而不是最終答案。",
+    "addAngle": "新增另一個角度",
+    "addAnotherAngle": "再加一張",
+    "anglesHint": "同一個體的 {{count}} 張照片 —— 更高準確度",
+    "removeAngleLabel": "移除第 {{index}} 個角度",
+    "offlineTitle": "你目前離線",
+    "offlineBody": "辨識需要連網。你的收藏和「探索」頁面離線也能用。",
+    "serviceDownTitle": "服務不可用",
+    "serviceDownBody": "該辨識服務暫時出現問題，請幾分鐘後再試——不是你的照片的問題。"
+  },
+  "detail": {
+    "profileTitle": "{{category}}檔案",
+    "readMoreLabel": "線上閱讀更多關於這個{{category}}的資訊",
+    "markAsWatered": "標記為已澆水",
+    "markAsWateredLabel": "標記為已澆水",
+    "wateringSection": "澆水",
+    "checkForDiseases": "檢查病害",
+    "checkingForDiseases": "檢查中…",
+    "checkForDiseasesLabel": "檢查病害",
+    "checkingForDiseasesLabel": "正在檢查病害",
+    "healthCheckSection": "健康檢查",
+    "edibleParts": "可食用部位",
+    "propagation": "繁殖方式",
+    "wateringNeeds": "澆水需求",
+    "conservationStatus": "保育狀態",
+    "safetySection": "安全性",
+    "ecologicalRoleSection": "生態角色",
+    "frequentlyConfusedWith": "容易混淆的物種",
+    "psychoactiveWarning": "這種蕈菇可能具有精神活性成分，會影響神經系統。",
+    "cropHealthReportTitle": "作物健康報告",
+    "cropMatch": "作物比對",
+    "cropPill": "作物",
+    "wateringGuideSection": "澆水指南",
+    "lightSection": "光照",
+    "soilSection": "土壤",
+    "commonUsesSection": "常見用途",
+    "culturalSignificanceSection": "文化意義",
+    "installNudgeTitle": "安裝 NatureLens",
+    "installNudgeBody": "將它加到主畫面，下次辨識更快速。",
+    "commonNames": "常用名稱",
+    "synonyms": "學名異名",
+    "referencePhoto": "參考照片",
+    "referencePhotoAlt": "{{name}} 的參考照片",
+    "coverageNoteTitle": "關於此結果",
+    "birdCoverageNote": "鳥類辨識涵蓋 291 個物種，以北美地區為主。列表之外的鳥類即使信心度很高也可能被誤判，請將結果作為參考起點。"
+  },
+  "disease": {
+    "overviewSection": "概觀",
+    "symptomsSection": "症狀",
+    "treatmentSection": "治療方式",
+    "biological": "生物防治",
+    "chemical": "化學防治",
+    "prevention": "預防",
+    "spreadingSection": "傳播途徑",
+    "healthStatusSection": "健康狀態",
+    "noDiseaseDetected": "這張照片中未偵測到明確的病害或蟲害。",
+    "match": "比對結果",
+    "severitySuffix": "嚴重程度：{{severity}}"
+  },
+  "collection": {
+    "title": "我的收藏",
+    "subtitle_one": "已發現 {{count}} 項",
+    "subtitle_other": "已發現 {{count}} 項",
+    "emptyTitle": "尚無收藏項目",
+    "emptyBody": "辨識植物、昆蟲、蕈菇或作物，並將其儲存以建立您的收藏。",
+    "startIdentifying": "開始辨識",
+    "goToProfileLabel": "前往個人檔案",
+    "switchToGridLabel": "切換為網格檢視",
+    "switchToListLabel": "切換為清單檢視",
+    "viewDetailsLabel": "查看{{name}}的詳細資料",
+    "removeLabel": "將{{name}}從收藏中移除",
+    "assignRoomTitle": "指定房間",
+    "assignRoomMessage": "為{{name}}選擇一個房間。",
+    "roomLivingRoom": "客廳",
+    "roomBedroom": "臥室",
+    "roomKitchen": "廚房",
+    "roomBalcony": "陽台",
+    "roomOffice": "辦公室",
+    "roomNone": "無",
+    "searchPlaceholder": "搜尋你的收藏…",
+    "clearSearchLabel": "清除搜尋",
+    "filterAll": "全部",
+    "noSearchResults": "沒有與搜尋相符的內容。"
+  },
+  "profile": {
+    "title": "我的個人檔案",
+    "itemsIdentified_one": "已辨識項目",
+    "itemsIdentified_other": "已辨識項目",
+    "byCategory": "依類別",
+    "privacyPolicy": "隱私權政策",
+    "language": "語言",
+    "installApp": "安裝應用程式",
+    "installAppIOSTitle": "安裝 NatureLens",
+    "installAppIOSBody": "輕點「共享」按鈕，然後輕點「加入主畫面」，即可將 NatureLens 安裝到你的手機上。",
+    "createPasswordTitle": "建立密碼",
+    "createPasswordBody": "可選 — 在其他裝置上用密碼登入以同步您的訂閱，不必每次都要求新的電子郵件驗證碼。",
+    "createPasswordButton": "建立密碼",
+    "creatingPassword": "建立中…",
+    "passwordTooShortTitle": "密碼太短",
+    "passwordTooShortBody": "請使用至少8個字元。",
+    "passwordCreatedTitle": "密碼已建立",
+    "passwordCreatedBody": "查看 {{email}} 進行確認，之後您可以在任何裝置上用此密碼登入。",
+    "passwordCreatedFailedTitle": "無法建立密碼",
+    "passwordCreatedFailedBody": "發生錯誤，請再試一次。",
+    "changePhoto": "更換頭像",
+    "version": "版本 {{version}}",
+    "termsOfUse": "使用條款",
+    "deleteAccount": "刪除帳戶",
+    "deletingAccount": "刪除中…",
+    "deleteAccountConfirmTitle": "刪除您的帳戶？",
+    "deleteAccountConfirmBody": "此操作將永久刪除您儲存的收藏、密碼（如有），並取消您的有效訂閱（如有）。此操作無法復原。",
+    "deleteAccountConfirmButton": "刪除",
+    "deleteAccountDoneTitle": "帳戶已刪除",
+    "deleteAccountDoneBody": "您的資料已被刪除，任何有效訂閱均已取消。",
+    "deleteAccountFailedTitle": "無法刪除帳戶",
+    "deleteAccountFailedBody": "發生錯誤，請再試一次。",
+    "helpAndSupport": "說明與支援",
+    "rewardsStore": "獎勵商店",
+    "naturalistBadge": "博物學家",
+    "deleteAccountDoneBillingBody": "你的帳戶和資料已刪除。重要：這不會取消訂閱——你必須在 Hotmart 帳戶中取消，否則將繼續扣款。",
+    "locationRow": "使用我的大致位置",
+    "locationHint": "將答案限定在你附近出現的物種，從而提高準確度。精度約 1 公里，且從不保存。",
+    "emptyTitle": "你的收藏從這裡開始",
+    "emptyBody": "把鏡頭對準任何植物、昆蟲、蘑菇、魚或鳥——或錄下一段叫聲——牠就會出現在這裡。",
+    "emptyCta": "辨識一個"
+  },
+  "terms": {
+    "title": "使用條款",
+    "acceptanceTitle": "條款之接受",
+    "acceptanceBody": "使用 NatureLens 即表示您同意本使用條款。如果您不同意，請勿使用本應用程式。",
+    "serviceTitle": "本應用程式的功能",
+    "serviceBody": "NatureLens 讓您拍攝植物、昆蟲、菇菌、農作物與樹木的照片，透過第三方 AI 服務（Plant.id、Insect.id、Mushroom.id、Crop.health，皆由 Kindwise 開發）進行辨識。結果為自動產生，未經人工專家審核。",
+    "accuracyTitle": "辨識準確性 — 請務必詳讀",
+    "accuracyBody": "AI 辨識可能出錯，包括判斷植物或菇類是否可食用、有毒或可安全觸摸。請勿僅憑本應用程式的結果食用、採集或使用任何野生植物、菇類或真菌。在食用或使用在野外發現的任何東西之前，請務必諮詢合格的專家（真菌學家、植物學家或中毒控制中心）。我們不對因依賴本應用程式所做辨識而造成的傷害負責。",
+    "billingTitle": "訂閱與計費",
+    "billingBody": "付費訂閱透過 Stripe 按您訂閱時應用程式中顯示的價格收費，並會自動續訂，直到您取消為止。您可以隨時取消；您的存取權限會持續到已付費週期結束。除法律要求外，我們不為未使用的時間提供按比例退款。",
+    "accountTitle": "帳戶與密碼",
+    "accountBody": "使用免費功能無需帳戶。訂閱者可以選擇建立密碼以登入並在裝置間同步訂閱。您需自行負責密碼安全，並對透過您帳戶發生的一切行為負責。",
+    "liabilityTitle": "不提供保證，責任限制",
+    "liabilityBody": "本應用程式按「現狀」提供，不作任何形式的保證。在法律允許的最大範圍內，我們不對因使用本應用程式（包括依賴任何辨識結果）而產生的任何損害負責。",
+    "changesTitle": "本條款之變更",
+    "changesBody": "我們可能會不時更新本條款。變更後繼續使用本應用程式即表示您接受更新後的條款。",
+    "contactTitle": "聯絡方式",
+    "contactBody": "有關本條款的問題可以聯絡本應用程式的開發者。"
+  },
+  "privacy": {
+    "title": "隱私權政策",
+    "collectTitle": "我們收集哪些資料",
+    "collectBody": "這個應用程式讓您可以拍攝植物、昆蟲、蕈菇或作物的照片以進行辨識。為此，我們使用第三方 AI 辨識服務——由 Kindwise 打造的 Plant.id、Insect.id、Mushroom.id 與 Crop.health。",
+    "thirdPartyTitle": "第三方 AI 服務",
+    "thirdPartyBody": "當您拍攝或上傳照片以辨識物體時，該照片會直接傳送至對應的 Kindwise 辨識服務以產生結果。我們不會將您的照片儲存在我們控管的任何伺服器上。",
+    "localStorageTitle": "僅限本機儲存",
+    "localStorageBody": "您儲存的收藏——包括已辨識的物種、備註與時間戳記——僅儲存在您自己裝置的瀏覽器或應用程式本機儲存空間中。這些資料絕不會上傳到我們營運的任何雲端伺服器，也絕不會與其他使用者分享。",
+    "noAccountsTitle": "無帳號，無追蹤",
+    "noAccountsBody": "這個應用程式不需要帳號即可使用——您的裝置會被指派一組隨機的匿名識別碼（僅儲存在您的裝置上），讓我們能判斷每個類別的免費辨識次數是否已被使用。如果您訂閱，Stripe 會直接收集您的電子郵件與付款資訊以處理扣款——我們只會收到與該匿名識別碼連結的訂閱狀態。訂閱者可以選擇建立密碼以登入並在其他裝置上同步訂閱；這從來不是使用本應用程式的必要條件。我們不使用任何分析或廣告追蹤工具。",
+    "dataLossTitle": "資料遺失風險",
+    "dataLossBody": "如果您清除瀏覽器資料或解除安裝應用程式，本機儲存的收藏將會永久遺失，因為沒有任何資料會備份至遠端伺服器。",
+    "contactTitle": "聯絡我們",
+    "contactBody": "若對本政策有任何疑問，歡迎聯絡應用程式開發者。"
+  },
+  "discover": {
+    "title": "探索",
+    "subtitle": "滿足您對自然世界的好奇心",
+    "dailyFact": "每日植物小知識",
+    "tapForAnotherFact": "點擊查看下一則知識",
+    "exploreCollections": "探索收藏集",
+    "trendingSpecies": "熱門物種",
+    "showNextFactLabel": "顯示下一則植物小知識",
+    "openCollectionLabel": "開啟{{title}}收藏集",
+    "viewSpeciesLabel": "查看{{name}}",
+    "facts": [
+      "泰坦魔芋（Amorphophallus titanum）可以長到超過3公尺高，並散發腐肉般的臭味來吸引授粉者。",
+      "竹子是地球上生長最快的植物——有些種類一天就能抽高90公分。",
+      "一隻蜜蜂一天要拜訪大約5,000朵花，但終其一生只釀得出約十二分之一茶匙的蜂蜜。",
+      "蕈菇和動物的血緣比和植物更近——大約十億年前，我們與牠們還共有同一個祖先。",
+      "已知最長壽的活樹是加州的一株刺果松，樹齡估計超過4,800年。",
+      "向日葵年輕時會追著太陽轉，成熟後卻固定朝東——這讓花朵更早回暖，也吸引到更多授粉者。",
+      "有些蘭花把雌蟲的外形與氣味模仿得維妙維肖，雄蟲會撲上去試圖交配，就這樣糊里糊塗替花授了粉。",
+      "蜻蜓追捕獵物的命中率高達約95%，是動物界最高的狩獵成功率之一。",
+      "螞蟻栽培真菌已有超過5,000萬年的歷史，遠早於人類發明農業。",
+      "亞馬遜雨林釋放的氧氣約占陸生植物總量的20%，而落在林中的雨，有很大一部分來自森林自己蒸散出的水氣。",
+      "蝴蝶用腳嚐味道——牠踩上一片葉子，就知道自己的幼蟲能不能吃。",
+      "美國奧勒岡州的一株蜜環菌蔓延將近10平方公里，是地球上最大的生物之一。",
+      "遊隼俯衝獵食時速度超過每小時300公里，是現存跑得最快的動物。",
+      "魚沒有眼瞼——大多數魚一輩子都不曾閉眼，連休息時也睜著。",
+      "捕蠅草會數數：感應毛必須在大約20秒內被碰觸兩次，捕蟲夾才會閉合，這樣雨滴就不會白白浪費它一次機會。",
+      "森林裡的樹木透過地下的真菌網路分享養分——一棵母樹能餵養幾公尺外那株長不好的幼苗。",
+      "北極燕鷗每年在兩極之間往返，飛行超過70,000公里，是動物界最長的遷徙。",
+      "咖啡、巧克力和香草都來自倚賴動物授粉的植物——沒有蜜蜂和蠓，就沒有早晨那杯咖啡。",
+      "有些蟬會在地下待滿17年，然後同時鑽出地面，數量以十億計。",
+      "鳳梨不是一顆果實，而是幾十顆漿果圍著同一根中軸融合而成。",
+      "貓頭鷹的眼睛動不了——牠的眼球是固定在眼窩裡的管狀構造，所以只好把頭轉到270度來代替。",
+      "蓮花的種子休眠一千多年後，依然能發芽。",
+      "鮭魚會回到自己孵化的那條河產卵，靠氣味橫越數千公里的外海找路回家。",
+      "真菌是最早登上陸地的複雜生物——比任何植物都早得多。",
+      "無花果樹不向外開花：每一顆無花果其實是一整叢向內生長的花，由一種鑽進小孔的榕小蜂授粉。",
+      "蜂鳥飛行時心跳每分鐘超過1,200下，必須每10到15分鐘進食一次才活得下去。",
+      "絞殺榕的一生從樹冠高處的枝椏開始，把根一路垂到地面，最後活活勒死當初收留它的那棵樹。",
+      "苔蘚沒有根——它直接用葉片吸水，所以能在岩石和樹皮上活得很好。",
+      "螳螂蝦有12到16種顏色受器；人類只有三種。",
+      "白楊林往往整片就是同一個生物體：成千上萬根樹幹共用一套根系，有些樹齡超過一萬年。",
+      "瓢蟲一生能吃掉多達5,000隻蚜蟲，所以園丁寧可放牠們出去，也不噴藥。",
+      "海椰子（coco de mer）的種子重達25公斤，是所有植物中最重的。",
+      "電鰻其實不是鰻魚，而是裸背電鰻的親戚，牠放出的電擊可超過800伏特。",
+      "地衣不是一個生物而是兩個——一種真菌與一種藻類活成一體，甚至能在外太空存活。",
+      "雄性皇帝企鵝整個南極寒冬都把一顆蛋托在腳背上，連續兩個月不吃東西。",
+      "蕁麻靠玻璃般的細刺毛螫人，刺毛會斷在皮膚裡；而解藥常常就長在旁邊：酸模的葉子。",
+      "有些深海魚是透明的，在無處可躲的地方，牠們用隱形當偽裝。",
+      "一棵成年橡樹在豐年可以落下10,000顆橡實，大約每一萬顆才有一顆長成大樹。",
+      "烏鴉認得出不同人的臉，會記仇，還會教下一代該躲開誰。",
+      "世界上最小的開花植物「無根萍」只有一粒沙那麼大——一根指尖上就放得下十幾株。"
+    ],
+    "topics": {
+      "airPurifying": {
+        "title": "淨化空氣植物",
+        "desc": "NASA 曾研究這些物種以淨化室內空氣。",
+        "intro": "在 1980 年代末，NASA 測試了數十種常見的室內植物，希望找出哪些植物能幫助清除太空艙密閉空間中的污染物——結果發現，許多家家戶戶常見的植物，竟然出乎意料地擅長吸收甲醛、苯與一氧化碳等有害物質。這個收藏集彙整了在該研究中表現最佳的物種，如今已成為居家空氣品質傳說中的經典代表。雖然它們無法取代開窗通風，但在您最常待的房間裡擺上幾盆合適的植物，仍是一種輕鬆省力、有助於清新空氣的好方法。",
+        "species": [
+          {
+            "name": "虎尾蘭",
+            "sci": "Dracaena trifasciata (syn. Sansevieria trifasciata)",
+            "note": "NASA 研究中表現最出色的植物之一，即使在夜間也能將二氧化碳轉化為氧氣，這與大多數室內植物不同。"
+          },
+          {
+            "name": "吊蘭",
+            "sci": "Chlorophytum comosum",
+            "note": "NASA 將它列為最擅長清除居家空氣中甲醛與二甲苯的植物之一。"
+          },
+          {
+            "name": "白鶴芋",
+            "sci": "Spathiphyllum wallisii",
+            "note": "在 NASA 最初的研究中，它在清除室內空氣中的苯、甲醛與三氯乙烯方面表現排名第一。"
+          },
+          {
+            "name": "常春藤",
+            "sci": "Hedera helix",
+            "note": "NASA 研究中整體得分最高的植物，以能清除甲醛甚至空氣中的黴菌孢子而備受推崇。"
+          },
+          {
+            "name": "波士頓腎蕨",
+            "sci": "Nephrolepis exaltata",
+            "note": "經 NASA 測試證實能清除甲醛，同時還能為乾燥、有暖氣的室內空間增加濕度。"
+          },
+          {
+            "name": "黃金葛",
+            "sci": "Epipremnum aureum",
+            "note": "幾乎不會枯死，並經證實能過濾室內空氣中的甲醛、苯與一氧化碳。"
+          },
+          {
+            "name": "印度橡膠樹",
+            "sci": "Ficus elastica",
+            "note": "NASA 清淨空氣研究中的佼佼者，能持續從日常生活空間中清除甲醛。"
+          }
+        ]
+      },
+      "beginnerSucculents": {
+        "title": "新手多肉植物",
+        "desc": "耐旱又好照顧，稍微疏於照料也能長得好的植物。",
+        "intro": "多肉植物之所以擁有「新手友善」的美名，可說是實至名歸：它們肥厚、能儲水的葉片與莖幹，讓它們就算偶爾被忘記澆水一兩次，也不會鬧脾氣。這份清單挑選出最強韌、最寬容的品種——能夠承受新手常犯的經典錯誤，像是澆水過多、澆水不足，或光照不穩定。只要給其中任何一種一個明亮的窗台，再加上一點耐心，您就擁有了幾乎零失敗的植物收藏入門選擇。",
+        "species": [
+          {
+            "name": "翡翠木",
+            "sci": "Crassula ovata",
+            "note": "肥厚的莖葉能儲存水分，就算偶爾忘記澆水一兩次也不受影響。"
+          },
+          {
+            "name": "虎尾蘭",
+            "sci": "Dracaena trifasciata",
+            "note": "即使完全被忽略也能長得很好，能忍受低光照與數週乾燥的土壤，毫無怨言。"
+          },
+          {
+            "name": "斑馬十二卷",
+            "sci": "Haworthiopsis fasciata",
+            "note": "植株小巧、生長緩慢，幾乎不可能因為照顧過度而出問題。"
+          },
+          {
+            "name": "蘆薈",
+            "sci": "Aloe vera",
+            "note": "充滿凝膠的葉片天生就能耐旱，因此就算澆水不規律也沒關係。"
+          },
+          {
+            "name": "熊童子",
+            "sci": "Kalanchoe tomentosa",
+            "note": "毛茸茸、能儲水的葉片能撐過乾旱期，是幾乎不會失敗的多肉入門選擇。"
+          },
+          {
+            "name": "玉串",
+            "sci": "Sedum morganianum",
+            "note": "飽滿下垂的葉片本身就能儲水，適合不常照顧、也不會過度澆水的主人。"
+          },
+          {
+            "name": "玉蝶",
+            "sci": "Echeveria elegans",
+            "note": "經典的蓮座狀外型能有效儲水，也很容易繁殖分株，能包容新手難免的失誤。"
+          }
+        ]
+      },
+      "petSafe": {
+        "title": "對寵物安全的室內植物",
+        "desc": "適合有貓狗家庭的無毒綠色植物。",
+        "intro": "與貓狗共同生活，並不代表就得放棄種植室內植物，不過確實有許多熱門品種一旦被啃咬就會造成傷害。這個收藏集彙整了經過充分紀錄、確認無毒的熱門植物，並比對過 ASPCA（美國防止虐待動物協會）的安全資料，讓您可以放心地在窗台與層架上擺滿植物，不必擔心好奇的貓爪或試探性的啃咬。從垂墜藤蔓到開花植物，這裡的每一個選擇都以「安全優先、美觀其次」的原則入選。",
+        "species": [
+          {
+            "name": "吊蘭",
+            "sci": "Chlorophytum comosum",
+            "note": "ASPCA 列為對貓狗無毒的植物，垂墜的葉片也能讓好奇的貓爪安全地玩耍。"
+          },
+          {
+            "name": "波士頓腎蕨",
+            "sci": "Nephrolepis exaltata",
+            "note": "這種茂密、富有層次感的蕨類對寵物無毒，能安全地為任何房間增添叢林般的蓬鬆感。"
+          },
+          {
+            "name": "袖珍椰子",
+            "sci": "Chamaedorea elegans",
+            "note": "維多利亞時代經典的室內植物，對貓狗無毒，即使光照不足也能安全生長。"
+          },
+          {
+            "name": "祈禱草",
+            "sci": "Maranta leuconeura",
+            "note": "它的葉片在夜晚會像祈禱的雙手一樣合起來，就算好奇的貓咪咬上一口也完全安全。"
+          },
+          {
+            "name": "西瓜皮椒草",
+            "sci": "Peperomia argyreia",
+            "note": "植株小巧且無毒，條紋葉片能為層架與邊桌增添亮眼、對寵物安全的裝飾效果。"
+          },
+          {
+            "name": "條紋十二卷",
+            "sci": "Haworthia attenuata",
+            "note": "作為蘆薈與翡翠木等有毒植物的寵物友善替代品，這款條紋多肉能呈現相似外觀卻沒有風險。"
+          },
+          {
+            "name": "非洲堇",
+            "sci": "Saintpaulia ionantha",
+            "note": "少數幾種確認無毒的開花室內植物之一，讓寵物也能與盛開的花朵共享窗台。"
+          }
+        ]
+      },
+      "medicinalHerbs": {
+        "title": "藥用香草植物",
+        "desc": "擁有悠久療癒歷史的植物。",
+        "intro": "早在現代藥箱出現之前，家庭花園就是最原始的藥房：薰衣草、薄荷與紫錐花等香草，數個世紀以來一直被種植、煎煮並用來舒緩日常的各種不適。這個收藏集聚焦於在世界各地民俗與傳統醫學系統中都有充分紀錄角色的植物，從地中海廚房常備的香草，到阿育吠陀的經典藥草皆有收錄。大多數品種只需要一個陽光充足的窗台就能長得很好，讓您在家中就能種出一段活生生的香草歷史。",
+        "species": [
+          {
+            "name": "蘆薈",
+            "sci": "Aloe vera",
+            "note": "充滿凝膠的葉片數千年來，在各種文化中都被用來舒緩燙傷與輕微皮膚不適。",
+            "id": "aloeVera",
+            "tags": [
+              "skin",
+              "digestion"
+            ]
+          },
+          {
+            "name": "薰衣草",
+            "sci": "Lavandula angustifolia",
+            "note": "長久以來因其能安定情緒的香氣而備受珍視，傳統上用來舒緩壓力、幫助安穩入眠。",
+            "id": "lavender",
+            "tags": [
+              "sleep",
+              "stress",
+              "headache"
+            ]
+          },
+          {
+            "name": "胡椒薄荷",
+            "sci": "Mentha x piperita",
+            "note": "富含薄荷腦的葉片，數個世紀以來在民俗醫學中一直被用來舒緩腸胃不適與頭痛。",
+            "id": "peppermint",
+            "tags": [
+              "digestion",
+              "headache"
+            ]
+          },
+          {
+            "name": "德國洋甘菊",
+            "sci": "Matricaria chamomilla",
+            "note": "它形似雛菊的花朵可沖泡成溫和的茶飲，長久以來被用來鎮定神經、幫助消化。",
+            "id": "germanChamomile",
+            "tags": [
+              "sleep",
+              "digestion",
+              "stress"
+            ]
+          },
+          {
+            "name": "紫錐花",
+            "sci": "Echinacea purpurea",
+            "note": "原生於北美洲，當地原住民長期使用其根部與花朵來支持免疫健康。",
+            "id": "purpleConeflower",
+            "tags": [
+              "immunity"
+            ]
+          },
+          {
+            "name": "迷迭香",
+            "sci": "Salvia rosmarinus (syn. Rosmarinus officinalis)",
+            "note": "這種帶有香氣的地中海灌木，自古以來就以能增強記憶力、促進血液循環而聞名。",
+            "id": "rosemary",
+            "tags": [
+              "headache",
+              "energy",
+              "digestion"
+            ]
+          },
+          {
+            "name": "聖羅勒（Tulsi）",
+            "sci": "Ocimum tenuiflorum",
+            "note": "在阿育吠陀傳統中備受推崇數個世紀，其葉片可沖泡成具有適應原特性的茶飲，用來舒緩壓力。",
+            "id": "holyBasil",
+            "tags": [
+              "stress",
+              "immunity",
+              "respiratory"
+            ]
+          },
+          {
+            "name": "薑黃",
+            "sci": "Curcuma longa",
+            "note": "印度阿育吠陀醫學數百年來一直用這金黃色的根莖來舒緩發炎、幫助消化並促進傷口癒合。",
+            "id": "turmeric",
+            "tags": [
+              "painInflammation",
+              "digestion",
+              "skin"
+            ]
+          },
+          {
+            "name": "薑",
+            "sci": "Zingiber officinale",
+            "note": "中醫與阿育吠陀療法自古以來就會咀嚼或煎煮這種根莖,用來止嘔並溫暖脾胃。",
+            "id": "ginger",
+            "tags": [
+              "digestion",
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "人參",
+            "sci": "Panax ginseng",
+            "note": "在中醫裡被珍視了兩千多年,是補氣提神、滋養元氣的珍貴滋補藥材。",
+            "id": "ginseng",
+            "tags": [
+              "energy",
+              "stress"
+            ]
+          },
+          {
+            "name": "南非醉茄",
+            "sci": "Withania somnifera",
+            "note": "在阿育吠陀醫學中使用了數千年,其根部傳統上用來舒緩壓力、重建體力與耐力。",
+            "id": "ashwagandha",
+            "tags": [
+              "stress",
+              "energy",
+              "sleep"
+            ]
+          },
+          {
+            "name": "接骨木莓",
+            "sci": "Sambucus nigra",
+            "note": "歐洲民間療法數百年來將其深色漿果熬煮成糖漿,用來對抗感冒與流感。",
+            "id": "elderberry",
+            "tags": [
+              "immunity",
+              "respiratory"
+            ]
+          },
+          {
+            "name": "纈草",
+            "sci": "Valeriana officinalis",
+            "note": "歐洲草藥師自古以來便將這股氣味濃烈的根部曬乾,作為改善睡眠不安的傳統良方。",
+            "id": "valerian",
+            "tags": [
+              "sleep",
+              "stress"
+            ]
+          },
+          {
+            "name": "金縷梅",
+            "sci": "Hamamelis virginiana",
+            "note": "北美原住民部落將其樹皮與葉片蒸餾成收斂性外用液,用來舒緩瘀傷、腫脹與皮膚不適。",
+            "id": "witchHazel",
+            "tags": [
+              "skin",
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "北美黃連",
+            "sci": "Hydrastis canadensis",
+            "note": "切羅基族及其他原住民療者會用這味苦根來治療瘡瘍、感染與腸胃不適。",
+            "id": "goldenseal",
+            "tags": [
+              "digestion",
+              "immunity",
+              "skin"
+            ]
+          },
+          {
+            "name": "魔鬼爪",
+            "sci": "Harpagophytum procumbens",
+            "note": "喀拉哈里沙漠的傳統療者長久以來使用這種帶鉤果實的根部,來舒緩關節疼痛與關節炎。",
+            "id": "devilsClaw",
+            "tags": [
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "非洲艾草",
+            "sci": "Artemisia afra",
+            "note": "南部非洲最廣泛使用的傳統藥材之一,常以蒸氣吸入或煎煮飲用來緩解咳嗽與鼻塞。",
+            "id": "africanWormwood",
+            "tags": [
+              "respiratory",
+              "digestion"
+            ]
+          },
+          {
+            "name": "瑪黛茶",
+            "sci": "Ilex paraguariensis",
+            "note": "南美洲的瓜拉尼人自古以來便將其葉片沖泡成日常茶飲,用來提神醒腦、幫助消化。",
+            "id": "yerbaMate",
+            "tags": [
+              "energy",
+              "digestion"
+            ]
+          },
+          {
+            "name": "積雪草",
+            "sci": "Centella asiatica",
+            "note": "在阿育吠陀醫學與東南亞傳統醫療中備受推崇,被視為能促進傷口癒合的藥草,據說還能增強記憶力並安定心神。",
+            "id": "gotuKola",
+            "tags": [
+              "skin",
+              "stress"
+            ]
+          },
+          {
+            "name": "甘草",
+            "sci": "Glycyrrhiza glabra",
+            "note": "數百年來廣泛應用於中醫、阿育吠陀醫學與中東傳統醫療,用來舒緩咳嗽、喉嚨痛與腸胃不適。",
+            "id": "licoriceRoot",
+            "tags": [
+              "respiratory",
+              "digestion"
+            ]
+          },
+          {
+            "name": "印楝",
+            "sci": "Azadirachta indica",
+            "note": "味苦的印楝葉、樹皮與油是阿育吠陀治療皮膚疹、傷口與寄生蟲感染的經典藥方。",
+            "id": "neem",
+            "tags": [
+              "skin",
+              "immunity"
+            ]
+          },
+          {
+            "name": "餘甘子（印度醋栗）",
+            "sci": "Phyllanthus emblica",
+            "note": "餘甘子是阿育吠陀中天然維生素C含量最豐富的藥材，為回春滋補配方（rasayana）的核心，深受推崇用於養生與助消化。",
+            "id": "amla",
+            "tags": [
+              "digestion",
+              "immunity"
+            ]
+          },
+          {
+            "name": "假馬齒莧（婆羅米）",
+            "sci": "Bacopa monnieri",
+            "note": "婆羅米是阿育吠陀中的「益智」聖藥（Medhya Rasayana），傳統上用來增強記憶力、安定心神並輔助學習。",
+            "id": "brahmi",
+            "tags": [
+              "stress",
+              "sleep"
+            ]
+          },
+          {
+            "name": "心葉青牛膽（吉洛伊）",
+            "sci": "Tinospora cordifolia",
+            "note": "這種藤莖的煎劑在阿育吠陀中被稱為「甘露」（意為「不朽之根」），是退燒與增強免疫力的常用藥材。",
+            "id": "guduchi",
+            "tags": [
+              "immunity",
+              "digestion"
+            ]
+          },
+          {
+            "name": "總狀天門冬（沙塔瓦莉）",
+            "sci": "Asparagus racemosus",
+            "note": "這款根部滋補品在阿育吠陀中被尊為女性回春聖品，傳統上用於促進哺乳與調節荷爾蒙平衡。",
+            "id": "shatavari",
+            "tags": [
+              "energy",
+              "digestion"
+            ]
+          },
+          {
+            "name": "阿江欖仁",
+            "sci": "Terminalia arjuna",
+            "note": "樹皮粉末長久以來用於阿育吠陀心臟療法，可強化心肌並促進健康的血液循環。",
+            "id": "arjuna",
+            "tags": [
+              "energy"
+            ]
+          },
+          {
+            "name": "訶子",
+            "sci": "Terminalia chebula",
+            "note": "訶子在阿育吠陀中被譽為「藥王」，是三果實（Triphala）配方的核心，用於助消化、排毒與促進排便。",
+            "id": "haritaki",
+            "tags": [
+              "digestion",
+              "immunity"
+            ]
+          },
+          {
+            "name": "毗黎勒",
+            "sci": "Terminalia bellirica",
+            "note": "毗黎勒是三果實（Triphala）中的三味果實之一，阿育吠陀傳統上用它來化解過多痰濕、養護呼吸道健康。",
+            "id": "bibhitaki",
+            "tags": [
+              "respiratory",
+              "digestion"
+            ]
+          },
+          {
+            "name": "葫蘆巴",
+            "sci": "Trigonella foenum-graecum",
+            "note": "南亞家庭世代將葫蘆巴籽浸泡後食用，用以幫助消化、促進哺乳並穩定血糖。",
+            "id": "fenugreek",
+            "tags": [
+              "digestion",
+              "energy"
+            ]
+          },
+          {
+            "name": "蓽茇（蓽拔）",
+            "sci": "Piper longum",
+            "note": "這味辛辣果實是阿育吠陀「三辛」（Trikatu）配方之一，傳統上用來點燃消化之火、疏通呼吸道鬱塞。",
+            "id": "longPepper",
+            "tags": [
+              "digestion",
+              "respiratory"
+            ]
+          },
+          {
+            "name": "檀香",
+            "sci": "Santalum album",
+            "note": "阿育吠陀將檀香調成清涼糊膏，敷用於舒緩發炎皮膚、退燒，並在禪修時安定心神。",
+            "id": "sandalwood",
+            "tags": [
+              "skin",
+              "stress"
+            ]
+          },
+          {
+            "name": "印度菝葜（消結木）",
+            "sci": "Hemidesmus indicus",
+            "note": "這種根味甘甜的藤本植物是古典阿育吠陀方劑的常客，用以涼血、淨化肌膚並舒緩關節疼痛。",
+            "id": "indianSarsaparilla",
+            "tags": [
+              "skin",
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "木橘（孟加拉榲桲）",
+            "sci": "Aegle marmelos",
+            "note": "未熟果肉是阿育吠陀傳統上用來緩解慢性腹瀉與痢疾的主力藥材。",
+            "id": "bael",
+            "tags": [
+              "digestion"
+            ]
+          },
+          {
+            "name": "古古脂樹（古格）",
+            "sci": "Commiphora wightii",
+            "note": "樹脂是阿育吠陀古古魯（Guggulu）配方的核心，傳統上用於調節膽固醇與消解關節發炎。",
+            "id": "guggul",
+            "tags": [
+              "painInflammation",
+              "digestion"
+            ]
+          },
+          {
+            "name": "茜草",
+            "sci": "Rubia cordifolia",
+            "note": "這味根藥在阿育吠陀中長期被當作血液淨化劑，用於淨膚、癒合傷口與疏通淋巴。",
+            "id": "manjistha",
+            "tags": [
+              "skin",
+              "immunity"
+            ]
+          },
+          {
+            "name": "甘松",
+            "sci": "Nardostachys jatamansi",
+            "note": "這款芳香根藥在阿育吠陀中長期用來鎮靜神經系統、幫助安眠。",
+            "id": "jatamansi",
+            "tags": [
+              "sleep",
+              "stress"
+            ]
+          },
+          {
+            "name": "黃耆",
+            "sci": "Astragalus membranaceus",
+            "note": "黃耆根煎煮後可固衛氣、提升體力並促進傷口癒合。",
+            "id": "astragalus",
+            "tags": [
+              "immunity",
+              "energy"
+            ]
+          },
+          {
+            "name": "靈芝",
+            "sci": "Ganoderma lucidum",
+            "note": "靈芝深受道家醫者珍視，用以安神定志、緩解失眠並延年益壽。",
+            "id": "reishiMushroom",
+            "tags": [
+              "sleep",
+              "stress",
+              "immunity"
+            ]
+          },
+          {
+            "name": "當歸",
+            "sci": "Angelica sinensis",
+            "note": "有「女性人參」之稱的當歸，兩千年來一直是補血調經的要藥。",
+            "id": "dongQuai",
+            "tags": [
+              "energy",
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "枸杞",
+            "sci": "Lycium barbarum",
+            "note": "枸杞子常被沖泡或直接食用，用以滋養肝腎之陰、明目養神。",
+            "id": "gojiBerry",
+            "tags": [
+              "immunity",
+              "energy"
+            ]
+          },
+          {
+            "name": "五味子",
+            "sci": "Schisandra chinensis",
+            "note": "五味子兼具五味，能斂肺、寧心並護肝。",
+            "id": "schisandra",
+            "tags": [
+              "respiratory",
+              "stress",
+              "sleep"
+            ]
+          },
+          {
+            "name": "黃芩",
+            "sci": "Scutellaria baicalensis",
+            "note": "黃芩根能清濕熱，自古方書記載即用於治療發燒、咳嗽與痢疾。",
+            "id": "chineseSkullcap",
+            "tags": [
+              "respiratory",
+              "digestion",
+              "immunity"
+            ]
+          },
+          {
+            "name": "地黃",
+            "sci": "Rehmannia glutinosa",
+            "note": "蒸製後的熟地黃能滋補腎陰與血分，是許多經典方劑的基石藥材。",
+            "id": "rehmannia",
+            "tags": [
+              "energy",
+              "sleep"
+            ]
+          },
+          {
+            "name": "菊花",
+            "sci": "Chrysanthemum morifolium",
+            "note": "菊花沖泡成茶可清熱、舒緩紅眼並緩解頭痛。",
+            "id": "chrysanthemum",
+            "tags": [
+              "headache",
+              "immunity"
+            ]
+          },
+          {
+            "name": "金銀花",
+            "sci": "Lonicera japonica",
+            "note": "金銀花能清熱解毒，自古用於治療發燒、瘡瘍與咽喉感染。",
+            "id": "japaneseHoneysuckle",
+            "tags": [
+              "immunity",
+              "respiratory",
+              "skin"
+            ]
+          },
+          {
+            "name": "肉桂",
+            "sci": "Cinnamomum cassia",
+            "note": "肉桂樹皮能溫補腎陽、活血化瘀，用以緩解寒性疼痛。",
+            "id": "chineseCinnamon",
+            "tags": [
+              "painInflammation",
+              "energy"
+            ]
+          },
+          {
+            "name": "茯苓",
+            "sci": "Wolfiporia extensa",
+            "note": "茯苓這種菌核在煎劑中能利水滲濕、寧心安神並健脾。",
+            "id": "poria",
+            "tags": [
+              "sleep",
+              "digestion",
+              "stress"
+            ]
+          },
+          {
+            "name": "山藥",
+            "sci": "Dioscorea polystachya",
+            "note": "山藥塊莖能補益脾、肺、腎之氣，傳統上常燉煮成滋補粥品。",
+            "id": "chineseYam",
+            "tags": [
+              "digestion",
+              "energy",
+              "respiratory"
+            ]
+          },
+          {
+            "name": "柴胡",
+            "sci": "Bupleurum chinense",
+            "note": "柴胡根能疏肝解鬱、退散熱邪，是治療寒熱往來的關鍵藥材。",
+            "id": "bupleurum",
+            "tags": [
+              "stress",
+              "immunity"
+            ]
+          },
+          {
+            "name": "三七",
+            "sci": "Panax notoginseng",
+            "note": "三七根用於止血消瘀，同時能活血行氣。",
+            "id": "notoginseng",
+            "tags": [
+              "painInflammation",
+              "skin"
+            ]
+          },
+          {
+            "name": "黨參",
+            "sci": "Codonopsis pilosula",
+            "note": "黨參是較溫和的人參替代品，能補氣健脾、增強消化功能。",
+            "id": "codonopsis",
+            "tags": [
+              "energy",
+              "digestion"
+            ]
+          },
+          {
+            "name": "何首烏",
+            "sci": "Reynoutria multiflora",
+            "note": "何首烏經過炮製後能滋養肝腎，相傳可使白髮轉黑。",
+            "id": "foti",
+            "tags": [
+              "energy",
+              "skin"
+            ]
+          },
+          {
+            "name": "西洋蓍草",
+            "sci": "Achillea millefolium",
+            "note": "蓍草有「戰士傷藥草」之稱，自古用於止血並加速戰場傷口的癒合。",
+            "id": "yarrow",
+            "tags": [
+              "skin",
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "聖約翰草",
+            "sci": "Hypericum perforatum",
+            "note": "這是歐洲民間用於舒緩憂鬱與神經痛的藥草，黃色花朵浸泡於油中製成療傷藥膏。",
+            "id": "stJohnsWort",
+            "tags": [
+              "stress",
+              "painInflammation",
+              "skin"
+            ]
+          },
+          {
+            "name": "鼠尾草",
+            "sci": "Salvia officinalis",
+            "note": "拉丁文「salvere」意為療癒，反映出鼠尾草自古用於漱口治喉嚨痛、幫助消化的悠久歷史。",
+            "id": "sage",
+            "tags": [
+              "digestion",
+              "respiratory"
+            ]
+          },
+          {
+            "name": "百里香",
+            "sci": "Thymus vulgaris",
+            "note": "百里香是地中海地區傳統的止咳化痰藥草，其揮發油長期用於糖漿中鬆化頑固痰液。",
+            "id": "thyme",
+            "tags": [
+              "respiratory",
+              "immunity"
+            ]
+          },
+          {
+            "name": "藥蜀葵",
+            "sci": "Althaea officinalis",
+            "note": "藥蜀葵的根與葉富含黏液質，數百年來歐洲藥房都用它舒緩喉嚨痛、咳嗽與腸胃黏膜發炎。",
+            "id": "marshmallow",
+            "tags": [
+              "respiratory",
+              "digestion"
+            ]
+          },
+          {
+            "name": "金盞花",
+            "sci": "Calendula officinalis",
+            "note": "金盞花鮮豔的花瓣搗製成藥膏，用以清潔傷口、舒緩發炎與難癒的肌膚。",
+            "id": "potMarigold",
+            "tags": [
+              "skin",
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "水飛薊",
+            "sci": "Silybum marianum",
+            "note": "地中海地區傳統上會嚼食或沖泡水飛薊籽，在大餐過後保護並滋養肝臟。",
+            "id": "milkThistle",
+            "tags": [
+              "digestion"
+            ]
+          },
+          {
+            "name": "茴香",
+            "sci": "Foeniculum vulgare",
+            "note": "茴香籽帶著茴香氣息，世代相傳於飯後咀嚼，用以緩解絞痛、脹氣，也用來安撫嬰兒腸絞痛。",
+            "id": "fennel",
+            "tags": [
+              "digestion"
+            ]
+          },
+          {
+            "name": "蕁麻",
+            "sci": "Urtica dioica",
+            "note": "帶刺的蕁麻葉沖泡成春季養生茶，用以淨化血液、緩解關節痠痛。",
+            "id": "stingingNettle",
+            "tags": [
+              "painInflammation",
+              "skin",
+              "immunity"
+            ]
+          },
+          {
+            "name": "White Horehound",
+            "sci": "Marrubium vulgare",
+            "note": "這款味苦的地中海藥草常被熬煮成糖漿或喉糖，是治療咳嗽與支氣管炎的傳統良方。",
+            "id": "whiteHorehound",
+            "tags": [
+              "respiratory",
+              "digestion"
+            ]
+          },
+          {
+            "name": "聚合草（康復力）",
+            "sci": "Symphytum officinale",
+            "note": "聚合草又稱「接骨草」，數百年來人們將搗碎的根葉敷於骨折、扭傷與瘀傷處。",
+            "id": "comfrey",
+            "tags": [
+              "painInflammation",
+              "skin"
+            ]
+          },
+          {
+            "name": "小白菊",
+            "sci": "Tanacetum parthenium",
+            "note": "這款帶苦味的藥草可生嚼或沖泡成茶，長久以來是民間對抗偏頭痛與頭痛的良方。",
+            "id": "feverfew",
+            "tags": [
+              "headache",
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "毛蕊花",
+            "sci": "Verbascum thapsus",
+            "note": "毛蕊花的絨毛葉片與花朵浸泡成油或茶，用於咳嗽、喉嚨痛與耳痛。",
+            "id": "mullein",
+            "tags": [
+              "respiratory",
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "西洋山楂",
+            "sci": "Crataegus monogyna",
+            "note": "山楂的果實、花朵與葉片沖泡飲用，是歐洲經典的心臟滋補品，用於調理衰弱或焦躁不安的脈象。",
+            "id": "hawthorn",
+            "tags": [
+              "stress",
+              "sleep"
+            ]
+          },
+          {
+            "name": "西洋椴樹（菩提花）",
+            "sci": "Tilia cordata",
+            "note": "椴樹芳香的花朵沖泡成鎮靜茶飲，用以退燒並舒緩煩躁不安的神經。",
+            "id": "linden",
+            "tags": [
+              "sleep",
+              "stress",
+              "immunity"
+            ]
+          },
+          {
+            "name": "旋果蚊子草",
+            "sci": "Filipendula ulmaria",
+            "note": "這款芳香的開花藥草長期用於退燒與關節疼痛，後來更啟發了阿斯匹靈的化學原型。",
+            "id": "meadowsweet",
+            "tags": [
+              "painInflammation",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Osha Root",
+            "sci": "Ligusticum porteri",
+            "note": "洛磯山脈的納瓦荷族與尤特族等部落咀嚼或沖泡此根，用以舒緩喉嚨痛與呼吸道感染。",
+            "id": "oshaRoot",
+            "tags": [
+              "respiratory",
+              "immunity"
+            ]
+          },
+          {
+            "name": "黑升麻",
+            "sci": "Actaea racemosa",
+            "note": "切羅基族與其他東部林地原住民使用其根部緩解經痛並輔助分娩。",
+            "id": "blackCohosh",
+            "tags": [
+              "painInflammation",
+              "stress"
+            ]
+          },
+          {
+            "name": "魔鬼棒（刺人參）",
+            "sci": "Oplopanax horridus",
+            "note": "特林吉特族、海達族等太平洋西北岸原住民使用其內樹皮治療關節炎、感染與糖尿病症狀。",
+            "id": "devilsClub",
+            "tags": [
+              "painInflammation",
+              "immunity"
+            ]
+          },
+          {
+            "name": "野生美國薄荷",
+            "sci": "Monarda fistulosa",
+            "note": "黑腳族與其他平原部落用這款富含百里酚的薄荷科植物葉片沖泡茶飲，治療感冒與呼吸道感染。",
+            "id": "wildBergamot",
+            "tags": [
+              "respiratory",
+              "digestion"
+            ]
+          },
+          {
+            "name": "熊果",
+            "sci": "Arctostaphylos uva-ursi",
+            "note": "眾多北美原住民部落將熊果葉沖泡飲用，作為利尿劑並治療泌尿道感染。",
+            "id": "bearberry",
+            "tags": [
+              "immunity",
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "滑榆",
+            "sci": "Ulmus rubra",
+            "note": "切羅基族與易洛魁族利用其富含黏液的內樹皮舒緩喉嚨痛並癒合傷口。",
+            "id": "slipperyElm",
+            "tags": [
+              "digestion",
+              "respiratory",
+              "skin"
+            ]
+          },
+          {
+            "name": "卡斯卡拉鼠李",
+            "sci": "Frangula purshiana",
+            "note": "太平洋西北岸部落將這種鼠李科植物的樹皮乾燥陳化，製成可靠的天然瀉藥。",
+            "id": "cascaraSagrada",
+            "tags": [
+              "digestion"
+            ]
+          },
+          {
+            "name": "金雞納樹",
+            "sci": "Cinchona officinalis",
+            "note": "安地斯山脈的蓋丘亞族早在奎寧問世之前，便使用這種苦味樹皮治療發燒。",
+            "id": "cinchona",
+            "tags": [
+              "immunity",
+              "digestion"
+            ]
+          },
+          {
+            "name": "貓爪藤",
+            "sci": "Uncaria tomentosa",
+            "note": "阿夏寧卡族與其他秘魯亞馬遜原住民將這種木質藤本的樹皮煎煮，用以治療關節炎並增強免疫力。",
+            "id": "catsClaw",
+            "tags": [
+              "painInflammation",
+              "immunity"
+            ]
+          },
+          {
+            "name": "古柯",
+            "sci": "Erythroxylum coca",
+            "note": "安地斯山脈的蓋丘亞族與艾馬拉族數千年來咀嚼古柯葉，以對抗高山症與疲勞。",
+            "id": "coca",
+            "tags": [
+              "energy",
+              "digestion"
+            ]
+          },
+          {
+            "name": "龍血竭",
+            "sci": "Croton lechleri",
+            "note": "亞馬遜原住民將這種樹木的紅色乳膠直接塗抹於割傷與傷口，作為天然消毒劑。",
+            "id": "dragonsBlood",
+            "tags": [
+              "skin",
+              "immunity"
+            ]
+          },
+          {
+            "name": "洋紅風鈴木（保哥果）",
+            "sci": "Tabebuia impetiginosa",
+            "note": "亞馬遜原住民將其內樹皮沖泡成茶，用以治療感染、發燒與皮膚問題。",
+            "id": "pauDarco",
+            "tags": [
+              "immunity",
+              "skin"
+            ]
+          },
+          {
+            "name": "波爾多葉",
+            "sci": "Peumus boldus",
+            "note": "智利的馬普切族治療師長期以波爾多葉茶養護肝功能、幫助消化。",
+            "id": "boldo",
+            "tags": [
+              "digestion"
+            ]
+          },
+          {
+            "name": "古巴香脂",
+            "sci": "Copaifera officinalis",
+            "note": "亞馬遜原住民採集這種樹木的樹脂，外用塗抹於傷口作為消炎藥。",
+            "id": "copaiba",
+            "tags": [
+              "painInflammation",
+              "skin"
+            ]
+          },
+          {
+            "name": "瓜拿納",
+            "sci": "Paullinia cupana",
+            "note": "巴西亞馬遜的薩特雷馬威族馴化了這種藤本植物，烘烤其種子以獲得持久的精力與專注力。",
+            "id": "guarana",
+            "tags": [
+              "energy"
+            ]
+          },
+          {
+            "name": "黑種草",
+            "sci": "Nigella sativa",
+            "note": "在先知醫學中被稱為「祝福的種子」，其油品用於治療氣喘、腸胃不適與皮膚感染。",
+            "id": "blackSeed",
+            "tags": [
+              "respiratory",
+              "digestion",
+              "skin"
+            ]
+          },
+          {
+            "name": "乳香",
+            "sci": "Boswellia sacra",
+            "note": "阿拉伯人數千年來自乳香樹採集樹脂，用於治療關節發炎、傷口與呼吸道不適。",
+            "id": "frankincense",
+            "tags": [
+              "painInflammation",
+              "respiratory",
+              "skin"
+            ]
+          },
+          {
+            "name": "沒藥",
+            "sci": "Commiphora myrrha",
+            "note": "沒藥採集自非洲之角與阿拉伯地區，其樹脂能為傷口消毒，並舒緩牙齦與喉嚨疼痛。",
+            "id": "myrrh",
+            "tags": [
+              "skin",
+              "respiratory"
+            ]
+          },
+          {
+            "name": "番瀉葉",
+            "sci": "Senna alexandrina",
+            "note": "自古埃及醫師便仰賴其莢果與葉片作為強效可靠的瀉藥。",
+            "id": "senna",
+            "tags": [
+              "digestion"
+            ]
+          },
+          {
+            "name": "洛神花",
+            "sci": "Hibiscus sabdariffa",
+            "note": "蘇丹與埃及一帶沖泡成「卡卡迪」茶飲，其花萼是民間用於降血壓與退燒的良方。",
+            "id": "hibiscus",
+            "tags": [
+              "immunity"
+            ]
+          },
+          {
+            "name": "辣木",
+            "sci": "Moringa oleifera",
+            "note": "撒哈拉以南非洲長久以來使用其葉片治療營養不良與發炎，並幫助哺乳母親增加乳汁分泌。",
+            "id": "moringa",
+            "tags": [
+              "immunity",
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "猴麵包樹",
+            "sci": "Adansonia digitata",
+            "note": "這棵非洲「生命之樹」的果肉與樹皮傳統上用於對抗發燒、腹瀉與瘧疾。",
+            "id": "baobab",
+            "tags": [
+              "immunity",
+              "digestion"
+            ]
+          },
+          {
+            "name": "南非博士茶（路易波士）",
+            "sci": "Aspalathus linearis",
+            "note": "南非科伊桑族與開普荷蘭移民沖泡這種紅褐色灌木，作為過敏與腸絞痛的療方。",
+            "id": "rooibos",
+            "tags": [
+              "immunity",
+              "digestion"
+            ]
+          },
+          {
+            "name": "布枯",
+            "sci": "Agathosma betulina",
+            "note": "開普地區的科伊桑族治療師用其氣味濃烈的葉片治療泌尿道感染與腎臟疾病。",
+            "id": "buchu",
+            "tags": [
+              "immunity"
+            ]
+          },
+          {
+            "name": "癌症灌木（蘇特蘭豆）",
+            "sci": "Lessertia frutescens",
+            "note": "科伊族稱其為「kankerbos」，這種南非灌木是傳統上用於抗壓、抗疲勞並支持免疫力的滋補品。",
+            "id": "cancerBush",
+            "tags": [
+              "stress",
+              "energy",
+              "immunity"
+            ]
+          },
+          {
+            "name": "南非天竺葵（烏姆卡洛阿寶）",
+            "sci": "Pelargonium sidoides",
+            "note": "南非的科薩族與祖魯族治療師使用其塊根治療咳嗽、支氣管炎與肺結核。",
+            "id": "umckaloabo",
+            "tags": [
+              "respiratory"
+            ]
+          },
+          {
+            "name": "好望角仙人掌（霍地亞）",
+            "sci": "Hoodia gordonii",
+            "note": "喀拉哈里沙漠的桑族獵人在長途跋涉時咀嚼這種多刺多肉植物，用以抑制飢餓與口渴。",
+            "id": "hoodia",
+            "tags": [
+              "energy"
+            ]
+          },
+          {
+            "name": "指甲花",
+            "sci": "Lawsonia inermis",
+            "note": "除了用於身體彩繪，中東與北非民間醫學也會將其葉泥敷用於治療皮膚真菌感染。",
+            "id": "henna",
+            "tags": [
+              "skin"
+            ]
+          },
+          {
+            "name": "乳香黃連木（瑪蒂膠樹）",
+            "sci": "Pistacia lentiscus",
+            "note": "東地中海地區自古咀嚼的這種樹脂，能舒緩胃潰瘍與腸胃不適。",
+            "id": "mastic",
+            "tags": [
+              "digestion"
+            ]
+          },
+          {
+            "name": "角豆",
+            "sci": "Ceratonia siliqua",
+            "note": "中東民間醫學將其豆莢磨粉，作為治療兒童腹瀉與腸胃不適的藥方。",
+            "id": "carob",
+            "tags": [
+              "digestion"
+            ]
+          }
+        ]
+      },
+      "floweringPerennials": {
+        "title": "多年生開花植物",
+        "desc": "年復一年綻放的花朵。",
+        "intro": "多年生開花植物是一座「持續回饋」花園的骨幹：與一年生植物不同，它們在冬天會枯萎凋零，但隔年春天會從同樣的根部、根莖或塊莖重新長出。許多品種會隨著時間安定下來，逐漸擴展成更茂密的叢生植株，因此只要種下一次，往後每個季節都能享受更多花朵的回饋。這個收藏集匯集了廣受喜愛、容易取得的多年生植物，能為花壇與邊界帶來穩定、每年重複綻放的色彩。",
+        "species": [
+          {
+            "name": "芍藥",
+            "sci": "Paeonia lactiflora",
+            "note": "長壽的塊根可以在同一個地方持續綻放五十年以上，幾乎不需要移動或打擾。"
+          },
+          {
+            "name": "萱草",
+            "sci": "Hemerocallis fulva",
+            "note": "雖然每朵花只開一天，但植株本身會不斷分蘗成茂密的叢生植株，並能持續開花、綿延好幾個世代。"
+          },
+          {
+            "name": "紫錐花",
+            "sci": "Echinacea purpurea",
+            "note": "這種原生於草原的植物，能從強健的主根重新長出，並隨著時間自行播種，形成越來越大片的族群。"
+          },
+          {
+            "name": "德國鳶尾",
+            "sci": "Iris germanica",
+            "note": "肥厚的根莖在土壤表層下方蔓延生長，分裂出新的植株，每年春天都會重新綻放。"
+          },
+          {
+            "name": "黑心金光菊",
+            "sci": "Rudbeckia fulgida",
+            "note": "透過根莖蔓延與自行播種擴展，形成每年夏天都會如期回歸的金黃色花海。"
+          },
+          {
+            "name": "錐花福祿考",
+            "sci": "Phlox paniculata",
+            "note": "強健的叢生莖幹每年秋天會枯萎至根部，隔年再重新長出更茂密的植株。"
+          },
+          {
+            "name": "英國薰衣草",
+            "sci": "Lavandula angustifolia",
+            "note": "木質化的多年生莖幹能撐過冬季休眠期，每年夏天都會重新長葉、再次開花。"
+          }
+        ]
+      },
+      "oceanAndRiverFish": {
+        "title": "海洋與河川的魚",
+        "desc": "十六種水域，同一個鏡頭",
+        "intro": "從珊瑚礁到高山冷水溪流，這些是大家最常拍下、也最常追問的魚。學名在全世界都維持拉丁文寫法，所以你在這裡學到的名字，走到哪一片海岸都通用。",
+        "species": [
+          {
+            "name": "小丑魚",
+            "sci": "Amphiprion ocellaris",
+            "note": "牠住在海葵裡，對海葵的螫刺免疫，用清潔服務換取一處庇護所。每一條小丑魚出生時都是雄性，群體中最強勢的那一隻會轉變成雌性。",
+            "id": "clownfish"
+          },
+          {
+            "name": "虹鱒",
+            "sci": "Oncorhynchus mykiss",
+            "note": "原產於太平洋沿岸的冷水河流，如今除了南極洲，各大洲都有人養殖。牠粉紅色的魚肉，來自平常吃下的甲殼類。",
+            "id": "rainbowTrout"
+          },
+          {
+            "name": "大西洋鮭",
+            "sci": "Salmo salar",
+            "note": "在淡水中孵化，在大海裡待上好幾年，然後精準找回自己出生的那條河產卵。牠的種名意思就是「跳躍者」。",
+            "id": "atlanticSalmon"
+          },
+          {
+            "name": "白斑狗魚",
+            "sci": "Esox lucius",
+            "note": "典型的伏擊型獵手，藏在水草間一動也不動，再於零點幾秒內暴起出擊。鴨嘴狀的吻部和長在身體後段的魚鰭，是牠藏不住的特徵。",
+            "id": "northernPike"
+          },
+          {
+            "name": "鯉魚",
+            "sci": "Cyprinus carpio",
+            "note": "人類養鯉魚已經超過兩千年，如今除了南極洲各大洲都有牠的蹤跡——在有些國家是桌上珍饈，在另一些國家卻是頭痛的入侵種。",
+            "id": "commonCarp"
+          },
+          {
+            "name": "藍倒吊",
+            "sci": "Paracanthurus hepatus",
+            "note": "珊瑚礁裡的刺尾鯛，尾柄旁藏著一根像手術刀般鋒利的硬棘，遇敵時就彈出來自衛。成魚是鮮亮的寶藍色，幼魚卻是一身亮黃。",
+            "id": "blueTang"
+          },
+          {
+            "name": "大口黑鱸",
+            "sci": "Micropterus salmoides",
+            "note": "全世界最多人專程去釣的淡水運動魚種。要和小口黑鱸分辨很簡單：牠的上顎會延伸超過眼睛後緣。",
+            "id": "largemouthBass"
+          },
+          {
+            "name": "黃鰭鮪",
+            "sci": "Thunnus albacares",
+            "note": "能橫越整片大洋，還能把體溫維持得比周圍海水更高，所以就算潛進冰冷的深海，照樣游得飛快。",
+            "id": "yellowfinTuna"
+          },
+          {
+            "name": "斑馬魚",
+            "sci": "Danio rerio",
+            "note": "來自南亞河流的小型條紋魚，卻成了科學界研究最多的動物之一——牠透明的胚胎，讓研究人員能親眼看著器官一點一點成形。",
+            "id": "zebrafish"
+          },
+          {
+            "name": "獅子魚",
+            "sci": "Pterois volitans",
+            "note": "美得驚人卻帶著毒，棘刺螫到會痛上好一陣子。原產於印度太平洋海域，在大西洋和加勒比海則是相當嚴重的入侵種。",
+            "id": "redLionfish"
+          }
+        ]
+      },
+      "birdsOfTheWorld": {
+        "title": "世界的鳥",
+        "desc": "十種你真的遇得到的鳥",
+        "intro": "鳥大概是多數人光靠一扇窗就能拍到的野生動物。這十種橫跨六大洲，也是地球上辨識度最高的鳥類之列——最適合拿來練出一雙好眼力。",
+        "species": [
+          {
+            "name": "家燕",
+            "sci": "Hirundo rustica",
+            "note": "全世界分布最廣的燕子，在北半球繁殖，再飛到南方過冬。飛行時那對深深分叉的燕尾，一眼就認得出來。",
+            "id": "barnSwallow"
+          },
+          {
+            "name": "家麻雀",
+            "sci": "Passer domesticus",
+            "note": "牠跟著人類從中東一路擴散，幾乎進駐了地球上每一座城市。雄鳥胸前掛著一塊黑色圍兜，雌鳥則是樸素的沙褐色。",
+            "id": "houseSparrow"
+          },
+          {
+            "name": "翠鳥",
+            "sci": "Alcedo atthis",
+            "note": "在歐洲、亞洲和北非的緩流河面上，牠像一道電光藍閃過。捕食時頭部朝下俯衝入水，能從一公尺深的地方叼起魚。",
+            "id": "commonKingfisher"
+          },
+          {
+            "name": "遊隼",
+            "sci": "Falco peregrinus",
+            "note": "現存速度最快的動物，狩獵俯衝時可超過每小時 300 公里。除了南極洲各大洲都找得到，而且越來越常在摩天大樓上築巢。",
+            "id": "peregrineFalcon"
+          },
+          {
+            "name": "大藍鷺",
+            "sci": "Ardea herodias",
+            "note": "能在淺水裡一動不動站上好幾分鐘，然後用快到看不清的一擊把魚叉起來。飛行時脖子會收成一個 S 形。",
+            "id": "greatBlueHeron"
+          },
+          {
+            "name": "野鴿",
+            "sci": "Columba livia",
+            "note": "就是城市裡的鴿子，祖先原本在懸崖上築巢——這也是牠為什麼那麼喜歡窗台和屋簷。雙親都會用「鴿乳」餵養雛鳥。",
+            "id": "rockPigeon"
+          },
+          {
+            "name": "知更鳥",
+            "sci": "Erithacus rubecula",
+            "note": "膽子大到會一路跟著園丁走，就為了翻土時冒出來的蟲。橙紅色的胸羽雌雄都有，而且整年都靠鳴唱把地盤守住。",
+            "id": "europeanRobin"
+          },
+          {
+            "name": "綠頭鴨",
+            "sci": "Anas platyrhynchos",
+            "note": "幾乎所有家鴨的祖先。頂著一頭綠的雄鴨最出名，但那經典又響亮的呱呱聲，其實只有雌鴨叫得出來。",
+            "id": "mallard"
+          },
+          {
+            "name": "緋紅金剛鸚鵡",
+            "sci": "Ara macao",
+            "note": "中南美洲雨林裡的大型鸚鵡，壽命可超過五十年，而且一生只認一個伴侶。牠的喙能咬開其他鳥都撬不動的堅果。",
+            "id": "scarletMacaw"
+          },
+          {
+            "name": "皇帝企鵝",
+            "sci": "Aptenodytes forsteri",
+            "note": "牠在南極的冬天繁殖，雄鳥在黑暗中緊緊擠成一團，把唯一的一顆蛋放在腳背上孵兩個月，期間完全不進食。",
+            "id": "emperorPenguin"
+          }
+        ]
+      },
+      "gardenInsects": {
+        "title": "腳邊的鄰居",
+        "desc": "十種常見無脊椎動物，這次認真看清楚",
+        "intro": "這十種動物就住在多數人家門口幾公尺內，幾乎每個人都看過牠們，卻沒人告訴過你牠們當時在做什麼。熟悉的外表底下，藏著化學戰、摺得像摺紙的後翅、跨洲導航，還有一個綿延六千公里的蟻群。",
+        "species": [
+          {
+            "name": "七星瓢蟲",
+            "sci": "Coccinella septempunctata",
+            "note": "捏牠一下，牠會從膝關節流血——那是刻意的，苦澀的黃色體液會讓鳥立刻把牠吐掉。",
+            "id": "sevenSpotLadybird"
+          },
+          {
+            "name": "歐洲蠼螋",
+            "sci": "Forficula auricularia",
+            "note": "後翅展開後超過收摺時的十倍大，是自然界最緊密的摺疊之一——而牠幾乎從不飛。",
+            "id": "commonEarwig"
+          },
+          {
+            "name": "球鼠婦",
+            "sci": "Armadillidium vulgare",
+            "note": "牠根本不是昆蟲，而是甲殼類——螃蟹的陸生親戚，至今仍用變形的鰓呼吸。",
+            "id": "commonPillWoodlouse"
+          },
+          {
+            "name": "家蠅",
+            "sci": "Musca domestica",
+            "note": "牠用腳嚐味道，所以在口器碰到之前，就已經知道自己停在什麼東西上。",
+            "id": "houseFly"
+          },
+          {
+            "name": "散大蝸牛",
+            "sci": "Cornu aspersum",
+            "note": "牠用一條佈滿牙齒的帶子刮過葉片進食，前排磨損後，後方會長出新牙遞補。",
+            "id": "gardenSnail"
+          },
+          {
+            "name": "西方蜜蜂",
+            "sci": "Apis mellifera",
+            "note": "蜂后只在幾天的空中婚飛裡交配，此後終生不再，往後產的卵全靠那批存下來的精子。",
+            "id": "westernHoneyBee"
+          },
+          {
+            "name": "小紅蛺蝶",
+            "sci": "Vanessa cardui",
+            "note": "沒有任何一隻走完整趟遷徙；從非洲熱帶飛到歐洲再飛回去，大約要接力六個世代。",
+            "id": "paintedLady"
+          },
+          {
+            "name": "家幽靈蛛",
+            "sci": "Pholcus phalangioides",
+            "note": "牠會像落網的昆蟲那樣撥動別種蜘蛛的網，等主人過來查看，再撲上去。",
+            "id": "cellarSpider"
+          },
+          {
+            "name": "阿根廷蟻",
+            "sci": "Linepithema humile",
+            "note": "來自西班牙、加州和日本、相隔數千公里的工蟻碰面不會打架：牠們被當成同一個蟻群。",
+            "id": "argentineAnt"
+          },
+          {
+            "name": "普通蚯蚓",
+            "sci": "Lumbricus terrestris",
+            "note": "達爾文晚年都在研究蚯蚓，去世前六個月出版了一本關於牠們的書。",
+            "id": "commonEarthworm"
+          }
+        ]
+      },
+      "fungiOfTheWorld": {
+        "title": "既不是植物，也不是動物",
+        "desc": "十種默默掌管世界的真菌",
+        "intro": "在生命樹上，真菌離動物比離植物更近；你看見的那朵菇，只是一張看不見的菌絲網結出的果實，那張網鋪在土裡、木頭裡，或一隻活著的昆蟲體內。這十種裡有殺死最多人的那朵菇、一個佔滿奧勒岡州九平方公里的個體，還有開啟抗生素時代的那株黴。",
+        "species": [
+          {
+            "name": "毒蠅傘",
+            "sci": "Amanita muscaria",
+            "note": "童話裡那朵紅底白點的蘑菇是真的，有毒，而且幾乎不含那個以牠命名的毒素。",
+            "id": "flyAgaric"
+          },
+          {
+            "name": "毒鵝膏",
+            "sci": "Amanita phalloides",
+            "note": "全球致死的菇類中毒絕大多數是牠造成的，而煮、曬、冷凍對牠的毒素完全沒用。",
+            "id": "deathCap"
+          },
+          {
+            "name": "洋菇",
+            "sci": "Agaricus bisporus",
+            "note": "白洋菇、褐色蘑菇和波特菇不是三種菇，而是同一種，差別只在品系和採收得多晚。",
+            "id": "buttonMushroom"
+          },
+          {
+            "name": "釀酒酵母",
+            "sci": "Saccharomyces cerevisiae",
+            "note": "麵包、啤酒和葡萄酒背後的單細胞真菌，也是1996年第一個被全基因組定序的真核生物。",
+            "id": "brewersYeast"
+          },
+          {
+            "name": "偏側蛇蟲草菌",
+            "sci": "Ophiocordyceps unilateralis",
+            "note": "牠讓感染的螞蟻爬到離地特定的高度，咬住不放然後死在那裡，再從牠頭上長出一根柄。",
+            "id": "zombieAntFungus"
+          },
+          {
+            "name": "奧氏蜜環菌",
+            "sci": "Armillaria ostoyae",
+            "note": "奧勒岡州東部的單一個體覆蓋約九平方公里，是有史以來測量過面積最大的生物。",
+            "id": "humongousFungus"
+          },
+          {
+            "name": "止血扇菇",
+            "sci": "Panellus stipticus",
+            "note": "小而堅韌的扇形傘菌，菌褶在黑暗中發綠光——但只限來自大西洋正確那一側的族群。",
+            "id": "bitterOyster"
+          },
+          {
+            "name": "青黴菌",
+            "sci": "Penicillium rubens",
+            "note": "1928年污染弗萊明培養皿的那株藍綠色黴，直到2011年才被正確鑑定為這個種。",
+            "id": "penicilliumMould"
+          },
+          {
+            "name": "蛙壺菌",
+            "sci": "Batrachochytrium dendrobatidis",
+            "note": "一種小到看不見的真菌，逼向滅絕的物種數量超過任何有紀錄的疾病。",
+            "id": "chytridFungus"
+          },
+          {
+            "name": "阿爾巴白松露",
+            "sci": "Tuber magnatum",
+            "note": "牠完全在地下結實，數十年來打敗所有想栽培的人；2007年一顆1.5公斤的在慈善拍賣賣到約33萬美元。",
+            "id": "whiteTruffle"
+          }
+        ]
+      },
+      "fromFieldToPlate": {
+        "title": "晚餐的起點",
+        "desc": "十種主食，以及它們真正的老家",
+        "intro": "盤子上的東西幾乎沒有一樣長在自己出生的地方。這十種作物在幾千年前於河谷、高地森林和沼澤裡被馴化，接著被帶著跨越海洋，最後最大的產區全落在完全不同的大陸上。",
+        "species": [
+          {
+            "name": "玉米",
+            "sci": "Zea mays",
+            "note": "牠的野生祖先只結十來顆穀粒，每顆封在石頭般硬的殼裡——一點也不像玉米穗。",
+            "id": "maize"
+          },
+          {
+            "name": "木薯",
+            "sci": "Manihot esculenta",
+            "note": "在亞馬遜邊緣被馴化，如今養活的非洲人比南美洲人還多。",
+            "id": "cassava"
+          },
+          {
+            "name": "阿拉比卡咖啡",
+            "sci": "Coffea arabica",
+            "note": "阿拉比卡不是古老的物種，而是另外兩種咖啡的天然雜交後代，遺傳變異少得驚人。",
+            "id": "arabicaCoffee"
+          },
+          {
+            "name": "大豆",
+            "sci": "Glycine max",
+            "note": "世界上大部分的大豆從沒直接進到人的餐盤——它們被榨成油和牲畜飼料。",
+            "id": "soybean"
+          },
+          {
+            "name": "甘蔗",
+            "sci": "Saccharum officinarum",
+            "note": "最早在新幾內亞種來嚼莖；製糖和乙醇是幾千年之後的事。",
+            "id": "sugarcane"
+          },
+          {
+            "name": "普通小麥",
+            "sci": "Triticum aestivum",
+            "note": "麵包小麥從未在野外存在過——它出現在農田裡，是栽培小麥和一種路邊野草雜交的結果。",
+            "id": "breadWheat"
+          },
+          {
+            "name": "亞洲稻",
+            "sci": "Oryza sativa",
+            "note": "稻被馴化過兩次，在兩個大陸——一次在長江邊，一次在西非，來自另一種野草。",
+            "id": "asianRice"
+          },
+          {
+            "name": "馬鈴薯",
+            "sci": "Solanum tuberosum",
+            "note": "歐洲、亞洲和非洲種的每一顆馬鈴薯，都能追回到的的喀喀湖周邊的高地。",
+            "id": "potato"
+          },
+          {
+            "name": "香蕉",
+            "sci": "Musa acuminata",
+            "note": "野生香蕉裡塞滿豌豆大的硬種子；無籽香蕉能存在，只因為人不斷重種不孕的無性系。",
+            "id": "banana"
+          },
+          {
+            "name": "甜橙",
+            "sci": "Citrus × sinensis",
+            "note": "甜橙不是野生物種：它是柚子和橘子的雜交後代，此後一直靠嫁接複製下去。",
+            "id": "sweetOrange"
+          }
+        ]
+      },
+      "heardNotSeen": {
+        "title": "先聽見，才看見",
+        "desc": "十種先用耳朵遇見的動物",
+        "intro": "大多數野生動物的相遇，都是從一個看不見來源的聲音開始。這十種——貓頭鷹和蛙、一種蟬、兩種會唱歌的昆蟲、一種猴子和一隻狐狸——用耳朵找都比用眼睛容易得多，而且每一種都在說某件具體的事。",
+        "species": [
+          {
+            "name": "灰林鴞",
+            "sci": "Strix aluco",
+            "note": "那句有名的「呼──嗚」其實是兩隻在對話：雌鳥尖銳的ke-wick，換來雄鳥顫抖的長鳴。",
+            "id": "tawnyOwl"
+          },
+          {
+            "name": "大杜鵑",
+            "sci": "Cuculus canorus",
+            "note": "只有雄鳥叫「布穀」；雌鳥回的是一串冒泡似的水聲笑音，會讓小鳥陷入恐慌。",
+            "id": "commonCuckoo"
+          },
+          {
+            "name": "夜鶯",
+            "sci": "Luscinia megarhynchos",
+            "note": "唱得最兇的是午夜到凌晨三點，而且只有還沒配對的雄鳥會唱——雌鳥一留下，夜歌就停了。",
+            "id": "commonNightingale"
+          },
+          {
+            "name": "歐洲雨蛙",
+            "sci": "Hyla arborea",
+            "note": "五公分的小蛙，鳴囊鼓起來比自己的頭還寬，無風的夜裡合唱能傳將近一公里。",
+            "id": "europeanTreeFrog"
+          },
+          {
+            "name": "美洲牛蛙",
+            "sci": "Lithobates catesbeianus",
+            "note": "約200赫茲的低音「jug-o-rum」，能在開闊水面上傳將近一公里。",
+            "id": "americanBullfrog"
+          },
+          {
+            "name": "Cicada orni",
+            "sci": "Cicada orni",
+            "note": "夠熱才唱：合唱隨著上午升溫一層層堆起來，一片雲遮住太陽就整個斷掉。",
+            "id": "cicadaOrni"
+          },
+          {
+            "name": "家蟋蟀",
+            "sci": "Acheta domesticus",
+            "note": "那聲唧唧是兩片翅膀互鋸——刮器劃過有一百多顆齒的音銼，頻率約4到5千赫。",
+            "id": "houseCricket"
+          },
+          {
+            "name": "大綠螽斯",
+            "sci": "Tettigonia viridissima",
+            "note": "從黃昏一路乾響到半夜過後，沒有斷句，有時連續好幾個小時幾乎不停。",
+            "id": "greatGreenBushCricket"
+          },
+          {
+            "name": "黑吼猴",
+            "sci": "Alouatta caraya",
+            "note": "黎明的吼聲能穿過森林傳到約五公里外，是陸生動物中最響亮的叫聲之一。",
+            "id": "blackHowlerMonkey"
+          },
+          {
+            "name": "赤狐",
+            "sci": "Vulpes vulpes",
+            "note": "冬夜那種尖叫通常被算在母狐頭上，其實公母都會叫，而且那是求偶聲，不是痛苦。",
+            "id": "redFox"
+          }
+        ]
+      }
+    },
+    "species": {
+      "fiddleLeafFig": {
+        "name": "琴葉榕",
+        "sci": "Ficus lyrata",
+        "light": "明亮、間接的光線",
+        "water": "每週澆水一次；讓表層約 2.5 至 5 公分（1 至 2 吋）的土壤乾透後再澆水",
+        "difficulty": "具挑戰性",
+        "overview": "琴葉榕原生於西非低地熱帶雨林，以碩大、光澤、形似小提琴的葉片與醒目的葉脈聞名，使它成為室內設計界的經典代表植物。它常被當作大型落地盆栽種植，在室內甚至能長到天花板高度，但也以對光照、澆水與溫度的穩定性極為挑剔而著稱。",
+        "funFact": "在原生棲地中，Ficus lyrata 可以長成超過 12 公尺高的完整大樹，葉片幾乎是我們在室內看到的兩倍大，甚至還能結出由特定榕小蜂授粉、不可食用的小型果實——但作為室內盆栽時，它幾乎不會有這樣的表現。"
+      },
+      "bostonFern": {
+        "name": "波士頓腎蕨",
+        "sci": "Nephrolepis exaltata",
+        "light": "明亮至中等的間接光線",
+        "water": "保持土壤均勻濕潤；切勿讓土壤完全乾透",
+        "difficulty": "中等",
+        "overview": "波士頓腎蕨是劍蕨的一個茂盛、拱形栽培品種，劍蕨這個物種遍布世界各地潮濕的熱帶地區。它羽毛狀、垂墜的葉片，自維多利亞時代以來就深受喜愛，常被用於懸掛花籃與遮蔭門廊，不過它需要穩定的濕度與高濕環境才能長得健康。",
+        "funFact": "「Bostoniensis」這個栽培品種並非刻意培育而成——它是 1894 年在一批從費城運往波士頓花店的劍蕨貨物中，意外發現的自然突變株，後來就是從這株單一的變異個體繁殖出我們今天所熟知的這種室內植物。"
+      },
+      "jadePlant": {
+        "name": "翡翠木",
+        "sci": "Crassula ovata",
+        "light": "全日照至明亮光線",
+        "water": "少量澆水；待土壤完全乾透後再澆",
+        "difficulty": "簡單",
+        "overview": "翡翠木是一種原生於南非與莫三比克半乾旱地區的耐旱多肉植物，特徵是厚實、有光澤的橢圓形葉片，以及木質化、分枝生長的莖幹，讓它看起來像一棵迷你樹木。它是深受喜愛的新手植物，也經常被當作傳家寶代代相傳，在風水傳統中有時被暱稱為「發財樹」。",
+        "funFact": "在適當的條件下，翡翠木可以存活 50 到 100 年，成熟的植株偶爾還會開出一叢叢白色或粉紅色的星形小花，回饋悉心照顧的種植者，這通常是由涼爽的夜晚與一段乾燥期所觸發。"
+      },
+      "calathea": {
+        "name": "圓葉竹芋",
+        "sci": "Goeppertia orbifolia",
+        "light": "中等間接光線",
+        "water": "使用過濾水或蒸餾水，保持土壤微濕",
+        "difficulty": "具挑戰性",
+        "overview": "圓葉竹芋原生於玻利維亞的雨林，是竹芋科（Marantaceae）中外型引人注目的一員，以碩大、圓形、帶有銀綠與深綠條紋的葉片而受到喜愛。和它的近親一樣，它的葉片會在夜晚立起並合攏，白天再重新垂下，這種被稱為「感夜運動」的現象，讓它彷彿擁有生命一般。",
+        "funFact": "這個物種過去被歸類為 Calathea orbifolia，但在 2012 年，基因與形態學研究將大多數竹芋屬（Calathea）物種重新劃分至 Goeppertia 屬——不過苗圃與植物愛好者至今絕大多數仍沿用舊稱「Calathea」。"
+      }
+    },
+    "topicSpeciesSectionTitle": "本收藏集中的物種",
+    "speciesLightLabel": "光照",
+    "speciesWaterLabel": "澆水",
+    "speciesDifficultyLabel": "難易度",
+    "funFactLabel": "趣味小知識",
+    "symptomFilterTitle": "您有什麼不舒服？",
+    "symptomFilterAll": "全部",
+    "symptomFilterEmpty": "目前尚無標記此症狀的藥草。",
+    "viewHerbLabel": "查看{{name}}",
+    "herbDisclaimer": "本資訊內容依據傳統及民俗醫療用途整理而成，僅供參考，並非醫療建議。使用任何藥草治療健康問題前，請先諮詢醫師。",
+    "herbDetailsLoadError": "無法載入此藥草的詳細資訊，請再試一次。",
+    "preparationLabel": "使用方法",
+    "benefitsLabel": "功效",
+    "symptoms": {
+      "headache": "頭痛",
+      "digestion": "消化",
+      "sleep": "睡眠",
+      "stress": "壓力與焦慮",
+      "immunity": "免疫支持",
+      "painInflammation": "疼痛與發炎",
+      "respiratory": "咳嗽與呼吸道",
+      "skin": "皮膚與傷口",
+      "energy": "精力與疲勞"
+    },
+    "herbSubscribeCtaTitle": "喜歡這篇指南嗎?",
+    "herbSubscribeCtaBody": "訂閱即可解鎖無限次的植物、昆蟲、菇菌與農作物辨識。",
+    "herbAlreadySubscribedCheck": "已經訂閱了嗎？點一下重新檢查"
+  },
+  "botanist": {
+    "headerTitle": "海倫娜·馬克斯博士",
+    "headerSubtitle": "農學家 · 植物學教授",
+    "intro": "你好！我是海倫娜，農學家和植物學教授。說說你的植物怎麼了——或者問我任何關於土壤、蟲害、澆水或自然的問題。",
+    "placeholder": "問海倫娜…",
+    "typing": "海倫娜正在輸入…",
+    "sendLabel": "傳送訊息",
+    "askLabel": "詢問：{{question}}",
+    "suggestions": [
+      "葉子在變黃",
+      "多久澆一次水？",
+      "對貓安全嗎？",
+      "該用什麼土？"
+    ],
+    "errorOffline": "你目前離線。等網路恢復我就在這裡。",
+    "errorRateLimited": "稍等——一次問得太多了。請幾分鐘後再試。",
+    "errorNotConfigured": "專家還未上線，正在設定中。",
+    "errorGeneric": "剛才沒能回答你。請稍後再試。"
+  },
+  "achievements": {
+    "title": "成就",
+    "streakLabel": "連續天數",
+    "longestStreakLabel": "最長連續天數",
+    "totalLabel": "識別次數",
+    "unlockedTitle": "成就解鎖！",
+    "progressLabel": "已解鎖 {{unlocked}}/{{total}}",
+    "firstScan": {
+      "title": "初次發現",
+      "body": "識別你的第一個物種"
+    },
+    "collector10": {
+      "title": "收藏家",
+      "body": "收藏10個物種"
+    },
+    "collector50": {
+      "title": "博物學家",
+      "body": "收藏50個物種"
+    },
+    "collector100": {
+      "title": "博物學大師",
+      "body": "收藏100個物種"
+    },
+    "allCategories": {
+      "title": "探索者",
+      "body": "每個類別至少收藏一個物種"
+    },
+    "streak3": {
+      "title": "嶄露頭角",
+      "body": "連續3天完成識別"
+    },
+    "streak7": {
+      "title": "堅持不懈",
+      "body": "連續7天完成識別"
+    },
+    "streak30": {
+      "title": "全心投入",
+      "body": "連續30天完成識別"
+    },
+    "sharedFirst": {
+      "title": "分享有愛",
+      "body": "分享你的第一個識別結果"
+    },
+    "subscriber": {
+      "title": "高級會員",
+      "body": "訂閱解鎖無限次識別"
+    },
+    "tokensLabel": "代幣",
+    "tokensEarned": "+{{count}} 枚代幣"
+  },
+  "help": {
+    "title": "說明與支援",
+    "identificationTitle": "辨識功能是如何運作的？",
+    "identificationBody": "拍攝植物、昆蟲、菇類、農作物或樹木的照片，我們的AI會將其與龐大的資料庫進行比對，提供最可能的物種，並附上學名、說明及其他詳細資訊。",
+    "accuracyTitle": "辨識結果一定準確嗎？",
+    "accuracyBody": "沒有一款辨識應用程式能做到100%準確，尤其是可能有毒的菇類與植物。請勿僅憑本應用程式的結果就食用、採集或使用任何物種——請務必先諮詢專業人士確認。",
+    "freeTitle": "NatureLens是免費的嗎？",
+    "freeBody": "每個類別（植物、昆蟲、菇類、農作物、樹木）都可免費辨識一次。之後，訂閱即可解鎖所有類別的無限次辨識。",
+    "cancelTitle": "如何取消訂閱？",
+    "cancelBody": "前往「個人資料」並刪除您的帳戶——這會自動取消所有有效訂閱，同時刪除您的資料。目前沒有獨立的取消按鈕；刪除帳戶是目前停止扣款的方式。",
+    "restoreTitle": "我換了手機或清除了瀏覽器資料——該如何找回我的訂閱？",
+    "restoreBody": "前往「個人資料」→「恢復存取」。您可以透過電子郵件要求一次性驗證碼，或者，如果您已設定密碼，也可以使用密碼或Google帳戶登入。",
+    "tokensTitle": "點數是什麼？可以用來兌換東西嗎？",
+    "tokensBody": "每次辨識物種或解鎖成就時，您都會自動獲得點數。目前尚無法使用點數兌換獎勵，但此功能已在規劃中——在那之前，您的點數會持續累積。",
+    "privacyTitle": "我的資料私密嗎？",
+    "privacyBody": "使用NatureLens不需要註冊帳戶。您大部分的資料（收藏、照片）僅保存在您的裝置上。詳情請參閱完整的《隱私權政策》。",
+    "deleteTitle": "如何刪除我的帳戶與資料？",
+    "deleteBody": "前往「個人資料」，點選底部的「刪除帳戶」。這會取消所有有效訂閱，從我們的伺服器中刪除您保存的資料，並清除此裝置上儲存的所有內容。",
+    "offlineTitle": "這款應用程式可以離線使用嗎？",
+    "offlineBody": "不行——辨識物種需要連接網際網路，以存取我們的AI服務。",
+    "languageTitle": "我可以使用其他語言嗎？",
+    "languageBody": "可以，NatureLens支援17種語言。前往「個人資料」→「語言」即可隨時切換。"
+  },
+  "store": {
+    "title": "獎勵",
+    "intro": "花掉你辨識物種賺來的代幣。這裡的每項獎勵在兌換後立即生效。",
+    "owned": "已擁有",
+    "open": "開啟",
+    "redeem": "兌換",
+    "redeemLabel": "用 {{cost}} 代幣兌換",
+    "redeemedTitle": "兌換成功！",
+    "notEnoughTitle": "代幣不足",
+    "notEnoughBody": "這項需要 {{cost}} 代幣。繼續辨識即可賺取更多。",
+    "shieldsHeld": "已存 {{count}} 個護盾",
+    "earnHint": "每次辨識獲得 5 代幣，每解鎖一項成就獲得 15 代幣。",
+    "download": "下載",
+    "downloadErrorTitle": "下載失敗",
+    "downloadErrorBody": "無法儲存檔案。請在瀏覽器中重試。",
+    "items": {
+      "streakShield": {
+        "title": "連續紀錄護盾",
+        "description": "漏掉一天時保護你的連續紀錄。可疊加——可以買多個。",
+        "redeemedBody": "你的連續紀錄已受保護。若漏掉一天，護盾會自動生效。"
+      },
+      "wallpapers": {
+        "title": "植物桌布",
+        "description": "三張專屬 1080×1920 手機桌布。",
+        "redeemedBody": "桌布已就緒。點擊你想要的那張的下載按鈕。"
+      },
+      "naturalistBadge": {
+        "title": "博物學家徽章",
+        "description": "個人檔案上的永久徽章，表明你已堅持一段時間。",
+        "redeemedBody": "徽章已加入你的個人檔案。",
+        "ownedBody": "你已擁有該徽章——它顯示在你的個人檔案上。"
+      }
+    }
+  },
+  "missions": {
+    "title": "今日任務",
+    "rewardEach": "每項 +{{tokens}}",
+    "allDone": "今天全部完成——明天再來！",
+    "pool": {
+      "scanAny2": "今天辨識 2 個物種",
+      "scanAny3": "今天辨識 3 個物種",
+      "scanPlant": "辨識一種植物或樹木",
+      "scanInsect": "辨識一種昆蟲",
+      "scanMushroom": "辨識一種蘑菇",
+      "scanFish": "辨識一種魚",
+      "scanBird": "辨識一種鳥",
+      "saveOne": "將一個發現存入收藏",
+      "saveTwo": "將 2 個發現存入收藏",
+      "shareOne": "分享一次辨識結果",
+      "openDiscover": "造訪「探索」標籤頁"
+    }
+  },
+  "share": {
+    "message": "我用 NatureLens 辨識了一種{{category}}：{{name}}{{scientific}}{{confidence}}\n\n拍張照就能辨識植物、昆蟲、蘑菇、魚類和鳥類：\n{{url}}",
+    "confidenceLine": "信心度 {{confidence}}%"
+  },
+  "onboarding": {
+    "skip": "跳過",
+    "next": "下一步",
+    "start": "開始辨識",
+    "what": {
+      "title": "對準。拍照。知道答案。",
+      "body": "拍下任何有生命的東西，NatureLens 幾秒內就告訴你它是什麼——還附上參考照片，方便你自己確認。"
+    },
+    "collect": {
+      "title": "建立你自己的自然筆記",
+      "body": "每個發現都可以存入收藏、加標籤，隨時回看。過程中還能賺取代幣、解鎖獎勵。"
+    },
+    "free": {
+      "title": "第一次辨識免費",
+      "body": "每個類別都可免費試用一次辨識。想要無限次掃描時再訂閱。"
+    }
+  },
+  "recap": {
+    "title": "你的自然月報",
+    "entrySubtitle": "查看並分享你的月報",
+    "headline": "你遇見了 {{count}} 個不同物種",
+    "emptyTitle": "還沒有可回顧的內容",
+    "emptyBody": "這個月辨識並儲存一個發現，你的月報就會出現在這裡。",
+    "byCategory": "按類別",
+    "highlight": "本月亮點",
+    "share": "分享我的月報",
+    "shareTitle": "我的自然月報",
+    "shareMessage": "{{month}}我用 NatureLens 辨識了 {{total}} 個發現 —— {{species}} 個不同物種 🌿\n\n拍張照就能辨識植物、昆蟲、蘑菇、魚類和鳥類：\n{{url}}",
+    "streakLine": "目前連續：{{current}} 天 · 最高紀錄：{{longest}}",
+    "stats": {
+      "total": "已儲存發現",
+      "species": "物種",
+      "categories": "類別",
+      "days": "活躍天數"
+    }
+  },
+  "subscription": {
+    "title": "我的訂閱",
+    "entrySubtitle": "狀態、方案與取消",
+    "activeTitle": "高級版已啟用",
+    "activeBody": "所有類別不限次數辨識。感謝你支持 NatureLens。",
+    "freeTitle": "免費方案",
+    "freeBody": "每個類別可免費辨識一次。訂閱後可無限次掃描。",
+    "unknownTitle": "暫時無法查詢",
+    "unknownBody": "未能連線伺服器。如果你已訂閱，使用不受影響——請稍後再試。",
+    "plansTitle": "方案",
+    "manageTitle": "管理或取消",
+    "manageBody": "你的訂閱由 Hotmart 收款，因此取消需在你的 Hotmart 帳戶中操作，而不是這裡。在那裡取消後將停止後續扣款，你的權限會保留到已付費週期結束。",
+    "openHotmart": "開啟我的 Hotmart 帳戶"
+  },
+  "notifications": {
+    "row": "通知",
+    "on": "已開啟",
+    "off": "已關閉",
+    "enabledTitle": "通知已開啟",
+    "enabledBody": "你將收到澆水提醒和連續紀錄提醒。",
+    "deniedTitle": "通知被封鎖",
+    "deniedBody": "你已封鎖本站的通知。請在瀏覽器設定中為 naturelensapp.cloud 允許通知。",
+    "errorTitle": "無法開啟",
+    "errorBody": "出了點問題，請稍後再試。"
+  },
+  "fieldGuide": {
+    "habitat": "棲息地",
+    "curiosity": "你知道嗎",
+    "identifyCta": "用相機辨識一隻",
+    "photoCredit": "照片：Wikimedia Commons · 點擊查看來源",
+    "textCredit": "文字：維基百科 · 點擊閱讀更多"
+  },
+  "backup": {
+    "exportRow": "備份我的收藏",
+    "importRow": "從備份還原",
+    "exportEmptyTitle": "目前沒有可備份的內容",
+    "exportEmptyBody": "儲存你的第一個發現，備份就有東西可以保管了。",
+    "importDoneTitle": "收藏已還原",
+    "importDoneBody": "已新增 {{added}} 項，{{skipped}} 項本來就有。",
+    "importFailedTitle": "無法還原",
+    "errorWrongFile": "該檔案不是 NatureLens 備份。",
+    "errorNewerVersion": "該備份來自更新版本的應用程式。請先更新再試。",
+    "errorStorageFull": "此裝置空間不足，無法新增這些項目。",
+    "errorGeneric": "讀取該檔案時出錯。"
+  },
+  "sound": {
+    "tapToRecord": "點擊開始錄音",
+    "recording": "錄音中…還剩 {{seconds}} 秒",
+    "analysing": "正在聆聽…",
+    "startLabel": "開始錄音",
+    "stopLabel": "停止並辨識",
+    "tipsTitle": "想要更好的結果",
+    "tip1": "能靠近就靠近——距離影響最大。",
+    "tip2": "把手機對準聲音方向並保持不動。",
+    "tip3": "在牠真正鳴叫時錄音，而不是間隔的安靜。",
+    "scopeNote": "涵蓋鳥類、蛙類、蟋蟀、蝗蟲和部分哺乳動物。它以野外錄音訓練，寵物和車流聲會干擾判斷。",
+    "identifiedBySound": "透過聲音辨識 · {{group}}",
+    "groupAmphibian": "兩棲動物",
+    "groupMammal": "哺乳動物",
+    "permissionTitle": "麥克風被封鎖",
+    "permissionBody": "請在瀏覽器設定中允許本站使用麥克風，然後重試。",
+    "unsupportedTitle": "無法錄音",
+    "unsupportedBody": "此瀏覽器不支援錄音。請在 Android 上試用 Chrome，或在 iPhone 上把應用程式加到主畫面。",
+    "tooShortTitle": "錄音太短",
+    "tooShortBody": "請在動物鳴叫時錄製至少兩秒。",
+    "failedTitle": "無法辨識",
+    "failedBody": "這段錄音出了問題，請重試。",
+    "decodeFailedBody": "無法讀取這段錄音，請重試。",
+    "notFoundBody": "這段錄音中沒有可辨識的內容。試著靠近一些，或在牠鳴叫時錄音。",
+    "noContentBody": "該物種暫無描述。",
+    "notWildlifeBody": "這聽起來像車輛、機器或人聲，不像動物。請到更安靜的地方重新錄音。"
+  },
+  "login": {
+    "signInRow": "登入",
+    "signInSubtitle": "在任何裝置上使用你的訂閱",
+    "accountRow": "我的帳戶"
+  }
+}

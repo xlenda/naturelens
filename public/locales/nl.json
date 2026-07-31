@@ -1,0 +1,2288 @@
+{
+  "common": {
+    "overview": "Overzicht",
+    "details": "Details",
+    "readMore": "Meer lezen",
+    "confidence": "Betrouwbaarheid",
+    "nativeOrigin": "Oorspronkelijke Herkomst",
+    "save": "Opslaan in Mijn Collectie",
+    "saved": "Opgeslagen in Collectie",
+    "cancel": "Annuleren",
+    "goBack": "Terug",
+    "shareThisResult": "Deel dit resultaat",
+    "removeFromCollection": "Verwijderen uit collectie",
+    "saveToCollection": "Opslaan in collectie",
+    "tabCollection": "Collectie",
+    "tabDiscover": "Weetjes",
+    "tabBotanist": "Botanicus",
+    "saveErrorTitle": "Opslaan mislukt",
+    "saveErrorBody": "Er is iets misgegaan bij het opslaan in je collectie. Probeer het opnieuw.",
+    "ok": "OK",
+    "next": "Volgende",
+    "showPassword": "Wachtwoord tonen",
+    "hidePassword": "Wachtwoord verbergen",
+    "close": "Sluiten",
+    "tabProfile": "Profiel",
+    "identified": "Herkend",
+    "yourPhoto": "Jouw foto",
+    "referencePhoto": "Referentie",
+    "technicalDescription": "Technische beschrijving",
+    "vendorEnglishNote": "Van de herkenningsdienst, in het Engels.",
+    "translate": "Vertalen",
+    "translating": "Vertalen…",
+    "translateFailed": "Vertalen lukt nu niet."
+  },
+  "auth": {
+    "title": "Log in om te identificeren",
+    "subtitle": "Eén gratis identificatie per categorie. Log in met je e-mailadres om te beginnen — geen wachtwoord nodig.",
+    "emailPlaceholder": "jij@voorbeeld.com",
+    "sendLink": "Magische link versturen",
+    "sending": "Bezig met verzenden…",
+    "checkEmailTitle": "Controleer je e-mail",
+    "checkEmailBody": "We hebben een inloglink gestuurd naar {{email}}. Open deze op dit apparaat om verder te gaan.",
+    "signOut": "Uitloggen",
+    "signedInAs": "Ingelogd als {{email}}",
+    "notReady": "Inloggen wordt momenteel ingesteld en is binnenkort beschikbaar."
+  },
+  "paywall": {
+    "title": "Gratis gebruik al benut",
+    "body": "Je hebt je gratis {{category}}-identificatie al gebruikt. Abonneer je om onbeperkt te blijven identificeren.",
+    "subscribe": "Abonneren",
+    "subscribing": "Doorverwijzen…",
+    "subscribed": "Geabonneerd",
+    "manage": "Abonnement beheren",
+    "annualPlan": "Jaarlijks",
+    "perYear": "/jaar",
+    "saveBadge": "Bespaar {{percent}}%",
+    "genericTitle": "Alles ontgrendelen",
+    "genericBody": "Onbeperkte identificaties van planten, insecten, paddenstoelen en gewassen, plus volledige toegang tot informatie over medicinale kruiden.",
+    "subscriptionConfirmedTitle": "Je bent geabonneerd!",
+    "subscriptionConfirmedBody": "Bedankt voor je abonnement – je hebt nu een onbeperkt aantal identificaties. Veel plezier!",
+    "subscriptionPendingTitle": "Betaling ontvangen",
+    "subscriptionPendingBody": "Betaling ontvangen. Open Profiel → Toegang herstellen en bevestig het e-mailadres waarmee je betaalde om dit apparaat te ontgrendelen.",
+    "checkoutFailedTitle": "Afrekenen mislukt",
+    "checkoutFailedBody": "We konden het afrekenen niet starten. Probeer het straks opnieuw.",
+    "monthlyPlan": "Maandelijks",
+    "quarterlyPlan": "Per kwartaal",
+    "perMonth": "per maand",
+    "perQuarter": "per kwartaal",
+    "notAvailableYet": "De betaling wordt nog ingesteld — probeer het zo opnieuw."
+  },
+  "restore": {
+    "title": "Inloggen",
+    "emailStepTitle": "Log in op je account",
+    "emailStepBody": "Gebruik het e-mailadres waarmee je je hebt aangemeld. We sturen een eenmalige code - geen wachtwoord om te onthouden.",
+    "emailPlaceholder": "jij@voorbeeld.com",
+    "sendCode": "Code versturen",
+    "codeStepTitle": "Voer je code in",
+    "codeStepBody": "We hebben een code naar {{email}} gestuurd. Voer die hieronder in om het inloggen af te ronden.",
+    "codePlaceholder": "6-cijferige code",
+    "verifyCode": "Verifiëren",
+    "changeEmail": "Ander e-mailadres gebruiken",
+    "doneTitleActive": "Je bent ingelogd",
+    "doneBodyActive": "Dit apparaat is nu gekoppeld aan je account en je abonnement is er actief.",
+    "doneTitleOther": "Account gekoppeld",
+    "doneBodyOther": "Dit apparaat is gekoppeld aan je account. Er is op dit moment geen actief abonnement.",
+    "backToProfile": "Terug naar Profiel",
+    "genericError": "Er is iets misgegaan. Probeer het opnieuw.",
+    "modeCode": "E-mailcode",
+    "modePassword": "Wachtwoord",
+    "passwordStepTitle": "Inloggen met wachtwoord",
+    "passwordStepBody": "Voer je e-mailadres en wachtwoord in om op dit apparaat in te loggen.",
+    "passwordPlaceholder": "Wachtwoord",
+    "signIn": "Inloggen",
+    "signInWithGoogle": "Doorgaan met Google",
+    "googleSignInErrorTitle": "Aanmelden mislukt",
+    "googleSignInErrorBody": "Aanmelden met Google is niet gelukt. Probeer het opnieuw."
+  },
+  "categories": {
+    "plant": {
+      "label": "Plant",
+      "tabLabel": "Planten",
+      "title": "Planten & bomen direct herkennen",
+      "subtitle": "Richt je camera op een plant, blad, bloem of boom en krijg binnen enkele seconden een gedetailleerd profiel.",
+      "scanHint": "Voor het beste resultaat kader je één blad, bloem of de algehele vorm bij goed licht."
+    },
+    "insect": {
+      "label": "Insect",
+      "tabLabel": "Insecten",
+      "title": "Identificeer Insecten Direct",
+      "subtitle": "Richt je camera op een beestje, kever, spin of vlinder en krijg direct een soortprofiel.",
+      "scanHint": "Voor het beste resultaat kom je dicht bij het insect met goede belichting en een rustige hand."
+    },
+    "mushroom": {
+      "label": "Paddenstoel",
+      "tabLabel": "Paddenstoelen",
+      "title": "Identificeer Paddenstoelen Direct",
+      "subtitle": "Richt je camera op een paddenstoel of schimmel om de soort te identificeren en de eetbaarheid te controleren.",
+      "scanHint": "Fotografeer de hoed, plaatjes en steel voor de meest nauwkeurige identificatie."
+    },
+    "crop": {
+      "label": "Gewas",
+      "tabLabel": "Gewassen",
+      "title": "Gewasgezondheidscontrole",
+      "subtitle": "Richt je camera op een gewasblad om te controleren op ziektes, plagen of voedingstekorten.",
+      "scanHint": "Kadreer het aangetaste blad of gebied van dichtbij voor de meest nauwkeurige diagnose."
+    },
+    "tree": {
+      "label": "Boom",
+      "tabLabel": "Bomen",
+      "title": "Identificeer bomen direct",
+      "subtitle": "Richt je camera op een boom, stam, blad of kroon en krijg binnen enkele seconden een gedetailleerd profiel.",
+      "scanHint": "Voor de beste resultaten, kadreer de bladeren, schors of algemene vorm met goede belichting."
+    },
+    "fish": {
+      "label": "Vis",
+      "tabLabel": "Vissen",
+      "title": "Vissen direct herkennen",
+      "subtitle": "Richt je camera op een vis en krijg binnen enkele seconden een gedetailleerd profiel.",
+      "scanHint": "Voor het beste resultaat fotografeer je de hele vis van opzij bij goed licht."
+    },
+    "bird": {
+      "label": "Vogel",
+      "tabLabel": "Vogels",
+      "title": "Vogels direct herkennen",
+      "subtitle": "Richt je camera op een vogel en krijg direct een determinatie.",
+      "scanHint": "Voor het beste resultaat breng je de hele vogel scherp en goed verlicht in beeld."
+    },
+    "sound": {
+      "label": "Geluid",
+      "tabLabel": "Geluiden",
+      "title": "Herken op geluid",
+      "subtitle": "Neem een vogel, kikker of insect op en ontdek wat het is."
+    }
+  },
+  "identify": {
+    "identifierTitle": "{{category}}-identificatie",
+    "subtitle": "Identificeer {{category}}s direct met AI",
+    "readyToScan": "Klaar om te scannen",
+    "didYouKnowTitle": "Wist je dat...?",
+    "continueLabel": "Doorgaan",
+    "analyzing": "{{category}} analyseren…",
+    "tapToIdentify": "Tik om te identificeren",
+    "identifying": "Identificeren…",
+    "uploadPhoto": "Foto Uploaden",
+    "myCollection": "Mijn Collectie",
+    "switchCategoryLabel": "Identificatiecategorie wisselen",
+    "switchCategoryTitle": "Categorie wisselen",
+    "switchCategoryMessage": "Wat wil je identificeren?",
+    "takePhotoLabel": "Maak een foto om {{category}} te identificeren",
+    "uploadPhotoLabel": "Upload een foto om te identificeren",
+    "goToCollectionLabel": "Ga naar Mijn Collectie",
+    "cameraPermissionTitle": "Camera-toegang vereist",
+    "cameraPermissionMessage": "Schakel camera-toegang in om een {{category}} te scannen.",
+    "libraryPermissionTitle": "Toegang tot fotobibliotheek vereist",
+    "libraryPermissionMessage": "Schakel toegang tot foto's in om een afbeelding te uploaden.",
+    "identificationFailedTitle": "Identificatie mislukt",
+    "identificationFailedDefault": "Probeer het opnieuw.",
+    "notFoundError": "Er is geen {{category}} herkend op deze foto. Probeer een duidelijkere close-up.",
+    "photoProcessingFailed": "Deze foto kon niet worden verwerkt. Probeer een andere foto of maak een nieuwe met je camera.",
+    "lowConfidence": "Dit is onze beste inschatting ({{confidence}}% zeker). Vergelijk hem met de referentiefoto’s voordat je erop vertrouwt.",
+    "lowConfidenceWithAlternatives": "Slechts {{confidence}}% zeker. Bekijk hieronder de andere mogelijke treffers voordat je hierop vertrouwt.",
+    "referenceImagesTitle": "Referentiefoto’s",
+    "referenceImagesHint": "Vergelijk ze met je eigen foto om te bevestigen.",
+    "referenceImageLabel": "Referentiefoto {{index}}",
+    "alternativesTitle": "Andere mogelijke treffers",
+    "alternativesHint": "Als het resultaat hierboven niet klopt, is jouw soort misschien een van deze.",
+    "lowConfidenceBare": "Slechts {{confidence}}% zeker — zie dit als een startpunt, niet als een definitief antwoord.",
+    "addAngle": "Nog een hoek toevoegen",
+    "addAnotherAngle": "Nog één toevoegen",
+    "anglesHint": "{{count}} foto’s van hetzelfde exemplaar — nauwkeuriger",
+    "removeAngleLabel": "Hoek {{index}} verwijderen",
+    "offlineTitle": "Je bent offline",
+    "offlineBody": "Herkenning vereist internet. Je collectie en het tabblad Ontdekken werken gewoon door.",
+    "serviceDownTitle": "Dienst niet beschikbaar",
+    "serviceDownBody": "Deze herkenningsdienst heeft even een probleem. Probeer het over een paar minuten opnieuw - het ligt niet aan je foto."
+  },
+  "detail": {
+    "profileTitle": "{{category}}-profiel",
+    "readMoreLabel": "Lees meer online over deze {{category}}",
+    "markAsWatered": "Markeren als Water Gegeven",
+    "markAsWateredLabel": "Markeren als water gegeven",
+    "wateringSection": "Water Geven",
+    "checkForDiseases": "Controleren op Ziektes",
+    "checkingForDiseases": "Controleren…",
+    "checkForDiseasesLabel": "Controleren op ziektes",
+    "checkingForDiseasesLabel": "Bezig met controleren op ziektes",
+    "healthCheckSection": "Gezondheidscontrole",
+    "edibleParts": "Eetbare Delen",
+    "propagation": "Vermeerdering",
+    "wateringNeeds": "Waterbehoefte",
+    "conservationStatus": "Beschermingsstatus",
+    "safetySection": "Veiligheid",
+    "ecologicalRoleSection": "Ecologische Rol",
+    "frequentlyConfusedWith": "Vaak Verward Met",
+    "psychoactiveWarning": "Deze paddenstoel kan psychoactief zijn en het zenuwstelsel beïnvloeden.",
+    "cropHealthReportTitle": "Gewasgezondheidsrapport",
+    "cropMatch": "Gewasovereenkomst",
+    "cropPill": "Gewas",
+    "wateringGuideSection": "Gids voor Water Geven",
+    "lightSection": "Licht",
+    "soilSection": "Grond",
+    "commonUsesSection": "Veelvoorkomende Toepassingen",
+    "culturalSignificanceSection": "Culturele Betekenis",
+    "installNudgeTitle": "NatureLens installeren",
+    "installNudgeBody": "Zet het op je beginscherm om de volgende keer sneller te herkennen.",
+    "commonNames": "Gangbare namen",
+    "synonyms": "Wetenschappelijke synoniemen",
+    "referencePhoto": "Referentiefoto",
+    "referencePhotoAlt": "Referentiefoto van {{name}}",
+    "coverageNoteTitle": "Over dit resultaat",
+    "birdCoverageNote": "Vogelherkenning omvat 291 soorten, vooral Noord-Amerikaanse. Vogels buiten die lijst kunnen ook bij hoge zekerheid verkeerd worden herkend - gebruik het resultaat als startpunt."
+  },
+  "disease": {
+    "overviewSection": "Overzicht",
+    "symptomsSection": "Symptomen",
+    "treatmentSection": "Behandeling",
+    "biological": "Biologisch",
+    "chemical": "Chemisch",
+    "prevention": "Preventie",
+    "spreadingSection": "Hoe Het Zich Verspreidt",
+    "healthStatusSection": "Gezondheidsstatus",
+    "noDiseaseDetected": "Er is geen ziekte of plaag met zekerheid gedetecteerd op deze foto.",
+    "match": "Overeenkomst",
+    "severitySuffix": "{{severity}} ernst"
+  },
+  "collection": {
+    "title": "Mijn Collectie",
+    "subtitle_one": "{{count}} item ontdekt",
+    "subtitle_other": "{{count}} items ontdekt",
+    "emptyTitle": "Nog niets opgeslagen",
+    "emptyBody": "Identificeer een plant, insect, paddenstoel of gewas en sla het op om je collectie op te bouwen.",
+    "startIdentifying": "Begin met Identificeren",
+    "goToProfileLabel": "Ga naar profiel",
+    "switchToGridLabel": "Overschakelen naar rasterweergave",
+    "switchToListLabel": "Overschakelen naar lijstweergave",
+    "viewDetailsLabel": "Bekijk details voor {{name}}",
+    "removeLabel": "Verwijder {{name}} uit collectie",
+    "assignRoomTitle": "Toewijzen aan een kamer",
+    "assignRoomMessage": "Kies een kamer voor {{name}}.",
+    "roomLivingRoom": "Woonkamer",
+    "roomBedroom": "Slaapkamer",
+    "roomKitchen": "Keuken",
+    "roomBalcony": "Balkon",
+    "roomOffice": "Kantoor",
+    "roomNone": "Geen",
+    "searchPlaceholder": "Zoek in je verzameling…",
+    "clearSearchLabel": "Zoekopdracht wissen",
+    "filterAll": "Alles",
+    "noSearchResults": "Niets komt overeen met je zoekopdracht."
+  },
+  "profile": {
+    "title": "Mijn Profiel",
+    "itemsIdentified_one": "item geïdentificeerd",
+    "itemsIdentified_other": "items geïdentificeerd",
+    "byCategory": "Per Categorie",
+    "privacyPolicy": "Privacybeleid",
+    "language": "Taal",
+    "installApp": "App installeren",
+    "installAppIOSTitle": "NatureLens installeren",
+    "installAppIOSBody": "Tik op de knop Deel en vervolgens op \"Zet op beginscherm\" om NatureLens op je telefoon te installeren.",
+    "createPasswordTitle": "Wachtwoord aanmaken",
+    "createPasswordBody": "Optioneel — log met een wachtwoord in op andere apparaten om je abonnement te synchroniseren, in plaats van elke keer een nieuwe code per e-mail aan te vragen.",
+    "createPasswordButton": "Wachtwoord aanmaken",
+    "creatingPassword": "Aanmaken…",
+    "passwordTooShortTitle": "Wachtwoord te kort",
+    "passwordTooShortBody": "Gebruik minstens 8 tekens.",
+    "passwordCreatedTitle": "Wachtwoord aangemaakt",
+    "passwordCreatedBody": "Controleer {{email}} om te bevestigen, daarna kun je met dit wachtwoord op elk apparaat inloggen.",
+    "passwordCreatedFailedTitle": "Wachtwoord kon niet worden aangemaakt",
+    "passwordCreatedFailedBody": "Er is iets misgegaan. Probeer het opnieuw.",
+    "changePhoto": "Profielfoto wijzigen",
+    "version": "Versie {{version}}",
+    "termsOfUse": "Gebruiksvoorwaarden",
+    "deleteAccount": "Account verwijderen",
+    "deletingAccount": "Verwijderen…",
+    "deleteAccountConfirmTitle": "Je account verwijderen?",
+    "deleteAccountConfirmBody": "Dit verwijdert permanent je opgeslagen collectie, wachtwoord (indien aanwezig) en zegt je actieve abonnement op, als je er een hebt. Dit kan niet ongedaan worden gemaakt.",
+    "deleteAccountConfirmButton": "Verwijderen",
+    "deleteAccountDoneTitle": "Account verwijderd",
+    "deleteAccountDoneBody": "Je gegevens zijn verwijderd en een eventueel actief abonnement is opgezegd.",
+    "deleteAccountFailedTitle": "Account kon niet worden verwijderd",
+    "deleteAccountFailedBody": "Er is iets misgegaan. Probeer het opnieuw.",
+    "helpAndSupport": "Hulp en ondersteuning",
+    "rewardsStore": "Beloningswinkel",
+    "naturalistBadge": "Naturalist",
+    "deleteAccountDoneBillingBody": "Je account en gegevens zijn verwijderd. BELANGRIJK: dit zegt je abonnement niet op — dat moet je in je Hotmart-account doen, anders loopt de afschrijving door.",
+    "locationRow": "Mijn geschatte locatie gebruiken",
+    "locationHint": "Verbetert de nauwkeurigheid door alleen soorten uit jouw omgeving te overwegen. Afgerond op ongeveer 1 km en nooit opgeslagen.",
+    "emptyTitle": "Hier begint je collectie",
+    "emptyBody": "Richt de camera op een plant, insect, paddenstoel, vis of vogel - of neem een roep op - en die komt hier terecht.",
+    "emptyCta": "Iets herkennen"
+  },
+  "terms": {
+    "title": "Gebruiksvoorwaarden",
+    "acceptanceTitle": "Aanvaarding van de voorwaarden",
+    "acceptanceBody": "Door NatureLens te gebruiken, ga je akkoord met deze Gebruiksvoorwaarden. Als je het er niet mee eens bent, gebruik de app dan niet.",
+    "serviceTitle": "Wat deze app doet",
+    "serviceBody": "Met NatureLens kun je planten, insecten, paddenstoelen, gewassen en bomen fotograferen om ze te identificeren met AI-diensten van derden (Plant.id, Insect.id, Mushroom.id, Crop.health, allemaal van Kindwise). Resultaten worden automatisch gegenereerd en niet beoordeeld door een menselijke expert.",
+    "accuracyTitle": "Nauwkeurigheid van identificatie — lees dit aandachtig",
+    "accuracyBody": "AI-identificatie kan fout zijn, ook over de vraag of een plant of paddenstoel eetbaar, giftig of veilig om aan te raken is. Eet, verzamel of gebruik nooit een wilde plant, paddenstoel of schimmel alleen op basis van het resultaat van deze app. Raadpleeg altijd een gekwalificeerde expert (mycoloog, botanicus of vergiftigingsinformatiecentrum) voordat je iets consumeert of gebruikt dat je in de natuur hebt gevonden. Wij zijn niet aansprakelijk voor schade veroorzaakt door het vertrouwen op een identificatie van deze app.",
+    "billingTitle": "Abonnementen en facturering",
+    "billingBody": "Betaalde abonnementen worden via Stripe in rekening gebracht tegen de prijs die in de app wordt weergegeven op het moment van abonneren, en worden automatisch verlengd totdat je opzegt. Je kunt op elk moment opzeggen; je toegang blijft bestaan tot het einde van de reeds betaalde periode. We bieden geen evenredige terugbetaling voor ongebruikte tijd, tenzij wettelijk vereist.",
+    "accountTitle": "Accounts en wachtwoorden",
+    "accountBody": "Je hebt geen account nodig om de gratis functies te gebruiken. Abonnees kunnen optioneel een wachtwoord aanmaken om in te loggen en hun abonnement te synchroniseren tussen apparaten. Jij bent verantwoordelijk voor het veilig houden van je wachtwoord en voor alles wat via je account gebeurt.",
+    "liabilityTitle": "Geen garantie, beperking van aansprakelijkheid",
+    "liabilityBody": "Deze app wordt \"as is\" geleverd, zonder enige garantie. Voor zover maximaal toegestaan door de wet zijn wij niet aansprakelijk voor enige schade die voortvloeit uit je gebruik van de app, inclusief het vertrouwen op een identificatieresultaat.",
+    "changesTitle": "Wijzigingen in deze voorwaarden",
+    "changesBody": "We kunnen deze voorwaarden van tijd tot tijd bijwerken. Als je de app blijft gebruiken na een wijziging, betekent dit dat je de bijgewerkte voorwaarden accepteert.",
+    "contactTitle": "Contact",
+    "contactBody": "Vragen over deze voorwaarden kunnen worden gericht aan de ontwikkelaar van de app."
+  },
+  "privacy": {
+    "title": "Privacybeleid",
+    "collectTitle": "Wat we verzamelen",
+    "collectBody": "Met deze app kun je planten, insecten, paddenstoelen of gewassen fotograferen om ze te identificeren. Hiervoor maakt de app gebruik van AI-identificatiediensten van derden — Plant.id, Insect.id, Mushroom.id en Crop.health, allemaal ontwikkeld door Kindwise.",
+    "thirdPartyTitle": "AI-diensten van derden",
+    "thirdPartyBody": "Wanneer je een foto maakt of uploadt om iets te identificeren, wordt die foto rechtstreeks verzonden naar de betreffende Kindwise-identificatiedienst om een resultaat te genereren. We slaan je foto's niet op op servers die wij beheren.",
+    "localStorageTitle": "Alleen lokale opslag",
+    "localStorageBody": "Je opgeslagen collectie — geïdentificeerde soorten, notities en tijdstempels — wordt alleen lokaal op je eigen apparaat opgeslagen via de lokale opslag van de browser of app. Deze wordt nooit geüpload naar een cloudserver van ons en nooit gedeeld met andere gebruikers.",
+    "noAccountsTitle": "Geen accounts, geen tracking",
+    "noAccountsBody": "Deze app vereist geen account om te gebruiken — je apparaat krijgt een willekeurige anonieme identificatiecode (die alleen op je apparaat wordt opgeslagen) zodat we kunnen zien wanneer de ene gratis identificatie per categorie is gebruikt. Als je je abonneert, verzamelt Stripe rechtstreeks je e-mailadres en betaalgegevens om de betaling te verwerken — wij ontvangen alleen je abonnementsstatus, gekoppeld aan diezelfde anonieme identificatiecode. Abonnees kunnen optioneel een wachtwoord aanmaken om in te loggen en hun abonnement op andere apparaten te synchroniseren; dit is nooit verplicht om de app te gebruiken. We gebruiken geen analytics- of advertentietrackers.",
+    "dataLossTitle": "Risico op gegevensverlies",
+    "dataLossBody": "Als je je browsergegevens wist of de app verwijdert, gaat je lokaal opgeslagen collectie permanent verloren, omdat er geen back-up op afstand wordt gemaakt.",
+    "contactTitle": "Contact",
+    "contactBody": "Vragen over dit beleid kun je richten aan de ontwikkelaar van de app."
+  },
+  "discover": {
+    "title": "Ontdekken",
+    "subtitle": "Voed je nieuwsgierigheid naar de natuurlijke wereld",
+    "dailyFact": "Dagelijks Plantenweetje",
+    "tapForAnotherFact": "Tik voor nog een weetje",
+    "exploreCollections": "Ontdek Collecties",
+    "trendingSpecies": "Populaire Soorten",
+    "showNextFactLabel": "Toon volgend plantenweetje",
+    "openCollectionLabel": "Open {{title}}-collectie",
+    "viewSpeciesLabel": "Bekijk {{name}}",
+    "facts": [
+      "De reuzenaronskelk (Amorphophallus titanum) kan meer dan 3 meter hoog worden en ruikt naar rottend vlees om bestuivers te lokken.",
+      "Bamboe is de snelstgroeiende plant ter wereld — sommige soorten schieten tot 90 centimeter per dag omhoog.",
+      "Eén honingbij bezoekt zo'n 5.000 bloemen per dag en maakt in haar hele leven toch maar een twaalfde theelepel honing.",
+      "Paddenstoelen zijn nauwer verwant aan dieren dan aan planten — ongeveer een miljard jaar geleden deelden wij nog een voorouder.",
+      "De oudste bekende levende boom is een borstelden in Californië, naar schatting ruim 4.800 jaar oud.",
+      "Zonnebloemen volgen de zon zolang ze jong zijn, maar eenmaal volgroeid blijven ze naar het oosten gericht staan — daardoor warmen ze eerder op en trekken ze meer bestuivers.",
+      "Sommige orchideeën bootsen het uiterlijk en de geur van vrouwtjesinsecten zo precies na dat mannetjes ermee proberen te paren en de bloem per ongeluk bestuiven.",
+      "Een libel vangt ongeveer 95% van de prooien waarop hij jaagt — een van de hoogste slagingspercentages in het hele dierenrijk.",
+      "Mieren kweken al meer dan 50 miljoen jaar schimmels, lang voordat de mens de landbouw uitvond.",
+      "Het Amazoneregenwoud levert ruwweg 20% van de zuurstof die landplanten afgeven, en een groot deel van de regen die er valt bestaat uit water dat het bos zelf heeft uitgeademd.",
+      "Vlinders proeven met hun poten — ze stappen op een blad om te weten of hun rupsen ervan kunnen eten.",
+      "Een honingzwam in Oregon beslaat bijna 10 vierkante kilometer en is daarmee een van de grootste levende organismen op aarde.",
+      "De slechtvalk haalt in een jachtduik meer dan 300 km/u en is daarmee het snelste dier ter wereld.",
+      "Vissen hebben geen oogleden — de meeste doen hun ogen dus nooit dicht, zelfs niet tijdens het rusten.",
+      "De venusvliegenvanger telt: een voelhaar moet binnen zo'n 20 seconden twee keer worden aangeraakt voordat de val dichtklapt, zodat regen hem niet verspilt.",
+      "Bomen in een bos delen voedingsstoffen via ondergrondse schimmelnetwerken — een moederboom kan een zwakke zaailing meters verderop voeden.",
+      "De noordse stern trekt elk jaar van pool naar pool en legt daarbij meer dan 70.000 kilometer af — de langste trek van alle dieren.",
+      "Koffie, chocolade en vanille komen allemaal van planten die voor hun bestuiving afhankelijk zijn van dieren — geen bijen of muggen, geen ochtendkoffie.",
+      "Sommige cicaden blijven 17 jaar onder de grond en komen daarna in één keer met miljarden tegelijk tevoorschijn.",
+      "Een ananas is niet één vrucht maar een bundel van tientallen bessen die om één kern zijn samengegroeid.",
+      "Uilen kunnen hun ogen niet bewegen — hun oogbollen zijn vastzittende buizen, en daarom draaien ze in plaats daarvan hun kop tot 270 graden.",
+      "Zaden van de heilige lotus kunnen na meer dan duizend jaar rust nog gewoon kiemen.",
+      "Zalmen keren terug om te paaien in precies de rivier waar ze zijn uitgekomen; ze navigeren op geur over duizenden kilometers open oceaan.",
+      "Schimmels waren de eerste complexe organismen die het land veroverden — lang voordat er ook maar één plant stond.",
+      "Vijgenbomen bloeien niet naar buiten toe: elke vijg is een binnenstebuiten gekeerde bloeiwijze, bestoven door een wespje dat door een piepklein gaatje naar binnen kruipt.",
+      "Het hart van een kolibrie klopt in de vlucht meer dan 1.200 keer per minuut, en hij moet elke 10 tot 15 minuten eten om te overleven.",
+      "De wurgvijg begint zijn leven op een tak hoog in het kronendak, laat wortels naar de bodem zakken en doodt uiteindelijk de boom die hem onderdak gaf.",
+      "Mos heeft geen wortels — het neemt water rechtstreeks op door zijn blaadjes, en daarom gedijt het op steen en schors.",
+      "De bidsprinkhaankreeft ziet met 12 tot 16 kleurreceptoren; de mens heeft er drie.",
+      "Espenbossen zijn vaak één organisme: duizenden stammen die één wortelstelsel delen, sommige ouder dan 10.000 jaar.",
+      "Lieveheersbeestjes eten in hun leven tot 5.000 bladluizen, en daarom zetten tuiniers ze uit in plaats van te spuiten.",
+      "Het zaad van de coco de mer weegt tot 25 kilo — het zwaarste zaad van alle planten.",
+      "Sidderalen zijn geen alen maar mesvissen, en hun stroomstoot kan meer dan 800 volt bedragen.",
+      "Korstmossen zijn niet één organisme maar twee — een schimmel en een alg die als één geheel leven, en ze overleven zelfs in de ruimte.",
+      "Het mannetje van de keizerspinguïn balanceert de hele Antarctische winter één ei op zijn voeten en eet twee maanden lang niets.",
+      "Brandnetels prikken met minuscule glasachtige haartjes die in de huid afbreken, en het tegengif groeit vaak vlakbij: zuringbladeren.",
+      "Sommige diepzeevissen zijn doorzichtig en gebruiken onzichtbaarheid als camouflage, juist daar waar niets is om je achter te verstoppen.",
+      "Een volgroeide eik laat in een goed jaar 10.000 eikels vallen, en ongeveer één op de tienduizend wordt een boom.",
+      "Kraaien herkennen individuele mensengezichten, koesteren wrok en leren hun jongen wie ze moeten mijden.",
+      "De kleinste bloeiende plant ter wereld, wortelloos kroos, is zo groot als een zandkorrel — er passen er een stuk of twaalf op een vingertop."
+    ],
+    "topics": {
+      "airPurifying": {
+        "title": "Luchtzuiverende Planten",
+        "desc": "NASA onderzocht deze soorten voor het zuiveren van binnenlucht.",
+        "intro": "Eind jaren tachtig testte NASA tientallen gangbare kamerplanten om te ontdekken welke konden helpen vervuilende stoffen uit de afgesloten lucht van ruimtevaartuigcabines te filteren — en ontdekte daarbij dat veel alledaagse favorieten verrassend goed zijn in het opnemen van giftige stoffen zoals formaldehyde, benzeen en koolmonoxide. Deze collectie verzamelt de soorten die het beste presteerden in dat onderzoek en die sindsdien klassiekers zijn geworden in de wereld van binnenluchtkwaliteit. Ze zijn geen vervanging voor een raam openzetten, maar een paar goed geplaatste potten zijn een eenvoudige, moeiteloze manier om de lucht te verfrissen in de kamers waar je de meeste tijd doorbrengt.",
+        "species": [
+          {
+            "name": "Vrouwentong",
+            "sci": "Dracaena trifasciata (syn. Sansevieria trifasciata)",
+            "note": "Een van de best presterende planten uit het NASA-onderzoek, die zelfs 's nachts CO2 omzet in zuurstof, in tegenstelling tot de meeste kamerplanten."
+          },
+          {
+            "name": "Graslelie",
+            "sci": "Chlorophytum comosum",
+            "note": "NASA rangschikte deze plant als een van de beste in het verwijderen van formaldehyde en xyleen uit gewone huislucht."
+          },
+          {
+            "name": "Lepelplant",
+            "sci": "Spathiphyllum wallisii",
+            "note": "Stond bovenaan in NASA's oorspronkelijke onderzoek naar het verwijderen van benzeen, formaldehyde en trichloorethyleen uit binnenlucht."
+          },
+          {
+            "name": "Klimop",
+            "sci": "Hedera helix",
+            "note": "De hoogst scorende plant in het hele NASA-onderzoek, geprezen om het verwijderen van formaldehyde en zelfs schimmelsporen uit de lucht."
+          },
+          {
+            "name": "Bostonvaren",
+            "sci": "Nephrolepis exaltata",
+            "note": "Een door NASA geteste formaldehydeverwijderaar die ook de luchtvochtigheid verhoogt in droge, verwarmde kamers."
+          },
+          {
+            "name": "Gouden pothos",
+            "sci": "Epipremnum aureum",
+            "note": "Bijna onverwoestbaar en aantoonbaar in staat om formaldehyde, benzeen en koolmonoxide uit binnenlucht te filteren."
+          },
+          {
+            "name": "Rubberplant",
+            "sci": "Ficus elastica",
+            "note": "Een uitblinker in NASA's Clean Air Study, die gestaag formaldehyde uit alledaagse woonruimtes haalt."
+          }
+        ]
+      },
+      "beginnerSucculents": {
+        "title": "Vetplanten voor Beginners",
+        "desc": "Plantjes die weinig water nodig hebben en gedijen bij een beetje verwaarlozing.",
+        "intro": "Vetplanten hebben hun beginnersvriendelijke reputatie eerlijk verdiend: dankzij hun dikke, wateropslaande bladeren en stengels overleven ze een vergeten beurtje water geven moeiteloos. Deze selectie richt zich op de sterkste, meest vergevingsgezinde soorten die er zijn — planten die de klassieke beginnersfouten van te veel water, te weinig water en wisselend licht goed doorstaan. Geef een van deze planten een lichte vensterbank en een beetje geduld, en je hebt een bijna foutloze start voor het opbouwen van je eigen plantencollectie.",
+        "species": [
+          {
+            "name": "Jadeplant",
+            "sci": "Crassula ovata",
+            "note": "Slaat water op in dikke stengels en bladeren, waardoor een gemiste beurt water geven geen probleem is."
+          },
+          {
+            "name": "Vrouwentong",
+            "sci": "Dracaena trifasciata",
+            "note": "Gedijt bij totale verwaarlozing en verdraagt weinig licht en wekenlang droge grond zonder klagen."
+          },
+          {
+            "name": "Zebraplant",
+            "sci": "Haworthiopsis fasciata",
+            "note": "Blijft compact en groeit langzaam, waardoor het bijna onmogelijk is om deze plant met te veel zorg te overweldigen."
+          },
+          {
+            "name": "Aloë vera",
+            "sci": "Aloe vera",
+            "note": "Vergeeft onregelmatig water geven dankzij de met gel gevulde bladeren die gebouwd zijn om droogte zelfstandig te doorstaan."
+          },
+          {
+            "name": "Pandaplant",
+            "sci": "Kalanchoe tomentosa",
+            "note": "Donzige, wateropslaande bladeren doorstaan droge periodes moeiteloos, wat dit een bijna foutloze eerste vetplant maakt."
+          },
+          {
+            "name": "Ezelsstaart",
+            "sci": "Sedum morganianum",
+            "note": "Dikke, hangende bladeren houden hun eigen watervoorraad vast, wat een beloning is voor eigenaren die zich niet bemoeien en niet te veel water geven."
+          },
+          {
+            "name": "Mexicaanse Hen-en-Kuikens",
+            "sci": "Echeveria elegans",
+            "note": "De klassieke rozetvorm slaat water efficiënt op en de plant vermeerdert zich gemakkelijk, waardoor onvermijdelijke beginnersfouten worden vergeven."
+          }
+        ]
+      },
+      "petSafe": {
+        "title": "Huisdiervriendelijke Kamerplanten",
+        "desc": "Niet-giftig groen voor huizen met katten en honden.",
+        "intro": "Samenwonen met katten en honden betekent niet dat je kamerplanten moet opgeven, maar veel populaire soorten zijn echt schadelijk als ze eraan knagen. Deze collectie verzamelt goed gedocumenteerde, niet-giftige favorieten, gecontroleerd aan de hand van veiligheidsgegevens van de ASPCA, zodat je vensterbanken en planken kunt vullen zonder je zorgen te maken over een nieuwsgierige poot of een verkennende hap. Van hangplanten tot bloeiende favorieten: elke plant op deze lijst verdient zijn plek doordat hij eerst veilig is en pas daarna mooi.",
+        "species": [
+          {
+            "name": "Graslelie",
+            "sci": "Chlorophytum comosum",
+            "note": "Door de ASPCA vermeld als niet-giftig voor katten en honden, en de neerhangende bladeren geven nieuwsgierige pootjes iets veiligs om naar te slaan."
+          },
+          {
+            "name": "Bostonvaren",
+            "sci": "Nephrolepis exaltata",
+            "note": "Deze weelderige, getextureerde varen is niet giftig voor huisdieren, waardoor je er veilig een jungle-achtig volume mee aan elke kamer kunt toevoegen."
+          },
+          {
+            "name": "Kamerpalm",
+            "sci": "Chamaedorea elegans",
+            "note": "Een klassieke Victoriaanse kamerplant die niet giftig is voor katten en honden en weinig licht verdraagt zonder enig risico."
+          },
+          {
+            "name": "Bidplant",
+            "sci": "Maranta leuconeura",
+            "note": "Zijn bladeren vouwen 's nachts op als biddende handen, en de plant is volledig veilig als een nieuwsgierige kat er eens aan knabbelt."
+          },
+          {
+            "name": "Watermeloenpeperomia",
+            "sci": "Peperomia argyreia",
+            "note": "Compact en niet giftig; de gestreepte bladeren vormen een opvallend, huisdiervriendelijk accent voor planken en bijzettafels."
+          },
+          {
+            "name": "Zebra-haworthia",
+            "sci": "Haworthia attenuata",
+            "note": "Een huisdiervriendelijk alternatief voor giftige aloë en jadeplant; deze gestreepte vetplant biedt dezelfde look zonder het risico."
+          },
+          {
+            "name": "Afrikaans viooltje",
+            "sci": "Saintpaulia ionantha",
+            "note": "Een van de weinige bloeiende kamerplanten die bevestigd niet giftig zijn, waardoor huisdieren de vensterbank kunnen delen met de bloemen."
+          }
+        ]
+      },
+      "medicinalHerbs": {
+        "title": "Medicinale Kruiden",
+        "desc": "Planten met een lange geschiedenis in geneeskundig gebruik.",
+        "intro": "Lang voordat er medicijnkastjes bestonden, waren moestuinen de oorspronkelijke apotheek: kruiden zoals lavendel, pepermunt en echinacea worden al eeuwenlang gekweekt, gebrouwen en toegepast om alledaagse ongemakken te verlichten. Deze collectie belicht planten met een goed gedocumenteerde rol in volksgeneeskunde en traditionele geneeswijzen over de hele wereld, van mediterrane keukenstaples tot ayurvedische klassiekers. De meeste gedijen op een zonnige vensterbank, zodat je een levend stukje kruidengeschiedenis in huis kunt kweken.",
+        "species": [
+          {
+            "name": "Aloë vera",
+            "sci": "Aloe vera",
+            "note": "De met gel gevulde bladeren verzachten al duizenden jaren, in verschillende culturen, brandwonden en lichte huidirritaties.",
+            "id": "aloeVera",
+            "tags": [
+              "skin",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Lavendel",
+            "sci": "Lavandula angustifolia",
+            "note": "Al lang gewaardeerd om zijn kalmerende geur, traditioneel gebruikt om stress te verminderen en een rustige slaap te bevorderen.",
+            "id": "lavender",
+            "tags": [
+              "sleep",
+              "stress",
+              "headache"
+            ]
+          },
+          {
+            "name": "Pepermunt",
+            "sci": "Mentha x piperita",
+            "note": "De mentholrijke bladeren verzachten al eeuwenlang, in de volksgeneeskunde, een van streek zijnde maag en hoofdpijn.",
+            "id": "peppermint",
+            "tags": [
+              "digestion",
+              "headache"
+            ]
+          },
+          {
+            "name": "Echte kamille",
+            "sci": "Matricaria chamomilla",
+            "note": "De madeliefjesachtige bloemen worden gebrouwen tot een milde thee die al lang wordt gebruikt om de zenuwen te kalmeren en de spijsvertering te ondersteunen.",
+            "id": "germanChamomile",
+            "tags": [
+              "sleep",
+              "digestion",
+              "stress"
+            ]
+          },
+          {
+            "name": "Rode zonnehoed",
+            "sci": "Echinacea purpurea",
+            "note": "Afkomstig uit Noord-Amerika; de wortels en bloemen werden door inheemse volkeren gebruikt ter ondersteuning van de weerstand.",
+            "id": "purpleConeflower",
+            "tags": [
+              "immunity"
+            ]
+          },
+          {
+            "name": "Rozemarijn",
+            "sci": "Salvia rosmarinus (syn. Rosmarinus officinalis)",
+            "note": "Deze geurige mediterrane struik heeft al eeuwenlang de reputatie het geheugen te verscherpen en de bloedsomloop te bevorderen.",
+            "id": "rosemary",
+            "tags": [
+              "headache",
+              "energy",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Heilige basilicum (Tulsi)",
+            "sci": "Ocimum tenuiflorum",
+            "note": "Al eeuwenlang vereerd in de ayurvedische traditie; de bladeren worden getrokken tot een adaptogene thee tegen stress.",
+            "id": "holyBasil",
+            "tags": [
+              "stress",
+              "immunity",
+              "respiratory"
+            ]
+          },
+          {
+            "name": "Kurkuma",
+            "sci": "Curcuma longa",
+            "note": "In de ayurvedische geneeskunde wordt deze gouden wortel al eeuwenlang gebruikt om ontstekingen te kalmeren en de spijsvertering en wondgenezing te ondersteunen.",
+            "id": "turmeric",
+            "tags": [
+              "painInflammation",
+              "digestion",
+              "skin"
+            ]
+          },
+          {
+            "name": "Gember",
+            "sci": "Zingiber officinale",
+            "note": "Chinese en ayurvedische genezers kauwen of brouwen deze wortelstok al lang om misselijkheid te verlichten en de spijsvertering te verwarmen.",
+            "id": "ginger",
+            "tags": [
+              "digestion",
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "Ginseng",
+            "sci": "Panax ginseng",
+            "note": "In de traditionele Chinese geneeskunde al meer dan tweeduizend jaar gewaardeerd als een versterkend middel voor energie en vitaliteit.",
+            "id": "ginseng",
+            "tags": [
+              "energy",
+              "stress"
+            ]
+          },
+          {
+            "name": "Ashwagandha",
+            "sci": "Withania somnifera",
+            "note": "Al duizenden jaren een basisproduct in de ayurveda; de wortel wordt van oudsher gebruikt om stress te verlichten en kracht en uithoudingsvermogen op te bouwen.",
+            "id": "ashwagandha",
+            "tags": [
+              "stress",
+              "energy",
+              "sleep"
+            ]
+          },
+          {
+            "name": "Vlierbes",
+            "sci": "Sambucus nigra",
+            "note": "Europese volksgenezers brouwen al eeuwenlang siropen van de donkere bessen om verkoudheid en griep te bestrijden.",
+            "id": "elderberry",
+            "tags": [
+              "immunity",
+              "respiratory"
+            ]
+          },
+          {
+            "name": "Valeriaan",
+            "sci": "Valeriana officinalis",
+            "note": "Europese kruidkundigen drogen deze scherp geurende wortel al sinds de oudheid als traditioneel middel tegen onrustige slaap.",
+            "id": "valerian",
+            "tags": [
+              "sleep",
+              "stress"
+            ]
+          },
+          {
+            "name": "Toverhazelaar",
+            "sci": "Hamamelis virginiana",
+            "note": "Inheemse Noord-Amerikaanse stammen distilleerden de bast en bladeren tot een samentrekkend washmiddel voor kneuzingen, zwellingen en huidirritatie.",
+            "id": "witchHazel",
+            "tags": [
+              "skin",
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "Goldenseal",
+            "sci": "Hydrastis canadensis",
+            "note": "Cherokee en andere inheemse genezers gebruikten deze bittere wortel om zweren, infecties en spijsverteringsklachten te behandelen.",
+            "id": "goldenseal",
+            "tags": [
+              "digestion",
+              "immunity",
+              "skin"
+            ]
+          },
+          {
+            "name": "Duivelsklauw",
+            "sci": "Harpagophytum procumbens",
+            "note": "Traditionele genezers uit de Kalahari gebruiken deze wortel met haakvormige vruchten al lang om gewrichtspijn en artritis te verlichten.",
+            "id": "devilsClaw",
+            "tags": [
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "Afrikaanse alsem",
+            "sci": "Artemisia afra",
+            "note": "Een van de meest gebruikte traditionele geneesmiddelen van zuidelijk Afrika, gestoomd of gebrouwen om hoest en verstopte luchtwegen te verlichten.",
+            "id": "africanWormwood",
+            "tags": [
+              "respiratory",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Maté",
+            "sci": "Ilex paraguariensis",
+            "note": "De Guaraní-bevolking van Zuid-Amerika brouwt al lang van de bladeren een stimulerende, dagelijkse thee die de spijsvertering ondersteunt.",
+            "id": "yerbaMate",
+            "tags": [
+              "energy",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Indische waternavel",
+            "sci": "Centella asiatica",
+            "note": "Vereerd in de ayurveda en de traditionele geneeskunde van Zuidoost-Azië als een wondhelend kruid dat het geheugen zou aanscherpen en de geest tot rust zou brengen.",
+            "id": "gotuKola",
+            "tags": [
+              "skin",
+              "stress"
+            ]
+          },
+          {
+            "name": "Zoethoutwortel",
+            "sci": "Glycyrrhiza glabra",
+            "note": "Al eeuwenlang gebruikt in de Chinese, ayurvedische en Midden-Oosterse geneeskunde om hoest, keelpijn en een van streek zijnde maag te verzachten.",
+            "id": "licoriceRoot",
+            "tags": [
+              "respiratory",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Neem",
+            "sci": "Azadirachta indica",
+            "note": "Bittere neemblaadjes, -bast en -olie zijn Ayurveda's klassieke middel tegen huiduitslag, wonden en parasitaire infecties.",
+            "id": "neem",
+            "tags": [
+              "skin",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Amla (Indiase kruisbes)",
+            "sci": "Phyllanthus emblica",
+            "note": "Als rijkste natuurlijke bron van vitamine C binnen de Ayurveda vormt amla de kern van rasayana-tonics die geroemd worden om hun verjongende en spijsverteringsbevorderende werking.",
+            "id": "amla",
+            "tags": [
+              "digestion",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Brahmi (Waterhysop)",
+            "sci": "Bacopa monnieri",
+            "note": "Dit Ayurvedische Medhya Rasayana-kruid wordt van oudsher ingenomen om het geheugen te scherpen, de geest te kalmeren en het leervermogen te ondersteunen.",
+            "id": "brahmi",
+            "tags": [
+              "stress",
+              "sleep"
+            ]
+          },
+          {
+            "name": "Guduchi (Giloy)",
+            "sci": "Tinospora cordifolia",
+            "note": "Ook wel Amrita genoemd, 'wortel van de onsterfelijkheid', dit afkooksel van de stengel is binnen de Ayurveda het eerste middel van keuze bij koorts en het opbouwen van weerstand.",
+            "id": "guduchi",
+            "tags": [
+              "immunity",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Shatavari",
+            "sci": "Asparagus racemosus",
+            "note": "Deze wortelkuur wordt in de Ayurveda geëerd als hét vrouwelijke verjongingsmiddel bij uitstek, van oudsher gebruikt ter ondersteuning van de borstvoeding en de hormonale balans.",
+            "id": "shatavari",
+            "tags": [
+              "energy",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Arjuna",
+            "sci": "Terminalia arjuna",
+            "note": "Bastpoeder dat al lang in de Ayurvedische cardiologie wordt gebruikt om de hartspier te versterken en een gezonde bloedsomloop te ondersteunen.",
+            "id": "arjuna",
+            "tags": [
+              "energy"
+            ]
+          },
+          {
+            "name": "Haritaki",
+            "sci": "Terminalia chebula",
+            "note": "In de Ayurveda de 'koning der geneesmiddelen' genoemd; deze vrucht vormt de kern van Triphala voor spijsvertering, ontgifting en een goede stoelgang.",
+            "id": "haritaki",
+            "tags": [
+              "digestion",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Bibhitaki",
+            "sci": "Terminalia bellirica",
+            "note": "Een van de drie vruchten van Triphala, van oudsher in de Ayurveda gebruikt om overtollig slijm op te ruimen en de luchtwegen te ondersteunen.",
+            "id": "bibhitaki",
+            "tags": [
+              "respiratory",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Fenegriek",
+            "sci": "Trigonella foenum-graecum",
+            "note": "In Zuid-Aziatische huishoudens worden de zaden geweekt en gegeten om de spijsvertering te vergemakkelijken, de borstvoeding te ondersteunen en de bloedsuikerspiegel in balans te houden.",
+            "id": "fenugreek",
+            "tags": [
+              "digestion",
+              "energy"
+            ]
+          },
+          {
+            "name": "Lange peper (Pippali)",
+            "sci": "Piper longum",
+            "note": "Scherpe vrucht in Ayurvedische Trikatu-mengsels, van oudsher gebruikt om het spijsverteringsvuur aan te wakkeren en de luchtwegen te ontstoppen.",
+            "id": "longPepper",
+            "tags": [
+              "digestion",
+              "respiratory"
+            ]
+          },
+          {
+            "name": "Sandelhout",
+            "sci": "Santalum album",
+            "note": "Verkoelende pasta die in de Ayurveda wordt aangebracht om ontstoken huid en koorts te verzachten en de geest tijdens meditatie tot rust te brengen.",
+            "id": "sandalwood",
+            "tags": [
+              "skin",
+              "stress"
+            ]
+          },
+          {
+            "name": "Indiase sarsaparilla (Anantamul)",
+            "sci": "Hemidesmus indicus",
+            "note": "Zoetwortelige klimplant die in klassieke Ayurvedische formules wordt gebruikt om het bloed te koelen, de huid te zuiveren en gewrichtspijn te verlichten.",
+            "id": "indianSarsaparilla",
+            "tags": [
+              "skin",
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "Bael (Bengaalse kweepeer)",
+            "sci": "Aegle marmelos",
+            "note": "Het vruchtvlees van de onrijpe vrucht is een traditioneel Ayurvedisch middel tegen chronische diarree en dysenterie.",
+            "id": "bael",
+            "tags": [
+              "digestion"
+            ]
+          },
+          {
+            "name": "Guggul",
+            "sci": "Commiphora wightii",
+            "note": "Hars die de kern vormt van Ayurveda's Guggulu-formules, van oudsher gebruikt om de cholesterol en gewrichtsontstekingen in toom te houden.",
+            "id": "guggul",
+            "tags": [
+              "painInflammation",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Manjistha (Indiase meekrap)",
+            "sci": "Rubia cordifolia",
+            "note": "Wortel die al lang in de Ayurveda wordt gebruikt als bloedzuiveraar voor een heldere huid, wondgenezing en ondersteuning van het lymfestelsel.",
+            "id": "manjistha",
+            "tags": [
+              "skin",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Jatamansi (Nardus)",
+            "sci": "Nardostachys jatamansi",
+            "note": "Geurige wortel die al lang in de Ayurveda wordt gebruikt om het zenuwstelsel te kalmeren en een rustgevende slaap te bevorderen.",
+            "id": "jatamansi",
+            "tags": [
+              "sleep",
+              "stress"
+            ]
+          },
+          {
+            "name": "Astragalus",
+            "sci": "Astragalus membranaceus",
+            "note": "De wortel van huang qi wordt afgekookt om de wei qi te versterken, het uithoudingsvermogen te vergroten en de wondgenezing te bevorderen.",
+            "id": "astragalus",
+            "tags": [
+              "immunity",
+              "energy"
+            ]
+          },
+          {
+            "name": "Reishi-paddenstoel",
+            "sci": "Ganoderma lucidum",
+            "note": "De ling zhi-paddenstoel werd door taoïstische kruidkundigen op waarde geschat om de shen te kalmeren, slapeloosheid te verlichten en het leven te verlengen.",
+            "id": "reishiMushroom",
+            "tags": [
+              "sleep",
+              "stress",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Dong Quai",
+            "sci": "Angelica sinensis",
+            "note": "Dang gui, de 'vrouwelijke ginseng', voedt al tweeduizend jaar het bloed en verlicht menstruatieklachten.",
+            "id": "dongQuai",
+            "tags": [
+              "energy",
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "Gojibes",
+            "sci": "Lycium barbarum",
+            "note": "Gou qi zi-bessen worden geweekt of gegeten om de yin van lever en nieren te voeden en de ogen te verhelderen.",
+            "id": "gojiBerry",
+            "tags": [
+              "immunity",
+              "energy"
+            ]
+          },
+          {
+            "name": "Schisandra",
+            "sci": "Schisandra chinensis",
+            "note": "Wu wei zi, de 'vrucht met de vijf smaken', verstevigt de longen, kalmeert de geest en beschermt de lever.",
+            "id": "schisandra",
+            "tags": [
+              "respiratory",
+              "stress",
+              "sleep"
+            ]
+          },
+          {
+            "name": "Chinees glidkruid (Huang Qin)",
+            "sci": "Scutellaria baicalensis",
+            "note": "De wortel van huang qin verdrijft vochtige hitte en behandelt sinds oude receptenboeken koorts, hoest en dysenterie.",
+            "id": "chineseSkullcap",
+            "tags": [
+              "respiratory",
+              "digestion",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Rehmannia",
+            "sci": "Rehmannia glutinosa",
+            "note": "Gestoomde di huang versterkt de yin en het bloed van de nieren en is een hoeksteen-ingrediënt van veel klassieke formules.",
+            "id": "rehmannia",
+            "tags": [
+              "energy",
+              "sleep"
+            ]
+          },
+          {
+            "name": "Chrysant",
+            "sci": "Chrysanthemum morifolium",
+            "note": "Ju hua-bloemen worden als thee gezet om hitte te verdrijven, rode ogen te verzachten en hoofdpijn te verlichten.",
+            "id": "chrysanthemum",
+            "tags": [
+              "headache",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Japanse kamperfoelie",
+            "sci": "Lonicera japonica",
+            "note": "De jin yin hua-bloem verdrijft hittetoxines en behandelt al eeuwenlang koorts, zweren en keelinfecties.",
+            "id": "japaneseHoneysuckle",
+            "tags": [
+              "immunity",
+              "respiratory",
+              "skin"
+            ]
+          },
+          {
+            "name": "Chinese kaneel (Cassia)",
+            "sci": "Cinnamomum cassia",
+            "note": "Rou gui-bast verwarmt de yang van de nieren en brengt stagnerend bloed in beweging om kougerelateerde pijn te verlichten.",
+            "id": "chineseCinnamon",
+            "tags": [
+              "painInflammation",
+              "energy"
+            ]
+          },
+          {
+            "name": "Poria (Fu Ling)",
+            "sci": "Wolfiporia extensa",
+            "note": "Fu ling, een schimmelsclerotium, draineert vocht, kalmeert de geest en versterkt de milt wanneer het wordt afgekookt.",
+            "id": "poria",
+            "tags": [
+              "sleep",
+              "digestion",
+              "stress"
+            ]
+          },
+          {
+            "name": "Chinese yam",
+            "sci": "Dioscorea polystachya",
+            "note": "De shan yao-knol versterkt de qi van milt, longen en nieren en wordt van oudsher gestoofd tot een versterkende pap.",
+            "id": "chineseYam",
+            "tags": [
+              "digestion",
+              "energy",
+              "respiratory"
+            ]
+          },
+          {
+            "name": "Bupleurum (Hazenoor)",
+            "sci": "Bupleurum chinense",
+            "note": "Chai hu-wortel harmoniseert de lever en verspreidt hitte, en is essentieel bij afwisselende koorts en koude rillingen.",
+            "id": "bupleurum",
+            "tags": [
+              "stress",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Notoginseng",
+            "sci": "Panax notoginseng",
+            "note": "San qi-wortel wordt toegepast om bloedingen en kneuzingen te stelpen en tegelijk de bloedsomloop te stimuleren.",
+            "id": "notoginseng",
+            "tags": [
+              "painInflammation",
+              "skin"
+            ]
+          },
+          {
+            "name": "Codonopsis",
+            "sci": "Codonopsis pilosula",
+            "note": "Dang shen-wortel dient als zachter alternatief voor ginseng, versterkt de qi en bevordert de spijsvertering.",
+            "id": "codonopsis",
+            "tags": [
+              "energy",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Fo-Ti (He Shou Wu)",
+            "sci": "Reynoutria multiflora",
+            "note": "He shou wu-wortel wordt bereid om lever en nieren te voeden en zou grijzend haar weer donker kunnen maken.",
+            "id": "foti",
+            "tags": [
+              "energy",
+              "skin"
+            ]
+          },
+          {
+            "name": "Duizendblad",
+            "sci": "Achillea millefolium",
+            "note": "Bekend als soldatenkruid, al sinds de oudheid gebruikt om bloedingen te stelpen en de genezing van slagveldwonden te bespoedigen.",
+            "id": "yarrow",
+            "tags": [
+              "skin",
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "Sint-janskruid",
+            "sci": "Hypericum perforatum",
+            "note": "Europees volksmiddel tegen zwaarmoedigheid en zenuwpijn; de gele bloemetjes werden in olie getrokken voor wondzalven.",
+            "id": "stJohnsWort",
+            "tags": [
+              "stress",
+              "painInflammation",
+              "skin"
+            ]
+          },
+          {
+            "name": "Salie",
+            "sci": "Salvia officinalis",
+            "note": "Het Latijnse salvere, genezen, weerspiegelt het eeuwenoude gebruik als gorgeldrank bij keelpijn en als middel om de spijsvertering te bevorderen.",
+            "id": "sage",
+            "tags": [
+              "digestion",
+              "respiratory"
+            ]
+          },
+          {
+            "name": "Tijm",
+            "sci": "Thymus vulgaris",
+            "note": "Mediterraan middel tegen hoest en verkoudheid op de borst; de vluchtige oliën worden al lang in siropen verwerkt om hardnekkig slijm los te maken.",
+            "id": "thyme",
+            "tags": [
+              "respiratory",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Heemst",
+            "sci": "Althaea officinalis",
+            "note": "De slijmstoffen uit wortel en blad verzachtten eeuwenlang in de Europese apotheek keelpijn, hoest en een geïrriteerd darmslijmvlies.",
+            "id": "marshmallow",
+            "tags": [
+              "respiratory",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Goudsbloem",
+            "sci": "Calendula officinalis",
+            "note": "Felgekleurde bloemblaadjes verwerkt tot zalf om snijwonden te reinigen en ontstoken, traag genezende huid te kalmeren.",
+            "id": "potMarigold",
+            "tags": [
+              "skin",
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "Mariadistel",
+            "sci": "Silybum marianum",
+            "note": "Mediterrane zaden van oudsher gekauwd of als thee gezet om de lever na een zware maaltijd te beschermen en te versterken.",
+            "id": "milkThistle",
+            "tags": [
+              "digestion"
+            ]
+          },
+          {
+            "name": "Venkel",
+            "sci": "Foeniculum vulgare",
+            "note": "Anijsgeurige zaadjes worden al generaties lang na de maaltijd gekauwd om koliek, een opgeblazen gevoel en winderigheid bij baby's te verlichten.",
+            "id": "fennel",
+            "tags": [
+              "digestion"
+            ]
+          },
+          {
+            "name": "Grote brandnetel",
+            "sci": "Urtica dioica",
+            "note": "De brandende bladeren worden als voorjaarstonicumthee gezet om het bloed te zuiveren en gewrichtspijn te verlichten.",
+            "id": "stingingNettle",
+            "tags": [
+              "painInflammation",
+              "skin",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Malrove",
+            "sci": "Marrubium vulgare",
+            "note": "Bitter mediterraan kruid dat tot snoepjes en siropen werd gekookt als klassiek middel tegen hoest en bronchitis.",
+            "id": "whiteHorehound",
+            "tags": [
+              "respiratory",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Smeerwortel",
+            "sci": "Symphytum officinale",
+            "note": "Bijgenaamd 'beenbreek'; de fijngestampte wortel en bladeren werden eeuwenlang als kompres op breuken, verstuikingen en kneuzingen gelegd.",
+            "id": "comfrey",
+            "tags": [
+              "painInflammation",
+              "skin"
+            ]
+          },
+          {
+            "name": "Moederkruid",
+            "sci": "Tanacetum parthenium",
+            "note": "Kruid met bittere blaadjes, vers gekauwd of als thee gezet, al lang een volksmiddel tegen migraine en hoofdpijn.",
+            "id": "feverfew",
+            "tags": [
+              "headache",
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "Koningskaars",
+            "sci": "Verbascum thapsus",
+            "note": "Donzige bladeren en bloemen getrokken in olie of thee tegen hoest, keelpijn en oorpijn.",
+            "id": "mullein",
+            "tags": [
+              "respiratory",
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "Eenstijlige meidoorn",
+            "sci": "Crataegus monogyna",
+            "note": "Bessen, bloemen en bladeren gezet als Europa's klassieke hartversterkende thee bij een zwakke of onrustige pols.",
+            "id": "hawthorn",
+            "tags": [
+              "stress",
+              "sleep"
+            ]
+          },
+          {
+            "name": "Linde (lindebloesem)",
+            "sci": "Tilia cordata",
+            "note": "Geurige bloesems gezet als kalmerende thee om koorts te breken en onrustige zenuwen te verzachten.",
+            "id": "linden",
+            "tags": [
+              "sleep",
+              "stress",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Moerasspirea",
+            "sci": "Filipendula ulmaria",
+            "note": "Geurig bloeiend kruid, al lang gebruikt tegen koorts en gewrichtspijn, dat later de chemische blauwdruk voor aspirine leverde.",
+            "id": "meadowsweet",
+            "tags": [
+              "painInflammation",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Osha-wortel",
+            "sci": "Ligusticum porteri",
+            "note": "Wortel gekauwd of als thee gezet door Rocky Mountain-stammen zoals de Navajo en de Ute om keelpijn en luchtweginfecties te verlichten.",
+            "id": "oshaRoot",
+            "tags": [
+              "respiratory",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Zilverkaars",
+            "sci": "Actaea racemosa",
+            "note": "Wortel gebruikt door de Cherokee en andere volkeren van de oostelijke bossen om menstruatiekrampen te verlichten en de bevalling te ondersteunen.",
+            "id": "blackCohosh",
+            "tags": [
+              "painInflammation",
+              "stress"
+            ]
+          },
+          {
+            "name": "Devil's Club",
+            "sci": "Oplopanax horridus",
+            "note": "Binnenbast gebruikt door de Tlingit, Haida en andere volkeren van de noordwestkust van de Stille Oceaan tegen artritis, infecties en diabetessymptomen.",
+            "id": "devilsClub",
+            "tags": [
+              "painInflammation",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Wilde bergamot",
+            "sci": "Monarda fistulosa",
+            "note": "Blackfeet en andere vlaktestammen zetten thee van de bladeren van deze thymolrijke munt tegen verkoudheid en luchtweginfecties.",
+            "id": "wildBergamot",
+            "tags": [
+              "respiratory",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Berendruif",
+            "sci": "Arctostaphylos uva-ursi",
+            "note": "Bladeren gezet door talrijke Indianenvolkeren als plasmiddel en remedie tegen urineweginfecties.",
+            "id": "bearberry",
+            "tags": [
+              "immunity",
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "Roodiep",
+            "sci": "Ulmus rubra",
+            "note": "De Cherokee en Irokezen gebruikten de slijmerige binnenbast om keelpijn te verzachten en wonden te helen.",
+            "id": "slipperyElm",
+            "tags": [
+              "digestion",
+              "respiratory",
+              "skin"
+            ]
+          },
+          {
+            "name": "Cascara Sagrada",
+            "sci": "Frangula purshiana",
+            "note": "Stammen uit het noordwesten van de Stille Oceaan droogden en lieten de bast van deze sporkehoutsoort rijpen tot een betrouwbaar natuurlijk laxeermiddel.",
+            "id": "cascaraSagrada",
+            "tags": [
+              "digestion"
+            ]
+          },
+          {
+            "name": "Kinaboom",
+            "sci": "Cinchona officinalis",
+            "note": "De Quechua uit de Andes gebruikten de bittere bast tegen koorts, lang voordat deze de bron werd van kinine.",
+            "id": "cinchona",
+            "tags": [
+              "immunity",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Kattenklauw",
+            "sci": "Uncaria tomentosa",
+            "note": "De Asháninka en andere volkeren van het Peruaanse Amazonegebied zetten thee van de bast van deze houtige klimplant tegen artritis en ter ondersteuning van de weerstand.",
+            "id": "catsClaw",
+            "tags": [
+              "painInflammation",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Coca",
+            "sci": "Erythroxylum coca",
+            "note": "De Quechua en Aymara van de Andes kauwen al millennialang op de bladeren om hoogteziekte en vermoeidheid tegen te gaan.",
+            "id": "coca",
+            "tags": [
+              "energy",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Drakenbloed",
+            "sci": "Croton lechleri",
+            "note": "Volkeren uit het Amazonegebied brengen het rode melksap van deze boom rechtstreeks aan op snijwonden als natuurlijk antisepticum.",
+            "id": "dragonsBlood",
+            "tags": [
+              "skin",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Pau d'Arco",
+            "sci": "Tabebuia impetiginosa",
+            "note": "Binnenbast door inheemse volkeren van het Amazonegebied als thee gezet tegen infecties, koorts en huidaandoeningen.",
+            "id": "pauDarco",
+            "tags": [
+              "immunity",
+              "skin"
+            ]
+          },
+          {
+            "name": "Boldo",
+            "sci": "Peumus boldus",
+            "note": "Mapuche-genezers in Chili gebruiken al lang boldo-bladthee om de leverfunctie te ondersteunen en de spijsvertering te bevorderen.",
+            "id": "boldo",
+            "tags": [
+              "digestion"
+            ]
+          },
+          {
+            "name": "Copaiba",
+            "sci": "Copaifera officinalis",
+            "note": "Volkeren uit het Amazonegebied tappen de hars van deze boom en brengen die uitwendig aan op wonden als ontstekingsremmend middel.",
+            "id": "copaiba",
+            "tags": [
+              "painInflammation",
+              "skin"
+            ]
+          },
+          {
+            "name": "Guarana",
+            "sci": "Paullinia cupana",
+            "note": "De Sateré-Mawé uit de Braziliaanse Amazone domesticeerden deze klimplant en roosterden de zaden voor langdurige energie en concentratie.",
+            "id": "guarana",
+            "tags": [
+              "energy"
+            ]
+          },
+          {
+            "name": "Zwarte komijn (Nigella)",
+            "sci": "Nigella sativa",
+            "note": "Bekend als 'het gezegende zaad' in de profetische geneeskunde; de olie behandelt astma, spijsverteringsklachten en huidinfecties.",
+            "id": "blackSeed",
+            "tags": [
+              "respiratory",
+              "digestion",
+              "skin"
+            ]
+          },
+          {
+            "name": "Wierook",
+            "sci": "Boswellia sacra",
+            "note": "Al millennialang getapt uit Arabische bomen; de hars behandelt gewrichtsontsteking, wonden en luchtwegklachten.",
+            "id": "frankincense",
+            "tags": [
+              "painInflammation",
+              "respiratory",
+              "skin"
+            ]
+          },
+          {
+            "name": "Mirre",
+            "sci": "Commiphora myrrha",
+            "note": "Geoogst in de Hoorn van Afrika en op het Arabisch Schiereiland; de hars ontsmet wonden en verzacht pijnlijk tandvlees en keelpijn.",
+            "id": "myrrh",
+            "tags": [
+              "skin",
+              "respiratory"
+            ]
+          },
+          {
+            "name": "Senna",
+            "sci": "Senna alexandrina",
+            "note": "Egyptische artsen vertrouwen al sinds de oudheid op de peulen en bladeren als krachtig en betrouwbaar laxeermiddel.",
+            "id": "senna",
+            "tags": [
+              "digestion"
+            ]
+          },
+          {
+            "name": "Hibiscus (Karkade)",
+            "sci": "Hibiscus sabdariffa",
+            "note": "Gezet als karkade in Soedan en Egypte; de kelkbladeren zijn een volksmiddel tegen hoge bloeddruk en koorts.",
+            "id": "hibiscus",
+            "tags": [
+              "immunity"
+            ]
+          },
+          {
+            "name": "Moringa",
+            "sci": "Moringa oleifera",
+            "note": "Al lang gebruikt in Afrika bezuiden de Sahara; de bladeren behandelen ondervoeding en ontsteking en ondersteunen de melkproductie van zogende moeders.",
+            "id": "moringa",
+            "tags": [
+              "immunity",
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "Baobab (Apenbroodboom)",
+            "sci": "Adansonia digitata",
+            "note": "Afrika's 'boom des levens' levert vruchtvlees en bast die van oudsher worden gebruikt tegen koorts, diarree en malaria.",
+            "id": "baobab",
+            "tags": [
+              "immunity",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Rooibos",
+            "sci": "Aspalathus linearis",
+            "note": "De Khoisan en Kaaps-Nederlandse kolonisten van Zuid-Afrika zetten deze roodachtige struik als middel tegen allergieën en koliek.",
+            "id": "rooibos",
+            "tags": [
+              "immunity",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Buchu",
+            "sci": "Agathosma betulina",
+            "note": "Khoisan-genezers in de Kaap gebruikten de scherpe bladeren tegen urineweginfecties en nieraandoeningen.",
+            "id": "buchu",
+            "tags": [
+              "immunity"
+            ]
+          },
+          {
+            "name": "Kankerbos (Sutherlandia)",
+            "sci": "Lessertia frutescens",
+            "note": "Bij de Khoi bekend als 'kankerbos'; deze zuidelijk-Afrikaanse struik is een traditioneel tonicum tegen stress en vermoeidheid en ter ondersteuning van de weerstand.",
+            "id": "cancerBush",
+            "tags": [
+              "stress",
+              "energy",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Umckaloabo (Afrikaanse geranium)",
+            "sci": "Pelargonium sidoides",
+            "note": "Xhosa- en Zoeloe-genezers in Zuid-Afrika gebruikten de knolwortel tegen hoest, bronchitis en tuberculose.",
+            "id": "umckaloabo",
+            "tags": [
+              "respiratory"
+            ]
+          },
+          {
+            "name": "Hoodia",
+            "sci": "Hoodia gordonii",
+            "note": "San-jagers in de Kalahari kauwden op deze stekelige vetplant om honger en dorst tijdens lange tochten te onderdrukken.",
+            "id": "hoodia",
+            "tags": [
+              "energy"
+            ]
+          },
+          {
+            "name": "Henna",
+            "sci": "Lawsonia inermis",
+            "note": "Naast lichaamskunst gebruikt de volksgeneeskunde in het Midden-Oosten en Noord-Afrika bladpasta tegen schimmelinfecties van de huid.",
+            "id": "henna",
+            "tags": [
+              "skin"
+            ]
+          },
+          {
+            "name": "Mastiek",
+            "sci": "Pistacia lentiscus",
+            "note": "Al sinds de oudheid gekauwd in het oostelijke Middellandse Zeegebied; deze boomhars verzacht maagzweren en spijsverteringsklachten.",
+            "id": "mastic",
+            "tags": [
+              "digestion"
+            ]
+          },
+          {
+            "name": "Johannesbrood",
+            "sci": "Ceratonia siliqua",
+            "note": "De volksgeneeskunde in het Midden-Oosten maalde de peulen tot een middel tegen diarree en spijsverteringsklachten bij kinderen.",
+            "id": "carob",
+            "tags": [
+              "digestion"
+            ]
+          }
+        ]
+      },
+      "floweringPerennials": {
+        "title": "Bloeiende Vaste Planten",
+        "desc": "Bloemen die jaar na jaar terugkomen.",
+        "intro": "Bloeiende vaste planten zijn de ruggengraat van een tuin die blijft geven: in tegenstelling tot eenjarigen sterven ze in de winter af en groeien ze elk voorjaar weer uit dezelfde wortels, wortelstokken of knollen. Veel soorten zetten zich vast en breiden in de loop der jaren uit tot vollere bosjes, zodat één aanplant je elk seizoen meer bloemen oplevert. Deze collectie verzamelt geliefde, gemakkelijk verkrijgbare vaste planten die perken en borders verankeren met betrouwbare, telkens terugkerende kleur.",
+        "species": [
+          {
+            "name": "Pioenroos",
+            "sci": "Paeonia lactiflora",
+            "note": "De langlevende knolwortels kunnen vijftig jaar of langer op dezelfde plek bloeien, grotendeels ongestoord."
+          },
+          {
+            "name": "Daglelie",
+            "sci": "Hemerocallis fulva",
+            "note": "Ondanks de naam vermeerdert elke waaier zich tot dichte bosjes die generaties lang betrouwbaar bloeien."
+          },
+          {
+            "name": "Rode zonnehoed",
+            "sci": "Echinacea purpurea",
+            "note": "Deze uit de prairie afkomstige plant komt terug vanuit een stevige penwortel en zaait zichzelf uit tot steeds grotere kolonies."
+          },
+          {
+            "name": "Baardiris",
+            "sci": "Iris germanica",
+            "note": "Vlezige wortelstokken breiden zich net onder het grondoppervlak uit en splitsen zich in nieuwe waaiers die elk voorjaar opnieuw bloeien."
+          },
+          {
+            "name": "Glanzende zonnehoed",
+            "sci": "Rudbeckia fulgida",
+            "note": "Verspreidt zich via wortelstokken en zelfzaai tot betrouwbare goudkleurige bloemenvelden die elke zomer terugkeren."
+          },
+          {
+            "name": "Vlambloem",
+            "sci": "Phlox paniculata",
+            "note": "Stevige, bosvormende stengels sterven elke herfst af tot aan de wortels en komen het jaar erop voller terug."
+          },
+          {
+            "name": "Engelse lavendel",
+            "sci": "Lavandula angustifolia",
+            "note": "Houtachtige, overblijvende stengels overleven de winterrust en lopen elk voorjaar weer uit om in de zomer opnieuw te bloeien."
+          }
+        ]
+      },
+      "oceanAndRiverFish": {
+        "title": "Vissen van zee en rivier",
+        "desc": "Zestien wateren, één lens",
+        "intro": "Van koraalriffen tot koude bergrivieren: dit zijn de vissen die mensen het vaakst fotograferen en waarover ze het meest vragen. Wetenschappelijke namen blijven wereldwijd in het Latijn, dus een naam die je hier leert werkt aan elke kust.",
+        "species": [
+          {
+            "name": "Clownvis",
+            "sci": "Amphiprion ocellaris",
+            "note": "Leeft tussen de tentakels van zeeanemonen, waarvan het gif hem niets doet: bescherming in ruil voor schoonmaakwerk. Elke clownvis wordt als mannetje geboren en het dominante dier verandert in een vrouwtje.",
+            "id": "clownfish"
+          },
+          {
+            "name": "Regenboogforel",
+            "sci": "Oncorhynchus mykiss",
+            "note": "Van huis uit een bewoner van koude rivieren aan de Pacifische kust, inmiddels gekweekt op elk continent behalve Antarctica. Zijn roze vlees dankt hij aan de kreeftachtigen die hij eet.",
+            "id": "rainbowTrout"
+          },
+          {
+            "name": "Atlantische zalm",
+            "sci": "Salmo salar",
+            "note": "Komt uit in zoet water, brengt jaren op zee door en vindt daarna precies de rivier terug waarin hij geboren werd om te paaien. Zijn soortnaam betekent „de springer”.",
+            "id": "atlanticSalmon"
+          },
+          {
+            "name": "Snoek",
+            "sci": "Esox lucius",
+            "note": "Een hinderlaagjager die roerloos tussen de waterplanten wacht en dan in een fractie van een seconde toeslaat. De eendenbeksnuit en de ver naar achteren geplaatste vinnen verraden hem meteen.",
+            "id": "northernPike"
+          },
+          {
+            "name": "Karper",
+            "sci": "Cyprinus carpio",
+            "note": "Al ruim tweeduizend jaar gekweekt en nu op elk continent behalve Antarctica te vinden — in het ene land een gewaardeerde delicatesse, in het andere een invasieve plaag.",
+            "id": "commonCarp"
+          },
+          {
+            "name": "Blauwe doktersvis",
+            "sci": "Paracanthurus hepatus",
+            "note": "Een doktersvis van het rif met een vlijmscherpe stekel bij de staart, die hij bij gevaar uitklapt. Als volwassen dier felblauw, als jong dier felgeel.",
+            "id": "blueTang"
+          },
+          {
+            "name": "Forelbaars",
+            "sci": "Micropterus salmoides",
+            "note": "Wereldwijd de meest beviste sportvis van het zoete water. Je onderscheidt hem van de zwartbaars doordat zijn bek tot voorbij het oog reikt.",
+            "id": "largemouthBass"
+          },
+          {
+            "name": "Geelvintonijn",
+            "sci": "Thunnus albacares",
+            "note": "Trekt hele oceanen over en houdt zijn lichaam warmer dan het water eromheen, waardoor hij ook in koude diepten razendsnel blijft zwemmen.",
+            "id": "yellowfinTuna"
+          },
+          {
+            "name": "Zebravis",
+            "sci": "Danio rerio",
+            "note": "Een klein gestreept riviervisje uit Zuid-Azië dat uitgroeide tot een van de best bestudeerde dieren van de wetenschap — dankzij de doorzichtige embryo's zien onderzoekers organen voor hun ogen ontstaan.",
+            "id": "zebrafish"
+          },
+          {
+            "name": "Koraalduivel",
+            "sci": "Pterois volitans",
+            "note": "Prachtig én giftig, met stekels die een pijnlijke steek toebrengen. Van oorsprong uit de Indo-Pacifische wateren en een hardnekkige indringer in de Atlantische Oceaan en het Caribisch gebied.",
+            "id": "redLionfish"
+          }
+        ]
+      },
+      "birdsOfTheWorld": {
+        "title": "Vogels van de wereld",
+        "desc": "Tien die je echt tegenkomt",
+        "intro": "Vogels zijn de wilde dieren die de meeste mensen vanuit hun raam kunnen fotograferen. Deze tien komen van zes continenten en horen bij de bekendste soorten op aarde — goed oefenmateriaal voor een scherp oog.",
+        "species": [
+          {
+            "name": "Boerenzwaluw",
+            "sci": "Hirundo rustica",
+            "note": "De meest wijdverbreide zwaluw ter wereld: hij broedt op het noordelijk halfrond en overwintert in het zuiden. Zijn diep gevorkte staart is in de vlucht onmiskenbaar.",
+            "id": "barnSwallow"
+          },
+          {
+            "name": "Huismus",
+            "sci": "Passer domesticus",
+            "note": "Volgde de mens vanuit het Midden-Oosten naar vrijwel elke stad op aarde. Mannetjes dragen een zwarte bef, vrouwtjes zijn effen zandbruin.",
+            "id": "houseSparrow"
+          },
+          {
+            "name": "IJsvogel",
+            "sci": "Alcedo atthis",
+            "note": "Een flits elektrisch blauw boven trage rivieren in Europa, Azië en Noord-Afrika. Hij duikt kopje-onder en haalt vissen tot een meter onder water weg.",
+            "id": "commonKingfisher"
+          },
+          {
+            "name": "Slechtvalk",
+            "sci": "Falco peregrinus",
+            "note": "Het snelste dier op aarde: in een jachtduik haalt hij meer dan 300 km/h. Hij komt op elk continent behalve Antarctica voor en nestelt steeds vaker op wolkenkrabbers.",
+            "id": "peregrineFalcon"
+          },
+          {
+            "name": "Amerikaanse blauwe reiger",
+            "sci": "Ardea herodias",
+            "note": "Staat minutenlang roerloos in ondiep water en spietst dan een vis met een uitval die te snel is om te volgen. Vliegt met de hals in een S gevouwen.",
+            "id": "greatBlueHeron"
+          },
+          {
+            "name": "Rotsduif",
+            "sci": "Columba livia",
+            "note": "De stadsduif, afstammeling van vogels die op kliffen nestelden — vandaar dat richels en vensterbanken hem zo goed bevallen. Beide ouders voeren de jongen met „kropmelk”.",
+            "id": "rockPigeon"
+          },
+          {
+            "name": "Roodborst",
+            "sci": "Erithacus rubecula",
+            "note": "Brutaal genoeg om een tuinier te volgen voor de wormen die bovenkomen. De oranje borst dragen beide geslachten, en hij wordt het hele jaar door met zang verdedigd.",
+            "id": "europeanRobin"
+          },
+          {
+            "name": "Wilde eend",
+            "sci": "Anas platyrhynchos",
+            "note": "De voorouder van bijna elke tamme eend. Het mannetje met de groene kop is beroemd, maar alleen het vrouwtje maakt het klassieke luide gekwaak.",
+            "id": "mallard"
+          },
+          {
+            "name": "Geelvleugelara",
+            "sci": "Ara macao",
+            "note": "Een grote papegaai uit de regenwouden van Midden- en Zuid-Amerika die ouder dan vijftig jaar kan worden en voor het leven paart. Zijn snavel kraakt noten die geen enkele andere vogel openkrijgt.",
+            "id": "scarletMacaw"
+          },
+          {
+            "name": "Keizerspinguïn",
+            "sci": "Aptenodytes forsteri",
+            "note": "Broedt midden in de Antarctische winter: de mannetjes staan twee maanden lang in het donker dicht opeen, met één ei op hun voeten en zonder te eten.",
+            "id": "emperorPenguin"
+          }
+        ]
+      },
+      "gardenInsects": {
+        "title": "Buren onder je voeten",
+        "desc": "Tien alledaagse beestjes, echt bekeken",
+        "intro": "De tien dieren hier leven op een paar meter van vrijwel elke voordeur, en bijna iedereen heeft ze allemaal weleens gezien zonder ooit te horen wat ze aan het doen waren. Onder die vertrouwdheid schuilt chemische oorlogvoering, opgevouwen origamivleugels, intercontinentale navigatie en een mierenkolonie van 6.000 kilometer lang.",
+        "species": [
+          {
+            "name": "Zevenstippelig lieveheersbeestje",
+            "sci": "Coccinella septempunctata",
+            "note": "Knijp erin en het bloedt expres uit zijn knieën: een bittere gele vloeistof waar vogels het meteen voor laten vallen.",
+            "id": "sevenSpotLadybird"
+          },
+          {
+            "name": "Gewone oorworm",
+            "sci": "Forficula auricularia",
+            "note": "Zijn achtervleugels vouwen open tot meer dan tien keer hun opgeborgen formaat, een van de strakste vouwen in de natuur — en toch vliegt hij vrijwel nooit.",
+            "id": "commonEarwig"
+          },
+          {
+            "name": "Gewone oprolpissebed",
+            "sci": "Armadillidium vulgare",
+            "note": "Helemaal geen insect maar een kreeftachtige: een landbewonende verwant van krabben die nog altijd met kieuwen ademt.",
+            "id": "commonPillWoodlouse"
+          },
+          {
+            "name": "Huisvlieg",
+            "sci": "Musca domestica",
+            "note": "Ze proeft met haar poten, dus ze weet al waarop ze geland is voordat haar monddelen er zijn.",
+            "id": "houseFly"
+          },
+          {
+            "name": "Segrijnslak",
+            "sci": "Cornu aspersum",
+            "note": "Ze eet door een getande band over bladeren te schrapen en laat van achteren nieuwe tandjes aangroeien als de voorste slijten.",
+            "id": "gardenSnail"
+          },
+          {
+            "name": "Honingbij",
+            "sci": "Apis mellifera",
+            "note": "Een koningin paart een paar dagen in de lucht, daarna nooit meer, en legt de rest van haar leven uit dat opgeslagen sperma.",
+            "id": "westernHoneyBee"
+          },
+          {
+            "name": "Distelvlinder",
+            "sci": "Vanessa cardui",
+            "note": "Geen enkel exemplaar maakt de hele trek: er zijn zo'n zes generaties nodig van tropisch Afrika naar Europa en terug.",
+            "id": "paintedLady"
+          },
+          {
+            "name": "Trilspin",
+            "sci": "Pholcus phalangioides",
+            "note": "Ze tokkelt aan het web van andere spinnen alsof er een insect vastzit, en overvalt de eigenaar die komt kijken.",
+            "id": "cellarSpider"
+          },
+          {
+            "name": "Argentijnse mier",
+            "sci": "Linepithema humile",
+            "note": "Werksters uit Spanje, Californië en Japan vechten niet als ze elkaar tegenkomen: ze gelden als één en dezelfde kolonie.",
+            "id": "argentineAnt"
+          },
+          {
+            "name": "Gewone regenworm",
+            "sci": "Lumbricus terrestris",
+            "note": "Darwin besteedde zijn laatste jaren aan regenwormen en publiceerde er een half jaar voor zijn dood een boek over.",
+            "id": "commonEarthworm"
+          }
+        ]
+      },
+      "fungiOfTheWorld": {
+        "title": "Geen plant, geen dier",
+        "desc": "Tien schimmels die stilletjes de baas zijn",
+        "intro": "Schimmels staan in de stamboom van het leven dichter bij dieren dan bij planten, en de paddenstoel die je ziet is alleen de vrucht van een net van draden dat onzichtbaar door grond, hout of een levend insect groeit. Tussen deze tien zit de paddenstoel die meer mensen doodt dan welke andere ook, een organisme dat negen vierkante kilometer Oregon beslaat, en de schimmel waarmee het antibioticatijdperk begon.",
+        "species": [
+          {
+            "name": "Vliegenzwam",
+            "sci": "Amanita muscaria",
+            "note": "De rood-witte paddenstoel uit elk sprookje bestaat echt, is giftig, en bevat nauwelijks het gif dat naar hem vernoemd is.",
+            "id": "flyAgaric"
+          },
+          {
+            "name": "Groene knolamaniet",
+            "sci": "Amanita phalloides",
+            "note": "Verantwoordelijk voor de meeste dodelijke paddenstoelvergiftigingen ter wereld; koken, drogen of invriezen doet het gif helemaal niets.",
+            "id": "deathCap"
+          },
+          {
+            "name": "Champignon",
+            "sci": "Agaricus bisporus",
+            "note": "Witte champignon, kastanjechampignon en portobello zijn één soort: alleen het ras en de oogstleeftijd verschillen.",
+            "id": "buttonMushroom"
+          },
+          {
+            "name": "Biergist",
+            "sci": "Saccharomyces cerevisiae",
+            "note": "Eencellige schimmel achter brood, bier en wijn, en in 1996 het eerste organisme met celkern waarvan het hele genoom werd ontrafeld.",
+            "id": "brewersYeast"
+          },
+          {
+            "name": "Zombiemierenschimmel",
+            "sci": "Ophiocordyceps unilateralis",
+            "note": "Hij laat een besmette mier naar een vaste hoogte klimmen, zich vastbijten en sterven, en groeit dan uit haar kop omhoog.",
+            "id": "zombieAntFungus"
+          },
+          {
+            "name": "Sombere honingzwam",
+            "sci": "Armillaria ostoyae",
+            "note": "Eén individu in oostelijk Oregon beslaat zo'n negen vierkante kilometer: qua oppervlak het grootste organisme ooit gemeten.",
+            "id": "humongousFungus"
+          },
+          {
+            "name": "Bittere taaiplaat",
+            "sci": "Panellus stipticus",
+            "note": "Kleine, taaie waaierzwam waarvan de plaatjes groen oplichten in het donker — maar alleen aan de juiste kant van de Atlantische Oceaan.",
+            "id": "bitterOyster"
+          },
+          {
+            "name": "Penicilliumschimmel",
+            "sci": "Penicillium rubens",
+            "note": "De blauwgroene schimmel die in 1928 de kweekschaal van Alexander Fleming besmette, werd pas in 2011 correct op naam gebracht.",
+            "id": "penicilliumMould"
+          },
+          {
+            "name": "Chytridschimmel",
+            "sci": "Batrachochytrium dendrobatidis",
+            "note": "Een schimmel die je met het blote oog niet ziet, dreef meer soorten richting uitsterven dan welke gedocumenteerde ziekte ook.",
+            "id": "chytridFungus"
+          },
+          {
+            "name": "Witte truffel",
+            "sci": "Tuber magnatum",
+            "note": "Groeit volledig ondergronds, tart al decennia elke kweker, en één exemplaar van 1,5 kg bracht in 2007 zo'n 330.000 dollar op.",
+            "id": "whiteTruffle"
+          }
+        ]
+      },
+      "fromFieldToPlate": {
+        "title": "Waar het eten begon",
+        "desc": "Tien gewassen en hun echte herkomst",
+        "intro": "Bijna niets op je bord groeit daar waar het ontstond. Deze tien gewassen werden duizenden jaren geleden getemd in riviervlaktes, bergbossen en moerassen, en daarna over oceanen meegenomen — tot de grootste oogsten uiteindelijk op een heel ander continent binnenkwamen.",
+        "species": [
+          {
+            "name": "Mais",
+            "sci": "Zea mays",
+            "note": "De wilde voorouder draagt een stuk of twaalf korrels, elk in een steenharde huls: niets wat op een kolf lijkt.",
+            "id": "maize"
+          },
+          {
+            "name": "Cassave",
+            "sci": "Manihot esculenta",
+            "note": "Getemd aan de rand van het Amazonegebied, voedt cassave nu meer mensen in Afrika dan in Zuid-Amerika.",
+            "id": "cassava"
+          },
+          {
+            "name": "Arabicakoffie",
+            "sci": "Coffea arabica",
+            "note": "Arabica is geen oeroude soort maar een natuurlijke kruising van twee andere koffies, met opvallend weinig genetische variatie.",
+            "id": "arabicaCoffee"
+          },
+          {
+            "name": "Sojaboon",
+            "sci": "Glycine max",
+            "note": "Het meeste soja ter wereld belandt nooit rechtstreeks op een bord: het wordt geperst tot olie en veevoer.",
+            "id": "soybean"
+          },
+          {
+            "name": "Suikerriet",
+            "sci": "Saccharum officinarum",
+            "note": "In Nieuw-Guinea werd het eerst geteeld om op te kauwen; suikerraffinage en ethanol kwamen duizenden jaren later.",
+            "id": "sugarcane"
+          },
+          {
+            "name": "Broodtarwe",
+            "sci": "Triticum aestivum",
+            "note": "Broodtarwe bestond nooit in het wild: ze ontstond op de akker toen een geteelde tarwe kruiste met een onooglijk bermgras.",
+            "id": "breadWheat"
+          },
+          {
+            "name": "Aziatische rijst",
+            "sci": "Oryza sativa",
+            "note": "Rijst werd twee keer getemd op twee continenten: eens langs de Jangtsekiang en eens uit een ander wild gras in West-Afrika.",
+            "id": "asianRice"
+          },
+          {
+            "name": "Aardappel",
+            "sci": "Solanum tuberosum",
+            "note": "Elke aardappel die in Europa, Azië en Afrika groeit, stamt af van het hoogland rond het Titicacameer.",
+            "id": "potato"
+          },
+          {
+            "name": "Banaan",
+            "sci": "Musa acuminata",
+            "note": "Wilde bananen zitten vol harde zaden zo groot als erwten; de pitloze vrucht bestaat alleen doordat mensen steriele klonen blijven planten.",
+            "id": "banana"
+          },
+          {
+            "name": "Sinaasappel",
+            "sci": "Citrus × sinensis",
+            "note": "De sinaasappel is geen wilde soort maar een kruising van pomelo en mandarijn, sindsdien eindeloos gekopieerd door enten.",
+            "id": "sweetOrange"
+          }
+        ]
+      },
+      "heardNotSeen": {
+        "title": "Eerst gehoord, dan gezien",
+        "desc": "Tien dieren die je eerst hoort",
+        "intro": "De meeste ontmoetingen met wilde dieren beginnen als een geluid uit een hoek die je niet kunt zien. Deze tien — uilen en kikkers, een cicade, twee zingende insecten, een aap en een vos — vind je veel makkelijker met je oren dan met je ogen, en ze zeggen stuk voor stuk iets heel specifieks.",
+        "species": [
+          {
+            "name": "Bosuil",
+            "sci": "Strix aluco",
+            "note": "De klassieke uilenroep is een gesprek tussen twee vogels: het scherpe kwiek van het vrouwtje, beantwoord door het trillende hoehoe van het mannetje.",
+            "id": "tawnyOwl"
+          },
+          {
+            "name": "Koekoek",
+            "sci": "Cuculus canorus",
+            "note": "Alleen het mannetje roept koekoek; het vrouwtje antwoordt met een borrelende lach waar kleine vogels van in paniek raken.",
+            "id": "commonCuckoo"
+          },
+          {
+            "name": "Nachtegaal",
+            "sci": "Luscinia megarhynchos",
+            "note": "Zingt het hardst tussen middernacht en drie uur, en alleen ongepaarde mannetjes: blijft er een vrouwtje, dan stopt de nachtzang.",
+            "id": "commonNightingale"
+          },
+          {
+            "name": "Boomkikker",
+            "sci": "Hyla arborea",
+            "note": "Een kikker van vijf centimeter met een keelblaas breder dan zijn kop, en een koor dat op een stille nacht bijna een kilometer draagt.",
+            "id": "europeanTreeFrog"
+          },
+          {
+            "name": "Brulkikker",
+            "sci": "Lithobates catesbeianus",
+            "note": "Een bas van ongeveer 200 hertz die over open water bijna een kilometer ver komt.",
+            "id": "americanBullfrog"
+          },
+          {
+            "name": "Cicada orni",
+            "sci": "Cicada orni",
+            "note": "Zingt alleen als het warm genoeg is: het koor zwelt aan met de ochtendhitte en valt stil zodra een wolk voor de zon schuift.",
+            "id": "cicadaOrni"
+          },
+          {
+            "name": "Huiskrekel",
+            "sci": "Acheta domesticus",
+            "note": "Het tsjirpen is twee vleugels die over elkaar zagen: een strijker langs een vijl met ruim honderd tandjes, rond 4 tot 5 kHz.",
+            "id": "houseCricket"
+          },
+          {
+            "name": "Grote groene sabelsprinkhaan",
+            "sci": "Tettigonia viridissima",
+            "note": "Een droog, onafgebroken geratel van de schemer tot ver na middernacht, soms urenlang zonder echte pauze.",
+            "id": "greatGreenBushCricket"
+          },
+          {
+            "name": "Zwarte brulaap",
+            "sci": "Alouatta caraya",
+            "note": "Het gebrul bij zonsopgang draagt tot zo'n vijf kilometer door het bos: een van de luidste roepen van alle landdieren.",
+            "id": "blackHowlerMonkey"
+          },
+          {
+            "name": "Vos",
+            "sci": "Vulpes vulpes",
+            "note": "De wintergil die men altijd aan het wijfje toeschrijft, komt van beide seksen, en is een paarroep en geen noodkreet.",
+            "id": "redFox"
+          }
+        ]
+      }
+    },
+    "species": {
+      "fiddleLeafFig": {
+        "name": "Vioolplant",
+        "sci": "Ficus lyrata",
+        "light": "Helder, indirect licht",
+        "water": "Wekelijks; laat de bovenste 2-5 cm van de grond opdrogen",
+        "difficulty": "Uitdagend",
+        "overview": "Afkomstig uit de laaglandregenwouden van West-Afrika, wordt de vioolplant gewaardeerd om zijn grote, glanzende, vioolvormige bladeren met opvallende nervatuur, die hem tot een icoon in interieurontwerp maakten. Hij wordt gekweekt als een indrukwekkende vloerplant die binnenshuis tot plafondhoogte kan reiken, maar staat er berucht om dat hij veel waarde hecht aan consistentie in licht, water en temperatuur.",
+        "funFact": "In zijn natuurlijke habitat kan Ficus lyrata uitgroeien tot een volwaardige boom van meer dan 12 meter hoog, met bladeren die bijna twee keer zo groot zijn als de bladeren die we binnenshuis zien. De boom kan zelfs kleine, oneetbare vijgen produceren die worden bestoven door een specifieke soort vijgenwesp - iets wat de plant als kamerplant vrijwel nooit doet."
+      },
+      "bostonFern": {
+        "name": "Bostonvaren",
+        "sci": "Nephrolepis exaltata",
+        "light": "Helder tot gemiddeld, indirect licht",
+        "water": "Houd de grond gelijkmatig vochtig; laat hem nooit volledig uitdrogen",
+        "difficulty": "Gemiddeld",
+        "overview": "De Bostonvaren is een weelderige, boogvormige cultivar van de zwaardvaren, een soort die wereldwijd voorkomt in vochtige tropische streken. Zijn veerachtige, overhangende bladeren maakten hem sinds het Victoriaanse tijdperk favoriet voor hangmanden en beschaduwde veranda's, al vraagt hij wel om constante vochtigheid en een hoge luchtvochtigheid om goed te gedijen.",
+        "funFact": "De cultivar 'Bostoniensis' is niet doelbewust gekweekt - het was een natuurlijke mutatie die in 1894 werd ontdekt in een zending zwaardvarens die van Philadelphia naar een bloemist in Boston werd gestuurd. Vanuit die ene afwijkende plant werd de kamerplant vermeerderd die we vandaag kennen."
+      },
+      "jadePlant": {
+        "name": "Jadeplant",
+        "sci": "Crassula ovata",
+        "light": "Volle zon tot fel licht",
+        "water": "Spaarzaam; laat de grond volledig opdrogen tussen de beurten water geven door",
+        "difficulty": "Makkelijk",
+        "overview": "De jadeplant is een taaie vetplant die van oorsprong uit de halfdroge gebieden van Zuid-Afrika en Mozambique komt, herkenbaar aan zijn dikke, glanzende ovale bladeren en houtachtige, vertakkende stengels die hem het uiterlijk van een miniatuurboompje geven. Het is een geliefde beginnersplant die vaak van generatie op generatie wordt doorgegeven, en in feng shui-tradities soms de 'geluksplant' wordt genoemd.",
+        "funFact": "Onder de juiste omstandigheden kunnen jadeplanten 50 tot 100 jaar oud worden, en volwassen exemplaren belonen hun eigenaar af en toe met trosjes kleine, stervormige witte of roze bloemen, meestal veroorzaakt door koele nachten en een droge periode."
+      },
+      "calathea": {
+        "name": "Calathea",
+        "sci": "Goeppertia orbifolia",
+        "light": "Gemiddeld, indirect licht",
+        "water": "Houd licht vochtig met gefilterd of gedestilleerd water",
+        "difficulty": "Uitdagend",
+        "overview": "Afkomstig uit de regenwouden van Bolivia, wordt dit opvallende lid van de bidplantfamilie (Marantaceae) gekweekt om zijn extra grote, ronde bladeren met strepen in zilverachtige en donkergroene tinten. Net als zijn verwanten vouwen de bladeren zich 's nachts omhoog en weer open overdag, een beweging die nyctinastie wordt genoemd en die de plant bijna levend doet aanvoelen.",
+        "funFact": "Deze soort werd vroeger geclassificeerd als Calathea orbifolia, maar in 2012 werden de meeste Calathea-soorten op basis van genetisch en morfologisch onderzoek ondergebracht in het geslacht Goeppertia - al gebruiken kwekers en plantenliefhebbers nog altijd overwegend de oude naam 'Calathea'."
+      }
+    },
+    "topicSpeciesSectionTitle": "Soorten in Deze Collectie",
+    "speciesLightLabel": "Licht",
+    "speciesWaterLabel": "Water",
+    "speciesDifficultyLabel": "Moeilijkheidsgraad",
+    "funFactLabel": "Wist-je-datje",
+    "symptomFilterTitle": "Waar heb je last van?",
+    "symptomFilterAll": "Alle",
+    "symptomFilterEmpty": "Hier zijn nog geen kruiden voor getagd.",
+    "viewHerbLabel": "Bekijk {{name}}",
+    "herbDisclaimer": "Informatieve inhoud gebaseerd op traditioneel gebruik en volksgeneeskunde. Geen medisch advies - raadpleeg een arts voordat je een kruid gebruikt om een gezondheidsklacht te behandelen.",
+    "herbDetailsLoadError": "De gegevens van dit kruid konden niet worden geladen. Probeer het opnieuw.",
+    "preparationLabel": "Bereidingswijze",
+    "benefitsLabel": "Voordelen",
+    "symptoms": {
+      "headache": "Hoofdpijn",
+      "digestion": "Spijsvertering",
+      "sleep": "Slaap",
+      "stress": "Stress & Angst",
+      "immunity": "Weerstand",
+      "painInflammation": "Pijn & Ontsteking",
+      "respiratory": "Hoest & Luchtwegen",
+      "skin": "Huid & Wonden",
+      "energy": "Energie & Vermoeidheid"
+    },
+    "herbSubscribeCtaTitle": "Vind je deze gids handig?",
+    "herbSubscribeCtaBody": "Neem een abonnement voor onbeperkte identificatie van planten, insecten, paddenstoelen en gewassen.",
+    "herbAlreadySubscribedCheck": "Al geabonneerd? Tik om opnieuw te controleren"
+  },
+  "botanist": {
+    "headerTitle": "Dr. Helena Marques",
+    "headerSubtitle": "Agronoom · Hoogleraar plantkunde",
+    "intro": "Hallo! Ik ben Helena, agronoom en hoogleraar plantkunde. Vertel me wat er met je plant aan de hand is — of vraag me alles over bodem, plagen, water geven of de natuur in het algemeen.",
+    "placeholder": "Vraag het Helena…",
+    "typing": "Helena is aan het typen…",
+    "sendLabel": "Bericht versturen",
+    "askLabel": "Vraag: {{question}}",
+    "suggestions": [
+      "Mijn bladeren worden geel",
+      "Hoe vaak moet ik water geven?",
+      "Is deze plant veilig voor katten?",
+      "Welke grond moet ik gebruiken?"
+    ],
+    "errorOffline": "Je bent offline. Ik ben er zodra de verbinding terug is.",
+    "errorRateLimited": "Even wachten — te veel vragen tegelijk. Probeer het over een paar minuten.",
+    "errorNotConfigured": "De specialist is nog niet beschikbaar. Ze wordt ingesteld.",
+    "errorGeneric": "Ik kon nu niet antwoorden. Probeer het zo nog eens."
+  },
+  "achievements": {
+    "title": "Prestaties",
+    "streakLabel": "Dagenreeks",
+    "longestStreakLabel": "Langste reeks",
+    "totalLabel": "Identificaties",
+    "unlockedTitle": "Prestatie ontgrendeld!",
+    "progressLabel": "{{unlocked}}/{{total}} ontgrendeld",
+    "firstScan": {
+      "title": "Eerste ontdekking",
+      "body": "Identificeer je eerste soort"
+    },
+    "collector10": {
+      "title": "Verzamelaar",
+      "body": "Sla 10 soorten op in je collectie"
+    },
+    "collector50": {
+      "title": "Natuurkenner",
+      "body": "Sla 50 soorten op in je collectie"
+    },
+    "collector100": {
+      "title": "Meester-natuurkenner",
+      "body": "Sla 100 soorten op in je collectie"
+    },
+    "allCategories": {
+      "title": "Verkenner",
+      "body": "Sla minstens één soort uit elke categorie op"
+    },
+    "streak3": {
+      "title": "Goede start",
+      "body": "Identificeer 3 dagen op rij iets"
+    },
+    "streak7": {
+      "title": "Toegewijd",
+      "body": "Identificeer 7 dagen op rij iets"
+    },
+    "streak30": {
+      "title": "Volhardend",
+      "body": "Identificeer 30 dagen op rij iets"
+    },
+    "sharedFirst": {
+      "title": "Delen is fijn",
+      "body": "Deel je eerste identificatieresultaat"
+    },
+    "subscriber": {
+      "title": "Premium-lid",
+      "body": "Geabonneerd voor onbeperkte identificaties"
+    },
+    "tokensLabel": "Tokens",
+    "tokensEarned": "+{{count}} tokens"
+  },
+  "help": {
+    "title": "Hulp en ondersteuning",
+    "identificationTitle": "Hoe werkt identificatie?",
+    "identificationBody": "Maak een foto van een plant, insect, paddenstoel, gewas of boom, en onze AI vergelijkt deze met een uitgebreide database om de meest waarschijnlijke soort voor te stellen, samen met de wetenschappelijke naam, beschrijving en andere details.",
+    "accuracyTitle": "Is de identificatie altijd nauwkeurig?",
+    "accuracyBody": "Geen enkele identificatie-app is 100% nauwkeurig, vooral niet bij paddenstoelen en planten die giftig kunnen zijn. Eet, verzamel of gebruik nooit een soort enkel op basis van het resultaat van deze app – raadpleeg altijd eerst een gekwalificeerde expert.",
+    "freeTitle": "Is NatureLens gratis?",
+    "freeBody": "Je krijgt één gratis identificatie per categorie (planten, insecten, paddenstoelen, gewassen, bomen). Daarna ontgrendelt een abonnement onbeperkte identificaties in alle categorieën.",
+    "cancelTitle": "Hoe zeg ik mijn abonnement op?",
+    "cancelBody": "Ga naar Profiel en verwijder je account – dit annuleert automatisch elk actief abonnement en verwijdert je gegevens. Er is momenteel geen aparte knop om op te zeggen; het verwijderen van je account is op dit moment de manier om de betaling te stoppen.",
+    "restoreTitle": "Ik ben van telefoon gewisseld of heb mijn browser gewist – hoe krijg ik mijn abonnement terug?",
+    "restoreBody": "Ga naar Profiel → Toegang herstellen. Je kunt een eenmalige code per e-mail aanvragen of, als je er een hebt aangemaakt, inloggen met een wachtwoord of je Google-account.",
+    "tokensTitle": "Wat zijn tokens? Kan ik ze ergens voor inwisselen?",
+    "tokensBody": "Je verdient automatisch tokens elke keer dat je een soort identificeert of een prestatie ontgrendelt. Tokens inwisselen voor beloningen is nog niet mogelijk, maar staat gepland voor de toekomst – je saldo blijft ondertussen groeien.",
+    "privacyTitle": "Zijn mijn gegevens privé?",
+    "privacyBody": "Voor het gebruik van NatureLens is geen account vereist. Het grootste deel van je gegevens (collectie, foto's) blijft alleen op je apparaat staan. Bekijk het volledige privacybeleid voor meer details.",
+    "deleteTitle": "Hoe verwijder ik mijn account en gegevens?",
+    "deleteBody": "Ga naar Profiel en tik onderaan op Account verwijderen. Dit annuleert elk actief abonnement, verwijdert je opgeslagen gegevens van onze servers en wist alles wat op dit apparaat is opgeslagen.",
+    "offlineTitle": "Werkt de app offline?",
+    "offlineBody": "Nee – voor het identificeren van een soort is een internetverbinding nodig om onze AI-service te bereiken.",
+    "languageTitle": "Kan ik de app in een andere taal gebruiken?",
+    "languageBody": "Ja, NatureLens ondersteunt 17 talen. Ga naar Profiel → Taal om deze op elk moment te wijzigen."
+  },
+  "store": {
+    "title": "Beloningen",
+    "intro": "Geef de tokens uit die je verdient met het herkennen van soorten. Elke beloning hier werkt zodra je hem inwisselt.",
+    "owned": "In bezit",
+    "open": "Openen",
+    "redeem": "Inwisselen",
+    "redeemLabel": "Inwisselen voor {{cost}} tokens",
+    "redeemedTitle": "Ingewisseld!",
+    "notEnoughTitle": "Niet genoeg tokens",
+    "notEnoughBody": "Je hebt {{cost}} tokens nodig hiervoor. Blijf herkennen om er meer te verdienen.",
+    "shieldsHeld": "{{count}} schild(en) bewaard",
+    "earnHint": "Je verdient 5 tokens per herkenning en 15 per behaalde prestatie.",
+    "download": "Downloaden",
+    "downloadErrorTitle": "Downloaden mislukt",
+    "downloadErrorBody": "Kon het bestand niet opslaan. Probeer het opnieuw vanuit een browser.",
+    "items": {
+      "streakShield": {
+        "title": "Reeksschild",
+        "description": "Beschermt je reeks als je een dag mist. Stapelbaar — koop er meerdere.",
+        "redeemedBody": "Je reeks is beschermd. Mis je een dag, dan vangt het schild dat automatisch op."
+      },
+      "wallpapers": {
+        "title": "Botanische Achtergronden",
+        "description": "Drie exclusieve achtergronden (1080×1920) voor je telefoon.",
+        "redeemedBody": "Je achtergronden staan klaar. Tik op Downloaden bij degene die je wilt."
+      },
+      "naturalistBadge": {
+        "title": "Naturalist-insigne",
+        "description": "Een blijvend insigne op je profiel. Laat zien dat je hier al even mee bezig bent.",
+        "redeemedBody": "Je insigne staat nu op je profiel.",
+        "ownedBody": "Je hebt dit insigne al — het staat op je profiel."
+      }
+    }
+  },
+  "missions": {
+    "title": "Missies van vandaag",
+    "rewardEach": "+{{tokens}} per missie",
+    "allDone": "Alles gedaan — kom morgen terug!",
+    "pool": {
+      "scanAny2": "Herken vandaag 2 soorten",
+      "scanAny3": "Herken vandaag 3 soorten",
+      "scanPlant": "Herken een plant of boom",
+      "scanInsect": "Herken een insect",
+      "scanMushroom": "Herken een paddenstoel",
+      "scanFish": "Herken een vis",
+      "scanBird": "Herken een vogel",
+      "saveOne": "Bewaar een vondst in je verzameling",
+      "saveTwo": "Bewaar 2 vondsten in je verzameling",
+      "shareOne": "Deel een determinatie",
+      "openDiscover": "Bezoek het tabblad Ontdekken"
+    }
+  },
+  "share": {
+    "message": "Ik heb met NatureLens een {{category}} herkend: {{name}}{{scientific}}{{confidence}}\n\nHerken planten, insecten, paddenstoelen, vissen en vogels vanaf een foto:\n{{url}}",
+    "confidenceLine": "{{confidence}}% zeker"
+  },
+  "onboarding": {
+    "skip": "Overslaan",
+    "next": "Volgende",
+    "start": "Beginnen",
+    "what": {
+      "title": "Richten. Klikken. Weten.",
+      "body": "Fotografeer iets levends en NatureLens vertelt je binnen seconden wat het is — met referentiefoto’s zodat je het zelf kunt bevestigen."
+    },
+    "collect": {
+      "title": "Bouw je eigen veldjournaal",
+      "body": "Elke vondst kun je bewaren in je verzameling, labelen en later terugzien. Verdien onderweg tokens en ontgrendel beloningen."
+    },
+    "free": {
+      "title": "Je eerste determinatie is gratis",
+      "body": "Probeer één determinatie per categorie gratis. Abonneer je pas als je onbeperkt wilt scannen."
+    }
+  },
+  "recap": {
+    "title": "Jouw maand in de natuur",
+    "entrySubtitle": "Bekijk je overzicht en deel het",
+    "headline": "Je ontmoette {{count}} verschillende soorten",
+    "emptyTitle": "Nog niets om samen te vatten",
+    "emptyBody": "Herken en bewaar deze maand iets, dan verschijnt hier je overzicht.",
+    "byCategory": "Per categorie",
+    "highlight": "Hoogtepunt van de maand",
+    "share": "Overzicht delen",
+    "shareTitle": "Mijn maand in de natuur",
+    "shareMessage": "In {{month}} herkende ik {{total}} vondsten — {{species}} verschillende soorten — met NatureLens 🌿\n\nHerken planten, insecten, paddenstoelen, vissen en vogels vanaf een foto:\n{{url}}",
+    "streakLine": "Huidige reeks: {{current}} dagen · record: {{longest}}",
+    "stats": {
+      "total": "Bewaarde vondsten",
+      "species": "Soorten",
+      "categories": "Categorieën",
+      "days": "Actieve dagen"
+    }
+  },
+  "subscription": {
+    "title": "Mijn abonnement",
+    "entrySubtitle": "Status, plannen en opzeggen",
+    "activeTitle": "Premium actief",
+    "activeBody": "Onbeperkt determineren in alle categorieën. Bedankt dat je NatureLens steunt.",
+    "freeTitle": "Gratis plan",
+    "freeBody": "Eén gratis determinatie per categorie. Abonneer voor onbeperkt scannen.",
+    "unknownTitle": "Kon nu niet controleren",
+    "unknownBody": "We konden de server niet bereiken. Als je geabonneerd bent, blijft je toegang gewoon werken — probeer het zo opnieuw.",
+    "plansTitle": "Plannen",
+    "manageTitle": "Beheren of opzeggen",
+    "manageBody": "Je abonnement wordt door Hotmart geïncasseerd, dus opzeggen doe je in je Hotmart-account, niet hier. Zeg je daar op, dan stoppen toekomstige afschrijvingen en blijft je toegang tot het einde van de betaalde periode.",
+    "openHotmart": "Mijn Hotmart-account openen"
+  },
+  "notifications": {
+    "row": "Meldingen",
+    "on": "Aan",
+    "off": "Uit",
+    "enabledTitle": "Meldingen aan",
+    "enabledBody": "Je krijgt herinneringen om je planten water te geven en je reeks vol te houden.",
+    "deniedTitle": "Meldingen geblokkeerd",
+    "deniedBody": "Je hebt meldingen voor deze site geblokkeerd. Sta ze toe in je browserinstellingen voor naturelensapp.cloud.",
+    "errorTitle": "Inschakelen mislukt",
+    "errorBody": "Er ging iets mis. Probeer het zo opnieuw."
+  },
+  "fieldGuide": {
+    "habitat": "Leefgebied",
+    "curiosity": "Wist je dat",
+    "identifyCta": "Er een herkennen met de camera",
+    "photoCredit": "Foto: Wikimedia Commons · tik voor de bron",
+    "textCredit": "Tekst: Wikipedia · tik om meer te lezen"
+  },
+  "backup": {
+    "exportRow": "Back-up van mijn collectie",
+    "importRow": "Herstellen uit een back-up",
+    "exportEmptyTitle": "Nog niets om te bewaren",
+    "exportEmptyBody": "Bewaar je eerste vondst en de back-up heeft iets om te behouden.",
+    "importDoneTitle": "Collectie hersteld",
+    "importDoneBody": "{{added}} item(s) toegevoegd. {{skipped}} stonden er al.",
+    "importFailedTitle": "Herstellen mislukt",
+    "errorWrongFile": "Dat bestand is geen NatureLens-back-up.",
+    "errorNewerVersion": "Die back-up is gemaakt met een nieuwere versie van de app. Werk bij en probeer opnieuw.",
+    "errorStorageFull": "Er is niet genoeg ruimte op dit apparaat voor die items.",
+    "errorGeneric": "Er ging iets mis bij het lezen van dat bestand."
+  },
+  "sound": {
+    "tapToRecord": "Tik om op te nemen",
+    "recording": "Opnemen… {{seconds}}s over",
+    "analysing": "Luistert…",
+    "startLabel": "Opname starten",
+    "stopLabel": "Stoppen en herkennen",
+    "tipsTitle": "Voor een beter resultaat",
+    "tip1": "Kom dichterbij als het kan — afstand is de grootste factor.",
+    "tip2": "Richt de telefoon naar het geluid en blijf stilstaan.",
+    "tip3": "Neem op terwijl het roept, niet de stilte ertussen.",
+    "scopeNote": "Omvat vogels, kikkers, krekels, sprinkhanen en enkele zoogdieren. Getraind op natuuropnames, dus huisdieren en verkeer verwarren het.",
+    "identifiedBySound": "Herkend op geluid · {{group}}",
+    "groupAmphibian": "Amfibie",
+    "groupMammal": "Zoogdier",
+    "permissionTitle": "Microfoon geblokkeerd",
+    "permissionBody": "Sta microfoontoegang voor deze site toe in je browserinstellingen en probeer het opnieuw.",
+    "unsupportedTitle": "Opnemen niet beschikbaar",
+    "unsupportedBody": "Deze browser kan geen audio opnemen. Probeer Chrome op Android, of installeer de app op je beginscherm op iPhone.",
+    "tooShortTitle": "Opname te kort",
+    "tooShortBody": "Neem minstens twee seconden op, terwijl het dier roept.",
+    "failedTitle": "Kon niet herkennen",
+    "failedBody": "Er ging iets mis met die opname. Probeer het opnieuw.",
+    "decodeFailedBody": "Die opname kon niet gelezen worden. Probeer het opnieuw.",
+    "notFoundBody": "Niets herkenbaars in die opname. Kom dichterbij of neem op terwijl het roept.",
+    "noContentBody": "Nog geen beschrijving voor deze soort.",
+    "notWildlifeBody": "Dat klinkt als een voertuig, een machine of een stem, niet als een dier. Probeer het opnieuw op een stillere plek."
+  },
+  "login": {
+    "signInRow": "Inloggen",
+    "signInSubtitle": "Gebruik je abonnement op elk apparaat",
+    "accountRow": "Mijn account"
+  }
+}

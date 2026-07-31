@@ -1,0 +1,314 @@
+{
+  "fishDetails": {
+    "clownfish": {
+      "overview": "Ein kleiner Riffbewohner des Indopazifiks, sofort erkennbar am orangefarbenen Körper mit drei weißen Querbinden. Sein ganzes erwachsenes Leben verbringt er in einer einzigen Seeanemone, deren Nesselarme die meisten anderen Fische töten würden.",
+      "habitat": "Warme, flache Korallenriffe und Lagunen vom Roten Meer bis Nordaustralien, immer im Verbund mit einer Wirtsanemone.",
+      "curiosity": "Jeder Clownfisch kommt als Männchen zur Welt. In jeder Anemone lebt ein dominantes Brutpaar; stirbt das Weibchen, wechselt das ranghöchste Männchen das Geschlecht und nimmt seinen Platz ein."
+    },
+    "rainbowTrout": {
+      "overview": "Ein Kaltwasserfisch, benannt nach dem schillernd rosa Streifen entlang seiner Flanke. Ursprünglich in den pazifischen Flusssystemen Nordamerikas und Asiens zu Hause, wird er heute auf allen Kontinenten außer der Antarktis gezüchtet.",
+      "habitat": "Klare, kühle, sauerstoffreiche Flüsse und Seen. Bestände, die ins Meer abwandern und zurückkehren, nennt man Steelhead.",
+      "curiosity": "Das rosa Fleisch ist kein natürlicher Farbstoff, sondern stammt aus den Krebstieren der Nahrung – Zuchtforellen mit anderem Futter bleiben weiß."
+    },
+    "atlanticSalmon": {
+      "overview": "Ein kraftvoller Wanderfisch: Er schlüpft im Süßwasser, frisst sich jahrelang im Meer groß und kehrt zum Laichen in genau den Fluss zurück, in dem er geboren wurde.",
+      "habitat": "Als erwachsener Fisch der Nordatlantik; zum Laichen die Flüsse Europas und des östlichen Nordamerikas.",
+      "curiosity": "Sein Artname salar bedeutet „der Springer“ – flussaufwärts überwinden Lachse Wasserfälle von über drei Metern Höhe."
+    },
+    "northernPike": {
+      "overview": "Ein langgestreckter, olivgrüner Lauerjäger mit flacher Entenschnabel-Schnauze und einem Maul voller nach hinten gerichteter Zähne. Er steht reglos im Kraut und schlägt im Bruchteil einer Sekunde zu.",
+      "habitat": "Krautige, langsam fließende Flüsse und Seen der Nordhalbkugel, von Irland über Sibirien bis Alaska.",
+      "curiosity": "Rücken- und Afterflosse sitzen weit hinten nahe am Schwanz – ein Körperbau, der ganz auf einen einzigen explosiven Vorstoß ausgelegt ist, nicht auf lange Verfolgung."
+    },
+    "commonCarp": {
+      "overview": "Ein massiger Süßwasserfisch mit großen Schuppen und zwei Bartelpaaren am Maul. Seit über zweitausend Jahren gezüchtet, gilt er in Teilen Europas und Asiens als Delikatesse – anderswo als ernstes invasives Problem.",
+      "habitat": "Warme, langsam fließende oder stehende Gewässer mit weichem Schlammgrund: Flüsse, Seen, Teiche und Kanäle auf allen Kontinenten außer der Antarktis.",
+      "curiosity": "Karpfen saugen Schlamm auf und filtern ihn durch. Das wirbelt Sediment auf und trübt das Wasser – der Hauptgrund für die Schäden in den Gewässern, die sie besiedeln."
+    },
+    "blueTang": {
+      "overview": "Ein leuchtend königsblauer Riffbewohner mit schwarzer Palettenzeichnung und gelber Schwanzflosse. Wie alle Doktorfische trägt er nahe der Schwanzwurzel einen skalpellscharfen Stachel.",
+      "habitat": "Korallenriffe des Indopazifiks, meist in kleinen Gruppen nahe verzweigten Korallen, in denen er Deckung findet.",
+      "curiosity": "Jungtiere sind leuchtend gelb und färben sich mit der Reife blau – und der sonst flach angelegte Schwanzstachel klappt bei Gefahr seitlich heraus."
+    },
+    "largemouthBass": {
+      "overview": "Ein gedrungener grüner Räuber mit dunklem Längsband – weltweit der begehrteste Sportfisch im Süßwasser.",
+      "habitat": "Warme Seen, Teiche und langsame Flüsse mit Deckung: versunkenes Holz, Krautfelder und Stege.",
+      "curiosity": "Vom Kleinmaulbarsch unterscheidet man ihn am Maul: Beim Forellenbarsch reicht der Oberkiefer über den Hinterrand des Auges hinaus."
+    },
+    "yellowfinTuna": {
+      "overview": "Ein großer, torpedoförmiger Hochseefisch mit sehr langen, sichelförmigen gelben Flossen und metallisch dunkelblauem Rücken, der nach unten silbern ausläuft.",
+      "habitat": "Warme offene Meere weltweit, meist in den oberen 100 Metern, zur Nahrungssuche aber auch deutlich tiefer.",
+      "curiosity": "Er hält seinen Körper wärmer als das umgebende Wasser. So arbeiten seine Muskeln auch in kalten Tiefen weiter, wo trägere Fische erlahmen – der Grund, warum er ganze Ozeane durchqueren kann."
+    },
+    "zebrafish": {
+      "overview": "Ein kleiner gestreifter Bärbling aus den Flüssen Südasiens, der zu einem der meistuntersuchten Tiere der Wissenschaft wurde.",
+      "habitat": "Flache, langsam fließende Süßgewässer – Reisfelder, Bäche und Teiche in Indien, Bangladesch und Nepal.",
+      "curiosity": "Seine Embryonen sind durchsichtig: Unter dem Mikroskop lässt sich in Echtzeit zusehen, wie ein Herz oder eine Wirbelsäule entsteht. Deshalb taucht er in Tausenden medizinischen Studien auf."
+    },
+    "redLionfish": {
+      "overview": "Ein auffälliger Fisch mit roten, weißen und braunen Binden und langen, fächerartigen Flossen, die Giftstacheln verbergen. Schön, langsam – und besser nicht anfassen.",
+      "habitat": "Ursprünglich Riffe des Indopazifiks; heute eine massiv invasive Art in der gesamten Karibik und im westlichen Atlantik.",
+      "curiosity": "In seinem neuen Verbreitungsgebiet hat er kaum Fressfeinde und frisst fast alles, was ins Maul passt. Deshalb rufen manche Länder aktiv dazu auf, ihn zu harpunieren und zu essen."
+    }
+  },
+  "birdDetails": {
+    "barnSwallow": {
+      "overview": "Ein schlanker Vogel mit glänzend blauem Rücken, tief gegabeltem Schwanz und rostroter Kehle, fast immer im schnellen, tiefen Kurvenflug über offenem Gelände unterwegs.",
+      "habitat": "Felder, Wiesen und Gewässerränder der Nordhalbkugel; den Winter verbringt sie auf der Südhalbkugel.",
+      "curiosity": "Sie ist die am weitesten verbreitete Schwalbe der Erde und frisst ausschließlich im Flug – selbst getrunken wird im Vorbeigleiten von der Wasseroberfläche."
+    },
+    "houseSparrow": {
+      "overview": "Ein kompakter braun-grauer Vogel: das Männchen mit schwarzem Kehllatz und kastanienbraunem Nacken, das Weibchen schlicht sandbraun mit hellem Überaugenstreif.",
+      "habitat": "Überall dort, wo Menschen sind – Städte, Dörfer, Höfe und Häfen auf fast jedem Kontinent.",
+      "curiosity": "Er folgte der menschlichen Landwirtschaft vor Jahrtausenden aus dem Nahen Osten heraus und lebt heute kaum irgendwo, wo nicht auch Menschen leben."
+    },
+    "commonKingfisher": {
+      "overview": "Ein winziger Vogel mit dolchartigem Schnabel in Elektroblau und Rostorange, meist nur als Farbblitz dicht über dem Wasser zu sehen.",
+      "habitat": "Langsame, klare Flüsse, Bäche und Kanäle mit überhängenden Ansitzen in Europa, Asien und Nordafrika.",
+      "curiosity": "Er stößt kopfüber ins Wasser und holt Fische noch aus einem Meter Tiefe. Danach schlägt er die Beute gegen einen Ast und verschluckt sie mit dem Kopf voran, damit sich die Stacheln anlegen."
+    },
+    "peregrineFalcon": {
+      "overview": "Ein kräftiger Falke mit spitzen Flügeln, oberseits schiefergrau, unterseits fein gebändert, mit dem markanten dunklen „Bartstreif“ unter dem Auge.",
+      "habitat": "Auf allen Kontinenten außer der Antarktis – Felswände, Küsten und zunehmend auch Hochhäuser und Kirchtürme.",
+      "curiosity": "Im Jagdstoß übertrifft er 300 km/h und ist damit das schnellste Tier überhaupt. Kleine Höcker in den Nasenlöchern bremsen den Luftstrom, sodass ihm bei diesem Tempo die Lunge nicht platzt."
+    },
+    "greatBlueHeron": {
+      "overview": "Ein hoher, langbeiniger grau-blauer Schreitvogel mit schwerem, speerartigem Schnabel und schwarzem Schmuckfederstreif hinter dem Auge.",
+      "habitat": "Flache Süß- und Salzgewässer in Nord- und Mittelamerika – Sümpfe, Seeufer, Flüsse und Küsten.",
+      "curiosity": "Er steht minutenlang reglos und stößt schneller zu, als das Auge folgen kann. Im Flug legt er den Hals in ein enges S – genau daran erkennt man einen Reiher und keinen Kranich."
+    },
+    "rockPigeon": {
+      "overview": "Die vertraute Stadttaube: grauer Körper, schillernd grün-violetter Hals, zwei dunkle Flügelbinden. Das Gefieder variiert enorm, eine Folge jahrhundertelanger Zucht.",
+      "habitat": "Ursprünglich Meeresklippen und Felsschluchten; heute Städte weltweit, wo Simse und Fensterbänke die Felsen ersetzen.",
+      "curiosity": "Beide Eltern bilden „Kropfmilch“, ein eiweißreiches Sekret für die Jungen – eine Eigenschaft, die nur eine Handvoll anderer Vögel teilt."
+    },
+    "europeanRobin": {
+      "overview": "Ein kleiner, rundlicher brauner Vogel mit leuchtend oranger Brust und Gesicht, der Menschen gern von einem nahen Zweig aus genau beobachtet.",
+      "habitat": "Wälder, Hecken und Gärten in Europa und Westasien.",
+      "curiosity": "Es folgt Gärtnern, weil umgegrabene Erde Würmer freilegt – ein Verhalten, das ursprünglich Wildschweinen galt, die den Waldboden aufbrechen. Beide Geschlechter tragen die orange Brust und verteidigen ihr Revier das ganze Jahr über mit Gesang."
+    },
+    "mallard": {
+      "overview": "Die klassische Schwimmente: der Erpel mit glänzend grünem Kopf und weißem Halsring, das Weibchen schlicht braun gescheckt mit blauem Flügelspiegel.",
+      "habitat": "Fast jedes Süß- oder Brackwasser der Nordhalbkugel, vom wilden Feuchtgebiet bis zum Teich im Stadtpark.",
+      "curiosity": "Sie ist die Stammform fast aller Hausentenrassen. Das berühmte laute Quaken kommt nur vom Weibchen – der Erpel gibt bloß ein leises, raues Schnarren von sich."
+    },
+    "scarletMacaw": {
+      "overview": "Ein sehr großer Papagei in leuchtendem Scharlachrot, Gelb und Blau, mit langem, spitz zulaufendem Schwanz und kräftigem Hakenschnabel.",
+      "habitat": "Feuchte Tieflandregenwälder von Südmexiko bis ins Amazonasbecken, meist hoch im Kronendach.",
+      "curiosity": "Er verpaart sich fürs Leben und kann über fünfzig Jahre alt werden. Sein Schnabel knackt Nüsse, an denen jeder andere Vogel des Waldes scheitert, und ganze Schwärme versammeln sich an Lehmwänden der Flussufer, um mineralreiche Erde zu fressen."
+    },
+    "emperorPenguin": {
+      "overview": "Der größte Pinguin, über einen Meter groß, schwarz-weiß mit einem goldorangen Fleck an jeder Halsseite.",
+      "habitat": "Das antarktische Meereis – der einzige Vogel, der den antarktischen Winter hindurch brütet.",
+      "curiosity": "Das Männchen balanciert das einzige Ei zwei Monate lang unter einer Bauchfalte auf den Füßen, durch Dunkelheit und Schneestürme, ohne einen Bissen zu fressen, während das Weibchen zum Fressen ans Meer zurückkehrt."
+    }
+  },
+  "insectDetails": {
+    "sevenSpotLadybird": {
+      "overview": "Ein gewölbter Käfer von 5–8 mm Länge, glänzend rot mit drei schwarzen Punkten auf jeder Flügeldecke und einem siebten auf der Naht. Sowohl die Käfer als auch ihre grauen, krokodilähnlichen Larven jagen Blattläuse – deshalb findet man sie im Garten immer wieder an befallenen Trieben. In ganz Eurasien heimisch und längst nach Nordamerika eingeführt, ist er der Käfer, den die meisten vor Augen haben, wenn sie „Marienkäfer\" hören.",
+      "habitat": "Brennnesselbestände, Hecken, Schrebergärten und jede Pflanze mit Blattläusen. Im Herbst sammeln sich die Käfer in dichten Klumpen zum Überwintern im Freien – in Laubstreu, Grasbulten, an Heckenfüßen, unter loser Rinde und in hohlen Pflanzenstängeln, oft Jahr für Jahr an denselben geschützten Stellen.",
+      "curiosity": "Das nennt sich Reflexbluten: Unter starkem Druck presst er Tropfen seiner eigenen Hämolymphe durch die Beingelenke heraus. Die darin enthaltenen Alkaloide schmecken so bitter, dass ein Vogel ihn meist unverletzt wieder ausspuckt."
+    },
+    "commonEarwig": {
+      "overview": "Ein flaches, glänzend braunes Insekt von etwa 12–15 mm Länge mit einer Zange am Hinterleib, bei Männchen stark gebogen, bei Weibchen fast gerade. Unter den kurzen, ledrigen Deckflügeln liegen große, fächerförmige Hinterflügel, gefaltet und verstaut wie ein Papierrätsel. Mit Ohren hat er trotz seines Namens nichts im Sinn; die Zange dient der Verteidigung, der Balz und dem Auspacken eben dieser Flügel.",
+      "habitat": "Tagsüber in feuchten, engen Verstecken – unter Blumentöpfen, in Laubstreu, zwischen Zaunbrettern, in Dahlienblüten und zusammengeklappten Gartenmöbeln. Nachts geht er an Blattläuse, Pollen und weiches Obst.",
+      "curiosity": "Er gehört zu den wenigen Insekten, die ihre Eier bewachen: Das Weibchen dreht und putzt wochenlang jedes einzelne, damit kein Schimmel ansetzt, und füttert die Jungen auch nach dem Schlüpfen weiter."
+    },
+    "commonPillWoodlouse": {
+      "overview": "Eine schiefergraue, gepanzerte Assel von bis zu etwa 18 mm Länge, die sich bei Störung zu einer festen Kugel einrollt. Die überlappenden Platten und dieses Einrollen unterscheiden sie von den flacheren Asseln, die nur weglaufen können. Ursprünglich aus dem Mittelmeerraum, lebt sie heute in Gärten auf jedem bewohnten Kontinent.",
+      "habitat": "Unter Steinen, Töpfen, Holz und feuchter Pappe, überall dort, wo die Luftfeuchte hoch bleibt. Ihre kiemenartigen Atmungsorgane müssen feucht bleiben, deshalb hält sie es auf trockenem, offenem Boden nicht lange aus.",
+      "curiosity": "Sie trinkt über ihr Hinterende: Zwei röhrenförmige Anhänge saugen Wasser durch Kapillarkraft nach oben. Und ihr Blut ist blau – Sauerstoff transportiert sie mit kupferhaltigem Hämocyanin statt mit eisenhaltigem Hämoglobin."
+    },
+    "houseFly": {
+      "overview": "Eine graue Fliege von 6–7 mm mit vier dunklen Längsstreifen auf dem Brustabschnitt und einem schwammartigen Rüssel statt Kiefern. Kauen kann sie nicht: Sie spuckt Speichel auf feste Nahrung, löst sie auf und tupft die Flüssigkeit wieder auf. Mit den Menschen um die Welt gereist, lebt sie heute auf jedem Kontinent, auf dem auch wir leben.",
+      "habitat": "Überall dort, wo es warm ist und feuchtes organisches Material zur Eiablage gibt – Komposthaufen, Mülltonnen, Mist, Abflüsse. Bei Sommerhitze läuft der ganze Zyklus vom Ei zur Fliege in etwa einer Woche ab.",
+      "curiosity": "Ihre Hinterflügel sind zu zwei keulenförmigen Schwingkölbchen geschrumpft, die rund 200-mal pro Sekunde gegenläufig zu den Flügeln schlagen und als Kreiselsensoren arbeiten. Entfernt man sie, kann sich die Fliege in der Luft nicht mehr aufrecht halten."
+    },
+    "gardenSnail": {
+      "overview": "Eine Schnecke mit runzligem braun-cremefarbenem Haus von etwa 3 cm Durchmesser, ursprünglich aus dem Mittelmeerraum und heute in Europa, Amerika, Australien, Südafrika und Ostasien etabliert. Sie raspelt Pflanzen mit der Radula ab, einem biegsamen Band mit Tausenden winziger Chitinzähne. Jedes Tier ist gleichzeitig männlich und weiblich.",
+      "habitat": "Mauern, Heckenränder, Blumentöpfe und die Schattenseiten von Gebäuden, aktiv in feuchten Nächten. Bei Trockenheit oder Kälte verschließt sie die Mündung mit einer kalkigen Haut und wartet ab, manchmal monatelang.",
+      "curiosity": "Vor der Paarung treibt jede Schnecke einen gehärteten Pfeil aus Kalk in den Körper der anderen. Der Schleim am Pfeil verändert den Geschlechtstrakt des Empfängers so, dass mehr Spermien des Schützen bis zur Befruchtung überleben."
+    },
+    "westernHoneyBee": {
+      "overview": "Eine 12–15 mm große, gestreifte Biene, die in Völkern von Zehntausenden lebt; heimisch in Europa, Afrika und Westasien, vom Menschen fast überall sonst gehalten. Eine Sammlerin, die von einer guten Blütenfläche zurückkommt, tanzt auf der senkrechten Wabe einen Schwänzeltanz: Der Winkel verschlüsselt die Richtung relativ zur Sonne, die Dauer die Entfernung. Sommerbienen leben etwa sechs Wochen, eine Königin mehrere Jahre.",
+      "habitat": "Wilde Völker bauen ihre Wachswaben in Baumhöhlen, Mauerspalten und Dachböden, gehaltene leben in Beuten; Sammlerinnen fliegen routinemäßig zwei bis drei Kilometer weit.",
+      "curiosity": "Das Volk hält keinen Winterschlaf. Es bildet eine dichte Kugel und zittert mit den Flugmuskeln, hält den Kern bei etwa 20–30 °C, während draußen Frost herrscht – und heizt im Spätwinter auf rund 35 °C hoch, sobald die Brutpflege wieder beginnt. Brennstoff ist durchgehend der eingelagerte Honig."
+    },
+    "paintedLady": {
+      "overview": "Ein orange-schwarzer Falter mit 5–6 cm Spannweite und weißen Flecken auf dunklen Flügelspitzen, einer der am weitesten verbreiteten Schmetterlinge der Erde. Die Raupen fressen an Disteln, Malven und Brennnesseln; in manchen Jahren erscheinen die Falter in riesigen Mengen, in anderen fast gar nicht. Radarmessungen haben sie in mehreren hundert Metern Höhe auf Wanderung verfolgt.",
+      "habitat": "Offenes, blütenreiches Gelände jeder Art – Brachen, Wegränder, Gärten, Wüsten nach Regen – in Europa, Asien, Afrika, Australien und Nordamerika. Südamerika ist neben der Antarktis der einzige Kontinent ohne ihn.",
+      "curiosity": "Der volle Jahreskreis umfasst rund 12.000 bis 15.000 km samt einer Sahara-Überquerung, und jede einzelne Etappe fliegen Tiere, die die Strecke noch nie zurückgelegt haben."
+    },
+    "cellarSpider": {
+      "overview": "Eine blasse Spinne mit extrem langen Beinen, Körper 8–10 mm, Beinspannweite bis 7 cm, die meist kopfüber in einem lockeren Gespinst hängt. Das Netz klebt nicht; Beute wird aus der Distanz mit den Hinterbeinen in Seide eingewickelt. Mit Fracht verschleppt, lebt sie heute fast weltweit in Gebäuden.",
+      "habitat": "Zimmerecken, Keller, Treppenhäuser, Garagen und der Raum hinter Möbeln – drinnen, ungestört und warm, denn kalte Winter im Freien übersteht sie schlecht.",
+      "curiosity": "Bei Störung schwingt sie ihren Körper so schnell im Netz, dass ihre Umrisse verschwimmen und ein Angreifer kaum zielen kann. Und sie tötet regelmäßig Spinnen, die größer sind als sie selbst."
+    },
+    "argentineAnt": {
+      "overview": "Eine kleine, unscheinbar braune Ameise von 2–3 mm, die dichte Straßen an Bordsteinen, Fußleisten und Küchenarbeitsplatten bildet. Ihre Nester haben viele Königinnen und verteidigen keine Grenzen, deshalb verschmelzen Nachbarnester, statt zu konkurrieren. Ursprünglich aus dem Einzugsgebiet des Paraná in Südamerika, wurde sie in Erde, Topfpflanzen und Fracht auf sechs Kontinente verschleppt.",
+      "habitat": "Flache Nester unter Gehwegplatten, Blumentöpfen, Mulch und Türschwellen in warmen und mediterranen Klimaten, immer in der Nähe von Feuchtigkeit, mit Straßen bis zu jeder Zuckerquelle im Haus.",
+      "curiosity": "An der Mittelmeerküste bildet die eingeschleppte Population eine Superkolonie von rund 6.000 km Länge, und Arbeiterinnen von verschiedenen Kontinenten erkennen einander noch immer als Nestgenossinnen statt als Feinde."
+    },
+    "commonEarthworm": {
+      "overview": "Ein rotbrauner Wurm von bis zu etwa 25 cm Länge mit abgeflachtem, hellerem Schwanzende und einem verdickten Gürtel, dem Clitellum, im vorderen Drittel. Er unterhält eine dauerhafte senkrechte Röhre von bis zu zwei Metern Tiefe und zieht nachts Blätter hinein. Europäischen Ursprungs, wurde er nach Nordamerika, Asien und auf die Südhalbkugel eingeführt.",
+      "habitat": "Feuchter, nicht saurer Boden in Gärten, Parks und auf Weiden. Er hat keine Lungen und atmet über die Haut, die für den Gasaustausch feucht bleiben muss – auf heißem, trockenem Pflaster stirbt er schnell, und oberirdisch wandert er in nassen Nächten, wenn er auf feuchtem Untergrund viel weiter kommt als grabend.",
+      "curiosity": "Darwin prüfte, wie Würmer mit Blättern umgehen, indem er ihnen Papierdreiecke anbot – sie packten sie an der Spitze, also genau in dem Winkel, der am leichtesten in die Röhre gleitet."
+    }
+  },
+  "fungiDetails": {
+    "flyAgaric": {
+      "overview": "Ein großer Pilz mit scharlachrotem bis orangefarbenem Hut, gesprenkelt mit weißen Flocken – Resten der Hülle, die den jungen Fruchtkörper umschloss. Er ist giftig; seine Wirkstoffe sind Ibotensäure und Muscimol, die im Gehirn ganz anders wirken als das Psilocybin der sogenannten Zauberpilze.",
+      "habitat": "Lebt in Partnerschaft mit den Wurzeln von Birke, Kiefer und Fichte auf der ganzen Nordhalbkugel und ist mit gepflanzten Nadelbäumen nach Neuseeland, Australien, Chile und Südafrika gewandert.",
+      "curiosity": "Muscarin wurde zuerst aus dieser Art isoliert und nach ihr benannt – enthalten sind davon aber nur Spuren. Der deutsche Name stammt vom mittelalterlichen Brauch, Stücke in Milch zu legen, um Fliegen zu betäuben."
+    },
+    "deathCap": {
+      "overview": "Ein mittelgroßer Pilz mit blass oliv- bis grünlichem Hut, weißen Lamellen, einem Ring am Stiel und einer becherförmigen Scheide an der Basis. Seine Amatoxine blockieren die RNA-Polymerase II, das Enzym, mit dem jede Zelle ihre eigenen Gene abliest; die Leber trifft es am härtesten. Ein halber Hut kann für einen Erwachsenen tödlich sein.",
+      "habitat": "Heimisch in den Eichen-, Buchen- und Kastanienwäldern Europas, wurde er mit den Wurzelballen von Baumschulware weltweit verschleppt und wächst heute auch in Kalifornien, im Osten der USA, in Australien und Südamerika.",
+      "curiosity": "Die Vergiftung ist heimtückisch: Die Beschwerden beginnen meist erst sechs bis zwölf Stunden nach der Mahlzeit und lassen dann für einen Tag oder länger nach, während die Leber darunter weiter zerstört wird."
+    },
+    "buttonMushroom": {
+      "overview": "Einer der meistkultivierten Pilze der Welt und das Rückgrat der westlichen Pilzbranche, jährlich in Millionen Tonnen produziert – nicht auf Feldern, sondern in dunklen Klimakammern auf Beeten aus kompostiertem Stroh und Mist. China und die USA bauen am meisten an, und geerntet wird drinnen, von Hand, das ganze Jahr über.",
+      "habitat": "Wild taucht er auf Wiesen, in Dünen und an Straßenrändern in Europa und Nordamerika auf; im Anbau sieht er nie Tageslicht und fruchtet auf einem mit Torf abgedeckten Kompostbeet.",
+      "curiosity": "Der Name bisporus ist eine Beschreibung. Die meisten Lamellenpilze schleudern vier Sporen von jeder Basidie ab, dieser meist nur zwei – jede Spore erbt so ein vollständiges Kernpaar und kann allein ein fruchtbares Myzel bilden."
+    },
+    "brewersYeast": {
+      "overview": "Ein mikroskopisch kleiner Pilz, der sich durch Knospung an der Flanke vermehrt und unter Sauerstoffmangel Zucker in Ethanol und Kohlendioxid umwandelt. Dieselbe Art treibt Brot und vergärt Bier, Wein und Sake, während gentechnisch veränderte Stämme in Tanks Insulin und Impfstoffproteine herstellen.",
+      "habitat": "Wild lebt sie auf reifen Früchten sowie an Rinde und Saftfluss von Eichen; die domestizierten Linien leben in Bäckereien, Brauereien und Industriefermentern.",
+      "curiosity": "Hefe und Mensch teilen so viel grundlegende Zellmaschinerie, dass sich in einem Experiment etwa die Hälfte einer Auswahl lebenswichtiger Hefegene durch ihre menschlichen Gegenstücke ersetzen ließ – und die Zellen wuchsen weiter."
+    },
+    "zombieAntFungus": {
+      "overview": "Ein Parasit von Rossameisen, heute als Komplex mehrerer Arten verstanden, von denen jede auf eine bestimmte Wirtsameise abgestimmt ist. Befallene Arbeiterinnen verlassen den Staat, beißen sich an einer Blattader oder einem Zweig fest und sterben dort; Tage später bricht ein Stiel hinter dem Kopf hervor und lässt Sporen auf die Straßen darunter regnen.",
+      "habitat": "Feuchte tropische und subtropische Wälder in Thailand, Brasilien, Japan und Westafrika, wo befallene Ameisen dichte Friedhöfe in niedriger Vegetation bilden.",
+      "curiosity": "In thailändischen Wäldern beißen sich die Ameisen rund 25 cm über dem Boden fest, wo die Luftfeuchte dem Pilz passt. Mikroskopaufnahmen zeigen Pilzzellen, die die Muskelfasern umhüllen – das Gehirn bleibt unangetastet."
+    },
+    "humongousFungus": {
+      "overview": "Ein honigfarbener Lamellenpilz, der im Herbst in Büscheln rund um Nadelbaumstämme erscheint, aber fast sein ganzes Leben als weiße Myzelhäute unter der Rinde und als schwarze, schnürsenkelartige Rhizomorphe verbringt. Er tötet Bäume, und Forstleute behandeln ihn als Schädling, nicht als Wunder.",
+      "habitat": "Nadelwälder in Nordamerika, Europa und Asien, wo er Fichte, Tanne und Kiefer befällt; das Rekordexemplar wächst im Malheur National Forest im Osten Oregons.",
+      "curiosity": "Genetische Proben zeigten, dass kilometerweit voneinander entfernte Fruchtkörper zu einem einzigen Klon von etwa 965 Hektar gehören, dessen Alter auf mindestens rund 2.500 Jahre geschätzt wird."
+    },
+    "bitterOyster": {
+      "overview": "Ein zäher, hellbrauner, fächerförmiger Pilz von wenigen Zentimetern, der in überlappenden Etagen auf totem Laubholz wächst und es zu blassen Fasern zersetzt. Funde aus dem Osten Nordamerikas leuchten, europäische derselben Art in der Regel nicht – ein Unterschied in der Chemie, nicht in der Artzugehörigkeit.",
+      "habitat": "Totes Eichen-, Birken- und Buchenholz in den gemäßigten Wäldern Nordamerikas, Europas und Asiens, oft mehrere Jahre hintereinander am selben liegenden Stamm.",
+      "curiosity": "Das Leuchten hat sein Maximum im Grünen bei etwa 520 Nanometern und ist so schwach, dass die Augen mehrere Minuten völliger Dunkelheit brauchen, um es aufzunehmen. Das zugrunde liegende Luciferin, 3-Hydroxyhispidin, teilen offenbar alle leuchtenden Pilze."
+    },
+    "penicilliumMould": {
+      "overview": "Ein häufiger Schimmel, der samtige blaugrüne Kolonien mit hellem Wachstumsrand bildet und seine Sporen von pinselförmigen Trägern abgibt; penicillus ist lateinisch für kleiner Pinsel. Er scheidet Penicillin aus, das Bakterien daran hindert, ihre Zellwand fertigzustellen, und seine zufällige Entdeckung eröffnete das Antibiotika-Zeitalter.",
+      "habitat": "Boden, feuchte Innenflächen und verderbende Lebensmittel überall auf der Welt; die entscheidende Kultur kam durch die Luft, mit einer einzigen verirrten Spore, die sich in einem Londoner Labor niederließ.",
+      "curiosity": "Flemings Stamm hieß jahrzehntelang Penicillium notatum, bis DNA-Analysen mehrerer Markergene ihn 2011 neu zuordneten. Die Spore stammte vermutlich aus einem Mykologielabor ein Stockwerk unter seinem."
+    },
+    "chytridFungus": {
+      "overview": "Ein Chytridpilz, Vertreter einer alten Pilzlinie, die noch schwimmt und begeißelte Sporen ins Wasser entlässt. Er besiedelt die keratinreiche Haut von Fröschen, Kröten und Salamandern und zerstört deren Salz- und Wasserhaushalt, was bei empfindlichen Arten im Herzstillstand endet.",
+      "habitat": "Bäche, Teiche und feuchte Wälder auf jedem Kontinent mit Amphibien; genetische Arbeiten verorten seinen Ursprung in Ostasien, von wo ihn der weltweite Handel mit lebenden Tieren verbreitet hat.",
+      "curiosity": "Eine Übersichtsarbeit von 2019 brachte ihn mit dem Rückgang von über 500 Amphibienarten und dem mutmaßlichen Aussterben von rund 90 davon in Verbindung – der größte dokumentierte Artenverlust durch einen einzigen Erreger."
+    },
+    "whiteTruffle": {
+      "overview": "Ein blasser, knolliger, kartoffelförmiger Pilz, der 5 bis 30 cm unter der Oberfläche heranwächst und die Feinwurzeln von Eiche, Pappel, Hasel und Weide ummantelt – Bodenmineralien gegen Baumzucker. Weil er nie an die Oberfläche kommt, muss er seine Sporen über den Geruch von Tieren verbreiten lassen, nicht über den Wind.",
+      "habitat": "Kalkböden in Nord- und Mittelitalien, vor allem die Hügel um Alba im Piemont, dazu Istrien und Teile des Balkans; gesucht wird mit abgerichteten Hunden, die den Fund seltener selbst fressen als Schweine.",
+      "curiosity": "Schwarze Trüffeln werden in Plantagen auf beimpften Setzlingen angebaut, doch diese Art widerstand ein Jahrhundert lang jedem Versuch. Die ersten bestätigten kultivierten Fruchtkörper wurden erst 2019 aus Frankreich gemeldet."
+    }
+  },
+  "cropDetails": {
+    "maize": {
+      "overview": "Das nach Tonnage ertragreichste Getreide der Welt, ein riesiges einjähriges Gras, dessen Körner Menschen, Vieh und Ethanolfabriken versorgen. Ein einziger Kolben trägt mehrere hundert Körner, eingehüllt in Lieschblätter. Angebaut wird Mais auf jedem Kontinent außer der Antarktis.",
+      "habitat": "Vom Meeresspiegel bis über 3.000 m in den Anden und von Kanada bis ins südliche Afrika; der wilde Verwandte Teosinte wächst noch heute an saisonal trockenen Hängen im Südwesten Mexikos.",
+      "curiosity": "Mais wurde vor rund 9.000 Jahren im Tal des Río Balsas domestiziert und kann ohne Menschen nicht mehr überleben: Der umhüllte Kolben zerfällt nicht, die Körner haben also keine Möglichkeit, sich selbst auszustreuen."
+    },
+    "cassava": {
+      "overview": "Ein verholzender Strauch, der wegen seiner verdickten, stärkereichen Speicherwurzeln angebaut wird; jede kann mehrere Kilogramm wiegen. Er verträgt arme, saure Böden und lange Trockenzeiten, an denen Mais eingehen würde. Roh enthalten die Wurzeln Blausäureverbindungen und müssen immer verarbeitet werden.",
+      "habitat": "Tropische Tieflagen weltweit, vom Südrand des Amazonasbeckens, wo er entstand, bis Westafrika und Südostasien, oft auf Böden, die für Getreide längst zu ausgelaugt sind.",
+      "curiosity": "Genetische Untersuchungen führen jeden Kulturmaniok auf Wildbestände im Südwesten Brasiliens und in Bolivien zurück. Portugiesische Schiffe brachten ihn im 16. Jahrhundert nach Afrika, und Nigeria ist heute der größte Produzent der Erde."
+    },
+    "arabicaCoffee": {
+      "overview": "Ein immergrüner Strauch oder kleiner Baum, dessen Bohnen die Samen einer roten, kirschartigen Frucht sind, meist zwei pro Frucht. Er liefert rund 60 % des Weltkaffees, der Rest ist überwiegend Robusta. Brasilien baut mehr davon an als jedes andere Land.",
+      "habitat": "Kühle, nebelverhangene tropische Hochlagen, meist zwischen 1.000 und 2.000 m; wilde Bestände wachsen noch im schattigen Unterwuchs der Bergwälder im Südwesten Äthiopiens.",
+      "curiosity": "Coffea arabica entstand in Äthiopien, als sich Robusta und Coffea eugenioides kreuzten und ihre Chromosomen verdoppelten. Sehr wenige Pflanzen, die in den Jemen und später in europäische Gewächshäuser gelangten, begründeten einen Großteil des heutigen Anbaus."
+    },
+    "soybean": {
+      "overview": "Eine buschige, einjährige Hülsenfrucht mit behaarten Hülsen zu zwei bis vier Samen. Diese Samen sind ungewöhnlich reich an Eiweiß und Öl, weshalb Soja den weltweiten Ölsaatenhandel dominiert. Die Pflanze bindet über Wurzelknöllchen ihren eigenen Stickstoff.",
+      "habitat": "Warm-gemäßigtes und subtropisches Ackerland, allen voran der brasilianische Cerrado, die argentinische Pampa und der US-Mittelwesten; die Wildform ist eine dünne Schlingpflanze an ostasiatischen Flussufern und Feldrändern.",
+      "curiosity": "Die wilde Glycine soja ist eine zarte Ranke mit kleinen, harten, schwarzen Samen und wurde vor rund 5.000 Jahren in China domestiziert. Brasilien baute vor den 1960er-Jahren fast kein Soja an und ist heute weltgrößter Produzent."
+    },
+    "sugarcane": {
+      "overview": "Ein riesiges tropisches Gras, dessen Halme drei bis fünf Meter erreichen und Saccharose im Stängel speichern statt im Samen. Das kommerzielle Zuckerrohr ist eine Kreuzung mit dem robusteren Wildgras Saccharum spontaneum und wird aus Stecklingen gepflanzt, nie aus Samen. Es liefert den größten Teil des Weltzuckers.",
+      "habitat": "Heiße Tieflagen mit hohen Niederschlägen oder Bewässerung, grob zwischen 30° Nord und 30° Süd; Brasilien und Indien bewirtschaften die mit Abstand größten Flächen.",
+      "curiosity": "Vor etwa 8.000 Jahren in Neuguinea domestiziert, wanderte das Rohr westwärts nach Indien, wo Zucker zuerst kristallisiert wurde, und weiter auf die Plantagen am Atlantik. Brasilien verarbeitet heute rund die Hälfte seiner Ernte zu Ethanol."
+    },
+    "breadWheat": {
+      "overview": "Ein einjähriges Gras der gemäßigten Zonen, das auf mehr Ackerfläche steht als fast jede andere Kulturpflanze. Jede Ähre trägt etwa 30 bis 50 Körner, deren Klebereiweiße den Teig Gas halten und aufgehen lassen. Er trägt sechs Chromosomensätze, geerbt von drei verschiedenen Grasarten.",
+      "habitat": "Gemäßigtes und mediterranes Ackerland auf jedem Kontinent außer der Antarktis, von der kanadischen Prärie bis in den Punjab; das wilde Aegilops-Gras wächst noch an Hängen vom Fruchtbaren Halbmond bis zum Kaspischen Meer.",
+      "curiosity": "Vor etwa 8.000 bis 9.000 Jahren kreuzte sich der kultivierte Emmer mit dem Unkrautgras Aegilops tauschii – einer unscheinbaren Pflanze mit brüchigen, zerfallenden Ähren, deren Genom die Dehnbarkeit des Brotteigs liefert."
+    },
+    "asianRice": {
+      "overview": "Ein einjähriges Gras, das dank luftführender Kanäle in Halmen und Wurzeln stehendes Wasser übersteht. Für etwa die Hälfte der Menschheit ist es das direkte Grundnahrungsmittel. Die Körner werden von Spelze und Kleieschicht befreit, die den stärkehaltigen Kern umgeben.",
+      "habitat": "Überflutete Nassreisfelder und Regenfeldbau in Monsunasien, dazu Westafrika, das Mississippi-Tal und Südbrasilien; der wilde Oryza rufipogon wächst noch in asiatischen Sümpfen und Gräben.",
+      "curiosity": "Der asiatische Reis wurde vor rund 9.000 Jahren am Jangtse aus Oryza rufipogon domestiziert. Der afrikanische Reis, Oryza glaberrima, entstand vor etwa 3.000 Jahren unabhängig im Binnendelta des Niger und überquerte später mit versklavten westafrikanischen Bauern den Atlantik."
+    },
+    "potato": {
+      "overview": "Ein Nachtschattengewächs, das wegen seiner Knollen angebaut wird – verdickte unterirdische Sprosse, keine Wurzeln. Oberirdisch ist es eine belaubte Pflanze mit weißen bis violetten Blüten und kleinen grünen Früchten, die wie winzige Tomaten aussehen und giftig sind. Grüne oder keimende Knollen reichern dieselben bitteren Glykoalkaloide an.",
+      "habitat": "Kühle Klimate weltweit, vom andinen Altiplano über 3.500 m bis zu den Feldern Chinas und Indiens; China erntet heute mehr Kartoffeln als jedes andere Land.",
+      "curiosity": "Vor rund 8.000 Jahren im Süden Perus aus bitteren Wildarten domestiziert, erreichte die Kartoffel Europa im 16. Jahrhundert über eine winzige genetische Stichprobe – während andine Bauern bis heute Tausende benannter Sorten in einer einzigen Region erhalten."
+    },
+    "banana": {
+      "overview": "Kein Baum, sondern ein riesiges Kraut: Der „Stamm\" ist eine dichte Säule aus gerollten Blattscheiden, und die Pflanze stirbt nach einer einzigen Fruchtbildung ab. Fast alle exportierten Bananen sind eine einzige sterile, dreifach-chromosomige Sorte, Cavendish, vermehrt aus Schösslingen und Gewebekultur.",
+      "habitat": "Feuchte tropische Tieflagen weltweit; Indien und China bauen am meisten an, Ecuador exportiert am meisten, und wilde, samenreiche Musa-Arten wachsen noch in den Wäldern Südostasiens und Neuguineas.",
+      "curiosity": "Grabungen im Kuk-Sumpf im Hochland Neuguineas datieren den Bananenanbau auf rund 7.000 Jahre. Weil jede Cavendish-Pflanze genetisch identisch ist, bedroht der Bodenpilz Fusarium TR4 die gesamte Exportware – so wie ein früherer Stamm im letzten Jahrhundert die Sorte Gros Michel auslöschte."
+    },
+    "sweetOrange": {
+      "overview": "Ein immergrüner Baum mit duftenden weißen Blüten, dessen Saft aus Haaren stammt, die sich zu flüssigkeitsgefüllten Säckchen entwickelt haben. Praktisch jeder Baum im Anbau ist ein gepfropfter Klon auf einer Unterlage, die nach Krankheitsresistenz ausgewählt wurde, nicht nach ihren Früchten.",
+      "habitat": "Subtropische Gürtel mit milden Wintern – Südostbrasilien, Florida, der Mittelmeerraum und Südchina; die Elternarten stammen aus den Wäldern Süd- und Südostasiens.",
+      "curiosity": "Die Kreuzung entstand in Südchina, reiste mit Händlern nach Westen und kam im 16. Jahrhundert auf portugiesischen Schiffen nach Brasilien, das heute mehr Orangen produziert als jedes andere Land. Zitrussamen enthalten oft zusätzliche Embryonen, die Klone des Mutterbaums sind – ein Sämling kann also eine exakte Kopie sein."
+    }
+  },
+  "soundDetails": {
+    "tawnyOwl": {
+      "overview": "Eine gedrungene, rundköpfige Waldeule von etwa 40 cm Länge, braun marmoriert und vor Rinde praktisch unsichtbar. Sie jagt bei fast völliger Dunkelheit nach Gehör und verbringt den Tag flach an einen Stamm gedrückt oder in einer Höhle verkeilt. In ihrem gesamten Verbreitungsgebiet gehört sie zu den meistgehörten und am seltensten gesehenen Vögeln.",
+      "habitat": "Alte Laubwälder, Parks, Friedhöfe und ältere Stadtviertel mit großen Bäumen, von Großbritannien und Iberien über Europa bis in den Iran und nach Westsibirien, dazu Nordafrika; in Irland fehlt sie.",
+      "curiosity": "Die Reviergesänge häufen sich im Herbst und noch einmal im Spätwinter, wenn der Ruf durch kahle Bäume mehrere hundert Meter weit trägt – und ein Paar kann dasselbe Waldstück ein Jahrzehnt lang halten."
+    },
+    "commonCuckoo": {
+      "overview": "Ein schlanker, langschwänziger grauer Vogel, etwa so groß wie ein Sperber, dessen gebänderte Unterseite und niedriger, geradliniger Flug diesem Greif so ähneln, dass Singvögel ihre Nester verlassen. Weibchen legen ihre Eier in fremde Nester und verschwinden; über 100 Wirtsarten sind belegt. Die meisten Menschen kennen die Stimme jahrelang, bevor sie den Vogel bewusst sehen.",
+      "habitat": "Waldränder, Schilfgebiete, Moore und offenes Agrarland in Europa und Nordasien; überwintert wird südlich der Sahara und in Südasien.",
+      "curiosity": "Der Zweitonruf ist etwa eine fallende kleine Terz und trägt über offenes Land einen Kilometer und mehr. Playback-Versuche zeigen: Wirtsvögel reagieren auf das sprudelnde Kichern des Weibchens ähnlich wie auf einen jagenden Sperber."
+    },
+    "commonNightingale": {
+      "overview": "Ein schlichter brauner Vogel, kaum größer als ein Rotkehlchen, der sich fast nie zeigt und aus dem Inneren dichten Gebüschs singt. Ein einzelnes Männchen beherrscht etwa 180 bis 260 verschiedene Strophentypen, vorgetragen als abrupte Pfiffe, tiefe Schnarrlaute und lange Crescendi. Es brütet in Europa, Nordafrika und Westasien und überwintert in Afrika.",
+      "habitat": "Dickichte, Niederwald und buschige Waldränder mit dichter Deckung dicht über dem Boden, oft an Gewässern oder entlang verwachsener Feldränder.",
+      "curiosity": "Aufnahmen an lauten Berliner Straßen erfassten Männchen mit Spitzen über 95 Dezibel, gemessen in einem Meter Abstand – sie drehen auf, um gegen den Verkehr anzukommen."
+    },
+    "europeanTreeFrog": {
+      "overview": "Ein kleiner, glatter, leuchtend grüner Frosch mit einem dunklen Streifen an jeder Flanke und Haftscheiben an den Zehen. Männchen versammeln sich im Frühjahr an den Laichgewässern und rufen in überlappenden Reihen, meist nach Einbruch der Dunkelheit. Außerhalb der Laichzeit klettert er und ist am Boden kaum je zu sehen.",
+      "habitat": "Besonnte Tümpel, Gräben und überschwemmte Wiesen mit Schilf- und Brombeersaum in Mittel- und Südosteuropa; zwischen den Laichzeiten sitzt er meterhoch in Sträuchern und Hecken.",
+      "curiosity": "Der Ruf liegt bei etwa 2,5 kHz, und ein Männchen wiederholt ihn in einer Nacht tausendfach. Rufen gehört zu den energieaufwendigsten Tätigkeiten, die je bei Wirbeltieren gemessen wurden – die Männchen verlieren über die Saison hinweg an Gewicht."
+    },
+    "americanBullfrog": {
+      "overview": "Der größte Frosch Nordamerikas, bis etwa 20 cm von der Schnauze bis zur Kloake, olivgrün und schwer gebaut. Männchen halten den Sommer über Uferreviere und rufen bei Tag und Nacht. Vielerorts eingeführt, gilt er heute auf mehreren Kontinenten als etablierter Invasor.",
+      "habitat": "Dauerhaft warmes Wasser – Seeufer, langsame Flüsse, Stauseen und Teiche –, heimisch im Osten Nordamerikas, etabliert in Brasilien, Japan, China und Teilen Südeuropas.",
+      "curiosity": "Die Tonhöhe hängt an der Körpergröße, die tiefste Stimme im Chor gehört also meist dem größten Männchen. Erkennen lassen sich Männchen zudem an einem Trommelfell, das deutlich breiter ist als das Auge."
+    },
+    "cicadaOrni": {
+      "overview": "Eine graubraune Mittelmeerzikade von etwa 3 cm mit klaren, dunkel gefleckten Flügeln, die sich per Gesang weit leichter bestimmen lässt als per Auge. Männchen erzeugen ein trockenes, wiederholtes zip-zip-zip mit gleichmäßigen Pausen, gesungen von Stämmen und Ästen. Weibchen singen überhaupt nicht.",
+      "habitat": "Kiefern, Olivenbäume, Platanen und Obstgärten rund ums Mittelmeer, von Iberien und Nordafrika über Italien und Griechenland bis in die Türkei.",
+      "curiosity": "Der Laut entsteht in einem Paar gerippter Platten, den Tymbalen, die hunderte Male pro Sekunde einknicken wie der Deckel einer Konservendose. Der Hinterleib dahinter ist weitgehend hohl – ein singendes Männchen besteht überwiegend aus Verstärker."
+    },
+    "houseCricket": {
+      "overview": "Eine strohbraune Grille von etwa 2 cm, ursprünglich aus Südwestasien und heute überall dort zu Hause, wo Gebäude warm bleiben. Männchen zirpen; Weibchen, kenntlich an der langen, nadelförmigen Legeröhre, bleiben stumm. Es ist eines der am häufigsten gezüchteten Insekten der Welt.",
+      "habitat": "Warme Menschenräume – Heizungskeller, Bäckereien, Mülldeponien, beheizte Ställe und Zuchtfarmen; im Freien übersteht es in gemäßigten Breiten die warmen Monate, in den Tropen das ganze Jahr.",
+      "curiosity": "Seine Ohren sitzen an den Vorderbeinen, kurz unterhalb des Knies, und die Zirprate steigt mit der Temperatur – derselbe Raum klingt in einer heißen Nacht schneller als in einer kühlen."
+    },
+    "greatGreenBushCricket": {
+      "overview": "Eine grasgrüne Laubheuschrecke von bis zu etwa 7 cm mit Fühlern, die länger sind als ihr Körper – ein großes Insekt, das sich in einer Hecke trotzdem kaum ausmachen lässt. Männchen singen von den Spitzen der Büsche und hoher Vegetation, oft den Großteil der Nacht hindurch. Sie kommt in Europa, Nordafrika und bis nach Zentralasien vor.",
+      "habitat": "Hohe, ungemähte Vegetation – Brombeeren, Hecken, Gebüsch, Straßenränder und Weinbergsränder – meist singend ein bis zwei Meter über dem Boden.",
+      "curiosity": "Ein großer Teil der Gesangsenergie liegt über 20 kHz, direkt an der Grenze des menschlichen Hörens. Kinder hören ein Männchen deshalb oft glasklar, während die Erwachsenen daneben kaum etwas wahrnehmen."
+    },
+    "blackHowlerMonkey": {
+      "overview": "Ein südamerikanischer Affe mit ungewöhnlich auffälligem Geschlechtsunterschied: erwachsene Männchen sind schwarz, Weibchen und Jungtiere hell blond. Gruppen brüllen bei Sonnenaufgang und -untergang, um ihre Position zu verkünden, was Nachbargruppen ohne Kontakt auf Abstand hält. Die Körperlänge liegt bei etwa 60 cm, dazu ein Greifschwanz ähnlicher Länge.",
+      "habitat": "Galeriewälder, saisonal überflutete Wälder und Waldinseln in Brasilien, Bolivien, Paraguay und Nordargentinien, meist hoch im Kronendach.",
+      "curiosity": "Verstärkt wird das Brüllen von einem vergrößerten, hohlen Zungenbein im Hals. Eine Vergleichsstudie von 2015 ergab: Die Brüllaffenarten mit den größten Zungenbeinen haben die kleinsten Hoden."
+    },
+    "redFox": {
+      "overview": "Das am weitesten verbreitete wilde Raubtier der Erde, rund 5–7 kg schwer und überall dort weitgehend nachtaktiv, wo Menschen häufig sind. Etwa zwanzig verschiedene Lauttypen sind beschrieben, vom knappen Kontaktbellen bis zum langgezogenen Schrei. In Städten hört man ihn weit öfter, als man ihn sieht.",
+      "habitat": "So gut wie überall: arktische Tundra, Agrarland, Wüstenränder, Wald und dichte Innenstadt, wo die Baue unter Schuppen, an Bahndämmen und in Gärten liegen.",
+      "curiosity": "Die Schreie häufen sich im Dezember und Januar, wenn sich die Füchse verpaaren, und hören weitgehend auf, bevor im Frühjahr die Welpen geboren werden – deshalb wirkt der Lärm, als käme und ginge er nach Plan."
+    }
+  }
+}

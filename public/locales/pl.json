@@ -1,0 +1,2288 @@
+{
+  "common": {
+    "overview": "Przegląd",
+    "details": "Szczegóły",
+    "readMore": "Czytaj więcej",
+    "confidence": "Pewność",
+    "nativeOrigin": "Pochodzenie",
+    "save": "Zapisz w mojej kolekcji",
+    "saved": "Zapisano w kolekcji",
+    "cancel": "Anuluj",
+    "goBack": "Wstecz",
+    "shareThisResult": "Udostępnij ten wynik",
+    "removeFromCollection": "Usuń z kolekcji",
+    "saveToCollection": "Zapisz w kolekcji",
+    "tabCollection": "Kolekcja",
+    "tabDiscover": "Ciekawostki",
+    "tabBotanist": "Botanik",
+    "saveErrorTitle": "Nie udało się zapisać",
+    "saveErrorBody": "Coś poszło nie tak podczas zapisywania w Twojej kolekcji. Spróbuj ponownie.",
+    "ok": "OK",
+    "next": "Dalej",
+    "showPassword": "Pokaż hasło",
+    "hidePassword": "Ukryj hasło",
+    "close": "Zamknij",
+    "tabProfile": "Profil",
+    "identified": "Rozpoznano",
+    "yourPhoto": "Twoje zdjęcie",
+    "referencePhoto": "Wzorzec",
+    "technicalDescription": "Opis techniczny",
+    "vendorEnglishNote": "Z usługi rozpoznawania, po angielsku.",
+    "translate": "Przetłumacz",
+    "translating": "Tłumaczenie…",
+    "translateFailed": "Nie udało się teraz przetłumaczyć."
+  },
+  "auth": {
+    "title": "Zaloguj się, aby rozpocząć identyfikację",
+    "subtitle": "Jedna bezpłatna identyfikacja na kategorię. Zaloguj się przy użyciu adresu e-mail, aby zacząć — hasło nie jest potrzebne.",
+    "emailPlaceholder": "ty@przyklad.com",
+    "sendLink": "Wyślij magiczny link",
+    "sending": "Wysyłanie…",
+    "checkEmailTitle": "Sprawdź skrzynkę e-mail",
+    "checkEmailBody": "Wysłaliśmy link logowania na adres {{email}}. Otwórz go na tym urządzeniu, aby kontynuować.",
+    "signOut": "Wyloguj się",
+    "signedInAs": "Zalogowano jako {{email}}",
+    "notReady": "Logowanie jest w trakcie konfiguracji i wkrótce będzie dostępne."
+  },
+  "paywall": {
+    "title": "Bezpłatne użycie już wykorzystane",
+    "body": "Wykorzystałeś już swoją bezpłatną identyfikację w kategorii {{category}}. Subskrybuj, aby identyfikować bez ograniczeń.",
+    "subscribe": "Subskrybuj",
+    "subscribing": "Przekierowywanie…",
+    "subscribed": "Subskrybowano",
+    "manage": "Zarządzaj subskrypcją",
+    "annualPlan": "Roczny",
+    "perYear": "/rok",
+    "saveBadge": "Oszczędź {{percent}}%",
+    "genericTitle": "Odblokuj wszystko",
+    "genericBody": "Nieograniczona liczba identyfikacji roślin, owadów, grzybów i upraw oraz pełny dostęp do informacji o ziołach leczniczych.",
+    "subscriptionConfirmedTitle": "Masz subskrypcję!",
+    "subscriptionConfirmedBody": "Dziękujemy za subskrypcję — masz teraz nieograniczoną liczbę identyfikacji. Miłego korzystania!",
+    "subscriptionPendingTitle": "Płatność otrzymana",
+    "subscriptionPendingBody": "Płatność otrzymana. Otwórz Profil → Przywróć dostęp i potwierdź e-mail użyty przy płatności, aby odblokować to urządzenie.",
+    "checkoutFailedTitle": "Płatność nie powiodła się",
+    "checkoutFailedBody": "Nie udało się rozpocząć płatności. Spróbuj ponownie za chwilę.",
+    "monthlyPlan": "Miesięcznie",
+    "quarterlyPlan": "Kwartalnie",
+    "perMonth": "miesięcznie",
+    "perQuarter": "kwartalnie",
+    "notAvailableYet": "Płatność jest konfigurowana — spróbuj ponownie za chwilę."
+  },
+  "restore": {
+    "title": "Zaloguj się",
+    "emailStepTitle": "Zaloguj się do swojego konta",
+    "emailStepBody": "Użyj adresu e-mail, na który się rejestrowałeś. Wyślemy jednorazowy kod - żadnego hasła do zapamiętania.",
+    "emailPlaceholder": "ty@przyklad.com",
+    "sendCode": "Wyślij kod",
+    "codeStepTitle": "Wpisz kod",
+    "codeStepBody": "Wysłaliśmy kod na {{email}}. Wpisz go poniżej, aby dokończyć logowanie.",
+    "codePlaceholder": "6-cyfrowy kod",
+    "verifyCode": "Zweryfikuj",
+    "changeEmail": "Użyj innego adresu",
+    "doneTitleActive": "Zalogowano",
+    "doneBodyActive": "To urządzenie jest teraz połączone z Twoim kontem, a subskrypcja jest na nim aktywna.",
+    "doneTitleOther": "Konto połączone",
+    "doneBodyOther": "To urządzenie jest połączone z Twoim kontem. Obecnie nie ma na nim aktywnej subskrypcji.",
+    "backToProfile": "Wróć do profilu",
+    "genericError": "Coś poszło nie tak. Spróbuj ponownie.",
+    "modeCode": "Kod e-mail",
+    "modePassword": "Hasło",
+    "passwordStepTitle": "Zaloguj się hasłem",
+    "passwordStepBody": "Wpisz swój e-mail i hasło, aby zalogować się na tym urządzeniu.",
+    "passwordPlaceholder": "Hasło",
+    "signIn": "Zaloguj się",
+    "signInWithGoogle": "Kontynuuj z Google",
+    "googleSignInErrorTitle": "Logowanie nie powiodło się",
+    "googleSignInErrorBody": "Nie udało się dokończyć logowania przez Google. Spróbuj ponownie."
+  },
+  "categories": {
+    "plant": {
+      "label": "Roślina",
+      "tabLabel": "Rośliny",
+      "title": "Rozpoznaj rośliny i drzewa natychmiast",
+      "subtitle": "Skieruj aparat na dowolną roślinę, liść, kwiat lub drzewo i w kilka sekund otrzymaj szczegółowy profil.",
+      "scanHint": "Aby uzyskać najlepsze wyniki, ujmij pojedynczy liść, kwiat lub ogólny pokrój przy dobrym oświetleniu."
+    },
+    "insect": {
+      "label": "Owad",
+      "tabLabel": "Owady",
+      "title": "Błyskawiczna identyfikacja owadów",
+      "subtitle": "Skieruj aparat na dowolnego robaka, chrząszcza, pająka lub motyla i uzyskaj natychmiastowy profil gatunku.",
+      "scanHint": "Aby uzyskać najlepsze wyniki, zbliż się do owada przy dobrym oświetleniu i trzymaj telefon stabilnie."
+    },
+    "mushroom": {
+      "label": "Grzyb",
+      "tabLabel": "Grzyby",
+      "title": "Błyskawiczna identyfikacja grzybów",
+      "subtitle": "Skieruj aparat na dowolnego grzyba, aby zidentyfikować gatunek i sprawdzić jego jadalność.",
+      "scanHint": "Sfotografuj kapelusz, blaszki i trzon, aby uzyskać najdokładniejszą identyfikację."
+    },
+    "crop": {
+      "label": "Uprawa",
+      "tabLabel": "Uprawy",
+      "title": "Sprawdzenie zdrowia uprawy",
+      "subtitle": "Skieruj aparat na liść uprawy, aby sprawdzić choroby, szkodniki lub problemy z odżywianiem.",
+      "scanHint": "Sfotografuj z bliska zaatakowany liść lub obszar, aby uzyskać najdokładniejszą diagnozę."
+    },
+    "tree": {
+      "label": "Drzewo",
+      "tabLabel": "Drzewa",
+      "title": "Rozpoznawaj drzewa błyskawicznie",
+      "subtitle": "Skieruj aparat na dowolne drzewo, pień, liść lub koronę i uzyskaj szczegółowy profil w kilka sekund.",
+      "scanHint": "Aby uzyskać najlepsze wyniki, kadruj liście, korę lub ogólny kształt przy dobrym oświetleniu."
+    },
+    "fish": {
+      "label": "Ryba",
+      "tabLabel": "Ryby",
+      "title": "Rozpoznaj ryby natychmiast",
+      "subtitle": "Skieruj aparat na dowolną rybę i w kilka sekund otrzymaj szczegółowy profil.",
+      "scanHint": "Aby uzyskać najlepsze wyniki, sfotografuj całą rybę z boku przy dobrym oświetleniu."
+    },
+    "bird": {
+      "label": "Ptak",
+      "tabLabel": "Ptaki",
+      "title": "Rozpoznaj ptaki natychmiast",
+      "subtitle": "Skieruj aparat na dowolnego ptaka i natychmiast otrzymaj oznaczenie.",
+      "scanHint": "Aby uzyskać najlepsze wyniki, ujmij całego ptaka - ostro i przy dobrym świetle."
+    },
+    "sound": {
+      "label": "Dźwięk",
+      "tabLabel": "Dźwięki",
+      "title": "Rozpoznaj po dźwięku",
+      "subtitle": "Nagraj ptaka, żabę lub owada i sprawdź, co to jest."
+    }
+  },
+  "identify": {
+    "identifierTitle": "Identyfikator: {{category}}",
+    "subtitle": "Błyskawiczna identyfikacja w kategorii {{category}} dzięki AI",
+    "readyToScan": "Gotowe do skanowania",
+    "didYouKnowTitle": "Czy wiesz, że...?",
+    "continueLabel": "Kontynuuj",
+    "analyzing": "Analizowanie: {{category}}…",
+    "tapToIdentify": "Dotknij, aby zidentyfikować",
+    "identifying": "Identyfikowanie…",
+    "uploadPhoto": "Prześlij zdjęcie",
+    "myCollection": "Moja kolekcja",
+    "switchCategoryLabel": "Zmień kategorię identyfikacji",
+    "switchCategoryTitle": "Zmień kategorię",
+    "switchCategoryMessage": "Co chcesz zidentyfikować?",
+    "takePhotoLabel": "Zrób zdjęcie, aby zidentyfikować obiekt w kategorii {{category}}",
+    "uploadPhotoLabel": "Prześlij zdjęcie, aby zidentyfikować",
+    "goToCollectionLabel": "Przejdź do mojej kolekcji",
+    "cameraPermissionTitle": "Wymagane uprawnienie do aparatu",
+    "cameraPermissionMessage": "Włącz dostęp do aparatu, aby zeskanować obiekt w kategorii {{category}}.",
+    "libraryPermissionTitle": "Wymagane uprawnienie do galerii zdjęć",
+    "libraryPermissionMessage": "Włącz dostęp do zdjęć, aby przesłać obraz.",
+    "identificationFailedTitle": "Identyfikacja nie powiodła się",
+    "identificationFailedDefault": "Spróbuj ponownie.",
+    "notFoundError": "Na tym zdjęciu nie rozpoznano niczego w kategorii {{category}}. Spróbuj zrobić wyraźniejsze, bliższe zdjęcie.",
+    "photoProcessingFailed": "Nie udało się przetworzyć tego zdjęcia. Spróbuj innego zdjęcia lub zrób nowe aparatem.",
+    "lowConfidence": "To nasze najlepsze przypuszczenie ({{confidence}}% pewności). Porównaj je ze zdjęciami referencyjnymi, zanim na tym polegniesz.",
+    "lowConfidenceWithAlternatives": "Tylko {{confidence}}% pewności. Sprawdź poniżej inne możliwe dopasowania, zanim na tym polegniesz.",
+    "referenceImagesTitle": "Zdjęcia referencyjne",
+    "referenceImagesHint": "Porównaj je z własnym zdjęciem, aby potwierdzić.",
+    "referenceImageLabel": "Zdjęcie referencyjne {{index}}",
+    "alternativesTitle": "Inne możliwe dopasowania",
+    "alternativesHint": "Jeśli wynik powyżej nie wygląda dobrze, twoim gatunkiem może być jeden z tych.",
+    "lowConfidenceBare": "Tylko {{confidence}}% pewności — potraktuj to jako punkt wyjścia, nie ostateczną odpowiedź.",
+    "addAngle": "Dodaj kolejne ujęcie",
+    "addAnotherAngle": "Dodaj jeszcze jedno",
+    "anglesHint": "{{count}} zdjęcia tego samego okazu — większa dokładność",
+    "removeAngleLabel": "Usuń ujęcie {{index}}",
+    "offlineTitle": "Jesteś offline",
+    "offlineBody": "Rozpoznawanie wymaga internetu. Twoja kolekcja i zakładka Odkrywaj działają dalej.",
+    "serviceDownTitle": "Usługa niedostępna",
+    "serviceDownBody": "Ta usługa rozpoznawania ma chwilowy problem. Spróbuj ponownie za kilka minut - to nie wina Twojego zdjęcia."
+  },
+  "detail": {
+    "profileTitle": "Profil: {{category}}",
+    "readMoreLabel": "Przeczytaj w internecie więcej na temat kategorii {{category}}",
+    "markAsWatered": "Oznacz jako podlane",
+    "markAsWateredLabel": "Oznacz jako podlane",
+    "wateringSection": "Podlewanie",
+    "checkForDiseases": "Sprawdź choroby",
+    "checkingForDiseases": "Sprawdzanie…",
+    "checkForDiseasesLabel": "Sprawdź choroby",
+    "checkingForDiseasesLabel": "Sprawdzanie chorób",
+    "healthCheckSection": "Kontrola zdrowia",
+    "edibleParts": "Części jadalne",
+    "propagation": "Rozmnażanie",
+    "wateringNeeds": "Potrzeby wodne",
+    "conservationStatus": "Status ochrony",
+    "safetySection": "Bezpieczeństwo",
+    "ecologicalRoleSection": "Rola ekologiczna",
+    "frequentlyConfusedWith": "Często mylone z",
+    "psychoactiveWarning": "Ten grzyb może być psychoaktywny i wpływać na układ nerwowy.",
+    "cropHealthReportTitle": "Raport o zdrowiu uprawy",
+    "cropMatch": "Dopasowanie uprawy",
+    "cropPill": "Uprawa",
+    "wateringGuideSection": "Przewodnik podlewania",
+    "lightSection": "Światło",
+    "soilSection": "Gleba",
+    "commonUsesSection": "Typowe zastosowania",
+    "culturalSignificanceSection": "Znaczenie kulturowe",
+    "installNudgeTitle": "Zainstaluj NatureLens",
+    "installNudgeBody": "Dodaj ją do ekranu głównego, aby następnym razem rozpoznawać szybciej.",
+    "commonNames": "Nazwy zwyczajowe",
+    "synonyms": "Synonimy naukowe",
+    "referencePhoto": "Zdjęcie referencyjne",
+    "referencePhotoAlt": "Zdjęcie referencyjne: {{name}}",
+    "coverageNoteTitle": "O tym wyniku",
+    "birdCoverageNote": "Rozpoznawanie ptaków obejmuje 291 gatunków, głównie północnoamerykańskich. Ptaki spoza tej listy mogą zostać oznaczone błędnie nawet przy wysokiej pewności - potraktuj wynik jako punkt wyjścia."
+  },
+  "disease": {
+    "overviewSection": "Przegląd",
+    "symptomsSection": "Objawy",
+    "treatmentSection": "Leczenie",
+    "biological": "Biologiczne",
+    "chemical": "Chemiczne",
+    "prevention": "Zapobieganie",
+    "spreadingSection": "Jak się rozprzestrzenia",
+    "healthStatusSection": "Stan zdrowia",
+    "noDiseaseDetected": "Na tym zdjęciu nie wykryto z pewnością żadnej choroby ani szkodnika.",
+    "match": "Dopasowanie",
+    "severitySuffix": "Nasilenie: {{severity}}"
+  },
+  "collection": {
+    "title": "Moja kolekcja",
+    "subtitle_one": "Odkryto {{count}} element",
+    "subtitle_other": "Odkryto {{count}} elementów",
+    "emptyTitle": "Jeszcze nic nie zapisano",
+    "emptyBody": "Zidentyfikuj roślinę, owada, grzyba lub uprawę i zapisz ją, aby zbudować swoją kolekcję.",
+    "startIdentifying": "Rozpocznij identyfikację",
+    "goToProfileLabel": "Przejdź do profilu",
+    "switchToGridLabel": "Przełącz na widok siatki",
+    "switchToListLabel": "Przełącz na widok listy",
+    "viewDetailsLabel": "Zobacz szczegóły: {{name}}",
+    "removeLabel": "Usuń {{name}} z kolekcji",
+    "assignRoomTitle": "Przypisz do pomieszczenia",
+    "assignRoomMessage": "Wybierz pomieszczenie dla {{name}}.",
+    "roomLivingRoom": "Salon",
+    "roomBedroom": "Sypialnia",
+    "roomKitchen": "Kuchnia",
+    "roomBalcony": "Balkon",
+    "roomOffice": "Biuro",
+    "roomNone": "Brak",
+    "searchPlaceholder": "Szukaj w swojej kolekcji…",
+    "clearSearchLabel": "Wyczyść wyszukiwanie",
+    "filterAll": "Wszystkie",
+    "noSearchResults": "Brak wyników wyszukiwania."
+  },
+  "profile": {
+    "title": "Mój profil",
+    "itemsIdentified_one": "zidentyfikowany element",
+    "itemsIdentified_other": "zidentyfikowanych elementów",
+    "byCategory": "Według kategorii",
+    "privacyPolicy": "Polityka prywatności",
+    "language": "Język",
+    "installApp": "Zainstaluj aplikację",
+    "installAppIOSTitle": "Zainstaluj NatureLens",
+    "installAppIOSBody": "Stuknij przycisk Udostępnij, a następnie „Dodaj do ekranu początkowego“, aby zainstalować NatureLens na telefonie.",
+    "createPasswordTitle": "Utwórz hasło",
+    "createPasswordBody": "Opcjonalnie — zaloguj się hasłem na innych urządzeniach, aby zsynchronizować subskrypcję, zamiast za każdym razem prosić o nowy kod e-mail.",
+    "createPasswordButton": "Utwórz hasło",
+    "creatingPassword": "Tworzenie…",
+    "passwordTooShortTitle": "Hasło za krótkie",
+    "passwordTooShortBody": "Użyj co najmniej 8 znaków.",
+    "passwordCreatedTitle": "Hasło utworzone",
+    "passwordCreatedBody": "Sprawdź {{email}}, aby je potwierdzić, potem będziesz mógł zalogować się tym hasłem na dowolnym urządzeniu.",
+    "passwordCreatedFailedTitle": "Nie udało się utworzyć hasła",
+    "passwordCreatedFailedBody": "Coś poszło nie tak. Spróbuj ponownie.",
+    "changePhoto": "Zmień zdjęcie profilowe",
+    "version": "Wersja {{version}}",
+    "termsOfUse": "Warunki korzystania",
+    "deleteAccount": "Usuń konto",
+    "deletingAccount": "Usuwanie…",
+    "deleteAccountConfirmTitle": "Usunąć konto?",
+    "deleteAccountConfirmBody": "To trwale usunie Twoją zapisaną kolekcję, hasło (jeśli istnieje) i anuluje aktywną subskrypcję, jeśli ją masz. Tej czynności nie można cofnąć.",
+    "deleteAccountConfirmButton": "Usuń",
+    "deleteAccountDoneTitle": "Konto usunięte",
+    "deleteAccountDoneBody": "Twoje dane zostały usunięte, a wszelkie aktywne subskrypcje zostały anulowane.",
+    "deleteAccountFailedTitle": "Nie udało się usunąć konta",
+    "deleteAccountFailedBody": "Coś poszło nie tak. Spróbuj ponownie.",
+    "helpAndSupport": "Pomoc i wsparcie",
+    "rewardsStore": "Sklep z nagrodami",
+    "naturalistBadge": "Przyrodnik",
+    "deleteAccountDoneBillingBody": "Twoje konto i dane zostały usunięte. WAŻNE: to nie anuluje subskrypcji — musisz anulować ją na swoim koncie Hotmart, inaczej opłata będzie pobierana dalej.",
+    "locationRow": "Używaj mojej przybliżonej lokalizacji",
+    "locationHint": "Zwiększa trafność, ograniczając odpowiedź do gatunków występujących w pobliżu. Zaokrąglona do około 1 km i nigdy nie zapisywana.",
+    "emptyTitle": "Tu zaczyna się Twoja kolekcja",
+    "emptyBody": "Skieruj aparat na roślinę, owada, grzyba, rybę lub ptaka - albo nagraj głos - a trafi tutaj.",
+    "emptyCta": "Rozpoznaj coś"
+  },
+  "terms": {
+    "title": "Warunki korzystania",
+    "acceptanceTitle": "Akceptacja warunków",
+    "acceptanceBody": "Korzystając z NatureLens, akceptujesz niniejsze Warunki korzystania. Jeśli się nie zgadzasz, prosimy nie korzystać z aplikacji.",
+    "serviceTitle": "Co robi ta aplikacja",
+    "serviceBody": "NatureLens pozwala fotografować rośliny, owady, grzyby, uprawy i drzewa, aby je zidentyfikować za pomocą usług AI stron trzecich (Plant.id, Insect.id, Mushroom.id, Crop.health, wszystkie stworzone przez Kindwise). Wyniki są generowane automatycznie i nie są weryfikowane przez eksperta.",
+    "accuracyTitle": "Dokładność identyfikacji — proszę przeczytać",
+    "accuracyBody": "Identyfikacja AI może się mylić, także co do tego, czy roślina lub grzyb są jadalne, trujące lub bezpieczne w dotyku. Nigdy nie jedz, nie zbieraj ani nie używaj żadnej dzikiej rośliny, grzyba czy grzybni wyłącznie na podstawie wyniku tej aplikacji. Zawsze potwierdź to u wykwalifikowanego eksperta (mykologa, botanika lub centrum kontroli zatruć), zanim spożyjesz lub użyjesz czegoś znalezionego w naturze. Nie ponosimy odpowiedzialności za szkody wynikające z polegania na identyfikacji wykonanej przez tę aplikację.",
+    "billingTitle": "Subskrypcje i płatności",
+    "billingBody": "Płatne subskrypcje są rozliczane przez Stripe w cenie widocznej w aplikacji w momencie subskrypcji i odnawiają się automatycznie, dopóki ich nie anulujesz. Możesz anulować w dowolnym momencie; dostęp trwa do końca już opłaconego okresu. Nie oferujemy proporcjonalnego zwrotu za niewykorzystany czas, chyba że wymaga tego prawo.",
+    "accountTitle": "Konta i hasła",
+    "accountBody": "Nie potrzebujesz konta, aby korzystać z bezpłatnych funkcji. Subskrybenci mogą opcjonalnie utworzyć hasło, aby zalogować się i zsynchronizować subskrypcję między urządzeniami. Jesteś odpowiedzialny za bezpieczeństwo swojego hasła i za wszystko, co dzieje się za pośrednictwem Twojego konta.",
+    "liabilityTitle": "Brak gwarancji, ograniczenie odpowiedzialności",
+    "liabilityBody": "Ta aplikacja jest dostarczana \"tak jak jest\", bez żadnych gwarancji. W maksymalnym zakresie dozwolonym przez prawo nie ponosimy odpowiedzialności za jakiekolwiek szkody wynikające z korzystania z aplikacji, w tym polegania na jakimkolwiek wyniku identyfikacji.",
+    "changesTitle": "Zmiany w niniejszych warunkach",
+    "changesBody": "Możemy od czasu do czasu aktualizować niniejsze warunki. Dalsze korzystanie z aplikacji po zmianie oznacza akceptację zaktualizowanych warunków.",
+    "contactTitle": "Kontakt",
+    "contactBody": "Pytania dotyczące niniejszych warunków można kierować do dewelopera aplikacji."
+  },
+  "privacy": {
+    "title": "Polityka prywatności",
+    "collectTitle": "Co zbieramy",
+    "collectBody": "Ta aplikacja pozwala fotografować rośliny, owady, grzyby lub uprawy w celu ich identyfikacji. W tym celu korzysta z usług identyfikacji AI innych firm — Plant.id, Insect.id, Mushroom.id oraz Crop.health, stworzonych przez Kindwise.",
+    "thirdPartyTitle": "Usługi AI innych firm",
+    "thirdPartyBody": "Gdy robisz lub przesyłasz zdjęcie w celu identyfikacji, jest ono wysyłane bezpośrednio do odpowiedniej usługi identyfikacyjnej Kindwise w celu uzyskania wyniku. Nie przechowujemy Twoich zdjęć na żadnym serwerze, który kontrolujemy.",
+    "localStorageTitle": "Tylko przechowywanie lokalne",
+    "localStorageBody": "Twoja zapisana kolekcja — zidentyfikowane gatunki, notatki i znaczniki czasu — jest przechowywana wyłącznie lokalnie na Twoim urządzeniu, w pamięci lokalnej przeglądarki lub aplikacji. Nigdy nie jest przesyłana na żaden prowadzony przez nas serwer w chmurze ani udostępniana innym użytkownikom.",
+    "noAccountsTitle": "Brak kont, brak śledzenia",
+    "noAccountsBody": "Ta aplikacja nie wymaga konta, aby z niej korzystać — Twoje urządzenie otrzymuje losowy, anonimowy identyfikator (przechowywany wyłącznie na Twoim urządzeniu), dzięki czemu możemy sprawdzić, czy bezpłatna identyfikacja w danej kategorii została już wykorzystana. Jeśli wykupisz subskrypcję, Stripe zbiera Twój adres e-mail i dane płatności bezpośrednio w celu przetworzenia opłaty — my otrzymujemy jedynie status Twojej subskrypcji, powiązany z tym samym anonimowym identyfikatorem. Subskrybenci mogą opcjonalnie utworzyć hasło, aby zalogować się i zsynchronizować subskrypcję na innych urządzeniach; nigdy nie jest to wymagane do korzystania z aplikacji. Nie korzystamy z narzędzi analitycznych ani reklamowych.",
+    "dataLossTitle": "Ryzyko utraty danych",
+    "dataLossBody": "Jeśli wyczyścisz dane przeglądarki lub odinstalujesz aplikację, Twoja lokalnie zapisana kolekcja zostanie trwale utracona, ponieważ nic nie jest tworzone zdalnie jako kopia zapasowa.",
+    "contactTitle": "Kontakt",
+    "contactBody": "Pytania dotyczące tej polityki można kierować do twórcy aplikacji."
+  },
+  "discover": {
+    "title": "Odkrywaj",
+    "subtitle": "Zaspokój swoją ciekawość świata natury",
+    "dailyFact": "Codzienna ciekawostka o roślinach",
+    "tapForAnotherFact": "Dotknij, aby zobaczyć kolejną ciekawostkę",
+    "exploreCollections": "Odkryj kolekcje",
+    "trendingSpecies": "Popularne gatunki",
+    "showNextFactLabel": "Pokaż kolejną ciekawostkę o roślinach",
+    "openCollectionLabel": "Otwórz kolekcję: {{title}}",
+    "viewSpeciesLabel": "Zobacz {{name}}",
+    "facts": [
+      "Dziwidło olbrzymie (Amorphophallus titanum) osiąga ponad 3 metry wysokości i cuchnie padliną, żeby zwabić zapylacze.",
+      "Bambus to najszybciej rosnąca roślina na Ziemi — niektóre gatunki przybywają nawet o 90 centymetrów w ciągu jednej doby.",
+      "Jedna pszczoła miodna odwiedza dziennie około 5000 kwiatów, a przez całe życie wytwarza zaledwie dwunastą część łyżeczki miodu.",
+      "Grzyby są bliżej spokrewnione ze zwierzętami niż z roślinami — dzielimy z nimi wspólnego przodka sprzed mniej więcej miliarda lat.",
+      "Najstarsze znane żywe drzewo to sosna oścista z Kalifornii, której wiek szacuje się na ponad 4800 lat.",
+      "Młode słoneczniki podążają za słońcem, ale dojrzałe zastygają zwrócone na wschód — dzięki temu nagrzewają się wcześniej i przyciągają więcej zapylaczy.",
+      "Niektóre storczyki tak wiernie naśladują wygląd i zapach samic owadów, że samce próbują się z nimi parzyć i przy okazji zapylają kwiat.",
+      "Ważka chwyta około 95% ściganej zdobyczy — to jedna z najwyższych skuteczności łowieckich w całym świecie zwierząt.",
+      "Mrówki uprawiają grzyby od ponad 50 milionów lat, na długo zanim człowiek wymyślił rolnictwo.",
+      "Amazonia wytwarza mniej więcej 20% tlenu uwalnianego przez rośliny lądowe, a spora część padającego tam deszczu pochodzi z wody, którą sam las wyparował.",
+      "Motyle smakują stopami — siadają na liściu, żeby sprawdzić, czy ich gąsienice będą mogły go zjeść.",
+      "Opieńka rosnąca w stanie Oregon zajmuje blisko 10 kilometrów kwadratowych, co czyni ją jednym z największych organizmów na naszej planecie.",
+      "Sokół wędrowny w locie nurkowym przekracza 300 km/h i jest najszybszym żyjącym zwierzęciem.",
+      "Ryby nie mają powiek — większość po prostu nigdy nie zamyka oczu, nawet podczas odpoczynku.",
+      "Muchołówka amerykańska potrafi liczyć: włosek czuciowy musi zostać trącony dwa razy w ciągu mniej więcej 20 sekund, żeby pułapka się zatrzasnęła — dzięki temu deszcz jej nie marnuje.",
+      "Drzewa w lesie dzielą się składnikami odżywczymi przez podziemne sieci grzybni — drzewo matka potrafi nakarmić słabą siewkę oddaloną o kilka metrów.",
+      "Rybitwa popielata co roku wędruje od bieguna do bieguna i pokonuje ponad 70 000 kilometrów — to najdłuższa migracja w świecie zwierząt.",
+      "Kawa, czekolada i wanilia pochodzą z roślin zależnych od zapylania przez zwierzęta — bez pszczół i drobnych muchówek nie byłoby porannej kawy.",
+      "Niektóre cykady spędzają pod ziemią 17 lat, po czym wychodzą wszystkie naraz, w miliardach.",
+      "Ananas to nie jeden owoc, lecz kilkadziesiąt jagód zrośniętych wokół wspólnego rdzenia.",
+      "Sowy nie mogą poruszać oczami — ich gałki mają kształt rurek zaklinowanych w oczodołach, dlatego zamiast tego obracają głowę nawet o 270 stopni.",
+      "Nasiona lotosu orzechodajnego potrafią wykiełkować po ponad tysiącu lat uśpienia.",
+      "Łosoś wraca na tarło do tej samej rzeki, w której się wykluł, nawigując węchem przez tysiące kilometrów otwartego oceanu.",
+      "Grzyby jako pierwsze złożone organizmy skolonizowały ląd — na długo przed jakąkolwiek rośliną.",
+      "Figowce nie kwitną na zewnątrz: każda figa to kwiatostan wywrócony do środka, zapylany przez osę, która wchodzi do niego maleńkim otworem.",
+      "Serce kolibra bije w locie ponad 1200 razy na minutę, a sam ptak musi jeść co 10–15 minut, żeby przeżyć.",
+      "Figowiec dusiciel zaczyna życie na gałęzi wysoko w koronie, spuszcza korzenie na ziemię i w końcu zabija drzewo, które go przygarnęło.",
+      "Mchy nie mają korzeni — wodę wchłaniają wprost przez listki, dlatego świetnie radzą sobie na skale i korze.",
+      "Ustonogi widzą dzięki 12–16 rodzajom receptorów barwy; człowiek ma trzy.",
+      "Zagajniki osiki to często jeden organizm: tysiące pni dzielących wspólny system korzeniowy, niektóre starsze niż 10 000 lat.",
+      "Biedronka zjada w ciągu życia nawet 5000 mszyc — dlatego ogrodnicy wypuszczają je do upraw zamiast sięgać po opryski.",
+      "Nasiono palmy coco de mer waży nawet 25 kilogramów — to najcięższe nasiono w świecie roślin.",
+      "Węgorze elektryczne wcale nie są węgorzami, lecz rybami z grupy nożowców, a ich wyładowanie potrafi przekroczyć 800 woltów.",
+      "Porost to nie jeden organizm, lecz dwa — grzyb i glon żyjące jako jedno, zdolne przetrwać nawet w przestrzeni kosmicznej.",
+      "Samiec pingwina cesarskiego przez całą antarktyczną zimę utrzymuje jedno jajo na stopach i przez dwa miesiące nic nie je.",
+      "Pokrzywa parzy szklistymi włoskami, które łamią się w skórze, a odtrutka zwykle rośnie tuż obok: liście szczawiu.",
+      "Niektóre ryby głębinowe są przezroczyste — tam, gdzie nie ma się gdzie schować, niewidzialność bywa najlepszym kamuflażem.",
+      "Dojrzały dąb potrafi w dobrym roku zrzucić 10 000 żołędzi, a drzewem zostaje mniej więcej jeden na dziesięć tysięcy.",
+      "Wrony rozpoznają twarze poszczególnych ludzi, pamiętają urazy i uczą młode, kogo unikać.",
+      "Najmniejsza roślina kwiatowa świata, wolffia, jest wielkości ziarnka piasku — kilkanaście sztuk zmieści się na opuszku palca."
+    ],
+    "topics": {
+      "airPurifying": {
+        "title": "Rośliny oczyszczające powietrze",
+        "desc": "NASA przebadała te gatunki pod kątem oczyszczania powietrza w pomieszczeniach.",
+        "intro": "Pod koniec lat 80. NASA przetestowała dziesiątki popularnych roślin doniczkowych, aby sprawdzić, które z nich pomagają usuwać zanieczyszczenia ze szczelnie zamkniętego powietrza kabin statków kosmicznych — i odkryła, że wiele powszechnie uprawianych ulubieńców zaskakująco dobrze pochłania toksyny, takie jak formaldehyd, benzen i tlenek węgla. Ta kolekcja zbiera gatunki, które wypadły najlepiej w tych badaniach i od tamtej pory stały się klasykami wiedzy o jakości powietrza w domu. Nie zastępują otwarcia okna, ale kilka dobrze rozmieszczonych doniczek to prosty i niewymagający sposób na odświeżenie powietrza w pomieszczeniach, w których spędzasz najwięcej czasu.",
+        "species": [
+          {
+            "name": "Wężownica",
+            "sci": "Dracaena trifasciata (syn. Sansevieria trifasciata)",
+            "note": "Jeden z najlepszych gatunków w badaniach NASA, przetwarzający CO2 w tlen nawet nocą, w przeciwieństwie do większości roślin doniczkowych."
+          },
+          {
+            "name": "Zielistka",
+            "sci": "Chlorophytum comosum",
+            "note": "NASA uznała ją za jedną z najlepszych w usuwaniu formaldehydu i ksylenu ze zwykłego domowego powietrza."
+          },
+          {
+            "name": "Skrzydłokwiat",
+            "sci": "Spathiphyllum wallisii",
+            "note": "Zajął pierwsze miejsce w pierwotnym badaniu NASA pod względem usuwania benzenu, formaldehydu i trichloroetylenu z powietrza w pomieszczeniach."
+          },
+          {
+            "name": "Bluszcz pospolity",
+            "sci": "Hedera helix",
+            "note": "Ogólny lider rankingu NASA, ceniony za usuwanie formaldehydu, a nawet unoszących się w powietrzu zarodników pleśni."
+          },
+          {
+            "name": "Nefrolepis wyniosły",
+            "sci": "Nephrolepis exaltata",
+            "note": "Przebadany przez NASA pogromca formaldehydu, który dodatkowo zwiększa wilgotność w suchych, ogrzewanych pomieszczeniach."
+          },
+          {
+            "name": "Potos złocisty",
+            "sci": "Epipremnum aureum",
+            "note": "Niemal niezniszczalny, a badania potwierdzają, że filtruje formaldehyd, benzen i tlenek węgla z powietrza w pomieszczeniach."
+          },
+          {
+            "name": "Fikus elastyczny",
+            "sci": "Ficus elastica",
+            "note": "Wyróżniający się w badaniu NASA Clean Air Study, systematycznie usuwający formaldehyd z codziennych przestrzeni mieszkalnych."
+          }
+        ]
+      },
+      "beginnerSucculents": {
+        "title": "Sukulenty dla początkujących",
+        "desc": "Rośliny niewymagające częstego podlewania, które dobrze znoszą odrobinę zaniedbania.",
+        "intro": "Sukulenty w pełni zasłużyły na swoją opinię roślin dla początkujących: ich grube, magazynujące wodę liście i łodygi pozwalają im bez szwanku przetrwać zapomniane podlewanie czy dwa. Ten zestaw stawia na najbardziej wytrzymałe i wybaczające odmiany — rośliny stworzone do znoszenia klasycznych błędów początkujących, czyli przelewania, niedolewania i niestabilnego oświetlenia. Wystarczy jasny parapet i odrobina cierpliwości, a zyskasz niemal niezawodny punkt startowy do budowania własnej kolekcji roślin.",
+        "species": [
+          {
+            "name": "Grubosz jajowaty",
+            "sci": "Crassula ovata",
+            "note": "Magazynuje wodę w grubych łodygach i liściach, więc pominięcie podlewania raz czy dwa mu nie zaszkodzi."
+          },
+          {
+            "name": "Wężownica",
+            "sci": "Dracaena trifasciata",
+            "note": "Świetnie radzi sobie przy całkowitym zaniedbaniu, znosząc słabe światło i tygodnie suchej gleby bez najmniejszego problemu."
+          },
+          {
+            "name": "Haworcja pasiasta",
+            "sci": "Haworthiopsis fasciata",
+            "note": "Pozostaje kompaktowa i rośnie powoli, dzięki czemu niemal nie sposób zaszkodzić jej nadmierną troską."
+          },
+          {
+            "name": "Aloes",
+            "sci": "Aloe vera",
+            "note": "Wybacza nieregularne podlewanie dzięki wypełnionym żelem liściom, stworzonym do samodzielnego przetrwania suszy."
+          },
+          {
+            "name": "Kalanchoe filcowate",
+            "sci": "Kalanchoe tomentosa",
+            "note": "Puszyste, magazynujące wodę liście doskonale znoszą okresy suszy, co czyni tę roślinę niemal niezawodnym pierwszym sukulentem."
+          },
+          {
+            "name": "Ośli ogon",
+            "sci": "Sedum morganianum",
+            "note": "Pękate, zwisające liście magazynują własne zapasy wody, nagradzając właścicieli, którzy powstrzymują się od nadmiernego podlewania."
+          },
+          {
+            "name": "Echeveria meksykańska",
+            "sci": "Echeveria elegans",
+            "note": "Klasyczny kształt rozety skutecznie magazynuje wodę i łatwo się rozmnaża, wybaczając nieuniknione błędy początkujących."
+          }
+        ]
+      },
+      "petSafe": {
+        "title": "Rośliny bezpieczne dla zwierząt domowych",
+        "desc": "Nietoksyczna zieleń do domów z kotami i psami.",
+        "intro": "Życie pod jednym dachem z kotami i psami nie oznacza rezygnacji z roślin doniczkowych, choć wiele popularnych gatunków bywa naprawdę szkodliwych po nadgryzieniu. Ta kolekcja zbiera dobrze udokumentowane, nietoksyczne ulubieńce, zweryfikowane na podstawie danych bezpieczeństwa ASPCA, dzięki czemu możesz zapełnić parapety i półki bez obaw o ciekawską łapę czy próbny kęs. Od zwisających pnączy po kwitnące ulubieńce — każda z tych roślin zasłużyła na swoje miejsce, będąc przede wszystkim bezpieczną, a dopiero potem piękną.",
+        "species": [
+          {
+            "name": "Zielistka",
+            "sci": "Chlorophytum comosum",
+            "note": "Umieszczona na liście ASPCA jako nietoksyczna dla kotów i psów, a jej zwisające liście dają ciekawskim łapkom coś bezpiecznego do trącania."
+          },
+          {
+            "name": "Nefrolepis wyniosły",
+            "sci": "Nephrolepis exaltata",
+            "note": "Ta bujna, teksturowana paproć jest nietoksyczna dla zwierząt domowych, co czyni ją bezpiecznym sposobem na dodanie dżunglowego charakteru do każdego pomieszczenia."
+          },
+          {
+            "name": "Chamedora wdzięczna",
+            "sci": "Chamaedorea elegans",
+            "note": "Klasyczna wiktoriańska roślina doniczkowa, nietoksyczna dla kotów i psów, znosząca słabe światło bez żadnego ryzyka."
+          },
+          {
+            "name": "Maranta",
+            "sci": "Maranta leuconeura",
+            "note": "Jej liście składają się w nocy jak dłonie do modlitwy i jest całkowicie bezpieczna, nawet jeśli ciekawski kot ją nadgryzie."
+          },
+          {
+            "name": "Peperomia arbuzowa",
+            "sci": "Peperomia argyreia",
+            "note": "Kompaktowa i nietoksyczna, jej pasiaste liście stanowią efektowny, bezpieczny dla zwierząt akcent na półkach i stolikach."
+          },
+          {
+            "name": "Haworcja zebrowata",
+            "sci": "Haworthia attenuata",
+            "note": "Bezpieczna dla zwierząt alternatywa dla toksycznego aloesu i grubosza — ten pasiasty sukulent zapewnia podobny wygląd bez ryzyka."
+          },
+          {
+            "name": "Fiołek afrykański",
+            "sci": "Saintpaulia ionantha",
+            "note": "Jedna z niewielu kwitnących roślin doniczkowych potwierdzonych jako nietoksyczne, dzięki czemu zwierzęta mogą dzielić parapet z kwiatami."
+          }
+        ]
+      },
+      "medicinalHerbs": {
+        "title": "Zioła lecznicze",
+        "desc": "Rośliny o długiej historii zastosowań leczniczych.",
+        "intro": "Na długo przed pojawieniem się nowoczesnych apteczek domowe ogrody były pierwowzorem apteki: zioła takie jak lawenda, mięta pieprzowa i jeżówka od wieków są uprawiane, zaparzane i stosowane, by łagodzić codzienne dolegliwości. Ta kolekcja przedstawia rośliny o dobrze udokumentowanej roli w tradycyjnych i ludowych systemach medycznych na całym świecie — od śródziemnomorskich klasyków kuchennych po ajurwedyjskie klasyki. Większość z nich świetnie rośnie na słonecznym parapecie, dzięki czemu możesz wyhodować w domu żywy kawałek zielarskiej historii.",
+        "species": [
+          {
+            "name": "Aloes",
+            "sci": "Aloe vera",
+            "note": "Jego wypełnione żelem liście od tysięcy lat łagodzą oparzenia i drobne podrażnienia skóry w różnych kulturach.",
+            "id": "aloeVera",
+            "tags": [
+              "skin",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Lawenda wąskolistna",
+            "sci": "Lavandula angustifolia",
+            "note": "Od dawna ceniona za swój kojący zapach, tradycyjnie stosowana, by łagodzić stres i wspomagać spokojny sen.",
+            "id": "lavender",
+            "tags": [
+              "sleep",
+              "stress",
+              "headache"
+            ]
+          },
+          {
+            "name": "Mięta pieprzowa",
+            "sci": "Mentha x piperita",
+            "note": "Bogate w mentol liście od wieków łagodzą w medycynie ludowej rozstrój żołądka i bóle głowy.",
+            "id": "peppermint",
+            "tags": [
+              "digestion",
+              "headache"
+            ]
+          },
+          {
+            "name": "Rumianek pospolity",
+            "sci": "Matricaria chamomilla",
+            "note": "Jego przypominające stokrotki kwiaty parzy się na łagodną herbatę, od dawna stosowaną, by uspokoić nerwy i wspomóc trawienie.",
+            "id": "germanChamomile",
+            "tags": [
+              "sleep",
+              "digestion",
+              "stress"
+            ]
+          },
+          {
+            "name": "Jeżówka purpurowa",
+            "sci": "Echinacea purpurea",
+            "note": "Pochodząca z Ameryki Północnej, jej korzenie i kwiaty były wykorzystywane przez rdzennych mieszkańców do wspierania odporności.",
+            "id": "purpleConeflower",
+            "tags": [
+              "immunity"
+            ]
+          },
+          {
+            "name": "Rozmaryn lekarski",
+            "sci": "Salvia rosmarinus (syn. Rosmarinus officinalis)",
+            "note": "Ten aromatyczny śródziemnomorski krzew od starożytności ma opinię rośliny wyostrzającej pamięć i wspomagającej krążenie.",
+            "id": "rosemary",
+            "tags": [
+              "headache",
+              "energy",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Bazylia święta (Tulsi)",
+            "sci": "Ocimum tenuiflorum",
+            "note": "Czczona w tradycji ajurwedyjskiej od wieków, jej liście zaparza się jako adaptogenną herbatę na stres.",
+            "id": "holyBasil",
+            "tags": [
+              "stress",
+              "immunity",
+              "respiratory"
+            ]
+          },
+          {
+            "name": "Kurkuma",
+            "sci": "Curcuma longa",
+            "note": "Medycyna ajurwedyjska od wieków wykorzystuje ten złocisty korzeń, by łagodzić stany zapalne oraz wspierać trawienie i gojenie ran.",
+            "id": "turmeric",
+            "tags": [
+              "painInflammation",
+              "digestion",
+              "skin"
+            ]
+          },
+          {
+            "name": "Imbir",
+            "sci": "Zingiber officinale",
+            "note": "Chińscy i ajurwedyjscy uzdrowiciele od dawna żuli lub parzyli to kłącze, by uspokoić mdłości i rozgrzać trawienie.",
+            "id": "ginger",
+            "tags": [
+              "digestion",
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "Żeń-szeń",
+            "sci": "Panax ginseng",
+            "note": "Ceniony w tradycyjnej medycynie chińskiej od ponad dwóch tysięcy lat jako wzmacniający tonik dodający energii i witalności.",
+            "id": "ginseng",
+            "tags": [
+              "energy",
+              "stress"
+            ]
+          },
+          {
+            "name": "Ashwagandha",
+            "sci": "Withania somnifera",
+            "note": "Podstawa ajurwedy od tysiącleci — jej korzeń tradycyjnie stosuje się, by łagodzić stres oraz odbudowywać siłę i wytrzymałość.",
+            "id": "ashwagandha",
+            "tags": [
+              "stress",
+              "energy",
+              "sleep"
+            ]
+          },
+          {
+            "name": "Czarny bez",
+            "sci": "Sambucus nigra",
+            "note": "Europejscy zielarze ludowi od wieków warzyli z jego ciemnych owoców syropy na przeziębienie i grypę.",
+            "id": "elderberry",
+            "tags": [
+              "immunity",
+              "respiratory"
+            ]
+          },
+          {
+            "name": "Kozłek lekarski",
+            "sci": "Valeriana officinalis",
+            "note": "Europejscy zielarze od starożytności suszyli ten intensywnie pachnący korzeń jako tradycyjny środek na niespokojny sen.",
+            "id": "valerian",
+            "tags": [
+              "sleep",
+              "stress"
+            ]
+          },
+          {
+            "name": "Oczar wirginijski",
+            "sci": "Hamamelis virginiana",
+            "note": "Plemiona rdzennych Amerykanów destylowały jego korę i liście, otrzymując ściągający płyn na siniaki, opuchliznę i podrażnienia skóry.",
+            "id": "witchHazel",
+            "tags": [
+              "skin",
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "Gorzknik kanadyjski",
+            "sci": "Hydrastis canadensis",
+            "note": "Uzdrowiciele Czirokezów i inni rdzenni uzdrowiciele stosowali ten gorzki korzeń w leczeniu ran, infekcji i dolegliwości trawiennych.",
+            "id": "goldenseal",
+            "tags": [
+              "digestion",
+              "immunity",
+              "skin"
+            ]
+          },
+          {
+            "name": "Diabelski pazur",
+            "sci": "Harpagophytum procumbens",
+            "note": "Tradycyjni uzdrowiciele Kalahari od dawna wykorzystują ten korzeń o hakowatych owocach, by łagodzić bóle stawów i dolegliwości reumatyczne.",
+            "id": "devilsClaw",
+            "tags": [
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "Bylica afrykańska",
+            "sci": "Artemisia afra",
+            "note": "Jeden z najpowszechniej stosowanych tradycyjnych środków leczniczych w południowej Afryce — inhalowany lub parzony jako napar, łagodzi kaszel i przekrwienie błon śluzowych.",
+            "id": "africanWormwood",
+            "tags": [
+              "respiratory",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Yerba mate",
+            "sci": "Ilex paraguariensis",
+            "note": "Lud Guarani z Ameryki Południowej od dawna parzy jej liście jako pobudzającą, wspomagającą trawienie herbatę pitą na co dzień.",
+            "id": "yerbaMate",
+            "tags": [
+              "energy",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Wąkrotka azjatycka",
+            "sci": "Centella asiatica",
+            "note": "Czczona w ajurwedzie i tradycyjnej medycynie Azji Południowo-Wschodniej jako ziele wspomagające gojenie ran, które podobno wyostrza pamięć i uspokaja umysł.",
+            "id": "gotuKola",
+            "tags": [
+              "skin",
+              "stress"
+            ]
+          },
+          {
+            "name": "Korzeń lukrecji",
+            "sci": "Glycyrrhiza glabra",
+            "note": "Stosowana w medycynie chińskiej, ajurwedyjskiej i bliskowschodniej od wieków, by łagodzić kaszel, ból gardła i problemy żołądkowe.",
+            "id": "licoriceRoot",
+            "tags": [
+              "respiratory",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Miodła indyjska (Neem)",
+            "sci": "Azadirachta indica",
+            "note": "Gorzkie liście, kora i olej neem to klasyczny ajurwedyjski środek na wypryski skórne, rany i infekcje pasożytnicze.",
+            "id": "neem",
+            "tags": [
+              "skin",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Amla (Agrest indyjski)",
+            "sci": "Phyllanthus emblica",
+            "note": "Najbogatsze naturalne źródło witaminy C w ajurwedzie - amla stanowi podstawę tonizujących mieszanek rasajana, cenionych za właściwości odmładzające i wspomagające trawienie.",
+            "id": "amla",
+            "tags": [
+              "digestion",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Brahmi (Bakopa drobnolistna)",
+            "sci": "Bacopa monnieri",
+            "note": "Ajurwedyjskie zioło Medhya Rasajana, tradycyjnie zażywane, by wyostrzyć pamięć, uspokoić umysł i wspierać zdolność uczenia się.",
+            "id": "brahmi",
+            "tags": [
+              "stress",
+              "sleep"
+            ]
+          },
+          {
+            "name": "Guduchi (Giloy)",
+            "sci": "Tinospora cordifolia",
+            "note": "Nazywana Amritą, „korzeniem nieśmiertelności”, ta łodyga w postaci wywaru jest ajurwedyjskim sposobem na gorączkę i budowanie odporności.",
+            "id": "guduchi",
+            "tags": [
+              "immunity",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Shatavari",
+            "sci": "Asparagus racemosus",
+            "note": "Tonik korzeniowy czczony w ajurwedzie jako najważniejszy żeński środek odmładzający, tradycyjnie stosowany dla wsparcia laktacji i równowagi hormonalnej.",
+            "id": "shatavari",
+            "tags": [
+              "energy",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Arjuna",
+            "sci": "Terminalia arjuna",
+            "note": "Sproszkowana kora od dawna wykorzystywana w ajurwedyjskiej kardiologii do wzmacniania mięśnia sercowego i wspierania zdrowego krążenia.",
+            "id": "arjuna",
+            "tags": [
+              "energy"
+            ]
+          },
+          {
+            "name": "Haritaki",
+            "sci": "Terminalia chebula",
+            "note": "Nazywana w ajurwedzie „królem leków”, ta owoc stanowi podstawę Triphali, wspierając trawienie, detoksykację i wydalanie.",
+            "id": "haritaki",
+            "tags": [
+              "digestion",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Bibhitaki",
+            "sci": "Terminalia bellirica",
+            "note": "Jeden z trzech owoców Triphali, tradycyjnie stosowany w ajurwedzie do usuwania nadmiaru śluzu i wspierania zdrowia dróg oddechowych.",
+            "id": "bibhitaki",
+            "tags": [
+              "respiratory",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Kozieradka pospolita",
+            "sci": "Trigonella foenum-graecum",
+            "note": "Namoczone nasiona jedzone w domach całej Azji Południowej, by ułatwić trawienie, wspierać laktację i regulować poziom cukru we krwi.",
+            "id": "fenugreek",
+            "tags": [
+              "digestion",
+              "energy"
+            ]
+          },
+          {
+            "name": "Pieprz długi (Pippali)",
+            "sci": "Piper longum",
+            "note": "Ostry w smaku owoc obecny w ajurwedyjskich mieszankach Trikatu, tradycyjnie używany do rozniecania ognia trawiennego i oczyszczania zatorów w drogach oddechowych.",
+            "id": "longPepper",
+            "tags": [
+              "digestion",
+              "respiratory"
+            ]
+          },
+          {
+            "name": "Drzewo sandałowe",
+            "sci": "Santalum album",
+            "note": "Chłodząca pasta stosowana w ajurwedzie do łagodzenia podrażnionej skóry i gorączki oraz uspokajania umysłu podczas medytacji.",
+            "id": "sandalwood",
+            "tags": [
+              "skin",
+              "stress"
+            ]
+          },
+          {
+            "name": "Sarsaparyla indyjska (Anantamul)",
+            "sci": "Hemidesmus indicus",
+            "note": "Słodko pachnące pnącze korzeniowe stosowane w klasycznych recepturach ajurwedyjskich do chłodzenia krwi, oczyszczania skóry i łagodzenia bólu stawów.",
+            "id": "indianSarsaparilla",
+            "tags": [
+              "skin",
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "Bael (Pigwa bengalska)",
+            "sci": "Aegle marmelos",
+            "note": "Miąższ niedojrzałego owocu to tradycyjny ajurwedyjski specyfik na łagodzenie przewlekłej biegunki i czerwonki.",
+            "id": "bael",
+            "tags": [
+              "digestion"
+            ]
+          },
+          {
+            "name": "Guggul",
+            "sci": "Commiphora wightii",
+            "note": "Żywica leżąca u podstaw ajurwedyjskich receptur Guggulu, tradycyjnie stosowana do regulacji poziomu cholesterolu i łagodzenia stanów zapalnych stawów.",
+            "id": "guggul",
+            "tags": [
+              "painInflammation",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Manjistha (Marzana sercowata)",
+            "sci": "Rubia cordifolia",
+            "note": "Korzeń od dawna stosowany w ajurwedzie jako oczyszczacz krwi, wspierający czystą skórę, gojenie ran i pracę układu limfatycznego.",
+            "id": "manjistha",
+            "tags": [
+              "skin",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Jatamansi (Nard)",
+            "sci": "Nardostachys jatamansi",
+            "note": "Pachnący korzeń od dawna wykorzystywany w ajurwedzie do uspokajania układu nerwowego i sprzyjania spokojnemu snowi.",
+            "id": "jatamansi",
+            "tags": [
+              "sleep",
+              "stress"
+            ]
+          },
+          {
+            "name": "Traganek błoniasty (Astragalus)",
+            "sci": "Astragalus membranaceus",
+            "note": "Korzeń huang qi odwarza się, by wzmocnić energię wei qi, dodać wytrzymałości i wspomóc gojenie ran.",
+            "id": "astragalus",
+            "tags": [
+              "immunity",
+              "energy"
+            ]
+          },
+          {
+            "name": "Reishi (Lakownica lśniąca)",
+            "sci": "Ganoderma lucidum",
+            "note": "Grzyb ling zhi ceniony przez taoistycznych zielarzy do uspokajania shen, łagodzenia bezsenności i przedłużania życia.",
+            "id": "reishiMushroom",
+            "tags": [
+              "sleep",
+              "stress",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Dong Quai (Dzięgiel chiński)",
+            "sci": "Angelica sinensis",
+            "note": "Dang gui, „żeński żeń-szeń”, od dwóch tysiącleci odżywia krew i łagodzi dolegliwości miesiączkowe.",
+            "id": "dongQuai",
+            "tags": [
+              "energy",
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "Jagody goji",
+            "sci": "Lycium barbarum",
+            "note": "Owoce gou qi zi zaparza się lub spożywa na surowo, by odżywić yin wątroby i nerek oraz rozjaśnić wzrok.",
+            "id": "gojiBerry",
+            "tags": [
+              "immunity",
+              "energy"
+            ]
+          },
+          {
+            "name": "Cytryniec chiński (Schisandra)",
+            "sci": "Schisandra chinensis",
+            "note": "Wu wei zi, „owoc pięciu smaków”, ściąga płuca, uspokaja umysł i chroni wątrobę.",
+            "id": "schisandra",
+            "tags": [
+              "respiratory",
+              "stress",
+              "sleep"
+            ]
+          },
+          {
+            "name": "Tarczyca bajkalska",
+            "sci": "Scutellaria baicalensis",
+            "note": "Korzeń huang qin usuwa wilgoć-gorąco i od czasów starożytnych receptur leczy gorączkę, kaszel oraz czerwonkę.",
+            "id": "chineseSkullcap",
+            "tags": [
+              "respiratory",
+              "digestion",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Rehmania kleista",
+            "sci": "Rehmannia glutinosa",
+            "note": "Gotowany na parze di huang tonizuje yin nerek i krew, będąc podstawowym składnikiem wielu klasycznych receptur.",
+            "id": "rehmannia",
+            "tags": [
+              "energy",
+              "sleep"
+            ]
+          },
+          {
+            "name": "Chryzantema",
+            "sci": "Chrysanthemum morifolium",
+            "note": "Kwiaty ju hua parzy się jako herbatę, by usunąć gorąco, ukoić przekrwione oczy i złagodzić bóle głowy.",
+            "id": "chrysanthemum",
+            "tags": [
+              "headache",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Wiciokrzew japoński",
+            "sci": "Lonicera japonica",
+            "note": "Kwiat jin yin hua usuwa toksyczne gorąco i od dawna leczy gorączkę, ropnie oraz infekcje gardła.",
+            "id": "japaneseHoneysuckle",
+            "tags": [
+              "immunity",
+              "respiratory",
+              "skin"
+            ]
+          },
+          {
+            "name": "Cynamonowiec chiński (Kasja)",
+            "sci": "Cinnamomum cassia",
+            "note": "Kora rou gui rozgrzewa yang nerek i pobudza zastały przepływ krwi, łagodząc bóle o charakterze zimna.",
+            "id": "chineseCinnamon",
+            "tags": [
+              "painInflammation",
+              "energy"
+            ]
+          },
+          {
+            "name": "Poria (Fu Ling)",
+            "sci": "Wolfiporia extensa",
+            "note": "Fu ling, grzybowy sklerocjum, odprowadza wilgoć, uspokaja ducha i wzmacnia śledzionę, gdy podaje się go w wywarach.",
+            "id": "poria",
+            "tags": [
+              "sleep",
+              "digestion",
+              "stress"
+            ]
+          },
+          {
+            "name": "Pochrzyn chiński (Chiński Yam)",
+            "sci": "Dioscorea polystachya",
+            "note": "Bulwa shan yao tonizuje qi śledziony, płuc i nerek, tradycyjnie gotowana na tonizujące kleiki.",
+            "id": "chineseYam",
+            "tags": [
+              "digestion",
+              "energy",
+              "respiratory"
+            ]
+          },
+          {
+            "name": "Przewiertnia chińska (Bupleurum)",
+            "sci": "Bupleurum chinense",
+            "note": "Korzeń chai hu harmonizuje wątrobę i rozprasza gorąco, kluczowy przy naprzemiennej gorączce i dreszczach.",
+            "id": "bupleurum",
+            "tags": [
+              "stress",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Notoginseng (Sanchi)",
+            "sci": "Panax notoginseng",
+            "note": "Korzeń san qi stosuje się, by zatrzymać krwawienie i siniaki, jednocześnie pobudzając krążenie krwi.",
+            "id": "notoginseng",
+            "tags": [
+              "painInflammation",
+              "skin"
+            ]
+          },
+          {
+            "name": "Kodonopsis",
+            "sci": "Codonopsis pilosula",
+            "note": "Korzeń dang shen służy jako łagodniejszy zamiennik żeń-szenia, tonizujący qi i wzmacniający trawienie.",
+            "id": "codonopsis",
+            "tags": [
+              "energy",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Fo-Ti (He Shou Wu)",
+            "sci": "Reynoutria multiflora",
+            "note": "Korzeń he shou wu przygotowuje się, by odżywić wątrobę i nerki; mówi się, że przywraca ciemny kolor siwiejącym włosom.",
+            "id": "foti",
+            "tags": [
+              "energy",
+              "skin"
+            ]
+          },
+          {
+            "name": "Krwawnik pospolity",
+            "sci": "Achillea millefolium",
+            "note": "Znany jako „żołnierskie ziele na rany”, stosowany od starożytności do tamowania krwawień i przyspieszania gojenia ran odniesionych w boju.",
+            "id": "yarrow",
+            "tags": [
+              "skin",
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "Dziurawiec zwyczajny",
+            "sci": "Hypericum perforatum",
+            "note": "Europejski ludowy środek na melancholię i bóle nerwowe; jego żółte kwiaty macerowano w oleju na maści przyspieszające gojenie ran.",
+            "id": "stJohnsWort",
+            "tags": [
+              "stress",
+              "painInflammation",
+              "skin"
+            ]
+          },
+          {
+            "name": "Szałwia lekarska",
+            "sci": "Salvia officinalis",
+            "note": "Łacińskie salvere, „leczyć”, odzwierciedla jej odwieczne zastosowanie w płukankach na ból gardła i jako wsparcie trawienia.",
+            "id": "sage",
+            "tags": [
+              "digestion",
+              "respiratory"
+            ]
+          },
+          {
+            "name": "Tymianek pospolity",
+            "sci": "Thymus vulgaris",
+            "note": "Śródziemnomorski środek na kaszel i dolegliwości piersiowe; jego olejki eteryczne od dawna stosuje się w syropach rozrzedzających uporczywą flegmę.",
+            "id": "thyme",
+            "tags": [
+              "respiratory",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Prawoślaz lekarski",
+            "sci": "Althaea officinalis",
+            "note": "Śluz z korzenia i liści łagodził ból gardła, kaszel i podrażnioną błonę śluzową jelit przez wieki europejskiej praktyki aptekarskiej.",
+            "id": "marshmallow",
+            "tags": [
+              "respiratory",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Nagietek lekarski",
+            "sci": "Calendula officinalis",
+            "note": "Jaskrawe płatki rozcierane na maści do oczyszczania skaleczeń i łagodzenia stanów zapalnych wolno gojącej się skóry.",
+            "id": "potMarigold",
+            "tags": [
+              "skin",
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "Ostropest plamisty",
+            "sci": "Silybum marianum",
+            "note": "Śródziemnomorskie nasiona tradycyjnie żute lub parzone, by chronić i tonizować wątrobę po obfitych ucztach.",
+            "id": "milkThistle",
+            "tags": [
+              "digestion"
+            ]
+          },
+          {
+            "name": "Koper włoski",
+            "sci": "Foeniculum vulgare",
+            "note": "Pachnące anyżem nasiona żute po posiłkach od pokoleń, by łagodzić kolkę, wzdęcia i gazy u niemowląt.",
+            "id": "fennel",
+            "tags": [
+              "digestion"
+            ]
+          },
+          {
+            "name": "Pokrzywa zwyczajna",
+            "sci": "Urtica dioica",
+            "note": "Parzące liście parzone jako wiosenna herbata tonizująca, oczyszczająca krew i łagodząca bóle stawów.",
+            "id": "stingingNettle",
+            "tags": [
+              "painInflammation",
+              "skin",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Szanta zwyczajna",
+            "sci": "Marrubium vulgare",
+            "note": "Gorzkie śródziemnomorskie ziele gotowane na cukierki i syropy jako klasyczny środek na kaszel i zapalenie oskrzeli.",
+            "id": "whiteHorehound",
+            "tags": [
+              "respiratory",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Żywokost lekarski",
+            "sci": "Symphytum officinale",
+            "note": "Nazywany potocznie „zrostem kości”, żywokost od wieków nakładano w postaci okładów z rozgniecionego korzenia i liści na złamania, skręcenia i stłuczenia.",
+            "id": "comfrey",
+            "tags": [
+              "painInflammation",
+              "skin"
+            ]
+          },
+          {
+            "name": "Złocień maruna",
+            "sci": "Tanacetum parthenium",
+            "note": "Ziele o gorzkich liściach żute na świeżo lub parzone jako herbata - odwieczna ludowa odpowiedź na migreny i bóle głowy.",
+            "id": "feverfew",
+            "tags": [
+              "headache",
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "Dziewanna wielkokwiatowa",
+            "sci": "Verbascum thapsus",
+            "note": "Aksamitne liście i kwiaty naparzane w oleju lub herbacie na kaszel, ból gardła i ból ucha.",
+            "id": "mullein",
+            "tags": [
+              "respiratory",
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "Głóg jednoszyjkowy",
+            "sci": "Crataegus monogyna",
+            "note": "Owoce, kwiaty i liście parzone jako klasyczny europejski tonik na serce - dla słabnącego lub niespokojnego pulsu.",
+            "id": "hawthorn",
+            "tags": [
+              "stress",
+              "sleep"
+            ]
+          },
+          {
+            "name": "Lipa drobnolistna (Kwiat lipy)",
+            "sci": "Tilia cordata",
+            "note": "Pachnące kwiaty parzone jako kojąca herbata, by przełamać gorączkę i ukoić rozdrażnione nerwy.",
+            "id": "linden",
+            "tags": [
+              "sleep",
+              "stress",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Wiązówka błotna",
+            "sci": "Filipendula ulmaria",
+            "note": "Pachnące kwiatostany od dawna stosowane na gorączkę i bóle stawów, które później dały chemiczny wzór dla aspiryny.",
+            "id": "meadowsweet",
+            "tags": [
+              "painInflammation",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Korzeń Osha",
+            "sci": "Ligusticum porteri",
+            "note": "Korzeń żuty lub parzony przez plemiona Gór Skalistych, takie jak Navajo i Ute, by łagodzić ból gardła i infekcje dróg oddechowych.",
+            "id": "oshaRoot",
+            "tags": [
+              "respiratory",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Pluskwica groniasta",
+            "sci": "Actaea racemosa",
+            "note": "Korzeń stosowany przez Czirokezów i inne ludy Wschodnich Lasów do łagodzenia bólów miesiączkowych i wspomagania porodu.",
+            "id": "blackCohosh",
+            "tags": [
+              "painInflammation",
+              "stress"
+            ]
+          },
+          {
+            "name": "Devil's Club",
+            "sci": "Oplopanax horridus",
+            "note": "Wewnętrzna kora używana przez ludy Tlingit, Haida i inne ludy Wybrzeża Pacyfiku Północno-Zachodniego do leczenia artretyzmu, infekcji i objawów cukrzycy.",
+            "id": "devilsClub",
+            "tags": [
+              "painInflammation",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Pysznogłówka rozłogowa (Dzika Bergamotka)",
+            "sci": "Monarda fistulosa",
+            "note": "Herbatę z liści tej bogatej w tymol mięty parzyli Czarne Stopy i inne plemiona Wielkich Równin, by leczyć przeziębienia i infekcje dróg oddechowych.",
+            "id": "wildBergamot",
+            "tags": [
+              "respiratory",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Mącznica lekarska",
+            "sci": "Arctostaphylos uva-ursi",
+            "note": "Liście parzone przez liczne plemiona rdzennych Amerykanów jako środek moczopędny i na infekcje dróg moczowych.",
+            "id": "bearberry",
+            "tags": [
+              "immunity",
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "Wiąz czerwony (Śliski wiąz)",
+            "sci": "Ulmus rubra",
+            "note": "Czirokezi i Irokezi wykorzystywali śluzowatą wewnętrzną korę do łagodzenia bólu gardła i gojenia ran.",
+            "id": "slipperyElm",
+            "tags": [
+              "digestion",
+              "respiratory",
+              "skin"
+            ]
+          },
+          {
+            "name": "Kaskara (Szakłak amerykański)",
+            "sci": "Frangula purshiana",
+            "note": "Plemiona północno-zachodniego wybrzeża Pacyfiku suszyły i sezonowały korę tej rośliny z rodziny szakłakowatych jako niezawodny naturalny środek przeczyszczający.",
+            "id": "cascaraSagrada",
+            "tags": [
+              "digestion"
+            ]
+          },
+          {
+            "name": "Chinowiec lekarski",
+            "sci": "Cinchona officinalis",
+            "note": "Andyjscy Keczua stosowali gorzką korę na gorączkę na długo, zanim stała się źródłem chininy.",
+            "id": "cinchona",
+            "tags": [
+              "immunity",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Koci pazur (Uncaria)",
+            "sci": "Uncaria tomentosa",
+            "note": "Aszaninka i inne ludy peruwiańskiej Amazonii parzyli korę tego drewnianego pnącza na artretyzm i wsparcie odporności.",
+            "id": "catsClaw",
+            "tags": [
+              "painInflammation",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Koka",
+            "sci": "Erythroxylum coca",
+            "note": "Keczua i Ajmara z Andów od tysiącleci żują liście, by zwalczać chorobę wysokościową i zmęczenie.",
+            "id": "coca",
+            "tags": [
+              "energy",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Krew smoka (Croton)",
+            "sci": "Croton lechleri",
+            "note": "Ludy amazońskie nakładają czerwony sok mleczny tego drzewa bezpośrednio na skaleczenia i rany jako naturalny środek antyseptyczny.",
+            "id": "dragonsBlood",
+            "tags": [
+              "skin",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Pau d'Arco (Tabebuia różowa)",
+            "sci": "Tabebuia impetiginosa",
+            "note": "Wewnętrzna kora parzona jako herbata przez rdzennych mieszkańców Amazonii, by leczyć infekcje, gorączkę i choroby skóry.",
+            "id": "pauDarco",
+            "tags": [
+              "immunity",
+              "skin"
+            ]
+          },
+          {
+            "name": "Boldo",
+            "sci": "Peumus boldus",
+            "note": "Chilijscy uzdrowiciele Mapuche od dawna stosują herbatę z liści boldo, by wspierać funkcjonowanie wątroby i ułatwiać trawienie.",
+            "id": "boldo",
+            "tags": [
+              "digestion"
+            ]
+          },
+          {
+            "name": "Kopaiwa",
+            "sci": "Copaifera officinalis",
+            "note": "Ludy amazońskie pozyskują żywicę z tego drzewa i nakładają ją miejscowo na rany jako środek przeciwzapalny.",
+            "id": "copaiba",
+            "tags": [
+              "painInflammation",
+              "skin"
+            ]
+          },
+          {
+            "name": "Guarana",
+            "sci": "Paullinia cupana",
+            "note": "Lud Sateré-Mawé z brazylijskiej Amazonii udomowił to pnącze, prażąc jego nasiona dla długotrwałej energii i koncentracji.",
+            "id": "guarana",
+            "tags": [
+              "energy"
+            ]
+          },
+          {
+            "name": "Czarnuszka siewna",
+            "sci": "Nigella sativa",
+            "note": "Znana jako „nasienie błogosławieństwa” w medycynie prorockiej, jej olej leczy astmę, dolegliwości trawienne i infekcje skóry.",
+            "id": "blackSeed",
+            "tags": [
+              "respiratory",
+              "digestion",
+              "skin"
+            ]
+          },
+          {
+            "name": "Kadzidłowiec (Olibanum)",
+            "sci": "Boswellia sacra",
+            "note": "Pozyskiwana z arabskich drzew od tysiącleci żywica leczy zapalenia stawów, rany i dolegliwości oddechowe.",
+            "id": "frankincense",
+            "tags": [
+              "painInflammation",
+              "respiratory",
+              "skin"
+            ]
+          },
+          {
+            "name": "Mirra",
+            "sci": "Commiphora myrrha",
+            "note": "Zbierana w Rogu Afryki i na Półwyspie Arabskim żywica dezynfekuje rany i łagodzi ból dziąseł oraz gardła.",
+            "id": "myrrh",
+            "tags": [
+              "skin",
+              "respiratory"
+            ]
+          },
+          {
+            "name": "Senes",
+            "sci": "Senna alexandrina",
+            "note": "Egipscy lekarze od starożytności polegają na jej strąkach i liściach jako na silnym, niezawodnym środku przeczyszczającym.",
+            "id": "senna",
+            "tags": [
+              "digestion"
+            ]
+          },
+          {
+            "name": "Hibiskus (Karkade)",
+            "sci": "Hibiscus sabdariffa",
+            "note": "Parzone jako karkade w Sudanie i Egipcie kielichy kwiatowe to ludowy środek na wysokie ciśnienie krwi i gorączkę.",
+            "id": "hibiscus",
+            "tags": [
+              "immunity"
+            ]
+          },
+          {
+            "name": "Moringa olejodajna",
+            "sci": "Moringa oleifera",
+            "note": "Od dawna stosowana w Afryce Subsaharyjskiej, jej liście leczą niedożywienie i stany zapalne oraz wspierają laktację karmiących matek.",
+            "id": "moringa",
+            "tags": [
+              "immunity",
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "Baobab afrykański",
+            "sci": "Adansonia digitata",
+            "note": "Afrykańskie „drzewo życia” dostarcza miąższu owoców i kory tradycyjnie stosowanych przeciw gorączce, biegunce i malarii.",
+            "id": "baobab",
+            "tags": [
+              "immunity",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Rooibos",
+            "sci": "Aspalathus linearis",
+            "note": "Południowoafrykańscy Khoisan oraz osadnicy z Przylądka Dobrej Nadziei parzyli ten czerwonawy krzew jako środek na alergie i kolkę.",
+            "id": "rooibos",
+            "tags": [
+              "immunity",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Buchu",
+            "sci": "Agathosma betulina",
+            "note": "Uzdrowiciele Khoisan na Przylądku wykorzystywali jej ostro pachnące liście do leczenia infekcji dróg moczowych i dolegliwości nerek.",
+            "id": "buchu",
+            "tags": [
+              "immunity"
+            ]
+          },
+          {
+            "name": "Krzew rakowy (Sutherlandia)",
+            "sci": "Lessertia frutescens",
+            "note": "Znany ludowi Khoi jako „kankerbos”, ten południowoafrykański krzew jest tradycyjnym tonikiem na stres, zmęczenie i wsparcie odporności.",
+            "id": "cancerBush",
+            "tags": [
+              "stress",
+              "energy",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Umckaloabo (Pelargonia afrykańska)",
+            "sci": "Pelargonium sidoides",
+            "note": "Uzdrowiciele Xhosa i Zulu w RPA wykorzystywali jej bulwiasty korzeń do leczenia kaszlu, zapalenia oskrzeli i gruźlicy.",
+            "id": "umckaloabo",
+            "tags": [
+              "respiratory"
+            ]
+          },
+          {
+            "name": "Hoodia",
+            "sci": "Hoodia gordonii",
+            "note": "Myśliwi San z Kalahari żuli tę kolczastą sukulentę, by tłumić głód i pragnienie podczas długich wędrówek.",
+            "id": "hoodia",
+            "tags": [
+              "energy"
+            ]
+          },
+          {
+            "name": "Henna",
+            "sci": "Lawsonia inermis",
+            "note": "Poza sztuką zdobienia ciała, ludowa medycyna Bliskiego Wschodu i Afryki Północnej stosuje pastę z jej liści do leczenia grzybiczych infekcji skóry.",
+            "id": "henna",
+            "tags": [
+              "skin"
+            ]
+          },
+          {
+            "name": "Mastyks (Pistacja mastyksowa)",
+            "sci": "Pistacia lentiscus",
+            "note": "Żuta od starożytności we wschodniej części basenu Morza Śródziemnego żywica tego drzewa łagodzi wrzody żołądka i dolegliwości trawienne.",
+            "id": "mastic",
+            "tags": [
+              "digestion"
+            ]
+          },
+          {
+            "name": "Karob (Szarańczyn strąkowy)",
+            "sci": "Ceratonia siliqua",
+            "note": "Ludowa medycyna Bliskiego Wschodu mieliła jej strąki na środek na dziecięcą biegunkę i dolegliwości trawienne.",
+            "id": "carob",
+            "tags": [
+              "digestion"
+            ]
+          }
+        ]
+      },
+      "floweringPerennials": {
+        "title": "Byliny kwitnące",
+        "desc": "Kwiaty, które powracają rok po roku.",
+        "intro": "Byliny kwitnące to fundament ogrodu, który wciąż obdarowuje: w przeciwieństwie do roślin jednorocznych, więdną na zimę i odrastają wiosną z tych samych korzeni, kłączy lub bulw. Wiele z nich z czasem zadomawia się i rozrasta w bujniejsze kępy, więc jedno nasadzenie może nagradzać coraz obfitszym kwitnieniem w kolejnych sezonach. Ta kolekcja zbiera lubiane, łatwo dostępne byliny, które stanowią trwałą podstawę rabat i obrzeży, zapewniając niezawodne, powracające kolory.",
+        "species": [
+          {
+            "name": "Piwonia chińska",
+            "sci": "Paeonia lactiflora",
+            "note": "Długowieczne, bulwiaste korzenie mogą kwitnąć w tym samym miejscu przez pięćdziesiąt lat lub dłużej, niemal bez ingerencji."
+          },
+          {
+            "name": "Liliowiec rdzawy",
+            "sci": "Hemerocallis fulva",
+            "note": "Wbrew nazwie, każda kępa z czasem rozrasta się w gęste skupiska, które niezawodnie kwitną przez pokolenia."
+          },
+          {
+            "name": "Jeżówka purpurowa",
+            "sci": "Echinacea purpurea",
+            "note": "Ta rodzima roślina prerii odrasta z mocnego korzenia palowego, samosiejąc się z czasem w coraz większe kolonie."
+          },
+          {
+            "name": "Irys bródkowy",
+            "sci": "Iris germanica",
+            "note": "Mięsiste kłącza rozrastają się tuż pod powierzchnią gleby, dzieląc się na nowe pędy, które co wiosnę zakwitają na nowo."
+          },
+          {
+            "name": "Rudbekia błyskotliwa",
+            "sci": "Rudbeckia fulgida",
+            "note": "Rozprzestrzenia się przez kłącza i samosiew, tworząc niezawodne złociste kobierce, które powracają każdego lata."
+          },
+          {
+            "name": "Floks wiechowaty",
+            "sci": "Phlox paniculata",
+            "note": "Mocne, kępiaste pędy więdną jesienią aż do korzeni, by w następnym roku odrosnąć jeszcze bujniej."
+          },
+          {
+            "name": "Lawenda wąskolistna",
+            "sci": "Lavandula angustifolia",
+            "note": "Zdrewniałe, wieloletnie pędy przetrwają zimowy spoczynek i wiosną ponownie pokrywają się liśćmi, by każdego lata zakwitnąć na nowo."
+          }
+        ]
+      },
+      "oceanAndRiverFish": {
+        "title": "Ryby oceanów i rzek",
+        "desc": "Szesnaście wód, jeden obiektyw",
+        "intro": "Od raf koralowych po zimne górskie rzeki — to ryby, które ludzie najczęściej fotografują i o które pytają. Nazwy naukowe na całym świecie pozostają po łacinie, więc nazwa poznana tutaj zadziała na każdym wybrzeżu.",
+        "species": [
+          {
+            "name": "Błazenek okoniowy",
+            "sci": "Amphiprion ocellaris",
+            "note": "Żyje wśród ukwiałów, na których parzydełka jest odporny — w zamian za ochronę czyści swojego gospodarza. Każdy błazenek rodzi się samcem, a osobnik dominujący zmienia płeć na żeńską.",
+            "id": "clownfish"
+          },
+          {
+            "name": "Pstrąg tęczowy",
+            "sci": "Oncorhynchus mykiss",
+            "note": "Pochodzi z zimnych rzek wybrzeża Pacyfiku, a dziś hoduje się go na każdym kontynencie poza Antarktydą. Różowe mięso zawdzięcza skorupiakom, którymi się żywi.",
+            "id": "rainbowTrout"
+          },
+          {
+            "name": "Łosoś atlantycki",
+            "sci": "Salmo salar",
+            "note": "Wylęga się w słodkiej wodzie, spędza lata w morzu, a na tarło odnajduje dokładnie tę rzekę, w której przyszedł na świat. Jego nazwa gatunkowa oznacza „skoczka”.",
+            "id": "atlanticSalmon"
+          },
+          {
+            "name": "Szczupak pospolity",
+            "sci": "Esox lucius",
+            "note": "Łowca z zasadzki: trwa bez ruchu w gąszczu roślin, by zaatakować w ułamku sekundy. Zdradza go kaczy pysk i płetwy przesunięte daleko ku tyłowi.",
+            "id": "northernPike"
+          },
+          {
+            "name": "Karp",
+            "sci": "Cyprinus carpio",
+            "note": "Hodowany od ponad dwóch tysięcy lat i obecny na każdym kontynencie poza Antarktydą — w jednych krajach ceniony przysmak, w innych inwazyjny szkodnik.",
+            "id": "commonCarp"
+          },
+          {
+            "name": "Pokolec błękitny",
+            "sci": "Paracanthurus hepatus",
+            "note": "Rafowa ryba chirurgiczna z ostrym jak skalpel kolcem przy ogonie, który wysuwa w obronie. Dorosły jest jaskrawoniebieski, młody — jaskrawożółty.",
+            "id": "blueTang"
+          },
+          {
+            "name": "Bass wielkogębowy",
+            "sci": "Micropterus salmoides",
+            "note": "Najczęściej łowiona sportowo ryba słodkowodna na świecie. Od bassa małogębowego odróżnisz go po szczęce sięgającej poza oko.",
+            "id": "largemouthBass"
+          },
+          {
+            "name": "Tuńczyk żółtopłetwy",
+            "sci": "Thunnus albacares",
+            "note": "Przemierza całe oceany i potrafi utrzymać ciało cieplejsze od otaczającej go wody — dlatego szybko pływa nawet w zimnych głębinach.",
+            "id": "yellowfinTuna"
+          },
+          {
+            "name": "Danio pręgowany",
+            "sci": "Danio rerio",
+            "note": "Mała pręgowana rybka z rzek Azji Południowej, która stała się jednym z najlepiej zbadanych zwierząt w nauce — jej przezroczyste zarodki pozwalają obserwować, jak powstają narządy.",
+            "id": "zebrafish"
+          },
+          {
+            "name": "Skrzydlica pstra",
+            "sci": "Pterois volitans",
+            "note": "Piękna i jadowita — jej kolce zadają bolesne ukłucia. Pochodzi z Indo-Pacyfiku, a w Atlantyku i na Karaibach jest groźnym gatunkiem inwazyjnym.",
+            "id": "redLionfish"
+          }
+        ]
+      },
+      "birdsOfTheWorld": {
+        "title": "Ptaki świata",
+        "desc": "Dziesięć, które naprawdę spotkasz",
+        "intro": "Ptaki to dzika przyroda, którą większość ludzi może sfotografować przez okno. Te dziesięć gatunków obejmuje sześć kontynentów i należy do najlepiej rozpoznawalnych na Ziemi — dobra wprawka dla bystrego oka.",
+        "species": [
+          {
+            "name": "Dymówka",
+            "sci": "Hirundo rustica",
+            "note": "Najszerzej rozprzestrzeniona jaskółka na Ziemi: gniazduje na całej półkuli północnej, a zimuje na południu. W locie nie sposób pomylić jej głęboko wciętego ogona.",
+            "id": "barnSwallow"
+          },
+          {
+            "name": "Wróbel zwyczajny",
+            "sci": "Passer domesticus",
+            "note": "Powędrował za człowiekiem z Bliskiego Wschodu do niemal każdego miasta na świecie. Samce noszą czarny śliniak, samice są jednolicie piaskowobrązowe.",
+            "id": "houseSparrow"
+          },
+          {
+            "name": "Zimorodek zwyczajny",
+            "sci": "Alcedo atthis",
+            "note": "Błysk elektrycznego błękitu nad leniwymi rzekami Europy, Azji i Afryki Północnej. Nurkuje głową naprzód i wyławia ryby z metrowej głębokości.",
+            "id": "commonKingfisher"
+          },
+          {
+            "name": "Sokół wędrowny",
+            "sci": "Falco peregrinus",
+            "note": "Najszybsze zwierzę świata — w locie nurkowym przekracza 300 km/h. Spotykany na każdym kontynencie poza Antarktydą, coraz częściej gniazduje na wieżowcach.",
+            "id": "peregrineFalcon"
+          },
+          {
+            "name": "Czapla modra",
+            "sci": "Ardea herodias",
+            "note": "Stoi nieruchomo na płyciźnie całymi minutami, by przebić rybę uderzeniem zbyt szybkim, żeby je dostrzec. Lata z szyją złożoną w literę S.",
+            "id": "greatBlueHeron"
+          },
+          {
+            "name": "Gołąb skalny",
+            "sci": "Columba livia",
+            "note": "Gołąb miejski, potomek ptaków gnieżdżących się na klifach — dlatego gzymsy i parapety pasują mu tak dobrze. Oboje rodzice karmią młode „mleczkiem wolowym”.",
+            "id": "rockPigeon"
+          },
+          {
+            "name": "Rudzik",
+            "sci": "Erithacus rubecula",
+            "note": "Na tyle śmiały, że chodzi za ogrodnikiem po dżdżownice wyrzucone z ziemi. Pomarańczową pierś noszą obie płcie i bronią jej śpiewem przez cały rok.",
+            "id": "europeanRobin"
+          },
+          {
+            "name": "Krzyżówka",
+            "sci": "Anas platyrhynchos",
+            "note": "Przodek niemal wszystkich kaczek domowych. Sławny jest samiec z zieloną głową, ale klasyczne głośne kwakanie wydaje wyłącznie samica.",
+            "id": "mallard"
+          },
+          {
+            "name": "Ara arakanga",
+            "sci": "Ara macao",
+            "note": "Duża papuga lasów deszczowych Ameryki Środkowej i Południowej — dożywa ponad pięćdziesięciu lat i łączy się w pary na całe życie. Jej dziób rozłupuje orzechy, z którymi nie poradzi sobie żaden inny ptak.",
+            "id": "scarletMacaw"
+          },
+          {
+            "name": "Pingwin cesarski",
+            "sci": "Aptenodytes forsteri",
+            "note": "Rozmnaża się w środku antarktycznej zimy: samce przez dwa miesiące tłoczą się w ciemności, nie jedząc i balansując pojedyncze jajo na stopach.",
+            "id": "emperorPenguin"
+          }
+        ]
+      },
+      "gardenInsects": {
+        "title": "Sąsiedzi spod nóg",
+        "desc": "Dziesięć pospolitych bezkręgowców z bliska",
+        "intro": "Wszystkie dziesięć zwierząt z tej kolekcji żyje kilka metrów od drzwi twojego domu i prawie każdy je widział, nie wiedząc, czym się właściwie zajmują. Pod tą swojskością kryje się wojna chemiczna, skrzydła składane jak origami, nawigacja międzykontynentalna i kolonia mrówek długa na 6000 kilometrów.",
+        "species": [
+          {
+            "name": "Biedronka siedmiokropka",
+            "sci": "Coccinella septempunctata",
+            "note": "Ściśnięta krwawi z kolan — i to celowo. Gorzki żółty płyn sprawia, że ptak natychmiast ją wypluwa.",
+            "id": "sevenSpotLadybird"
+          },
+          {
+            "name": "Skorek pospolity",
+            "sci": "Forficula auricularia",
+            "note": "Rozkłada tylne skrzydła do ponad dziesięciokrotności upakowanej wielkości — i prawie nigdy nie lata.",
+            "id": "commonEarwig"
+          },
+          {
+            "name": "Kulanka pospolita",
+            "sci": "Armadillidium vulgare",
+            "note": "Wcale nie owad, tylko skorupiak — lądowy krewny krabów, który wciąż oddycha przerobionymi skrzelami.",
+            "id": "commonPillWoodlouse"
+          },
+          {
+            "name": "Mucha domowa",
+            "sci": "Musca domestica",
+            "note": "Smakuje stopami — wie, na czym wylądowała, zanim dotrze tam jej aparat gębowy.",
+            "id": "houseFly"
+          },
+          {
+            "name": "Ślimak przydrożny",
+            "sci": "Cornu aspersum",
+            "note": "Żre, przeciągając po liściu uzębioną taśmę; gdy przednie zęby się zetrą, z tyłu wyrastają nowe.",
+            "id": "gardenSnail"
+          },
+          {
+            "name": "Pszczoła miodna",
+            "sci": "Apis mellifera",
+            "note": "Matka kopuluje w powietrzu przez kilka dni, nigdy więcej — i z tego zapasu nasienia czerpie do końca życia.",
+            "id": "westernHoneyBee"
+          },
+          {
+            "name": "Rusałka osetnik",
+            "sci": "Vanessa cardui",
+            "note": "Żaden motyl nie pokonuje całej trasy: droga z Afryki do Europy i z powrotem zajmuje jakieś sześć pokoleń.",
+            "id": "paintedLady"
+          },
+          {
+            "name": "Nastrosz piwniczny",
+            "sci": "Pholcus phalangioides",
+            "note": "Poluje na inne pająki, szarpiąc ich sieci jak schwytany owad, i atakuje właściciela, który przybiega sprawdzić.",
+            "id": "cellarSpider"
+          },
+          {
+            "name": "Mrówka argentyńska",
+            "sci": "Linepithema humile",
+            "note": "Robotnice z Hiszpanii, Kalifornii i Japonii spotykają się bez walki — traktują się jak jedna kolonia.",
+            "id": "argentineAnt"
+          },
+          {
+            "name": "Dżdżownica ziemna",
+            "sci": "Lumbricus terrestris",
+            "note": "Darwin poświęcił dżdżownicom ostatnie lata życia i wydał o nich książkę pół roku przed śmiercią.",
+            "id": "commonEarthworm"
+          }
+        ]
+      },
+      "fungiOfTheWorld": {
+        "title": "Ani roślina, ani zwierzę",
+        "desc": "Dziesięć grzybów, które rządzą światem",
+        "intro": "Na drzewie życia grzyby stoją bliżej zwierząt niż roślin, a to, co widzisz jako grzyba, jest tylko owocem sieci nitek rozchodzącej się niewidocznie w glebie, drewnie albo w żywym owadzie. Wśród tych dziesięciu jest ten, który zabija więcej ludzi niż jakikolwiek inny grzyb, organizm pokrywający dziewięć kilometrów kwadratowych Oregonu i pleśń, od której zaczęła się era antybiotyków.",
+        "species": [
+          {
+            "name": "Muchomor czerwony",
+            "sci": "Amanita muscaria",
+            "note": "Czerwono-biały grzyb z każdej bajki istnieje naprawdę, jest trujący i prawie nie zawiera toksyny nazwanej jego imieniem.",
+            "id": "flyAgaric"
+          },
+          {
+            "name": "Muchomor sromotnikowy",
+            "sci": "Amanita phalloides",
+            "note": "Odpowiada za większość śmiertelnych zatruć grzybami na świecie, a gotowanie, suszenie i mrożenie nic jego toksynie nie robią.",
+            "id": "deathCap"
+          },
+          {
+            "name": "Pieczarka dwuzarodnikowa",
+            "sci": "Agaricus bisporus",
+            "note": "Pieczarka biała, brązowa i portobello to nie trzy grzyby, tylko jeden gatunek: różni je odmiana i wiek zbioru.",
+            "id": "buttonMushroom"
+          },
+          {
+            "name": "Drożdże piwowarskie",
+            "sci": "Saccharomyces cerevisiae",
+            "note": "Jednokomórkowy grzyb od chleba, piwa i wina — i pierwszy organizm jądrowy z całym zsekwencjonowanym genomem, w 1996 roku.",
+            "id": "brewersYeast"
+          },
+          {
+            "name": "Maczużnik jednostronny",
+            "sci": "Ophiocordyceps unilateralis",
+            "note": "Prowadzi zarażoną mrówkę na określoną wysokość, każe jej zacisnąć szczęki i umrzeć, po czym wyrasta jej z głowy.",
+            "id": "zombieAntFungus"
+          },
+          {
+            "name": "Opieńka ciemna",
+            "sci": "Armillaria ostoyae",
+            "note": "Jeden osobnik we wschodnim Oregonie zajmuje około dziewięciu kilometrów kwadratowych — powierzchniowo największy zmierzony organizm.",
+            "id": "humongousFungus"
+          },
+          {
+            "name": "Łycznik ostrygowaty",
+            "sci": "Panellus stipticus",
+            "note": "Mały, twardy, wachlarzowaty grzybek świecący blaszkami na zielono — ale tylko po właściwej stronie Atlantyku.",
+            "id": "bitterOyster"
+          },
+          {
+            "name": "Pędzlak",
+            "sci": "Penicillium rubens",
+            "note": "Niebieskozieloną pleśń, która w 1928 roku zanieczyściła szalkę Alexandra Fleminga, poprawnie oznaczono dopiero w 2011 roku.",
+            "id": "penicilliumMould"
+          },
+          {
+            "name": "Batrachochytrium dendrobatidis",
+            "sci": "Batrachochytrium dendrobatidis",
+            "note": "Grzyb niewidoczny gołym okiem zepchnął ku wymarciu więcej gatunków niż jakakolwiek inna udokumentowana choroba.",
+            "id": "chytridFungus"
+          },
+          {
+            "name": "Trufla biała",
+            "sci": "Tuber magnatum",
+            "note": "Owocuje wyłącznie pod ziemią, od dekad wymyka się hodowcom, a okaz 1,5 kg poszedł w 2007 roku za jakieś 330 tysięcy dolarów.",
+            "id": "whiteTruffle"
+          }
+        ]
+      },
+      "fromFieldToPlate": {
+        "title": "Skąd wziął się obiad",
+        "desc": "Dziesięć upraw i ich prawdziwy rodowód",
+        "intro": "Prawie nic z tego, co ląduje na talerzu, nie rośnie tam, gdzie się urodziło. Te dziesięć roślin udomowiono tysiące lat temu w dolinach rzek, górskich lasach i na bagnach, a potem rozwieziono przez oceany — aż największe zbiory wylądowały na zupełnie nie tym kontynencie.",
+        "species": [
+          {
+            "name": "Kukurydza",
+            "sci": "Zea mays",
+            "note": "Jej dziki przodek ma kilkanaście ziaren, każde zamknięte w twardej jak kamień łupinie — nic podobnego do kolby.",
+            "id": "maize"
+          },
+          {
+            "name": "Maniok",
+            "sci": "Manihot esculenta",
+            "note": "Udomowiony na skraju Amazonii, dziś karmi więcej ludzi w Afryce niż w Ameryce Południowej.",
+            "id": "cassava"
+          },
+          {
+            "name": "Kawa arabska",
+            "sci": "Coffea arabica",
+            "note": "Arabika nie jest starym gatunkiem, tylko naturalną krzyżówką dwóch innych kaw — o zaskakująco ubogiej zmienności.",
+            "id": "arabicaCoffee"
+          },
+          {
+            "name": "Soja",
+            "sci": "Glycine max",
+            "note": "Większość światowej soi nigdy nie trafia wprost na talerz — idzie na olej i paszę dla zwierząt.",
+            "id": "soybean"
+          },
+          {
+            "name": "Trzcina cukrowa",
+            "sci": "Saccharum officinarum",
+            "note": "Na Nowej Gwinei uprawiano ją najpierw jako łodygę do żucia; cukrownictwo i etanol przyszły tysiące lat później.",
+            "id": "sugarcane"
+          },
+          {
+            "name": "Pszenica zwyczajna",
+            "sci": "Triticum aestivum",
+            "note": "Pszenica chlebowa nigdy nie istniała dziko — powstała na polach, gdy uprawne zboże skrzyżowało się z przydrożną trawą.",
+            "id": "breadWheat"
+          },
+          {
+            "name": "Ryż siewny",
+            "sci": "Oryza sativa",
+            "note": "Ryż udomowiono dwa razy na dwóch kontynentach: nad Jangcy i, z innej dzikiej trawy, w Afryce Zachodniej.",
+            "id": "asianRice"
+          },
+          {
+            "name": "Ziemniak",
+            "sci": "Solanum tuberosum",
+            "note": "Każdy ziemniak z Europy, Azji i Afryki wywodzi się z wyżyn wokół jeziora Titicaca.",
+            "id": "potato"
+          },
+          {
+            "name": "Banan",
+            "sci": "Musa acuminata",
+            "note": "Dzikie banany są nabite twardymi nasionami wielkości grochu; owoc bez pestek istnieje tylko dzięki sadzeniu bezpłodnych klonów.",
+            "id": "banana"
+          },
+          {
+            "name": "Pomarańcza",
+            "sci": "Citrus × sinensis",
+            "note": "Pomarańcza nie jest dzikim gatunkiem: to krzyżówka pomelo z mandarynką, od tamtej pory kopiowana przez szczepienie.",
+            "id": "sweetOrange"
+          }
+        ]
+      },
+      "heardNotSeen": {
+        "title": "Najpierw słychać",
+        "desc": "Dziesięć zwierząt poznawanych uchem",
+        "intro": "Większość spotkań z dziką przyrodą zaczyna się od dźwięku dobiegającego stamtąd, gdzie nic nie widać. Tę dziesiątkę — sowy i żaby, cykadę, dwa śpiewające owady, małpę i lisa — dużo łatwiej znaleźć uchem niż okiem, a każde z nich mówi coś konkretnego.",
+        "species": [
+          {
+            "name": "Puszczyk zwyczajny",
+            "sci": "Strix aluco",
+            "note": "Słynne pohukiwanie to rozmowa dwojga sów: ostre kłe-wik samicy i drżące huuu samca w odpowiedzi.",
+            "id": "tawnyOwl"
+          },
+          {
+            "name": "Kukułka",
+            "sci": "Cuculus canorus",
+            "note": "Tylko samiec woła „ku-ku”; samica odpowiada bulgoczącym chichotem, od którego drobne ptaki wpadają w panikę.",
+            "id": "commonCuckoo"
+          },
+          {
+            "name": "Słowik rdzawy",
+            "sci": "Luscinia megarhynchos",
+            "note": "Śpiewa najmocniej między północą a trzecią i tylko bez pary — kiedy samica zostaje, nocny śpiew cichnie.",
+            "id": "commonNightingale"
+          },
+          {
+            "name": "Rzekotka drzewna",
+            "sci": "Hyla arborea",
+            "note": "Pięciocentymetrowa żaba z rezonatorem szerszym niż własna głowa; w bezwietrzną noc chór słychać niemal z kilometra.",
+            "id": "europeanTreeFrog"
+          },
+          {
+            "name": "Żaba rycząca",
+            "sci": "Lithobates catesbeianus",
+            "note": "Basowe brum o częstotliwości około 200 herców niesie się nad otwartą wodą prawie kilometr.",
+            "id": "americanBullfrog"
+          },
+          {
+            "name": "Cykada jesionowa",
+            "sci": "Cicada orni",
+            "note": "Śpiewa tylko w upale: chór narasta wraz z porannym żarem i milknie, gdy chmura zasłoni słońce.",
+            "id": "cicadaOrni"
+          },
+          {
+            "name": "Świerszcz domowy",
+            "sci": "Acheta domesticus",
+            "note": "Cykanie to dwa skrzydła piłujące się nawzajem: skrobak po pilniku ze stu z górą ząbków, przy 4–5 kHz.",
+            "id": "houseCricket"
+          },
+          {
+            "name": "Pasikonik zielony",
+            "sci": "Tettigonia viridissima",
+            "note": "Suchy, nieprzerwany terkot od zmierzchu do długo po północy, czasem godzinami bez prawdziwej pauzy.",
+            "id": "greatGreenBushCricket"
+          },
+          {
+            "name": "Wyjec czarny",
+            "sci": "Alouatta caraya",
+            "note": "Poranny ryk niesie się przez las nawet pięć kilometrów — to jeden z najgłośniejszych głosów lądu.",
+            "id": "blackHowlerMonkey"
+          },
+          {
+            "name": "Lis rudy",
+            "sci": "Vulpes vulpes",
+            "note": "Zimowy wrzask przypisywany zwykle lisicom wydają obie płcie — to głos godowy, nie sygnał strachu.",
+            "id": "redFox"
+          }
+        ]
+      }
+    },
+    "species": {
+      "fiddleLeafFig": {
+        "name": "Figowiec lirowaty",
+        "sci": "Ficus lyrata",
+        "light": "Jasne, rozproszone światło",
+        "water": "Co tydzień; pozwól, aby wyschły górne 2,5–5 cm podłoża",
+        "difficulty": "Wymagająca",
+        "overview": "Pochodzący z nizinnych lasów tropikalnych Afryki Zachodniej figowiec lirowaty jest ceniony za duże, błyszczące liście w kształcie skrzypiec, z efektownym unerwieniem, które uczyniło go ikoną wnętrzarskiego designu. Uprawia się go jako efektowną roślinę podłogową, która w domu może osiągnąć wysokość sufitu, choć jest znany z tego, że wymaga stałych warunków światła, podlewania i temperatury.",
+        "funFact": "W naturalnym środowisku Ficus lyrata może wyrosnąć na pełnowymiarowe drzewo o wysokości ponad 12 metrów, z liśćmi niemal dwukrotnie większymi od tych, które widzimy w uprawie doniczkowej, i może nawet wytwarzać drobne, niejadalne figi zapylane przez określony gatunek osy figowej — czego jako roślina doniczkowa praktycznie nigdy nie robi."
+      },
+      "bostonFern": {
+        "name": "Nefrolepis wyniosły",
+        "sci": "Nephrolepis exaltata",
+        "light": "Jasne do średniego, rozproszone światło",
+        "water": "Utrzymuj glebę równomiernie wilgotną; nigdy nie pozwól jej całkowicie wyschnąć",
+        "difficulty": "Umiarkowana",
+        "overview": "Nefrolepis wyniosły to bujna, łukowato wygięta odmiana paproci mieczykowatej, gatunku występującego w wilgotnych regionach tropikalnych na całym świecie. Jego pierzaste, opadające liście uczyniły go ulubieńcem wiszących koszy i zacienionych werand już od czasów wiktoriańskich, choć wymaga stałej wilgotności i wysokiej wilgotności powietrza, by dobrze się czuć.",
+        "funFact": "Odmiana 'Bostoniensis' nie została wyhodowana celowo — była naturalną mutacją odkrytą w 1894 roku w przesyłce paproci mieczykowatych wysłanej z Filadelfii do kwiaciarni w Bostonie, i to właśnie z tej pojedynczej odmiany rozmnożono roślinę doniczkową, którą znamy dzisiaj."
+      },
+      "jadePlant": {
+        "name": "Grubosz jajowaty",
+        "sci": "Crassula ovata",
+        "light": "Pełne słońce do jasnego światła",
+        "water": "Oszczędnie; pozwól glebie całkowicie wyschnąć między podlewaniami",
+        "difficulty": "Łatwa",
+        "overview": "Grubosz jajowaty to wytrzymały sukulent pochodzący z półsuchych regionów Republiki Południowej Afryki i Mozambiku, rozpoznawalny po grubych, błyszczących, owalnych liściach i zdrewniałych, rozgałęzionych pędach, które nadają mu wygląd miniaturowego drzewka. To uwielbiana roślina dla początkujących, często przekazywana z pokolenia na pokolenie jako rodzinna pamiątka, czasem nazywana 'rośliną szczęścia' w tradycji feng shui.",
+        "funFact": "W odpowiednich warunkach grubosz jajowaty może żyć od 50 do 100 lat, a dojrzałe okazy niekiedy nagradzają hodowców gronami drobnych, gwiazdkowatych, białych lub różowych kwiatów, zwykle wywoływanych przez chłodne noce i okres suszy."
+      },
+      "calathea": {
+        "name": "Kalatea",
+        "sci": "Goeppertia orbifolia",
+        "light": "Średnie, rozproszone światło",
+        "water": "Utrzymuj lekko wilgotną, podlewaj wodą filtrowaną lub destylowaną",
+        "difficulty": "Wymagająca",
+        "overview": "Pochodząca z lasów deszczowych Boliwii, ta efektowna roślina z rodziny marantowatych (Marantaceae) jest uprawiana ze względu na swoje wielkie, okrągłe liście w srebrzyste i ciemnozielone pasy. Podobnie jak jej krewni, jej liście unoszą się i składają w nocy, a w ciągu dnia ponownie opadają — ruch ten nazywany jest niktynastią i sprawia, że roślina wydaje się niemal żywa.",
+        "funFact": "Ten gatunek był kiedyś klasyfikowany jako Calathea orbifolia, ale w 2012 roku badania genetyczne i morfologiczne wydzieliły większość gatunków Calathea do rodzaju Goeppertia — choć szkółki i miłośnicy roślin wciąż w przytłaczającej większości używają starej nazwy 'Calathea'."
+      }
+    },
+    "topicSpeciesSectionTitle": "Gatunki w tej kolekcji",
+    "speciesLightLabel": "Światło",
+    "speciesWaterLabel": "Woda",
+    "speciesDifficultyLabel": "Trudność",
+    "funFactLabel": "Ciekawostka",
+    "symptomFilterTitle": "Co Ci dolega?",
+    "symptomFilterAll": "Wszystkie",
+    "symptomFilterEmpty": "Brak ziół oznaczonych w tej kategorii.",
+    "viewHerbLabel": "Zobacz {{name}}",
+    "herbDisclaimer": "Treści informacyjne oparte na tradycyjnym i ludowym zastosowaniu ziół. To nie jest porada medyczna - przed użyciem jakiegokolwiek zioła w celu leczenia dolegliwości skonsultuj się z lekarzem.",
+    "herbDetailsLoadError": "Nie udało się wczytać szczegółów tego zioła. Spróbuj ponownie.",
+    "preparationLabel": "Sposób przygotowania",
+    "benefitsLabel": "Korzyści",
+    "symptoms": {
+      "headache": "Ból głowy",
+      "digestion": "Trawienie",
+      "sleep": "Sen",
+      "stress": "Stres i lęk",
+      "immunity": "Wsparcie odporności",
+      "painInflammation": "Ból i stany zapalne",
+      "respiratory": "Kaszel i drogi oddechowe",
+      "skin": "Skóra i rany",
+      "energy": "Energia i zmęczenie"
+    },
+    "herbSubscribeCtaTitle": "Podoba Ci się ten przewodnik?",
+    "herbSubscribeCtaBody": "Subskrybuj, aby odblokować nieograniczoną liczbę identyfikacji roślin, owadów, grzybów i upraw.",
+    "herbAlreadySubscribedCheck": "Masz już subskrypcję? Dotknij, aby sprawdzić ponownie"
+  },
+  "botanist": {
+    "headerTitle": "Dr Helena Marques",
+    "headerSubtitle": "Agronom · Profesor botaniki",
+    "intro": "Cześć! Jestem Helena, agronom i profesor botaniki. Powiedz mi, co się dzieje z twoją rośliną — albo zapytaj o cokolwiek: glebę, szkodniki, podlewanie czy przyrodę w ogóle.",
+    "placeholder": "Zapytaj Helenę…",
+    "typing": "Helena pisze…",
+    "sendLabel": "Wyślij wiadomość",
+    "askLabel": "Zapytaj: {{question}}",
+    "suggestions": [
+      "Liście mi żółkną",
+      "Jak często podlewać?",
+      "Czy jest bezpieczna dla kotów?",
+      "Jakiej ziemi użyć?"
+    ],
+    "errorOffline": "Jesteś offline. Będę tu, gdy połączenie wróci.",
+    "errorRateLimited": "Chwilę — za dużo pytań naraz. Spróbuj za kilka minut.",
+    "errorNotConfigured": "Specjalistka nie jest jeszcze dostępna. Trwa konfiguracja.",
+    "errorGeneric": "Nie udało mi się odpowiedzieć. Spróbuj ponownie za moment."
+  },
+  "achievements": {
+    "title": "Osiągnięcia",
+    "streakLabel": "Passa dni",
+    "longestStreakLabel": "Najdłuższa passa",
+    "totalLabel": "Identyfikacje",
+    "unlockedTitle": "Odblokowano osiągnięcie!",
+    "progressLabel": "Odblokowano {{unlocked}}/{{total}}",
+    "firstScan": {
+      "title": "Pierwsze odkrycie",
+      "body": "Zidentyfikuj swój pierwszy gatunek"
+    },
+    "collector10": {
+      "title": "Kolekcjoner",
+      "body": "Zapisz 10 gatunków w swojej kolekcji"
+    },
+    "collector50": {
+      "title": "Przyrodnik",
+      "body": "Zapisz 50 gatunków w swojej kolekcji"
+    },
+    "collector100": {
+      "title": "Mistrz Przyrodnik",
+      "body": "Zapisz 100 gatunków w swojej kolekcji"
+    },
+    "allCategories": {
+      "title": "Odkrywca",
+      "body": "Zapisz co najmniej jeden gatunek z każdej kategorii"
+    },
+    "streak3": {
+      "title": "Pierwsze kroki",
+      "body": "Identyfikuj coś przez 3 dni z rzędu"
+    },
+    "streak7": {
+      "title": "Zaangażowanie",
+      "body": "Identyfikuj coś przez 7 dni z rzędu"
+    },
+    "streak30": {
+      "title": "Oddanie",
+      "body": "Identyfikuj coś przez 30 dni z rzędu"
+    },
+    "sharedFirst": {
+      "title": "Warto się dzielić",
+      "body": "Udostępnij swój pierwszy wynik identyfikacji"
+    },
+    "subscriber": {
+      "title": "Członek Premium",
+      "body": "Subskrybuj, aby identyfikować bez ograniczeń"
+    },
+    "tokensLabel": "Tokeny",
+    "tokensEarned": "+{{count}} tokenów"
+  },
+  "help": {
+    "title": "Pomoc i wsparcie",
+    "identificationTitle": "Jak działa rozpoznawanie?",
+    "identificationBody": "Zrób zdjęcie rośliny, owada, grzyba, uprawy lub drzewa, a nasza sztuczna inteligencja porówna je z obszerną bazą danych, aby zaproponować najbardziej prawdopodobny gatunek wraz z jego nazwą naukową, opisem i innymi szczegółami.",
+    "accuracyTitle": "Czy rozpoznawanie jest zawsze dokładne?",
+    "accuracyBody": "Żadna aplikacja do rozpoznawania nie jest dokładna w 100%, zwłaszcza w przypadku grzybów i roślin, które mogą być trujące. Nigdy nie jedz, nie zbieraj ani nie używaj żadnego gatunku wyłącznie na podstawie wyniku z tej aplikacji — zawsze skonsultuj się najpierw z wykwalifikowanym ekspertem.",
+    "freeTitle": "Czy NatureLens jest darmowa?",
+    "freeBody": "Otrzymujesz jedno darmowe rozpoznanie w każdej kategorii (rośliny, owady, grzyby, uprawy, drzewa). Później subskrypcja odblokowuje nieograniczoną liczbę rozpoznań we wszystkich kategoriach.",
+    "cancelTitle": "Jak anulować subskrypcję?",
+    "cancelBody": "Przejdź do Profilu i usuń swoje konto — to automatycznie anuluje każdą aktywną subskrypcję oraz usuwa Twoje dane. Obecnie nie ma osobnego przycisku anulowania; usunięcie konta to aktualny sposób na zatrzymanie płatności.",
+    "restoreTitle": "Zmieniłem telefon lub wyczyściłem przeglądarkę — jak odzyskać subskrypcję?",
+    "restoreBody": "Przejdź do Profil → Przywróć dostęp. Możesz poprosić o jednorazowy kod e-mailem lub, jeśli je utworzyłeś, zalogować się hasłem albo kontem Google.",
+    "tokensTitle": "Czym są tokeny? Czy mogę je za coś wymienić?",
+    "tokensBody": "Zdobywasz tokeny automatycznie za każdym razem, gdy rozpoznasz gatunek lub odblokujesz osiągnięcie. Wymiana tokenów na nagrody nie jest jeszcze dostępna, ale jest planowana na przyszłość — Twoje saldo tymczasem rośnie.",
+    "privacyTitle": "Czy moje dane są prywatne?",
+    "privacyBody": "Korzystanie z NatureLens nie wymaga konta. Większość Twoich danych (kolekcja, zdjęcia) pozostaje wyłącznie na Twoim urządzeniu. Szczegóły znajdziesz w pełnej Polityce prywatności.",
+    "deleteTitle": "Jak usunąć konto i dane?",
+    "deleteBody": "Przejdź do Profilu i naciśnij Usuń konto na dole ekranu. Spowoduje to anulowanie każdej aktywnej subskrypcji, usunięcie zapisanych danych z naszych serwerów oraz wyczyszczenie wszystkiego, co jest przechowywane na tym urządzeniu.",
+    "offlineTitle": "Czy aplikacja działa offline?",
+    "offlineBody": "Nie — rozpoznanie gatunku wymaga połączenia z internetem, aby uzyskać dostęp do naszej usługi AI.",
+    "languageTitle": "Czy mogę korzystać z aplikacji w innym języku?",
+    "languageBody": "Tak, NatureLens obsługuje 17 języków. Przejdź do Profil → Język, aby zmienić go w dowolnym momencie."
+  },
+  "store": {
+    "title": "Nagrody",
+    "intro": "Wydaj tokeny zdobyte za rozpoznawanie gatunków. Każda nagroda tutaj działa od razu po odebraniu.",
+    "owned": "Posiadane",
+    "open": "Otwórz",
+    "redeem": "Odbierz",
+    "redeemLabel": "Odbierz za {{cost}} tokenów",
+    "redeemedTitle": "Odebrano!",
+    "notEnoughTitle": "Za mało tokenów",
+    "notEnoughBody": "Potrzebujesz {{cost}} tokenów na to. Rozpoznawaj dalej, aby zdobyć więcej.",
+    "shieldsHeld": "Zapisane tarcze: {{count}}",
+    "earnHint": "Zdobywasz 5 tokenów za rozpoznanie i 15 za odblokowane osiągnięcie.",
+    "download": "Pobierz",
+    "downloadErrorTitle": "Pobieranie nie powiodło się",
+    "downloadErrorBody": "Nie udało się zapisać pliku. Spróbuj ponownie w przeglądarce.",
+    "items": {
+      "streakShield": {
+        "title": "Tarcza Serii",
+        "description": "Chroni twoją serię, jeśli opuścisz jeden dzień. Kumuluje się — kup więcej niż jedną.",
+        "redeemedBody": "Twoja seria jest chroniona. Jeśli opuścisz dzień, tarcza zadziała automatycznie."
+      },
+      "wallpapers": {
+        "title": "Tapety Botaniczne",
+        "description": "Trzy ekskluzywne tapety 1080×1920 na telefon.",
+        "redeemedBody": "Twoje tapety są gotowe. Dotknij Pobierz przy wybranej."
+      },
+      "naturalistBadge": {
+        "title": "Odznaka Przyrodnika",
+        "description": "Stała odznaka w twoim profilu. Pokazuje, że jesteś tu już od jakiegoś czasu.",
+        "redeemedBody": "Twoja odznaka jest już w profilu.",
+        "ownedBody": "Masz już tę odznakę — widnieje w twoim profilu."
+      }
+    }
+  },
+  "missions": {
+    "title": "Dzisiejsze misje",
+    "rewardEach": "+{{tokens}} za każdą",
+    "allDone": "Wszystko zrobione — wróć jutro!",
+    "pool": {
+      "scanAny2": "Rozpoznaj dziś 2 gatunki",
+      "scanAny3": "Rozpoznaj dziś 3 gatunki",
+      "scanPlant": "Rozpoznaj roślinę lub drzewo",
+      "scanInsect": "Rozpoznaj owada",
+      "scanMushroom": "Rozpoznaj grzyba",
+      "scanFish": "Rozpoznaj rybę",
+      "scanBird": "Rozpoznaj ptaka",
+      "saveOne": "Zapisz znalezisko w kolekcji",
+      "saveTwo": "Zapisz 2 znaleziska w kolekcji",
+      "shareOne": "Udostępnij rozpoznanie",
+      "openDiscover": "Odwiedź kartę Odkrywaj"
+    }
+  },
+  "share": {
+    "message": "Rozpoznałem/am {{category}} za pomocą NatureLens: {{name}}{{scientific}}{{confidence}}\n\nRozpoznawaj rośliny, owady, grzyby, ryby i ptaki ze zdjęcia:\n{{url}}",
+    "confidenceLine": "{{confidence}}% pewności"
+  },
+  "onboarding": {
+    "skip": "Pomiń",
+    "next": "Dalej",
+    "start": "Zacznij rozpoznawać",
+    "what": {
+      "title": "Wyceluj. Zrób zdjęcie. Poznaj.",
+      "body": "Sfotografuj cokolwiek żywego, a NatureLens powie ci w kilka sekund, co to jest — ze zdjęciami referencyjnymi, byś sam potwierdził."
+    },
+    "collect": {
+      "title": "Zbuduj własny dziennik terenowy",
+      "body": "Każde znalezisko możesz zapisać w kolekcji, oznaczyć i wrócić do niego później. Po drodze zdobywaj tokeny i odblokowuj nagrody."
+    },
+    "free": {
+      "title": "Pierwsze rozpoznanie jest darmowe",
+      "body": "Wypróbuj jedno rozpoznanie w każdej kategorii za darmo. Wykup subskrypcję dopiero, gdy zechcesz skanować bez limitu."
+    }
+  },
+  "recap": {
+    "title": "Twój miesiąc w naturze",
+    "entrySubtitle": "Zobacz podsumowanie i udostępnij",
+    "headline": "Poznałeś/aś {{count}} różnych gatunków",
+    "emptyTitle": "Nie ma jeszcze czego podsumować",
+    "emptyBody": "Rozpoznaj i zapisz coś w tym miesiącu, a podsumowanie pojawi się tutaj.",
+    "byCategory": "Według kategorii",
+    "highlight": "Wyróżnienie miesiąca",
+    "share": "Udostępnij podsumowanie",
+    "shareTitle": "Mój miesiąc w naturze",
+    "shareMessage": "W {{month}} rozpoznałem/am {{total}} znalezisk — {{species}} różnych gatunków — z NatureLens 🌿\n\nRozpoznawaj rośliny, owady, grzyby, ryby i ptaki ze zdjęcia:\n{{url}}",
+    "streakLine": "Aktualna seria: {{current}} dni · rekord: {{longest}}",
+    "stats": {
+      "total": "Zapisane znaleziska",
+      "species": "Gatunki",
+      "categories": "Kategorie",
+      "days": "Aktywne dni"
+    }
+  },
+  "subscription": {
+    "title": "Moja subskrypcja",
+    "entrySubtitle": "Status, plany i anulowanie",
+    "activeTitle": "Premium aktywne",
+    "activeBody": "Nieograniczone rozpoznania we wszystkich kategoriach. Dziękujemy za wsparcie NatureLens.",
+    "freeTitle": "Plan darmowy",
+    "freeBody": "Jedno darmowe rozpoznanie na kategorię. Wykup subskrypcję, by skanować bez limitu.",
+    "unknownTitle": "Nie udało się teraz sprawdzić",
+    "unknownBody": "Nie udało się połączyć z serwerem. Jeśli masz subskrypcję, Twój dostęp nie jest zagrożony — spróbuj za chwilę.",
+    "plansTitle": "Plany",
+    "manageTitle": "Zarządzaj lub anuluj",
+    "manageBody": "Twoja subskrypcja jest rozliczana przez Hotmart, więc anulowanie odbywa się na Twoim koncie Hotmart, nie tutaj. Po anulowaniu tam kolejne opłaty ustają, a dostęp trwa do końca opłaconego okresu.",
+    "openHotmart": "Otwórz moje konto Hotmart"
+  },
+  "notifications": {
+    "row": "Powiadomienia",
+    "on": "Włączone",
+    "off": "Wyłączone",
+    "enabledTitle": "Powiadomienia włączone",
+    "enabledBody": "Będziesz dostawać przypomnienia o podlewaniu roślin i utrzymaniu serii.",
+    "deniedTitle": "Powiadomienia zablokowane",
+    "deniedBody": "Zablokowałeś/aś powiadomienia dla tej strony. Zezwól na nie w ustawieniach przeglądarki dla naturelensapp.cloud.",
+    "errorTitle": "Nie udało się włączyć",
+    "errorBody": "Coś poszło nie tak. Spróbuj ponownie za chwilę."
+  },
+  "fieldGuide": {
+    "habitat": "Siedlisko",
+    "curiosity": "Czy wiesz, że",
+    "identifyCta": "Rozpoznaj takiego aparatem",
+    "photoCredit": "Zdjęcie: Wikimedia Commons · dotknij, by zobaczyć źródło",
+    "textCredit": "Tekst: Wikipedia · dotknij, aby przeczytać więcej"
+  },
+  "backup": {
+    "exportRow": "Utwórz kopię kolekcji",
+    "importRow": "Przywróć z kopii",
+    "exportEmptyTitle": "Nie ma jeszcze czego zapisać",
+    "exportEmptyBody": "Zapisz pierwsze znalezisko, a kopia będzie miała co przechować.",
+    "importDoneTitle": "Kolekcja przywrócona",
+    "importDoneBody": "Dodano {{added}} element(y). {{skipped}} już tu były.",
+    "importFailedTitle": "Nie udało się przywrócić",
+    "errorWrongFile": "Ten plik nie jest kopią NatureLens.",
+    "errorNewerVersion": "Ta kopia powstała w nowszej wersji aplikacji. Zaktualizuj i spróbuj ponownie.",
+    "errorStorageFull": "Na tym urządzeniu nie ma dość miejsca na te elementy.",
+    "errorGeneric": "Coś poszło nie tak przy czytaniu pliku."
+  },
+  "sound": {
+    "tapToRecord": "Dotknij, aby nagrać",
+    "recording": "Nagrywanie… zostało {{seconds}}s",
+    "analysing": "Słucham…",
+    "startLabel": "Rozpocznij nagrywanie",
+    "stopLabel": "Zatrzymaj i rozpoznaj",
+    "tipsTitle": "Aby uzyskać lepszy wynik",
+    "tip1": "Podejdź bliżej, jeśli możesz — odległość ma największe znaczenie.",
+    "tip2": "Skieruj telefon w stronę dźwięku i nie ruszaj się.",
+    "tip3": "Nagrywaj, gdy faktycznie śpiewa, a nie ciszę pomiędzy.",
+    "scopeNote": "Obejmuje ptaki, żaby, świerszcze, koniki polne i niektóre ssaki. Trenowany na nagraniach z natury — zwierzęta domowe i ruch uliczny go mylą.",
+    "identifiedBySound": "Rozpoznano po dźwięku · {{group}}",
+    "groupAmphibian": "Płaz",
+    "groupMammal": "Ssak",
+    "permissionTitle": "Mikrofon zablokowany",
+    "permissionBody": "Zezwól na dostęp do mikrofonu dla tej strony w ustawieniach przeglądarki i spróbuj ponownie.",
+    "unsupportedTitle": "Nagrywanie niedostępne",
+    "unsupportedBody": "Ta przeglądarka nie nagrywa dźwięku. Wypróbuj Chrome na Androidzie lub zainstaluj aplikację na ekranie głównym iPhone’a.",
+    "tooShortTitle": "Nagranie za krótkie",
+    "tooShortBody": "Nagraj co najmniej dwie sekundy, gdy zwierzę śpiewa.",
+    "failedTitle": "Nie udało się rozpoznać",
+    "failedBody": "Coś poszło nie tak z tym nagraniem. Spróbuj ponownie.",
+    "decodeFailedBody": "Nie udało się odczytać tego nagrania. Spróbuj ponownie.",
+    "notFoundBody": "Nic rozpoznawalnego w tym nagraniu. Podejdź bliżej lub nagrywaj, gdy śpiewa.",
+    "noContentBody": "Brak jeszcze opisu tego gatunku.",
+    "notWildlifeBody": "To brzmi jak pojazd, maszyna albo głos, a nie zwierzę. Spróbuj nagrać ponownie w cichszym miejscu."
+  },
+  "login": {
+    "signInRow": "Zaloguj się",
+    "signInSubtitle": "Korzystaj z subskrypcji na każdym urządzeniu",
+    "accountRow": "Moje konto"
+  }
+}

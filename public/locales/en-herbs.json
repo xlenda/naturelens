@@ -1,0 +1,492 @@
+{
+  "aloeVera": {
+    "overview": "Aloe vera is a succulent plant native to the Arabian Peninsula, prized for the clear, mucilaginous gel found within its thick, spiky leaves. For thousands of years across Egyptian, Greek, and other Mediterranean cultures, the gel has been applied to burns, cuts, and skin irritations, while the bitter yellow latex beneath the skin has been used as a traditional laxative.",
+    "preparation": "Fresh gel is sliced directly from the leaf and applied topically to the skin; the yellow latex is occasionally taken in small diluted amounts internally as a traditional laxative.",
+    "benefits": "Traditionally used to soothe sunburn, minor burns, and skin irritation, and occasionally taken internally in small amounts to relieve occasional constipation."
+  },
+  "lavender": {
+    "overview": "Lavender is a fragrant flowering shrub native to the Mediterranean, cultivated for its purple flower spikes and aromatic essential oil. Traditional European herbalism has long used the dried flowers and oil to calm the nerves, ease tension, and promote restful sleep, and folk remedies have also applied diluted oil to the temples for headaches.",
+    "preparation": "Dried flowers are steeped as a tea for 5-10 minutes, or the essential oil is diluted and applied to the temples or inhaled for relaxation.",
+    "benefits": "Traditionally used to ease stress and anxiety, promote restful sleep, and relieve tension headaches."
+  },
+  "peppermint": {
+    "overview": "Peppermint is a hybrid mint native to Europe, valued for its menthol-rich leaves and cooling aroma. Folk medicine across Europe and the Middle East has long used peppermint tea to calm an upset stomach and indigestion, while diluted peppermint oil has been rubbed on the temples to relieve tension headaches.",
+    "preparation": "Fresh or dried leaves are steeped as a tea for 5-10 minutes after meals; diluted peppermint oil is rubbed on the temples for headache relief.",
+    "benefits": "Traditionally used to relieve indigestion, gas, and stomach upset, and to soothe tension headaches when applied topically."
+  },
+  "germanChamomile": {
+    "overview": "German chamomile is a daisy-like flowering plant native to Europe and western Asia, whose small white-and-yellow blossoms have been dried for tea since antiquity. Traditional European folk medicine has used chamomile tea as a gentle nervine to calm restlessness and stress and as a carminative to soothe digestive upset.",
+    "preparation": "Dried flowers are steeped as a tea for 5-10 minutes, often taken before bed or after meals.",
+    "benefits": "Traditionally used to calm nerves and mild stress, promote relaxation before sleep, and ease indigestion and stomach discomfort."
+  },
+  "purpleConeflower": {
+    "overview": "Purple coneflower is a prairie wildflower native to central North America, whose roots, leaves, and flowers were used by Plains Indigenous peoples to treat infections and wounds. It became a staple of American folk medicine in the 19th and 20th centuries as a remedy taken at the first sign of a cold.",
+    "preparation": "Dried root or aerial parts are prepared as a tea or tincture, with tincture typically taken as 20-30 drops in water several times daily at the onset of illness.",
+    "benefits": "Traditionally used to support the immune system and shorten the duration and severity of colds and upper respiratory infections."
+  },
+  "rosemary": {
+    "overview": "Rosemary is an evergreen, needle-leafed shrub native to the Mediterranean, long associated with memory and mental clarity in ancient Greek and Roman tradition. Its aromatic leaves have also been used as a digestive bitter and brewed into tea to relieve headaches and stimulate circulation and alertness.",
+    "preparation": "Fresh or dried leaves are steeped as a tea for 5-10 minutes, or the essential oil is diluted and massaged into the temples or scalp.",
+    "benefits": "Traditionally used to sharpen mental focus and energy and ease headaches, and taken as a digestive aid after meals."
+  },
+  "holyBasil": {
+    "overview": "Holy basil, or tulsi, is a sacred aromatic herb native to the Indian subcontinent, central to Ayurvedic medicine and Hindu religious practice. Its leaves have long been steeped as an adaptogenic tea to help the body cope with stress, and traditionally used to ease coughs and respiratory congestion.",
+    "preparation": "Fresh or dried leaves are steeped as a tea for 5-10 minutes, often taken daily.",
+    "benefits": "Traditionally used as an adaptogen to help the body manage stress, support immune resilience, and relieve coughs and respiratory congestion."
+  },
+  "turmeric": {
+    "overview": "Turmeric is a bright orange rhizome in the ginger family, native to South Asia, that has colored and flavored Ayurvedic and Southeast Asian medicine for millennia. Its active compound curcumin underlies its traditional use for calming inflammation, aiding digestion, and speeding the healing of wounds.",
+    "preparation": "The dried, powdered root is simmered in water or milk (as \"golden milk\") or mixed into a paste with water for topical application to wounds and skin.",
+    "benefits": "Traditionally used to ease joint pain and inflammation, support digestion, and applied topically to promote wound healing and skin health."
+  },
+  "ginger": {
+    "overview": "Ginger is a knobby, pungent rhizome native to Southeast Asia, used for thousands of years in Chinese and Ayurvedic medicine as a warming digestive remedy. Fresh or dried ginger has traditionally been chewed, brewed, or added to food to settle nausea, ease indigestion, and calm minor aches.",
+    "preparation": "Fresh root is sliced and steeped as a tea for about 10 minutes, or a small piece is chewed directly to settle the stomach.",
+    "benefits": "Traditionally used to relieve nausea, motion sickness, and indigestion, and to ease minor muscle and joint discomfort."
+  },
+  "ginseng": {
+    "overview": "Ginseng is a slow-growing forest root native to East Asia, central to Traditional Chinese Medicine for over two thousand years as a premier restorative tonic. It has traditionally been taken to rebuild energy and vitality after illness or fatigue and to help the body adapt to stress.",
+    "preparation": "Dried root is simmered as a decoction for 20-30 minutes, or taken as a standardized tincture or powdered extract.",
+    "benefits": "Traditionally used to boost energy and stamina, support recovery from fatigue, and help the body cope with physical and mental stress."
+  },
+  "ashwagandha": {
+    "overview": "Ashwagandha is a small shrub with reddish berries native to India, North Africa, and the Middle East, whose root has been a cornerstone of Ayurvedic medicine for millennia. It is traditionally classified as a rasayana, or rejuvenating tonic, taken to ease stress, rebuild physical strength and stamina, and support restful sleep.",
+    "preparation": "Dried root powder is mixed into warm milk or water, typically about 1/4 to 1/2 teaspoon taken once or twice daily.",
+    "benefits": "Traditionally used to ease stress and anxiety, rebuild strength and stamina, and support restful sleep."
+  },
+  "elderberry": {
+    "overview": "Elderberry is a dark-berried shrub native to Europe, whose fruit and flowers have been used in European folk medicine for centuries. The berries have traditionally been cooked into syrups and taken at the first sign of a cold or flu to support the immune system and ease congestion.",
+    "preparation": "Ripe berries are cooked down with water and honey into a syrup, traditionally taken by the spoonful at the onset of cold or flu symptoms.",
+    "benefits": "Traditionally used to shorten the duration and severity of colds and flu and to ease respiratory congestion."
+  },
+  "valerian": {
+    "overview": "Valerian is a flowering perennial native to Europe and Asia, whose pungent-smelling root has been dried and used since ancient Greek and Roman times as a sleep aid. European herbalists have long relied on it to calm restlessness and nervous tension before bed.",
+    "preparation": "Dried root is steeped as a tea for 10-15 minutes or taken as a tincture, typically 20-30 drops in water shortly before bedtime.",
+    "benefits": "Traditionally used to ease restlessness and mild anxiety and to promote falling asleep more easily."
+  },
+  "witchHazel": {
+    "overview": "Witch hazel is a flowering shrub native to eastern North America, whose bark and leaves Native American tribes distilled into an astringent wash. Colonial settlers adopted the practice, and witch hazel extract has long been dabbed on bruises, swelling, and irritated skin.",
+    "preparation": "Bark and leaves are distilled or decocted into a liquid extract, which is applied topically to the skin with a cotton pad.",
+    "benefits": "Traditionally used as a topical astringent to reduce minor skin swelling, bruising, and irritation."
+  },
+  "goldenseal": {
+    "overview": "Goldenseal is a low-growing woodland plant native to eastern North America, whose bright yellow root was used by the Cherokee and other Indigenous peoples as a bitter tonic. It has traditionally been applied to sores and infections and taken internally to settle digestive complaints.",
+    "preparation": "Dried root is prepared as a decoction or tincture, or the powder is applied directly to skin sores; it is taken internally only in small doses due to its intense bitterness.",
+    "benefits": "Traditionally used to support digestive health and resistance to infection, and applied topically to help soothe minor skin sores and irritation."
+  },
+  "devilsClaw": {
+    "overview": "Devil's claw is a trailing plant native to the Kalahari Desert and savannas of southern Africa, named for the hooked fruits that cling to passing animals. Its tuberous root has long been used by traditional healers of the region to relieve joint pain and the stiffness of arthritis.",
+    "preparation": "Dried root is prepared as a decoction, steeped for 10-15 minutes, or taken as a standardized tincture or capsule.",
+    "benefits": "Traditionally used to relieve joint pain, stiffness, and discomfort associated with arthritis."
+  },
+  "africanWormwood": {
+    "overview": "African wormwood is a bitter, aromatic shrub native to southern and eastern Africa, considered one of the region's most widely used traditional medicines. Its leaves are traditionally steamed, brewed, or smoked to relieve coughs, congestion, and respiratory complaints.",
+    "preparation": "Fresh or dried leaves are steeped as a tea, or the steam from boiled leaves is inhaled to relieve nasal and chest congestion.",
+    "benefits": "Traditionally used to relieve coughs, colds, and congestion, and to settle digestive upset."
+  },
+  "yerbaMate": {
+    "overview": "Yerba mate is an evergreen holly species native to the subtropical forests of South America, whose leaves the Guaraní people have brewed as a stimulating daily beverage for centuries. Traditionally shared from a communal gourd, mate has long been valued both as an energizing drink and as a digestive aid.",
+    "preparation": "Dried, cut leaves are steeped in hot water in a gourd and sipped through a metal straw (bombilla), often refilled throughout the day.",
+    "benefits": "Traditionally used to boost energy and mental alertness and to support healthy digestion after meals."
+  },
+  "gotuKola": {
+    "overview": "Gotu kola is a small, creeping herb native to the wetlands of Asia, revered in Ayurvedic and traditional Southeast Asian medicine as a rejuvenating tonic. Its leaves have traditionally been used to speed the healing of wounds and skin conditions and to calm the mind under stress.",
+    "preparation": "Fresh or dried leaves are steeped as a tea, eaten fresh in salads, or made into a paste applied topically to wounds and skin.",
+    "benefits": "Traditionally used to support wound healing and skin health, and to calm the mind and ease stress."
+  },
+  "licoriceRoot": {
+    "overview": "Licorice root is a sweet-tasting root native to the Mediterranean and parts of Asia, used for centuries across Chinese, Ayurvedic, and Middle Eastern medicine. It has traditionally been prepared to soothe coughs and sore throats and to calm an upset stomach.",
+    "preparation": "Dried root is simmered as a decoction for 10-15 minutes, or chewed directly as a stick; it is also taken as a tincture or lozenge for the throat.",
+    "benefits": "Traditionally used to soothe coughs and sore throats, and to ease indigestion and stomach discomfort."
+  },
+  "neem": {
+    "overview": "Neem is a fast-growing evergreen tree native to the Indian subcontinent; its intensely bitter leaves, bark, and seed oil have been used for millennia in Ayurvedic and folk medicine as a purifying agent for skin and blood. It remains one of the most relied-upon plants in traditional Indian household medicine.",
+    "preparation": "Fresh or dried leaves are boiled into a decoction for topical washes or taken as a bitter tea, while the cold-pressed oil is applied directly to affected skin or hair.",
+    "benefits": "Traditionally used to treat skin eruptions such as acne, eczema, and boils, to cleanse wounds, and to address parasitic and fungal infections."
+  },
+  "amla": {
+    "overview": "Amla, or Indian gooseberry, is a small sour-tart fruit native to India and Southeast Asia, celebrated in Ayurveda as one of the richest natural sources of vitamin C. It forms the base of many rasayana (rejuvenating) tonics, most famously Chyawanprash and Triphala.",
+    "preparation": "The dried fruit is ground into a powder (churna) and mixed with water, honey, or ghee, or the fresh fruit is eaten raw, juiced, or preserved as murabba (candied fruit).",
+    "benefits": "Traditionally used to strengthen digestion, boost immunity and vitality, and support hair, skin, and overall rejuvenation."
+  },
+  "brahmi": {
+    "overview": "Brahmi is a small creeping herb found in wetlands across India and other tropical regions, classified in Ayurveda as a Medhya Rasayana, or brain-nourishing rejuvenative. It has traditionally been given to students and elders alike to support mental clarity and calm.",
+    "preparation": "Fresh leaf juice or dried leaf powder is mixed with water or ghee and taken daily, and it is also prepared as a mild leaf tea or infused into medicated oils for head massage.",
+    "benefits": "Traditionally used to sharpen memory and concentration, calm an overactive mind, and ease everyday stress and support restful sleep."
+  },
+  "guduchi": {
+    "overview": "Guduchi is a climbing shrub native to India and Southeast Asia whose stem is central to Ayurvedic medicine, where it is honored with the name Amrita, or 'root of immortality.' It has long been regarded as a premier rasayana for building resilience against illness.",
+    "preparation": "The stem is cut and simmered into a bitter decoction (kashaya), or dried and powdered for mixing into water or honey; concentrated stem extracts are also taken as tablets.",
+    "benefits": "Traditionally used to reduce fevers, support the body's immune response, and aid recovery from prolonged illness, alongside easing digestive discomfort."
+  },
+  "shatavari": {
+    "overview": "Shatavari is a climbing variety of asparagus native to India, whose tuberous roots are considered Ayurveda's foremost rejuvenative tonic for women. Its name, meaning 'she who possesses a hundred roots,' reflects its traditional reputation for fertility and vitality.",
+    "preparation": "The dried root is ground into a powder and simmered in milk or water, often with ghee and sweeteners, and taken daily as a tonic.",
+    "benefits": "Traditionally used to support lactation, balance female hormonal cycles, and soothe the digestive tract, while building overall vitality and stamina."
+  },
+  "arjuna": {
+    "overview": "Arjuna is a large deciduous tree native to the Indian subcontinent, whose bark has been a mainstay of Ayurvedic cardiac care for centuries. Classical texts describe it as a hridya, or heart-supporting, herb.",
+    "preparation": "The dried bark is simmered into a decoction, often boiled with milk, or taken as a standardized powder or tablet.",
+    "benefits": "Traditionally used to strengthen the heart muscle, support healthy circulation, and maintain overall cardiovascular vitality and stamina."
+  },
+  "haritaki": {
+    "overview": "Haritaki is the fruit of a large tree native to South Asia, revered in Ayurveda as the 'king of medicines' and the primary ingredient in the classic three-fruit formula Triphala. It has traditionally been used as a gentle daily rejuvenator for the digestive system.",
+    "preparation": "The dried fruit is powdered and taken with warm water or honey before bed, or simmered into a mild decoction.",
+    "benefits": "Traditionally used to support regular elimination, aid digestion, and assist the body's natural detoxification and immune resilience."
+  },
+  "bibhitaki": {
+    "overview": "Bibhitaki is the fruit of a tall tree native to South and Southeast Asia and, alongside amla and haritaki, forms one of the three fruits of Triphala. Traditional Ayurvedic texts describe it as a drying, mucus-clearing remedy.",
+    "preparation": "The dried fruit is ground into a powder and taken with warm water or honey, or combined with the other Triphala fruits as a nightly decoction.",
+    "benefits": "Traditionally used to clear excess mucus and support respiratory health, as well as to aid digestion and gentle detoxification."
+  },
+  "fenugreek": {
+    "overview": "Fenugreek is an annual herb native to the Mediterranean and Western Asia, whose small golden-brown seeds have flavored and healed South Asian households for generations. It is one of the most common kitchen remedies for digestive and lactation support.",
+    "preparation": "Seeds are soaked overnight in water and eaten or the soaking water drunk in the morning, or the seeds are dry-roasted and ground into a powder for tea or cooking.",
+    "benefits": "Traditionally used to ease indigestion and appetite loss, support milk supply in nursing mothers, and help maintain balanced blood sugar and steady energy."
+  },
+  "longPepper": {
+    "overview": "Long pepper is a flowering vine native to India and Southeast Asia, whose elongated fruit is one of the three pungent spices in Ayurveda's classic Trikatu blend. It has traditionally been valued for igniting digestive fire and clearing the respiratory tract.",
+    "preparation": "The dried fruit is ground into a powder and taken with honey or warm water, or combined with black pepper and ginger in the Trikatu formula.",
+    "benefits": "Traditionally used to stimulate digestion and appetite, and to loosen and clear congestion in coughs, colds, and respiratory conditions."
+  },
+  "sandalwood": {
+    "overview": "Sandalwood is a fragrant heartwood tree native to South Asia, whose cooling paste and oil have been used in Ayurveda and religious ritual alike to soothe the body and settle the mind. Its scent is closely tied to traditional meditation practice.",
+    "preparation": "The heartwood is ground with water into a fine paste and applied directly to the skin or forehead, or the essential oil is diffused or diluted for topical use.",
+    "benefits": "Traditionally used to cool inflamed or irritated skin, ease fevers, and calm the mind during meditation and rest."
+  },
+  "indianSarsaparilla": {
+    "overview": "Indian sarsaparilla is a sweet-rooted twining vine native to India, long used in classical Ayurvedic formulas as a cooling blood purifier. It is distinct from tropical American sarsaparilla but shares a similar traditional reputation.",
+    "preparation": "The dried root is simmered into a decoction or infused in water overnight, and is also powdered for mixing into tonics.",
+    "benefits": "Traditionally used to purify the blood for clearer skin, and to ease joint pain and inflammation."
+  },
+  "bael": {
+    "overview": "Bael is a fruit-bearing tree native to the Indian subcontinent, sacred in Hindu tradition and long relied upon as a digestive remedy. The unripe fruit in particular is a staple household treatment for intestinal complaints.",
+    "preparation": "The pulp of the unripe fruit is dried and powdered, or the fresh pulp is mixed with water and taken as a mild beverage.",
+    "benefits": "Traditionally used to soothe chronic diarrhea and dysentery, and to support overall digestive tract health."
+  },
+  "guggul": {
+    "overview": "Guggul is an aromatic resin tapped from a small thorny tree native to arid regions of India, forming the foundation of Ayurveda's Guggulu formulas. It has been used for centuries as a purifying, warming remedy for joints and metabolism.",
+    "preparation": "The purified resin is taken as a standardized extract or tablet, or traditionally simmered with herbal decoctions to prepare classical Guggulu formulations.",
+    "benefits": "Traditionally used to support healthy cholesterol levels and manage joint inflammation and stiffness."
+  },
+  "manjistha": {
+    "overview": "Manjistha is a climbing herb native to India and the Himalayan region, whose reddish root has long served in Ayurveda as a primary blood purifier. It is a common ingredient in formulas aimed at clear, healthy skin.",
+    "preparation": "The dried root is powdered and taken with water or honey, or simmered into a decoction for internal use and skin washes.",
+    "benefits": "Traditionally used to purify the blood for clear skin and wound healing, and to support lymphatic drainage."
+  },
+  "jatamansi": {
+    "overview": "Jatamansi is a fragrant flowering plant native to the high-altitude Himalayas, whose rhizome has long been prized in Ayurveda as a nervine sedative. It shares its aromatic reputation with its distant relative, spikenard, referenced in ancient texts.",
+    "preparation": "The dried rhizome is powdered and taken with warm milk or water, or infused into oil for a calming head and scalp massage before bed.",
+    "benefits": "Traditionally used to calm the nervous system, ease stress and anxiety, and promote restful sleep."
+  },
+  "astragalus": {
+    "overview": "Astragalus, known as huang qi, is a flowering plant native to northern China and Mongolia whose dried root is a foundational qi tonic in Traditional Chinese Medicine. It has traditionally been used to fortify the body's protective 'wei qi' energy against illness.",
+    "preparation": "The dried, sliced root is simmered into a decoction, often alongside other tonic herbs, or taken as a powdered extract.",
+    "benefits": "Traditionally used to support immune resilience, build stamina and energy, and promote wound healing."
+  },
+  "reishiMushroom": {
+    "overview": "Reishi, or ling zhi, is a woody bracket fungus that grows on decaying hardwoods in East Asia, revered by Daoist herbalists as the 'mushroom of immortality.' It has traditionally been used to calm the spirit, or shen, and support longevity.",
+    "preparation": "The dried, woody mushroom is simmered for an extended period into a decoction or tea, or taken as a powdered extract or tincture.",
+    "benefits": "Traditionally used to ease insomnia and restlessness, reduce stress, and support the immune system and overall vitality."
+  },
+  "dongQuai": {
+    "overview": "Dong quai, or dang gui, is an aromatic root native to China, long called the 'female ginseng' for its central role in nourishing blood and supporting women's reproductive health in Traditional Chinese Medicine. It has been used for over two thousand years in classical formulas.",
+    "preparation": "The dried root is sliced and simmered into a decoction, often combined with other blood-nourishing herbs, or taken as a tincture or powdered extract.",
+    "benefits": "Traditionally used to nourish and invigorate the blood, ease menstrual cramps and irregularity, and support overall vitality."
+  },
+  "gojiBerry": {
+    "overview": "Goji berries, or gou qi zi, are the small red fruits of a shrub native to China, traditionally eaten to nourish the liver and kidney yin in Traditional Chinese Medicine. They have long been associated with supporting vision and slowing the effects of aging.",
+    "preparation": "The dried berries are eaten as a snack, steeped in hot water or tea, or simmered into soups and tonic broths.",
+    "benefits": "Traditionally used to support immune function, boost energy and vitality, and nourish eye health and clear vision."
+  },
+  "schisandra": {
+    "overview": "Schisandra chinensis is a woody vine native to northern China and the Russian Far East, whose ripe red berries (wu wei zi) are prized in Chinese herbalism for containing all five flavors—sour, bitter, sweet, pungent, and salty—in one fruit. Traditionally classified as an astringent tonic, it has long been used to consolidate lung and kidney energy, steady the mind, and support the liver.",
+    "preparation": "Dried berries are simmered in water to make a decoction, often combined with other tonic herbs, or ground into a powder taken with warm water.",
+    "benefits": "Traditionally used to relieve chronic cough and shortness of breath, calm anxiety and support restful sleep, and help the body adapt to stress."
+  },
+  "chineseSkullcap": {
+    "overview": "Scutellaria baicalensis is a perennial herb native to China and neighboring regions, whose dried root (huang qin) has been a staple of Chinese medicine for over two thousand years. It is classified as a heat-clearing, damp-drying herb used in classical formularies to address febrile illness and infection.",
+    "preparation": "The dried, often stir-fried root is sliced and simmered for 20-30 minutes as part of a multi-herb decoction.",
+    "benefits": "Traditionally used to reduce fever, calm coughs with thick phlegm, and ease diarrhea or dysentery associated with intestinal damp-heat."
+  },
+  "rehmannia": {
+    "overview": "Rehmannia glutinosa is a flowering plant native to China, whose root (di huang) is used either raw and dried or, more traditionally, repeatedly steamed in wine to become 'shu di huang.' The steamed form is considered one of the primary kidney yin and blood tonics in Chinese medicine.",
+    "preparation": "The steamed, blackened root is simmered as a decoction alongside complementary tonic herbs, or ground into pills and pastes.",
+    "benefits": "Traditionally used to relieve fatigue, low back weakness, and night sweats associated with yin deficiency, and to nourish blood in cases of pallor or dizziness."
+  },
+  "chrysanthemum": {
+    "overview": "Chrysanthemum morifolium is a flowering plant cultivated across China, whose dried yellow or white blossoms (ju hua) are a widely used cooling herb in both Chinese medicine and folk tea culture. It is traditionally classified as a heat-clearing herb associated with the liver and lungs.",
+    "preparation": "Dried flower heads are steeped in hot water for several minutes as a tea, often alone or blended with goji berries or green tea.",
+    "benefits": "Traditionally used to relieve headaches and dizziness, soothe red or irritated eyes, and cool feverish conditions."
+  },
+  "japaneseHoneysuckle": {
+    "overview": "Lonicera japonica is a climbing vine native to East Asia, whose dried flower buds (jin yin hua) are among the most widely used heat-clearing, detoxifying herbs in Chinese medicine. It has been employed for centuries to address acute infections and inflamed skin conditions.",
+    "preparation": "Dried flower buds are steeped as a tea or simmered into a decoction for 10-15 minutes, often combined with forsythia.",
+    "benefits": "Traditionally used to reduce fever and sore throat in early-stage colds, and to treat boils, sores, and other inflamed skin eruptions."
+  },
+  "chineseCinnamon": {
+    "overview": "Cinnamomum cassia is an evergreen tree native to southern China, whose inner bark (rou gui) is regarded in Chinese medicine as a strongly warming herb that fortifies kidney yang and disperses cold. It differs from culinary Ceylon cinnamon in its thicker, more pungent bark traditionally reserved for medicinal use.",
+    "preparation": "The dried bark is simmered as a decoction, often in small amounts within tonic formulas, or powdered and taken in warm water or wine.",
+    "benefits": "Traditionally used to relieve cold-type abdominal and joint pain, improve circulation, and counter fatigue and coldness linked to low vital energy."
+  },
+  "poria": {
+    "overview": "Wolfiporia extensa (formerly Poria cocos) is a fungus that grows on the roots of pine trees, whose dried sclerotium (fu ling) is one of the most frequently used substances in Chinese medicine. It is classified as a dampness-draining, spleen-strengthening herb also valued for calming the spirit.",
+    "preparation": "The dried, diced sclerotium is simmered for 20-30 minutes as part of a multi-herb decoction.",
+    "benefits": "Traditionally used to relieve bloating and loose stools from digestive dampness, ease insomnia and restlessness, and support overall digestive strength."
+  },
+  "chineseYam": {
+    "overview": "Dioscorea polystachya is a climbing vine native to China, whose starchy tuber (shan yao) has long served as both a food and a gentle tonic herb. It is traditionally valued for nourishing the spleen, lungs, and kidneys simultaneously.",
+    "preparation": "The dried or fresh tuber is sliced and simmered into tonic porridges or decoctions, often alongside other qi-tonifying herbs.",
+    "benefits": "Traditionally used to strengthen digestion and appetite, ease chronic cough, and support stamina in states of general depletion."
+  },
+  "bupleurum": {
+    "overview": "Bupleurum chinense is a perennial herb native to China, whose dried root (chai hu) is a central ingredient in classical formulas for harmonizing the liver. It has been used for centuries to address disorders marked by alternating fever and chills or emotional constraint.",
+    "preparation": "The dried root is sliced and simmered for 20-30 minutes as part of a multi-herb decoction.",
+    "benefits": "Traditionally used to relieve alternating fever and chills, ease irritability and tension linked to stagnant liver energy, and support emotional balance under stress."
+  },
+  "notoginseng": {
+    "overview": "Panax notoginseng is a relative of ginseng cultivated in southwestern China, whose root (san qi) is prized as a premier herb for addressing bleeding and trauma. It has long been included in both internal formulas and topical wound powders in Chinese medicine.",
+    "preparation": "The dried root is powdered and taken with warm water, or the powder is applied directly to cuts and bruises.",
+    "benefits": "Traditionally used to stop bleeding and reduce bruising and swelling from injury, while also promoting healthy blood circulation."
+  },
+  "codonopsis": {
+    "overview": "Codonopsis pilosula is a climbing perennial native to China, whose dried root (dang shen) is used as a milder, more widely available alternative to Panax ginseng. It is classified as a qi tonic traditionally used to strengthen digestion and overall vitality.",
+    "preparation": "The dried root is sliced and simmered as a decoction, often included in daily tonic soups alongside other qi-building herbs.",
+    "benefits": "Traditionally used to relieve fatigue and low appetite, strengthen digestion, and support stamina during recovery from illness."
+  },
+  "foti": {
+    "overview": "Reynoutria multiflora (formerly Polygonum multiflorum) is a flowering vine native to China, whose root (he shou wu) is processed by repeated steaming in black bean liquid to create a tonic prized for nourishing liver and kidney essence. Raw and prepared forms are used differently, with the processed form reserved for tonic use.",
+    "preparation": "The processed, steamed and dried root is simmered as a decoction or ground into pills, traditionally taken as a long-term tonic.",
+    "benefits": "Traditionally used to combat fatigue and premature graying of hair, and to strengthen the low back and knees as part of anti-aging tonic regimens."
+  },
+  "yarrow": {
+    "overview": "Achillea millefolium is a feathery-leaved perennial native to Europe and temperate Asia, long nicknamed 'soldier's woundwort' for its historic battlefield use. Its aerial parts have been used across folk traditions to stanch bleeding and support wound healing, as well as to ease fevers and cramping.",
+    "preparation": "Fresh or dried leaves and flowers are crushed and applied directly to wounds, or dried aerial parts are steeped as a tea for internal use.",
+    "benefits": "Traditionally used to stop minor bleeding and speed healing of cuts, and to ease menstrual cramping and feverish colds."
+  },
+  "stJohnsWort": {
+    "overview": "Hypericum perforatum is a yellow-flowering perennial native to Europe, long used in folk medicine for low mood and nerve-related discomfort. Its flowering tops are infused in oil to create a red-tinted preparation traditionally applied to wounds, burns, and nerve pain.",
+    "preparation": "Fresh flowering tops are infused in oil over several weeks to make a topical oil, or dried flowers are steeped as a tea or taken as a tincture.",
+    "benefits": "Traditionally used to lift low mood and ease nervous tension, and applied topically to soothe minor wounds, burns, and nerve-related pain."
+  },
+  "sage": {
+    "overview": "Salvia officinalis is a Mediterranean shrub whose name derives from the Latin salvere, 'to be saved' or 'to heal,' reflecting its long reputation as a healing herb. Its aromatic leaves have been used since antiquity both as a culinary herb and as a remedy for the throat and digestive tract.",
+    "preparation": "Dried leaves are steeped as a tea, which can be drunk or used as a gargle, and are also used to season food for digestive support.",
+    "benefits": "Traditionally used to soothe sore throats and gum inflammation when gargled, and to ease indigestion and bloating when taken as a tea."
+  },
+  "thyme": {
+    "overview": "Thymus vulgaris is a low, aromatic shrub native to the Mediterranean, whose leaves and essential oil have been used for centuries as a remedy for coughs and chest congestion. It has also served in folk tradition as a general antiseptic and immune-supporting herb.",
+    "preparation": "Dried leaves are steeped as a tea or simmered into a syrup with honey, and the essential oil is used in chest rubs and steam inhalations.",
+    "benefits": "Traditionally used to loosen phlegm and ease coughs and bronchitis, and to support the body during colds and minor infections."
+  },
+  "marshmallow": {
+    "overview": "Althaea officinalis is a perennial herb native to Europe and western Asia, whose root and leaves contain abundant mucilage that soothes irritated tissue. It has been a staple of European apothecary practice for centuries, used for both respiratory and digestive complaints.",
+    "preparation": "The dried root is soaked in cold water for several hours to draw out its mucilage, producing a soothing infusion, or dried leaves are steeped as a milder tea.",
+    "benefits": "Traditionally used to soothe sore throats and coughs, and to calm irritated stomach and gut linings."
+  },
+  "potMarigold": {
+    "overview": "Calendula officinalis is a bright orange-flowered annual native to southern Europe, whose petals have long been infused into oils and salves for skin care. It is one of the most widely used skin-healing herbs in Western folk tradition.",
+    "preparation": "Fresh or dried petals are infused in oil to make a salve or cream, applied topically to the skin.",
+    "benefits": "Traditionally used to clean minor cuts and scrapes and calm inflamed, slow-healing skin such as rashes and mild burns."
+  },
+  "milkThistle": {
+    "overview": "Silybum marianum is a spiny, purple-flowered plant native to the Mediterranean, whose seeds contain silymarin and have been used since classical antiquity as a liver remedy. It became a mainstay of European herbal practice for supporting recovery after heavy eating or drinking.",
+    "preparation": "The ripe seeds are crushed and steeped as a tea, or ground into a powder taken with water; traditional use also included simply chewing the seeds.",
+    "benefits": "Traditionally used to support and protect liver function, particularly after overindulgence in rich food or alcohol."
+  },
+  "fennel": {
+    "overview": "Foeniculum vulgare is an aromatic Mediterranean plant whose aniseed-scented seeds have been chewed and brewed for generations to settle the digestive tract. It has a long history of use across European and Middle Eastern folk medicine as a gentle carminative, including for infants.",
+    "preparation": "Whole seeds are chewed directly after meals, or steeped as a tea for about 10 minutes; a very dilute, cooled infusion has traditionally been given to infants for colic.",
+    "benefits": "Traditionally used to relieve bloating, gas, and colic, and to ease indigestion after meals."
+  },
+  "stingingNettle": {
+    "overview": "Stinging nettle is a widespread perennial armed with fine stinging hairs on its leaves, native to Europe, Asia, and North America. Its aerial parts have been gathered each spring for centuries in European folk herbalism as a cleansing tonic and general restorative.",
+    "preparation": "Dried or blanched leaves (which neutralizes the sting) steeped as tea for 10-15 minutes, traditionally taken as a daily spring tonic.",
+    "benefits": "Traditionally used to relieve joint and muscle aches, support the body's natural cleansing processes, and act as a nourishing spring tonic for overall vitality."
+  },
+  "whiteHorehound": {
+    "overview": "White horehound is a bitter, downy-leaved mint-family herb native to the Mediterranean and naturalized worldwide, long valued in European folk medicine as an expectorant. Its leaves and flowering tops are the traditionally used parts, most famously boiled into horehound candy and cough syrup.",
+    "preparation": "Dried leaves and flowering tops decocted and boiled down with honey or sugar into a syrup or hard candy, or brewed as a bitter tea.",
+    "benefits": "Traditionally used to loosen phlegm and ease coughs, sore throats, and bronchitis, and taken as a bitter tonic to stimulate digestion."
+  },
+  "comfrey": {
+    "overview": "Comfrey, nicknamed \"knitbone,\" is a European perennial whose mucilage-rich root and leaves have been poulticed onto injuries for centuries. It is used strictly as an external remedy in traditional herbalism, valued for its role in soothing tissue during recovery.",
+    "preparation": "Fresh mashed root or leaves made into a moist poultice or paste and applied externally over unbroken skin, or infused into a salve.",
+    "benefits": "Traditionally used externally to soothe bruises, sprains, and closed fractures, and to calm inflamed or irritated skin."
+  },
+  "feverfew": {
+    "overview": "Feverfew is a bitter, daisy-like herb native to the Balkans and long naturalized across Europe, traditionally used as a folk remedy for head pain and fevers. The fresh or dried leaves are the part used in Western herbal tradition.",
+    "preparation": "A few fresh leaves chewed daily, or dried leaves steeped as tea for about 10 minutes.",
+    "benefits": "Traditionally used to prevent and ease migraines and recurring headaches, and to relieve associated aches and inflammation."
+  },
+  "mullein": {
+    "overview": "Mullein is a tall biennial with soft, downy leaves and a spike of yellow flowers, native to Europe and Asia and naturalized widely. Its leaves and flowers have long been used in European and Appalachian folk herbalism to soothe the respiratory tract and ears.",
+    "preparation": "Dried leaves steeped as tea (well strained to remove fine hairs), or flowers slowly infused in oil for several weeks, with the oil used as ear drops.",
+    "benefits": "Traditionally used to soothe coughs, sore throats, and bronchial irritation, with the infused flower oil traditionally applied for earache discomfort."
+  },
+  "hawthorn": {
+    "overview": "Hawthorn is a thorny hedgerow tree native to Europe, whose berries, flowers, and leaves have been steeped since antiquity as the continent's classic tonic for the heart and circulation. It holds a central place in European herbal tradition as a gentle remedy for a weak or \"anxious\" pulse.",
+    "preparation": "Dried berries, flowers, and leaves steeped as tea for 10-15 minutes, or taken as a tincture, typically over an extended daily course.",
+    "benefits": "Traditionally used to support heart function and circulation, and to calm nervous tension and an anxious, fluttering heartbeat."
+  },
+  "linden": {
+    "overview": "Linden, or lime flower, comes from the fragrant blossoms of the European lime tree, gathered each early summer and dried for tea in European folk medicine. It has traditionally been valued as a gentle nervine and fever remedy, especially for children and the elderly.",
+    "preparation": "Dried flowers steeped as tea for about 10 minutes, often taken hot at the onset of a cold or in the evening before bed.",
+    "benefits": "Traditionally used to promote relaxation and restful sleep, ease stress and nervous tension, and help break fevers during colds."
+  },
+  "meadowsweet": {
+    "overview": "Meadowsweet is a fragrant, creamy-flowered herb native to European wet meadows, traditionally used for fevers, aches, and stomach complaints. Its flowering tops contain salicylate compounds later isolated and chemically modified to create aspirin.",
+    "preparation": "Dried flowering tops and leaves steeped as tea for 10-15 minutes, taken several times through the day.",
+    "benefits": "Traditionally used to ease joint pain, headaches, and fevers, and to soothe an upset stomach and excess acidity."
+  },
+  "oshaRoot": {
+    "overview": "Osha is an aromatic root native to the high-elevation Rocky Mountains, long harvested by the Navajo, Ute, and other Indigenous peoples of the region. It is a cornerstone of Southwestern folk herbalism for supporting the respiratory system through colds and infections.",
+    "preparation": "Dried root chewed directly, or simmered as a decoction for 15-20 minutes and drunk as tea; also taken as a tincture.",
+    "benefits": "Traditionally used to ease sore throats, coughs, and respiratory infections, and to support the body's response during colds and flu."
+  },
+  "blackCohosh": {
+    "overview": "Black cohosh is a woodland perennial native to eastern North America, whose root was used by the Cherokee and other Eastern Woodland peoples as a women's health remedy. It became a staple of 19th-century American herbal medicine for menstrual and reproductive complaints.",
+    "preparation": "Dried root simmered as a decoction for about 20 minutes, or taken as a tincture in small measured doses.",
+    "benefits": "Traditionally used to ease menstrual cramps and discomfort, and to support labor and the childbirth process."
+  },
+  "devilsClub": {
+    "overview": "Devil's Club is a spiny understory shrub native to Pacific Northwest Coast rainforests, regarded by the Tlingit, Haida, and other Coastal peoples as one of the most important plants in their medicine chest. Its inner bark is the traditionally used part, prepared as a decoction or salve.",
+    "preparation": "Inner bark scraped from the stem and simmered as a decoction for 20-30 minutes, or dried and powdered into a salve applied to joints.",
+    "benefits": "Traditionally used to ease arthritis and joint pain, help the body resist infections, and address symptoms associated with blood sugar imbalance."
+  },
+  "wildBergamot": {
+    "overview": "Wild bergamot is a fragrant, thymol-rich mint native to North American prairies, long used by the Blackfeet and other Plains tribes to treat respiratory ailments. Its leaves and flowering tops are traditionally dried and brewed as tea.",
+    "preparation": "Dried leaves and flowering tops steeped as tea for about 10 minutes, often taken at the first sign of a cold.",
+    "benefits": "Traditionally used to relieve coughs, colds, and respiratory infections, and to settle an upset stomach."
+  },
+  "bearberry": {
+    "overview": "Bearberry, or uva ursi, is a low-growing evergreen shrub native to northern regions of North America, Europe, and Asia, whose leathery leaves were brewed by numerous Native American tribes and later adopted into European herbal practice. It has traditionally served as a urinary tract remedy and mild diuretic.",
+    "preparation": "Dried leaves steeped as tea for 10-15 minutes, traditionally taken for short courses rather than continuous daily use.",
+    "benefits": "Traditionally used to relieve urinary tract infections and associated discomfort, and to act as a mild diuretic."
+  },
+  "slipperyElm": {
+    "overview": "Slippery elm is a North American tree whose mucilage-rich inner bark was used by the Cherokee, Iroquois, and other Indigenous nations as a soothing remedy. Ground into powder, it forms a slick gel that has traditionally been used both internally and externally.",
+    "preparation": "Powdered inner bark mixed with water into a gruel and taken by mouth, or made into a paste and applied as a poultice to wounds.",
+    "benefits": "Traditionally used to soothe sore throats and coughs, calm digestive irritation, and support the healing of wounds and irritated skin."
+  },
+  "cascaraSagrada": {
+    "overview": "Cascara sagrada is a Pacific Northwest buckthorn tree whose bark was traditionally harvested and aged for at least a year by regional Indigenous peoples and later settlers, since fresh bark was considered too harsh for use. Its Spanish name, meaning \"sacred bark,\" reflects its long-standing reputation as a reliable laxative.",
+    "preparation": "Aged, dried bark simmered as a decoction, or taken as a tincture or capsule, typically at bedtime.",
+    "benefits": "Traditionally used as a natural laxative to relieve occasional constipation."
+  },
+  "cinchona": {
+    "overview": "Cinchona is an evergreen tree native to the Andean slopes of Peru and Bolivia, whose bitter bark was used by the Quechua peoples to treat fevers long before Europeans isolated its alkaloid quinine. It later became world-famous as the original source of quinine for treating malaria.",
+    "preparation": "Dried bark simmered as a decoction for 20-30 minutes, historically taken as a bitter tonic during fevers.",
+    "benefits": "Traditionally used to reduce fevers and, historically, to treat malarial infections, as well as taken as a bitter digestive tonic."
+  },
+  "catsClaw": {
+    "overview": "Cat's claw is a woody vine native to the Peruvian Amazon, named for its claw-like curved thorns, whose bark has long been brewed by the Asháninka and other Amazonian peoples. It is a traditional remedy for joint complaints and general immune support.",
+    "preparation": "Dried inner bark simmered as a decoction for 30-45 minutes, or taken as a tincture or capsule.",
+    "benefits": "Traditionally used to ease arthritis and joint inflammation, and to support the body's immune defenses."
+  },
+  "coca": {
+    "overview": "Coca is a shrub native to the Andean highlands of South America, whose leaves have been chewed and brewed by the Quechua and Aymara peoples for thousands of years as part of daily life. It is traditionally valued at high altitude for combating fatigue and the effects of thin mountain air.",
+    "preparation": "Fresh or dried leaves chewed together with a small amount of an alkaline substance, or steeped as mate de coca tea.",
+    "benefits": "Traditionally used to boost energy and endurance, reduce fatigue and hunger, and ease nausea and discomfort from altitude sickness."
+  },
+  "dragonsBlood": {
+    "overview": "Dragon's blood is the deep red latex sap tapped from a tree native to the Amazon rainforest, long used by Indigenous Amazonian peoples as a topical wound treatment. The sap is drawn directly from the bark and applied fresh to the skin.",
+    "preparation": "Fresh red latex sap applied directly in a thin layer onto cuts, wounds, or insect bites, where it dries to form a protective seal.",
+    "benefits": "Traditionally used as a natural antiseptic to clean and protect cuts and wounds, and to support skin healing."
+  },
+  "pauDarco": {
+    "overview": "Pau d'arco is a tall flowering tree native to Central and South American rainforests, whose inner bark has been brewed as tea by Indigenous Amazonian peoples for generations. It is traditionally regarded as a broad remedy for infections, fevers, and skin conditions.",
+    "preparation": "Dried inner bark simmered as a decoction for 15-20 minutes and taken as a tea.",
+    "benefits": "Traditionally used to help fight infections and fevers, and to help clear skin conditions."
+  },
+  "boldo": {
+    "overview": "Boldo is an evergreen shrub native to the central Chilean matorral, whose aromatic leaves have long been used by Mapuche healers and Chilean folk medicine as a bitter digestive and liver tonic. The leaves contain volatile oils and the alkaloid boldine, traditionally believed to stimulate bile flow and calm the stomach.",
+    "preparation": "Dried leaves are steeped as a bitter tea for 5-10 minutes, typically drunk after meals.",
+    "benefits": "Traditionally used to support liver function, stimulate bile production, and relieve indigestion, bloating, and mild stomach upset."
+  },
+  "copaiba": {
+    "overview": "Copaiba is a tall tree native to the Amazon rainforest and northern South America, from which a clear oleoresin is tapped directly from the trunk. Amazonian peoples have long applied this resin topically as an anti-inflammatory remedy for wounds and skin ailments.",
+    "preparation": "The raw resin is applied directly to cuts and inflamed skin, or diluted in a carrier oil for topical massage.",
+    "benefits": "Traditionally used to reduce inflammation, disinfect wounds, and promote healing of cuts and skin irritations."
+  },
+  "guarana": {
+    "overview": "Guarana is a climbing vine native to the Amazon basin, domesticated by the Sateré-Mawé people for its seeds, which have an exceptionally high natural caffeine content. Roasted and ground, the seeds have traditionally been pressed into sticks or paste and used as a stimulant.",
+    "preparation": "Roasted seeds are ground into a fine powder and mixed into water, juice, or a paste that is scraped off and dissolved as a drink.",
+    "benefits": "Traditionally used to boost energy, sustain alertness, and support mental focus during long periods of exertion."
+  },
+  "blackSeed": {
+    "overview": "Black seed, or black cumin, is a flowering plant native to South Asia and the Mediterranean whose small dark seeds are pressed for oil or used whole. Called \"the seed of blessing\" in Prophetic medicine, it has been a staple of Middle Eastern and South Asian folk remedies for centuries.",
+    "preparation": "Cold-pressed seed oil is taken by the teaspoon or in capsules, or the whole seeds are chewed or mixed with honey.",
+    "benefits": "Traditionally used to ease asthma and respiratory congestion, calm digestive upset, and treat skin infections and irritation."
+  },
+  "frankincense": {
+    "overview": "Frankincense is a resin tapped from Boswellia sacra trees native to the Arabian Peninsula and Horn of Africa, harvested by scoring the bark and collecting the hardened sap. Traded for millennia along ancient incense routes, it has served both ceremonial and medicinal purposes.",
+    "preparation": "The resin is burned as incense for inhalation, or made into a topical salve or diluted oil rubbed onto sore joints and skin.",
+    "benefits": "Traditionally used to relieve joint pain and inflammation, promote wound healing, and ease coughs and respiratory congestion."
+  },
+  "myrrh": {
+    "overview": "Myrrh is an aromatic resin harvested from Commiphora trees across the Horn of Africa and the Arabian Peninsula, collected much like frankincense. It has been valued since antiquity as a disinfectant and healing agent for wounds and oral or throat ailments.",
+    "preparation": "The resin is dissolved in alcohol or water as a tincture used for a mouth rinse or gargle, or applied directly to wounds as a powder or paste.",
+    "benefits": "Traditionally used to disinfect and heal wounds, soothe sore gums, and relieve sore throats."
+  },
+  "senna": {
+    "overview": "Senna is a flowering shrub native to Egypt and Sudan whose leaves and seed pods have been used since antiquity by Egyptian physicians as a reliable laxative. It remains one of the most widely used traditional botanical remedies for constipation.",
+    "preparation": "Dried leaves or pods are steeped as a tea, typically taken in the evening to produce a bowel movement the following morning.",
+    "benefits": "Traditionally used to relieve constipation and stimulate bowel movements."
+  },
+  "hibiscus": {
+    "overview": "Hibiscus, known as karkade in Egypt and Sudan, is a tropical plant whose deep red calyces are dried and steeped into a tart infusion. It has long been a household folk remedy across North Africa for cooling fevers and supporting circulation.",
+    "preparation": "Dried calyces are steeped in hot or cold water for 5-10 minutes to make a tart red infusion, often sweetened and served hot or chilled.",
+    "benefits": "Traditionally used to help manage high blood pressure and reduce fever."
+  },
+  "moringa": {
+    "overview": "Moringa is a fast-growing tree cultivated widely across Sub-Saharan Africa, prized for its highly nutrient-dense leaves. Traditionally used to combat malnutrition, it is also given to nursing mothers to help support lactation.",
+    "preparation": "Fresh or dried leaves are cooked into stews, ground into a powder stirred into porridge or water, or steeped as a tea.",
+    "benefits": "Traditionally used to combat malnutrition, reduce inflammation, and support milk supply in breastfeeding mothers."
+  },
+  "baobab": {
+    "overview": "Baobab, Africa's iconic \"tree of life,\" produces a large fruit whose dry, tangy pulp and fibrous bark have been used across the continent as both food and medicine. Traditional healers have long relied on it to address fevers and digestive illness, including malaria and diarrhea.",
+    "preparation": "Dried fruit pulp is dissolved in water or milk as a tangy drink, while the bark is boiled to make a decoction.",
+    "benefits": "Traditionally used to reduce fever, relieve diarrhea, and support recovery from malaria."
+  },
+  "rooibos": {
+    "overview": "Rooibos is a reddish-brown shrub native to South Africa's Cederberg mountains, traditionally harvested and fermented by the Khoisan and later adopted by Cape Dutch settlers as a caffeine-free brewed beverage. It has long served as a gentle folk remedy for allergic complaints and infant colic.",
+    "preparation": "Fermented, dried leaves and stems are steeped in boiling water for 5-10 minutes as a reddish tea, often given diluted to infants for colic.",
+    "benefits": "Traditionally used to ease allergy symptoms and soothe digestive discomfort and colic in infants."
+  },
+  "buchu": {
+    "overview": "Buchu is a small aromatic shrub native to South Africa's Cape region, whose pungent, oil-rich leaves were used by Khoisan healers as a traditional treatment for urinary and kidney complaints. It remains a well-known Cape folk remedy today.",
+    "preparation": "Dried leaves are steeped as a tea or soaked in brandy to make a traditional buchu tincture, taken to support urinary health.",
+    "benefits": "Traditionally used to help relieve urinary tract infections and support kidney health."
+  },
+  "cancerBush": {
+    "overview": "Known to the Khoi as \"kankerbos,\" Sutherlandia is a silvery-leaved shrub native to the dry regions of Southern Africa, long regarded as one of the region's most important traditional tonics. It has been used to help the body cope with stress, fatigue, and general debility.",
+    "preparation": "Dried leaves are steeped as a bitter tea, or ground into a powder taken in capsules for daily tonic use.",
+    "benefits": "Traditionally used to relieve stress, combat fatigue, and support overall vitality and immune resilience."
+  },
+  "umckaloabo": {
+    "overview": "Umckaloabo comes from the thick tuberous root of a geranium species native to South Africa's grasslands, traditionally harvested and used by Xhosa and Zulu healers. It has long served as a remedy for persistent coughs and chest ailments.",
+    "preparation": "The dried root is boiled to make a decoction, or processed into a tincture taken by the drop for coughs and chest complaints.",
+    "benefits": "Traditionally used to relieve coughs, bronchitis, and other respiratory infections."
+  },
+  "hoodia": {
+    "overview": "Hoodia is a spiny, cactus-like succulent native to the Kalahari Desert, traditionally chewed fresh by San hunters to endure long treks without food or water. It has been used as a natural appetite and thirst suppressant for generations.",
+    "preparation": "The fresh stem is peeled and chewed raw during extended hunting trips to stave off hunger and thirst.",
+    "benefits": "Traditionally used to suppress appetite and thirst and help sustain energy during prolonged physical exertion."
+  },
+  "henna": {
+    "overview": "Henna is a flowering shrub native to North Africa, the Middle East, and South Asia, best known for the reddish dye extracted from its dried, powdered leaves. Beyond decorative body art, folk medicine across these regions has applied henna paste topically to treat fungal skin conditions.",
+    "preparation": "Dried leaf powder is mixed with water into a paste and applied directly to affected areas of the skin.",
+    "benefits": "Traditionally used to treat fungal skin infections and soothe skin irritation."
+  },
+  "mastic": {
+    "overview": "Mastic is an aromatic resin tapped from incisions in the bark of the mastic tree, grown chiefly on the Greek island of Chios and across the Eastern Mediterranean. Chewed since antiquity, it has traditionally been used to soothe the stomach and digestive tract.",
+    "preparation": "Hardened resin tears are chewed directly as a gum, or ground into a powder and dissolved in water.",
+    "benefits": "Traditionally used to soothe stomach ulcers, ease indigestion, and calm general digestive complaints."
+  },
+  "carob": {
+    "overview": "Carob is a Mediterranean evergreen tree whose long, sweet pods have been used in Middle Eastern and North African folk medicine as a gentle remedy for digestive upset, particularly in children. The dried pod pulp is naturally rich in fiber and tannins.",
+    "preparation": "Dried pods are ground into a powder and mixed into water, milk, or porridge, especially for children with diarrhea.",
+    "benefits": "Traditionally used to relieve diarrhea and soothe digestive upset, especially in children."
+  }
+}

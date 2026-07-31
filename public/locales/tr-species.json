@@ -1,0 +1,314 @@
+{
+  "fishDetails": {
+    "clownfish": {
+      "overview": "Hint-Pasifik resiflerinde yaşayan küçük bir balık; turuncu gövdesini kesen üç beyaz şeritten hemen tanınır. Yetişkin hayatının tamamını, yakıcı dokunaçları çoğu balığı öldürecek olan tek bir deniz şakayığının içinde geçirir.",
+      "habitat": "Kızıldeniz'den kuzey Avustralya'ya uzanan sıcak ve sığ mercan resifleri ile lagünler; her zaman bir konak şakayıkla birlikte.",
+      "curiosity": "Her palyaço balığı erkek doğar. Her şakayıkta baskın bir üreme çifti bulunur; dişi öldüğünde baskın erkek cinsiyet değiştirip onun yerini alır."
+    },
+    "rainbowTrout": {
+      "overview": "Yanında uzanan yanardöner pembe şeritten adını alan bir soğuk su balığı. Anavatanı Kuzey Amerika ve Asya'nın Pasifik'e dökülen nehirleridir; bugün Antarktika dışında her kıtada yetiştiriliyor.",
+      "habitat": "Berrak, serin ve oksijeni bol nehirler ile göller. Denize göç edip geri dönen popülasyonlara steelhead denir.",
+      "curiosity": "Pembe eti doğal bir pigmentten değil, yediği kabuklulardan gelir; farklı bir yemle beslenen çiftlik alabalıkları beyaz etli büyür."
+    },
+    "atlanticSalmon": {
+      "overview": "Tatlı suda yumurtadan çıkan, yıllarca denizde beslenen ve yumurtlamak için doğduğu nehre geri dönen güçlü bir göçmen balık.",
+      "habitat": "Yetişkinlikte Kuzey Atlantik; üremek içinse Avrupa ve Kuzey Amerika'nın doğusundaki nehirler.",
+      "curiosity": "Tür adı olan salar “sıçrayan” anlamına gelir; somonlar nehir yukarı çıkarken üç metreyi aşan şelaleleri atlayabilir."
+    },
+    "northernPike": {
+      "overview": "Yassı, ördek gagasını andıran burnu ve geriye dönük dişlerle dolu ağzıyla uzun, zeytin yeşili bir pusu avcısı. Otların arasında kıpırdamadan bekler ve saniyenin çok küçük bir bölümünde saldırır.",
+      "habitat": "İrlanda'dan Sibirya'ya, oradan Alaska'ya kadar kuzey yarımkürenin otlu, ağır akan nehirleri ve gölleri.",
+      "curiosity": "Sırt ve anal yüzgeçleri kuyruğa çok yakın durur; bu vücut planı kovalamak için değil, tek bir patlayıcı hızlanma için kurulmuştur."
+    },
+    "commonCarp": {
+      "overview": "İri pullu, ağzının kenarında iki çift bıyığı olan gövdeli bir tatlı su balığı. İki bin yıldan uzun süredir yetiştiriliyor; Avrupa ve Asya'nın bazı bölgelerinde değerli bir besin, başka yerlerde ise ciddi bir istilacı zararlı.",
+      "habitat": "Yumuşak çamurlu tabanı olan sıcak, ağır akan ya da durgun sular: Antarktika dışında her kıtada nehirler, göller, göletler ve kanallar.",
+      "curiosity": "Sazanlar çamuru emip eleyerek beslenir; bu da dibi karıştırıp suyu bulandırır ve istila ettikleri gölleri asıl bu yüzden bozarlar."
+    },
+    "blueTang": {
+      "overview": "Siyah “palet” deseni ve sarı kuyruğuyla göz alıcı, canlı lacivert bir resif balığı. Tüm cerrah balıkları gibi kuyruk dibinde neşter keskinliğinde bir diken taşır.",
+      "habitat": "Hint-Pasifik'in mercan resifleri; genellikle saklanabileceği dallı mercanların yakınında küçük gruplar hâlinde.",
+      "curiosity": "Yavrular parlak sarıdır ve olgunlaştıkça maviye döner. Normalde yatık duran kuyruk dikeni ise balık tehdit altındayken yana doğru fırlar."
+    },
+    "largemouthBass": {
+      "overview": "Koyu bir yan bandı olan tıknaz, yeşil bir avcı; dünyada peşine en çok düşülen tatlı su sportif balığı.",
+      "habitat": "Saklanacak yeri olan sıcak göller, göletler ve ağır akan nehirler: batık ağaçlar, ot yatakları ve iskeleler.",
+      "curiosity": "Küçük ağızlı akrabasından çenesiyle ayırt edilir: geniş ağızlı levrekte üst çene gözün arka hizasını geçer."
+    },
+    "yellowfinTuna": {
+      "overview": "Çok uzun, orak biçimli sarı yüzgeçleri, metalik koyu mavi sırtı ve aşağı doğru gümüşe dönen gövdesiyle iri, torpido gövdeli bir okyanus balığı.",
+      "habitat": "Dünya genelinde sıcak açık okyanuslar; çoğunlukla ilk 100 metrede, ama beslenmek için çok daha derine dalar.",
+      "curiosity": "Vücudunu çevresindeki sudan sıcak tutabilir; bu sayede yavaş balıkların ağırlaştığı soğuk derinliklerde kasları çalışmayı sürdürür ve okyanusları baştan başa geçebilir."
+    },
+    "zebrafish": {
+      "overview": "Güney Asya nehirlerinden gelen küçük, çizgili bir balık; bilimin en çok incelediği hayvanlardan biri hâline geldi.",
+      "habitat": "Sığ, ağır akan tatlı sular: Hindistan, Bangladeş ve Nepal'deki çeltik tarlaları, dereler ve göletler.",
+      "curiosity": "Embriyoları saydamdır; araştırmacılar mikroskop altında bir kalbin ya da omurganın oluşumunu anlık olarak izleyebilir. Binlerce tıbbi çalışmada karşımıza çıkmasının sebebi de bu."
+    },
+    "redLionfish": {
+      "overview": "Kırmızı, beyaz ve kahverengi şeritli çarpıcı bir balık; yelpaze gibi açılan uzun yüzgeçlerinin arasında zehirli dikenler saklı. Güzel, ağır hareketli ve dokunulmaması gereken bir tür.",
+      "habitat": "Anavatanı Hint-Pasifik resifleri; bugün Karayipler ve batı Atlantik boyunca ciddi bir istilacı tür.",
+      "curiosity": "İstila ettiği sularda neredeyse hiç avcısı yoktur ve ağzına sığan hemen her şeyi yer; bazı ülkelerin zıpkınla avlanıp yenmesini teşvik etmesinin sebebi budur."
+    }
+  },
+  "birdDetails": {
+    "barnSwallow": {
+      "overview": "Derin çatallı kuyruğu ve pas rengi boğazıyla ince yapılı, sırtı parlak mavi bir kuş; neredeyse hep açık arazinin üstünde hızlı, alçak ve kıvrımlı uçarken görülür.",
+      "habitat": "Kuzey yarımkürede tarlalar, çayırlar ve su kıyıları; kışı güney yarımkürede geçirir.",
+      "curiosity": "Dünyanın en yaygın kırlangıcıdır ve tamamen havada beslenir; su içerken bile uçuşunu bozmadan gölet yüzeyini sıyırır."
+    },
+    "houseSparrow": {
+      "overview": "Tıknaz, kahverengi ve gri bir kuş; erkeğinde siyah bir gerdanlık ve kestane rengi ense, dişisinde sade kum rengi bir tüy örtüsü ve soluk bir göz çizgisi bulunur.",
+      "habitat": "İnsan neredeyse orada: neredeyse her kıtada şehirler, köyler, çiftlikler ve limanlar.",
+      "curiosity": "Binlerce yıl önce insan tarımının peşine takılıp Orta Doğu'dan çıktı ve bugün insanın olmadığı yerlerde neredeyse hiç yaşamıyor."
+    },
+    "commonKingfisher": {
+      "overview": "Elektrik mavisi ve yanık turuncu renkli, hançer gagalı minik bir kuş; genellikle suyun hemen üstünden geçen bir renk şimşeği olarak görülür.",
+      "habitat": "Avrupa, Asya ve Kuzey Afrika boyunca üzerine tüneyecek dalları olan ağır akan, berrak nehirler, dereler ve kanallar.",
+      "curiosity": "Suya baş aşağı dalar ve bir metre derinden balık çıkarabilir; sonra balığı bir dala vurur ve dikenleri yatsın diye baştan yutar."
+    },
+    "peregrineFalcon": {
+      "overview": "Sivri kanatlı, güçlü bir doğan; üstü arduvaz grisi, altı enine çizgili ve gözünün altında belirgin, koyu bir “bıyık” var.",
+      "habitat": "Antarktika dışında her kıta: kayalıklar, kıyılar ve giderek artan biçimde gökdelenler ile katedral kuleleri.",
+      "curiosity": "Av dalışında 300 km/s'yi aşar; yaşayan en hızlı hayvan odur. Burun deliklerindeki küçük çıkıntılar, bu hızda akciğerleri patlamadan nefes almasını sağlar."
+    },
+    "greatBlueHeron": {
+      "overview": "Uzun bacaklı, boylu, mavimsi gri bir su kuşu; ağır ve mızrak gibi bir gagası, gözünün arkasında siyah bir sorgucu vardır.",
+      "habitat": "Kuzey ve Orta Amerika boyunca sığ tatlı ve tuzlu sular: bataklıklar, göl kıyıları, nehirler ve sahiller.",
+      "curiosity": "Dakikalarca kıpırdamadan durur, sonra gözün takip edemeyeceği hızda saldırır. Uçarken boynunu sıkı bir S'ye katlar; balıkçılı turnadan işte böyle ayırt edersiniz."
+    },
+    "rockPigeon": {
+      "overview": "Herkesin bildiği şehir güvercini: gri gövde, yeşile ve mora çalan boyun, kanatta iki koyu şerit. Yüzyıllar süren evcilleştirme yüzünden tüy deseni müthiş bir çeşitlilik gösterir.",
+      "habitat": "Aslında deniz kayalıkları ve kayalık boğazlar; bugün ise kayaların yerini çıkıntılar ve pencere pervazlarının aldığı dünya şehirleri.",
+      "curiosity": "Anne de baba da yavruya “kursak sütü” denen, proteince zengin bir salgı verir; bu özelliği paylaşan yalnızca birkaç kuş türü daha var."
+    },
+    "europeanRobin": {
+      "overview": "Küçük, tombul, kahverengi bir kuş; göğsü ve yüzü canlı turuncudur ve yakındaki bir daldan insanları dikkatle izleme huyu vardır.",
+      "habitat": "Avrupa ve batı Asya boyunca ormanlar, çalı çitleri ve bahçeler.",
+      "curiosity": "Bahçıvanların peşinden gider, çünkü altüst edilen toprak solucanları açığa çıkarır; bu alışkanlık aslında orman tabanını eşeleyen yaban domuzlarıyla başladı. Turuncu göğsü iki cinsiyet de taşır ve ikisi de yıl boyu ötüşle bölge savunur."
+    },
+    "mallard": {
+      "overview": "Klasik yüzey ördeği: erkeğinde parlak yeşil bir baş ve beyaz boyun halkası, dişisinde benekli kahverengi tüyler ve mavi bir kanat aynası.",
+      "habitat": "Kuzey yarımkürede hemen her tatlı ya da acı su: doğal sulak alanlardan şehir parkı göletlerine kadar.",
+      "curiosity": "Neredeyse bütün evcil ördek ırklarının atasıdır. O meşhur yüksek sesli vaklama yalnızca dişiden gelir; erkeğin sesi kısık, hırıltılı bir tıkırtıdır."
+    },
+    "scarletMacaw": {
+      "overview": "Canlı kırmızı, sarı ve mavi tüyleri, uzun sivrilen kuyruğu ve güçlü kanca gagasıyla çok iri bir papağan.",
+      "habitat": "Güney Meksika'dan Amazon havzasına kadar nemli ova yağmur ormanları; genellikle ağaç tepelerinde.",
+      "curiosity": "Ömür boyu tek eşle yaşar ve elli yılı aşabilir. Gagası, ormandaki başka hiçbir kuşun kıramayacağı sert kabukları kırar; sürüler nehir kıyısındaki kil yataklarında toplanıp mineralce zengin toprak yer."
+    },
+    "emperorPenguin": {
+      "overview": "En büyük penguen türü: bir metreyi aşan boyu, siyah beyaz tüyleri ve boynunun iki yanındaki altın turuncu lekeleriyle tanınır.",
+      "habitat": "Antarktika deniz buzu; Antarktika kışı boyunca üreyen tek kuştur.",
+      "curiosity": "Erkek, iki ay süren karanlık ve tipi boyunca tek yumurtayı bir deri kıvrımının altında, ayaklarının üstünde dengeler ve hiçbir şey yemez; bu sırada dişi beslenmek için denize döner."
+    }
+  },
+  "insectDetails": {
+    "sevenSpotLadybird": {
+      "overview": "5-8 mm boyunda, kubbe sırtlı, parlak kırmızı bir böcek; her kanat kapağında üç siyah nokta, yedincisi ise ikisinin birleştiği yerde oturur. Hem erginler hem de gri, timsah görünümlü larvaları yaprak biti avlar; bahçıvanların onları hep bit basmış saplarda bulmasının sebebi budur. Avrasya'nın yerlisidir, Kuzey Amerika'ya çoktan taşınmıştır ve \"uğur böceği\" denince çoğu insanın gözünde canlanan böcek odur.",
+      "habitat": "Isırgan öbekleri, çitler, bostanlar ve yaprak biti taşıyan her bitki. Sonbaharda erginler kışı dışarıda geçirmek için kalabalık kümeler halinde toplanır: yaprak döküntüsünde, kurumuş ot tutamlarında, çit diplerinde, gevşek kabukların altında ve içi boş bitki saplarında — çoğu zaman her yıl aynı korunaklı köşelere dönerek.",
+      "curiosity": "Bu savunmanın adı refleks kanaması: sıkıştırıldığında kendi hemolenfini bacak eklemlerinden damlalar halinde dışarı iter. Damlalardaki alkaloitler o kadar acıdır ki kuş böceği genellikle zarar vermeden tükürür."
+    },
+    "commonEarwig": {
+      "overview": "12-15 mm boyunda, yassı, parlak kahverengi bir böcek; arkasında bir çift kıskaç taşır — erkeklerde belirgin biçimde kıvrık, dişilerde neredeyse düz. Kısa, deri gibi kanat kapaklarının altında yelpaze biçimli iri arka kanatlar, bir kâğıt bulmacası gibi kırılıp istiflenmiş durur. Adının aksine kulaklarla hiçbir işi yoktur; kıskaçlarını savunmada, kur yapmada ve o kanatları açmaya yardım etmekte kullanır.",
+      "habitat": "Gündüzleri nemli, dar köşelerde saklanır: saksı altları, yaprak döküntüsü, çit tahtalarının arası, yıldız çiçeklerinin içi, katlanmış bahçe mobilyaları. Geceleri çıkıp yaprak biti, polen ve yumuşak meyve yer.",
+      "curiosity": "Yumurtalarını koruyan az sayıdaki böcekten biridir: anne haftalarca her yumurtayı tek tek çevirip temizleyerek küflenmelerini önler, yavrular çıktıktan sonra da onları beslemeyi sürdürür."
+    },
+    "commonPillWoodlouse": {
+      "overview": "18 mm'ye kadar uzayan, kurşuni gri zırhlı bir izopot; rahatsız edilince sımsıkı bir top haline gelir. Üst üste binen plakaları ve top olma alışkanlığı, onu ancak kaçıp saklanabilen daha yassı akrabalarından ayırır. Kökeni Akdeniz'dir, ama artık insan yaşayan her kıtanın bahçelerinde karşınıza çıkar.",
+      "habitat": "Taş, saksı, kütük ve ıslak mukavva altları — nemin yüksek kaldığı her yer. Solungaca benzeyen solunum yapılarının nemli kalması gerektiğinden kuru ve açık zeminde uzun süre dayanamaz.",
+      "curiosity": "Suyu arka ucundan içer: boru biçimli iki üropodundan kılcal etkiyle yukarı çeker. Kanı da mavidir; oksijeni demir temelli hemoglobinle değil, bakır temelli hemosiyaninle taşır."
+    },
+    "houseFly": {
+      "overview": "6-7 mm boyunda, göğsünde dört koyu çizgi taşıyan gri bir sinek; ısıran çeneleri yerine süngerimsi bir yastığı vardır. Hiçbir şeyi çiğneyemez: katı yiyeceğin üstüne tükürüğünü boşaltır, onu çözer ve sıvıyı geri emer. İnsan yerleşimiyle birlikte dünyanın her yanına taşındı; bugün insanın yaşadığı her kıtada yaşıyor.",
+      "habitat": "Yumurta bırakacak nemli organik madde bulunan her sıcak yer: kompost yığınları, çöp kutuları, gübre, gider ağızları. Yaz sıcağında yumurtadan ergine kadar bütün döngü yaklaşık bir haftada tamamlanır.",
+      "curiosity": "Arka kanatları, saniyede yaklaşık 200 kez kanatlarla ters fazda çırpınan iki topuz biçimli haltere indirgenmiştir; jiroskop gibi çalışırlar. Onları alırsanız sinek havada dengesini koruyamaz."
+    },
+    "gardenSnail": {
+      "overview": "Yaklaşık 3 cm çapında, buruşuk kahve-krem kabuklu bir yumuşakça. Kökeni Akdeniz olsa da bugün Avrupa, Amerika kıtaları, Avustralya, Güney Afrika ve Doğu Asya'ya yerleşmiş durumda. Bitkileri, binlerce küçük kitinli diş taşıyan esnek bir şerit olan radulasıyla kazır. Her birey aynı anda hem erkek hem dişidir.",
+      "habitat": "Duvarlar, çit dipleri, saksılar ve binaların gölgede kalan yüzleri; nemli gecelerde hareketlenir. Kuraklıkta ya da soğukta kabuk ağzını kireçli bir zarla mühürleyip bekler — bazen aylarca.",
+      "curiosity": "Çiftleşmeden önce her salyangoz, eşinin bedenine kalsiyum karbonattan sertleşmiş bir ok saplar. Okun üzerindeki salgı, karşı tarafın üreme kanalını değiştirir; böylece oku atanın sperminin daha büyük bölümü yumurtaya ulaşacak kadar hayatta kalır."
+    },
+    "westernHoneyBee": {
+      "overview": "12-15 mm boyunda, şeritli bir arı; on binlerce bireylik kolonilerde yaşar. Avrupa, Afrika ve Batı Asya'nın yerlisidir, geri kalan hemen her yerde ise insan eliyle bakılır. İyi bir çiçek alanından dönen tarlacı arı, dikey petek üzerinde sallanma dansı yapar: dansın açısı güneşe göre yönü, süresi ise mesafeyi bildirir. Yaz işçileri yaklaşık altı hafta yaşar; ana arı birkaç yıl dayanabilir.",
+      "habitat": "Yabani koloniler ağaç kovuklarında, duvar boşluklarında ve çatı aralarında balmumu petek örer; bakılan koloniler kovanlarda yaşar. Tarlacılar rutin olarak evden iki üç kilometre uzaktaki çiçeklere gider.",
+      "curiosity": "Koloni kış uykusuna yatmaz. Kışın sıkı bir top oluşturup uçuş kaslarını titretir; dışarısı donarken kümenin çekirdeğini 20-30°C civarında tutar. Kış sonunda yavru büyütme yeniden başlayınca bu sıcaklığı 35°C'ye çıkarır ve tüm bu süre boyunca yakıt olarak depoladığı balı yakar."
+    },
+    "paintedLady": {
+      "overview": "5-6 cm kanat açıklığında, turuncu-siyah desenli, koyu kanat uçlarında beyaz benekler taşıyan bir kelebek; dünyanın en geniş yayılışlı kelebeklerinden biri. Tırtılları deve dikeni, ebegümeci ve ısırganla beslenir; erginler bazı yıllarda muazzam sayılarda görünür, bazı yıllarda neredeyse hiç yoktur. Radar çalışmaları onları yerden yüzlerce metre yukarıda göç ederken izledi.",
+      "habitat": "Hemen her türden açık, çiçekli arazi: boş alanlar, yol kenarları, bahçeler, yağmur sonrası çöller. Avrupa, Asya, Afrika, Avustralya ve Kuzey Amerika'da bulunur. Antarktika dışında bulunmadığı tek kıta Güney Amerika'dır.",
+      "curiosity": "Yıllık turun tamamı kabaca 12.000-15.000 km eder ve Sahra'yı geçmeyi içerir; her bir etabı, o yolculuğu daha önce hiç yapmamış böcekler uçar."
+    },
+    "cellarSpider": {
+      "overview": "Soluk renkli, aşırı uzun bacaklı bir örümcek; gövdesi 8-10 mm, bacak açıklığı 7 cm'ye ulaşır ve genellikle gevşek bir ipek karmaşasında baş aşağı asılı durur. Ağında yapışkan yoktur; av, arka bacaklarla uzaktan savrulan ipekle sarılıp sarmalanır. İnsan yüküyle taşınarak bugün neredeyse tüm dünyada binalarda yaşıyor.",
+      "habitat": "Tavan köşeleri, bodrumlar, merdiven boşlukları, garajlar ve mobilya arkaları — kapalı, rahatsız edilmeyen ve sıcak yerler; soğuk kışları dışarıda zor atlatır.",
+      "curiosity": "Rahatsız edildiğinde gövdesini ağın içinde kendi hattı bulanıklaşacak kadar hızlı döndürür; bu, avcının nişan almasını zorlaştırır. Ayrıca kendinden büyük örümcekleri düzenli olarak öldürür."
+    },
+    "argentineAnt": {
+      "overview": "2-3 mm boyunda, küçük ve sade kahverengi bir karınca; kaldırım kenarlarında, süpürgeliklerde ve mutfak tezgâhlarında yoğun izler oluşturur. Yuvalarında çok sayıda kraliçe bulunur ve sınır savunmazlar; komşu yuvalar rekabet etmek yerine birleşir. Güney Amerika'daki Paraná havzasının yerlisidir; toprakla, saksı bitkileriyle ve kargoyla altı kıtaya taşınmıştır.",
+      "habitat": "Ilıman ve Akdeniz ikliminde kaldırım taşlarının, saksıların, malçın ve kapı eşiklerinin altında sığ yuvalar; her zaman neme yakın, izleri de içeride herhangi bir şeker kaynağına uzanır.",
+      "curiosity": "Akdeniz kıyısı boyunca yayılan popülasyonu yaklaşık 6.000 km uzunluğunda bir süperkoloni oluşturur; ayrı kıtalardan toplanan işçiler bile birbirini rakip değil, yuva arkadaşı olarak tanır."
+    },
+    "commonEarthworm": {
+      "overview": "25 cm'ye kadar uzayan, kırmızımsı kahverengi bir solucan; kuyruğu yassı ve daha açık renklidir, gövdesinin üçte bir kadar aşağısında ise klitellum denen şişkin bir bant taşır. İki metre derinliğe inebilen kalıcı, dikey bir tünel açar ve geceleri yüzeye çıkıp yaprakları içeri sürükler. Kökeni Avrupa'dır; Kuzey Amerika'ya, Asya'ya ve güney yarımküreye sonradan taşınmıştır.",
+      "habitat": "Bahçelerin, parkların ve meraların nemli, asidik olmayan toprağı. Akciğeri yoktur; oksijeni derisinden alır ve gaz alışverişi için derisinin nemli kalması gerekir. Bu yüzden sıcak, kuru asfaltta çabucak ölür ve yer üstü yolculuklarını ıslak gecelerde yapar — nemli zemin, tünel kazarak gidebileceğinden çok daha fazla yol almasını sağlar.",
+      "curiosity": "Darwin, solucanların yaprakları nasıl taşıdığını sınamak için onlara kâğıt üçgenler verdi ve hepsini sivri uçlarından kavradıklarını gördü — bir tünele en kolay kayan açı."
+    }
+  },
+  "fungiDetails": {
+    "flyAgaric": {
+      "overview": "Al kırmızıdan turuncuya çalan, beyaz siğillerle beneklenmiş iri şapkalı bir mantar; o siğiller, genç mantarı saran örtünün kalıntılarıdır. Zehirlidir ve etkin bileşikleri ibotenik asit ile muskimoldür — bunlar beyinde, \"sihirli mantar\" denen türlerdeki psilosibinden epeyce farklı çalışır.",
+      "habitat": "Kuzey yarımküre boyunca huş, çam ve ladin köklerinin ortağı olarak yaşar; dikilen iğne yapraklılarla birlikte güneye, Yeni Zelanda'ya, Avustralya'ya, Şili'ye ve Güney Afrika'ya taşınmıştır.",
+      "curiosity": "Muskarin ilk kez bu türden ayrıştırıldı ve adını ondan aldı; oysa mantarda yalnızca eser miktarda bulunur. Yaygın adı ise ortaçağdan kalma bir alışkanlıktan gelir: sinekleri sersemletmek için mantar parçaları süte konurdu."
+    },
+    "deathCap": {
+      "overview": "Soluk zeytin yeşiliyle yeşilimsi arasında şapkası, beyaz lamelleri, sapında bir halkası ve dibinde kadeh biçimli bir kesesi olan orta boy bir mantar. İçindeki amatoksinler, her hücrenin kendi genlerini okumak için kullandığı RNA polimeraz II enzimini durdurur; en ağır hasarı karaciğer alır. Yarım şapka bir yetişkin için öldürücü doz olabilir.",
+      "habitat": "Avrupa'nın meşe, kayın ve kestane ormanlarının yerlisi. Fidanlıklardan gelen ağaçların kök topraklarıyla dünyaya yayıldı; bugün Kaliforniya'da, ABD'nin doğusunda, Avustralya'da ve Güney Amerika'da da bitiyor.",
+      "curiosity": "Zehirlenme aldatıcıdır: belirtiler genellikle yemekten ancak altı ila on iki saat sonra başlar, sonra bir gün ya da daha uzun süre hafifler — bu sırada karaciğer sessizce yıkılmayı sürdürür."
+    },
+    "buttonMushroom": {
+      "overview": "Dünyada en çok yetiştirilen mantarlardan biri ve Batı mantar endüstrisinin belkemiği. Yılda milyonlarca ton üretilir — tarlada değil, karanlık ve iklimi denetlenen odalarda, kompostlanmış saman ve gübre yataklarında. En büyük üreticiler Çin ve ABD; hasat yıl boyunca, kapalı alanda ve elle yapılır.",
+      "habitat": "Doğada Avrupa ve Kuzey Amerika'nın çayırlarında, kumullarında ve yol kenarlarında çıkar; ticari üretimde ise gün ışığını hiç görmez, turba örtülü bir kompost yatağında meyve verir.",
+      "curiosity": "bisporus adı aslında bir tarif. Lamelli mantarların çoğu her bazidyumdan dört spor fırlatır, bu tür ise genellikle iki tane üretir; böylece her spor tam bir çekirdek çifti devralır ve tek başına verimli bir misel oluşturabilir."
+    },
+    "brewersYeast": {
+      "overview": "Yan tarafından tomurcuklanarak yavru hücreler çıkaran mikroskobik bir mantar; oksijensiz kaldığında şekeri etanol ve karbondioksite çevirir. Aynı tür hem ekmeği kabartır hem birayı, şarabı ve sakeyi mayalar; genetiği değiştirilmiş ırkları ise tanklarda insülin ve aşı proteini üretmek için çoğaltılır.",
+      "habitat": "Doğada olgun meyvelerin üzerinde, meşe kabuklarında ve öz su akıntılarında yaşar; evcilleşmiş soyları ise fırınlarda, bira fabrikalarında ve endüstriyel fermentörlerde.",
+      "curiosity": "Maya ile insan o kadar çok temel hücresel donanımı paylaşıyor ki bir deneyde mayanın yaşamsal genlerinin yaklaşık yarısı insandaki karşılıklarıyla değiştirildi ve hücreler büyümeyi sürdürdü."
+    },
+    "zombieAntFungus": {
+      "overview": "Marangoz karıncalarının paraziti; bugün her biri belirli bir konak karıncaya ayarlanmış bir tür kompleksi sayılıyor. Bulaşan işçiler koloniyi terk eder, çenelerini bir yaprak damarına ya da dala kenetler ve orada ölür; günler sonra kafalarının arkasından bir sap fışkırıp aşağıdaki karınca yollarına spor döker.",
+      "habitat": "Tayland, Brezilya, Japonya ve Batı Afrika'nın nemli tropik ve subtropik ormanları; bulaşmış karıncalar alçak bitki örtüsünde yoğun mezarlıklar halinde toplanır.",
+      "curiosity": "Tayland ormanlarında karıncalar yerden yaklaşık 25 cm yukarıda ısırır; nem oradaki mantara tam uyar. Mikroskop görüntüleri, mantar hücrelerinin karıncanın kas liflerini sardığını, beyne ise hiç girmediğini gösteriyor."
+    },
+    "humongousFungus": {
+      "overview": "Sonbaharda iğne yapraklı ağaç gövdelerinin çevresinde kümeler halinde çıkan bal renkli, lamelli bir mantar; ama ömrünün neredeyse tamamını kabuk altındaki beyaz misel tabakaları ve rizomorf denen siyah, ayakkabı bağı gibi kordonlar olarak geçirir. Ağaçları öldürür; orman işletmecileri onu bir harika değil, bir patojen olarak görür.",
+      "habitat": "Kuzey Amerika, Avrupa ve Asya'nın iğne yapraklı ormanları; ladin, göknar ve çamı hedef alır. Rekortmen birey, doğu Oregon'daki Malheur Ulusal Ormanı'nda büyüyor.",
+      "curiosity": "Genetik örneklemeler, kilometrelerce uzaktaki mantarların yaklaşık 965 hektara yayılan tek bir klona ait olduğunu gösterdi; yaş tahminleri kabaca 2.500 yıldan başlıyor."
+    },
+    "bitterOyster": {
+      "overview": "Birkaç santim genişliğinde, sert, açık kahverengi, yelpaze biçimli bir mantar; ölü sert odun üzerinde üst üste binen katmanlar halinde büyür ve odunu soluk bir life dönüştürür. Kuzey Amerika'nın doğusundan toplanan örnekler biyolüminesandır; aynı türün Avrupa'dakileri genellikle değildir — kimlik değil, kimya farkı.",
+      "habitat": "Kuzey Amerika, Avrupa ve Asya'nın ılıman ormanlarında ölü meşe, huş ve kayın; çoğu zaman aynı devrik kütükte üst üste birkaç yıl meyve verir.",
+      "curiosity": "Işıma yeşilde, 520 nanometre dolayında doruğa çıkar ve o kadar soluktur ki gözünüzün onu seçmesi için birkaç dakika tam karanlık gerekir. Arkasındaki lusiferinin — 3-hidroksihispidin — ışıyan bütün mantarlarda ortak olduğu anlaşıldı."
+    },
+    "penicilliumMould": {
+      "overview": "Kadifemsi mavi-yeşil koloniler kuran, kenarı açık renkli, yaygın bir küf; sporlarını fırça biçimli saplardan salar — penicillus Latincede \"küçük fırça\" demek. Bakterilerin hücre duvarlarını tamamlamasını engelleyen penisilini salgılar ve tesadüfi keşfi antibiyotik çağını açtı.",
+      "habitat": "Dünyanın her yerinde toprak, nemli iç mekân yüzeyleri ve bozulan yiyecekler. Tarihi değiştiren kültür ise havadan geldi: bir Londra laboratuvarına konan tek bir başıboş spor.",
+      "curiosity": "Fleming'in ırkı onlarca yıl Penicillium notatum diye etiketlendi; birkaç işaret geninin DNA dizilimi 2011'de onu yeniden sınıflandırdı. Sporun bir alt kattaki mikoloji laboratuvarından yukarı süzüldüğü düşünülüyor."
+    },
+    "chytridFungus": {
+      "overview": "Bir kitrit: hâlâ yüzebilen kadim bir mantar soyunun üyesi; suya kuyruklu sporlar bırakır. Kurbağaların, karakurbağalarının ve semenderlerin keratin dolu derisine yerleşir, derinin tuz ve su dengesini bozar; duyarlı türlerde bu kalp durmasıyla biter.",
+      "habitat": "Amfibi bulunan her kıtada dereler, göletler ve nemli ormanlar. Genetik çalışmalar kökenini Doğu Asya'ya dayandırıyor; oradan dünyaya canlı hayvan ticaretiyle yayıldı.",
+      "curiosity": "2019 tarihli bir derleme, 500'den fazla amfibi türündeki azalmayı ve bunların yaklaşık 90'ının yok olmuş sayılmasını bu mantara bağladı — tek bir patojene atfedilen, belgelenmiş en büyük biyoçeşitlilik kaybı."
+    },
+    "whiteTruffle": {
+      "overview": "Yüzeyin 5 ila 30 cm altında gelişen, soluk renkli, yumrulu, patates biçimli bir mantar; meşe, kavak, fındık ve söğüdün ince köklerini sararak toprak mineralleriyle ağaç şekerini takas eder. Yüzeye hiç çıkmadığı için sporlarını taşıtmak üzere rüzgâra değil, kokuya ve hayvanlara güvenir.",
+      "habitat": "Kuzey ve orta İtalya'nın kireçli toprakları, hepsinden çok da Alba çevresindeki Piemonte tepeleri; ayrıca İstria ve Balkanlar'ın bazı bölgeleri. Avcılar onu eğitilmiş köpeklerle bulur — köpekler, domuzların aksine buldukları şeyi yeme eğiliminde değildir.",
+      "curiosity": "Siyah trüfler aşılanmış fidanlarla bahçelerde yetiştirilir, ama bu tür bir yüzyıl boyunca her denemeye direndi; ilk doğrulanmış kültür mantarları ancak 2019'da Fransa'dan bildirildi."
+    }
+  },
+  "cropDetails": {
+    "maize": {
+      "overview": "Tonaj olarak dünyanın en yüksek verimli tahılı; insanı, hayvanı ve yakıt rafinerilerini besleyen dev, tek yıllık bir ot. Tek bir başak, koçana dizilmiş ve kapçıklarla sarılmış birkaç yüz tane taşıyabilir. Antarktika dışında her kıtada yetiştirilir.",
+      "habitat": "Deniz seviyesinden And Dağları'nda 3.000 metrenin üstüne, Kanada'dan Güney Afrika'ya kadar ekilir; yabani akrabası teosinte hâlâ güneybatı Meksika'nın mevsimlik kurak yamaçlarında yetişir.",
+      "curiosity": "Mısır, yaklaşık 9.000 yıl önce Meksika'nın Balsas Vadisi'nde evcilleştirildi ve artık insansız yaşayamıyor: kapçıklı koçan dağılmadığı için tanelerin kendi kendine saçılma imkânı yok."
+    },
+    "cassava": {
+      "overview": "Her biri birkaç kilo çekebilen şişkin, nişastalı depo kökleri için yetiştirilen odunsu bir çalı. Mısırı doğrudan öldürecek fakir, asitli toprakları ve uzun kuraklıkları kaldırır. Çiğ kökleri siyanür veren bileşikler içerir, bu yüzden mutlaka işlenmesi gerekir.",
+      "habitat": "Dünya genelinde alçak tropikler: başladığı yer olan Amazon havzasının güney kıyısından Batı Afrika'ya ve Güneydoğu Asya'ya kadar; çoğu zaman tahıl için fazla yorulmuş topraklarda.",
+      "curiosity": "Genetik çalışmalar, kültürü yapılan bütün manyokları güneybatı Brezilya ve Bolivya'daki yabani popülasyonlara dayandırıyor. Portekiz gemileri onu 1500'lerde Afrika'ya götürdü; bugün dünyanın en büyük üreticisi Nijerya."
+    },
+    "arabicaCoffee": {
+      "overview": "Herdem yeşil bir çalı ya da küçük ağaç; çekirdekleri kırmızı, kirazı andıran meyvenin tohumlarıdır — genellikle meyve başına iki tane. Dünya kahvesinin kabaca %60'ını karşılar, geri kalanın çoğu robustadır. En çok yetiştiren ülke Brezilya'dır.",
+      "habitat": "Serin, sisli tropik yaylalar; tipik olarak 1.000 ile 2.000 metre arası. Yabani popülasyonları hâlâ güneybatı Etiyopya'daki dağ ormanlarının gölgeli alt katında yetişiyor.",
+      "curiosity": "Coffea arabica, Etiyopya'da robusta ile Coffea eugenioides melezlenip kromozomlarını ikiye katladığında ortaya çıktı. Yemen'e, oradan da Avrupa seralarına götürülen çok az sayıda bitki, bugün yetiştirilen ürünün büyük bölümünün atası oldu."
+    },
+    "soybean": {
+      "overview": "İki ila dört tohum taşıyan tüylü baklaları olan, çalımsı ve tek yıllık bir baklagil. Tohumları hem protein hem yağ bakımından alışılmadık ölçüde zengindir; soyanın dünya yağlı tohum ticaretine hâkim olmasının sebebi budur. Bitki, kök nodülleri sayesinde kendi azotunu bağlar.",
+      "habitat": "Ilıman-sıcak ve subtropik tarım alanları; her şeyden çok Brezilya serradosu, Arjantin pampaları ve ABD'nin Ortabatısı. Yabani atası, Doğu Asya'nın nehir kıyılarında ve tarla kenarlarında yetişen ince bir sarmaşıktır.",
+      "curiosity": "Yabani Glycine soja, küçük, sert ve siyah tohumlu ince bir sarılıcıdır; Çin'de kabaca 5.000 yıl önce evcilleştirildi. Brezilya 1960'lardan önce neredeyse hiç soya ekmiyordu, bugün dünyanın en büyük üreticisi."
+    },
+    "sugarcane": {
+      "overview": "Kamışları üç ila beş metreye ulaşan ve sakarozu tohumda değil sapta biriktiren dev bir tropik ot. Ticari kamış, daha dayanıklı yabani Saccharum spontaneum ile melezdir ve tohumla değil, hep sap çelikleriyle dikilir. Dünya şekerinin büyük bölümünü karşılar.",
+      "habitat": "Bol yağış ya da sulama alan sıcak ovalar; kabaca 30° kuzey ile 30° güney arası. En geniş alanları açık ara Brezilya ve Hindistan ekiyor.",
+      "curiosity": "Yaklaşık 8.000 yıl önce Yeni Gine'de evcilleşen kamış, batıya — şekerin ilk kez kristalleştirildiği Hindistan'a, oradan da Atlantik plantasyonlarına — yayıldı. Brezilya bugün kamış hasadının yaklaşık yarısını etanol yakıtına ayırıyor."
+    },
+    "breadWheat": {
+      "overview": "Neredeyse başka her üründen daha geniş bir tarım alanına ekilen, ılıman iklimin tek yıllık otu. Her başak yaklaşık 30-50 tane taşır; tanedeki gluten proteinleri hamurun gaz tutup kabarmasını sağlar. Üç farklı ot türünden devraldığı altı takım kromozomu vardır.",
+      "habitat": "Antarktika dışında her kıtada ılıman ve Akdeniz tarım alanları; Kanada prerilerinden Pencap'a kadar. Yabani atası Aegilops otu hâlâ Bereketli Hilal'den Hazar'a uzanan yamaçlarda yetişiyor.",
+      "curiosity": "Yaklaşık 8.000-9.000 yıl önce evcil gernik buğdayı, yabani ot Aegilops tauschii ile melezlendi. Kırılgan, dağılan başakları olan bu sıradan bitkinin genomu, ekmeğe hamurunu uzatabilme niteliğini veriyor."
+    },
+    "asianRice": {
+      "overview": "Sap ve köklerinden geçen hava kanalları sayesinde durgun suda yaşayabilen tek yıllık bir ot. Dünya nüfusunun kabaca yarısının doğrudan temel besini. Taneler, nişastalı endospermi saran kavuz ve kepek katmanından ayrılarak öğütülür.",
+      "habitat": "Muson Asyası boyunca su basmış çeltik tarlaları ve yağmurla beslenen araziler; ayrıca Batı Afrika, Mississippi vadisi ve güney Brezilya. Yabani Oryza rufipogon hâlâ Asya'nın bataklıklarında ve hendeklerinde yetişiyor.",
+      "curiosity": "Asya pirinci yaklaşık 9.000 yıl önce Çin'in Yangtze havzasında Oryza rufipogon'dan evcilleştirildi. Afrika pirinci Oryza glaberrima ise yaklaşık 3.000 yıl önce iç Nijer deltasında bağımsız olarak evcilleştirildi ve sonradan köleleştirilmiş Batı Afrikalı çiftçilerle Atlantik'i geçti."
+    },
+    "potato": {
+      "overview": "Yumruları için yetiştirilen bir patlıcangil; o yumrular kök değil, şişmiş yeraltı gövdeleridir. Toprak üstünde beyazdan mora çiçekler açan yapraklı bir bitkidir ve minik domates gibi görünen küçük yeşil meyveleri zehirlidir. Yeşermiş ya da filizlenmiş yumrular da aynı acı glikoalkaloitleri biriktirir.",
+      "habitat": "Dünya genelinde serin iklimler: And altiplanosunda 3.500 metrenin üstünden Çin ve Hindistan'ın tarlalarına kadar. Bugün en çok patatesi Çin hasat ediyor.",
+      "curiosity": "Yaklaşık 8.000 yıl önce güney Peru'da acı yabani türlerden evcilleştirilen patates, Avrupa'ya 1500'lerde çok küçük bir genetik örnekle ulaştı; And çiftçileri ise hâlâ tek bir bölgede binlerce ayrı adlı çeşidi yaşatıyor."
+    },
+    "banana": {
+      "overview": "Ağaç değil, dev bir ot: gövde dediğimiz şey sıkıca sarılmış yaprak diplerinden oluşan bir sütundur ve bitki bir kez meyve verdikten sonra kurur. İhraç edilen muzların çoğu, tek bir kısır triploid çeşit olan Cavendish'tir; piçlerden ve doku kültüründen çoğaltılır.",
+      "habitat": "Dünya genelinde yağışlı tropik ovalar. En çok üreten Hindistan ve Çin, en çok ihraç eden Ekvador; tohumlu yabani Musa türleri ise hâlâ Güneydoğu Asya ve Yeni Gine ormanlarında yetişiyor.",
+      "curiosity": "Yeni Gine yaylalarındaki Kuk Bataklığı kazıları muz tarımını kabaca 7.000 yıl öncesine tarihliyor. Her Cavendish bitkisi genetik olarak aynı olduğundan, toprak mantarı Fusarium Tropik Irk 4 bütün ihracat ürününü tehdit ediyor — tıpkı önceki bir ırkın geçen yüzyılda Gros Michel çeşidini silip süpürmesi gibi."
+    },
+    "sweetOrange": {
+      "overview": "Mis kokulu beyaz çiçekler açan herdem yeşil bir ağaç; meyvesinin suyu, sıvı dolu keseciklere dönüşmüş tüylerden gelir. Ticari ağaçların neredeyse hepsi, meyvesi için değil hastalığa dayanıklılığı için seçilmiş bir anaca aşılanmış klonlardır.",
+      "habitat": "Kışları ılıman subtropik kuşaklar: güneydoğu Brezilya, Florida, Akdeniz havzası ve güney Çin. Ata türleri güney ve güneydoğu Asya ormanlarından gelir.",
+      "curiosity": "Melez güney Çin'de ortaya çıktı, tüccarlarla batıya gitti ve 1500'lerde Portekiz gemileriyle Brezilya'ya vardı; bugün en çok portakalı Brezilya üretiyor. Turunçgil tohumları çoğu zaman ana ağaçtan klonlanmış fazladan embriyolar taşır, dolayısıyla bir fidan ebeveyninin birebir kopyası olabilir."
+    }
+  },
+  "soundDetails": {
+    "tawnyOwl": {
+      "overview": "Yaklaşık 40 cm boyunda, tıknaz, yuvarlak kafalı bir orman baykuşu; benekli kahverengi tüyleriyle ağaç kabuğunun önünde adeta görünmezdir. Neredeyse tam karanlıkta sesle avlanır, gündüzü bir gövdeye yapışmış ya da bir kovuğa sıkışmış halde geçirir. Yayıldığı her yerde en çok duyulan, en az görülen kuşlardan biridir.",
+      "habitat": "Olgun geniş yapraklı ormanlar, korular, mezarlıklar ve iri ağaçlı eski şehir mahalleleri; Britanya ve İber Yarımadası'ndan Avrupa boyunca İran'a ve batı Sibirya'ya, ayrıca Kuzey Afrika'ya kadar. İrlanda'da bulunmaz.",
+      "curiosity": "Bölge ötüşü sonbaharda ve kış sonunda doruğa çıkar; yapraksız ağaçlar sesin yüzlerce metre gitmesine izin verir. Bir çift, aynı orman parçasını on yıl boyunca elinde tutabilir."
+    },
+    "commonCuckoo": {
+      "overview": "Atmaca büyüklüğünde, ince yapılı, uzun kuyruklu gri bir kuş; enine çizgili karnı ve alçaktan düz uçuşu, ötücü kuşları yuvalarından kaçıracak kadar atmacaya benzer. Dişiler yumurtalarını başka türlerin yuvasına bırakıp gider; 100'den fazla konak tür kaydedilmiştir. Çoğu insan bu kuşu bilerek görmeden yıllar önce sesini tanır.",
+      "habitat": "Avrupa ve kuzey Asya boyunca orman kenarları, sazlıklar, fundalıklar ve açık tarım alanları; kışı Sahra altı Afrika'da ve Güney Asya'da geçirir.",
+      "curiosity": "İki notalı ötüş kabaca inen bir küçük üçlüdür ve açık arazide bir kilometre ya da daha uzağa taşınır. Ses oynatma deneyleri, konak kuşların dişinin fokurtulu kıkırtısına neredeyse avlanan bir atmacaya verdikleri tepkiyi verdiğini gösteriyor."
+    },
+    "commonNightingale": {
+      "overview": "Kızılgerdandan ancak biraz büyük, sade kahverengi bir kuş; neredeyse hiç ortaya çıkmaz, sık çalılığın derinliğinden öter. Tek bir erkeğin dağarcığı kabaca 180-260 ayrı ezgi tipine ulaşır: ani ıslıklar, derin hırıltılar ve uzun yükselişler. Avrupa, Kuzey Afrika ve Batı Asya'da ürer, kışı Afrika'da geçirir.",
+      "habitat": "Yere yakın sık örtüsü olan çalılıklar, baltalıklar ve çalılı orman kenarları; çoğu zaman su kıyısında ya da otlanmış tarla sınırları boyunca.",
+      "curiosity": "Berlin'in gürültülü sokaklarında yapılan kayıtlar, bir metreden ölçüldüğünde 95 desibeli aşan tepe seslerle öten erkekleri yakaladı: trafikle yarışmak için seslerini yükseltiyorlar."
+    },
+    "europeanTreeFrog": {
+      "overview": "Küçük, pürüzsüz, parlak yeşil bir kurbağa; her iki yanında koyu bir çizgi, parmak uçlarında ise tırmanmaya yarayan yapışkan diskler taşır. Erkekler ilkbaharda üreme göletlerinde toplanır ve çoğunlukla hava karardıktan sonra sıra sıra, üst üste binen seslerle çağırır. Üreme mevsimi dışında tırmanıcıdır, yer seviyesinde pek görülmez.",
+      "habitat": "Orta ve güneydoğu Avrupa'da kamış ve böğürtlenle çevrili güneşli göletler, hendekler ve su basmış çayırlar. Üreme mevsimleri arasında çalıların ve çitlerin metrelerce yukarısında oturur.",
+      "curiosity": "Ses 2,5 kHz dolayında doruğa çıkar ve bir erkek bunu tek gecede binlerce kez yineleyebilir. Çağırmak, omurgalılarda ölçülmüş en pahalı enerji harcamalarından biridir; erkekler mevsim boyunca kilo kaybeder."
+    },
+    "americanBullfrog": {
+      "overview": "Kuzey Amerika'nın en büyük kurbağası; burnundan kuyruk sokumuna 20 cm'ye varır, zeytin yeşili ve ağır gövdelidir. Erkekler yaz boyunca kıyıda bölge tutar, gece gündüz çağırır. Pek çok yere sokulmuştur ve bugün birkaç kıtada yerleşik bir istilacıdır.",
+      "habitat": "Kalıcı ılık sular: göl kenarları, ağır akan nehirler, barajlar ve çiftlik göletleri. Kuzey Amerika'nın doğusunun yerlisidir; Brezilya, Japonya, Çin ve güney Avrupa'nın bazı bölgelerine yerleşmiştir.",
+      "curiosity": "Sesin kalınlığı gövde boyunu izler; koroda en pes ses genellikle en iri erkeğe aittir. Erkekler, gözden çok daha geniş kulak zarlarıyla dişilerden ayrılır."
+    },
+    "cicadaOrni": {
+      "overview": "Yaklaşık 3 cm boyunda, gri-kahverengi bir Akdeniz ağustosböceği; saydam kanatları koyu beneklerle işaretlidir ve görünüşünden çok sesiyle tanınır. Erkekler gövdelerden ve dallardan, eşit aralıklarla bölünen kuru bir \"zzt-zzt-zzt\" çıkarır. Dişiler hiç ses üretmez.",
+      "habitat": "Akdeniz çevresinde çamlar, zeytinler, çınarlar ve meyve bahçeleri; İber Yarımadası ve Kuzey Afrika'dan İtalya ve Yunanistan üzerinden Türkiye'ye kadar.",
+      "curiosity": "Ses, timbal denen bir çift kaburgalı plakadan gelir; bunlar saniyede yüzlerce kez teneke kutu kapağı gibi içeri çöker. Arkalarındaki karın boşluğu büyük ölçüde boştur — öten bir erkek, esasen bir amplifikatördür."
+    },
+    "houseCricket": {
+      "overview": "Yaklaşık 2 cm boyunda, soluk saman kahvesi bir cırcır böceği; aslen Güneybatı Asyalıdır, bugün binaların sıcak kaldığı her yerde yaşar. Cırlayan erkeklerdir; uzun, iğneyi andıran yumurta borusuyla tanınan dişiler sessizdir. Dünyada en çok yetiştirilen böceklerden biridir.",
+      "habitat": "Sıcak insan mekânları: kazan daireleri, fırınlar, çöp sahaları, ısıtılmış barakalar ve üretim çiftlikleri. Dışarıda ılıman bölgelerde sıcak ayları, tropiklerde ise yılın tamamını geçirebilir.",
+      "curiosity": "Kulakları ön bacaklarında, dizin hemen altındadır; cırlama hızı sıcaklıkla birlikte artar — aynı oda, sıcak bir gecede serin bir geceye göre daha hızlı ses verir."
+    },
+    "greatGreenBushCricket": {
+      "overview": "7 cm'ye varan, ot yeşili bir çalı çekirgesi; antenleri gövdesinden uzundur. İri bir böcek olmasına rağmen bir çitin içinde onu seçmek neredeyse imkânsızdır. Erkekler çalıların ve uzun bitkilerin tepesinden, çoğu zaman gecenin büyük bölümü boyunca öter. Avrupa, Kuzey Afrika ve Orta Asya'ya kadar yayılır.",
+      "habitat": "Uzun ve kaba bitki örtüsü: böğürtlen, çitler, çalılıklar, yol kenarları ve bağ sınırları; genellikle yerden bir iki metre yukarıda öter.",
+      "curiosity": "Sesin enerjisinin büyük bölümü, insan işitmesinin tam sınırında, 20 kHz'in üstündedir; bu yüzden çocuklar, yanlarındaki yetişkinlerin zar zor fark ettiği bir erkeği çoğu zaman net duyar."
+    },
+    "blackHowlerMonkey": {
+      "overview": "Cinsiyet farkı alışılmadık ölçüde belirgin bir Güney Amerika maymunu: ergin erkekler siyah, dişiler ve yavrular açık sarımsıdır. Gruplar şafakta ve akşamüstü kükreyerek nerede olduklarını duyurur; böylece komşu topluluklar hiç karşılaşmadan birbirinden uzak durur. Gövde boyu 60 cm dolayında, buna bir o kadar uzun ve kavrayıcı bir kuyruk eklenir.",
+      "habitat": "Brezilya, Bolivya, Paraguay ve kuzey Arjantin'de galeri ormanları, mevsimlik su basan ormanlar ve orman parçaları; çoğunlukla tepe örtüsünün yükseklerinde.",
+      "curiosity": "Kükreme, boğazdaki büyümüş ve içi oyulmuş hyoid kemiğiyle güçlendirilir. 2015 tarihli karşılaştırmalı bir çalışma, en büyük hyoide sahip uluyan maymun türlerinin en küçük testislere sahip olduğunu buldu."
+    },
+    "redFox": {
+      "overview": "Dünyanın en geniş yayılışlı yabani etçili; 5-7 kilo çeker ve insanın yoğun olduğu her yerde büyük ölçüde gececidir. Kısa kesik iletişim havlamalarından uzun çığlığa kadar yaklaşık yirmi ayrı ses tipi tanımlanmıştır. Şehirlerde görüldüğünden çok daha sık duyulur.",
+      "habitat": "Neredeyse her yer: Arktik tundra, tarlalar, çöl kenarı, orman ve yoğun şehir merkezi — inleri baraka altlarında, demiryolu şevlerinde ve bahçelerdedir.",
+      "curiosity": "Çığlıklar, tilkilerin çiftleştiği aralık ve ocak aylarında doruğa çıkar ve yavrular ilkbaharda doğduğunda büyük ölçüde kesilir; ses bu yüzden takvime uyup gelip gidiyormuş gibi görünür."
+    }
+  }
+}

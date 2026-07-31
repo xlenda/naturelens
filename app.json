@@ -1,0 +1,33 @@
+{
+  "expo": {
+    "name": "NatureLens",
+    "slug": "mandei-as-esepciicas-no-texto",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "backgroundColor": "#000000"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.wron.app0pem4pcca7"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#000000"
+      },
+      "package": "com.wron.app0pem4pcca7"
+    },
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "cameraPermission": "Allow this app to use the camera to scan plants.",
+          "photosPermission": "Allow this app to access your photos to identify plants."
+        }
+      ],
+      "expo-localization"
+    ]
+  }
+}

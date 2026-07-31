@@ -1,0 +1,492 @@
+{
+  "aloeVera": {
+    "overview": "Aloe vera é uma planta suculenta nativa da Península Arábica, valorizada pelo gel transparente e mucilaginoso encontrado em suas folhas grossas e espinhosas. Por milhares de anos, em culturas egípcias, gregas e outras do Mediterrâneo, o gel tem sido aplicado em queimaduras, cortes e irritações de pele, enquanto o látex amarelo amargo sob a casca tem sido usado como laxante tradicional.",
+    "preparation": "O gel fresco é cortado diretamente da folha e aplicado topicamente na pele; o látex amarelo é ocasionalmente tomado internamente, em pequenas quantidades diluídas, como laxante tradicional.",
+    "benefits": "Tradicionalmente usada para aliviar queimaduras de sol, queimaduras leves e irritações de pele, e ocasionalmente tomada internamente em pequenas quantidades para aliviar a constipação ocasional."
+  },
+  "lavender": {
+    "overview": "A lavanda é um arbusto florido e perfumado nativo do Mediterrâneo, cultivado por suas hastes de flores roxas e seu óleo essencial aromático. A fitoterapia tradicional europeia há muito usa as flores secas e o óleo para acalmar os nervos, aliviar a tensão e promover um sono tranquilo, e remédios populares também aplicam o óleo diluído nas têmporas para dores de cabeça.",
+    "preparation": "As flores secas são infusionadas como chá por 5-10 minutos, ou o óleo essencial é diluído e aplicado nas têmporas ou inalado para relaxamento.",
+    "benefits": "Tradicionalmente usada para aliviar o estresse e a ansiedade, promover um sono tranquilo e aliviar dores de cabeça tensionais."
+  },
+  "peppermint": {
+    "overview": "A hortelã-pimenta é uma menta híbrida nativa da Europa, valorizada por suas folhas ricas em mentol e seu aroma refrescante. A medicina popular na Europa e no Oriente Médio há muito usa o chá de hortelã-pimenta para acalmar o estômago e a indigestão, enquanto o óleo diluído é friccionado nas têmporas para aliviar dores de cabeça tensionais.",
+    "preparation": "Folhas frescas ou secas são infusionadas como chá por 5-10 minutos após as refeições; o óleo de hortelã-pimenta diluído é friccionado nas têmporas para alívio de dores de cabeça.",
+    "benefits": "Tradicionalmente usada para aliviar indigestão, gases e mal-estar estomacal, e para acalmar dores de cabeça tensionais quando aplicada topicamente."
+  },
+  "germanChamomile": {
+    "overview": "A camomila-alemã é uma planta florida parecida com margarida, nativa da Europa e da Ásia ocidental, cujas pequenas flores brancas e amarelas são secas para chá desde a Antiguidade. A medicina popular tradicional europeia usa o chá de camomila como um nervino suave para acalmar a inquietação e o estresse, e como carminativo para aliviar o desconforto digestivo.",
+    "preparation": "As flores secas são infusionadas como chá por 5-10 minutos, frequentemente tomadas antes de dormir ou após as refeições.",
+    "benefits": "Tradicionalmente usada para acalmar os nervos e o estresse leve, promover relaxamento antes de dormir e aliviar a indigestão e o desconforto estomacal."
+  },
+  "purpleConeflower": {
+    "overview": "A equinácea-púrpura é uma flor silvestre de pradaria nativa da América do Norte central, cujas raízes, folhas e flores eram usadas pelos povos indígenas das planícies para tratar infecções e feridas. Tornou-se um pilar da medicina popular americana nos séculos XIX e XX, sendo um remédio tomado aos primeiros sinais de resfriado.",
+    "preparation": "A raiz seca ou as partes aéreas são preparadas como chá ou tintura, sendo a tintura geralmente tomada em 20-30 gotas em água, várias vezes ao dia, no início dos sintomas.",
+    "benefits": "Tradicionalmente usada para apoiar o sistema imunológico e reduzir a duração e a gravidade de resfriados e infecções respiratórias superiores."
+  },
+  "rosemary": {
+    "overview": "O alecrim é um arbusto perene de folhas em forma de agulha, nativo do Mediterrâneo, há muito associado à memória e à clareza mental na tradição grega e romana antiga. Suas folhas aromáticas também foram usadas como amargo digestivo e preparadas em chá para aliviar dores de cabeça e estimular a circulação e o estado de alerta.",
+    "preparation": "Folhas frescas ou secas são infusionadas como chá por 5-10 minutos, ou o óleo essencial é diluído e massageado nas têmporas ou no couro cabeludo.",
+    "benefits": "Tradicionalmente usado para aguçar o foco mental e a energia, aliviar dores de cabeça, e tomado como auxiliar digestivo após as refeições."
+  },
+  "holyBasil": {
+    "overview": "O manjericão-sagrado, ou tulsi, é uma erva aromática sagrada nativa do subcontinente indiano, central na medicina ayurvédica e na prática religiosa hindu. Suas folhas há muito são preparadas em chá adaptógeno para ajudar o corpo a lidar com o estresse, e tradicionalmente usadas para aliviar tosses e congestão respiratória.",
+    "preparation": "Folhas frescas ou secas são infusionadas como chá por 5-10 minutos, frequentemente tomadas diariamente.",
+    "benefits": "Tradicionalmente usado como adaptógeno para ajudar o corpo a gerenciar o estresse, apoiar a resiliência imunológica e aliviar tosses e congestão respiratória."
+  },
+  "turmeric": {
+    "overview": "A cúrcuma é um rizoma laranja-vivo da família do gengibre, nativo do sul da Ásia, que colore e dá sabor à medicina ayurvédica e do sudeste asiático há milênios. Seu composto ativo, a curcumina, fundamenta seu uso tradicional para acalmar inflamações, auxiliar a digestão e acelerar a cicatrização de feridas.",
+    "preparation": "A raiz seca e em pó é fervida em água ou leite (como \"leite dourado\") ou misturada em uma pasta com água para aplicação tópica em feridas e na pele.",
+    "benefits": "Tradicionalmente usada para aliviar dores articulares e inflamação, apoiar a digestão, e aplicada topicamente para promover a cicatrização de feridas e a saúde da pele."
+  },
+  "ginger": {
+    "overview": "O gengibre é um rizoma nodoso e picante nativo do sudeste asiático, usado há milhares de anos na medicina chinesa e ayurvédica como um remédio digestivo que aquece o corpo. Fresco ou seco, o gengibre tradicionalmente é mastigado, preparado em chá ou adicionado aos alimentos para aliviar náuseas, indigestão e dores leves.",
+    "preparation": "A raiz fresca é fatiada e infusionada como chá por cerca de 10 minutos, ou um pequeno pedaço é mastigado diretamente para acalmar o estômago.",
+    "benefits": "Tradicionalmente usado para aliviar náuseas, enjoo de movimento e indigestão, e para aliviar desconfortos musculares e articulares leves."
+  },
+  "ginseng": {
+    "overview": "O ginseng é uma raiz florestal de crescimento lento nativa do leste asiático, central na Medicina Tradicional Chinesa há mais de dois mil anos como um tônico restaurador de primeira linha. Tradicionalmente é tomado para reconstruir energia e vitalidade após doenças ou fadiga e para ajudar o corpo a se adaptar ao estresse.",
+    "preparation": "A raiz seca é fervida como decocção por 20-30 minutos, ou tomada como tintura padronizada ou extrato em pó.",
+    "benefits": "Tradicionalmente usado para aumentar energia e resistência, apoiar a recuperação da fadiga, e ajudar o corpo a lidar com o estresse físico e mental."
+  },
+  "ashwagandha": {
+    "overview": "A ashwagandha é um pequeno arbusto de bagas avermelhadas nativo da Índia, do norte da África e do Oriente Médio, cuja raiz tem sido pedra angular da medicina ayurvédica por milênios. É tradicionalmente classificada como um rasayana, ou tônico rejuvenescedor, tomado para aliviar o estresse, reconstruir a força física e a resistência, e apoiar um sono tranquilo.",
+    "preparation": "O pó da raiz seca é misturado em leite morno ou água, geralmente cerca de 1/4 a 1/2 colher de chá tomada uma ou duas vezes ao dia.",
+    "benefits": "Tradicionalmente usada para aliviar o estresse e a ansiedade, reconstruir força e resistência, e apoiar um sono tranquilo."
+  },
+  "elderberry": {
+    "overview": "O sabugueiro é um arbusto de bagas escuras nativo da Europa, cujos frutos e flores têm sido usados na medicina popular europeia por séculos. As bagas tradicionalmente são cozidas em xaropes e tomadas aos primeiros sinais de resfriado ou gripe para apoiar o sistema imunológico e aliviar a congestão.",
+    "preparation": "As bagas maduras são cozidas com água e mel até formar um xarope, tradicionalmente tomado às colheradas no início dos sintomas de resfriado ou gripe.",
+    "benefits": "Tradicionalmente usado para reduzir a duração e a gravidade de resfriados e gripes e para aliviar a congestão respiratória."
+  },
+  "valerian": {
+    "overview": "A valeriana é uma perene florida nativa da Europa e da Ásia, cuja raiz de cheiro forte é seca e usada desde os tempos da Grécia e Roma antigas como auxiliar do sono. Os herbalistas europeus há muito confiam nela para acalmar a inquietação e a tensão nervosa antes de dormir.",
+    "preparation": "A raiz seca é infusionada como chá por 10-15 minutos ou tomada como tintura, geralmente 20-30 gotas em água pouco antes de dormir.",
+    "benefits": "Tradicionalmente usada para aliviar a inquietação e a ansiedade leve e para facilitar o adormecer."
+  },
+  "witchHazel": {
+    "overview": "O hamamélis é um arbusto florido nativo do leste da América do Norte, cuja casca e folhas eram destiladas por tribos nativas americanas em uma loção adstringente. Colonos adotaram essa prática, e o extrato de hamamélis há muito é aplicado em hematomas, inchaços e peles irritadas.",
+    "preparation": "A casca e as folhas são destiladas ou decoctadas em um extrato líquido, aplicado topicamente na pele com um algodão.",
+    "benefits": "Tradicionalmente usado como adstringente tópico para reduzir inchaços leves, hematomas e irritações de pele."
+  },
+  "goldenseal": {
+    "overview": "O hidraste é uma planta rasteira de sub-bosque nativa do leste da América do Norte, cuja raiz amarelo-vivo era usada pelos Cherokee e outros povos indígenas como um tônico amargo. Tradicionalmente é aplicado em feridas e infecções e tomado internamente para aliviar queixas digestivas.",
+    "preparation": "A raiz seca é preparada como decocção ou tintura, ou o pó é aplicado diretamente sobre feridas na pele; é tomada internamente apenas em pequenas doses devido ao seu sabor intensamente amargo.",
+    "benefits": "Tradicionalmente usado para apoiar a saúde digestiva e a resistência a infecções, e aplicado topicamente para ajudar a acalmar pequenas feridas e irritações de pele."
+  },
+  "devilsClaw": {
+    "overview": "A garra-do-diabo é uma planta rasteira nativa do Deserto do Kalahari e das savanas do sul da África, batizada assim pelos frutos em forma de gancho que se prendem a animais que passam. Sua raiz tuberosa há muito é usada por curandeiros tradicionais da região para aliviar dores articulares e a rigidez da artrite.",
+    "preparation": "A raiz seca é preparada como decocção, infusionada por 10-15 minutos, ou tomada como tintura padronizada ou cápsula.",
+    "benefits": "Tradicionalmente usada para aliviar dores articulares, rigidez e o desconforto associado à artrite."
+  },
+  "africanWormwood": {
+    "overview": "A losna-africana é um arbusto amargo e aromático nativo do sul e do leste da África, considerado uma das medicinas tradicionais mais usadas da região. Suas folhas tradicionalmente são fumigadas, preparadas em chá ou fumadas para aliviar tosses, congestão e queixas respiratórias.",
+    "preparation": "Folhas frescas ou secas são infusionadas como chá, ou o vapor das folhas fervidas é inalado para aliviar a congestão nasal e torácica.",
+    "benefits": "Tradicionalmente usada para aliviar tosses, resfriados e congestão, e para acalmar o desconforto digestivo."
+  },
+  "yerbaMate": {
+    "overview": "A erva-mate é uma espécie perene de azevinho nativa das florestas subtropicais da América do Sul, cujas folhas o povo Guarani prepara como bebida estimulante diária há séculos. Tradicionalmente compartilhada de uma cuia comunitária, o mate há muito é valorizado tanto como bebida energizante quanto como auxiliar digestivo.",
+    "preparation": "As folhas secas e cortadas são infusionadas em água quente em uma cuia e sorvidas com uma bomba (bombilla) de metal, frequentemente reabastecida ao longo do dia.",
+    "benefits": "Tradicionalmente usada para aumentar a energia e o estado de alerta mental e para apoiar uma digestão saudável após as refeições."
+  },
+  "gotuKola": {
+    "overview": "A centela-asiática é uma pequena erva rasteira nativa das áreas úmidas da Ásia, reverenciada na medicina ayurvédica e tradicional do sudeste asiático como um tônico rejuvenescedor. Suas folhas tradicionalmente são usadas para acelerar a cicatrização de feridas e condições de pele e para acalmar a mente sob estresse.",
+    "preparation": "Folhas frescas ou secas são infusionadas como chá, comidas frescas em saladas, ou transformadas em pasta aplicada topicamente em feridas e na pele.",
+    "benefits": "Tradicionalmente usada para apoiar a cicatrização de feridas e a saúde da pele, e para acalmar a mente e aliviar o estresse."
+  },
+  "licoriceRoot": {
+    "overview": "A raiz de alcaçuz é uma raiz de sabor doce nativa do Mediterrâneo e de partes da Ásia, usada por séculos nas medicinas chinesa, ayurvédica e do Oriente Médio. Tradicionalmente é preparada para acalmar tosses e dores de garganta e para aliviar o mal-estar estomacal.",
+    "preparation": "A raiz seca é fervida como decocção por 10-15 minutos, ou mastigada diretamente como um bastão; também é tomada como tintura ou pastilha para a garganta.",
+    "benefits": "Tradicionalmente usada para acalmar tosses e dores de garganta, e para aliviar a indigestão e o desconforto estomacal."
+  },
+  "neem": {
+    "overview": "O nim é uma árvore perene de crescimento rápido nativa do subcontinente indiano; suas folhas, casca e óleo de semente intensamente amargos têm sido usados há milênios na medicina ayurvédica e popular como agente purificador para pele e sangue. Continua sendo uma das plantas mais utilizadas na medicina doméstica tradicional indiana.",
+    "preparation": "Folhas frescas ou secas são fervidas em decocção para lavagens tópicas ou tomadas como chá amargo, enquanto o óleo prensado a frio é aplicado diretamente na pele ou no cabelo afetados.",
+    "benefits": "Tradicionalmente usado para tratar erupções cutâneas como acne, eczema e furúnculos, para limpar feridas, e para tratar infecções parasitárias e fúngicas."
+  },
+  "amla": {
+    "overview": "O amla, ou groselha-indiana, é um pequeno fruto azedo nativo da Índia e do sudeste asiático, celebrado na Ayurveda como uma das fontes naturais mais ricas de vitamina C. Forma a base de muitos tônicos rasayana (rejuvenescedores), sendo o mais famoso o Chyawanprash e o Triphala.",
+    "preparation": "O fruto seco é moído em pó (churna) e misturado com água, mel ou ghee, ou o fruto fresco é comido cru, feito em suco, ou conservado como murabba (fruta cristalizada).",
+    "benefits": "Tradicionalmente usado para fortalecer a digestão, aumentar a imunidade e a vitalidade, e apoiar o cabelo, a pele e o rejuvenescimento geral."
+  },
+  "brahmi": {
+    "overview": "O brahmi é uma pequena erva rasteira encontrada em áreas úmidas por toda a Índia e outras regiões tropicais, classificado na Ayurveda como um Medhya Rasayana, ou rejuvenescedor nutritivo para o cérebro. Tradicionalmente é dado tanto a estudantes quanto a idosos para apoiar a clareza mental e a calma.",
+    "preparation": "O suco da folha fresca ou o pó da folha seca é misturado com água ou ghee e tomado diariamente, e também é preparado como um chá suave de folhas ou infundido em óleos medicinais para massagem na cabeça.",
+    "benefits": "Tradicionalmente usado para aguçar a memória e a concentração, acalmar uma mente hiperativa, e aliviar o estresse do dia a dia e apoiar um sono tranquilo."
+  },
+  "guduchi": {
+    "overview": "O guduchi é um arbusto trepador nativo da Índia e do sudeste asiático cujo caule é central na medicina ayurvédica, onde é honrado com o nome Amrita, ou 'raiz da imortalidade'. Há muito é considerado um rasayana de primeira linha para construir resiliência contra doenças.",
+    "preparation": "O caule é cortado e fervido em uma decocção amarga (kashaya), ou seco e transformado em pó para misturar com água ou mel; extratos concentrados do caule também são tomados em comprimidos.",
+    "benefits": "Tradicionalmente usado para reduzir febres, apoiar a resposta imunológica do corpo, e auxiliar a recuperação de doenças prolongadas, além de aliviar o desconforto digestivo."
+  },
+  "shatavari": {
+    "overview": "O shatavari é uma variedade trepadora de aspargo nativa da Índia, cujas raízes tuberosas são consideradas o tônico rejuvenescedor mais importante da Ayurveda para mulheres. Seu nome, que significa 'aquela que possui cem raízes', reflete sua reputação tradicional de fertilidade e vitalidade.",
+    "preparation": "A raiz seca é moída em pó e fervida em leite ou água, frequentemente com ghee e adoçantes, e tomada diariamente como tônico.",
+    "benefits": "Tradicionalmente usado para apoiar a lactação, equilibrar os ciclos hormonais femininos, e acalmar o trato digestivo, ao mesmo tempo em que constrói a vitalidade geral e a resistência."
+  },
+  "arjuna": {
+    "overview": "O arjuna é uma grande árvore decídua nativa do subcontinente indiano, cuja casca é um pilar dos cuidados cardíacos ayurvédicos há séculos. Textos clássicos a descrevem como uma erva hridya, ou de apoio ao coração.",
+    "preparation": "A casca seca é fervida em decocção, frequentemente cozida com leite, ou tomada como pó padronizado ou comprimido.",
+    "benefits": "Tradicionalmente usado para fortalecer o músculo cardíaco, apoiar uma circulação saudável, e manter a vitalidade cardiovascular geral e a resistência."
+  },
+  "haritaki": {
+    "overview": "O haritaki é o fruto de uma grande árvore nativa do sul da Ásia, reverenciado na Ayurveda como o 'rei dos remédios' e o ingrediente principal da clássica fórmula de três frutas, o Triphala. Tradicionalmente é usado como um rejuvenescedor diário suave para o sistema digestivo.",
+    "preparation": "O fruto seco é transformado em pó e tomado com água morna ou mel antes de dormir, ou fervido em uma decocção suave.",
+    "benefits": "Tradicionalmente usado para apoiar a eliminação regular, auxiliar a digestão, e ajudar a desintoxicação natural do corpo e a resiliência imunológica."
+  },
+  "bibhitaki": {
+    "overview": "O bibhitaki é o fruto de uma árvore alta nativa do sul e sudeste da Ásia e, junto com o amla e o haritaki, forma um dos três frutos do Triphala. Textos ayurvédicos tradicionais o descrevem como um remédio secante, que limpa o muco.",
+    "preparation": "O fruto seco é moído em pó e tomado com água morna ou mel, ou combinado com os outros frutos do Triphala como uma decocção noturna.",
+    "benefits": "Tradicionalmente usado para eliminar o excesso de muco e apoiar a saúde respiratória, além de auxiliar a digestão e a desintoxicação suave."
+  },
+  "fenugreek": {
+    "overview": "O feno-grego é uma erva anual nativa do Mediterrâneo e da Ásia Ocidental, cujas pequenas sementes dourado-acastanhadas dão sabor e curam lares do sul da Ásia há gerações. É um dos remédios caseiros mais comuns para apoio digestivo e à lactação.",
+    "preparation": "As sementes são deixadas de molho em água durante a noite e comidas, ou a água do molho é bebida pela manhã, ou as sementes são torradas a seco e moídas em pó para chá ou culinária.",
+    "benefits": "Tradicionalmente usado para aliviar a indigestão e a perda de apetite, apoiar a produção de leite em lactantes, e ajudar a manter o açúcar no sangue equilibrado e a energia estável."
+  },
+  "longPepper": {
+    "overview": "A pimenta-longa é uma videira florida nativa da Índia e do sudeste asiático, cujo fruto alongado é uma das três especiarias picantes na clássica mistura ayurvédica Trikatu. Tradicionalmente é valorizada por acender o fogo digestivo e limpar o trato respiratório.",
+    "preparation": "O fruto seco é moído em pó e tomado com mel ou água morna, ou combinado com pimenta-do-reino e gengibre na fórmula Trikatu.",
+    "benefits": "Tradicionalmente usada para estimular a digestão e o apetite, e para soltar e limpar a congestão em tosses, resfriados e condições respiratórias."
+  },
+  "sandalwood": {
+    "overview": "O sândalo é uma árvore de madeira nobre aromática nativa do sul da Ásia, cuja pasta e óleo refrescantes têm sido usados tanto na Ayurveda quanto em rituais religiosos para acalmar o corpo e serenar a mente. Seu aroma está intimamente ligado à prática tradicional de meditação.",
+    "preparation": "A madeira nobre é moída com água até formar uma pasta fina e aplicada diretamente na pele ou na testa, ou o óleo essencial é difundido ou diluído para uso tópico.",
+    "benefits": "Tradicionalmente usado para refrescar a pele inflamada ou irritada, aliviar febres, e acalmar a mente durante a meditação e o repouso."
+  },
+  "indianSarsaparilla": {
+    "overview": "A salsaparrilha-indiana é uma videira trepadora de raiz doce nativa da Índia, há muito usada em fórmulas ayurvédicas clássicas como um purificador de sangue refrescante. É distinta da salsaparrilha tropical americana, mas compartilha uma reputação tradicional semelhante.",
+    "preparation": "A raiz seca é fervida em decocção ou infundida em água durante a noite, e também é transformada em pó para misturar em tônicos.",
+    "benefits": "Tradicionalmente usada para purificar o sangue em busca de uma pele mais limpa, e para aliviar dores articulares e inflamação."
+  },
+  "bael": {
+    "overview": "O bael é uma árvore frutífera nativa do subcontinente indiano, sagrada na tradição hindu e há muito usada como remédio digestivo. O fruto verde, em particular, é um tratamento caseiro básico para queixas intestinais.",
+    "preparation": "A polpa do fruto verde é seca e transformada em pó, ou a polpa fresca é misturada com água e tomada como uma bebida suave.",
+    "benefits": "Tradicionalmente usado para aliviar diarreia crônica e disenteria, e para apoiar a saúde geral do trato digestivo."
+  },
+  "guggul": {
+    "overview": "O guggul é uma resina aromática extraída de uma pequena árvore espinhosa nativa das regiões áridas da Índia, formando a base das fórmulas Guggulu da Ayurveda. Tem sido usado por séculos como remédio purificador e aquecedor para as articulações e o metabolismo.",
+    "preparation": "A resina purificada é tomada como extrato padronizado ou comprimido, ou tradicionalmente fervida com decocções de ervas para preparar as fórmulas clássicas de Guggulu.",
+    "benefits": "Tradicionalmente usado para apoiar níveis saudáveis de colesterol e controlar a inflamação e a rigidez articular."
+  },
+  "manjistha": {
+    "overview": "O manjistha é uma erva trepadora nativa da Índia e da região do Himalaia, cuja raiz avermelhada há muito serve na Ayurveda como principal purificador de sangue. É um ingrediente comum em fórmulas voltadas para uma pele clara e saudável.",
+    "preparation": "A raiz seca é transformada em pó e tomada com água ou mel, ou fervida em decocção para uso interno e lavagens de pele.",
+    "benefits": "Tradicionalmente usado para purificar o sangue em busca de pele limpa e cicatrização de feridas, e para apoiar a drenagem linfática."
+  },
+  "jatamansi": {
+    "overview": "O jatamansi é uma planta florida e aromática nativa do Himalaia de alta altitude, cujo rizoma há muito é apreciado na Ayurveda como sedativo nervino. Compartilha sua reputação aromática com sua parente distante, o nardo, referenciado em textos antigos.",
+    "preparation": "O rizoma seco é transformado em pó e tomado com leite morno ou água, ou infundido em óleo para uma massagem calmante na cabeça e no couro cabeludo antes de dormir.",
+    "benefits": "Tradicionalmente usado para acalmar o sistema nervoso, aliviar o estresse e a ansiedade, e promover um sono tranquilo."
+  },
+  "astragalus": {
+    "overview": "O astrágalo, conhecido como huang qi, é uma planta florida nativa do norte da China e da Mongólia, cuja raiz seca é um tônico fundamental de qi na Medicina Tradicional Chinesa. Tradicionalmente é usado para fortalecer a energia protetora 'wei qi' do corpo contra doenças.",
+    "preparation": "A raiz seca e fatiada é fervida em decocção, frequentemente junto com outras ervas tônicas, ou tomada como extrato em pó.",
+    "benefits": "Tradicionalmente usado para apoiar a resiliência imunológica, construir resistência e energia, e promover a cicatrização de feridas."
+  },
+  "reishiMushroom": {
+    "overview": "O reishi, ou ling zhi, é um fungo lenhoso em forma de console que cresce em madeiras decíduas em decomposição no leste asiático, reverenciado por herbalistas taoistas como o 'cogumelo da imortalidade'. Tradicionalmente é usado para acalmar o espírito, ou shen, e apoiar a longevidade.",
+    "preparation": "O cogumelo seco e lenhoso é fervido por um longo período em uma decocção ou chá, ou tomado como extrato em pó ou tintura.",
+    "benefits": "Tradicionalmente usado para aliviar insônia e inquietação, reduzir o estresse, e apoiar o sistema imunológico e a vitalidade geral."
+  },
+  "dongQuai": {
+    "overview": "O dong quai, ou dang gui, é uma raiz aromática nativa da China, há muito chamada de 'ginseng feminino' por seu papel central em nutrir o sangue e apoiar a saúde reprodutiva feminina na Medicina Tradicional Chinesa. É usado há mais de dois mil anos em fórmulas clássicas.",
+    "preparation": "A raiz seca é fatiada e fervida em decocção, frequentemente combinada com outras ervas nutridoras de sangue, ou tomada como tintura ou extrato em pó.",
+    "benefits": "Tradicionalmente usado para nutrir e revigorar o sangue, aliviar cólicas menstruais e irregularidades, e apoiar a vitalidade geral."
+  },
+  "gojiBerry": {
+    "overview": "As bagas de goji, ou gou qi zi, são os pequenos frutos vermelhos de um arbusto nativo da China, tradicionalmente comidos para nutrir o yin do fígado e dos rins na Medicina Tradicional Chinesa. Há muito são associadas ao apoio à visão e ao retardo dos efeitos do envelhecimento.",
+    "preparation": "As bagas secas são comidas como lanche, infundidas em água quente ou chá, ou fervidas em sopas e caldos tônicos.",
+    "benefits": "Tradicionalmente usadas para apoiar a função imunológica, aumentar a energia e a vitalidade, e nutrir a saúde ocular e a visão nítida."
+  },
+  "schisandra": {
+    "overview": "Schisandra chinensis é uma videira lenhosa nativa do norte da China e do Extremo Oriente russo, cujas bagas vermelhas maduras (wu wei zi) são apreciadas na fitoterapia chinesa por conterem os cinco sabores — azedo, amargo, doce, picante e salgado — em um único fruto. Tradicionalmente classificada como um tônico adstringente, há muito é usada para consolidar a energia dos pulmões e rins, estabilizar a mente e apoiar o fígado.",
+    "preparation": "As bagas secas são fervidas em água para fazer uma decocção, frequentemente combinadas com outras ervas tônicas, ou moídas em pó tomado com água morna.",
+    "benefits": "Tradicionalmente usada para aliviar tosse crônica e falta de ar, acalmar a ansiedade e apoiar um sono tranquilo, e ajudar o corpo a se adaptar ao estresse."
+  },
+  "chineseSkullcap": {
+    "overview": "Scutellaria baicalensis é uma erva perene nativa da China e regiões vizinhas, cuja raiz seca (huang qin) é um pilar da medicina chinesa há mais de dois mil anos. É classificada como uma erva que limpa o calor e seca a umidade, usada em formulários clássicos para tratar doenças febris e infecções.",
+    "preparation": "A raiz seca, frequentemente refogada, é fatiada e fervida por 20-30 minutos como parte de uma decocção com várias ervas.",
+    "benefits": "Tradicionalmente usada para reduzir a febre, acalmar tosses com catarro espesso, e aliviar diarreia ou disenteria associadas à umidade-calor intestinal."
+  },
+  "rehmannia": {
+    "overview": "Rehmannia glutinosa é uma planta florida nativa da China, cuja raiz (di huang) é usada crua e seca ou, mais tradicionalmente, cozida no vapor repetidamente em vinho para se tornar 'shu di huang'. A forma cozida no vapor é considerada um dos principais tônicos de yin e sangue dos rins na medicina chinesa.",
+    "preparation": "A raiz cozida no vapor e enegrecida é fervida como decocção junto com ervas tônicas complementares, ou moída em pílulas e pastas.",
+    "benefits": "Tradicionalmente usada para aliviar a fadiga, a fraqueza lombar e os suores noturnos associados à deficiência de yin, e para nutrir o sangue em casos de palidez ou tontura."
+  },
+  "chrysanthemum": {
+    "overview": "Chrysanthemum morifolium é uma planta florida cultivada em toda a China, cujas flores secas amarelas ou brancas (ju hua) são uma erva refrescante amplamente usada tanto na medicina chinesa quanto na cultura popular do chá. Tradicionalmente é classificada como uma erva que limpa o calor, associada ao fígado e aos pulmões.",
+    "preparation": "As flores secas são infusionadas em água quente por vários minutos como chá, frequentemente sozinhas ou misturadas com bagas de goji ou chá verde.",
+    "benefits": "Tradicionalmente usado para aliviar dores de cabeça e tonturas, acalmar olhos vermelhos ou irritados, e refrescar condições febris."
+  },
+  "japaneseHoneysuckle": {
+    "overview": "Lonicera japonica é uma videira trepadora nativa do leste asiático, cujos botões florais secos (jin yin hua) estão entre as ervas mais usadas na medicina chinesa para limpar o calor e desintoxicar. Tem sido empregada por séculos para tratar infecções agudas e condições de pele inflamadas.",
+    "preparation": "Os botões florais secos são infusionados como chá ou fervidos em decocção por 10-15 minutos, frequentemente combinados com forsítia.",
+    "benefits": "Tradicionalmente usada para reduzir febre e dor de garganta em resfriados em estágio inicial, e para tratar furúnculos, feridas e outras erupções cutâneas inflamadas."
+  },
+  "chineseCinnamon": {
+    "overview": "Cinnamomum cassia é uma árvore perene nativa do sul da China, cuja casca interna (rou gui) é considerada na medicina chinesa uma erva fortemente aquecedora que fortalece o yang dos rins e dispersa o frio. Difere da canela do Ceilão culinária por sua casca mais espessa e picante, tradicionalmente reservada para uso medicinal.",
+    "preparation": "A casca seca é fervida em decocção, frequentemente em pequenas quantidades dentro de fórmulas tônicas, ou transformada em pó e tomada com água morna ou vinho.",
+    "benefits": "Tradicionalmente usada para aliviar dores abdominais e articulares do tipo frio, melhorar a circulação, e combater a fadiga e o frio ligados à baixa energia vital."
+  },
+  "poria": {
+    "overview": "Wolfiporia extensa (anteriormente Poria cocos) é um fungo que cresce nas raízes de pinheiros, cujo esclerócio seco (fu ling) é uma das substâncias mais frequentemente usadas na medicina chinesa. É classificada como uma erva que drena a umidade e fortalece o baço, também valorizada por acalmar o espírito.",
+    "preparation": "O esclerócio seco e cortado em cubos é fervido por 20-30 minutos como parte de uma decocção com várias ervas.",
+    "benefits": "Tradicionalmente usada para aliviar o inchaço e as fezes soltas causados pela umidade digestiva, aliviar a insônia e a inquietação, e apoiar a força digestiva geral."
+  },
+  "chineseYam": {
+    "overview": "Dioscorea polystachya é uma videira trepadora nativa da China, cujo tubérculo amiláceo (shan yao) há muito serve tanto como alimento quanto como uma erva tônica suave. É tradicionalmente valorizado por nutrir simultaneamente o baço, os pulmões e os rins.",
+    "preparation": "O tubérculo seco ou fresco é fatiado e fervido em mingaus tônicos ou decocções, frequentemente junto com outras ervas tonificantes de qi.",
+    "benefits": "Tradicionalmente usado para fortalecer a digestão e o apetite, aliviar a tosse crônica, e apoiar a resistência em estados de esgotamento geral."
+  },
+  "bupleurum": {
+    "overview": "Bupleurum chinense é uma erva perene nativa da China, cuja raiz seca (chai hu) é um ingrediente central em fórmulas clássicas para harmonizar o fígado. Tem sido usada por séculos para tratar distúrbios marcados por febre e calafrios alternados ou restrição emocional.",
+    "preparation": "A raiz seca é fatiada e fervida por 20-30 minutos como parte de uma decocção com várias ervas.",
+    "benefits": "Tradicionalmente usada para aliviar febre e calafrios alternados, aliviar a irritabilidade e a tensão ligadas à estagnação da energia do fígado, e apoiar o equilíbrio emocional sob estresse."
+  },
+  "notoginseng": {
+    "overview": "Panax notoginseng é uma parente do ginseng cultivada no sudoeste da China, cuja raiz (san qi) é apreciada como uma erva de primeira linha para tratar sangramentos e traumas. Há muito é incluída tanto em fórmulas internas quanto em pós tópicos para feridas na medicina chinesa.",
+    "preparation": "A raiz seca é transformada em pó e tomada com água morna, ou o pó é aplicado diretamente em cortes e hematomas.",
+    "benefits": "Tradicionalmente usada para estancar sangramentos e reduzir hematomas e inchaços causados por lesões, ao mesmo tempo em que promove uma circulação sanguínea saudável."
+  },
+  "codonopsis": {
+    "overview": "Codonopsis pilosula é uma trepadeira perene nativa da China, cuja raiz seca (dang shen) é usada como uma alternativa mais suave e amplamente disponível ao ginseng Panax. É classificada como um tônico de qi tradicionalmente usado para fortalecer a digestão e a vitalidade geral.",
+    "preparation": "A raiz seca é fatiada e fervida em decocção, frequentemente incluída em sopas tônicas diárias junto com outras ervas fortalecedoras de qi.",
+    "benefits": "Tradicionalmente usada para aliviar a fadiga e a falta de apetite, fortalecer a digestão, e apoiar a resistência durante a recuperação de doenças."
+  },
+  "foti": {
+    "overview": "Reynoutria multiflora (anteriormente Polygonum multiflorum) é uma videira florida nativa da China, cuja raiz (he shou wu) é processada por cozimento repetido a vapor em líquido de feijão preto para criar um tônico apreciado por nutrir a essência do fígado e dos rins. As formas crua e preparada são usadas de maneiras diferentes, sendo a forma processada reservada para uso tônico.",
+    "preparation": "A raiz processada, cozida no vapor e seca, é fervida em decocção ou moída em pílulas, tradicionalmente tomada como tônico de longo prazo.",
+    "benefits": "Tradicionalmente usada para combater a fadiga e o encanecimento precoce dos cabelos, e para fortalecer a região lombar e os joelhos como parte de regimes tônicos antienvelhecimento."
+  },
+  "yarrow": {
+    "overview": "Achillea millefolium é uma perene de folhas plumosas nativa da Europa e da Ásia temperada, há muito apelidada de 'erva-do-soldado' por seu uso histórico em campos de batalha. Suas partes aéreas têm sido usadas em tradições populares para estancar sangramentos e apoiar a cicatrização de feridas, além de aliviar febres e cólicas.",
+    "preparation": "Folhas e flores frescas ou secas são esmagadas e aplicadas diretamente em feridas, ou as partes aéreas secas são infusionadas como chá para uso interno.",
+    "benefits": "Tradicionalmente usada para estancar pequenos sangramentos e acelerar a cicatrização de cortes, e para aliviar cólicas menstruais e resfriados febris."
+  },
+  "stJohnsWort": {
+    "overview": "Hypericum perforatum é uma perene de flores amarelas nativa da Europa, há muito usada na medicina popular para o humor baixo e o desconforto relacionado aos nervos. Suas flores são infundidas em óleo para criar uma preparação de tom avermelhado tradicionalmente aplicada em feridas, queimaduras e dores nervosas.",
+    "preparation": "As pontas floridas frescas são infundidas em óleo por várias semanas para fazer um óleo tópico, ou as flores secas são infusionadas como chá ou tomadas como tintura.",
+    "benefits": "Tradicionalmente usada para elevar o humor baixo e aliviar a tensão nervosa, e aplicada topicamente para acalmar pequenas feridas, queimaduras e dores relacionadas aos nervos."
+  },
+  "sage": {
+    "overview": "Salvia officinalis é um arbusto mediterrâneo cujo nome deriva do latim salvere, 'ser salvo' ou 'curar', refletindo sua longa reputação como erva de cura. Suas folhas aromáticas têm sido usadas desde a Antiguidade tanto como erva culinária quanto como remédio para a garganta e o trato digestivo.",
+    "preparation": "As folhas secas são infusionadas como chá, que pode ser bebido ou usado como gargarejo, e também são usadas para temperar alimentos como apoio digestivo.",
+    "benefits": "Tradicionalmente usada para acalmar dores de garganta e inflamação nas gengivas quando usada em gargarejo, e para aliviar a indigestão e o inchaço quando tomada como chá."
+  },
+  "thyme": {
+    "overview": "Thymus vulgaris é um arbusto baixo e aromático nativo do Mediterrâneo, cujas folhas e óleo essencial têm sido usados por séculos como remédio para tosses e congestão torácica. Também serviu na tradição popular como um antisséptico geral e erva de apoio imunológico.",
+    "preparation": "As folhas secas são infusionadas como chá ou fervidas em xarope com mel, e o óleo essencial é usado em fricções no peito e inalações de vapor.",
+    "benefits": "Tradicionalmente usado para soltar catarro e aliviar tosses e bronquite, e para apoiar o corpo durante resfriados e infecções leves."
+  },
+  "marshmallow": {
+    "overview": "Althaea officinalis é uma erva perene nativa da Europa e da Ásia ocidental, cuja raiz e folhas contêm mucilagem abundante que acalma tecidos irritados. Tem sido um pilar da prática farmacêutica europeia por séculos, usada tanto para queixas respiratórias quanto digestivas.",
+    "preparation": "A raiz seca é deixada de molho em água fria por várias horas para extrair sua mucilagem, produzindo uma infusão calmante, ou as folhas secas são infusionadas como um chá mais suave.",
+    "benefits": "Tradicionalmente usada para acalmar dores de garganta e tosses, e para acalmar o revestimento irritado do estômago e do intestino."
+  },
+  "potMarigold": {
+    "overview": "Calendula officinalis é uma anual de flores laranja-vivo nativa do sul da Europa, cujas pétalas há muito são infundidas em óleos e pomadas para cuidados com a pele. É uma das ervas mais usadas para cicatrização de pele na tradição popular ocidental.",
+    "preparation": "Pétalas frescas ou secas são infundidas em óleo para fazer uma pomada ou creme, aplicado topicamente na pele.",
+    "benefits": "Tradicionalmente usada para limpar pequenos cortes e arranhões e acalmar peles inflamadas e de cicatrização lenta, como erupções e queimaduras leves."
+  },
+  "milkThistle": {
+    "overview": "Silybum marianum é uma planta espinhosa de flores roxas nativa do Mediterrâneo, cujas sementes contêm silimarina e têm sido usadas desde a Antiguidade clássica como remédio para o fígado. Tornou-se um pilar da prática herbal europeia para apoiar a recuperação após excessos alimentares ou de bebida.",
+    "preparation": "As sementes maduras são esmagadas e infusionadas como chá, ou moídas em pó tomado com água; o uso tradicional também incluía simplesmente mastigar as sementes.",
+    "benefits": "Tradicionalmente usado para apoiar e proteger a função hepática, particularmente após excessos de comida rica ou álcool."
+  },
+  "fennel": {
+    "overview": "Foeniculum vulgare é uma planta aromática mediterrânea cujas sementes com aroma de anis têm sido mastigadas e preparadas em chá por gerações para acalmar o trato digestivo. Tem uma longa história de uso na medicina popular europeia e do Oriente Médio como um carminativo suave, inclusive para bebês.",
+    "preparation": "As sementes inteiras são mastigadas diretamente após as refeições, ou infusionadas como chá por cerca de 10 minutos; uma infusão bem diluída e resfriada tradicionalmente é dada a bebês para cólicas.",
+    "benefits": "Tradicionalmente usado para aliviar inchaço, gases e cólicas, e para aliviar a indigestão após as refeições."
+  },
+  "stingingNettle": {
+    "overview": "A urtiga é uma perene amplamente disseminada, armada com finos pelos urticantes nas folhas, nativa da Europa, Ásia e América do Norte. Suas partes aéreas têm sido colhidas a cada primavera por séculos na fitoterapia popular europeia como um tônico depurativo e restaurador geral.",
+    "preparation": "Folhas secas ou escaldadas (o que neutraliza a urtiga) são infusionadas como chá por 10-15 minutos, tradicionalmente tomado como um tônico diário de primavera.",
+    "benefits": "Tradicionalmente usada para aliviar dores nas articulações e músculos, apoiar os processos naturais de depuração do corpo, e atuar como um tônico nutritivo de primavera para a vitalidade geral."
+  },
+  "whiteHorehound": {
+    "overview": "O marroio-branco é uma erva amarga e felpuda da família da menta, nativa do Mediterrâneo e naturalizada em todo o mundo, há muito valorizada na medicina popular europeia como expectorante. Suas folhas e pontas floridas são as partes tradicionalmente usadas, mais famosas por serem fervidas em balas e xaropes para tosse.",
+    "preparation": "Folhas secas e pontas floridas são decoctadas e fervidas com mel ou açúcar até formar um xarope ou uma bala dura, ou preparadas como um chá amargo.",
+    "benefits": "Tradicionalmente usado para soltar catarro e aliviar tosses, dores de garganta e bronquite, e tomado como tônico amargo para estimular a digestão."
+  },
+  "comfrey": {
+    "overview": "O confrei, apelidado de \"consólida-maior\", é uma perene europeia cuja raiz e folhas ricas em mucilagem têm sido aplicadas em cataplasmas sobre lesões por séculos. É usado estritamente como remédio externo na fitoterapia tradicional, valorizado por seu papel em acalmar tecidos durante a recuperação.",
+    "preparation": "Raiz ou folhas frescas amassadas são transformadas em uma cataplasma ou pasta úmida e aplicadas externamente sobre pele intacta, ou infundidas em uma pomada.",
+    "benefits": "Tradicionalmente usado externamente para acalmar hematomas, entorses e fraturas fechadas, e para acalmar a pele inflamada ou irritada."
+  },
+  "feverfew": {
+    "overview": "A matricária é uma erva amarga parecida com margarida, nativa dos Bálcãs e há muito naturalizada em toda a Europa, tradicionalmente usada como remédio popular para dores de cabeça e febres. As folhas frescas ou secas são a parte usada na tradição herbal ocidental.",
+    "preparation": "Algumas folhas frescas mastigadas diariamente, ou folhas secas infusionadas como chá por cerca de 10 minutos.",
+    "benefits": "Tradicionalmente usada para prevenir e aliviar enxaquecas e dores de cabeça recorrentes, e para aliviar dores e inflamações associadas."
+  },
+  "mullein": {
+    "overview": "O verbasco é uma bienal alta de folhas macias e felpudas e uma haste de flores amarelas, nativa da Europa e da Ásia e amplamente naturalizada. Suas folhas e flores há muito são usadas na fitoterapia popular europeia e apalachiana para acalmar o trato respiratório e os ouvidos.",
+    "preparation": "Folhas secas infusionadas como chá (bem coadas para remover os pelos finos), ou flores lentamente infundidas em óleo por várias semanas, com o óleo usado como gotas para os ouvidos.",
+    "benefits": "Tradicionalmente usado para acalmar tosses, dores de garganta e irritação brônquica, com o óleo de flores infundido tradicionalmente aplicado para o desconforto de dor de ouvido."
+  },
+  "hawthorn": {
+    "overview": "O espinheiro-alvar é uma árvore espinhosa de sebe nativa da Europa, cujas bagas, flores e folhas têm sido preparadas em infusão desde a Antiguidade como o tônico clássico do continente para o coração e a circulação. Ocupa um lugar central na tradição herbal europeia como remédio suave para um pulso fraco ou \"ansioso\".",
+    "preparation": "Bagas, flores e folhas secas infusionadas como chá por 10-15 minutos, ou tomadas como tintura, geralmente ao longo de um curso diário prolongado.",
+    "benefits": "Tradicionalmente usado para apoiar a função cardíaca e a circulação, e para acalmar a tensão nervosa e um batimento cardíaco ansioso e trêmulo."
+  },
+  "linden": {
+    "overview": "A tília, ou flor de limeira, vem das flores perfumadas da tília europeia, colhidas no início de cada verão e secas para chá na medicina popular europeia. Tradicionalmente é valorizada como um nervino suave e remédio para febre, especialmente para crianças e idosos.",
+    "preparation": "Flores secas infusionadas como chá por cerca de 10 minutos, frequentemente tomadas quentes no início de um resfriado ou à noite antes de dormir.",
+    "benefits": "Tradicionalmente usada para promover o relaxamento e um sono tranquilo, aliviar o estresse e a tensão nervosa, e ajudar a quebrar febres durante resfriados."
+  },
+  "meadowsweet": {
+    "overview": "A ulmária é uma erva aromática de flores cremosas nativa dos prados úmidos europeus, tradicionalmente usada para febres, dores e queixas estomacais. Suas pontas floridas contêm compostos salicilatos posteriormente isolados e quimicamente modificados para criar a aspirina.",
+    "preparation": "Pontas floridas e folhas secas infusionadas como chá por 10-15 minutos, tomadas várias vezes ao longo do dia.",
+    "benefits": "Tradicionalmente usada para aliviar dores articulares, dores de cabeça e febres, e para acalmar o estômago irritado e o excesso de acidez."
+  },
+  "oshaRoot": {
+    "overview": "A osha é uma raiz aromática nativa das Montanhas Rochosas de alta altitude, há muito colhida pelos Navajo, Ute e outros povos indígenas da região. É um pilar da fitoterapia popular do sudoeste americano para apoiar o sistema respiratório durante resfriados e infecções.",
+    "preparation": "A raiz seca é mastigada diretamente, ou fervida como decocção por 15-20 minutos e bebida como chá; também é tomada como tintura.",
+    "benefits": "Tradicionalmente usada para aliviar dores de garganta, tosses e infecções respiratórias, e para apoiar a resposta do corpo durante resfriados e gripes."
+  },
+  "blackCohosh": {
+    "overview": "A cimicífuga é uma perene de sub-bosque nativa do leste da América do Norte, cuja raiz era usada pelos Cherokee e outros povos das florestas orientais como remédio para a saúde da mulher. Tornou-se um pilar da medicina herbal americana do século XIX para queixas menstruais e reprodutivas.",
+    "preparation": "Raiz seca fervida como decocção por cerca de 20 minutos, ou tomada como tintura em pequenas doses medidas.",
+    "benefits": "Tradicionalmente usada para aliviar cólicas e desconforto menstrual, e para apoiar o trabalho de parto e o processo do parto."
+  },
+  "devilsClub": {
+    "overview": "A clava-do-diabo é um arbusto espinhoso de sub-bosque nativo das florestas pluviais da costa noroeste do Pacífico, considerado pelos Tlingit, Haida e outros povos costeiros como uma das plantas mais importantes de seu arsenal medicinal. Sua casca interna é a parte tradicionalmente usada, preparada como decocção ou pomada.",
+    "preparation": "A casca interna é raspada do caule e fervida como decocção por 20-30 minutos, ou seca e transformada em pó para uma pomada aplicada nas articulações.",
+    "benefits": "Tradicionalmente usada para aliviar a artrite e dores articulares, ajudar o corpo a resistir a infecções, e tratar sintomas associados ao desequilíbrio de açúcar no sangue."
+  },
+  "wildBergamot": {
+    "overview": "A bergamota-selvagem é uma menta aromática rica em timol, nativa das pradarias norte-americanas, há muito usada pelos Blackfeet e outras tribos das planícies para tratar doenças respiratórias. Suas folhas e pontas floridas tradicionalmente são secas e preparadas em chá.",
+    "preparation": "Folhas e pontas floridas secas infusionadas como chá por cerca de 10 minutos, frequentemente tomadas aos primeiros sinais de resfriado.",
+    "benefits": "Tradicionalmente usada para aliviar tosses, resfriados e infecções respiratórias, e para acalmar o estômago perturbado."
+  },
+  "bearberry": {
+    "overview": "A uva-ursina é um arbusto perene rasteiro nativo das regiões do norte da América do Norte, Europa e Ásia, cujas folhas coriáceas eram preparadas em infusão por numerosas tribos nativas americanas e posteriormente adotadas pela prática herbal europeia. Tradicionalmente serve como remédio para o trato urinário e diurético suave.",
+    "preparation": "Folhas secas infusionadas como chá por 10-15 minutos, tradicionalmente tomadas em cursos curtos, e não em uso diário contínuo.",
+    "benefits": "Tradicionalmente usada para aliviar infecções do trato urinário e o desconforto associado, e para atuar como diurético suave."
+  },
+  "slipperyElm": {
+    "overview": "O olmo-escorregadio é uma árvore norte-americana cuja casca interna, rica em mucilagem, era usada pelos Cherokee, Iroquois e outras nações indígenas como remédio calmante. Moída em pó, forma um gel viscoso que tradicionalmente é usado tanto interna quanto externamente.",
+    "preparation": "A casca interna em pó é misturada com água em uma papa e tomada por via oral, ou transformada em pasta e aplicada como cataplasma em feridas.",
+    "benefits": "Tradicionalmente usada para acalmar dores de garganta e tosses, aliviar a irritação digestiva, e apoiar a cicatrização de feridas e peles irritadas."
+  },
+  "cascaraSagrada": {
+    "overview": "A cascara sagrada é uma árvore da família das ramnáceas do noroeste do Pacífico, cuja casca era tradicionalmente colhida e envelhecida por pelo menos um ano pelos povos indígenas da região e colonos posteriores, já que a casca fresca era considerada agressiva demais para uso. Seu nome em espanhol, que significa \"casca sagrada\", reflete sua reputação de longa data como laxante confiável.",
+    "preparation": "Casca envelhecida e seca fervida como decocção, ou tomada como tintura ou cápsula, tipicamente antes de dormir.",
+    "benefits": "Tradicionalmente usada como laxante natural para aliviar a constipação ocasional."
+  },
+  "cinchona": {
+    "overview": "A quina é uma árvore perene nativa das encostas andinas do Peru e da Bolívia, cuja casca amarga era usada pelos povos Quéchua para tratar febres muito antes de os europeus isolarem seu alcaloide, a quinina. Posteriormente tornou-se mundialmente famosa como a fonte original da quinina para o tratamento da malária.",
+    "preparation": "Casca seca fervida como decocção por 20-30 minutos, historicamente tomada como tônico amargo durante febres.",
+    "benefits": "Tradicionalmente usada para reduzir febres e, historicamente, para tratar infecções malárias, além de tomada como tônico digestivo amargo."
+  },
+  "catsClaw": {
+    "overview": "A unha-de-gato é uma videira lenhosa nativa da Amazônia peruana, batizada por seus espinhos curvos em forma de garra, cuja casca há muito é preparada em infusão pelos Asháninka e outros povos amazônicos. É um remédio tradicional para queixas articulares e apoio imunológico geral.",
+    "preparation": "Casca interna seca fervida como decocção por 30-45 minutos, ou tomada como tintura ou cápsula.",
+    "benefits": "Tradicionalmente usada para aliviar a artrite e a inflamação articular, e para apoiar as defesas imunológicas do corpo."
+  },
+  "coca": {
+    "overview": "A coca é um arbusto nativo do altiplano andino da América do Sul, cujas folhas têm sido mastigadas e preparadas em infusão pelos povos Quéchua e Aymara há milhares de anos como parte da vida cotidiana. Tradicionalmente é valorizada em grandes altitudes por combater a fadiga e os efeitos do ar rarefeito da montanha.",
+    "preparation": "Folhas frescas ou secas mastigadas junto com uma pequena quantidade de uma substância alcalina, ou infusionadas como chá de mate de coca.",
+    "benefits": "Tradicionalmente usada para aumentar a energia e a resistência, reduzir a fadiga e a fome, e aliviar náuseas e desconforto do mal de altitude."
+  },
+  "dragonsBlood": {
+    "overview": "O sangue-de-dragão é a seiva de látex vermelho-intenso extraída de uma árvore nativa da floresta amazônica, há muito usada por povos indígenas amazônicos como tratamento tópico para feridas. A seiva é retirada diretamente da casca e aplicada fresca sobre a pele.",
+    "preparation": "A seiva de látex vermelho fresca é aplicada diretamente em uma camada fina sobre cortes, feridas ou picadas de inseto, onde seca formando um selo protetor.",
+    "benefits": "Tradicionalmente usada como antisséptico natural para limpar e proteger cortes e feridas, e para apoiar a cicatrização da pele."
+  },
+  "pauDarco": {
+    "overview": "O pau d'arco é uma árvore alta e florida nativa das florestas pluviais da América Central e do Sul, cuja casca interna tem sido preparada em chá por povos indígenas amazônicos por gerações. É tradicionalmente considerado um remédio amplo para infecções, febres e condições de pele.",
+    "preparation": "Casca interna seca fervida como decocção por 15-20 minutos e tomada como chá.",
+    "benefits": "Tradicionalmente usado para ajudar a combater infecções e febres, e para ajudar a limpar condições de pele."
+  },
+  "boldo": {
+    "overview": "O boldo é um arbusto perene nativo do matorral chileno central, cujas folhas aromáticas há muito são usadas por curandeiros mapuches e pela medicina popular chilena como tônico digestivo e hepático amargo. As folhas contêm óleos voláteis e o alcaloide boldina, tradicionalmente acreditado por estimular o fluxo biliar e acalmar o estômago.",
+    "preparation": "As folhas secas são infusionadas como chá amargo por 5-10 minutos, tipicamente bebido após as refeições.",
+    "benefits": "Tradicionalmente usado para apoiar a função hepática, estimular a produção de bile, e aliviar indigestão, inchaço e mal-estar estomacal leve."
+  },
+  "copaiba": {
+    "overview": "A copaíba é uma árvore alta nativa da floresta amazônica e do norte da América do Sul, da qual uma oleorresina transparente é extraída diretamente do tronco. Povos amazônicos há muito aplicam essa resina topicamente como remédio anti-inflamatório para feridas e afecções de pele.",
+    "preparation": "A resina bruta é aplicada diretamente em cortes e peles inflamadas, ou diluída em um óleo carreador para massagem tópica.",
+    "benefits": "Tradicionalmente usada para reduzir a inflamação, desinfetar feridas, e promover a cicatrização de cortes e irritações de pele."
+  },
+  "guarana": {
+    "overview": "O guaraná é uma videira trepadora nativa da bacia amazônica, domesticada pelo povo Sateré-Mawé por suas sementes, que possuem um teor de cafeína natural excepcionalmente alto. Torradas e moídas, as sementes tradicionalmente são prensadas em bastões ou pasta e usadas como estimulante.",
+    "preparation": "As sementes torradas são moídas em pó fino e misturadas em água, suco, ou uma pasta que é raspada e dissolvida como bebida.",
+    "benefits": "Tradicionalmente usado para aumentar a energia, sustentar o estado de alerta, e apoiar o foco mental durante longos períodos de esforço."
+  },
+  "blackSeed": {
+    "overview": "A semente-preta, ou cominho-preto, é uma planta florida nativa do sul da Ásia e do Mediterrâneo, cujas pequenas sementes escuras são prensadas para óleo ou usadas inteiras. Chamada de \"a semente da bênção\" na medicina profética, tem sido um item básico dos remédios populares do Oriente Médio e do sul da Ásia por séculos.",
+    "preparation": "O óleo de semente prensado a frio é tomado em colher de chá ou em cápsulas, ou as sementes inteiras são mastigadas ou misturadas com mel.",
+    "benefits": "Tradicionalmente usada para aliviar asma e congestão respiratória, acalmar o mal-estar digestivo, e tratar infecções e irritações de pele."
+  },
+  "frankincense": {
+    "overview": "O olíbano é uma resina extraída de árvores Boswellia sacra nativas da Península Arábica e do Chifre da África, colhida ao se cortar a casca e coletar a seiva endurecida. Negociada há milênios ao longo de antigas rotas de incenso, serviu tanto a propósitos cerimoniais quanto medicinais.",
+    "preparation": "A resina é queimada como incenso para inalação, ou transformada em pomada tópica ou óleo diluído friccionado em articulações doloridas e na pele.",
+    "benefits": "Tradicionalmente usado para aliviar dores e inflamações articulares, promover a cicatrização de feridas, e aliviar tosses e congestão respiratória."
+  },
+  "myrrh": {
+    "overview": "A mirra é uma resina aromática colhida de árvores Commiphora em todo o Chifre da África e a Península Arábica, coletada de maneira semelhante ao olíbano. Tem sido valorizada desde a Antiguidade como desinfetante e agente curativo para feridas e afecções orais ou de garganta.",
+    "preparation": "A resina é dissolvida em álcool ou água como tintura usada para enxaguante bucal ou gargarejo, ou aplicada diretamente em feridas como pó ou pasta.",
+    "benefits": "Tradicionalmente usada para desinfetar e curar feridas, acalmar gengivas doloridas, e aliviar dores de garganta."
+  },
+  "senna": {
+    "overview": "O sene é um arbusto florido nativo do Egito e do Sudão, cujas folhas e vagens de sementes têm sido usadas desde a Antiguidade por médicos egípcios como laxante confiável. Continua sendo um dos remédios botânicos tradicionais mais usados para a constipação.",
+    "preparation": "Folhas ou vagens secas são infusionadas como chá, tipicamente tomado à noite para produzir uma evacuação na manhã seguinte.",
+    "benefits": "Tradicionalmente usado para aliviar a constipação e estimular as evacuações intestinais."
+  },
+  "hibiscus": {
+    "overview": "O hibisco, conhecido como karkade no Egito e no Sudão, é uma planta tropical cujos cálices vermelho-intensos são secos e preparados em uma infusão azeda. Há muito é um remédio popular caseiro no norte da África para refrescar febres e apoiar a circulação.",
+    "preparation": "Cálices secos são infusionados em água quente ou fria por 5-10 minutos para fazer uma infusão vermelha e azeda, frequentemente adoçada e servida quente ou gelada.",
+    "benefits": "Tradicionalmente usado para ajudar a controlar a pressão arterial alta e reduzir a febre."
+  },
+  "moringa": {
+    "overview": "A moringa é uma árvore de crescimento rápido cultivada amplamente em toda a África Subsaariana, apreciada por suas folhas extremamente ricas em nutrientes. Tradicionalmente usada para combater a desnutrição, também é dada a lactantes para ajudar a apoiar a produção de leite.",
+    "preparation": "Folhas frescas ou secas são cozidas em ensopados, moídas em pó misturado em mingau ou água, ou infusionadas como chá.",
+    "benefits": "Tradicionalmente usada para combater a desnutrição, reduzir a inflamação, e apoiar a produção de leite em mães que amamentam."
+  },
+  "baobab": {
+    "overview": "O baobá, a icônica \"árvore da vida\" da África, produz um grande fruto cuja polpa seca e azeda e casca fibrosa têm sido usadas por todo o continente tanto como alimento quanto como remédio. Curandeiros tradicionais há muito confiam nele para tratar febres e doenças digestivas, incluindo malária e diarreia.",
+    "preparation": "A polpa seca do fruto é dissolvida em água ou leite como uma bebida azeda, enquanto a casca é fervida para fazer uma decocção.",
+    "benefits": "Tradicionalmente usado para reduzir a febre, aliviar a diarreia, e apoiar a recuperação da malária."
+  },
+  "rooibos": {
+    "overview": "O rooibos é um arbusto marrom-avermelhado nativo das montanhas Cederberg da África do Sul, tradicionalmente colhido e fermentado pelos Khoisan e posteriormente adotado pelos colonos holandeses do Cabo como uma bebida infusionada sem cafeína. Há muito serve como remédio popular suave para queixas alérgicas e cólicas infantis.",
+    "preparation": "Folhas e caules fermentados e secos são infusionados em água fervente por 5-10 minutos como um chá avermelhado, frequentemente dado diluído a bebês para cólicas.",
+    "benefits": "Tradicionalmente usado para aliviar sintomas de alergia e acalmar o desconforto digestivo e as cólicas em bebês."
+  },
+  "buchu": {
+    "overview": "O buchu é um pequeno arbusto aromático nativo da região do Cabo, na África do Sul, cujas folhas picantes e ricas em óleo eram usadas por curandeiros Khoisan como tratamento tradicional para queixas urinárias e renais. Continua sendo um remédio popular bem conhecido do Cabo até hoje.",
+    "preparation": "Folhas secas são infusionadas como chá ou deixadas de molho em conhaque para fazer uma tintura tradicional de buchu, tomada para apoiar a saúde urinária.",
+    "benefits": "Tradicionalmente usado para ajudar a aliviar infecções do trato urinário e apoiar a saúde renal."
+  },
+  "cancerBush": {
+    "overview": "Conhecida pelos Khoi como \"kankerbos\", a Sutherlandia é um arbusto de folhas prateadas nativo das regiões secas do sul da África, há muito considerado um dos tônicos tradicionais mais importantes da região. Tem sido usada para ajudar o corpo a lidar com estresse, fadiga e debilidade geral.",
+    "preparation": "Folhas secas são infusionadas como chá amargo, ou moídas em pó tomado em cápsulas para uso tônico diário.",
+    "benefits": "Tradicionalmente usado para aliviar o estresse, combater a fadiga, e apoiar a vitalidade geral e a resiliência imunológica."
+  },
+  "umckaloabo": {
+    "overview": "O umckaloabo vem da raiz tuberosa e espessa de uma espécie de gerânio nativa das pastagens da África do Sul, tradicionalmente colhida e usada por curandeiros Xhosa e Zulu. Há muito serve como remédio para tosses persistentes e afecções torácicas.",
+    "preparation": "A raiz seca é fervida para fazer uma decocção, ou processada em uma tintura tomada em gotas para tosses e queixas torácicas.",
+    "benefits": "Tradicionalmente usado para aliviar tosses, bronquite e outras infecções respiratórias."
+  },
+  "hoodia": {
+    "overview": "A hoodia é uma suculenta espinhosa parecida com cacto, nativa do Deserto do Kalahari, tradicionalmente mastigada fresca por caçadores San para suportar longas travessias sem comida ou água. Tem sido usada como supressor natural de apetite e sede por gerações.",
+    "preparation": "O caule fresco é descascado e mastigado cru durante longas expedições de caça para conter a fome e a sede.",
+    "benefits": "Tradicionalmente usada para suprimir o apetite e a sede e ajudar a sustentar a energia durante esforços físicos prolongados."
+  },
+  "henna": {
+    "overview": "A hena é um arbusto florido nativo do norte da África, do Oriente Médio e do sul da Ásia, mais conhecido pelo tingimento avermelhado extraído de suas folhas secas e em pó. Além da arte corporal decorativa, a medicina popular nessas regiões aplica a pasta de hena topicamente para tratar condições fúngicas da pele.",
+    "preparation": "O pó de folha seca é misturado com água até formar uma pasta e aplicado diretamente nas áreas afetadas da pele.",
+    "benefits": "Tradicionalmente usada para tratar infecções fúngicas de pele e acalmar irritações cutâneas."
+  },
+  "mastic": {
+    "overview": "O mástique é uma resina aromática extraída de incisões na casca da árvore de lentisco, cultivada principalmente na ilha grega de Quios e por todo o Mediterrâneo Oriental. Mastigada desde a Antiguidade, tradicionalmente é usada para acalmar o estômago e o trato digestivo.",
+    "preparation": "As lágrimas de resina endurecida são mastigadas diretamente como uma goma, ou moídas em pó e dissolvidas em água.",
+    "benefits": "Tradicionalmente usado para acalmar úlceras estomacais, aliviar a indigestão, e acalmar queixas digestivas em geral."
+  },
+  "carob": {
+    "overview": "A alfarroba é uma árvore perene mediterrânea cujas vagens longas e doces têm sido usadas na medicina popular do Oriente Médio e do norte da África como remédio suave para o mal-estar digestivo, particularmente em crianças. A polpa seca da vagem é naturalmente rica em fibras e taninos.",
+    "preparation": "Vagens secas são moídas em pó e misturadas em água, leite ou mingau, especialmente para crianças com diarreia.",
+    "benefits": "Tradicionalmente usada para aliviar a diarreia e acalmar o mal-estar digestivo, especialmente em crianças."
+  }
+}

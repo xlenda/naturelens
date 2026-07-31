@@ -1,0 +1,177 @@
+const { getSupabaseAdmin, requireDeviceId } = require('./_lib/supabaseAdmin');
+const { sendPush } = require('./_lib/webpush');
+
+// Web Push subscription registry.
+//
+// One merged endpoint (action in the body) rather than subscribe/unsubscribe as
+// separate files - the Vercel Hobby plan counts every file under api/ as a
+// Serverless Function and caps a deployment at 12. Same pattern as api/auth.js.
+//
+// This only STORES subscriptions. Actually delivering a push requires signing a
+// VAPID JWT per endpoint and encrypting the payload (RFC 8291), which is a real
+// piece of crypto - it belongs in a scheduled job, not in a request handler.
+// Storing them now means that when the sender ships, there is already an
+// audience: a reminder feature that starts with zero subscribers on day one is
+// a feature nobody experiences.
+
+// Reminder copy, per language, kept server-side because the push is composed
+// where the user's browser is not running. Falls back to English for any
+// language not listed - a reminder in the wrong language still beats silence.
+const REMINDERS = {
+  en: { title: 'Your streak is waiting', body: 'Identify one species today to keep it alive.' },
+  pt: { title: 'Sua sequência está esperando', body: 'Identifique uma espécie hoje para não perdê-la.' },
+  es: { title: 'Tu racha te espera', body: 'Identifica una especie hoy para mantenerla.' },
+  de: { title: 'Deine Serie wartet', body: 'Bestimme heute eine Art, um sie zu halten.' },
+  fr: { title: 'Votre série vous attend', body: 'Identifiez une espèce aujourd’hui pour la conserver.' },
+  it: { title: 'La tua serie ti aspetta', body: 'Identifica una specie oggi per non perderla.' },
+  nl: { title: 'Je reeks wacht op je', body: 'Herken vandaag een soort om hem te behouden.' },
+  tr: { title: 'Serin seni bekliyor', body: 'Serini korumak için bugün bir tür tanımla.' },
+};
+
+function reminderFor(language) {
+  const short = String(language || 'en').slice(0, 2).toLowerCase();
+  return REMINDERS[short] || REMINDERS.en;
+}
+
+// Fired by Vercel Cron (see vercel.json). Sends the daily streak reminder and
+// prunes endpoints the push service reports as dead.
+async function handleCron(req, res) {
+  // Vercel signs cron invocations with this header. Without the check, anyone
+  // who found the URL could blast a notification to every subscriber.
+  const secret = process.env.CRON_SECRET?.trim();
+  const provided = req.headers?.authorization || '';
+  if (!secret || provided !== `Bearer ${secret}`) {
+    res.status(401).json({ error: 'Unauthorized' });
+    return;
+  }
+
+  const admin = getSupabaseAdmin();
+  const { data: subs, error } = await admin
+    .from('push_subscriptions')
+    .select('*')
+    .limit(500);
+
+  if (error) {
+    console.error('push cron: read failed', error.message);
+    res.status(500).json({ error: 'Could not read subscriptions.' });
+    return;
+  }
+
+  let sent = 0;
+  let pruned = 0;
+
+  for (const sub of subs || []) {
+    const copy = reminderFor(sub.language);
+    const result = await sendPush(sub, { ...copy, tag: 'streak', url: '/' });
+
+    if (result.gone) {
+      // 404/410 means this endpoint is permanently dead. Deleting is not
+      // optional housekeeping - retrying it forever burns push-service quota
+      // and can get the whole origin throttled.
+      await admin.from('push_subscriptions').delete().eq('endpoint', sub.endpoint);
+      pruned += 1;
+      continue;
+    }
+
+    if (result.ok) {
+      sent += 1;
+      await admin
+        .from('push_subscriptions')
+        .update({ last_sent_at: new Date().toISOString(), failure_count: 0 })
+        .eq('endpoint', sub.endpoint);
+    } else {
+      // Transient failure: count it. A row that fails repeatedly gets pruned
+      // by the threshold below rather than being retried indefinitely.
+      const next = (sub.failure_count || 0) + 1;
+      if (next >= 5) {
+        await admin.from('push_subscriptions').delete().eq('endpoint', sub.endpoint);
+        pruned += 1;
+      } else {
+        await admin
+          .from('push_subscriptions')
+          .update({ failure_count: next })
+          .eq('endpoint', sub.endpoint);
+      }
+    }
+  }
+
+  res.status(200).json({ sent, pruned, total: subs?.length || 0 });
+}
+
+module.exports = async (req, res) => {
+  // The cron path is a GET (that is how Vercel Cron invokes it) and carries no
+  // device id, so it is dispatched before the POST/device guards below.
+  if (req.method === 'GET' && req.query?.task === 'reminders') {
+    await handleCron(req, res);
+    return;
+  }
+
+  if (req.method !== 'POST') {
+    res.status(405).json({ error: 'Method not allowed' });
+    return;
+  }
+
+  const deviceId = requireDeviceId(req, res);
+  if (!deviceId) return;
+
+  const action = req.body?.action;
+  const admin = getSupabaseAdmin();
+
+  try {
+    if (action === 'subscribe') {
+      const sub = req.body?.subscription;
+      // A subscription without its keys cannot be encrypted to - storing it
+      // would just make the sender fail later, on a row that looks valid.
+      if (!sub?.endpoint || !sub?.keys?.p256dh || !sub?.keys?.auth) {
+        res.status(400).json({ error: 'Invalid subscription' });
+        return;
+      }
+
+      // Keyed by endpoint: the same browser re-subscribing produces the same
+      // endpoint, so upsert keeps exactly one row instead of accumulating
+      // duplicates that would each deliver the same notification.
+      const { error } = await admin.from('push_subscriptions').upsert(
+        {
+          endpoint: sub.endpoint,
+          device_id: deviceId,
+          p256dh: sub.keys.p256dh,
+          auth: sub.keys.auth,
+          language: typeof req.body?.language === 'string' ? req.body.language.slice(0, 12) : null,
+          timezone_offset:
+            Number.isFinite(req.body?.timezoneOffset) ? req.body.timezoneOffset : null,
+          updated_at: new Date().toISOString(),
+        },
+        { onConflict: 'endpoint' }
+      );
+
+      if (error) {
+        // The table only exists after supabase-migration-hotmart.sql is run.
+        // Report it plainly rather than pretending the subscription worked -
+        // the client uses this to avoid showing "notifications on" when they
+        // are not.
+        console.error('push subscribe failed', error.message);
+        res.status(500).json({ error: 'Could not save the subscription.' });
+        return;
+      }
+
+      res.status(200).json({ subscribed: true });
+      return;
+    }
+
+    if (action === 'unsubscribe') {
+      const endpoint = req.body?.endpoint;
+      if (!endpoint) {
+        res.status(400).json({ error: 'Missing endpoint' });
+        return;
+      }
+      await admin.from('push_subscriptions').delete().eq('endpoint', endpoint);
+      res.status(200).json({ unsubscribed: true });
+      return;
+    }
+
+    res.status(400).json({ error: 'Unknown action' });
+  } catch (e) {
+    console.error('push endpoint error', e.message);
+    res.status(500).json({ error: 'Something went wrong.' });
+  }
+};

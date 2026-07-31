@@ -1,0 +1,2288 @@
+{
+  "common": {
+    "overview": "Översikt",
+    "details": "Detaljer",
+    "readMore": "Läs mer",
+    "confidence": "Säkerhet",
+    "nativeOrigin": "Naturligt ursprung",
+    "save": "Spara i min samling",
+    "saved": "Sparad i samlingen",
+    "cancel": "Avbryt",
+    "goBack": "Gå tillbaka",
+    "shareThisResult": "Dela detta resultat",
+    "removeFromCollection": "Ta bort från samlingen",
+    "saveToCollection": "Spara i samlingen",
+    "tabCollection": "Samling",
+    "tabDiscover": "Kuriosa",
+    "tabBotanist": "Botanist",
+    "saveErrorTitle": "Det gick inte att spara",
+    "saveErrorBody": "Något gick fel när det sparades i din samling. Försök igen.",
+    "ok": "OK",
+    "next": "Nästa",
+    "showPassword": "Visa lösenord",
+    "hidePassword": "Dölj lösenord",
+    "close": "Stäng",
+    "tabProfile": "Profil",
+    "identified": "Identifierad",
+    "yourPhoto": "Ditt foto",
+    "referencePhoto": "Referens",
+    "technicalDescription": "Teknisk beskrivning",
+    "vendorEnglishNote": "Från identifieringstjänsten, på engelska.",
+    "translate": "Översätt",
+    "translating": "Översätter…",
+    "translateFailed": "Kunde inte översätta just nu."
+  },
+  "auth": {
+    "title": "Logga in för att identifiera",
+    "subtitle": "En gratis identifiering per kategori. Logga in med din e-postadress för att komma igång — inget lösenord behövs.",
+    "emailPlaceholder": "du@exempel.com",
+    "sendLink": "Skicka magisk länk",
+    "sending": "Skickar…",
+    "checkEmailTitle": "Kolla din e-post",
+    "checkEmailBody": "Vi har skickat en inloggningslänk till {{email}}. Öppna den på den här enheten för att fortsätta.",
+    "signOut": "Logga ut",
+    "signedInAs": "Inloggad som {{email}}",
+    "notReady": "Inloggning håller på att sättas upp och kommer snart att vara tillgänglig."
+  },
+  "paywall": {
+    "title": "Gratis användning redan förbrukad",
+    "body": "Du har redan använt din gratis {{category}}-identifiering. Prenumerera för att fortsätta identifiera utan begränsningar.",
+    "subscribe": "Prenumerera",
+    "subscribing": "Omdirigerar…",
+    "subscribed": "Prenumeration aktiv",
+    "manage": "Hantera prenumeration",
+    "annualPlan": "Årsvis",
+    "perYear": "/år",
+    "saveBadge": "Spara {{percent}}%",
+    "genericTitle": "Lås upp allt",
+    "genericBody": "Obegränsade identifieringar av växter, insekter, svampar och grödor, plus full tillgång till information om medicinalväxter.",
+    "subscriptionConfirmedTitle": "Du prenumererar nu!",
+    "subscriptionConfirmedBody": "Tack för din prenumeration – nu har du obegränsat med identifieringar. Ha så kul!",
+    "subscriptionPendingTitle": "Betalning mottagen",
+    "subscriptionPendingBody": "Betalning mottagen. Öppna Profil → Återställ åtkomst och bekräfta e-postadressen du betalade med för att låsa upp den här enheten.",
+    "checkoutFailedTitle": "Betalningen misslyckades",
+    "checkoutFailedBody": "Vi kunde inte starta betalningen. Försök igen om en liten stund.",
+    "monthlyPlan": "Månadsvis",
+    "quarterlyPlan": "Kvartalsvis",
+    "perMonth": "per månad",
+    "perQuarter": "per kvartal",
+    "notAvailableYet": "Betalningen håller på att sättas upp — försök igen strax."
+  },
+  "restore": {
+    "title": "Logga in",
+    "emailStepTitle": "Logga in på ditt konto",
+    "emailStepBody": "Använd e-postadressen du registrerade dig med. Vi skickar en engångskod - inget lösenord att komma ihåg.",
+    "emailPlaceholder": "du@exempel.com",
+    "sendCode": "Skicka kod",
+    "codeStepTitle": "Ange din kod",
+    "codeStepBody": "Vi skickade en kod till {{email}}. Ange den nedan för att slutföra inloggningen.",
+    "codePlaceholder": "6-siffrig kod",
+    "verifyCode": "Verifiera",
+    "changeEmail": "Använd en annan e-postadress",
+    "doneTitleActive": "Du är inloggad",
+    "doneBodyActive": "Den här enheten är nu kopplad till ditt konto och din prenumeration är aktiv på den.",
+    "doneTitleOther": "Konto kopplat",
+    "doneBodyOther": "Den här enheten är kopplad till ditt konto. Det finns ingen aktiv prenumeration på den just nu.",
+    "backToProfile": "Tillbaka till profilen",
+    "genericError": "Något gick fel. Försök igen.",
+    "modeCode": "E-postkod",
+    "modePassword": "Lösenord",
+    "passwordStepTitle": "Logga in med lösenord",
+    "passwordStepBody": "Ange din e-postadress och ditt lösenord för att logga in på den här enheten.",
+    "passwordPlaceholder": "Lösenord",
+    "signIn": "Logga in",
+    "signInWithGoogle": "Fortsätt med Google",
+    "googleSignInErrorTitle": "Inloggningen misslyckades",
+    "googleSignInErrorBody": "Vi kunde inte slutföra inloggningen med Google. Försök igen."
+  },
+  "categories": {
+    "plant": {
+      "label": "Växt",
+      "tabLabel": "Växter",
+      "title": "Identifiera växter och träd direkt",
+      "subtitle": "Rikta kameran mot en växt, ett blad, en blomma eller ett träd och få en detaljerad profil på några sekunder.",
+      "scanHint": "För bästa resultat, fånga ett enskilt blad, en blomma eller helhetsformen i bra ljus."
+    },
+    "insect": {
+      "label": "Insekt",
+      "tabLabel": "Insekter",
+      "title": "Identifiera insekter direkt",
+      "subtitle": "Rikta kameran mot en skalbagge, spindel, fjäril eller annan kryp och få en insektsprofil direkt.",
+      "scanHint": "För bästa resultat, gå nära insekten med bra ljus och en stadig hand."
+    },
+    "mushroom": {
+      "label": "Svamp",
+      "tabLabel": "Svampar",
+      "title": "Identifiera svampar direkt",
+      "subtitle": "Rikta kameran mot en svamp för att identifiera arten och kontrollera om den är ätlig.",
+      "scanHint": "Fotografera hatten, skivorna och foten för säkrast identifiering."
+    },
+    "crop": {
+      "label": "Gröda",
+      "tabLabel": "Grödor",
+      "title": "Hälsokontroll för grödor",
+      "subtitle": "Rikta kameran mot ett blad på en gröda för att kontrollera sjukdomar, skadedjur eller näringsbrist.",
+      "scanHint": "Rama in det drabbade bladet eller området på nära håll för säkrast diagnos."
+    },
+    "tree": {
+      "label": "Träd",
+      "tabLabel": "Träd",
+      "title": "Identifiera träd direkt",
+      "subtitle": "Rikta kameran mot valfritt träd, stam, blad eller krona och få en detaljerad profil på några sekunder.",
+      "scanHint": "För bästa resultat, rama in löv, bark eller den övergripande formen i bra ljus."
+    },
+    "fish": {
+      "label": "Fisk",
+      "tabLabel": "Fiskar",
+      "title": "Identifiera fiskar direkt",
+      "subtitle": "Rikta kameran mot vilken fisk som helst och få en detaljerad profil på några sekunder.",
+      "scanHint": "För bästa resultat, fotografera hela fisken från sidan i bra ljus."
+    },
+    "bird": {
+      "label": "Fågel",
+      "tabLabel": "Fåglar",
+      "title": "Identifiera fåglar direkt",
+      "subtitle": "Rikta kameran mot vilken fågel som helst och få en identifiering direkt.",
+      "scanHint": "För bästa resultat, få med hela fågeln, skarp och väl belyst."
+    },
+    "sound": {
+      "label": "Ljud",
+      "tabLabel": "Ljud",
+      "title": "Identifiera via ljud",
+      "subtitle": "Spela in en fågel, groda eller insekt och ta reda på vad det är."
+    }
+  },
+  "identify": {
+    "identifierTitle": "{{category}}-identifierare",
+    "subtitle": "Identifiera {{category}} direkt med AI",
+    "readyToScan": "Redo att skanna",
+    "didYouKnowTitle": "Visste du det?",
+    "continueLabel": "Fortsätt",
+    "analyzing": "Analyserar {{category}}…",
+    "tapToIdentify": "Tryck för att identifiera",
+    "identifying": "Identifierar…",
+    "uploadPhoto": "Ladda upp foto",
+    "myCollection": "Min samling",
+    "switchCategoryLabel": "Byt identifieringskategori",
+    "switchCategoryTitle": "Byt kategori",
+    "switchCategoryMessage": "Vad vill du identifiera?",
+    "takePhotoLabel": "Ta foto för att identifiera {{category}}",
+    "uploadPhotoLabel": "Ladda upp foto för att identifiera",
+    "goToCollectionLabel": "Gå till Min samling",
+    "cameraPermissionTitle": "Kameratillstånd krävs",
+    "cameraPermissionMessage": "Aktivera kameraåtkomst för att skanna en {{category}}.",
+    "libraryPermissionTitle": "Tillstånd för fotobibliotek krävs",
+    "libraryPermissionMessage": "Aktivera fotoåtkomst för att ladda upp en bild.",
+    "identificationFailedTitle": "Identifieringen misslyckades",
+    "identificationFailedDefault": "Försök igen.",
+    "notFoundError": "Ingen {{category}} kunde identifieras på det här fotot. Prova en tydligare bild på närmare håll.",
+    "photoProcessingFailed": "Det gick inte att bearbeta bilden. Prova en annan bild eller ta en ny med kameran.",
+    "lowConfidence": "Det här är vår bästa gissning ({{confidence}}% säkerhet). Jämför den med referensfotona innan du litar på den.",
+    "lowConfidenceWithAlternatives": "Bara {{confidence}}% säkerhet. Kolla de andra möjliga träffarna nedan innan du litar på det här.",
+    "referenceImagesTitle": "Referensfoton",
+    "referenceImagesHint": "Jämför dem med ditt eget foto för att bekräfta.",
+    "referenceImageLabel": "Referensfoto {{index}}",
+    "alternativesTitle": "Andra möjliga träffar",
+    "alternativesHint": "Om resultatet ovan inte ser rätt ut kan din art vara någon av dessa.",
+    "lowConfidenceBare": "Bara {{confidence}}% säkerhet — se det som en utgångspunkt, inte ett slutgiltigt svar.",
+    "addAngle": "Lägg till en vinkel till",
+    "addAnotherAngle": "Lägg till en till",
+    "anglesHint": "{{count}} foton av samma exemplar — bättre träffsäkerhet",
+    "removeAngleLabel": "Ta bort vinkel {{index}}",
+    "offlineTitle": "Du är offline",
+    "offlineBody": "Identifiering kräver internet. Din samling och Upptäck-fliken fungerar ändå.",
+    "serviceDownTitle": "Tjänsten är inte tillgänglig",
+    "serviceDownBody": "Den här identifieringstjänsten krånglar just nu. Försök igen om några minuter - det är inte ditt foto."
+  },
+  "detail": {
+    "profileTitle": "{{category}}-profil",
+    "readMoreLabel": "Läs mer online om den här {{category}}",
+    "markAsWatered": "Markera som vattnad",
+    "markAsWateredLabel": "Markera som vattnad",
+    "wateringSection": "Bevattning",
+    "checkForDiseases": "Kontrollera sjukdomar",
+    "checkingForDiseases": "Kontrollerar…",
+    "checkForDiseasesLabel": "Kontrollera sjukdomar",
+    "checkingForDiseasesLabel": "Kontrollerar sjukdomar",
+    "healthCheckSection": "Hälsokontroll",
+    "edibleParts": "Ätliga delar",
+    "propagation": "Förökning",
+    "wateringNeeds": "Vattenbehov",
+    "conservationStatus": "Bevarandestatus",
+    "safetySection": "Säkerhet",
+    "ecologicalRoleSection": "Ekologisk roll",
+    "frequentlyConfusedWith": "Förväxlas ofta med",
+    "psychoactiveWarning": "Denna svamp kan vara psykoaktiv och kan påverka nervsystemet.",
+    "cropHealthReportTitle": "Hälsorapport för gröda",
+    "cropMatch": "Grödmatchning",
+    "cropPill": "Gröda",
+    "wateringGuideSection": "Bevattningsguide",
+    "lightSection": "Ljus",
+    "soilSection": "Jord",
+    "commonUsesSection": "Vanliga användningsområden",
+    "culturalSignificanceSection": "Kulturell betydelse",
+    "installNudgeTitle": "Installera NatureLens",
+    "installNudgeBody": "Lägg till den på hemskärmen för att identifiera snabbare nästa gång.",
+    "commonNames": "Vanliga namn",
+    "synonyms": "Vetenskapliga synonymer",
+    "referencePhoto": "Referensfoto",
+    "referencePhotoAlt": "Referensfoto av {{name}}",
+    "coverageNoteTitle": "Om detta resultat",
+    "birdCoverageNote": "Fågelidentifieringen omfattar 291 arter, mestadels nordamerikanska. Fåglar utanför listan kan identifieras fel även vid hög säkerhet - se resultatet som en utgångspunkt."
+  },
+  "disease": {
+    "overviewSection": "Översikt",
+    "symptomsSection": "Symtom",
+    "treatmentSection": "Behandling",
+    "biological": "Biologisk",
+    "chemical": "Kemisk",
+    "prevention": "Förebyggande",
+    "spreadingSection": "Hur den sprids",
+    "healthStatusSection": "Hälsostatus",
+    "noDiseaseDetected": "Ingen sjukdom eller skadedjur kunde med säkerhet identifieras på det här fotot.",
+    "match": "Matchning",
+    "severitySuffix": "{{severity}} allvarlighetsgrad"
+  },
+  "collection": {
+    "title": "Min samling",
+    "subtitle_one": "{{count}} objekt upptäckt",
+    "subtitle_other": "{{count}} objekt upptäckta",
+    "emptyTitle": "Inget sparat än",
+    "emptyBody": "Identifiera en växt, insekt, svamp eller gröda och spara den för att bygga upp din samling.",
+    "startIdentifying": "Börja identifiera",
+    "goToProfileLabel": "Gå till profilen",
+    "switchToGridLabel": "Byt till rutnätsvy",
+    "switchToListLabel": "Byt till listvy",
+    "viewDetailsLabel": "Visa detaljer för {{name}}",
+    "removeLabel": "Ta bort {{name}} från samlingen",
+    "assignRoomTitle": "Tilldela ett rum",
+    "assignRoomMessage": "Välj ett rum för {{name}}.",
+    "roomLivingRoom": "Vardagsrum",
+    "roomBedroom": "Sovrum",
+    "roomKitchen": "Kök",
+    "roomBalcony": "Balkong",
+    "roomOffice": "Kontor",
+    "roomNone": "Inget",
+    "searchPlaceholder": "Sök i din samling…",
+    "clearSearchLabel": "Rensa sökning",
+    "filterAll": "Alla",
+    "noSearchResults": "Inget matchar din sökning."
+  },
+  "profile": {
+    "title": "Min profil",
+    "itemsIdentified_one": "objekt identifierat",
+    "itemsIdentified_other": "objekt identifierade",
+    "byCategory": "Efter kategori",
+    "privacyPolicy": "Integritetspolicy",
+    "language": "Språk",
+    "installApp": "Installera app",
+    "installAppIOSTitle": "Installera NatureLens",
+    "installAppIOSBody": "Tryck på knappen Dela och sedan på \"Lägg till på hemskärmen\" för att installera NatureLens på din telefon.",
+    "createPasswordTitle": "Skapa ett lösenord",
+    "createPasswordBody": "Valfritt — logga in med lösenord på andra enheter för att synka din prenumeration, istället för att begära en ny e-postkod varje gång.",
+    "createPasswordButton": "Skapa lösenord",
+    "creatingPassword": "Skapar…",
+    "passwordTooShortTitle": "Lösenordet är för kort",
+    "passwordTooShortBody": "Använd minst 8 tecken.",
+    "passwordCreatedTitle": "Lösenord skapat",
+    "passwordCreatedBody": "Kolla {{email}} för att bekräfta, sedan kan du logga in med detta lösenord på vilken enhet som helst.",
+    "passwordCreatedFailedTitle": "Kunde inte skapa lösenord",
+    "passwordCreatedFailedBody": "Något gick fel. Försök igen.",
+    "changePhoto": "Ändra profilbild",
+    "version": "Version {{version}}",
+    "termsOfUse": "Användarvillkor",
+    "deleteAccount": "Radera konto",
+    "deletingAccount": "Raderar…",
+    "deleteAccountConfirmTitle": "Radera ditt konto?",
+    "deleteAccountConfirmBody": "Detta raderar permanent din sparade samling, ditt lösenord (om det finns) och avbryter din aktiva prenumeration, om du har en. Detta kan inte ångras.",
+    "deleteAccountConfirmButton": "Radera",
+    "deleteAccountDoneTitle": "Konto raderat",
+    "deleteAccountDoneBody": "Din data har raderats och eventuell aktiv prenumeration har avbrutits.",
+    "deleteAccountFailedTitle": "Kunde inte radera kontot",
+    "deleteAccountFailedBody": "Något gick fel. Försök igen.",
+    "helpAndSupport": "Hjälp och support",
+    "rewardsStore": "Belöningsbutik",
+    "naturalistBadge": "Naturalist",
+    "deleteAccountDoneBillingBody": "Ditt konto och dina data har raderats. VIKTIGT: detta avslutar inte din prenumeration — du måste säga upp den i ditt Hotmart-konto, annars fortsätter debiteringen.",
+    "locationRow": "Använd min ungefärliga plats",
+    "locationHint": "Ökar träffsäkerheten genom att bara väga in arter nära dig. Avrundad till cirka 1 km och sparas aldrig.",
+    "emptyTitle": "Din samling börjar här",
+    "emptyBody": "Rikta kameran mot en växt, insekt, svamp, fisk eller fågel - eller spela in ett läte - så hamnar den här.",
+    "emptyCta": "Identifiera något"
+  },
+  "terms": {
+    "title": "Användarvillkor",
+    "acceptanceTitle": "Godkännande av villkoren",
+    "acceptanceBody": "Genom att använda NatureLens godkänner du dessa användarvillkor. Om du inte håller med, vänligen använd inte appen.",
+    "serviceTitle": "Vad den här appen gör",
+    "serviceBody": "Med NatureLens kan du fotografera växter, insekter, svampar, grödor och träd för att identifiera dem med hjälp av tredjeparts AI-tjänster (Plant.id, Insect.id, Mushroom.id, Crop.health, alla från Kindwise). Resultat genereras automatiskt och granskas inte av en mänsklig expert.",
+    "accuracyTitle": "Identifieringens noggrannhet — läs detta",
+    "accuracyBody": "AI-identifiering kan ha fel, även om huruvida en växt eller svamp är ätbar, giftig eller säker att röra vid. Ät, plocka eller använd aldrig en vild växt, svamp eller organism enbart baserat på resultatet från den här appen. Bekräfta alltid med en kvalificerad expert (mykolog, botaniker eller giftinformationscentral) innan du äter eller använder något du hittat i naturen. Vi ansvarar inte för skador orsakade av att man litar på en identifiering som gjorts av den här appen.",
+    "billingTitle": "Prenumerationer och fakturering",
+    "billingBody": "Betalda prenumerationer debiteras via Stripe till det pris som visas i appen vid prenumerationstillfället och förnyas automatiskt tills du säger upp dem. Du kan säga upp när som helst; din åtkomst fortsätter till slutet av den redan betalda perioden. Vi erbjuder inte proportionell återbetalning för outnyttjad tid, förutom när det krävs enligt lag.",
+    "accountTitle": "Konton och lösenord",
+    "accountBody": "Du behöver inget konto för att använda de kostnadsfria funktionerna. Prenumeranter kan valfritt skapa ett lösenord för att logga in och synka sin prenumeration mellan enheter. Du ansvarar för att hålla ditt lösenord säkert och för allt som händer via ditt konto.",
+    "liabilityTitle": "Ingen garanti, ansvarsbegränsning",
+    "liabilityBody": "Den här appen tillhandahålls \"i befintligt skick\", utan några garantier. I den utsträckning som lagen tillåter ansvarar vi inte för några skador som uppstår från din användning av appen, inklusive att förlita sig på något identifieringsresultat.",
+    "changesTitle": "Ändringar av dessa villkor",
+    "changesBody": "Vi kan uppdatera dessa villkor då och då. Att fortsätta använda appen efter en ändring innebär att du accepterar de uppdaterade villkoren.",
+    "contactTitle": "Kontakt",
+    "contactBody": "Frågor om dessa villkor kan riktas till appens utvecklare."
+  },
+  "privacy": {
+    "title": "Integritetspolicy",
+    "collectTitle": "Vad vi samlar in",
+    "collectBody": "Med den här appen kan du fotografera växter, insekter, svampar eller grödor för att identifiera dem. För att göra detta används AI-identifieringstjänster från tredje part — Plant.id, Insect.id, Mushroom.id och Crop.health, alla utvecklade av Kindwise.",
+    "thirdPartyTitle": "AI-tjänster från tredje part",
+    "thirdPartyBody": "När du tar eller laddar upp ett foto för att identifiera något skickas fotot direkt till relevant Kindwise-identifieringstjänst för att ta fram ett resultat. Vi lagrar inte dina foton på någon server som vi kontrollerar.",
+    "localStorageTitle": "Endast lokal lagring",
+    "localStorageBody": "Din sparade samling — identifierade arter, anteckningar och tidsstämplar — lagras endast lokalt på din egen enhet via webbläsarens eller appens lokala lagring. Den laddas aldrig upp till någon molnserver som vi driver, och delas aldrig med andra användare.",
+    "noAccountsTitle": "Inga konton, ingen spårning",
+    "noAccountsBody": "Den här appen kräver inget konto för att användas — din enhet tilldelas en slumpmässig anonym identifierare (lagrad endast på din enhet) så att vi kan avgöra när den fria identifieringen per kategori har använts. Om du prenumererar samlar Stripe in din e-postadress och dina betalningsuppgifter direkt för att hantera betalningen — vi får bara din prenumerationsstatus, kopplad till samma anonyma identifierare. Prenumeranter kan valfritt skapa ett lösenord för att logga in och synka sin prenumeration på andra enheter; det krävs aldrig för att använda appen. Vi använder inga analys- eller annonsspårare.",
+    "dataLossTitle": "Risk för dataförlust",
+    "dataLossBody": "Om du rensar webbläsarens data eller avinstallerar appen går din lokalt sparade samling permanent förlorad, eftersom ingenting säkerhetskopieras på distans.",
+    "contactTitle": "Kontakt",
+    "contactBody": "Frågor om denna policy kan riktas till appens utvecklare."
+  },
+  "discover": {
+    "title": "Upptäck",
+    "subtitle": "Mata din nyfikenhet om naturen",
+    "dailyFact": "Dagens växtfakta",
+    "tapForAnotherFact": "Tryck för ännu ett faktum",
+    "exploreCollections": "Utforska samlingar",
+    "trendingSpecies": "Populära arter",
+    "showNextFactLabel": "Visa nästa växtfakta",
+    "openCollectionLabel": "Öppna samlingen {{title}}",
+    "viewSpeciesLabel": "Visa {{name}}",
+    "facts": [
+      "Titanarum (Amorphophallus titanum) kan bli över 3 meter hög och luktar as för att locka till sig pollinatörer.",
+      "Bambu är jordens snabbast växande växt – vissa arter skjuter upp till 90 centimeter på ett enda dygn.",
+      "Ett enda honungsbi besöker omkring 5 000 blommor om dagen, men hinner ändå bara producera en tolftedels tesked honung under hela sitt liv.",
+      "Svampar är närmare släkt med djur än med växter – vi delar en gemensam anfader som levde för ungefär en miljard år sedan.",
+      "Det äldsta kända levande trädet är en borsttall i Kalifornien, uppskattad till över 4 800 år.",
+      "Solrosor följer solen medan de är unga, men som fullvuxna stannar de vända mot öster – det värmer upp dem tidigare på morgonen och lockar fler pollinatörer.",
+      "Vissa orkidéer härmar honinsekters utseende och doft så exakt att hanarna försöker para sig med blomman och pollinerar den av misstag.",
+      "En trollslända fångar omkring 95 % av bytena den jagar – en av de högsta jaktframgångarna i hela djurriket.",
+      "Myror har odlat svamp i över 50 miljoner år, långt innan människan uppfann jordbruket.",
+      "Amazonas regnskog står för ungefär 20 % av det syre som landväxterna avger, och mycket av regnet där faller från vatten som skogen själv andats ut.",
+      "Fjärilar smakar med fötterna – de kliver på ett blad för att känna om larverna kan äta det.",
+      "En honungsskivling i Oregon breder ut sig över nästan 10 kvadratkilometer och är därmed en av planetens största levande organismer.",
+      "Pilgrimsfalken passerar 300 km/h i störtdykning och är därmed jordens snabbaste djur.",
+      "Fiskar saknar ögonlock – de flesta blundar helt enkelt aldrig, inte ens när de vilar.",
+      "Venus flugfälla räknar: ett känselhår måste beröras två gånger inom cirka 20 sekunder innan fällan slår igen, så att regndroppar inte utlöser den i onödan.",
+      "Träd i en skog delar näring genom underjordiska svampnätverk – ett moderträd kan mata en svag planta flera meter bort.",
+      "Silvertärnan flyttar från pol till pol varje år och tillryggalägger mer än 70 000 kilometer – djurvärldens längsta flyttning.",
+      "Kaffe, choklad och vanilj kommer alla från växter som är beroende av djur för sin pollinering – utan bin och svidknott, inget morgonkaffe.",
+      "Vissa cikador stannar under jord i 17 år innan de kryper upp – alla samtidigt, i miljardtal.",
+      "En ananas är inte en enda frukt utan dussintals bär som vuxit ihop runt en gemensam kärna.",
+      "Ugglor kan inte röra ögonen – ögongloberna är rörformade och sitter fast, och därför vrider de i stället huvudet upp till 270 grader.",
+      "Den indiska lotusens frön kan gro efter mer än tusen år av vila.",
+      "Laxen återvänder för att leka i exakt samma älv där den kläcktes och navigerar med luktsinnet över tusentals kilometer öppet hav.",
+      "Svampar var de första komplexa organismerna som koloniserade land – långt före någon växt.",
+      "Fikonträd blommar inte utåt: varje fikon är en blomsamling vänd ut och in, pollinerad av en stekel som kryper in genom ett litet hål.",
+      "En kolibris hjärta slår över 1 200 gånger i minuten under flykten, och den måste äta var tionde till femtonde minut för att överleva.",
+      "Strypfikonet börjar sitt liv på en gren högt uppe i trädkronan, sänker ner rötter till marken och tar till slut död på trädet som var dess värd.",
+      "Mossa saknar rötter – den tar upp vatten direkt genom bladen, och därför trivs den på sten och bark.",
+      "Mantisräkan ser med 12 till 16 färgreceptorer; människan har tre.",
+      "Aspdungar är ofta en enda organism: tusentals stammar som delar ett rotsystem, vissa över 10 000 år gamla.",
+      "En nyckelpiga äter upp till 5 000 bladlöss under sin livstid – därför släpper odlare ut dem i stället för att spruta.",
+      "Fröet från sjökokospalmen väger upp till 25 kilo – det tyngsta i hela växtriket.",
+      "Elektriska ålar är inga ålar utan knivfiskar, och deras stöt kan överstiga 800 volt.",
+      "Lavar är inte en organism utan två – en svamp och en alg som lever som ett, och de klarar till och med rymden.",
+      "Kejsarpingvinhanen balanserar ett enda ägg på fötterna genom den antarktiska vintern och går två månader utan mat.",
+      "Brännässlan bränns med små glasliknande hår som bryts av i huden, och motgiftet växer ofta alldeles intill: skräppans blad.",
+      "Vissa djuphavsfiskar är genomskinliga och använder osynlighet som kamouflage där det inte finns någonstans att gömma sig.",
+      "En fullvuxen ek kan fälla 10 000 ekollon ett gott år, och ungefär ett av tiotusen blir ett träd.",
+      "Kråkor känner igen enskilda människoansikten, hyser agg och lär sina ungar vem de ska undvika.",
+      "Världens minsta blomväxt, dvärgandmat, är stor som ett sandkorn – ett dussin får plats på en fingertopp."
+    ],
+    "topics": {
+      "airPurifying": {
+        "title": "Luftrenande växter",
+        "desc": "NASA studerade dessa arter för att rena inomhusluft.",
+        "intro": "I slutet av 1980-talet testade NASA dussintals vanliga krukväxter för att ta reda på vilka som kunde hjälpa till att rena bort föroreningar från den slutna luften i rymdfarkosters kabiner — och upptäckte att många vanliga favoriter är förvånansvärt bra på att absorbera gifter som formaldehyd, bensen och kolmonoxid. Den här samlingen samlar de arter som presterade bäst i den forskningen och som sedan dess har blivit klassiker inom hemmets luftkvalitetsfolklore. De ersätter inte att öppna ett fönster, men några välplacerade krukor är ett enkelt sätt att fräscha upp luften i de rum där du tillbringar mest tid.",
+        "species": [
+          {
+            "name": "Svärmorstunga",
+            "sci": "Dracaena trifasciata (syn. Sansevieria trifasciata)",
+            "note": "En av NASA:s bästa prestationer — omvandlar koldioxid till syre även nattetid, till skillnad från de flesta andra krukväxter."
+          },
+          {
+            "name": "Ampellilja",
+            "sci": "Chlorophytum comosum",
+            "note": "NASA rankade den som en av de bästa på att rena bort formaldehyd och xylen från vanlig inomhusluft."
+          },
+          {
+            "name": "Fredslilja",
+            "sci": "Spathiphyllum wallisii",
+            "note": "Toppade NASA:s ursprungliga studie för att rena inomhusluften från bensen, formaldehyd och trikloretylen."
+          },
+          {
+            "name": "Murgröna",
+            "sci": "Hedera helix",
+            "note": "NASA:s högst rankade växt totalt sett, uppskattad för att rena bort formaldehyd och till och med luftburna mögelsporer."
+          },
+          {
+            "name": "Svärdbräken",
+            "sci": "Nephrolepis exaltata",
+            "note": "En NASA-testad formaldehydrenare som också höjer luftfuktigheten i torra, uppvärmda inomhusrum."
+          },
+          {
+            "name": "Guldranka",
+            "sci": "Epipremnum aureum",
+            "note": "Nästan omöjlig att döda och dokumenterat att den filtrerar formaldehyd, bensen och kolmonoxid från inomhusluften."
+          },
+          {
+            "name": "Gummiträd",
+            "sci": "Ficus elastica",
+            "note": "En favorit i NASA:s Clean Air Study, som stadigt renar bort formaldehyd från vardagliga boendemiljöer."
+          }
+        ]
+      },
+      "beginnerSucculents": {
+        "title": "Suckulenter för nybörjare",
+        "desc": "Törstsnåla växter som trivs med lite försumlighet.",
+        "intro": "Suckulenter har fått sitt rykte som nybörjarvänliga på goda grunder: deras tjocka, vattenlagrande blad och stjälkar gör att de klarar en glömd vattning eller två utan att sura. Den här samlingen fokuserar på de tåligaste, mest förlåtande sorterna som finns — växter byggda för att tåla de klassiska nybörjarmisstagen övervattning, undervattning och ojämnt ljus. Ge vilken som helst av dessa en ljus fönsterbräda och lite tålamod, så har du en nästan idiotsäker startpunkt för att bygga upp din egen växtsamling.",
+        "species": [
+          {
+            "name": "Jadeväxt",
+            "sci": "Crassula ovata",
+            "note": "Lagrar vatten i tjocka stjälkar och blad, så en missad vattning eller två stör den inte."
+          },
+          {
+            "name": "Svärmorstunga",
+            "sci": "Dracaena trifasciata",
+            "note": "Trivs med total försumelse, tål svagt ljus och veckor av torr jord utan att klaga."
+          },
+          {
+            "name": "Zebraplanta",
+            "sci": "Haworthiopsis fasciata",
+            "note": "Förblir kompakt och långsamväxande, vilket gör det nästan omöjligt att ge den för mycket skötsel."
+          },
+          {
+            "name": "Aloe vera",
+            "sci": "Aloe vera",
+            "note": "Förlåter oregelbunden vattning tack vare gelfyllda blad byggda för att överleva torka på egen hand."
+          },
+          {
+            "name": "Pandaväxt",
+            "sci": "Kalanchoe tomentosa",
+            "note": "Luddiga, vattenlagrande blad struntar i torrperioder, vilket gör detta till en nästan idiotsäker första suckulent."
+          },
+          {
+            "name": "Åsnesvans",
+            "sci": "Sedum morganianum",
+            "note": "Fylliga hängande blad har egna vattenreserver, vilket belönar passiva ägare som motstår frestelsen att övervattna."
+          },
+          {
+            "name": "Mexikansk taklök",
+            "sci": "Echeveria elegans",
+            "note": "Den klassiska rosettformen lagrar vatten effektivt och förökar sig lätt, vilket förlåter nybörjares oundvikliga missteg."
+          }
+        ]
+      },
+      "petSafe": {
+        "title": "Husdjurssäkra krukväxter",
+        "desc": "Ogiftig grönska för hem med katter och hundar.",
+        "intro": "Att dela hem med katter och hundar betyder inte att man måste ge upp krukväxter, men många populära arter är faktiskt skadliga om de blir tuggade på. Den här samlingen samlar väldokumenterade, ogiftiga favoriter, dubbelkontrollerade mot ASPCA:s säkerhetsdata, så att du kan fylla fönsterbrädor och hyllor utan att oroa dig för en nyfiken tass eller ett utforskande bett. Från hängande rankor till blommande favoriter förtjänar varje val här sin plats genom att vara säkert först och vackert sedan.",
+        "species": [
+          {
+            "name": "Ampellilja",
+            "sci": "Chlorophytum comosum",
+            "note": "ASPCA klassar den som ogiftig för katter och hundar, och dess hängande blad ger nyfikna tassar något ofarligt att leka med."
+          },
+          {
+            "name": "Svärdbräken",
+            "sci": "Nephrolepis exaltata",
+            "note": "Denna frodiga, texturrika ormbunke är ogiftig för husdjur, vilket gör den till ett säkert sätt att tillföra djungelkänsla till vilket rum som helst."
+          },
+          {
+            "name": "Bordspalm",
+            "sci": "Chamaedorea elegans",
+            "note": "En klassisk viktoriansk krukväxt som är ogiftig för katter och hundar och som tål svagt ljus utan någon risk."
+          },
+          {
+            "name": "Bönväxt",
+            "sci": "Maranta leuconeura",
+            "note": "Dess blad viks ihop på natten som knäppta händer i bön, och den är helt säker om en nyfiken katt tar en tugga."
+          },
+          {
+            "name": "Vattenmelonpeperomia",
+            "sci": "Peperomia argyreia",
+            "note": "Kompakt och ogiftig, dess randiga blad gör den till ett slående, husdjurssäkert inslag på hyllor och sidobord."
+          },
+          {
+            "name": "Zebrahaworthia",
+            "sci": "Haworthia attenuata",
+            "note": "Ett husdjurssäkert alternativ till giftig aloe och jadeväxt, denna randiga suckulent ger samma look utan risken."
+          },
+          {
+            "name": "Usambaraviol",
+            "sci": "Saintpaulia ionantha",
+            "note": "En av få blommande krukväxter som bekräftats vara ogiftig, så husdjur kan dela fönsterbrädan med blommorna."
+          }
+        ]
+      },
+      "medicinalHerbs": {
+        "title": "Medicinalörter",
+        "desc": "Växter med en lång historia av läkande användning.",
+        "intro": "Långt innan det moderna medicinskåpet var trädgårdar det ursprungliga apoteket: örter som lavendel, pepparmynta och röd solhatt har odlats, bryggts och applicerats i århundraden för att lindra vardagliga besvär. Den här samlingen lyfter fram växter med väldokumenterade roller inom folkmedicin och traditionella medicinsystem världen över, från medelhavsklassiker i köket till ayurvediska favoriter. De flesta trivs på en solig fönsterbräda, vilket låter dig odla en levande bit av örthistoria hemma.",
+        "species": [
+          {
+            "name": "Aloe vera",
+            "sci": "Aloe vera",
+            "note": "Dess gelfyllda blad har lindrat brännskador och mindre hudirritationer i olika kulturer i tusentals år.",
+            "id": "aloeVera",
+            "tags": [
+              "skin",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Lavendel",
+            "sci": "Lavandula angustifolia",
+            "note": "Länge värdesatt för sin lugnande doft, traditionellt använd för att lindra stress och främja god sömn.",
+            "id": "lavender",
+            "tags": [
+              "sleep",
+              "stress",
+              "headache"
+            ]
+          },
+          {
+            "name": "Pepparmynta",
+            "sci": "Mentha x piperita",
+            "note": "Mentolrika blad har lindrat magont och huvudvärk inom folkmedicinen i århundraden.",
+            "id": "peppermint",
+            "tags": [
+              "digestion",
+              "headache"
+            ]
+          },
+          {
+            "name": "Kamomill",
+            "sci": "Matricaria chamomilla",
+            "note": "Dess prästkrageliknande blommor bryggs till ett milt te som länge använts för att lugna nerverna och underlätta matsmältningen.",
+            "id": "germanChamomile",
+            "tags": [
+              "sleep",
+              "digestion",
+              "stress"
+            ]
+          },
+          {
+            "name": "Röd solhatt",
+            "sci": "Echinacea purpurea",
+            "note": "Ursprunglig i Nordamerika, dess rötter och blommor användes av ursprungsbefolkningar för att stödja immunförsvaret.",
+            "id": "purpleConeflower",
+            "tags": [
+              "immunity"
+            ]
+          },
+          {
+            "name": "Rosmarin",
+            "sci": "Salvia rosmarinus (syn. Rosmarinus officinalis)",
+            "note": "Denna doftande medelhavsbuske bär på ett urgammalt rykte om att skärpa minnet och underlätta blodcirkulationen.",
+            "id": "rosemary",
+            "tags": [
+              "headache",
+              "energy",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Helig basilika (Tulsi)",
+            "sci": "Ocimum tenuiflorum",
+            "note": "Vördad inom ayurvedisk tradition i århundraden, dess blad dras som ett adaptogent te mot stress.",
+            "id": "holyBasil",
+            "tags": [
+              "stress",
+              "immunity",
+              "respiratory"
+            ]
+          },
+          {
+            "name": "Gurkmeja",
+            "sci": "Curcuma longa",
+            "note": "Ayurvedisk medicin har i århundraden använt denna gyllene rot för att lindra inflammation och stödja matsmältning och sårläkning.",
+            "id": "turmeric",
+            "tags": [
+              "painInflammation",
+              "digestion",
+              "skin"
+            ]
+          },
+          {
+            "name": "Ingefära",
+            "sci": "Zingiber officinale",
+            "note": "Kinesiska och ayurvediska healers har länge tuggat eller bryggt denna rotstam för att lugna illamående och värma matsmältningen.",
+            "id": "ginger",
+            "tags": [
+              "digestion",
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "Ginseng",
+            "sci": "Panax ginseng",
+            "note": "Högt skattad inom traditionell kinesisk medicin i över tvåtusen år som ett stärkande tonikum för energi och vitalitet.",
+            "id": "ginseng",
+            "tags": [
+              "energy",
+              "stress"
+            ]
+          },
+          {
+            "name": "Ashwagandha",
+            "sci": "Withania somnifera",
+            "note": "En ayurvedisk basört i årtusenden – roten tas traditionellt för att lindra stress och bygga upp styrka och uthållighet.",
+            "id": "ashwagandha",
+            "tags": [
+              "stress",
+              "energy",
+              "sleep"
+            ]
+          },
+          {
+            "name": "Fläderbär",
+            "sci": "Sambucus nigra",
+            "note": "Europeiska folkliga healers har i århundraden bryggt dess mörka bär till safter för att bekämpa förkylning och influensa.",
+            "id": "elderberry",
+            "tags": [
+              "immunity",
+              "respiratory"
+            ]
+          },
+          {
+            "name": "Vänderot",
+            "sci": "Valeriana officinalis",
+            "note": "Europeiska örtläkare har sedan urminnes tider torkat denna starkt doftande rot som ett traditionellt medel mot orolig sömn.",
+            "id": "valerian",
+            "tags": [
+              "sleep",
+              "stress"
+            ]
+          },
+          {
+            "name": "Trollhassel",
+            "sci": "Hamamelis virginiana",
+            "note": "Nordamerikanska urfolk destillerade bark och blad till en sammandragande lösning mot blåmärken, svullnad och hudirritation.",
+            "id": "witchHazel",
+            "tags": [
+              "skin",
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "Goldenseal",
+            "sci": "Hydrastis canadensis",
+            "note": "Cherokeserna och andra nordamerikanska urfolk använde denna bittra rot för att behandla sår, infektioner och matsmältningsbesvär.",
+            "id": "goldenseal",
+            "tags": [
+              "digestion",
+              "immunity",
+              "skin"
+            ]
+          },
+          {
+            "name": "Djävulsklo",
+            "sci": "Harpagophytum procumbens",
+            "note": "Traditionella healers i Kalahari har länge använt denna hakförsedda rot för att lindra ledvärk och artrit.",
+            "id": "devilsClaw",
+            "tags": [
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "Afrikansk malört",
+            "sci": "Artemisia afra",
+            "note": "En av södra Afrikas mest använda traditionella medicinalväxter, ångad eller bryggd för att lindra hosta och nästäppa.",
+            "id": "africanWormwood",
+            "tags": [
+              "respiratory",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Yerba Mate",
+            "sci": "Ilex paraguariensis",
+            "note": "Guaranífolket i Sydamerika har länge bryggt bladen till ett stimulerande, matsmältningsfrämjande te som dricks dagligen.",
+            "id": "yerbaMate",
+            "tags": [
+              "energy",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Asiatiskt vattennav",
+            "sci": "Centella asiatica",
+            "note": "Vördad inom ayurvedisk och traditionell sydostasiatisk medicin som en sårläkande ört som sägs skärpa minnet och lugna sinnet.",
+            "id": "gotuKola",
+            "tags": [
+              "skin",
+              "stress"
+            ]
+          },
+          {
+            "name": "Lakritsrot",
+            "sci": "Glycyrrhiza glabra",
+            "note": "Använd inom kinesisk, ayurvedisk och mellanösternmedicin i århundraden för att lindra hosta, halsont och magont.",
+            "id": "licoriceRoot",
+            "tags": [
+              "respiratory",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Neem",
+            "sci": "Azadirachta indica",
+            "note": "De bittra neembladen, barken och oljan är ayurvedans klassiska botemedel mot hudutslag, sår och parasitinfektioner.",
+            "id": "neem",
+            "tags": [
+              "skin",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Amla (indiskt krusbär)",
+            "sci": "Phyllanthus emblica",
+            "note": "Ayurvedans rikaste naturliga källa till C-vitamin, amla utgör grunden i rasayana-tonika som värderas högt för föryngring och matsmältning.",
+            "id": "amla",
+            "tags": [
+              "digestion",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Brahmi",
+            "sci": "Bacopa monnieri",
+            "note": "Denna ayurvediska Medhya Rasayana-ört tas traditionellt för att skärpa minnet, lugna sinnet och stödja inlärning.",
+            "id": "brahmi",
+            "tags": [
+              "stress",
+              "sleep"
+            ]
+          },
+          {
+            "name": "Guduchi (Giloy)",
+            "sci": "Tinospora cordifolia",
+            "note": "Kallad Amrita, 'odödlighetens rot', är denna stjälkdekokt ayurvedans främsta val mot feber och för att bygga upp immunförsvaret.",
+            "id": "guduchi",
+            "tags": [
+              "immunity",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Shatavari",
+            "sci": "Asparagus racemosus",
+            "note": "Denna rottonic hyllas inom ayurvedan som det främsta föryngringsmedlet för kvinnor och används traditionellt för att stödja amning och hormonell balans.",
+            "id": "shatavari",
+            "tags": [
+              "energy",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Arjuna",
+            "sci": "Terminalia arjuna",
+            "note": "Barkpulver har länge använts inom ayurvedisk hjärtvård för att stärka hjärtmuskeln och stödja en hälsosam blodcirkulation.",
+            "id": "arjuna",
+            "tags": [
+              "energy"
+            ]
+          },
+          {
+            "name": "Haritaki",
+            "sci": "Terminalia chebula",
+            "note": "Kallad 'medicinernas kung' inom ayurvedan, är denna frukt grundstenen i Triphala för matsmältning, avgiftning och utrensning.",
+            "id": "haritaki",
+            "tags": [
+              "digestion",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Bibhitaki",
+            "sci": "Terminalia bellirica",
+            "note": "En av Triphalas tre frukter, som traditionellt använts inom ayurvedan för att rensa bort överskott av slem och stödja andningshälsan.",
+            "id": "bibhitaki",
+            "tags": [
+              "respiratory",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Bockhornsklöver",
+            "sci": "Trigonella foenum-graecum",
+            "note": "Fröna blötläggs och äts i hushåll över hela Sydasien för att underlätta matsmältningen, stödja amning och balansera blodsockret.",
+            "id": "fenugreek",
+            "tags": [
+              "digestion",
+              "energy"
+            ]
+          },
+          {
+            "name": "Lång peppar (Pippali)",
+            "sci": "Piper longum",
+            "note": "Denna skarpa frukt ingår i ayurvediska Trikatu-blandningar och används traditionellt för att tända matsmältningens eld och lösa upp slem i luftvägarna.",
+            "id": "longPepper",
+            "tags": [
+              "digestion",
+              "respiratory"
+            ]
+          },
+          {
+            "name": "Sandelträ",
+            "sci": "Santalum album",
+            "note": "En kylande pasta som används inom ayurvedan för att lugna inflammerad hud, sänka feber och stilla sinnet under meditation.",
+            "id": "sandalwood",
+            "tags": [
+              "skin",
+              "stress"
+            ]
+          },
+          {
+            "name": "Indisk sarsaparilla (Anantamul)",
+            "sci": "Hemidesmus indicus",
+            "note": "Denna söta rotranka används i klassiska ayurvediska recept för att kyla blodet, rena huden och lindra ledvärk.",
+            "id": "indianSarsaparilla",
+            "tags": [
+              "skin",
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "Bael (bengalisk kvitten)",
+            "sci": "Aegle marmelos",
+            "note": "Fruktköttet från den omogna frukten är en traditionell ayurvedisk basvara för att lindra kronisk diarré och dysenteri.",
+            "id": "bael",
+            "tags": [
+              "digestion"
+            ]
+          },
+          {
+            "name": "Guggul",
+            "sci": "Commiphora wightii",
+            "note": "Kådan utgör hjärtat i ayurvedans Guggulu-recept och används traditionellt för att hantera kolesterol och ledinflammation.",
+            "id": "guggul",
+            "tags": [
+              "painInflammation",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Manjistha (indisk krapp)",
+            "sci": "Rubia cordifolia",
+            "note": "Roten har länge använts inom ayurvedan som blodrenare för klar hud, sårläkning och stöd åt lymfsystemet.",
+            "id": "manjistha",
+            "tags": [
+              "skin",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Jatamansi (nardus)",
+            "sci": "Nardostachys jatamansi",
+            "note": "Den doftande roten har länge använts inom ayurvedan för att lugna nervsystemet och främja en god natts sömn.",
+            "id": "jatamansi",
+            "tags": [
+              "sleep",
+              "stress"
+            ]
+          },
+          {
+            "name": "Astragalus",
+            "sci": "Astragalus membranaceus",
+            "note": "Huang qi-roten kokas till en dekokt för att stärka wei qi, öka uthålligheten och stödja sårläkning.",
+            "id": "astragalus",
+            "tags": [
+              "immunity",
+              "energy"
+            ]
+          },
+          {
+            "name": "Reishi-svamp",
+            "sci": "Ganoderma lucidum",
+            "note": "Ling zhi-svampen värderades högt av daoistiska örtkunniga för att lugna shen, lindra sömnlöshet och förlänga livet.",
+            "id": "reishiMushroom",
+            "tags": [
+              "sleep",
+              "stress",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Kinesisk kvanne",
+            "sci": "Angelica sinensis",
+            "note": "Dang gui, 'den kvinnliga ginsengen', har närt blodet och lindrat menstruationsbesvär i två tusen år.",
+            "id": "dongQuai",
+            "tags": [
+              "energy",
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "Gojibär",
+            "sci": "Lycium barbarum",
+            "note": "Gou qi zi-bären dras som te eller äts för att nära lever- och njur-yin och ge klarare syn.",
+            "id": "gojiBerry",
+            "tags": [
+              "immunity",
+              "energy"
+            ]
+          },
+          {
+            "name": "Schisandra",
+            "sci": "Schisandra chinensis",
+            "note": "Wu wei zi, 'femsmaksfrukten', sammandrar lungorna, lugnar sinnet och skyddar levern.",
+            "id": "schisandra",
+            "tags": [
+              "respiratory",
+              "stress",
+              "sleep"
+            ]
+          },
+          {
+            "name": "Kinesisk frossört",
+            "sci": "Scutellaria baicalensis",
+            "note": "Huang qin-roten rensar bort fukt-hetta och har använts mot feber, hosta och dysenteri ända sedan de äldsta recepten.",
+            "id": "chineseSkullcap",
+            "tags": [
+              "respiratory",
+              "digestion",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Rehmannia",
+            "sci": "Rehmannia glutinosa",
+            "note": "Ångad di huang stärker njur-yin och blodet, och är en hörnstensingrediens i många klassiska recept.",
+            "id": "rehmannia",
+            "tags": [
+              "energy",
+              "sleep"
+            ]
+          },
+          {
+            "name": "Krysantemum",
+            "sci": "Chrysanthemum morifolium",
+            "note": "Ju hua-blommorna bryggs som te för att skingra hetta, lugna röda ögon och lindra huvudvärk.",
+            "id": "chrysanthemum",
+            "tags": [
+              "headache",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Japansk kaprifol",
+            "sci": "Lonicera japonica",
+            "note": "Jin yin hua-blomman rensar bort hetta och gift, och har länge använts mot feber, sår och halsinfektioner.",
+            "id": "japaneseHoneysuckle",
+            "tags": [
+              "immunity",
+              "respiratory",
+              "skin"
+            ]
+          },
+          {
+            "name": "Kinesisk kanel (Cassia)",
+            "sci": "Cinnamomum cassia",
+            "note": "Rou gui-barken värmer njur-yang och sätter fart på stillastående blod för att lindra köldbetingad smärta.",
+            "id": "chineseCinnamon",
+            "tags": [
+              "painInflammation",
+              "energy"
+            ]
+          },
+          {
+            "name": "Poria",
+            "sci": "Wolfiporia extensa",
+            "note": "Fu ling, ett svampsklerotium, dränerar fukt, lugnar sinnet och stärker mjälten när den kokas i dekokter.",
+            "id": "poria",
+            "tags": [
+              "sleep",
+              "digestion",
+              "stress"
+            ]
+          },
+          {
+            "name": "Kinesisk yams",
+            "sci": "Dioscorea polystachya",
+            "note": "Shan yao-knölen stärker mjältens, lungans och njurens qi, och puttrades traditionellt ner i stärkande gröt.",
+            "id": "chineseYam",
+            "tags": [
+              "digestion",
+              "energy",
+              "respiratory"
+            ]
+          },
+          {
+            "name": "Bupleurum",
+            "sci": "Bupleurum chinense",
+            "note": "Chai hu-roten harmoniserar levern och skingrar hetta, avgörande vid växlande feber och frossa.",
+            "id": "bupleurum",
+            "tags": [
+              "stress",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Notoginseng",
+            "sci": "Panax notoginseng",
+            "note": "San qi-roten används för att stoppa blödningar och blåmärken samtidigt som den sätter fart på blodcirkulationen.",
+            "id": "notoginseng",
+            "tags": [
+              "painInflammation",
+              "skin"
+            ]
+          },
+          {
+            "name": "Codonopsis",
+            "sci": "Codonopsis pilosula",
+            "note": "Dang shen-roten fungerar som en mildare ersättning för ginseng, den stärker qi och förbättrar matsmältningen.",
+            "id": "codonopsis",
+            "tags": [
+              "energy",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Fo-Ti (He Shou Wu)",
+            "sci": "Reynoutria multiflora",
+            "note": "He shou wu-roten tillagas för att nära lever och njurar, och sägs kunna göra grånande hår mörkt igen.",
+            "id": "foti",
+            "tags": [
+              "energy",
+              "skin"
+            ]
+          },
+          {
+            "name": "Röllika",
+            "sci": "Achillea millefolium",
+            "note": "Känd som soldatens sårört, har den använts sedan antiken för att stoppa blödningar och snabba på läkningen av slagfältets sår.",
+            "id": "yarrow",
+            "tags": [
+              "skin",
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "Johannesört",
+            "sci": "Hypericum perforatum",
+            "note": "Ett europeiskt folkligt botemedel mot melankoli och nervsmärta, vars gula blommor dras i olja till sårläkande salvor.",
+            "id": "stJohnsWort",
+            "tags": [
+              "stress",
+              "painInflammation",
+              "skin"
+            ]
+          },
+          {
+            "name": "Kryddsalvia",
+            "sci": "Salvia officinalis",
+            "note": "Det latinska ordet salvere, att läka, speglar dess urgamla användning som gurgelvatten mot halsont och för att underlätta matsmältningen.",
+            "id": "sage",
+            "tags": [
+              "digestion",
+              "respiratory"
+            ]
+          },
+          {
+            "name": "Timjan",
+            "sci": "Thymus vulgaris",
+            "note": "Ett medelhavsbotemedel mot hosta och bröstbesvär, vars flyktiga oljor länge använts i safter för att lösa upp envist slem.",
+            "id": "thyme",
+            "tags": [
+              "respiratory",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Läkemalva",
+            "sci": "Althaea officinalis",
+            "note": "Slemämnena i rot och blad har genom sekler av europeiskt apoteksbruk lindrat halsont, hosta och irriterade tarmslemhinnor.",
+            "id": "marshmallow",
+            "tags": [
+              "respiratory",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Ringblomma",
+            "sci": "Calendula officinalis",
+            "note": "De klarlysande kronbladen krossas till salvor för att rengöra skärsår och lugna inflammerad, långsamt läkande hud.",
+            "id": "potMarigold",
+            "tags": [
+              "skin",
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "Mariatistel",
+            "sci": "Silybum marianum",
+            "note": "Dessa medelhavsfrön har traditionellt tuggats eller bryggts för att skydda och stärka levern efter tunga festmåltider.",
+            "id": "milkThistle",
+            "tags": [
+              "digestion"
+            ]
+          },
+          {
+            "name": "Fänkål",
+            "sci": "Foeniculum vulgare",
+            "note": "De anisdoftande fröna har i generationer tuggats efter maten för att lindra kolik, uppblåsthet och gasbesvär hos spädbarn.",
+            "id": "fennel",
+            "tags": [
+              "digestion"
+            ]
+          },
+          {
+            "name": "Brännässla",
+            "sci": "Urtica dioica",
+            "note": "De brännande bladen bryggs till ett vårstärkande te för att rena blodet och lindra ledvärk.",
+            "id": "stingingNettle",
+            "tags": [
+              "painInflammation",
+              "skin",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Kransborre",
+            "sci": "Marrubium vulgare",
+            "note": "Denna bittra medelhavsört kokas ner till karameller och safter som ett klassiskt medel mot hosta och bronkit.",
+            "id": "whiteHorehound",
+            "tags": [
+              "respiratory",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Vallört",
+            "sci": "Symphytum officinale",
+            "note": "Kallad benstocka, har dess mosade rot och blad i sekler lagts som omslag på benbrott, stukningar och blåmärken.",
+            "id": "comfrey",
+            "tags": [
+              "painInflammation",
+              "skin"
+            ]
+          },
+          {
+            "name": "Mattram",
+            "sci": "Tanacetum parthenium",
+            "note": "En bitterbladig ört som tuggas färsk eller bryggs som te, ett sedan länge etablerat folkligt svar på migrän och huvudvärk.",
+            "id": "feverfew",
+            "tags": [
+              "headache",
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "Kungsljus",
+            "sci": "Verbascum thapsus",
+            "note": "De luddiga bladen och blommorna dras i olja eller te mot hosta, halsont och örsprång.",
+            "id": "mullein",
+            "tags": [
+              "respiratory",
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "Hagtorn",
+            "sci": "Crataegus monogyna",
+            "note": "Bär, blommor och blad dras som Europas klassiska hjärttonikum för en svag eller orolig puls.",
+            "id": "hawthorn",
+            "tags": [
+              "stress",
+              "sleep"
+            ]
+          },
+          {
+            "name": "Lind (lindblom)",
+            "sci": "Tilia cordata",
+            "note": "De doftande blommorna dras som ett lugnande te för att bryta feber och stilla oroliga nerver.",
+            "id": "linden",
+            "tags": [
+              "sleep",
+              "stress",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Älggräs",
+            "sci": "Filipendula ulmaria",
+            "note": "En doftande blommande ört som länge använts mot feber och ledvärk, och som senare gav den kemiska förlagan till aspirin.",
+            "id": "meadowsweet",
+            "tags": [
+              "painInflammation",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Osharot",
+            "sci": "Ligusticum porteri",
+            "note": "Roten har tuggats eller bryggts av stammar i Klippiga bergen, som navajo och ute, för att lindra halsont och luftvägsinfektioner.",
+            "id": "oshaRoot",
+            "tags": [
+              "respiratory",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Black Cohosh",
+            "sci": "Actaea racemosa",
+            "note": "Roten har använts av cherokeserna och andra folk från de östra skogslandskapen för att lindra menstruationskramper och stödja förlossningen.",
+            "id": "blackCohosh",
+            "tags": [
+              "painInflammation",
+              "stress"
+            ]
+          },
+          {
+            "name": "Devil's Club",
+            "sci": "Oplopanax horridus",
+            "note": "Innerbarken har använts av tlingit, haida och andra folk längs Stillahavskusten i nordvästra Nordamerika för att behandla artrit, infektioner och diabetessymtom.",
+            "id": "devilsClub",
+            "tags": [
+              "painInflammation",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Wild Bergamot",
+            "sci": "Monarda fistulosa",
+            "note": "Blackfeet och andra prärieindianska folk bryggde blad-te av denna tymolrika mynta för att behandla förkylningar och luftvägsinfektioner.",
+            "id": "wildBergamot",
+            "tags": [
+              "respiratory",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Mjölon (Uva Ursi)",
+            "sci": "Arctostaphylos uva-ursi",
+            "note": "Bladen bryggdes av många ursprungsamerikanska folk som ett urindrivande medel och botemedel mot urinvägsinfektioner.",
+            "id": "bearberry",
+            "tags": [
+              "immunity",
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "Rödalm",
+            "sci": "Ulmus rubra",
+            "note": "Cherokeserna och irokeserna använde den slemmiga innerbarken för att lindra halsont och läka sår.",
+            "id": "slipperyElm",
+            "tags": [
+              "digestion",
+              "respiratory",
+              "skin"
+            ]
+          },
+          {
+            "name": "Cascara Sagrada",
+            "sci": "Frangula purshiana",
+            "note": "Ursprungsfolk i nordvästra Stillahavsregionen torkade och lagrade barken från denna brakvedsväxt som ett pålitligt naturligt laxermedel.",
+            "id": "cascaraSagrada",
+            "tags": [
+              "digestion"
+            ]
+          },
+          {
+            "name": "Kinabark",
+            "sci": "Cinchona officinalis",
+            "note": "Quechuafolket i Anderna använde den bittra barken mot feber långt innan den blev källan till kinin.",
+            "id": "cinchona",
+            "tags": [
+              "immunity",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Kattklo",
+            "sci": "Uncaria tomentosa",
+            "note": "Asháninka och andra folk i den peruanska Amazonas bryggde bark från denna vedartade rankväxt mot artrit och för att stödja immunförsvaret.",
+            "id": "catsClaw",
+            "tags": [
+              "painInflammation",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Coca",
+            "sci": "Erythroxylum coca",
+            "note": "Quechua- och aymarafolken i Anderna har tuggat bladen i tusentals år för att bekämpa höjdsjuka och trötthet.",
+            "id": "coca",
+            "tags": [
+              "energy",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Drakblod",
+            "sci": "Croton lechleri",
+            "note": "Amazonasfolk stryker trädets röda lateksaft direkt på skärsår och sår som ett naturligt antiseptiskt medel.",
+            "id": "dragonsBlood",
+            "tags": [
+              "skin",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Lapacho",
+            "sci": "Tabebuia impetiginosa",
+            "note": "Innerbarken bryggs som te av ursprungsfolk i Amazonas för att behandla infektioner, feber och hudåkommor.",
+            "id": "pauDarco",
+            "tags": [
+              "immunity",
+              "skin"
+            ]
+          },
+          {
+            "name": "Boldo",
+            "sci": "Peumus boldus",
+            "note": "Mapuchefolkets healare i Chile har länge använt boldote för att stödja leverfunktionen och underlätta matsmältningen.",
+            "id": "boldo",
+            "tags": [
+              "digestion"
+            ]
+          },
+          {
+            "name": "Copaiba",
+            "sci": "Copaifera officinalis",
+            "note": "Amazonasfolk tappar kåda från detta träd och stryker den direkt på sår som ett antiinflammatoriskt medel.",
+            "id": "copaiba",
+            "tags": [
+              "painInflammation",
+              "skin"
+            ]
+          },
+          {
+            "name": "Guarana",
+            "sci": "Paullinia cupana",
+            "note": "Sateré-mawéfolket i brasilianska Amazonas domesticerade denna ranka och rostade dess frön för uthållig energi och fokus.",
+            "id": "guarana",
+            "tags": [
+              "energy"
+            ]
+          },
+          {
+            "name": "Svartkummin",
+            "sci": "Nigella sativa",
+            "note": "Känt som 'välsignelsens frö' inom profetisk medicin, behandlar dess olja astma, magbesvär och hudinfektioner.",
+            "id": "blackSeed",
+            "tags": [
+              "respiratory",
+              "digestion",
+              "skin"
+            ]
+          },
+          {
+            "name": "Rökelse",
+            "sci": "Boswellia sacra",
+            "note": "Kådan, som i tusentals år tappats från arabiska träd, behandlar ledinflammation, sår och andningsbesvär.",
+            "id": "frankincense",
+            "tags": [
+              "painInflammation",
+              "respiratory",
+              "skin"
+            ]
+          },
+          {
+            "name": "Myrra",
+            "sci": "Commiphora myrrha",
+            "note": "Kådan skördas i Afrikas horn och på Arabiska halvön och desinficerar sår samt lindrar ömma tandkött och halsar.",
+            "id": "myrrh",
+            "tags": [
+              "skin",
+              "respiratory"
+            ]
+          },
+          {
+            "name": "Senna",
+            "sci": "Senna alexandrina",
+            "note": "Egyptiska läkare har sedan antiken litat på dess baljor och blad som ett kraftfullt och pålitligt laxermedel.",
+            "id": "senna",
+            "tags": [
+              "digestion"
+            ]
+          },
+          {
+            "name": "Hibiskus (Karkade)",
+            "sci": "Hibiscus sabdariffa",
+            "note": "Dras som karkade i Sudan och Egypten, där dess foderblad är ett folkligt botemedel mot högt blodtryck och feber.",
+            "id": "hibiscus",
+            "tags": [
+              "immunity"
+            ]
+          },
+          {
+            "name": "Moringa",
+            "sci": "Moringa oleifera",
+            "note": "Har länge använts i hela Afrika söder om Sahara, där bladen behandlar undernäring och inflammation samt stödjer ammande mödrars mjölkproduktion.",
+            "id": "moringa",
+            "tags": [
+              "immunity",
+              "painInflammation"
+            ]
+          },
+          {
+            "name": "Baobab",
+            "sci": "Adansonia digitata",
+            "note": "Afrikas 'livets träd' ger fruktkött och bark som traditionellt använts mot feber, diarré och malaria.",
+            "id": "baobab",
+            "tags": [
+              "immunity",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Rooibos",
+            "sci": "Aspalathus linearis",
+            "note": "Sydafrikas khoisanfolk och kapholländska nybyggare bryggde denna rödaktiga buske som botemedel mot allergier och kolik.",
+            "id": "rooibos",
+            "tags": [
+              "immunity",
+              "digestion"
+            ]
+          },
+          {
+            "name": "Buchu",
+            "sci": "Agathosma betulina",
+            "note": "Khoisanfolkets healare vid Kap använde dess starkt doftande blad för att behandla urinvägsinfektioner och njurbesvär.",
+            "id": "buchu",
+            "tags": [
+              "immunity"
+            ]
+          },
+          {
+            "name": "Cancerbuske (Sutherlandia)",
+            "sci": "Lessertia frutescens",
+            "note": "Känd av khoifolket som 'kankerbos', är denna sydafrikanska buske ett traditionellt stärkande medel mot stress, trötthet och för att stödja immunförsvaret.",
+            "id": "cancerBush",
+            "tags": [
+              "stress",
+              "energy",
+              "immunity"
+            ]
+          },
+          {
+            "name": "Umckaloabo (afrikansk pelargon)",
+            "sci": "Pelargonium sidoides",
+            "note": "Xhosa- och zulufolkets healare i Sydafrika använde dess knölrot för att behandla hosta, bronkit och tuberkulos.",
+            "id": "umckaloabo",
+            "tags": [
+              "respiratory"
+            ]
+          },
+          {
+            "name": "Hoodia",
+            "sci": "Hoodia gordonii",
+            "note": "Sanfolkets jägare i Kalahari tuggade denna taggiga suckulent för att dämpa hunger och törst under långa vandringar.",
+            "id": "hoodia",
+            "tags": [
+              "energy"
+            ]
+          },
+          {
+            "name": "Henna",
+            "sci": "Lawsonia inermis",
+            "note": "Utöver kroppskonst används dess bladpasta inom mellanösternisk och nordafrikansk folkmedicin för att behandla svampinfektioner i huden.",
+            "id": "henna",
+            "tags": [
+              "skin"
+            ]
+          },
+          {
+            "name": "Mastix",
+            "sci": "Pistacia lentiscus",
+            "note": "Denna trädkåda har tuggats sedan antiken runt östra Medelhavet och lindrar magsår och matsmältningsbesvär.",
+            "id": "mastic",
+            "tags": [
+              "digestion"
+            ]
+          },
+          {
+            "name": "Johannesbröd",
+            "sci": "Ceratonia siliqua",
+            "note": "Mellanösterns folkmedicin malde dess baljor till ett botemedel mot diarré hos barn och magbesvär.",
+            "id": "carob",
+            "tags": [
+              "digestion"
+            ]
+          }
+        ]
+      },
+      "floweringPerennials": {
+        "title": "Blommande perenner",
+        "desc": "Blomster som återkommer år efter år.",
+        "intro": "Blommande perenner är ryggraden i en trädgård som fortsätter ge: till skillnad från ettåriga växter dör de tillbaka på vintern och växer upp igen från samma rötter, jordstammar eller knölar varje vår. Många slår sig till ro och sprider sig till fylligare tuvor med åren, så en enda plantering kan belöna dig med fler blommor varje säsong. Den här samlingen samlar älskade, lättillgängliga perenner som förankrar rabatter och kanter med pålitlig, återkommande färg.",
+        "species": [
+          {
+            "name": "Pion",
+            "sci": "Paeonia lactiflora",
+            "note": "Långlivade knölrötter kan blomma på samma plats i femtio år eller mer, i stort sett ostörda."
+          },
+          {
+            "name": "Daglilja",
+            "sci": "Hemerocallis fulva",
+            "note": "Trots namnet förökar sig varje planta till täta klumpar som blommar pålitligt i generationer."
+          },
+          {
+            "name": "Röd solhatt",
+            "sci": "Echinacea purpurea",
+            "note": "Denna prärieväxt återkommer från en stadig pålrot och självsår sig till allt större kolonier med tiden."
+          },
+          {
+            "name": "Skäggiris",
+            "sci": "Iris germanica",
+            "note": "Köttiga jordstammar sprider sig strax under jordytan och delar sig i nya knippen som blommar igen varje vår."
+          },
+          {
+            "name": "Gul solhatt",
+            "sci": "Rudbeckia fulgida",
+            "note": "Sprider sig via jordstammar och självsådd och bildar pålitliga gyllene mattor som återkommer varje sommar."
+          },
+          {
+            "name": "Trädgårdsflox",
+            "sci": "Phlox paniculata",
+            "note": "Kraftiga, tuvbildande stjälkar dör tillbaka till rötterna varje höst och kommer upp fylligare året därpå."
+          },
+          {
+            "name": "Äkta lavendel",
+            "sci": "Lavandula angustifolia",
+            "note": "Vedartade, fleråriga stjälkar överlever vintervila och bladas ut på nytt för att blomma varje sommar."
+          }
+        ]
+      },
+      "oceanAndRiverFish": {
+        "title": "Havs- och flodfiskar",
+        "desc": "Sexton vatten, en lins",
+        "intro": "Från korallrev till kalla fjällälvar — det här är fiskarna som folk oftast fotograferar och frågar om. Vetenskapliga namn står på latin över hela världen, så ett namn du lär dig här fungerar vid vilken kust som helst.",
+        "species": [
+          {
+            "name": "Clownfisk",
+            "sci": "Amphiprion ocellaris",
+            "note": "Lever inne i havsanemoner vars nässelgift den är immun mot och betalar för skyddet med städning. Alla clownfiskar föds som hanar, och den dominanta blir hona.",
+            "id": "clownfish"
+          },
+          {
+            "name": "Regnbåge",
+            "sci": "Oncorhynchus mykiss",
+            "note": "Kommer ursprungligen från kalla floder längs Stillahavskusten och odlas i dag på alla kontinenter utom Antarktis. Det rosa köttet kommer från kräftdjuren den äter.",
+            "id": "rainbowTrout"
+          },
+          {
+            "name": "Lax",
+            "sci": "Salmo salar",
+            "note": "Kläcks i sötvatten, tillbringar flera år till havs och hittar sedan tillbaka till exakt den älv där den föddes för att leka. Artnamnet betyder ”hopparen”.",
+            "id": "atlanticSalmon"
+          },
+          {
+            "name": "Gädda",
+            "sci": "Esox lucius",
+            "note": "En bakhållsjägare som ligger orörlig bland vattenväxterna och sedan hugger på bråkdelen av en sekund. Den andnäbbslika nosen och de bakåtsittande fenorna avslöjar den.",
+            "id": "northernPike"
+          },
+          {
+            "name": "Karp",
+            "sci": "Cyprinus carpio",
+            "note": "Har odlats i över tvåtusen år och finns nu på alla kontinenter utom Antarktis — eftertraktad matfisk i vissa länder, invasiv skadegörare i andra.",
+            "id": "commonCarp"
+          },
+          {
+            "name": "Palettkirurgfisk",
+            "sci": "Paracanthurus hepatus",
+            "note": "En kirurgfisk från korallreven med en rakbladsvass tagg vid stjärten som den fäller ut i försvar. Klarblå som vuxen, klargul som ungfisk.",
+            "id": "blueTang"
+          },
+          {
+            "name": "Öringabborre",
+            "sci": "Micropterus salmoides",
+            "note": "Världens mest eftertraktade sportfisk i sötvatten. Du skiljer den från svartabborren på att käken sträcker sig förbi ögat.",
+            "id": "largemouthBass"
+          },
+          {
+            "name": "Gulfenad tonfisk",
+            "sci": "Thunnus albacares",
+            "note": "Korsar hela oceaner och kan hålla kroppen varmare än vattnet omkring sig, och därför simmar den snabbt även på kalla djup.",
+            "id": "yellowfinTuna"
+          },
+          {
+            "name": "Sebrafisk",
+            "sci": "Danio rerio",
+            "note": "En liten randig flodfisk från Sydasien som blivit ett av vetenskapens mest studerade djur — de genomskinliga embryona låter forskarna se organen bildas.",
+            "id": "zebrafish"
+          },
+          {
+            "name": "Drakfisk",
+            "sci": "Pterois volitans",
+            "note": "Vacker och giftig, med taggar som ger ett smärtsamt stick. Hör hemma i Indo-Stillahavsområdet och är en allvarlig invasiv art i Atlanten och Karibien.",
+            "id": "redLionfish"
+          }
+        ]
+      },
+      "birdsOfTheWorld": {
+        "title": "Världens fåglar",
+        "desc": "Tio du faktiskt möter",
+        "intro": "Fåglar är det vilda liv som de flesta kan fotografera genom ett fönster. De här tio finns på sex kontinenter och hör till de mest igenkända arterna på jorden — bra träning för ett skarpt öga.",
+        "species": [
+          {
+            "name": "Ladusvala",
+            "sci": "Hirundo rustica",
+            "note": "Jordens mest spridda svala, som häckar över hela norra halvklotet och övervintrar i söder. Den djupt kluvna stjärten är omöjlig att missa i flykten.",
+            "id": "barnSwallow"
+          },
+          {
+            "name": "Gråsparv",
+            "sci": "Passer domesticus",
+            "note": "Följde människan ut från Mellanöstern till nästan varje stad på planeten. Hanen bär en svart haklapp, honan är enfärgat sandbrun.",
+            "id": "houseSparrow"
+          },
+          {
+            "name": "Kungsfiskare",
+            "sci": "Alcedo atthis",
+            "note": "En blixt av elektriskt blått över lugna floder i Europa, Asien och Nordafrika. Den dyker med huvudet först och kan ta fisk en meter under ytan.",
+            "id": "commonKingfisher"
+          },
+          {
+            "name": "Pilgrimsfalk",
+            "sci": "Falco peregrinus",
+            "note": "Världens snabbaste djur, som överstiger 300 km/h i jaktdykningen. Finns på alla kontinenter utom Antarktis och häckar allt oftare på skyskrapor.",
+            "id": "peregrineFalcon"
+          },
+          {
+            "name": "Amerikansk häger",
+            "sci": "Ardea herodias",
+            "note": "Står orörlig i grunt vatten i flera minuter och spetsar sedan en fisk med ett hugg som ögat inte hinner följa. Flyger med halsen vikt i ett S.",
+            "id": "greatBlueHeron"
+          },
+          {
+            "name": "Klippduva",
+            "sci": "Columba livia",
+            "note": "Stadsduvan, som härstammar från klippboende fåglar — därför passar fönsterbleck och avsatser den så bra. Båda föräldrarna matar ungarna med ”krävmjölk”.",
+            "id": "rockPigeon"
+          },
+          {
+            "name": "Rödhake",
+            "sci": "Erithacus rubecula",
+            "note": "Djärv nog att följa en trädgårdsmästare för att komma åt uppgrävda maskar. Det orange bröstet bärs av båda könen och försvaras med sång året om.",
+            "id": "europeanRobin"
+          },
+          {
+            "name": "Gräsand",
+            "sci": "Anas platyrhynchos",
+            "note": "Stamfader till nästan alla tamänder. Den grönhövdade hanen är den berömda, men bara honan gör det klassiska höga kvackandet.",
+            "id": "mallard"
+          },
+          {
+            "name": "Röd ara",
+            "sci": "Ara macao",
+            "note": "En stor papegoja i Central- och Sydamerikas regnskogar som kan bli över femtio år och håller ihop med samma partner livet ut. Näbben knäcker nötter som ingen annan fågel klarar.",
+            "id": "scarletMacaw"
+          },
+          {
+            "name": "Kejsarpingvin",
+            "sci": "Aptenodytes forsteri",
+            "note": "Häckar mitt i den antarktiska vintern, där hanarna trängs ihop i mörkret med ett enda ägg balanserat på fötterna i två månader utan att äta.",
+            "id": "emperorPenguin"
+          }
+        ]
+      },
+      "gardenInsects": {
+        "title": "Grannar under fötterna",
+        "desc": "Tio vanliga småkryp, ordentligt sedda",
+        "intro": "De tio djuren här lever inom några meter från de flesta ytterdörrar, och nästan alla har tittat på dem utan att någonsin få veta vad de höll på med. Under det välbekanta döljer sig kemisk krigföring, hopvikta origamivingar, navigering mellan kontinenter och en myrkoloni som är 600 mil lång.",
+        "species": [
+          {
+            "name": "Sjuprickig nyckelpiga",
+            "sci": "Coccinella septempunctata",
+            "note": "Klämmer du på den blöder den med flit ur knälederna – en bitter gul vätska som får fåglar att spotta ut den.",
+            "id": "sevenSpotLadybird"
+          },
+          {
+            "name": "Tvestjärt",
+            "sci": "Forficula auricularia",
+            "note": "Bakvingarna vecklas ut till över tio gånger sin hopvikta storlek, ett av naturens tätaste veck – och den flyger nästan aldrig.",
+            "id": "commonEarwig"
+          },
+          {
+            "name": "Kulgråsugga",
+            "sci": "Armadillidium vulgare",
+            "note": "Inte alls en insekt utan ett kräftdjur – en landlevande släkting till krabbor som fortfarande andas med ombildade gälar.",
+            "id": "commonPillWoodlouse"
+          },
+          {
+            "name": "Husfluga",
+            "sci": "Musca domestica",
+            "note": "Den smakar med fötterna och vet alltså vad den har landat på innan munnen ens hinner dit.",
+            "id": "houseFly"
+          },
+          {
+            "name": "Trädgårdssnäcka",
+            "sci": "Cornu aspersum",
+            "note": "Den äter genom att dra ett tandförsett band över bladen och bildar nya tänder bakifrån när främre raden nöts ner.",
+            "id": "gardenSnail"
+          },
+          {
+            "name": "Honungsbi",
+            "sci": "Apis mellifera",
+            "note": "Drottningen parar sig i luften under några dagar, aldrig mer, och lägger sedan ägg med den sparade sperman resten av livet.",
+            "id": "westernHoneyBee"
+          },
+          {
+            "name": "Tistelfjäril",
+            "sci": "Vanessa cardui",
+            "note": "Ingen enskild fjäril hinner hela rundan; det tar ungefär sex generationer från tropiska Afrika till Europa och tillbaka.",
+            "id": "paintedLady"
+          },
+          {
+            "name": "Väggspindel",
+            "sci": "Pholcus phalangioides",
+            "note": "Den jagar andra spindlar genom att rycka i deras nät som ett fastnat byte och anfaller ägaren som kommer för att se efter.",
+            "id": "cellarSpider"
+          },
+          {
+            "name": "Argentinsk myra",
+            "sci": "Linepithema humile",
+            "note": "Arbetare från Spanien, Kalifornien och Japan möts utan att slåss trots tusentals mil emellan – de räknas som ett samhälle.",
+            "id": "argentineAnt"
+          },
+          {
+            "name": "Daggmask",
+            "sci": "Lumbricus terrestris",
+            "note": "Darwin ägnade sina sista år åt daggmaskar och gav ut en bok om dem ett halvår innan han dog.",
+            "id": "commonEarthworm"
+          }
+        ]
+      },
+      "fungiOfTheWorld": {
+        "title": "Varken växt eller djur",
+        "desc": "Tio svampar som i tysthet styr världen",
+        "intro": "Svampar står närmare djuren än växterna i livets träd, och den svamp du ser är bara frukten av ett nät av trådar som breder ut sig osynligt i jord, ved eller en levande insekt. Bland de här tio finns den som dödar fler människor än någon annan svamp, en organism som täcker nio kvadratkilometer i Oregon och mögelsvampen som inledde antibiotikans tidsålder.",
+        "species": [
+          {
+            "name": "Röd flugsvamp",
+            "sci": "Amanita muscaria",
+            "note": "Den röd- och vitprickiga sagosvampen finns på riktigt, är giftig och innehåller nästan inget av giftet som fick namn efter den.",
+            "id": "flyAgaric"
+          },
+          {
+            "name": "Lömsk flugsvamp",
+            "sci": "Amanita phalloides",
+            "note": "Står för de flesta dödliga svampförgiftningarna i världen, och kokning, torkning eller frysning gör ingenting alls åt giftet.",
+            "id": "deathCap"
+          },
+          {
+            "name": "Champinjon",
+            "sci": "Agaricus bisporus",
+            "note": "Vit champinjon, kastanjechampinjon och portabello är inte tre svampar utan en art – olika stammar och olika lång tillväxt.",
+            "id": "buttonMushroom"
+          },
+          {
+            "name": "Bryggerijäst",
+            "sci": "Saccharomyces cerevisiae",
+            "note": "En encellig svamp bakom bröd, öl och vin, och den första organismen med cellkärna som fick hela sitt genom kartlagt, 1996.",
+            "id": "brewersYeast"
+          },
+          {
+            "name": "Zombiemyrsvamp",
+            "sci": "Ophiocordyceps unilateralis",
+            "note": "Den styr en infekterad myra till en viss höjd över marken, får den att bita fast och dö där, och växer ut som en stjälk ur huvudet.",
+            "id": "zombieAntFungus"
+          },
+          {
+            "name": "Mörk honungsskivling",
+            "sci": "Armillaria ostoyae",
+            "note": "En enda individ i östra Oregon täcker ungefär nio kvadratkilometer och är till ytan den största organism som någonsin mätts.",
+            "id": "humongousFungus"
+          },
+          {
+            "name": "Besk kantmussling",
+            "sci": "Panellus stipticus",
+            "note": "En liten, seg, solfjäderformad skivsvamp vars skivor lyser grönt i mörkret – men bara om den kommer från rätt sida av Atlanten.",
+            "id": "bitterOyster"
+          },
+          {
+            "name": "Penselmögel",
+            "sci": "Penicillium rubens",
+            "note": "Det blågröna mögel som förorenade Alexander Flemings odlingsskål 1928 artbestämdes rätt först 2011.",
+            "id": "penicilliumMould"
+          },
+          {
+            "name": "Groddjurschytrid",
+            "sci": "Batrachochytrium dendrobatidis",
+            "note": "En svamp som är för liten för att se har drivit fler arter mot utrotning än någon annan sjukdom som dokumenterats.",
+            "id": "chytridFungus"
+          },
+          {
+            "name": "Vit tryffel",
+            "sci": "Tuber magnatum",
+            "note": "Den bildar fruktkroppar helt under jord, har trotsat odlare i decennier, och 1,5 kg gick för runt 330 000 dollar 2007.",
+            "id": "whiteTruffle"
+          }
+        ]
+      },
+      "fromFieldToPlate": {
+        "title": "Där middagen började",
+        "desc": "Tio basgrödor och deras verkliga ursprung",
+        "intro": "Nästan ingenting på tallriken växer där det föddes. De här tio grödorna domesticerades i floddalar, höglandsskogar och träsk för tusentals år sedan och fördes sedan över haven tills de största skördarna hamnade på helt fel kontinent.",
+        "species": [
+          {
+            "name": "Majs",
+            "sci": "Zea mays",
+            "note": "Den vilda anfadern bär ett tiotal kärnor, var och en instängd i ett stenhårt skal – ingenting som liknar en majskolv.",
+            "id": "maize"
+          },
+          {
+            "name": "Kassava",
+            "sci": "Manihot esculenta",
+            "note": "Domesticerad i utkanten av Amazonas, i dag föder den fler människor i Afrika än i Sydamerika.",
+            "id": "cassava"
+          },
+          {
+            "name": "Arabicakaffe",
+            "sci": "Coffea arabica",
+            "note": "Arabica är ingen urgammal art utan en naturlig hybrid mellan två andra kaffen, med förvånansvärt liten genetisk variation.",
+            "id": "arabicaCoffee"
+          },
+          {
+            "name": "Sojaböna",
+            "sci": "Glycine max",
+            "note": "Det mesta av världens soja når aldrig en tallrik direkt – den pressas till olja och mals till djurfoder.",
+            "id": "soybean"
+          },
+          {
+            "name": "Sockerrör",
+            "sci": "Saccharum officinarum",
+            "note": "Odlades först på Nya Guinea som en stjälk att tugga på; sockerraffinering och etanol kom tusentals år senare.",
+            "id": "sugarcane"
+          },
+          {
+            "name": "Vete",
+            "sci": "Triticum aestivum",
+            "note": "Vetet har aldrig funnits vilt – det uppstod på bondens åkrar när ett odlat vete korsades med ett gräs i vägkanten.",
+            "id": "breadWheat"
+          },
+          {
+            "name": "Ris",
+            "sci": "Oryza sativa",
+            "note": "Riset domesticerades två gånger på två kontinenter – en gång vid Yangtze, en gång ur ett annat vildgräs i Västafrika.",
+            "id": "asianRice"
+          },
+          {
+            "name": "Potatis",
+            "sci": "Solanum tuberosum",
+            "note": "All potatis som odlas i Europa, Asien och Afrika går tillbaka på höglandet kring Titicacasjön.",
+            "id": "potato"
+          },
+          {
+            "name": "Banan",
+            "sci": "Musa acuminata",
+            "note": "Vilda bananer är fulla av hårda, ärtstora frön; den kärnfria frukten finns bara för att människor planterar om sterila kloner.",
+            "id": "banana"
+          },
+          {
+            "name": "Apelsin",
+            "sci": "Citrus × sinensis",
+            "note": "Apelsinen är ingen vild art: den är en korsning mellan pomelo och mandarin som kopierats med ympning ända sedan dess.",
+            "id": "sweetOrange"
+          }
+        ]
+      },
+      "heardNotSeen": {
+        "title": "Hörs före de syns",
+        "desc": "Tio djur du möter med öronen först",
+        "intro": "De flesta möten med vilda djur börjar med ett ljud från något du inte kan se. De här tio – ugglor och grodor, en cikada, två sjungande insekter, en apa och en räv – är alla mycket lättare att hitta med öronen än med ögonen, och var och en av dem säger något bestämt.",
+        "species": [
+          {
+            "name": "Kattuggla",
+            "sci": "Strix aluco",
+            "note": "Det berömda ho-huu är två ugglor i samtal: honans skarpa ke-vick och hanens darrande hoande svar.",
+            "id": "tawnyOwl"
+          },
+          {
+            "name": "Gök",
+            "sci": "Cuculus canorus",
+            "note": "Bara hanen säger ko-ko; honan svarar med ett bubblande skratt som får småfåglar att gripas av panik.",
+            "id": "commonCuckoo"
+          },
+          {
+            "name": "Sydnäktergal",
+            "sci": "Luscinia megarhynchos",
+            "note": "Sjunger som mest mellan midnatt och tre, och bara oparade hanar gör det – när en hona stannar tystnar nattsången.",
+            "id": "commonNightingale"
+          },
+          {
+            "name": "Lövgroda",
+            "sci": "Hyla arborea",
+            "note": "En fem centimeter lång groda med en strupsäck bredare än huvudet, och en kör som bär nästan en kilometer en stilla natt.",
+            "id": "europeanTreeFrog"
+          },
+          {
+            "name": "Oxgroda",
+            "sci": "Lithobates catesbeianus",
+            "note": "Ett bastonande på cirka 200 hertz som bär närmare en kilometer över öppet vatten.",
+            "id": "americanBullfrog"
+          },
+          {
+            "name": "Cicada orni",
+            "sci": "Cicada orni",
+            "note": "Sjunger bara när det är tillräckligt varmt: kören växer när morgonen hettar upp och tystnar när ett moln går för solen.",
+            "id": "cicadaOrni"
+          },
+          {
+            "name": "Hussyrsa",
+            "sci": "Acheta domesticus",
+            "note": "Spelet är två vingar som sågar mot varandra – en skrapkant dragen över en fil med över hundra tänder, kring 4–5 kHz.",
+            "id": "houseCricket"
+          },
+          {
+            "name": "Grön vårtbitare",
+            "sci": "Tettigonia viridissima",
+            "note": "Ett torrt, oavbrutet rasslande från skymningen till långt efter midnatt, ibland i timmar utan någon riktig paus.",
+            "id": "greatGreenBushCricket"
+          },
+          {
+            "name": "Svart vrålapa",
+            "sci": "Alouatta caraya",
+            "note": "Vrålet i gryningen bär upp till fem kilometer genom skogen, bland de starkaste läten något landdjur ger ifrån sig.",
+            "id": "blackHowlerMonkey"
+          },
+          {
+            "name": "Rödräv",
+            "sci": "Vulpes vulpes",
+            "note": "Vinterskriket som brukar skyllas på honorna kommer från båda könen, och det är ett parningsläte, inte ett nödrop.",
+            "id": "redFox"
+          }
+        ]
+      }
+    },
+    "species": {
+      "fiddleLeafFig": {
+        "name": "Lyrfikus",
+        "sci": "Ficus lyrata",
+        "light": "Starkt, indirekt ljus",
+        "water": "Varje vecka; låt de översta 2–5 cm av jorden torka ut",
+        "difficulty": "Krävande",
+        "overview": "Lyrfikusen kommer ursprungligen från Västafrikas låglänta regnskogar och är älskad för sina stora, blanka, fiolformade blad med dramatisk nervatur som gjort den till en ikon inom inredning. Den odlas som en dramatisk golvväxt som kan nå upp till taket inomhus, men den är känd för att vara känslig för variationer i ljus, vatten och temperatur.",
+        "funFact": "I sin naturliga miljö kan Ficus lyrata växa till ett fullvuxet träd på över 12 meter med blad som är nästan dubbelt så stora som de vi ser inomhus, och den kan till och med producera små, oätliga fikon som pollineras av en särskild art av fikongeting — något den i praktiken aldrig gör som krukväxt."
+      },
+      "bostonFern": {
+        "name": "Svärdbräken",
+        "sci": "Nephrolepis exaltata",
+        "light": "Starkt till medelstarkt, indirekt ljus",
+        "water": "Håll jorden jämnt fuktig; låt den aldrig torka ut helt",
+        "difficulty": "Medel",
+        "overview": "Svärdbräken (Boston fern) är en frodig, bågformad odlingssort av svärdormbunken, en art som förekommer i fuktiga tropiska regioner världen över. Dess fjäderlika, hängande blad gjorde den till en favorit för upphängda korgar och skuggiga verandor sedan den viktorianska eran, även om den kräver jämn fukt och hög luftfuktighet för att trivas.",
+        "funFact": "Sorten 'Bostoniensis' avlades inte fram med avsikt — den var en naturlig mutation som upptäcktes 1894 i en leverans av svärdormbunkar skickad från Philadelphia till en Boston-florist, och den förökades från den enda avvikande plantan till den krukväxt vi känner idag."
+      },
+      "jadePlant": {
+        "name": "Jadeväxt",
+        "sci": "Crassula ovata",
+        "light": "Fullt sol till starkt ljus",
+        "water": "Sparsamt; låt jorden torka ut helt mellan vattningarna",
+        "difficulty": "Lätt",
+        "overview": "Jadeväxten är en härdig suckulent som härstammar från de halvtorra regionerna i Sydafrika och Moçambique, och känns igen på sina tjocka, blanka, ovala blad och vedartade, förgrenade stjälkar som ger den ett utseende av ett miniatyrträd. Det är en älskad nybörjarväxt som ofta ärvs inom familjen, ibland kallad 'lyckoväxten' inom feng shui-traditionen.",
+        "funFact": "Under rätt förhållanden kan jadeväxter leva i 50 till 100 år, och fullvuxna exemplar belönar ibland odlaren med klasar av små, stjärnformade vita eller rosa blommor, vanligtvis utlösta av svala nätter och en torrperiod."
+      },
+      "calathea": {
+        "name": "Calathea",
+        "sci": "Goeppertia orbifolia",
+        "light": "Medelstarkt, indirekt ljus",
+        "water": "Håll lätt fuktig med filtrerat eller destillerat vatten",
+        "difficulty": "Krävande",
+        "overview": "Denna slående medlem av bönväxtfamiljen (Marantaceae), som härstammar från Bolivias regnskogar, odlas för sina extra stora, runda blad randiga i silver- och mörkgröna toner. Precis som sina släktingar reser sig och viks bladen ihop på natten och sänks igen på dagen, en rörelse som kallas nyktinasti och som får den att kännas nästan levande.",
+        "funFact": "Den här arten klassificerades tidigare som Calathea orbifolia, men 2012 delade genetisk och morfologisk forskning upp de flesta Calathea-arter i släktet Goeppertia — även om plantskolor och växtälskare fortfarande övervägande använder det gamla namnet 'Calathea'."
+      }
+    },
+    "topicSpeciesSectionTitle": "Arter i denna samling",
+    "speciesLightLabel": "Ljus",
+    "speciesWaterLabel": "Vatten",
+    "speciesDifficultyLabel": "Svårighetsgrad",
+    "funFactLabel": "Visste du att",
+    "symptomFilterTitle": "Vad besvärar dig?",
+    "symptomFilterAll": "Alla",
+    "symptomFilterEmpty": "Inga örter har taggats för detta än.",
+    "viewHerbLabel": "Visa {{name}}",
+    "herbDisclaimer": "Informativt innehåll baserat på traditionell och folklig medicinanvändning. Detta är inte medicinsk rådgivning - rådfråga en läkare innan du använder någon ört för att behandla ett hälsotillstånd.",
+    "herbDetailsLoadError": "Det gick inte att läsa in information om denna ört. Försök igen.",
+    "preparationLabel": "Så här förbereder du",
+    "benefitsLabel": "Fördelar",
+    "symptoms": {
+      "headache": "Huvudvärk",
+      "digestion": "Matsmältning",
+      "sleep": "Sömn",
+      "stress": "Stress & ångest",
+      "immunity": "Immunförsvar",
+      "painInflammation": "Smärta & inflammation",
+      "respiratory": "Hosta & luftvägar",
+      "skin": "Hud & sår",
+      "energy": "Energi & trötthet"
+    },
+    "herbSubscribeCtaTitle": "Gillar du den här guiden?",
+    "herbSubscribeCtaBody": "Prenumerera för att låsa upp obegränsad identifiering av växter, insekter, svampar och grödor.",
+    "herbAlreadySubscribedCheck": "Redan prenumerant? Tryck för att kontrollera igen"
+  },
+  "botanist": {
+    "headerTitle": "Dr. Helena Marques",
+    "headerSubtitle": "Agronom · Professor i botanik",
+    "intro": "Hej! Jag är Helena, agronom och professor i botanik. Berätta vad som händer med din växt — eller fråga mig vad du vill om jord, skadedjur, vattning eller naturen i stort.",
+    "placeholder": "Fråga Helena…",
+    "typing": "Helena skriver…",
+    "sendLabel": "Skicka meddelande",
+    "askLabel": "Fråga: {{question}}",
+    "suggestions": [
+      "Mina blad gulnar",
+      "Hur ofta ska jag vattna?",
+      "Är den säker för katter?",
+      "Vilken jord ska jag använda?"
+    ],
+    "errorOffline": "Du är offline. Jag finns här när uppkopplingen är tillbaka.",
+    "errorRateLimited": "Ett ögonblick — för många frågor på en gång. Försök igen om några minuter.",
+    "errorNotConfigured": "Specialisten är inte tillgänglig än. Hon håller på att sättas upp.",
+    "errorGeneric": "Jag kunde inte svara just nu. Försök igen om en stund."
+  },
+  "achievements": {
+    "title": "Prestationer",
+    "streakLabel": "Dagar i rad",
+    "longestStreakLabel": "Längsta sviten",
+    "totalLabel": "Identifieringar",
+    "unlockedTitle": "Prestation upplåst!",
+    "progressLabel": "{{unlocked}}/{{total}} upplåsta",
+    "firstScan": {
+      "title": "Första upptäckten",
+      "body": "Identifiera din första art"
+    },
+    "collector10": {
+      "title": "Samlare",
+      "body": "Spara 10 arter i din samling"
+    },
+    "collector50": {
+      "title": "Naturforskare",
+      "body": "Spara 50 arter i din samling"
+    },
+    "collector100": {
+      "title": "Mästerforskare",
+      "body": "Spara 100 arter i din samling"
+    },
+    "allCategories": {
+      "title": "Upptäcktsresande",
+      "body": "Spara minst en art från varje kategori"
+    },
+    "streak3": {
+      "title": "Kom igång",
+      "body": "Identifiera något 3 dagar i rad"
+    },
+    "streak7": {
+      "title": "Engagerad",
+      "body": "Identifiera något 7 dagar i rad"
+    },
+    "streak30": {
+      "title": "Hängiven",
+      "body": "Identifiera något 30 dagar i rad"
+    },
+    "sharedFirst": {
+      "title": "Dela med dig",
+      "body": "Dela ditt första identifieringsresultat"
+    },
+    "subscriber": {
+      "title": "Premiummedlem",
+      "body": "Prenumerera för obegränsade identifieringar"
+    },
+    "tokensLabel": "Tokens",
+    "tokensEarned": "+{{count}} tokens"
+  },
+  "help": {
+    "title": "Hjälp och support",
+    "identificationTitle": "Hur fungerar identifiering?",
+    "identificationBody": "Ta ett foto av en växt, insekt, svamp, gröda eller ett träd, så jämför vår AI det med en stor databas för att föreslå den mest sannolika arten, tillsammans med dess vetenskapliga namn, beskrivning och andra detaljer.",
+    "accuracyTitle": "Är identifieringen alltid korrekt?",
+    "accuracyBody": "Ingen identifieringsapp är 100 % korrekt, särskilt inte för svampar och växter som kan vara giftiga. Ät, plocka eller använd aldrig någon art enbart baserat på appens resultat — bekräfta alltid först med en kvalificerad expert.",
+    "freeTitle": "Är NatureLens gratis?",
+    "freeBody": "Du får en gratis identifiering per kategori (växter, insekter, svampar, grödor, träd). Därefter låser en prenumeration upp obegränsade identifieringar i alla kategorier.",
+    "cancelTitle": "Hur avslutar jag min prenumeration?",
+    "cancelBody": "Gå till Profil och radera ditt konto — det avslutar automatiskt eventuella aktiva prenumerationer och tar samtidigt bort dina data. Det finns i dagsläget ingen separat avsluta-knapp; att radera kontot är det aktuella sättet att stoppa debiteringen.",
+    "restoreTitle": "Jag har bytt telefon eller rensat webbläsaren — hur får jag tillbaka min prenumeration?",
+    "restoreBody": "Gå till Profil → Återställ åtkomst. Du kan antingen begära en engångskod via e-post eller, om du har skapat ett, logga in med lösenord eller ditt Google-konto.",
+    "tokensTitle": "Vad är tokens? Kan jag lösa in dem mot något?",
+    "tokensBody": "Du tjänar tokens automatiskt varje gång du identifierar en art eller låser upp ett achievement. Att lösa in tokens mot belöningar är inte tillgängligt än, men är planerat för framtiden — ditt saldo fortsätter att växa under tiden.",
+    "privacyTitle": "Är mina data privata?",
+    "privacyBody": "NatureLens kräver inget konto för att användas. Merparten av dina data (samling, foton) stannar bara på din enhet. Se den fullständiga integritetspolicyn för mer information.",
+    "deleteTitle": "Hur raderar jag mitt konto och mina data?",
+    "deleteBody": "Gå till Profil och tryck på Radera konto längst ner. Det avslutar eventuella aktiva prenumerationer, tar bort dina sparade data från våra servrar och rensar allt som lagras på den här enheten.",
+    "offlineTitle": "Fungerar appen offline?",
+    "offlineBody": "Nej — att identifiera en art kräver en internetanslutning för att nå vår AI-tjänst.",
+    "languageTitle": "Kan jag använda appen på ett annat språk?",
+    "languageBody": "Ja, NatureLens har stöd för 17 språk. Gå till Profil → Språk för att byta när som helst."
+  },
+  "store": {
+    "title": "Belöningar",
+    "intro": "Använd de tokens du tjänar på att identifiera arter. Varje belöning här fungerar direkt när du löser in den.",
+    "owned": "Ägd",
+    "open": "Öppna",
+    "redeem": "Lös in",
+    "redeemLabel": "Lös in för {{cost}} tokens",
+    "redeemedTitle": "Inlöst!",
+    "notEnoughTitle": "Inte tillräckligt med tokens",
+    "notEnoughBody": "Du behöver {{cost}} tokens för den här. Fortsätt identifiera för att tjäna fler.",
+    "shieldsHeld": "{{count}} sköld(ar) sparade",
+    "earnHint": "Du får 5 tokens per identifiering och 15 per upplåst prestation.",
+    "download": "Ladda ner",
+    "downloadErrorTitle": "Nedladdningen misslyckades",
+    "downloadErrorBody": "Kunde inte spara filen. Försök igen från en webbläsare.",
+    "items": {
+      "streakShield": {
+        "title": "Seriesköld",
+        "description": "Skyddar din serie om du missar en dag. Staplas — köp fler än en.",
+        "redeemedBody": "Din serie är skyddad. Missar du en dag täcker skölden det automatiskt."
+      },
+      "wallpapers": {
+        "title": "Botaniska Bakgrunder",
+        "description": "Tre exklusiva bakgrundsbilder (1080×1920) till din telefon.",
+        "redeemedBody": "Dina bakgrundsbilder är klara. Tryck på Ladda ner på den du vill ha."
+      },
+      "naturalistBadge": {
+        "title": "Naturalistmärke",
+        "description": "Ett permanent märke på din profil. Visar att du hållit på ett tag.",
+        "redeemedBody": "Ditt märke finns nu på din profil.",
+        "ownedBody": "Du har redan det här märket — det syns på din profil."
+      }
+    }
+  },
+  "missions": {
+    "title": "Dagens uppdrag",
+    "rewardEach": "+{{tokens}} vardera",
+    "allDone": "Allt klart — kom tillbaka imorgon!",
+    "pool": {
+      "scanAny2": "Identifiera 2 arter idag",
+      "scanAny3": "Identifiera 3 arter idag",
+      "scanPlant": "Identifiera en växt eller ett träd",
+      "scanInsect": "Identifiera en insekt",
+      "scanMushroom": "Identifiera en svamp",
+      "scanFish": "Identifiera en fisk",
+      "scanBird": "Identifiera en fågel",
+      "saveOne": "Spara ett fynd i din samling",
+      "saveTwo": "Spara 2 fynd i din samling",
+      "shareOne": "Dela en identifiering",
+      "openDiscover": "Besök fliken Upptäck"
+    }
+  },
+  "share": {
+    "message": "Jag identifierade en {{category}} med NatureLens: {{name}}{{scientific}}{{confidence}}\n\nIdentifiera växter, insekter, svampar, fiskar och fåglar från ett foto:\n{{url}}",
+    "confidenceLine": "{{confidence}}% säkerhet"
+  },
+  "onboarding": {
+    "skip": "Hoppa över",
+    "next": "Nästa",
+    "start": "Börja identifiera",
+    "what": {
+      "title": "Sikta. Fota. Vet.",
+      "body": "Fotografera något levande så säger NatureLens vad det är på några sekunder — med referensfoton så att du kan bekräfta det själv."
+    },
+    "collect": {
+      "title": "Bygg din egen fältdagbok",
+      "body": "Varje fynd kan sparas i din samling, märkas och ses igen senare. Tjäna tokens och lås upp belöningar på vägen."
+    },
+    "free": {
+      "title": "Din första identifiering är gratis",
+      "body": "Testa en identifiering i varje kategori utan kostnad. Prenumerera först när du vill skanna obegränsat."
+    }
+  },
+  "recap": {
+    "title": "Din månad i naturen",
+    "entrySubtitle": "Se din sammanfattning och dela den",
+    "headline": "Du mötte {{count}} olika arter",
+    "emptyTitle": "Inget att sammanfatta än",
+    "emptyBody": "Identifiera och spara något den här månaden så dyker din sammanfattning upp här.",
+    "byCategory": "Per kategori",
+    "highlight": "Månadens höjdpunkt",
+    "share": "Dela min sammanfattning",
+    "shareTitle": "Min månad i naturen",
+    "shareMessage": "I {{month}} identifierade jag {{total}} fynd — {{species}} olika arter — med NatureLens 🌿\n\nIdentifiera växter, insekter, svampar, fiskar och fåglar från ett foto:\n{{url}}",
+    "streakLine": "Nuvarande svit: {{current}} dagar · rekord: {{longest}}",
+    "stats": {
+      "total": "Sparade fynd",
+      "species": "Arter",
+      "categories": "Kategorier",
+      "days": "Aktiva dagar"
+    }
+  },
+  "subscription": {
+    "title": "Min prenumeration",
+    "entrySubtitle": "Status, planer och uppsägning",
+    "activeTitle": "Premium aktivt",
+    "activeBody": "Obegränsade identifieringar i alla kategorier. Tack för att du stöttar NatureLens.",
+    "freeTitle": "Gratisplan",
+    "freeBody": "En gratis identifiering per kategori. Prenumerera för obegränsade skanningar.",
+    "unknownTitle": "Kunde inte kontrollera nu",
+    "unknownBody": "Vi nådde inte servern. Om du prenumererar påverkas inte din åtkomst — försök igen om en stund.",
+    "plansTitle": "Planer",
+    "manageTitle": "Hantera eller säg upp",
+    "manageBody": "Din prenumeration faktureras av Hotmart, så uppsägningen sker i ditt Hotmart-konto — inte här. Säger du upp där stoppas framtida debiteringar och din åtkomst gäller till slutet av den betalda perioden.",
+    "openHotmart": "Öppna mitt Hotmart-konto"
+  },
+  "notifications": {
+    "row": "Aviseringar",
+    "on": "På",
+    "off": "Av",
+    "enabledTitle": "Aviseringar på",
+    "enabledBody": "Du får påminnelser om att vattna dina växter och hålla din svit vid liv.",
+    "deniedTitle": "Aviseringar blockerade",
+    "deniedBody": "Du har blockerat aviseringar för den här sidan. Tillåt dem i webbläsarens inställningar för naturelensapp.cloud.",
+    "errorTitle": "Kunde inte aktivera",
+    "errorBody": "Något gick fel. Försök igen om en stund."
+  },
+  "fieldGuide": {
+    "habitat": "Livsmiljö",
+    "curiosity": "Visste du att",
+    "identifyCta": "Identifiera en med kameran",
+    "photoCredit": "Foto: Wikimedia Commons · tryck för källan",
+    "textCredit": "Text: Wikipedia · tryck för att läsa mer"
+  },
+  "backup": {
+    "exportRow": "Säkerhetskopiera min samling",
+    "importRow": "Återställ från en kopia",
+    "exportEmptyTitle": "Inget att kopiera än",
+    "exportEmptyBody": "Spara ditt första fynd, då har kopian något att bevara.",
+    "importDoneTitle": "Samlingen återställd",
+    "importDoneBody": "{{added}} objekt tillagda. {{skipped}} fanns redan.",
+    "importFailedTitle": "Kunde inte återställa",
+    "errorWrongFile": "Den filen är inte en NatureLens-kopia.",
+    "errorNewerVersion": "Den kopian gjordes med en nyare version av appen. Uppdatera och försök igen.",
+    "errorStorageFull": "Det finns inte tillräckligt med utrymme på enheten för de objekten.",
+    "errorGeneric": "Något gick fel när filen lästes."
+  },
+  "sound": {
+    "tapToRecord": "Tryck för att spela in",
+    "recording": "Spelar in… {{seconds}}s kvar",
+    "analysing": "Lyssnar…",
+    "startLabel": "Börja spela in",
+    "stopLabel": "Stoppa och identifiera",
+    "tipsTitle": "För bättre resultat",
+    "tip1": "Kom närmare om du kan — avståndet betyder mest.",
+    "tip2": "Rikta telefonen mot ljudet och stå still.",
+    "tip3": "Spela in när den faktiskt låter, inte tystnaden emellan.",
+    "scopeNote": "Täcker fåglar, grodor, syrsor, gräshoppor och några däggdjur. Tränad på naturinspelningar, så husdjur och trafik förvirrar den.",
+    "identifiedBySound": "Identifierad via ljud · {{group}}",
+    "groupAmphibian": "Amfibie",
+    "groupMammal": "Däggdjur",
+    "permissionTitle": "Mikrofonen blockerad",
+    "permissionBody": "Tillåt mikrofonåtkomst för den här sidan i webbläsarens inställningar och försök igen.",
+    "unsupportedTitle": "Inspelning inte tillgänglig",
+    "unsupportedBody": "Den här webbläsaren kan inte spela in ljud. Prova Chrome på Android, eller lägg till appen på hemskärmen på iPhone.",
+    "tooShortTitle": "Inspelningen är för kort",
+    "tooShortBody": "Spela in minst två sekunder, medan djuret låter.",
+    "failedTitle": "Kunde inte identifiera",
+    "failedBody": "Något gick fel med den inspelningen. Försök igen.",
+    "decodeFailedBody": "Den inspelningen kunde inte läsas. Försök igen.",
+    "notFoundBody": "Inget igenkännbart i inspelningen. Kom närmare eller spela in när den låter.",
+    "noContentBody": "Ingen beskrivning för den här arten än.",
+    "notWildlifeBody": "Det låter som ett fordon, en maskin eller en röst, inte ett djur. Prova att spela in igen på en tystare plats."
+  },
+  "login": {
+    "signInRow": "Logga in",
+    "signInSubtitle": "Använd din prenumeration på alla enheter",
+    "accountRow": "Mitt konto"
+  }
+}
