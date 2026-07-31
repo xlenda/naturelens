@@ -18,6 +18,7 @@ import { getCollection, saveToCollection, removeFromCollection } from '../compon
 import { shareEntity } from '../components/share';
 import { getSpeciesInfo } from '../components/speciesPhoto';
 import TranslatableText from '../components/TranslatableText';
+import { isInReaderLanguage } from '../components/localisedOverview';
 import { getCuratedBird } from '../components/curatedBirds';
 import { addTokens } from '../components/achievements';
 import { recordMissionEvent, TOKENS_PER_MISSION } from '../components/missions';
@@ -242,7 +243,14 @@ export default function SoundDetailScreen({ route }) {
           <TranslatableText
             text={overview || t('sound.noContentBody')}
             style={styles.body}
-            showWhenEnglish={!curated?.overview && !!info?.extract}
+            /* Only when the text is Wikipedia's AND that article came back in
+               English. Curated text is written in the reader language by
+               definition, and a Portuguese extract needs no button. */
+            showWhenEnglish={
+              !curated?.overview &&
+              !!info?.extract &&
+              !isInReaderLanguage(info.extract, i18n.language)
+            }
           />
           {/* Credit the source when the words are not ours. */}
           {!curated?.overview && !!info?.extract && (

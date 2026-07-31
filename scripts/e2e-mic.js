@@ -6,10 +6,36 @@
 const { spawn } = require('child_process');
 const fs = require('fs'); const os = require('os');
 const CDP = require('chrome-remote-interface');
-const PORT = 9701;
 const CHROME = ['C:/Program Files/Google/Chrome/Application/chrome.exe',
   'C:/Program Files (x86)/Google/Chrome/Application/chrome.exe'].find(fs.existsSync);
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
+// A fixed port plus a blind 3.5s wait made this gate flake: it failed once
+// during a deploy and passed immediately afterwards, alone and in a re-run. Both
+// halves were wrong. The port collided with any other Chrome this project had
+// left listening, and the sleep assumed Chrome opens its debugging port within a
+// fixed time, which it does not on a loaded machine.
+//
+// A flaky gate is worse than no gate. This one exists because a Permissions-
+// Policy header shipped the whole sound feature dead while every other check was
+// green - if it cries wolf, the next real failure gets waved through.
+const PORT = 9700 + Math.floor(Math.random() * 200);
+
+// Poll for the port rather than guessing how long Chrome needs.
+async function connectWhenReady(port, budgetMs = 20000) {
+  const deadline = Date.now() + budgetMs;
+  let lastError;
+  while (Date.now() < deadline) {
+    try {
+      return await CDP({ port });
+    } catch (e) {
+      lastError = e;
+      await sleep(250);
+    }
+  }
+  throw new Error(`Chrome never opened port ${port}: ${lastError?.message || 'unknown'}`);
+}
+
 (async () => {
   const proc = spawn(CHROME, ['--remote-debugging-port=' + PORT, '--headless=new', '--disable-gpu',
     '--no-first-run', '--no-sandbox',
@@ -17,8 +43,19 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
     // real MediaStream and MediaRecorder produces real bytes.
     '--use-fake-device-for-media-stream', '--use-fake-ui-for-media-stream',
     '--user-data-dir=' + os.tmpdir() + '/mic' + Date.now(), 'about:blank'], { stdio: 'ignore' });
-  await sleep(3500);
-  const client = await CDP({ port: PORT });
+
+  // Kill Chrome however this process ends, including a throw before the normal
+  // teardown - a leaked headless Chrome is what makes the NEXT run collide.
+  const killChrome = () => {
+    try {
+      proc.kill();
+    } catch (e) {
+      /* already gone */
+    }
+  };
+  process.on('exit', killChrome);
+
+  const client = await connectWhenReady(PORT);
   const { Page, Runtime, Browser } = client;
   await Page.enable(); await Runtime.enable();
   await Browser.grantPermissions({ origin: 'https://naturelensapp.cloud', permissions: ['audioCapture'] }).catch(() => {});

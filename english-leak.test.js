@@ -166,3 +166,43 @@ test('a translated vendor description is recognisable as translated', () => {
       'uses its presence to know the overview is in the reader language'
   );
 });
+
+test('no screen offers Translate without checking the text language', () => {
+  // Three screens carry the button and each judges "is this still English?"
+  // differently, because each gets its text from a different place. The bug this
+  // catches is the lazy version: offering whenever text merely EXISTS.
+  const cases = [
+    ['screens/FishDetailScreen.js', /showWhenEnglish=\{stillEnglish\(/],
+    ['screens/BirdDetailScreen.js', /showWhenEnglish=\{[^}]*!localised\?\.localised/],
+    ['screens/SoundDetailScreen.js', /!isInReaderLanguage\(info\.extract, i18n\.language\)/],
+  ];
+  for (const [file, pattern] of cases) {
+    assert.match(
+      read(file),
+      pattern,
+      `${file} must decide the Translate button from the text's language, not its existence`
+    );
+  }
+});
+
+test('a translation never outlives the text it was made from', () => {
+  // `text` is not fixed for the life of TranslatableText: FishDetailScreen picks
+  // which source leads, and that flips the moment the Wikipedia lookup resolves.
+  // Tap Translate on the vendor's table while the lookup is in flight and, a
+  // second later, the component was still rendering the old translation over the
+  // new paragraph.
+  const src = read('components/TranslatableText.js');
+
+  // Cleared when the text or the language changes.
+  assert.match(src, /useEffect\(\(\) => \{\s*setTranslated\(null\);[\s\S]{0,60}\}, \[text\]\)/);
+  assert.match(src, /\}, \[i18n\.language\]\)/);
+
+  // And a request already in flight must not land on the new text.
+  assert.match(src, /const requestedText = text;/);
+  assert.match(
+    src,
+    /currentRef\.current\.text !== requestedText[\s\S]{0,30}return;/,
+    'a late answer for a paragraph no longer on screen must be discarded'
+  );
+  assert.match(src, /const currentRef = useRef\(/, 'must be a ref - state would be stale in the callback');
+});

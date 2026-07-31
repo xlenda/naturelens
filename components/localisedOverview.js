@@ -95,6 +95,19 @@ export async function getLocalisedOverview({ scientific, commonName, language })
   };
 }
 
+/**
+ * Is this text already in the reader's language?
+ *
+ * Exported because three screens need it and two of them do not go through
+ * getLocalisedOverview - SoundDetailScreen fetches getSpeciesInfo directly for
+ * the photo and reuses its extract. Without this, that screen offered a
+ * "Translate" button on a paragraph already in Portuguese: a button that would
+ * spend an API call to change nothing.
+ */
+export function isInReaderLanguage(text, language) {
+  return isLikelyLocalised(text, language);
+}
+
 // Rough check for "did we actually get the reader's language, or the English
 // fallback?".
 //
