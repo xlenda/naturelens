@@ -2284,5 +2284,14 @@
     "signInRow": "Accedi",
     "signInSubtitle": "Usa il tuo abbonamento su ogni dispositivo",
     "accountRow": "Il mio account"
+  },
+  "authError": {
+    "passwordTooShort": "La password deve avere almeno 8 caratteri.",
+    "subscribersOnly": "Creare una password è riservato agli abbonati attivi.",
+    "noSubscription": "Non abbiamo trovato alcun abbonamento per quell’email.",
+    "linkFailed": "Non siamo riusciti a collegare questo dispositivo al tuo account. Riprova.",
+    "missingCredentials": "Inserisci email e password.",
+    "badCredentials": "Email o password non corrispondono, oppure l’email non è ancora confermata.",
+    "googleFailed": "L’accesso con Google non è andato a buon fine. Riprova."
   }
 }

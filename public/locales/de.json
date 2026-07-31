@@ -2284,5 +2284,14 @@
     "signInRow": "Anmelden",
     "signInSubtitle": "Dein Abo auf jedem Gerät nutzen",
     "accountRow": "Mein Konto"
+  },
+  "authError": {
+    "passwordTooShort": "Dein Passwort braucht mindestens 8 Zeichen.",
+    "subscribersOnly": "Ein Passwort anzulegen ist Abonnenten vorbehalten.",
+    "noSubscription": "Zu dieser E-Mail-Adresse haben wir kein Abo gefunden.",
+    "linkFailed": "Wir konnten dieses Gerät nicht mit deinem Konto verknüpfen. Bitte versuche es erneut.",
+    "missingCredentials": "Gib deine E-Mail-Adresse und dein Passwort ein.",
+    "badCredentials": "E-Mail-Adresse oder Passwort stimmen nicht, oder die Adresse ist noch nicht bestätigt.",
+    "googleFailed": "Die Anmeldung mit Google hat nicht geklappt. Bitte versuche es erneut."
   }
 }

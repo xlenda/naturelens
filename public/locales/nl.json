@@ -2284,5 +2284,14 @@
     "signInRow": "Inloggen",
     "signInSubtitle": "Gebruik je abonnement op elk apparaat",
     "accountRow": "Mijn account"
+  },
+  "authError": {
+    "passwordTooShort": "Je wachtwoord heeft minstens 8 tekens nodig.",
+    "subscribersOnly": "Een wachtwoord aanmaken is voor actieve abonnees.",
+    "noSubscription": "We vonden geen abonnement bij dat e-mailadres.",
+    "linkFailed": "We konden dit apparaat niet aan je account koppelen. Probeer het opnieuw.",
+    "missingCredentials": "Vul je e-mailadres en wachtwoord in.",
+    "badCredentials": "Dat e-mailadres of wachtwoord klopt niet, of het adres is nog niet bevestigd.",
+    "googleFailed": "Inloggen met Google is niet gelukt. Probeer het opnieuw."
   }
 }

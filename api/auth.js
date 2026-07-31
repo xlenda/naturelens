@@ -42,7 +42,7 @@ async function verifySupabaseAccessToken(accessToken) {
 async function handleSignup(req, res, deviceId) {
   const password = req.body?.password;
   if (!password || typeof password !== 'string' || password.length < 8) {
-    res.status(400).json({ error: 'Password must be at least 8 characters.' });
+    res.status(400).json({ error: 'Password must be at least 8 characters.', reason: 'passwordTooShort' });
     return;
   }
 
@@ -54,7 +54,7 @@ async function handleSignup(req, res, deviceId) {
     .maybeSingle();
 
   if (subError || !sub?.email || sub.status !== 'active') {
-    res.status(403).json({ error: 'Only active subscribers can create a password.' });
+    res.status(403).json({ error: 'Only active subscribers can create a password.', reason: 'subscribersOnly' });
     return;
   }
 
@@ -93,7 +93,7 @@ async function linkDeviceToEmail(res, deviceId, normalizedEmail) {
     .maybeSingle();
 
   if (!existing) {
-    res.status(404).json({ error: 'No subscription was found for that account.' });
+    res.status(404).json({ error: 'No subscription was found for that account.', reason: 'noSubscription' });
     return;
   }
 
@@ -115,7 +115,7 @@ async function linkDeviceToEmail(res, deviceId, normalizedEmail) {
 
   if (linkError) {
     console.error('linkDeviceToEmail: upsert failed', deviceId, linkError.message);
-    res.status(500).json({ error: 'Could not link this device to your account. Please try again.' });
+    res.status(500).json({ error: 'Could not link this device to your account. Please try again.', reason: 'linkFailed' });
     return;
   }
 
@@ -129,7 +129,7 @@ async function handleSignin(req, res, deviceId) {
   const email = req.body?.email;
   const password = req.body?.password;
   if (!email || typeof email !== 'string' || !password || typeof password !== 'string') {
-    res.status(400).json({ error: 'Missing email or password' });
+    res.status(400).json({ error: 'Missing email or password', reason: 'missingCredentials' });
     return;
   }
 
@@ -142,7 +142,7 @@ async function handleSignin(req, res, deviceId) {
   });
 
   if (signInError) {
-    res.status(400).json({ error: 'Incorrect email or password, or the email is not yet confirmed.' });
+    res.status(400).json({ error: 'Incorrect email or password, or the email is not yet confirmed.', reason: 'badCredentials' });
     return;
   }
 
@@ -180,18 +180,18 @@ async function handleGoogle(req, res, deviceId) {
       body: JSON.stringify({ auth_code: code, code_verifier: codeVerifier }),
     });
     if (!exchangeResponse.ok) {
-      res.status(400).json({ error: 'Could not verify Google sign-in.' });
+      res.status(400).json({ error: 'Could not verify Google sign-in.', reason: 'googleFailed' });
       return;
     }
     const exchangeData = await exchangeResponse.json();
     accessToken = exchangeData?.access_token;
   } catch (err) {
-    res.status(400).json({ error: 'Could not verify Google sign-in.' });
+    res.status(400).json({ error: 'Could not verify Google sign-in.', reason: 'googleFailed' });
     return;
   }
 
   if (!accessToken) {
-    res.status(400).json({ error: 'Could not verify Google sign-in.' });
+    res.status(400).json({ error: 'Could not verify Google sign-in.', reason: 'googleFailed' });
     return;
   }
 
@@ -199,12 +199,12 @@ async function handleGoogle(req, res, deviceId) {
   try {
     payload = await verifySupabaseAccessToken(accessToken);
   } catch (err) {
-    res.status(400).json({ error: 'Could not verify Google sign-in.' });
+    res.status(400).json({ error: 'Could not verify Google sign-in.', reason: 'googleFailed' });
     return;
   }
 
   if (!payload?.email) {
-    res.status(400).json({ error: 'Could not verify Google sign-in.' });
+    res.status(400).json({ error: 'Could not verify Google sign-in.', reason: 'googleFailed' });
     return;
   }
 

@@ -2284,5 +2284,14 @@
     "signInRow": "로그인",
     "signInSubtitle": "어느 기기에서나 구독 사용",
     "accountRow": "내 계정"
+  },
+  "authError": {
+    "passwordTooShort": "비밀번호는 8자 이상이어야 합니다.",
+    "subscribersOnly": "비밀번호 만들기는 이용 중인 구독자만 가능합니다.",
+    "noSubscription": "해당 이메일로 구독을 찾지 못했습니다.",
+    "linkFailed": "이 기기를 계정에 연결하지 못했습니다. 다시 시도해 주세요.",
+    "missingCredentials": "이메일과 비밀번호를 입력하세요.",
+    "badCredentials": "이메일 또는 비밀번호가 맞지 않거나, 이메일이 아직 확인되지 않았습니다.",
+    "googleFailed": "Google 로그인이 완료되지 않았습니다. 다시 시도해 주세요."
   }
 }

@@ -2284,5 +2284,14 @@
     "signInRow": "Se connecter",
     "signInSubtitle": "Retrouvez votre abonnement sur tous vos appareils",
     "accountRow": "Mon compte"
+  },
+  "authError": {
+    "passwordTooShort": "Votre mot de passe doit faire au moins 8 caractères.",
+    "subscribersOnly": "La création d’un mot de passe est réservée aux abonnés.",
+    "noSubscription": "Aucun abonnement trouvé pour cette adresse e-mail.",
+    "linkFailed": "Nous n’avons pas pu lier cet appareil à votre compte. Réessayez.",
+    "missingCredentials": "Saisissez votre e-mail et votre mot de passe.",
+    "badCredentials": "Cet e-mail ou ce mot de passe est incorrect, ou l’e-mail n’est pas encore confirmé.",
+    "googleFailed": "La connexion Google n’a pas abouti. Réessayez."
   }
 }

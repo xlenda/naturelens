@@ -2284,5 +2284,14 @@
     "signInRow": "Log ind",
     "signInSubtitle": "Brug dit abonnement på alle enheder",
     "accountRow": "Min konto"
+  },
+  "authError": {
+    "passwordTooShort": "Din adgangskode skal have mindst 8 tegn.",
+    "subscribersOnly": "At oprette adgangskode er for aktive abonnenter.",
+    "noSubscription": "Vi fandt ingen abonnementer på den e-mail.",
+    "linkFailed": "Vi kunne ikke forbinde denne enhed til din konto. Prøv igen.",
+    "missingCredentials": "Indtast din e-mail og adgangskode.",
+    "badCredentials": "Den e-mail eller adgangskode passer ikke, eller e-mailen er ikke bekræftet endnu.",
+    "googleFailed": "Login med Google gik ikke igennem. Prøv igen."
   }
 }

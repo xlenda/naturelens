@@ -2284,5 +2284,14 @@
     "signInRow": "Zaloguj się",
     "signInSubtitle": "Korzystaj z subskrypcji na każdym urządzeniu",
     "accountRow": "Moje konto"
+  },
+  "authError": {
+    "passwordTooShort": "Hasło musi mieć co najmniej 8 znaków.",
+    "subscribersOnly": "Tworzenie hasła jest dla aktywnych subskrybentów.",
+    "noSubscription": "Nie znaleźliśmy subskrypcji dla tego adresu e-mail.",
+    "linkFailed": "Nie udało się powiązać tego urządzenia z Twoim kontem. Spróbuj ponownie.",
+    "missingCredentials": "Wpisz swój e-mail i hasło.",
+    "badCredentials": "Ten e-mail lub hasło się nie zgadza, albo adres nie został jeszcze potwierdzony.",
+    "googleFailed": "Logowanie przez Google się nie powiodło. Spróbuj ponownie."
   }
 }

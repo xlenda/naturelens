@@ -2284,5 +2284,14 @@
     "signInRow": "Sign in",
     "signInSubtitle": "Sync your subscription across devices",
     "accountRow": "My account"
+  },
+  "authError": {
+    "passwordTooShort": "Your password needs at least 8 characters.",
+    "subscribersOnly": "Creating a password is for active subscribers.",
+    "noSubscription": "We found no subscription for that email.",
+    "linkFailed": "We could not link this device to your account. Please try again.",
+    "missingCredentials": "Enter your email and password.",
+    "badCredentials": "That email or password is not right, or the email has not been confirmed yet.",
+    "googleFailed": "Google sign-in did not go through. Please try again."
   }
 }

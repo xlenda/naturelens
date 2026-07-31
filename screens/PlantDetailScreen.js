@@ -217,7 +217,7 @@ export default function PlantDetailScreen({ route }) {
         <IdentificationExtras entity={plant} accent={meta.accent} />
 
         <SectionCard icon="leaf-outline" title={t('common.overview')} color={meta.accent}>
-          <Text style={styles.body}>{plant.overview}</Text>
+          <Text style={styles.body}>{plant.overview || t('sound.noContentBody')}</Text>
         </SectionCard>
 
         {infoRows.length > 0 && (

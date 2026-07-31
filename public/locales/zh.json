@@ -2284,5 +2284,14 @@
     "signInRow": "登录",
     "signInSubtitle": "在任何设备上使用你的订阅",
     "accountRow": "我的账户"
+  },
+  "authError": {
+    "passwordTooShort": "密码至少需要 8 个字符。",
+    "subscribersOnly": "创建密码仅限有效订阅用户。",
+    "noSubscription": "没有找到该邮箱对应的订阅。",
+    "linkFailed": "无法将此设备关联到你的账户，请重试。",
+    "missingCredentials": "请输入邮箱和密码。",
+    "badCredentials": "邮箱或密码不正确，或邮箱尚未确认。",
+    "googleFailed": "Google 登录未完成，请重试。"
   }
 }

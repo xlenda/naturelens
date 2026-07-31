@@ -2284,5 +2284,14 @@
     "signInRow": "Logga in",
     "signInSubtitle": "Använd din prenumeration på alla enheter",
     "accountRow": "Mitt konto"
+  },
+  "authError": {
+    "passwordTooShort": "Lösenordet behöver minst 8 tecken.",
+    "subscribersOnly": "Att skapa lösenord är för aktiva prenumeranter.",
+    "noSubscription": "Vi hittade ingen prenumeration för den e-postadressen.",
+    "linkFailed": "Vi kunde inte koppla den här enheten till ditt konto. Försök igen.",
+    "missingCredentials": "Ange din e-postadress och ditt lösenord.",
+    "badCredentials": "E-postadressen eller lösenordet stämmer inte, eller så är adressen inte bekräftad än.",
+    "googleFailed": "Inloggningen med Google gick inte igenom. Försök igen."
   }
 }

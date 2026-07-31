@@ -117,6 +117,27 @@ export default function FishDetailScreen({ route }) {
       ? vendorText
       : plant.overviewOriginal || (secondaryCandidate !== lead ? secondaryCandidate : null);
 
+  // Which of the two texts is STILL in English, so the Translate button is only
+  // offered where it would do something.
+  //
+  // Getting this wrong is not harmless: the first version keyed the button off
+  // the Wikipedia language flag and attached it to whatever text was leading, so
+  // a vendor description already translated server-side into Portuguese still
+  // showed "Traduzir" - a button that would send Portuguese to be translated
+  // into Portuguese, costing a call to change nothing.
+  //
+  // The vendor's text is in the reader's language exactly when a translation
+  // happened, and `overviewOriginal` is only populated in that case.
+  const vendorIsEnglish = !plant.overviewOriginal;
+  const wikiIsEnglish = !localised?.localised;
+  const stillEnglish = (text) => {
+    if (!text) return false;
+    if (text === plant.overviewOriginal) return true; // the original, by definition
+    if (text === vendorText) return vendorIsEnglish;
+    if (text === wikiText) return wikiIsEnglish;
+    return false;
+  };
+
   const infoRows = [
     { label: t('common.nativeOrigin'), value: plant.origin },
     { label: t('detail.commonNames'), value: plant.commonNames },
@@ -221,7 +242,7 @@ export default function FishDetailScreen({ route }) {
             {/* Wikipedia may have answered in English when the reader's
                 language has no article. Offer the button there too - it is the
                 same leaked-English problem, just from a different source. */}
-            <TranslatableText text={lead} style={styles.body} showWhenEnglish={!localised?.localised} />
+            <TranslatableText text={lead} style={styles.body} showWhenEnglish={stillEnglish(lead)} />
             {lead === localised?.text && !!localised?.url && (
               <TouchableOpacity onPress={() => Linking.openURL(localised.url)} accessibilityRole="link">
                 <Text style={styles.sourceLink}>{t('fieldGuide.textCredit')}</Text>
@@ -236,7 +257,7 @@ export default function FishDetailScreen({ route }) {
             title={t('common.technicalDescription')}
             color={colors.info}
           >
-            <TranslatableText text={secondary} style={styles.body} />
+            <TranslatableText text={secondary} style={styles.body} showWhenEnglish={stillEnglish(secondary)} />
             {secondary === plant.overviewOriginal && (
               <Text style={styles.sourceNote}>{t('common.vendorEnglishNote')}</Text>
             )}

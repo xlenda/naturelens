@@ -2284,5 +2284,14 @@
     "signInRow": "Giriş yap",
     "signInSubtitle": "Aboneliğini her cihazda kullan",
     "accountRow": "Hesabım"
+  },
+  "authError": {
+    "passwordTooShort": "Parolan en az 8 karakter olmalı.",
+    "subscribersOnly": "Parola oluşturmak aktif abonelere özel.",
+    "noSubscription": "Bu e-postaya ait abonelik bulamadık.",
+    "linkFailed": "Bu cihazı hesabına bağlayamadık. Tekrar dene.",
+    "missingCredentials": "E-postanı ve parolanı gir.",
+    "badCredentials": "Bu e-posta veya parola doğru değil ya da e-posta henüz onaylanmadı.",
+    "googleFailed": "Google ile giriş tamamlanmadı. Tekrar dene."
   }
 }

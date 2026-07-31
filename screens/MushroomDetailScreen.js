@@ -198,7 +198,7 @@ export default function MushroomDetailScreen({ route }) {
         <IdentificationExtras entity={plant} accent={meta.accent} />
 
         <SectionCard icon="document-text-outline" title={t('common.overview')} color={meta.accent}>
-          <Text style={styles.body}>{plant.overview}</Text>
+          <Text style={styles.body}>{plant.overview || t('sound.noContentBody')}</Text>
         </SectionCard>
 
         {plant.lookAlike?.length > 0 && (

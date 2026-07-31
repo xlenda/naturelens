@@ -1,6 +1,30 @@
 import { getDeviceId } from './deviceId';
 import { API_BASE } from './apiBase';
 
+import i18n from '../i18n';
+
+// Server error -> a message in the reader's language.
+//
+// The API answers with an English sentence in `error` (useful in logs and to
+// anyone calling it directly) plus a `reason` code. Only the code is meant for
+// people: the login screen showed the English sentence verbatim to all 17
+// languages, which is the worst possible place for it - someone who cannot read
+// why their sign-in failed simply stops trying.
+const REASON_KEYS = {
+  passwordTooShort: 'authError.passwordTooShort',
+  subscribersOnly: 'authError.subscribersOnly',
+  noSubscription: 'authError.noSubscription',
+  linkFailed: 'authError.linkFailed',
+  missingCredentials: 'authError.missingCredentials',
+  badCredentials: 'authError.badCredentials',
+  googleFailed: 'authError.googleFailed',
+};
+
+function serverError(data, fallbackKey) {
+  const key = data?.reason && REASON_KEYS[data.reason];
+  return new Error(i18n.t(key || fallbackKey));
+}
+
 
 export async function requestRestoreCode(email) {
   const response = await fetch(`${API_BASE}/api/restore/request-code`, {
@@ -11,7 +35,7 @@ export async function requestRestoreCode(email) {
 
   const data = await response.json();
   if (!response.ok) {
-    throw new Error(data?.error || 'Could not send the code.');
+    throw serverError(data, 'restore.genericError');
   }
 }
 
@@ -26,7 +50,7 @@ export async function verifyRestoreCode(email, code) {
 
   const data = await response.json();
   if (!response.ok) {
-    throw new Error(data?.error || 'Could not verify the code.');
+    throw serverError(data, 'restore.genericError');
   }
 
   return data.status;
@@ -49,7 +73,7 @@ export async function createPassword(password) {
 
   const data = await response.json();
   if (!response.ok) {
-    throw new Error(data?.error || 'Could not create a password.');
+    throw serverError(data, 'restore.genericError');
   }
 
   return data.email;
@@ -66,7 +90,7 @@ export async function signInWithPassword(email, password) {
 
   const data = await response.json();
   if (!response.ok) {
-    throw new Error(data?.error || 'Could not sign in.');
+    throw serverError(data, 'authError.badCredentials');
   }
 
   return data.status;
@@ -144,7 +168,7 @@ export async function completeGoogleSignIn(code) {
 
   const data = await response.json();
   if (!response.ok) {
-    throw new Error(data?.error || 'Could not sign in with Google.');
+    throw serverError(data, 'authError.googleFailed');
   }
 
   return data.status;
@@ -165,7 +189,7 @@ export async function deleteAccount() {
 
   const data = await response.json();
   if (!response.ok) {
-    throw new Error(data?.error || 'Could not delete account.');
+    throw serverError(data, 'restore.genericError');
   }
   // true when a Hotmart subscription is still live. The caller MUST surface
   // this: unlike the old Stripe flow, deleting the account here does NOT stop

@@ -74,9 +74,20 @@ export async function identify(category, photos) {
       err.serviceDown = true;
       throw err;
     }
-    const err = new Error(data?.error || i18n.t('identify.serviceDownBody'));
-    if (response.status === 402) err.paymentRequired = true;
-    throw err;
+    // A generic server-side failure. The API also sends an English sentence in
+    // `error` for logs, but showing it would put English in front of 16 other
+    // languages - the app already has this message translated.
+    if (data?.reason === 'identifyFailed') {
+      throw new Error(i18n.t('identify.identificationFailedDefault'));
+    }
+    // 402 carries a real, actionable meaning (free uses spent) and the screen
+    // turns it into a paywall rather than a message, so its text is never shown.
+    if (response.status === 402) {
+      const err = new Error(i18n.t('identify.identificationFailedDefault'));
+      err.paymentRequired = true;
+      throw err;
+    }
+    throw new Error(data?.error || i18n.t('identify.serviceDownBody'));
   }
 
   if (!data) {
@@ -135,9 +146,20 @@ export async function identifySound(audioBase64, sampleRate) {
       err.serviceDown = true;
       throw err;
     }
-    const err = new Error(data?.error || i18n.t('identify.serviceDownBody'));
-    if (response.status === 402) err.paymentRequired = true;
-    throw err;
+    // A generic server-side failure. The API also sends an English sentence in
+    // `error` for logs, but showing it would put English in front of 16 other
+    // languages - the app already has this message translated.
+    if (data?.reason === 'identifyFailed') {
+      throw new Error(i18n.t('identify.identificationFailedDefault'));
+    }
+    // 402 carries a real, actionable meaning (free uses spent) and the screen
+    // turns it into a paywall rather than a message, so its text is never shown.
+    if (response.status === 402) {
+      const err = new Error(i18n.t('identify.identificationFailedDefault'));
+      err.paymentRequired = true;
+      throw err;
+    }
+    throw new Error(data?.error || i18n.t('identify.serviceDownBody'));
   }
 
   if (!data) throw new Error('Could not reach the identification service.');

@@ -160,7 +160,7 @@ const CATEGORIES = {
         language,
       });
       if (!data) return null;
-      return mapPlantLike(data, 'plant', 'No description available for this plant.');
+      return mapPlantLike(data, 'plant', null);
     },
   },
 
@@ -184,7 +184,7 @@ const CATEGORIES = {
         language,
       });
       if (!data) return null;
-      return mapPlantLike(data, 'tree', 'No description available for this tree.');
+      return mapPlantLike(data, 'tree', null);
     },
   },
 
@@ -222,7 +222,7 @@ const CATEGORIES = {
           name: (details.common_names && details.common_names[0]) || top.name,
           scientific: top.name,
           confidence: Math.round((top.probability || 0) * 100),
-          overview: details.description?.value || 'No description available for this insect.',
+          overview: details.description?.value || null,
           origin: origin || null,
           danger: details.danger?.length ? details.danger : null,
           dangerDescription: details.danger_description || null,
@@ -271,7 +271,7 @@ const CATEGORIES = {
           name: (details.common_names && details.common_names[0]) || top.name,
           scientific: top.name,
           confidence: Math.round((top.probability || 0) * 100),
-          overview: details.description?.value || 'No description available for this mushroom.',
+          overview: details.description?.value || null,
           origin: origin || null,
           edibility: details.edibility || null,
           psychoactive: typeof details.psychoactive === 'boolean' ? details.psychoactive : null,
@@ -327,7 +327,7 @@ const CATEGORIES = {
                 overview:
                   diseaseDetails.description ||
                   diseaseDetails.wiki_description?.value ||
-                  'No description available.',
+                  null,
                 severity: diseaseDetails.severity || null,
                 spreading: diseaseDetails.spreading || null,
                 symptoms: diseaseDetails.symptoms
@@ -517,7 +517,10 @@ const CATEGORIES = {
           name: data.labelName,
           scientific: null,
           confidence: Math.round((data.confidence || 0) * 100),
-          overview: 'No description available for this bird.',
+          // Nyckel sends no description at all. null, not an English sentence:
+          // the screen falls back to Wikipedia in the reader language, and a
+          // placeholder here would also be SAVED into their collection.
+          overview: null,
           origin: null,
           url: null,
         },
@@ -607,7 +610,12 @@ module.exports = async (req, res) => {
     res.status(200).json(result);
   } catch (err) {
     if (!res.headersSent) {
-      res.status(500).json({ error: config.errorMessage });
+      // `reason` is what the client actually shows - it maps to a translated
+      // string. `error` stays for the logs and for anyone calling the API
+      // directly, but a user must never be shown this English sentence: the app
+      // ships in 17 languages and already has "Falha na identificação / Tente
+      // novamente" written in all of them.
+      res.status(500).json({ error: config.errorMessage, reason: 'identifyFailed' });
     }
   }
 };

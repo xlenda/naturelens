@@ -2284,5 +2284,14 @@
     "signInRow": "Entrar",
     "signInSubtitle": "Use sua assinatura em qualquer aparelho",
     "accountRow": "Minha conta"
+  },
+  "authError": {
+    "passwordTooShort": "Sua senha precisa de pelo menos 8 caracteres.",
+    "subscribersOnly": "Criar senha é para quem tem assinatura ativa.",
+    "noSubscription": "Não encontramos assinatura para esse e-mail.",
+    "linkFailed": "Não conseguimos ligar este aparelho à sua conta. Tente de novo.",
+    "missingCredentials": "Digite seu e-mail e sua senha.",
+    "badCredentials": "Esse e-mail ou senha não confere, ou o e-mail ainda não foi confirmado.",
+    "googleFailed": "A entrada com o Google não foi concluída. Tente de novo."
   }
 }

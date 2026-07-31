@@ -2284,5 +2284,14 @@
     "signInRow": "Iniciar sesión",
     "signInSubtitle": "Usa tu suscripción en cualquier dispositivo",
     "accountRow": "Mi cuenta"
+  },
+  "authError": {
+    "passwordTooShort": "Tu contraseña necesita al menos 8 caracteres.",
+    "subscribersOnly": "Crear contraseña es para quien tiene suscripción activa.",
+    "noSubscription": "No encontramos ninguna suscripción para ese correo.",
+    "linkFailed": "No pudimos vincular este dispositivo a tu cuenta. Inténtalo de nuevo.",
+    "missingCredentials": "Escribe tu correo y tu contraseña.",
+    "badCredentials": "Ese correo o contraseña no coincide, o el correo aún no está confirmado.",
+    "googleFailed": "El inicio de sesión con Google no se completó. Inténtalo de nuevo."
   }
 }

@@ -2284,5 +2284,14 @@
     "signInRow": "Přihlásit se",
     "signInSubtitle": "Používej předplatné na jakémkoli zařízení",
     "accountRow": "Můj účet"
+  },
+  "authError": {
+    "passwordTooShort": "Heslo musí mít aspoň 8 znaků.",
+    "subscribersOnly": "Vytvořit heslo mohou jen aktivní předplatitelé.",
+    "noSubscription": "K tomuto e-mailu jsme nenašli žádné předplatné.",
+    "linkFailed": "Nepodařilo se propojit toto zařízení s tvým účtem. Zkus to znovu.",
+    "missingCredentials": "Zadej e-mail a heslo.",
+    "badCredentials": "Tento e-mail nebo heslo nesedí, nebo e-mail zatím není potvrzený.",
+    "googleFailed": "Přihlášení přes Google neproběhlo. Zkus to znovu."
   }
 }
