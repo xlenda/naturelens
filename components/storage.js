@@ -33,7 +33,33 @@ export async function removeFromCollection(savedId) {
     const list = await getCollection();
     const next = list.filter((p) => p.savedId !== savedId);
     await AsyncStorage.setItem(COLLECTION_KEY, JSON.stringify(next));
+    // Remember the deletion so cloud sync can carry it to the user's other
+    // devices. Without a tombstone the next sync would pull this find straight
+    // back from another device and the app would look like it refuses
+    // deletions. Imported lazily: storage.js is used on every screen and must
+    // not drag the sync module into every bundle path.
+    try {
+      const { rememberDeletion } = require('./collectionSync');
+      rememberDeletion(savedId);
+    } catch (e) {
+      /* sync unavailable - the local deletion still stands */
+    }
     return next;
+  } catch (e) {
+    return null;
+  }
+}
+
+/**
+ * Replaces the whole collection. Used ONLY by cloud sync, which has already
+ * merged local and remote - never call it with a list that has not been merged,
+ * because it is the one function here that can lose finds.
+ */
+export async function replaceCollection(list) {
+  try {
+    if (!Array.isArray(list)) return null;
+    await AsyncStorage.setItem(COLLECTION_KEY, JSON.stringify(list));
+    return list;
   } catch (e) {
     return null;
   }

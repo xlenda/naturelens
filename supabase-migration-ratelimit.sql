@@ -74,3 +74,51 @@ $$;
 
 -- Limpa o que já está acumulado agora.
 select public.prune_rate_limits();
+
+
+-- ----------------------------------------------------------------------------
+-- 3. Coleção na nuvem (assinantes)
+-- ----------------------------------------------------------------------------
+-- A coleção vive só no aparelho. Existe exportar/importar manual, mas perder o
+-- celular perde tudo — e é a única coisa no app que o usuário não consegue
+-- recuperar de jeito nenhum.
+--
+-- O QUE SINCRONIZA, E O QUE NÃO
+-- Só os METADADOS do achado: nome, espécie, categoria, confiança, data, texto.
+-- A FOTO DO USUÁRIO NÃO SOBE. Dois motivos, e o segundo é decisivo:
+--   1. cada foto tem ~300 KB (JPEG 1280px em base64); 100 achados seriam 30 MB
+--      por conta, contra ~100 KB só de metadados;
+--   2. a política de privacidade do app diz, com todas as letras, que não
+--      armazenamos fotos em servidor nosso. Subir foto contradiria isso.
+-- A foto de referência da espécie é recuperável a partir do nome científico
+-- (Wikipedia), então o achado reaparece com imagem no outro aparelho mesmo sem
+-- a foto original.
+--
+-- CHAVE POR E-MAIL, não por aparelho: o objetivo é justamente atravessar
+-- aparelhos. Quem não tem conta não sincroniza — e não perde nada, porque a
+-- coleção local continua funcionando exatamente como antes.
+create table if not exists public.collection_entries (
+  email text not null,
+  -- O savedId gerado no aparelho. É Date.now() em texto, então dois aparelhos
+  -- PODEM colidir no mesmo milissegundo; a chave primária composta com o e-mail
+  -- torna isso inofensivo (no pior caso um achado sobrescreve outro do mesmo
+  -- dono no mesmo instante, o que ninguém consegue provocar na prática).
+  saved_id text not null,
+  category text not null,
+  payload jsonb not null,
+  saved_at timestamptz,
+  -- Lápide. Sem isto, apagar um achado num aparelho e sincronizar o traria de
+  -- volta do outro — a sincronização viraria um botão de desfazer exclusão.
+  deleted boolean not null default false,
+  updated_at timestamptz not null default now(),
+  primary key (email, saved_id)
+);
+
+create index if not exists collection_entries_email_idx
+  on public.collection_entries (email, updated_at desc);
+
+alter table public.collection_entries enable row level security;
+
+-- Sem policy de RLS, igual às outras tabelas: não existe sessão do Supabase
+-- Auth para escopar uma policy. Todo acesso passa pelas funções serverless com
+-- a service_role key, que ignora RLS. anon/authenticated ficam negados.

@@ -17,6 +17,7 @@ import * as Haptics from 'expo-haptics';
 import { useTranslation } from 'react-i18next';
 import { colors, shadow } from '../components/theme';
 import { getCollection, removeFromCollection, updateCollectionEntry } from '../components/storage';
+import { syncCollection } from '../components/collectionSync';
 import { CATEGORIES } from '../components/categories';
 import { getWateringStatus } from '../components/watering';
 import AlertModal from '../components/AlertModal';
@@ -72,6 +73,16 @@ export default function CollectionScreen() {
     const list = await getCollection();
     setCollection(list);
     setLoading(false);
+
+    // Cloud sync, after the local list is already on screen.
+    //
+    // Deliberately not awaited before rendering: the local collection is the
+    // authoritative copy and must appear instantly, offline or not. Sync is a
+    // convenience layered on top - it self-throttles to once a minute, never
+    // throws, and only does anything for a signed-in subscriber.
+    syncCollection().then((result) => {
+      if (result?.added) load();
+    });
   }, []);
 
   useFocusEffect(
@@ -82,6 +93,8 @@ export default function CollectionScreen() {
 
   const onRefresh = useCallback(async () => {
     setRefreshing(true);
+    // Pull-to-refresh is an explicit 'do it now', so it bypasses the throttle.
+    await syncCollection({ force: true });
     const list = await getCollection();
     setCollection(list);
     setRefreshing(false);

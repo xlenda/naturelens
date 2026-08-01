@@ -7,7 +7,7 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "test": "node --test i18n.test.js hotmart.test.js sound.test.js location.test.js english-leak.test.js",
+    "test": "node --test i18n.test.js hotmart.test.js sound.test.js location.test.js english-leak.test.js sync.test.js",
     "verify:live": "node scripts/verify-live.js",
     "deploy": "npm test && npx expo export -p web && node scripts/patch-pwa.js && npx vercel deploy --prod --yes && node scripts/gates.js",
     "e2e": "node scripts/e2e-render.js",
