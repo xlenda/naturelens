@@ -294,10 +294,10 @@
     "deleteAccount": "删除账户",
     "deletingAccount": "删除中…",
     "deleteAccountConfirmTitle": "删除您的账户？",
-    "deleteAccountConfirmBody": "此操作将永久删除您保存的收藏、密码（如有），并取消您的有效订阅（如有）。此操作无法撤销。",
+    "deleteAccountConfirmBody": "这将永久删除你保存的收藏和密码（如果有）。这不会取消扣款——如果你有付费订阅，必须在购买处取消，否则费用会继续。此操作无法撤销。",
     "deleteAccountConfirmButton": "删除",
     "deleteAccountDoneTitle": "账户已删除",
-    "deleteAccountDoneBody": "您的数据已被删除，任何有效订阅均已取消。",
+    "deleteAccountDoneBody": "你的账户和数据已删除。如果你有付费订阅，请记得在购买处取消——在这里删除数据并不会停止扣款。",
     "deleteAccountFailedTitle": "无法删除账户",
     "deleteAccountFailedBody": "出了点问题，请重试。",
     "helpAndSupport": "帮助与支持",
@@ -332,9 +332,9 @@
   "privacy": {
     "title": "隐私政策",
     "collectTitle": "我们收集哪些信息",
-    "collectBody": "本应用允许你拍摄植物、昆虫、蘑菇或作物的照片以进行识别。为此，应用使用了第三方 AI 识别服务——Plant.id、Insect.id、Mushroom.id 和 Crop.health，均由 Kindwise 开发。",
+    "collectBody": "本应用可让你拍摄植物、树木、昆虫、蘑菇、作物、鱼类或鸟类进行识别，也可录制动物叫声按声音识别。识别由 AI 服务完成：Kindwise（植物、树木、昆虫、蘑菇、作物）、Fishial.AI（鱼类）和 Nyckel（鸟类）。声音在我们自己的服务器上识别，因此录音不会到达第三方。",
     "thirdPartyTitle": "第三方 AI 服务",
-    "thirdPartyBody": "当你拍摄或上传照片以识别某个物体时，该照片会直接发送至相应的 Kindwise 识别服务以生成结果。我们不会将你的照片存储在我们控制的任何服务器上。",
+    "thirdPartyBody": "当你拍摄或上传照片时，照片会发送到对应的识别服务以生成结果。我们不会在任何自有服务器上保存你的照片。为了展示参考图和物种描述，应用会用学名查询维基百科——维基百科因此知道你查过哪个物种，但不知道你是谁。部分供应商只提供英文；翻译该文本，以及向应用内的专家提问，会把该文本发送给 Anthropic。",
     "localStorageTitle": "仅本地存储",
     "localStorageBody": "你保存的收藏——包括已识别的物种、备注和时间戳——仅通过浏览器或应用的本地存储保存在你自己的设备上。它绝不会上传到我们运行的任何云服务器，也绝不会与其他用户共享。",
     "noAccountsTitle": "无账户，无追踪",
@@ -342,7 +342,9 @@
     "dataLossTitle": "数据丢失风险",
     "dataLossBody": "如果你清除浏览器数据或卸载应用，本地保存的收藏将永久丢失，因为没有任何数据会被远程备份。",
     "contactTitle": "联系方式",
-    "contactBody": "如对本政策有任何疑问，可联系应用开发者。"
+    "contactBody": "如对本政策有任何疑问，可联系应用开发者。",
+    "locationTitle": "大致位置",
+    "locationBody": "对于植物、树木、昆虫、蘑菇和作物，应用可以发送照片拍摄的大致地点和时间，这会明显提升准确度：同一朵褐色小蘑菇在巴西和挪威可能是不同物种。坐标在离开你的设备前会取整到约 1 公里——足以圈定物种分布，不足以定位建筑——我们也从不保存。你可以随时在“个人资料”中关闭，关闭后识别照常工作。鱼类、鸟类和声音从不发送位置。"
   },
   "discover": {
     "title": "发现",
@@ -2283,7 +2285,10 @@
   "login": {
     "signInRow": "登录",
     "signInSubtitle": "在任何设备上使用你的订阅",
-    "accountRow": "我的账户"
+    "accountRow": "我的账户",
+    "signOut": "在此设备上退出登录",
+    "signingOut": "正在退出…",
+    "signOutFailedTitle": "无法退出登录"
   },
   "authError": {
     "passwordTooShort": "密码至少需要 8 个字符。",
@@ -2292,6 +2297,11 @@
     "linkFailed": "无法将此设备关联到你的账户，请重试。",
     "missingCredentials": "请输入邮箱和密码。",
     "badCredentials": "邮箱或密码不正确，或邮箱尚未确认。",
-    "googleFailed": "Google 登录未完成，请重试。"
+    "googleFailed": "Google 登录未完成，请重试。",
+    "accountExists": "该邮箱已有账户。请用你已有的密码登录。",
+    "signupFailed": "无法创建密码，请重试。",
+    "badCode": "验证码错误或已过期，请重新获取。",
+    "badEmail": "这看起来不是有效的邮箱地址。",
+    "codeSendFailed": "验证码发送失败，请稍后重试。"
   }
 }

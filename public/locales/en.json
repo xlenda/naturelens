@@ -345,10 +345,10 @@
     "deleteAccount": "Delete account",
     "deletingAccount": "Deleting…",
     "deleteAccountConfirmTitle": "Delete your account?",
-    "deleteAccountConfirmBody": "This permanently deletes your saved collection, password (if any), and cancels your active subscription if you have one. This cannot be undone.",
+    "deleteAccountConfirmBody": "This permanently erases your saved collection and your password, if you have one. It does NOT cancel billing — if you have a paid subscription you must cancel it where you bought it, or the charge continues. This cannot be undone.",
     "deleteAccountConfirmButton": "Delete",
     "deleteAccountDoneTitle": "Account deleted",
-    "deleteAccountDoneBody": "Your data has been deleted and any active subscription has been canceled.",
+    "deleteAccountDoneBody": "Your account and your data have been erased. If you had a paid subscription, remember to cancel it where you bought it — deleting your data here does not stop the charge.",
     "deleteAccountFailedTitle": "Couldn't delete account",
     "deleteAccountFailedBody": "Something went wrong. Please try again.",
     "rewardsStore": "Rewards store",
@@ -405,9 +405,9 @@
   "privacy": {
     "title": "Privacy Policy",
     "collectTitle": "What we collect",
-    "collectBody": "This app lets you photograph plants, insects, mushrooms, or crops to identify them. To do this, it uses third-party AI identification services — Plant.id, Insect.id, Mushroom.id, and Crop.health, all built by Kindwise.",
+    "collectBody": "This app lets you photograph a plant, tree, insect, mushroom, crop, fish or bird to identify it, and record an animal call to identify it by sound. Identification is done by AI services: Kindwise (plants, trees, insects, mushrooms, crops), Fishial.AI (fish) and Nyckel (birds). Sound is identified on our own server, so recordings never reach a third party.",
     "thirdPartyTitle": "Third-party AI services",
-    "thirdPartyBody": "When you take or upload a photo to identify something, that photo is sent directly to the relevant Kindwise identification service to produce a result. We do not store your photos on any server we control.",
+    "thirdPartyBody": "When you take or upload a photo, that photo is sent to the matching identification service to produce a result. We do not store your photos on any server we control. To show you a reference picture and a description of the species, the app asks Wikipedia about the scientific name — Wikipedia therefore sees which species you looked up, but not who you are. Some vendors only write in English; translating that text, and asking the in-app specialist a question, sends that text to Anthropic.",
     "localStorageTitle": "Local storage only",
     "localStorageBody": "Your saved collection — identified species, notes, and timestamps — is stored only locally on your own device using browser or app local storage. It is never uploaded to any cloud server we run, and it is never shared with other users.",
     "noAccountsTitle": "No accounts, no tracking",
@@ -415,7 +415,9 @@
     "dataLossTitle": "Data loss risk",
     "dataLossBody": "If you clear your browser data or uninstall the app, your locally saved collection will be permanently lost, since nothing is backed up remotely.",
     "contactTitle": "Contact",
-    "contactBody": "Questions about this policy can be directed to the app's developer."
+    "contactBody": "Questions about this policy can be directed to the app's developer.",
+    "locationTitle": "Approximate location",
+    "locationBody": "For plants, trees, insects, mushrooms and crops, the app can send roughly where and when the photo was taken, which measurably improves the answer: the same small brown mushroom means different things in Brazil and in Norway. The coordinates are rounded to about 1 km before they leave your device — enough to place a species, not enough to identify a building — and they are never stored by us. You can turn this off at any time under Profile, and identification keeps working without it. It is never sent for fish, birds or sound."
   },
   "discover": {
     "title": "Discover",
@@ -2283,7 +2285,10 @@
   "login": {
     "signInRow": "Sign in",
     "signInSubtitle": "Sync your subscription across devices",
-    "accountRow": "My account"
+    "accountRow": "My account",
+    "signOut": "Sign out of this device",
+    "signingOut": "Signing out…",
+    "signOutFailedTitle": "Could not sign out"
   },
   "authError": {
     "passwordTooShort": "Your password needs at least 8 characters.",
@@ -2292,6 +2297,11 @@
     "linkFailed": "We could not link this device to your account. Please try again.",
     "missingCredentials": "Enter your email and password.",
     "badCredentials": "That email or password is not right, or the email has not been confirmed yet.",
-    "googleFailed": "Google sign-in did not go through. Please try again."
+    "googleFailed": "Google sign-in did not go through. Please try again.",
+    "accountExists": "There is already an account with this email. Sign in with your existing password instead.",
+    "signupFailed": "We could not create the password. Please try again.",
+    "badCode": "That code is wrong or has expired. Ask for a new one.",
+    "badEmail": "That does not look like a valid email address.",
+    "codeSendFailed": "We could not send the code. Please try again in a moment."
   }
 }

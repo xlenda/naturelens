@@ -294,10 +294,10 @@
     "deleteAccount": "Supprimer le compte",
     "deletingAccount": "Suppression…",
     "deleteAccountConfirmTitle": "Supprimer votre compte ?",
-    "deleteAccountConfirmBody": "Cela supprime définitivement votre collection enregistrée, votre mot de passe (le cas échéant) et annule votre abonnement actif, si vous en avez un. Cette action est irréversible.",
+    "deleteAccountConfirmBody": "Cela efface définitivement votre collection enregistrée et votre mot de passe, le cas échéant. Cela n’annule PAS le paiement : si vous avez un abonnement payant, vous devez l’annuler là où vous l’avez acheté, sinon le prélèvement continue. Action irréversible.",
     "deleteAccountConfirmButton": "Supprimer",
     "deleteAccountDoneTitle": "Compte supprimé",
-    "deleteAccountDoneBody": "Vos données ont été supprimées et tout abonnement actif a été annulé.",
+    "deleteAccountDoneBody": "Votre compte et vos données ont été effacés. Si vous aviez un abonnement payant, pensez à l’annuler là où vous l’avez acheté — supprimer vos données ici n’arrête pas le prélèvement.",
     "deleteAccountFailedTitle": "Impossible de supprimer le compte",
     "deleteAccountFailedBody": "Une erreur s'est produite. Veuillez réessayer.",
     "helpAndSupport": "Aide et assistance",
@@ -332,9 +332,9 @@
   "privacy": {
     "title": "Politique de confidentialité",
     "collectTitle": "Ce que nous collectons",
-    "collectBody": "Cette application vous permet de photographier des plantes, des insectes, des champignons ou des cultures pour les identifier. Pour ce faire, elle utilise des services d'identification par IA tiers — Plant.id, Insect.id, Mushroom.id et Crop.health, tous développés par Kindwise.",
+    "collectBody": "Cette app vous permet de photographier une plante, un arbre, un insecte, un champignon, une culture, un poisson ou un oiseau pour l’identifier, et d’enregistrer un cri d’animal pour l’identifier au son. L’identification est faite par des services d’IA : Kindwise (plantes, arbres, insectes, champignons, cultures), Fishial.AI (poissons) et Nyckel (oiseaux). Le son est identifié sur notre propre serveur, les enregistrements n’atteignent donc aucun tiers.",
     "thirdPartyTitle": "Services d'IA tiers",
-    "thirdPartyBody": "Lorsque vous prenez ou importez une photo pour identifier quelque chose, cette photo est envoyée directement au service d'identification Kindwise concerné afin de produire un résultat. Nous ne stockons vos photos sur aucun serveur que nous contrôlons.",
+    "thirdPartyBody": "Quand vous prenez ou envoyez une photo, elle est transmise au service d’identification correspondant. Nous ne stockons vos photos sur aucun serveur que nous contrôlons. Pour afficher une photo de référence et une description, l’app interroge Wikipédia sur le nom scientifique — Wikipédia voit donc quelle espèce vous avez consultée, mais pas qui vous êtes. Certains fournisseurs n’écrivent qu’en anglais ; traduire ce texte, et poser une question à la spécialiste de l’app, l’envoie à Anthropic.",
     "localStorageTitle": "Stockage local uniquement",
     "localStorageBody": "Votre collection enregistrée — espèces identifiées, notes et horodatages — est stockée uniquement en local sur votre propre appareil, via le stockage local du navigateur ou de l'application. Elle n'est jamais téléversée vers un serveur cloud que nous exploitons, et elle n'est jamais partagée avec d'autres utilisateurs.",
     "noAccountsTitle": "Pas de comptes, pas de suivi",
@@ -342,7 +342,9 @@
     "dataLossTitle": "Risque de perte de données",
     "dataLossBody": "Si vous effacez les données de votre navigateur ou désinstallez l'application, votre collection enregistrée localement sera définitivement perdue, car rien n'est sauvegardé à distance.",
     "contactTitle": "Contact",
-    "contactBody": "Pour toute question concernant cette politique, vous pouvez contacter le développeur de l'application."
+    "contactBody": "Pour toute question concernant cette politique, vous pouvez contacter le développeur de l'application.",
+    "locationTitle": "Position approximative",
+    "locationBody": "Pour les plantes, arbres, insectes, champignons et cultures, l’app peut envoyer approximativement où et quand la photo a été prise, ce qui améliore nettement la réponse : le même petit champignon brun ne signifie pas la même chose au Brésil et en Norvège. Les coordonnées sont arrondies à environ 1 km avant de quitter votre appareil — assez pour situer une espèce, pas assez pour identifier un bâtiment — et nous ne les conservons jamais. Vous pouvez désactiver cela à tout moment dans Profil, l’identification continue de fonctionner. Ce n’est jamais envoyé pour les poissons, les oiseaux ou le son."
   },
   "discover": {
     "title": "Découvrir",
@@ -2283,7 +2285,10 @@
   "login": {
     "signInRow": "Se connecter",
     "signInSubtitle": "Retrouvez votre abonnement sur tous vos appareils",
-    "accountRow": "Mon compte"
+    "accountRow": "Mon compte",
+    "signOut": "Se déconnecter de cet appareil",
+    "signingOut": "Déconnexion…",
+    "signOutFailedTitle": "Déconnexion impossible"
   },
   "authError": {
     "passwordTooShort": "Votre mot de passe doit faire au moins 8 caractères.",
@@ -2292,6 +2297,11 @@
     "linkFailed": "Nous n’avons pas pu lier cet appareil à votre compte. Réessayez.",
     "missingCredentials": "Saisissez votre e-mail et votre mot de passe.",
     "badCredentials": "Cet e-mail ou ce mot de passe est incorrect, ou l’e-mail n’est pas encore confirmé.",
-    "googleFailed": "La connexion Google n’a pas abouti. Réessayez."
+    "googleFailed": "La connexion Google n’a pas abouti. Réessayez.",
+    "accountExists": "Un compte existe déjà avec cette adresse. Connectez-vous avec votre mot de passe actuel.",
+    "signupFailed": "Le mot de passe n’a pas pu être créé. Réessayez.",
+    "badCode": "Ce code est incorrect ou expiré. Demandez-en un nouveau.",
+    "badEmail": "Cela ne ressemble pas à une adresse e-mail valide.",
+    "codeSendFailed": "Le code n’a pas pu être envoyé. Réessayez dans un instant."
   }
 }

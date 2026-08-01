@@ -1,5 +1,6 @@
 const { getSupabaseAnon, getSupabaseAdmin, requireDeviceId } = require('../_lib/supabaseAdmin');
 const { requireMethod } = require('../_lib/kindwise');
+const { checkRateLimit } = require('../_lib/rateLimit');
 
 module.exports = async (req, res) => {
   if (!requireMethod(req, res, 'POST')) return;
@@ -10,11 +11,35 @@ module.exports = async (req, res) => {
   const email = req.body?.email;
   const code = req.body?.code;
   if (!email || typeof email !== 'string' || !code || typeof code !== 'string') {
-    res.status(400).json({ error: 'Missing email or code' });
+    res.status(400).json({ error: 'Missing email or code', reason: 'missingCredentials' });
     return;
   }
 
   const normalizedEmail = email.trim().toLowerCase();
+
+  // Requesting a code is limited to 3/hour; VERIFYING one was not limited at
+  // all. A 6-digit code is a million combinations, and Supabase's OTP stays
+  // valid for an hour - so an attacker who knows a subscriber's email could
+  // trigger one send and then try codes without any brake until they hit it.
+  // Succeeding links THEIR device to the victim's subscription, which is the
+  // same prize as guessing the password.
+  //
+  // Two buckets, same reasoning as sign-in: by IP so one machine cannot hammer
+  // many accounts, and by EMAIL so a botnet rotating addresses cannot hammer
+  // one. 10 attempts is generous for someone typing a code off their phone.
+  if (!(await checkRateLimit(req, res, { scope: 'restore-verify', limit: 10, windowSeconds: 3600 }))) {
+    return;
+  }
+  if (
+    !(await checkRateLimit(req, res, {
+      scope: `restore-verify-email:${normalizedEmail}`,
+      limit: 10,
+      windowSeconds: 3600,
+      ignoreIp: true,
+    }))
+  ) {
+    return;
+  }
 
   const supabaseAnon = getSupabaseAnon();
   const { error: verifyError } = await supabaseAnon.auth.verifyOtp({
@@ -24,7 +49,7 @@ module.exports = async (req, res) => {
   });
 
   if (verifyError) {
-    res.status(400).json({ error: 'That code is invalid or expired.' });
+    res.status(400).json({ error: 'That code is invalid or expired.', reason: 'badCode' });
     return;
   }
 
@@ -48,7 +73,7 @@ module.exports = async (req, res) => {
     .maybeSingle();
 
   if (!existing) {
-    res.status(404).json({ error: 'No subscription was found for that email.' });
+    res.status(404).json({ error: 'No subscription was found for that email.', reason: 'noSubscription' });
     return;
   }
 
@@ -71,7 +96,7 @@ module.exports = async (req, res) => {
 
   if (linkError) {
     console.error('restore/verify-code: link failed', deviceId, linkError.message);
-    res.status(500).json({ error: 'Could not restore access on this device. Please try again.' });
+    res.status(500).json({ error: 'Could not restore access on this device. Please try again.', reason: 'linkFailed' });
     return;
   }
 

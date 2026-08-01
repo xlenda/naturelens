@@ -214,12 +214,90 @@ test('on-demand translation is rate limited and needs a device', () => {
 
 test('the fish handler only pays to translate text that will lead', () => {
   const src = read('api/identify.js');
+  // Decided once, on the ENGLISH original, and sent to the client as
+  // overviewIsProse. The client cannot re-derive it: by then the text may be a
+  // Korean or Chinese translation, which the detector reads as "not prose".
+  assert.match(src, /const vendorIsProse = looksLikeProse\(fa\.description\);/);
   assert.match(
     src,
-    /looksLikeProse\(fa\.description\)\s*\?\s*await translateVendorText/,
+    /vendorIsProse\s*\n?\s*\?\s*await translateVendorText/,
     'a diagnostic key lands in a card below the fold - translating it on every ' +
       'identification pays for text most people never scroll to'
   );
+  assert.match(
+    src,
+    /overviewIsProse: vendorIsProse/,
+    'the verdict must travel to the client, not be recomputed there'
+  );
+
+  const screen = read('screens/FishDetailScreen.js');
+  assert.match(
+    screen,
+    /typeof plant\.overviewIsProse === 'boolean'/,
+    'the screen must trust the server verdict when it has one'
+  );
+});
+
+test('language detection never mistakes English for another language', () => {
+  // The Dutch marker used to include "is", a word in both languages, so all
+  // three of these English sentences were judged already-Dutch and the Translate
+  // button disappeared for every Dutch reader. "en" was the same trap for
+  // Swedish and Danish.
+  const src = read('components/localisedOverview.js');
+  const start = src.indexOf('function isLikelyLocalised');
+  // eslint-disable-next-line no-eval
+  const isLikelyLocalised = eval(`(${src.slice(start, src.indexOf('\n}', start) + 2)})`);
+
+  const ENGLISH = [
+    'The peregrine falcon is a bird of prey in the family Falconidae. It is renowned for its speed.',
+    'This is a species of tree frog found across Europe. Adults are green and about 4 cm long.',
+    'The clownfish is one of the most recognisable reef fish in the world. It lives among anemones.',
+  ];
+  for (const lang of ['pt', 'es', 'fr', 'de', 'it', 'nl', 'pl', 'cs', 'sv', 'da', 'tr']) {
+    for (const text of ENGLISH) {
+      assert.equal(
+        isLikelyLocalised(text, lang),
+        false,
+        `English text judged as ${lang} - the Translate button would vanish`
+      );
+    }
+  }
+
+  // And real text in each language must still be recognised, or the button
+  // appears on text that needs no translating.
+  const NATIVE = {
+    pt: 'Esta espécie habita recifes de coral no Indo-Pacífico. Forma relação simbiótica com anêmonas.',
+    nl: 'Deze soort leeft in koraalriffen en lagunes. Het vormt een symbiotische relatie met zeeanemonen.',
+    sv: 'Denna art lever i korallrev och laguner. Den bildar ett symbiotiskt förhållande med havsanemoner.',
+    da: 'Denne art lever i koralrev og laguner, og den danner et symbiotisk forhold med søanemoner.',
+    de: 'Diese Art lebt in Korallenriffen. Sie bildet eine symbiotische Beziehung mit Seeanemonen.',
+  };
+  for (const [lang, text] of Object.entries(NATIVE)) {
+    assert.equal(isLikelyLocalised(text, lang), true, `${lang} text not recognised as ${lang}`);
+  }
+});
+
+test('the privacy policy discloses that location leaves the device', () => {
+  // Location was added and shipped default-ON without the policy saying so. It
+  // goes to a third party (Kindwise), which is exactly what a privacy policy is
+  // for.
+  const screen = read('screens/PrivacyScreen.js');
+  assert.match(screen, /privacy\.locationTitle/);
+  assert.match(screen, /privacy\.locationBody/);
+
+  const dir = path.join(__dirname, 'public/locales');
+  const locales = fs
+    .readdirSync(dir)
+    .filter((f) => f.endsWith('.json') && !/-(herbs|species)\.json$/.test(f));
+  for (const file of locales) {
+    const j = JSON.parse(fs.readFileSync(path.join(dir, file), 'utf8'));
+    for (const key of ['locationTitle', 'locationBody']) {
+      assert.ok(
+        typeof j.privacy?.[key] === 'string' && j.privacy[key].trim(),
+        `${file} is missing a non-empty privacy.${key}`
+      );
+    }
+  }
 });
 
 test('every locale can label the translate button', () => {

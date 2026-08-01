@@ -379,7 +379,23 @@ const CATEGORIES = {
       // whatever happens (no key, timeout, provider error), and the caller then
       // keeps the English. A translation failure must never cost someone the
       // identification they just spent a scan on.
-      const translated = looksLikeProse(fa.description)
+      // Decided ONCE, here, on the English original - and sent to the client.
+      //
+      // The client used to re-run looksLikeProse on whatever text it had, which
+      // by then was the TRANSLATION. The detector counts sentences with
+      // /[.!?](\s+[A-Z]|$)/ and splits words on whitespace: Korean and Arabic
+      // sentences end with a period followed by a non-Latin letter, Chinese uses
+      // 。 and has no spaces at all, Hindi ends with ।. Verified on faithful
+      // translations of the same paragraph: en and pt read as prose, ko, zh, ar
+      // and hi all read as "not prose".
+      //
+      // So for a Korean reader the translation just paid for was demoted below
+      // the fold, English could lead the Overview card, and the reader was
+      // offered a SECOND paid translation of it. The drift test between the two
+      // copies could never catch this - the copies are byte-identical; the
+      // divergence is in what they are fed.
+      const vendorIsProse = looksLikeProse(fa.description);
+      const translated = vendorIsProse
         ? await translateVendorText(fa.description, language)
         : null;
 
@@ -400,6 +416,10 @@ const CATEGORIES = {
           // the translation is the original (English reader) - two identical
           // paragraphs help nobody.
           overviewOriginal: translated ? fa.description : null,
+          // Whether `overview` is readable prose or a diagnostic key, judged on
+          // the English source. The client cannot re-derive this from a
+          // translation - see the comment above.
+          overviewIsProse: vendorIsProse,
           origin: origin || null,
           commonNames: fa.commonNames?.length ? fa.commonNames.join(', ') : null,
           synonyms: fa.scientificNames?.length ? fa.scientificNames.join(', ') : null,

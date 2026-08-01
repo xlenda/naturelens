@@ -11,7 +11,7 @@ import { getCollection, getProfilePhoto, saveProfilePhoto, clearCollection, clea
 import { CATEGORIES } from '../components/categories';
 import { SUPPORTED_LANGUAGES, setAppLanguage } from '../i18n';
 import { startCheckout, getSubscriptionStatus, getLinkedEmail } from '../components/subscription';
-import { createPassword, deleteAccount } from '../components/restore';
+import { createPassword, deleteAccount, signOut } from '../components/restore';
 import { resetDeviceId } from '../components/deviceId';
 import { getStreakInfo, evaluateAchievements, clearAchievements } from '../components/achievements';
 import { clearRewards, hasReward } from '../components/rewardOwnership';
@@ -82,6 +82,25 @@ export default function ProfileScreen() {
       alive = false;
     };
   }, []);
+
+  const [signingOut, setSigningOut] = useState(false);
+
+  const handleSignOut = async () => {
+    if (signingOut) return;
+    setSigningOut(true);
+    try {
+      await signOut();
+      // Clear the shown account immediately rather than waiting for the next
+      // focus - the row above is the only thing telling the user which account
+      // they were on, and it must not keep naming one they just left.
+      setAccountEmail(null);
+      await load();
+    } catch (e) {
+      showAlert(t('login.signOutFailedTitle'), e.message || t('restore.genericError'));
+    } finally {
+      setSigningOut(false);
+    }
+  };
 
   const toggleLocation = async () => {
     const next = !locationOn;
@@ -416,10 +435,18 @@ export default function ProfileScreen() {
             balance opens the Rewards store - tapping a balance to go spend it is
             the affordance people expect, and until the store existed this card
             led somewhere that could not answer "what are these for?". */}
-        {/* Same reasoning as the card above: a streak of 0 and a balance of 0
-            are not information, they are two more zeros. Both appear the moment
-            there is something to count. */}
-        {total > 0 && (
+        {/* Shown as soon as there is ANY progress - not only once something has
+            been saved.
+            Gating this on `total > 0` was wrong twice over. Tokens and the
+            streak come from recordIdentification(), which fires on every scan
+            whether or not the find is ever saved, so someone who identified
+            daily for a week without tapping Save had a 7-day streak and 35+
+            tokens that the app refused to show them. Worse, these two cards hold
+            the ONLY navigation into Achievements and the Rewards Store -
+            verified: navigate('Achievements') and navigate('Store') each appear
+            exactly once in the whole codebase, both inside this block. Hiding it
+            made a store the app sells things in unreachable. */}
+        {(total > 0 || currentStreak > 0 || tokens > 0) && (
         <View style={styles.streakRow}>
           <TouchableOpacity
             style={styles.streakCard}
@@ -499,6 +526,28 @@ export default function ProfileScreen() {
           </View>
           <Ionicons name="chevron-forward" size={17} color={colors.textMuted} />
         </TouchableOpacity>
+
+        {/* Sign out - only offered when there IS an account on this device.
+            The app had a way in and no way out: once a device was linked,
+            nothing could unlink it. The nearest thing was "delete account",
+            which erases the collection and password for every device - a wildly
+            disproportionate answer to selling a phone or signing in on someone
+            else's tablet. */}
+        {!!accountEmail && (
+          <TouchableOpacity
+            style={styles.signOutRow}
+            activeOpacity={0.7}
+            onPress={handleSignOut}
+            disabled={signingOut}
+            accessibilityRole="button"
+            accessibilityLabel={t('login.signOut')}
+          >
+            <Ionicons name="log-out-outline" size={17} color={colors.textMuted} />
+            <Text style={styles.signOutText}>
+              {signingOut ? t('login.signingOut') : t('login.signOut')}
+            </Text>
+          </TouchableOpacity>
+        )}
 
         <TouchableOpacity
           style={styles.recapRow}
@@ -1117,6 +1166,17 @@ const styles = StyleSheet.create({
     fontWeight: '700',
     color: colors.text,
   },
+  // Deliberately quieter than the rows above it: signing out is a rare,
+  // reversible action, not something to invite.
+  signOutRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 8,
+    paddingVertical: 10,
+    paddingHorizontal: 4,
+    marginBottom: 4,
+  },
+  signOutText: { color: colors.textMuted, fontSize: 13.5, fontWeight: '600' },
   recapRow: {
     flexDirection: 'row',
     alignItems: 'center',

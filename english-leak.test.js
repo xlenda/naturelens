@@ -206,3 +206,71 @@ test('a translation never outlives the text it was made from', () => {
   );
   assert.match(src, /const currentRef = useRef\(/, 'must be a ref - state would be stale in the callback');
 });
+
+test('the Hotmart-unlock flow explains what actually failed', () => {
+  // verify-code.js and request-code.js sent no reason at all, so a wrong code,
+  // an unknown email and a failed device link all rendered as the same
+  // "Something went wrong. Please try again." - in the flow someone uses
+  // precisely because something already went wrong with their purchase.
+  const verify = read('api/restore/verify-code.js');
+  const request = read('api/restore/request-code.js');
+  assert.match(verify, /reason: 'badCode'/);
+  assert.match(verify, /reason: 'noSubscription'/);
+  assert.match(verify, /reason: 'linkFailed'/);
+  assert.match(request, /reason: 'badEmail'/);
+
+  const client = read('components/restore.js');
+  for (const reason of ['badCode', 'badEmail', 'codeSendFailed', 'accountExists', 'signupFailed']) {
+    assert.match(client, new RegExp(`${reason}: 'authError\.`), `${reason} is not mapped to a key`);
+  }
+});
+
+test('creating a password twice does not report a false success', () => {
+  // Supabase deliberately does NOT error when the email already has an account -
+  // it answers 200 with an empty `identities` array, so a signup form cannot be
+  // used to discover which addresses are registered. Forwarded as-is, that told
+  // a subscriber "password created" while their real password was unchanged,
+  // and they could then never sign in.
+  const api = read('api/auth.js');
+  assert.match(api, /signUpData\?\.user\?\.identities/);
+  assert.match(api, /reason: 'accountExists'/);
+});
+
+test('the delete-account dialogs do not promise a cancellation that never happens', () => {
+  // handleDelete deliberately does not cancel Hotmart billing - deleting data
+  // while a card keeps being charged, silently, is the dark pattern it avoids.
+  // The copy said the opposite.
+  const api = read('api/auth.js');
+  assert.doesNotMatch(
+    api.slice(api.indexOf('async function handleDelete')),
+    /cancel.*subscription.*await/i,
+    'if this ever starts cancelling, the copy below has to change with it'
+  );
+
+  const dir = path.join(__dirname, 'public', 'locales');
+  const claims = /cancel(a|s|ed|led|a sua|ada)?\b(?![^.]*\bnão\b)/i;
+  const pt = JSON.parse(fs.readFileSync(path.join(dir, 'pt.json'), 'utf8'));
+  assert.doesNotMatch(
+    pt.profile.deleteAccountDoneBody,
+    /foi cancelada/i,
+    'the success message must not claim the subscription was cancelled'
+  );
+  assert.match(
+    pt.profile.deleteAccountConfirmBody,
+    /NÃO cancela/,
+    'the confirmation must warn that billing continues'
+  );
+});
+
+test('location never stalls a scan more than once', () => {
+  // A device that cannot produce a fix - indoors, no GPS, a desktop browser -
+  // paid the full guard timeout on EVERY identification, forever.
+  const src = read('components/deviceLocation.js');
+  assert.match(src, /let lastFailureAt = 0;/);
+  assert.match(src, /Date\.now\(\) - lastFailureAt < FAILURE_BACKOFF_MS[\s\S]{0,20}return null/);
+  // And a refusal is a timestamp, not a permanent flag: browsers report a
+  // dismissed prompt with the same code as a deliberate block, so a stray tap
+  // used to kill the feature for good with no way back.
+  assert.match(src, /DENIED_RETRY_MS/);
+  assert.match(src, /setItem\(DENIED_KEY, String\(Date\.now\(\)\)\)/);
+});

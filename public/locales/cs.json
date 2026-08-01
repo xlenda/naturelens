@@ -294,10 +294,10 @@
     "deleteAccount": "Smazat účet",
     "deletingAccount": "Mazání…",
     "deleteAccountConfirmTitle": "Smazat váš účet?",
-    "deleteAccountConfirmBody": "Tímto trvale smažete svou uloženou sbírku, heslo (pokud existuje) a zrušíte aktivní předplatné, pokud nějaké máte. Tuto akci nelze vrátit zpět.",
+    "deleteAccountConfirmBody": "Tímto trvale smažeš svou uloženou sbírku a heslo, pokud ho máš. NEZRUŠÍ to platbu — pokud máš placené předplatné, musíš ho zrušit tam, kde jsi ho koupil, jinak strhávání pokračuje. Nelze vrátit zpět.",
     "deleteAccountConfirmButton": "Smazat",
     "deleteAccountDoneTitle": "Účet smazán",
-    "deleteAccountDoneBody": "Vaše data byla smazána a jakékoli aktivní předplatné bylo zrušeno.",
+    "deleteAccountDoneBody": "Tvůj účet a data byly smazány. Pokud jsi měl placené předplatné, nezapomeň ho zrušit tam, kde jsi ho koupil — smazání dat tady platbu nezastaví.",
     "deleteAccountFailedTitle": "Účet se nepodařilo smazat",
     "deleteAccountFailedBody": "Něco se pokazilo. Zkuste to prosím znovu.",
     "helpAndSupport": "Nápověda a podpora",
@@ -332,9 +332,9 @@
   "privacy": {
     "title": "Zásady ochrany osobních údajů",
     "collectTitle": "Co shromažďujeme",
-    "collectBody": "Tato aplikace vám umožňuje fotografovat rostliny, hmyz, houby nebo plodiny za účelem jejich identifikace. K tomu využívá služby umělé inteligence třetích stran – Plant.id, Insect.id, Mushroom.id a Crop.health, vyvinuté společností Kindwise.",
+    "collectBody": "Tato aplikace umožňuje vyfotit rostlinu, strom, hmyz, houbu, plodinu, rybu nebo ptáka a určit je, a nahrát zvíře podle hlasu. Určování zajišťují AI služby: Kindwise (rostliny, stromy, hmyz, houby, plodiny), Fishial.AI (ryby) a Nyckel (ptáci). Zvuk určujeme na vlastním serveru, takže nahrávky se k třetím stranám nedostanou.",
     "thirdPartyTitle": "Identifikační služby AI třetích stran",
-    "thirdPartyBody": "Když vyfotíte nebo nahrajete fotku k identifikaci, je tato fotka odeslána přímo příslušné identifikační službě Kindwise, aby vytvořila výsledek. Vaše fotky neukládáme na žádném serveru, který spravujeme.",
+    "thirdPartyBody": "Když vyfotíš nebo nahraješ fotku, odejde odpovídající určovací službě. Tvoje fotky neukládáme na žádný náš server. Pro referenční snímek a popis se aplikace ptá Wikipedie na vědecký název — Wikipedie tedy vidí, jaký druh sis vyhledal, ale ne kdo jsi. Někteří dodavatelé píší jen anglicky; překlad toho textu a dotaz na odbornici v aplikaci ten text posílají do Anthropic.",
     "localStorageTitle": "Pouze lokální úložiště",
     "localStorageBody": "Vaše uložená sbírka – identifikované druhy, poznámky a časová razítka – je uložena pouze lokálně ve vašem zařízení pomocí lokálního úložiště prohlížeče nebo aplikace. Nikdy se nenahrává na žádný cloudový server, který provozujeme, a nikdy se nesdílí s jinými uživateli.",
     "noAccountsTitle": "Žádné účty, žádné sledování",
@@ -342,7 +342,9 @@
     "dataLossTitle": "Riziko ztráty dat",
     "dataLossBody": "Pokud vymažete data prohlížeče nebo aplikaci odinstalujete, vaše lokálně uložená sbírka bude trvale ztracena, protože se nikde vzdáleně nezálohuje.",
     "contactTitle": "Kontakt",
-    "contactBody": "S dotazy ohledně těchto zásad se můžete obrátit na vývojáře aplikace."
+    "contactBody": "S dotazy ohledně těchto zásad se můžete obrátit na vývojáře aplikace.",
+    "locationTitle": "Přibližná poloha",
+    "locationBody": "U rostlin, stromů, hmyzu, hub a plodin může aplikace poslat přibližně kde a kdy fotka vznikla, což měřitelně zlepší odpověď: stejná malá hnědá houba znamená něco jiného v Brazílii a něco jiného v Norsku. Souřadnice se před odchodem ze zařízení zaokrouhlí asi na 1 km — dost na určení druhu, málo na určení budovy — a nikdy je neukládáme. Kdykoli to vypneš v Profilu a určování funguje dál. U ryb, ptáků a zvuku se neposílá nikdy."
   },
   "discover": {
     "title": "Objevovat",
@@ -2283,7 +2285,10 @@
   "login": {
     "signInRow": "Přihlásit se",
     "signInSubtitle": "Používej předplatné na jakémkoli zařízení",
-    "accountRow": "Můj účet"
+    "accountRow": "Můj účet",
+    "signOut": "Odhlásit z tohoto zařízení",
+    "signingOut": "Odhlašuji…",
+    "signOutFailedTitle": "Odhlášení se nezdařilo"
   },
   "authError": {
     "passwordTooShort": "Heslo musí mít aspoň 8 znaků.",
@@ -2292,6 +2297,11 @@
     "linkFailed": "Nepodařilo se propojit toto zařízení s tvým účtem. Zkus to znovu.",
     "missingCredentials": "Zadej e-mail a heslo.",
     "badCredentials": "Tento e-mail nebo heslo nesedí, nebo e-mail zatím není potvrzený.",
-    "googleFailed": "Přihlášení přes Google neproběhlo. Zkus to znovu."
+    "googleFailed": "Přihlášení přes Google neproběhlo. Zkus to znovu.",
+    "accountExists": "Účet s tímto e-mailem už existuje. Přihlas se heslem, které máš.",
+    "signupFailed": "Heslo se nepodařilo vytvořit. Zkus to znovu.",
+    "badCode": "Tento kód je špatný nebo vypršel. Vyžádej si nový.",
+    "badEmail": "Tohle nevypadá jako platná e-mailová adresa.",
+    "codeSendFailed": "Kód se nepodařilo odeslat. Zkus to za chvíli znovu."
   }
 }

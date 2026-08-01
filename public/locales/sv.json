@@ -294,10 +294,10 @@
     "deleteAccount": "Radera konto",
     "deletingAccount": "Raderar…",
     "deleteAccountConfirmTitle": "Radera ditt konto?",
-    "deleteAccountConfirmBody": "Detta raderar permanent din sparade samling, ditt lösenord (om det finns) och avbryter din aktiva prenumeration, om du har en. Detta kan inte ångras.",
+    "deleteAccountConfirmBody": "Detta raderar permanent din sparade samling och ditt lösenord, om du har ett. Det avslutar INTE betalningen — har du en betald prenumeration måste du säga upp den där du köpte den, annars fortsätter dragningen. Går inte att ångra.",
     "deleteAccountConfirmButton": "Radera",
     "deleteAccountDoneTitle": "Konto raderat",
-    "deleteAccountDoneBody": "Din data har raderats och eventuell aktiv prenumeration har avbrutits.",
+    "deleteAccountDoneBody": "Ditt konto och dina uppgifter har raderats. Hade du en betald prenumeration, kom ihåg att säga upp den där du köpte den — att radera dina uppgifter här stoppar inte dragningen.",
     "deleteAccountFailedTitle": "Kunde inte radera kontot",
     "deleteAccountFailedBody": "Något gick fel. Försök igen.",
     "helpAndSupport": "Hjälp och support",
@@ -332,9 +332,9 @@
   "privacy": {
     "title": "Integritetspolicy",
     "collectTitle": "Vad vi samlar in",
-    "collectBody": "Med den här appen kan du fotografera växter, insekter, svampar eller grödor för att identifiera dem. För att göra detta används AI-identifieringstjänster från tredje part — Plant.id, Insect.id, Mushroom.id och Crop.health, alla utvecklade av Kindwise.",
+    "collectBody": "Med den här appen kan du fotografera en växt, ett träd, en insekt, en svamp, en gröda, en fisk eller en fågel för att artbestämma den, och spela in ett djurläte för att känna igen det på ljudet. Bestämningen görs av AI-tjänster: Kindwise (växter, träd, insekter, svampar, grödor), Fishial.AI (fisk) och Nyckel (fåglar). Ljud bestäms på vår egen server, så inspelningar når aldrig tredje part.",
     "thirdPartyTitle": "AI-tjänster från tredje part",
-    "thirdPartyBody": "När du tar eller laddar upp ett foto för att identifiera något skickas fotot direkt till relevant Kindwise-identifieringstjänst för att ta fram ett resultat. Vi lagrar inte dina foton på någon server som vi kontrollerar.",
+    "thirdPartyBody": "När du tar eller laddar upp ett foto skickas det till motsvarande bestämningstjänst. Vi lagrar inte dina foton på någon server vi kontrollerar. För att visa en referensbild och en beskrivning frågar appen Wikipedia om det vetenskapliga namnet — Wikipedia ser alltså vilken art du slog upp, men inte vem du är. Vissa leverantörer skriver bara på engelska; att översätta den texten, och att ställa en fråga till specialisten i appen, skickar texten till Anthropic.",
     "localStorageTitle": "Endast lokal lagring",
     "localStorageBody": "Din sparade samling — identifierade arter, anteckningar och tidsstämplar — lagras endast lokalt på din egen enhet via webbläsarens eller appens lokala lagring. Den laddas aldrig upp till någon molnserver som vi driver, och delas aldrig med andra användare.",
     "noAccountsTitle": "Inga konton, ingen spårning",
@@ -342,7 +342,9 @@
     "dataLossTitle": "Risk för dataförlust",
     "dataLossBody": "Om du rensar webbläsarens data eller avinstallerar appen går din lokalt sparade samling permanent förlorad, eftersom ingenting säkerhetskopieras på distans.",
     "contactTitle": "Kontakt",
-    "contactBody": "Frågor om denna policy kan riktas till appens utvecklare."
+    "contactBody": "Frågor om denna policy kan riktas till appens utvecklare.",
+    "locationTitle": "Ungefärlig plats",
+    "locationBody": "För växter, träd, insekter, svampar och grödor kan appen skicka ungefär var och när fotot togs, vilket mätbart förbättrar svaret: samma lilla bruna svamp betyder olika saker i Brasilien och i Norge. Koordinaterna avrundas till ungefär 1 km innan de lämnar enheten — nog för att placera en art, för lite för att peka ut en byggnad — och vi sparar dem aldrig. Du kan stänga av det när som helst under Profil, och bestämningen fungerar ändå. Det skickas aldrig för fisk, fåglar eller ljud."
   },
   "discover": {
     "title": "Upptäck",
@@ -2283,7 +2285,10 @@
   "login": {
     "signInRow": "Logga in",
     "signInSubtitle": "Använd din prenumeration på alla enheter",
-    "accountRow": "Mitt konto"
+    "accountRow": "Mitt konto",
+    "signOut": "Logga ut från den här enheten",
+    "signingOut": "Loggar ut…",
+    "signOutFailedTitle": "Kunde inte logga ut"
   },
   "authError": {
     "passwordTooShort": "Lösenordet behöver minst 8 tecken.",
@@ -2292,6 +2297,11 @@
     "linkFailed": "Vi kunde inte koppla den här enheten till ditt konto. Försök igen.",
     "missingCredentials": "Ange din e-postadress och ditt lösenord.",
     "badCredentials": "E-postadressen eller lösenordet stämmer inte, eller så är adressen inte bekräftad än.",
-    "googleFailed": "Inloggningen med Google gick inte igenom. Försök igen."
+    "googleFailed": "Inloggningen med Google gick inte igenom. Försök igen.",
+    "accountExists": "Det finns redan ett konto med den e-postadressen. Logga in med lösenordet du har.",
+    "signupFailed": "Lösenordet kunde inte skapas. Försök igen.",
+    "badCode": "Koden är fel eller har gått ut. Be om en ny.",
+    "badEmail": "Det ser inte ut som en giltig e-postadress.",
+    "codeSendFailed": "Koden kunde inte skickas. Försök igen om en stund."
   }
 }

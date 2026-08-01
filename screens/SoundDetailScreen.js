@@ -173,7 +173,10 @@ export default function SoundDetailScreen({ route }) {
             style={styles.iconBtn}
             onPress={() => {
               Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
-              shareEntity(plant, groupLabel);
+              // `plant.name` is Perch's raw label, which is the binomial - the
+              // same string as plant.scientific. Sharing the raw object printed
+              // it twice and never the common name the screen is showing.
+              shareEntity({ ...plant, name: displayName }, groupLabel);
             }}
             accessibilityRole="button"
             accessibilityLabel={t('common.shareThisResult')}

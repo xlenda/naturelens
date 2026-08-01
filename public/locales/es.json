@@ -294,10 +294,10 @@
     "deleteAccount": "Eliminar cuenta",
     "deletingAccount": "Eliminando…",
     "deleteAccountConfirmTitle": "¿Eliminar tu cuenta?",
-    "deleteAccountConfirmBody": "Esto elimina permanentemente tu colección guardada, tu contraseña (si tienes) y cancela tu suscripción activa, si tienes alguna. Esto no se puede deshacer.",
+    "deleteAccountConfirmBody": "Esto borra permanentemente tu colección guardada y tu contraseña, si tienes una. NO cancela el cobro: si tienes una suscripción de pago, debes cancelarla donde la compraste o el cargo continúa. Esto no se puede deshacer.",
     "deleteAccountConfirmButton": "Eliminar",
     "deleteAccountDoneTitle": "Cuenta eliminada",
-    "deleteAccountDoneBody": "Tus datos han sido eliminados y cualquier suscripción activa ha sido cancelada.",
+    "deleteAccountDoneBody": "Tu cuenta y tus datos han sido borrados. Si tenías una suscripción de pago, recuerda cancelarla donde la compraste: borrar tus datos aquí no detiene el cargo.",
     "deleteAccountFailedTitle": "No se pudo eliminar la cuenta",
     "deleteAccountFailedBody": "Algo salió mal. Inténtalo de nuevo.",
     "helpAndSupport": "Ayuda y soporte",
@@ -332,9 +332,9 @@
   "privacy": {
     "title": "Política de Privacidad",
     "collectTitle": "Qué recopilamos",
-    "collectBody": "Esta app te permite fotografiar plantas, insectos, hongos o cultivos para identificarlos. Para ello, utiliza servicios de identificación por IA de terceros — Plant.id, Insect.id, Mushroom.id y Crop.health, todos de Kindwise.",
+    "collectBody": "Esta app te permite fotografiar una planta, árbol, insecto, hongo, cultivo, pez o ave para identificarlo, y grabar el canto de un animal para identificarlo por sonido. La identificación la hacen servicios de IA: Kindwise (plantas, árboles, insectos, hongos, cultivos), Fishial.AI (peces) y Nyckel (aves). El sonido se identifica en nuestro propio servidor, así que las grabaciones no llegan a terceros.",
     "thirdPartyTitle": "Servicios de IA de terceros",
-    "thirdPartyBody": "Cuando tomas o subes una foto para identificar algo, esa foto se envía directamente al servicio de identificación de Kindwise correspondiente para generar un resultado. No almacenamos tus fotos en ningún servidor que controlemos.",
+    "thirdPartyBody": "Cuando tomas o subes una foto, se envía al servicio de identificación correspondiente para generar un resultado. No almacenamos tus fotos en ningún servidor nuestro. Para mostrarte una imagen de referencia y la descripción de la especie, la app consulta Wikipedia por el nombre científico: Wikipedia ve qué especie consultaste, pero no quién eres. Algunos proveedores solo escriben en inglés; traducir ese texto, y preguntar a la especialista de la app, envía ese texto a Anthropic.",
     "localStorageTitle": "Solo almacenamiento local",
     "localStorageBody": "Tu colección guardada — especies identificadas, notas y fechas — se almacena solo localmente en tu propio dispositivo mediante el almacenamiento local del navegador o app. Nunca se sube a ningún servidor en la nube que operemos, y nunca se comparte con otros usuarios.",
     "noAccountsTitle": "Sin cuentas, sin rastreo",
@@ -342,7 +342,9 @@
     "dataLossTitle": "Riesgo de pérdida de datos",
     "dataLossBody": "Si borras los datos de tu navegador o desinstalas la app, tu colección guardada localmente se perderá permanentemente, ya que nada se respalda de forma remota.",
     "contactTitle": "Contacto",
-    "contactBody": "Las preguntas sobre esta política pueden dirigirse al desarrollador de la app."
+    "contactBody": "Las preguntas sobre esta política pueden dirigirse al desarrollador de la app.",
+    "locationTitle": "Ubicación aproximada",
+    "locationBody": "Para plantas, árboles, insectos, hongos y cultivos, la app puede enviar aproximadamente dónde y cuándo se tomó la foto, lo que mejora la respuesta de forma medible: el mismo hongo marrón significa cosas distintas en Brasil y en Noruega. Las coordenadas se redondean a alrededor de 1 km antes de salir de tu dispositivo —suficiente para situar una especie, insuficiente para identificar un edificio— y nunca las almacenamos. Puedes desactivarlo cuando quieras en Perfil, y la identificación sigue funcionando. Nunca se envía para peces, aves ni sonido."
   },
   "discover": {
     "title": "Descubrir",
@@ -2283,7 +2285,10 @@
   "login": {
     "signInRow": "Iniciar sesión",
     "signInSubtitle": "Usa tu suscripción en cualquier dispositivo",
-    "accountRow": "Mi cuenta"
+    "accountRow": "Mi cuenta",
+    "signOut": "Cerrar sesión en este dispositivo",
+    "signingOut": "Cerrando sesión…",
+    "signOutFailedTitle": "No se pudo cerrar sesión"
   },
   "authError": {
     "passwordTooShort": "Tu contraseña necesita al menos 8 caracteres.",
@@ -2292,6 +2297,11 @@
     "linkFailed": "No pudimos vincular este dispositivo a tu cuenta. Inténtalo de nuevo.",
     "missingCredentials": "Escribe tu correo y tu contraseña.",
     "badCredentials": "Ese correo o contraseña no coincide, o el correo aún no está confirmado.",
-    "googleFailed": "El inicio de sesión con Google no se completó. Inténtalo de nuevo."
+    "googleFailed": "El inicio de sesión con Google no se completó. Inténtalo de nuevo.",
+    "accountExists": "Ya existe una cuenta con ese correo. Inicia sesión con la contraseña que ya tienes.",
+    "signupFailed": "No se pudo crear la contraseña. Inténtalo de nuevo.",
+    "badCode": "Ese código es incorrecto o ha caducado. Pide uno nuevo.",
+    "badEmail": "Eso no parece un correo válido.",
+    "codeSendFailed": "No se pudo enviar el código. Inténtalo de nuevo en un momento."
   }
 }

@@ -294,10 +294,10 @@
     "deleteAccount": "刪除帳戶",
     "deletingAccount": "刪除中…",
     "deleteAccountConfirmTitle": "刪除您的帳戶？",
-    "deleteAccountConfirmBody": "此操作將永久刪除您儲存的收藏、密碼（如有），並取消您的有效訂閱（如有）。此操作無法復原。",
+    "deleteAccountConfirmBody": "這將永久刪除你儲存的收藏和密碼（如果有）。這不會取消扣款——如果你有付費訂閱，必須在購買處取消，否則費用會繼續。此操作無法復原。",
     "deleteAccountConfirmButton": "刪除",
     "deleteAccountDoneTitle": "帳戶已刪除",
-    "deleteAccountDoneBody": "您的資料已被刪除，任何有效訂閱均已取消。",
+    "deleteAccountDoneBody": "你的帳戶和資料已刪除。如果你有付費訂閱，請記得在購買處取消——在這裡刪除資料並不會停止扣款。",
     "deleteAccountFailedTitle": "無法刪除帳戶",
     "deleteAccountFailedBody": "發生錯誤，請再試一次。",
     "helpAndSupport": "說明與支援",
@@ -332,9 +332,9 @@
   "privacy": {
     "title": "隱私權政策",
     "collectTitle": "我們收集哪些資料",
-    "collectBody": "這個應用程式讓您可以拍攝植物、昆蟲、蕈菇或作物的照片以進行辨識。為此，我們使用第三方 AI 辨識服務——由 Kindwise 打造的 Plant.id、Insect.id、Mushroom.id 與 Crop.health。",
+    "collectBody": "本應用可讓你拍攝植物、樹木、昆蟲、蘑菇、作物、魚類或鳥類進行辨識，也可錄製動物叫聲以聲音辨識。辨識由 AI 服務完成：Kindwise（植物、樹木、昆蟲、蘑菇、作物）、Fishial.AI（魚類）與 Nyckel（鳥類）。聲音在我們自己的伺服器上辨識，因此錄音不會傳給第三方。",
     "thirdPartyTitle": "第三方 AI 服務",
-    "thirdPartyBody": "當您拍攝或上傳照片以辨識物體時，該照片會直接傳送至對應的 Kindwise 辨識服務以產生結果。我們不會將您的照片儲存在我們控管的任何伺服器上。",
+    "thirdPartyBody": "當你拍攝或上傳照片時，照片會傳送到對應的辨識服務以產生結果。我們不會在任何自有伺服器上保存你的照片。為了顯示參考圖與物種描述，應用會以學名查詢維基百科——維基百科因此知道你查過哪個物種，但不知道你是誰。部分供應商只提供英文；翻譯該文字，以及向應用內的專家提問，會把該文字傳送給 Anthropic。",
     "localStorageTitle": "僅限本機儲存",
     "localStorageBody": "您儲存的收藏——包括已辨識的物種、備註與時間戳記——僅儲存在您自己裝置的瀏覽器或應用程式本機儲存空間中。這些資料絕不會上傳到我們營運的任何雲端伺服器，也絕不會與其他使用者分享。",
     "noAccountsTitle": "無帳號，無追蹤",
@@ -342,7 +342,9 @@
     "dataLossTitle": "資料遺失風險",
     "dataLossBody": "如果您清除瀏覽器資料或解除安裝應用程式，本機儲存的收藏將會永久遺失，因為沒有任何資料會備份至遠端伺服器。",
     "contactTitle": "聯絡我們",
-    "contactBody": "若對本政策有任何疑問，歡迎聯絡應用程式開發者。"
+    "contactBody": "若對本政策有任何疑問，歡迎聯絡應用程式開發者。",
+    "locationTitle": "大致位置",
+    "locationBody": "對於植物、樹木、昆蟲、蘑菇與作物，應用可以傳送照片拍攝的大致地點與時間，這會明顯提升準確度：同一朵褐色小蘑菇在巴西與挪威可能是不同物種。座標在離開你的裝置前會取整到約 1 公里——足以圈定物種分布，不足以定位建築——我們也從不保存。你可以隨時在「個人資料」中關閉，關閉後辨識照常運作。魚類、鳥類與聲音從不傳送位置。"
   },
   "discover": {
     "title": "探索",
@@ -2283,7 +2285,10 @@
   "login": {
     "signInRow": "登入",
     "signInSubtitle": "在任何裝置上使用你的訂閱",
-    "accountRow": "我的帳戶"
+    "accountRow": "我的帳戶",
+    "signOut": "在此裝置上登出",
+    "signingOut": "正在登出…",
+    "signOutFailedTitle": "無法登出"
   },
   "authError": {
     "passwordTooShort": "密碼至少需要 8 個字元。",
@@ -2292,6 +2297,11 @@
     "linkFailed": "無法將此裝置連結到你的帳戶，請重試。",
     "missingCredentials": "請輸入信箱和密碼。",
     "badCredentials": "信箱或密碼不正確，或信箱尚未確認。",
-    "googleFailed": "Google 登入未完成，請重試。"
+    "googleFailed": "Google 登入未完成，請重試。",
+    "accountExists": "該信箱已有帳戶。請用你已有的密碼登入。",
+    "signupFailed": "無法建立密碼，請重試。",
+    "badCode": "驗證碼錯誤或已過期，請重新取得。",
+    "badEmail": "這看起來不是有效的信箱地址。",
+    "codeSendFailed": "驗證碼傳送失敗，請稍後重試。"
   }
 }

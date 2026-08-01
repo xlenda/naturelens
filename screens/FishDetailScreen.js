@@ -106,16 +106,34 @@ export default function FishDetailScreen({ route }) {
   // description of an animal.
   const vendorText = plant.overview || null;
   const wikiText = localised?.text || null;
-  const vendorIsProse = looksLikeProse(vendorText);
+  // The server's verdict, decided on the ENGLISH original. Never re-derived
+  // here: by this point plant.overview may be a Korean or Chinese translation,
+  // and the detector cannot read those - it would call every one of them a
+  // diagnostic key and bury the translation the app just paid for.
+  //
+  // The `??` fallback covers an entry saved to the collection before this field
+  // existed, where re-deriving is still better than nothing.
+  const vendorIsProse =
+    typeof plant.overviewIsProse === 'boolean'
+      ? plant.overviewIsProse
+      : looksLikeProse(vendorText);
 
   const lead = vendorIsProse ? vendorText : wikiText || vendorText;
-  const secondaryCandidate = lead === vendorText ? wikiText : vendorText;
-  // The untranslated original is only offered when a translation happened AND
-  // the vendor's text is not already the lead.
-  const secondary =
-    lead !== vendorText && vendorText
-      ? vendorText
-      : plant.overviewOriginal || (secondaryCandidate !== lead ? secondaryCandidate : null);
+
+  // The second card, or nothing.
+  //
+  // It must never repeat what is already above it. The previous version reached
+  // for plant.overviewOriginal whenever a translation had happened - but when
+  // the vendor's prose IS the lead, the "original" is that same paragraph in
+  // English, so the screen showed the same text twice, with a Translate button
+  // offering to spend an API call reproducing the translation already on screen.
+  //
+  // Rules, in order:
+  //   * vendor prose leads  -> Wikipedia is the alternative view, if it differs.
+  //   * Wikipedia leads     -> the vendor's diagnostic key is the technical card.
+  //   * nothing else        -> no second card at all.
+  const secondaryRaw = lead === vendorText ? wikiText : vendorText;
+  const secondary = secondaryRaw && secondaryRaw !== lead ? secondaryRaw : null;
 
   // Which of the two texts is STILL in English, so the Translate button is only
   // offered where it would do something.

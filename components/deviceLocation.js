@@ -36,6 +36,24 @@ const TIMEOUT_MS = 6000;
 
 let cached = null; // { latitude, longitude, at }
 
+// When the last attempt failed, and how long to wait before trying again.
+//
+// Without this, a device that simply cannot produce a fix - indoors, no GPS, a
+// desktop browser, permission granted but the hardware never answers - paid the
+// full guard timeout on the critical path of EVERY identification, forever. Six
+// and a half seconds added to every scan, silently, with nothing to show for it.
+//
+// A failure is remembered for five minutes. That is short enough that walking
+// outside starts working on the next scan, and long enough that a scanning
+// session indoors is not five separate six-second stalls.
+let lastFailureAt = 0;
+const FAILURE_BACKOFF_MS = 5 * 60 * 1000;
+
+// How long a refusal is respected before the app is willing to ask again.
+// See the PERMISSION_DENIED branch in readPosition for why this is a duration
+// and not a permanent flag.
+const DENIED_RETRY_MS = 24 * 60 * 60 * 1000;
+
 export function canUseLocation() {
   return typeof navigator !== 'undefined' && !!navigator.geolocation;
 }
@@ -85,10 +103,21 @@ function readPosition() {
         },
         (error) => {
           clearTimeout(guard);
-          // 1 === PERMISSION_DENIED. Remember it so the next scan does not
-          // trigger another prompt.
+          // 1 === PERMISSION_DENIED. Remembered so the next scan does not
+          // trigger another prompt - but with a TIMESTAMP, not a permanent flag.
+          //
+          // A permanent flag was wrong: browsers report a dismissed prompt with
+          // the same code as a deliberate "Block", so tapping outside the dialog
+          // by accident killed the feature for good. The Profile switch still
+          // read "on", so there was nothing to turn back on and no way to
+          // discover what had happened.
+          //
+          // With a timestamp the app stays quiet for a day - long enough not to
+          // nag someone who meant it - and then asks once more. Someone who
+          // really did block it sees no prompt at all, because the browser
+          // remembers that itself and rejects without asking.
           if (error && error.code === 1) {
-            AsyncStorage.setItem(DENIED_KEY, '1').catch(() => {});
+            AsyncStorage.setItem(DENIED_KEY, String(Date.now())).catch(() => {});
           }
           done(null);
         },
@@ -110,7 +139,8 @@ export async function getApproximateLocation() {
   if (!(await isLocationEnabled())) return null;
 
   try {
-    if (await AsyncStorage.getItem(DENIED_KEY)) return null;
+    const deniedAt = Number(await AsyncStorage.getItem(DENIED_KEY));
+    if (deniedAt && Date.now() - deniedAt < DENIED_RETRY_MS) return null;
   } catch (e) {
     // Storage unavailable - fall through and just try.
   }
@@ -119,11 +149,16 @@ export async function getApproximateLocation() {
     return { latitude: cached.latitude, longitude: cached.longitude, datetime: localIsoNow() };
   }
 
+  // Recently failed? Do not spend the timeout again - see lastFailureAt.
+  if (Date.now() - lastFailureAt < FAILURE_BACKOFF_MS) return null;
+
   const position = await readPosition();
   const coords = position?.coords;
   if (!coords || typeof coords.latitude !== 'number' || typeof coords.longitude !== 'number') {
+    lastFailureAt = Date.now();
     return null;
   }
+  lastFailureAt = 0;
 
   // See the note at the top: ~1.1 km is all a species range needs.
   const latitude = Math.round(coords.latitude * 100) / 100;

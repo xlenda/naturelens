@@ -294,10 +294,10 @@
     "deleteAccount": "Account verwijderen",
     "deletingAccount": "Verwijderen…",
     "deleteAccountConfirmTitle": "Je account verwijderen?",
-    "deleteAccountConfirmBody": "Dit verwijdert permanent je opgeslagen collectie, wachtwoord (indien aanwezig) en zegt je actieve abonnement op, als je er een hebt. Dit kan niet ongedaan worden gemaakt.",
+    "deleteAccountConfirmBody": "Dit wist je opgeslagen collectie en je wachtwoord, als je er een hebt, definitief. Het zegt de betaling NIET op: heb je een betaald abonnement, dan moet je dat opzeggen waar je het kocht, anders loopt de afschrijving door. Dit kan niet ongedaan worden gemaakt.",
     "deleteAccountConfirmButton": "Verwijderen",
     "deleteAccountDoneTitle": "Account verwijderd",
-    "deleteAccountDoneBody": "Je gegevens zijn verwijderd en een eventueel actief abonnement is opgezegd.",
+    "deleteAccountDoneBody": "Je account en je gegevens zijn gewist. Had je een betaald abonnement, vergeet dan niet het op te zeggen waar je het kocht — je gegevens hier verwijderen stopt de afschrijving niet.",
     "deleteAccountFailedTitle": "Account kon niet worden verwijderd",
     "deleteAccountFailedBody": "Er is iets misgegaan. Probeer het opnieuw.",
     "helpAndSupport": "Hulp en ondersteuning",
@@ -332,9 +332,9 @@
   "privacy": {
     "title": "Privacybeleid",
     "collectTitle": "Wat we verzamelen",
-    "collectBody": "Met deze app kun je planten, insecten, paddenstoelen of gewassen fotograferen om ze te identificeren. Hiervoor maakt de app gebruik van AI-identificatiediensten van derden — Plant.id, Insect.id, Mushroom.id en Crop.health, allemaal ontwikkeld door Kindwise.",
+    "collectBody": "Met deze app kun je een plant, boom, insect, paddenstoel, gewas, vis of vogel fotograferen om die te herkennen, en een dierengeluid opnemen om het op geluid te herkennen. De herkenning gebeurt door AI-diensten: Kindwise (planten, bomen, insecten, paddenstoelen, gewassen), Fishial.AI (vissen) en Nyckel (vogels). Geluid wordt op onze eigen server herkend, dus opnames bereiken geen derden.",
     "thirdPartyTitle": "AI-diensten van derden",
-    "thirdPartyBody": "Wanneer je een foto maakt of uploadt om iets te identificeren, wordt die foto rechtstreeks verzonden naar de betreffende Kindwise-identificatiedienst om een resultaat te genereren. We slaan je foto's niet op op servers die wij beheren.",
+    "thirdPartyBody": "Wanneer je een foto maakt of uploadt, wordt die naar de bijbehorende herkenningsdienst gestuurd. We bewaren je foto’s op geen enkele server die wij beheren. Om een referentiefoto en een beschrijving te tonen, vraagt de app Wikipedia naar de wetenschappelijke naam — Wikipedia ziet dus welke soort je opzocht, maar niet wie je bent. Sommige leveranciers schrijven alleen in het Engels; die tekst vertalen, en de specialist in de app een vraag stellen, stuurt die tekst naar Anthropic.",
     "localStorageTitle": "Alleen lokale opslag",
     "localStorageBody": "Je opgeslagen collectie — geïdentificeerde soorten, notities en tijdstempels — wordt alleen lokaal op je eigen apparaat opgeslagen via de lokale opslag van de browser of app. Deze wordt nooit geüpload naar een cloudserver van ons en nooit gedeeld met andere gebruikers.",
     "noAccountsTitle": "Geen accounts, geen tracking",
@@ -342,7 +342,9 @@
     "dataLossTitle": "Risico op gegevensverlies",
     "dataLossBody": "Als je je browsergegevens wist of de app verwijdert, gaat je lokaal opgeslagen collectie permanent verloren, omdat er geen back-up op afstand wordt gemaakt.",
     "contactTitle": "Contact",
-    "contactBody": "Vragen over dit beleid kun je richten aan de ontwikkelaar van de app."
+    "contactBody": "Vragen over dit beleid kun je richten aan de ontwikkelaar van de app.",
+    "locationTitle": "Globale locatie",
+    "locationBody": "Voor planten, bomen, insecten, paddenstoelen en gewassen kan de app ongeveer meesturen waar en wanneer de foto is gemaakt, wat het antwoord meetbaar verbetert: hetzelfde kleine bruine paddenstoeltje betekent iets anders in Brazilië dan in Noorwegen. De coördinaten worden vóór het verlaten van je toestel afgerond op ongeveer 1 km — genoeg om een soort te plaatsen, te weinig om een gebouw te herkennen — en wij bewaren ze nooit. Je kunt dit altijd uitzetten bij Profiel, en herkenning blijft werken. Voor vissen, vogels en geluid wordt het nooit verstuurd."
   },
   "discover": {
     "title": "Ontdekken",
@@ -2283,7 +2285,10 @@
   "login": {
     "signInRow": "Inloggen",
     "signInSubtitle": "Gebruik je abonnement op elk apparaat",
-    "accountRow": "Mijn account"
+    "accountRow": "Mijn account",
+    "signOut": "Uitloggen op dit apparaat",
+    "signingOut": "Uitloggen…",
+    "signOutFailedTitle": "Uitloggen niet gelukt"
   },
   "authError": {
     "passwordTooShort": "Je wachtwoord heeft minstens 8 tekens nodig.",
@@ -2292,6 +2297,11 @@
     "linkFailed": "We konden dit apparaat niet aan je account koppelen. Probeer het opnieuw.",
     "missingCredentials": "Vul je e-mailadres en wachtwoord in.",
     "badCredentials": "Dat e-mailadres of wachtwoord klopt niet, of het adres is nog niet bevestigd.",
-    "googleFailed": "Inloggen met Google is niet gelukt. Probeer het opnieuw."
+    "googleFailed": "Inloggen met Google is niet gelukt. Probeer het opnieuw.",
+    "accountExists": "Er bestaat al een account met dit e-mailadres. Log in met je bestaande wachtwoord.",
+    "signupFailed": "Het wachtwoord kon niet worden aangemaakt. Probeer het opnieuw.",
+    "badCode": "Die code klopt niet of is verlopen. Vraag een nieuwe aan.",
+    "badEmail": "Dat lijkt geen geldig e-mailadres.",
+    "codeSendFailed": "De code kon niet worden verstuurd. Probeer het zo meteen opnieuw."
   }
 }

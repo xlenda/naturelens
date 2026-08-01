@@ -129,19 +129,33 @@ function isLikelyLocalised(text, language) {
   };
   if (SCRIPTS[lang]) return SCRIPTS[lang].test(text);
 
-  // Latin scripts: accented characters, or a function word English lacks.
+  // Latin scripts: words and characters that English does NOT have.
+  //
+  // Every marker here was checked against real English species prose, because
+  // the first version failed exactly that way: the Dutch marker included "is",
+  // which is a word in both languages, so all three English test sentences were
+  // judged to be Dutch already and the Translate button vanished for every Dutch
+  // reader. "en" was equally bad for Swedish and Danish - it is English's most
+  // common word.
+  //
+  // A marker earns its place only if English never produces it. Accented
+  // characters are the safest signal; short function words are the most
+  // dangerous, so the shared ones are gone.
   const MARKERS = {
-    pt: /\b(é|uma|dos|das|não|também|espécie)\b/i,
-    es: /\b(es|una|los|las|también|especie)\b/i,
-    fr: /\b(est|une|des|également|espèce)\b/i,
-    de: /\b(ist|eine|der|die|Art)\b/,
-    it: /\b(è|una|degli|anche|specie)\b/i,
-    nl: /\b(is|een|van|soort)\b/i,
-    pl: /\b(jest|gatunek|oraz)\b/i,
-    cs: /\b(je|druh|nebo)\b/i,
-    sv: /\b(är|en|arten)\b/i,
-    da: /\b(er|en|arten)\b/i,
-    tr: /\b(bir|türü|olan)\b/i,
+    pt: /\b(uma|dos|das|não|também|espécie|habita)\b|[ãõçáéíóúâê]/i,
+    es: /\b(una|los|las|también|especie|habita)\b|[ñáéíóúü]/i,
+    fr: /\b(est|une|également|espèce|dans)\b|[àâçéèêîôûù]/i,
+    de: /\b(ist|eine|der|die|und|Art|sich)\b|[äöüß]/,
+    it: /\b(una|degli|anche|specie|nella)\b|[àèéìòù]/i,
+    // Not "is", not "een" alone - "van", "soort" and "de" plus Dutch spellings.
+    nl: /\b(soort|van|het|wordt|zijn)\b/i,
+    pl: /\b(jest|gatunek|oraz|się)\b|[ąćęłńóśźż]/i,
+    cs: /\b(je|druh|nebo|se)\b|[áčďéěíňóřšťúůýž]/i,
+    // Not "en" - English's commonest word. Swedish keeps å/ä/ö and "är".
+    sv: /\b(är|arten|och|som)\b|[åäö]/i,
+    // Not "en", not "er" (English "er" is rare but "arten"/"og" are safe).
+    da: /\b(arten|og|som|kan)\b|[æøå]/i,
+    tr: /\b(bir|türü|olan|ve)\b|[çğıöşü]/i,
   };
   const marker = MARKERS[lang];
   return marker ? marker.test(text) : /[À-ÿ]/.test(text);

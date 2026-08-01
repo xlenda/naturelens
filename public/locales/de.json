@@ -294,10 +294,10 @@
     "deleteAccount": "Konto löschen",
     "deletingAccount": "Wird gelöscht…",
     "deleteAccountConfirmTitle": "Konto löschen?",
-    "deleteAccountConfirmBody": "Dadurch werden deine gespeicherte Sammlung und dein Passwort (falls vorhanden) dauerhaft gelöscht und dein aktives Abo gekündigt, falls du eines hast. Dies kann nicht rückgängig gemacht werden.",
+    "deleteAccountConfirmBody": "Damit werden deine gespeicherte Sammlung und dein Passwort, falls vorhanden, dauerhaft gelöscht. Die Abrechnung wird NICHT gekündigt — bei einem bezahlten Abo musst du dort kündigen, wo du es gekauft hast, sonst läuft die Abbuchung weiter. Das lässt sich nicht rückgängig machen.",
     "deleteAccountConfirmButton": "Löschen",
     "deleteAccountDoneTitle": "Konto gelöscht",
-    "deleteAccountDoneBody": "Deine Daten wurden gelöscht und ein eventuell aktives Abo wurde gekündigt.",
+    "deleteAccountDoneBody": "Dein Konto und deine Daten wurden gelöscht. Falls du ein bezahltes Abo hattest, denk daran, es dort zu kündigen, wo du es gekauft hast — das Löschen der Daten hier stoppt die Abbuchung nicht.",
     "deleteAccountFailedTitle": "Konto konnte nicht gelöscht werden",
     "deleteAccountFailedBody": "Etwas ist schiefgelaufen. Bitte versuche es erneut.",
     "helpAndSupport": "Hilfe & Support",
@@ -332,9 +332,9 @@
   "privacy": {
     "title": "Datenschutzerklärung",
     "collectTitle": "Was wir erfassen",
-    "collectBody": "Mit dieser App kannst du Pflanzen, Insekten, Pilze oder Nutzpflanzen fotografieren, um sie zu identifizieren. Dafür nutzt sie KI-Identifizierungsdienste von Drittanbietern — Plant.id, Insect.id, Mushroom.id und Crop.health, alle entwickelt von Kindwise.",
+    "collectBody": "Mit dieser App kannst du eine Pflanze, einen Baum, ein Insekt, einen Pilz, eine Nutzpflanze, einen Fisch oder einen Vogel fotografieren, um sie zu bestimmen, und einen Tierruf aufnehmen, um ihn am Klang zu erkennen. Die Bestimmung übernehmen KI-Dienste: Kindwise (Pflanzen, Bäume, Insekten, Pilze, Nutzpflanzen), Fishial.AI (Fische) und Nyckel (Vögel). Der Klang wird auf unserem eigenen Server bestimmt, Aufnahmen erreichen also keine Dritten.",
     "thirdPartyTitle": "KI-Dienste von Drittanbietern",
-    "thirdPartyBody": "Wenn du ein Foto aufnimmst oder hochlädst, um etwas zu identifizieren, wird dieses Foto direkt an den entsprechenden Kindwise-Identifizierungsdienst gesendet, um ein Ergebnis zu erzeugen. Wir speichern deine Fotos auf keinem Server, den wir kontrollieren.",
+    "thirdPartyBody": "Wenn du ein Foto aufnimmst oder hochlädst, wird es an den passenden Bestimmungsdienst geschickt. Wir speichern deine Fotos auf keinem Server, den wir kontrollieren. Für ein Referenzbild und eine Beschreibung fragt die App Wikipedia nach dem wissenschaftlichen Namen — Wikipedia sieht also, welche Art du nachgeschlagen hast, aber nicht, wer du bist. Manche Anbieter schreiben nur auf Englisch; diesen Text zu übersetzen und der Fachperson in der App eine Frage zu stellen, sendet ihn an Anthropic.",
     "localStorageTitle": "Nur lokale Speicherung",
     "localStorageBody": "Deine gespeicherte Sammlung — identifizierte Arten, Notizen und Zeitstempel — wird ausschließlich lokal auf deinem eigenen Gerät im lokalen Speicher des Browsers oder der App gespeichert. Sie wird niemals auf einen von uns betriebenen Cloud-Server hochgeladen und niemals mit anderen Nutzern geteilt.",
     "noAccountsTitle": "Keine Konten, kein Tracking",
@@ -342,7 +342,9 @@
     "dataLossTitle": "Risiko von Datenverlust",
     "dataLossBody": "Wenn du deine Browserdaten löschst oder die App deinstallierst, geht deine lokal gespeicherte Sammlung dauerhaft verloren, da nichts extern gesichert wird.",
     "contactTitle": "Kontakt",
-    "contactBody": "Fragen zu dieser Richtlinie kannst du direkt an den Entwickler der App richten."
+    "contactBody": "Fragen zu dieser Richtlinie kannst du direkt an den Entwickler der App richten.",
+    "locationTitle": "Ungefährer Standort",
+    "locationBody": "Für Pflanzen, Bäume, Insekten, Pilze und Nutzpflanzen kann die App ungefähr senden, wo und wann das Foto entstand - das verbessert die Antwort messbar: derselbe kleine braune Pilz bedeutet in Brasilien etwas anderes als in Norwegen. Die Koordinaten werden vor dem Verlassen des Geräts auf etwa 1 km gerundet - genug, um eine Art einzuordnen, zu wenig, um ein Gebäude zu bestimmen - und von uns nie gespeichert. Du kannst das jederzeit im Profil abschalten, die Bestimmung funktioniert weiterhin. Für Fische, Vögel und Klang wird es nie gesendet."
   },
   "discover": {
     "title": "Entdecken",
@@ -2283,7 +2285,10 @@
   "login": {
     "signInRow": "Anmelden",
     "signInSubtitle": "Dein Abo auf jedem Gerät nutzen",
-    "accountRow": "Mein Konto"
+    "accountRow": "Mein Konto",
+    "signOut": "Auf diesem Gerät abmelden",
+    "signingOut": "Wird abgemeldet…",
+    "signOutFailedTitle": "Abmelden nicht möglich"
   },
   "authError": {
     "passwordTooShort": "Dein Passwort braucht mindestens 8 Zeichen.",
@@ -2292,6 +2297,11 @@
     "linkFailed": "Wir konnten dieses Gerät nicht mit deinem Konto verknüpfen. Bitte versuche es erneut.",
     "missingCredentials": "Gib deine E-Mail-Adresse und dein Passwort ein.",
     "badCredentials": "E-Mail-Adresse oder Passwort stimmen nicht, oder die Adresse ist noch nicht bestätigt.",
-    "googleFailed": "Die Anmeldung mit Google hat nicht geklappt. Bitte versuche es erneut."
+    "googleFailed": "Die Anmeldung mit Google hat nicht geklappt. Bitte versuche es erneut.",
+    "accountExists": "Zu dieser E-Mail-Adresse gibt es bereits ein Konto. Melde dich mit deinem vorhandenen Passwort an.",
+    "signupFailed": "Das Passwort konnte nicht angelegt werden. Bitte versuche es erneut.",
+    "badCode": "Dieser Code ist falsch oder abgelaufen. Fordere einen neuen an.",
+    "badEmail": "Das sieht nicht nach einer gültigen E-Mail-Adresse aus.",
+    "codeSendFailed": "Der Code konnte nicht gesendet werden. Bitte versuche es gleich noch einmal."
   }
 }

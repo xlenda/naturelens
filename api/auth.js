@@ -1,5 +1,6 @@
 const { getSupabaseAnon, getSupabaseAdmin, requireDeviceId } = require('./_lib/supabaseAdmin');
 const { requireMethod } = require('./_lib/kindwise');
+const { checkRateLimit } = require('./_lib/rateLimit');
 
 // Supabase signs session JWTs with an asymmetric key (confirmed live via
 // GET /auth/v1/.well-known/jwks.json - ES256), so a Google-sign-in
@@ -59,13 +60,33 @@ async function handleSignup(req, res, deviceId) {
   }
 
   const supabaseAnon = getSupabaseAnon();
-  const { error: signUpError } = await supabaseAnon.auth.signUp({
+  const { data: signUpData, error: signUpError } = await supabaseAnon.auth.signUp({
     email: sub.email,
     password,
   });
 
   if (signUpError) {
-    res.status(400).json({ error: signUpError.message });
+    // The provider's own sentence, in English, must not reach the screen.
+    console.error('handleSignup: signUp failed', signUpError.message);
+    res.status(400).json({ error: signUpError.message, reason: 'signupFailed' });
+    return;
+  }
+
+  // Supabase does NOT error when the email already has an account - by design,
+  // so that a signup form cannot be used to discover which addresses are
+  // registered. It answers 200 with a user carrying an empty identities array.
+  //
+  // Forwarded as-is, that told a subscriber "password created" while their real
+  // password stayed whatever it was before. They then failed to sign in, with
+  // the app having just assured them the password was set - and no path out.
+  const alreadyRegistered =
+    Array.isArray(signUpData?.user?.identities) && signUpData.user.identities.length === 0;
+
+  if (alreadyRegistered) {
+    res.status(409).json({
+      error: 'An account already exists for this email.',
+      reason: 'accountExists',
+    });
     return;
   }
 
@@ -273,6 +294,38 @@ async function handleDelete(req, res, deviceId) {
   res.status(200).json({ deleted: true, billingStillActive });
 }
 
+// Unlink THIS device from the account, without touching the account itself.
+//
+// The app had no sign-out at all: once a device was linked, nothing anywhere
+// could unlink it. The only thing that came close was "delete account", which
+// erases the collection and the password for everyone - a wildly
+// disproportionate answer to "I am selling this phone" or "I signed in on my
+// sister's tablet".
+//
+// It deletes only the subscriptions row for this device_id. The account, its
+// password, its Hotmart billing and every OTHER device stay exactly as they
+// were - so signing in again on this device restores access normally.
+//
+// Deliberately NOT touched: category_usage. That row is the free-use counter,
+// and clearing it on sign-out would turn this into a one-tap way to reset the
+// free tier forever.
+async function handleSignOut(req, res, deviceId) {
+  const admin = getSupabaseAdmin();
+  const { error } = await admin.from('subscriptions').delete().eq('device_id', deviceId);
+
+  if (error) {
+    // supabase-js reports failure through `error`, not by throwing. Answering
+    // 200 here would tell someone their device was unlinked while it still had
+    // access - the exact class of silent-write bug this codebase has been bitten
+    // by before.
+    console.error('handleSignOut: delete failed', deviceId, error.message);
+    res.status(500).json({ error: 'Could not sign out on this device.', reason: 'linkFailed' });
+    return;
+  }
+
+  res.status(200).json({ signedOut: true });
+}
+
 module.exports = async (req, res) => {
   if (!requireMethod(req, res, 'POST')) return;
 
@@ -284,11 +337,51 @@ module.exports = async (req, res) => {
     return;
   }
   if (req.body?.action === 'signin') {
+    // Sign-in had NO rate limit, no attempt counter and no lockout, which made
+    // this an unlimited online password-guessing oracle: anyone holding a
+    // subscriber's email address - a Hotmart buyer list, a credential-stuffing
+    // dump, or just knowing the person - could try passwords in a loop against
+    // an account whose only requirement is 8 characters.
+    //
+    // A hit is not a small loss. handleSignin links the caller's OWN deviceId to
+    // the victim's subscription, so the attacker gets the paid entitlement (spent
+    // on vendor credits the owner pays for) and /api/subscription-status then
+    // returns the victim's email to them.
+    //
+    // TWO buckets, because each closes a hole the other leaves open:
+    //   * by IP, which stops one machine hammering many accounts;
+    //   * by EMAIL, which stops a botnet rotating IPs against one account.
+    // Both are needed - an attacker controls neither for free.
+    const email = typeof req.body?.email === 'string' ? req.body.email.trim().toLowerCase() : '';
+
+    if (!(await checkRateLimit(req, res, { scope: 'auth-signin', limit: 10, windowSeconds: 3600 }))) {
+      return;
+    }
+    if (
+      email &&
+      !(await checkRateLimit(req, res, {
+        // The bucket key is scope + IP, so the target email goes in the scope to
+        // get its own counter independent of where the attempts come from.
+        scope: `auth-signin-email:${email}`,
+        limit: 10,
+        windowSeconds: 3600,
+        // Per-account, deliberately ignoring the caller's IP - that is the whole
+        // point of this second bucket.
+        ignoreIp: true,
+      }))
+    ) {
+      return;
+    }
+
     await handleSignin(req, res, deviceId);
     return;
   }
   if (req.body?.action === 'google') {
     await handleGoogle(req, res, deviceId);
+    return;
+  }
+  if (req.body?.action === 'signout') {
+    await handleSignOut(req, res, deviceId);
     return;
   }
   if (req.body?.action === 'delete') {

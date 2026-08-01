@@ -15,19 +15,38 @@
 
 const cache = new Map();
 
+// App locale -> the Wikipedia subdomain that actually serves it.
+//
+// `zh-hant` is a locale this app SHIPS, and it has no wikipedia.org subdomain of
+// that name: Traditional Chinese lives at zh-yue/zh-tw variants of zh, and the
+// closest usable host is zh.wikipedia.org. A two-letter regex silently rejected
+// the whole code and served English, so every Traditional Chinese reader got
+// English species text and English photo captions - one of the seventeen
+// languages simply did not work.
+const WIKI_HOSTS = {
+  'zh-hant': 'zh',
+};
+
 function endpoint(scientificName, language) {
-  // Wikipedia wants underscores, and only the binomial - a name carrying an
-  // author citation ("Dracaena trifasciata (syn. Sansevieria)") finds nothing.
-  const clean = String(scientificName)
-    .split('(')[0]
-    .trim()
-    .split(/\s+/)
-    .slice(0, 2)
-    .join('_');
+  // Wikipedia wants underscores. A binomial is two words, but this is also
+  // called with a COMMON name for Nyckel bird results, which have no scientific
+  // name at all - "Peregrine Falcon" is two words, "Great Blue Heron" is three.
+  // Truncating to two turned that into "Great Blue", which finds nothing.
+  //
+  // So: strip an author citation, then keep two words only when the input looks
+  // like a binomial (exactly two words, second one lower-case, as Latin
+  // epithets always are). Anything else is passed through whole.
+  const bare = String(scientificName).split('(')[0].trim();
+  const words = bare.split(/\s+/);
+  const isBinomial = words.length === 2 && /^[a-zà-ÿ]/.test(words[1] || '');
+  const clean = (isBinomial ? words.slice(0, 2) : words).join('_');
+
   // Try the user's own language Wikipedia first (its caption and article are in
   // their language), then fall back to English, which has the widest species
   // coverage by far.
-  const lang = /^[a-z]{2}$/.test(language) ? language : 'en';
+  const raw = String(language || 'en').toLowerCase();
+  const mapped = WIKI_HOSTS[raw] || raw;
+  const lang = /^[a-z]{2,3}$/.test(mapped) ? mapped : 'en';
   return {
     lang,
     binomial: clean.replace(/_/g, ' '),

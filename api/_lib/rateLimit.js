@@ -40,13 +40,56 @@ function windowStartIso(windowSeconds) {
 
 // Returns true if the request is allowed to proceed. On block, already sends
 // a 429 response - callers just need to `return` when this is false.
-async function checkRateLimit(req, res, { scope, limit, windowSeconds }) {
-  const ip = getClientIp(req);
-  const bucketKey = `${scope}:${ip}`;
+async function checkRateLimit(req, res, { scope, limit, windowSeconds, ignoreIp = false }) {
+  // `ignoreIp` gives a bucket that counts a TARGET rather than a caller - used
+  // for per-account sign-in attempts, where the whole point is that rotating IPs
+  // must not reset the counter.
+  const bucketKey = ignoreIp ? scope : `${scope}:${getClientIp(req)}`;
   const windowStart = windowStartIso(windowSeconds);
 
   try {
     const admin = getSupabaseAdmin();
+
+    // Increment FIRST, then decide on the value that came back.
+    //
+    // The previous version read the counter and wrote count+1 in two separate
+    // statements. Fire N requests at once from one IP and every one of them
+    // reads the counter before any of them writes: all N pass the check, and the
+    // row ends at 1 instead of N. So a caller using concurrency had no limit at
+    // all, and because the stored counter never advanced, the burst was
+    // repeatable forever.
+    //
+    // That matters more here than anywhere else in the codebase: this is the
+    // only spend control a caller cannot reset. deviceId is self-issued and free
+    // to mint per request; the IP is not. Behind it sit /api/translate and
+    // /api/ask (Anthropic, billed to the owner) and /api/identify (vendor
+    // credits).
+    //
+    // Same fix, same reason, as increment_category_usage: one INSERT ... ON
+    // CONFLICT DO UPDATE, which Postgres serialises on the row lock.
+    const { data: count, error: rpcError } = await admin.rpc('increment_rate_limit', {
+      p_bucket_key: bucketKey,
+      p_window_start: windowStart,
+    });
+
+    if (!rpcError && typeof count === 'number') {
+      if (count > limit) {
+        res.status(429).json({ error: 'Too many requests. Please try again in a bit.' });
+        return false;
+      }
+      return true;
+    }
+
+    // The RPC does not exist yet (supabase-migration-ratelimit.sql not run).
+    // Fall back to the old read-then-write so the limit still applies to
+    // sequential callers - a leaky limit beats none - and log loudly, because
+    // while this path is in use the concurrency hole above is open.
+    console.error(
+      'checkRateLimit: increment_rate_limit unavailable, using racy fallback -',
+      'run supabase-migration-ratelimit.sql',
+      rpcError?.message || 'no count returned'
+    );
+
     const { data: existing, error: readError } = await admin
       .from('rate_limits')
       .select('count')

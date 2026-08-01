@@ -18,7 +18,7 @@ module.exports = async (req, res) => {
 
   const email = req.body?.email;
   if (!email || typeof email !== 'string' || !email.includes('@')) {
-    res.status(400).json({ error: 'Please enter a valid email address.' });
+    res.status(400).json({ error: 'Please enter a valid email address.', reason: 'badEmail' });
     return;
   }
 
@@ -26,7 +26,7 @@ module.exports = async (req, res) => {
   const { error } = await supabase.auth.signInWithOtp({ email: email.trim().toLowerCase() });
 
   if (error) {
-    res.status(500).json({ error: error.message });
+    res.status(500).json({ error: error.message, reason: 'codeSendFailed' });
     return;
   }
 

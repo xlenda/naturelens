@@ -18,6 +18,11 @@ const REASON_KEYS = {
   missingCredentials: 'authError.missingCredentials',
   badCredentials: 'authError.badCredentials',
   googleFailed: 'authError.googleFailed',
+  accountExists: 'authError.accountExists',
+  signupFailed: 'authError.signupFailed',
+  badCode: 'authError.badCode',
+  badEmail: 'authError.badEmail',
+  codeSendFailed: 'authError.codeSendFailed',
 };
 
 function serverError(data, fallbackKey) {
@@ -178,6 +183,29 @@ export async function completeGoogleSignIn(code) {
 // to this device (see api/auth.js's handleDelete). Does NOT clear local
 // storage itself - callers must also clear the collection/profile
 // photo/device id on success (see ProfileScreen.js's handleDeleteAccount).
+// Unlinks THIS device from the account. The account, its password and its
+// billing all stay - signing in again restores access.
+//
+// Not the same as deleteAccount(), which erases everything for every device.
+// Before this existed the app offered a way IN with no way out: a phone that
+// was sold, lent or signed into by mistake kept the previous person's
+// subscription with nothing anyone could do about it.
+export async function signOut() {
+  const deviceId = await getDeviceId();
+
+  const response = await fetch(`${API_BASE}/api/auth`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ action: 'signout', deviceId }),
+  });
+
+  const data = await response.json().catch(() => null);
+  if (!response.ok) {
+    throw serverError(data, 'restore.genericError');
+  }
+  return true;
+}
+
 export async function deleteAccount() {
   const deviceId = await getDeviceId();
 

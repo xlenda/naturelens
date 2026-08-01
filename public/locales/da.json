@@ -294,10 +294,10 @@
     "deleteAccount": "Slet konto",
     "deletingAccount": "Sletter…",
     "deleteAccountConfirmTitle": "Slet din konto?",
-    "deleteAccountConfirmBody": "Dette sletter permanent din gemte samling, din adgangskode (hvis nogen) og annullerer dit aktive abonnement, hvis du har et. Dette kan ikke fortrydes.",
+    "deleteAccountConfirmBody": "Dette sletter permanent din gemte samling og din adgangskode, hvis du har en. Det opsiger IKKE betalingen — har du et betalt abonnement, skal du opsige det, hvor du købte det, ellers fortsætter trækket. Kan ikke fortrydes.",
     "deleteAccountConfirmButton": "Slet",
     "deleteAccountDoneTitle": "Konto slettet",
-    "deleteAccountDoneBody": "Dine data er blevet slettet, og eventuelle aktive abonnementer er blevet annulleret.",
+    "deleteAccountDoneBody": "Din konto og dine data er slettet. Havde du et betalt abonnement, så husk at opsige det, hvor du købte det — at slette dine data her stopper ikke trækket.",
     "deleteAccountFailedTitle": "Kunne ikke slette konto",
     "deleteAccountFailedBody": "Noget gik galt. Prøv venligst igen.",
     "helpAndSupport": "Hjælp og support",
@@ -332,9 +332,9 @@
   "privacy": {
     "title": "Privatlivspolitik",
     "collectTitle": "Hvad vi indsamler",
-    "collectBody": "Denne app giver dig mulighed for at fotografere planter, insekter, svampe eller afgrøder for at identificere dem. For at gøre dette bruger den tredjeparts AI-identifikationstjenester — Plant.id, Insect.id, Mushroom.id og Crop.health, som alle er udviklet af Kindwise.",
+    "collectBody": "Med denne app kan du fotografere en plante, et træ, et insekt, en svamp, en afgrøde, en fisk eller en fugl for at bestemme den, og optage et dyrekald for at genkende det på lyden. Bestemmelsen laves af AI-tjenester: Kindwise (planter, træer, insekter, svampe, afgrøder), Fishial.AI (fisk) og Nyckel (fugle). Lyd bestemmes på vores egen server, så optagelser når aldrig tredjepart.",
     "thirdPartyTitle": "AI-tjenester fra tredjepart",
-    "thirdPartyBody": "Når du tager eller uploader et foto for at identificere noget, sendes fotoet direkte til den relevante Kindwise-identifikationstjeneste for at generere et resultat. Vi gemmer ikke dine fotos på nogen server, vi kontrollerer.",
+    "thirdPartyBody": "Når du tager eller uploader et foto, sendes det til den tilsvarende bestemmelsestjeneste. Vi gemmer ikke dine fotos på nogen server, vi kontrollerer. For at vise et referencefoto og en beskrivelse spørger appen Wikipedia om det videnskabelige navn — Wikipedia ser altså hvilken art du slog op, men ikke hvem du er. Nogle leverandører skriver kun på engelsk; at oversætte den tekst, og at stille specialisten i appen et spørgsmål, sender teksten til Anthropic.",
     "localStorageTitle": "Kun lokal lagring",
     "localStorageBody": "Din gemte samling — identificerede arter, noter og tidsstempler — gemmes kun lokalt på din egen enhed ved hjælp af browserens eller appens lokale lager. Den bliver aldrig uploadet til nogen skyserver, vi driver, og den bliver aldrig delt med andre brugere.",
     "noAccountsTitle": "Ingen konti, ingen sporing",
@@ -342,7 +342,9 @@
     "dataLossTitle": "Risiko for datatab",
     "dataLossBody": "Hvis du rydder dine browserdata eller afinstallerer appen, går din lokalt gemte samling permanent tabt, da intet bliver sikkerhedskopieret eksternt.",
     "contactTitle": "Kontakt",
-    "contactBody": "Spørgsmål til denne politik kan rettes til appens udvikler."
+    "contactBody": "Spørgsmål til denne politik kan rettes til appens udvikler.",
+    "locationTitle": "Omtrentlig placering",
+    "locationBody": "For planter, træer, insekter, svampe og afgrøder kan appen sende omtrent hvor og hvornår fotoet blev taget, hvilket målbart forbedrer svaret: den samme lille brune svamp betyder noget forskelligt i Brasilien og i Norge. Koordinaterne rundes af til cirka 1 km, før de forlader din enhed — nok til at placere en art, for lidt til at udpege en bygning — og vi gemmer dem aldrig. Du kan slå det fra når som helst under Profil, og bestemmelsen virker stadig. Det sendes aldrig for fisk, fugle eller lyd."
   },
   "discover": {
     "title": "Opdag",
@@ -2283,7 +2285,10 @@
   "login": {
     "signInRow": "Log ind",
     "signInSubtitle": "Brug dit abonnement på alle enheder",
-    "accountRow": "Min konto"
+    "accountRow": "Min konto",
+    "signOut": "Log ud på denne enhed",
+    "signingOut": "Logger ud…",
+    "signOutFailedTitle": "Kunne ikke logge ud"
   },
   "authError": {
     "passwordTooShort": "Din adgangskode skal have mindst 8 tegn.",
@@ -2292,6 +2297,11 @@
     "linkFailed": "Vi kunne ikke forbinde denne enhed til din konto. Prøv igen.",
     "missingCredentials": "Indtast din e-mail og adgangskode.",
     "badCredentials": "Den e-mail eller adgangskode passer ikke, eller e-mailen er ikke bekræftet endnu.",
-    "googleFailed": "Login med Google gik ikke igennem. Prøv igen."
+    "googleFailed": "Login med Google gik ikke igennem. Prøv igen.",
+    "accountExists": "Der findes allerede en konto med denne e-mail. Log ind med den adgangskode, du har.",
+    "signupFailed": "Adgangskoden kunne ikke oprettes. Prøv igen.",
+    "badCode": "Koden er forkert eller udløbet. Bed om en ny.",
+    "badEmail": "Det ligner ikke en gyldig e-mailadresse.",
+    "codeSendFailed": "Koden kunne ikke sendes. Prøv igen om et øjeblik."
   }
 }

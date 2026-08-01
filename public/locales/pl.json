@@ -294,10 +294,10 @@
     "deleteAccount": "Usuń konto",
     "deletingAccount": "Usuwanie…",
     "deleteAccountConfirmTitle": "Usunąć konto?",
-    "deleteAccountConfirmBody": "To trwale usunie Twoją zapisaną kolekcję, hasło (jeśli istnieje) i anuluje aktywną subskrypcję, jeśli ją masz. Tej czynności nie można cofnąć.",
+    "deleteAccountConfirmBody": "To trwale usuwa Twoją zapisaną kolekcję i hasło, jeśli je masz. NIE anuluje płatności — jeśli masz płatną subskrypcję, musisz anulować ją tam, gdzie ją kupiłeś, inaczej opłata leci dalej. Tego nie da się cofnąć.",
     "deleteAccountConfirmButton": "Usuń",
     "deleteAccountDoneTitle": "Konto usunięte",
-    "deleteAccountDoneBody": "Twoje dane zostały usunięte, a wszelkie aktywne subskrypcje zostały anulowane.",
+    "deleteAccountDoneBody": "Twoje konto i dane zostały usunięte. Jeśli miałeś płatną subskrypcję, pamiętaj, aby anulować ją tam, gdzie ją kupiłeś — usunięcie danych tutaj nie zatrzymuje opłaty.",
     "deleteAccountFailedTitle": "Nie udało się usunąć konta",
     "deleteAccountFailedBody": "Coś poszło nie tak. Spróbuj ponownie.",
     "helpAndSupport": "Pomoc i wsparcie",
@@ -332,9 +332,9 @@
   "privacy": {
     "title": "Polityka prywatności",
     "collectTitle": "Co zbieramy",
-    "collectBody": "Ta aplikacja pozwala fotografować rośliny, owady, grzyby lub uprawy w celu ich identyfikacji. W tym celu korzysta z usług identyfikacji AI innych firm — Plant.id, Insect.id, Mushroom.id oraz Crop.health, stworzonych przez Kindwise.",
+    "collectBody": "Ta aplikacja pozwala sfotografować roślinę, drzewo, owada, grzyba, uprawę, rybę lub ptaka, aby je rozpoznać, oraz nagrać głos zwierzęcia, by rozpoznać je po dźwięku. Rozpoznawanie wykonują usługi AI: Kindwise (rośliny, drzewa, owady, grzyby, uprawy), Fishial.AI (ryby) i Nyckel (ptaki). Dźwięk rozpoznajemy na własnym serwerze, więc nagrania nie trafiają do stron trzecich.",
     "thirdPartyTitle": "Usługi AI innych firm",
-    "thirdPartyBody": "Gdy robisz lub przesyłasz zdjęcie w celu identyfikacji, jest ono wysyłane bezpośrednio do odpowiedniej usługi identyfikacyjnej Kindwise w celu uzyskania wyniku. Nie przechowujemy Twoich zdjęć na żadnym serwerze, który kontrolujemy.",
+    "thirdPartyBody": "Gdy robisz lub wysyłasz zdjęcie, trafia ono do odpowiedniej usługi rozpoznawania. Nie przechowujemy Twoich zdjęć na żadnym naszym serwerze. Aby pokazać zdjęcie wzorcowe i opis, aplikacja pyta Wikipedię o nazwę naukową — Wikipedia widzi więc, jaki gatunek sprawdzałeś, ale nie kim jesteś. Część dostawców pisze wyłącznie po angielsku; przetłumaczenie tego tekstu oraz zadanie pytania specjalistce w aplikacji wysyła ten tekst do Anthropic.",
     "localStorageTitle": "Tylko przechowywanie lokalne",
     "localStorageBody": "Twoja zapisana kolekcja — zidentyfikowane gatunki, notatki i znaczniki czasu — jest przechowywana wyłącznie lokalnie na Twoim urządzeniu, w pamięci lokalnej przeglądarki lub aplikacji. Nigdy nie jest przesyłana na żaden prowadzony przez nas serwer w chmurze ani udostępniana innym użytkownikom.",
     "noAccountsTitle": "Brak kont, brak śledzenia",
@@ -342,7 +342,9 @@
     "dataLossTitle": "Ryzyko utraty danych",
     "dataLossBody": "Jeśli wyczyścisz dane przeglądarki lub odinstalujesz aplikację, Twoja lokalnie zapisana kolekcja zostanie trwale utracona, ponieważ nic nie jest tworzone zdalnie jako kopia zapasowa.",
     "contactTitle": "Kontakt",
-    "contactBody": "Pytania dotyczące tej polityki można kierować do twórcy aplikacji."
+    "contactBody": "Pytania dotyczące tej polityki można kierować do twórcy aplikacji.",
+    "locationTitle": "Przybliżona lokalizacja",
+    "locationBody": "Dla roślin, drzew, owadów, grzybów i upraw aplikacja może wysłać w przybliżeniu, gdzie i kiedy zrobiono zdjęcie, co wymiernie poprawia odpowiedź: ten sam mały brązowy grzyb znaczy co innego w Brazylii, a co innego w Norwegii. Współrzędne są zaokrąglane do około 1 km przed opuszczeniem urządzenia — dość, by umiejscowić gatunek, za mało, by wskazać budynek — i nigdy ich nie przechowujemy. Możesz to wyłączyć w Profilu, a rozpoznawanie nadal działa. Nigdy nie jest wysyłana dla ryb, ptaków ani dźwięku."
   },
   "discover": {
     "title": "Odkrywaj",
@@ -2283,7 +2285,10 @@
   "login": {
     "signInRow": "Zaloguj się",
     "signInSubtitle": "Korzystaj z subskrypcji na każdym urządzeniu",
-    "accountRow": "Moje konto"
+    "accountRow": "Moje konto",
+    "signOut": "Wyloguj z tego urządzenia",
+    "signingOut": "Wylogowywanie…",
+    "signOutFailedTitle": "Nie udało się wylogować"
   },
   "authError": {
     "passwordTooShort": "Hasło musi mieć co najmniej 8 znaków.",
@@ -2292,6 +2297,11 @@
     "linkFailed": "Nie udało się powiązać tego urządzenia z Twoim kontem. Spróbuj ponownie.",
     "missingCredentials": "Wpisz swój e-mail i hasło.",
     "badCredentials": "Ten e-mail lub hasło się nie zgadza, albo adres nie został jeszcze potwierdzony.",
-    "googleFailed": "Logowanie przez Google się nie powiodło. Spróbuj ponownie."
+    "googleFailed": "Logowanie przez Google się nie powiodło. Spróbuj ponownie.",
+    "accountExists": "Konto z tym adresem e-mail już istnieje. Zaloguj się hasłem, które już masz.",
+    "signupFailed": "Nie udało się utworzyć hasła. Spróbuj ponownie.",
+    "badCode": "Ten kod jest błędny lub wygasł. Poproś o nowy.",
+    "badEmail": "To nie wygląda na poprawny adres e-mail.",
+    "codeSendFailed": "Nie udało się wysłać kodu. Spróbuj ponownie za chwilę."
   }
 }

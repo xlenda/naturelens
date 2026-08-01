@@ -53,6 +53,27 @@ module.exports = async (req, res) => {
     return;
   }
 
+  // A per-device budget on top of the per-IP rate limit.
+  //
+  // Without it this endpoint is a general-purpose Anthropic translation proxy
+  // funded by the app's owner: a deviceId is a self-issued UUID, so a caller
+  // mints a fresh one per request and pays nothing to translate arbitrary text.
+  // The IP limit above is the real backstop, but it is also shared - one abusive
+  // caller behind a carrier NAT would spend the budget of everyone else on that
+  // address, so the device budget is what keeps a normal user's allowance intact.
+  //
+  // 40 in 24 hours is far beyond real use: this button appears on at most two
+  // cards per species screen, and only when the text is still in English.
+  const deviceOk = await checkRateLimit(req, res, {
+    scope: `translate-device:${deviceId}`,
+    limit: 40,
+    windowSeconds: 86400,
+    // Counted per device, not per address - the whole point is that changing
+    // network must not reset it.
+    ignoreIp: true,
+  });
+  if (!deviceOk) return;
+
   const language = typeof req.body?.language === 'string' ? req.body.language : 'en';
 
   const translated = await translateVendorText(text, language);

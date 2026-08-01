@@ -294,10 +294,10 @@
     "deleteAccount": "Hesabı sil",
     "deletingAccount": "Siliniyor…",
     "deleteAccountConfirmTitle": "Hesabınızı silmek istiyor musunuz?",
-    "deleteAccountConfirmBody": "Bu işlem, kaydedilmiş koleksiyonunuzu, şifrenizi (varsa) kalıcı olarak siler ve varsa aktif aboneliğinizi iptal eder. Bu işlem geri alınamaz.",
+    "deleteAccountConfirmBody": "Bu, kayıtlı koleksiyonunu ve varsa parolanı kalıcı olarak siler. Ödemeyi İPTAL ETMEZ — ücretli aboneliğin varsa satın aldığın yerden iptal etmelisin, yoksa tahsilat devam eder. Geri alınamaz.",
     "deleteAccountConfirmButton": "Sil",
     "deleteAccountDoneTitle": "Hesap silindi",
-    "deleteAccountDoneBody": "Verileriniz silindi ve aktif abonelikleriniz varsa iptal edildi.",
+    "deleteAccountDoneBody": "Hesabın ve verilerin silindi. Ücretli aboneliğin vardıysa, satın aldığın yerden iptal etmeyi unutma — buradaki verileri silmek tahsilatı durdurmaz.",
     "deleteAccountFailedTitle": "Hesap silinemedi",
     "deleteAccountFailedBody": "Bir şeyler ters gitti. Lütfen tekrar deneyin.",
     "helpAndSupport": "Yardım ve Destek",
@@ -332,9 +332,9 @@
   "privacy": {
     "title": "Gizlilik Politikası",
     "collectTitle": "Neleri topluyoruz",
-    "collectBody": "Bu uygulama, bitkileri, böcekleri, mantarları veya ürünleri tanımlamak için fotoğraflarını çekmene olanak tanır. Bunun için Kindwise tarafından geliştirilen üçüncü taraf yapay zeka tanımlama servislerini kullanır — Plant.id, Insect.id, Mushroom.id ve Crop.health.",
+    "collectBody": "Bu uygulama bir bitkiyi, ağacı, böceği, mantarı, ekini, balığı veya kuşu fotoğraflayıp tanımlamanı, ve bir hayvan sesini kaydedip sesinden tanımlamanı sağlar. Tanımlamayı yapay zekâ servisleri yapar: Kindwise (bitki, ağaç, böcek, mantar, ekin), Fishial.AI (balık) ve Nyckel (kuş). Ses kendi sunucumuzda tanımlanır, yani kayıtlar üçüncü taraflara ulaşmaz.",
     "thirdPartyTitle": "Üçüncü taraf yapay zeka servisleri",
-    "thirdPartyBody": "Bir şeyi tanımlamak için fotoğraf çektiğinde veya yüklediğinde, bu fotoğraf sonuç üretmek üzere doğrudan ilgili Kindwise tanımlama servisine gönderilir. Fotoğraflarını kontrolümüz altındaki hiçbir sunucuda saklamıyoruz.",
+    "thirdPartyBody": "Bir fotoğraf çektiğinde veya yüklediğinde, ilgili tanımlama servisine gönderilir. Fotoğraflarını kontrol ettiğimiz hiçbir sunucuda saklamıyoruz. Referans fotoğrafı ve açıklama göstermek için uygulama bilimsel adı Vikipedi’ye sorar — yani Vikipedi hangi türe baktığını görür, kim olduğunu değil. Bazı sağlayıcılar yalnızca İngilizce yazar; bu metni çevirmek ve uygulamadaki uzmana soru sormak, o metni Anthropic’e gönderir.",
     "localStorageTitle": "Sadece yerel depolama",
     "localStorageBody": "Kayıtlı koleksiyonun — tanımlanan türler, notlar ve zaman damgaları — yalnızca kendi cihazında, tarayıcı veya uygulama yerel depolaması kullanılarak saklanır. Bu veriler bizim işlettiğimiz herhangi bir bulut sunucusuna asla yüklenmez ve başka kullanıcılarla asla paylaşılmaz.",
     "noAccountsTitle": "Hesap yok, takip yok",
@@ -342,7 +342,9 @@
     "dataLossTitle": "Veri kaybı riski",
     "dataLossBody": "Tarayıcı verilerini temizlersen veya uygulamayı kaldırırsan, hiçbir şey uzaktan yedeklenmediği için yerel olarak kaydedilmiş koleksiyonun kalıcı olarak kaybolur.",
     "contactTitle": "İletişim",
-    "contactBody": "Bu politikayla ilgili sorular uygulamanın geliştiricisine iletilebilir."
+    "contactBody": "Bu politikayla ilgili sorular uygulamanın geliştiricisine iletilebilir.",
+    "locationTitle": "Yaklaşık konum",
+    "locationBody": "Bitki, ağaç, böcek, mantar ve ekinlerde uygulama fotoğrafın yaklaşık nerede ve ne zaman çekildiğini gönderebilir; bu yanıtı ölçülebilir biçimde iyileştirir: aynı küçük kahverengi mantar Brezilya’da başka, Norveç’te başka anlama gelir. Koordinatlar cihazından çıkmadan önce yaklaşık 1 km’ye yuvarlanır — bir türü konumlandırmaya yeter, bir binayı belirlemeye yetmez — ve bunları asla saklamayız. Profil’den istediğin zaman kapatabilirsin, tanımlama yine çalışır. Balık, kuş ve ses için asla gönderilmez."
   },
   "discover": {
     "title": "Keşfet",
@@ -2283,7 +2285,10 @@
   "login": {
     "signInRow": "Giriş yap",
     "signInSubtitle": "Aboneliğini her cihazda kullan",
-    "accountRow": "Hesabım"
+    "accountRow": "Hesabım",
+    "signOut": "Bu cihazdan çıkış yap",
+    "signingOut": "Çıkış yapılıyor…",
+    "signOutFailedTitle": "Çıkış yapılamadı"
   },
   "authError": {
     "passwordTooShort": "Parolan en az 8 karakter olmalı.",
@@ -2292,6 +2297,11 @@
     "linkFailed": "Bu cihazı hesabına bağlayamadık. Tekrar dene.",
     "missingCredentials": "E-postanı ve parolanı gir.",
     "badCredentials": "Bu e-posta veya parola doğru değil ya da e-posta henüz onaylanmadı.",
-    "googleFailed": "Google ile giriş tamamlanmadı. Tekrar dene."
+    "googleFailed": "Google ile giriş tamamlanmadı. Tekrar dene.",
+    "accountExists": "Bu e-posta ile zaten bir hesap var. Mevcut parolanla giriş yap.",
+    "signupFailed": "Parola oluşturulamadı. Tekrar dene.",
+    "badCode": "Bu kod yanlış veya süresi dolmuş. Yenisini iste.",
+    "badEmail": "Bu geçerli bir e-posta adresine benzemiyor.",
+    "codeSendFailed": "Kod gönderilemedi. Birazdan tekrar dene."
   }
 }
