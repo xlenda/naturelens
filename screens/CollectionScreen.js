@@ -9,6 +9,7 @@ import {
   Image,
   TextInput,
   ScrollView,
+  Modal,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useNavigation, useFocusEffect } from '@react-navigation/native';
@@ -42,19 +43,25 @@ export default function CollectionScreen() {
   const [viewMode, setViewMode] = useState('list');
   const [query, setQuery] = useState('');
   const [categoryFilter, setCategoryFilter] = useState(null);
+  // The find being nicknamed, or null. Draft is separate state so typing does
+  // not touch the collection until the user confirms.
+  const [nicknameTarget, setNicknameTarget] = useState(null);
+  const [nicknameDraft, setNicknameDraft] = useState('');
   const { alertConfig, showAlert, hideAlert } = useAppAlert();
 
   // Search + per-category filter. Past roughly thirty saved items, scrolling a
   // flat list to find "that fern from last month" stops working; matching is on
-  // the common name and the scientific name, since either is what people
-  // remember. Chips only render when the collection actually spans more than
-  // one category - a single-category collection gets no useless chrome.
+  // the nickname, the common name and the scientific name, since any of the
+  // three is what people remember. Chips only render when the collection
+  // actually spans more than one category - a single-category collection gets
+  // no useless chrome.
   const normalizedQuery = query.trim().toLowerCase();
   const savedCategories = [...new Set(collection.map((i) => i.category))];
   const filtered = collection.filter((item) => {
     if (categoryFilter && item.category !== categoryFilter) return false;
     if (!normalizedQuery) return true;
     return (
+      (item.nickname || '').toLowerCase().includes(normalizedQuery) ||
       (item.name || '').toLowerCase().includes(normalizedQuery) ||
       (item.scientific || '').toLowerCase().includes(normalizedQuery)
     );
@@ -124,6 +131,37 @@ export default function CollectionScreen() {
     }
   };
 
+  const openNicknameEditor = (item) => {
+    setNicknameDraft(item.nickname || '');
+    setNicknameTarget(item);
+  };
+
+  const applyNickname = async () => {
+    const target = nicknameTarget;
+    setNicknameTarget(null);
+    if (!target) return;
+    // An emptied field removes the nickname - one gesture for both directions,
+    // and no separate "remove" button to translate and explain.
+    const trimmed = nicknameDraft.trim().slice(0, 40);
+    const result = await updateCollectionEntry(target.savedId, { nickname: trimmed || null });
+    if (result) {
+      setCollection(result);
+    } else {
+      showAlert(t('common.saveErrorTitle'), t('common.saveErrorBody'));
+    }
+  };
+
+  // Long-press menu: nickname and room used to compete for the same gesture
+  // (long-press went straight to rooms), so both now live one honest menu in.
+  const handleItemActions = (item) => {
+    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
+    showAlert(item.nickname || item.name, null, [
+      { text: t('collection.setNickname'), onPress: () => openNicknameEditor(item) },
+      { text: t('collection.assignRoomTitle'), onPress: () => handleAssignRoom(item) },
+      { text: t('common.cancel'), style: 'cancel' },
+    ]);
+  };
+
   const handleAssignRoom = (item) => {
     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
     showAlert(
@@ -149,15 +187,19 @@ export default function CollectionScreen() {
         style={styles.card}
         activeOpacity={0.85}
         onPress={() => navigation.navigate(meta.detailRoute, { plant: item })}
-        onLongPress={() => handleAssignRoom(item)}
+        onLongPress={() => handleItemActions(item)}
         accessibilityRole="button"
-        accessibilityLabel={t('collection.viewDetailsLabel', { name: item.name })}
+        accessibilityLabel={t('collection.viewDetailsLabel', { name: item.nickname || item.name })}
       >
         <View style={[styles.thumb, { backgroundColor: meta.accent + '33' }]}>
           <CategoryIcon name={meta.tabIcon} size={28} color={meta.accent} />
         </View>
         <View style={{ flex: 1 }}>
-          <Text style={styles.cardName}>{item.name}</Text>
+          {/* The nickname takes the name's place - the find is "the balcony
+              fern" to its owner, and the species name steps down to the line
+              below. Both stay searchable. */}
+          <Text style={styles.cardName}>{item.nickname || item.name}</Text>
+          {!!item.nickname && <Text style={styles.cardRealName}>{item.name}</Text>}
           {!!item.scientific && <Text style={styles.cardSci}>{item.scientific}</Text>}
           <View style={styles.cardMeta}>
             <View style={[styles.tag, { backgroundColor: meta.accent + '22' }]}>
@@ -225,15 +267,15 @@ export default function CollectionScreen() {
         style={styles.gridCard}
         activeOpacity={0.85}
         onPress={() => navigation.navigate(meta.detailRoute, { plant: item })}
-        onLongPress={() => handleAssignRoom(item)}
+        onLongPress={() => handleItemActions(item)}
         accessibilityRole="button"
-        accessibilityLabel={t('collection.viewDetailsLabel', { name: item.name })}
+        accessibilityLabel={t('collection.viewDetailsLabel', { name: item.nickname || item.name })}
       >
         <View style={[styles.gridThumb, { backgroundColor: meta.accent + '33' }]}>
           <CategoryIcon name={meta.tabIcon} size={22} color={meta.accent} />
         </View>
         <Text style={styles.gridName} numberOfLines={1}>
-          {item.name}
+          {item.nickname || item.name}
         </Text>
         <View style={[styles.tag, { backgroundColor: meta.accent + '22', marginRight: 0 }]}>
           <Text style={[styles.tagText, { color: meta.accent }]}>{t(`categories.${meta.key}.label`)}</Text>
@@ -409,6 +451,56 @@ export default function CollectionScreen() {
         buttons={alertConfig?.buttons}
         onRequestClose={hideAlert}
       />
+
+      {/* Nickname editor. A real Modal (not AlertModal) because it needs a
+          TextInput, and teaching AlertModal about inputs would complicate its
+          ten other call sites for the sake of this one. */}
+      <Modal
+        visible={!!nicknameTarget}
+        transparent
+        animationType="fade"
+        onRequestClose={() => setNicknameTarget(null)}
+      >
+        <View style={styles.nicknameBackdrop}>
+          <View style={styles.nicknameCard}>
+            <Text style={styles.nicknameTitle}>{t('collection.nicknameTitle')}</Text>
+            <Text style={styles.nicknameHint}>
+              {t('collection.nicknamePrompt', { name: nicknameTarget?.name || '' })}
+            </Text>
+            <TextInput
+              style={styles.nicknameInput}
+              value={nicknameDraft}
+              onChangeText={setNicknameDraft}
+              placeholder={t('collection.nicknamePlaceholder')}
+              placeholderTextColor={colors.textMuted}
+              maxLength={40}
+              autoFocus
+              returnKeyType="done"
+              onSubmitEditing={applyNickname}
+            />
+            <View style={styles.nicknameButtons}>
+              <TouchableOpacity
+                style={[styles.nicknameBtn, styles.nicknameBtnCancel]}
+                activeOpacity={0.8}
+                onPress={() => setNicknameTarget(null)}
+                accessibilityRole="button"
+                accessibilityLabel={t('common.cancel')}
+              >
+                <Text style={styles.nicknameBtnCancelText}>{t('common.cancel')}</Text>
+              </TouchableOpacity>
+              <TouchableOpacity
+                style={styles.nicknameBtn}
+                activeOpacity={0.8}
+                onPress={applyNickname}
+                accessibilityRole="button"
+                accessibilityLabel={t('common.ok')}
+              >
+                <Text style={styles.nicknameBtnText}>{t('common.ok')}</Text>
+              </TouchableOpacity>
+            </View>
+          </View>
+        </View>
+      </Modal>
     </SafeAreaView>
   );
 }
@@ -515,7 +607,49 @@ const styles = StyleSheet.create({
     marginRight: 14,
   },
   cardName: { fontSize: 16, fontWeight: '700', color: colors.text },
+  cardRealName: { fontSize: 12.5, color: colors.textSecondary, marginTop: 1 },
   cardSci: { fontSize: 12.5, fontStyle: 'italic', color: colors.textSecondary, marginTop: 1 },
+  nicknameBackdrop: {
+    flex: 1,
+    backgroundColor: 'rgba(0,0,0,0.6)',
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 24,
+  },
+  nicknameCard: {
+    width: '100%',
+    maxWidth: 340,
+    backgroundColor: colors.card,
+    borderRadius: 18,
+    padding: 22,
+    borderWidth: 1,
+    borderColor: colors.border,
+    ...shadow,
+  },
+  nicknameTitle: { fontSize: 17, fontWeight: '800', color: colors.text, marginBottom: 8, textAlign: 'center' },
+  nicknameHint: { fontSize: 13.5, color: colors.textSecondary, lineHeight: 19, textAlign: 'center', marginBottom: 14 },
+  nicknameInput: {
+    backgroundColor: colors.surface,
+    borderWidth: 1,
+    borderColor: colors.border,
+    borderRadius: 12,
+    paddingHorizontal: 14,
+    paddingVertical: 12,
+    fontSize: 14.5,
+    color: colors.text,
+    marginBottom: 14,
+  },
+  nicknameButtons: { flexDirection: 'row', gap: 8 },
+  nicknameBtn: {
+    flex: 1,
+    borderRadius: 12,
+    paddingVertical: 12,
+    alignItems: 'center',
+    backgroundColor: colors.accent,
+  },
+  nicknameBtnCancel: { backgroundColor: colors.surface, borderWidth: 1, borderColor: colors.border },
+  nicknameBtnText: { color: colors.white, fontWeight: '700', fontSize: 14.5 },
+  nicknameBtnCancelText: { color: colors.textSecondary, fontWeight: '700', fontSize: 14.5 },
   cardMeta: { flexDirection: 'row', alignItems: 'center', marginTop: 8 },
   tag: { paddingHorizontal: 8, paddingVertical: 3, borderRadius: 8, marginRight: 10 },
   tagText: { fontSize: 11, fontWeight: '700' },

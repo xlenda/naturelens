@@ -266,7 +266,11 @@
     "searchPlaceholder": "ابحث في مجموعتك…",
     "clearSearchLabel": "مسح البحث",
     "filterAll": "الكل",
-    "noSearchResults": "لا شيء يطابق بحثك."
+    "noSearchResults": "لا شيء يطابق بحثك.",
+    "setNickname": "أضف اسمًا مستعارًا",
+    "nicknameTitle": "اسم مستعار",
+    "nicknamePrompt": "بماذا تنادي {{name}}؟ اتركه فارغًا لإزالة الاسم المستعار.",
+    "nicknamePlaceholder": "مثال: سرخس الشرفة"
   },
   "profile": {
     "title": "ملفي الشخصي",

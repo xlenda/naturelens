@@ -266,7 +266,11 @@
     "searchPlaceholder": "Zoek in je verzameling…",
     "clearSearchLabel": "Zoekopdracht wissen",
     "filterAll": "Alles",
-    "noSearchResults": "Niets komt overeen met je zoekopdracht."
+    "noSearchResults": "Niets komt overeen met je zoekopdracht.",
+    "setNickname": "Geef een bijnaam",
+    "nicknameTitle": "Bijnaam",
+    "nicknamePrompt": "Hoe noem je {{name}}? Laat leeg om de bijnaam te verwijderen.",
+    "nicknamePlaceholder": "bijv. de balkonvaren"
   },
   "profile": {
     "title": "Mijn Profiel",

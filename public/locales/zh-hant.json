@@ -266,7 +266,11 @@
     "searchPlaceholder": "搜尋你的收藏…",
     "clearSearchLabel": "清除搜尋",
     "filterAll": "全部",
-    "noSearchResults": "沒有與搜尋相符的內容。"
+    "noSearchResults": "沒有與搜尋相符的內容。",
+    "setNickname": "取個暱稱",
+    "nicknameTitle": "暱稱",
+    "nicknamePrompt": "你怎麼稱呼{{name}}？留空即可移除暱稱。",
+    "nicknamePlaceholder": "例如：陽台上的蕨"
   },
   "profile": {
     "title": "我的個人檔案",

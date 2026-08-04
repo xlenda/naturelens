@@ -266,7 +266,11 @@
     "searchPlaceholder": "Buscar en tu colección…",
     "clearSearchLabel": "Borrar búsqueda",
     "filterAll": "Todos",
-    "noSearchResults": "Nada coincide con tu búsqueda."
+    "noSearchResults": "Nada coincide con tu búsqueda.",
+    "setNickname": "Poner un apodo",
+    "nicknameTitle": "Apodo",
+    "nicknamePrompt": "¿Cómo llamas a {{name}}? Deja vacío para quitar el apodo.",
+    "nicknamePlaceholder": "ej.: el helecho del balcón"
   },
   "profile": {
     "title": "Mi Perfil",

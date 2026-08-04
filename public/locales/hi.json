@@ -266,7 +266,11 @@
     "searchPlaceholder": "अपने संग्रह में खोजें…",
     "clearSearchLabel": "खोज साफ़ करें",
     "filterAll": "सभी",
-    "noSearchResults": "आपकी खोज से कुछ मेल नहीं खाता।"
+    "noSearchResults": "आपकी खोज से कुछ मेल नहीं खाता।",
+    "setNickname": "उपनाम दें",
+    "nicknameTitle": "उपनाम",
+    "nicknamePrompt": "आप {{name}} को क्या कहते हैं? उपनाम हटाने के लिए खाली छोड़ें।",
+    "nicknamePlaceholder": "जैसे: बालकनी का फ़र्न"
   },
   "profile": {
     "title": "मेरी प्रोफ़ाइल",

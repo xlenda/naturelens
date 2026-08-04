@@ -266,7 +266,11 @@
     "searchPlaceholder": "Rechercher dans votre collection…",
     "clearSearchLabel": "Effacer la recherche",
     "filterAll": "Tout",
-    "noSearchResults": "Rien ne correspond à votre recherche."
+    "noSearchResults": "Rien ne correspond à votre recherche.",
+    "setNickname": "Donner un surnom",
+    "nicknameTitle": "Surnom",
+    "nicknamePrompt": "Comment appelez-vous {{name}} ? Laissez vide pour retirer le surnom.",
+    "nicknamePlaceholder": "ex. : la fougère du balcon"
   },
   "profile": {
     "title": "Mon Profil",

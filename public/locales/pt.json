@@ -316,7 +316,11 @@
     "searchPlaceholder": "Buscar na sua coleção…",
     "clearSearchLabel": "Limpar busca",
     "filterAll": "Todos",
-    "noSearchResults": "Nada corresponde à sua busca."
+    "noSearchResults": "Nada corresponde à sua busca.",
+    "setNickname": "Dar apelido",
+    "nicknameTitle": "Apelido",
+    "nicknamePrompt": "Como você chama {{name}}? Deixe vazio para remover o apelido.",
+    "nicknamePlaceholder": "ex.: samambaia da varanda"
   },
   "profile": {
     "title": "Meu Perfil",

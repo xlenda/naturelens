@@ -266,7 +266,11 @@
     "searchPlaceholder": "Cerca nella tua collezione…",
     "clearSearchLabel": "Cancella ricerca",
     "filterAll": "Tutti",
-    "noSearchResults": "Nessun risultato per la tua ricerca."
+    "noSearchResults": "Nessun risultato per la tua ricerca.",
+    "setNickname": "Dai un soprannome",
+    "nicknameTitle": "Soprannome",
+    "nicknamePrompt": "Come chiami {{name}}? Lascia vuoto per rimuovere il soprannome.",
+    "nicknamePlaceholder": "es.: la felce del balcone"
   },
   "profile": {
     "title": "Il mio profilo",

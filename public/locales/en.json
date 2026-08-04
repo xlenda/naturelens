@@ -316,7 +316,11 @@
     "searchPlaceholder": "Search your collection…",
     "clearSearchLabel": "Clear search",
     "filterAll": "All",
-    "noSearchResults": "Nothing matches your search."
+    "noSearchResults": "Nothing matches your search.",
+    "setNickname": "Give a nickname",
+    "nicknameTitle": "Nickname",
+    "nicknamePrompt": "What do you call {{name}}? Leave empty to remove the nickname.",
+    "nicknamePlaceholder": "e.g. the balcony fern"
   },
   "profile": {
     "title": "My Profile",

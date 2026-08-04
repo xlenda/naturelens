@@ -266,7 +266,11 @@
     "searchPlaceholder": "컬렉션에서 검색…",
     "clearSearchLabel": "검색 지우기",
     "filterAll": "전체",
-    "noSearchResults": "검색과 일치하는 항목이 없습니다."
+    "noSearchResults": "검색과 일치하는 항목이 없습니다.",
+    "setNickname": "별명 붙이기",
+    "nicknameTitle": "별명",
+    "nicknamePrompt": "{{name}}을(를) 뭐라고 부르나요? 별명을 지우려면 비워 두세요.",
+    "nicknamePlaceholder": "예: 베란다 고사리"
   },
   "profile": {
     "title": "내 프로필",

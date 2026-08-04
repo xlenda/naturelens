@@ -266,7 +266,11 @@
     "searchPlaceholder": "Koleksiyonunda ara…",
     "clearSearchLabel": "Aramayı temizle",
     "filterAll": "Tümü",
-    "noSearchResults": "Aramanla eşleşen bir şey yok."
+    "noSearchResults": "Aramanla eşleşen bir şey yok.",
+    "setNickname": "Takma ad ver",
+    "nicknameTitle": "Takma ad",
+    "nicknamePrompt": "{{name}} için ne diyorsunuz? Takma adı kaldırmak için boş bırakın.",
+    "nicknamePlaceholder": "örn. balkondaki eğrelti"
   },
   "profile": {
     "title": "Profilim",

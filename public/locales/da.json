@@ -266,7 +266,11 @@
     "searchPlaceholder": "Søg i din samling…",
     "clearSearchLabel": "Ryd søgning",
     "filterAll": "Alle",
-    "noSearchResults": "Intet matcher din søgning."
+    "noSearchResults": "Intet matcher din søgning.",
+    "setNickname": "Giv et kaldenavn",
+    "nicknameTitle": "Kaldenavn",
+    "nicknamePrompt": "Hvad kalder du {{name}}? Lad stå tomt for at fjerne kaldenavnet.",
+    "nicknamePlaceholder": "f.eks. bregnen på altanen"
   },
   "profile": {
     "title": "Min profil",

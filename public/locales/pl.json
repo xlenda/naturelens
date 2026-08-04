@@ -266,7 +266,11 @@
     "searchPlaceholder": "Szukaj w swojej kolekcji…",
     "clearSearchLabel": "Wyczyść wyszukiwanie",
     "filterAll": "Wszystkie",
-    "noSearchResults": "Brak wyników wyszukiwania."
+    "noSearchResults": "Brak wyników wyszukiwania.",
+    "setNickname": "Nadaj przydomek",
+    "nicknameTitle": "Przydomek",
+    "nicknamePrompt": "Jak nazywasz {{name}}? Zostaw puste, aby usunąć przydomek.",
+    "nicknamePlaceholder": "np. paproć z balkonu"
   },
   "profile": {
     "title": "Mój profil",

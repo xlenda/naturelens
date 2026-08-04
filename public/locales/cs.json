@@ -266,7 +266,11 @@
     "searchPlaceholder": "Hledat ve sbírce…",
     "clearSearchLabel": "Vymazat hledání",
     "filterAll": "Vše",
-    "noSearchResults": "Nic neodpovídá vašemu hledání."
+    "noSearchResults": "Nic neodpovídá vašemu hledání.",
+    "setNickname": "Dát přezdívku",
+    "nicknameTitle": "Přezdívka",
+    "nicknamePrompt": "Jak říkáte {{name}}? Nechte prázdné pro odstranění přezdívky.",
+    "nicknamePlaceholder": "např. kapradina z balkonu"
   },
   "profile": {
     "title": "Můj profil",

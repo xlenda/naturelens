@@ -48,6 +48,12 @@ const SYNCED_FIELDS = [
   'edibleParts',
   'toxicity',
   'savedAt',
+  // The user's own pet name for the find ("the balcony fern"). Affective
+  // metadata, tiny, and the whole point of cloud sync is that a rebuilt
+  // device gets the collection back AS THE USER KNOWS IT - losing every
+  // nickname on restore would make the recovered collection feel like
+  // someone else's.
+  'nickname',
 ];
 
 function sanitiseEntry(entry) {

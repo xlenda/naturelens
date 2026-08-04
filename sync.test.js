@@ -22,6 +22,21 @@ test("the user's own photo is never uploaded", () => {
   assert.match(api, /function sanitiseEntry/, 'entries must be filtered server-side, not trusted');
 });
 
+test('a nickname survives sync', () => {
+  // The nickname is the user's own name for a find ("the balcony fern"). If
+  // the server filter strips it, a restore on a new device silently returns a
+  // collection that no longer feels like theirs - and nothing would error.
+  const api = read('api/collection.js');
+  const start = api.indexOf('const SYNCED_FIELDS');
+  const fields = api.slice(start, api.indexOf('];', start));
+  assert.match(fields, /'nickname'/, 'nickname must be in the synced field list');
+
+  // And the collection screen must actually let the user search by it - a
+  // nickname that cannot find its own find defeats the point of naming it.
+  const screen = read('screens/CollectionScreen.js');
+  assert.match(screen, /item\.nickname \|\| ''\)\.toLowerCase\(\)\.includes/, 'search must match nicknames');
+});
+
 test('sync merges and never replaces', () => {
   // A sync that could empty a collection would be a second way to lose it.
   const client = read('components/collectionSync.js');

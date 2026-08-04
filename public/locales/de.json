@@ -266,7 +266,11 @@
     "searchPlaceholder": "Sammlung durchsuchen…",
     "clearSearchLabel": "Suche löschen",
     "filterAll": "Alle",
-    "noSearchResults": "Nichts entspricht deiner Suche."
+    "noSearchResults": "Nichts entspricht deiner Suche.",
+    "setNickname": "Spitznamen geben",
+    "nicknameTitle": "Spitzname",
+    "nicknamePrompt": "Wie nennst du {{name}}? Leer lassen, um den Spitznamen zu entfernen.",
+    "nicknamePlaceholder": "z. B. der Balkonfarn"
   },
   "profile": {
     "title": "Mein Profil",
