@@ -165,10 +165,9 @@ export default function InsectDetailScreen({ route }) {
             all built from data the API already returned. */}
         <IdentificationExtras entity={plant} accent={meta.accent} />
 
-        <SectionCard icon="document-text-outline" title={t('common.overview')} color={meta.accent}>
-          <Text style={styles.body}>{plant.overview || t('sound.noContentBody')}</Text>
-        </SectionCard>
-
+        {/* Safety leads ("quente primeiro"): for insects, "did the thing that
+            just stung me matter?" is the question that opened the camera - it
+            cannot sit below the encyclopedia paragraph. */}
         {hasDanger && (
           <SectionCard icon="warning-outline" title={t('detail.safetySection')} color={dangerColor}>
             <View style={styles.tagRow}>
@@ -179,6 +178,10 @@ export default function InsectDetailScreen({ route }) {
             {!!plant.dangerDescription && <Text style={[styles.body, { marginTop: 10 }]}>{plant.dangerDescription}</Text>}
           </SectionCard>
         )}
+
+        <SectionCard icon="document-text-outline" title={t('common.overview')} color={meta.accent}>
+          <Text style={styles.body}>{plant.overview || t('sound.noContentBody')}</Text>
+        </SectionCard>
 
         {plant.role?.length > 0 && (
           <SectionCard icon="leaf-outline" title={t('detail.ecologicalRoleSection')} color={colors.accent}>

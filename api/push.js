@@ -26,10 +26,26 @@ const REMINDERS = {
   it: { title: 'La tua serie ti aspetta', body: 'Identifica una specie oggi per non perderla.' },
   nl: { title: 'Je reeks wacht op je', body: 'Herken vandaag een soort om hem te behouden.' },
   tr: { title: 'Serin seni bekliyor', body: 'Serini korumak için bugün bir tür tanımla.' },
+  pl: { title: 'Twoja passa czeka', body: 'Zidentyfikuj dziś jeden gatunek, aby jej nie stracić.' },
+  cs: { title: 'Vaše série čeká', body: 'Identifikujte dnes jeden druh, ať o ni nepřijdete.' },
+  sv: { title: 'Din svit väntar', body: 'Identifiera en art idag för att behålla den.' },
+  da: { title: 'Din stribe venter', body: 'Identificér en art i dag for at beholde den.' },
+  ko: { title: '연속 기록이 기다리고 있어요', body: '오늘 한 종을 식별하고 기록을 이어가세요.' },
+  zh: { title: '你的连续记录在等你', body: '今天识别一个物种，保持连续记录。' },
+  'zh-hant': { title: '你的連續紀錄在等你', body: '今天辨識一個物種，保持連續紀錄。' },
+  hi: { title: 'आपकी श्रृंखला इंतज़ार कर रही है', body: 'इसे बनाए रखने के लिए आज एक प्रजाति की पहचान करें।' },
+  ar: { title: 'سلسلتك بانتظارك', body: 'تعرف على نوع واحد اليوم للحفاظ عليها.' },
 };
 
 function reminderFor(language) {
-  const short = String(language || 'en').slice(0, 2).toLowerCase();
+  // Full code first: 'zh-hant' must reach its own entry, not be truncated to
+  // 'zh' and silently receive Simplified Chinese - the same class of bug the
+  // client already fixed once ("zh-hant era rejeitado por um regex de duas
+  // letras"). The 2-letter prefix stays as the fallback for regional variants
+  // like 'pt-BR'.
+  const full = String(language || 'en').toLowerCase();
+  if (REMINDERS[full]) return REMINDERS[full];
+  const short = full.slice(0, 2);
   return REMINDERS[short] || REMINDERS.en;
 }
 

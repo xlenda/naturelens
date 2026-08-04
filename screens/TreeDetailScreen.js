@@ -176,23 +176,18 @@ export default function TreeDetailScreen({ route }) {
             all built from data the API already returned. */}
         <IdentificationExtras entity={plant} accent={meta.accent} />
 
-        <SectionCard icon="leaf-outline" title={t('common.overview')} color={meta.accent}>
-          <Text style={styles.body}>{plant.overview || t('sound.noContentBody')}</Text>
-        </SectionCard>
-
-        {infoRows.length > 0 && (
-          <SectionCard icon="finger-print-outline" title={t('common.details')} color={colors.purple}>
-            {infoRows.map((row) => (
-              <InfoRow key={row.label} label={row.label} value={row.value} />
-            ))}
-          </SectionCard>
-        )}
-
+        {/* Section order is deliberate ("quente primeiro, ficha depois"):
+            safety leads, story and care follow, and the technical info rows
+            close the screen as a receipt - same order as PlantDetailScreen. */}
         {!!plant.toxicity && (
           <SectionCard icon="warning-outline" title={t('detail.safetySection')} color={colors.error}>
             <Text style={styles.body}>{plant.toxicity}</Text>
           </SectionCard>
         )}
+
+        <SectionCard icon="leaf-outline" title={t('common.overview')} color={meta.accent}>
+          <Text style={styles.body}>{plant.overview || t('sound.noContentBody')}</Text>
+        </SectionCard>
 
         {!!plant.bestWatering && (
           <SectionCard icon="water-outline" title={t('detail.wateringGuideSection')} color={colors.info}>
@@ -252,6 +247,14 @@ export default function TreeDetailScreen({ route }) {
         {!!plant.culturalSignificance && (
           <SectionCard icon="book-outline" title={t('detail.culturalSignificanceSection')} color={colors.purple}>
             <Text style={styles.body}>{plant.culturalSignificance}</Text>
+          </SectionCard>
+        )}
+
+        {infoRows.length > 0 && (
+          <SectionCard icon="finger-print-outline" title={t('common.details')} color={colors.purple}>
+            {infoRows.map((row) => (
+              <InfoRow key={row.label} label={row.label} value={row.value} />
+            ))}
           </SectionCard>
         )}
 
