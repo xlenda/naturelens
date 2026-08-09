@@ -24,6 +24,7 @@ import { getWateringStatus } from '../components/watering';
 import AlertModal from '../components/AlertModal';
 import { useAppAlert } from '../components/useAppAlert';
 import CategoryIcon from '../components/CategoryIcon';
+import FindThumb from '../components/FindThumb';
 
 function formatDate(iso) {
   try {
@@ -191,9 +192,18 @@ export default function CollectionScreen() {
         accessibilityRole="button"
         accessibilityLabel={t('collection.viewDetailsLabel', { name: item.nickname || item.name })}
       >
-        <View style={[styles.thumb, { backgroundColor: meta.accent + '33' }]}>
-          <CategoryIcon name={meta.tabIcon} size={28} color={meta.accent} />
-        </View>
+        {/* The find's own photo, not a category icon - this is the album of
+            what the person actually saw. Falls back to a real species photo
+            for finds restored from the cloud (which never carry the personal
+            photo), and only then to the icon. */}
+        <FindThumb
+          photoUri={item.photoUri}
+          scientific={item.scientific}
+          icon={meta.tabIcon}
+          accent={meta.accent}
+          iconSize={28}
+          style={styles.thumb}
+        />
         <View style={{ flex: 1 }}>
           {/* The nickname takes the name's place - the find is "the balcony
               fern" to its owner, and the species name steps down to the line
@@ -271,9 +281,16 @@ export default function CollectionScreen() {
         accessibilityRole="button"
         accessibilityLabel={t('collection.viewDetailsLabel', { name: item.nickname || item.name })}
       >
-        <View style={[styles.gridThumb, { backgroundColor: meta.accent + '33' }]}>
-          <CategoryIcon name={meta.tabIcon} size={22} color={meta.accent} />
-        </View>
+        {/* Grid mode is the album view: the photo IS the tile, edge to edge,
+            with the name as caption - not an icon chip with text under it. */}
+        <FindThumb
+          photoUri={item.photoUri}
+          scientific={item.scientific}
+          icon={meta.tabIcon}
+          accent={meta.accent}
+          iconSize={30}
+          style={styles.gridThumb}
+        />
         <Text style={styles.gridName} numberOfLines={1}>
           {item.nickname || item.name}
         </Text>
@@ -680,18 +697,16 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: colors.card,
     borderRadius: 16,
-    padding: 12,
+    padding: 10,
     marginBottom: 12,
     borderWidth: 1,
     borderColor: colors.border,
     ...shadow,
   },
   gridThumb: {
-    width: 48,
-    height: 48,
+    width: '100%',
+    height: 110,
     borderRadius: 12,
-    alignItems: 'center',
-    justifyContent: 'center',
     marginBottom: 8,
   },
   gridName: {

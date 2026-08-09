@@ -15,6 +15,7 @@ import { useTranslation } from 'react-i18next';
 import { colors, shadow } from '../components/theme';
 import DailyMissionsCard from '../components/DailyMissionsCard';
 import CategoryIcon from '../components/CategoryIcon';
+import FindThumb from '../components/FindThumb';
 import { addTokens } from '../components/achievements';
 import { recordMissionEvent, TOKENS_PER_MISSION } from '../components/missions';
 
@@ -216,15 +217,16 @@ export default function DiscoverScreen() {
                 accessibilityRole="button"
                 accessibilityLabel={t('discover.viewSpeciesLabel', { name })}
               >
-                <View style={[styles.speciesThumb, { backgroundColor: s.color + '33' }]}>
-                  <Ionicons
-                    name="leaf"
-                    size={30}
-                    color={s.color}
-                    accessibilityElementsHidden={true}
-                    importantForAccessibility="no-hide-descendants"
-                  />
-                </View>
+                {/* A real photo of the species, not a coloured leaf icon -
+                    "trending" only reads as content when you can SEE the
+                    species. Scientific name is the language-independent key. */}
+                <FindThumb
+                  scientific={sci}
+                  icon="leaf"
+                  accent={s.color}
+                  iconSize={30}
+                  style={styles.speciesThumb}
+                />
                 <Text style={styles.speciesName}>{name}</Text>
                 <Text style={styles.speciesSci}>{sci}</Text>
               </TouchableOpacity>
@@ -256,15 +258,13 @@ export default function DiscoverScreen() {
                 accessibilityRole="button"
                 accessibilityLabel={t('discover.viewSpeciesLabel', { name: entry.name })}
               >
-                <View style={[styles.speciesThumb, { backgroundColor: r.color + '33' }]}>
-                  <CategoryIcon
-                    name={r.icon}
-                    size={30}
-                    color={r.color}
-                    accessibilityElementsHidden={true}
-                    importantForAccessibility="no-hide-descendants"
-                  />
-                </View>
+                <FindThumb
+                  scientific={entry.sci}
+                  icon={r.icon}
+                  accent={r.color}
+                  iconSize={30}
+                  style={styles.speciesThumb}
+                />
                 <Text style={styles.speciesName}>{entry.name}</Text>
                 <Text style={styles.speciesSci}>{entry.sci}</Text>
               </TouchableOpacity>
