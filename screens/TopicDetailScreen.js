@@ -4,10 +4,14 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { useNavigation } from '@react-navigation/native';
 import { useTranslation } from 'react-i18next';
 import { Ionicons } from '@expo/vector-icons';
+import { LinearGradient } from 'expo-linear-gradient';
 import BackChevron from '../components/BackChevron';
 import * as Haptics from 'expo-haptics';
 import { colors, shadow } from '../components/theme';
 import CategoryIcon from '../components/CategoryIcon';
+import NatureScene from '../components/NatureScene';
+import ZoneBand from '../components/ZoneBand';
+import PressScale from '../components/PressScale';
 
 const SYMPTOM_KEYS = [
   'headache',
@@ -43,6 +47,11 @@ export default function TopicDetailScreen({ route }) {
 
   return (
     <SafeAreaView style={styles.container} edges={['top']}>
+      {/* Cenário em camadas: first child of the root, painting over the
+          container colour without replacing it and without taking a touch, so
+          the collection opens onto the same place the Discover tab sits on. */}
+      <NatureScene accent={color} />
+
       <View style={styles.topBar}>
         <TouchableOpacity
           style={styles.iconBtn}
@@ -57,11 +66,22 @@ export default function TopicDetailScreen({ route }) {
       </View>
 
       <ScrollView contentContainerStyle={styles.scroll} showsVerticalScrollIndicator={false}>
-        <View style={[styles.heroIcon, { backgroundColor: color + '22' }]}>
-          <CategoryIcon name={icon} size={32} color={color} />
+        {/* Composição centrada: the hero - seal, title, one-line desc - is a
+            centred column carrying the collection's own colour through from the
+            card that opened it. `intro` stays outside it and left-aligned: a
+            centred paragraph is the part of this device that backfires. */}
+        <View style={styles.hero}>
+          <LinearGradient
+            colors={[color + '4D', color + '14']}
+            start={{ x: 0, y: 0 }}
+            end={{ x: 1, y: 1 }}
+            style={styles.heroIcon}
+          >
+            <CategoryIcon name={icon} size={32} color={color} />
+          </LinearGradient>
+          <Text style={styles.title}>{title}</Text>
+          <Text style={styles.desc}>{desc}</Text>
         </View>
-        <Text style={styles.title}>{title}</Text>
-        <Text style={styles.desc}>{desc}</Text>
         <Text style={styles.intro}>{intro}</Text>
 
         {isHerbs && (
@@ -109,59 +129,68 @@ export default function TopicDetailScreen({ route }) {
           </>
         )}
 
-        <Text style={styles.sectionLabel}>{t('discover.topicSpeciesSectionTitle')}</Text>
+        {/* Zona de cor: the species list - the reason the screen exists - is the
+            one band here. The hero and the filter row stay on the scene, so the
+            band reads as a change of ground and not as the page background. */}
+        <ZoneBand gutter={20}>
+          <Text style={styles.sectionLabel}>{t('discover.topicSpeciesSectionTitle')}</Text>
 
-        {isHerbs && visibleSpecies.length === 0 && (
-          <Text style={styles.emptyText}>{t('discover.symptomFilterEmpty')}</Text>
-        )}
+          {isHerbs && visibleSpecies.length === 0 && (
+            <Text style={styles.emptyText}>{t('discover.symptomFilterEmpty')}</Text>
+          )}
 
-        {visibleSpecies.map((s, i) => {
-          // Fish and birds now carry full field-guide entries too (overview,
-          // habitat, curiosity), so their cards open a detail screen exactly
-          // like the herbs do. Before this, tapping one did nothing at all -
-          // a card that looks tappable and isn't reads as a broken app.
-          const tappable = (isHerbs || hasSpeciesDetail) && s.id;
-          const CardWrapper = tappable ? TouchableOpacity : View;
-          const wrapperProps = tappable
-            ? {
-                activeOpacity: 0.85,
-                onPress: () => {
-                  Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
-                  if (isHerbs) {
-                    navigation.navigate('HerbDetail', { herbId: s.id, color });
-                  } else {
-                    navigation.navigate('FieldGuide', {
-                      speciesId: s.id,
-                      name: s.name,
-                      sci: s.sci,
-                      color,
-                      icon,
-                    });
-                  }
-                },
-                accessibilityRole: 'button',
-                accessibilityLabel: t('discover.viewHerbLabel', { name: s.name }),
-              }
-            : {};
-          return (
-            <CardWrapper key={s.id || i} style={styles.speciesCard} {...wrapperProps}>
-              <View style={{ flex: 1 }}>
-                <Text style={styles.speciesName}>{s.name}</Text>
-                <Text style={styles.speciesSci}>{s.sci}</Text>
-                <Text style={styles.speciesNote}>{s.note}</Text>
-              </View>
-              {isHerbs && (
-                <Ionicons
-                  name="chevron-forward"
-                  size={18}
-                  color={colors.textMuted}
-                  accessibilityElementsHidden={true}
-                  importantForAccessibility="no-hide-descendants"
-                />
-              )}
-            </CardWrapper>
-          );
-        })}
+          {visibleSpecies.map((s, i) => {
+            // Fish and birds now carry full field-guide entries too (overview,
+            // habitat, curiosity), so their cards open a detail screen exactly
+            // like the herbs do. Before this, tapping one did nothing at all -
+            // a card that looks tappable and isn't reads as a broken app.
+            const tappable = (isHerbs || hasSpeciesDetail) && s.id;
+            const CardWrapper = tappable ? TouchableOpacity : View;
+            const wrapperProps = tappable
+              ? {
+                  activeOpacity: 0.85,
+                  onPress: () => {
+                    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+                    if (isHerbs) {
+                      navigation.navigate('HerbDetail', { herbId: s.id, color });
+                    } else {
+                      navigation.navigate('FieldGuide', {
+                        speciesId: s.id,
+                        name: s.name,
+                        sci: s.sci,
+                        color,
+                        icon,
+                      });
+                    }
+                  },
+                  accessibilityRole: 'button',
+                  accessibilityLabel: t('discover.viewHerbLabel', { name: s.name }),
+                }
+              : {};
+            const card = (
+              <CardWrapper key={s.id || i} style={styles.speciesCard} {...wrapperProps}>
+                <View style={{ flex: 1 }}>
+                  <Text style={styles.speciesName}>{s.name}</Text>
+                  <Text style={styles.speciesSci}>{s.sci}</Text>
+                  <Text style={styles.speciesNote}>{s.note}</Text>
+                </View>
+                {isHerbs && (
+                  <Ionicons
+                    name="chevron-forward"
+                    size={18}
+                    color={colors.textMuted}
+                    accessibilityElementsHidden={true}
+                    importantForAccessibility="no-hide-descendants"
+                  />
+                )}
+              </CardWrapper>
+            );
+            // Press-scale only where there is a press. PressScale clones its child
+            // to attach onPressIn/Out, and a card that is a plain View would carry
+            // those handlers for a gesture that never comes.
+            return tappable ? <PressScale key={s.id || i}>{card}</PressScale> : card;
+          })}
+        </ZoneBand>
       </ScrollView>
     </SafeAreaView>
   );
@@ -187,24 +216,27 @@ const styles = StyleSheet.create({
   },
   topTitle: { flex: 1, fontSize: 16, fontWeight: '700', color: colors.text, marginHorizontal: 8, textAlign: 'center' },
   scroll: { padding: 20, paddingTop: 6, paddingBottom: 40 },
+  hero: { alignItems: 'center' },
   heroIcon: {
-    width: 64,
-    height: 64,
-    borderRadius: 20,
+    width: 72,
+    height: 72,
+    borderRadius: 24,
     alignItems: 'center',
     justifyContent: 'center',
     marginBottom: 16,
   },
-  title: { fontSize: 24, fontWeight: '800', color: colors.text, marginBottom: 6 },
-  desc: { fontSize: 14, color: colors.textMuted, marginBottom: 14 },
+  title: { fontSize: 24, fontWeight: '800', color: colors.text, marginBottom: 6, textAlign: 'center' },
+  desc: { fontSize: 14, color: colors.textMuted, marginBottom: 14, textAlign: 'center' },
   intro: { fontSize: 14.5, lineHeight: 22, color: colors.textSecondary, marginBottom: 24 },
+  // Composição centrada, com critério: a SECTION title centres and carries
+  // weight, while the card text under it stays left-aligned.
   sectionLabel: {
-    fontSize: 13,
-    fontWeight: '700',
-    color: colors.textMuted,
-    textTransform: 'uppercase',
-    letterSpacing: 0.5,
-    marginBottom: 14,
+    fontSize: 22,
+    fontWeight: '800',
+    color: colors.text,
+    textAlign: 'center',
+    marginTop: 34,
+    marginBottom: 16,
   },
   symptomChip: {
     paddingHorizontal: 14,

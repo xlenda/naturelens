@@ -6,6 +6,9 @@ import { Ionicons } from '@expo/vector-icons';
 import * as Haptics from 'expo-haptics';
 import { useTranslation } from 'react-i18next';
 import BackChevron from '../components/BackChevron';
+import NatureScene from '../components/NatureScene';
+import ZoneBand from '../components/ZoneBand';
+import PressScale from '../components/PressScale';
 import PaywallModal from '../components/PaywallModal';
 import AlertModal from '../components/AlertModal';
 import { useAppAlert } from '../components/useAppAlert';
@@ -89,6 +92,11 @@ export default function SubscriptionScreen() {
 
   return (
     <SafeAreaView style={styles.container} edges={['top']}>
+      {/* Cenário em camadas: first child of the root, filling it absolutely with
+          pointerEvents="none" so it can never intercept a tap on this screen of
+          all screens. The container keeps its backgroundColor underneath. */}
+      <NatureScene />
+
       <View style={styles.topBar}>
         <TouchableOpacity
           style={styles.iconBtn}
@@ -127,8 +135,13 @@ export default function SubscriptionScreen() {
           </Text>
         </View>
 
+        {/* Zona de cor: the plan block sits in a full-bleed band a shade lighter
+            than the page, with the status card floating above it on the scene.
+            ZoneBand replaces the fragment ONLY - the gate in front of it is
+            byte-for-byte the same three-state condition, so `undefined` (a check
+            that failed) still shows neither the plans nor the manage block. */}
         {!isActive && !isUnknown && (
-          <>
+          <ZoneBand gutter={20} style={styles.zoneGap}>
             <Text style={styles.sectionTitle}>{t('subscription.plansTitle')}</Text>
             {PLAN_ORDER.map((plan) => (
               <View key={plan} style={styles.planRow}>
@@ -137,34 +150,38 @@ export default function SubscriptionScreen() {
               </View>
             ))}
 
-            <TouchableOpacity
-              style={styles.primaryBtn}
-              onPress={openPaywall}
-              activeOpacity={0.85}
-              accessibilityRole="button"
-              accessibilityLabel={t('paywall.subscribe')}
-            >
-              <Text style={styles.primaryBtnText}>{t('paywall.subscribe')}</Text>
-            </TouchableOpacity>
-          </>
+            <PressScale>
+              <TouchableOpacity
+                style={styles.primaryBtn}
+                onPress={openPaywall}
+                activeOpacity={0.85}
+                accessibilityRole="button"
+                accessibilityLabel={t('paywall.subscribe')}
+              >
+                <Text style={styles.primaryBtnText}>{t('paywall.subscribe')}</Text>
+              </TouchableOpacity>
+            </PressScale>
+          </ZoneBand>
         )}
 
         {isActive && (
-          <>
+          <ZoneBand gutter={20} style={styles.zoneGap}>
             {/* The cancellation answer, stated plainly instead of buried. */}
             <Text style={styles.sectionTitle}>{t('subscription.manageTitle')}</Text>
             <Text style={styles.manageBody}>{t('subscription.manageBody')}</Text>
-            <TouchableOpacity
-              style={styles.secondaryBtn}
-              onPress={openHotmart}
-              activeOpacity={0.85}
-              accessibilityRole="button"
-              accessibilityLabel={t('subscription.openHotmart')}
-            >
-              <Ionicons name="open-outline" size={17} color={colors.text} />
-              <Text style={styles.secondaryBtnText}>{t('subscription.openHotmart')}</Text>
-            </TouchableOpacity>
-          </>
+            <PressScale>
+              <TouchableOpacity
+                style={styles.secondaryBtn}
+                onPress={openHotmart}
+                activeOpacity={0.85}
+                accessibilityRole="button"
+                accessibilityLabel={t('subscription.openHotmart')}
+              >
+                <Ionicons name="open-outline" size={17} color={colors.text} />
+                <Text style={styles.secondaryBtnText}>{t('subscription.openHotmart')}</Text>
+              </TouchableOpacity>
+            </PressScale>
+          </ZoneBand>
         )}
 
         {/* Signing in belongs on the subscription screen too - this is exactly
@@ -172,17 +189,19 @@ export default function SubscriptionScreen() {
             wording is "Sign in", not "restore access on another device": the
             latter described the situation instead of the action, and only made
             sense to someone who already knew what had gone wrong. */}
-        <TouchableOpacity
-          style={styles.linkRow}
-          onPress={() => navigation.navigate('RestoreAccess')}
-          activeOpacity={0.7}
-          accessibilityRole="button"
-          accessibilityLabel={t('login.signInRow')}
-        >
-          <Ionicons name="log-in-outline" size={17} color={colors.accentLight} />
-          <Text style={styles.linkRowText}>{t('login.signInRow')}</Text>
-          <Ionicons name="chevron-forward" size={16} color={colors.textMuted} />
-        </TouchableOpacity>
+        <PressScale>
+          <TouchableOpacity
+            style={styles.linkRow}
+            onPress={() => navigation.navigate('RestoreAccess')}
+            activeOpacity={0.7}
+            accessibilityRole="button"
+            accessibilityLabel={t('login.signInRow')}
+          >
+            <Ionicons name="log-in-outline" size={17} color={colors.accentLight} />
+            <Text style={styles.linkRowText}>{t('login.signInRow')}</Text>
+            <Ionicons name="chevron-forward" size={16} color={colors.textMuted} />
+          </TouchableOpacity>
+        </PressScale>
       </ScrollView>
 
       <PaywallModal
@@ -238,6 +257,9 @@ const styles = StyleSheet.create({
     ...shadow,
   },
   statusCardActive: { borderColor: colors.accent + '66' },
+  // The gap between the status card and the band below it is the scene showing
+  // through; ZoneBand's own 8px read as the two being glued together.
+  zoneGap: { marginTop: 20 },
   statusTitle: { color: colors.text, fontSize: 17, fontWeight: '800', textAlign: 'center' },
   statusBody: {
     color: colors.textSecondary,
@@ -245,7 +267,17 @@ const styles = StyleSheet.create({
     lineHeight: 20,
     textAlign: 'center',
   },
-  sectionTitle: { color: colors.text, fontSize: 15, fontWeight: '700', marginTop: 26, marginBottom: 12 },
+  // Composição centrada, with the criterion: the SECTION title centres and
+  // carries weight (22/800); manageBody below it is reading text and stays left
+  // aligned, and the plan rows keep their name-left / price-right ledger.
+  sectionTitle: {
+    color: colors.text,
+    fontSize: 22,
+    fontWeight: '800',
+    textAlign: 'center',
+    marginTop: 34,
+    marginBottom: 14,
+  },
   planRow: {
     flexDirection: 'row',
     justifyContent: 'space-between',

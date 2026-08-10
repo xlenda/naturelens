@@ -5,6 +5,8 @@ import { useNavigation, useFocusEffect } from '@react-navigation/native';
 import { useTranslation } from 'react-i18next';
 import { Ionicons } from '@expo/vector-icons';
 import BackChevron from '../components/BackChevron';
+import NatureScene from '../components/NatureScene';
+import ZoneBand from '../components/ZoneBand';
 import { colors, shadow } from '../components/theme';
 import { ACHIEVEMENT_LIST, evaluateAchievements, getStreakInfo } from '../components/achievements';
 import { getSubscriptionStatus } from '../components/subscription';
@@ -35,6 +37,10 @@ export default function AchievementsScreen() {
 
   return (
     <SafeAreaView style={styles.container} edges={['top']}>
+      {/* Cenário em camadas: the scene is the FIRST child and paints over the
+          container's own background, never replaces it. */}
+      <NatureScene />
+
       <View style={styles.header}>
         <TouchableOpacity
           style={styles.backBtn}
@@ -102,41 +108,47 @@ export default function AchievementsScreen() {
           </View>
         </View>
 
-        <Text style={styles.sectionLabel}>
-          {t('achievements.progressLabel', { unlocked: unlockedCount, total: ACHIEVEMENT_LIST.length })}
-        </Text>
+        {/* Zonas de cor: the badge list is the one block on this screen that
+            reads as a section, so it lives in a band while the tokens banner
+            and the stats row stay on the scene above it. Its own label heads
+            the band - the band is a pure wrapper and keeps this order. */}
+        <ZoneBand gutter={20}>
+          <Text style={styles.sectionLabel}>
+            {t('achievements.progressLabel', { unlocked: unlockedCount, total: ACHIEVEMENT_LIST.length })}
+          </Text>
 
-        {ACHIEVEMENT_LIST.map((a) => {
-          const isUnlocked = !!unlocked[a.id];
-          return (
-            <View key={a.id} style={[styles.badgeRow, !isUnlocked && styles.badgeRowLocked]}>
-              <View style={[styles.badgeIcon, isUnlocked && styles.badgeIconUnlocked]}>
-                <Ionicons
-                  name={isUnlocked ? a.icon : 'lock-closed'}
-                  size={22}
-                  color={isUnlocked ? colors.warning : colors.textMuted}
-                  accessibilityElementsHidden={true}
-                  importantForAccessibility="no-hide-descendants"
-                />
+          {ACHIEVEMENT_LIST.map((a) => {
+            const isUnlocked = !!unlocked[a.id];
+            return (
+              <View key={a.id} style={[styles.badgeRow, !isUnlocked && styles.badgeRowLocked]}>
+                <View style={[styles.badgeIcon, isUnlocked && styles.badgeIconUnlocked]}>
+                  <Ionicons
+                    name={isUnlocked ? a.icon : 'lock-closed'}
+                    size={22}
+                    color={isUnlocked ? colors.warning : colors.textMuted}
+                    accessibilityElementsHidden={true}
+                    importantForAccessibility="no-hide-descendants"
+                  />
+                </View>
+                <View style={{ flex: 1 }}>
+                  <Text style={[styles.badgeTitle, !isUnlocked && styles.badgeTitleLocked]}>
+                    {t(`achievements.${a.id}.title`)}
+                  </Text>
+                  <Text style={styles.badgeBody}>{t(`achievements.${a.id}.body`)}</Text>
+                </View>
+                {isUnlocked && (
+                  <Ionicons
+                    name="checkmark-circle"
+                    size={20}
+                    color={colors.accent}
+                    accessibilityElementsHidden={true}
+                    importantForAccessibility="no-hide-descendants"
+                  />
+                )}
               </View>
-              <View style={{ flex: 1 }}>
-                <Text style={[styles.badgeTitle, !isUnlocked && styles.badgeTitleLocked]}>
-                  {t(`achievements.${a.id}.title`)}
-                </Text>
-                <Text style={styles.badgeBody}>{t(`achievements.${a.id}.body`)}</Text>
-              </View>
-              {isUnlocked && (
-                <Ionicons
-                  name="checkmark-circle"
-                  size={20}
-                  color={colors.accent}
-                  accessibilityElementsHidden={true}
-                  importantForAccessibility="no-hide-descendants"
-                />
-              )}
-            </View>
-          );
-        })}
+            );
+          })}
+        </ZoneBand>
       </ScrollView>
     </SafeAreaView>
   );
@@ -194,12 +206,16 @@ const styles = StyleSheet.create({
   },
   statNumber: { fontSize: 22, fontWeight: '800', color: colors.text, marginTop: 8 },
   statLabel: { fontSize: 11.5, color: colors.textMuted, marginTop: 2, textAlign: 'center' },
+  // Composição centrada: this is the section label for the badge list, so it
+  // centres. Badge titles and bodies below deliberately do not - centred
+  // reading text is what makes the device look cheap instead of composed.
   sectionLabel: {
     fontSize: 13,
     fontWeight: '700',
     color: colors.textMuted,
     textTransform: 'uppercase',
     letterSpacing: 0.5,
+    textAlign: 'center',
     marginTop: 24,
     marginBottom: 12,
   },

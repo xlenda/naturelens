@@ -25,6 +25,9 @@ import PasswordInput from '../components/PasswordInput';
 import { useAppAlert } from '../components/useAppAlert';
 import { usePageShowReset } from '../components/usePageShowReset';
 import CategoryIcon from '../components/CategoryIcon';
+import NatureScene from '../components/NatureScene';
+import ZoneBand from '../components/ZoneBand';
+import PressScale from '../components/PressScale';
 import {
   canUsePush,
   getPermission as getPushPermission,
@@ -348,6 +351,12 @@ export default function ProfileScreen() {
 
   return (
     <SafeAreaView style={styles.container} edges={['top']}>
+      {/* Cenário em camadas: the scene is the FIRST child of the root and fills
+          it absolutely with pointerEvents="none", so decoration can never steal
+          a touch. The container keeps its own backgroundColor underneath - the
+          scene paints over it, it does not replace it. */}
+      <NatureScene />
+
       {/* No back chevron: Profile is a bottom tab now, so it is the root of its
           own stack and goBack() has nowhere to go. The two spacers keep the
           title optically centred, same as the other tab-root screens. */}
@@ -361,24 +370,31 @@ export default function ProfileScreen() {
         contentContainerStyle={styles.scroll}
         showsVerticalScrollIndicator={false}
       >
-        <TouchableOpacity
-          style={styles.avatarWrap}
-          onPress={handlePickPhoto}
-          activeOpacity={0.8}
-          accessibilityRole="button"
-          accessibilityLabel={t('profile.changePhoto')}
-        >
-          {photoUri ? (
-            <Image source={{ uri: photoUri }} style={styles.avatarImage} />
-          ) : (
-            <View style={styles.avatarPlaceholder}>
-              <Ionicons name="camera" size={26} color={colors.textMuted} />
+        {/* Hero-first: the screen opens with the person, not with the settings
+            list. The avatar is large and centred with room around it, and the
+            counters below it finish the identity block before the first row of
+            settings. This is layout only - the picker, the edit badge and the
+            accessibility label are exactly as they were. */}
+        <PressScale>
+          <TouchableOpacity
+            style={styles.avatarWrap}
+            onPress={handlePickPhoto}
+            activeOpacity={0.8}
+            accessibilityRole="button"
+            accessibilityLabel={t('profile.changePhoto')}
+          >
+            {photoUri ? (
+              <Image source={{ uri: photoUri }} style={styles.avatarImage} />
+            ) : (
+              <View style={styles.avatarPlaceholder}>
+                <Ionicons name="camera" size={34} color={colors.textMuted} />
+              </View>
+            )}
+            <View style={styles.avatarEditBadge}>
+              <Ionicons name="pencil" size={15} color={colors.white} />
             </View>
-          )}
-          <View style={styles.avatarEditBadge}>
-            <Ionicons name="pencil" size={12} color={colors.white} />
-          </View>
-        </TouchableOpacity>
+          </TouchableOpacity>
+        </PressScale>
 
         {hasNaturalistBadge && (
           <View style={styles.naturalistPill}>
@@ -394,23 +410,25 @@ export default function ProfileScreen() {
             for having done something; before that they are only a reminder that
             you have not. */}
         {total === 0 ? (
-          <TouchableOpacity
-            style={styles.emptyCard}
-            activeOpacity={0.85}
-            onPress={() => navigation.getParent()?.navigate(CATEGORIES.plant.tabLabel)}
-            accessibilityRole="button"
-            accessibilityLabel={t('profile.emptyCta')}
-          >
-            <View style={[styles.emptyIcon, { backgroundColor: colors.accent + '1F' }]}>
-              <CategoryIcon name="leaf" size={26} color={colors.accent} />
-            </View>
-            <Text style={styles.emptyTitle}>{t('profile.emptyTitle')}</Text>
-            <Text style={styles.emptyBody}>{t('profile.emptyBody')}</Text>
-            <View style={[styles.emptyBtn, { backgroundColor: colors.accent }]}>
-              <Ionicons name="camera" size={16} color={colors.white} />
-              <Text style={styles.emptyBtnText}>{t('profile.emptyCta')}</Text>
-            </View>
-          </TouchableOpacity>
+          <PressScale>
+            <TouchableOpacity
+              style={styles.emptyCard}
+              activeOpacity={0.85}
+              onPress={() => navigation.getParent()?.navigate(CATEGORIES.plant.tabLabel)}
+              accessibilityRole="button"
+              accessibilityLabel={t('profile.emptyCta')}
+            >
+              <View style={[styles.emptyIcon, { backgroundColor: colors.accent + '1F' }]}>
+                <CategoryIcon name="leaf" size={26} color={colors.accent} />
+              </View>
+              <Text style={styles.emptyTitle}>{t('profile.emptyTitle')}</Text>
+              <Text style={styles.emptyBody}>{t('profile.emptyBody')}</Text>
+              <View style={[styles.emptyBtn, { backgroundColor: colors.accent }]}>
+                <Ionicons name="camera" size={16} color={colors.white} />
+                <Text style={styles.emptyBtnText}>{t('profile.emptyCta')}</Text>
+              </View>
+            </TouchableOpacity>
+          </PressScale>
         ) : (
           <View style={styles.totalCard}>
             <View style={styles.totalIcon}>
@@ -448,48 +466,55 @@ export default function ProfileScreen() {
             made a store the app sells things in unreachable. */}
         {(total > 0 || currentStreak > 0 || tokens > 0) && (
         <View style={styles.streakRow}>
-          <TouchableOpacity
-            style={styles.streakCard}
-            activeOpacity={0.85}
-            onPress={() => navigation.navigate('Achievements')}
-            accessibilityRole="button"
-            accessibilityLabel={t('achievements.title')}
-          >
-            <View style={styles.streakIcon}>
-              <Ionicons
-                name="flame"
-                size={22}
-                color={colors.warning}
-                accessibilityElementsHidden={true}
-                importantForAccessibility="no-hide-descendants"
-              />
-            </View>
-            <View style={{ flex: 1 }}>
-              <Text style={styles.streakNumber}>{currentStreak}</Text>
-              <Text style={styles.streakLabel}>{t('achievements.streakLabel')}</Text>
-            </View>
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={styles.streakCard}
-            activeOpacity={0.85}
-            onPress={() => navigation.navigate('Store')}
-            accessibilityRole="button"
-            accessibilityLabel={t('profile.rewardsStore')}
-          >
-            <View style={[styles.streakIcon, styles.tokensIcon]}>
-              <Ionicons
-                name="disc"
-                size={22}
-                color={colors.accentLight}
-                accessibilityElementsHidden={true}
-                importantForAccessibility="no-hide-descendants"
-              />
-            </View>
-            <View style={{ flex: 1 }}>
-              <Text style={styles.streakNumber}>{tokens}</Text>
-              <Text style={styles.streakLabel}>{t('achievements.tokensLabel')}</Text>
-            </View>
-          </TouchableOpacity>
+          {/* Press-scale by outer wrapper. The `flex: 1` has to move onto the
+              wrapper as well: the Animated.View is now the flex child of this
+              row, so without it both cards would collapse to their content. */}
+          <PressScale style={styles.streakCardWrap}>
+            <TouchableOpacity
+              style={styles.streakCard}
+              activeOpacity={0.85}
+              onPress={() => navigation.navigate('Achievements')}
+              accessibilityRole="button"
+              accessibilityLabel={t('achievements.title')}
+            >
+              <View style={styles.streakIcon}>
+                <Ionicons
+                  name="flame"
+                  size={22}
+                  color={colors.warning}
+                  accessibilityElementsHidden={true}
+                  importantForAccessibility="no-hide-descendants"
+                />
+              </View>
+              <View style={{ flex: 1 }}>
+                <Text style={styles.streakNumber}>{currentStreak}</Text>
+                <Text style={styles.streakLabel}>{t('achievements.streakLabel')}</Text>
+              </View>
+            </TouchableOpacity>
+          </PressScale>
+          <PressScale style={styles.streakCardWrap}>
+            <TouchableOpacity
+              style={styles.streakCard}
+              activeOpacity={0.85}
+              onPress={() => navigation.navigate('Store')}
+              accessibilityRole="button"
+              accessibilityLabel={t('profile.rewardsStore')}
+            >
+              <View style={[styles.streakIcon, styles.tokensIcon]}>
+                <Ionicons
+                  name="disc"
+                  size={22}
+                  color={colors.accentLight}
+                  accessibilityElementsHidden={true}
+                  importantForAccessibility="no-hide-descendants"
+                />
+              </View>
+              <View style={{ flex: 1 }}>
+                <Text style={styles.streakNumber}>{tokens}</Text>
+                <Text style={styles.streakLabel}>{t('achievements.tokensLabel')}</Text>
+              </View>
+            </TouchableOpacity>
+          </PressScale>
         </View>
         )}
 
@@ -504,28 +529,30 @@ export default function ProfileScreen() {
             is simply how you sign in - and someone who already pays could never
             find their own account. Signing in is an ENTRY action, so it sits at
             the top, and once there is an account it shows which one. */}
-        <TouchableOpacity
-          style={styles.recapRow}
-          activeOpacity={0.85}
-          onPress={() => navigation.navigate('RestoreAccess')}
-          accessibilityRole="button"
-          accessibilityLabel={accountEmail ? t('login.accountRow') : t('login.signInRow')}
-        >
-          <Ionicons
-            name={accountEmail ? 'person-circle' : 'log-in-outline'}
-            size={19}
-            color={colors.accentLight}
-          />
-          <View style={{ flex: 1 }}>
-            <Text style={styles.recapTitle}>
-              {accountEmail ? t('login.accountRow') : t('login.signInRow')}
-            </Text>
-            <Text style={styles.recapSub} numberOfLines={1}>
-              {accountEmail || t('login.signInSubtitle')}
-            </Text>
-          </View>
-          <Ionicons name="chevron-forward" size={17} color={colors.textMuted} />
-        </TouchableOpacity>
+        <PressScale>
+          <TouchableOpacity
+            style={styles.recapRow}
+            activeOpacity={0.85}
+            onPress={() => navigation.navigate('RestoreAccess')}
+            accessibilityRole="button"
+            accessibilityLabel={accountEmail ? t('login.accountRow') : t('login.signInRow')}
+          >
+            <Ionicons
+              name={accountEmail ? 'person-circle' : 'log-in-outline'}
+              size={19}
+              color={colors.accentLight}
+            />
+            <View style={{ flex: 1 }}>
+              <Text style={styles.recapTitle}>
+                {accountEmail ? t('login.accountRow') : t('login.signInRow')}
+              </Text>
+              <Text style={styles.recapSub} numberOfLines={1}>
+                {accountEmail || t('login.signInSubtitle')}
+              </Text>
+            </View>
+            <Ionicons name="chevron-forward" size={17} color={colors.textMuted} />
+          </TouchableOpacity>
+        </PressScale>
 
         {/* Sign out - only offered when there IS an account on this device.
             The app had a way in and no way out: once a device was linked,
@@ -549,35 +576,39 @@ export default function ProfileScreen() {
           </TouchableOpacity>
         )}
 
-        <TouchableOpacity
-          style={styles.recapRow}
-          activeOpacity={0.85}
-          onPress={() => navigation.navigate('MonthlyRecap')}
-          accessibilityRole="button"
-          accessibilityLabel={t('recap.title')}
-        >
-          <Ionicons name="stats-chart" size={19} color={colors.accentLight} />
-          <View style={{ flex: 1 }}>
-            <Text style={styles.recapTitle}>{t('recap.title')}</Text>
-            <Text style={styles.recapSub}>{t('recap.entrySubtitle')}</Text>
-          </View>
-          <Ionicons name="chevron-forward" size={17} color={colors.textMuted} />
-        </TouchableOpacity>
+        <PressScale>
+          <TouchableOpacity
+            style={styles.recapRow}
+            activeOpacity={0.85}
+            onPress={() => navigation.navigate('MonthlyRecap')}
+            accessibilityRole="button"
+            accessibilityLabel={t('recap.title')}
+          >
+            <Ionicons name="stats-chart" size={19} color={colors.accentLight} />
+            <View style={{ flex: 1 }}>
+              <Text style={styles.recapTitle}>{t('recap.title')}</Text>
+              <Text style={styles.recapSub}>{t('recap.entrySubtitle')}</Text>
+            </View>
+            <Ionicons name="chevron-forward" size={17} color={colors.textMuted} />
+          </TouchableOpacity>
+        </PressScale>
 
-        <TouchableOpacity
-          style={styles.recapRow}
-          activeOpacity={0.85}
-          onPress={() => navigation.navigate('Subscription')}
-          accessibilityRole="button"
-          accessibilityLabel={t('subscription.title')}
-        >
-          <Ionicons name="card-outline" size={19} color={colors.accentLight} />
-          <View style={{ flex: 1 }}>
-            <Text style={styles.recapTitle}>{t('subscription.title')}</Text>
-            <Text style={styles.recapSub}>{t('subscription.entrySubtitle')}</Text>
-          </View>
-          <Ionicons name="chevron-forward" size={17} color={colors.textMuted} />
-        </TouchableOpacity>
+        <PressScale>
+          <TouchableOpacity
+            style={styles.recapRow}
+            activeOpacity={0.85}
+            onPress={() => navigation.navigate('Subscription')}
+            accessibilityRole="button"
+            accessibilityLabel={t('subscription.title')}
+          >
+            <Ionicons name="card-outline" size={19} color={colors.accentLight} />
+            <View style={{ flex: 1 }}>
+              <Text style={styles.recapTitle}>{t('subscription.title')}</Text>
+              <Text style={styles.recapSub}>{t('subscription.entrySubtitle')}</Text>
+            </View>
+            <Ionicons name="chevron-forward" size={17} color={colors.textMuted} />
+          </TouchableOpacity>
+        </PressScale>
 
         <View style={styles.accountCard}>
           {subStatus === 'active' ? (
@@ -632,234 +663,268 @@ export default function ProfileScreen() {
           </View>
         )}
 
-        <Text style={styles.sectionLabel}>{t('profile.byCategory')}</Text>
+        {/* Zona de cor #1: the whole per-category block lives in a full-bleed
+            band one shade lighter than the page, so it reads as ONE section and
+            the gap above and below it is the scene showing through. The gutter
+            matches styles.scroll's padding, and ZoneBand is a pure wrapper - the
+            title and the categories keep their order and their content. */}
+        <ZoneBand gutter={20} style={styles.zoneGap}>
+          <Text style={styles.sectionLabel}>{t('profile.byCategory')}</Text>
 
-        {Object.values(CATEGORIES).map((meta) => (
-          <View key={meta.key} style={styles.categoryCard}>
-            <View style={[styles.categoryIcon, { backgroundColor: meta.accent + '33' }]}>
-              <CategoryIcon
-                name={meta.tabIcon}
-                size={22}
-                color={meta.accent}
+          {Object.values(CATEGORIES).map((meta) => (
+            <View key={meta.key} style={styles.categoryCard}>
+              <View style={[styles.categoryIcon, { backgroundColor: meta.accent + '33' }]}>
+                <CategoryIcon
+                  name={meta.tabIcon}
+                  size={22}
+                  color={meta.accent}
+                  accessibilityElementsHidden={true}
+                  importantForAccessibility="no-hide-descendants"
+                />
+              </View>
+              <Text style={styles.categoryLabel}>{t(`categories.${meta.key}.tabLabel`)}</Text>
+              <Text style={styles.categoryCount}>{counts[meta.key] || 0}</Text>
+            </View>
+          ))}
+        </ZoneBand>
+
+        {/* Zona de cor #2: every settings row in one full-bleed band, so the
+            eye reads "settings" as a single place instead of a stack of loose
+            cards drifting down the page. Nothing here was reordered or moved
+            between sections - the band only draws around what was already this
+            run of rows. */}
+        <ZoneBand gutter={20} style={styles.zoneGap}>
+          {/* Web push. Only rendered where it can actually work: on iPhone the
+              API exists in a Safari tab but is inert until the PWA is installed,
+              so offering it there would teach the user the button is broken. */}
+          {canUsePush() && (
+            <PressScale>
+              <TouchableOpacity
+                style={styles.privacyRow}
+                activeOpacity={0.7}
+                onPress={handleTogglePush}
+                disabled={pushBusy}
+                accessibilityRole="switch"
+                accessibilityState={{ checked: pushOn }}
+                accessibilityLabel={t('notifications.row')}
+              >
+                <Ionicons
+                  name={pushOn ? 'notifications' : 'notifications-outline'}
+                  size={19}
+                  color={pushOn ? colors.accent : colors.accentLight}
+                />
+                <Text style={styles.privacyText}>{t('notifications.row')}</Text>
+                <Text style={styles.pushState}>
+                  {pushOn ? t('notifications.on') : t('notifications.off')}
+                </Text>
+              </TouchableOpacity>
+            </PressScale>
+          )}
+
+          {/* Backup. The collection lives only in this browser's storage, so
+              without this a cleared browser or a new phone loses everything -
+              the one thing in the app a user cannot get back. */}
+          {Platform.OS === 'web' && (
+            <>
+              <PressScale>
+                <TouchableOpacity
+                  style={styles.privacyRow}
+                  activeOpacity={0.7}
+                  onPress={handleExport}
+                  disabled={backupBusy}
+                  accessibilityRole="button"
+                  accessibilityLabel={t('backup.exportRow')}
+                >
+                  <Ionicons name="download-outline" size={19} color={colors.accentLight} />
+                  <Text style={styles.privacyText}>{t('backup.exportRow')}</Text>
+                  <Ionicons name="chevron-forward" size={18} color={colors.textMuted} />
+                </TouchableOpacity>
+              </PressScale>
+
+              <PressScale>
+                <TouchableOpacity
+                  style={styles.privacyRow}
+                  activeOpacity={0.7}
+                  onPress={handleImport}
+                  disabled={backupBusy}
+                  accessibilityRole="button"
+                  accessibilityLabel={t('backup.importRow')}
+                >
+                  <Ionicons name="cloud-upload-outline" size={19} color={colors.accentLight} />
+                  <Text style={styles.privacyText}>{t('backup.importRow')}</Text>
+                  <Ionicons name="chevron-forward" size={18} color={colors.textMuted} />
+                </TouchableOpacity>
+              </PressScale>
+            </>
+          )}
+
+          {/* Approximate location. Sits with the privacy rows rather than under a
+              "settings" heading because that is what it is: a choice about what
+              leaves the device. Off is always allowed - identification still
+              works, just with a wider field of candidates. */}
+          {canUseLocation() && (
+            <PressScale>
+              <TouchableOpacity
+                style={styles.privacyRow}
+                activeOpacity={0.7}
+                onPress={toggleLocation}
+                accessibilityRole="switch"
+                accessibilityState={{ checked: locationOn }}
+                accessibilityLabel={t('profile.locationRow')}
+              >
+                <Ionicons
+                  name={locationOn ? 'location' : 'location-outline'}
+                  size={19}
+                  color={locationOn ? colors.accentLight : colors.textMuted}
+                />
+                <View style={{ flex: 1 }}>
+                  <Text style={styles.privacyText}>{t('profile.locationRow')}</Text>
+                  <Text style={styles.locationHint}>{t('profile.locationHint')}</Text>
+                </View>
+                <Ionicons
+                  name={locationOn ? 'toggle' : 'toggle-outline'}
+                  size={26}
+                  color={locationOn ? colors.accent : colors.textMuted}
+                />
+              </TouchableOpacity>
+            </PressScale>
+          )}
+
+          <PressScale>
+            <TouchableOpacity
+              style={styles.privacyRow}
+              activeOpacity={0.7}
+              onPress={() => navigation.navigate('Privacy')}
+              accessibilityRole="button"
+              accessibilityLabel={t('profile.privacyPolicy')}
+            >
+              <Ionicons
+                name="document-lock-outline"
+                size={18}
+                color={colors.textSecondary}
                 accessibilityElementsHidden={true}
                 importantForAccessibility="no-hide-descendants"
               />
-            </View>
-            <Text style={styles.categoryLabel}>{t(`categories.${meta.key}.tabLabel`)}</Text>
-            <Text style={styles.categoryCount}>{counts[meta.key] || 0}</Text>
-          </View>
-        ))}
+              <Text style={styles.privacyText}>{t('profile.privacyPolicy')}</Text>
+              <Ionicons
+                name="chevron-forward"
+                size={18}
+                color={colors.textMuted}
+                accessibilityElementsHidden={true}
+                importantForAccessibility="no-hide-descendants"
+              />
+            </TouchableOpacity>
+          </PressScale>
 
-        {/* Web push. Only rendered where it can actually work: on iPhone the
-            API exists in a Safari tab but is inert until the PWA is installed,
-            so offering it there would teach the user the button is broken. */}
-        {canUsePush() && (
-          <TouchableOpacity
-            style={styles.privacyRow}
-            activeOpacity={0.7}
-            onPress={handleTogglePush}
-            disabled={pushBusy}
-            accessibilityRole="switch"
-            accessibilityState={{ checked: pushOn }}
-            accessibilityLabel={t('notifications.row')}
-          >
-            <Ionicons
-              name={pushOn ? 'notifications' : 'notifications-outline'}
-              size={19}
-              color={pushOn ? colors.accent : colors.accentLight}
-            />
-            <Text style={styles.privacyText}>{t('notifications.row')}</Text>
-            <Text style={styles.pushState}>
-              {pushOn ? t('notifications.on') : t('notifications.off')}
-            </Text>
-          </TouchableOpacity>
-        )}
-
-        {/* Backup. The collection lives only in this browser's storage, so
-            without this a cleared browser or a new phone loses everything -
-            the one thing in the app a user cannot get back. */}
-        {Platform.OS === 'web' && (
-          <>
+          <PressScale>
             <TouchableOpacity
               style={styles.privacyRow}
               activeOpacity={0.7}
-              onPress={handleExport}
-              disabled={backupBusy}
+              onPress={() => navigation.navigate('Terms')}
               accessibilityRole="button"
-              accessibilityLabel={t('backup.exportRow')}
+              accessibilityLabel={t('profile.termsOfUse')}
             >
-              <Ionicons name="download-outline" size={19} color={colors.accentLight} />
-              <Text style={styles.privacyText}>{t('backup.exportRow')}</Text>
-              <Ionicons name="chevron-forward" size={18} color={colors.textMuted} />
+              <Ionicons
+                name="document-text-outline"
+                size={18}
+                color={colors.textSecondary}
+                accessibilityElementsHidden={true}
+                importantForAccessibility="no-hide-descendants"
+              />
+              <Text style={styles.privacyText}>{t('profile.termsOfUse')}</Text>
+              <Ionicons
+                name="chevron-forward"
+                size={18}
+                color={colors.textMuted}
+                accessibilityElementsHidden={true}
+                importantForAccessibility="no-hide-descendants"
+              />
             </TouchableOpacity>
+          </PressScale>
 
+          <PressScale>
             <TouchableOpacity
               style={styles.privacyRow}
               activeOpacity={0.7}
-              onPress={handleImport}
-              disabled={backupBusy}
+              onPress={() => navigation.navigate('Help')}
               accessibilityRole="button"
-              accessibilityLabel={t('backup.importRow')}
+              accessibilityLabel={t('profile.helpAndSupport')}
             >
-              <Ionicons name="cloud-upload-outline" size={19} color={colors.accentLight} />
-              <Text style={styles.privacyText}>{t('backup.importRow')}</Text>
-              <Ionicons name="chevron-forward" size={18} color={colors.textMuted} />
+              <Ionicons
+                name="help-circle-outline"
+                size={18}
+                color={colors.textSecondary}
+                accessibilityElementsHidden={true}
+                importantForAccessibility="no-hide-descendants"
+              />
+              <Text style={styles.privacyText}>{t('profile.helpAndSupport')}</Text>
+              <Ionicons
+                name="chevron-forward"
+                size={18}
+                color={colors.textMuted}
+                accessibilityElementsHidden={true}
+                importantForAccessibility="no-hide-descendants"
+              />
             </TouchableOpacity>
-          </>
-        )}
+          </PressScale>
 
-        {/* Approximate location. Sits with the privacy rows rather than under a
-            "settings" heading because that is what it is: a choice about what
-            leaves the device. Off is always allowed - identification still
-            works, just with a wider field of candidates. */}
-        {canUseLocation() && (
-          <TouchableOpacity
-            style={styles.privacyRow}
-            activeOpacity={0.7}
-            onPress={toggleLocation}
-            accessibilityRole="switch"
-            accessibilityState={{ checked: locationOn }}
-            accessibilityLabel={t('profile.locationRow')}
-          >
-            <Ionicons
-              name={locationOn ? 'location' : 'location-outline'}
-              size={19}
-              color={locationOn ? colors.accentLight : colors.textMuted}
-            />
-            <View style={{ flex: 1 }}>
-              <Text style={styles.privacyText}>{t('profile.locationRow')}</Text>
-              <Text style={styles.locationHint}>{t('profile.locationHint')}</Text>
-            </View>
-            <Ionicons
-              name={locationOn ? 'toggle' : 'toggle-outline'}
-              size={26}
-              color={locationOn ? colors.accent : colors.textMuted}
-            />
-          </TouchableOpacity>
-        )}
-
-        <TouchableOpacity
-          style={styles.privacyRow}
-          activeOpacity={0.7}
-          onPress={() => navigation.navigate('Privacy')}
-          accessibilityRole="button"
-          accessibilityLabel={t('profile.privacyPolicy')}
-        >
-          <Ionicons
-            name="document-lock-outline"
-            size={18}
-            color={colors.textSecondary}
-            accessibilityElementsHidden={true}
-            importantForAccessibility="no-hide-descendants"
-          />
-          <Text style={styles.privacyText}>{t('profile.privacyPolicy')}</Text>
-          <Ionicons
-            name="chevron-forward"
-            size={18}
-            color={colors.textMuted}
-            accessibilityElementsHidden={true}
-            importantForAccessibility="no-hide-descendants"
-          />
-        </TouchableOpacity>
-
-        <TouchableOpacity
-          style={styles.privacyRow}
-          activeOpacity={0.7}
-          onPress={() => navigation.navigate('Terms')}
-          accessibilityRole="button"
-          accessibilityLabel={t('profile.termsOfUse')}
-        >
-          <Ionicons
-            name="document-text-outline"
-            size={18}
-            color={colors.textSecondary}
-            accessibilityElementsHidden={true}
-            importantForAccessibility="no-hide-descendants"
-          />
-          <Text style={styles.privacyText}>{t('profile.termsOfUse')}</Text>
-          <Ionicons
-            name="chevron-forward"
-            size={18}
-            color={colors.textMuted}
-            accessibilityElementsHidden={true}
-            importantForAccessibility="no-hide-descendants"
-          />
-        </TouchableOpacity>
-
-        <TouchableOpacity
-          style={styles.privacyRow}
-          activeOpacity={0.7}
-          onPress={() => navigation.navigate('Help')}
-          accessibilityRole="button"
-          accessibilityLabel={t('profile.helpAndSupport')}
-        >
-          <Ionicons
-            name="help-circle-outline"
-            size={18}
-            color={colors.textSecondary}
-            accessibilityElementsHidden={true}
-            importantForAccessibility="no-hide-descendants"
-          />
-          <Text style={styles.privacyText}>{t('profile.helpAndSupport')}</Text>
-          <Ionicons
-            name="chevron-forward"
-            size={18}
-            color={colors.textMuted}
-            accessibilityElementsHidden={true}
-            importantForAccessibility="no-hide-descendants"
-          />
-        </TouchableOpacity>
-
-        {installAvailable && (
-          <TouchableOpacity
-            style={styles.privacyRow}
-            activeOpacity={0.7}
-            onPress={handleInstall}
-            accessibilityRole="button"
-            accessibilityLabel={t('profile.installApp')}
-          >
-            <Ionicons
-              name="download-outline"
-              size={18}
-              color={colors.textSecondary}
-              accessibilityElementsHidden={true}
-              importantForAccessibility="no-hide-descendants"
-            />
-            <Text style={styles.privacyText}>{t('profile.installApp')}</Text>
-            <Ionicons
-              name="chevron-forward"
-              size={18}
-              color={colors.textMuted}
-              accessibilityElementsHidden={true}
-              importantForAccessibility="no-hide-descendants"
-            />
-          </TouchableOpacity>
-        )}
+          {installAvailable && (
+            <PressScale>
+              <TouchableOpacity
+                style={styles.privacyRow}
+                activeOpacity={0.7}
+                onPress={handleInstall}
+                accessibilityRole="button"
+                accessibilityLabel={t('profile.installApp')}
+              >
+                <Ionicons
+                  name="download-outline"
+                  size={18}
+                  color={colors.textSecondary}
+                  accessibilityElementsHidden={true}
+                  importantForAccessibility="no-hide-descendants"
+                />
+                <Text style={styles.privacyText}>{t('profile.installApp')}</Text>
+                <Ionicons
+                  name="chevron-forward"
+                  size={18}
+                  color={colors.textMuted}
+                  accessibilityElementsHidden={true}
+                  importantForAccessibility="no-hide-descendants"
+                />
+              </TouchableOpacity>
+            </PressScale>
+          )}
+        </ZoneBand>
 
         <Text style={styles.sectionLabel}>{t('profile.language')}</Text>
 
         {SUPPORTED_LANGUAGES.map((lang) => {
           const isActive = i18n.language === lang.code;
           return (
-            <TouchableOpacity
-              key={lang.code}
-              style={[styles.languageRow, isActive && styles.languageRowActive]}
-              activeOpacity={0.7}
-              onPress={async () => await setAppLanguage(lang.code)}
-              accessibilityRole="button"
-              accessibilityLabel={`Switch language to ${lang.label}`}
-            >
-              <Text style={styles.languageText}>{lang.label}</Text>
-              {isActive && (
-                <Ionicons
-                  name="checkmark-circle"
-                  size={20}
-                  color={colors.accent}
-                  accessibilityElementsHidden={true}
-                  importantForAccessibility="no-hide-descendants"
-                />
-              )}
-            </TouchableOpacity>
+            // The key goes on the wrapper because that is now the element in the
+            // array; the row keeps its own key so the Touchable is untouched.
+            <PressScale key={lang.code}>
+              <TouchableOpacity
+                key={lang.code}
+                style={[styles.languageRow, isActive && styles.languageRowActive]}
+                activeOpacity={0.7}
+                onPress={async () => await setAppLanguage(lang.code)}
+                accessibilityRole="button"
+                accessibilityLabel={`Switch language to ${lang.label}`}
+              >
+                <Text style={styles.languageText}>{lang.label}</Text>
+                {isActive && (
+                  <Ionicons
+                    name="checkmark-circle"
+                    size={20}
+                    color={colors.accent}
+                    accessibilityElementsHidden={true}
+                    importantForAccessibility="no-hide-descendants"
+                  />
+                )}
+              </TouchableOpacity>
+            </PressScale>
           );
         })}
 
@@ -919,23 +984,26 @@ const styles = StyleSheet.create({
   },
   title: { fontSize: 20, fontWeight: '800', color: colors.text },
   scroll: { padding: 20, paddingTop: 6 },
+  // Hero-first: the avatar is the screen's identity, so it is large (124) and
+  // given room above and below rather than sitting as a small chip over a list.
   avatarWrap: {
     alignSelf: 'center',
-    marginBottom: 16,
-    width: 88,
-    height: 88,
+    marginTop: 10,
+    marginBottom: 20,
+    width: 124,
+    height: 124,
   },
   avatarImage: {
-    width: 88,
-    height: 88,
-    borderRadius: 44,
+    width: 124,
+    height: 124,
+    borderRadius: 62,
     borderWidth: 2,
     borderColor: colors.border,
   },
   avatarPlaceholder: {
-    width: 88,
-    height: 88,
-    borderRadius: 44,
+    width: 124,
+    height: 124,
+    borderRadius: 62,
     backgroundColor: colors.surface,
     borderWidth: 2,
     borderColor: colors.border,
@@ -944,11 +1012,11 @@ const styles = StyleSheet.create({
   },
   avatarEditBadge: {
     position: 'absolute',
-    right: 0,
-    bottom: 0,
-    width: 26,
-    height: 26,
-    borderRadius: 13,
+    right: 4,
+    bottom: 4,
+    width: 32,
+    height: 32,
+    borderRadius: 16,
     backgroundColor: colors.accent,
     alignItems: 'center',
     justifyContent: 'center',
@@ -1018,6 +1086,13 @@ const styles = StyleSheet.create({
     gap: 12,
     marginTop: 14,
   },
+  // The flex the PressScale wrapper needs so the two cards still share the row
+  // evenly once the Animated.View sits between them and streakRow.
+  streakCardWrap: { flex: 1 },
+  // The gap between two zones IS the device - it is the scene showing through
+  // between them. ZoneBand's own 8px left the stats band and the settings band
+  // reading as one continuous slab, which is the opposite of the rhythm.
+  zoneGap: { marginTop: 26 },
   streakCard: {
     flex: 1,
     flexDirection: 'row',
@@ -1086,14 +1161,16 @@ const styles = StyleSheet.create({
     color: colors.text,
     marginBottom: 10,
   },
+  // Composição centrada, with the criterion: SECTION titles centre and carry
+  // weight (22/800). Row labels, card titles and reading text below stay left
+  // aligned - centring a long line is what makes a layout unreadable.
   sectionLabel: {
-    fontSize: 13,
-    fontWeight: '700',
-    color: colors.textMuted,
-    textTransform: 'uppercase',
-    letterSpacing: 0.5,
-    marginTop: 24,
-    marginBottom: 12,
+    fontSize: 22,
+    fontWeight: '800',
+    color: colors.text,
+    textAlign: 'center',
+    marginTop: 34,
+    marginBottom: 16,
   },
   categoryCard: {
     flexDirection: 'row',
@@ -1116,6 +1193,9 @@ const styles = StyleSheet.create({
   },
   categoryLabel: { flex: 1, fontSize: 15, fontWeight: '700', color: colors.text },
   categoryCount: { fontSize: 16, fontWeight: '800', color: colors.accentLight },
+  // Tighter than before (24 → 12): inside the settings zone the band itself
+  // provides the separation, so 24px between every row made one section read as
+  // seven unrelated ones.
   privacyRow: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -1123,7 +1203,7 @@ const styles = StyleSheet.create({
     borderRadius: 14,
     paddingHorizontal: 16,
     paddingVertical: 14,
-    marginTop: 24,
+    marginTop: 12,
     borderWidth: 1,
     borderColor: colors.border,
   },

@@ -128,28 +128,51 @@ export default function TwoRowTabBar({ state, descriptors, navigation }) {
       />
     ));
 
+  // Dock pílula: the bar floats free of the screen edges instead of being
+  // welded to them. Two rules from the Cosmic doctrine are load-bearing here:
+  //
+  //  - position by MARGINS, never `position: absolute`. An absolute bar covers
+  //    the bottom of every screen behind it, which is the viewport bug class
+  //    that has already cost real conversions in another app.
+  //  - the outer View needs its own backgroundColor: on web the gap around the
+  //    pill renders white without it.
   return (
-    <View style={[styles.bar, { paddingBottom: Math.max(insets.bottom, 8) }]}>
-      {scanRows.map((entries, i) => (
-        // Index as key is safe here: rows are positional slots, not identities -
-        // the tabs inside carry their own stable route.key.
-        <View key={`scan-${i}`} style={styles.row}>
-          {render(entries, true)}
-        </View>
-      ))}
-      {bottom.length > 0 && (
-        <View style={[styles.row, styles.rowBottom]}>{render(bottom, false)}</View>
-      )}
+    <View style={[styles.dock, { paddingBottom: Math.max(insets.bottom, 10) }]}>
+      <View style={styles.bar}>
+        {scanRows.map((entries, i) => (
+          // Index as key is safe here: rows are positional slots, not identities -
+          // the tabs inside carry their own stable route.key.
+          <View key={`scan-${i}`} style={styles.row}>
+            {render(entries, true)}
+          </View>
+        ))}
+        {bottom.length > 0 && (
+          <View style={[styles.row, styles.rowBottom]}>{render(bottom, false)}</View>
+        )}
+      </View>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
+  dock: {
+    backgroundColor: colors.background,
+    paddingHorizontal: 10,
+    paddingTop: 6,
+  },
   bar: {
     backgroundColor: colors.surface,
-    borderTopColor: colors.border,
-    borderTopWidth: 1,
+    borderColor: colors.border,
+    borderWidth: 1,
+    borderRadius: 26,
     paddingTop: 6,
+    paddingBottom: 4,
+    overflow: 'hidden',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.3,
+    shadowRadius: 12,
+    elevation: 8,
   },
   row: {
     flexDirection: 'row',

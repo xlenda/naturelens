@@ -4,6 +4,13 @@ export const colors = {
   surfaceElevated: '#1F2A25',
   card: '#1A241F',
   border: '#26332C',
+  // Scene + zone tones. Both are NEIGHBOURS of `background` (one step up), not
+  // new hues: the premium look comes from a dark→lighter→dark rhythm across
+  // full-bleed bands, and a band in a loud colour reads as a banner instead of
+  // as depth. See NatureScene.js / ZoneBand.js.
+  sky: '#132019',
+  skyMid: '#101A15',
+  zone: '#141E19',
   accent: '#4E9F6B',
   accentDark: '#3B7A52',
   accentLight: '#7FC79A',

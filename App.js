@@ -5,7 +5,7 @@ import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { createStackNavigator } from '@react-navigation/stack';
+import { createStackNavigator, TransitionPresets } from '@react-navigation/stack';
 import { Ionicons } from '@expo/vector-icons';
 import CategoryIcon from './components/CategoryIcon';
 import { StatusBar } from 'expo-status-bar';
@@ -55,6 +55,24 @@ const CollectionStack = createStackNavigator();
 const DiscoverStack = createStackNavigator();
 const ProfileStack = createStackNavigator();
 
+// Shared options for every stack. Three deliberate pieces, each one a defect
+// that shows up only on web:
+//
+//  - `animationEnabled: true` EXPLICITLY: react-navigation defaults it to false
+//    on web, so the preset alone gives no transition at all.
+//  - `cardStyle` with the app background: without it the area behind the
+//    sliding card is the navigator's DefaultTheme grey, and every push flashes
+//    a pale rectangle across a dark app.
+//  - `gestureEnabled: false` stays: the preset does not turn gestures on, and
+//    swipe-back on web hijacks horizontal scrolling inside the screen.
+const STACK_OPTIONS = {
+  headerShown: false,
+  animationEnabled: true,
+  gestureEnabled: false,
+  cardStyle: { backgroundColor: colors.background },
+  ...TransitionPresets.SlideFromRightIOS,
+};
+
 const DETAIL_SCREENS = {
   plant: PlantDetailScreen,
   insect: InsectDetailScreen,
@@ -71,7 +89,7 @@ function makeScanStackNav(categoryKey) {
   const DetailScreen = DETAIL_SCREENS[categoryKey];
   return function ScanStackNav() {
     return (
-      <ScanStack.Navigator screenOptions={{ headerShown: false }}>
+      <ScanStack.Navigator screenOptions={STACK_OPTIONS}>
         <ScanStack.Screen name="ScanHome" component={IdentifyScreen} initialParams={{ category: categoryKey }} />
         <ScanStack.Screen name={meta.detailRoute} component={DetailScreen} />
       </ScanStack.Navigator>
@@ -94,7 +112,7 @@ const BirdStack = makeScanStackNav('bird');
 // IdentifyScreen (a camera screen) as the root, and this category has no camera.
 function SoundStackNav() {
   return (
-    <ScanStack.Navigator screenOptions={{ headerShown: false }}>
+    <ScanStack.Navigator screenOptions={STACK_OPTIONS}>
       <ScanStack.Screen name="SoundHome" component={SoundScreen} />
       <ScanStack.Screen name="SoundDetail" component={SoundDetailScreen} />
     </ScanStack.Navigator>
@@ -103,7 +121,7 @@ function SoundStackNav() {
 
 function CollectionStackNav() {
   return (
-    <CollectionStack.Navigator screenOptions={{ headerShown: false }}>
+    <CollectionStack.Navigator screenOptions={STACK_OPTIONS}>
       <CollectionStack.Screen name="CollectionHome" component={CollectionScreen} />
       <CollectionStack.Screen name="PlantDetail" component={PlantDetailScreen} />
       <CollectionStack.Screen name="InsectDetail" component={InsectDetailScreen} />
@@ -128,7 +146,7 @@ function CollectionStackNav() {
 // navigated to them (verified by grep before the move), so the split is clean.
 function ProfileStackNav() {
   return (
-    <ProfileStack.Navigator screenOptions={{ headerShown: false }}>
+    <ProfileStack.Navigator screenOptions={STACK_OPTIONS}>
       <ProfileStack.Screen name="ProfileHome" component={ProfileScreen} />
       <ProfileStack.Screen name="Achievements" component={AchievementsScreen} />
       <ProfileStack.Screen name="Store" component={StoreScreen} />
@@ -144,7 +162,7 @@ function ProfileStackNav() {
 
 function DiscoverStackNav() {
   return (
-    <DiscoverStack.Navigator screenOptions={{ headerShown: false }}>
+    <DiscoverStack.Navigator screenOptions={STACK_OPTIONS}>
       <DiscoverStack.Screen name="DiscoverHome" component={DiscoverScreen} />
       <DiscoverStack.Screen name="TopicDetail" component={TopicDetailScreen} />
       <DiscoverStack.Screen name="SpeciesDetail" component={SpeciesDetailScreen} />

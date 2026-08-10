@@ -25,6 +25,10 @@ import AlertModal from '../components/AlertModal';
 import { useAppAlert } from '../components/useAppAlert';
 import CategoryIcon from '../components/CategoryIcon';
 import FindThumb from '../components/FindThumb';
+import SubscribeFab from '../components/SubscribeFab';
+import NatureScene from '../components/NatureScene';
+import ZoneBand from '../components/ZoneBand';
+import PressScale from '../components/PressScale';
 
 function formatDate(iso) {
   try {
@@ -184,125 +188,140 @@ export default function CollectionScreen() {
     const meta = CATEGORIES[item.category] || CATEGORIES.plant;
     const wateringStatus = item.category === 'plant' ? getWateringStatus(item) : null;
     return (
-      <TouchableOpacity
-        style={styles.card}
-        activeOpacity={0.85}
-        onPress={() => navigation.navigate(meta.detailRoute, { plant: item })}
-        onLongPress={() => handleItemActions(item)}
-        accessibilityRole="button"
-        accessibilityLabel={t('collection.viewDetailsLabel', { name: item.nickname || item.name })}
-      >
-        {/* The find's own photo, not a category icon - this is the album of
-            what the person actually saw. Falls back to a real species photo
-            for finds restored from the cloud (which never carry the personal
-            photo), and only then to the icon. */}
-        <FindThumb
-          photoUri={item.photoUri}
-          scientific={item.scientific}
-          icon={meta.tabIcon}
-          accent={meta.accent}
-          iconSize={28}
-          style={styles.thumb}
-        />
-        <View style={{ flex: 1 }}>
-          {/* The nickname takes the name's place - the find is "the balcony
-              fern" to its owner, and the species name steps down to the line
-              below. Both stay searchable. */}
-          <Text style={styles.cardName}>{item.nickname || item.name}</Text>
-          {!!item.nickname && <Text style={styles.cardRealName}>{item.name}</Text>}
-          {!!item.scientific && <Text style={styles.cardSci}>{item.scientific}</Text>}
-          <View style={styles.cardMeta}>
-            <View style={[styles.tag, { backgroundColor: meta.accent + '22' }]}>
-              <Text style={[styles.tagText, { color: meta.accent }]}>{t(`categories.${meta.key}.label`)}</Text>
-            </View>
-            {!!wateringStatus && (
-              <View style={styles.waterBadge}>
-                <Ionicons
-                  name="water-outline"
-                  size={11}
-                  color={wateringStatus.overdue ? colors.error : colors.textMuted}
-                  accessibilityElementsHidden={true}
-                  importantForAccessibility="no-hide-descendants"
-                />
-                <Text
-                  style={[
-                    styles.waterBadgeText,
-                    { color: wateringStatus.overdue ? colors.error : colors.textMuted },
-                  ]}
-                >
-                  {wateringStatus.label}
-                </Text>
-              </View>
-            )}
-            {!!item.room && (
-              <View style={styles.roomBadge}>
-                <Ionicons
-                  name="home-outline"
-                  size={11}
-                  color={colors.textSecondary}
-                  accessibilityElementsHidden={true}
-                  importantForAccessibility="no-hide-descendants"
-                />
-                <Text style={styles.roomBadgeText}>{ROOM_LABELS[item.room]}</Text>
-              </View>
-            )}
-            <Text style={styles.date}>
-              <Ionicons
-                name="time-outline"
-                size={11}
-                color={colors.textMuted}
-                accessibilityElementsHidden={true}
-                importantForAccessibility="no-hide-descendants"
-              />{' '}
-              {formatDate(item.savedAt)}
-            </Text>
-          </View>
-        </View>
+      // Micro-animação press-scale, applied as an OUTER wrapper on purpose: the
+      // card Touchable keeps every prop it had (a11y, activeOpacity, onPress,
+      // onLongPress), and on react-native-web the transform only drives from a
+      // wrapping Animated.View anyway.
+      <PressScale>
         <TouchableOpacity
-          style={styles.removeBtn}
-          onPress={() => handleRemove(item.savedId)}
+          style={styles.card}
+          activeOpacity={0.85}
+          onPress={() => navigation.navigate(meta.detailRoute, { plant: item })}
+          onLongPress={() => handleItemActions(item)}
           accessibilityRole="button"
-          accessibilityLabel={t('collection.removeLabel', { name: item.name })}
+          accessibilityLabel={t('collection.viewDetailsLabel', { name: item.nickname || item.name })}
         >
-          <Ionicons name="trash-outline" size={18} color={colors.textMuted} />
+          {/* The find's own photo, not a category icon - this is the album of
+              what the person actually saw. Falls back to a real species photo
+              for finds restored from the cloud (which never carry the personal
+              photo), and only then to the icon. */}
+          <FindThumb
+            photoUri={item.photoUri}
+            scientific={item.scientific}
+            icon={meta.tabIcon}
+            accent={meta.accent}
+            iconSize={28}
+            style={styles.thumb}
+          />
+          <View style={{ flex: 1 }}>
+            {/* The nickname takes the name's place - the find is "the balcony
+                fern" to its owner, and the species name steps down to the line
+                below. Both stay searchable. */}
+            <Text style={styles.cardName}>{item.nickname || item.name}</Text>
+            {!!item.nickname && <Text style={styles.cardRealName}>{item.name}</Text>}
+            {!!item.scientific && <Text style={styles.cardSci}>{item.scientific}</Text>}
+            <View style={styles.cardMeta}>
+              <View style={[styles.tag, { backgroundColor: meta.accent + '22' }]}>
+                <Text style={[styles.tagText, { color: meta.accent }]}>{t(`categories.${meta.key}.label`)}</Text>
+              </View>
+              {!!wateringStatus && (
+                <View style={styles.waterBadge}>
+                  <Ionicons
+                    name="water-outline"
+                    size={11}
+                    color={wateringStatus.overdue ? colors.error : colors.textMuted}
+                    accessibilityElementsHidden={true}
+                    importantForAccessibility="no-hide-descendants"
+                  />
+                  <Text
+                    style={[
+                      styles.waterBadgeText,
+                      { color: wateringStatus.overdue ? colors.error : colors.textMuted },
+                    ]}
+                  >
+                    {wateringStatus.label}
+                  </Text>
+                </View>
+              )}
+              {!!item.room && (
+                <View style={styles.roomBadge}>
+                  <Ionicons
+                    name="home-outline"
+                    size={11}
+                    color={colors.textSecondary}
+                    accessibilityElementsHidden={true}
+                    importantForAccessibility="no-hide-descendants"
+                  />
+                  <Text style={styles.roomBadgeText}>{ROOM_LABELS[item.room]}</Text>
+                </View>
+              )}
+              <Text style={styles.date}>
+                <Ionicons
+                  name="time-outline"
+                  size={11}
+                  color={colors.textMuted}
+                  accessibilityElementsHidden={true}
+                  importantForAccessibility="no-hide-descendants"
+                />{' '}
+                {formatDate(item.savedAt)}
+              </Text>
+            </View>
+          </View>
+          <TouchableOpacity
+            style={styles.removeBtn}
+            onPress={() => handleRemove(item.savedId)}
+            accessibilityRole="button"
+            accessibilityLabel={t('collection.removeLabel', { name: item.name })}
+          >
+            <Ionicons name="trash-outline" size={18} color={colors.textMuted} />
+          </TouchableOpacity>
         </TouchableOpacity>
-      </TouchableOpacity>
+      </PressScale>
     );
   };
 
   const renderGridItem = ({ item }) => {
     const meta = CATEGORIES[item.category] || CATEGORIES.plant;
     return (
-      <TouchableOpacity
-        style={styles.gridCard}
-        activeOpacity={0.85}
-        onPress={() => navigation.navigate(meta.detailRoute, { plant: item })}
-        onLongPress={() => handleItemActions(item)}
-        accessibilityRole="button"
-        accessibilityLabel={t('collection.viewDetailsLabel', { name: item.nickname || item.name })}
-      >
-        {/* Grid mode is the album view: the photo IS the tile, edge to edge,
-            with the name as caption - not an icon chip with text under it. */}
-        <FindThumb
-          photoUri={item.photoUri}
-          scientific={item.scientific}
-          icon={meta.tabIcon}
-          accent={meta.accent}
-          iconSize={30}
-          style={styles.gridThumb}
-        />
-        <Text style={styles.gridName} numberOfLines={1}>
-          {item.nickname || item.name}
-        </Text>
-        <View style={[styles.tag, { backgroundColor: meta.accent + '22', marginRight: 0 }]}>
-          <Text style={[styles.tagText, { color: meta.accent }]}>{t(`categories.${meta.key}.label`)}</Text>
-        </View>
-      </TouchableOpacity>
+      // Micro-animação press-scale. The wrapper - not the card - carries the
+      // flex here: it becomes the column of the two-up row, and without
+      // gridCardWrap the tiles would collapse to their content width.
+      <PressScale style={styles.gridCardWrap}>
+        <TouchableOpacity
+          style={styles.gridCard}
+          activeOpacity={0.85}
+          onPress={() => navigation.navigate(meta.detailRoute, { plant: item })}
+          onLongPress={() => handleItemActions(item)}
+          accessibilityRole="button"
+          accessibilityLabel={t('collection.viewDetailsLabel', { name: item.nickname || item.name })}
+        >
+          {/* Grid mode is the album view: the photo IS the tile, edge to edge,
+              with the name as caption - not an icon chip with text under it. */}
+          <FindThumb
+            photoUri={item.photoUri}
+            scientific={item.scientific}
+            icon={meta.tabIcon}
+            accent={meta.accent}
+            iconSize={30}
+            style={styles.gridThumb}
+          />
+          <Text style={styles.gridName} numberOfLines={1}>
+            {item.nickname || item.name}
+          </Text>
+          <View style={[styles.tag, { backgroundColor: meta.accent + '22', marginRight: 0 }]}>
+            <Text style={[styles.tagText, { color: meta.accent }]}>{t(`categories.${meta.key}.label`)}</Text>
+          </View>
+        </TouchableOpacity>
+      </PressScale>
     );
   };
 
   return (
     <SafeAreaView style={styles.container} edges={['top']}>
+      {/* Cenário em camadas: the scene is the FIRST child and paints over the
+          container's own background, never replaces it. */}
+      <NatureScene />
+
       <View style={styles.header}>
         <View style={styles.titleRow}>
           <Image source={require('../assets/icon.png')} style={styles.logo} />
@@ -342,66 +361,75 @@ export default function CollectionScreen() {
       </View>
 
       {!loading && collection.length > 0 && (
-        <View style={styles.searchBlock}>
-          <View style={styles.searchRow}>
-            <Ionicons name="search-outline" size={17} color={colors.textMuted} />
-            <TextInput
-              style={styles.searchInput}
-              placeholder={t('collection.searchPlaceholder')}
-              placeholderTextColor={colors.textMuted}
-              value={query}
-              onChangeText={setQuery}
-              autoCapitalize="none"
-              autoCorrect={false}
-              returnKeyType="search"
-            />
-            {query.length > 0 && (
-              <TouchableOpacity
-                onPress={() => setQuery('')}
-                accessibilityRole="button"
-                accessibilityLabel={t('collection.clearSearchLabel')}
-              >
-                <Ionicons name="close-circle" size={17} color={colors.textMuted} />
-              </TouchableOpacity>
+        // Zonas de cor: search + chips are the one block on this screen that
+        // reads as a section, so they get the band and the list stays on the
+        // scene - dark header, lighter band, dark list. The list itself is a
+        // FlatList and must keep its own scroll container, so it is never
+        // wrapped. gutter is 0 because the screen root has no horizontal
+        // padding of its own: searchBlock supplies the inset, and a non-zero
+        // gutter here would push the band past both screen edges.
+        <ZoneBand gutter={0}>
+          <View style={styles.searchBlock}>
+            <View style={styles.searchRow}>
+              <Ionicons name="search-outline" size={17} color={colors.textMuted} />
+              <TextInput
+                style={styles.searchInput}
+                placeholder={t('collection.searchPlaceholder')}
+                placeholderTextColor={colors.textMuted}
+                value={query}
+                onChangeText={setQuery}
+                autoCapitalize="none"
+                autoCorrect={false}
+                returnKeyType="search"
+              />
+              {query.length > 0 && (
+                <TouchableOpacity
+                  onPress={() => setQuery('')}
+                  accessibilityRole="button"
+                  accessibilityLabel={t('collection.clearSearchLabel')}
+                >
+                  <Ionicons name="close-circle" size={17} color={colors.textMuted} />
+                </TouchableOpacity>
+              )}
+            </View>
+
+            {savedCategories.length > 1 && (
+              <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.chipRow}>
+                <TouchableOpacity
+                  style={[styles.chip, !categoryFilter && styles.chipActive]}
+                  onPress={() => setCategoryFilter(null)}
+                  accessibilityRole="button"
+                  accessibilityState={{ selected: !categoryFilter }}
+                  accessibilityLabel={t('collection.filterAll')}
+                >
+                  <Text style={[styles.chipText, !categoryFilter && styles.chipTextActive]}>
+                    {t('collection.filterAll')}
+                  </Text>
+                </TouchableOpacity>
+                {savedCategories.map((key) => {
+                  const catMeta = CATEGORIES[key];
+                  if (!catMeta) return null;
+                  const active = categoryFilter === key;
+                  return (
+                    <TouchableOpacity
+                      key={key}
+                      style={[styles.chip, active && { backgroundColor: catMeta.accent + '33', borderColor: catMeta.accent }]}
+                      onPress={() => setCategoryFilter(active ? null : key)}
+                      accessibilityRole="button"
+                      accessibilityState={{ selected: active }}
+                      accessibilityLabel={t(`categories.${key}.label`)}
+                    >
+                      <CategoryIcon name={catMeta.tabIcon} size={13} color={active ? catMeta.accent : colors.textMuted} />
+                      <Text style={[styles.chipText, active && { color: catMeta.accent }]}>
+                        {t(`categories.${key}.label`)}
+                      </Text>
+                    </TouchableOpacity>
+                  );
+                })}
+              </ScrollView>
             )}
           </View>
-
-          {savedCategories.length > 1 && (
-            <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.chipRow}>
-              <TouchableOpacity
-                style={[styles.chip, !categoryFilter && styles.chipActive]}
-                onPress={() => setCategoryFilter(null)}
-                accessibilityRole="button"
-                accessibilityState={{ selected: !categoryFilter }}
-                accessibilityLabel={t('collection.filterAll')}
-              >
-                <Text style={[styles.chipText, !categoryFilter && styles.chipTextActive]}>
-                  {t('collection.filterAll')}
-                </Text>
-              </TouchableOpacity>
-              {savedCategories.map((key) => {
-                const catMeta = CATEGORIES[key];
-                if (!catMeta) return null;
-                const active = categoryFilter === key;
-                return (
-                  <TouchableOpacity
-                    key={key}
-                    style={[styles.chip, active && { backgroundColor: catMeta.accent + '33', borderColor: catMeta.accent }]}
-                    onPress={() => setCategoryFilter(active ? null : key)}
-                    accessibilityRole="button"
-                    accessibilityState={{ selected: active }}
-                    accessibilityLabel={t(`categories.${key}.label`)}
-                  >
-                    <CategoryIcon name={catMeta.tabIcon} size={13} color={active ? catMeta.accent : colors.textMuted} />
-                    <Text style={[styles.chipText, active && { color: catMeta.accent }]}>
-                      {t(`categories.${key}.label`)}
-                    </Text>
-                  </TouchableOpacity>
-                );
-              })}
-            </ScrollView>
-          )}
-        </View>
+        </ZoneBand>
       )}
 
       {loading ? null : collection.length === 0 ? (
@@ -518,6 +546,12 @@ export default function CollectionScreen() {
           </View>
         </View>
       </Modal>
+
+      {/* Floating subscribe pill. Last child so it sits above the list, and
+          absolutely positioned WITHIN this screen - the dock lives outside it
+          and is never covered. It refuses to render for anyone but a confirmed
+          non-subscriber with checkout configured (see SubscribeFab). */}
+      <SubscribeFab />
     </SafeAreaView>
   );
 }
@@ -567,7 +601,10 @@ const styles = StyleSheet.create({
     borderColor: colors.border,
   },
   countText: { color: colors.accentLight, fontWeight: '800', fontSize: 16, marginLeft: 6 },
-  list: { padding: 20, paddingTop: 6 },
+  // Bottom padding clears the floating subscribe pill. Without it the pill
+  // covers the last card in the list, which is the same viewport bug the dock
+  // avoids by staying in flow - in miniature.
+  list: { padding: 20, paddingTop: 6, paddingBottom: 84 },
   searchBlock: { paddingHorizontal: 20, paddingBottom: 4 },
   searchRow: {
     flexDirection: 'row',
@@ -692,6 +729,9 @@ const styles = StyleSheet.create({
   date: { fontSize: 11, color: colors.textMuted },
   removeBtn: { padding: 8 },
   gridRow: { gap: 12 },
+  // The press-scale wrapper stands between the row and the tile, so the column
+  // flex belongs to it - see renderGridItem.
+  gridCardWrap: { flex: 1 },
   gridCard: {
     flex: 1,
     alignItems: 'center',

@@ -80,6 +80,21 @@ const headInject = [
   '    <meta name="apple-mobile-web-app-capable" content="yes" />',
   '    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />',
   '    <meta name="apple-mobile-web-app-title" content="NatureLens" />',
+  // Phone frame on desktop. A mobile-first app stretched across 1900px reads
+  // as a broken web page, and the owner's verdict on his own desktop is "está
+  // tudo esticado". Below 600px nothing here applies, so phones and the e2e
+  // gate (390x844 viewport) never see it.
+  '    <style>',
+  '      @media (min-width: 600px) {',
+  '        body { background: radial-gradient(circle at 50% 0%, #17241d 0%, #0a100d 70%); }',
+  '        #root {',
+  '          max-width: 480px;',
+  '          margin: 0 auto;',
+  '          min-height: 100vh;',
+  '          box-shadow: 0 0 60px rgba(0,0,0,0.55);',
+  '        }',
+  '      }',
+  '    </style>',
 ].join('\n');
 html = html.replace('</head>', headInject + '\n  </head>');
 
