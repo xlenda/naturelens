@@ -6,7 +6,6 @@ import * as Haptics from 'expo-haptics';
 import { useTranslation } from 'react-i18next';
 import { colors } from './theme';
 import { getSubscriptionStatus, isCheckoutConfigured } from './subscription';
-import { trackPaywallShown } from './tracking';
 
 // Floating subscribe pill, sitting just above the dock on the browse screens.
 //
@@ -43,13 +42,26 @@ export default function SubscribeFab() {
     }, [])
   );
 
-  // `undefined` (unknown) falls through here as well as 'active' - only a
-  // confirmed non-subscriber sees the pill.
-  if (status !== null || !isCheckoutConfigured()) return null;
+  // Hide for exactly two states, and show for everything else.
+  //
+  // Getting this backwards was a real revenue bug: the first version hid the
+  // pill for any status other than `null`, which silently excluded 'canceled'
+  // and 'expired' - people who already proved they will pay and who, per
+  // api/_lib/entitlement.js, have no access right now. They are the warmest
+  // audience this pill has, and it was invisible to exactly them.
+  //
+  //   undefined -> "don't know" (offline/429/5xx). Never say "subscribe" to
+  //                someone who might be paying right now.
+  //   'active'  -> they already have it.
+  //   anything else (null, 'canceled', 'expired', 'past_due') -> show.
+  if (status === undefined || status === 'active' || !isCheckoutConfigured()) return null;
 
+  // No tracking call here on purpose. This tap NAVIGATES; it does not show a
+  // paywall, and SubscriptionScreen already fires `paywall_shown` when the
+  // paywall actually opens. Firing it here too put two events in one journey
+  // and halved the measured paywall->checkout rate for this traffic.
   const open = () => {
     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
-    trackPaywallShown({ trigger: 'floating_cta' });
     navigation.navigate('Profile', { screen: 'Subscription' });
   };
 

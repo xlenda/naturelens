@@ -86,7 +86,7 @@ export default function TopicDetailScreen({ route }) {
 
         {isHerbs && (
           <>
-            <Text style={styles.sectionLabel}>{t('discover.symptomFilterTitle')}</Text>
+            <Text style={styles.filterLabel}>{t('discover.symptomFilterTitle')}</Text>
             <ScrollView
               horizontal
               showsHorizontalScrollIndicator={false}
@@ -230,6 +230,10 @@ const styles = StyleSheet.create({
   intro: { fontSize: 14.5, lineHeight: 22, color: colors.textSecondary, marginBottom: 24 },
   // Composição centrada, com critério: a SECTION title centres and carries
   // weight, while the card text under it stays left-aligned.
+  // Only a real SECTION heading gets the big centred treatment. The symptom
+  // filter below is a control label, not a section: sharing one style gave the
+  // herbs collection two identical 22px centred headings stacked on the same
+  // screen, which reads as a rendering fault rather than as hierarchy.
   sectionLabel: {
     fontSize: 22,
     fontWeight: '800',
@@ -237,6 +241,15 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     marginTop: 34,
     marginBottom: 16,
+  },
+  filterLabel: {
+    fontSize: 13,
+    fontWeight: '700',
+    color: colors.textMuted,
+    textTransform: 'uppercase',
+    letterSpacing: 0.5,
+    marginTop: 26,
+    marginBottom: 12,
   },
   symptomChip: {
     paddingHorizontal: 14,
