@@ -1,23 +1,25 @@
 {
   "expo": {
     "name": "NatureLens",
-    "slug": "mandei-as-esepciicas-no-texto",
+    "slug": "naturelens",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "automatic",
+    "scheme": "naturelens",
     "splash": {
-      "backgroundColor": "#000000"
+      "backgroundColor": "#0E1512"
     },
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.wron.app0pem4pcca7"
+      "bundleIdentifier": "app.naturelens"
     },
     "android": {
       "adaptiveIcon": {
-        "backgroundColor": "#000000"
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#F3F5EE"
       },
-      "package": "com.wron.app0pem4pcca7"
+      "package": "app.naturelens"
     },
     "plugins": [
       [
