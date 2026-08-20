@@ -2323,7 +2323,8 @@
     "sectionAccount": "Compte",
     "tellFriends": "Recommander à des amis",
     "linkCopied": "Lien copié",
-    "validUntil": "Valable jusqu'au {{date}}"
+    "validUntil": "Valable jusqu'au {{date}}",
+    "sectionAbout": "À propos de l'app"
   },
   "books": {
     "shelfTitle": "Livres",
@@ -2331,5 +2332,13 @@
     "unlockFor": "Débloquer pour {{count}} jetons",
     "chaptersLabel": "Chapitres",
     "notEnoughTokens": "Pas encore assez de jetons – identifiez des espèces pour en gagner plus."
+  },
+  "about": {
+    "appInfo": "Infos de l'app",
+    "creditsTitle": "Données et crédits",
+    "visitSite": "Visiter le site",
+    "fullDocLabel": "Document juridique complet",
+    "whatBody": "NatureLens identifie les plantes, insectes, champignons, cultures, poissons, oiseaux et même les sons à partir d'une photo ou d'un enregistrement, et transforme vos trouvailles en une collection nature personnelle.",
+    "creditsBody": "Identification par Kindwise (plantes, insectes, champignons, cultures), Fishial (poissons), Nyckel (oiseaux) et notre propre modèle sonore. Photos de référence issues de Wikipedia / Wikimedia Commons, créditées là où elles apparaissent. Chat de la spécialiste assuré par une IA (Anthropic)."
   }
 }

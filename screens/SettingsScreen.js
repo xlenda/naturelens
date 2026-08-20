@@ -367,8 +367,8 @@ export default function SettingsScreen() {
             icon="help-circle-outline"
             label={t('profile.helpAndSupport')}
             onPress={() => navigation.navigate('Help')}
+            last
           />
-          <Row icon="share-social-outline" label={t('settings.tellFriends')} onPress={handleTellFriends} last />
         </View>
 
         <Text style={styles.eyebrow}>{t('settings.sectionLegal')}</Text>
@@ -384,6 +384,19 @@ export default function SettingsScreen() {
             onPress={() => navigation.navigate('Terms')}
             last
           />
+        </View>
+
+        {/* About the App trio, mirroring the competitor: App info opens the
+            About screen and Tell Friends lives here (moved from Support),
+            exactly where the competitor puts it. */}
+        <Text style={styles.eyebrow}>{t('settings.sectionAbout')}</Text>
+        <View style={styles.card}>
+          <Row
+            icon="information-circle-outline"
+            label={t('about.appInfo')}
+            onPress={() => navigation.navigate('About')}
+          />
+          <Row icon="share-social-outline" label={t('settings.tellFriends')} onPress={handleTellFriends} last />
         </View>
 
         <Text style={styles.eyebrow}>{t('settings.sectionAccount')}</Text>

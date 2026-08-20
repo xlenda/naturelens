@@ -2323,7 +2323,8 @@
     "sectionAccount": "Account",
     "tellFriends": "Consiglia agli amici",
     "linkCopied": "Link copiato",
-    "validUntil": "Valido fino al {{date}}"
+    "validUntil": "Valido fino al {{date}}",
+    "sectionAbout": "Informazioni sull'app"
   },
   "books": {
     "shelfTitle": "Libri",
@@ -2331,5 +2332,13 @@
     "unlockFor": "Sblocca per {{count}} token",
     "chaptersLabel": "Capitoli",
     "notEnoughTokens": "Token insufficienti: identifica specie per guadagnarne altri."
+  },
+  "about": {
+    "appInfo": "Info sull'app",
+    "creditsTitle": "Dati e crediti",
+    "visitSite": "Visita il sito",
+    "fullDocLabel": "Documento legale completo",
+    "whatBody": "NatureLens identifica piante, insetti, funghi, colture, pesci, uccelli e persino suoni da una foto o una registrazione, e trasforma le tue scoperte in una collezione naturalistica personale.",
+    "creditsBody": "Identificazione a cura di Kindwise (piante, insetti, funghi, colture), Fishial (pesci), Nyckel (uccelli) e del nostro modello sonoro. Foto di riferimento da Wikipedia / Wikimedia Commons, con credito dove appaiono. Chat della specialista gestita da IA (Anthropic)."
   }
 }

@@ -2323,7 +2323,8 @@
     "sectionAccount": "Account",
     "tellFriends": "Tell friends",
     "linkCopied": "Link copied",
-    "validUntil": "Valid until {{date}}"
+    "validUntil": "Valid until {{date}}",
+    "sectionAbout": "About the app"
   },
   "books": {
     "shelfTitle": "Books",
@@ -2331,5 +2332,13 @@
     "unlockFor": "Unlock for {{count}} tokens",
     "chaptersLabel": "Chapters",
     "notEnoughTokens": "Not enough tokens yet — identify species to earn more."
+  },
+  "about": {
+    "appInfo": "App info",
+    "creditsTitle": "Data & credits",
+    "visitSite": "Visit the website",
+    "fullDocLabel": "Full legal document",
+    "whatBody": "NatureLens identifies plants, insects, mushrooms, crops, fish, birds and even sounds from a photo or recording, and turns your finds into a personal nature collection.",
+    "creditsBody": "Identification by Kindwise (plants, insects, mushrooms, crops), Fishial (fish), Nyckel (birds) and our own sound model. Reference photos from Wikipedia / Wikimedia Commons, credited where they appear. Specialist chat answered by AI (Anthropic)."
   }
 }

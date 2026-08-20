@@ -45,6 +45,7 @@ const SYNCED_FIELDS = [
   'commonNames',
   'synonyms',
   'water',
+  'waterLabel',
   'edibleParts',
   'toxicity',
   'savedAt',

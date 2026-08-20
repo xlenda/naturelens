@@ -2323,7 +2323,8 @@
     "sectionAccount": "帳戶",
     "tellFriends": "推薦給朋友",
     "linkCopied": "連結已複製",
-    "validUntil": "有效期至 {{date}}"
+    "validUntil": "有效期至 {{date}}",
+    "sectionAbout": "關於應用程式"
   },
   "books": {
     "shelfTitle": "圖書",
@@ -2331,5 +2332,13 @@
     "unlockFor": "用 {{count}} 代幣解鎖",
     "chaptersLabel": "章節",
     "notEnoughTokens": "代幣不足——識別物種來賺取更多。"
+  },
+  "about": {
+    "appInfo": "應用程式資訊",
+    "creditsTitle": "資料與致謝",
+    "visitSite": "造訪網站",
+    "fullDocLabel": "完整法律文件",
+    "whatBody": "NatureLens 可透過照片或錄音辨識植物、昆蟲、蘑菇、農作物、魚類、鳥類甚至聲音，並將你的發現變成專屬的自然收藏。",
+    "creditsBody": "辨識由 Kindwise（植物、昆蟲、蘑菇、農作物）、Fishial（魚類）、Nyckel（鳥類）以及我們自己的聲音模型提供。參考照片來自 Wikipedia / Wikimedia Commons，並在出現處註明來源。專家聊天由 AI（Anthropic）回答。"
   }
 }

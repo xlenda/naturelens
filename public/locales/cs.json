@@ -2323,7 +2323,8 @@
     "sectionAccount": "Účet",
     "tellFriends": "Doporučit přátelům",
     "linkCopied": "Odkaz zkopírován",
-    "validUntil": "Platné do {{date}}"
+    "validUntil": "Platné do {{date}}",
+    "sectionAbout": "O aplikaci"
   },
   "books": {
     "shelfTitle": "Knihy",
@@ -2331,5 +2332,13 @@
     "unlockFor": "Odemknout za {{count}} tokenů",
     "chaptersLabel": "Kapitoly",
     "notEnoughTokens": "Zatím nemáš dost tokenů — identifikuj druhy a získej další."
+  },
+  "about": {
+    "appInfo": "Informace o aplikaci",
+    "creditsTitle": "Data a poděkování",
+    "visitSite": "Navštívit web",
+    "fullDocLabel": "Úplný právní dokument",
+    "whatBody": "NatureLens rozpozná rostliny, hmyz, houby, plodiny, ryby, ptáky a dokonce i zvuky z fotografie nebo nahrávky a promění vaše nálezy v osobní přírodní sbírku.",
+    "creditsBody": "Identifikaci zajišťují Kindwise (rostliny, hmyz, houby, plodiny), Fishial (ryby), Nyckel (ptáci) a náš vlastní zvukový model. Referenční fotografie pocházejí z Wikipedia / Wikimedia Commons, s uvedením autora tam, kde se zobrazují. Chat se specialistkou zodpovídá AI (Anthropic)."
   }
 }

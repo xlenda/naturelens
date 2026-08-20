@@ -2323,7 +2323,8 @@
     "sectionAccount": "Cuenta",
     "tellFriends": "Recomiéndala a amigos",
     "linkCopied": "Enlace copiado",
-    "validUntil": "Válido hasta {{date}}"
+    "validUntil": "Válido hasta {{date}}",
+    "sectionAbout": "Acerca de la app"
   },
   "books": {
     "shelfTitle": "Libros",
@@ -2331,5 +2332,13 @@
     "unlockFor": "Desbloquear por {{count}} tokens",
     "chaptersLabel": "Capítulos",
     "notEnoughTokens": "Aún faltan tokens: identifica especies para ganar más."
+  },
+  "about": {
+    "appInfo": "Información de la app",
+    "creditsTitle": "Datos y créditos",
+    "visitSite": "Visitar el sitio",
+    "fullDocLabel": "Documento legal completo",
+    "whatBody": "NatureLens identifica plantas, insectos, setas, cultivos, peces, aves e incluso sonidos a partir de una foto o grabación, y convierte tus hallazgos en una colección personal de naturaleza.",
+    "creditsBody": "Identificación por Kindwise (plantas, insectos, setas, cultivos), Fishial (peces), Nyckel (aves) y nuestro propio modelo de sonido. Fotos de referencia de Wikipedia / Wikimedia Commons, con crédito donde aparecen. Chat de la especialista respondido por IA (Anthropic)."
   }
 }

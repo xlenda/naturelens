@@ -41,6 +41,7 @@ import HelpScreen from './screens/HelpScreen';
 import RestoreAccessScreen from './screens/RestoreAccessScreen';
 import SettingsScreen from './screens/SettingsScreen';
 import LanguageScreen from './screens/LanguageScreen';
+import AboutScreen from './screens/AboutScreen';
 import { colors } from './components/theme';
 import { CATEGORIES } from './components/categories';
 import { pollSubscriptionStatus, PLAN_PRICES } from './components/subscription';
@@ -161,6 +162,7 @@ function ProfileStackNav() {
       <ProfileStack.Screen name="RestoreAccess" component={RestoreAccessScreen} />
       <ProfileStack.Screen name="Settings" component={SettingsScreen} />
       <ProfileStack.Screen name="Language" component={LanguageScreen} />
+      <ProfileStack.Screen name="About" component={AboutScreen} />
     </ProfileStack.Navigator>
   );
 }

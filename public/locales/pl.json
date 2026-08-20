@@ -2323,7 +2323,8 @@
     "sectionAccount": "Konto",
     "tellFriends": "Poleć znajomym",
     "linkCopied": "Link skopiowany",
-    "validUntil": "Ważne do {{date}}"
+    "validUntil": "Ważne do {{date}}",
+    "sectionAbout": "O aplikacji"
   },
   "books": {
     "shelfTitle": "Książki",
@@ -2331,5 +2332,13 @@
     "unlockFor": "Odblokuj za {{count}} tokenów",
     "chaptersLabel": "Rozdziały",
     "notEnoughTokens": "Za mało tokenów — identyfikuj gatunki, aby zdobyć więcej."
+  },
+  "about": {
+    "appInfo": "Informacje o aplikacji",
+    "creditsTitle": "Dane i podziękowania",
+    "visitSite": "Odwiedź stronę",
+    "fullDocLabel": "Pełny dokument prawny",
+    "whatBody": "NatureLens rozpoznaje rośliny, owady, grzyby, uprawy, ryby, ptaki, a nawet dźwięki na podstawie zdjęcia lub nagrania i zamienia Twoje znaleziska w osobistą kolekcję przyrodniczą.",
+    "creditsBody": "Identyfikacja: Kindwise (rośliny, owady, grzyby, uprawy), Fishial (ryby), Nyckel (ptaki) oraz nasz własny model dźwięku. Zdjęcia referencyjne z Wikipedia / Wikimedia Commons, z podaniem autorstwa tam, gdzie się pojawiają. Czat ze specjalistką obsługiwany przez AI (Anthropic)."
   }
 }

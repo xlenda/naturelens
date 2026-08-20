@@ -2323,7 +2323,8 @@
     "sectionAccount": "Konto",
     "tellFriends": "Fortæl dine venner",
     "linkCopied": "Link kopieret",
-    "validUntil": "Gyldig til {{date}}"
+    "validUntil": "Gyldig til {{date}}",
+    "sectionAbout": "Om appen"
   },
   "books": {
     "shelfTitle": "Bøger",
@@ -2331,5 +2332,13 @@
     "unlockFor": "Lås op for {{count}} tokens",
     "chaptersLabel": "Kapitler",
     "notEnoughTokens": "Ikke nok tokens endnu – identificér arter for at optjene flere."
+  },
+  "about": {
+    "appInfo": "Appinfo",
+    "creditsTitle": "Data og kreditering",
+    "visitSite": "Besøg webstedet",
+    "fullDocLabel": "Fuldt juridisk dokument",
+    "whatBody": "NatureLens identificerer planter, insekter, svampe, afgrøder, fisk, fugle og endda lyde ud fra et foto eller en optagelse og forvandler dine fund til en personlig natursamling.",
+    "creditsBody": "Identifikation af Kindwise (planter, insekter, svampe, afgrøder), Fishial (fisk), Nyckel (fugle) og vores egen lydmodel. Referencefotos fra Wikipedia / Wikimedia Commons, krediteret hvor de vises. Specialistchat besvares af AI (Anthropic)."
   }
 }

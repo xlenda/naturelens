@@ -2323,7 +2323,8 @@
     "sectionAccount": "계정",
     "tellFriends": "친구에게 알리기",
     "linkCopied": "링크가 복사되었습니다",
-    "validUntil": "{{date}}까지 유효"
+    "validUntil": "{{date}}까지 유효",
+    "sectionAbout": "앱 정보"
   },
   "books": {
     "shelfTitle": "책",
@@ -2331,5 +2332,13 @@
     "unlockFor": "토큰 {{count}}개로 잠금 해제",
     "chaptersLabel": "챕터",
     "notEnoughTokens": "토큰이 부족합니다. 종을 식별하여 더 모아보세요."
+  },
+  "about": {
+    "appInfo": "앱 정보",
+    "creditsTitle": "데이터 및 크레딧",
+    "visitSite": "웹사이트 방문",
+    "fullDocLabel": "전체 법적 문서",
+    "whatBody": "NatureLens는 사진이나 녹음으로 식물, 곤충, 버섯, 농작물, 물고기, 새, 심지어 소리까지 식별하고, 발견한 것들을 나만의 자연 컬렉션으로 만들어 줍니다.",
+    "creditsBody": "식별은 Kindwise(식물, 곤충, 버섯, 농작물), Fishial(물고기), Nyckel(새) 및 자체 소리 모델이 담당합니다. 참고 사진은 Wikipedia / Wikimedia Commons에서 가져왔으며, 표시되는 곳에 출처를 밝힙니다. 전문가 채팅은 AI(Anthropic)가 답변합니다."
   }
 }

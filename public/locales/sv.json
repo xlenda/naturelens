@@ -2323,7 +2323,8 @@
     "sectionAccount": "Konto",
     "tellFriends": "Tipsa vänner",
     "linkCopied": "Länk kopierad",
-    "validUntil": "Giltig till {{date}}"
+    "validUntil": "Giltig till {{date}}",
+    "sectionAbout": "Om appen"
   },
   "books": {
     "shelfTitle": "Böcker",
@@ -2331,5 +2332,13 @@
     "unlockFor": "Lås upp för {{count}} tokens",
     "chaptersLabel": "Kapitel",
     "notEnoughTokens": "Inte tillräckligt med tokens än – identifiera arter för att tjäna fler."
+  },
+  "about": {
+    "appInfo": "Appinfo",
+    "creditsTitle": "Data och erkännanden",
+    "visitSite": "Besök webbplatsen",
+    "fullDocLabel": "Fullständigt juridiskt dokument",
+    "whatBody": "NatureLens identifierar växter, insekter, svampar, grödor, fiskar, fåglar och till och med ljud utifrån ett foto eller en inspelning, och gör dina fynd till en personlig natursamling.",
+    "creditsBody": "Identifiering av Kindwise (växter, insekter, svampar, grödor), Fishial (fiskar), Nyckel (fåglar) och vår egen ljudmodell. Referensfoton från Wikipedia / Wikimedia Commons, med erkännande där de visas. Specialistchatten besvaras av AI (Anthropic)."
   }
 }

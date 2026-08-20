@@ -2323,7 +2323,8 @@
     "sectionAccount": "Hesap",
     "tellFriends": "Arkadaşlarına öner",
     "linkCopied": "Bağlantı kopyalandı",
-    "validUntil": "{{date}} tarihine kadar geçerli"
+    "validUntil": "{{date}} tarihine kadar geçerli",
+    "sectionAbout": "Uygulama hakkında"
   },
   "books": {
     "shelfTitle": "Kitaplar",
@@ -2331,5 +2332,13 @@
     "unlockFor": "{{count}} token karşılığında aç",
     "chaptersLabel": "Bölümler",
     "notEnoughTokens": "Henüz yeterli token yok — daha fazla kazanmak için türleri tanımla."
+  },
+  "about": {
+    "appInfo": "Uygulama bilgisi",
+    "creditsTitle": "Veriler ve katkılar",
+    "visitSite": "Web sitesini ziyaret et",
+    "fullDocLabel": "Tam yasal belge",
+    "whatBody": "NatureLens bir fotoğraf veya kayıttan bitkileri, böcekleri, mantarları, ekinleri, balıkları, kuşları ve hatta sesleri tanımlar ve bulduklarınızı kişisel bir doğa koleksiyonuna dönüştürür.",
+    "creditsBody": "Tanımlama: Kindwise (bitkiler, böcekler, mantarlar, ekinler), Fishial (balıklar), Nyckel (kuşlar) ve kendi ses modelimiz. Referans fotoğraflar Wikipedia / Wikimedia Commons kaynaklıdır ve göründükleri yerde kaynak belirtilmiştir. Uzman sohbeti yapay zekâ (Anthropic) tarafından yanıtlanır."
   }
 }

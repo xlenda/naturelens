@@ -2323,7 +2323,8 @@
     "sectionAccount": "Conta",
     "tellFriends": "Indique a amigos",
     "linkCopied": "Link copiado",
-    "validUntil": "Válido até {{date}}"
+    "validUntil": "Válido até {{date}}",
+    "sectionAbout": "Sobre o app"
   },
   "books": {
     "shelfTitle": "Livros",
@@ -2331,5 +2332,13 @@
     "unlockFor": "Desbloquear por {{count}} tokens",
     "chaptersLabel": "Capítulos",
     "notEnoughTokens": "Ainda faltam tokens — identifique espécies para ganhar mais."
+  },
+  "about": {
+    "appInfo": "Informações do app",
+    "creditsTitle": "Dados e créditos",
+    "visitSite": "Visitar o site",
+    "fullDocLabel": "Documento legal completo",
+    "whatBody": "O NatureLens identifica plantas, insetos, cogumelos, lavouras, peixes, pássaros e até sons a partir de uma foto ou gravação, e transforma seus achados numa coleção pessoal da natureza.",
+    "creditsBody": "Identificação por Kindwise (plantas, insetos, cogumelos, lavouras), Fishial (peixes), Nyckel (pássaros) e nosso próprio modelo de som. Fotos de referência da Wikipedia / Wikimedia Commons, com crédito onde aparecem. Chat da especialista respondido por IA (Anthropic)."
   }
 }

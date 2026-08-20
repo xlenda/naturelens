@@ -90,7 +90,7 @@ export default function TreeDetailScreen({ route }) {
 
   const infoRows = [
     { label: t('common.nativeOrigin'), value: plant.origin },
-    { label: t('detail.wateringNeeds'), value: plant.water },
+    { label: t('detail.wateringNeeds'), value: plant.waterLabel || plant.water },
     { label: t('detail.edibleParts'), value: plant.edibleParts },
     { label: t('detail.propagation'), value: plant.propagationMethods },
   ].filter((r) => r.value);

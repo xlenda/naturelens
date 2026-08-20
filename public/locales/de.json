@@ -2323,7 +2323,8 @@
     "sectionAccount": "Konto",
     "tellFriends": "Freunden empfehlen",
     "linkCopied": "Link kopiert",
-    "validUntil": "Gültig bis {{date}}"
+    "validUntil": "Gültig bis {{date}}",
+    "sectionAbout": "Über die App"
   },
   "books": {
     "shelfTitle": "Bücher",
@@ -2331,5 +2332,13 @@
     "unlockFor": "Für {{count}} Token freischalten",
     "chaptersLabel": "Kapitel",
     "notEnoughTokens": "Noch nicht genug Token – bestimme Arten, um mehr zu verdienen."
+  },
+  "about": {
+    "appInfo": "App-Info",
+    "creditsTitle": "Daten & Danksagung",
+    "visitSite": "Website besuchen",
+    "fullDocLabel": "Vollständiges Rechtsdokument",
+    "whatBody": "NatureLens erkennt Pflanzen, Insekten, Pilze, Nutzpflanzen, Fische, Vögel und sogar Geräusche anhand eines Fotos oder einer Aufnahme und verwandelt deine Funde in eine persönliche Natursammlung.",
+    "creditsBody": "Bestimmung durch Kindwise (Pflanzen, Insekten, Pilze, Nutzpflanzen), Fishial (Fische), Nyckel (Vögel) und unser eigenes Klangmodell. Referenzfotos von Wikipedia / Wikimedia Commons, mit Quellenangabe dort, wo sie erscheinen. Experten-Chat beantwortet von KI (Anthropic)."
   }
 }

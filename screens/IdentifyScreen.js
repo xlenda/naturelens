@@ -1,4 +1,4 @@
-import React, { useState, useRef, useCallback } from 'react';
+import React, { useState, useRef, useCallback, useEffect } from 'react';
 import {
   View,
   Text,
@@ -39,15 +39,31 @@ import { recordMissionEvent, TOKENS_PER_MISSION } from '../components/missions';
 import { useAppAlert } from '../components/useAppAlert';
 import { usePageShowReset } from '../components/usePageShowReset';
 import CategoryIcon from '../components/CategoryIcon';
+import { getSpeciesPhoto } from '../components/speciesPhoto';
 import NatureScene from '../components/NatureScene';
 import PressScale from '../components/PressScale';
 import FindThumb from '../components/FindThumb';
 import { getCollection } from '../components/storage';
 
+// Foto-exemplo do palco (pedido do dono: "cada parte onde ele clica pra tirar
+// foto tem que ter alguma foto ali" - no video do concorrente cada ponto de
+// captura mostra uma imagem de exemplo). Um exemplar REAL e fotogenico por
+// categoria, buscado pela mesma cadeia Wikipedia do FindThumb (cache embutido,
+// zero chave nova). Categoria fora desta lista = sem foto = palco atual.
+const EXEMPLAR_SCI = {
+  plant: 'Plumeria rubra',
+  insect: 'Coccinella septempunctata',
+  mushroom: 'Amanita muscaria',
+  crop: 'Zea mays',
+  fish: 'Betta splendens',
+  bird: 'Cyanistes caeruleus',
+  sound: 'Turdus merula',
+};
+
 export default function IdentifyScreen() {
   const navigation = useNavigation();
   const route = useRoute();
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const category = route.params?.category || 'plant';
   const meta = CATEGORIES[category];
 
@@ -62,6 +78,23 @@ export default function IdentifyScreen() {
   // generic animation. Null (no uri available) falls back to the previous
   // gradient-only scanning view, byte for byte.
   const [stagePhotoUri, setStagePhotoUri] = useState(null);
+  // Foto-exemplo: fundo do palco PARADO (sem scan em andamento). null = offline
+  // ou especie sem foto -> o palco fica byte a byte identico ao atual.
+  const [exemplarPhoto, setExemplarPhoto] = useState(null);
+  useEffect(() => {
+    let alive = true;
+    // Trocar de categoria zera na hora: o exemplar da categoria anterior nunca
+    // pode aparecer atras do icone da nova enquanto a busca (cacheada) resolve.
+    setExemplarPhoto(null);
+    // getSpeciesPhoto nunca lanca (contrato do speciesPhoto.js) e resolve null
+    // para categorias fora do EXEMPLAR_SCI - o then basta.
+    getSpeciesPhoto(EXEMPLAR_SCI[category], i18n.language).then((photo) => {
+      if (alive) setExemplarPhoto(photo);
+    });
+    return () => {
+      alive = false;
+    };
+  }, [category, i18n.language]);
   const scanAnim = useRef(new Animated.Value(0)).current;
   const { alertConfig, showAlert, hideAlert } = useAppAlert();
   // Un-freezes the subscribe button when the page is restored from bfcache
@@ -431,13 +464,38 @@ export default function IdentifyScreen() {
                 </View>
               </>
             ) : (
-              <View style={styles.scanCenter}>
-                <CategoryIcon name={meta.icon} size={56} color={meta.accent} />
-                <Text style={styles.viewfinderText}>{t('identify.readyToScan')}</Text>
-                {/* The instruction the removed hero card used to carry. Here it
-                    is where someone is actually looking before they tap. */}
-                <Text style={styles.viewfinderHint}>{t(`categories.${category}.subtitle`)}</Text>
-              </View>
+              <>
+                {/* Foto-exemplo (pedido do dono): o ponto de captura mostra um
+                    exemplar real da categoria, como no video do concorrente.
+                    REGRA DURA: o scrim (fundo a ~70%) fica ENTRE a foto e o
+                    titulo/subtitulo, entao a foto nunca atrapalha a leitura -
+                    e sem foto nada disto renderiza (palco atual intacto). */}
+                {exemplarPhoto ? (
+                  <>
+                    <Image
+                      source={{ uri: exemplarPhoto.url }}
+                      style={styles.stagePhoto}
+                      resizeMode="cover"
+                    />
+                    <View style={styles.exemplarScrim} />
+                  </>
+                ) : null}
+                <View style={styles.scanCenter}>
+                  <CategoryIcon name={meta.icon} size={56} color={meta.accent} />
+                  <Text style={styles.viewfinderText}>{t('identify.readyToScan')}</Text>
+                  {/* The instruction the removed hero card used to carry. Here it
+                      is where someone is actually looking before they tap. */}
+                  <Text style={styles.viewfinderHint}>{t(`categories.${category}.subtitle`)}</Text>
+                </View>
+                {/* Credito minusculo SO quando a foto esta visivel - nunca
+                    apresentar foto de terceiro como nossa (doutrina do
+                    speciesPhoto.js). Chave existente, nenhuma nova. */}
+                {exemplarPhoto ? (
+                  <Text style={styles.exemplarCredit} numberOfLines={1}>
+                    {t('fieldGuide.photoCredit')}
+                  </Text>
+                ) : null}
+              </>
             )}
             {[styles.cTL, styles.cTR, styles.cBL, styles.cBR].map((c, i) => (
               <View key={i} style={[styles.corner, c, { borderColor: meta.accent }]} />
@@ -715,6 +773,18 @@ const styles = StyleSheet.create({
   // the background tone at ~60% so the scanline/spinner/label stay readable.
   stagePhoto: { ...StyleSheet.absoluteFillObject },
   stageScrim: { ...StyleSheet.absoluteFillObject, backgroundColor: colors.background + '99' },
+  // Foto-exemplo: scrim mais fechado ('B3' ~70%) que o do scan - regra dura do
+  // dono: a foto de fundo NAO pode atrapalhar a leitura do titulo/subtitulo.
+  exemplarScrim: { ...StyleSheet.absoluteFillObject, backgroundColor: colors.background + 'B3' },
+  // Credito no canto inferior do palco, dentro das cantoneiras (que estao a
+  // 14px com 26px de braco) - por isso o recuo de 46px na direita.
+  exemplarCredit: {
+    position: 'absolute',
+    bottom: 6,
+    right: 46,
+    fontSize: 9,
+    color: colors.textMuted,
+  },
   scanLine: {
     position: 'absolute',
     top: 20,

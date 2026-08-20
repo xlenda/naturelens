@@ -6,6 +6,7 @@ const { translateVendorText, looksLikeProse } = require('./_lib/translate');
 const { requireDeviceId } = require('./_lib/supabaseAdmin');
 const { checkEntitlement, recordUsage } = require('./_lib/entitlement');
 const { checkRateLimit } = require('./_lib/rateLimit');
+const { translateEntity } = require('./_lib/translateEntity');
 
 // One handler for every identification category.
 //
@@ -610,6 +611,14 @@ module.exports = async (req, res) => {
     });
     // A null result means the vendor helper already wrote an error response.
     if (!result) return;
+
+    // English-only vendor fields (care, toxicity, uses, disease text) get
+    // translated server-side in one Haiku call - the owner caught the result
+    // screen half in English with the UI in Portuguese. Fails soft: on any
+    // error the English original ships. See api/_lib/translateEntity.js.
+    if (result.entity) {
+      await translateEntity(result.entity, req.body?.language);
+    }
 
     // Only a real identification costs a free use.
     //
