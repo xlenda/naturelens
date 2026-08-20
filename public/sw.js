@@ -20,7 +20,7 @@
 //     paid API call against live credits; a cached answer would be a lie.
 //
 // Bump CACHE_VERSION to evict everything on the next activate.
-const CACHE_VERSION = 'naturelens-v1';
+const CACHE_VERSION = 'naturelens-v2';
 const SHELL_CACHE = `${CACHE_VERSION}-shell`;
 const DATA_CACHE = `${CACHE_VERSION}-data`;
 

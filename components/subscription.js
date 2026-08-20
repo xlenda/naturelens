@@ -19,7 +19,17 @@ import { API_BASE } from './apiBase';
 // Three plans, matching the offers configured in the Hotmart product.
 // Display-only: these numbers must be kept in step by hand with what is
 // actually configured at Hotmart - nothing is fetched dynamically.
-export const PLAN_PRICES = { monthly: 5, quarterly: 12, annual: 39 };
+// Precos posicionados logo ABAIXO do concorrente (pedido do dono, 20/08).
+// Referencia medida no video do PictureThis: R$ 199,90/ano (~US$ 37) e, no
+// PlantAID, R$ 23,07/mes no plano de 12 meses. O anual daqui fica em US$ 33
+// (~R$ 178), uns 11% abaixo do anual deles, e a escada mensal->trimestral->
+// anual gera 27% e 45% de economia real - o selo e calculado destes numeros,
+// entao ele nunca mente.
+//
+// IMPORTANTE: isto e SO exibicao. As tres ofertas na Hotmart precisam ser
+// criadas com exatamente estes valores, senao a tela promete um preco e o
+// checkout cobra outro.
+export const PLAN_PRICES = { monthly: 5, quarterly: 11, annual: 33 };
 
 export const PLAN_ORDER = ['monthly', 'quarterly', 'annual'];
 

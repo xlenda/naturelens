@@ -78,7 +78,7 @@ export default function PaywallModal({ visible, title, body, categoryLabel, acce
               >
                 {savePercent > 0 && (
                   <View style={[styles.saveBadge, { backgroundColor: accent }]}>
-                    <Text style={styles.saveBadgeText}>
+                    <Text style={styles.saveBadgeText} numberOfLines={1}>
                       {t('paywall.saveBadge', { percent: savePercent })}
                     </Text>
                   </View>
@@ -161,8 +161,13 @@ const styles = StyleSheet.create({
     borderWidth: 1.5,
     borderColor: colors.border,
     borderRadius: 14,
-    paddingVertical: 14,
-    paddingHorizontal: 8,
+    // paddingTop maior que o de baixo: o selo de economia flutua em top:-10
+    // e, quando o texto quebrava em duas linhas, ele COBRIA o nome do plano
+    // ('Trimestral' e 'Anual' sumiam - print do dono, 20/08). Com o selo em
+    // uma linha so (numberOfLines) e este respiro, os dois convivem.
+    paddingTop: 20,
+    paddingBottom: 14,
+    paddingHorizontal: 6,
     alignItems: 'center',
     position: 'relative',
   },
