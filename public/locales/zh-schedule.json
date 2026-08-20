@@ -1,0 +1,282 @@
+{
+  "succulent": {
+    "rows": [
+      {
+        "activity": "浇水",
+        "spring": "每2-3周一次",
+        "summer": "每2-3周一次",
+        "autumn": "拉长间隔",
+        "winter": "几乎不浇",
+        "note": "沙漠仙人掌在低温、近乎干燥的状态下休眠;此时浇水只会长出徒长弱枝(Clemson、RHS)。"
+      },
+      {
+        "activity": "施肥",
+        "spring": "每月一次,半量",
+        "summer": "每月一次,半量",
+        "autumn": "停止",
+        "winter": "不施肥",
+        "note": "氮要少,用标签剂量的二分之一到四分之一。氮过量会长出容易腐烂的软组织(Clemson、Iowa State)。"
+      },
+      {
+        "activity": "换盆",
+        "spring": "最佳时期",
+        "summer": "",
+        "autumn": "",
+        "winter": "",
+        "note": "只换大一号的盆,并等几天再第一次浇水(Clemson)。"
+      },
+      {
+        "activity": "光照",
+        "spring": "10 小时以上强光",
+        "summer": "户外半阴",
+        "autumn": "10 小时以上强光",
+        "winter": "10 小时以上强光",
+        "note": "至少 6-8 小时。移到户外前要先放半阴处,否则叶片会灼伤(Iowa State)。"
+      }
+    ]
+  },
+  "tropicalFoliage": {
+    "rows": [
+      {
+        "activity": "浇水",
+        "spring": "保持均匀湿润",
+        "summer": "保持均匀湿润",
+        "autumn": "保持均匀湿润",
+        "winter": "多干一些",
+        "note": "水温 17-22 C,绝不用软化水,并倒空托盘(Clemson)。"
+      },
+      {
+        "activity": "施肥",
+        "spring": "每月一次,稀释",
+        "summer": "每月一次,稀释",
+        "autumn": "逐渐减少",
+        "winter": "不施肥",
+        "note": "室内植物只在生长期施肥,休眠期完全不施(UConn)。"
+      },
+      {
+        "activity": "扦插",
+        "spring": "四季均可",
+        "summer": "四季均可",
+        "autumn": "四季均可",
+        "winter": "四季均可",
+        "note": "喜林芋及其近亲一年四季都能用茎插扦繁殖(Clemson)。"
+      }
+    ]
+  },
+  "fern": {
+    "rows": [
+      {
+        "activity": "浇水",
+        "spring": "微湿即可",
+        "summer": "微湿即可",
+        "autumn": "微湿即可",
+        "winter": "微湿即可",
+        "note": "绝不可让它彻底干透,也绝不能让盆里积水(Clemson)。"
+      },
+      {
+        "activity": "施肥",
+        "spring": "每月一次,半量",
+        "summer": "每月一次,半量",
+        "autumn": "停止",
+        "winter": "不施肥",
+        "note": "分株或换盆后 6 个月内完全不施肥;肥过量会灼伤叶片(Clemson、UConn)。"
+      },
+      {
+        "activity": "分株换盆",
+        "spring": "早春",
+        "summer": "",
+        "autumn": "",
+        "winter": "",
+        "note": "把根团分成 2-3 份,之后数周保持基质和空气湿润(UConn)。"
+      },
+      {
+        "activity": "空气湿度",
+        "spring": "30-50%",
+        "summer": "30-50%",
+        "autumn": "30-50%",
+        "winter": "水盘或喷雾",
+        "note": "寒冷季节室内空气干燥才是真正的风险;卵石水盘比喷雾更有效(Clemson、UConn)。"
+      }
+    ]
+  },
+  "fruitVeg": {
+    "rows": [
+      {
+        "activity": "浇水",
+        "spring": "每周 25-50 毫米",
+        "summer": "每周 25-50 毫米",
+        "autumn": "每周 25-50 毫米",
+        "winter": "",
+        "note": "浇透且均匀。浇得浅又不匀会阻断钙的运输,导致脐腐病(USU、UGA)。"
+      },
+      {
+        "activity": "施肥",
+        "spring": "开花期",
+        "summer": "采收后",
+        "autumn": "停止",
+        "winter": "不施肥",
+        "note": "核果类分三次施用,夏末数周完全不施,好让枝条老熟(Clemson)。"
+      },
+      {
+        "activity": "修剪",
+        "spring": "",
+        "summer": "",
+        "autumn": "深秋起",
+        "winter": "休眠期最佳",
+        "note": "休眠期是标准时段:骨架清晰可见,伤口会在下一个生长期愈合(USDA)。"
+      },
+      {
+        "activity": "疏果",
+        "spring": "",
+        "summer": "人工疏果",
+        "autumn": "",
+        "winter": "",
+        "note": "果径 1-2 厘米时的自然落果不能代替人工疏果;每一串留下最大的一颗(Iowa State)。"
+      }
+    ]
+  },
+  "flowering": {
+    "rows": [
+      {
+        "activity": "施肥",
+        "spring": "萌芽期",
+        "summer": "每 6 周一次",
+        "autumn": "霜前停止",
+        "winter": "不施肥",
+        "note": "月季在最热时降到半量,并在预计初霜前 6 周停止(Clemson)。"
+      },
+      {
+        "activity": "摘除残花",
+        "spring": "摘掉残花",
+        "summer": "摘掉残花",
+        "autumn": "保留种荚",
+        "winter": "",
+        "note": "留在枝头的种荚能在整个寒冷季节为野生动物提供食物(Clemson)。"
+      },
+      {
+        "activity": "球根",
+        "spring": "出苗时施肥",
+        "summer": "休眠时分球",
+        "autumn": "",
+        "winter": "",
+        "note": "出苗时施肥或花后施肥,二选一,绝不可两次都施。摘掉残花,但绝不要摘叶(Illinois)。"
+      }
+    ]
+  },
+  "woody": {
+    "rows": [
+      {
+        "activity": "新栽树浇水",
+        "spring": "每周一次,浇透",
+        "summer": "每周一次,浇透",
+        "autumn": "直到降霜",
+        "winter": "",
+        "note": "树干直径每 1 英寸浇 1-1.5 加仑,浇在根区,不要贴着树干(Penn State)。"
+      },
+      {
+        "activity": "施肥",
+        "spring": "萌芽期",
+        "summer": "分次施用",
+        "autumn": "停止",
+        "winter": "不施肥",
+        "note": "成年树几乎不需要或完全不需要。晚期高氮施肥会推迟休眠(Clemson)。"
+      },
+      {
+        "activity": "修剪",
+        "spring": "花后修剪",
+        "summer": "",
+        "autumn": "避免",
+        "winter": "休眠期最佳",
+        "note": "春花灌木要在花谢后立刻修剪;剪得晚就会把明年的花芽剪掉(Clemson)。"
+      },
+      {
+        "activity": "地面覆盖",
+        "spring": "2-4 英寸,不贴树干",
+        "summer": "2-4 英寸,不贴树干",
+        "autumn": "2-4 英寸,不贴树干",
+        "winter": "2-4 英寸,不贴树干",
+        "note": "幼树主干周围留出 3-5 英寸,成年树留出 8-10 英寸(Penn State)。"
+      }
+    ]
+  },
+  "orchid": {
+    "rows": [
+      {
+        "activity": "浇水",
+        "spring": "每周一次",
+        "summer": "每周一次",
+        "autumn": "减少频率",
+        "winter": "减少频率",
+        "note": "浇到水从盆底孔流出为止,然后沥干。绝不能让它泡在托盘里(AOS、RHS)。"
+      },
+      {
+        "activity": "施肥",
+        "spring": "每周一次,半量",
+        "summer": "每周一次,半量",
+        "autumn": "每 2 周一次",
+        "winter": "每 2 周一次",
+        "note": "用标签剂量的一半,少用或不用尿素,并每第 4 次施肥跳过一次以淋洗盐分(AOS、RHS)。"
+      },
+      {
+        "activity": "换盆",
+        "spring": "早春",
+        "summer": "",
+        "autumn": "",
+        "winter": "冬末",
+        "note": "只在看到新根时进行。种在水苔里的,等花开完再换盆(Clemson)。"
+      },
+      {
+        "activity": "花芽分化",
+        "spring": "",
+        "summer": "",
+        "autumn": "14 小时黑暗",
+        "winter": "保持均匀湿润",
+        "note": "仅限蟹爪兰:连续 6 周以上每天 14 小时以上不间断黑暗,2 小时灯光就会让花芽消失(Clemson)。"
+      }
+    ]
+  },
+  "herb": {
+    "rows": [
+      {
+        "activity": "浇水",
+        "spring": "间隔时干透",
+        "summer": "清晨浇水",
+        "autumn": "间隔时干透",
+        "winter": "切忌积水",
+        "note": "这一组分两类:地中海香草需要真正干透,叶用类(罗勒、欧芹、薄荷)需要稳定湿润(Clemson、RHS)。"
+      },
+      {
+        "activity": "施肥",
+        "spring": "定植时少量",
+        "summer": "停长才补",
+        "autumn": "不施肥",
+        "winter": "不施肥",
+        "note": "地栽迷迭香完全不施肥,土壤太肥会让香味变淡(RHS、Clemson)。"
+      },
+      {
+        "activity": "修剪",
+        "spring": "重剪(鼠尾草)",
+        "summer": "轻剪(月桂)",
+        "autumn": "花后修剪",
+        "winter": "",
+        "note": "迷迭香在花后轻剪,绝不剪入老枝。薄荷剪到 5 厘米以更新植株(RHS)。"
+      },
+      {
+        "activity": "采收",
+        "spring": "开花前采收",
+        "summer": "开花前采收",
+        "autumn": "",
+        "winter": "",
+        "note": "清晨、花刚要开的时候,叶片的精油含量最高(Clemson)。"
+      },
+      {
+        "activity": "防寒",
+        "spring": "",
+        "summer": "",
+        "autumn": "",
+        "winter": "防霜保护",
+        "note": "扎根后的迷迭香能耐 -8 C,但霜仍会灼伤新梢(RHS)。"
+      }
+    ]
+  }
+}

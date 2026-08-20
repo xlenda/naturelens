@@ -1,0 +1,282 @@
+{
+  "succulent": {
+    "rows": [
+      {
+        "activity": "Irrigazione",
+        "spring": "Ogni 2-3 settimane",
+        "summer": "Ogni 2-3 settimane",
+        "autumn": "Diradare",
+        "winter": "Quasi nulla",
+        "note": "I cactus del deserto riposano al freddo e quasi asciutti; irrigare in quella fase produce solo crescita debole (Clemson, RHS)."
+      },
+      {
+        "activity": "Concimazione",
+        "spring": "Mensile, mezza dose",
+        "summer": "Mensile, mezza dose",
+        "autumn": "Sospendere",
+        "winter": "Nessuna",
+        "note": "Poco azoto, da metà a un quarto della dose in etichetta. L'eccesso di azoto crea tessuti molli che marciscono (Clemson, Iowa State)."
+      },
+      {
+        "activity": "Rinvaso",
+        "spring": "Momento migliore",
+        "summer": "",
+        "autumn": "",
+        "winter": "",
+        "note": "Solo una misura di vaso in più, e aspettare vari giorni prima della prima irrigazione (Clemson)."
+      },
+      {
+        "activity": "Luce",
+        "spring": "10+ h di luce",
+        "summer": "Mezz'ombra fuori",
+        "autumn": "10+ h di luce",
+        "winter": "10+ h di luce",
+        "note": "Minimo 6-8 h. Portare la pianta all'aperto richiede prima la mezz'ombra, altrimenti le foglie si scottano (Iowa State)."
+      }
+    ]
+  },
+  "tropicalFoliage": {
+    "rows": [
+      {
+        "activity": "Irrigazione",
+        "spring": "Sempre umido",
+        "summer": "Sempre umido",
+        "autumn": "Sempre umido",
+        "winter": "Far asciugare di più",
+        "note": "Acqua a 17-22 C, mai addolcita, e sottovaso da svuotare (Clemson)."
+      },
+      {
+        "activity": "Concimazione",
+        "spring": "Mensile, diluito",
+        "summer": "Mensile, diluito",
+        "autumn": "Ridurre",
+        "winter": "Nessuna",
+        "note": "Le piante d'appartamento si concimano solo nella stagione di crescita, nulla durante il riposo (UConn)."
+      },
+      {
+        "activity": "Talee",
+        "spring": "Ogni stagione",
+        "summer": "Ogni stagione",
+        "autumn": "Ogni stagione",
+        "winter": "Ogni stagione",
+        "note": "Il filodendro e i suoi parenti radicano da talea di fusto in qualsiasi stagione (Clemson)."
+      }
+    ]
+  },
+  "fern": {
+    "rows": [
+      {
+        "activity": "Irrigazione",
+        "spring": "Appena umido",
+        "summer": "Appena umido",
+        "autumn": "Appena umido",
+        "winter": "Appena umido",
+        "note": "Non lasciarla mai asciugare del tutto e non lasciare mai acqua ferma nel vaso (Clemson)."
+      },
+      {
+        "activity": "Concimazione",
+        "spring": "Mensile, mezza dose",
+        "summer": "Mensile, mezza dose",
+        "autumn": "Sospendere",
+        "winter": "Nessuna",
+        "note": "Nulla per 6 mesi dopo la divisione o il rinvaso; troppo concime brucia le fronde (Clemson, UConn)."
+      },
+      {
+        "activity": "Divisione e rinvaso",
+        "spring": "Inizio primavera",
+        "summer": "",
+        "autumn": "",
+        "winter": "",
+        "note": "Dividere il pane di radici in 2-3 sezioni e tenere substrato e aria umidi per settimane (UConn)."
+      },
+      {
+        "activity": "Umidità dell'aria",
+        "spring": "30-50%",
+        "summer": "30-50%",
+        "autumn": "30-50%",
+        "winter": "Vassoio o spruzzo",
+        "note": "L'aria secca degli interni nella stagione fredda è il rischio vero; un sottovaso con argilla rende più della nebulizzazione (Clemson, UConn)."
+      }
+    ]
+  },
+  "fruitVeg": {
+    "rows": [
+      {
+        "activity": "Irrigazione",
+        "spring": "25-50 mm/settimana",
+        "summer": "25-50 mm/settimana",
+        "autumn": "25-50 mm/settimana",
+        "winter": "",
+        "note": "Profonda e regolare. Un'irrigazione superficiale e irregolare blocca il trasporto del calcio e causa il marciume apicale (USU, UGA)."
+      },
+      {
+        "activity": "Concimazione",
+        "spring": "Alla fioritura",
+        "summer": "Dopo il raccolto",
+        "autumn": "Sospendere",
+        "winter": "Nessuna",
+        "note": "La drupacea prende tre dosi frazionate e nulla nelle ultime settimane d'estate, così il legno matura (Clemson)."
+      },
+      {
+        "activity": "Potatura",
+        "spring": "",
+        "summer": "",
+        "autumn": "Da fine autunno",
+        "winter": "Riposo: ideale",
+        "note": "Il riposo è la finestra standard: la struttura è visibile e la ferita chiude nella stagione di crescita successiva (USDA)."
+      },
+      {
+        "activity": "Diradamento",
+        "spring": "",
+        "summer": "A mano",
+        "autumn": "",
+        "winter": "",
+        "note": "La cascola naturale a 1-2 cm non sostituisce il diradamento a mano; tieni il frutto più grande di ogni grappolo (Iowa State)."
+      }
+    ]
+  },
+  "flowering": {
+    "rows": [
+      {
+        "activity": "Concimazione",
+        "spring": "Al germogliamento",
+        "summer": "Ogni 6 settimane",
+        "autumn": "Stop prima del gelo",
+        "winter": "Nessuna",
+        "note": "Le rose scendono a mezza dose nel picco di caldo e si fermano 6 settimane prima della prima gelata attesa (Clemson)."
+      },
+      {
+        "activity": "Fiori appassiti",
+        "spring": "Togliere sfioriti",
+        "summer": "Togliere sfioriti",
+        "autumn": "Lasciare i semi",
+        "winter": "",
+        "note": "Le teste di seme lasciate in piedi nutrono la fauna per tutta la stagione fredda (Clemson)."
+      },
+      {
+        "activity": "Bulbi",
+        "spring": "Concime alla ripresa",
+        "summer": "Dividere a riposo",
+        "autumn": "",
+        "winter": "",
+        "note": "Concimare alla ripresa OPPURE dopo la fioritura, mai entrambe. Togli il fiore sfiorito ma mai le foglie (Illinois)."
+      }
+    ]
+  },
+  "woody": {
+    "rows": [
+      {
+        "activity": "Irrigare i giovani",
+        "spring": "Settimanale, a fondo",
+        "summer": "Settimanale, a fondo",
+        "autumn": "Fino al gelo",
+        "winter": "",
+        "note": "1-1,5 galloni per pollice di diametro del fusto, sulla zona radicale e non contro il fusto (Penn State)."
+      },
+      {
+        "activity": "Concimazione",
+        "spring": "Al germogliamento",
+        "summer": "Dosi frazionate",
+        "autumn": "Sospendere",
+        "winter": "Nessuna",
+        "note": "Un albero maturo ha bisogno di poco o nulla. Una concimazione azotata tardiva ritarda il riposo (Clemson)."
+      },
+      {
+        "activity": "Potatura",
+        "spring": "Dopo la fioritura",
+        "summer": "",
+        "autumn": "Evitare",
+        "winter": "Riposo: ideale",
+        "note": "Gli arbusti a fioritura primaverile si potano subito dopo i fiori; potare più tardi taglia le gemme dell'anno dopo (Clemson)."
+      },
+      {
+        "activity": "Pacciamatura",
+        "spring": "2-4 poll, staccata",
+        "summer": "2-4 poll, staccata",
+        "autumn": "2-4 poll, staccata",
+        "winter": "2-4 poll, staccata",
+        "note": "Tenerla a 3-5 pollici dal fusto giovane e a 8-10 pollici da quello maturo (Penn State)."
+      }
+    ]
+  },
+  "orchid": {
+    "rows": [
+      {
+        "activity": "Irrigazione",
+        "spring": "Settimanale",
+        "summer": "Settimanale",
+        "autumn": "Ridurre",
+        "winter": "Ridurre",
+        "note": "Bagnare finché esce dai fori, poi far sgocciolare. Mai lasciarla nel sottovaso (AOS, RHS)."
+      },
+      {
+        "activity": "Concimazione",
+        "spring": "Settim., mezza dose",
+        "summer": "Settim., mezza dose",
+        "autumn": "Ogni 2 settimane",
+        "winter": "Ogni 2 settimane",
+        "note": "Metà della dose in etichetta, poca o nessuna urea, e salta una concimazione su 4 per dilavare i sali (AOS, RHS)."
+      },
+      {
+        "activity": "Rinvaso",
+        "spring": "Inizio primavera",
+        "summer": "",
+        "autumn": "",
+        "winter": "Fine inverno",
+        "note": "Solo quando si vedono radici nuove. In sfagno, rinvasare a fioritura finita (Clemson)."
+      },
+      {
+        "activity": "Induzione fiorale",
+        "spring": "",
+        "summer": "",
+        "autumn": "14 h di buio",
+        "winter": "Sempre umido",
+        "note": "Solo Schlumbergera: 14 h o più di buio continuo per almeno 6 settimane, e 2 h di luce artificiale annullano i boccioli (Clemson)."
+      }
+    ]
+  },
+  "herb": {
+    "rows": [
+      {
+        "activity": "Irrigazione",
+        "spring": "Far asciugare tra",
+        "summer": "Irrigare presto",
+        "autumn": "Far asciugare tra",
+        "winter": "Mai ristagno",
+        "note": "Gruppo diviso: le aromatiche mediterranee vogliono asciugare davvero, quelle a foglia (basilico, prezzemolo, menta) umidità costante (Clemson, RHS)."
+      },
+      {
+        "activity": "Concimazione",
+        "spring": "Poco, all'impianto",
+        "summer": "Solo se si ferma",
+        "autumn": "Nessuna",
+        "winter": "Nessuna",
+        "note": "Il rosmarino in piena terra non riceve nulla, e un terreno molto ricco spegne l'aroma (RHS, Clemson)."
+      },
+      {
+        "activity": "Potatura",
+        "spring": "Forte (salvia)",
+        "summer": "Spuntare (alloro)",
+        "autumn": "Dopo la fioritura",
+        "winter": "",
+        "note": "Il rosmarino prende una spuntatura leggera dopo i fiori, mai sul legno vecchio. La menta si taglia a 5 cm per rinnovarla (RHS)."
+      },
+      {
+        "activity": "Raccolta",
+        "spring": "Poco prima del fiore",
+        "summer": "Poco prima del fiore",
+        "autumn": "",
+        "winter": "",
+        "note": "Al mattino presto, poco prima della fioritura, è quando la foglia porta più olio (Clemson)."
+      },
+      {
+        "activity": "Freddo",
+        "spring": "",
+        "summer": "",
+        "autumn": "",
+        "winter": "Riparare dal gelo",
+        "note": "Il rosmarino ben radicato regge -8 C, ma la gelata brucia comunque i getti nuovi (RHS)."
+      }
+    ]
+  }
+}

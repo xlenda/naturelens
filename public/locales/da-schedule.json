@@ -1,0 +1,282 @@
+{
+  "succulent": {
+    "rows": [
+      {
+        "activity": "Vanding",
+        "spring": "Hver 2.-3. uge",
+        "summer": "Hver 2.-3. uge",
+        "autumn": "Sjældnere",
+        "winter": "Næsten intet",
+        "note": "Ørkenkaktus hviler køligt og næsten tørt; vanding på det tidspunkt giver kun svag vækst (Clemson, RHS)."
+      },
+      {
+        "activity": "Gødning",
+        "spring": "Månedligt, halv dos",
+        "summer": "Månedligt, halv dos",
+        "autumn": "Stop gødning",
+        "winter": "Ingen",
+        "note": "Lidt kvælstof, halvdelen til en fjerdedel af dosis på etiketten. For meget kvælstof giver blødt væv, der rådner (Clemson, Iowa State)."
+      },
+      {
+        "activity": "Omplantning",
+        "spring": "Bedste tid",
+        "summer": "",
+        "autumn": "",
+        "winter": "",
+        "note": "Kun én pottestørrelse op, og vent flere dage før den første vanding (Clemson)."
+      },
+      {
+        "activity": "Lys",
+        "spring": "10+ t lys",
+        "summer": "Halvskygge ude",
+        "autumn": "10+ t lys",
+        "winter": "10+ t lys",
+        "note": "Mindst 6-8 t. Skal planten ud, skal den først stå i halvskygge, ellers svides bladene (Iowa State)."
+      }
+    ]
+  },
+  "tropicalFoliage": {
+    "rows": [
+      {
+        "activity": "Vanding",
+        "spring": "Jævnt fugtig",
+        "summer": "Jævnt fugtig",
+        "autumn": "Jævnt fugtig",
+        "winter": "Lad tørre mere",
+        "note": "Vand på 17-22 C, aldrig blødgjort vand, og tøm underskålen (Clemson)."
+      },
+      {
+        "activity": "Gødning",
+        "spring": "Månedligt, fortyndet",
+        "summer": "Månedligt, fortyndet",
+        "autumn": "Trap ned",
+        "winter": "Ingen",
+        "note": "Potteplanter gødes kun i vækstsæsonen, intet i hvileperioden (UConn)."
+      },
+      {
+        "activity": "Stiklinger",
+        "spring": "Alle årstider",
+        "summer": "Alle årstider",
+        "autumn": "Alle årstider",
+        "winter": "Alle årstider",
+        "note": "Philodendron og slægtninge rodfæster fra stiklinger på alle tider af året (Clemson)."
+      }
+    ]
+  },
+  "fern": {
+    "rows": [
+      {
+        "activity": "Vanding",
+        "spring": "Let fugtig",
+        "summer": "Let fugtig",
+        "autumn": "Let fugtig",
+        "winter": "Let fugtig",
+        "note": "Lad den aldrig tørre helt ud, og lad aldrig vand stå i potten (Clemson)."
+      },
+      {
+        "activity": "Gødning",
+        "spring": "Månedligt, halv dos",
+        "summer": "Månedligt, halv dos",
+        "autumn": "Stop gødning",
+        "winter": "Ingen",
+        "note": "Slet intet i 6 måneder efter deling eller omplantning; for meget gødning svider bladene (Clemson, UConn)."
+      },
+      {
+        "activity": "Deling & omplantning",
+        "spring": "Tidligt forår",
+        "summer": "",
+        "autumn": "",
+        "winter": "",
+        "note": "Del rodklumpen i 2-3 dele, og hold jord og luft fugtig i ugerne efter (UConn)."
+      },
+      {
+        "activity": "Luftfugtighed",
+        "spring": "30-50%",
+        "summer": "30-50%",
+        "autumn": "30-50%",
+        "winter": "Fugtbakke el. spray",
+        "note": "Tør indeluft i den kolde årstid er den reelle risiko; en bakke med lecakugler slår forstøvning (Clemson, UConn)."
+      }
+    ]
+  },
+  "fruitVeg": {
+    "rows": [
+      {
+        "activity": "Vanding",
+        "spring": "25-50 mm/uge",
+        "summer": "25-50 mm/uge",
+        "autumn": "25-50 mm/uge",
+        "winter": "",
+        "note": "Dybt og jævnt. Overfladisk, ujævn vanding hæmmer calciumtransporten og giver griffelråd (USU, UGA)."
+      },
+      {
+        "activity": "Gødning",
+        "spring": "Ved blomstring",
+        "summer": "Efter høst",
+        "autumn": "Stop gødning",
+        "winter": "Ingen",
+        "note": "Stenfrugt tager tre delte doser og ingen i sommerens sidste uger, så veddet modner (Clemson)."
+      },
+      {
+        "activity": "Beskæring",
+        "spring": "",
+        "summer": "",
+        "autumn": "Fra sen efterår",
+        "winter": "Hvile: bedst",
+        "note": "Hvileperioden er standardvinduet: strukturen er synlig, og såret lukker i den næste vækstsæson (USDA)."
+      },
+      {
+        "activity": "Udtynding",
+        "spring": "",
+        "summer": "I hånden",
+        "autumn": "",
+        "winter": "",
+        "note": "Det naturlige fald ved 1-2 cm erstatter ikke udtynding i hånden; behold den største frugt i hver klase (Iowa State)."
+      }
+    ]
+  },
+  "flowering": {
+    "rows": [
+      {
+        "activity": "Gødning",
+        "spring": "Ved knopbrud",
+        "summer": "Hver 6. uge",
+        "autumn": "Stop før frost",
+        "winter": "Ingen",
+        "note": "Roser går ned på halv dosis i den værste varme og stopper 6 uger før den første ventede frost (Clemson)."
+      },
+      {
+        "activity": "Afpudsning",
+        "spring": "Fjern visne blomster",
+        "summer": "Fjern visne blomster",
+        "autumn": "Lad frøstande stå",
+        "winter": "",
+        "note": "Frøstande, der får lov at stå, fodrer dyrelivet gennem hele den kolde årstid (Clemson)."
+      },
+      {
+        "activity": "Løg",
+        "spring": "Gød ved fremspiring",
+        "summer": "Del i hvile",
+        "autumn": "",
+        "winter": "",
+        "note": "Gød ved fremspiring ELLER efter blomstring, aldrig begge dele. Fjern den afblomstrede blomst, men aldrig bladene (Illinois)."
+      }
+    ]
+  },
+  "woody": {
+    "rows": [
+      {
+        "activity": "Vanding af nyplantet",
+        "spring": "Ugentligt, dybt",
+        "summer": "Ugentligt, dybt",
+        "autumn": "Indtil frost",
+        "winter": "",
+        "note": "1 til 1,5 gallon pr. tomme stammediameter, ud over rodzonen og ikke ind mod stammen (Penn State)."
+      },
+      {
+        "activity": "Gødning",
+        "spring": "Ved knopbrud",
+        "summer": "Delte doser",
+        "autumn": "Stop gødning",
+        "winter": "Ingen",
+        "note": "Et udvokset træ har brug for lidt eller intet. Sen gødning med meget kvælstof udskyder hvileperioden (Clemson)."
+      },
+      {
+        "activity": "Beskæring",
+        "spring": "Efter blomstring",
+        "summer": "",
+        "autumn": "Undgå",
+        "winter": "Hvile: bedst",
+        "note": "Forårsblomstrende buske beskæres lige efter blomsterne; beskærer du senere, klipper du næste års knopper af (Clemson)."
+      },
+      {
+        "activity": "Jorddække",
+        "spring": "2-4 tom., fri stamme",
+        "summer": "2-4 tom., fri stamme",
+        "autumn": "2-4 tom., fri stamme",
+        "winter": "2-4 tom., fri stamme",
+        "note": "Hold 3-5 tommer fri omkring en ung stamme og 8-10 tommer omkring en udvokset (Penn State)."
+      }
+    ]
+  },
+  "orchid": {
+    "rows": [
+      {
+        "activity": "Vanding",
+        "spring": "Ugentligt",
+        "summer": "Ugentligt",
+        "autumn": "Skru ned",
+        "winter": "Skru ned",
+        "note": "Gennemvæd, til det løber ud af hullerne, og lad så dræne. Lad den aldrig stå i underskålen (AOS, RHS)."
+      },
+      {
+        "activity": "Gødning",
+        "spring": "Ugentligt, halv dos",
+        "summer": "Ugentligt, halv dos",
+        "autumn": "Hver 2. uge",
+        "winter": "Hver 2. uge",
+        "note": "Halv dosis af etiketten, lidt eller ingen urea, og spring hver 4. gødskning over for at skylle salte ud (AOS, RHS)."
+      },
+      {
+        "activity": "Omplantning",
+        "spring": "Tidligt forår",
+        "summer": "",
+        "autumn": "",
+        "winter": "Sen vinter",
+        "note": "Først når der er synlig ny rodvækst. I sphagnum omplantes der, når blomstringen er slut (Clemson)."
+      },
+      {
+        "activity": "Knopsætning",
+        "spring": "",
+        "summer": "",
+        "autumn": "14 t mørke",
+        "winter": "Jævnt fugtig",
+        "note": "Kun Schlumbergera: 14 t eller mere ubrudt mørke i mindst 6 uger, og 2 t lampelys sletter knopperne (Clemson)."
+      }
+    ]
+  },
+  "herb": {
+    "rows": [
+      {
+        "activity": "Vanding",
+        "spring": "Tør ud imellem",
+        "summer": "Vand tidligt",
+        "autumn": "Tør ud imellem",
+        "winter": "Aldrig vandmættet",
+        "note": "Delt gruppe: middelhavsurter vil tørre helt ud, de bladrige (basilikum, persille, mynte) vil have jævn fugt (Clemson, RHS)."
+      },
+      {
+        "activity": "Gødning",
+        "spring": "Lidt, ved plantning",
+        "summer": "Kun hvis den står",
+        "autumn": "Ingen",
+        "winter": "Ingen",
+        "note": "Rosmarin i jorden får slet ingenting, og meget næringsrig jord sløver smagen (RHS, Clemson)."
+      },
+      {
+        "activity": "Beskæring",
+        "spring": "Hårdt (salvie)",
+        "summer": "Klip (laurbær)",
+        "autumn": "Efter blomstring",
+        "winter": "",
+        "note": "Rosmarin tager en let klipning efter blomsterne, aldrig ind i gammelt ved. Mynte klippes ned til 5 cm for at forny den (RHS)."
+      },
+      {
+        "activity": "Høst",
+        "spring": "Lige før blomstring",
+        "summer": "Lige før blomstring",
+        "autumn": "",
+        "winter": "",
+        "note": "Tidligt om morgenen, lige før blomstringen, bærer bladet mest olie (Clemson)."
+      },
+      {
+        "activity": "Kulde",
+        "spring": "",
+        "summer": "",
+        "autumn": "",
+        "winter": "Beskyt mod frost",
+        "note": "Etableret rosmarin klarer -8 C, men frost svider stadig de nye skud (RHS)."
+      }
+    ]
+  }
+}

@@ -1,0 +1,282 @@
+{
+  "succulent": {
+    "rows": [
+      {
+        "activity": "Sulama",
+        "spring": "2-3 haftada bir",
+        "summer": "2-3 haftada bir",
+        "autumn": "Seyrek sulayın",
+        "winter": "Çok az",
+        "note": "Çöl kaktüsleri serin ve neredeyse kuru dinlenir; o dönemde sulamak yalnızca zayıf sürgün verir (Clemson, RHS)."
+      },
+      {
+        "activity": "Gübreleme",
+        "spring": "Ayda bir, yarım doz",
+        "summer": "Ayda bir, yarım doz",
+        "autumn": "Durdurun",
+        "winter": "Yok",
+        "note": "Az azot, etiket dozunun yarısı ile dörtte biri arası. Fazla azot çürüyen yumuşak doku yapar (Clemson, Iowa State)."
+      },
+      {
+        "activity": "Saksı değişimi",
+        "spring": "En iyi zaman",
+        "summer": "",
+        "autumn": "",
+        "winter": "",
+        "note": "Yalnızca bir boy büyük saksı, ve ilk sulamadan önce birkaç gün bekleyin (Clemson)."
+      },
+      {
+        "activity": "Işık",
+        "spring": "10+ saat ışık",
+        "summer": "Dışarıda yarı gölge",
+        "autumn": "10+ saat ışık",
+        "winter": "10+ saat ışık",
+        "note": "En az 6-8 saat. Bitkiyi dışarı çıkarırken önce yarı gölge gerekir, yoksa yapraklar yanar (Iowa State)."
+      }
+    ]
+  },
+  "tropicalFoliage": {
+    "rows": [
+      {
+        "activity": "Sulama",
+        "spring": "Sürekli nemli",
+        "summer": "Sürekli nemli",
+        "autumn": "Sürekli nemli",
+        "winter": "Daha çok kurusun",
+        "note": "17-22 C suyla, asla yumuşatılmış su değil, ve tabağı boşaltın (Clemson)."
+      },
+      {
+        "activity": "Gübreleme",
+        "spring": "Ayda bir, seyreltik",
+        "summer": "Ayda bir, seyreltik",
+        "autumn": "Azaltın",
+        "winter": "Yok",
+        "note": "İç mekân bitkileri yalnızca büyüme mevsiminde gübrelenir, dinlenme döneminde hiç (UConn)."
+      },
+      {
+        "activity": "Çelikleme",
+        "spring": "Her mevsim",
+        "summer": "Her mevsim",
+        "autumn": "Her mevsim",
+        "winter": "Her mevsim",
+        "note": "Filodendron ve akrabaları yılın her döneminde gövde çeliğinden köklenir (Clemson)."
+      }
+    ]
+  },
+  "fern": {
+    "rows": [
+      {
+        "activity": "Sulama",
+        "spring": "Hafif nemli",
+        "summer": "Hafif nemli",
+        "autumn": "Hafif nemli",
+        "winter": "Hafif nemli",
+        "note": "Asla tamamen kurumasına izin vermeyin ve saksıda asla su bırakmayın (Clemson)."
+      },
+      {
+        "activity": "Gübreleme",
+        "spring": "Ayda bir, yarım doz",
+        "summer": "Ayda bir, yarım doz",
+        "autumn": "Durdurun",
+        "winter": "Yok",
+        "note": "Bölme ya da saksı değişiminden sonra 6 ay boyunca hiçbir şey; fazla gübre yaprakları yakar (Clemson, UConn)."
+      },
+      {
+        "activity": "Bölme ve saksılama",
+        "spring": "İlkbahar başı",
+        "summer": "",
+        "autumn": "",
+        "winter": "",
+        "note": "Kök kütlesini 2-3 parçaya ayırın ve haftalarca hem harcı hem havayı nemli tutun (UConn)."
+      },
+      {
+        "activity": "Nem",
+        "spring": "30-50%",
+        "summer": "30-50%",
+        "autumn": "30-50%",
+        "winter": "Tepsi veya sisleme",
+        "note": "Soğuk mevsimde kuru iç mekân havası asıl risktir; çakıllı tepsi, sisleme yapmaktan iyidir (Clemson, UConn)."
+      }
+    ]
+  },
+  "fruitVeg": {
+    "rows": [
+      {
+        "activity": "Sulama",
+        "spring": "haftada 25-50 mm",
+        "summer": "haftada 25-50 mm",
+        "autumn": "haftada 25-50 mm",
+        "winter": "",
+        "note": "Derin ve düzenli. Yüzeysel, düzensiz sulama kalsiyum taşınımını keser ve çiçek burnu çürüklüğüne yol açar (USU, UGA)."
+      },
+      {
+        "activity": "Gübreleme",
+        "spring": "Çiçeklenmede",
+        "summer": "Hasattan sonra",
+        "autumn": "Durdurun",
+        "winter": "Yok",
+        "note": "Sert çekirdekli meyve üç bölünmüş doz alır, yazın son haftalarında hiç almaz ki odun olgunlaşsın (Clemson)."
+      },
+      {
+        "activity": "Budama",
+        "spring": "",
+        "summer": "",
+        "autumn": "Geç sonbahardan",
+        "winter": "Dinlenmede: ideal",
+        "note": "Dinlenme dönemi standart penceredir: yapı görünür ve yara bir sonraki büyüme mevsiminde kapanır (USDA)."
+      },
+      {
+        "activity": "Meyve seyreltme",
+        "spring": "",
+        "summer": "Elle",
+        "autumn": "",
+        "winter": "",
+        "note": "1-2 cm'de görülen doğal dökülme elle seyreltmenin yerini tutmaz; her salkımda en iri meyveyi bırakın (Iowa State)."
+      }
+    ]
+  },
+  "flowering": {
+    "rows": [
+      {
+        "activity": "Gübreleme",
+        "spring": "Tomurcuk patlarken",
+        "summer": "6 haftada bir",
+        "autumn": "Dondan önce kesin",
+        "winter": "Yok",
+        "note": "Güller sıcağın zirvesinde yarım doza iner ve beklenen ilk dondan 6 hafta önce durur (Clemson)."
+      },
+      {
+        "activity": "Solan çiçekler",
+        "spring": "Solan çiçekleri al",
+        "summer": "Solan çiçekleri al",
+        "autumn": "Tohumları bırakın",
+        "winter": "",
+        "note": "Bırakılan tohum başları soğuk mevsim boyunca yaban hayatını besler (Clemson)."
+      },
+      {
+        "activity": "Soğanlılar",
+        "spring": "Sürgünde gübreleyin",
+        "summer": "Uykuda bölün",
+        "autumn": "",
+        "winter": "",
+        "note": "Sürgün çıkarken YA DA çiçekten sonra gübreleyin, asla ikisi birden değil. Solmuş çiçeği alın ama yaprakları asla (Illinois)."
+      }
+    ]
+  },
+  "woody": {
+    "rows": [
+      {
+        "activity": "Yeni fidan suyu",
+        "spring": "Haftada bir, derin",
+        "summer": "Haftada bir, derin",
+        "autumn": "Dona kadar",
+        "winter": "",
+        "note": "Gövde çapının her inçi için 1-1,5 galon, kök bölgesine ve gövdeye dayamadan (Penn State)."
+      },
+      {
+        "activity": "Gübreleme",
+        "spring": "Tomurcuk patlarken",
+        "summer": "Bölünmüş dozlar",
+        "autumn": "Durdurun",
+        "winter": "Yok",
+        "note": "Olgun bir ağacın çok azına ya da hiçbirine ihtiyacı yoktur. Geç ve azotlu gübreleme dinlenmeyi geciktirir (Clemson)."
+      },
+      {
+        "activity": "Budama",
+        "spring": "Çiçekten sonra",
+        "summer": "",
+        "autumn": "Kaçının",
+        "winter": "Dinlenmede: ideal",
+        "note": "İlkbaharda çiçek açan çalılar çiçekten hemen sonra budanır; daha geç budarsanız gelecek yılın tomurcuklarını kesersiniz (Clemson)."
+      },
+      {
+        "activity": "Malç",
+        "spring": "2-4 inç, gövde açık",
+        "summer": "2-4 inç, gövde açık",
+        "autumn": "2-4 inç, gövde açık",
+        "winter": "2-4 inç, gövde açık",
+        "note": "Genç gövdede 3-5 inç, olgun gövdede 8-10 inç boşluk bırakın (Penn State)."
+      }
+    ]
+  },
+  "orchid": {
+    "rows": [
+      {
+        "activity": "Sulama",
+        "spring": "Haftada bir",
+        "summer": "Haftada bir",
+        "autumn": "Azaltın",
+        "winter": "Azaltın",
+        "note": "Deliklerden akana kadar suya doyurun, sonra süzdürün. Asla tabakta bekletmeyin (AOS, RHS)."
+      },
+      {
+        "activity": "Gübreleme",
+        "spring": "Haftada bir, yarım",
+        "summer": "Haftada bir, yarım",
+        "autumn": "2 haftada bir",
+        "winter": "2 haftada bir",
+        "note": "Etiket dozunun yarısı, az üre ya da hiç, ve tuzları yıkamak için her 4. gübrelemeyi atlayın (AOS, RHS)."
+      },
+      {
+        "activity": "Saksı değişimi",
+        "spring": "İlkbahar başı",
+        "summer": "",
+        "autumn": "",
+        "winter": "Kış sonu",
+        "note": "Yalnızca yeni kök görüldüğünde. Sfagnum içindeyse çiçeklenme bittikten sonra saksı değiştirin (Clemson)."
+      },
+      {
+        "activity": "Tomurcuk oluşumu",
+        "spring": "",
+        "summer": "",
+        "autumn": "14 saat karanlık",
+        "winter": "Sürekli nemli",
+        "note": "Yalnızca Schlumbergera: en az 6 hafta boyunca 14 saat ve üzeri kesintisiz karanlık, ve 2 saatlik lamba ışığı tomurcukları iptal eder (Clemson)."
+      }
+    ]
+  },
+  "herb": {
+    "rows": [
+      {
+        "activity": "Sulama",
+        "spring": "Aralarda kurusun",
+        "summer": "Sabah erken sulayın",
+        "autumn": "Aralarda kurusun",
+        "winter": "Asla su birikmesin",
+        "note": "Bölünmüş grup: Akdeniz bitkileri gerçek kurumayı ister, yapraklılar (fesleğen, maydanoz, nane) sürekli nemi ister (Clemson, RHS)."
+      },
+      {
+        "activity": "Gübreleme",
+        "spring": "Az, dikimde",
+        "summer": "Sadece durursa",
+        "autumn": "Yok",
+        "winter": "Yok",
+        "note": "Toprağa dikili biberiye hiç gübre almaz, çok besleyici toprak da aromayı köreltir (RHS, Clemson)."
+      },
+      {
+        "activity": "Budama",
+        "spring": "Sert (adaçayı)",
+        "summer": "Hafif (defne)",
+        "autumn": "Çiçekten sonra",
+        "winter": "",
+        "note": "Biberiye çiçekten sonra hafif bir budama alır, asla eski oduna girilmez. Nane yenilenmesi için 5 cm'ye kesilir (RHS)."
+      },
+      {
+        "activity": "Hasat",
+        "spring": "Çiçeklenmeden önce",
+        "summer": "Çiçeklenmeden önce",
+        "autumn": "",
+        "winter": "",
+        "note": "Sabahın erken saatinde, çiçeklenmeden hemen önce, yaprak en çok yağı taşır (Clemson)."
+      },
+      {
+        "activity": "Soğuk",
+        "spring": "",
+        "summer": "",
+        "autumn": "",
+        "winter": "Dondan koruyun",
+        "note": "Tutmuş biberiye -8 C'ye dayanır, ama don yine de yeni sürgünleri yakar (RHS)."
+      }
+    ]
+  }
+}

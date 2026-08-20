@@ -1,0 +1,282 @@
+{
+  "succulent": {
+    "rows": [
+      {
+        "activity": "Water geven",
+        "spring": "Om de 2-3 weken",
+        "summer": "Om de 2-3 weken",
+        "autumn": "Minder vaak",
+        "winter": "Bijna niet",
+        "note": "Woestijncactussen rusten koel en bijna droog; dan water geven levert alleen slappe groei op (Clemson, RHS)."
+      },
+      {
+        "activity": "Bemesten",
+        "spring": "Maandelijks, half",
+        "summer": "Maandelijks, half",
+        "autumn": "Stoppen",
+        "winter": "Niet bemesten",
+        "note": "Weinig stikstof, de helft tot een kwart van de dosering op het etiket. Te veel N geeft zacht weefsel dat wegrot (Clemson, Iowa State)."
+      },
+      {
+        "activity": "Verpotten",
+        "spring": "Beste moment",
+        "summer": "",
+        "autumn": "",
+        "winter": "",
+        "note": "Maar één potmaat groter, en enkele dagen wachten voor de eerste watergift (Clemson)."
+      },
+      {
+        "activity": "Licht",
+        "spring": "10+ u licht",
+        "summer": "Halfschaduw buiten",
+        "autumn": "10+ u licht",
+        "winter": "10+ u licht",
+        "note": "Minimaal 6-8 u. Naar buiten verhuizen gaat eerst via halfschaduw, anders verbranden de bladeren (Iowa State)."
+      }
+    ]
+  },
+  "tropicalFoliage": {
+    "rows": [
+      {
+        "activity": "Water geven",
+        "spring": "Gelijkmatig vochtig",
+        "summer": "Gelijkmatig vochtig",
+        "autumn": "Gelijkmatig vochtig",
+        "winter": "Meer laten drogen",
+        "note": "Water van 17-22 C, nooit onthard water, en de schotel leeggieten (Clemson)."
+      },
+      {
+        "activity": "Bemesten",
+        "spring": "Maandelijks, verdund",
+        "summer": "Maandelijks, verdund",
+        "autumn": "Afbouwen",
+        "winter": "Niet bemesten",
+        "note": "Kamerplanten worden alleen in het groeiseizoen bemest, niets tijdens de rustperiode (UConn)."
+      },
+      {
+        "activity": "Stekken",
+        "spring": "Elk seizoen",
+        "summer": "Elk seizoen",
+        "autumn": "Elk seizoen",
+        "winter": "Elk seizoen",
+        "note": "Philodendron en verwanten wortelen het hele jaar door uit stengelstek (Clemson)."
+      }
+    ]
+  },
+  "fern": {
+    "rows": [
+      {
+        "activity": "Water geven",
+        "spring": "Licht vochtig",
+        "summer": "Licht vochtig",
+        "autumn": "Licht vochtig",
+        "winter": "Licht vochtig",
+        "note": "Nooit helemaal laten uitdrogen, en nooit water in de pot laten staan (Clemson)."
+      },
+      {
+        "activity": "Bemesten",
+        "spring": "Maandelijks, half",
+        "summer": "Maandelijks, half",
+        "autumn": "Stoppen",
+        "winter": "Niet bemesten",
+        "note": "Helemaal niets gedurende 6 maanden na delen of verpotten; te veel mest verbrandt de bladveren (Clemson, UConn)."
+      },
+      {
+        "activity": "Delen & verpotten",
+        "spring": "Vroeg voorjaar",
+        "summer": "",
+        "autumn": "",
+        "winter": "",
+        "note": "Splits de wortelkluit in 2-3 delen en houd grond en lucht daarna wekenlang vochtig (UConn)."
+      },
+      {
+        "activity": "Luchtvochtigheid",
+        "spring": "30-50%",
+        "summer": "30-50%",
+        "autumn": "30-50%",
+        "winter": "Schaal of nevelen",
+        "note": "Droge binnenlucht in het koude seizoen is het echte risico; een schotel met kiezels werkt beter dan nevelen (Clemson, UConn)."
+      }
+    ]
+  },
+  "fruitVeg": {
+    "rows": [
+      {
+        "activity": "Water geven",
+        "spring": "25-50 mm per week",
+        "summer": "25-50 mm per week",
+        "autumn": "25-50 mm per week",
+        "winter": "",
+        "note": "Diep en gelijkmatig. Ondiep, ongelijk water geven remt het calciumtransport en veroorzaakt neusrot (USU, UGA)."
+      },
+      {
+        "activity": "Bemesten",
+        "spring": "Bij de bloei",
+        "summer": "Na de oogst",
+        "autumn": "Stoppen",
+        "winter": "Niet bemesten",
+        "note": "Steenfruit krijgt drie gedeelde giften en niets in de laatste zomerweken, zodat het hout uitrijpt (Clemson)."
+      },
+      {
+        "activity": "Snoeien",
+        "spring": "",
+        "summer": "",
+        "autumn": "Vanaf laat najaar",
+        "winter": "Rustperiode: best",
+        "note": "De rustperiode is het standaardvenster: de opbouw is zichtbaar en de wond sluit in het volgende groeiseizoen (USDA)."
+      },
+      {
+        "activity": "Uitdunnen",
+        "spring": "",
+        "summer": "Met de hand",
+        "autumn": "",
+        "winter": "",
+        "note": "De natuurlijke rui bij 1-2 cm vervangt het handmatig uitdunnen niet; houd de grootste vrucht per tros over (Iowa State)."
+      }
+    ]
+  },
+  "flowering": {
+    "rows": [
+      {
+        "activity": "Bemesten",
+        "spring": "Bij het uitlopen",
+        "summer": "Om de 6 weken",
+        "autumn": "Stop voor de vorst",
+        "winter": "Niet bemesten",
+        "note": "Rozen gaan in de grootste hitte naar halve dosis en stoppen 6 weken voor de eerste verwachte vorst (Clemson)."
+      },
+      {
+        "activity": "Uitbloeiers",
+        "spring": "Uitbloeiers weghalen",
+        "summer": "Uitbloeiers weghalen",
+        "autumn": "Zaaddozen laten",
+        "winter": "",
+        "note": "Zaaddozen die blijven staan voeden de dieren het hele koude seizoen door (Clemson)."
+      },
+      {
+        "activity": "Bollen",
+        "spring": "Bij opkomst voeden",
+        "summer": "Delen in rust",
+        "autumn": "",
+        "winter": "",
+        "note": "Bemesten bij opkomst OF na de bloei, nooit allebei. Haal de uitgebloeide bloem weg maar nooit het blad (Illinois)."
+      }
+    ]
+  },
+  "woody": {
+    "rows": [
+      {
+        "activity": "Jonge boom water",
+        "spring": "Wekelijks, diep",
+        "summer": "Wekelijks, diep",
+        "autumn": "Tot de vorst",
+        "winter": "",
+        "note": "1 tot 1,5 gallon per inch stamdiameter, over de wortelzone en niet tegen de stam (Penn State)."
+      },
+      {
+        "activity": "Bemesten",
+        "spring": "Bij het uitlopen",
+        "summer": "In gedeelde giften",
+        "autumn": "Stoppen",
+        "winter": "Niet bemesten",
+        "note": "Een volgroeide boom heeft weinig tot niets nodig. Late stikstofrijke bemesting stelt de rust uit (Clemson)."
+      },
+      {
+        "activity": "Snoeien",
+        "spring": "Na de bloei",
+        "summer": "",
+        "autumn": "Vermijden",
+        "winter": "Rustperiode: best",
+        "note": "Voorjaarsbloeiende heesters snoei je direct na de bloei; later snoeien haalt de knoppen van volgend jaar weg (Clemson)."
+      },
+      {
+        "activity": "Mulchlaag",
+        "spring": "2-4 inch, stam vrij",
+        "summer": "2-4 inch, stam vrij",
+        "autumn": "2-4 inch, stam vrij",
+        "winter": "2-4 inch, stam vrij",
+        "note": "Houd 3-5 inch vrij rond een jonge stam en 8-10 inch rond een volgroeide (Penn State)."
+      }
+    ]
+  },
+  "orchid": {
+    "rows": [
+      {
+        "activity": "Water geven",
+        "spring": "Wekelijks",
+        "summer": "Wekelijks",
+        "autumn": "Minder",
+        "winter": "Minder",
+        "note": "Doorweken tot het uit de gaten loopt, dan laten uitlekken. Nooit in de schotel laten staan (AOS, RHS)."
+      },
+      {
+        "activity": "Bemesten",
+        "spring": "Wekelijks, half",
+        "summer": "Wekelijks, half",
+        "autumn": "Om de 2 weken",
+        "winter": "Om de 2 weken",
+        "note": "De helft van de etiketdosering, weinig of geen ureum, en elke 4e gift overslaan om zouten uit te spoelen (AOS, RHS)."
+      },
+      {
+        "activity": "Verpotten",
+        "spring": "Vroeg voorjaar",
+        "summer": "",
+        "autumn": "",
+        "winter": "Eind winter",
+        "note": "Pas als er nieuwe wortelgroei zichtbaar is. In sphagnum verpot je na de bloei (Clemson)."
+      },
+      {
+        "activity": "Knopvorming",
+        "spring": "",
+        "summer": "",
+        "autumn": "14 u donker",
+        "winter": "Gelijkmatig vochtig",
+        "note": "Alleen Schlumbergera: 14 u of meer ononderbroken donker gedurende minstens 6 weken, en 2 u lamplicht wist de knoppen uit (Clemson)."
+      }
+    ]
+  },
+  "herb": {
+    "rows": [
+      {
+        "activity": "Water geven",
+        "spring": "Tussendoor drogen",
+        "summer": "'s Ochtends water",
+        "autumn": "Tussendoor drogen",
+        "winter": "Nooit natte voeten",
+        "note": "Gedeelde groep: mediterrane kruiden willen echt uitdrogen, de bladrijke (basilicum, peterselie, munt) willen constante vocht (Clemson, RHS)."
+      },
+      {
+        "activity": "Bemesten",
+        "spring": "Weinig, bij planten",
+        "summer": "Alleen bij stilstand",
+        "autumn": "Niet bemesten",
+        "winter": "Niet bemesten",
+        "note": "Rozemarijn in de volle grond krijgt helemaal niets, en heel rijke grond vervlakt de smaak (RHS, Clemson)."
+      },
+      {
+        "activity": "Snoeien",
+        "spring": "Hard terug (salie)",
+        "summer": "Bijknippen (laurier)",
+        "autumn": "Na de bloei",
+        "winter": "",
+        "note": "Rozemarijn krijgt een lichte snoei na de bloei, nooit in het oude hout. Munt wordt op 5 cm gezet om te vernieuwen (RHS)."
+      },
+      {
+        "activity": "Oogst",
+        "spring": "Vlak voor de bloei",
+        "summer": "Vlak voor de bloei",
+        "autumn": "",
+        "winter": "",
+        "note": "Vroeg in de ochtend, vlak voor de bloei, draagt het blad de meeste olie (Clemson)."
+      },
+      {
+        "activity": "Kou",
+        "spring": "",
+        "summer": "",
+        "autumn": "",
+        "winter": "Vorstvrij zetten",
+        "note": "Ingegroeide rozemarijn overleeft -8 C, maar vorst verbrandt de jonge scheuten alsnog (RHS)."
+      }
+    ]
+  }
+}

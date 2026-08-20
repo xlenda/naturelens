@@ -1,0 +1,282 @@
+{
+  "succulent": {
+    "rows": [
+      {
+        "activity": "Zálivka",
+        "spring": "Každé 2-3 týdny",
+        "summer": "Každé 2-3 týdny",
+        "autumn": "Zvětšit rozestup",
+        "winter": "Minimálně",
+        "note": "Pouštní kaktusy odpočívají v chladu a téměř suchu; zálivka v té době vede jen ke slabému růstu (Clemson, RHS)."
+      },
+      {
+        "activity": "Hnojení",
+        "spring": "Měsíčně, půl dávky",
+        "summer": "Měsíčně, půl dávky",
+        "autumn": "Ukončit",
+        "winter": "Nehnojit",
+        "note": "Málo dusíku, polovina až čtvrtina dávky z etikety. Přebytek dusíku tvoří měkká pletiva, která hnijí (Clemson, Iowa State)."
+      },
+      {
+        "activity": "Přesazování",
+        "spring": "Nejlepší doba",
+        "summer": "",
+        "autumn": "",
+        "winter": "",
+        "note": "Jen o jednu velikost květináče výš, a před první zálivkou počkat několik dní (Clemson)."
+      },
+      {
+        "activity": "Světlo",
+        "spring": "10+ h světla",
+        "summer": "Venku polostín",
+        "autumn": "10+ h světla",
+        "winter": "10+ h světla",
+        "note": "Minimálně 6-8 h. Před přesunem ven je nutný nejdřív polostín, jinak se listy spálí (Iowa State)."
+      }
+    ]
+  },
+  "tropicalFoliage": {
+    "rows": [
+      {
+        "activity": "Zálivka",
+        "spring": "Rovnoměrně vlhké",
+        "summer": "Rovnoměrně vlhké",
+        "autumn": "Rovnoměrně vlhké",
+        "winter": "Více proschnout",
+        "note": "Voda o 17-22 C, nikdy změkčená, a misku vylít (Clemson)."
+      },
+      {
+        "activity": "Hnojení",
+        "spring": "Měsíčně, zředěné",
+        "summer": "Měsíčně, zředěné",
+        "autumn": "Omezit",
+        "winter": "Nehnojit",
+        "note": "Pokojové rostliny se hnojí jen v době růstu, v období klidu vůbec (UConn)."
+      },
+      {
+        "activity": "Řízkování",
+        "spring": "Kdykoli v roce",
+        "summer": "Kdykoli v roce",
+        "autumn": "Kdykoli v roce",
+        "winter": "Kdykoli v roce",
+        "note": "Filodendron a příbuzní zakořeňují ze stonkových řízků kdykoli v roce (Clemson)."
+      }
+    ]
+  },
+  "fern": {
+    "rows": [
+      {
+        "activity": "Zálivka",
+        "spring": "Mírně vlhké",
+        "summer": "Mírně vlhké",
+        "autumn": "Mírně vlhké",
+        "winter": "Mírně vlhké",
+        "note": "Nikdy nenechat úplně proschnout a nikdy nenechat stát vodu v květináči (Clemson)."
+      },
+      {
+        "activity": "Hnojení",
+        "spring": "Měsíčně, půl dávky",
+        "summer": "Měsíčně, půl dávky",
+        "autumn": "Ukončit",
+        "winter": "Nehnojit",
+        "note": "Po dělení nebo přesazení 6 měsíců vůbec nic; příliš hnojiva spálí listy (Clemson, UConn)."
+      },
+      {
+        "activity": "Dělení a přesazení",
+        "spring": "Časné jaro",
+        "summer": "",
+        "autumn": "",
+        "winter": "",
+        "note": "Kořenový bal rozdělit na 2-3 části a substrát i vzduch držet vlhké ještě týdny poté (UConn)."
+      },
+      {
+        "activity": "Vzdušná vlhkost",
+        "spring": "30-50%",
+        "summer": "30-50%",
+        "autumn": "30-50%",
+        "winter": "Miska nebo rosení",
+        "note": "Suchý vzduch v bytě v chladné části roku je skutečné riziko; miska s kamínky je lepší než rosení (Clemson, UConn)."
+      }
+    ]
+  },
+  "fruitVeg": {
+    "rows": [
+      {
+        "activity": "Zálivka",
+        "spring": "25-50 mm/týden",
+        "summer": "25-50 mm/týden",
+        "autumn": "25-50 mm/týden",
+        "winter": "",
+        "note": "Hluboce a rovnoměrně. Mělká a nepravidelná zálivka omezí transport vápníku a způsobí suchou hnilobu květního konce (USU, UGA)."
+      },
+      {
+        "activity": "Hnojení",
+        "spring": "Při kvetení",
+        "summer": "Po sklizni",
+        "autumn": "Ukončit",
+        "winter": "Nehnojit",
+        "note": "Peckoviny berou tři dělené dávky a nic v posledních týdnech léta, aby dřevo vyzrálo (Clemson)."
+      },
+      {
+        "activity": "Řez",
+        "spring": "",
+        "summer": "",
+        "autumn": "Od pozdního podzimu",
+        "winter": "Období klidu: ideál",
+        "note": "Období vegetačního klidu je standardní okno: struktura je vidět a rána se zavře v další vegetační sezoně (USDA)."
+      },
+      {
+        "activity": "Probírka plodů",
+        "spring": "",
+        "summer": "Ručně",
+        "autumn": "",
+        "winter": "",
+        "note": "Přirozený opad při 1-2 cm nenahradí ruční probírku; ponechte největší plod z každého shluku (Iowa State)."
+      }
+    ]
+  },
+  "flowering": {
+    "rows": [
+      {
+        "activity": "Hnojení",
+        "spring": "Při rašení",
+        "summer": "Každých 6 týdnů",
+        "autumn": "Před mrazem stop",
+        "winter": "Nehnojit",
+        "note": "Růže jdou na půl dávky v největším horku a končí 6 týdnů před prvním očekávaným mrazem (Clemson)."
+      },
+      {
+        "activity": "Odkvetlé květy",
+        "spring": "Odstranit odkvetlé",
+        "summer": "Odstranit odkvetlé",
+        "autumn": "Nechat semeníky",
+        "winter": "",
+        "note": "Ponechané semeníky živí zvěř po celou chladnou část roku (Clemson)."
+      },
+      {
+        "activity": "Cibuloviny",
+        "spring": "Přihnojit při rašení",
+        "summer": "Dělit v klidu",
+        "autumn": "",
+        "winter": "",
+        "note": "Přihnojit při rašení NEBO po odkvětu, nikdy obojí. Odstraňte odkvetlý květ, ale nikdy listy (Illinois)."
+      }
+    ]
+  },
+  "woody": {
+    "rows": [
+      {
+        "activity": "Zálivka mladých",
+        "spring": "Týdně, vydatně",
+        "summer": "Týdně, vydatně",
+        "autumn": "Do mrazů",
+        "winter": "",
+        "note": "1 až 1,5 galonu na palec průměru kmene, na kořenovou zónu a ne ke kmeni (Penn State)."
+      },
+      {
+        "activity": "Hnojení",
+        "spring": "Při rašení",
+        "summer": "Dělené dávky",
+        "autumn": "Ukončit",
+        "winter": "Nehnojit",
+        "note": "Vzrostlý strom potřebuje málo nebo vůbec nic. Pozdní dusíkaté hnojení oddaluje vegetační klid (Clemson)."
+      },
+      {
+        "activity": "Řez",
+        "spring": "Po odkvětu",
+        "summer": "",
+        "autumn": "Vyhnout se",
+        "winter": "Období klidu: ideál",
+        "note": "Keře kvetoucí na jaře se řežou hned po odkvětu; pozdější řez odstraní poupata na příští rok (Clemson)."
+      },
+      {
+        "activity": "Mulč",
+        "spring": "2-4 palce, mimo kmen",
+        "summer": "2-4 palce, mimo kmen",
+        "autumn": "2-4 palce, mimo kmen",
+        "winter": "2-4 palce, mimo kmen",
+        "note": "Nechte 3-5 palců volných u mladého kmene a 8-10 palců u vzrostlého (Penn State)."
+      }
+    ]
+  },
+  "orchid": {
+    "rows": [
+      {
+        "activity": "Zálivka",
+        "spring": "Týdně",
+        "summer": "Týdně",
+        "autumn": "Omezit",
+        "winter": "Omezit",
+        "note": "Namáčet, dokud voda neteče z otvorů, pak nechat okapat. Nikdy nenechávat stát v misce (AOS, RHS)."
+      },
+      {
+        "activity": "Hnojení",
+        "spring": "Týdně, půl dávky",
+        "summer": "Týdně, půl dávky",
+        "autumn": "Každé 2 týdny",
+        "winter": "Každé 2 týdny",
+        "note": "Poloviční dávka z etikety, málo nebo žádná močovina, a každou 4. dávku vynechat kvůli vyplavení solí (AOS, RHS)."
+      },
+      {
+        "activity": "Přesazování",
+        "spring": "Časné jaro",
+        "summer": "",
+        "autumn": "",
+        "winter": "Pozdní zima",
+        "note": "Až když jsou vidět nové kořeny. V rašeliníku přesazujte po skončení kvetení (Clemson)."
+      },
+      {
+        "activity": "Nasazení poupat",
+        "spring": "",
+        "summer": "",
+        "autumn": "14 h tmy",
+        "winter": "Rovnoměrně vlhké",
+        "note": "Jen Schlumbergera: 14 h a více nepřerušené tmy po dobu nejméně 6 týdnů, a 2 h světla z lampy poupata zruší (Clemson)."
+      }
+    ]
+  },
+  "herb": {
+    "rows": [
+      {
+        "activity": "Zálivka",
+        "spring": "Nechat proschnout",
+        "summer": "Zalévat ráno",
+        "autumn": "Nechat proschnout",
+        "winter": "Nikdy podmáčené",
+        "note": "Rozdělená skupina: středomořské byliny chtějí skutečné proschnutí, listové (bazalka, petržel, máta) stálou vlhkost (Clemson, RHS)."
+      },
+      {
+        "activity": "Hnojení",
+        "spring": "Málo, při výsadbě",
+        "summer": "Jen když stagnuje",
+        "autumn": "Nehnojit",
+        "winter": "Nehnojit",
+        "note": "Rozmarýn v záhonu nedostává nic a velmi živná půda otupí chuť (RHS, Clemson)."
+      },
+      {
+        "activity": "Řez",
+        "spring": "Hluboký (šalvěj)",
+        "summer": "Zástřih (vavřín)",
+        "autumn": "Po odkvětu",
+        "winter": "",
+        "note": "Rozmarýn snese lehký zástřih po odkvětu, nikdy do starého dřeva. Mátu seřízněte na 5 cm, aby se obnovila (RHS)."
+      },
+      {
+        "activity": "Sklizeň",
+        "spring": "Těsně před květem",
+        "summer": "Těsně před květem",
+        "autumn": "",
+        "winter": "",
+        "note": "Brzy ráno, těsně před rozkvětem, nese list nejvíc silice (Clemson)."
+      },
+      {
+        "activity": "Chlad",
+        "spring": "",
+        "summer": "",
+        "autumn": "",
+        "winter": "Chránit před mrazem",
+        "note": "Zapojený rozmarýn přežije -8 C, ale mráz i tak spálí nové výhony (RHS)."
+      }
+    ]
+  }
+}

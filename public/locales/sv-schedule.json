@@ -1,0 +1,282 @@
+{
+  "succulent": {
+    "rows": [
+      {
+        "activity": "Vattning",
+        "spring": "Var 2-3:e vecka",
+        "summer": "Var 2-3:e vecka",
+        "autumn": "Glesare",
+        "winter": "Nästan inget",
+        "note": "Ökenkaktusar vilar svalt och nästan torrt; att vattna då ger bara svag växt (Clemson, RHS)."
+      },
+      {
+        "activity": "Gödsling",
+        "spring": "Månadsvis, halv dos",
+        "summer": "Månadsvis, halv dos",
+        "autumn": "Sluta",
+        "winter": "Ingen",
+        "note": "Lite kväve, halva till en fjärdedel av dosen på förpackningen. För mycket kväve ger mjuk vävnad som ruttnar (Clemson, Iowa State)."
+      },
+      {
+        "activity": "Omplantering",
+        "spring": "Bästa tiden",
+        "summer": "",
+        "autumn": "",
+        "winter": "",
+        "note": "Bara en krukstorlek större, och vänta flera dagar före första vattningen (Clemson)."
+      },
+      {
+        "activity": "Ljus",
+        "spring": "10+ h ljust",
+        "summer": "Halvskugga ute",
+        "autumn": "10+ h ljust",
+        "winter": "10+ h ljust",
+        "note": "Minst 6-8 h. Att flytta ut en planta kräver halvskugga först, annars bränns bladen (Iowa State)."
+      }
+    ]
+  },
+  "tropicalFoliage": {
+    "rows": [
+      {
+        "activity": "Vattning",
+        "spring": "Jämnt fuktig",
+        "summer": "Jämnt fuktig",
+        "autumn": "Jämnt fuktig",
+        "winter": "Låt torka mer",
+        "note": "Vatten på 17-22 C, aldrig avhärdat, och töm fatet (Clemson)."
+      },
+      {
+        "activity": "Gödsling",
+        "spring": "Månadsvis, utspätt",
+        "summer": "Månadsvis, utspätt",
+        "autumn": "Trappa ner",
+        "winter": "Ingen",
+        "note": "Krukväxter göds bara under växtsäsongen, ingenting under viloperioden (UConn)."
+      },
+      {
+        "activity": "Sticklingar",
+        "spring": "Alla årstider",
+        "summer": "Alla årstider",
+        "autumn": "Alla årstider",
+        "winter": "Alla årstider",
+        "note": "Philodendron och släktingar rotar sig från stamsticklingar när som helst på året (Clemson)."
+      }
+    ]
+  },
+  "fern": {
+    "rows": [
+      {
+        "activity": "Vattning",
+        "spring": "Lätt fuktig",
+        "summer": "Lätt fuktig",
+        "autumn": "Lätt fuktig",
+        "winter": "Lätt fuktig",
+        "note": "Låt den aldrig torka ut helt, och lämna aldrig stående vatten i krukan (Clemson)."
+      },
+      {
+        "activity": "Gödsling",
+        "spring": "Månadsvis, halv dos",
+        "summer": "Månadsvis, halv dos",
+        "autumn": "Sluta",
+        "winter": "Ingen",
+        "note": "Ingenting alls på 6 månader efter delning eller omplantering; för mycket gödsel bränner bladen (Clemson, UConn)."
+      },
+      {
+        "activity": "Dela & omplantera",
+        "spring": "Tidig vår",
+        "summer": "",
+        "autumn": "",
+        "winter": "",
+        "note": "Dela rotklumpen i 2-3 delar och håll jord och luft fuktiga i flera veckor efteråt (UConn)."
+      },
+      {
+        "activity": "Luftfuktighet",
+        "spring": "30-50%",
+        "summer": "30-50%",
+        "autumn": "30-50%",
+        "winter": "Fat eller dimma",
+        "note": "Torr inomhusluft under den kalla årstiden är den verkliga risken; ett fat med kulor slår dimspray (Clemson, UConn)."
+      }
+    ]
+  },
+  "fruitVeg": {
+    "rows": [
+      {
+        "activity": "Vattning",
+        "spring": "25-50 mm/vecka",
+        "summer": "25-50 mm/vecka",
+        "autumn": "25-50 mm/vecka",
+        "winter": "",
+        "note": "Djupt och jämnt. Ytlig, ojämn vattning bromsar kalciumtransporten och ger pistillröta (USU, UGA)."
+      },
+      {
+        "activity": "Gödsling",
+        "spring": "Vid blomning",
+        "summer": "Efter skörd",
+        "autumn": "Sluta",
+        "winter": "Ingen",
+        "note": "Stenfrukt tar tre delade givor och ingen alls de sista sommarveckorna, så att veden mognar (Clemson)."
+      },
+      {
+        "activity": "Beskärning",
+        "spring": "",
+        "summer": "",
+        "autumn": "Från sen höst",
+        "winter": "Vila: bäst",
+        "note": "Vilan är standardfönstret: strukturen syns och såret sluts under nästa växtsäsong (USDA)."
+      },
+      {
+        "activity": "Gallring",
+        "spring": "",
+        "summer": "För hand",
+        "autumn": "",
+        "winter": "",
+        "note": "Det naturliga fallet vid 1-2 cm ersätter inte handgallring; behåll den största frukten i varje klase (Iowa State)."
+      }
+    ]
+  },
+  "flowering": {
+    "rows": [
+      {
+        "activity": "Gödsling",
+        "spring": "Vid knoppsprickning",
+        "summer": "Var 6:e vecka",
+        "autumn": "Sluta före frost",
+        "winter": "Ingen",
+        "note": "Rosor går ner till halv dos i värsta hettan och slutar 6 veckor före den första väntade frosten (Clemson)."
+      },
+      {
+        "activity": "Putsning",
+        "spring": "Putsa vissna blommor",
+        "summer": "Putsa vissna blommor",
+        "autumn": "Låt frön sitta kvar",
+        "winter": "",
+        "note": "Fröställningar som får stå kvar föder djurlivet genom hela den kalla årstiden (Clemson)."
+      },
+      {
+        "activity": "Lökar",
+        "spring": "Göd vid uppkomst",
+        "summer": "Dela i vila",
+        "autumn": "",
+        "winter": "",
+        "note": "Göd vid uppkomst ELLER efter blomningen, aldrig båda. Ta bort den vissna blomman men aldrig bladen (Illinois)."
+      }
+    ]
+  },
+  "woody": {
+    "rows": [
+      {
+        "activity": "Vattna nyplanterat",
+        "spring": "Varje vecka, djupt",
+        "summer": "Varje vecka, djupt",
+        "autumn": "Fram till frost",
+        "winter": "",
+        "note": "1 till 1,5 gallon per tum stamdiameter, över rotzonen och inte mot stammen (Penn State)."
+      },
+      {
+        "activity": "Gödsling",
+        "spring": "Vid knoppsprickning",
+        "summer": "Delade givor",
+        "autumn": "Sluta",
+        "winter": "Ingen",
+        "note": "Ett fullvuxet träd behöver lite eller inget. Sen gödsling med mycket kväve fördröjer vilan (Clemson)."
+      },
+      {
+        "activity": "Beskärning",
+        "spring": "Efter blomning",
+        "summer": "",
+        "autumn": "Undvik",
+        "winter": "Vila: bäst",
+        "note": "Vårblommande buskar beskärs direkt efter blomningen; beskär senare och du klipper bort nästa års knoppar (Clemson)."
+      },
+      {
+        "activity": "Marktäckning",
+        "spring": "2-4 tum, ej mot stam",
+        "summer": "2-4 tum, ej mot stam",
+        "autumn": "2-4 tum, ej mot stam",
+        "winter": "2-4 tum, ej mot stam",
+        "note": "Håll 3-5 tum fritt runt en ung stam och 8-10 tum runt en fullvuxen (Penn State)."
+      }
+    ]
+  },
+  "orchid": {
+    "rows": [
+      {
+        "activity": "Vattning",
+        "spring": "Varje vecka",
+        "summer": "Varje vecka",
+        "autumn": "Dra ner",
+        "winter": "Dra ner",
+        "note": "Blöt tills det rinner ut ur hålen, låt sedan rinna av. Lämna den aldrig stående i fatet (AOS, RHS)."
+      },
+      {
+        "activity": "Gödsling",
+        "spring": "Veckovis, halv dos",
+        "summer": "Veckovis, halv dos",
+        "autumn": "Varannan vecka",
+        "winter": "Varannan vecka",
+        "note": "Halva dosen på förpackningen, lite eller ingen urea, och hoppa över var 4:e giva för att skölja ut salter (AOS, RHS)."
+      },
+      {
+        "activity": "Omplantering",
+        "spring": "Tidig vår",
+        "summer": "",
+        "autumn": "",
+        "winter": "Sen vinter",
+        "note": "Först när ny rottillväxt syns. I vitmossa omplanterar du när blomningen är över (Clemson)."
+      },
+      {
+        "activity": "Knoppsättning",
+        "spring": "",
+        "summer": "",
+        "autumn": "14 h mörker",
+        "winter": "Jämnt fuktig",
+        "note": "Bara Schlumbergera: 14 h eller mer obrutet mörker i minst 6 veckor, och 2 h lampljus raderar knopparna (Clemson)."
+      }
+    ]
+  },
+  "herb": {
+    "rows": [
+      {
+        "activity": "Vattning",
+        "spring": "Låt torka emellan",
+        "summer": "Vattna tidigt",
+        "autumn": "Låt torka emellan",
+        "winter": "Aldrig blött",
+        "note": "Delad grupp: medelhavskryddor vill torka upp på riktigt, de bladiga (basilika, persilja, mynta) vill ha jämn fukt (Clemson, RHS)."
+      },
+      {
+        "activity": "Gödsling",
+        "spring": "Lite, vid plantering",
+        "summer": "Bara om det stannar",
+        "autumn": "Ingen",
+        "winter": "Ingen",
+        "note": "Rosmarin på friland får ingenting alls, och väldigt näringsrik jord dämpar smaken (RHS, Clemson)."
+      },
+      {
+        "activity": "Beskärning",
+        "spring": "Hårt (salvia)",
+        "summer": "Putsa (lager)",
+        "autumn": "Efter blomning",
+        "winter": "",
+        "note": "Rosmarin tål en lätt putsning efter blomningen, aldrig in i gammal ved. Mynta klipps till 5 cm för att förnyas (RHS)."
+      },
+      {
+        "activity": "Skörd",
+        "spring": "Strax före blomning",
+        "summer": "Strax före blomning",
+        "autumn": "",
+        "winter": "",
+        "note": "Tidig morgon, precis före blomningen, är när bladet bär mest olja (Clemson)."
+      },
+      {
+        "activity": "Kyla",
+        "spring": "",
+        "summer": "",
+        "autumn": "",
+        "winter": "Skydda mot frost",
+        "note": "Etablerad rosmarin klarar -8 C, men frost bränner ändå de nya skotten (RHS)."
+      }
+    ]
+  }
+}

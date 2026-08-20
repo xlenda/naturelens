@@ -1,0 +1,282 @@
+{
+  "succulent": {
+    "rows": [
+      {
+        "activity": "Arrosage",
+        "spring": "Toutes les 2-3 sem.",
+        "summer": "Toutes les 2-3 sem.",
+        "autumn": "Espacer",
+        "winter": "Presque rien",
+        "note": "Les cactus de désert se reposent au froid et presque au sec; arroser à ce moment ne donne qu'une croissance faible (Clemson, RHS)."
+      },
+      {
+        "activity": "Fertilisation",
+        "spring": "Mensuel, demi-dose",
+        "summer": "Mensuel, demi-dose",
+        "autumn": "Arrêter",
+        "winter": "Aucun",
+        "note": "Peu d'azote, de la moitié au quart de la dose indiquée. L'excès d'azote fait des tissus mous qui pourrissent (Clemson, Iowa State)."
+      },
+      {
+        "activity": "Rempotage",
+        "spring": "Meilleur moment",
+        "summer": "",
+        "autumn": "",
+        "winter": "",
+        "note": "Un seul calibre de pot au-dessus, et attendre plusieurs jours avant le premier arrosage (Clemson)."
+      },
+      {
+        "activity": "Lumière",
+        "spring": "10+ h de lumière",
+        "summer": "Mi-ombre dehors",
+        "autumn": "10+ h de lumière",
+        "winter": "10+ h de lumière",
+        "note": "Au minimum 6-8 h. Une sortie à l'extérieur passe d'abord par la mi-ombre, sinon les feuilles brûlent (Iowa State)."
+      }
+    ]
+  },
+  "tropicalFoliage": {
+    "rows": [
+      {
+        "activity": "Arrosage",
+        "spring": "Humide régulier",
+        "summer": "Humide régulier",
+        "autumn": "Humide régulier",
+        "winter": "Laisser sécher plus",
+        "note": "Eau à 17-22 C, jamais adoucie, et vider la soucoupe (Clemson)."
+      },
+      {
+        "activity": "Fertilisation",
+        "spring": "Mensuel, dilué",
+        "summer": "Mensuel, dilué",
+        "autumn": "Réduire",
+        "winter": "Aucun",
+        "note": "Les plantes d'intérieur ne sont nourries que pendant la saison de croissance, rien pendant le repos (UConn)."
+      },
+      {
+        "activity": "Bouturage",
+        "spring": "Toute saison",
+        "summer": "Toute saison",
+        "autumn": "Toute saison",
+        "winter": "Toute saison",
+        "note": "Le philodendron et ses proches s'enracinent par bouture de tige en toute saison (Clemson)."
+      }
+    ]
+  },
+  "fern": {
+    "rows": [
+      {
+        "activity": "Arrosage",
+        "spring": "À peine humide",
+        "summer": "À peine humide",
+        "autumn": "À peine humide",
+        "winter": "À peine humide",
+        "note": "Ne jamais laisser sécher complètement, et ne jamais laisser d'eau stagnante dans le pot (Clemson)."
+      },
+      {
+        "activity": "Fertilisation",
+        "spring": "Mensuel, demi-dose",
+        "summer": "Mensuel, demi-dose",
+        "autumn": "Arrêter",
+        "winter": "Aucun",
+        "note": "Rien du tout pendant 6 mois après une division ou un rempotage; trop d'engrais brûle les frondes (Clemson, UConn)."
+      },
+      {
+        "activity": "Diviser et rempoter",
+        "spring": "Début de printemps",
+        "summer": "",
+        "autumn": "",
+        "winter": "",
+        "note": "Séparer la motte en 2-3 sections et garder le substrat et l'air humides pendant des semaines (UConn)."
+      },
+      {
+        "activity": "Hygrométrie",
+        "spring": "30-50%",
+        "summer": "30-50%",
+        "autumn": "30-50%",
+        "winter": "Plateau ou brumiser",
+        "note": "L'air sec des intérieurs chauffés à la saison froide est le vrai risque; un plateau de billes vaut mieux que la brumisation (Clemson, UConn)."
+      }
+    ]
+  },
+  "fruitVeg": {
+    "rows": [
+      {
+        "activity": "Arrosage",
+        "spring": "25-50 mm/semaine",
+        "summer": "25-50 mm/semaine",
+        "autumn": "25-50 mm/semaine",
+        "winter": "",
+        "note": "Profond et régulier. Un arrosage superficiel et irrégulier coupe le transport du calcium et provoque la nécrose apicale (USU, UGA)."
+      },
+      {
+        "activity": "Fertilisation",
+        "spring": "À la floraison",
+        "summer": "Après la récolte",
+        "autumn": "Arrêter",
+        "winter": "Aucun",
+        "note": "Les fruits à noyau prennent trois apports fractionnés et rien dans les dernières semaines de l'été, pour que le bois mûrisse (Clemson)."
+      },
+      {
+        "activity": "Taille",
+        "spring": "",
+        "summer": "",
+        "autumn": "Dès l'automne tardif",
+        "winter": "Repos: idéal",
+        "note": "Le repos est la fenêtre standard: la charpente est visible et la plaie se referme à la saison de croissance suivante (USDA)."
+      },
+      {
+        "activity": "Éclaircissage",
+        "spring": "",
+        "summer": "À la main",
+        "autumn": "",
+        "winter": "",
+        "note": "La chute naturelle à 1-2 cm ne remplace pas l'éclaircissage à la main; garder le plus gros fruit de chaque bouquet (Iowa State)."
+      }
+    ]
+  },
+  "flowering": {
+    "rows": [
+      {
+        "activity": "Fertilisation",
+        "spring": "Au débourrement",
+        "summer": "Toutes les 6 sem.",
+        "autumn": "Stop avant le gel",
+        "winter": "Aucun",
+        "note": "Les rosiers passent à demi-dose au plus fort de la chaleur et s'arrêtent 6 semaines avant la première gelée attendue (Clemson)."
+      },
+      {
+        "activity": "Fleurs fanées",
+        "spring": "Ôter fleurs fanées",
+        "summer": "Ôter fleurs fanées",
+        "autumn": "Laisser les graines",
+        "winter": "",
+        "note": "Les têtes de graines laissées en place nourrissent la faune pendant la saison froide (Clemson)."
+      },
+      {
+        "activity": "Bulbes",
+        "spring": "Nourrir à la levée",
+        "summer": "Diviser au repos",
+        "autumn": "",
+        "winter": "",
+        "note": "Nourrir à la levée OU après la floraison, jamais les deux. Ôter la fleur fanée mais jamais le feuillage (Illinois)."
+      }
+    ]
+  },
+  "woody": {
+    "rows": [
+      {
+        "activity": "Arrosage jeune arbre",
+        "spring": "Hebdo, en profondeur",
+        "summer": "Hebdo, en profondeur",
+        "autumn": "Jusqu'au gel",
+        "winter": "",
+        "note": "1 à 1,5 gallon par pouce de diamètre de tronc, sur la zone racinaire et pas contre le tronc (Penn State)."
+      },
+      {
+        "activity": "Fertilisation",
+        "spring": "Au débourrement",
+        "summer": "Doses fractionnées",
+        "autumn": "Arrêter",
+        "winter": "Aucun",
+        "note": "Un arbre adulte n'a besoin que de peu ou de rien. Un apport tardif riche en azote retarde le repos (Clemson)."
+      },
+      {
+        "activity": "Taille",
+        "spring": "Après la floraison",
+        "summer": "",
+        "autumn": "Éviter",
+        "winter": "Repos: idéal",
+        "note": "Les arbustes à floraison printanière se taillent juste après les fleurs; tailler plus tard supprime les boutons de l'année suivante (Clemson)."
+      },
+      {
+        "activity": "Paillage",
+        "spring": "2-4 po, pas au tronc",
+        "summer": "2-4 po, pas au tronc",
+        "autumn": "2-4 po, pas au tronc",
+        "winter": "2-4 po, pas au tronc",
+        "note": "Garder 3-5 pouces de dégagement sur un jeune tronc et 8-10 pouces sur un tronc adulte (Penn State)."
+      }
+    ]
+  },
+  "orchid": {
+    "rows": [
+      {
+        "activity": "Arrosage",
+        "spring": "Hebdomadaire",
+        "summer": "Hebdomadaire",
+        "autumn": "Espacer",
+        "winter": "Espacer",
+        "note": "Tremper jusqu'à ce que l'eau sorte par les trous, puis égoutter. Ne jamais laisser dans la soucoupe (AOS, RHS)."
+      },
+      {
+        "activity": "Fertilisation",
+        "spring": "Hebdo, demi-dose",
+        "summer": "Hebdo, demi-dose",
+        "autumn": "Toutes les 2 sem.",
+        "winter": "Toutes les 2 sem.",
+        "note": "Demi-dose de l'étiquette, peu ou pas d'urée, et sauter un apport sur 4 pour rincer les sels (AOS, RHS)."
+      },
+      {
+        "activity": "Rempotage",
+        "spring": "Début de printemps",
+        "summer": "",
+        "autumn": "",
+        "winter": "Fin d'hiver",
+        "note": "Seulement quand de nouvelles racines sont visibles. En sphaigne, rempoter à la fin de la floraison (Clemson)."
+      },
+      {
+        "activity": "Induction florale",
+        "spring": "",
+        "summer": "",
+        "autumn": "14 h d'obscurité",
+        "winter": "Humide régulier",
+        "note": "Schlumbergera uniquement: 14 h et plus d'obscurité continue pendant au moins 6 semaines, et 2 h de lampe annulent les boutons (Clemson)."
+      }
+    ]
+  },
+  "herb": {
+    "rows": [
+      {
+        "activity": "Arrosage",
+        "spring": "Laisser sécher",
+        "summer": "Arroser tôt",
+        "autumn": "Laisser sécher",
+        "winter": "Jamais détrempé",
+        "note": "Groupe partagé: les aromatiques méditerranéennes veulent un vrai assèchement, les feuillues (basilic, persil, menthe) une humidité constante (Clemson, RHS)."
+      },
+      {
+        "activity": "Fertilisation",
+        "spring": "Léger, à plantation",
+        "summer": "Si la pousse cale",
+        "autumn": "Aucun",
+        "winter": "Aucun",
+        "note": "Le romarin en pleine terre ne reçoit rien du tout, et un sol trop riche affadit le parfum (RHS, Clemson)."
+      },
+      {
+        "activity": "Taille",
+        "spring": "Sévère (sauge)",
+        "summer": "Tailler (laurier)",
+        "autumn": "Après la floraison",
+        "winter": "",
+        "note": "Le romarin reçoit une taille légère après les fleurs, jamais dans le vieux bois. La menthe se rabat à 5 cm pour la renouveler (RHS)."
+      },
+      {
+        "activity": "Récolte",
+        "spring": "Avant la floraison",
+        "summer": "Avant la floraison",
+        "autumn": "",
+        "winter": "",
+        "note": "Tôt le matin, juste avant la floraison, c'est là que la feuille porte le plus d'huile (Clemson)."
+      },
+      {
+        "activity": "Froid",
+        "spring": "",
+        "summer": "",
+        "autumn": "",
+        "winter": "Protéger du gel",
+        "note": "Un romarin bien installé supporte -8 C, mais le gel brûle quand même les jeunes pousses (RHS)."
+      }
+    ]
+  }
+}

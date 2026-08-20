@@ -383,3 +383,89 @@ test('no mushroom FAQ question invites the reader to eat it', () => {
     }
   }
 });
+
+// O cronograma de cuidado e por ESTACAO, nunca por MES.
+//
+// O app tem usuario nos dois hemisferios. Um nome de mes numa celula
+// transforma o conselho no seu contrario para metade do planeta: "adubar em
+// marco" e comeco de primavera no norte e fim de verao no sul. As fontes do
+// corpus (Clemson, RHS, Penn State, USDA) escrevem TODAS em meses do
+// hemisferio norte, entao o erro entra sozinho a cada linha nova - por isso a
+// regra precisa de portao e nao de disciplina.
+//
+// As armadilhas que este teste existe para pegar sao as que ninguem ve lendo:
+// em turco `aralik` e "intervalo" E dezembro, e `ekim` e "plantio" E outubro;
+// em polones `grudnik` (nome da Schlumbergera) vem de `grudzien`, dezembro.
+// Duas delas quase entraram na traducao dos 15 idiomas em 20/08.
+const MESES_POR_IDIOMA = {
+  en: ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december'],
+  pt: ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'],
+  es: ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'],
+  de: ['januar', 'februar', 'märz', 'april', 'mai', 'juni', 'juli', 'august', 'september', 'oktober', 'november', 'dezember'],
+  fr: ['janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre'],
+  it: ['gennaio', 'febbraio', 'marzo', 'aprile', 'maggio', 'giugno', 'luglio', 'agosto', 'settembre', 'ottobre', 'novembre', 'dicembre'],
+  nl: ['januari', 'februari', 'maart', 'april', 'mei', 'juni', 'juli', 'augustus', 'september', 'oktober', 'november', 'december'],
+  pl: ['styczeń', 'luty', 'marzec', 'kwiecień', 'maj', 'czerwiec', 'lipiec', 'sierpień', 'wrzesień', 'październik', 'listopad', 'grudzień', 'grudnik'],
+  sv: ['januari', 'februari', 'mars', 'april', 'maj', 'juni', 'juli', 'augusti', 'september', 'oktober', 'november', 'december'],
+  da: ['januar', 'februar', 'marts', 'april', 'maj', 'juni', 'juli', 'august', 'september', 'oktober', 'november', 'december'],
+  cs: ['leden', 'únor', 'březen', 'duben', 'květen', 'červen', 'červenec', 'srpen', 'září', 'říjen', 'listopad', 'prosinec'],
+  tr: ['ocak', 'şubat', 'mart', 'nisan', 'mayıs', 'haziran', 'temmuz', 'ağustos', 'eylül', 'ekim', 'kasım', 'aralık'],
+};
+
+// Coreano e chines escrevem mes como numeral + caractere.
+// O NUMERAL e obrigatorio na regra. Aceitar qualquer caractere chines antes
+// de 月 acusaria `每月一次` ("uma vez por mes"), que e frequencia legitima e
+// nao nome de mes - falso positivo que aconteceu ao escrever este teste.
+const MES_CJK = /[0-9０-９一二三四五六七八九十]+\s*[月월]/;
+
+function linhasDoCronograma(dados) {
+  return Object.entries(dados).flatMap(([grupo, valor]) =>
+    (valor.rows || []).map((linha, i) => ({ grupo, i, linha }))
+  );
+}
+
+test('o cronograma e por estacao, nunca por mes, nos 17 idiomas', () => {
+  const referencia = load(path.join(LOCALES_DIR, 'en-schedule.json'));
+  const esperado = Object.fromEntries(
+    Object.entries(referencia).map(([g, v]) => [g, (v.rows || []).length])
+  );
+
+  const arquivos = fs.readdirSync(LOCALES_DIR).filter((f) => f.endsWith('-schedule.json'));
+  assert.equal(arquivos.length, 17, `esperava 17 cronogramas, achei ${arquivos.length}`);
+
+  for (const arquivo of arquivos) {
+    const lang = arquivo.replace('-schedule.json', '');
+    const dados = load(path.join(LOCALES_DIR, arquivo));
+
+    // Mesma estrutura: conselho que existe num idioma tem que existir em todos.
+    const atual = Object.fromEntries(
+      Object.entries(dados).map(([g, v]) => [g, (v.rows || []).length])
+    );
+    assert.deepEqual(atual, esperado, `${arquivo}: estrutura diferente do en-schedule.json`);
+
+    for (const { grupo, i, linha } of linhasDoCronograma(dados)) {
+      const texto = Object.values(linha).filter((v) => typeof v === 'string').join(' ');
+      const minusculo = texto.toLowerCase();
+
+      for (const mes of MESES_POR_IDIOMA[lang] || []) {
+        assert.ok(
+          // Concatenacao com aspas simples, NUNCA template literal: dentro de
+          // uma template, `\b` e o caractere BACKSPACE (U+0008), nao a
+          // fronteira de palavra do regex. Escrito assim, este portao ficou
+          // verde com "Ab Mai" na tabela alema - um teste que passa pelo
+          // motivo errado e pior que teste nenhum, porque da confianca.
+          !new RegExp('\\b' + mes + '\\b', 'i').test(minusculo),
+          `${arquivo} (${grupo}, linha ${i}): tem o mes "${mes}". O cronograma e por ESTACAO - ` +
+            `um mes inverte o conselho para o hemisferio sul.`
+        );
+      }
+
+      if (['zh', 'zh-hant', 'ko'].includes(lang)) {
+        assert.ok(
+          !MES_CJK.test(texto),
+          `${arquivo} (${grupo}, linha ${i}): tem mes em formato CJK ("<numeral>月/월")`
+        );
+      }
+    }
+  }
+});

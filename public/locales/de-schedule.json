@@ -1,0 +1,282 @@
+{
+  "succulent": {
+    "rows": [
+      {
+        "activity": "Gießen",
+        "spring": "Alle 2-3 Wochen",
+        "summer": "Alle 2-3 Wochen",
+        "autumn": "Seltener gießen",
+        "winter": "Kaum gießen",
+        "note": "Wüstenkakteen ruhen kühl und fast trocken; Gießen bringt dann nur schwaches Wachstum (Clemson, RHS)."
+      },
+      {
+        "activity": "Düngen",
+        "spring": "Monatl., halbe Dosis",
+        "summer": "Monatl., halbe Dosis",
+        "autumn": "Stopp",
+        "winter": "Nicht düngen",
+        "note": "Wenig Stickstoff, halbe bis viertel Dosis der Packungsangabe. Zu viel N bildet weiches Gewebe, das fault (Clemson, Iowa State)."
+      },
+      {
+        "activity": "Umtopfen",
+        "spring": "Beste Zeit",
+        "summer": "",
+        "autumn": "",
+        "winter": "",
+        "note": "Nur eine Topfgröße größer, und vor dem ersten Gießen mehrere Tage warten (Clemson)."
+      },
+      {
+        "activity": "Licht",
+        "spring": "10+ h hell",
+        "summer": "Draußen Halbschatten",
+        "autumn": "10+ h hell",
+        "winter": "10+ h hell",
+        "note": "Mindestens 6-8 h. Vor dem Umzug nach draußen erst in den Halbschatten, sonst verbrennen die Blätter (Iowa State)."
+      }
+    ]
+  },
+  "tropicalFoliage": {
+    "rows": [
+      {
+        "activity": "Gießen",
+        "spring": "Gleichmäßig feucht",
+        "summer": "Gleichmäßig feucht",
+        "autumn": "Gleichmäßig feucht",
+        "winter": "Mehr abtrocknen",
+        "note": "Wasser mit 17-22 C, nie enthärtetes Wasser, und den Untersetzer leeren (Clemson)."
+      },
+      {
+        "activity": "Düngen",
+        "spring": "Monatl., verdünnt",
+        "summer": "Monatl., verdünnt",
+        "autumn": "Reduzieren",
+        "winter": "Nicht düngen",
+        "note": "Zimmerpflanzen werden nur in der Wachstumszeit gedüngt, in der Ruhezeit gar nicht (UConn)."
+      },
+      {
+        "activity": "Stecklinge",
+        "spring": "Jede Jahreszeit",
+        "summer": "Jede Jahreszeit",
+        "autumn": "Jede Jahreszeit",
+        "winter": "Jede Jahreszeit",
+        "note": "Philodendron und Verwandte bewurzeln über Stecklinge zu jeder Jahreszeit (Clemson)."
+      }
+    ]
+  },
+  "fern": {
+    "rows": [
+      {
+        "activity": "Gießen",
+        "spring": "Leicht feucht",
+        "summer": "Leicht feucht",
+        "autumn": "Leicht feucht",
+        "winter": "Leicht feucht",
+        "note": "Nie ganz austrocknen lassen und nie Wasser im Topf stehen lassen (Clemson)."
+      },
+      {
+        "activity": "Düngen",
+        "spring": "Monatl., halbe Dosis",
+        "summer": "Monatl., halbe Dosis",
+        "autumn": "Stopp",
+        "winter": "Nicht düngen",
+        "note": "Nach Teilen oder Umtopfen 6 Monate lang gar nichts; zu viel Dünger verbrennt die Wedel (Clemson, UConn)."
+      },
+      {
+        "activity": "Teilen & umtopfen",
+        "spring": "Zeitiges Frühjahr",
+        "summer": "",
+        "autumn": "",
+        "winter": "",
+        "note": "Den Wurzelballen in 2-3 Teile trennen und Substrat und Luft danach wochenlang feucht halten (UConn)."
+      },
+      {
+        "activity": "Luftfeuchte",
+        "spring": "30-50%",
+        "summer": "30-50%",
+        "autumn": "30-50%",
+        "winter": "Schale oder Sprühen",
+        "note": "Trockene Heizungsluft in der kalten Jahreszeit ist das eigentliche Risiko; eine Kiesschale bringt mehr als Sprühen (Clemson, UConn)."
+      }
+    ]
+  },
+  "fruitVeg": {
+    "rows": [
+      {
+        "activity": "Gießen",
+        "spring": "25-50 mm/Woche",
+        "summer": "25-50 mm/Woche",
+        "autumn": "25-50 mm/Woche",
+        "winter": "",
+        "note": "Tief und gleichmäßig. Flaches, ungleiches Gießen bremst den Kalktransport und führt zur Blütenendfäule (USU, UGA)."
+      },
+      {
+        "activity": "Düngen",
+        "spring": "Zur Blüte",
+        "summer": "Nach der Ernte",
+        "autumn": "Stopp",
+        "winter": "Nicht düngen",
+        "note": "Steinobst bekommt drei Teilgaben und nichts in den letzten Sommerwochen, damit das Holz ausreift (Clemson)."
+      },
+      {
+        "activity": "Schnitt",
+        "spring": "",
+        "summer": "",
+        "autumn": "Ab Spätherbst",
+        "winter": "Winterruhe: ideal",
+        "note": "Die Winterruhe ist das Standardfenster: der Aufbau ist sichtbar und die Wunde schließt sich in der nächsten Wachstumszeit (USDA)."
+      },
+      {
+        "activity": "Ausdünnen",
+        "spring": "",
+        "summer": "Von Hand",
+        "autumn": "",
+        "winter": "",
+        "note": "Der natürliche Fruchtfall bei 1-2 cm ersetzt das Ausdünnen von Hand nicht; die größte Frucht je Büschel bleibt (Iowa State)."
+      }
+    ]
+  },
+  "flowering": {
+    "rows": [
+      {
+        "activity": "Düngen",
+        "spring": "Zum Austrieb",
+        "summer": "Alle 6 Wochen",
+        "autumn": "Vor Frost stoppen",
+        "winter": "Nicht düngen",
+        "note": "Rosen gehen in der größten Hitze auf halbe Dosis und hören 6 Wochen vor dem ersten erwarteten Frost auf (Clemson)."
+      },
+      {
+        "activity": "Ausputzen",
+        "spring": "Verblühtes entfernen",
+        "summer": "Verblühtes entfernen",
+        "autumn": "Samenstände lassen",
+        "winter": "",
+        "note": "Stehen gelassene Samenstände füttern die Tierwelt durch die kalte Jahreszeit (Clemson)."
+      },
+      {
+        "activity": "Zwiebeln",
+        "spring": "Beim Austrieb düngen",
+        "summer": "In Ruhe teilen",
+        "autumn": "",
+        "winter": "",
+        "note": "Beim Austrieb ODER nach der Blüte düngen, nie beides. Die verblühte Blüte entfernen, nie das Laub (Illinois)."
+      }
+    ]
+  },
+  "woody": {
+    "rows": [
+      {
+        "activity": "Jungbaum gießen",
+        "spring": "Wöchentlich, tief",
+        "summer": "Wöchentlich, tief",
+        "autumn": "Bis zum Frost",
+        "winter": "",
+        "note": "1 bis 1,5 Gallonen je Zoll Stammdurchmesser, über die Wurzelzone und nicht an den Stamm (Penn State)."
+      },
+      {
+        "activity": "Düngen",
+        "spring": "Zum Austrieb",
+        "summer": "Geteilte Gaben",
+        "autumn": "Stopp",
+        "winter": "Nicht düngen",
+        "note": "Ein alter Baum braucht wenig bis gar nichts. Späte Stickstoffgaben verzögern die Winterruhe (Clemson)."
+      },
+      {
+        "activity": "Schnitt",
+        "spring": "Nach der Blüte",
+        "summer": "",
+        "autumn": "Vermeiden",
+        "winter": "Winterruhe: ideal",
+        "note": "Frühjahrsblühende Sträucher werden direkt nach der Blüte geschnitten; später schneidet man die Knospen des nächsten Jahres ab (Clemson)."
+      },
+      {
+        "activity": "Mulchen",
+        "spring": "2-4 Zoll, Stamm frei",
+        "summer": "2-4 Zoll, Stamm frei",
+        "autumn": "2-4 Zoll, Stamm frei",
+        "winter": "2-4 Zoll, Stamm frei",
+        "note": "3-5 Zoll Abstand zum jungen Stamm halten und 8-10 Zoll zum alten (Penn State)."
+      }
+    ]
+  },
+  "orchid": {
+    "rows": [
+      {
+        "activity": "Gießen",
+        "spring": "Wöchentlich",
+        "summer": "Wöchentlich",
+        "autumn": "Zurücknehmen",
+        "winter": "Zurücknehmen",
+        "note": "Durchdringend wässern, bis es aus den Löchern läuft, dann abtropfen lassen. Nie im Untersetzer stehen lassen (AOS, RHS)."
+      },
+      {
+        "activity": "Düngen",
+        "spring": "Wöchentl., halb",
+        "summer": "Wöchentl., halb",
+        "autumn": "Alle 2 Wochen",
+        "winter": "Alle 2 Wochen",
+        "note": "Halbe Dosis der Packungsangabe, wenig oder kein Harnstoff, und jede 4. Gabe auslassen, um Salze auszuspülen (AOS, RHS)."
+      },
+      {
+        "activity": "Umtopfen",
+        "spring": "Zeitiges Frühjahr",
+        "summer": "",
+        "autumn": "",
+        "winter": "Spätwinter",
+        "note": "Erst wenn neue Wurzeln sichtbar sind. In Sphagnum nach dem Ende der Blüte umtopfen (Clemson)."
+      },
+      {
+        "activity": "Blütenansatz",
+        "spring": "",
+        "summer": "",
+        "autumn": "14 h Dunkelheit",
+        "winter": "Gleichmäßig feucht",
+        "note": "Nur Schlumbergera: 14+ h ununterbrochene Dunkelheit über mindestens 6 Wochen, und 2 h Lampenlicht löschen die Knospen (Clemson)."
+      }
+    ]
+  },
+  "herb": {
+    "rows": [
+      {
+        "activity": "Gießen",
+        "spring": "Antrocknen lassen",
+        "summer": "Morgens gießen",
+        "autumn": "Antrocknen lassen",
+        "winter": "Nie staunass",
+        "note": "Geteilte Gruppe: mediterrane Kräuter wollen echtes Abtrocknen, blattreiche (Basilikum, Petersilie, Minze) gleichmäßige Feuchte (Clemson, RHS)."
+      },
+      {
+        "activity": "Düngen",
+        "spring": "Wenig, beim Pflanzen",
+        "summer": "Nur bei Stillstand",
+        "autumn": "Nicht düngen",
+        "winter": "Nicht düngen",
+        "note": "Rosmarin im Beet bekommt gar nichts, und sehr nährstoffreicher Boden schwächt das Aroma (RHS, Clemson)."
+      },
+      {
+        "activity": "Schnitt",
+        "spring": "Stark (Salbei)",
+        "summer": "Trimmen (Lorbeer)",
+        "autumn": "Nach der Blüte",
+        "winter": "",
+        "note": "Rosmarin bekommt nach der Blüte einen leichten Schnitt, nie ins alte Holz. Minze wird auf 5 cm gesetzt, um sie zu erneuern (RHS)."
+      },
+      {
+        "activity": "Ernte",
+        "spring": "Kurz vor der Blüte",
+        "summer": "Kurz vor der Blüte",
+        "autumn": "",
+        "winter": "",
+        "note": "Am frühen Morgen, kurz vor der Blüte, trägt das Blatt am meisten Öl (Clemson)."
+      },
+      {
+        "activity": "Kälte",
+        "spring": "",
+        "summer": "",
+        "autumn": "",
+        "winter": "Vor Frost schützen",
+        "note": "Eingewachsener Rosmarin übersteht -8 C, doch Frost verbrennt die jungen Triebe trotzdem (RHS)."
+      }
+    ]
+  }
+}

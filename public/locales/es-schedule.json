@@ -1,0 +1,282 @@
+{
+  "succulent": {
+    "rows": [
+      {
+        "activity": "Riego",
+        "spring": "Cada 2-3 semanas",
+        "summer": "Cada 2-3 semanas",
+        "autumn": "Espaciar",
+        "winter": "Casi nada",
+        "note": "Los cactus de desierto descansan en frío y casi secos; regar entonces solo produce crecimiento débil (Clemson, RHS)."
+      },
+      {
+        "activity": "Abonado",
+        "spring": "Mensual, media dosis",
+        "summer": "Mensual, media dosis",
+        "autumn": "Parar",
+        "winter": "No abonar",
+        "note": "Poco nitrógeno, de la mitad a un cuarto de la dosis de la etiqueta. El exceso de N genera tejido blando que se pudre (Clemson, Iowa State)."
+      },
+      {
+        "activity": "Trasplante",
+        "spring": "Mejor época",
+        "summer": "",
+        "autumn": "",
+        "winter": "",
+        "note": "Solo una medida de maceta más, y esperar varios días antes del primer riego (Clemson)."
+      },
+      {
+        "activity": "Luz",
+        "spring": "10+ h de luz",
+        "summer": "Media sombra fuera",
+        "autumn": "10+ h de luz",
+        "winter": "10+ h de luz",
+        "note": "Mínimo 6-8 h. Al sacar la planta afuera hay que aclimatarla en media sombra o las hojas se queman (Iowa State)."
+      }
+    ]
+  },
+  "tropicalFoliage": {
+    "rows": [
+      {
+        "activity": "Riego",
+        "spring": "Húmedo uniforme",
+        "summer": "Húmedo uniforme",
+        "autumn": "Húmedo uniforme",
+        "winter": "Dejar secar más",
+        "note": "Agua a 17-22 C, nunca descalcificada, y vaciar el plato (Clemson)."
+      },
+      {
+        "activity": "Abonado",
+        "spring": "Mensual, diluido",
+        "summer": "Mensual, diluido",
+        "autumn": "Reducir",
+        "winter": "No abonar",
+        "note": "Las plantas de interior solo se abonan durante la temporada de crecimiento, nada en el reposo (UConn)."
+      },
+      {
+        "activity": "Esquejes",
+        "spring": "Cualquier estación",
+        "summer": "Cualquier estación",
+        "autumn": "Cualquier estación",
+        "winter": "Cualquier estación",
+        "note": "El filodendro y sus parientes enraízan por esqueje de tallo en cualquier estación (Clemson)."
+      }
+    ]
+  },
+  "fern": {
+    "rows": [
+      {
+        "activity": "Riego",
+        "spring": "Apenas húmedo",
+        "summer": "Apenas húmedo",
+        "autumn": "Apenas húmedo",
+        "winter": "Apenas húmedo",
+        "note": "Nunca dejar que se seque del todo, ni dejar agua estancada en la maceta (Clemson)."
+      },
+      {
+        "activity": "Abonado",
+        "spring": "Mensual, media dosis",
+        "summer": "Mensual, media dosis",
+        "autumn": "Parar",
+        "winter": "No abonar",
+        "note": "Nada durante 6 meses tras dividir o trasplantar; el exceso de abono quema las frondes (Clemson, UConn)."
+      },
+      {
+        "activity": "Dividir y trasplantar",
+        "spring": "Inicio de primavera",
+        "summer": "",
+        "autumn": "",
+        "winter": "",
+        "note": "Dividir el cepellón en 2-3 secciones y mantener sustrato y aire húmedos durante semanas (UConn)."
+      },
+      {
+        "activity": "Humedad ambiente",
+        "spring": "30-50%",
+        "summer": "30-50%",
+        "autumn": "30-50%",
+        "winter": "Bandeja o pulverizar",
+        "note": "El aire seco de interior en la estación fría es el riesgo real; una bandeja de grava rinde más que pulverizar (Clemson, UConn)."
+      }
+    ]
+  },
+  "fruitVeg": {
+    "rows": [
+      {
+        "activity": "Riego",
+        "spring": "25-50 mm/semana",
+        "summer": "25-50 mm/semana",
+        "autumn": "25-50 mm/semana",
+        "winter": "",
+        "note": "Profundo y parejo. El riego superficial e irregular corta el transporte de calcio y provoca podredumbre apical (USU, UGA)."
+      },
+      {
+        "activity": "Abonado",
+        "spring": "En floración",
+        "summer": "Tras la cosecha",
+        "autumn": "Parar",
+        "winter": "No abonar",
+        "note": "La fruta de hueso lleva tres dosis fraccionadas y ninguna en las últimas semanas del verano, para que la madera madure (Clemson)."
+      },
+      {
+        "activity": "Poda",
+        "spring": "",
+        "summer": "",
+        "autumn": "Desde otoño tardío",
+        "winter": "Reposo: ideal",
+        "note": "El reposo es la ventana estándar: la estructura queda a la vista y la herida cierra en la siguiente temporada de crecimiento (USDA)."
+      },
+      {
+        "activity": "Aclareo",
+        "spring": "",
+        "summer": "A mano",
+        "autumn": "",
+        "winter": "",
+        "note": "La caída natural a 1-2 cm no sustituye el aclareo a mano; deja el fruto más grande de cada racimo (Iowa State)."
+      }
+    ]
+  },
+  "flowering": {
+    "rows": [
+      {
+        "activity": "Abonado",
+        "spring": "En la brotación",
+        "summer": "Cada 6 semanas",
+        "autumn": "Parar antes de helar",
+        "winter": "No abonar",
+        "note": "Los rosales bajan a media dosis en el pico de calor y paran 6 semanas antes de la primera helada esperada (Clemson)."
+      },
+      {
+        "activity": "Descabezado",
+        "spring": "Quitar flores viejas",
+        "summer": "Quitar flores viejas",
+        "autumn": "Dejar las semillas",
+        "winter": "",
+        "note": "Las cabezas de semilla que se dejan en pie alimentan a la fauna durante la estación fría (Clemson)."
+      },
+      {
+        "activity": "Bulbos",
+        "spring": "Abonar al brotar",
+        "summer": "Dividir en reposo",
+        "autumn": "",
+        "winter": "",
+        "note": "Abonar al brotar O después de florecer, nunca ambas. Quita la flor gastada pero nunca las hojas (Illinois)."
+      }
+    ]
+  },
+  "woody": {
+    "rows": [
+      {
+        "activity": "Riego de plantón",
+        "spring": "Semanal, profundo",
+        "summer": "Semanal, profundo",
+        "autumn": "Hasta la helada",
+        "winter": "",
+        "note": "1 a 1,5 galones por pulgada de diámetro de tronco, sobre la zona radicular y no pegado al tronco (Penn State)."
+      },
+      {
+        "activity": "Abonado",
+        "spring": "En la brotación",
+        "summer": "Dosis fraccionadas",
+        "autumn": "Parar",
+        "winter": "No abonar",
+        "note": "Un árbol maduro necesita poco o nada. Abonar tarde con mucho nitrógeno retrasa el reposo (Clemson)."
+      },
+      {
+        "activity": "Poda",
+        "spring": "Tras la floración",
+        "summer": "",
+        "autumn": "Evitar",
+        "winter": "Reposo: ideal",
+        "note": "Los arbustos de floración primaveral se podan justo después de la flor; podar más tarde corta las yemas del año siguiente (Clemson)."
+      },
+      {
+        "activity": "Acolchado",
+        "spring": "2-4 pulg, sin tocar",
+        "summer": "2-4 pulg, sin tocar",
+        "autumn": "2-4 pulg, sin tocar",
+        "winter": "2-4 pulg, sin tocar",
+        "note": "Mantener 3-5 pulgadas libres en un tronco joven y 8-10 pulgadas en uno maduro (Penn State)."
+      }
+    ]
+  },
+  "orchid": {
+    "rows": [
+      {
+        "activity": "Riego",
+        "spring": "Semanal",
+        "summer": "Semanal",
+        "autumn": "Reducir",
+        "winter": "Reducir",
+        "note": "Empapar hasta que salga por los agujeros y luego escurrir. Nunca dejarla en el plato (AOS, RHS)."
+      },
+      {
+        "activity": "Abonado",
+        "spring": "Semanal, media dosis",
+        "summer": "Semanal, media dosis",
+        "autumn": "Cada 2 semanas",
+        "winter": "Cada 2 semanas",
+        "note": "La mitad de la dosis de la etiqueta, poca o ninguna urea, y saltarse cada 4.º abonado para lavar sales (AOS, RHS)."
+      },
+      {
+        "activity": "Trasplante",
+        "spring": "Inicio de primavera",
+        "summer": "",
+        "autumn": "",
+        "winter": "Final de invierno",
+        "note": "Solo cuando se vean raíces nuevas. En esfagno, trasplantar cuando termine la floración (Clemson)."
+      },
+      {
+        "activity": "Inducción floral",
+        "spring": "",
+        "summer": "",
+        "autumn": "14 h de oscuridad",
+        "winter": "Húmedo uniforme",
+        "note": "Solo Schlumbergera: 14+ h de oscuridad continua durante al menos 6 semanas, y 2 h de luz de lámpara anulan los botones (Clemson)."
+      }
+    ]
+  },
+  "herb": {
+    "rows": [
+      {
+        "activity": "Riego",
+        "spring": "Secar entre riegos",
+        "summer": "Regar temprano",
+        "autumn": "Secar entre riegos",
+        "winter": "Nunca encharcado",
+        "note": "Grupo dividido: las hierbas mediterráneas quieren secado real, las de hoja (albahaca, perejil, menta) humedad constante (Clemson, RHS)."
+      },
+      {
+        "activity": "Abonado",
+        "spring": "Poco, al plantar",
+        "summer": "Solo si se estanca",
+        "autumn": "No abonar",
+        "winter": "No abonar",
+        "note": "El romero en suelo no recibe nada, y un suelo muy rico apaga el sabor (RHS, Clemson)."
+      },
+      {
+        "activity": "Poda",
+        "spring": "Fuerte (salvia)",
+        "summer": "Recortar (laurel)",
+        "autumn": "Tras la floración",
+        "winter": "",
+        "note": "El romero lleva un recorte ligero tras la flor, nunca en madera vieja. La menta se corta a 5 cm para renovarla (RHS)."
+      },
+      {
+        "activity": "Cosecha",
+        "spring": "Antes de florecer",
+        "summer": "Antes de florecer",
+        "autumn": "",
+        "winter": "",
+        "note": "A primera hora de la mañana, justo antes de florecer, es cuando la hoja carga más aceite (Clemson)."
+      },
+      {
+        "activity": "Frío",
+        "spring": "",
+        "summer": "",
+        "autumn": "",
+        "winter": "Proteger de heladas",
+        "note": "El romero establecido sobrevive a -8 C, pero la helada sigue quemando los brotes nuevos (RHS)."
+      }
+    ]
+  }
+}
