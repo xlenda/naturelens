@@ -115,6 +115,16 @@ const chromePath = CANDIDATES.find((p) => p && fs.existsSync(p));
     await sleep(1200);
     await shot(Page, 'r3-resultado-fim');
 
+    // BUG REPRO: verificar doencas e depois tentar voltar/ver a Visao Geral
+    if (await clickByText(Runtime, Input, "verificar doen\u00e7as")) {
+      console.log('cliquei verificar doencas');
+      await sleep(14000);
+      await shot(Page, 'd1-apos-doencas');
+      await scrollBy(Runtime, -1400);
+      await sleep(800);
+      await shot(Page, 'd2-topo-apos-doencas');
+    }
+
     // abre o manual pelas portas: tenta um card de fatos rapidos / porta
     const opened =
       (await clickByText(Runtime, Input, 'guia de rega')) ||

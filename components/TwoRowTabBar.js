@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet, ScrollView } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import CategoryIcon from './CategoryIcon';
 import { colors } from './theme';
@@ -117,6 +117,7 @@ function TabButton({ route, descriptor, navigation, isFocused, compact, tight })
 
 export default function TwoRowTabBar({ state, descriptors, navigation }) {
   const insets = useSafeAreaInsets();
+  const scrollRef = React.useRef(null);
 
   const scan = [];
   const bottom = [];
@@ -124,8 +125,49 @@ export default function TwoRowTabBar({ state, descriptors, navigation }) {
     (BOTTOM_ROW.has(route.name) ? bottom : scan).push({ route, index });
   });
 
-  const scanRows = chunkBalanced(scan, MAX_PER_SCAN_ROW);
-  const tight = scanRows.length > 1;
+  // Dock compacto (pedido do dono: "ta ocupando muito espaco embaixo").
+  // As categorias de scan deixaram de ser 2 fileiras empilhadas e viraram UMA
+  // fileira de chips horizontais rolaveis (icone + nome lado a lado), no mesmo
+  // padrao das abas do manual - ~50px devolvidos pra tela. O chip ativo entra
+  // em cena sozinho: scrollTo aproximado por indice, suficiente para 7 chips.
+  const activeScanPos = scan.findIndex(({ index }) => index === state.index);
+  React.useEffect(() => {
+    if (activeScanPos >= 0 && scrollRef.current) {
+      scrollRef.current.scrollTo({ x: Math.max(0, activeScanPos * 92 - 92), animated: true });
+    }
+  }, [activeScanPos]);
+
+  const renderChip = ({ route, index }) => {
+    const descriptor = descriptors[route.key];
+    const { options } = descriptor;
+    const isFocused = state.index === index;
+    const label = options.tabBarLabel ?? route.name;
+    const color = isFocused ? colors.accent : colors.textMuted;
+    const icon = options.tabBarIcon
+      ? options.tabBarIcon({ color, size: 16, focused: isFocused })
+      : <CategoryIcon name="ellipse" size={14} color={color} />;
+    const onPress = () => {
+      const event = navigation.emit({ type: 'tabPress', target: route.key, canPreventDefault: true });
+      if (!isFocused && !event.defaultPrevented) navigation.navigate(route.name);
+    };
+    return (
+      <TouchableOpacity
+        key={route.key}
+        style={[styles.chip, isFocused && styles.chipActive]}
+        onPress={onPress}
+        onLongPress={() => navigation.emit({ type: 'tabLongPress', target: route.key })}
+        activeOpacity={0.7}
+        accessibilityRole="button"
+        accessibilityState={isFocused ? { selected: true } : {}}
+        accessibilityLabel={options.tabBarAccessibilityLabel ?? String(label)}
+      >
+        {icon}
+        <Text style={[styles.chipLabel, { color }]} numberOfLines={1}>
+          {label}
+        </Text>
+      </TouchableOpacity>
+    );
+  };
 
   const render = (entries, compact) =>
     entries.map(({ route, index }) => (
@@ -136,28 +178,22 @@ export default function TwoRowTabBar({ state, descriptors, navigation }) {
         navigation={navigation}
         isFocused={state.index === index}
         compact={compact}
-        tight={compact && tight}
+        tight={false}
       />
     ));
 
-  // Dock pílula: the bar floats free of the screen edges instead of being
-  // welded to them. Two rules from the Cosmic doctrine are load-bearing here:
-  //
-  //  - position by MARGINS, never `position: absolute`. An absolute bar covers
-  //    the bottom of every screen behind it, which is the viewport bug class
-  //    that has already cost real conversions in another app.
-  //  - the outer View needs its own backgroundColor: on web the gap around the
-  //    pill renders white without it.
+  // Dock pilula: margens, nunca position absolute; fundo proprio no wrapper.
   return (
     <View style={[styles.dock, { paddingBottom: Math.max(insets.bottom, 10) }]}>
       <View style={styles.bar}>
-        {scanRows.map((entries, i) => (
-          // Index as key is safe here: rows are positional slots, not identities -
-          // the tabs inside carry their own stable route.key.
-          <View key={`scan-${i}`} style={styles.row}>
-            {render(entries, true)}
-          </View>
-        ))}
+        <ScrollView
+          ref={scrollRef}
+          horizontal
+          showsHorizontalScrollIndicator={false}
+          contentContainerStyle={styles.chipRow}
+        >
+          {scan.map(renderChip)}
+        </ScrollView>
         {bottom.length > 0 && (
           <View style={[styles.row, styles.rowBottom]}>{render(bottom, false)}</View>
         )}
@@ -167,6 +203,17 @@ export default function TwoRowTabBar({ state, descriptors, navigation }) {
 }
 
 const styles = StyleSheet.create({
+  chipRow: { paddingHorizontal: 8, gap: 6, alignItems: 'center' },
+  chip: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 6,
+    paddingHorizontal: 11,
+    paddingVertical: 7,
+    borderRadius: 16,
+  },
+  chipActive: { backgroundColor: colors.accent + '22' },
+  chipLabel: { fontSize: 11, fontWeight: '700' },
   dock: {
     backgroundColor: colors.background,
     paddingHorizontal: 10,

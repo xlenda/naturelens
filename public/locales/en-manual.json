@@ -1,0 +1,389 @@
+{
+  "watering": {
+    "advice": [
+      "Watering well is less about frequency and more about observation. Plants drink at different rates depending on light, temperature, pot size, and season, so a fixed schedule almost always fails. Instead, learn to read the soil itself: press a finger into the top layer, feel the weight of the pot, and notice how the leaves hold themselves. When the top of the soil has dried out, most plants are ready for a drink; when it is still cool and damp, waiting is nearly always the safer choice.",
+      "When you do water, water thoroughly. Pour slowly and evenly across the whole surface until water escapes through the drainage holes, which guarantees the entire root zone was reached and flushes out accumulated mineral salts. Shallow sips wet only the surface and encourage roots to stay near the top, where they dry out and overheat quickly. Always empty the saucer afterward — roots left standing in water are starved of oxygen, and that is how most houseplants are lost.",
+      "Adjust with the seasons rather than the calendar. During warm months of active growth, plants use water quickly; in cooler, darker months, growth slows and the same pot can stay moist for far longer. Cold, wet soil in winter is a common silent killer, so let the soil dry further between waterings when light and warmth drop. Whenever possible, use room-temperature water — icy water shocks roots, especially on tropical species."
+    ],
+    "checklist": [
+      "Check the soil with your finger before watering, not the calendar",
+      "Water deeply until it drains from the bottom",
+      "Empty the saucer — never leave roots standing in water",
+      "Reduce watering in cold, dark months",
+      "Use room-temperature water when you can",
+      "Lift the pot: light means dry, heavy means still moist"
+    ],
+    "problems": [
+      {
+        "title": "Overwatering",
+        "symptoms": [
+          "Yellowing leaves that feel soft or limp, often starting at the bottom",
+          "Soil that stays wet for days, sometimes with a sour or musty smell",
+          "Brown, mushy roots instead of firm, pale ones; fungus gnats hovering over the soil"
+        ],
+        "solutions": [
+          "Stop watering immediately and move the plant somewhere bright and airy so the soil can dry",
+          "Check the roots: slide the plant out of its pot, trim away any brown, mushy sections with clean scissors, and repot into fresh, well-draining mix",
+          "Going forward, water only when the top of the soil has dried, and confirm the pot drains freely every time"
+        ]
+      },
+      {
+        "title": "Underwatering",
+        "symptoms": [
+          "Wilting or drooping leaves that perk up shortly after watering",
+          "Dry, crispy leaf edges and tips; leaves may curl inward",
+          "Soil pulling away from the sides of the pot; the pot feels unusually light"
+        ],
+        "solutions": [
+          "Water slowly and deeply; if the soil repels water, stand the pot in a basin of water for a while so it can rehydrate from below",
+          "Once the root ball is evenly moist again, resume regular checks — very dry soil often needs two gentle waterings a few minutes apart to absorb properly",
+          "If the plant dries out faster than you can keep up, consider a slightly larger pot or a mix that holds a little more moisture"
+        ]
+      }
+    ]
+  },
+  "light": {
+    "advice": [
+      "Light is the food supply of a plant — water and fertilizer only support what light makes possible. Growers describe light in broad bands: full sun (direct rays for much of the day), partial sun or partial shade (direct light for part of the day, often gentler morning sun), bright indirect light (bright enough to cast a soft shadow, but no direct rays), and shade. Knowing which band a spot in your home or garden falls into is the single most useful skill in plant care.",
+      "To read a room, watch it over the course of a day. A south-facing window (in the northern hemisphere) delivers the strongest, longest light; east gives gentle morning sun; west gives hotter afternoon sun; north stays soft and diffuse. Distance matters enormously — light intensity drops off sharply with every step away from a window, so a plant one meter from the glass may receive a fraction of what it would receive on the sill. Sheer curtains, tinted glass, and outdoor obstructions all reduce light further.",
+      "When moving any plant to brighter conditions, acclimate it gradually. Leaves adapt to the light they grew in, and a sudden jump — indoors to full sun, shade to a sunny wall — can scorch even sun-loving species. Increase exposure step by step over a couple of weeks, starting with gentle morning light, and watch the foliage: bleached patches mean too fast, while fresh, compact new growth means the plant is settling in well."
+    ],
+    "checklist": [
+      "Identify your light band: full sun, partial, bright indirect, or shade",
+      "Watch the spot across a whole day before placing a plant",
+      "Remember intensity falls off fast with distance from a window",
+      "Acclimate plants gradually to any brighter position",
+      "Rotate pots now and then so growth stays even",
+      "Wipe dusty leaves — dust silently steals light"
+    ],
+    "problems": [
+      {
+        "title": "Too much light (sun scorch)",
+        "symptoms": [
+          "Bleached, faded, or papery patches on the leaves most exposed to the sun",
+          "Crisp brown spots or edges that appear after a move to a brighter spot",
+          "Leaves that look washed-out or yellowish overall despite good watering"
+        ],
+        "solutions": [
+          "Move the plant out of direct rays or filter the light with a sheer curtain",
+          "Trim badly scorched leaves once you are sure the tissue is dead — they will not recover, and removing them redirects energy",
+          "Reintroduce stronger light slowly over weeks if the plant genuinely wants more sun"
+        ]
+      },
+      {
+        "title": "Too little light (etiolation)",
+        "symptoms": [
+          "Long, stretched stems with wide gaps between leaves, leaning hard toward the window",
+          "New leaves coming in smaller and paler than older ones",
+          "Variegated plants losing their patterns; flowering plants refusing to bloom"
+        ],
+        "solutions": [
+          "Move the plant closer to a window or to a brighter room, adjusting gradually",
+          "Prune leggy growth once the plant is in better light to encourage a fuller shape",
+          "Where natural light is truly scarce, a simple full-spectrum grow light run on a daily timer works remarkably well"
+        ]
+      }
+    ]
+  },
+  "soil": {
+    "advice": [
+      "Healthy soil is a living structure, not just dirt. Roots need three things from it at once: moisture, air, and anchorage. Good soil holds water like a wrung-out sponge — damp throughout, never sodden — while keeping pockets of air between its particles. That balance comes from structure: coarse material (bark, perlite, sand, grit) opens drainage channels, while fine organic matter (compost, coir, leaf mold) holds moisture and feeds the soil life that in turn feeds the plant.",
+      "Drainage is non-negotiable in containers. Every pot needs holes, and the mix inside must let excess water pass through freely; a layer of pebbles at the bottom does not fix a dense mix — it just raises the waterlogged zone closer to the roots. If water sits on the surface for a long time after watering, or rushes straight through without darkening the soil, the structure needs correcting. Organic matter is the great mediator: it improves both water retention in sandy mixes and drainage in heavy ones.",
+      "pH — how acidic or alkaline soil is — quietly controls which nutrients roots can actually absorb. Most garden and house plants are content in a slightly acidic to neutral range, and problems appear mainly at the extremes, where nutrients become chemically locked away even when present. Rather than chasing numbers, work in generous amounts of well-rotted organic matter, which buffers pH naturally, and only investigate further if a plant shows persistent nutrient deficiencies that watering and light cannot explain."
+    ],
+    "checklist": [
+      "Confirm every container has real drainage holes",
+      "Aim for soil that feels like a wrung-out sponge after watering",
+      "Mix in coarse material for air, organic matter for moisture and life",
+      "Skip the pebble layer myth — fix the mix instead",
+      "Refresh or top-dress container soil as it slumps and compacts over time",
+      "Mulch outdoor beds to protect structure and soil life"
+    ],
+    "problems": [
+      {
+        "title": "Compacted, waterlogged soil",
+        "symptoms": [
+          "Water pools on the surface or drains extremely slowly",
+          "Soil is dense, heavy, and airless; may develop a sour smell",
+          "Plant declines despite careful watering — yellowing, wilting, stalled growth"
+        ],
+        "solutions": [
+          "For pots: repot into a fresh mix amended with coarse material such as perlite or bark, gently loosening the root ball",
+          "For beds: work in organic matter with a fork rather than turning the soil violently, and avoid walking on wet ground",
+          "Reduce watering while structure recovers, and let the surface dry between waterings"
+        ]
+      },
+      {
+        "title": "Poor, exhausted soil",
+        "symptoms": [
+          "Pale leaves, weak stems, and little to no new growth in season",
+          "Water races straight through the pot without truly moistening it",
+          "Container soil has shrunk, hardened, or pulled away from the pot walls"
+        ],
+        "solutions": [
+          "Repot with fresh, quality mix — container soil wears out and no fertilizer fully revives collapsed structure",
+          "Feed lightly and regularly during the growing season rather than heavily at once; strong doses can burn roots",
+          "Outdoors, build fertility slowly with compost and mulch, which feed the soil rather than just the plant"
+        ]
+      }
+    ]
+  },
+  "safety": {
+    "advice": [
+      "Living with plants, fungi, and insects is one of life's quiet pleasures, and a few steady habits make it a safe one. The foundational rule is simple: never eat, taste, or brew anything you have not identified with complete certainty. An app identification, including this one, is a starting point for learning — never a green light for consumption. Many toxic species are convincing look-alikes of edible ones, and with fungi in particular, the margin for error can be zero.",
+      "At home, know what you grow. Some common houseplants and garden species can irritate skin or are harmful if chewed, so keep plants out of reach of small children and pets, and teach children early that leaves and berries are not food unless a trusted adult says so. Wear gloves for heavy pruning or when handling unfamiliar species, avoid touching your face while working, and wash your hands well afterward. Sap from some plants can sensitize skin to sunlight, so rinsing any sap off promptly is a good reflex.",
+      "On the trail, look generously and touch selectively. Observe insects without handling them, leave fungi where they stand unless you are with an experienced guide, and assume unknown berries are off the menu. If anyone in your household has known plant or sting allergies, carry their medication and know how to use it. None of this requires fear — just the same calm respect you would give a river current or a hot stove."
+    ],
+    "checklist": [
+      "Never consume anything without certain, expert-level identification",
+      "Keep questionable plants out of reach of children and pets",
+      "Wear gloves for pruning and unfamiliar species; wash hands after",
+      "Rinse plant sap off skin promptly",
+      "Observe wild fungi and insects without handling them",
+      "Save your local poison-control number in your phone"
+    ],
+    "problems": [
+      {
+        "title": "Skin contact with an irritating species",
+        "symptoms": [
+          "Redness, itching, burning, or a rash where the plant touched skin",
+          "Blisters or streaky marks appearing hours after contact",
+          "Worsening reaction after sun exposure on the affected area"
+        ],
+        "solutions": [
+          "Wash the area thoroughly with soap and cool water as soon as possible, and wash any clothing that touched the plant",
+          "Avoid scratching, and keep the area out of direct sunlight while it calms",
+          "If the reaction is severe, spreading, near the eyes or mouth, or involves any difficulty breathing, seek medical care immediately"
+        ]
+      },
+      {
+        "title": "Accidental ingestion",
+        "symptoms": [
+          "A child or pet has chewed or swallowed part of an unidentified plant or fungus",
+          "Mouth or throat irritation, drooling, nausea, vomiting, or unusual drowsiness",
+          "Sometimes no symptoms at all at first — absence of symptoms is not proof of safety"
+        ],
+        "solutions": [
+          "Do not induce vomiting and do not give food, milk, or home remedies unless a professional instructs you to",
+          "Remove any remaining plant material from the mouth, and save a sample or photo of exactly what was eaten",
+          "Contact poison control or emergency services immediately — for pets, an emergency veterinarian — even if the person or animal seems fine"
+        ]
+      }
+    ]
+  },
+  "uses": {
+    "advice": [
+      "Humanity's story is written in plants. They have given us staple foods and spices, timber for shelter and ships, fibers like cotton, flax, and hemp for cloth and rope, dyes, resins, perfumes, and the sheer daily joy of ornamental gardening. Understanding how a species has been used opens a window into both botany and history — the same plant may be a crop on one continent, a sacred symbol on another, and a garden favorite on a third.",
+      "Traditional medicine deserves special respect and special caution in equal measure. Countless modern drugs trace their origins to plants used by traditional healers, and that heritage is genuinely remarkable. But traditional use is a record of history, not a proof of safety or effectiveness — dosage, preparation, plant part, and the person taking it all change the outcome entirely. Never self-treat with plants based on something you read, including in this app; always consult a qualified healthcare professional first.",
+      "Whatever draws you to useful plants, let ethics lead. Harvest only what you can identify with certainty and are permitted to take, favor cultivated sources over wild ones, and take modestly so populations can recover. Overharvesting has pushed beloved medicinal and ornamental species toward scarcity in many regions. The best practitioners think in generations: they harvest as if they, their neighbors, and their grandchildren will all return to the same patch."
+    ],
+    "checklist": [
+      "Treat traditional uses as history to learn from, not instructions to follow",
+      "Consult a healthcare professional before any medicinal use",
+      "Buy from cultivated, ethical sources when possible",
+      "Harvest lightly and legally — know your local rules",
+      "Never harvest rare, protected, or slow-growing species",
+      "Record what you learn; useful-plant knowledge is worth keeping"
+    ],
+    "problems": [
+      {
+        "title": "Using plants without proper guidance",
+        "symptoms": [
+          "Preparing teas, tinctures, or remedies from a species identified only by app or by memory",
+          "Following dosage advice from social media or hearsay",
+          "Combining plant remedies with prescription medication without telling a doctor"
+        ],
+        "solutions": [
+          "Stop use until the plant's identity and safety are confirmed by a qualified expert",
+          "Discuss any plant-based remedy with a healthcare professional, especially alongside other medication, pregnancy, or existing conditions",
+          "Treat this app's information as educational context, never as a prescription"
+        ]
+      },
+      {
+        "title": "Predatory harvesting",
+        "symptoms": [
+          "Patches of a wild species visibly shrinking or disappearing year over year",
+          "Harvesting that takes roots, bark, or whole plants rather than renewable parts",
+          "Collecting in protected areas or ignoring local harvest rules"
+        ],
+        "solutions": [
+          "Follow the forager's rule of restraint: take only a small fraction of what you find, and only from abundant stands",
+          "Prefer renewable parts — leaves, some flowers, some fruit — over roots and bark, which often cost the plant its life",
+          "Support cultivation programs and buy cultivated material; report obvious illegal harvesting to local authorities"
+        ]
+      }
+    ]
+  },
+  "cultural": {
+    "advice": [
+      "Every species that has lived alongside people carries stories. Plants and fungi appear in creation myths, wedding rituals, funeral rites, national emblems, poems, and proverbs; an oak means one thing in one tradition and something else entirely in another. Learning these layers turns a walk in the park into a walk through human imagination — the names alone often preserve centuries of observation, humor, and belief.",
+      "Folklore is also a record of real knowledge, filtered through generations. Stories about which plants heal, harm, protect, or predict weather often encode genuine observations alongside pure poetry, and telling one from the other is part of the pleasure. Approach these traditions as a respectful guest: they belong to living cultures, not to a museum, and the communities who keep them are their best interpreters.",
+      "When you research a species' cultural history, favor sources close to the tradition itself — community authors, regional scholars, museum and archive collections — and note where a story comes from. Repeating a legend with its origin attached honors the people who created it; repeating it stripped of origin slowly erases them. Curiosity plus attribution is the whole method."
+    ],
+    "checklist": [
+      "Look up local and folk names — they hold compressed history",
+      "Note which culture and region each story comes from",
+      "Prefer sources from within the tradition when possible",
+      "Enjoy symbolism without treating it as biology",
+      "Share legends with their origins attached",
+      "Ask before photographing or collecting at sacred or community sites"
+    ],
+    "problems": [
+      {
+        "title": "Myth vs. fact",
+        "symptoms": [
+          "Assuming a plant is safe to eat or use because 'people have always used it'",
+          "Reading symbolic meanings — luck, protection, healing — as physical properties",
+          "Trusting a widely repeated story more because it is widely repeated"
+        ],
+        "solutions": [
+          "Keep two shelves in your mind: what a plant means and what a plant does — both are true knowledge, but they answer different questions",
+          "Verify anything involving safety or consumption against modern expert sources, regardless of how old the tradition is",
+          "Enjoy the myth on its own terms; it does not need to be literally true to be culturally precious"
+        ]
+      },
+      {
+        "title": "Attribution and respect",
+        "symptoms": [
+          "Retelling stories or ceremonies with no mention of the people they belong to",
+          "Presenting one culture's tradition as universal or generic folklore",
+          "Using sacred plants or symbols as casual decoration without understanding their weight"
+        ],
+        "solutions": [
+          "Name the culture, region, and where you learned each story whenever you share it",
+          "When a tradition is living and sacred, follow the community's own guidance on what may be shared and how",
+          "Let curiosity deepen into relationship: read community authors, visit cultural centers, and support the keepers of the knowledge"
+        ]
+      }
+    ]
+  },
+  "edible": {
+    "advice": [
+      "Foraging safely rests on one unbreakable rule: positive identification, three ways, every time. Before anything wild touches your lips, you should be able to confirm the species by multiple independent features — leaf, flower, fruit, bark, smell, habitat, season — cross-checked against at least one authoritative field guide and, ideally, verified in person by an experienced forager. If any single check leaves doubt, the answer is no. An app suggestion, including this one, is the beginning of an identification, never the end of one.",
+      "Edibility is rarely a yes-or-no property of a whole plant. Many species have one edible part and other parts that are harmful; many are safe only at a certain stage of ripeness, or only after proper preparation such as thorough cooking. 'Edible' in a reference always means the right part, at the right stage, prepared the right way. When trying any new wild food that you have rigorously confirmed, eat a small amount first and wait a day — individual sensitivities exist even to genuinely edible species.",
+      "Ethical foraging protects both you and the land. Gather only where it is legal and the environment is clean — roadside verges, sprayed fields, and industrial sites can contaminate even perfectly edible species. Take modestly, leave plenty for wildlife and regrowth, and never strip a patch bare. The old foragers' habit is worth adopting whole: know your plant, know your place, take a little, and give the patch a reason to welcome you back."
+    ],
+    "checklist": [
+      "Confirm identity by multiple independent features, never just one",
+      "Cross-check with a field guide and an experienced person",
+      "Learn which part, which stage, and which preparation is safe",
+      "When any doubt remains: do not eat it",
+      "Try new wild foods in small amounts, one at a time",
+      "Forage legally, from clean places, and leave plenty behind"
+    ],
+    "problems": [
+      {
+        "title": "Confusing look-alike species",
+        "symptoms": [
+          "Identification based on one feature, a single photo, or overall vibe",
+          "The specimen matches most, but not all, of the field-guide description",
+          "Well-known dangerous doubles exist in the same family — common with mushrooms, wild carrots and parsleys, and many berries"
+        ],
+        "solutions": [
+          "Halt at the first mismatch: a real match agrees on every feature, and one wrong detail means a different species",
+          "Learn the dangerous look-alikes of your region as thoroughly as the edibles themselves — study what could kill you first",
+          "Bring your find to an expert or local foraging group before it ever reaches the kitchen; with fungi, treat this as mandatory"
+        ]
+      },
+      {
+        "title": "Inadequate preparation",
+        "symptoms": [
+          "Eating raw a species that tradition and references say must be cooked",
+          "Using the wrong part of a correctly identified plant",
+          "Digestive upset after eating a supposedly edible find"
+        ],
+        "solutions": [
+          "Follow preparation instructions from authoritative sources exactly — cooking requirements exist because heat neutralizes real compounds",
+          "Match part and stage to the reference: right species, wrong part is still a wrong meal",
+          "If someone becomes ill, keep a sample of what was eaten and seek medical advice promptly rather than waiting it out"
+        ]
+      }
+    ]
+  },
+  "propagation": {
+    "advice": [
+      "Propagation is gardening's quiet magic: one plant becomes many, for free. The three doors in are cuttings, division, and seed. A cutting takes a healthy stem or leaf and persuades it to grow roots of its own; division splits a clumping plant into ready-made smaller plants; seed starts from scratch and rewards patience with the widest possibilities. Each species has methods it prefers, but the underlying principles are shared across almost all of them.",
+      "For cuttings, three things decide success: healthy material, clean cuts, and steady conditions. Take cuttings from vigorous, disease-free growth, cut just below a node — the joint where leaves meet the stem, which is where rooting energy concentrates — and remove lower leaves so nothing rots below the surface. Whether rooting in water or in a light, airy mix, give cuttings bright indirect light, gentle warmth, and high humidity, and resist the urge to tug them to check progress; new leaves are the announcement that roots exist.",
+      "Hygiene and timing are the two most underrated ingredients. Clean tools with alcohol or a flame before and between cuts — a dirty blade spreads disease straight into fresh wounds. Propagate during active growth, usually spring into early summer, when the plant has energy to spare; material taken from a dormant or stressed plant starts life at a disadvantage. And take more cuttings than you need: even experts lose a percentage, and the spares make fine gifts."
+    ],
+    "checklist": [
+      "Propagate from healthy, vigorous, pest-free plants only",
+      "Sterilize blades before and between cuts",
+      "Cut just below a node; remove leaves that would sit below the surface",
+      "Give bright indirect light, warmth, and humidity — not direct sun",
+      "Keep the medium moist but never soggy",
+      "Take extra cuttings; some losses are normal even for experts"
+    ],
+    "problems": [
+      {
+        "title": "Cuttings that rot",
+        "symptoms": [
+          "Stem turning brown, black, or translucent from the base upward",
+          "A soft, slimy texture and a sour smell in the water or medium",
+          "Leaves collapsing rather than gently wilting"
+        ],
+        "solutions": [
+          "Discard clearly rotten cuttings and start fresh — rot travels upward and rarely reverses",
+          "If only the base is affected, recut well above the damage with a sterile blade and restart in fresh water or mix",
+          "Prevent the repeat: cleaner tools, fresher water changed regularly, a lighter and airier medium, and no leaves below the surface"
+        ]
+      },
+      {
+        "title": "Cuttings that will not root",
+        "symptoms": [
+          "Weeks pass with no roots, though the cutting still looks alive",
+          "Cutting slowly yellows and drains of energy without change",
+          "Callus forms at the base but roots never follow"
+        ],
+        "solutions": [
+          "Check conditions first: most stalls trace to too little light, too little warmth, or dry air — adjust these before blaming the cutting",
+          "Recut the base at an angle below a node to expose fresh tissue, and consider a rooting hormone for reluctant species",
+          "Be patient by species: some root in days, others take months — as long as the cutting is firm and green, it is still trying"
+        ]
+      }
+    ]
+  },
+  "role": {
+    "advice": [
+      "No species lives alone. Every plant, fungus, and insect occupies a role in a web of relationships: flowering plants feed pollinators, which in turn set the seeds and fruits that feed birds and mammals; leaves feed caterpillars that feed nestlings; fungi and decomposer insects break down fallen matter and return its nutrients to the soil that grows the next generation. Learning a species' role — what it feeds, shelters, partners with, and depends on — transforms identification from naming into understanding.",
+      "The richest way to see these roles is patient, low-impact observation. Sit still near a flowering plant for a few minutes and count its visitors; return to the same tree across seasons and watch its cast of characters change; turn over a log gently and lay it back exactly as it was. Photograph rather than collect, stay on trails in sensitive habitats, keep respectful distance from nests and burrows, and let wildlife decide the distance between you. The naturalist's paradox is that the less you interfere, the more you see.",
+      "Your own garden, balcony, or windowsill is a functioning piece of the ecosystem. A pot of flowering herbs feeds pollinators; a corner of leaf litter shelters overwintering insects; skipping pesticides keeps the food web intact from aphid to songbird. Small choices multiply across neighborhoods — the same attention you give a houseplant, turned outward, quietly repairs the web around you."
+    ],
+    "checklist": [
+      "Ask of any species: what does it feed, and what feeds on it?",
+      "Observe quietly and leave every site as you found it",
+      "Photograph instead of collecting",
+      "Return anything you turn over to its exact position",
+      "Plant flowers, keep some wild corners, skip the pesticides",
+      "Note your sightings — records over time reveal the web"
+    ],
+    "problems": [
+      {
+        "title": "Species out of place (invasives)",
+        "symptoms": [
+          "A single species blanketing an area and crowding out varied native growth",
+          "Fast, aggressive spread far beyond where it was planted",
+          "Noticeably fewer insects, birds, or wildflowers where it dominates"
+        ],
+        "solutions": [
+          "Learn which species are considered invasive in your region — the same plant can be harmless at home and destructive abroad",
+          "Never dump garden waste, aquarium contents, or unwanted plants into wild land or waterways",
+          "Choose native or well-behaved species for your garden, and support local removal efforts where they exist"
+        ]
+      },
+      {
+        "title": "Pollinator decline",
+        "symptoms": [
+          "Flowers blooming with few or no visiting insects",
+          "Fruit and vegetable plants flowering well but setting little fruit",
+          "Noticeably fewer bees, butterflies, and hoverflies than in past seasons"
+        ],
+        "solutions": [
+          "Plant a relay of flowers so something is blooming across the whole growing season, favoring simple, open blossoms over dense doubles",
+          "Eliminate insecticide use, especially on anything in flower, and tolerate some nibbled leaves as rent paid to the ecosystem",
+          "Provide the quiet infrastructure: undisturbed corners, bare soil patches, hollow stems left standing, and a shallow water dish with landing stones"
+        ]
+      }
+    ]
+  }
+}

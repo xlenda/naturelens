@@ -1,0 +1,389 @@
+{
+  "watering": {
+    "advice": [
+      "Regar bem tem menos a ver com frequência e mais com observação. As plantas bebem em ritmos diferentes conforme a luz, a temperatura, o tamanho do vaso e a estação — por isso, um cronograma fixo quase sempre falha. Em vez disso, aprenda a ler o próprio solo: pressione o dedo na camada de cima, sinta o peso do vaso e repare em como as folhas se sustentam. Quando o topo do solo secou, a maioria das plantas está pronta para beber; quando ainda está fresco e úmido, esperar é quase sempre a escolha mais segura.",
+      "Quando regar, regue a fundo. Despeje a água devagar e por igual em toda a superfície até escorrer pelos furos de drenagem — isso garante que toda a zona das raízes foi alcançada e lava o acúmulo de sais minerais. Goles rasos molham só a superfície e estimulam as raízes a ficarem perto do topo, onde secam e superaquecem rápido. Esvazie sempre o pratinho depois — raízes paradas na água ficam sem oxigênio, e é assim que a maioria das plantas de casa se perde.",
+      "Ajuste pelas estações, não pelo calendário. Nos meses quentes de crescimento ativo, as plantas usam água rapidamente; nos meses mais frios e escuros, o crescimento desacelera e o mesmo vaso pode ficar úmido por muito mais tempo. Solo frio e encharcado no inverno é um assassino silencioso muito comum, então deixe o solo secar mais entre as regas quando a luz e o calor diminuírem. Sempre que possível, use água em temperatura ambiente — água gelada choca as raízes, principalmente nas espécies tropicais."
+    ],
+    "checklist": [
+      "Confira o solo com o dedo antes de regar, não o calendário",
+      "Regue a fundo até a água sair por baixo",
+      "Esvazie o pratinho — nunca deixe raízes paradas na água",
+      "Reduza as regas nos meses frios e escuros",
+      "Use água em temperatura ambiente sempre que puder",
+      "Levante o vaso: leve significa seco, pesado significa ainda úmido"
+    ],
+    "problems": [
+      {
+        "title": "Excesso de água",
+        "symptoms": [
+          "Folhas amareladas, moles ou caídas, geralmente começando pelas de baixo",
+          "Solo que permanece molhado por dias, às vezes com cheiro azedo ou de mofo",
+          "Raízes marrons e moles em vez de firmes e claras; mosquitinhos de fungo sobrevoando o solo"
+        ],
+        "solutions": [
+          "Pare de regar imediatamente e leve a planta para um lugar claro e arejado para o solo secar",
+          "Verifique as raízes: retire a planta do vaso, apare as partes marrons e moles com uma tesoura limpa e replante em substrato fresco e bem drenante",
+          "Daqui em diante, regue apenas quando o topo do solo tiver secado, e confirme sempre que o vaso drena livremente"
+        ]
+      },
+      {
+        "title": "Falta de água",
+        "symptoms": [
+          "Folhas murchas ou caídas que se reerguem pouco depois da rega",
+          "Bordas e pontas secas e quebradiças; folhas podem se enrolar para dentro",
+          "Solo se soltando das laterais do vaso; o vaso parece anormalmente leve"
+        ],
+        "solutions": [
+          "Regue devagar e a fundo; se o solo repelir a água, deixe o vaso de molho numa bacia com água por um tempo para reidratar por baixo",
+          "Quando o torrão estiver uniformemente úmido de novo, retome as verificações regulares — solo muito seco costuma precisar de duas regas suaves com alguns minutos de intervalo para absorver direito",
+          "Se a planta secar mais rápido do que você consegue acompanhar, considere um vaso um pouco maior ou um substrato que retenha um pouco mais de umidade"
+        ]
+      }
+    ]
+  },
+  "light": {
+    "advice": [
+      "A luz é o alimento da planta — água e adubo apenas sustentam o que a luz torna possível. Os cultivadores descrevem a luz em faixas amplas: sol pleno (raios diretos durante boa parte do dia), meia-sombra ou sol parcial (luz direta por parte do dia, geralmente o sol mais suave da manhã), luz indireta brilhante (clara o bastante para projetar uma sombra suave, mas sem raios diretos) e sombra. Saber em qual faixa cada canto da sua casa ou jardim se encaixa é a habilidade mais útil de todo o cultivo.",
+      "Para ler um ambiente, observe-o ao longo de um dia inteiro. Uma janela voltada para o norte (no hemisfério sul) entrega a luz mais forte e duradoura; o leste dá o sol suave da manhã; o oeste, o sol mais quente da tarde; e a face oposta ao sol permanece suave e difusa. A distância importa muito — a intensidade da luz cai bruscamente a cada passo para longe da janela, então uma planta a um metro do vidro pode receber uma fração do que receberia no parapeito. Cortinas finas, vidros escurecidos e obstáculos do lado de fora reduzem a luz ainda mais.",
+      "Ao mover qualquer planta para condições mais claras, aclimate-a aos poucos. As folhas se adaptam à luz em que cresceram, e um salto repentino — de dentro de casa para o sol pleno, da sombra para um muro ensolarado — pode queimar até espécies que amam sol. Aumente a exposição passo a passo ao longo de algumas semanas, começando pela luz suave da manhã, e observe a folhagem: manchas desbotadas significam rápido demais, enquanto brotos novos, firmes e compactos mostram que a planta está se adaptando bem."
+    ],
+    "checklist": [
+      "Identifique sua faixa de luz: sol pleno, parcial, indireta brilhante ou sombra",
+      "Observe o local ao longo de um dia inteiro antes de posicionar a planta",
+      "Lembre que a intensidade cai rápido conforme se afasta da janela",
+      "Aclimate as plantas gradualmente a qualquer posição mais clara",
+      "Gire os vasos de tempos em tempos para o crescimento ficar uniforme",
+      "Limpe folhas empoeiradas — a poeira rouba luz em silêncio"
+    ],
+    "problems": [
+      {
+        "title": "Luz demais (queimadura de sol)",
+        "symptoms": [
+          "Manchas desbotadas, esbranquiçadas ou com textura de papel nas folhas mais expostas ao sol",
+          "Pontos ou bordas marrons e secos que surgem após a mudança para um lugar mais claro",
+          "Folhas com aparência lavada ou amarelada no geral, apesar da rega correta"
+        ],
+        "solutions": [
+          "Tire a planta dos raios diretos ou filtre a luz com uma cortina fina",
+          "Apare as folhas muito queimadas quando tiver certeza de que o tecido morreu — elas não se recuperam, e removê-las redireciona a energia",
+          "Reintroduza luz mais forte lentamente, ao longo de semanas, se a planta realmente pedir mais sol"
+        ]
+      },
+      {
+        "title": "Luz de menos (estiolamento)",
+        "symptoms": [
+          "Caules longos e esticados, com grandes espaços entre as folhas, inclinados com força na direção da janela",
+          "Folhas novas nascendo menores e mais pálidas que as antigas",
+          "Plantas variegadas perdendo o padrão; plantas floríferas se recusando a florescer"
+        ],
+        "solutions": [
+          "Aproxime a planta de uma janela ou leve-a para um cômodo mais claro, ajustando gradualmente",
+          "Pode os ramos estiolados quando a planta já estiver em luz melhor, para estimular uma forma mais cheia",
+          "Onde a luz natural é realmente escassa, uma lâmpada de cultivo de espectro completo num timer diário funciona surpreendentemente bem"
+        ]
+      }
+    ]
+  },
+  "soil": {
+    "advice": [
+      "Solo saudável é uma estrutura viva, não apenas terra. As raízes precisam de três coisas dele ao mesmo tempo: umidade, ar e sustentação. Um bom solo segura a água como uma esponja torcida — úmido por inteiro, nunca ensopado — mantendo bolsões de ar entre as partículas. Esse equilíbrio vem da estrutura: material grosso (casca, perlita, areia, brita fina) abre canais de drenagem, enquanto a matéria orgânica fina (composto, fibra de coco, folhas decompostas) retém umidade e alimenta a vida do solo, que por sua vez alimenta a planta.",
+      "Drenagem não é negociável em vasos. Todo vaso precisa de furos, e a mistura dentro dele deve deixar o excesso de água passar livremente; uma camada de pedrinhas no fundo não conserta um substrato denso — só aproxima a zona encharcada das raízes. Se a água fica parada na superfície muito tempo depois da rega, ou atravessa direto sem escurecer o solo, a estrutura precisa de correção. A matéria orgânica é a grande mediadora: melhora tanto a retenção de água em misturas arenosas quanto a drenagem nas pesadas.",
+      "O pH — o quanto o solo é ácido ou alcalino — controla silenciosamente quais nutrientes as raízes conseguem de fato absorver. A maioria das plantas de jardim e de casa fica satisfeita numa faixa de levemente ácida a neutra, e os problemas aparecem principalmente nos extremos, onde os nutrientes ficam quimicamente presos mesmo estando presentes. Em vez de perseguir números, incorpore boas quantidades de matéria orgânica bem decomposta, que equilibra o pH naturalmente, e só investigue mais a fundo se a planta mostrar deficiências persistentes que rega e luz não expliquem."
+    ],
+    "checklist": [
+      "Confirme que todo vaso tem furos de drenagem de verdade",
+      "Busque um solo que pareça uma esponja torcida depois da rega",
+      "Misture material grosso para ar e matéria orgânica para umidade e vida",
+      "Esqueça o mito da camada de pedrinhas — corrija a mistura",
+      "Renove ou complete o substrato do vaso conforme ele abaixa e compacta com o tempo",
+      "Cubra canteiros externos com cobertura morta para proteger a estrutura e a vida do solo"
+    ],
+    "problems": [
+      {
+        "title": "Solo compactado e encharcado",
+        "symptoms": [
+          "Água empoçando na superfície ou drenando com extrema lentidão",
+          "Solo denso, pesado e sem ar; pode desenvolver cheiro azedo",
+          "Planta definhando apesar da rega cuidadosa — amarelamento, murcha, crescimento parado"
+        ],
+        "solutions": [
+          "Em vasos: replante em substrato fresco enriquecido com material grosso, como perlita ou casca, soltando o torrão com delicadeza",
+          "Em canteiros: incorpore matéria orgânica com um garfo em vez de revirar o solo com violência, e evite pisar em terra molhada",
+          "Reduza as regas enquanto a estrutura se recupera, e deixe a superfície secar entre uma rega e outra"
+        ]
+      },
+      {
+        "title": "Solo pobre e esgotado",
+        "symptoms": [
+          "Folhas pálidas, caules fracos e pouco ou nenhum crescimento novo na estação",
+          "Água atravessando o vaso direto, sem realmente umedecê-lo",
+          "Substrato do vaso encolhido, endurecido ou descolado das paredes"
+        ],
+        "solutions": [
+          "Replante com substrato fresco e de qualidade — a terra de vaso se desgasta, e nenhum adubo revive por completo uma estrutura colapsada",
+          "Adube leve e regularmente durante a estação de crescimento, em vez de muito de uma vez; doses fortes podem queimar as raízes",
+          "Ao ar livre, construa a fertilidade devagar com composto e cobertura morta, que alimentam o solo e não apenas a planta"
+        ]
+      }
+    ]
+  },
+  "safety": {
+    "advice": [
+      "Conviver com plantas, fungos e insetos é um dos prazeres silenciosos da vida, e alguns hábitos firmes tornam essa convivência segura. A regra fundamental é simples: nunca coma, prove ou prepare chá de nada que você não tenha identificado com certeza absoluta. Uma identificação por aplicativo, incluindo este, é um ponto de partida para aprender — nunca um sinal verde para consumo. Muitas espécies tóxicas são sósias convincentes de espécies comestíveis, e com fungos, em particular, a margem de erro pode ser zero.",
+      "Em casa, conheça o que você cultiva. Algumas plantas comuns de interior e de jardim podem irritar a pele ou fazer mal se mastigadas, então mantenha-as fora do alcance de crianças pequenas e pets, e ensine cedo às crianças que folhas e frutinhas não são comida, a menos que um adulto de confiança diga que sim. Use luvas em podas pesadas ou ao manusear espécies desconhecidas, evite tocar o rosto enquanto trabalha e lave bem as mãos depois. A seiva de algumas plantas pode sensibilizar a pele ao sol, então enxaguar qualquer seiva logo é um bom reflexo.",
+      "Na trilha, olhe com generosidade e toque com critério. Observe os insetos sem manuseá-los, deixe os fungos onde estão a menos que esteja com um guia experiente, e assuma que frutinhas desconhecidas estão fora do cardápio. Se alguém da sua casa tem alergia conhecida a plantas ou picadas, leve a medicação da pessoa e saiba usá-la. Nada disso exige medo — apenas o mesmo respeito tranquilo que você daria à correnteza de um rio ou a um fogão quente."
+    ],
+    "checklist": [
+      "Nunca consuma nada sem identificação certeira, em nível de especialista",
+      "Mantenha plantas duvidosas fora do alcance de crianças e pets",
+      "Use luvas na poda e com espécies desconhecidas; lave as mãos depois",
+      "Enxágue seiva de planta da pele imediatamente",
+      "Observe fungos e insetos silvestres sem tocá-los",
+      "Salve o número do centro de intoxicações da sua região no celular"
+    ],
+    "problems": [
+      {
+        "title": "Contato da pele com espécie irritante",
+        "symptoms": [
+          "Vermelhidão, coceira, ardência ou irritação onde a planta tocou a pele",
+          "Bolhas ou marcas em risco surgindo horas após o contato",
+          "Reação piorando após exposição ao sol na área afetada"
+        ],
+        "solutions": [
+          "Lave a área com bastante sabão e água fria o quanto antes, e lave também qualquer roupa que tocou a planta",
+          "Evite coçar e mantenha a área longe do sol direto enquanto acalma",
+          "Se a reação for intensa, estiver se espalhando, perto dos olhos ou da boca, ou envolver qualquer dificuldade para respirar, procure atendimento médico imediatamente"
+        ]
+      },
+      {
+        "title": "Ingestão acidental",
+        "symptoms": [
+          "Uma criança ou pet mastigou ou engoliu parte de uma planta ou fungo não identificado",
+          "Irritação na boca ou garganta, salivação, náusea, vômito ou sonolência incomum",
+          "Às vezes nenhum sintoma no início — ausência de sintomas não é prova de segurança"
+        ],
+        "solutions": [
+          "Não induza o vômito e não ofereça comida, leite ou remédios caseiros, a menos que um profissional oriente",
+          "Retire qualquer resto de planta da boca e guarde uma amostra ou foto exata do que foi ingerido",
+          "Contate o centro de intoxicações ou a emergência imediatamente — no caso de pets, um veterinário de emergência — mesmo que a pessoa ou o animal pareça bem"
+        ]
+      }
+    ]
+  },
+  "uses": {
+    "advice": [
+      "A história da humanidade está escrita nas plantas. Elas nos deram alimentos básicos e especiarias, madeira para abrigos e navios, fibras como algodão, linho e cânhamo para tecidos e cordas, corantes, resinas, perfumes e a alegria diária do cultivo ornamental. Entender como uma espécie foi usada abre uma janela para a botânica e para a história ao mesmo tempo — a mesma planta pode ser lavoura num continente, símbolo sagrado em outro e queridinha de jardim num terceiro.",
+      "A medicina tradicional merece, em igual medida, respeito especial e cautela especial. Incontáveis medicamentos modernos têm origem em plantas usadas por curadores tradicionais, e essa herança é realmente notável. Mas o uso tradicional é um registro histórico, não uma prova de segurança ou eficácia — dose, preparo, parte da planta e a pessoa que a toma mudam completamente o resultado. Nunca se automedique com plantas com base em algo que leu, inclusive neste aplicativo; consulte sempre antes um profissional de saúde qualificado.",
+      "Seja o que for que atraia você para as plantas úteis, deixe a ética conduzir. Colha apenas o que consegue identificar com certeza e tem permissão de colher, prefira fontes cultivadas às silvestres e colha com modéstia para que as populações se recuperem. A colheita excessiva empurrou espécies medicinais e ornamentais queridas para a escassez em muitas regiões. Os melhores praticantes pensam em gerações: colhem como se eles, os vizinhos e os netos fossem todos voltar ao mesmo lugar."
+    ],
+    "checklist": [
+      "Trate usos tradicionais como história para aprender, não instruções para seguir",
+      "Consulte um profissional de saúde antes de qualquer uso medicinal",
+      "Compre de fontes cultivadas e éticas sempre que possível",
+      "Colha pouco e dentro da lei — conheça as regras locais",
+      "Nunca colha espécies raras, protegidas ou de crescimento lento",
+      "Registre o que aprender; conhecimento sobre plantas úteis merece ser guardado"
+    ],
+    "problems": [
+      {
+        "title": "Uso sem orientação adequada",
+        "symptoms": [
+          "Preparar chás, tinturas ou remédios de uma espécie identificada só por aplicativo ou de memória",
+          "Seguir doses recomendadas por redes sociais ou boatos",
+          "Combinar remédios de plantas com medicamentos de receita sem avisar o médico"
+        ],
+        "solutions": [
+          "Suspenda o uso até que a identidade e a segurança da planta sejam confirmadas por um especialista qualificado",
+          "Converse com um profissional de saúde sobre qualquer remédio à base de plantas, principalmente junto de outros medicamentos, gravidez ou condições existentes",
+          "Trate as informações deste aplicativo como contexto educativo, nunca como prescrição"
+        ]
+      },
+      {
+        "title": "Colheita predatória",
+        "symptoms": [
+          "Populações de uma espécie silvestre visivelmente encolhendo ou sumindo ano após ano",
+          "Colheita que leva raízes, cascas ou plantas inteiras em vez de partes renováveis",
+          "Coleta em áreas protegidas ou ignorando as regras locais de colheita"
+        ],
+        "solutions": [
+          "Siga a regra de contenção do coletor: leve apenas uma pequena fração do que encontrar, e somente de populações abundantes",
+          "Prefira partes renováveis — folhas, algumas flores, alguns frutos — a raízes e cascas, que muitas vezes custam a vida da planta",
+          "Apoie programas de cultivo e compre material cultivado; denuncie colheita ilegal evidente às autoridades locais"
+        ]
+      }
+    ]
+  },
+  "cultural": {
+    "advice": [
+      "Toda espécie que conviveu com pessoas carrega histórias. Plantas e fungos aparecem em mitos de criação, rituais de casamento, ritos fúnebres, emblemas nacionais, poemas e provérbios; um carvalho significa uma coisa numa tradição e algo completamente diferente em outra. Aprender essas camadas transforma uma caminhada no parque num passeio pela imaginação humana — os nomes populares, sozinhos, muitas vezes preservam séculos de observação, humor e crença.",
+      "O folclore também é um registro de conhecimento real, filtrado por gerações. Histórias sobre quais plantas curam, ferem, protegem ou preveem o tempo costumam codificar observações genuínas ao lado de pura poesia, e distinguir uma da outra é parte do prazer. Aproxime-se dessas tradições como um convidado respeitoso: elas pertencem a culturas vivas, não a um museu, e as comunidades que as mantêm são suas melhores intérpretes.",
+      "Ao pesquisar a história cultural de uma espécie, prefira fontes próximas da própria tradição — autores da comunidade, estudiosos regionais, acervos de museus e arquivos — e anote de onde cada história vem. Recontar uma lenda com a origem junto honra as pessoas que a criaram; recontá-la sem origem as apaga aos poucos. Curiosidade mais atribuição: esse é o método inteiro."
+    ],
+    "checklist": [
+      "Pesquise os nomes populares e regionais — eles guardam história condensada",
+      "Anote de qual cultura e região vem cada história",
+      "Prefira fontes de dentro da tradição sempre que possível",
+      "Aprecie o simbolismo sem tratá-lo como biologia",
+      "Compartilhe lendas junto com suas origens",
+      "Peça permissão antes de fotografar ou coletar em locais sagrados ou comunitários"
+    ],
+    "problems": [
+      {
+        "title": "Mito x fato",
+        "symptoms": [
+          "Presumir que uma planta é segura para comer ou usar porque 'sempre foi usada'",
+          "Ler significados simbólicos — sorte, proteção, cura — como propriedades físicas",
+          "Confiar mais numa história muito repetida justamente por ser muito repetida"
+        ],
+        "solutions": [
+          "Mantenha duas prateleiras na cabeça: o que a planta significa e o que a planta faz — ambos são conhecimento verdadeiro, mas respondem a perguntas diferentes",
+          "Verifique tudo que envolva segurança ou consumo em fontes especializadas modernas, por mais antiga que a tradição seja",
+          "Aprecie o mito nos termos dele; ele não precisa ser literalmente verdadeiro para ser culturalmente precioso"
+        ]
+      },
+      {
+        "title": "Atribuição e respeito",
+        "symptoms": [
+          "Recontar histórias ou cerimônias sem mencionar o povo a quem pertencem",
+          "Apresentar a tradição de uma cultura como folclore universal ou genérico",
+          "Usar plantas ou símbolos sagrados como decoração casual, sem entender seu peso"
+        ],
+        "solutions": [
+          "Nomeie a cultura, a região e onde você aprendeu cada história sempre que a compartilhar",
+          "Quando a tradição é viva e sagrada, siga a orientação da própria comunidade sobre o que pode ser compartilhado e como",
+          "Deixe a curiosidade amadurecer em relação: leia autores da comunidade, visite centros culturais e apoie os guardiões do conhecimento"
+        ]
+      }
+    ]
+  },
+  "edible": {
+    "advice": [
+      "Foragear com segurança se apoia numa regra inquebrável: identificação positiva, por três vias, todas as vezes. Antes de qualquer coisa silvestre tocar seus lábios, você precisa conseguir confirmar a espécie por múltiplas características independentes — folha, flor, fruto, casca, cheiro, habitat, estação — cruzadas com pelo menos um guia de campo confiável e, idealmente, verificadas pessoalmente por um coletor experiente. Se qualquer uma das verificações deixar dúvida, a resposta é não. Uma sugestão de aplicativo, incluindo este, é o começo de uma identificação, nunca o fim dela.",
+      "Comestibilidade raramente é uma propriedade de sim-ou-não da planta inteira. Muitas espécies têm uma parte comestível e outras partes nocivas; muitas são seguras apenas em certo estágio de maturação, ou somente após o preparo correto, como cozimento completo. 'Comestível' numa referência sempre significa a parte certa, no estágio certo, preparada do jeito certo. Ao experimentar qualquer alimento silvestre novo que você confirmou rigorosamente, coma uma quantidade pequena primeiro e espere um dia — sensibilidades individuais existem até para espécies genuinamente comestíveis.",
+      "Foragear com ética protege você e a terra ao mesmo tempo. Colete apenas onde é permitido e o ambiente é limpo — beiras de estrada, campos pulverizados e áreas industriais podem contaminar até espécies perfeitamente comestíveis. Colha com modéstia, deixe bastante para a fauna e para a rebrota, e nunca esvazie um local por completo. O velho hábito dos coletores vale ser adotado por inteiro: conheça sua planta, conheça seu lugar, leve pouco e dê ao lugar um motivo para recebê-lo de volta."
+    ],
+    "checklist": [
+      "Confirme a identidade por várias características independentes, nunca por uma só",
+      "Cruze com um guia de campo e com uma pessoa experiente",
+      "Aprenda qual parte, em qual estágio e com qual preparo é seguro",
+      "Se restar qualquer dúvida: não coma",
+      "Experimente alimentos silvestres novos em pequenas quantidades, um de cada vez",
+      "Colete dentro da lei, em lugares limpos, e deixe bastante para trás"
+    ],
+    "problems": [
+      {
+        "title": "Confusão entre espécies parecidas",
+        "symptoms": [
+          "Identificação baseada numa única característica, numa única foto ou na impressão geral",
+          "O exemplar bate com a maior parte, mas não com toda a descrição do guia de campo",
+          "Existem sósias perigosos conhecidos na mesma família — comum com cogumelos, cenouras e salsas silvestres e muitas frutinhas"
+        ],
+        "solutions": [
+          "Pare na primeira divergência: uma identificação de verdade bate em todas as características, e um detalhe errado significa outra espécie",
+          "Aprenda os sósias perigosos da sua região tão a fundo quanto as espécies comestíveis — estude primeiro o que pode matar",
+          "Leve o achado a um especialista ou grupo local de forageio antes de ele chegar à cozinha; com fungos, trate isso como obrigatório"
+        ]
+      },
+      {
+        "title": "Preparo inadequado",
+        "symptoms": [
+          "Comer crua uma espécie que a tradição e as referências dizem que deve ser cozida",
+          "Usar a parte errada de uma planta corretamente identificada",
+          "Mal-estar digestivo depois de comer um achado supostamente comestível"
+        ],
+        "solutions": [
+          "Siga à risca as instruções de preparo de fontes confiáveis — exigências de cozimento existem porque o calor neutraliza compostos reais",
+          "Confira parte e estágio na referência: espécie certa com parte errada continua sendo a refeição errada",
+          "Se alguém passar mal, guarde uma amostra do que foi comido e procure orientação médica logo, em vez de esperar passar"
+        ]
+      }
+    ]
+  },
+  "propagation": {
+    "advice": [
+      "Propagar é a magia silenciosa da jardinagem: uma planta vira muitas, de graça. As três portas de entrada são estaca, divisão e semente. A estaca pega um caule ou folha saudável e o convence a criar raízes próprias; a divisão separa uma planta que cresce em touceira em plantas menores já prontas; a semente começa do zero e recompensa a paciência com as maiores possibilidades. Cada espécie tem métodos que prefere, mas os princípios por trás valem para quase todas.",
+      "Nas estacas, três coisas decidem o sucesso: material saudável, cortes limpos e condições estáveis. Tire estacas de ramos vigorosos e livres de doenças, corte logo abaixo de um nó — a junção onde as folhas encontram o caule, onde a energia de enraizamento se concentra — e remova as folhas de baixo para que nada apodreça abaixo da superfície. Seja enraizando na água ou num substrato leve e arejado, dê às estacas luz indireta brilhante, calor suave e umidade alta, e resista à vontade de puxá-las para conferir o progresso; folhas novas são o anúncio de que as raízes existem.",
+      "Higiene e época são os dois ingredientes mais subestimados. Limpe as ferramentas com álcool ou chama antes e entre os cortes — uma lâmina suja espalha doença direto em feridas frescas. Propague durante o crescimento ativo, geralmente da primavera ao início do verão, quando a planta tem energia de sobra; material tirado de uma planta dormente ou estressada começa a vida em desvantagem. E tire mais estacas do que precisa: até os especialistas perdem uma parte, e as que sobram viram ótimos presentes."
+    ],
+    "checklist": [
+      "Propague apenas de plantas saudáveis, vigorosas e sem pragas",
+      "Esterilize as lâminas antes e entre os cortes",
+      "Corte logo abaixo de um nó; remova folhas que ficariam abaixo da superfície",
+      "Dê luz indireta brilhante, calor e umidade — nunca sol direto",
+      "Mantenha o meio úmido, mas nunca encharcado",
+      "Tire estacas extras; algumas perdas são normais até para especialistas"
+    ],
+    "problems": [
+      {
+        "title": "Estaca que apodrece",
+        "symptoms": [
+          "Caule ficando marrom, preto ou translúcido da base para cima",
+          "Textura mole e viscosa e cheiro azedo na água ou no substrato",
+          "Folhas desabando em vez de murcharem suavemente"
+        ],
+        "solutions": [
+          "Descarte estacas claramente apodrecidas e comece de novo — a podridão sobe e raramente regride",
+          "Se só a base foi afetada, refaça o corte bem acima do dano com lâmina esterilizada e recomece em água ou substrato frescos",
+          "Previna a repetição: ferramentas mais limpas, água trocada com regularidade, meio mais leve e arejado, e nenhuma folha abaixo da superfície"
+        ]
+      },
+      {
+        "title": "Muda que não enraíza",
+        "symptoms": [
+          "Semanas se passam sem raízes, embora a estaca ainda pareça viva",
+          "Estaca amarelando devagar e perdendo energia sem mudança",
+          "Calo se forma na base, mas as raízes nunca vêm"
+        ],
+        "solutions": [
+          "Cheque as condições primeiro: a maioria dos travamentos vem de pouca luz, pouco calor ou ar seco — ajuste isso antes de culpar a estaca",
+          "Refaça o corte da base em ângulo, abaixo de um nó, para expor tecido novo, e considere um enraizador para espécies relutantes",
+          "Tenha paciência conforme a espécie: algumas enraízam em dias, outras levam meses — enquanto a estaca estiver firme e verde, ela ainda está tentando"
+        ]
+      }
+    ]
+  },
+  "role": {
+    "advice": [
+      "Nenhuma espécie vive sozinha. Cada planta, fungo e inseto ocupa um papel numa teia de relações: plantas com flor alimentam polinizadores, que por sua vez geram as sementes e frutos que alimentam aves e mamíferos; folhas alimentam lagartas que alimentam filhotes no ninho; fungos e insetos decompositores desmontam a matéria caída e devolvem seus nutrientes ao solo que cria a próxima geração. Aprender o papel de uma espécie — o que ela alimenta, abriga, com quem se associa e de quem depende — transforma a identificação de um ato de nomear num ato de compreender.",
+      "O jeito mais rico de ver esses papéis é a observação paciente e de baixo impacto. Fique parado perto de uma planta florida por alguns minutos e conte os visitantes; volte à mesma árvore ao longo das estações e veja o elenco mudar; vire um tronco caído com cuidado e devolva-o exatamente como estava. Fotografe em vez de coletar, fique nas trilhas em habitats sensíveis, mantenha distância respeitosa de ninhos e tocas e deixe a fauna decidir a distância entre vocês. O paradoxo do naturalista é que quanto menos você interfere, mais você vê.",
+      "Seu jardim, varanda ou parapeito é um pedaço funcional do ecossistema. Um vaso de ervas floridas alimenta polinizadores; um canto de folhas secas abriga insetos no inverno; dispensar agrotóxicos mantém a teia alimentar intacta do pulgão ao passarinho. Escolhas pequenas se multiplicam pelos bairros — a mesma atenção que você dá a uma planta de casa, virada para fora, repara silenciosamente a teia ao seu redor."
+    ],
+    "checklist": [
+      "Pergunte de qualquer espécie: o que ela alimenta, e o que se alimenta dela?",
+      "Observe em silêncio e deixe cada lugar como encontrou",
+      "Fotografe em vez de coletar",
+      "Devolva à posição exata qualquer coisa que virar",
+      "Plante flores, mantenha cantos selvagens, dispense os agrotóxicos",
+      "Anote seus avistamentos — registros ao longo do tempo revelam a teia"
+    ],
+    "problems": [
+      {
+        "title": "Espécie fora do lugar (invasoras)",
+        "symptoms": [
+          "Uma única espécie cobrindo uma área e sufocando a vegetação nativa variada",
+          "Espalhamento rápido e agressivo muito além de onde foi plantada",
+          "Nitidamente menos insetos, aves ou flores silvestres onde ela domina"
+        ],
+        "solutions": [
+          "Aprenda quais espécies são consideradas invasoras na sua região — a mesma planta pode ser inofensiva em casa e destrutiva fora dela",
+          "Nunca descarte restos de jardim, conteúdo de aquário ou plantas indesejadas em áreas naturais ou cursos d'água",
+          "Escolha espécies nativas ou bem-comportadas para o seu jardim e apoie mutirões locais de remoção onde existirem"
+        ]
+      },
+      {
+        "title": "Declínio de polinizadores",
+        "symptoms": [
+          "Flores abertas com poucos ou nenhum inseto visitante",
+          "Hortaliças e frutíferas florescendo bem, mas produzindo pouco fruto",
+          "Nitidamente menos abelhas, borboletas e moscas-das-flores do que em estações passadas"
+        ],
+        "solutions": [
+          "Plante um revezamento de flores para que algo esteja aberto durante toda a estação, preferindo flores simples e abertas às dobradas e densas",
+          "Elimine inseticidas, principalmente sobre qualquer coisa em flor, e tolere algumas folhas mordidas como aluguel pago ao ecossistema",
+          "Ofereça a infraestrutura silenciosa: cantos sem mexer, trechos de solo nu, hastes ocas deixadas em pé e um pratinho raso de água com pedras para pouso"
+        ]
+      }
+    ]
+  }
+}

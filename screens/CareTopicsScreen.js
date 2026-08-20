@@ -9,6 +9,7 @@ import { colors } from '../components/theme';
 import TopBar from '../components/TopBar';
 import NatureScene from '../components/NatureScene';
 import HelpfulRow from '../components/HelpfulRow';
+import { getTopicManual } from '../components/manualContent';
 
 // The species MANUAL, diagrammed like the competitor's (studied frame by
 // frame from the owner's 6-minute video) instead of "um monte de texto em
@@ -53,7 +54,8 @@ function splitAdvice(text) {
 export default function CareTopicsScreen() {
   const navigation = useNavigation();
   const route = useRoute();
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const i18nLang = i18n.language;
   const { title, accent = colors.accent, category = 'plant', topics = [], initialKey } = route.params || {};
 
   const valid = topics.filter((tp) => tp && tp.key && tp.text);
@@ -75,6 +77,24 @@ export default function CareTopicsScreen() {
   };
 
   const advice = active ? splitAdvice(active.text) : { lead: '', bullets: [] };
+
+  // O MIOLO IMENSO (manual editorial por topico, {lang}-manual.json): os
+  // conselhos fundamentais, o checklist e os problemas em acordeao que dao a
+  // aba a profundidade do concorrente. Pre-escrito nos 17 idiomas e servido
+  // estatico (CDN) - nada e gerado por usuario, e por isso escala. null = a
+  // aba mostra so o texto da especie, nunca um erro.
+  const [manual, setManual] = useState(null);
+  const [openProblem, setOpenProblem] = useState(null);
+  useEffect(() => {
+    let alive = true;
+    setManual(null);
+    setOpenProblem(null);
+    const manualKey = activeKey === 'confusas' ? 'safety' : activeKey === 'overview' ? 'role' : activeKey;
+    getTopicManual(manualKey, i18nLang).then((m) => {
+      if (alive) setManual(m);
+    });
+    return () => { alive = false; };
+  }, [activeKey, i18nLang]);
 
   return (
     <SafeAreaView style={styles.container} edges={['top']}>
@@ -162,7 +182,7 @@ export default function CareTopicsScreen() {
             {/* O texto REAL do vendor, reformatado fielmente: frase-lider +
                 bullets escaneaveis (mesmas palavras, mesma ordem). */}
             <View style={styles.adviceCard}>
-              <Text style={styles.adviceTitle}>{active.label}</Text>
+              <Text style={styles.adviceTitle}>{t('detail.aboutSpecies')}</Text>
               {!!advice.lead && <Text style={styles.lead}>{advice.lead}</Text>}
               {advice.bullets.map((b, i) => (
                 <View key={i} style={styles.bulletRow}>
@@ -172,6 +192,79 @@ export default function CareTopicsScreen() {
               ))}
             </View>
           </>
+        )}
+
+        {/* CONSELHOS FUNDAMENTAIS - o manual editorial profundo. */}
+        {manual?.advice?.length > 0 && (
+          <View style={styles.adviceCard}>
+            <Text style={styles.adviceTitle}>{t('detail.fundamentals')}</Text>
+            {manual.advice.map((para, i) => (
+              <Text key={i} style={styles.body}>
+                {para}
+              </Text>
+            ))}
+          </View>
+        )}
+
+        {/* ANTES DE COMECAR - checklist com check. */}
+        {manual?.checklist?.length > 0 && (
+          <View style={styles.adviceCard}>
+            <Text style={styles.adviceTitle}>{t('detail.checklistLabel')}</Text>
+            {manual.checklist.map((item, i) => (
+              <View key={i} style={styles.checkRow}>
+                <Ionicons name="checkmark-circle" size={17} color={accent} />
+                <Text style={styles.checkText}>{item}</Text>
+              </View>
+            ))}
+          </View>
+        )}
+
+        {/* SINAIS DE PROBLEMAS - acordeoes (titulo fechado; sintomas +
+            solucoes numeradas ao expandir), dispositivo do concorrente. */}
+        {manual?.problems?.length > 0 && (
+          <View style={styles.adviceCard}>
+            <Text style={styles.adviceTitle}>{t('detail.problemsLabel')}</Text>
+            {manual.problems.map((prob, i) => {
+              const open = openProblem === i;
+              return (
+                <View key={i} style={styles.problemBlock}>
+                  <TouchableOpacity
+                    style={styles.problemHead}
+                    onPress={() => setOpenProblem(open ? null : i)}
+                    activeOpacity={0.7}
+                    accessibilityRole="button"
+                    accessibilityState={{ expanded: open }}
+                    accessibilityLabel={prob.title}
+                  >
+                    <Ionicons name="alert-circle-outline" size={17} color={colors.warning} />
+                    <Text style={styles.problemTitle}>{prob.title}</Text>
+                    <Ionicons name={open ? 'chevron-up' : 'chevron-down'} size={16} color={colors.textMuted} />
+                  </TouchableOpacity>
+                  {open && (
+                    <View style={styles.problemBody}>
+                      {(prob.symptoms || []).map((sy, j) => (
+                        <View key={j} style={styles.bulletRow}>
+                          <View style={[styles.bulletDot, { backgroundColor: colors.warning }]} />
+                          <Text style={styles.bulletText}>{sy}</Text>
+                        </View>
+                      ))}
+                      {prob.solutions?.length > 0 && (
+                        <>
+                          <Text style={styles.solutionsLabel}>{t('detail.solutionsLabel')}</Text>
+                          {prob.solutions.map((sol, j) => (
+                            <View key={j} style={styles.bulletRow}>
+                              <Text style={[styles.solutionNum, { color: accent }]}>{j + 1}.</Text>
+                              <Text style={styles.bulletText}>{sol}</Text>
+                            </View>
+                          ))}
+                        </>
+                      )}
+                    </View>
+                  )}
+                </View>
+              );
+            })}
+          </View>
         )}
 
         <HelpfulRow category={category} context={`topic:${activeKey}`} />
@@ -249,4 +342,21 @@ const styles = StyleSheet.create({
   bulletRow: { flexDirection: 'row', alignItems: 'flex-start', gap: 10, marginBottom: 10 },
   bulletDot: { width: 6, height: 6, borderRadius: 3, marginTop: 8 },
   bulletText: { flex: 1, fontSize: 14, lineHeight: 21, color: colors.textSecondary },
+  body: { fontSize: 14, lineHeight: 22, color: colors.textSecondary, marginBottom: 12 },
+  checkRow: { flexDirection: 'row', alignItems: 'flex-start', gap: 10, marginBottom: 10 },
+  checkText: { flex: 1, fontSize: 14, lineHeight: 21, color: colors.textSecondary },
+  problemBlock: { borderTopWidth: 1, borderTopColor: colors.border, marginTop: 4 },
+  problemHead: { flexDirection: 'row', alignItems: 'center', gap: 10, paddingVertical: 13 },
+  problemTitle: { flex: 1, fontSize: 14.5, fontWeight: '700', color: colors.text },
+  problemBody: { paddingBottom: 12 },
+  solutionsLabel: {
+    fontSize: 11,
+    fontWeight: '800',
+    color: colors.textMuted,
+    textTransform: 'uppercase',
+    letterSpacing: 0.6,
+    marginTop: 6,
+    marginBottom: 8,
+  },
+  solutionNum: { fontSize: 14, fontWeight: '800', width: 20 },
 });

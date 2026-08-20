@@ -93,7 +93,7 @@ test('every locale can phrase every auth failure', () => {
   const dir = path.join(__dirname, 'public', 'locales');
   const locales = fs
     .readdirSync(dir)
-    .filter((f) => f.endsWith('.json') && !/-(herbs|species)\.json$/.test(f));
+    .filter((f) => f.endsWith('.json') && !/-(herbs|species|manual)\.json$/.test(f));
   assert.equal(locales.length, 17);
 
   for (const file of locales) {

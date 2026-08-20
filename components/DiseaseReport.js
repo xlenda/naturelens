@@ -74,9 +74,13 @@ export default function DiseaseReport({ disease }) {
         )}
       </View>
 
-      <SectionCard icon="document-text-outline" title={t('disease.overviewSection')} color={colors.info}>
-        <Text style={styles.body}>{disease.overview}</Text>
-      </SectionCard>
+      {/* Guarded like every sibling: a healthy result has no overview text,
+          and an empty titled card reads as a dead button (owner hit it). */}
+      {!!disease.overview && (
+        <SectionCard icon="document-text-outline" title={t('disease.overviewSection')} color={colors.info}>
+          <Text style={styles.body}>{disease.overview}</Text>
+        </SectionCard>
+      )}
 
       {disease.symptoms?.length > 0 && (
         <SectionCard icon="eye-outline" title={t('disease.symptomsSection')} color={colors.warning}>

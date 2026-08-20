@@ -388,35 +388,8 @@ export default function TreeDetailScreen({ route }) {
             reading. */}
         {!!(plant.bestWatering || plant.bestLightCondition || plant.bestSoilType || wateringStatus) && (
         <ZoneBand gutter={20}>
-        {!!plant.bestWatering && (
-          <TopicDoor
-            icon="water-outline"
-            color={colors.info}
-            label={t('detail.wateringGuideSection')}
-            preview={plant.bestWatering}
-            onPress={() => openTopic('watering')}
-          />
-        )}
 
-        {!!plant.bestLightCondition && (
-          <TopicDoor
-            icon="sunny-outline"
-            color={colors.warning}
-            label={t('detail.lightSection')}
-            preview={plant.bestLightCondition}
-            onPress={() => openTopic('light')}
-          />
-        )}
 
-        {!!plant.bestSoilType && (
-          <TopicDoor
-            icon="layers-outline"
-            color={colors.purple}
-            label={t('detail.soilSection')}
-            preview={plant.bestSoilType}
-            onPress={() => openTopic('soil')}
-          />
-        )}
 
         {!!wateringStatus && (
           <SectionCard icon="water-outline" title={t('detail.wateringSection')} color={colors.info}>
