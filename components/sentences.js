@@ -10,14 +10,16 @@
 // e minusculo e volta pro anterior em vez de virar uma linha truncada - que,
 // num aviso de toxicidade, e exatamente o pedaco que muda o sentido.
 //
-// Escrita sem ponto final (chines, japones, arabe) devolve o texto inteiro
-// como uma frase so: nao ha o que colapsar, e o componente entao mostra tudo.
+// Chines e japones terminam frase com 。！？ (largura cheia), nao com o ponto
+// latino: sem eles no separador a descricao inteira virava UMA frase, o
+// "Ver mais" nunca aparecia e o manual nunca virava topicos nesses idiomas.
+// Escrita arabe usa o ponto latino e ja funcionava.
 const ABBREV = /(\s|^)([A-Z]|cv|sp|ssp|subsp|var|f|e\.g|i\.e|approx|Dr|Sr|Sra|Mr|Mrs|St|no)\.$/i;
 
 export function splitSentences(text) {
   if (typeof text !== 'string' || !text.trim()) return [];
 
-  const pieces = text.trim().match(/[^.!?]+(?:[.!?]+|$)/g) || [];
+  const pieces = text.trim().match(/[^.!?。！？]+(?:[.!?。！？]+|$)/g) || [];
   const out = [];
 
   for (const piece of pieces) {
@@ -30,7 +32,28 @@ export function splitSentences(text) {
     // outra metade escondida - foi resolvido onde nasceu: aviso de toxicidade
     // e de perigo nao passam mais por "Ver mais", renderizam inteiros.
     const previous = out[out.length - 1];
-    if (previous && (ABBREV.test(previous) || sentence.length < 15)) {
+
+    // Numero decimal NAO e fim de frase. "Grows 1.5 m tall." era cortado em
+    // "Grows 1." + "5 m tall." e remontado com espaco, entregando ao usuario
+    // "Grows 1. 5 m tall." - texto CORROMPIDO na tela, nao so mal cortado.
+    // A juncao e feita aqui em vez de no regex porque a forma natural de
+    // resolver no regex e lookbehind, que derruba o app inteiro em iOS 15
+    // (o motivo deste arquivo existir).
+    const decimalPartido = previous && /\d\.$/.test(previous) && /^\d/.test(sentence);
+
+    if (previous && decimalPartido) {
+      out[out.length - 1] = previous + sentence; // sem espaco: e o mesmo numero
+      continue;
+    }
+
+    // A regra de "farelo curto" e de escrita LATINA. Em chines e japones uma
+    // frase inteira cabe em poucos caracteres ("喜阳。" = "gosta de sol"), entao o
+    // limiar de 15 juntava a descricao toda de volta num bloco so - e ainda
+    // colava um espaco que nao existe nessas escritas. Peca com terminador de
+    // largura cheia ja e frase completa: nunca e farelo.
+    const escritaCJK = /[　-鿿＀-￯]/.test(sentence);
+
+    if (previous && !escritaCJK && (ABBREV.test(previous) || sentence.length < 6)) {
       out[out.length - 1] = previous + ' ' + sentence;
     } else {
       out.push(sentence);

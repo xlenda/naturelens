@@ -69,7 +69,12 @@ const ROTULOS = [
 // (a doutrina do topo deste arquivo) e o DiseaseReport ainda compara os dois
 // para reconhecer o laudo-fantasma: traduzir um e nao o outro apagaria a
 // comparacao. Aqui so viaja prosa.
-const NEVER_TRANSLATE = ['url', 'name', 'scientific', 'id'];
+// `severity` entra aqui porque `disease` E uma chave elegivel e o walk desce
+// nela: sem esta linha, a gravidade era traduzida NO LUGAR (virando 'alto') e
+// SEPARADAMENTE no rotulo, entao SEVERITY_COLORS perdia a chave inglesa e uma
+// doenca grave saia laranja em vez de vermelha. O rotulo traduzido continua
+// vindo pela tabela ROTULOS, que nao passa por aqui.
+const NEVER_TRANSLATE = ['url', 'name', 'scientific', 'id', 'severity'];
 
 // Collects every translatable string under the eligible keys as {text, set}
 // pairs, so the reply can be written back exactly where each string came from.

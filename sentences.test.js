@@ -76,3 +76,29 @@ test('vazio nao vira frase', () => {
   assert.deepEqual(splitSentences(null), []);
   assert.deepEqual(splitSentences('   '), []);
 });
+
+// Os tres casos abaixo vieram de uma revisao independente do proprio diff
+// (20/08). Os dois primeiros eram CORRUPCAO de texto na tela, nao so corte
+// feio - o usuario lia um numero errado.
+test('numero decimal nao e cortado ao meio', () => {
+  // "Grows 1.5 m tall." virava "Grows 1. 5 m tall." na tela.
+  assert.deepEqual(splitSentences('Grows 1.5 m tall. Prefers shade.'), [
+    'Grows 1.5 m tall.',
+    'Prefers shade.',
+  ]);
+});
+
+test('chines e japones cortam em 。！？', () => {
+  // Sem o terminador de largura cheia a descricao inteira virava UMA frase:
+  // o "Ver mais" nunca aparecia e o manual nunca virava topicos em zh/zh-hant.
+  assert.deepEqual(splitSentences('喜阳。保持土壤湿润。避免积水。'), [
+    '喜阳。',
+    '保持土壤湿润。',
+    '避免积水。',
+  ]);
+});
+
+test('frase curta legitima continua sendo frase', () => {
+  // O limiar de farelo era 15 caracteres e comia "Cresce rapido." inteiro.
+  assert.equal(splitSentences('Descrita por Dr. Silva em 1890. Cresce rapido.').length, 2);
+});
