@@ -1,3 +1,4 @@
+import { Platform } from 'react-native';
 import { colors } from './theme';
 
 // tabLabel doubles as the React Navigation route name (App.js) - keep it a stable
@@ -113,10 +114,17 @@ export const CATEGORIES = {
     // box). Verified end to end against real Commons recordings before switching
     // on: 4/5 species correct, white noise and silence both refused.
     //
-    // A literal `true` rather than an EXPO_PUBLIC_* flag, matching bird: the
-    // build runs locally, so a env-gated tab would silently vanish for everyone
-    // the first time someone deployed without the .env file present.
-    enabled: true,
+    // A literal expression rather than an EXPO_PUBLIC_* flag, matching bird:
+    // the build runs locally, so a env-gated tab would silently vanish for
+    // everyone the first time someone deployed without the .env file present.
+    //
+    // Web-only until a native recorder exists: audioRecorder.js is built on
+    // MediaRecorder/getUserMedia and there is no native audio dependency in
+    // package.json, so on a store build this tab would render but never be able
+    // to record - a dead tab wearing a feature's name. Honest absence instead.
+    // CATEGORIES itself keeps the entry either way, so sound finds restored
+    // from the cloud still open their detail screen on native.
+    enabled: Platform.OS === 'web',
   },
 };
 
