@@ -2310,5 +2310,15 @@
     "badCode": "यह कोड गलत है या समाप्त हो गया। नया मंगवाएँ।",
     "badEmail": "यह मान्य ईमेल पता नहीं लगता।",
     "codeSendFailed": "कोड नहीं भेजा जा सका। थोड़ी देर में फिर कोशिश करें।"
+  },
+  "settings": {
+    "title": "सेटिंग्स",
+    "sectionMembership": "सदस्यता",
+    "sectionGeneral": "सामान्य",
+    "sectionSupport": "सहायता",
+    "sectionLegal": "कानूनी",
+    "sectionAccount": "खाता",
+    "tellFriends": "दोस्तों को बताएं",
+    "linkCopied": "लिंक कॉपी हो गया"
   }
 }

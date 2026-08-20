@@ -2310,5 +2310,15 @@
     "badCode": "코드가 잘못되었거나 만료되었습니다. 새 코드를 요청하세요.",
     "badEmail": "올바른 이메일 주소로 보이지 않습니다.",
     "codeSendFailed": "코드를 보내지 못했습니다. 잠시 후 다시 시도해 주세요."
+  },
+  "settings": {
+    "title": "설정",
+    "sectionMembership": "구독",
+    "sectionGeneral": "일반",
+    "sectionSupport": "지원",
+    "sectionLegal": "법적 고지",
+    "sectionAccount": "계정",
+    "tellFriends": "친구에게 알리기",
+    "linkCopied": "링크가 복사되었습니다"
   }
 }

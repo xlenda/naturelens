@@ -2310,5 +2310,15 @@
     "badCode": "驗證碼錯誤或已過期，請重新取得。",
     "badEmail": "這看起來不是有效的信箱地址。",
     "codeSendFailed": "驗證碼傳送失敗，請稍後重試。"
+  },
+  "settings": {
+    "title": "設定",
+    "sectionMembership": "訂閱",
+    "sectionGeneral": "一般",
+    "sectionSupport": "支援",
+    "sectionLegal": "法律條款",
+    "sectionAccount": "帳戶",
+    "tellFriends": "推薦給朋友",
+    "linkCopied": "連結已複製"
   }
 }

@@ -2310,5 +2310,15 @@
     "badCode": "验证码错误或已过期，请重新获取。",
     "badEmail": "这看起来不是有效的邮箱地址。",
     "codeSendFailed": "验证码发送失败，请稍后重试。"
+  },
+  "settings": {
+    "title": "设置",
+    "sectionMembership": "订阅",
+    "sectionGeneral": "通用",
+    "sectionSupport": "支持",
+    "sectionLegal": "法律条款",
+    "sectionAccount": "账户",
+    "tellFriends": "推荐给朋友",
+    "linkCopied": "链接已复制"
   }
 }

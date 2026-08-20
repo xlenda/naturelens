@@ -2310,5 +2310,15 @@
     "badCode": "Tento kód je špatný nebo vypršel. Vyžádej si nový.",
     "badEmail": "Tohle nevypadá jako platná e-mailová adresa.",
     "codeSendFailed": "Kód se nepodařilo odeslat. Zkus to za chvíli znovu."
+  },
+  "settings": {
+    "title": "Nastavení",
+    "sectionMembership": "Předplatné",
+    "sectionGeneral": "Obecné",
+    "sectionSupport": "Podpora",
+    "sectionLegal": "Právní informace",
+    "sectionAccount": "Účet",
+    "tellFriends": "Doporučit přátelům",
+    "linkCopied": "Odkaz zkopírován"
   }
 }

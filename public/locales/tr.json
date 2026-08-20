@@ -2310,5 +2310,15 @@
     "badCode": "Bu kod yanlış veya süresi dolmuş. Yenisini iste.",
     "badEmail": "Bu geçerli bir e-posta adresine benzemiyor.",
     "codeSendFailed": "Kod gönderilemedi. Birazdan tekrar dene."
+  },
+  "settings": {
+    "title": "Ayarlar",
+    "sectionMembership": "Abonelik",
+    "sectionGeneral": "Genel",
+    "sectionSupport": "Destek",
+    "sectionLegal": "Yasal",
+    "sectionAccount": "Hesap",
+    "tellFriends": "Arkadaşlarına öner",
+    "linkCopied": "Bağlantı kopyalandı"
   }
 }

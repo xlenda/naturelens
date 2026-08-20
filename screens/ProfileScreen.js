@@ -7,18 +7,12 @@ import { Ionicons } from '@expo/vector-icons';
 import * as ImagePicker from 'expo-image-picker';
 import * as ImageManipulator from 'expo-image-manipulator';
 import { colors, shadow } from '../components/theme';
-import { getCollection, getProfilePhoto, saveProfilePhoto, clearCollection, clearProfilePhoto } from '../components/storage';
+import { getCollection, getProfilePhoto, saveProfilePhoto } from '../components/storage';
 import { CATEGORIES } from '../components/categories';
-import { SUPPORTED_LANGUAGES, setAppLanguage } from '../i18n';
 import { startCheckout, getSubscriptionStatus, getLinkedEmail } from '../components/subscription';
-import { createPassword, deleteAccount, signOut } from '../components/restore';
-import { resetDeviceId } from '../components/deviceId';
-import { getStreakInfo, evaluateAchievements, clearAchievements } from '../components/achievements';
-import { clearRewards, hasReward } from '../components/rewardOwnership';
-import { exportCollection, pickAndImport } from '../components/collectionBackup';
-import { canUseLocation, isLocationEnabled, setLocationEnabled } from '../components/deviceLocation';
-import { clearShields } from '../components/streakShield';
-import { clearMissions } from '../components/missions';
+import { createPassword } from '../components/restore';
+import { getStreakInfo, evaluateAchievements } from '../components/achievements';
+import { hasReward } from '../components/rewardOwnership';
 import PaywallModal from '../components/PaywallModal';
 import AlertModal from '../components/AlertModal';
 import PasswordInput from '../components/PasswordInput';
@@ -28,22 +22,6 @@ import CategoryIcon from '../components/CategoryIcon';
 import NatureScene from '../components/NatureScene';
 import ZoneBand from '../components/ZoneBand';
 import PressScale from '../components/PressScale';
-import {
-  canUsePush,
-  getPermission as getPushPermission,
-  enablePush,
-  disablePush,
-  isPushEnabled,
-} from '../components/pushNotifications';
-import {
-  canPromptInstall,
-  isStandalone,
-  isIOS,
-  onInstallAvailabilityChange,
-  promptInstall,
-} from '../components/pwaInstall';
-
-const APP_VERSION = '1.0.0';
 
 // Derived from CATEGORIES rather than hand-listed. The hardcoded version of
 // this object silently dropped every saved fish and bird from the per-category
@@ -61,58 +39,15 @@ export default function ProfileScreen() {
   const [accountEmail, setAccountEmail] = useState(null);
   const [checkingOut, setCheckingOut] = useState(false);
   const [paywallVisible, setPaywallVisible] = useState(false);
-  const [installAvailable, setInstallAvailable] = useState(
-    Platform.OS === 'web' && !isStandalone() && (canPromptInstall() || isIOS())
-  );
   const [passwordInput, setPasswordInput] = useState('');
   const [creatingPassword, setCreatingPassword] = useState(false);
   const [photoUri, setPhotoUri] = useState(null);
-  const [deletingAccount, setDeletingAccount] = useState(false);
   const [currentStreak, setCurrentStreak] = useState(0);
   const [tokens, setTokens] = useState(0);
   const [hasNaturalistBadge, setHasNaturalistBadge] = useState(false);
-  const [pushOn, setPushOn] = useState(false);
-  const [pushBusy, setPushBusy] = useState(false);
-  const [backupBusy, setBackupBusy] = useState(false);
-  const [locationOn, setLocationOn] = useState(true);
 
-  useEffect(() => {
-    let alive = true;
-    isLocationEnabled().then((on) => {
-      if (alive) setLocationOn(on);
-    });
-    return () => {
-      alive = false;
-    };
-  }, []);
 
-  const [signingOut, setSigningOut] = useState(false);
 
-  const handleSignOut = async () => {
-    if (signingOut) return;
-    setSigningOut(true);
-    try {
-      await signOut();
-      // Clear the shown account immediately rather than waiting for the next
-      // focus - the row above is the only thing telling the user which account
-      // they were on, and it must not keep naming one they just left.
-      setAccountEmail(null);
-      await load();
-    } catch (e) {
-      showAlert(t('login.signOutFailedTitle'), e.message || t('restore.genericError'));
-    } finally {
-      setSigningOut(false);
-    }
-  };
-
-  const toggleLocation = async () => {
-    const next = !locationOn;
-    // Optimistic: the switch has to feel instant, and a storage write that fails
-    // is reverted rather than left showing a state that was not saved.
-    setLocationOn(next);
-    const saved = await setLocationEnabled(next);
-    if (!saved) setLocationOn(!next);
-  };
   const { alertConfig, showAlert, hideAlert } = useAppAlert();
   // Un-freezes the subscribe button when the page is restored from bfcache
   // after coming back from Hotmart's checkout (see usePageShowReset).
@@ -149,7 +84,6 @@ export default function ProfileScreen() {
     // The badge is a one-time reward bought in the store; this is the effect it
     // was sold for, so it has to actually render somewhere the buyer sees it.
     setHasNaturalistBadge(await hasReward('naturalistBadge'));
-    setPushOn(await isPushEnabled());
   }, []);
 
   useEffect(() => {
@@ -162,89 +96,9 @@ export default function ProfileScreen() {
     }, [load])
   );
 
-  useEffect(() => {
-    if (Platform.OS !== 'web') return undefined;
-    return onInstallAvailabilityChange(() => {
-      setInstallAvailable(!isStandalone() && (canPromptInstall() || isIOS()));
-    });
-  }, []);
 
-  const handleExport = async () => {
-    if (backupBusy) return;
-    setBackupBusy(true);
-    try {
-      const ok = await exportCollection();
-      if (!ok) {
-        // Empty collection is the common case here, not an error - saying
-        // "export failed" for an empty collection would be misleading.
-        showAlert(t('backup.exportEmptyTitle'), t('backup.exportEmptyBody'));
-      }
-    } finally {
-      setBackupBusy(false);
-    }
-  };
 
-  const handleImport = async () => {
-    if (backupBusy) return;
-    setBackupBusy(true);
-    try {
-      const result = await pickAndImport();
-      if (!result) return; // cancelled
-      await load();
-      showAlert(
-        t('backup.importDoneTitle'),
-        t('backup.importDoneBody', { added: result.added, skipped: result.skipped })
-      );
-    } catch (err) {
-      const key =
-        err.code === 'wrong_format' || err.code === 'invalid_file'
-          ? 'backup.errorWrongFile'
-          : err.code === 'newer_version'
-          ? 'backup.errorNewerVersion'
-          : err.code === 'storage_full'
-          ? 'backup.errorStorageFull'
-          : 'backup.errorGeneric';
-      showAlert(t('backup.importFailedTitle'), t(key));
-    } finally {
-      setBackupBusy(false);
-    }
-  };
 
-  const handleTogglePush = async () => {
-    if (pushBusy) return;
-    setPushBusy(true);
-    try {
-      if (pushOn) {
-        await disablePush();
-        setPushOn(false);
-        return;
-      }
-      const result = await enablePush();
-      if (result === 'granted') {
-        setPushOn(true);
-        showAlert(t('notifications.enabledTitle'), t('notifications.enabledBody'));
-      } else if (result === 'denied') {
-        // Once denied, the browser will not ask again - only the user can undo
-        // it in site settings, so say that instead of silently doing nothing.
-        showAlert(t('notifications.deniedTitle'), t('notifications.deniedBody'));
-      } else {
-        showAlert(t('notifications.errorTitle'), t('notifications.errorBody'));
-      }
-    } finally {
-      setPushBusy(false);
-    }
-  };
-
-  const handleInstall = async () => {
-    if (canPromptInstall()) {
-      const choice = await promptInstall();
-      if (choice?.outcome === 'accepted') setInstallAvailable(false);
-      return;
-    }
-    if (isIOS()) {
-      showAlert(t('profile.installAppIOSTitle'), t('profile.installAppIOSBody'));
-    }
-  };
 
   const handleSubscribe = async (plan) => {
     setCheckingOut(true);
@@ -289,48 +143,7 @@ export default function ProfileScreen() {
     }
   };
 
-  const handleDeleteAccount = async () => {
-    setDeletingAccount(true);
-    try {
-      const { billingStillActive } = await deleteAccount();
-      await clearCollection();
-      await clearProfilePhoto();
-      await clearAchievements();
-      // Rewards bought with tokens are part of "everything about me on this
-      // device" - leaving shields and badges behind after a full account wipe
-      // would contradict what the confirmation dialog promises.
-      await clearRewards();
-      await clearShields();
-      await clearMissions();
-      await resetDeviceId();
-      // If billing is still running at Hotmart, say so instead of letting the
-      // person believe deleting the account also stopped the charge.
-      showAlert(
-        t('profile.deleteAccountDoneTitle'),
-        billingStillActive
-          ? t('profile.deleteAccountDoneBillingBody')
-          : t('profile.deleteAccountDoneBody'),
-        [
-          // 'CollectionHome' lives in a different stack now that Profile is its
-          // own tab, so naming it directly no longer resolves. Navigating to
-          // the TAB works: React Navigation bubbles an unhandled action up to
-          // the parent tab navigator.
-          { text: t('common.ok'), onPress: () => navigation.navigate('Collection') },
-        ]
-      );
-    } catch (e) {
-      showAlert(t('profile.deleteAccountFailedTitle'), e.message || t('profile.deleteAccountFailedBody'));
-    } finally {
-      setDeletingAccount(false);
-    }
-  };
 
-  const confirmDeleteAccount = () => {
-    showAlert(t('profile.deleteAccountConfirmTitle'), t('profile.deleteAccountConfirmBody'), [
-      { text: t('profile.deleteAccountConfirmButton'), style: 'destructive', onPress: handleDeleteAccount },
-      { text: t('common.cancel'), style: 'cancel' },
-    ]);
-  };
 
   const handleCreatePassword = async () => {
     if (passwordInput.length < 8) {
@@ -358,12 +171,22 @@ export default function ProfileScreen() {
       <NatureScene />
 
       {/* No back chevron: Profile is a bottom tab now, so it is the root of its
-          own stack and goBack() has nowhere to go. The two spacers keep the
-          title optically centred, same as the other tab-root screens. */}
+          own stack and goBack() has nowhere to go. The left spacer mirrors the
+          gear on the right so the title stays optically centred. The gear is
+          the single entry into Settings - preferences, backup, legal and
+          account actions moved there so this screen could go back to being an
+          identity hub instead of a 900-line drawer. */}
       <View style={styles.header}>
         <View style={styles.backBtn} />
         <Text style={styles.title} accessibilityRole="header">{t('profile.title')}</Text>
-        <View style={styles.backBtn} />
+        <TouchableOpacity
+          style={styles.backBtn}
+          onPress={() => navigation.navigate('Settings')}
+          accessibilityRole="button"
+          accessibilityLabel={t('settings.title')}
+        >
+          <Ionicons name="settings-outline" size={22} color={colors.text} />
+        </TouchableOpacity>
       </View>
 
       <ScrollView
@@ -554,27 +377,8 @@ export default function ProfileScreen() {
           </TouchableOpacity>
         </PressScale>
 
-        {/* Sign out - only offered when there IS an account on this device.
-            The app had a way in and no way out: once a device was linked,
-            nothing could unlink it. The nearest thing was "delete account",
-            which erases the collection and password for every device - a wildly
-            disproportionate answer to selling a phone or signing in on someone
-            else's tablet. */}
-        {!!accountEmail && (
-          <TouchableOpacity
-            style={styles.signOutRow}
-            activeOpacity={0.7}
-            onPress={handleSignOut}
-            disabled={signingOut}
-            accessibilityRole="button"
-            accessibilityLabel={t('login.signOut')}
-          >
-            <Ionicons name="log-out-outline" size={17} color={colors.textMuted} />
-            <Text style={styles.signOutText}>
-              {signingOut ? t('login.signingOut') : t('login.signOut')}
-            </Text>
-          </TouchableOpacity>
-        )}
+        {/* Sign out moved to Settings > Account, next to Delete account -
+            leaving/erasing are maintenance actions, not identity. */}
 
         <PressScale>
           <TouchableOpacity
@@ -688,260 +492,6 @@ export default function ProfileScreen() {
           ))}
         </ZoneBand>
 
-        {/* Zona de cor #2: every settings row in one full-bleed band, so the
-            eye reads "settings" as a single place instead of a stack of loose
-            cards drifting down the page. Nothing here was reordered or moved
-            between sections - the band only draws around what was already this
-            run of rows. */}
-        <ZoneBand gutter={20} style={styles.zoneGap}>
-          {/* Web push. Only rendered where it can actually work: on iPhone the
-              API exists in a Safari tab but is inert until the PWA is installed,
-              so offering it there would teach the user the button is broken. */}
-          {canUsePush() && (
-            <PressScale>
-              <TouchableOpacity
-                style={styles.privacyRow}
-                activeOpacity={0.7}
-                onPress={handleTogglePush}
-                disabled={pushBusy}
-                accessibilityRole="switch"
-                accessibilityState={{ checked: pushOn }}
-                accessibilityLabel={t('notifications.row')}
-              >
-                <Ionicons
-                  name={pushOn ? 'notifications' : 'notifications-outline'}
-                  size={19}
-                  color={pushOn ? colors.accent : colors.accentLight}
-                />
-                <Text style={styles.privacyText}>{t('notifications.row')}</Text>
-                <Text style={styles.pushState}>
-                  {pushOn ? t('notifications.on') : t('notifications.off')}
-                </Text>
-              </TouchableOpacity>
-            </PressScale>
-          )}
-
-          {/* Backup. The collection lives only in this browser's storage, so
-              without this a cleared browser or a new phone loses everything -
-              the one thing in the app a user cannot get back. */}
-          {Platform.OS === 'web' && (
-            <>
-              <PressScale>
-                <TouchableOpacity
-                  style={styles.privacyRow}
-                  activeOpacity={0.7}
-                  onPress={handleExport}
-                  disabled={backupBusy}
-                  accessibilityRole="button"
-                  accessibilityLabel={t('backup.exportRow')}
-                >
-                  <Ionicons name="download-outline" size={19} color={colors.accentLight} />
-                  <Text style={styles.privacyText}>{t('backup.exportRow')}</Text>
-                  <Ionicons name="chevron-forward" size={18} color={colors.textMuted} />
-                </TouchableOpacity>
-              </PressScale>
-
-              <PressScale>
-                <TouchableOpacity
-                  style={styles.privacyRow}
-                  activeOpacity={0.7}
-                  onPress={handleImport}
-                  disabled={backupBusy}
-                  accessibilityRole="button"
-                  accessibilityLabel={t('backup.importRow')}
-                >
-                  <Ionicons name="cloud-upload-outline" size={19} color={colors.accentLight} />
-                  <Text style={styles.privacyText}>{t('backup.importRow')}</Text>
-                  <Ionicons name="chevron-forward" size={18} color={colors.textMuted} />
-                </TouchableOpacity>
-              </PressScale>
-            </>
-          )}
-
-          {/* Approximate location. Sits with the privacy rows rather than under a
-              "settings" heading because that is what it is: a choice about what
-              leaves the device. Off is always allowed - identification still
-              works, just with a wider field of candidates. */}
-          {canUseLocation() && (
-            <PressScale>
-              <TouchableOpacity
-                style={styles.privacyRow}
-                activeOpacity={0.7}
-                onPress={toggleLocation}
-                accessibilityRole="switch"
-                accessibilityState={{ checked: locationOn }}
-                accessibilityLabel={t('profile.locationRow')}
-              >
-                <Ionicons
-                  name={locationOn ? 'location' : 'location-outline'}
-                  size={19}
-                  color={locationOn ? colors.accentLight : colors.textMuted}
-                />
-                <View style={{ flex: 1 }}>
-                  <Text style={styles.privacyText}>{t('profile.locationRow')}</Text>
-                  <Text style={styles.locationHint}>{t('profile.locationHint')}</Text>
-                </View>
-                <Ionicons
-                  name={locationOn ? 'toggle' : 'toggle-outline'}
-                  size={26}
-                  color={locationOn ? colors.accent : colors.textMuted}
-                />
-              </TouchableOpacity>
-            </PressScale>
-          )}
-
-          <PressScale>
-            <TouchableOpacity
-              style={styles.privacyRow}
-              activeOpacity={0.7}
-              onPress={() => navigation.navigate('Privacy')}
-              accessibilityRole="button"
-              accessibilityLabel={t('profile.privacyPolicy')}
-            >
-              <Ionicons
-                name="document-lock-outline"
-                size={18}
-                color={colors.textSecondary}
-                accessibilityElementsHidden={true}
-                importantForAccessibility="no-hide-descendants"
-              />
-              <Text style={styles.privacyText}>{t('profile.privacyPolicy')}</Text>
-              <Ionicons
-                name="chevron-forward"
-                size={18}
-                color={colors.textMuted}
-                accessibilityElementsHidden={true}
-                importantForAccessibility="no-hide-descendants"
-              />
-            </TouchableOpacity>
-          </PressScale>
-
-          <PressScale>
-            <TouchableOpacity
-              style={styles.privacyRow}
-              activeOpacity={0.7}
-              onPress={() => navigation.navigate('Terms')}
-              accessibilityRole="button"
-              accessibilityLabel={t('profile.termsOfUse')}
-            >
-              <Ionicons
-                name="document-text-outline"
-                size={18}
-                color={colors.textSecondary}
-                accessibilityElementsHidden={true}
-                importantForAccessibility="no-hide-descendants"
-              />
-              <Text style={styles.privacyText}>{t('profile.termsOfUse')}</Text>
-              <Ionicons
-                name="chevron-forward"
-                size={18}
-                color={colors.textMuted}
-                accessibilityElementsHidden={true}
-                importantForAccessibility="no-hide-descendants"
-              />
-            </TouchableOpacity>
-          </PressScale>
-
-          <PressScale>
-            <TouchableOpacity
-              style={styles.privacyRow}
-              activeOpacity={0.7}
-              onPress={() => navigation.navigate('Help')}
-              accessibilityRole="button"
-              accessibilityLabel={t('profile.helpAndSupport')}
-            >
-              <Ionicons
-                name="help-circle-outline"
-                size={18}
-                color={colors.textSecondary}
-                accessibilityElementsHidden={true}
-                importantForAccessibility="no-hide-descendants"
-              />
-              <Text style={styles.privacyText}>{t('profile.helpAndSupport')}</Text>
-              <Ionicons
-                name="chevron-forward"
-                size={18}
-                color={colors.textMuted}
-                accessibilityElementsHidden={true}
-                importantForAccessibility="no-hide-descendants"
-              />
-            </TouchableOpacity>
-          </PressScale>
-
-          {installAvailable && (
-            <PressScale>
-              <TouchableOpacity
-                style={styles.privacyRow}
-                activeOpacity={0.7}
-                onPress={handleInstall}
-                accessibilityRole="button"
-                accessibilityLabel={t('profile.installApp')}
-              >
-                <Ionicons
-                  name="download-outline"
-                  size={18}
-                  color={colors.textSecondary}
-                  accessibilityElementsHidden={true}
-                  importantForAccessibility="no-hide-descendants"
-                />
-                <Text style={styles.privacyText}>{t('profile.installApp')}</Text>
-                <Ionicons
-                  name="chevron-forward"
-                  size={18}
-                  color={colors.textMuted}
-                  accessibilityElementsHidden={true}
-                  importantForAccessibility="no-hide-descendants"
-                />
-              </TouchableOpacity>
-            </PressScale>
-          )}
-        </ZoneBand>
-
-        <Text style={styles.sectionLabel}>{t('profile.language')}</Text>
-
-        {SUPPORTED_LANGUAGES.map((lang) => {
-          const isActive = i18n.language === lang.code;
-          return (
-            // The key goes on the wrapper because that is now the element in the
-            // array; the row keeps its own key so the Touchable is untouched.
-            <PressScale key={lang.code}>
-              <TouchableOpacity
-                key={lang.code}
-                style={[styles.languageRow, isActive && styles.languageRowActive]}
-                activeOpacity={0.7}
-                onPress={async () => await setAppLanguage(lang.code)}
-                accessibilityRole="button"
-                accessibilityLabel={`Switch language to ${lang.label}`}
-              >
-                <Text style={styles.languageText}>{lang.label}</Text>
-                {isActive && (
-                  <Ionicons
-                    name="checkmark-circle"
-                    size={20}
-                    color={colors.accent}
-                    accessibilityElementsHidden={true}
-                    importantForAccessibility="no-hide-descendants"
-                  />
-                )}
-              </TouchableOpacity>
-            </PressScale>
-          );
-        })}
-
-        <TouchableOpacity
-          style={styles.deleteAccountBtn}
-          onPress={confirmDeleteAccount}
-          disabled={deletingAccount}
-          activeOpacity={0.7}
-          accessibilityRole="button"
-          accessibilityLabel={t('profile.deleteAccount')}
-        >
-          <Text style={styles.deleteAccountBtnText}>
-            {deletingAccount ? t('profile.deletingAccount') : t('profile.deleteAccount')}
-          </Text>
-        </TouchableOpacity>
-
-        <Text style={styles.versionText}>{t('profile.version', { version: APP_VERSION })}</Text>
       </ScrollView>
 
       <PaywallModal
@@ -1196,67 +746,10 @@ const styles = StyleSheet.create({
   // Tighter than before (24 → 12): inside the settings zone the band itself
   // provides the separation, so 24px between every row made one section read as
   // seven unrelated ones.
-  privacyRow: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    backgroundColor: colors.surface,
-    borderRadius: 14,
-    paddingHorizontal: 16,
-    paddingVertical: 14,
-    marginTop: 12,
-    borderWidth: 1,
-    borderColor: colors.border,
-  },
-  privacyText: {
-    flex: 1,
-    marginLeft: 10,
-    fontSize: 14,
-    fontWeight: '600',
-    color: colors.textSecondary,
-  },
   // Matches privacyText's indent so the explanation lines up under its label
   // rather than under the icon.
-  locationHint: {
-    marginLeft: 10,
-    marginTop: 3,
-    marginRight: 6,
-    fontSize: 11.5,
-    lineHeight: 16,
-    color: colors.textMuted,
-  },
-  languageRow: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    backgroundColor: colors.card,
-    borderRadius: 14,
-    paddingHorizontal: 16,
-    paddingVertical: 14,
-    marginBottom: 12,
-    borderWidth: 1,
-    borderColor: colors.border,
-    ...shadow,
-  },
-  languageRowActive: {
-    borderColor: colors.accent,
-    backgroundColor: colors.surface,
-  },
-  languageText: {
-    fontSize: 15,
-    fontWeight: '700',
-    color: colors.text,
-  },
   // Deliberately quieter than the rows above it: signing out is a rare,
   // reversible action, not something to invite.
-  signOutRow: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 8,
-    paddingVertical: 10,
-    paddingHorizontal: 4,
-    marginBottom: 4,
-  },
-  signOutText: { color: colors.textMuted, fontSize: 13.5, fontWeight: '600' },
   recapRow: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -1270,7 +763,6 @@ const styles = StyleSheet.create({
   },
   recapTitle: { color: colors.text, fontSize: 14, fontWeight: '700' },
   recapSub: { color: colors.textMuted, fontSize: 12, marginTop: 2 },
-  pushState: { color: colors.textMuted, fontSize: 12.5, fontWeight: '700' },
   naturalistPill: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -1283,20 +775,4 @@ const styles = StyleSheet.create({
     marginTop: 10,
   },
   naturalistPillText: { color: colors.warning, fontSize: 12.5, fontWeight: '700' },
-  versionText: {
-    textAlign: 'center',
-    color: colors.textMuted,
-    fontSize: 12,
-    marginTop: 8,
-    marginBottom: 8,
-  },
-  deleteAccountBtn: {
-    alignItems: 'center',
-    paddingVertical: 14,
-    marginTop: 28,
-    borderRadius: 14,
-    borderWidth: 1,
-    borderColor: colors.error + '55',
-  },
-  deleteAccountBtnText: { color: colors.error, fontWeight: '700', fontSize: 14 },
 });

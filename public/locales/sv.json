@@ -2310,5 +2310,15 @@
     "badCode": "Koden är fel eller har gått ut. Be om en ny.",
     "badEmail": "Det ser inte ut som en giltig e-postadress.",
     "codeSendFailed": "Koden kunde inte skickas. Försök igen om en stund."
+  },
+  "settings": {
+    "title": "Inställningar",
+    "sectionMembership": "Prenumeration",
+    "sectionGeneral": "Allmänt",
+    "sectionSupport": "Support",
+    "sectionLegal": "Juridiskt",
+    "sectionAccount": "Konto",
+    "tellFriends": "Tipsa vänner",
+    "linkCopied": "Länk kopierad"
   }
 }

@@ -2310,5 +2310,15 @@
     "badCode": "Ten kod jest błędny lub wygasł. Poproś o nowy.",
     "badEmail": "To nie wygląda na poprawny adres e-mail.",
     "codeSendFailed": "Nie udało się wysłać kodu. Spróbuj ponownie za chwilę."
+  },
+  "settings": {
+    "title": "Ustawienia",
+    "sectionMembership": "Subskrypcja",
+    "sectionGeneral": "Ogólne",
+    "sectionSupport": "Wsparcie",
+    "sectionLegal": "Informacje prawne",
+    "sectionAccount": "Konto",
+    "tellFriends": "Poleć znajomym",
+    "linkCopied": "Link skopiowany"
   }
 }

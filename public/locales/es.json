@@ -2310,5 +2310,15 @@
     "badCode": "Ese código es incorrecto o ha caducado. Pide uno nuevo.",
     "badEmail": "Eso no parece un correo válido.",
     "codeSendFailed": "No se pudo enviar el código. Inténtalo de nuevo en un momento."
+  },
+  "settings": {
+    "title": "Ajustes",
+    "sectionMembership": "Suscripción",
+    "sectionGeneral": "General",
+    "sectionSupport": "Soporte",
+    "sectionLegal": "Legal",
+    "sectionAccount": "Cuenta",
+    "tellFriends": "Recomiéndala a amigos",
+    "linkCopied": "Enlace copiado"
   }
 }

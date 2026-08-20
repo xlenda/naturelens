@@ -2310,5 +2310,15 @@
     "badCode": "Die code klopt niet of is verlopen. Vraag een nieuwe aan.",
     "badEmail": "Dat lijkt geen geldig e-mailadres.",
     "codeSendFailed": "De code kon niet worden verstuurd. Probeer het zo meteen opnieuw."
+  },
+  "settings": {
+    "title": "Instellingen",
+    "sectionMembership": "Abonnement",
+    "sectionGeneral": "Algemeen",
+    "sectionSupport": "Ondersteuning",
+    "sectionLegal": "Juridisch",
+    "sectionAccount": "Account",
+    "tellFriends": "Vertel het je vrienden",
+    "linkCopied": "Link gekopieerd"
   }
 }

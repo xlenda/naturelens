@@ -38,6 +38,8 @@ import PrivacyScreen from './screens/PrivacyScreen';
 import TermsScreen from './screens/TermsScreen';
 import HelpScreen from './screens/HelpScreen';
 import RestoreAccessScreen from './screens/RestoreAccessScreen';
+import SettingsScreen from './screens/SettingsScreen';
+import LanguageScreen from './screens/LanguageScreen';
 import { colors } from './components/theme';
 import { CATEGORIES } from './components/categories';
 import { pollSubscriptionStatus, PLAN_PRICES } from './components/subscription';
@@ -156,6 +158,8 @@ function ProfileStackNav() {
       <ProfileStack.Screen name="Terms" component={TermsScreen} />
       <ProfileStack.Screen name="Help" component={HelpScreen} />
       <ProfileStack.Screen name="RestoreAccess" component={RestoreAccessScreen} />
+      <ProfileStack.Screen name="Settings" component={SettingsScreen} />
+      <ProfileStack.Screen name="Language" component={LanguageScreen} />
     </ProfileStack.Navigator>
   );
 }

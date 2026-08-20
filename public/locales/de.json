@@ -2310,5 +2310,15 @@
     "badCode": "Dieser Code ist falsch oder abgelaufen. Fordere einen neuen an.",
     "badEmail": "Das sieht nicht nach einer gültigen E-Mail-Adresse aus.",
     "codeSendFailed": "Der Code konnte nicht gesendet werden. Bitte versuche es gleich noch einmal."
+  },
+  "settings": {
+    "title": "Einstellungen",
+    "sectionMembership": "Abo",
+    "sectionGeneral": "Allgemein",
+    "sectionSupport": "Support",
+    "sectionLegal": "Rechtliches",
+    "sectionAccount": "Konto",
+    "tellFriends": "Freunden empfehlen",
+    "linkCopied": "Link kopiert"
   }
 }

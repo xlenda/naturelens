@@ -2310,5 +2310,15 @@
     "badCode": "Esse código está errado ou expirou. Peça um novo.",
     "badEmail": "Isso não parece um e-mail válido.",
     "codeSendFailed": "Não foi possível enviar o código. Tente de novo em instantes."
+  },
+  "settings": {
+    "title": "Configurações",
+    "sectionMembership": "Assinatura",
+    "sectionGeneral": "Geral",
+    "sectionSupport": "Suporte",
+    "sectionLegal": "Legal",
+    "sectionAccount": "Conta",
+    "tellFriends": "Indique a amigos",
+    "linkCopied": "Link copiado"
   }
 }

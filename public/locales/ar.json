@@ -2310,5 +2310,15 @@
     "badCode": "هذا الرمز خاطئ أو منتهي الصلاحية. اطلب رمزًا جديدًا.",
     "badEmail": "هذا لا يبدو بريدًا إلكترونيًا صالحًا.",
     "codeSendFailed": "تعذّر إرسال الرمز. حاول بعد لحظات."
+  },
+  "settings": {
+    "title": "الإعدادات",
+    "sectionMembership": "الاشتراك",
+    "sectionGeneral": "عام",
+    "sectionSupport": "الدعم",
+    "sectionLegal": "الشؤون القانونية",
+    "sectionAccount": "الحساب",
+    "tellFriends": "أخبر أصدقاءك",
+    "linkCopied": "تم نسخ الرابط"
   }
 }

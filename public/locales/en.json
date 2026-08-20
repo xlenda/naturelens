@@ -2310,5 +2310,15 @@
     "badCode": "That code is wrong or has expired. Ask for a new one.",
     "badEmail": "That does not look like a valid email address.",
     "codeSendFailed": "We could not send the code. Please try again in a moment."
+  },
+  "settings": {
+    "title": "Settings",
+    "sectionMembership": "Membership",
+    "sectionGeneral": "General",
+    "sectionSupport": "Support",
+    "sectionLegal": "Legal",
+    "sectionAccount": "Account",
+    "tellFriends": "Tell friends",
+    "linkCopied": "Link copied"
   }
 }

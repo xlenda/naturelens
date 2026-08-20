@@ -2310,5 +2310,15 @@
     "badCode": "Koden er forkert eller udløbet. Bed om en ny.",
     "badEmail": "Det ligner ikke en gyldig e-mailadresse.",
     "codeSendFailed": "Koden kunne ikke sendes. Prøv igen om et øjeblik."
+  },
+  "settings": {
+    "title": "Indstillinger",
+    "sectionMembership": "Abonnement",
+    "sectionGeneral": "Generelt",
+    "sectionSupport": "Support",
+    "sectionLegal": "Juridisk",
+    "sectionAccount": "Konto",
+    "tellFriends": "Fortæl dine venner",
+    "linkCopied": "Link kopieret"
   }
 }
