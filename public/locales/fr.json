@@ -2320,5 +2320,12 @@
     "sectionAccount": "Compte",
     "tellFriends": "Recommander à des amis",
     "linkCopied": "Lien copié"
+  },
+  "books": {
+    "shelfTitle": "Livres",
+    "free": "Gratuit",
+    "unlockFor": "Débloquer pour {{count}} jetons",
+    "chaptersLabel": "Chapitres",
+    "notEnoughTokens": "Pas encore assez de jetons – identifiez des espèces pour en gagner plus."
   }
 }

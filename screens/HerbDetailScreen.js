@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, StyleSheet, ScrollView, TouchableOpacity, ActivityIndicator } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, TouchableOpacity, ActivityIndicator, Image, Linking } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useNavigation } from '@react-navigation/native';
 import { useTranslation } from 'react-i18next';
 import { Ionicons } from '@expo/vector-icons';
+import { LinearGradient } from 'expo-linear-gradient';
 import BackChevron from '../components/BackChevron';
 import SectionCard from '../components/SectionCard';
 import { colors, shadow } from '../components/theme';
+import { getSpeciesPhoto } from '../components/speciesPhoto';
 import { getHerbDetails } from '../components/herbDetails';
 import { getSubscriptionStatus, startCheckout } from '../components/subscription';
 import PaywallModal from '../components/PaywallModal';
@@ -28,6 +30,25 @@ export default function HerbDetailScreen({ route }) {
 
   const allHerbs = t('discover.topics.medicinalHerbs.species', { returnObjects: true });
   const herb = allHerbs.find((h) => h.id === herbId);
+
+  // Foto REAL da especie para o hero, da Wikipedia pelo nome cientifico
+  // (cadeia ja pronta e cacheada em speciesPhoto.js). Performance: UMA
+  // busca por tela - so a especie visivel - e o cache absorve revisitas.
+  const sci = herb?.sci;
+  const [refPhoto, setRefPhoto] = useState(null);
+  useEffect(() => {
+    if (!sci) {
+      setRefPhoto(null);
+      return undefined;
+    }
+    let alive = true;
+    getSpeciesPhoto(sci, i18n.language).then((p) => {
+      if (alive) setRefPhoto(p);
+    });
+    return () => {
+      alive = false;
+    };
+  }, [sci, i18n.language]);
 
   useEffect(() => {
     let cancelled = false;
@@ -84,9 +105,39 @@ export default function HerbDetailScreen({ route }) {
       </View>
 
       <ScrollView contentContainerStyle={styles.scroll} showsVerticalScrollIndicator={false}>
-        <View style={[styles.heroThumb, { backgroundColor: (color || colors.error) + '33' }]}>
-          <Ionicons name="leaf" size={40} color={color || colors.error} />
-        </View>
+        {refPhoto?.url ? (
+          // Ancora cenica full-bleed (diagramacao-premium, mesmo dispositivo do
+          // PlantHero): margem negativa cancela o gutter de 20 do scroll e o
+          // gradiente transparente -> background funde a foto na pagina. O nome
+          // logo abaixo e a legenda do tile - nunca selo pequeno num card.
+          <View style={styles.heroTile}>
+            <Image source={{ uri: refPhoto.url }} style={StyleSheet.absoluteFill} resizeMode="cover" />
+            <LinearGradient
+              colors={['transparent', colors.background]}
+              style={styles.heroFade}
+              pointerEvents="none"
+            />
+            {/* Foto e da Wikimedia - credito obrigatorio (speciesPhoto.js:
+                "Never present a third party's photo as ours"), e o texto
+                promete tap, entao o tap abre a fonte de verdade. */}
+            {!!refPhoto.sourceUrl && (
+              <TouchableOpacity
+                style={styles.heroCredit}
+                onPress={() => Linking.openURL(refPhoto.sourceUrl)}
+                accessibilityRole="link"
+                accessibilityLabel={t('fieldGuide.photoCredit')}
+              >
+                <Text style={styles.heroCreditText}>{t('fieldGuide.photoCredit')}</Text>
+              </TouchableOpacity>
+            )}
+          </View>
+        ) : (
+          // Fallback (offline / especie sem Wikipedia): exatamente como hoje,
+          // icone no quadrado colorido - a tela nunca nasce quebrada.
+          <View style={[styles.heroThumb, { backgroundColor: (color || colors.error) + '33' }]}>
+            <Ionicons name="leaf" size={40} color={color || colors.error} />
+          </View>
+        )}
         <Text style={styles.name}>{herb?.name}</Text>
         {!!herb?.sci && <Text style={styles.sci}>{herb.sci}</Text>}
 
@@ -199,6 +250,19 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     marginBottom: 16,
   },
+  // Tile do hero: full-bleed via margem negativa que cancela o padding 20 do
+  // scroll (mesmo dispositivo do PlantHero - nunca position absolute).
+  heroTile: {
+    alignSelf: 'stretch',
+    marginHorizontal: -20,
+    height: 210,
+    marginBottom: 16,
+    overflow: 'hidden',
+    backgroundColor: colors.surfaceElevated,
+  },
+  heroFade: { position: 'absolute', left: 0, right: 0, bottom: 0, height: '34%' },
+  heroCredit: { position: 'absolute', bottom: 8, left: 12, right: 12 },
+  heroCreditText: { color: 'rgba(255,255,255,0.75)', fontSize: 10, textAlign: 'center' },
   name: { fontSize: 22, fontWeight: '800', color: colors.text, textAlign: 'center' },
   sci: { fontSize: 14, fontStyle: 'italic', color: colors.textMuted, textAlign: 'center', marginTop: 2 },
   disclaimer: {

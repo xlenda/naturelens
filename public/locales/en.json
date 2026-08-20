@@ -2320,5 +2320,12 @@
     "sectionAccount": "Account",
     "tellFriends": "Tell friends",
     "linkCopied": "Link copied"
+  },
+  "books": {
+    "shelfTitle": "Books",
+    "free": "Free",
+    "unlockFor": "Unlock for {{count}} tokens",
+    "chaptersLabel": "Chapters",
+    "notEnoughTokens": "Not enough tokens yet — identify species to earn more."
   }
 }

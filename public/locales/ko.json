@@ -2320,5 +2320,12 @@
     "sectionAccount": "계정",
     "tellFriends": "친구에게 알리기",
     "linkCopied": "링크가 복사되었습니다"
+  },
+  "books": {
+    "shelfTitle": "책",
+    "free": "무료",
+    "unlockFor": "토큰 {{count}}개로 잠금 해제",
+    "chaptersLabel": "챕터",
+    "notEnoughTokens": "토큰이 부족합니다. 종을 식별하여 더 모아보세요."
   }
 }

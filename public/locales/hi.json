@@ -2320,5 +2320,12 @@
     "sectionAccount": "खाता",
     "tellFriends": "दोस्तों को बताएं",
     "linkCopied": "लिंक कॉपी हो गया"
+  },
+  "books": {
+    "shelfTitle": "किताबें",
+    "free": "मुफ़्त",
+    "unlockFor": "{{count}} टोकन में अनलॉक करें",
+    "chaptersLabel": "अध्याय",
+    "notEnoughTokens": "अभी पर्याप्त टोकन नहीं हैं — और पाने के लिए प्रजातियाँ पहचानें।"
   }
 }

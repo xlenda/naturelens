@@ -8,6 +8,7 @@ import {
   Image,
   Platform,
   Modal,
+  ImageBackground,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useNavigation, useFocusEffect } from '@react-navigation/native';
@@ -144,12 +145,23 @@ export default function StoreScreen() {
         {/* Banner de saldo: balance and shields fused into one full-bleed
             gradient header (negative margins cancel the scroll gutter). Same
             texts as before - only the clothing changed. */}
+        {/* Banda de status com ARTE (chrome ilustrado, doutrina do
+            concorrente: banner de recompensa com cena) - a mesa de tesouros
+            na clareira atras do saldo; o gradiente escuro por cima garante a
+            leitura dos numeros sobre qualquer trecho da imagem. */}
+        <ImageBackground
+          source={require('../assets/art/store-banner.jpg')}
+          resizeMode="cover"
+          style={styles.balanceBanner}
+          imageStyle={styles.balanceBannerArt}
+        >
         <LinearGradient
-          colors={[colors.accentDark, colors.accent]}
+          colors={['rgba(14,21,18,0.55)', 'rgba(14,21,18,0.15)']}
           start={{ x: 0, y: 0 }}
           end={{ x: 1, y: 1 }}
-          style={styles.balanceBanner}
-        >
+          style={StyleSheet.absoluteFill}
+        />
+        <View style={styles.balanceContent}>
           <Ionicons name="disc" size={28} color={colors.white} />
           <Text style={styles.balanceValue}>{tokens}</Text>
           <Text style={styles.balanceLabel}>{t('achievements.tokensLabel')}</Text>
@@ -160,7 +172,8 @@ export default function StoreScreen() {
               <Text style={styles.shieldText}>{t('store.shieldsHeld', { count: shields })}</Text>
             </View>
           )}
-        </LinearGradient>
+        </View>
+        </ImageBackground>
 
         <Text style={styles.intro}>{t('store.intro')}</Text>
 
@@ -344,7 +357,10 @@ const styles = StyleSheet.create({
   scroll: { padding: 20, paddingBottom: 40 },
   // Full-bleed: negative margins cancel the scroll's 20px gutter on both
   // sides (and the top), so the gradient reaches the edges of the page.
+  balanceBannerArt: { borderRadius: 0 },
+  balanceContent: { alignItems: 'center', width: '100%' },
   balanceBanner: {
+    overflow: 'hidden',
     marginTop: -20,
     marginHorizontal: -20,
     paddingHorizontal: 20,

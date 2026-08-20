@@ -2320,5 +2320,12 @@
     "sectionAccount": "帳戶",
     "tellFriends": "推薦給朋友",
     "linkCopied": "連結已複製"
+  },
+  "books": {
+    "shelfTitle": "圖書",
+    "free": "免費",
+    "unlockFor": "用 {{count}} 代幣解鎖",
+    "chaptersLabel": "章節",
+    "notEnoughTokens": "代幣不足——識別物種來賺取更多。"
   }
 }

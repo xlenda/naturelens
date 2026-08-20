@@ -9,9 +9,14 @@ import BackChevron from '../components/BackChevron';
 import * as Haptics from 'expo-haptics';
 import { colors, shadow } from '../components/theme';
 import CategoryIcon from '../components/CategoryIcon';
+import FindThumb from '../components/FindThumb';
 import NatureScene from '../components/NatureScene';
 import ZoneBand from '../components/ZoneBand';
 import PressScale from '../components/PressScale';
+
+// Quantas linhas ganham foto de cara, e o passo de crescimento do cap conforme
+// o scroll avança. 16 cobre a primeira dobra com folga em qualquer viewport.
+const PHOTO_CHUNK = 16;
 
 const SYMPTOM_KEYS = [
   'headache',
@@ -30,6 +35,13 @@ export default function TopicDetailScreen({ route }) {
   const { t } = useTranslation();
   const { topicKey, icon, color } = route.params;
   const [activeSymptom, setActiveSymptom] = useState(null);
+  // Performance: esta tela lista até 98 espécies num ScrollView (não FlatList -
+  // a ZoneBand embrulha o rótulo da seção e todas as linhas num bloco único, e
+  // converter quebraria essa banda). Montar FindThumb com `scientific` em todas
+  // dispararia 98 fetches de uma vez, então só as linhas até `photoCap` recebem
+  // o nome científico; o cap começa na primeira dobra e cresce com o scroll
+  // (onScroll abaixo). O cache do speciesPhoto absorve o re-scroll.
+  const [photoCap, setPhotoCap] = useState(PHOTO_CHUNK);
 
   const title = t(`discover.topics.${topicKey}.title`);
   const desc = t(`discover.topics.${topicKey}.desc`);
@@ -65,7 +77,25 @@ export default function TopicDetailScreen({ route }) {
         <View style={styles.iconBtn} />
       </View>
 
-      <ScrollView contentContainerStyle={styles.scroll} showsVerticalScrollIndicator={false}>
+      <ScrollView
+        contentContainerStyle={styles.scroll}
+        showsVerticalScrollIndicator={false}
+        // A fração rolada da página ≈ fração das linhas já vistas (a lista
+        // domina a altura da página). O erro do cabeçalho sobra pra CIMA, o
+        // que só adianta fetches em bloco - nunca deixa uma linha visível sem
+        // foto. Bumps em múltiplos de PHOTO_CHUNK limitam os re-renders.
+        onScroll={(e) => {
+          const { contentOffset, layoutMeasurement, contentSize } = e.nativeEvent;
+          if (!contentSize.height) return;
+          const seen =
+            Math.ceil(
+              ((contentOffset.y + layoutMeasurement.height) / contentSize.height) *
+                visibleSpecies.length
+            ) + PHOTO_CHUNK;
+          if (seen > photoCap) setPhotoCap(Math.ceil(seen / PHOTO_CHUNK) * PHOTO_CHUNK);
+        }}
+        scrollEventThrottle={100}
+      >
         {/* Composição centrada: the hero - seal, title, one-line desc - is a
             centred column carrying the collection's own colour through from the
             card that opened it. `intro` stays outside it and left-aligned: a
@@ -169,6 +199,20 @@ export default function TopicDetailScreen({ route }) {
               : {};
             const card = (
               <CardWrapper key={s.id || i} style={styles.speciesCard} {...wrapperProps}>
+                {/* Doutrina de diagramação (diagramacao-premium.md, "encha de
+                    imagem"): foto REAL ancorando a linha à esquerda como tile
+                    arredondado, com o nome/nota existentes servindo de legenda.
+                    FindThumb já implementa a cadeia inteira: foto da Wikipedia
+                    pelo nome científico (com cache) e, sem foto (offline,
+                    espécie sem artigo, linha além do photoCap), o MESMO ícone
+                    da coleção - a linha nunca nasce quebrada. */}
+                <FindThumb
+                  scientific={i < photoCap ? s.sci : null}
+                  icon={icon}
+                  accent={color}
+                  iconSize={24}
+                  style={styles.speciesThumb}
+                />
                 <View style={{ flex: 1 }}>
                   <Text style={styles.speciesName}>{s.name}</Text>
                   <Text style={styles.speciesSci}>{s.sci}</Text>
@@ -272,6 +316,7 @@ const styles = StyleSheet.create({
     borderColor: colors.border,
     ...shadow,
   },
+  speciesThumb: { width: 52, height: 52, borderRadius: 12, marginRight: 12 },
   speciesName: { fontSize: 15.5, fontWeight: '700', color: colors.text },
   speciesSci: { fontSize: 12.5, fontStyle: 'italic', color: colors.textMuted, marginTop: 1, marginBottom: 6 },
   speciesNote: { fontSize: 13.5, color: colors.textSecondary, lineHeight: 19 },

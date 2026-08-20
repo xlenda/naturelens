@@ -11,7 +11,7 @@ import {
   Image,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { useNavigation, useRoute } from '@react-navigation/native';
+import { useNavigation, useRoute, useFocusEffect } from '@react-navigation/native';
 import { useTranslation } from 'react-i18next';
 import { Ionicons } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
@@ -41,6 +41,8 @@ import { usePageShowReset } from '../components/usePageShowReset';
 import CategoryIcon from '../components/CategoryIcon';
 import NatureScene from '../components/NatureScene';
 import PressScale from '../components/PressScale';
+import FindThumb from '../components/FindThumb';
+import { getCollection } from '../components/storage';
 
 export default function IdentifyScreen() {
   const navigation = useNavigation();
@@ -65,6 +67,35 @@ export default function IdentifyScreen() {
   // Un-freezes the subscribe button when the page is restored from bfcache
   // after coming back from Hotmart's checkout (see usePageShowReset).
   usePageShowReset(useCallback(() => setSubscribing(false), []));
+
+  // Achados recentes DESTA categoria, for the strip above the footer tip.
+  // Loaded on focus, not on mount: a scan saved moments ago on the detail
+  // screen has to appear the instant the user comes back. Newest first and
+  // capped at 8, so this never fans out into "98 fetches on mount":
+  // every locally-made find renders its own photoUri (a local file - zero
+  // network), and only cloud-restored finds without one fall back to
+  // FindThumb's cached Wikipedia chain - at most 8 requests, once, absorbed
+  // by the speciesPhoto cache afterwards.
+  const [recentFinds, setRecentFinds] = useState([]);
+  useFocusEffect(
+    useCallback(() => {
+      let alive = true;
+      getCollection().then((list) => {
+        if (!alive) return;
+        setRecentFinds(
+          list
+            .filter((i) => i.category === category)
+            // savedAt is an ISO string, which sorts correctly as text - no
+            // Date parsing (and no NaN comparator) needed.
+            .sort((a, b) => (b.savedAt || '').localeCompare(a.savedAt || ''))
+            .slice(0, 8)
+        );
+      });
+      return () => {
+        alive = false;
+      };
+    }, [category])
+  );
 
   const runScanAnimation = () => {
     scanAnim.setValue(0);
@@ -314,15 +345,29 @@ export default function IdentifyScreen() {
               {t('identify.subtitle', { category: t(`categories.${category}.label`).toLowerCase() })}
             </Text>
           </View>
-          <TouchableOpacity
-            style={[styles.logoBadge, { backgroundColor: meta.accentDark }]}
-            activeOpacity={0.8}
-            onPress={handleSwitchCategory}
-            accessibilityRole="button"
-            accessibilityLabel={t('identify.switchCategoryLabel')}
-          >
-            <CategoryIcon name={meta.tabIcon} size={22} color={colors.white} />
-          </TouchableOpacity>
+          <View style={styles.headerBtns}>
+            {/* Settings pinned to every main screen's header, like the
+                competitor's ever-present gear. Nested navigate bubbles to the
+                tab navigator (same proven pattern as SubscribeFab). */}
+            <TouchableOpacity
+              style={styles.gearBtn}
+              activeOpacity={0.8}
+              onPress={() => navigation.navigate('Profile', { screen: 'Settings' })}
+              accessibilityRole="button"
+              accessibilityLabel={t('settings.title')}
+            >
+              <Ionicons name="settings-outline" size={20} color={colors.text} />
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={[styles.logoBadge, { backgroundColor: meta.accentDark }]}
+              activeOpacity={0.8}
+              onPress={handleSwitchCategory}
+              accessibilityRole="button"
+              accessibilityLabel={t('identify.switchCategoryLabel')}
+            >
+              <CategoryIcon name={meta.tabIcon} size={22} color={colors.white} />
+            </TouchableOpacity>
+          </View>
         </View>
 
         {/* The big gradient hero used to sit here, and it said the same thing
@@ -518,6 +563,50 @@ export default function IdentifyScreen() {
           </PressScale>
         </View>
 
+        {/* Achados recentes: the user's latest finds of THIS category as a
+            horizontal strip of photo tiles - foto como tile com o nome como
+            legenda embaixo, never a small badge lost in a text card
+            (diagramacao-premium doctrine). Renders only when there is at least
+            one find, so a new user never sees empty chrome. Reuses FindThumb:
+            the same photo-priority chain (own photo -> Wikipedia by scientific
+            name -> category icon) as the Collection, with its icon fallback,
+            so this strip can never render broken offline. */}
+        {recentFinds.length > 0 && (
+          <ScrollView
+            horizontal
+            showsHorizontalScrollIndicator={false}
+            style={styles.recentStrip}
+            contentContainerStyle={styles.recentStripContent}
+          >
+            {recentFinds.map((item) => (
+              <TouchableOpacity
+                key={item.savedId}
+                style={styles.recentItem}
+                activeOpacity={0.8}
+                onPress={() =>
+                  navigation.navigate(meta.detailRoute, { plant: item, fromIdentify: false })
+                }
+                accessibilityRole="button"
+                accessibilityLabel={t('collection.viewDetailsLabel', {
+                  name: item.nickname || item.name,
+                })}
+              >
+                <FindThumb
+                  photoUri={item.photoUri}
+                  scientific={item.scientific}
+                  icon={meta.tabIcon}
+                  accent={meta.accent}
+                  iconSize={26}
+                  style={styles.recentThumb}
+                />
+                <Text style={styles.recentName} numberOfLines={1}>
+                  {item.nickname || item.name}
+                </Text>
+              </TouchableOpacity>
+            ))}
+          </ScrollView>
+        )}
+
         <View style={styles.tipCard}>
           <Ionicons
             name="bulb"
@@ -571,6 +660,15 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     marginBottom: 20,
+  },
+  headerBtns: { flexDirection: 'row', alignItems: 'center', gap: 8 },
+  gearBtn: {
+    width: 40,
+    height: 40,
+    borderRadius: 12,
+    backgroundColor: colors.surface,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   hello: { fontSize: 24, fontWeight: '800', color: colors.text },
   subtitle: { fontSize: 13, color: colors.textMuted, marginTop: 2 },
@@ -690,6 +788,19 @@ const styles = StyleSheet.create({
     borderColor: colors.border,
   },
   actionText: { color: colors.text, fontWeight: '600', marginTop: 8, fontSize: 13 },
+  // Achados recentes: 64px rounded photo tile, one-line 10.5px caption below
+  // (diagramacao-premium: a foto E o tile, o nome e a legenda).
+  recentStrip: { marginTop: 16 },
+  recentStripContent: { gap: 12, paddingRight: 4 },
+  recentItem: { width: 64, alignItems: 'center' },
+  recentThumb: { width: 64, height: 64, borderRadius: 14 },
+  recentName: {
+    marginTop: 4,
+    fontSize: 10.5,
+    fontWeight: '600',
+    color: colors.textSecondary,
+    maxWidth: 64,
+  },
   tipCard: {
     flexDirection: 'row',
     backgroundColor: colors.surface,

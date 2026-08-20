@@ -2320,5 +2320,12 @@
     "sectionAccount": "Account",
     "tellFriends": "Vertel het je vrienden",
     "linkCopied": "Link gekopieerd"
+  },
+  "books": {
+    "shelfTitle": "Boeken",
+    "free": "Gratis",
+    "unlockFor": "Ontgrendel voor {{count}} tokens",
+    "chaptersLabel": "Hoofdstukken",
+    "notEnoughTokens": "Nog niet genoeg tokens – identificeer soorten om meer te verdienen."
   }
 }

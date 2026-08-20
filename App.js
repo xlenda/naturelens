@@ -28,6 +28,7 @@ import TopicDetailScreen from './screens/TopicDetailScreen';
 import SpeciesDetailScreen from './screens/SpeciesDetailScreen';
 import HerbDetailScreen from './screens/HerbDetailScreen';
 import FieldGuideScreen from './screens/FieldGuideScreen';
+import BookScreen from './screens/BookScreen';
 import BotanistScreen from './screens/BotanistScreen';
 import ProfileScreen from './screens/ProfileScreen';
 import AchievementsScreen from './screens/AchievementsScreen';
@@ -172,6 +173,7 @@ function DiscoverStackNav() {
       <DiscoverStack.Screen name="SpeciesDetail" component={SpeciesDetailScreen} />
       <DiscoverStack.Screen name="HerbDetail" component={HerbDetailScreen} />
       <DiscoverStack.Screen name="FieldGuide" component={FieldGuideScreen} />
+      <DiscoverStack.Screen name="Book" component={BookScreen} />
     </DiscoverStack.Navigator>
   );
 }

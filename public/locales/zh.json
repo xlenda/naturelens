@@ -2320,5 +2320,12 @@
     "sectionAccount": "账户",
     "tellFriends": "推荐给朋友",
     "linkCopied": "链接已复制"
+  },
+  "books": {
+    "shelfTitle": "图书",
+    "free": "免费",
+    "unlockFor": "用 {{count}} 代币解锁",
+    "chaptersLabel": "章节",
+    "notEnoughTokens": "代币不足——识别物种来赚取更多。"
   }
 }

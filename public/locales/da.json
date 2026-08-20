@@ -2320,5 +2320,12 @@
     "sectionAccount": "Konto",
     "tellFriends": "Fortæl dine venner",
     "linkCopied": "Link kopieret"
+  },
+  "books": {
+    "shelfTitle": "Bøger",
+    "free": "Gratis",
+    "unlockFor": "Lås op for {{count}} tokens",
+    "chaptersLabel": "Kapitler",
+    "notEnoughTokens": "Ikke nok tokens endnu – identificér arter for at optjene flere."
   }
 }

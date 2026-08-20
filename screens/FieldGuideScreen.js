@@ -10,6 +10,22 @@ import CategoryIcon from '../components/CategoryIcon';
 import { colors } from '../components/theme';
 import { getSpeciesDetail } from '../components/speciesDetails';
 import { getSpeciesPhoto } from '../components/speciesPhoto';
+import { CATEGORIES } from '../components/categories';
+
+// Which scan tab the "go identify one" CTA opens, keyed by the icon the entry
+// arrived with (the icon doubles as the collection's category marker). Before
+// the books shipped only fish and birds ever reached this screen, so the CTA
+// was a bird/fish ternary; insect, fungi, crop and sound chapters land here
+// now too and must not all be sent to the Fish camera. Sounds only has a tab
+// when the category is enabled (web) - registered here conditionally so we
+// never navigate to a route that does not exist.
+const CTA_TAB_BY_ICON = {
+  bird: CATEGORIES.bird.tabLabel,
+  'bug-outline': CATEGORIES.insect.tabLabel,
+  'mushroom-outline': CATEGORIES.mushroom.tabLabel,
+  'nutrition-outline': CATEGORIES.crop.tabLabel,
+  ...(CATEGORIES.sound.enabled ? { 'mic-outline': CATEGORIES.sound.tabLabel } : null),
+};
 
 // Field-guide entry for a species in a Discover collection (fish, birds).
 //
@@ -116,7 +132,7 @@ export default function FieldGuideScreen({ route }) {
         <TouchableOpacity
           style={[styles.cta, { backgroundColor: color }]}
           activeOpacity={0.85}
-          onPress={() => navigation.getParent()?.getParent()?.navigate(icon === 'bird' ? 'Birds' : 'Fish')}
+          onPress={() => navigation.getParent()?.getParent()?.navigate(CTA_TAB_BY_ICON[icon] || CATEGORIES.fish.tabLabel)}
           accessibilityRole="button"
           accessibilityLabel={t('fieldGuide.identifyCta')}
         >

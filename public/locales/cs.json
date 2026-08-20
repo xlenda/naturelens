@@ -2320,5 +2320,12 @@
     "sectionAccount": "Účet",
     "tellFriends": "Doporučit přátelům",
     "linkCopied": "Odkaz zkopírován"
+  },
+  "books": {
+    "shelfTitle": "Knihy",
+    "free": "Zdarma",
+    "unlockFor": "Odemknout za {{count}} tokenů",
+    "chaptersLabel": "Kapitoly",
+    "notEnoughTokens": "Zatím nemáš dost tokenů — identifikuj druhy a získej další."
   }
 }

@@ -357,6 +357,19 @@ export default function CollectionScreen() {
             />
             <Text style={styles.countText}>{collection.length}</Text>
           </View>
+          {/* Settings always one tap away, on every main screen (the
+              competitor keeps its gear pinned to the hub header). Nested
+              navigate bubbles to the tab navigator - same proven pattern as
+              SubscribeFab's Profile/Subscription jump. */}
+          <TouchableOpacity
+            style={styles.iconBtn}
+            activeOpacity={0.85}
+            onPress={() => navigation.navigate('Profile', { screen: 'Settings' })}
+            accessibilityRole="button"
+            accessibilityLabel={t('settings.title')}
+          >
+            <Ionicons name="settings-outline" size={20} color={colors.accentLight} />
+          </TouchableOpacity>
         </View>
       </View>
 
@@ -434,15 +447,14 @@ export default function CollectionScreen() {
 
       {loading ? null : collection.length === 0 ? (
         <View style={styles.empty}>
-          <View style={styles.emptyIcon}>
-            <Ionicons
-              name="file-tray-outline"
-              size={48}
-              color={colors.accent}
-              accessibilityElementsHidden={true}
-              importantForAccessibility="no-hide-descendants"
-            />
-          </View>
+          {/* Illustrated empty state (chrome art, not species data): the
+              inviting forest path replaces the grey tray icon - an empty
+              collection is a beginning, not an absence. */}
+          <Image
+            source={require('../assets/art/empty-collection.jpg')}
+            style={styles.emptyArt}
+            resizeMode="cover"
+          />
           <Text style={styles.emptyTitle}>{t('collection.emptyTitle')}</Text>
           <Text style={styles.emptyBody}>{t('collection.emptyBody')}</Text>
           <TouchableOpacity
@@ -758,13 +770,10 @@ const styles = StyleSheet.create({
     alignSelf: 'stretch',
   },
   empty: { flex: 1, alignItems: 'center', justifyContent: 'center', padding: 40 },
-  emptyIcon: {
-    width: 96,
-    height: 96,
-    borderRadius: 48,
-    backgroundColor: colors.surface,
-    alignItems: 'center',
-    justifyContent: 'center',
+  emptyArt: {
+    width: 240,
+    height: 200,
+    borderRadius: 22,
     marginBottom: 20,
   },
   emptyTitle: { fontSize: 20, fontWeight: '800', color: colors.text },

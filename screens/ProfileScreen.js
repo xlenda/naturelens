@@ -19,6 +19,7 @@ import PasswordInput from '../components/PasswordInput';
 import { useAppAlert } from '../components/useAppAlert';
 import { usePageShowReset } from '../components/usePageShowReset';
 import CategoryIcon from '../components/CategoryIcon';
+import FindThumb from '../components/FindThumb';
 import NatureScene from '../components/NatureScene';
 import ZoneBand from '../components/ZoneBand';
 import PressScale from '../components/PressScale';
@@ -35,6 +36,10 @@ export default function ProfileScreen() {
   const { t, i18n } = useTranslation();
   const [total, setTotal] = useState(0);
   const [counts, setCounts] = useState(EMPTY_COUNTS);
+  // Achado mais recente por categoria + as fotos próprias mais recentes.
+  // Derivados da MESMA lista que load() já busca - zero fetch novo.
+  const [latestByCategory, setLatestByCategory] = useState({});
+  const [recentPhotos, setRecentPhotos] = useState([]);
   const [subStatus, setSubStatus] = useState(null);
   const [accountEmail, setAccountEmail] = useState(null);
   const [checkingOut, setCheckingOut] = useState(false);
@@ -63,6 +68,24 @@ export default function ProfileScreen() {
       }
     });
     setCounts(next);
+
+    // Uma passada só sobre a lista já carregada: a entrada mais recente de
+    // cada categoria (por savedAt - a ordem do array não é garantida depois
+    // do cloud sync) vira a foto da linha "Por Categoria", e os 3 achados
+    // mais recentes COM foto do usuário viram a pilha do card de total
+    // (doutrina "banda de status com arte"). Nenhum fetch aqui.
+    const latest = {};
+    list.forEach((item) => {
+      const cur = latest[item.category];
+      if (!cur || (item.savedAt || '') > (cur.savedAt || '')) latest[item.category] = item;
+    });
+    setLatestByCategory(latest);
+    setRecentPhotos(
+      list
+        .filter((item) => item.photoUri)
+        .sort((a, b) => (b.savedAt || '').localeCompare(a.savedAt || ''))
+        .slice(0, 3)
+    );
 
     const status = await getSubscriptionStatus();
     setSubStatus(status);
@@ -241,9 +264,13 @@ export default function ProfileScreen() {
               accessibilityRole="button"
               accessibilityLabel={t('profile.emptyCta')}
             >
-              <View style={[styles.emptyIcon, { backgroundColor: colors.accent + '1F' }]}>
-                <CategoryIcon name="leaf" size={26} color={colors.accent} />
-              </View>
+              {/* Illustrated empty state (chrome art): the forest path
+                  invites the first identification. */}
+              <Image
+                source={require('../assets/art/empty-collection.jpg')}
+                style={styles.emptyArt}
+                resizeMode="cover"
+              />
               <Text style={styles.emptyTitle}>{t('profile.emptyTitle')}</Text>
               <Text style={styles.emptyBody}>{t('profile.emptyBody')}</Text>
               <View style={[styles.emptyBtn, { backgroundColor: colors.accent }]}>
@@ -269,6 +296,27 @@ export default function ProfileScreen() {
                 {t('profile.itemsIdentified', { count: total })}
               </Text>
             </View>
+            {/* Banda de status com arte (doutrina diagramacao-premium): pilha
+                de mini-fotos sobrepostas dos achados mais recentes ao lado do
+                número. Só fotos tiradas pelo PRÓPRIO usuário (photoUri) - a
+                lista é filtrada no load(), então isto nunca dispara fetch e
+                sem nenhuma foto o card fica exatamente como hoje. Decorativo:
+                escondido da acessibilidade como o ícone acima. */}
+            {recentPhotos.length > 0 && (
+              <View
+                style={styles.totalStack}
+                accessibilityElementsHidden={true}
+                importantForAccessibility="no-hide-descendants"
+              >
+                {recentPhotos.map((item, idx) => (
+                  <FindThumb
+                    key={item.savedId}
+                    photoUri={item.photoUri}
+                    style={[styles.totalStackPhoto, idx > 0 && styles.totalStackOverlap]}
+                  />
+                ))}
+              </View>
+            )}
           </View>
         )}
 
@@ -475,21 +523,45 @@ export default function ProfileScreen() {
         <ZoneBand gutter={20} style={styles.zoneGap}>
           <Text style={styles.sectionLabel}>{t('profile.byCategory')}</Text>
 
-          {Object.values(CATEGORIES).map((meta) => (
-            <View key={meta.key} style={styles.categoryCard}>
-              <View style={[styles.categoryIcon, { backgroundColor: meta.accent + '33' }]}>
-                <CategoryIcon
-                  name={meta.tabIcon}
-                  size={22}
-                  color={meta.accent}
-                  accessibilityElementsHidden={true}
-                  importantForAccessibility="no-hide-descendants"
-                />
+          {Object.values(CATEGORIES).map((meta) => {
+            const latest = latestByCategory[meta.key];
+            return (
+              <View key={meta.key} style={styles.categoryCard}>
+                {latest ? (
+                  /* Foto real no lugar do selo de ícone (doutrina
+                     diagramacao-premium: a foto é a arte da linha, ícone é o
+                     ÚLTIMO recurso). FindThumb já implementa a cadeia inteira:
+                     foto do próprio usuário → foto da Wikipedia pelo nome
+                     científico (cacheada) → o mesmo ícone de hoje, então
+                     offline/espécie sem foto renderiza exatamente como antes.
+                     Performance: são só as categorias (todas visíveis, meia
+                     dúzia de linhas), não a coleção inteira - no pior caso um
+                     fetch por categoria sem foto própria, absorvido pelo cache
+                     do speciesPhoto. */
+                  <FindThumb
+                    photoUri={latest.photoUri}
+                    scientific={latest.scientific}
+                    icon={meta.tabIcon}
+                    accent={meta.accent}
+                    iconSize={22}
+                    style={styles.categoryThumb}
+                  />
+                ) : (
+                  <View style={[styles.categoryIcon, { backgroundColor: meta.accent + '33' }]}>
+                    <CategoryIcon
+                      name={meta.tabIcon}
+                      size={22}
+                      color={meta.accent}
+                      accessibilityElementsHidden={true}
+                      importantForAccessibility="no-hide-descendants"
+                    />
+                  </View>
+                )}
+                <Text style={styles.categoryLabel}>{t(`categories.${meta.key}.tabLabel`)}</Text>
+                <Text style={styles.categoryCount}>{counts[meta.key] || 0}</Text>
               </View>
-              <Text style={styles.categoryLabel}>{t(`categories.${meta.key}.tabLabel`)}</Text>
-              <Text style={styles.categoryCount}>{counts[meta.key] || 0}</Text>
-            </View>
-          ))}
+            );
+          })}
         </ZoneBand>
 
       </ScrollView>
@@ -584,13 +656,11 @@ const styles = StyleSheet.create({
     padding: 22,
     alignItems: 'center',
   },
-  emptyIcon: {
-    width: 56,
-    height: 56,
-    borderRadius: 28,
-    alignItems: 'center',
-    justifyContent: 'center',
-    marginBottom: 12,
+  emptyArt: {
+    width: '100%',
+    height: 160,
+    borderRadius: 16,
+    marginBottom: 14,
   },
   emptyTitle: { color: colors.text, fontSize: 16.5, fontWeight: '800', textAlign: 'center' },
   emptyBody: {
@@ -741,6 +811,20 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     marginRight: 14,
   },
+  // Mesma pegada do categoryIcon (44 + marginRight 14) para a linha não pular
+  // quando a foto entra no lugar do selo; o borderRadius vale tanto para a
+  // Image quanto para a caixa de ícone do fallback do FindThumb.
+  categoryThumb: { width: 44, height: 44, borderRadius: 22, marginRight: 14 },
+  // Pilha sobreposta: anel na cor do card separa uma foto da outra.
+  totalStack: { flexDirection: 'row', marginLeft: 8 },
+  totalStackPhoto: {
+    width: 30,
+    height: 30,
+    borderRadius: 15,
+    borderWidth: 2,
+    borderColor: colors.card,
+  },
+  totalStackOverlap: { marginLeft: -10 },
   categoryLabel: { flex: 1, fontSize: 15, fontWeight: '700', color: colors.text },
   categoryCount: { fontSize: 16, fontWeight: '800', color: colors.accentLight },
   // Tighter than before (24 → 12): inside the settings zone the band itself

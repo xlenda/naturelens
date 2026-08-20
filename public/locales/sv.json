@@ -2320,5 +2320,12 @@
     "sectionAccount": "Konto",
     "tellFriends": "Tipsa vänner",
     "linkCopied": "Länk kopierad"
+  },
+  "books": {
+    "shelfTitle": "Böcker",
+    "free": "Gratis",
+    "unlockFor": "Lås upp för {{count}} tokens",
+    "chaptersLabel": "Kapitel",
+    "notEnoughTokens": "Inte tillräckligt med tokens än – identifiera arter för att tjäna fler."
   }
 }

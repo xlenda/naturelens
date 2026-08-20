@@ -14,7 +14,6 @@ import * as Haptics from 'expo-haptics';
 import { useTranslation } from 'react-i18next';
 import { colors, shadow } from '../components/theme';
 import DailyMissionsCard from '../components/DailyMissionsCard';
-import CategoryIcon from '../components/CategoryIcon';
 import FindThumb from '../components/FindThumb';
 import NatureScene from '../components/NatureScene';
 import ZoneBand from '../components/ZoneBand';
@@ -22,6 +21,8 @@ import PressScale from '../components/PressScale';
 import SubscribeFab from '../components/SubscribeFab';
 import { addTokens } from '../components/achievements';
 import { recordMissionEvent, TOKENS_PER_MISSION } from '../components/missions';
+import { BOOKS } from '../components/books';
+import { getOwnedRewards } from '../components/rewardOwnership';
 
 // This list is what actually renders - a collection that exists only in the
 // locale files but not here is invisible. (Learned the hard way: the fish and
@@ -109,12 +110,16 @@ export default function DiscoverScreen() {
   // The bump afterwards makes the missions card below re-read, so the mission
   // this very visit completed shows as done immediately.
   const [missionsTick, setMissionsTick] = useState(0);
+  // Book ownership re-read on every focus, so a book redeemed on BookScreen
+  // comes back to a shelf that already shows it unlocked.
+  const [ownedBooks, setOwnedBooks] = useState({});
   useFocusEffect(
     useCallback(() => {
       recordMissionEvent('discover').then((done) => {
         if (done.length) addTokens(done.length * TOKENS_PER_MISSION);
         setMissionsTick((n) => n + 1);
       });
+      getOwnedRewards().then(setOwnedBooks);
     }, [])
   );
 
@@ -126,8 +131,23 @@ export default function DiscoverScreen() {
       <NatureScene />
 
       <ScrollView contentContainerStyle={styles.scroll} showsVerticalScrollIndicator={false}>
-        <Text style={styles.title} accessibilityRole="header">{t('discover.title')}</Text>
-        <Text style={styles.subtitle}>{t('discover.subtitle')}</Text>
+        <View style={styles.titleRowTop}>
+          <View style={{ flex: 1 }}>
+            <Text style={styles.title} accessibilityRole="header">{t('discover.title')}</Text>
+            <Text style={styles.subtitle}>{t('discover.subtitle')}</Text>
+          </View>
+          {/* Settings pinned to every main screen's header (competitor's
+              ever-present gear); nested navigate bubbles to the tab navigator. */}
+          <TouchableOpacity
+            style={styles.gearBtn}
+            activeOpacity={0.8}
+            onPress={() => navigation.navigate('Profile', { screen: 'Settings' })}
+            accessibilityRole="button"
+            accessibilityLabel={t('settings.title')}
+          >
+            <Ionicons name="settings-outline" size={20} color={colors.text} />
+          </TouchableOpacity>
+        </View>
 
         <DailyMissionsCard refreshKey={missionsTick} />
 
@@ -171,6 +191,64 @@ export default function DiscoverScreen() {
           </TouchableOpacity>
         </PressScale>
 
+        {/* Estante dos Livros da Natureza: four photo covers, horizontal, right
+            after the daily fact. Covers ride on the scene (not a ZoneBand - the
+            two-band rhythm below stays intact). Each cover is the real photo of
+            the book's cover species via FindThumb, icon fallback when it fails.
+            Locked books wear a lock+cost badge; the free one wears a gift badge
+            until claimed, so the "one is free" present is visible from here. */}
+        <Text style={styles.sectionTitle}>{t('books.shelfTitle')}</Text>
+        <ScrollView
+          horizontal
+          showsHorizontalScrollIndicator={false}
+          style={{ marginHorizontal: -20 }}
+          contentContainerStyle={{ paddingHorizontal: 20 }}
+        >
+          {BOOKS.map((b) => {
+            const owned = !!ownedBooks[b.id];
+            const bookTitle = t(`discover.topics.${b.topicKey}.title`);
+            return (
+              <PressScale key={b.id}>
+                <TouchableOpacity
+                  style={styles.bookCover}
+                  activeOpacity={0.85}
+                  onPress={() => {
+                    Haptics.selectionAsync();
+                    navigation.navigate('Book', { bookId: b.id });
+                  }}
+                  accessibilityRole="button"
+                  accessibilityLabel={t('discover.openCollectionLabel', { title: bookTitle })}
+                >
+                  <FindThumb
+                    scientific={b.coverSci}
+                    icon={b.icon}
+                    accent={b.color}
+                    iconSize={28}
+                    style={[StyleSheet.absoluteFill, styles.bookThumb]}
+                  />
+                  <LinearGradient
+                    colors={['transparent', 'rgba(14,21,18,0.9)']}
+                    style={styles.bookScrim}
+                  />
+                  <Text style={styles.bookTitle} numberOfLines={2}>{bookTitle}</Text>
+                  {!owned &&
+                    (b.cost === 0 ? (
+                      <View style={[styles.bookBadge, { backgroundColor: b.color }]}>
+                        <Ionicons name="gift" size={11} color={colors.white} />
+                        <Text style={styles.bookBadgeText}>{t('books.free')}</Text>
+                      </View>
+                    ) : (
+                      <View style={[styles.bookBadge, styles.bookLockBadge]}>
+                        <Ionicons name="lock-closed" size={11} color={colors.white} />
+                        <Text style={styles.bookBadgeText}>{b.cost}</Text>
+                      </View>
+                    ))}
+                </TouchableOpacity>
+              </PressScale>
+            );
+          })}
+        </ScrollView>
+
         {/* Zona de cor: the whole collections section lives inside one full-bleed
             band. Only two bands on this screen - the gap between them is the
             scene showing through, and banding every section flattens the
@@ -178,7 +256,17 @@ export default function DiscoverScreen() {
         <ZoneBand gutter={20}>
           <Text style={styles.sectionTitle}>{t('discover.exploreCollections')}</Text>
           {TOPICS.map((topic) => {
-            const speciesCount = t(`discover.topics.${topic.topicKey}.species`, { returnObjects: true }).length;
+            const speciesList = t(`discover.topics.${topic.topicKey}.species`, { returnObjects: true });
+            const speciesCount = Array.isArray(speciesList) ? speciesList.length : 0;
+            // Capa da coleção = foto REAL da primeira espécie da própria lista
+            // que tem nome científico (chave universal do speciesPhoto). Nunca
+            // ilustração inventada: se a espécie não tiver foto na Wikipedia
+            // (ou offline), o FindThumb degrada para o ícone da categoria e o
+            // card renderiza como antes - "feature nova nunca nasce quebrada"
+            // (doutrina, Cards 70% arte). São ~11 coleções fixas nesta
+            // ScrollView, então ~11 fetches cacheados no mount - aceitável e
+            // absorvido pelo cache do speciesPhoto em toda visita seguinte.
+            const cover = Array.isArray(speciesList) ? speciesList.find((x) => x && x.sci) : null;
             return (
               <PressScale key={topic.id}>
                 <TouchableOpacity
@@ -192,30 +280,31 @@ export default function DiscoverScreen() {
                   accessibilityRole="button"
                   accessibilityLabel={t('discover.openCollectionLabel', { title: t(`discover.topics.${topic.topicKey}.title`) })}
                 >
-                  {/* Card 70% arte: a collection is curated, not a species, so
-                      there is no photograph to show and none should be invented -
-                      the gradient in the collection's OWN colour IS the art, and
-                      the category icon drops to a seal in its corner. The text
-                      strip below keeps every fact the row card carried. */}
-                  <LinearGradient
-                    colors={[topic.color + 'D9', topic.color + '59', colors.card]}
-                    start={{ x: 0, y: 0 }}
-                    end={{ x: 1, y: 1 }}
-                    style={styles.topicBanner}
-                  >
-                    <View style={styles.topicSeal}>
-                      <CategoryIcon
-                        name={topic.icon}
-                        size={22}
-                        color={topic.color}
-                        accessibilityElementsHidden={true}
-                        importantForAccessibility="no-hide-descendants"
-                      />
-                    </View>
-                  </LinearGradient>
+                  {/* Card 70% arte, agora com foto de verdade (doutrina: foto
+                      como TILE borda a borda, nome como legenda sobreposta,
+                      nunca selo pequeno num card de texto). A foto é da espécie
+                      representativa da coleção; sem foto, o FindThumb rende o
+                      ícone da categoria na cor de sempre - fallback obrigatório
+                      da doutrina. O scrim escuro na base garante o título
+                      legível sobre qualquer foto. */}
+                  <View style={styles.topicBanner}>
+                    <FindThumb
+                      scientific={cover?.sci}
+                      icon={topic.icon}
+                      accent={topic.color}
+                      iconSize={30}
+                      style={StyleSheet.absoluteFill}
+                    />
+                    <LinearGradient
+                      colors={['transparent', 'rgba(14,21,18,0.88)']}
+                      style={styles.topicScrim}
+                    />
+                    <Text style={styles.topicBannerTitle} numberOfLines={1}>
+                      {t(`discover.topics.${topic.topicKey}.title`)}
+                    </Text>
+                  </View>
                   <View style={styles.topicStrip}>
                     <View style={{ flex: 1 }}>
-                      <Text style={styles.topicTitle}>{t(`discover.topics.${topic.topicKey}.title`)}</Text>
                       <Text style={styles.topicDesc}>{t(`discover.topics.${topic.topicKey}.desc`)}</Text>
                     </View>
                     <View style={styles.topicCount}>
@@ -256,7 +345,10 @@ export default function DiscoverScreen() {
                   >
                     {/* A real photo of the species, not a coloured leaf icon -
                         "trending" only reads as content when you can SEE the
-                        species. Scientific name is the language-independent key. */}
+                        species. Scientific name is the language-independent key.
+                        TILE borda a borda (doutrina): a foto encosta nas
+                        bordas do card e o nome vira legenda embaixo, em vez de
+                        selo emoldurado pelo padding. */}
                     <FindThumb
                       scientific={sci}
                       icon="leaf"
@@ -264,8 +356,10 @@ export default function DiscoverScreen() {
                       iconSize={30}
                       style={styles.speciesThumb}
                     />
-                    <Text style={styles.speciesName}>{name}</Text>
-                    <Text style={styles.speciesSci}>{sci}</Text>
+                    <View style={styles.speciesCaption}>
+                      <Text style={styles.speciesName}>{name}</Text>
+                      <Text style={styles.speciesSci}>{sci}</Text>
+                    </View>
                   </TouchableOpacity>
                 </PressScale>
               );
@@ -304,8 +398,10 @@ export default function DiscoverScreen() {
                       iconSize={30}
                       style={styles.speciesThumb}
                     />
-                    <Text style={styles.speciesName}>{entry.name}</Text>
-                    <Text style={styles.speciesSci}>{entry.sci}</Text>
+                    <View style={styles.speciesCaption}>
+                      <Text style={styles.speciesName}>{entry.name}</Text>
+                      <Text style={styles.speciesSci}>{entry.sci}</Text>
+                    </View>
                   </TouchableOpacity>
                 </PressScale>
               );
@@ -323,6 +419,16 @@ export default function DiscoverScreen() {
 }
 
 const styles = StyleSheet.create({
+  titleRowTop: { flexDirection: 'row', alignItems: 'flex-start', gap: 10 },
+  gearBtn: {
+    width: 40,
+    height: 40,
+    borderRadius: 12,
+    backgroundColor: colors.surface,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: 4,
+  },
   container: { flex: 1, backgroundColor: colors.background },
   // Bottom padding clears the floating subscribe pill (see CollectionScreen).
   scroll: { padding: 20, paddingBottom: 84 },
@@ -345,6 +451,47 @@ const styles = StyleSheet.create({
     marginTop: 34,
     marginBottom: 16,
   },
+  // Capa de livro: photo tile 110x150 with the title as an overlaid caption
+  // and the status badge stamped on top. justifyContent pushes the caption to
+  // the base; overflow clips the photo to the cover's corners.
+  bookCover: {
+    width: 110,
+    height: 150,
+    borderRadius: 14,
+    marginRight: 12,
+    overflow: 'hidden',
+    borderWidth: 1,
+    borderColor: colors.border,
+    backgroundColor: colors.card,
+    justifyContent: 'flex-end',
+    ...shadow,
+  },
+  // Centres the fallback icon when there is no photo.
+  bookThumb: { alignItems: 'center', justifyContent: 'center' },
+  bookScrim: { position: 'absolute', left: 0, right: 0, bottom: 0, height: 72 },
+  bookTitle: {
+    color: colors.white,
+    fontSize: 12.5,
+    fontWeight: '800',
+    paddingHorizontal: 8,
+    paddingBottom: 8,
+    textShadowColor: 'rgba(0,0,0,0.6)',
+    textShadowOffset: { width: 0, height: 1 },
+    textShadowRadius: 3,
+  },
+  bookBadge: {
+    position: 'absolute',
+    top: 6,
+    right: 6,
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 3,
+    borderRadius: 999,
+    paddingHorizontal: 7,
+    paddingVertical: 3,
+  },
+  bookLockBadge: { backgroundColor: 'rgba(0,0,0,0.55)' },
+  bookBadgeText: { color: colors.white, fontSize: 10.5, fontWeight: '800' },
   topicCard: {
     backgroundColor: colors.card,
     borderRadius: 18,
@@ -356,29 +503,35 @@ const styles = StyleSheet.create({
     ...shadow,
   },
   topicBanner: {
-    height: 84,
-    // One less than the card radius: the 1px border sits outside this.
-    borderTopLeftRadius: 17,
-    borderTopRightRadius: 17,
+    // Taller than the old 84px gradient: a photo needs room to read as a
+    // capa, not a listra. The card's overflow:hidden clips the corners.
+    height: 108,
     justifyContent: 'flex-end',
     paddingHorizontal: 14,
     paddingBottom: 10,
   },
-  topicSeal: {
-    width: 40,
-    height: 40,
-    borderRadius: 13,
-    alignItems: 'center',
-    justifyContent: 'center',
-    // Dark enough for the coloured glyph to read against its own gradient.
-    backgroundColor: 'rgba(14,21,18,0.55)',
+  // Scrim só na metade de baixo: escurece onde o título senta e deixa o
+  // topo da foto limpo (tile primeiro, legibilidade garantida).
+  topicScrim: {
+    position: 'absolute',
+    left: 0,
+    right: 0,
+    bottom: 0,
+    height: 64,
+  },
+  topicBannerTitle: {
+    fontSize: 16,
+    fontWeight: '800',
+    color: colors.white,
+    textShadowColor: 'rgba(0,0,0,0.6)',
+    textShadowOffset: { width: 0, height: 1 },
+    textShadowRadius: 3,
   },
   topicStrip: {
     flexDirection: 'row',
     alignItems: 'center',
     padding: 14,
   },
-  topicTitle: { fontSize: 15.5, fontWeight: '700', color: colors.text },
   topicDesc: { fontSize: 12.5, color: colors.textMuted, marginTop: 2 },
   topicCount: { alignItems: 'center', flexDirection: 'row' },
   topicCountText: { fontWeight: '800', fontSize: 15, marginRight: 2 },
@@ -386,20 +539,22 @@ const styles = StyleSheet.create({
     width: 140,
     backgroundColor: colors.card,
     borderRadius: 16,
-    padding: 14,
     marginRight: 12,
     borderWidth: 1,
     borderColor: colors.border,
+    // The photo has to be cut by the card's own corners (tile, not selo).
+    overflow: 'hidden',
     ...shadow,
   },
+  // Borda a borda: sem raio nem margem próprios, o card recorta os cantos.
+  // align/justify continuam para centralizar o ícone no fallback sem foto.
   speciesThumb: {
     width: '100%',
-    height: 90,
-    borderRadius: 12,
+    height: 100,
     alignItems: 'center',
     justifyContent: 'center',
-    marginBottom: 10,
   },
+  speciesCaption: { paddingHorizontal: 12, paddingVertical: 10 },
   speciesName: { fontSize: 14, fontWeight: '700', color: colors.text },
   speciesSci: { fontSize: 11.5, fontStyle: 'italic', color: colors.textSecondary, marginTop: 1 },
 });

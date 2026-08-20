@@ -2320,5 +2320,12 @@
     "sectionAccount": "الحساب",
     "tellFriends": "أخبر أصدقاءك",
     "linkCopied": "تم نسخ الرابط"
+  },
+  "books": {
+    "shelfTitle": "الكتب",
+    "free": "مجاني",
+    "unlockFor": "افتح مقابل {{count}} رمزًا",
+    "chaptersLabel": "الفصول",
+    "notEnoughTokens": "لا توجد رموز كافية بعد — تعرّف على الأنواع لكسب المزيد."
   }
 }
