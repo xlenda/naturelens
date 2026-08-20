@@ -39,6 +39,8 @@ import { recordMissionEvent, TOKENS_PER_MISSION } from '../components/missions';
 import { useAppAlert } from '../components/useAppAlert';
 import { usePageShowReset } from '../components/usePageShowReset';
 import CategoryIcon from '../components/CategoryIcon';
+import NatureScene from '../components/NatureScene';
+import PressScale from '../components/PressScale';
 
 export default function IdentifyScreen() {
   const navigation = useNavigation();
@@ -53,6 +55,11 @@ export default function IdentifyScreen() {
   const [revealFact, setRevealFact] = useState(null);
   const [pendingNav, setPendingNav] = useState(null);
   const [unlockedIds, setUnlockedIds] = useState(null);
+  // Foto no palco: the uri of the photo being analysed RIGHT NOW, staged inside
+  // the viewfinder under the scan overlay - "analysing YOUR photo", not a
+  // generic animation. Null (no uri available) falls back to the previous
+  // gradient-only scanning view, byte for byte.
+  const [stagePhotoUri, setStagePhotoUri] = useState(null);
   const scanAnim = useRef(new Animated.Value(0)).current;
   const { alertConfig, showAlert, hideAlert } = useAppAlert();
   // Un-freezes the subscribe button when the page is restored from bfcache
@@ -92,6 +99,7 @@ export default function IdentifyScreen() {
 
   const runIdentification = async (photo) => {
     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
+    setStagePhotoUri(photo.uri || null);
     setScanning(true);
     runScanAnimation();
     trackScanStarted({
@@ -156,6 +164,7 @@ export default function IdentifyScreen() {
       showAlert(t('identify.identificationFailedTitle'), err.message || t('identify.identificationFailedDefault'));
     } finally {
       setScanning(false);
+      setStagePhotoUri(null);
       // Always clear, success or failure: keeping stale angles would silently
       // attach them to the NEXT, unrelated specimen the user photographs.
       setExtraPhotos([]);
@@ -291,6 +300,10 @@ export default function IdentifyScreen() {
 
   return (
     <SafeAreaView style={styles.container} edges={['top']}>
+      {/* Cenário em camadas: FIRST child of the root, pointerEvents="none"
+          inside the component, and the root keeps backgroundColor underneath
+          (see NatureScene.js / diagramacao-premium doctrine). */}
+      <NatureScene accent={meta.accent} />
       <ScrollView contentContainerStyle={styles.scroll} showsVerticalScrollIndicator={false}>
         <View style={styles.headerRow}>
           <View>
@@ -322,6 +335,9 @@ export default function IdentifyScreen() {
             it carried now sits under the viewfinder, where it reads as an
             instruction rather than a second banner. */}
 
+        {/* Micro-animações da doutrina: press-scale by OUTER wrapper only -
+            the Touchable below stays byte for byte (a11y, handlers, styles). */}
+        <PressScale>
         <TouchableOpacity
           style={styles.viewfinder}
           activeOpacity={0.85}
@@ -340,6 +356,21 @@ export default function IdentifyScreen() {
           >
             {scanning ? (
               <>
+                {/* Foto no palco ("a arte É a tela"): the freshly taken photo
+                    fills the viewfinder while it is analysed, with the scanline
+                    and the overlay ON TOP - the scrim keeps spinner and label
+                    legible over any photo. No uri -> neither renders and the
+                    block behaves exactly as before. */}
+                {stagePhotoUri ? (
+                  <>
+                    <Image
+                      source={{ uri: stagePhotoUri }}
+                      style={styles.stagePhoto}
+                      resizeMode="cover"
+                    />
+                    <View style={styles.stageScrim} />
+                  </>
+                ) : null}
                 <Animated.View
                   style={[
                     styles.scanLine,
@@ -368,7 +399,10 @@ export default function IdentifyScreen() {
             ))}
           </LinearGradient>
         </TouchableOpacity>
+        </PressScale>
 
+        {/* Press-scale por wrapper EXTERNO (doutrina) - shutter unchanged inside. */}
+        <PressScale scaleTo={0.93}>
         <TouchableOpacity
           activeOpacity={0.85}
           style={styles.shutterWrap}
@@ -387,6 +421,7 @@ export default function IdentifyScreen() {
             </View>
           </View>
         </TouchableOpacity>
+        </PressScale>
         <Text style={styles.shutterLabel}>
           {scanning ? t('identify.identifying') : t('identify.tapToIdentify')}
         </Text>
@@ -440,6 +475,11 @@ export default function IdentifyScreen() {
         )}
 
         <View style={styles.actionsRow}>
+          {/* Press-scale by outer wrapper. The `flex: 1` has to move onto the
+              wrapper as well: the Animated.View is now the flex child of this
+              row, so without it both cards would collapse to their content
+              (same device as ProfileScreen's streakCardWrap). */}
+          <PressScale style={styles.actionBtnWrap}>
           <TouchableOpacity
             style={styles.actionBtn}
             activeOpacity={0.8}
@@ -457,6 +497,8 @@ export default function IdentifyScreen() {
             />
             <Text style={styles.actionText}>{t('identify.uploadPhoto')}</Text>
           </TouchableOpacity>
+          </PressScale>
+          <PressScale style={styles.actionBtnWrap}>
           <TouchableOpacity
             style={styles.actionBtn}
             activeOpacity={0.8}
@@ -473,6 +515,7 @@ export default function IdentifyScreen() {
             />
             <Text style={styles.actionText}>{t('identify.myCollection')}</Text>
           </TouchableOpacity>
+          </PressScale>
         </View>
 
         <View style={styles.tipCard}>
@@ -557,6 +600,10 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   scanText: { marginTop: 12, fontWeight: '600' },
+  // Foto no palco: the staged photo fills the viewfinder interior; the scrim is
+  // the background tone at ~60% so the scanline/spinner/label stay readable.
+  stagePhoto: { ...StyleSheet.absoluteFillObject },
+  stageScrim: { ...StyleSheet.absoluteFillObject, backgroundColor: colors.background + '99' },
   scanLine: {
     position: 'absolute',
     top: 20,
@@ -630,6 +677,9 @@ const styles = StyleSheet.create({
   addAngleText: { fontSize: 12.5, fontWeight: '700' },
   anglesHint: { color: colors.textMuted, fontSize: 11.5, textAlign: 'center' },
   actionsRow: { flexDirection: 'row', gap: 12, marginTop: 24 },
+  // The flex the PressScale wrapper needs so the two cards still share the row
+  // evenly once the Animated.View sits between them and actionsRow.
+  actionBtnWrap: { flex: 1 },
   actionBtn: {
     flex: 1,
     backgroundColor: colors.card,

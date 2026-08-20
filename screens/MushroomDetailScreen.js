@@ -10,7 +10,6 @@ import {
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useNavigation } from '@react-navigation/native';
 import { Ionicons } from '@expo/vector-icons';
-import BackChevron from '../components/BackChevron';
 import * as Haptics from 'expo-haptics';
 import { useTranslation } from 'react-i18next';
 import PlantHero from '../components/PlantHero';
@@ -26,6 +25,11 @@ import AlertModal from '../components/AlertModal';
 import { useAppAlert } from '../components/useAppAlert';
 import { addTokens } from '../components/achievements';
 import { recordMissionEvent, TOKENS_PER_MISSION } from '../components/missions';
+import NatureScene from '../components/NatureScene';
+import ZoneBand from '../components/ZoneBand';
+import PressScale from '../components/PressScale';
+import SaveFab from '../components/SaveFab';
+import TopBar, { TopBarIcon } from '../components/TopBar';
 
 const EDIBILITY_COLORS = {
   choice: colors.accent,
@@ -98,43 +102,37 @@ export default function MushroomDetailScreen({ route }) {
 
   return (
     <SafeAreaView style={styles.container} edges={['top']}>
-      <View style={styles.topBar}>
-        <TouchableOpacity
-          style={styles.iconBtn}
-          onPress={() => navigation.goBack()}
-          accessibilityRole="button"
-          accessibilityLabel={t('common.goBack')}
-        >
-          <BackChevron size={22} color={colors.text} />
-        </TouchableOpacity>
-        <Text style={styles.topTitle} accessibilityRole="header">{t('detail.profileTitle', { category: t('categories.mushroom.label') })}</Text>
-        <View style={styles.topBarActions}>
-          <TouchableOpacity
-            style={styles.iconBtn}
-            onPress={handleShare}
-            accessibilityRole="button"
-            accessibilityLabel={t('common.shareThisResult')}
-          >
-            <Ionicons name="share-social-outline" size={20} color={colors.text} />
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={styles.iconBtn}
-            onPress={toggleSave}
-            accessibilityRole="button"
-            accessibilityLabel={saved ? t('common.removeFromCollection') : t('common.saveToCollection')}
-          >
-            <Ionicons
-              name={saved ? 'bookmark' : 'bookmark-outline'}
-              size={20}
-              color={saved ? meta.accent : colors.text}
-            />
-          </TouchableOpacity>
-        </View>
-      </View>
+      {/* Cenario em camadas (diagramacao-premium): FIRST child of the root,
+          pointerEvents none inside the component, and the root keeps its own
+          backgroundColor underneath - decoration never steals a touch. */}
+      <NatureScene accent={meta.accent} />
+
+      <TopBar
+        title={t('detail.profileTitle', { category: t('categories.mushroom.label') })}
+        onBack={() => navigation.goBack()}
+        right={
+          <>
+            <TopBarIcon onPress={handleShare} label={t('common.shareThisResult')}>
+              <Ionicons name="share-social-outline" size={20} color={colors.text} />
+            </TopBarIcon>
+            <TopBarIcon
+              onPress={toggleSave}
+              label={saved ? t('common.removeFromCollection') : t('common.saveToCollection')}
+            >
+              <Ionicons
+                name={saved ? 'bookmark' : 'bookmark-outline'}
+                size={20}
+                color={saved ? meta.accent : colors.text}
+              />
+            </TopBarIcon>
+          </>
+        }
+      />
 
       <ScrollView contentContainerStyle={styles.scroll} showsVerticalScrollIndicator={false}>
         <PlantHero
           photoUri={plant.photoUri}
+          similarImages={plant.similarImages}
           scientific={plant.scientific}
           accent={meta.accent}
           icon={meta.tabIcon}
@@ -176,6 +174,14 @@ export default function MushroomDetailScreen({ route }) {
           )}
         </View>
 
+        {/* Zona de cor (diagramacao-premium): thematic runs of sections live
+            in full-bleed bands one shade above the background; the gap between
+            bands is the scene showing through. ZoneBand is a pure wrapper -
+            the quente-primeiro order stays byte for byte. This first band is
+            the whole safety story: psychoactive warning, the always-visible
+            edibility note, the identification extras (on mushrooms they ARE
+            food safety) and the overview. */}
+        <ZoneBand gutter={20}>
         {plant.psychoactive === true && (
           <View style={styles.warningBanner}>
             <Ionicons
@@ -191,6 +197,23 @@ export default function MushroomDetailScreen({ route }) {
           </View>
         )}
 
+        {/* Always-visible food-safety note. The "never eat based on this
+            app's result" warning used to live only in Terms and the FAQ -
+            places nobody about to cook a find ever reads. It reuses the
+            Terms wording verbatim: one source of truth, already translated
+            in all 17 languages, and the exact claim a store reviewer looks
+            for next to an edibility badge. */}
+        <View style={styles.edibilityNote}>
+          <Ionicons
+            name="warning-outline"
+            size={18}
+            color={colors.warning}
+            accessibilityElementsHidden={true}
+            importantForAccessibility="no-hide-descendants"
+          />
+          <Text style={styles.edibilityNoteText}>{t('terms.accuracyBody')}</Text>
+        </View>
+
         {/* Reference photos, runner-up species and a low-confidence warning -
             all built from data the API already returned. This matters more on
             mushrooms than anywhere else in the app: a confidently-stated wrong
@@ -200,33 +223,42 @@ export default function MushroomDetailScreen({ route }) {
         <SectionCard icon="document-text-outline" title={t('common.overview')} color={meta.accent}>
           <Text style={styles.body}>{plant.overview || t('sound.noContentBody')}</Text>
         </SectionCard>
+        </ZoneBand>
 
+        {/* Look-alike band. Guarded: an empty band would render as a floating
+            pill of nothing. */}
         {plant.lookAlike?.length > 0 && (
-          <SectionCard icon="eye-outline" title={t('detail.frequentlyConfusedWith')} color={colors.warning}>
-            {plant.lookAlike.map((name) => (
-              <View key={name} style={styles.lookAlikeRow}>
-                <Ionicons
-                  name="swap-horizontal-outline"
-                  size={14}
-                  color={colors.textMuted}
-                  accessibilityElementsHidden={true}
-                  importantForAccessibility="no-hide-descendants"
-                />
-                <Text style={styles.lookAlikeText}>{name}</Text>
-              </View>
-            ))}
-          </SectionCard>
+          <ZoneBand gutter={20}>
+            <SectionCard icon="eye-outline" title={t('detail.frequentlyConfusedWith')} color={colors.warning}>
+              {plant.lookAlike.map((name) => (
+                <View key={name} style={styles.lookAlikeRow}>
+                  <Ionicons
+                    name="swap-horizontal-outline"
+                    size={14}
+                    color={colors.textMuted}
+                    accessibilityElementsHidden={true}
+                    importantForAccessibility="no-hide-descendants"
+                  />
+                  <Text style={styles.lookAlikeText}>{name}</Text>
+                </View>
+              ))}
+            </SectionCard>
+          </ZoneBand>
         )}
 
+        {/* Ficha/recibo band: the technical rows close the screen as a
+            receipt. Guarded like the band above. */}
         {infoRows.length > 0 && (
-          <SectionCard icon="finger-print-outline" title={t('common.details')} color={colors.purple}>
-            {infoRows.map((row) => (
-              <View key={row.label} style={styles.infoRow}>
-                <Text style={styles.infoLabel}>{row.label}</Text>
-                <Text style={styles.infoValue}>{row.value}</Text>
-              </View>
-            ))}
-          </SectionCard>
+          <ZoneBand gutter={20}>
+            <SectionCard icon="finger-print-outline" title={t('common.details')} color={colors.purple}>
+              {infoRows.map((row) => (
+                <View key={row.label} style={styles.infoRow}>
+                  <Text style={styles.infoLabel}>{row.label}</Text>
+                  <Text style={styles.infoValue}>{row.value}</Text>
+                </View>
+              ))}
+            </SectionCard>
+          </ZoneBand>
         )}
 
         {!!plant.url && (
@@ -248,6 +280,9 @@ export default function MushroomDetailScreen({ route }) {
           </TouchableOpacity>
         )}
 
+        {/* Press-scale por wrapper EXTERNO (diagramacao-premium): the
+            Touchable stays byte for byte - a11y, labels and handlers intact. */}
+        <PressScale>
         <TouchableOpacity
           style={[styles.saveBtn, { backgroundColor: meta.accent }, saved && { backgroundColor: meta.accentDark }]}
           onPress={toggleSave}
@@ -266,9 +301,15 @@ export default function MushroomDetailScreen({ route }) {
             {saved ? t('common.saved') : t('common.save')}
           </Text>
         </TouchableOpacity>
+        </PressScale>
 
         <InstallNudgeCard show={!!fromIdentify} accent={meta.accent} />
       </ScrollView>
+
+      {/* Floating save pill (SaveFab doctrine): absolute WITHIN the screen,
+          and the scroll content above carries paddingBottom >= 96 so the pill
+          never hides the last row. Gone once saved. */}
+      <SaveFab onPress={toggleSave} accent={meta.accent} visible={!saved} />
 
       <AlertModal
         visible={!!alertConfig}
@@ -283,24 +324,8 @@ export default function MushroomDetailScreen({ route }) {
 
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: colors.background },
-  topBar: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    paddingHorizontal: 16,
-    paddingBottom: 10,
-  },
-  topBarActions: { flexDirection: 'row', gap: 8 },
-  iconBtn: {
-    width: 40,
-    height: 40,
-    borderRadius: 12,
-    backgroundColor: colors.surface,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  topTitle: { fontSize: 16, fontWeight: '700', color: colors.text },
-  scroll: { padding: 20, paddingBottom: 40 },
+  // paddingBottom >= 96: room for the floating SaveFab (viewport law).
+  scroll: { padding: 20, paddingBottom: 96 },
   nameRow: { flexDirection: 'row', alignItems: 'flex-start', marginTop: 18 },
   name: { fontSize: 24, fontWeight: '800', color: colors.text },
   scientific: { fontSize: 15, fontStyle: 'italic', color: colors.textSecondary, marginTop: 3 },
@@ -334,6 +359,17 @@ const styles = StyleSheet.create({
     alignItems: 'flex-start',
   },
   warningText: { flex: 1, color: colors.error, fontSize: 13, fontWeight: '600', marginLeft: 10, lineHeight: 18 },
+  edibilityNote: {
+    flexDirection: 'row',
+    backgroundColor: colors.warning + '14',
+    borderRadius: 14,
+    padding: 14,
+    marginBottom: 16,
+    borderWidth: 1,
+    borderColor: colors.warning + '3C',
+    alignItems: 'flex-start',
+  },
+  edibilityNoteText: { flex: 1, color: colors.textSecondary, fontSize: 12.5, marginLeft: 10, lineHeight: 18 },
   body: { color: colors.textSecondary, fontSize: 14, lineHeight: 21 },
   lookAlikeRow: { flexDirection: 'row', alignItems: 'center', paddingVertical: 6 },
   lookAlikeText: { color: colors.text, fontSize: 13.5, marginLeft: 8 },

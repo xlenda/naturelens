@@ -14,7 +14,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { useTranslation } from 'react-i18next';
 import * as Haptics from 'expo-haptics';
 import { colors } from '../components/theme';
-import { askSpecialist, ASK_ERRORS } from '../components/askSpecialist';
+import { askSpecialist, reportSpecialistAnswer, ASK_ERRORS } from '../components/askSpecialist';
 
 // The keyword matcher that used to live here is gone. It mapped a handful of
 // words onto fixed canned answers while presenting itself as an AI botanist -
@@ -29,6 +29,16 @@ export default function BotanistScreen({ route }) {
   ]);
   const [input, setInput] = useState('');
   const [typing, setTyping] = useState(false);
+  // Message ids the user flagged. Optimistic: the checkmark appears on tap,
+  // and a report lost to a flaky network is not worth an error dialog.
+  const [reported, setReported] = useState({});
+
+  const reportAnswer = (item) => {
+    if (reported[item.id]) return;
+    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+    setReported((r) => ({ ...r, [item.id]: true }));
+    reportSpecialistAnswer(item.text).catch(() => {});
+  };
 
   const suggestions = t('botanist.suggestions', { returnObjects: true });
 
@@ -107,6 +117,30 @@ export default function BotanistScreen({ route }) {
         )}
         <View style={[styles.bubble, isUser ? styles.userBubble : styles.botBubble]}>
           <Text style={[styles.msgText, isUser && { color: colors.white }]}>{item.text}</Text>
+          {/* AI answers can be reported (Google Play AI-content policy asks
+              for an in-app flag). Not on the intro (UI copy, not the model)
+              and not on error bubbles (nothing generated to report). */}
+          {!isUser && item.id !== 'intro' && !item.isError && (
+            <TouchableOpacity
+              style={styles.reportBtn}
+              onPress={() => reportAnswer(item)}
+              disabled={!!reported[item.id]}
+              activeOpacity={0.7}
+              accessibilityRole="button"
+              accessibilityLabel={
+                reported[item.id] ? t('botanist.reportedLabel') : t('botanist.reportLabel')
+              }
+            >
+              <Ionicons
+                name={reported[item.id] ? 'checkmark-circle' : 'flag-outline'}
+                size={12}
+                color={reported[item.id] ? colors.accent : colors.textMuted}
+              />
+              <Text style={[styles.reportText, reported[item.id] && { color: colors.accent }]}>
+                {reported[item.id] ? t('botanist.reportedLabel') : t('botanist.reportLabel')}
+              </Text>
+            </TouchableOpacity>
+          )}
         </View>
       </View>
     );
@@ -254,6 +288,15 @@ const styles = StyleSheet.create({
   botBubble: { backgroundColor: colors.card, borderBottomLeftRadius: 4, borderWidth: 1, borderColor: colors.border },
   userBubble: { backgroundColor: colors.accent, borderBottomRightRadius: 4 },
   msgText: { color: colors.text, fontSize: 14.5, lineHeight: 21 },
+  reportBtn: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 4,
+    alignSelf: 'flex-start',
+    marginTop: 8,
+    paddingVertical: 2,
+  },
+  reportText: { color: colors.textMuted, fontSize: 11 },
   typingText: { color: colors.textMuted, fontSize: 14, fontStyle: 'italic' },
   suggestions: { paddingHorizontal: 16, paddingBottom: 8 },
   chip: {

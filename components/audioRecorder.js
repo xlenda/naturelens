@@ -141,6 +141,12 @@ export async function startRecording() {
   };
 
   return {
+    // The live MediaStream, exposed READ-ONLY for the on-screen level meter
+    // (an AnalyserNode taps it without touching the recording). Consumers must
+    // never stop its tracks - the lifecycle stays owned by stop()/cancel()/
+    // autoStop above.
+    stream,
+
     get durationSeconds() {
       return (Date.now() - startedAt) / 1000;
     },

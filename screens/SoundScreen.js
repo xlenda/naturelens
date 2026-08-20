@@ -16,6 +16,7 @@ import { recordMissionEvent, TOKENS_PER_MISSION } from '../components/missions';
 import { trackScanStarted, trackScanCompleted, trackScanFailed, trackPaywallShown } from '../components/tracking';
 import PaywallModal from '../components/PaywallModal';
 import { startCheckout } from '../components/subscription';
+import NatureScene from '../components/NatureScene';
 
 // Identification by SOUND - the one category with no camera.
 //
@@ -23,6 +24,9 @@ import { startCheckout } from '../components/subscription';
 // grasshoppers and mammals, so the copy deliberately says "sound of nature"
 // rather than "birdsong". Calling it birdsong and then naming a frog would read
 // as a bug.
+
+// Bars in the live level meter. 5-7 reads as a meter; fewer reads as a blob.
+const BAR_COUNT = 6;
 
 export default function SoundScreen() {
   const navigation = useNavigation();
@@ -42,6 +46,22 @@ export default function SoundScreen() {
   // interval callback where side effects belong - see toggle().
   const elapsedRef = useRef(0);
   const pulse = useRef(new Animated.Value(1)).current;
+  // Drives the decorative rings around the mic. Separate from `pulse` and on
+  // the JS driver (useNativeDriver: false - this screen is web-only, see
+  // canRecord). At 0 the rings sit static and faint; the loop only runs WHILE
+  // recording, honouring the doctrine's "nunca loop infinito de decoração" -
+  // the loop dies with the recording.
+  const ringPulse = useRef(new Animated.Value(0)).current;
+
+  // MEDIDOR DE NÍVEL REAL (web-only): an AnalyserNode taps the SAME
+  // MediaStream the recorder already opened - real microphone data, zero
+  // network. One Animated.Value per bar, driven by setValue from a rAF loop
+  // (no re-render per frame). If the AudioContext cannot be built the bars are
+  // simply not shown: ausência honesta, never fake levels.
+  const barLevels = useRef(Array.from({ length: BAR_COUNT }, () => new Animated.Value(0))).current;
+  const [meterOn, setMeterOn] = useState(false);
+  const audioCtxRef = useRef(null);
+  const meterRafRef = useRef(0);
 
   // "A transition is in flight." A ref and not state, deliberately: setState is
   // asynchronous, and a double-tap lands inside the SAME React batch, so both
@@ -81,6 +101,66 @@ export default function SoundScreen() {
     }
   }, []);
 
+  // Tears the meter down completely: rAF loop, AudioContext, bars back to
+  // zero. Idempotent, so every exit path (stop, unmount, failed start) can
+  // call it without caring about the others.
+  const stopMeter = useCallback(() => {
+    if (meterRafRef.current) {
+      cancelAnimationFrame(meterRafRef.current);
+      meterRafRef.current = 0;
+    }
+    if (audioCtxRef.current) {
+      try {
+        audioCtxRef.current.close().catch(() => {});
+      } catch (e) {}
+      audioCtxRef.current = null;
+    }
+    setMeterOn(false);
+    barLevels.forEach((v) => v.setValue(0));
+  }, [barLevels]);
+
+  const startMeter = useCallback(
+    (stream) => {
+      // Web-only guard: AnalyserNode is a browser API. Anything missing or
+      // throwing means NO meter (ausência honesta) - recording is unaffected.
+      if (Platform.OS !== 'web' || !stream || typeof window === 'undefined') return;
+      try {
+        const Ctx = window.AudioContext || window.webkitAudioContext;
+        if (!Ctx) return;
+        const ctx = new Ctx();
+        audioCtxRef.current = ctx;
+        const analyser = ctx.createAnalyser();
+        analyser.fftSize = 256;
+        analyser.smoothingTimeConstant = 0.65;
+        // Tapping the stream does not consume it - MediaRecorder keeps its own
+        // track reference, and this node graph is discarded by stopMeter().
+        ctx.createMediaStreamSource(stream).connect(analyser);
+        const data = new Uint8Array(analyser.frequencyBinCount);
+        // Only the lower half of the spectrum: at a 44.1/48 kHz device rate the
+        // top bins sit above ~12 kHz, where nature recordings carry almost
+        // nothing - bars pinned at zero would read as broken.
+        const usable = Math.floor(data.length / 2);
+        const band = Math.floor(usable / BAR_COUNT);
+        const tick = () => {
+          analyser.getByteFrequencyData(data);
+          for (let i = 0; i < BAR_COUNT; i += 1) {
+            let sum = 0;
+            for (let j = i * band; j < (i + 1) * band; j += 1) sum += data[j];
+            // 0-255 average, normalised so ordinary ambient sound already
+            // moves the bars; capped at 1.
+            barLevels[i].setValue(Math.min(1, sum / band / 180));
+          }
+          meterRafRef.current = requestAnimationFrame(tick);
+        };
+        meterRafRef.current = requestAnimationFrame(tick);
+        setMeterOn(true);
+      } catch (e) {
+        stopMeter();
+      }
+    },
+    [barLevels, stopMeter]
+  );
+
   // Releasing the microphone on unmount is not optional tidiness: leaving the
   // track open keeps the browser's "recording" indicator lit for the rest of
   // the session, which is a privacy problem, not a cosmetic one.
@@ -88,7 +168,10 @@ export default function SoundScreen() {
     () => () => {
       if (tickRef.current) clearInterval(tickRef.current);
       handleRef.current?.cancel();
+      stopMeter();
     },
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- stopMeter is
+    // identity-stable (useCallback over a ref-stable array); unmount-only.
     []
   );
 
@@ -100,6 +183,18 @@ export default function SoundScreen() {
       ])
     ).start();
   }, [pulse]);
+
+  // Subtle breathing of the decorative rings, slower than the button's own
+  // pulse so the two don't strobe together. Started with the recording and
+  // stopped with it in stopAndAnalyse - decoration never loops while idle.
+  const runRingPulse = useCallback(() => {
+    Animated.loop(
+      Animated.sequence([
+        Animated.timing(ringPulse, { toValue: 1, duration: 1400, useNativeDriver: false }),
+        Animated.timing(ringPulse, { toValue: 0, duration: 1400, useNativeDriver: false }),
+      ])
+    ).start();
+  }, [ringPulse]);
 
   const analyse = async (clip) => {
     setAnalysing(true);
@@ -139,6 +234,9 @@ export default function SoundScreen() {
     if (tickRef.current) clearInterval(tickRef.current);
     pulse.stopAnimation();
     pulse.setValue(1);
+    ringPulse.stopAnimation();
+    ringPulse.setValue(0);
+    stopMeter();
     setRecording(false);
 
     const handle = handleRef.current;
@@ -183,12 +281,18 @@ export default function SoundScreen() {
         // Likewise release a handle that somehow survived, rather than orphaning
         // its microphone track.
         handleRef.current?.cancel();
+        // And a meter that somehow survived with it (stopMeter is idempotent).
+        stopMeter();
 
         handleRef.current = await startRecording();
         setRecording(true);
         elapsedRef.current = 0;
         setElapsed(0);
         runPulse();
+        runRingPulse();
+        // Level meter fed by the SAME MediaStream the recorder holds - real
+        // data, zero network (see startMeter for the honest-absence fallback).
+        startMeter(handleRef.current.stream);
 
         tickRef.current = setInterval(() => {
           elapsedRef.current += 1;
@@ -226,6 +330,10 @@ export default function SoundScreen() {
 
   return (
     <SafeAreaView style={styles.container} edges={['top']}>
+      {/* Cenário em camadas: FIRST child of the root, pointerEvents="none"
+          inside the component, and the root keeps backgroundColor underneath
+          (see NatureScene.js / diagramacao-premium doctrine). */}
+      <NatureScene accent={meta.accent} />
       <ScrollView contentContainerStyle={styles.scroll} showsVerticalScrollIndicator={false}>
         <Text style={styles.title} accessibilityRole="header">
           {t('categories.sound.title')}
@@ -240,6 +348,40 @@ export default function SoundScreen() {
         ) : (
           <>
             <View style={styles.micWrap}>
+              {/* Anéis decorativos em volta do mic. Decoration in a
+                  pointerEvents="none" layer so it can never steal the tap
+                  (mesma regra do cenário). Static and faint while idle
+                  (ringPulse = 0); they only breathe while recording. */}
+              <View style={styles.ringLayer} pointerEvents="none">
+                <View style={styles.ringBox}>
+                  <Animated.View
+                    style={[
+                      styles.ring,
+                      styles.ringOuter,
+                      {
+                        borderColor: meta.accent,
+                        opacity: ringPulse.interpolate({ inputRange: [0, 1], outputRange: [0.16, 0.34] }),
+                        transform: [
+                          { scale: ringPulse.interpolate({ inputRange: [0, 1], outputRange: [1, 1.08] }) },
+                        ],
+                      },
+                    ]}
+                  />
+                  <Animated.View
+                    style={[
+                      styles.ring,
+                      styles.ringInner,
+                      {
+                        borderColor: meta.accent,
+                        opacity: ringPulse.interpolate({ inputRange: [0, 1], outputRange: [0.28, 0.5] }),
+                        transform: [
+                          { scale: ringPulse.interpolate({ inputRange: [0, 1], outputRange: [1, 1.05] }) },
+                        ],
+                      },
+                    ]}
+                  />
+                </View>
+              </View>
               <Animated.View style={{ transform: [{ scale: recording ? pulse : 1 }] }}>
                 <TouchableOpacity
                   style={[
@@ -261,6 +403,26 @@ export default function SoundScreen() {
                 </TouchableOpacity>
               </Animated.View>
             </View>
+
+            {/* Medidor de nível REAL: only while recording AND only when the
+                AnalyserNode actually came up (meterOn) - hidden otherwise, the
+                honest absence over a fake equalizer. */}
+            {recording && meterOn && (
+              <View style={styles.meterRow} pointerEvents="none">
+                {barLevels.map((level, i) => (
+                  <Animated.View
+                    key={i}
+                    style={[
+                      styles.meterBar,
+                      {
+                        backgroundColor: meta.accent,
+                        height: level.interpolate({ inputRange: [0, 1], outputRange: [4, 34] }),
+                      },
+                    ]}
+                  />
+                ))}
+              </View>
+            )}
 
             <Text style={styles.status}>
               {analysing
@@ -313,7 +475,36 @@ const styles = StyleSheet.create({
   scroll: { padding: 24, paddingBottom: 40 },
   title: { color: colors.text, fontSize: 23, fontWeight: '800', marginTop: 8 },
   subtitle: { color: colors.textSecondary, fontSize: 14.5, lineHeight: 21, marginTop: 8 },
-  micWrap: { alignItems: 'center', marginTop: 44, marginBottom: 18 },
+  // The halo space is reserved with padding (12 + 32 keeps the previous 44px
+  // visual top) so the 180px outer ring never overlaps the status text below.
+  micWrap: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: 12,
+    paddingVertical: 32,
+  },
+  // Rings centred on the button: an absoluteFill layer centres a fixed
+  // 180x180 box, and the rings position absolutely INSIDE it - centring
+  // absolute children via the parent's alignItems is Yoga-only and does not
+  // survive react-native-web.
+  ringLayer: {
+    ...StyleSheet.absoluteFillObject,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  ringBox: { width: 180, height: 180 },
+  ring: { position: 'absolute', borderWidth: 1.5 },
+  ringOuter: { top: 0, left: 0, width: 180, height: 180, borderRadius: 90 },
+  ringInner: { top: 16, left: 16, width: 148, height: 148, borderRadius: 74 },
+  meterRow: {
+    flexDirection: 'row',
+    alignItems: 'flex-end',
+    justifyContent: 'center',
+    gap: 5,
+    height: 34,
+    marginBottom: 12,
+  },
+  meterBar: { width: 5, borderRadius: 3 },
   micButton: {
     width: 116,
     height: 116,

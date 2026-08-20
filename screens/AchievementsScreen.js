@@ -16,14 +16,16 @@ export default function AchievementsScreen() {
   const { t } = useTranslation();
   const [streak, setStreak] = useState({ currentStreak: 0, longestStreak: 0, totalIdentifications: 0, tokens: 0 });
   const [unlocked, setUnlocked] = useState({});
+  const [progress, setProgress] = useState({});
 
   const load = useCallback(async () => {
     const subStatus = await getSubscriptionStatus();
-    const [{ unlocked: unlockedMap }, streakInfo] = await Promise.all([
+    const [{ unlocked: unlockedMap, progress: progressMap }, streakInfo] = await Promise.all([
       evaluateAchievements({ subStatus }),
       getStreakInfo(),
     ]);
     setUnlocked(unlockedMap);
+    setProgress(progressMap || {});
     setStreak(streakInfo);
   }, []);
 
@@ -83,6 +85,21 @@ export default function AchievementsScreen() {
             />
             <Text style={styles.statNumber}>{streak.currentStreak}</Text>
             <Text style={styles.statLabel}>{t('achievements.streakLabel')}</Text>
+            {/* Escudo visível: shields already come from getStreakInfo - a
+                bought shield that only surfaced in the Store was invisible
+                exactly where the streak lives. Icon + number, no new copy. */}
+            {streak.shields > 0 && (
+              <View style={styles.shieldPill}>
+                <Ionicons
+                  name="shield-checkmark"
+                  size={12}
+                  color={colors.info}
+                  accessibilityElementsHidden={true}
+                  importantForAccessibility="no-hide-descendants"
+                />
+                <Text style={styles.shieldPillText}>{streak.shields}</Text>
+              </View>
+            )}
           </View>
           <View style={styles.statCard}>
             <Ionicons
@@ -119,22 +136,54 @@ export default function AchievementsScreen() {
 
           {ACHIEVEMENT_LIST.map((a) => {
             const isUnlocked = !!unlocked[a.id];
+            const p = !isUnlocked && progress[a.id];
             return (
               <View key={a.id} style={[styles.badgeRow, !isUnlocked && styles.badgeRowLocked]}>
+                {/* A locked badge shows its REAL icon dimmed with a mini-lock
+                    in the corner - ten identical padlocks told the user
+                    nothing about what each badge even was. */}
                 <View style={[styles.badgeIcon, isUnlocked && styles.badgeIconUnlocked]}>
                   <Ionicons
-                    name={isUnlocked ? a.icon : 'lock-closed'}
+                    name={a.icon}
                     size={22}
                     color={isUnlocked ? colors.warning : colors.textMuted}
+                    style={!isUnlocked ? styles.badgeGlyphLocked : null}
                     accessibilityElementsHidden={true}
                     importantForAccessibility="no-hide-descendants"
                   />
+                  {!isUnlocked && (
+                    <View style={styles.miniLock}>
+                      <Ionicons
+                        name="lock-closed"
+                        size={10}
+                        color={colors.textMuted}
+                        accessibilityElementsHidden={true}
+                        importantForAccessibility="no-hide-descendants"
+                      />
+                    </View>
+                  )}
                 </View>
                 <View style={{ flex: 1 }}>
                   <Text style={[styles.badgeTitle, !isUnlocked && styles.badgeTitleLocked]}>
                     {t(`achievements.${a.id}.title`)}
                   </Text>
                   <Text style={styles.badgeBody}>{t(`achievements.${a.id}.body`)}</Text>
+                  {/* Real progress on countable achievements: current/target
+                      come from evaluateAchievements (same numbers the unlock
+                      check uses). Pure digits - no new i18n copy. */}
+                  {p && p.target > 0 && (
+                    <View style={styles.progressWrap}>
+                      <View style={styles.progressTrack}>
+                        <View
+                          style={[
+                            styles.progressFill,
+                            { width: `${Math.min(100, (p.current / p.target) * 100)}%` },
+                          ]}
+                        />
+                      </View>
+                      <Text style={styles.progressText}>{`${Math.min(p.current, p.target)}/${p.target}`}</Text>
+                    </View>
+                  )}
                 </View>
                 {isUnlocked && (
                   <Ionicons
@@ -206,6 +255,17 @@ const styles = StyleSheet.create({
   },
   statNumber: { fontSize: 22, fontWeight: '800', color: colors.text, marginTop: 8 },
   statLabel: { fontSize: 11.5, color: colors.textMuted, marginTop: 2, textAlign: 'center' },
+  shieldPill: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 3,
+    marginTop: 6,
+    paddingHorizontal: 8,
+    paddingVertical: 3,
+    borderRadius: 999,
+    backgroundColor: colors.info + '22',
+  },
+  shieldPillText: { fontSize: 11.5, fontWeight: '800', color: colors.info },
   // Composição centrada: this is the section label for the badge list, so it
   // centres. Badge titles and bodies below deliberately do not - centred
   // reading text is what makes the device look cheap instead of composed.
@@ -246,7 +306,36 @@ const styles = StyleSheet.create({
   badgeIconUnlocked: {
     backgroundColor: colors.warning + '22',
   },
+  badgeGlyphLocked: { opacity: 0.35 },
+  miniLock: {
+    position: 'absolute',
+    bottom: -3,
+    right: -3,
+    width: 18,
+    height: 18,
+    borderRadius: 9,
+    backgroundColor: colors.surfaceElevated,
+    borderWidth: 1,
+    borderColor: colors.border,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
   badgeTitle: { fontSize: 15, fontWeight: '700', color: colors.text, marginBottom: 2 },
   badgeTitleLocked: { color: colors.textSecondary },
   badgeBody: { fontSize: 12.5, color: colors.textMuted, lineHeight: 17 },
+  progressWrap: { flexDirection: 'row', alignItems: 'center', gap: 8, marginTop: 8 },
+  progressTrack: {
+    flex: 1,
+    height: 4,
+    borderRadius: 2,
+    backgroundColor: colors.surfaceElevated,
+    overflow: 'hidden',
+  },
+  progressFill: { height: 4, borderRadius: 2, backgroundColor: colors.accent },
+  progressText: {
+    fontSize: 11,
+    fontWeight: '700',
+    color: colors.textMuted,
+    fontVariant: ['tabular-nums'],
+  },
 });

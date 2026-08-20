@@ -3,7 +3,6 @@ import { View, Text, StyleSheet, ScrollView, TouchableOpacity, Image, Linking } 
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useNavigation } from '@react-navigation/native';
 import { Ionicons } from '@expo/vector-icons';
-import BackChevron from '../components/BackChevron';
 import * as Haptics from 'expo-haptics';
 import { useTranslation } from 'react-i18next';
 import SectionCard from '../components/SectionCard';
@@ -22,6 +21,11 @@ import { isInReaderLanguage } from '../components/localisedOverview';
 import { getCuratedBird } from '../components/curatedBirds';
 import { addTokens } from '../components/achievements';
 import { recordMissionEvent, TOKENS_PER_MISSION } from '../components/missions';
+import NatureScene from '../components/NatureScene';
+import ZoneBand from '../components/ZoneBand';
+import PressScale from '../components/PressScale';
+import SaveFab from '../components/SaveFab';
+import TopBar, { TopBarIcon } from '../components/TopBar';
 
 // Result of a SOUND identification.
 //
@@ -156,62 +160,66 @@ export default function SoundDetailScreen({ route }) {
 
   return (
     <SafeAreaView style={styles.container} edges={['top']}>
-      <View style={styles.topBar}>
-        <TouchableOpacity
-          style={styles.iconBtn}
-          onPress={() => navigation.goBack()}
-          accessibilityRole="button"
-          accessibilityLabel={t('common.goBack')}
-        >
-          <BackChevron size={22} color={colors.text} />
-        </TouchableOpacity>
-        <Text style={styles.topTitle} accessibilityRole="header">
-          {t('detail.profileTitle', { category: groupLabel })}
-        </Text>
-        <View style={styles.topBarActions}>
-          <TouchableOpacity
-            style={styles.iconBtn}
-            onPress={() => {
-              Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
-              // `plant.name` is Perch's raw label, which is the binomial - the
-              // same string as plant.scientific. Sharing the raw object printed
-              // it twice and never the common name the screen is showing.
-              shareEntity({ ...plant, name: displayName }, groupLabel);
-            }}
-            accessibilityRole="button"
-            accessibilityLabel={t('common.shareThisResult')}
-          >
-            <Ionicons name="share-social-outline" size={20} color={colors.text} />
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={[styles.iconBtn, saveDisabled && styles.disabled]}
-            onPress={toggleSave}
-            disabled={saveDisabled}
-            accessibilityRole="button"
-            accessibilityState={{ disabled: saveDisabled }}
-            accessibilityLabel={saved ? t('common.removeFromCollection') : t('common.saveToCollection')}
-          >
-            <Ionicons
-              name={saved ? 'bookmark' : 'bookmark-outline'}
-              size={20}
-              color={saved ? meta.accent : colors.text}
-            />
-          </TouchableOpacity>
-        </View>
-      </View>
+      {/* Cenário em camadas: FIRST child of the root, pointerEvents="none"
+          inside the component, and the container keeps its own backgroundColor
+          underneath - the scene paints over it, never replaces it. */}
+      <NatureScene accent={meta.accent} />
+
+      {/* Shared TopBar: same icons, labels and handlers as the hand-rolled bar
+          it replaces. The save button stays a raw TouchableOpacity because it
+          is the one top-bar button in the app with a disabled state, and
+          TopBarIcon does not forward `disabled`/`accessibilityState` - going
+          through it would silently drop the a11y disabled announcement. */}
+      <TopBar
+        title={t('detail.profileTitle', { category: groupLabel })}
+        onBack={() => navigation.goBack()}
+        right={
+          <>
+            <TopBarIcon
+              onPress={() => {
+                Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+                // `plant.name` is Perch's raw label, which is the binomial - the
+                // same string as plant.scientific. Sharing the raw object printed
+                // it twice and never the common name the screen is showing.
+                shareEntity({ ...plant, name: displayName }, groupLabel);
+              }}
+              label={t('common.shareThisResult')}
+            >
+              <Ionicons name="share-social-outline" size={20} color={colors.text} />
+            </TopBarIcon>
+            <TouchableOpacity
+              style={[styles.iconBtn, saveDisabled && styles.disabled]}
+              onPress={toggleSave}
+              disabled={saveDisabled}
+              accessibilityRole="button"
+              accessibilityState={{ disabled: saveDisabled }}
+              accessibilityLabel={saved ? t('common.removeFromCollection') : t('common.saveToCollection')}
+            >
+              <Ionicons
+                name={saved ? 'bookmark' : 'bookmark-outline'}
+                size={20}
+                color={saved ? meta.accent : colors.text}
+              />
+            </TouchableOpacity>
+          </>
+        }
+      />
 
       <ScrollView contentContainerStyle={styles.scroll} showsVerticalScrollIndicator={false}>
         {/* The species photo IS the hero here - there is no user photo to show. */}
         {photo ? (
-          <TouchableOpacity
-            activeOpacity={0.9}
-            onPress={() => photo.sourceUrl && Linking.openURL(photo.sourceUrl)}
-            accessibilityRole="imagebutton"
-            accessibilityLabel={plant.name}
-          >
-            <Image source={{ uri: photo.url }} style={styles.heroPhoto} resizeMode="cover" />
-            <Text style={styles.photoCredit}>{t('fieldGuide.photoCredit')}</Text>
-          </TouchableOpacity>
+          /* Press-scale by OUTER wrapper: the Touchable stays byte for byte. */
+          <PressScale>
+            <TouchableOpacity
+              activeOpacity={0.9}
+              onPress={() => photo.sourceUrl && Linking.openURL(photo.sourceUrl)}
+              accessibilityRole="imagebutton"
+              accessibilityLabel={plant.name}
+            >
+              <Image source={{ uri: photo.url }} style={styles.heroPhoto} resizeMode="cover" />
+              <Text style={styles.photoCredit}>{t('fieldGuide.photoCredit')}</Text>
+            </TouchableOpacity>
+          </PressScale>
         ) : (
           <View style={[styles.heroFallback, { backgroundColor: meta.accent + '22' }]}>
             <CategoryIcon name="mic" size={38} color={meta.accent} />
@@ -239,65 +247,86 @@ export default function SoundDetailScreen({ route }) {
 
         <IdentificationExtras entity={plant} accent={meta.accent} />
 
-        <SectionCard icon="document-text-outline" title={t('common.overview')} color={meta.accent}>
-          {/* Wikipedia answers in the reader's language when it can; when it
-              falls back to English this offers the button rather than leaving
-              them with a paragraph they cannot read. */}
-          <TranslatableText
-            text={overview || t('sound.noContentBody')}
-            style={styles.body}
-            /* Only when the text is Wikipedia's AND that article came back in
-               English. Curated text is written in the reader language by
-               definition, and a Portuguese extract needs no button. */
-            showWhenEnglish={
-              !curated?.overview &&
-              !!info?.extract &&
-              !isInReaderLanguage(info.extract, i18n.language)
-            }
-          />
-          {/* Credit the source when the words are not ours. */}
-          {!curated?.overview && !!info?.extract && (
-            <TouchableOpacity
-              onPress={() => info.sourceUrl && Linking.openURL(info.sourceUrl)}
-              accessibilityRole="link"
-            >
-              <Text style={styles.sourceLink}>{t('fieldGuide.textCredit')}</Text>
-            </TouchableOpacity>
+        {/* Zona de cor: the reading about the species - overview plus the
+            curated habitat/curiosity when we have them - lives in one
+            full-bleed band a shade above the page. ZoneBand is a pure wrapper
+            (order untouched) and never empty: the overview card is
+            unconditional. */}
+        <ZoneBand gutter={20}>
+          <SectionCard icon="document-text-outline" title={t('common.overview')} color={meta.accent}>
+            {/* Wikipedia answers in the reader's language when it can; when it
+                falls back to English this offers the button rather than leaving
+                them with a paragraph they cannot read. */}
+            <TranslatableText
+              text={overview || t('sound.noContentBody')}
+              style={styles.body}
+              /* Only when the text is Wikipedia's AND that article came back in
+                 English. Curated text is written in the reader language by
+                 definition, and a Portuguese extract needs no button. */
+              showWhenEnglish={
+                !curated?.overview &&
+                !!info?.extract &&
+                !isInReaderLanguage(info.extract, i18n.language)
+              }
+            />
+            {/* Credit the source when the words are not ours. */}
+            {!curated?.overview && !!info?.extract && (
+              <TouchableOpacity
+                onPress={() => info.sourceUrl && Linking.openURL(info.sourceUrl)}
+                accessibilityRole="link"
+              >
+                <Text style={styles.sourceLink}>{t('fieldGuide.textCredit')}</Text>
+              </TouchableOpacity>
+            )}
+          </SectionCard>
+
+          {/* Curated habitat/curiosity when this species is one we wrote about. */}
+          {!!curated?.habitat && (
+            <SectionCard icon="earth-outline" title={t('fieldGuide.habitat')} color={colors.info}>
+              <Text style={styles.body}>{curated.habitat}</Text>
+            </SectionCard>
           )}
-        </SectionCard>
+          {!!curated?.curiosity && (
+            <SectionCard icon="sparkles-outline" title={t('fieldGuide.curiosity')} color={colors.warning}>
+              <Text style={styles.body}>{curated.curiosity}</Text>
+            </SectionCard>
+          )}
+        </ZoneBand>
 
-        {/* Curated habitat/curiosity when this species is one we wrote about. */}
-        {!!curated?.habitat && (
-          <SectionCard icon="earth-outline" title={t('fieldGuide.habitat')} color={colors.info}>
-            <Text style={styles.body}>{curated.habitat}</Text>
-          </SectionCard>
-        )}
-        {!!curated?.curiosity && (
-          <SectionCard icon="sparkles-outline" title={t('fieldGuide.curiosity')} color={colors.warning}>
-            <Text style={styles.body}>{curated.curiosity}</Text>
-          </SectionCard>
-        )}
-
-        <TouchableOpacity
-          style={[
-            styles.saveBtn,
-            { backgroundColor: meta.accent },
-            saved && { backgroundColor: meta.accentDark },
-            saveDisabled && styles.disabled,
-          ]}
-          onPress={toggleSave}
-          disabled={saveDisabled}
-          activeOpacity={0.85}
-          accessibilityRole="button"
-          accessibilityState={{ disabled: saveDisabled }}
-          accessibilityLabel={saved ? t('common.removeFromCollection') : t('common.saveToCollection')}
-        >
-          <Ionicons name={saved ? 'checkmark-circle' : 'add-circle-outline'} size={20} color={colors.white} />
-          <Text style={styles.saveBtnText}>{saved ? t('common.saved') : t('common.save')}</Text>
-        </TouchableOpacity>
+        {/* Press-scale by OUTER wrapper: the Touchable stays byte for byte
+            (a11y, disabled state, handlers) - on RN-web an Animated.Value on
+            the Touchable's own style would not drive the transform. */}
+        <PressScale>
+          <TouchableOpacity
+            style={[
+              styles.saveBtn,
+              { backgroundColor: meta.accent },
+              saved && { backgroundColor: meta.accentDark },
+              saveDisabled && styles.disabled,
+            ]}
+            onPress={toggleSave}
+            disabled={saveDisabled}
+            activeOpacity={0.85}
+            accessibilityRole="button"
+            accessibilityState={{ disabled: saveDisabled }}
+            accessibilityLabel={saved ? t('common.removeFromCollection') : t('common.saveToCollection')}
+          >
+            <Ionicons name={saved ? 'checkmark-circle' : 'add-circle-outline'} size={20} color={colors.white} />
+            <Text style={styles.saveBtnText}>{saved ? t('common.saved') : t('common.save')}</Text>
+          </TouchableOpacity>
+        </PressScale>
 
         <InstallNudgeCard show={!!fromIdentify} accent={meta.accent} />
       </ScrollView>
+
+      {/* Floating save pill, absolute WITHIN the screen; styles.scroll carries
+          paddingBottom >= 96 so the pill never covers the last row (the
+          viewport bug in miniature). Hidden while the species lookup is still
+          settling for the same reason the save buttons are disabled then:
+          saving early writes a permanently bare entry (see lookupDone) - and
+          SaveFab has no disabled state, so hiding IS the guard. Gone once
+          saved - the top bookmark takes over as the state indicator. */}
+      <SaveFab onPress={toggleSave} accent={meta.accent} visible={!saved && !saveDisabled} />
 
       <AlertModal
         visible={!!alertConfig}
@@ -312,14 +341,8 @@ export default function SoundDetailScreen({ route }) {
 
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: colors.background },
-  topBar: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    paddingHorizontal: 16,
-    paddingBottom: 10,
-  },
-  topBarActions: { flexDirection: 'row', gap: 8 },
+  // Kept (not moved into TopBar): the raw disabled-capable save button in the
+  // top bar's `right` slot still needs the 40x40 r12 surface look.
   iconBtn: {
     width: 40,
     height: 40,
@@ -328,8 +351,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  topTitle: { fontSize: 16, fontWeight: '700', color: colors.text },
-  scroll: { padding: 20, paddingBottom: 40 },
+  // paddingBottom >= 96: room for the floating SaveFab (doutrina: a pill that
+  // hides the last row is the viewport bug in miniature).
+  scroll: { padding: 20, paddingBottom: 120 },
   heroPhoto: {
     width: '100%',
     height: 220,

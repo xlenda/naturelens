@@ -10,7 +10,6 @@ import {
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useNavigation } from '@react-navigation/native';
 import { Ionicons } from '@expo/vector-icons';
-import BackChevron from '../components/BackChevron';
 import * as Haptics from 'expo-haptics';
 import { useTranslation } from 'react-i18next';
 import PlantHero from '../components/PlantHero';
@@ -31,6 +30,11 @@ import { useAppAlert } from '../components/useAppAlert';
 import { addTokens } from '../components/achievements';
 import { recordMissionEvent, TOKENS_PER_MISSION } from '../components/missions';
 import { startCheckout } from '../components/subscription';
+import NatureScene from '../components/NatureScene';
+import ZoneBand from '../components/ZoneBand';
+import PressScale from '../components/PressScale';
+import SaveFab from '../components/SaveFab';
+import TopBar, { TopBarIcon } from '../components/TopBar';
 
 function InfoRow({ label, value, color }) {
   return (
@@ -148,43 +152,37 @@ export default function PlantDetailScreen({ route }) {
 
   return (
     <SafeAreaView style={styles.container} edges={['top']}>
-      <View style={styles.topBar}>
-        <TouchableOpacity
-          style={styles.iconBtn}
-          onPress={() => navigation.goBack()}
-          accessibilityRole="button"
-          accessibilityLabel={t('common.goBack')}
-        >
-          <BackChevron size={22} color={colors.text} />
-        </TouchableOpacity>
-        <Text style={styles.topTitle} accessibilityRole="header">{t('detail.profileTitle', { category: t('categories.plant.label') })}</Text>
-        <View style={styles.topBarActions}>
-          <TouchableOpacity
-            style={styles.iconBtn}
-            onPress={handleShare}
-            accessibilityRole="button"
-            accessibilityLabel={t('common.shareThisResult')}
-          >
-            <Ionicons name="share-social-outline" size={20} color={colors.text} />
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={styles.iconBtn}
-            onPress={toggleSave}
-            accessibilityRole="button"
-            accessibilityLabel={saved ? t('common.removeFromCollection') : t('common.saveToCollection')}
-          >
-            <Ionicons
-              name={saved ? 'bookmark' : 'bookmark-outline'}
-              size={20}
-              color={saved ? meta.accent : colors.text}
-            />
-          </TouchableOpacity>
-        </View>
-      </View>
+      {/* Cenario em camadas (diagramacao-premium): FIRST child of the root,
+          pointerEvents none inside the component, and the root keeps its own
+          backgroundColor underneath - decoration never steals a touch. */}
+      <NatureScene accent={meta.accent} />
+
+      <TopBar
+        title={t('detail.profileTitle', { category: t('categories.plant.label') })}
+        onBack={() => navigation.goBack()}
+        right={
+          <>
+            <TopBarIcon onPress={handleShare} label={t('common.shareThisResult')}>
+              <Ionicons name="share-social-outline" size={20} color={colors.text} />
+            </TopBarIcon>
+            <TopBarIcon
+              onPress={toggleSave}
+              label={saved ? t('common.removeFromCollection') : t('common.saveToCollection')}
+            >
+              <Ionicons
+                name={saved ? 'bookmark' : 'bookmark-outline'}
+                size={20}
+                color={saved ? meta.accent : colors.text}
+              />
+            </TopBarIcon>
+          </>
+        }
+      />
 
       <ScrollView contentContainerStyle={styles.scroll} showsVerticalScrollIndicator={false}>
         <PlantHero
           photoUri={plant.photoUri}
+          similarImages={plant.similarImages}
           scientific={plant.scientific}
           accent={meta.accent}
           icon={meta.tabIcon}
@@ -220,16 +218,27 @@ export default function PlantDetailScreen({ route }) {
             safety answers the fear that brought many users here, so it leads;
             story and care advice follow; the technical info rows close the
             screen as a receipt rather than opening it as a wall of data. */}
-        {!!plant.toxicity && (
-          <SectionCard icon="warning-outline" title={t('detail.safetySection')} color={colors.error}>
-            <Text style={styles.body}>{plant.toxicity}</Text>
+        {/* Zona de cor (diagramacao-premium): each thematic run of sections
+            lives in a full-bleed band one shade above the background; the gap
+            between bands is the scene showing through. ZoneBand is a pure
+            wrapper - the quente-primeiro order above stays byte for byte. */}
+        <ZoneBand gutter={20}>
+          {!!plant.toxicity && (
+            <SectionCard icon="warning-outline" title={t('detail.safetySection')} color={colors.error}>
+              <Text style={styles.body}>{plant.toxicity}</Text>
+            </SectionCard>
+          )}
+
+          <SectionCard icon="leaf-outline" title={t('common.overview')} color={meta.accent}>
+            <Text style={styles.body}>{plant.overview || t('sound.noContentBody')}</Text>
           </SectionCard>
-        )}
+        </ZoneBand>
 
-        <SectionCard icon="leaf-outline" title={t('common.overview')} color={meta.accent}>
-          <Text style={styles.body}>{plant.overview || t('sound.noContentBody')}</Text>
-        </SectionCard>
-
+        {/* Care band. Guarded: every child is conditional, and an empty band
+            would render as a floating pill of nothing. photoBase64 covers the
+            whole health-check block (button, error and result). */}
+        {!!(plant.bestWatering || plant.bestLightCondition || plant.bestSoilType || wateringStatus || photoBase64) && (
+        <ZoneBand gutter={20}>
         {!!plant.bestWatering && (
           <SectionCard icon="water-outline" title={t('detail.wateringGuideSection')} color={colors.info}>
             <Text style={styles.body}>{plant.bestWatering}</Text>
@@ -279,7 +288,10 @@ export default function PlantDetailScreen({ route }) {
           </SectionCard>
         )}
 
+        {/* Press-scale por wrapper EXTERNO (diagramacao-premium): the
+            Touchable stays byte for byte - a11y, labels and handlers intact. */}
         {!!photoBase64 && !healthResult && (
+          <PressScale>
           <TouchableOpacity
             style={[styles.healthBtn, healthChecking && { opacity: 0.6 }]}
             activeOpacity={0.85}
@@ -299,6 +311,7 @@ export default function PlantDetailScreen({ route }) {
               {healthChecking ? t('detail.checkingForDiseases') : t('detail.checkForDiseases')}
             </Text>
           </TouchableOpacity>
+          </PressScale>
         )}
 
         {!!healthError && (
@@ -310,7 +323,13 @@ export default function PlantDetailScreen({ route }) {
             <DiseaseReport disease={healthResult.disease} />
           </SectionCard>
         )}
+        </ZoneBand>
+        )}
 
+        {/* Ficha/recibo band: story context and the technical rows close the
+            screen as a receipt. Guarded like the care band. */}
+        {!!(plant.commonUses || plant.culturalSignificance || infoRows.length > 0) && (
+        <ZoneBand gutter={20}>
         {!!plant.commonUses && (
           <SectionCard icon="construct-outline" title={t('detail.commonUsesSection')} color={meta.accent}>
             <Text style={styles.body}>{plant.commonUses}</Text>
@@ -329,6 +348,8 @@ export default function PlantDetailScreen({ route }) {
               <InfoRow key={row.label} label={row.label} value={row.value} />
             ))}
           </SectionCard>
+        )}
+        </ZoneBand>
         )}
 
         {!!plant.url && (
@@ -350,6 +371,8 @@ export default function PlantDetailScreen({ route }) {
           </TouchableOpacity>
         )}
 
+        {/* Press-scale por wrapper EXTERNO (diagramacao-premium). */}
+        <PressScale>
         <TouchableOpacity
           style={[styles.saveBtn, { backgroundColor: meta.accent }, saved && { backgroundColor: meta.accentDark }]}
           onPress={toggleSave}
@@ -368,9 +391,15 @@ export default function PlantDetailScreen({ route }) {
             {saved ? t('common.saved') : t('common.save')}
           </Text>
         </TouchableOpacity>
+        </PressScale>
 
         <InstallNudgeCard show={!!fromIdentify} accent={meta.accent} />
       </ScrollView>
+
+      {/* Floating save pill (SaveFab doctrine): absolute WITHIN the screen,
+          and the scroll content above carries paddingBottom >= 96 so the pill
+          never hides the last row. Gone once saved. */}
+      <SaveFab onPress={toggleSave} accent={meta.accent} visible={!saved} />
 
       <PaywallModal
         visible={paywallVisible}
@@ -394,24 +423,8 @@ export default function PlantDetailScreen({ route }) {
 
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: colors.background },
-  topBar: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    paddingHorizontal: 16,
-    paddingBottom: 10,
-  },
-  topBarActions: { flexDirection: 'row', gap: 8 },
-  iconBtn: {
-    width: 40,
-    height: 40,
-    borderRadius: 12,
-    backgroundColor: colors.surface,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  topTitle: { fontSize: 16, fontWeight: '700', color: colors.text },
-  scroll: { padding: 20, paddingBottom: 40 },
+  // paddingBottom >= 96: room for the floating SaveFab (viewport law).
+  scroll: { padding: 20, paddingBottom: 96 },
   nameRow: { flexDirection: 'row', alignItems: 'flex-start', marginTop: 18 },
   name: { fontSize: 24, fontWeight: '800', color: colors.text },
   scientific: { fontSize: 15, fontStyle: 'italic', color: colors.textSecondary, marginTop: 3 },

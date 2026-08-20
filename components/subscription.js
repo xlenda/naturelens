@@ -1,4 +1,4 @@
-import { Platform, Linking } from 'react-native';
+import { Platform } from 'react-native';
 import { getDeviceId } from './deviceId';
 import { API_BASE } from './apiBase';
 
@@ -59,7 +59,15 @@ export function getCheckoutLink(plan) {
 // True only when every plan has a link configured. The paywall uses this to
 // avoid showing a Subscribe button that would go nowhere - a dead button on a
 // payment screen is worse than an honest "coming soon".
+//
+// Never true on native: Google Play's payments policy forbids any link,
+// button or CTA that leads to a payment method other than Play Billing
+// inside an Android app. Hotmart checkout is therefore web-only; a store
+// build sells nothing until Play Billing (react-native-purchases) is wired.
+// Consumption-only is explicitly allowed - subscribers who bought on the
+// site can still sign in and use Premium.
 export function isCheckoutConfigured() {
+  if (Platform.OS !== 'web') return false;
   return PLAN_ORDER.every((p) => Boolean(CHECKOUT_LINKS[p]));
 }
 
@@ -90,7 +98,11 @@ export async function startCheckout(plan = 'monthly') {
     // app. The user returns manually and restores access by email.
     window.location.href = url;
   } else {
-    await Linking.openURL(url);
+    // Opening an external checkout from inside an Android/iOS build would
+    // violate the store payments policy - this path must stay dead until
+    // Play Billing is wired. isCheckoutConfigured() already returns false
+    // on native, so no UI should ever reach here.
+    throw new Error('Checkout is only available on the web.');
   }
 }
 

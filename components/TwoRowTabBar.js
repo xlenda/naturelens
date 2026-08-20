@@ -89,8 +89,20 @@ function TabButton({ route, descriptor, navigation, isFocused, compact, tight })
           above the label that pushed "Cogumelos" and "Pássaros" visibly higher
           than their neighbours - the single sloppiest-looking thing in the app,
           and a real misalignment rather than a design opinion. Reserving the
-          same height for every icon makes every label start on the same line. */}
-      <View style={[styles.iconSlot, { height: iconSize + 2 }]}>{icon}</View>
+          same height for every icon makes every label start on the same line.
+
+          Leito colorido na aba ativa (diagramacao-premium, "dock pilula"): a
+          soft accent bed behind the focused icon. Style-only, on this slot
+          View - the TouchableOpacity above stays byte for byte. */}
+      <View
+        style={[
+          styles.iconSlot,
+          { height: iconSize + 2 },
+          isFocused && styles.iconSlotActive,
+        ]}
+      >
+        {icon}
+      </View>
       <Text
         style={[compact ? styles.labelCompact : styles.label, { color }]}
         numberOfLines={1}
@@ -196,6 +208,11 @@ const styles = StyleSheet.create({
   },
   tabTight: { paddingVertical: 2 },
   iconSlot: { alignItems: 'center', justifyContent: 'center' },
+  iconSlotActive: {
+    backgroundColor: colors.accent + '22',
+    borderRadius: 12,
+    paddingHorizontal: 12,
+  },
   label: { fontSize: 10.5, fontWeight: '600', marginTop: 3 },
   labelCompact: { fontSize: 9, fontWeight: '600', marginTop: 2 },
 });

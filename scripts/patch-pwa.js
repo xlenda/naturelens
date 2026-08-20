@@ -98,6 +98,52 @@ const headInject = [
 ].join('\n');
 html = html.replace('</head>', headInject + '\n  </head>');
 
+// Entry splash: the NatureLens leaf DRAWING ITSELF (stroke-dasharray /
+// stroke-dashoffset, pure CSS, ~1.6s) plus the wordmark fading in.
+//
+// It is injected INSIDE #root on purpose: ReactDOM's render replaces the
+// container's children, so the splash vanishes by itself the instant the real
+// app mounts - no JS to remove it, no listener to leak, and the e2e gate
+// (which polls for real app text) is unaffected because the splash simply is
+// not there once anything assertable exists. The <style> rides inside #root
+// too, so it is swept away with the markup.
+//
+// prefers-reduced-motion: no animation at all - the leaf shows fully drawn and
+// the wordmark fully visible, statically.
+const splash = [
+  '<style>',
+  '  #nl-splash{position:fixed;inset:0;display:flex;flex-direction:column;',
+  '    align-items:center;justify-content:center;gap:18px;background:#0E1512;z-index:9999}',
+  '  #nl-splash svg path{fill:none;stroke:#4E9F6B;stroke-width:3.5;stroke-linecap:round;',
+  '    stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1;',
+  '    animation:nl-draw .9s ease-out forwards}',
+  '  #nl-splash svg path:nth-child(2){animation-delay:.45s;animation-duration:.5s}',
+  '  #nl-splash svg path:nth-child(3){animation-delay:.8s;animation-duration:.35s}',
+  '  #nl-splash svg path:nth-child(4){animation-delay:.95s;animation-duration:.35s}',
+  '  #nl-wordmark{color:#F2F5F3;font-family:system-ui,sans-serif;font-size:22px;',
+  '    font-weight:700;letter-spacing:1px;opacity:0;animation:nl-fade .6s ease-out .7s forwards}',
+  '  @keyframes nl-draw{to{stroke-dashoffset:0}}',
+  '  @keyframes nl-fade{to{opacity:1}}',
+  '  @media (prefers-reduced-motion: reduce){',
+  '    #nl-splash svg path{animation:none;stroke-dashoffset:0}',
+  '    #nl-wordmark{animation:none;opacity:1}',
+  '  }',
+  '</style>',
+  '<div id="nl-splash">',
+  '  <svg width="96" height="96" viewBox="0 0 120 120" aria-hidden="true">',
+  '    <path pathLength="1" d="M60 110 C22 84 24 34 60 12 C96 34 98 84 60 110 Z"/>',
+  '    <path pathLength="1" d="M60 106 C58 76 58 48 60 22"/>',
+  '    <path pathLength="1" d="M59 80 C48 72 41 63 37 52"/>',
+  '    <path pathLength="1" d="M60 58 C70 52 78 43 82 33"/>',
+  '  </svg>',
+  '  <div id="nl-wordmark">NatureLens</div>',
+  '</div>',
+].join('\n');
+// Idempotent: a second run of this script must not stack a second splash.
+if (!html.includes('nl-splash')) {
+  html = html.replace(/(<div id="root"[^>]*>)/, '$1' + splash);
+}
+
 const swInject = [
   '    <script>',
   "      if ('serviceWorker' in navigator) {",

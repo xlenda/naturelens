@@ -14,7 +14,11 @@ import { useNavigation, useFocusEffect } from '@react-navigation/native';
 import { Ionicons } from '@expo/vector-icons';
 import * as Haptics from 'expo-haptics';
 import { useTranslation } from 'react-i18next';
+import { LinearGradient } from 'expo-linear-gradient';
 import BackChevron from '../components/BackChevron';
+import NatureScene from '../components/NatureScene';
+import ZoneBand from '../components/ZoneBand';
+import PressScale from '../components/PressScale';
 import AlertModal from '../components/AlertModal';
 import { useAppAlert } from '../components/useAppAlert';
 import { trackRewardRedeemed } from '../components/tracking';
@@ -116,6 +120,11 @@ export default function StoreScreen() {
 
   return (
     <SafeAreaView style={styles.container} edges={['top']}>
+      {/* Cenário em camadas: the scene is the FIRST child, pointerEvents none
+          inside the component, and the container keeps its own backgroundColor
+          underneath - the scene paints over it, never replaces it. */}
+      <NatureScene />
+
       <View style={styles.topBar}>
         <TouchableOpacity
           style={styles.iconBtn}
@@ -132,48 +141,64 @@ export default function StoreScreen() {
       </View>
 
       <ScrollView contentContainerStyle={styles.scroll} showsVerticalScrollIndicator={false}>
-        <View style={styles.balanceCard}>
-          <Ionicons name="disc" size={28} color={colors.accentLight} />
+        {/* Banner de saldo: balance and shields fused into one full-bleed
+            gradient header (negative margins cancel the scroll gutter). Same
+            texts as before - only the clothing changed. */}
+        <LinearGradient
+          colors={[colors.accentDark, colors.accent]}
+          start={{ x: 0, y: 0 }}
+          end={{ x: 1, y: 1 }}
+          style={styles.balanceBanner}
+        >
+          <Ionicons name="disc" size={28} color={colors.white} />
           <Text style={styles.balanceValue}>{tokens}</Text>
           <Text style={styles.balanceLabel}>{t('achievements.tokensLabel')}</Text>
-        </View>
 
-        {shields > 0 && (
-          <View style={styles.shieldRow}>
-            <Ionicons name="shield-checkmark" size={16} color="#5AA9C9" />
-            <Text style={styles.shieldText}>{t('store.shieldsHeld', { count: shields })}</Text>
-          </View>
-        )}
+          {shields > 0 && (
+            <View style={styles.shieldSeal}>
+              <Ionicons name="shield-checkmark" size={16} color={colors.white} />
+              <Text style={styles.shieldText}>{t('store.shieldsHeld', { count: shields })}</Text>
+            </View>
+          )}
+        </LinearGradient>
 
         <Text style={styles.intro}>{t('store.intro')}</Text>
 
-        {rewards.map((reward) => {
-          const isOwned = reward.kind === 'onetime' && !!owned[reward.id];
-          const affordable = tokens >= reward.cost;
-          const disabled = busyId !== null || (!isOwned && !affordable);
+        {/* Zona de cor: the rewards list is the section of this screen, so it
+            lives in a full-bleed band. Pure wrapper - the card order above is
+            untouched. */}
+        <ZoneBand gutter={20} style={styles.rewardsBand}>
+          {rewards.map((reward) => {
+            const isOwned = reward.kind === 'onetime' && !!owned[reward.id];
+            const affordable = tokens >= reward.cost;
+            const disabled = busyId !== null || (!isOwned && !affordable);
 
-          return (
-            <View key={reward.id} style={styles.card}>
-              <View style={[styles.cardIcon, { backgroundColor: reward.accent + '26' }]}>
-                <Ionicons name={reward.icon} size={22} color={reward.accent} />
-              </View>
+            // Cards 70% arte: the wallpapers reward leads with its own covers
+            // as a thumbnail strip. Guarded - if the covers are ever missing or
+            // malformed the plain card below renders instead, so the reward
+            // never ships broken because its art failed (doutrina).
+            const hasArt =
+              reward.id === 'wallpapers' &&
+              Array.isArray(WALLPAPERS) &&
+              WALLPAPERS.length > 0 &&
+              WALLPAPERS.every((wp) => wp && typeof wp.uri === 'string');
 
-              <View style={styles.cardBody}>
-                <Text style={styles.cardTitle}>{t(`store.items.${reward.id}.title`)}</Text>
-                <Text style={styles.cardDesc}>{t(`store.items.${reward.id}.description`)}</Text>
+            const footer = (
+              <View style={styles.cardFooter}>
+                {isOwned ? (
+                  <Text style={[styles.ownedTag, { color: reward.accent }]}>
+                    {t('store.owned')}
+                  </Text>
+                ) : (
+                  <View style={styles.costRow}>
+                    <Ionicons name="disc-outline" size={13} color={colors.textMuted} />
+                    <Text style={styles.costText}>{reward.cost}</Text>
+                  </View>
+                )}
 
-                <View style={styles.cardFooter}>
-                  {isOwned ? (
-                    <Text style={[styles.ownedTag, { color: reward.accent }]}>
-                      {t('store.owned')}
-                    </Text>
-                  ) : (
-                    <View style={styles.costRow}>
-                      <Ionicons name="disc-outline" size={13} color={colors.textMuted} />
-                      <Text style={styles.costText}>{reward.cost}</Text>
-                    </View>
-                  )}
-
+                {/* Press-scale por wrapper EXTERNO (doutrina): the Touchable
+                    stays byte for byte - a11y, disabled and onPress intact. */}
+                <PressScale>
                   <TouchableOpacity
                     style={[
                       styles.redeemBtn,
@@ -192,11 +217,58 @@ export default function StoreScreen() {
                       {isOwned ? t('store.open') : t('store.redeem')}
                     </Text>
                   </TouchableOpacity>
+                </PressScale>
+              </View>
+            );
+
+            if (hasArt) {
+              return (
+                <View key={reward.id} style={styles.cardArt}>
+                  <View style={styles.artBanner}>
+                    {WALLPAPERS.map((wp) => (
+                      <Image
+                        key={wp.id}
+                        source={{ uri: wp.uri }}
+                        style={styles.artThumb}
+                        resizeMode="cover"
+                      />
+                    ))}
+                    {/* Ícone vira selinho no canto do banner (doutrina). */}
+                    <View style={[styles.artSeal, { backgroundColor: reward.accent }]}>
+                      <Ionicons name={reward.icon} size={13} color={colors.white} />
+                    </View>
+                    {/* Lock + cost overlaid while not owned - digits only. */}
+                    {!isOwned && (
+                      <View style={styles.artLockBadge}>
+                        <Ionicons name="lock-closed" size={11} color={colors.white} />
+                        <Text style={styles.artLockText}>{reward.cost}</Text>
+                      </View>
+                    )}
+                  </View>
+                  <View style={styles.cardArtBody}>
+                    <Text style={styles.cardTitle}>{t(`store.items.${reward.id}.title`)}</Text>
+                    <Text style={styles.cardDesc}>{t(`store.items.${reward.id}.description`)}</Text>
+                    {footer}
+                  </View>
+                </View>
+              );
+            }
+
+            return (
+              <View key={reward.id} style={styles.card}>
+                <View style={[styles.cardIcon, { backgroundColor: reward.accent + '26' }]}>
+                  <Ionicons name={reward.icon} size={22} color={reward.accent} />
+                </View>
+
+                <View style={styles.cardBody}>
+                  <Text style={styles.cardTitle}>{t(`store.items.${reward.id}.title`)}</Text>
+                  <Text style={styles.cardDesc}>{t(`store.items.${reward.id}.description`)}</Text>
+                  {footer}
                 </View>
               </View>
-            </View>
-          );
-        })}
+            );
+          })}
+        </ZoneBand>
 
         <Text style={styles.footnote}>{t('store.earnHint')}</Text>
       </ScrollView>
@@ -270,23 +342,41 @@ const styles = StyleSheet.create({
   },
   topTitle: { fontSize: 16, fontWeight: '700', color: colors.text },
   scroll: { padding: 20, paddingBottom: 40 },
-  balanceCard: {
-    backgroundColor: colors.surface,
-    borderRadius: 18,
-    paddingVertical: 22,
+  // Full-bleed: negative margins cancel the scroll's 20px gutter on both
+  // sides (and the top), so the gradient reaches the edges of the page.
+  balanceBanner: {
+    marginTop: -20,
+    marginHorizontal: -20,
+    paddingHorizontal: 20,
+    paddingTop: 26,
+    paddingBottom: 22,
+    borderBottomLeftRadius: 28,
+    borderBottomRightRadius: 28,
     alignItems: 'center',
     ...shadow,
   },
-  balanceValue: { fontSize: 38, fontWeight: '800', color: colors.text, marginTop: 6 },
-  balanceLabel: { fontSize: 12.5, color: colors.textMuted, fontWeight: '600' },
-  shieldRow: {
+  balanceValue: {
+    fontSize: 44,
+    fontWeight: '800',
+    color: colors.white,
+    marginTop: 6,
+    // Tabular digits so the big number never jiggles as it changes.
+    ...(IS_WEB && { fontVariant: ['tabular-nums'] }),
+  },
+  balanceLabel: { fontSize: 12.5, color: 'rgba(255,255,255,0.85)', fontWeight: '600' },
+  // Shields as a seal stamped on the banner, not a loose row under it.
+  shieldSeal: {
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'center',
     gap: 6,
     marginTop: 12,
+    paddingHorizontal: 12,
+    paddingVertical: 6,
+    borderRadius: 999,
+    backgroundColor: 'rgba(255,255,255,0.18)',
   },
-  shieldText: { color: colors.textSecondary, fontSize: 13, fontWeight: '600' },
+  shieldText: { color: colors.white, fontSize: 13, fontWeight: '600' },
+  rewardsBand: { paddingTop: 20 },
   intro: {
     color: colors.textSecondary,
     fontSize: 13.5,
@@ -312,6 +402,42 @@ const styles = StyleSheet.create({
     marginRight: 12,
   },
   cardBody: { flex: 1 },
+  // Cards 70% arte (wallpapers): banner of covers on top, text strip below;
+  // overflow hidden clips the strip to the card's corners.
+  cardArt: {
+    backgroundColor: colors.card,
+    borderRadius: 16,
+    marginBottom: 12,
+    borderWidth: 1,
+    borderColor: colors.border,
+    overflow: 'hidden',
+  },
+  artBanner: { flexDirection: 'row', height: 84 },
+  artThumb: { flex: 1, height: 84, backgroundColor: colors.surfaceElevated },
+  artSeal: {
+    position: 'absolute',
+    top: 8,
+    left: 8,
+    width: 26,
+    height: 26,
+    borderRadius: 13,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  artLockBadge: {
+    position: 'absolute',
+    top: 8,
+    right: 8,
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 4,
+    backgroundColor: 'rgba(0,0,0,0.55)',
+    borderRadius: 999,
+    paddingHorizontal: 9,
+    paddingVertical: 4,
+  },
+  artLockText: { color: colors.white, fontSize: 11.5, fontWeight: '800' },
+  cardArtBody: { padding: 14 },
   cardTitle: { color: colors.text, fontSize: 15, fontWeight: '700' },
   cardDesc: { color: colors.textSecondary, fontSize: 13, lineHeight: 19, marginTop: 4 },
   cardFooter: {

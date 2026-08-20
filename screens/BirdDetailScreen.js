@@ -3,7 +3,6 @@ import { View, Text, StyleSheet, ScrollView, TouchableOpacity, Image, Linking } 
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useNavigation } from '@react-navigation/native';
 import { Ionicons } from '@expo/vector-icons';
-import BackChevron from '../components/BackChevron';
 import * as Haptics from 'expo-haptics';
 import { useTranslation } from 'react-i18next';
 import PlantHero from '../components/PlantHero';
@@ -23,6 +22,11 @@ import { getLocalisedOverview } from '../components/localisedOverview';
 import TranslatableText from '../components/TranslatableText';
 import { addTokens } from '../components/achievements';
 import { recordMissionEvent, TOKENS_PER_MISSION } from '../components/missions';
+import NatureScene from '../components/NatureScene';
+import ZoneBand from '../components/ZoneBand';
+import PressScale from '../components/PressScale';
+import SaveFab from '../components/SaveFab';
+import TopBar, { TopBarIcon } from '../components/TopBar';
 
 // Deliberately the thinnest detail screen in the app, because the data behind it
 // is genuinely thin: Nyckel's bird classifier returns a label and a confidence
@@ -120,45 +124,39 @@ export default function BirdDetailScreen({ route }) {
 
   return (
     <SafeAreaView style={styles.container} edges={['top']}>
-      <View style={styles.topBar}>
-        <TouchableOpacity
-          style={styles.iconBtn}
-          onPress={() => navigation.goBack()}
-          accessibilityRole="button"
-          accessibilityLabel={t('common.goBack')}
-        >
-          <BackChevron size={22} color={colors.text} />
-        </TouchableOpacity>
-        <Text style={styles.topTitle} accessibilityRole="header">
-          {t('detail.profileTitle', { category: t('categories.bird.label') })}
-        </Text>
-        <View style={styles.topBarActions}>
-          <TouchableOpacity
-            style={styles.iconBtn}
-            onPress={handleShare}
-            accessibilityRole="button"
-            accessibilityLabel={t('common.shareThisResult')}
-          >
-            <Ionicons name="share-social-outline" size={20} color={colors.text} />
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={styles.iconBtn}
-            onPress={toggleSave}
-            accessibilityRole="button"
-            accessibilityLabel={saved ? t('common.removeFromCollection') : t('common.saveToCollection')}
-          >
-            <Ionicons
-              name={saved ? 'bookmark' : 'bookmark-outline'}
-              size={20}
-              color={saved ? meta.accent : colors.text}
-            />
-          </TouchableOpacity>
-        </View>
-      </View>
+      {/* Cenário em camadas: FIRST child of the root, pointerEvents="none"
+          inside the component, and the container keeps its own backgroundColor
+          underneath - the scene paints over it, never replaces it. */}
+      <NatureScene accent={meta.accent} />
+
+      {/* Shared TopBar: same icons, labels and handlers as the hand-rolled bar
+          it replaces - one component, one truth. */}
+      <TopBar
+        title={t('detail.profileTitle', { category: t('categories.bird.label') })}
+        onBack={() => navigation.goBack()}
+        right={
+          <>
+            <TopBarIcon onPress={handleShare} label={t('common.shareThisResult')}>
+              <Ionicons name="share-social-outline" size={20} color={colors.text} />
+            </TopBarIcon>
+            <TopBarIcon
+              onPress={toggleSave}
+              label={saved ? t('common.removeFromCollection') : t('common.saveToCollection')}
+            >
+              <Ionicons
+                name={saved ? 'bookmark' : 'bookmark-outline'}
+                size={20}
+                color={saved ? meta.accent : colors.text}
+              />
+            </TopBarIcon>
+          </>
+        }
+      />
 
       <ScrollView contentContainerStyle={styles.scroll} showsVerticalScrollIndicator={false}>
         <PlantHero
           photoUri={plant.photoUri}
+          similarImages={plant.similarImages}
           scientific={plant.scientific}
           accent={meta.accent}
           icon={meta.tabIcon}
@@ -191,15 +189,18 @@ export default function BirdDetailScreen({ route }) {
         {!!photo && (
           <SectionCard icon="images-outline" title={t('identify.referenceImagesTitle')} color={colors.info}>
             <Text style={styles.photoHint}>{t('identify.referenceImagesHint')}</Text>
-            <TouchableOpacity
-              activeOpacity={0.9}
-              onPress={() => photo.sourceUrl && Linking.openURL(photo.sourceUrl)}
-              accessibilityRole="imagebutton"
-              accessibilityLabel={plant.name}
-            >
-              <Image source={{ uri: photo.url }} style={styles.refPhoto} resizeMode="cover" />
-              <Text style={styles.photoCredit}>{t('fieldGuide.photoCredit')}</Text>
-            </TouchableOpacity>
+            {/* Press-scale by OUTER wrapper: the Touchable stays byte for byte. */}
+            <PressScale>
+              <TouchableOpacity
+                activeOpacity={0.9}
+                onPress={() => photo.sourceUrl && Linking.openURL(photo.sourceUrl)}
+                accessibilityRole="imagebutton"
+                accessibilityLabel={plant.name}
+              >
+                <Image source={{ uri: photo.url }} style={styles.refPhoto} resizeMode="cover" />
+                <Text style={styles.photoCredit}>{t('fieldGuide.photoCredit')}</Text>
+              </TouchableOpacity>
+            </PressScale>
           </SectionCard>
         )}
 
@@ -212,73 +213,91 @@ export default function BirdDetailScreen({ route }) {
             screen in the app. The curated file fills that gap for the species
             people actually photograph; anything outside it still shows the
             honest placeholder rather than inventing facts. */}
-        {curated ? (
-          <>
-            <SectionCard icon="document-text-outline" title={t('common.overview')} color={meta.accent}>
-              <Text style={styles.body}>{curated.overview}</Text>
+        {/* Zona de cor: everything we can SAY about the species - the reading
+            plus the honesty note that qualifies it - lives in one full-bleed
+            band a shade above the page. ZoneBand is a pure wrapper: the
+            quente-primeiro order of the cards is untouched, and the band is
+            never empty because the coverage note is unconditional. */}
+        <ZoneBand gutter={20}>
+          {curated ? (
+            <>
+              <SectionCard icon="document-text-outline" title={t('common.overview')} color={meta.accent}>
+                <Text style={styles.body}>{curated.overview}</Text>
+              </SectionCard>
+              {!!curated.habitat && (
+                <SectionCard icon="earth-outline" title={t('fieldGuide.habitat')} color={colors.info}>
+                  <Text style={styles.body}>{curated.habitat}</Text>
+                </SectionCard>
+              )}
+              {!!curated.curiosity && (
+                <SectionCard icon="sparkles-outline" title={t('fieldGuide.curiosity')} color={colors.warning}>
+                  <Text style={styles.body}>{curated.curiosity}</Text>
+                </SectionCard>
+              )}
+            </>
+          ) : (
+            /* No curated entry for this species. Nyckel gives an English label and
+               nothing else, so plant.overview here is the literal string "No
+               description available for this bird." - shown in English to all 17
+               languages. Wikipedia in the reader's own language is better on both
+               counts: it says something, and it says it to them. */
+            <SectionCard icon="information-circle-outline" title={t('common.overview')} color={meta.accent}>
+              <TranslatableText
+                text={localised?.text || t('sound.noContentBody')}
+                style={styles.body}
+                showWhenEnglish={!!localised?.text && !localised?.localised}
+              />
+              {!!localised?.url && (
+                <TouchableOpacity onPress={() => Linking.openURL(localised.url)} accessibilityRole="link">
+                  <Text style={styles.sourceLink}>{t('fieldGuide.textCredit')}</Text>
+                </TouchableOpacity>
+              )}
             </SectionCard>
-            {!!curated.habitat && (
-              <SectionCard icon="earth-outline" title={t('fieldGuide.habitat')} color={colors.info}>
-                <Text style={styles.body}>{curated.habitat}</Text>
-              </SectionCard>
-            )}
-            {!!curated.curiosity && (
-              <SectionCard icon="sparkles-outline" title={t('fieldGuide.curiosity')} color={colors.warning}>
-                <Text style={styles.body}>{curated.curiosity}</Text>
-              </SectionCard>
-            )}
-          </>
-        ) : (
-          /* No curated entry for this species. Nyckel gives an English label and
-             nothing else, so plant.overview here is the literal string "No
-             description available for this bird." - shown in English to all 17
-             languages. Wikipedia in the reader's own language is better on both
-             counts: it says something, and it says it to them. */
-          <SectionCard icon="information-circle-outline" title={t('common.overview')} color={meta.accent}>
-            <TranslatableText
-              text={localised?.text || t('sound.noContentBody')}
-              style={styles.body}
-              showWhenEnglish={!!localised?.text && !localised?.localised}
-            />
-            {!!localised?.url && (
-              <TouchableOpacity onPress={() => Linking.openURL(localised.url)} accessibilityRole="link">
-                <Text style={styles.sourceLink}>{t('fieldGuide.textCredit')}</Text>
-              </TouchableOpacity>
-            )}
+          )}
+
+          {/* Honest coverage note. The classifier knows 291 species out of roughly
+              eleven thousand in the world, weighted toward North America - a user
+              photographing a common Brazilian bird can absolutely get a confident
+              wrong answer, and should be told that up front rather than after. */}
+          <SectionCard icon="alert-circle-outline" title={t('detail.coverageNoteTitle')} color={colors.warning}>
+            <Text style={styles.body}>{t('detail.birdCoverageNote')}</Text>
           </SectionCard>
-        )}
+        </ZoneBand>
 
-        {/* Honest coverage note. The classifier knows 291 species out of roughly
-            eleven thousand in the world, weighted toward North America - a user
-            photographing a common Brazilian bird can absolutely get a confident
-            wrong answer, and should be told that up front rather than after. */}
-        <SectionCard icon="alert-circle-outline" title={t('detail.coverageNoteTitle')} color={colors.warning}>
-          <Text style={styles.body}>{t('detail.birdCoverageNote')}</Text>
-        </SectionCard>
-
-        <TouchableOpacity
-          style={[
-            styles.saveBtn,
-            { backgroundColor: meta.accent },
-            saved && { backgroundColor: meta.accentDark },
-          ]}
-          onPress={toggleSave}
-          activeOpacity={0.85}
-          accessibilityRole="button"
-          accessibilityLabel={saved ? t('common.removeFromCollection') : t('common.saveToCollection')}
-        >
-          <Ionicons
-            name={saved ? 'checkmark-circle' : 'add-circle-outline'}
-            size={20}
-            color={colors.white}
-            accessibilityElementsHidden={true}
-            importantForAccessibility="no-hide-descendants"
-          />
-          <Text style={styles.saveBtnText}>{saved ? t('common.saved') : t('common.save')}</Text>
-        </TouchableOpacity>
+        {/* Press-scale by OUTER wrapper: the Touchable stays byte for byte
+            (a11y, handlers, activeOpacity) - on RN-web an Animated.Value on the
+            Touchable's own style would not drive the transform. */}
+        <PressScale>
+          <TouchableOpacity
+            style={[
+              styles.saveBtn,
+              { backgroundColor: meta.accent },
+              saved && { backgroundColor: meta.accentDark },
+            ]}
+            onPress={toggleSave}
+            activeOpacity={0.85}
+            accessibilityRole="button"
+            accessibilityLabel={saved ? t('common.removeFromCollection') : t('common.saveToCollection')}
+          >
+            <Ionicons
+              name={saved ? 'checkmark-circle' : 'add-circle-outline'}
+              size={20}
+              color={colors.white}
+              accessibilityElementsHidden={true}
+              importantForAccessibility="no-hide-descendants"
+            />
+            <Text style={styles.saveBtnText}>{saved ? t('common.saved') : t('common.save')}</Text>
+          </TouchableOpacity>
+        </PressScale>
 
         <InstallNudgeCard show={!!fromIdentify} accent={meta.accent} />
       </ScrollView>
+
+      {/* Floating save pill, absolute WITHIN the screen; styles.scroll carries
+          paddingBottom >= 96 so the pill never covers the last row (the
+          viewport bug in miniature). Gone once saved - the top bookmark takes
+          over as the state indicator. */}
+      <SaveFab onPress={toggleSave} accent={meta.accent} visible={!saved} />
 
       <AlertModal
         visible={!!alertConfig}
@@ -293,24 +312,9 @@ export default function BirdDetailScreen({ route }) {
 
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: colors.background },
-  topBar: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    paddingHorizontal: 16,
-    paddingBottom: 10,
-  },
-  topBarActions: { flexDirection: 'row', gap: 8 },
-  iconBtn: {
-    width: 40,
-    height: 40,
-    borderRadius: 12,
-    backgroundColor: colors.surface,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  topTitle: { fontSize: 16, fontWeight: '700', color: colors.text },
-  scroll: { padding: 20, paddingBottom: 40 },
+  // paddingBottom >= 96: room for the floating SaveFab (doutrina: a pill that
+  // hides the last row is the viewport bug in miniature).
+  scroll: { padding: 20, paddingBottom: 120 },
   nameRow: { flexDirection: 'row', alignItems: 'flex-start', marginTop: 18 },
   name: { fontSize: 24, fontWeight: '800', color: colors.text },
   scientific: { fontSize: 15, fontStyle: 'italic', color: colors.textSecondary, marginTop: 3 },

@@ -1,11 +1,13 @@
-import React, { useState } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, Image, Dimensions } from 'react-native';
+import React, { useState, useRef, useEffect } from 'react';
+import { View, Text, StyleSheet, TouchableOpacity, Image, Dimensions, Animated } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Ionicons } from '@expo/vector-icons';
 import * as Haptics from 'expo-haptics';
 import { useTranslation } from 'react-i18next';
 import CategoryIcon from '../components/CategoryIcon';
+import NatureScene from '../components/NatureScene';
+import PressScale from '../components/PressScale';
 import { colors } from '../components/theme';
 import { CATEGORY_LIST } from '../components/categories';
 import { markOnboardingSeen } from '../components/onboarding';
@@ -24,6 +26,20 @@ const { width } = Dimensions.get('window');
 export default function OnboardingScreen({ onDone }) {
   const { t } = useTranslation();
   const [step, setStep] = useState(0);
+
+  // Micro-animacao (diagramacao-premium): subtle fade+slide when the slide
+  // changes. useNativeDriver:false because this ships on react-native-web.
+  // It only animates opacity/translate of content that is already mounted -
+  // it never delays the press handler or alters any text.
+  const slideIn = useRef(new Animated.Value(1)).current;
+  useEffect(() => {
+    slideIn.setValue(0);
+    Animated.timing(slideIn, {
+      toValue: 1,
+      duration: 260,
+      useNativeDriver: false,
+    }).start();
+  }, [step, slideIn]);
 
   const steps = [
     {
@@ -55,6 +71,9 @@ export default function OnboardingScreen({ onDone }) {
 
   return (
     <SafeAreaView style={styles.container}>
+      {/* Cenario em camadas (diagramacao-premium): first child of the root,
+          pointerEvents none inside, root keeps its backgroundColor beneath. */}
+      <NatureScene />
       <View style={styles.skipRow}>
         {!isLast && (
           <TouchableOpacity
@@ -68,7 +87,22 @@ export default function OnboardingScreen({ onDone }) {
         )}
       </View>
 
-      <View style={styles.body}>
+      <Animated.View
+        style={[
+          styles.body,
+          {
+            opacity: slideIn,
+            transform: [
+              {
+                translateY: slideIn.interpolate({
+                  inputRange: [0, 1],
+                  outputRange: [12, 0],
+                }),
+              },
+            ],
+          },
+        ]}
+      >
         <LinearGradient
           colors={[colors.accent, colors.accentDark]}
           style={styles.iconCircle}
@@ -95,7 +129,7 @@ export default function OnboardingScreen({ onDone }) {
             ))}
           </View>
         )}
-      </View>
+      </Animated.View>
 
       <View style={styles.footer}>
         <View style={styles.dots}>
@@ -104,16 +138,21 @@ export default function OnboardingScreen({ onDone }) {
           ))}
         </View>
 
-        <TouchableOpacity
-          style={styles.cta}
-          onPress={next}
-          activeOpacity={0.85}
-          accessibilityRole="button"
-          accessibilityLabel={isLast ? t('onboarding.start') : t('onboarding.next')}
-        >
-          <Text style={styles.ctaText}>{isLast ? t('onboarding.start') : t('onboarding.next')}</Text>
-          <Ionicons name="arrow-forward" size={18} color={colors.white} />
-        </TouchableOpacity>
+        {/* Press-scale by OUTER wrapper (diagramacao-premium): the Touchable
+            below stays byte for byte - label, role and onPress untouched, so
+            the e2e gate that clicks this CTA sees exactly what it always saw. */}
+        <PressScale>
+          <TouchableOpacity
+            style={styles.cta}
+            onPress={next}
+            activeOpacity={0.85}
+            accessibilityRole="button"
+            accessibilityLabel={isLast ? t('onboarding.start') : t('onboarding.next')}
+          >
+            <Text style={styles.ctaText}>{isLast ? t('onboarding.start') : t('onboarding.next')}</Text>
+            <Ionicons name="arrow-forward" size={18} color={colors.white} />
+          </TouchableOpacity>
+        </PressScale>
       </View>
     </SafeAreaView>
   );

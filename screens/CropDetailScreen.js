@@ -10,7 +10,6 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { useNavigation } from '@react-navigation/native';
 import { useTranslation } from 'react-i18next';
 import { Ionicons } from '@expo/vector-icons';
-import BackChevron from '../components/BackChevron';
 import * as Haptics from 'expo-haptics';
 import PlantHero from '../components/PlantHero';
 import DiseaseReport from '../components/DiseaseReport';
@@ -24,6 +23,11 @@ import AlertModal from '../components/AlertModal';
 import { useAppAlert } from '../components/useAppAlert';
 import { addTokens } from '../components/achievements';
 import { recordMissionEvent, TOKENS_PER_MISSION } from '../components/missions';
+import NatureScene from '../components/NatureScene';
+import ZoneBand from '../components/ZoneBand';
+import PressScale from '../components/PressScale';
+import SaveFab from '../components/SaveFab';
+import TopBar, { TopBarIcon } from '../components/TopBar';
 
 export default function CropDetailScreen({ route }) {
   const navigation = useNavigation();
@@ -81,43 +85,39 @@ export default function CropDetailScreen({ route }) {
 
   return (
     <SafeAreaView style={styles.container} edges={['top']}>
-      <View style={styles.topBar}>
-        <TouchableOpacity
-          style={styles.iconBtn}
-          onPress={() => navigation.goBack()}
-          accessibilityRole="button"
-          accessibilityLabel={t('common.goBack')}
-        >
-          <BackChevron size={22} color={colors.text} />
-        </TouchableOpacity>
-        <Text style={styles.topTitle} accessibilityRole="header">{t('detail.cropHealthReportTitle')}</Text>
-        <View style={styles.topBarActions}>
-          <TouchableOpacity
-            style={styles.iconBtn}
-            onPress={handleShare}
-            accessibilityRole="button"
-            accessibilityLabel={t('common.shareThisResult')}
-          >
-            <Ionicons name="share-social-outline" size={20} color={colors.text} />
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={styles.iconBtn}
-            onPress={toggleSave}
-            accessibilityRole="button"
-            accessibilityLabel={saved ? t('common.removeFromCollection') : t('common.saveToCollection')}
-          >
-            <Ionicons
-              name={saved ? 'bookmark' : 'bookmark-outline'}
-              size={20}
-              color={saved ? meta.accent : colors.text}
-            />
-          </TouchableOpacity>
-        </View>
-      </View>
+      {/* Cenário em camadas: FIRST child of the root, pointerEvents="none"
+          inside the component, and the container keeps its own backgroundColor
+          underneath - the scene paints over it, never replaces it. */}
+      <NatureScene accent={meta.accent} />
+
+      {/* Shared TopBar: same icons, labels and handlers as the hand-rolled bar
+          it replaces - one component, one truth. */}
+      <TopBar
+        title={t('detail.cropHealthReportTitle')}
+        onBack={() => navigation.goBack()}
+        right={
+          <>
+            <TopBarIcon onPress={handleShare} label={t('common.shareThisResult')}>
+              <Ionicons name="share-social-outline" size={20} color={colors.text} />
+            </TopBarIcon>
+            <TopBarIcon
+              onPress={toggleSave}
+              label={saved ? t('common.removeFromCollection') : t('common.saveToCollection')}
+            >
+              <Ionicons
+                name={saved ? 'bookmark' : 'bookmark-outline'}
+                size={20}
+                color={saved ? meta.accent : colors.text}
+              />
+            </TopBarIcon>
+          </>
+        }
+      />
 
       <ScrollView contentContainerStyle={styles.scroll} showsVerticalScrollIndicator={false}>
         <PlantHero
           photoUri={plant.photoUri}
+          similarImages={plant.similarImages}
           scientific={plant.scientific}
           accent={meta.accent}
           icon={meta.tabIcon}
@@ -145,29 +145,46 @@ export default function CropDetailScreen({ route }) {
           <Text style={[styles.typePillText, { color: meta.accent }]}>{t('detail.cropPill')}</Text>
         </View>
 
-        <DiseaseReport disease={disease} />
+        {/* Zona de cor: the health report - the reason the screen exists - is
+            the one full-bleed band here, a shade above the page. ZoneBand is a
+            pure wrapper (order and content untouched), and DiseaseReport always
+            renders something: the healthy card when there is no disease. */}
+        <ZoneBand gutter={20}>
+          <DiseaseReport disease={disease} />
+        </ZoneBand>
 
-        <TouchableOpacity
-          style={[styles.saveBtn, { backgroundColor: meta.accent }, saved && { backgroundColor: meta.accentDark }]}
-          onPress={toggleSave}
-          activeOpacity={0.85}
-          accessibilityRole="button"
-          accessibilityLabel={saved ? t('common.removeFromCollection') : t('common.saveToCollection')}
-        >
-          <Ionicons
-            name={saved ? 'checkmark-circle' : 'add-circle-outline'}
-            size={20}
-            color={colors.white}
-            accessibilityElementsHidden={true}
-            importantForAccessibility="no-hide-descendants"
-          />
-          <Text style={styles.saveBtnText}>
-            {saved ? t('common.saved') : t('common.save')}
-          </Text>
-        </TouchableOpacity>
+        {/* Press-scale by OUTER wrapper: the Touchable stays byte for byte
+            (a11y, handlers, activeOpacity) - on RN-web an Animated.Value on the
+            Touchable's own style would not drive the transform. */}
+        <PressScale>
+          <TouchableOpacity
+            style={[styles.saveBtn, { backgroundColor: meta.accent }, saved && { backgroundColor: meta.accentDark }]}
+            onPress={toggleSave}
+            activeOpacity={0.85}
+            accessibilityRole="button"
+            accessibilityLabel={saved ? t('common.removeFromCollection') : t('common.saveToCollection')}
+          >
+            <Ionicons
+              name={saved ? 'checkmark-circle' : 'add-circle-outline'}
+              size={20}
+              color={colors.white}
+              accessibilityElementsHidden={true}
+              importantForAccessibility="no-hide-descendants"
+            />
+            <Text style={styles.saveBtnText}>
+              {saved ? t('common.saved') : t('common.save')}
+            </Text>
+          </TouchableOpacity>
+        </PressScale>
 
         <InstallNudgeCard show={!!fromIdentify} accent={meta.accent} />
       </ScrollView>
+
+      {/* Floating save pill, absolute WITHIN the screen; styles.scroll carries
+          paddingBottom >= 96 so the pill never covers the last row (the
+          viewport bug in miniature). Gone once saved - the top bookmark takes
+          over as the state indicator. */}
+      <SaveFab onPress={toggleSave} accent={meta.accent} visible={!saved} />
 
       <AlertModal
         visible={!!alertConfig}
@@ -182,24 +199,9 @@ export default function CropDetailScreen({ route }) {
 
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: colors.background },
-  topBar: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    paddingHorizontal: 16,
-    paddingBottom: 10,
-  },
-  topBarActions: { flexDirection: 'row', gap: 8 },
-  iconBtn: {
-    width: 40,
-    height: 40,
-    borderRadius: 12,
-    backgroundColor: colors.surface,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  topTitle: { fontSize: 16, fontWeight: '700', color: colors.text },
-  scroll: { padding: 20, paddingBottom: 40 },
+  // paddingBottom >= 96: room for the floating SaveFab (doutrina: a pill that
+  // hides the last row is the viewport bug in miniature).
+  scroll: { padding: 20, paddingBottom: 120 },
   nameRow: { flexDirection: 'row', alignItems: 'flex-start', marginTop: 18 },
   name: { fontSize: 24, fontWeight: '800', color: colors.text },
   scientific: { fontSize: 15, fontStyle: 'italic', color: colors.textSecondary, marginTop: 3 },

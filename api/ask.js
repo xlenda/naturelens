@@ -1,4 +1,4 @@
-const { requireDeviceId } = require('./_lib/supabaseAdmin');
+const { requireDeviceId, getSupabaseAdmin } = require('./_lib/supabaseAdmin');
 const { checkRateLimit } = require('./_lib/rateLimit');
 
 // "Fale com um especialista" - real AI, replacing the keyword matcher.
@@ -84,6 +84,32 @@ module.exports = async (req, res) => {
 
   const deviceId = requireDeviceId(req, res);
   if (!deviceId) return;
+
+  // Report branch - Google Play's AI-Generated Content policy requires an
+  // in-app way to flag an offensive AI answer, and this app has exactly one
+  // generative surface (this chat). Piggybacks on this endpoint on purpose:
+  // Vercel Hobby caps serverless functions, and a report is chat traffic.
+  // Storage is ai_reports (supabase-migration-ai-reports.sql); if the table
+  // is missing the report is still acknowledged - the user did their part,
+  // and the log line keeps the signal until the migration runs.
+  if (req.body?.report) {
+    const flagged = String(req.body.report.message || '').trim().slice(0, 2000);
+    if (!flagged) {
+      res.status(400).json({ error: 'Missing report' });
+      return;
+    }
+    try {
+      const admin = getSupabaseAdmin();
+      const { error } = await admin
+        .from('ai_reports')
+        .insert({ device_id: deviceId, message: flagged });
+      if (error) console.error('ai_reports insert failed:', error.message);
+    } catch (e) {
+      console.error('ai report not persisted (table missing?):', e?.message);
+    }
+    res.status(200).json({ reported: true });
+    return;
+  }
 
   const messages = Array.isArray(req.body?.messages) ? req.body.messages : null;
   if (!messages || messages.length === 0) {

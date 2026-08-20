@@ -3,7 +3,6 @@ import { View, Text, StyleSheet, ScrollView, TouchableOpacity, Image, Linking } 
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useNavigation } from '@react-navigation/native';
 import { Ionicons } from '@expo/vector-icons';
-import BackChevron from '../components/BackChevron';
 import * as Haptics from 'expo-haptics';
 import { useTranslation } from 'react-i18next';
 import PlantHero from '../components/PlantHero';
@@ -21,6 +20,11 @@ import { addTokens } from '../components/achievements';
 import { recordMissionEvent, TOKENS_PER_MISSION } from '../components/missions';
 import { getLocalisedOverview, looksLikeProse } from '../components/localisedOverview';
 import TranslatableText from '../components/TranslatableText';
+import NatureScene from '../components/NatureScene';
+import ZoneBand from '../components/ZoneBand';
+import PressScale from '../components/PressScale';
+import SaveFab from '../components/SaveFab';
+import TopBar, { TopBarIcon } from '../components/TopBar';
 
 // Modelled on TreeDetailScreen, minus everything that only makes sense for a
 // plant: no watering tracker, no light/soil guide, no "mark as watered". Fish
@@ -156,9 +160,11 @@ export default function FishDetailScreen({ route }) {
     return false;
   };
 
+  // commonNames left this list for the identity block under the scientific
+  // name - a fish's everyday names are who it IS, not a receipt row ("quente
+  // primeiro, ficha depois"). Synonyms and origin stay here: they are the ficha.
   const infoRows = [
     { label: t('common.nativeOrigin'), value: plant.origin },
-    { label: t('detail.commonNames'), value: plant.commonNames },
     { label: t('detail.synonyms'), value: plant.synonyms },
   ].filter((r) => r.value);
 
@@ -169,45 +175,39 @@ export default function FishDetailScreen({ route }) {
 
   return (
     <SafeAreaView style={styles.container} edges={['top']}>
-      <View style={styles.topBar}>
-        <TouchableOpacity
-          style={styles.iconBtn}
-          onPress={() => navigation.goBack()}
-          accessibilityRole="button"
-          accessibilityLabel={t('common.goBack')}
-        >
-          <BackChevron size={22} color={colors.text} />
-        </TouchableOpacity>
-        <Text style={styles.topTitle} accessibilityRole="header">
-          {t('detail.profileTitle', { category: t('categories.fish.label') })}
-        </Text>
-        <View style={styles.topBarActions}>
-          <TouchableOpacity
-            style={styles.iconBtn}
-            onPress={handleShare}
-            accessibilityRole="button"
-            accessibilityLabel={t('common.shareThisResult')}
-          >
-            <Ionicons name="share-social-outline" size={20} color={colors.text} />
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={styles.iconBtn}
-            onPress={toggleSave}
-            accessibilityRole="button"
-            accessibilityLabel={saved ? t('common.removeFromCollection') : t('common.saveToCollection')}
-          >
-            <Ionicons
-              name={saved ? 'bookmark' : 'bookmark-outline'}
-              size={20}
-              color={saved ? meta.accent : colors.text}
-            />
-          </TouchableOpacity>
-        </View>
-      </View>
+      {/* Cenário em camadas: FIRST child of the root, pointerEvents="none"
+          inside the component, and the container keeps its own backgroundColor
+          underneath - the scene paints over it, never replaces it. */}
+      <NatureScene accent={meta.accent} />
+
+      {/* Shared TopBar: same icons, labels and handlers as the hand-rolled bar
+          it replaces - one component, one truth. */}
+      <TopBar
+        title={t('detail.profileTitle', { category: t('categories.fish.label') })}
+        onBack={() => navigation.goBack()}
+        right={
+          <>
+            <TopBarIcon onPress={handleShare} label={t('common.shareThisResult')}>
+              <Ionicons name="share-social-outline" size={20} color={colors.text} />
+            </TopBarIcon>
+            <TopBarIcon
+              onPress={toggleSave}
+              label={saved ? t('common.removeFromCollection') : t('common.saveToCollection')}
+            >
+              <Ionicons
+                name={saved ? 'bookmark' : 'bookmark-outline'}
+                size={20}
+                color={saved ? meta.accent : colors.text}
+              />
+            </TopBarIcon>
+          </>
+        }
+      />
 
       <ScrollView contentContainerStyle={styles.scroll} showsVerticalScrollIndicator={false}>
         <PlantHero
           photoUri={plant.photoUri}
+          similarImages={plant.similarImages}
           scientific={plant.scientific}
           accent={meta.accent}
           icon={meta.tabIcon}
@@ -217,6 +217,14 @@ export default function FishDetailScreen({ route }) {
           <View style={{ flex: 1 }}>
             <Text style={styles.name}>{plant.name}</Text>
             {!!plant.scientific && <Text style={styles.scientific}>{plant.scientific}</Text>}
+            {/* Moved out of the Details receipt: the names people actually call
+                this fish belong with its name, not in the ficha at the bottom.
+                Same text, same i18n key - only the place changed. */}
+            {!!plant.commonNames && (
+              <Text style={styles.commonNamesLine}>
+                {t('detail.commonNames')}: {plant.commonNames}
+              </Text>
+            )}
           </View>
           <View style={styles.confidenceBadge}>
             <Text style={styles.confidenceLabel}>{t('common.confidence')}</Text>
@@ -255,39 +263,51 @@ export default function FishDetailScreen({ route }) {
             See looksLikeProse: Fishial's description for a clownfish is a
             fin-ray count table, and no amount of translating makes that the
             right thing to lead with. */}
+        {/* Zona de cor #1: the reading matter - overview plus the technical
+            description - lives in one full-bleed band a shade above the page.
+            ZoneBand is a pure wrapper: the quente-primeiro order (readable text
+            first, fin-ray counts after) is untouched. `secondary` can only
+            exist when `lead` does (see its derivation), so nesting it here
+            changes nothing. */}
         {!!lead && (
-          <SectionCard icon="fish-outline" title={t('common.overview')} color={meta.accent}>
-            {/* Wikipedia may have answered in English when the reader's
-                language has no article. Offer the button there too - it is the
-                same leaked-English problem, just from a different source. */}
-            <TranslatableText text={lead} style={styles.body} showWhenEnglish={stillEnglish(lead)} />
-            {lead === localised?.text && !!localised?.url && (
-              <TouchableOpacity onPress={() => Linking.openURL(localised.url)} accessibilityRole="link">
-                <Text style={styles.sourceLink}>{t('fieldGuide.textCredit')}</Text>
-              </TouchableOpacity>
+          <ZoneBand gutter={20}>
+            <SectionCard icon="fish-outline" title={t('common.overview')} color={meta.accent}>
+              {/* Wikipedia may have answered in English when the reader's
+                  language has no article. Offer the button there too - it is the
+                  same leaked-English problem, just from a different source. */}
+              <TranslatableText text={lead} style={styles.body} showWhenEnglish={stillEnglish(lead)} />
+              {lead === localised?.text && !!localised?.url && (
+                <TouchableOpacity onPress={() => Linking.openURL(localised.url)} accessibilityRole="link">
+                  <Text style={styles.sourceLink}>{t('fieldGuide.textCredit')}</Text>
+                </TouchableOpacity>
+              )}
+            </SectionCard>
+
+            {!!secondary && (
+              <SectionCard
+                icon="school-outline"
+                title={t('common.technicalDescription')}
+                color={colors.info}
+              >
+                <TranslatableText text={secondary} style={styles.body} showWhenEnglish={stillEnglish(secondary)} />
+                {secondary === plant.overviewOriginal && (
+                  <Text style={styles.sourceNote}>{t('common.vendorEnglishNote')}</Text>
+                )}
+              </SectionCard>
             )}
-          </SectionCard>
+          </ZoneBand>
         )}
 
-        {!!secondary && (
-          <SectionCard
-            icon="school-outline"
-            title={t('common.technicalDescription')}
-            color={colors.info}
-          >
-            <TranslatableText text={secondary} style={styles.body} showWhenEnglish={stillEnglish(secondary)} />
-            {secondary === plant.overviewOriginal && (
-              <Text style={styles.sourceNote}>{t('common.vendorEnglishNote')}</Text>
-            )}
-          </SectionCard>
-        )}
-
+        {/* Zona de cor #2: the receipt. The ficha closes the screen in its own
+            band, and the gap between the bands is the scene showing through. */}
         {infoRows.length > 0 && (
-          <SectionCard icon="finger-print-outline" title={t('common.details')} color={colors.purple}>
-            {infoRows.map((row) => (
-              <InfoRow key={row.label} label={row.label} value={row.value} />
-            ))}
-          </SectionCard>
+          <ZoneBand gutter={20}>
+            <SectionCard icon="finger-print-outline" title={t('common.details')} color={colors.purple}>
+              {infoRows.map((row) => (
+                <InfoRow key={row.label} label={row.label} value={row.value} />
+              ))}
+            </SectionCard>
+          </ZoneBand>
         )}
 
         {/* The species reference photo used to be rendered here as its own card.
@@ -295,29 +315,40 @@ export default function FishDetailScreen({ route }) {
             `similarImages` from the same Fishial photo for every category
             uniformly - keeping both would show the identical image twice. */}
 
-        <TouchableOpacity
-          style={[
-            styles.saveBtn,
-            { backgroundColor: meta.accent },
-            saved && { backgroundColor: meta.accentDark },
-          ]}
-          onPress={toggleSave}
-          activeOpacity={0.85}
-          accessibilityRole="button"
-          accessibilityLabel={saved ? t('common.removeFromCollection') : t('common.saveToCollection')}
-        >
-          <Ionicons
-            name={saved ? 'checkmark-circle' : 'add-circle-outline'}
-            size={20}
-            color={colors.white}
-            accessibilityElementsHidden={true}
-            importantForAccessibility="no-hide-descendants"
-          />
-          <Text style={styles.saveBtnText}>{saved ? t('common.saved') : t('common.save')}</Text>
-        </TouchableOpacity>
+        {/* Press-scale by OUTER wrapper: the Touchable stays byte for byte
+            (a11y, handlers, activeOpacity) - on RN-web an Animated.Value on the
+            Touchable's own style would not drive the transform. */}
+        <PressScale>
+          <TouchableOpacity
+            style={[
+              styles.saveBtn,
+              { backgroundColor: meta.accent },
+              saved && { backgroundColor: meta.accentDark },
+            ]}
+            onPress={toggleSave}
+            activeOpacity={0.85}
+            accessibilityRole="button"
+            accessibilityLabel={saved ? t('common.removeFromCollection') : t('common.saveToCollection')}
+          >
+            <Ionicons
+              name={saved ? 'checkmark-circle' : 'add-circle-outline'}
+              size={20}
+              color={colors.white}
+              accessibilityElementsHidden={true}
+              importantForAccessibility="no-hide-descendants"
+            />
+            <Text style={styles.saveBtnText}>{saved ? t('common.saved') : t('common.save')}</Text>
+          </TouchableOpacity>
+        </PressScale>
 
         <InstallNudgeCard show={!!fromIdentify} accent={meta.accent} />
       </ScrollView>
+
+      {/* Floating save pill, absolute WITHIN the screen; styles.scroll carries
+          paddingBottom >= 96 so the pill never covers the last row (the
+          viewport bug in miniature). Gone once saved - the top bookmark takes
+          over as the state indicator. */}
+      <SaveFab onPress={toggleSave} accent={meta.accent} visible={!saved} />
 
       <AlertModal
         visible={!!alertConfig}
@@ -332,27 +363,13 @@ export default function FishDetailScreen({ route }) {
 
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: colors.background },
-  topBar: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    paddingHorizontal: 16,
-    paddingBottom: 10,
-  },
-  topBarActions: { flexDirection: 'row', gap: 8 },
-  iconBtn: {
-    width: 40,
-    height: 40,
-    borderRadius: 12,
-    backgroundColor: colors.surface,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  topTitle: { fontSize: 16, fontWeight: '700', color: colors.text },
-  scroll: { padding: 20, paddingBottom: 40 },
+  // paddingBottom >= 96: room for the floating SaveFab (doutrina: a pill that
+  // hides the last row is the viewport bug in miniature).
+  scroll: { padding: 20, paddingBottom: 120 },
   nameRow: { flexDirection: 'row', alignItems: 'flex-start', marginTop: 18 },
   name: { fontSize: 24, fontWeight: '800', color: colors.text },
   scientific: { fontSize: 15, fontStyle: 'italic', color: colors.textSecondary, marginTop: 3 },
+  commonNamesLine: { fontSize: 12.5, color: colors.textMuted, marginTop: 4 },
   confidenceBadge: {
     backgroundColor: colors.accentDark + '33',
     borderRadius: 12,

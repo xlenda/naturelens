@@ -143,24 +143,33 @@ export default function SubscriptionScreen() {
         {!isActive && !isUnknown && (
           <ZoneBand gutter={20} style={styles.zoneGap}>
             <Text style={styles.sectionTitle}>{t('subscription.plansTitle')}</Text>
-            {PLAN_ORDER.map((plan) => (
-              <View key={plan} style={styles.planRow}>
-                <Text style={styles.planName}>{t(`paywall.${plan}Plan`)}</Text>
-                <Text style={styles.planPrice}>${PLAN_PRICES[plan]}</Text>
-              </View>
-            ))}
+            {Platform.OS === 'web' ? (
+              <>
+                {PLAN_ORDER.map((plan) => (
+                  <View key={plan} style={styles.planRow}>
+                    <Text style={styles.planName}>{t(`paywall.${plan}Plan`)}</Text>
+                    <Text style={styles.planPrice}>${PLAN_PRICES[plan]}</Text>
+                  </View>
+                ))}
 
-            <PressScale>
-              <TouchableOpacity
-                style={styles.primaryBtn}
-                onPress={openPaywall}
-                activeOpacity={0.85}
-                accessibilityRole="button"
-                accessibilityLabel={t('paywall.subscribe')}
-              >
-                <Text style={styles.primaryBtnText}>{t('paywall.subscribe')}</Text>
-              </TouchableOpacity>
-            </PressScale>
+                <PressScale>
+                  <TouchableOpacity
+                    style={styles.primaryBtn}
+                    onPress={openPaywall}
+                    activeOpacity={0.85}
+                    accessibilityRole="button"
+                    accessibilityLabel={t('paywall.subscribe')}
+                  >
+                    <Text style={styles.primaryBtnText}>{t('paywall.subscribe')}</Text>
+                  </TouchableOpacity>
+                </PressScale>
+              </>
+            ) : (
+              // Store builds show no price table and no purchase CTA (Play
+              // Billing policy). Plain text naming the website - without a
+              // link - is the consumption-only wording Google's FAQ allows.
+              <Text style={styles.manageBody}>{t('paywall.webOnlyBody')}</Text>
+            )}
           </ZoneBand>
         )}
 
@@ -169,18 +178,27 @@ export default function SubscriptionScreen() {
             {/* The cancellation answer, stated plainly instead of buried. */}
             <Text style={styles.sectionTitle}>{t('subscription.manageTitle')}</Text>
             <Text style={styles.manageBody}>{t('subscription.manageBody')}</Text>
-            <PressScale>
-              <TouchableOpacity
-                style={styles.secondaryBtn}
-                onPress={openHotmart}
-                activeOpacity={0.85}
-                accessibilityRole="button"
-                accessibilityLabel={t('subscription.openHotmart')}
-              >
-                <Ionicons name="open-outline" size={17} color={colors.text} />
-                <Text style={styles.secondaryBtnText}>{t('subscription.openHotmart')}</Text>
-              </TouchableOpacity>
-            </PressScale>
+            {Platform.OS === 'web' ? (
+              <PressScale>
+                <TouchableOpacity
+                  style={styles.secondaryBtn}
+                  onPress={openHotmart}
+                  activeOpacity={0.85}
+                  accessibilityRole="button"
+                  accessibilityLabel={t('subscription.openHotmart')}
+                >
+                  <Ionicons name="open-outline" size={17} color={colors.text} />
+                  <Text style={styles.secondaryBtnText}>{t('subscription.openHotmart')}</Text>
+                </TouchableOpacity>
+              </PressScale>
+            ) : (
+              // No tappable external link in the store build - the address as
+              // selectable text keeps the cancellation path honest without a
+              // CTA the review could read as an outside-billing flow.
+              <Text style={styles.manageBody} selectable>
+                {HOTMART_ACCOUNT_URL}
+              </Text>
+            )}
           </ZoneBand>
         )}
 

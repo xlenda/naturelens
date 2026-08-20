@@ -70,3 +70,18 @@ export async function askSpecialist(history, context) {
 
   return { text: data.text };
 }
+
+/**
+ * Flags one AI answer as offensive/wrong (Google Play's AI-generated-content
+ * policy requires an in-app report path). Fire-and-forget from the UI's point
+ * of view: the tap is acknowledged optimistically, and a lost report is not
+ * worth an error dialog in a chat.
+ */
+export async function reportSpecialistAnswer(text) {
+  const deviceId = await getDeviceId();
+  await fetch(`${API_BASE}/api/ask`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ deviceId, report: { message: String(text || '').slice(0, 2000) } }),
+  });
+}

@@ -9,8 +9,11 @@ export const LANGUAGE_STORAGE_KEY = '@textmarker_language';
 // Locale JSON files live in public/locales/ and are fetched on demand instead
 // of bundled into the JS - with 17 languages, bundling them all upfront would
 // add ~180KB to every single visitor's first load, even ones who only ever
-// use one language.
-const API_BASE = Platform.OS === 'web' ? '' : 'https://dist-coral-seven-83.vercel.app';
+// use one language. Two native-only exceptions (see loadLanguage/initI18n):
+// English ships in the native bundle and fetched languages are cached in
+// AsyncStorage, because a store build has no service worker to fall back on.
+import { API_BASE } from './components/apiBase';
+import bundledEn from './components/bundledEn';
 
 export const SUPPORTED_LANGUAGES = [
   { code: 'en', label: 'English' },
@@ -54,11 +57,34 @@ function applyDocumentDirection(code) {
 
 async function loadLanguage(code) {
   if (loadedLanguages.has(code)) return;
-  const response = await fetch(`${API_BASE}/locales/${code}.json`);
-  if (!response.ok) throw new Error(`Could not load locale "${code}"`);
-  const translation = await response.json();
+
+  let translation = null;
+  try {
+    const response = await fetch(`${API_BASE}/locales/${code}.json`);
+    if (response.ok) translation = await response.json();
+  } catch (e) {
+    // offline / DNS failure - the native cache below may still save the day
+  }
+
+  // Native fallback: the last successfully fetched copy. Freshness comes from
+  // the fetch above always running first; the cache only answers when the
+  // network can't.
+  const cacheKey = `@naturelens_locale_${code}`;
+  if (!translation && Platform.OS !== 'web') {
+    try {
+      const cached = await AsyncStorage.getItem(cacheKey);
+      if (cached) translation = JSON.parse(cached);
+    } catch (e) {
+      // corrupt cache reads as missing
+    }
+  }
+  if (!translation) throw new Error(`Could not load locale "${code}"`);
+
   i18n.addResourceBundle(code, 'translation', translation, true, true);
   loadedLanguages.add(code);
+  if (Platform.OS !== 'web') {
+    AsyncStorage.setItem(cacheKey, JSON.stringify(translation)).catch(() => {});
+  }
 }
 
 function detectDeviceLanguage() {
@@ -83,6 +109,13 @@ export async function initI18n() {
     fallbackLng: 'en',
     interpolation: { escapeValue: false },
   });
+
+  // Native ships English inside the bundle (components/bundledEn.native.js);
+  // on web this is null and the fetch path below stays exactly as it was.
+  if (bundledEn) {
+    i18n.addResourceBundle('en', 'translation', bundledEn, true, true);
+    loadedLanguages.add('en');
+  }
 
   await loadLanguage('en');
   if (initialLang !== 'en') {

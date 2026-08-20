@@ -286,6 +286,17 @@ async function handleDelete(req, res, deviceId) {
     }
   }
 
+  // Everything keyed to this account must go, not just the two original
+  // tables: the synced collection is keyed by EMAIL (api/collection.js) and
+  // push subscriptions by device_id. Leaving either behind contradicts the
+  // "removes your saved data from our servers" promise in the UI - and
+  // Google Play's account-deletion policy requires associated data to be
+  // actually removed.
+  if (sub?.email) {
+    const normalizedEmail = sub.email.trim().toLowerCase();
+    await admin.from('collection_entries').delete().eq('email', normalizedEmail);
+  }
+  await admin.from('push_subscriptions').delete().eq('device_id', deviceId);
   await admin.from('subscriptions').delete().eq('device_id', deviceId);
   await admin.from('category_usage').delete().eq('device_id', deviceId);
 

@@ -221,7 +221,22 @@ export async function evaluateAchievements({ subStatus } = {}) {
     await setState({ ...state, unlocked, tokens });
   }
 
-  return { newlyUnlocked, unlocked };
+  // {current, target} for the COUNTABLE achievements only, derived from the
+  // same numbers the `met` map above already used - never a second source of
+  // truth. Additive field: existing callers that destructure only
+  // { newlyUnlocked, unlocked } are untouched. Locked + countable implies
+  // current < target, because crossing the target unlocks it in this same call.
+  const progress = {
+    collector10: { current: collection.length, target: 10 },
+    collector50: { current: collection.length, target: 50 },
+    collector100: { current: collection.length, target: 100 },
+    allCategories: { current: categoriesSaved.size, target: CATEGORY_LIST.length },
+    streak3: { current: state.longestStreak, target: 3 },
+    streak7: { current: state.longestStreak, target: 7 },
+    streak30: { current: state.longestStreak, target: 30 },
+  };
+
+  return { newlyUnlocked, unlocked, progress };
 }
 
 export async function clearAchievements() {

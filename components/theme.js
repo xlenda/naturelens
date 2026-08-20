@@ -35,6 +35,28 @@ export const categoryColors = {
   Water: '#5AA9C9',
 };
 
+// Type scale - the single source of truth for text roles. Before this
+// existed each screen improvised: sectionTitle was 22/800-centred in
+// Discover/Subscription but 15/700-left in MonthlyRecap, and the doctrine
+// ("section titles centre; card titles and running text stay left") lived
+// only in memory. Spread these into StyleSheet entries; screens may still
+// override spacing, never size/weight/alignment.
+export const type = {
+  screenTitle: { fontSize: 24, fontWeight: '800', color: colors.text },
+  sectionTitle: {
+    fontSize: 22,
+    fontWeight: '800',
+    color: colors.text,
+    textAlign: 'center',
+    marginTop: 34,
+    marginBottom: 14,
+  },
+  cardTitle: { fontSize: 15, fontWeight: '700', color: colors.text },
+  body: { fontSize: 14, lineHeight: 21, color: colors.textSecondary },
+  caption: { fontSize: 12.5, color: colors.textMuted },
+  topTitle: { fontSize: 16, fontWeight: '700', color: colors.text },
+};
+
 export const shadow = {
   shadowColor: '#000',
   shadowOffset: { width: 0, height: 2 },

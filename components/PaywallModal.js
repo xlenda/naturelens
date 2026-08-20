@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, Platform } from 'react-native';
 import { useTranslation } from 'react-i18next';
 import { colors, shadow } from './theme';
 import { PLAN_PRICES, PLAN_ORDER, getPlanSavingPercent, isCheckoutConfigured } from './subscription';
@@ -22,6 +22,32 @@ export default function PaywallModal({ visible, title, body, categoryLabel, acce
 
   const symbol = '$';
   const configured = isCheckoutConfigured();
+
+  // Store builds must not render a purchase surface: Google Play's payments
+  // policy forbids prices/CTAs for a subscription sold outside Play Billing.
+  // What IS allowed (their FAQ, verbatim class of example: "Go to our website
+  // to upgrade your subscription") is plain text with no link - so the native
+  // modal explains the limit and mentions the website, and nothing more.
+  if (Platform.OS !== 'web') {
+    return (
+      <View style={styles.backdrop}>
+        <View style={styles.card}>
+          <Text style={styles.title}>{title || t('paywall.title')}</Text>
+          <Text style={styles.body}>{body || t('paywall.body', { category: categoryLabel })}</Text>
+          <Text style={styles.body}>{t('paywall.webOnlyBody')}</Text>
+          <TouchableOpacity
+            style={styles.cancelBtn}
+            onPress={onCancel}
+            activeOpacity={0.7}
+            accessibilityRole="button"
+            accessibilityLabel={t('common.close')}
+          >
+            <Text style={styles.cancelBtnText}>{t('common.close')}</Text>
+          </TouchableOpacity>
+        </View>
+      </View>
+    );
+  }
 
   return (
     <View style={styles.backdrop}>
