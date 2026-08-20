@@ -20,7 +20,7 @@ import DiseaseReport from '../components/DiseaseReport';
 import { colors } from '../components/theme';
 import { getCollection, saveToCollection, removeFromCollection, updateCollectionEntry } from '../components/storage';
 import { CATEGORIES } from '../components/categories';
-import { getWateringStatus } from '../components/watering';
+import { getWateringStatus, WATER_INTERVAL_DAYS } from '../components/watering';
 import { identify } from '../components/identify';
 import { shareEntity } from '../components/share';
 import InstallNudgeCard from '../components/InstallNudgeCard';
