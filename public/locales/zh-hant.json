@@ -30,7 +30,9 @@
     "vendorEnglishNote": "來自辨識服務，英文原文。",
     "translate": "翻譯",
     "translating": "翻譯中…",
-    "translateFailed": "目前無法翻譯。"
+    "translateFailed": "目前無法翻譯。",
+    "yes": "是",
+    "no": "否"
   },
   "auth": {
     "title": "登入以開始辨識",
@@ -232,7 +234,15 @@
     "referencePhoto": "參考照片",
     "referencePhotoAlt": "{{name}} 的參考照片",
     "coverageNoteTitle": "關於此結果",
-    "birdCoverageNote": "鳥類辨識涵蓋 291 個物種，以北美地區為主。列表之外的鳥類即使信心度很高也可能被誤判，請將結果作為參考起點。"
+    "birdCoverageNote": "鳥類辨識涵蓋 291 個物種，以北美地區為主。列表之外的鳥類即使信心度很高也可能被誤判，請將結果作為參考起點。",
+    "tabSummary": "概覽",
+    "tabCare": "養護",
+    "tabExplore": "探索",
+    "quickFacts": "速覽",
+    "actionNew": "重新拍照",
+    "wasHelpful": "這有幫助嗎？",
+    "pronounceLabel": "聽發音",
+    "askSpecialistCta": "對這個物種有疑問？問問專家"
   },
   "disease": {
     "overviewSection": "概觀",

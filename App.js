@@ -41,6 +41,7 @@ import HelpScreen from './screens/HelpScreen';
 import RestoreAccessScreen from './screens/RestoreAccessScreen';
 import SettingsScreen from './screens/SettingsScreen';
 import LanguageScreen from './screens/LanguageScreen';
+import CareTopicsScreen from './screens/CareTopicsScreen';
 import AboutScreen from './screens/AboutScreen';
 import { colors } from './components/theme';
 import { CATEGORIES } from './components/categories';
@@ -96,6 +97,7 @@ function makeScanStackNav(categoryKey) {
       <ScanStack.Navigator screenOptions={STACK_OPTIONS}>
         <ScanStack.Screen name="ScanHome" component={IdentifyScreen} initialParams={{ category: categoryKey }} />
         <ScanStack.Screen name={meta.detailRoute} component={DetailScreen} />
+        <ScanStack.Screen name="CareTopics" component={CareTopicsScreen} />
       </ScanStack.Navigator>
     );
   };
@@ -119,6 +121,7 @@ function SoundStackNav() {
     <ScanStack.Navigator screenOptions={STACK_OPTIONS}>
       <ScanStack.Screen name="SoundHome" component={SoundScreen} />
       <ScanStack.Screen name="SoundDetail" component={SoundDetailScreen} />
+      <ScanStack.Screen name="CareTopics" component={CareTopicsScreen} />
     </ScanStack.Navigator>
   );
 }
@@ -139,6 +142,7 @@ function CollectionStackNav() {
       <CollectionStack.Screen name="FishDetail" component={FishDetailScreen} />
       <CollectionStack.Screen name="BirdDetail" component={BirdDetailScreen} />
       <CollectionStack.Screen name="SoundDetail" component={SoundDetailScreen} />
+      <CollectionStack.Screen name="CareTopics" component={CareTopicsScreen} />
     </CollectionStack.Navigator>
   );
 }

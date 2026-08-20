@@ -24,7 +24,9 @@ import { recordMissionEvent, TOKENS_PER_MISSION } from '../components/missions';
 import NatureScene from '../components/NatureScene';
 import ZoneBand from '../components/ZoneBand';
 import PressScale from '../components/PressScale';
-import SaveFab from '../components/SaveFab';
+import ResultActionBar from '../components/ResultActionBar';
+import HelpfulRow from '../components/HelpfulRow';
+import Pronounce from '../components/Pronounce';
 import TopBar, { TopBarIcon } from '../components/TopBar';
 
 // Result of a SOUND identification.
@@ -158,6 +160,32 @@ export default function SoundDetailScreen({ route }) {
   // opening paragraph in the user's language, then an honest "nothing yet".
   const overview = curated?.overview || info?.extract || plant.overview || null;
 
+  const handleShare = () => {
+    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+    // `plant.name` is Perch's raw label, which is the binomial - the same
+    // string as plant.scientific. Sharing the raw object printed it twice and
+    // never the common name the screen is showing.
+    shareEntity({ ...plant, name: displayName }, groupLabel);
+  };
+
+  // Hub do resultado (video do concorrente): as leituras curadas viram
+  // cards-porta pro manual (CareTopics); o overview continua inline completo.
+  // Sem material curado, nada renderiza (regra de fallback do hub).
+  const TOPICS = [
+    { key: 'overview', label: t('common.overview'), icon: 'document-text-outline', color: meta.accent, text: overview },
+    { key: 'habitat', label: t('fieldGuide.habitat'), icon: 'earth-outline', color: colors.info, text: curated?.habitat },
+    { key: 'curiosity', label: t('fieldGuide.curiosity'), icon: 'sparkles-outline', color: colors.warning, text: curated?.curiosity },
+  ].filter((tp) => !!tp.text);
+
+  const openTopic = (key) =>
+    navigation.navigate('CareTopics', {
+      title: displayName,
+      accent: meta.accent,
+      category: 'sound',
+      topics: TOPICS,
+      initialKey: key,
+    });
+
   return (
     <SafeAreaView style={styles.container} edges={['top']}>
       {/* Cenário em camadas: FIRST child of the root, pointerEvents="none"
@@ -175,16 +203,7 @@ export default function SoundDetailScreen({ route }) {
         onBack={() => navigation.goBack()}
         right={
           <>
-            <TopBarIcon
-              onPress={() => {
-                Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
-                // `plant.name` is Perch's raw label, which is the binomial - the
-                // same string as plant.scientific. Sharing the raw object printed
-                // it twice and never the common name the screen is showing.
-                shareEntity({ ...plant, name: displayName }, groupLabel);
-              }}
-              label={t('common.shareThisResult')}
-            >
+            <TopBarIcon onPress={handleShare} label={t('common.shareThisResult')}>
               <Ionicons name="share-social-outline" size={20} color={colors.text} />
             </TopBarIcon>
             <TouchableOpacity
@@ -229,7 +248,19 @@ export default function SoundDetailScreen({ route }) {
         <View style={styles.nameRow}>
           <View style={{ flex: 1 }}>
             <Text style={styles.name}>{displayName}</Text>
-            {!!plant.scientific && <Text style={styles.scientific}>{plant.scientific}</Text>}
+            {/* Hub do resultado (video do concorrente): falante ao lado do
+                cientifico + nomes populares como linha discreta. */}
+            {!!plant.scientific && (
+              <View style={styles.sciRow}>
+                <Text style={styles.scientific}>{plant.scientific}</Text>
+                <Pronounce text={plant.scientific} />
+              </View>
+            )}
+            {!!plant.commonNames && (
+              <Text style={styles.commonNames}>
+                {t('detail.commonNames')}: {Array.isArray(plant.commonNames) ? plant.commonNames.join(', ') : plant.commonNames}
+              </Text>
+            )}
             {!!info?.description && <Text style={styles.taxonLine}>{info.description}</Text>}
           </View>
           <View style={styles.confidenceBadge}>
@@ -246,6 +277,35 @@ export default function SoundDetailScreen({ route }) {
         </View>
 
         <IdentificationExtras entity={plant} accent={meta.accent} />
+
+        {/* Fatos rapidos (hub do resultado, video do concorrente): grade de
+            cards compactos que navegam pro manual. Sound so tem material real
+            pro habitat curado - sem material, nao força. */}
+        {!!curated?.habitat && (
+          <View style={styles.factsWrap}>
+            <Text style={styles.factsTitle}>{t('detail.quickFacts')}</Text>
+            <View style={styles.factsGrid}>
+              <TouchableOpacity
+                style={styles.factCard}
+                onPress={() => openTopic('habitat')}
+                activeOpacity={0.8}
+                accessibilityRole="button"
+                accessibilityLabel={t('fieldGuide.habitat')}
+              >
+                <View style={[styles.factIcon, { backgroundColor: colors.info + '22' }]}>
+                  <Ionicons name="earth-outline" size={15} color={colors.info} />
+                </View>
+                <View style={{ flex: 1 }}>
+                  <Text style={styles.factLabel}>{t('fieldGuide.habitat')}</Text>
+                  <Text style={styles.factValue} numberOfLines={2}>
+                    {curated.habitat.split('\n')[0]}
+                  </Text>
+                </View>
+                <Ionicons name="chevron-forward" size={14} color={colors.textMuted} />
+              </TouchableOpacity>
+            </View>
+          </View>
+        )}
 
         {/* Zona de cor: the reading about the species - overview plus the
             curated habitat/curiosity when we have them - lives in one
@@ -280,18 +340,52 @@ export default function SoundDetailScreen({ route }) {
             )}
           </SectionCard>
 
-          {/* Curated habitat/curiosity when this species is one we wrote about. */}
-          {!!curated?.habitat && (
-            <SectionCard icon="earth-outline" title={t('fieldGuide.habitat')} color={colors.info}>
-              <Text style={styles.body}>{curated.habitat}</Text>
-            </SectionCard>
-          )}
-          {!!curated?.curiosity && (
-            <SectionCard icon="sparkles-outline" title={t('fieldGuide.curiosity')} color={colors.warning}>
-              <Text style={styles.body}>{curated.curiosity}</Text>
-            </SectionCard>
-          )}
+          {/* Hub do resultado (video do concorrente): habitat/curiosidade
+              curados deixam de ser prosa empilhada e viram cards-porta que
+              abrem o manual da especie na aba certa. O overview acima continua
+              inline completo. */}
+          {TOPICS.filter((tp) => tp.key !== 'overview').map((tp) => (
+            <TouchableOpacity
+              key={tp.key}
+              style={styles.doorCard}
+              onPress={() => openTopic(tp.key)}
+              activeOpacity={0.8}
+              accessibilityRole="button"
+              accessibilityLabel={tp.label}
+            >
+              <View style={[styles.doorIcon, { backgroundColor: tp.color + '22' }]}>
+                <Ionicons name={tp.icon} size={16} color={tp.color} />
+              </View>
+              <View style={{ flex: 1 }}>
+                <Text style={styles.doorLabel}>{tp.label}</Text>
+                <Text style={styles.doorPreview} numberOfLines={1}>
+                  {tp.text}
+                </Text>
+              </View>
+              <Ionicons name="chevron-forward" size={16} color={colors.textMuted} />
+            </TouchableOpacity>
+          ))}
         </ZoneBand>
+
+        {/* Gancho da especialista (hub do resultado): a pergunta ja sai com o
+            contexto da especie, do jeito que BotanistScreen.route.params.context
+            espera. displayName em vez de plant.name porque no sound o name cru
+            e o proprio binomio (viria duplicado). */}
+        <TouchableOpacity
+          style={styles.specialistCta}
+          onPress={() =>
+            navigation.navigate('Botanist', {
+              context: displayName + ' (' + (plant.scientific || '') + ')',
+            })
+          }
+          activeOpacity={0.8}
+          accessibilityRole="button"
+          accessibilityLabel={t('detail.askSpecialistCta')}
+        >
+          <Ionicons name="sparkles" size={16} color={meta.accent} />
+          <Text style={styles.specialistCtaText}>{t('detail.askSpecialistCta')}</Text>
+          <Ionicons name="chevron-forward" size={16} color={colors.textMuted} />
+        </TouchableOpacity>
 
         {/* Press-scale by OUTER wrapper: the Touchable stays byte for byte
             (a11y, disabled state, handlers) - on RN-web an Animated.Value on
@@ -317,16 +411,30 @@ export default function SoundDetailScreen({ route }) {
         </PressScale>
 
         <InstallNudgeCard show={!!fromIdentify} accent={meta.accent} />
+
+        {/* Hub do resultado (video do concorrente): feedback de utilidade no
+            fim do scroll. */}
+        <HelpfulRow category="sound" context="result" />
       </ScrollView>
 
-      {/* Floating save pill, absolute WITHIN the screen; styles.scroll carries
-          paddingBottom >= 96 so the pill never covers the last row (the
-          viewport bug in miniature). Hidden while the species lookup is still
-          settling for the same reason the save buttons are disabled then:
-          saving early writes a permanently bare entry (see lookupDone) - and
-          SaveFab has no disabled state, so hiding IS the guard. Gone once
-          saved - the top bookmark takes over as the state indicator. */}
-      <SaveFab onPress={toggleSave} accent={meta.accent} visible={!saved && !saveDisabled} />
+      {/* Hub do resultado (video do concorrente): a barra fixa Nova | Compartilhar
+          | Salvar substitui o SaveFab; styles.scroll carries paddingBottom >= 120
+          so the bar never covers the last row. While the species lookup is still
+          settling the save tap is a no-op, for the same reason the other save
+          buttons are disabled then: saving early writes a permanently bare entry
+          (see lookupDone). The old SaveFab had no disabled state so hiding WAS
+          the guard; the bar guards the handler instead. "Nova" so faz sentido
+          vindo da identificacao. O bookmark do TopBar permanece. */}
+      <ResultActionBar
+        onNew={fromIdentify ? () => navigation.goBack() : null}
+        onShare={handleShare}
+        onSave={() => {
+          if (saveDisabled) return;
+          toggleSave();
+        }}
+        saved={saved}
+        accent={meta.accent}
+      />
 
       <AlertModal
         visible={!!alertConfig}
@@ -351,8 +459,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  // paddingBottom >= 96: room for the floating SaveFab (doutrina: a pill that
-  // hides the last row is the viewport bug in miniature).
+  // paddingBottom >= 120: room for the fixed ResultActionBar (doutrina: a bar
+  // that hides the last row is the viewport bug in miniature).
   scroll: { padding: 20, paddingBottom: 120 },
   heroPhoto: {
     width: '100%',
@@ -370,8 +478,64 @@ const styles = StyleSheet.create({
   },
   nameRow: { flexDirection: 'row', alignItems: 'flex-start', marginTop: 18 },
   name: { fontSize: 24, fontWeight: '800', color: colors.text },
+  sciRow: { flexDirection: 'row', alignItems: 'center', gap: 8 },
   scientific: { fontSize: 15, fontStyle: 'italic', color: colors.textSecondary, marginTop: 3 },
+  commonNames: { fontSize: 12.5, color: colors.textMuted, marginTop: 4 },
   taxonLine: { fontSize: 12.5, color: colors.textMuted, marginTop: 4 },
+  // Fatos rapidos + cards-porta do hub do resultado (video do concorrente).
+  factsWrap: { marginBottom: 16 },
+  factsTitle: { fontSize: 15, fontWeight: '800', color: colors.text, marginBottom: 10 },
+  factsGrid: { flexDirection: 'row', flexWrap: 'wrap', gap: 10 },
+  factCard: {
+    flexBasis: '48%',
+    flexGrow: 1,
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 8,
+    backgroundColor: colors.surface,
+    borderWidth: 1,
+    borderColor: colors.border,
+    borderRadius: 14,
+    padding: 12,
+  },
+  factIcon: {
+    width: 28,
+    height: 28,
+    borderRadius: 9,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  factLabel: { fontSize: 11, fontWeight: '700', color: colors.textMuted },
+  factValue: { fontSize: 12.5, color: colors.textSecondary, marginTop: 2 },
+  doorCard: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 12,
+    backgroundColor: colors.surface,
+    borderWidth: 1,
+    borderColor: colors.border,
+    borderRadius: 14,
+    padding: 14,
+    marginBottom: 10,
+  },
+  doorIcon: {
+    width: 32,
+    height: 32,
+    borderRadius: 10,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  doorLabel: { fontSize: 14, fontWeight: '700', color: colors.text },
+  doorPreview: { fontSize: 12.5, color: colors.textMuted, marginTop: 2 },
+  specialistCta: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 10,
+    paddingVertical: 14,
+    paddingHorizontal: 4,
+    marginTop: 10,
+  },
+  specialistCtaText: { flex: 1, fontSize: 13.5, fontWeight: '600', color: colors.textSecondary },
   sourceLink: {
     color: colors.textMuted,
     fontSize: 11.5,

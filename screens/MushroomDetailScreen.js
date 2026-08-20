@@ -28,8 +28,10 @@ import { recordMissionEvent, TOKENS_PER_MISSION } from '../components/missions';
 import NatureScene from '../components/NatureScene';
 import ZoneBand from '../components/ZoneBand';
 import PressScale from '../components/PressScale';
-import SaveFab from '../components/SaveFab';
 import TopBar, { TopBarIcon } from '../components/TopBar';
+import Pronounce from '../components/Pronounce';
+import HelpfulRow from '../components/HelpfulRow';
+import ResultActionBar from '../components/ResultActionBar';
 
 const EDIBILITY_COLORS = {
   choice: colors.accent,
@@ -100,6 +102,49 @@ export default function MushroomDetailScreen({ route }) {
     shareEntity(plant, t('categories.mushroom.label'));
   };
 
+  // Hub do resultado (video do concorrente): topicos do manual da especie
+  // (CareTopicsScreen) construidos SO dos campos reais que a entidade tem -
+  // no cogumelo isso e a lista de confusoes; os banners de seguranca
+  // (psicoativo, edibilityNote) continuam inline, a lei do dono.
+  const topics = [
+    plant.lookAlike?.length > 0 && {
+      key: 'confusas',
+      label: t('detail.frequentlyConfusedWith'),
+      text: '• ' + plant.lookAlike.join('\n• '),
+    },
+  ].filter(Boolean);
+
+  const openTopic = (initialKey) =>
+    navigation.navigate('CareTopics', {
+      title: plant.name,
+      accent: meta.accent,
+      category: 'mushroom',
+      topics,
+      initialKey,
+    });
+
+  // Fatos rapidos (hub do resultado): valor curto HONESTO do proprio campo.
+  // Sem topico nenhum nao ha porta para abrir - a grade some junto.
+  const quickFacts =
+    topics.length === 0
+      ? []
+      : [
+          !!plant.edibility && {
+            key: 'edibility',
+            icon: 'restaurant-outline',
+            color: edColor,
+            label: null,
+            value: plant.edibility,
+          },
+          plant.lookAlike?.length > 0 && {
+            key: 'confusas',
+            icon: 'eye-outline',
+            color: colors.warning,
+            label: t('detail.frequentlyConfusedWith'),
+            value: plant.lookAlike[0],
+          },
+        ].filter(Boolean);
+
   return (
     <SafeAreaView style={styles.container} edges={['top']}>
       {/* Cenario em camadas (diagramacao-premium): FIRST child of the root,
@@ -141,7 +186,20 @@ export default function MushroomDetailScreen({ route }) {
         <View style={styles.nameRow}>
           <View style={{ flex: 1 }}>
             <Text style={styles.name}>{plant.name}</Text>
-            {!!plant.scientific && <Text style={styles.scientific}>{plant.scientific}</Text>}
+            {/* Hub do resultado (video do concorrente): alto-falante de
+                pronuncia colado no nome cientifico. */}
+            {!!plant.scientific && (
+              <View style={styles.scientificRow}>
+                <Text style={styles.scientific}>{plant.scientific}</Text>
+                <Pronounce text={plant.scientific} />
+              </View>
+            )}
+            {!!plant.commonNames && (
+              <Text style={styles.commonNamesLine}>
+                {t('detail.commonNames')}:{' '}
+                {Array.isArray(plant.commonNames) ? plant.commonNames.join(', ') : plant.commonNames}
+              </Text>
+            )}
           </View>
           <View style={styles.confidenceBadge}>
             <Text style={styles.confidenceLabel}>{t('common.confidence')}</Text>
@@ -225,24 +283,79 @@ export default function MushroomDetailScreen({ route }) {
         </SectionCard>
         </ZoneBand>
 
-        {/* Look-alike band. Guarded: an empty band would render as a floating
-            pill of nothing. */}
-        {plant.lookAlike?.length > 0 && (
-          <ZoneBand gutter={20}>
-            <SectionCard icon="eye-outline" title={t('detail.frequentlyConfusedWith')} color={colors.warning}>
-              {plant.lookAlike.map((name) => (
-                <View key={name} style={styles.lookAlikeRow}>
+        {/* Fatos rapidos - hub do resultado (video do concorrente): grade 2
+            colunas de cards compactos; cada card navega pro manual da especie
+            ja aberto no topico certo. */}
+        {quickFacts.length > 0 && (
+          <View style={styles.factsWrap}>
+            <Text style={styles.factsTitle} accessibilityRole="header">
+              {t('detail.quickFacts')}
+            </Text>
+            <View style={styles.factsGrid}>
+              {quickFacts.map((f) => (
+                <TouchableOpacity
+                  key={f.key}
+                  style={styles.factCard}
+                  activeOpacity={0.8}
+                  onPress={() => openTopic(f.key)}
+                  accessibilityRole="button"
+                  accessibilityLabel={f.label || f.value}
+                >
                   <Ionicons
-                    name="swap-horizontal-outline"
+                    name={f.icon}
+                    size={18}
+                    color={f.color}
+                    accessibilityElementsHidden={true}
+                    importantForAccessibility="no-hide-descendants"
+                  />
+                  <View style={{ flex: 1 }}>
+                    {!!f.label && <Text style={styles.factLabel}>{f.label}</Text>}
+                    <Text style={styles.factValue} numberOfLines={2}>{f.value}</Text>
+                  </View>
+                  <Ionicons
+                    name="chevron-forward"
                     size={14}
                     color={colors.textMuted}
                     accessibilityElementsHidden={true}
                     importantForAccessibility="no-hide-descendants"
                   />
-                  <Text style={styles.lookAlikeText}>{name}</Text>
-                </View>
+                </TouchableOpacity>
               ))}
-            </SectionCard>
+            </View>
+          </View>
+        )}
+
+        {/* Look-alike - hub do resultado (video do concorrente): a lista deixa
+            a pilha de SectionCards e vira card-porta para o manual. Guarded:
+            an empty band would render as a floating pill of nothing. */}
+        {plant.lookAlike?.length > 0 && (
+          <ZoneBand gutter={20}>
+            <TouchableOpacity
+              style={styles.doorCard}
+              activeOpacity={0.8}
+              onPress={() => openTopic('confusas')}
+              accessibilityRole="button"
+              accessibilityLabel={t('detail.frequentlyConfusedWith')}
+            >
+              <Ionicons
+                name="eye-outline"
+                size={18}
+                color={colors.warning}
+                accessibilityElementsHidden={true}
+                importantForAccessibility="no-hide-descendants"
+              />
+              <View style={{ flex: 1 }}>
+                <Text style={styles.doorLabel}>{t('detail.frequentlyConfusedWith')}</Text>
+                <Text style={styles.doorPreview} numberOfLines={1}>{plant.lookAlike.join(', ')}</Text>
+              </View>
+              <Ionicons
+                name="chevron-forward"
+                size={16}
+                color={colors.textMuted}
+                accessibilityElementsHidden={true}
+                importantForAccessibility="no-hide-descendants"
+              />
+            </TouchableOpacity>
           </ZoneBand>
         )}
 
@@ -260,6 +373,37 @@ export default function MushroomDetailScreen({ route }) {
             </SectionCard>
           </ZoneBand>
         )}
+
+        {/* Gancho da especialista - hub do resultado (video do concorrente):
+            leva a duvida pro tab do especialista COM o contexto da especie
+            (BotanistScreen le route.params.context). */}
+        <TouchableOpacity
+          style={styles.specialistCta}
+          activeOpacity={0.8}
+          onPress={() =>
+            navigation.navigate('Botanist', {
+              context: plant.name + ' (' + (plant.scientific || '') + ')',
+            })
+          }
+          accessibilityRole="button"
+          accessibilityLabel={t('detail.askSpecialistCta')}
+        >
+          <Ionicons
+            name="sparkles"
+            size={16}
+            color={meta.accent}
+            accessibilityElementsHidden={true}
+            importantForAccessibility="no-hide-descendants"
+          />
+          <Text style={styles.specialistText}>{t('detail.askSpecialistCta')}</Text>
+          <Ionicons
+            name="chevron-forward"
+            size={16}
+            color={colors.textMuted}
+            accessibilityElementsHidden={true}
+            importantForAccessibility="no-hide-descendants"
+          />
+        </TouchableOpacity>
 
         {!!plant.url && (
           <TouchableOpacity
@@ -304,12 +448,23 @@ export default function MushroomDetailScreen({ route }) {
         </PressScale>
 
         <InstallNudgeCard show={!!fromIdentify} accent={meta.accent} />
+
+        {/* Foi util? - hub do resultado (video do concorrente): fecha o
+            scroll medindo a identificacao. */}
+        <HelpfulRow category="mushroom" context="result" />
       </ScrollView>
 
-      {/* Floating save pill (SaveFab doctrine): absolute WITHIN the screen,
-          and the scroll content above carries paddingBottom >= 96 so the pill
-          never hides the last row. Gone once saved. */}
-      <SaveFab onPress={toggleSave} accent={meta.accent} visible={!saved} />
+      {/* Barra de acoes fixa - hub do resultado (video do concorrente):
+          Nova foto | Compartilhar | Salvar sempre a um toque; substitui o
+          SaveFab, e o scroll acima carrega paddingBottom >= 120. "Nova foto"
+          so quando a tela veio da identificacao. */}
+      <ResultActionBar
+        onNew={fromIdentify ? () => navigation.goBack() : null}
+        onShare={handleShare}
+        onSave={toggleSave}
+        saved={saved}
+        accent={meta.accent}
+      />
 
       <AlertModal
         visible={!!alertConfig}
@@ -324,11 +479,13 @@ export default function MushroomDetailScreen({ route }) {
 
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: colors.background },
-  // paddingBottom >= 96: room for the floating SaveFab (viewport law).
-  scroll: { padding: 20, paddingBottom: 96 },
+  // paddingBottom >= 120: room for the fixed ResultActionBar (viewport law).
+  scroll: { padding: 20, paddingBottom: 120 },
   nameRow: { flexDirection: 'row', alignItems: 'flex-start', marginTop: 18 },
   name: { fontSize: 24, fontWeight: '800', color: colors.text },
-  scientific: { fontSize: 15, fontStyle: 'italic', color: colors.textSecondary, marginTop: 3 },
+  scientific: { fontSize: 15, fontStyle: 'italic', color: colors.textSecondary },
+  scientificRow: { flexDirection: 'row', alignItems: 'center', gap: 8, marginTop: 3 },
+  commonNamesLine: { fontSize: 12.5, color: colors.textMuted, marginTop: 4 },
   confidenceBadge: {
     backgroundColor: colors.accentDark + '33',
     borderRadius: 12,
@@ -371,8 +528,46 @@ const styles = StyleSheet.create({
   },
   edibilityNoteText: { flex: 1, color: colors.textSecondary, fontSize: 12.5, marginLeft: 10, lineHeight: 18 },
   body: { color: colors.textSecondary, fontSize: 14, lineHeight: 21 },
-  lookAlikeRow: { flexDirection: 'row', alignItems: 'center', paddingVertical: 6 },
-  lookAlikeText: { color: colors.text, fontSize: 13.5, marginLeft: 8 },
+  // Hub do resultado (video do concorrente): grade de fatos rapidos,
+  // cards-porta e o gancho da especialista.
+  factsWrap: { marginBottom: 4 },
+  factsTitle: { fontSize: 16, fontWeight: '800', color: colors.text, marginBottom: 10 },
+  factsGrid: { flexDirection: 'row', flexWrap: 'wrap', gap: 10 },
+  factCard: {
+    flexBasis: '46%',
+    flexGrow: 1,
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 8,
+    backgroundColor: colors.surface,
+    borderRadius: 14,
+    borderWidth: 1,
+    borderColor: colors.border,
+    padding: 12,
+  },
+  factLabel: { fontSize: 11, fontWeight: '700', color: colors.textMuted, marginBottom: 2 },
+  factValue: { fontSize: 13, fontWeight: '600', color: colors.text, lineHeight: 17 },
+  doorCard: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 10,
+    backgroundColor: colors.surface,
+    borderRadius: 16,
+    borderWidth: 1,
+    borderColor: colors.border,
+    padding: 14,
+    marginTop: 12,
+  },
+  doorLabel: { fontSize: 14.5, fontWeight: '700', color: colors.text },
+  doorPreview: { fontSize: 12.5, color: colors.textSecondary, marginTop: 2 },
+  specialistCta: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 8,
+    paddingVertical: 14,
+    paddingHorizontal: 4,
+  },
+  specialistText: { flex: 1, color: colors.text, fontWeight: '600', fontSize: 13.5 },
   infoRow: {
     flexDirection: 'row',
     justifyContent: 'space-between',

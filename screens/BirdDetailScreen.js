@@ -25,7 +25,9 @@ import { recordMissionEvent, TOKENS_PER_MISSION } from '../components/missions';
 import NatureScene from '../components/NatureScene';
 import ZoneBand from '../components/ZoneBand';
 import PressScale from '../components/PressScale';
-import SaveFab from '../components/SaveFab';
+import ResultActionBar from '../components/ResultActionBar';
+import HelpfulRow from '../components/HelpfulRow';
+import Pronounce from '../components/Pronounce';
 import TopBar, { TopBarIcon } from '../components/TopBar';
 
 // Deliberately the thinnest detail screen in the app, because the data behind it
@@ -38,6 +40,76 @@ import TopBar, { TopBarIcon } from '../components/TopBar';
 // layout with empty section cards. If bird content is ever wanted, it has to
 // come from a curated database keyed by species name - the same pattern already
 // proven by the 98-herb Medicinal Herbs feature - not from this vendor.
+
+// Fato rapido do hub do resultado (video do concorrente): card compacto -
+// icone colorido, valor curto honesto do proprio campo, chevron - que
+// deep-linka na aba certa do manual CareTopics.
+function QuickFact({ icon, color, label, value, onPress }) {
+  return (
+    <TouchableOpacity
+      style={styles.factCard}
+      onPress={onPress}
+      activeOpacity={0.8}
+      accessibilityRole="button"
+      accessibilityLabel={label}
+    >
+      <View style={styles.factTop}>
+        <Ionicons
+          name={icon}
+          size={15}
+          color={color}
+          accessibilityElementsHidden={true}
+          importantForAccessibility="no-hide-descendants"
+        />
+        <Text style={styles.factLabel} numberOfLines={1}>{label}</Text>
+        <Ionicons
+          name="chevron-forward"
+          size={13}
+          color={colors.textMuted}
+          accessibilityElementsHidden={true}
+          importantForAccessibility="no-hide-descendants"
+        />
+      </View>
+      <Text style={styles.factValue} numberOfLines={2}>{value}</Text>
+    </TouchableOpacity>
+  );
+}
+
+// Card-porta do hub do resultado (video do concorrente): a prosa longa da
+// secao mora no manual CareTopics; aqui fica a porta - icone, label da
+// secao, primeira linha truncada e chevron.
+function TopicDoor({ icon, color, label, preview, onPress }) {
+  return (
+    <TouchableOpacity
+      style={styles.doorCard}
+      onPress={onPress}
+      activeOpacity={0.8}
+      accessibilityRole="button"
+      accessibilityLabel={label}
+    >
+      <View style={[styles.doorIcon, { backgroundColor: color + '22' }]}>
+        <Ionicons
+          name={icon}
+          size={17}
+          color={color}
+          accessibilityElementsHidden={true}
+          importantForAccessibility="no-hide-descendants"
+        />
+      </View>
+      <View style={{ flex: 1 }}>
+        <Text style={[styles.doorLabel, { color }]}>{label}</Text>
+        <Text style={styles.doorPreview} numberOfLines={1}>{preview}</Text>
+      </View>
+      <Ionicons
+        name="chevron-forward"
+        size={16}
+        color={colors.textMuted}
+        accessibilityElementsHidden={true}
+        importantForAccessibility="no-hide-descendants"
+      />
+    </TouchableOpacity>
+  );
+}
 
 export default function BirdDetailScreen({ route }) {
   const navigation = useNavigation();
@@ -122,6 +194,41 @@ export default function BirdDetailScreen({ route }) {
     shareEntity(plant, t('categories.bird.label'));
   };
 
+  // Hub do resultado (video do concorrente): os campos curados viram o MANUAL
+  // da especie (abas do CareTopics). Construido so de campos que realmente
+  // existem, com labels que o app ja carrega - nenhuma chave i18n nova. Menos
+  // de dois topicos = nao ha manual que valha a pena abrir, e a tela mantem
+  // seus cards inline de sempre (o caminho do placeholder honesto - sem
+  // curadoria - nao muda nada).
+  const topics = curated
+    ? [
+        { key: 'overview', label: t('common.overview'), text: curated.overview },
+        { key: 'habitat', label: t('fieldGuide.habitat'), text: curated.habitat },
+        { key: 'curiosity', label: t('fieldGuide.curiosity'), text: curated.curiosity },
+      ].filter((tp) => tp.text)
+    : [];
+  const hasManual = topics.length >= 2;
+
+  const openTopic = (initialKey) => {
+    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+    navigation.navigate('CareTopics', {
+      title: plant.name,
+      accent: meta.accent,
+      category: 'bird',
+      topics,
+      initialKey,
+    });
+  };
+
+  // Gancho da especialista (hub do resultado, video do concorrente): leva a
+  // especie junto como contexto pro chat do Botanico (tab irmao no App.js).
+  const openSpecialist = () => {
+    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+    navigation.navigate('Botanist', {
+      context: plant.name + ' (' + (plant.scientific || '') + ')',
+    });
+  };
+
   return (
     <SafeAreaView style={styles.container} edges={['top']}>
       {/* Cenário em camadas: FIRST child of the root, pointerEvents="none"
@@ -165,7 +272,13 @@ export default function BirdDetailScreen({ route }) {
         <View style={styles.nameRow}>
           <View style={{ flex: 1 }}>
             <Text style={styles.name}>{plant.name}</Text>
-            {!!plant.scientific && <Text style={styles.scientific}>{plant.scientific}</Text>}
+            {/* Speaker do concorrente (hub do resultado): ouvir o latim. */}
+            {!!plant.scientific && (
+              <View style={styles.scientificRow}>
+                <Text style={styles.scientific}>{plant.scientific}</Text>
+                <Pronounce text={plant.scientific} />
+              </View>
+            )}
           </View>
           <View style={styles.confidenceBadge}>
             <Text style={styles.confidenceLabel}>{t('common.confidence')}</Text>
@@ -207,6 +320,25 @@ export default function BirdDetailScreen({ route }) {
         {/* Runner-up species and the low-confidence warning. */}
         <IdentificationExtras entity={plant} accent={meta.accent} />
 
+        {/* Quick facts (hub do resultado, video do concorrente): a primeira
+            linha do habitat como card compacto que deep-linka na aba certa do
+            manual. So aparece quando o manual existe pra receber o toque - a
+            truncagem e honesta porque a porta abre o texto inteiro. */}
+        {hasManual && !!curated.habitat && (
+          <View style={styles.factsBlock}>
+            <Text style={styles.factsTitle}>{t('detail.quickFacts')}</Text>
+            <View style={styles.factsGrid}>
+              <QuickFact
+                icon="earth-outline"
+                color={colors.info}
+                label={t('fieldGuide.habitat')}
+                value={curated.habitat}
+                onPress={() => openTopic('habitat')}
+              />
+            </View>
+          </View>
+        )}
+
         {/* Curated content, when we have it for this species.
             Nyckel returns a label and a confidence and nothing else - no
             description, no habitat, no photo - which made this the emptiest
@@ -221,18 +353,49 @@ export default function BirdDetailScreen({ route }) {
         <ZoneBand gutter={20}>
           {curated ? (
             <>
+              {/* Overview fica inline e completo - a leitura que abre a tela
+                  ("quente primeiro"). */}
               <SectionCard icon="document-text-outline" title={t('common.overview')} color={meta.accent}>
                 <Text style={styles.body}>{curated.overview}</Text>
               </SectionCard>
-              {!!curated.habitat && (
-                <SectionCard icon="earth-outline" title={t('fieldGuide.habitat')} color={colors.info}>
-                  <Text style={styles.body}>{curated.habitat}</Text>
-                </SectionCard>
-              )}
-              {!!curated.curiosity && (
-                <SectionCard icon="sparkles-outline" title={t('fieldGuide.curiosity')} color={colors.warning}>
-                  <Text style={styles.body}>{curated.curiosity}</Text>
-                </SectionCard>
+              {/* Hub do resultado (video do concorrente): as secoes longas
+                  deixam de ser prosa empilhada e viram cards-porta pro manual
+                  CareTopics. Sem manual (menos de 2 topicos) os cards inline
+                  originais continuam - mesmo texto, mesmas chaves. */}
+              {hasManual ? (
+                <>
+                  {!!curated.habitat && (
+                    <TopicDoor
+                      icon="earth-outline"
+                      color={colors.info}
+                      label={t('fieldGuide.habitat')}
+                      preview={curated.habitat}
+                      onPress={() => openTopic('habitat')}
+                    />
+                  )}
+                  {!!curated.curiosity && (
+                    <TopicDoor
+                      icon="sparkles-outline"
+                      color={colors.warning}
+                      label={t('fieldGuide.curiosity')}
+                      preview={curated.curiosity}
+                      onPress={() => openTopic('curiosity')}
+                    />
+                  )}
+                </>
+              ) : (
+                <>
+                  {!!curated.habitat && (
+                    <SectionCard icon="earth-outline" title={t('fieldGuide.habitat')} color={colors.info}>
+                      <Text style={styles.body}>{curated.habitat}</Text>
+                    </SectionCard>
+                  )}
+                  {!!curated.curiosity && (
+                    <SectionCard icon="sparkles-outline" title={t('fieldGuide.curiosity')} color={colors.warning}>
+                      <Text style={styles.body}>{curated.curiosity}</Text>
+                    </SectionCard>
+                  )}
+                </>
               )}
             </>
           ) : (
@@ -264,6 +427,33 @@ export default function BirdDetailScreen({ route }) {
           </SectionCard>
         </ZoneBand>
 
+        {/* Gancho da especialista (hub do resultado, video do concorrente):
+            linha discreta que abre o chat do Botanist com a especie como
+            contexto. */}
+        <TouchableOpacity
+          style={styles.specialistRow}
+          onPress={openSpecialist}
+          activeOpacity={0.8}
+          accessibilityRole="button"
+          accessibilityLabel={t('detail.askSpecialistCta')}
+        >
+          <Ionicons
+            name="sparkles"
+            size={16}
+            color={meta.accent}
+            accessibilityElementsHidden={true}
+            importantForAccessibility="no-hide-descendants"
+          />
+          <Text style={styles.specialistText}>{t('detail.askSpecialistCta')}</Text>
+          <Ionicons
+            name="chevron-forward"
+            size={16}
+            color={colors.textMuted}
+            accessibilityElementsHidden={true}
+            importantForAccessibility="no-hide-descendants"
+          />
+        </TouchableOpacity>
+
         {/* Press-scale by OUTER wrapper: the Touchable stays byte for byte
             (a11y, handlers, activeOpacity) - on RN-web an Animated.Value on the
             Touchable's own style would not drive the transform. */}
@@ -291,13 +481,23 @@ export default function BirdDetailScreen({ route }) {
         </PressScale>
 
         <InstallNudgeCard show={!!fromIdentify} accent={meta.accent} />
+
+        {/* Feedback fecha o scroll (hub do resultado, video do concorrente). */}
+        <HelpfulRow category="bird" context="result" />
       </ScrollView>
 
-      {/* Floating save pill, absolute WITHIN the screen; styles.scroll carries
-          paddingBottom >= 96 so the pill never covers the last row (the
-          viewport bug in miniature). Gone once saved - the top bookmark takes
-          over as the state indicator. */}
-      <SaveFab onPress={toggleSave} accent={meta.accent} visible={!saved} />
+      {/* Barra de acao fixa do hub do resultado (video do concorrente),
+          substituindo o SaveFab: Nova foto (so quando veio direto de uma
+          identificacao), Share e a pill dominante de salvar. Absolute WITHIN
+          the screen; styles.scroll keeps paddingBottom >= 120 so the bar never
+          covers the last row. The top-bar bookmark stays as state indicator. */}
+      <ResultActionBar
+        onNew={fromIdentify ? () => navigation.goBack() : null}
+        onShare={handleShare}
+        onSave={toggleSave}
+        saved={saved}
+        accent={meta.accent}
+      />
 
       <AlertModal
         visible={!!alertConfig}
@@ -312,12 +512,57 @@ export default function BirdDetailScreen({ route }) {
 
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: colors.background },
-  // paddingBottom >= 96: room for the floating SaveFab (doutrina: a pill that
-  // hides the last row is the viewport bug in miniature).
+  // paddingBottom >= 120: room for the fixed ResultActionBar (hub do
+  // resultado, video do concorrente) - a bar that hides the last row is the
+  // viewport bug in miniature.
   scroll: { padding: 20, paddingBottom: 120 },
   nameRow: { flexDirection: 'row', alignItems: 'flex-start', marginTop: 18 },
   name: { fontSize: 24, fontWeight: '800', color: colors.text },
+  scientificRow: { flexDirection: 'row', alignItems: 'center', gap: 8 },
   scientific: { fontSize: 15, fontStyle: 'italic', color: colors.textSecondary, marginTop: 3 },
+  factsBlock: { marginBottom: 16 },
+  factsTitle: { fontSize: 15, fontWeight: '700', color: colors.text, marginBottom: 10 },
+  factsGrid: { flexDirection: 'row', flexWrap: 'wrap', gap: 10 },
+  factCard: {
+    flexBasis: '47%',
+    flexGrow: 1,
+    backgroundColor: colors.card,
+    borderRadius: 14,
+    borderWidth: 1,
+    borderColor: colors.border,
+    padding: 12,
+  },
+  factTop: { flexDirection: 'row', alignItems: 'center', gap: 6, marginBottom: 6 },
+  factLabel: { flex: 1, fontSize: 11.5, fontWeight: '700', color: colors.textMuted },
+  factValue: { fontSize: 12.5, color: colors.text, lineHeight: 17 },
+  doorCard: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 10,
+    backgroundColor: colors.card,
+    borderRadius: 16,
+    borderWidth: 1,
+    borderColor: colors.border,
+    padding: 14,
+    marginBottom: 16,
+  },
+  doorIcon: {
+    width: 34,
+    height: 34,
+    borderRadius: 10,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  doorLabel: { fontSize: 14.5, fontWeight: '700' },
+  doorPreview: { fontSize: 12.5, color: colors.textMuted, marginTop: 2 },
+  specialistRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 8,
+    paddingVertical: 14,
+    paddingHorizontal: 4,
+  },
+  specialistText: { flex: 1, color: colors.text, fontSize: 13.5, fontWeight: '700' },
   confidenceBadge: {
     backgroundColor: colors.accentDark + '33',
     borderRadius: 12,

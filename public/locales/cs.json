@@ -30,7 +30,9 @@
     "vendorEnglishNote": "Z určovací služby, anglicky.",
     "translate": "Přeložit",
     "translating": "Překládám…",
-    "translateFailed": "Teď se nepodařilo přeložit."
+    "translateFailed": "Teď se nepodařilo přeložit.",
+    "yes": "Ano",
+    "no": "Ne"
   },
   "auth": {
     "title": "Přihlaste se k identifikaci",
@@ -232,7 +234,15 @@
     "referencePhoto": "Referenční fotografie",
     "referencePhotoAlt": "Referenční fotografie druhu {{name}}",
     "coverageNoteTitle": "O tomto výsledku",
-    "birdCoverageNote": "Určování ptáků pokrývá 291 druhů, převážně severoamerických. Ptáci mimo tento seznam mohou být určeni chybně i při vysoké jistotě - berte výsledek jako výchozí bod."
+    "birdCoverageNote": "Určování ptáků pokrývá 291 druhů, převážně severoamerických. Ptáci mimo tento seznam mohou být určeni chybně i při vysoké jistotě - berte výsledek jako výchozí bod.",
+    "tabSummary": "Přehled",
+    "tabCare": "Péče",
+    "tabExplore": "Objevovat",
+    "quickFacts": "Rychlá fakta",
+    "actionNew": "Nová fotka",
+    "wasHelpful": "Bylo to užitečné?",
+    "pronounceLabel": "Poslechnout výslovnost",
+    "askSpecialistCta": "Otázky k tomuto druhu? Zeptej se specialistky"
   },
   "disease": {
     "overviewSection": "Přehled",

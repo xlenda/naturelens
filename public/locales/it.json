@@ -30,7 +30,9 @@
     "vendorEnglishNote": "Dal servizio di identificazione, in inglese.",
     "translate": "Traduci",
     "translating": "Traduzione…",
-    "translateFailed": "Non è stato possibile tradurre ora."
+    "translateFailed": "Non è stato possibile tradurre ora.",
+    "yes": "Sì",
+    "no": "No"
   },
   "auth": {
     "title": "Accedi per identificare",
@@ -232,7 +234,15 @@
     "referencePhoto": "Foto di riferimento",
     "referencePhotoAlt": "Foto di riferimento di {{name}}",
     "coverageNoteTitle": "Informazioni su questo risultato",
-    "birdCoverageNote": "L’identificazione degli uccelli copre 291 specie, per lo più nordamericane. Gli uccelli non inclusi possono essere identificati in modo errato anche con alta affidabilità: usa il risultato come punto di partenza."
+    "birdCoverageNote": "L’identificazione degli uccelli copre 291 specie, per lo più nordamericane. Gli uccelli non inclusi possono essere identificati in modo errato anche con alta affidabilità: usa il risultato come punto di partenza.",
+    "tabSummary": "Riepilogo",
+    "tabCare": "Cura",
+    "tabExplore": "Esplora",
+    "quickFacts": "Fatti rapidi",
+    "actionNew": "Nuova foto",
+    "wasHelpful": "È stato utile?",
+    "pronounceLabel": "Ascolta la pronuncia",
+    "askSpecialistCta": "Domande su questa specie? Chiedi alla specialista"
   },
   "disease": {
     "overviewSection": "Panoramica",

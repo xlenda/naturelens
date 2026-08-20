@@ -23,7 +23,9 @@ import TranslatableText from '../components/TranslatableText';
 import NatureScene from '../components/NatureScene';
 import ZoneBand from '../components/ZoneBand';
 import PressScale from '../components/PressScale';
-import SaveFab from '../components/SaveFab';
+import ResultActionBar from '../components/ResultActionBar';
+import HelpfulRow from '../components/HelpfulRow';
+import Pronounce from '../components/Pronounce';
 import TopBar, { TopBarIcon } from '../components/TopBar';
 
 // Modelled on TreeDetailScreen, minus everything that only makes sense for a
@@ -173,6 +175,23 @@ export default function FishDetailScreen({ route }) {
     shareEntity(plant, t('categories.fish.label'));
   };
 
+  // Gancho da especialista (hub do resultado, video do concorrente): leva a
+  // especie junto como contexto pro chat do Botanico (tab irmao no App.js).
+  //
+  // Note what this screen does NOT get from the hub reform: no CareTopics
+  // manual and no quick-facts grid. The two long texts (lead/secondary) carry
+  // the Translate button and the Wikipedia/vendor credits, which the manual
+  // cannot host - and english-leak.test.js pins both TranslatableText renders
+  // to this file - so the prose stays inline; and the only short fields
+  // (origin, synonyms) are already shown IN FULL in the Details receipt,
+  // where a truncated fact tile with no door to open would only hide data.
+  const openSpecialist = () => {
+    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+    navigation.navigate('Botanist', {
+      context: plant.name + ' (' + (plant.scientific || '') + ')',
+    });
+  };
+
   return (
     <SafeAreaView style={styles.container} edges={['top']}>
       {/* Cenário em camadas: FIRST child of the root, pointerEvents="none"
@@ -216,7 +235,13 @@ export default function FishDetailScreen({ route }) {
         <View style={styles.nameRow}>
           <View style={{ flex: 1 }}>
             <Text style={styles.name}>{plant.name}</Text>
-            {!!plant.scientific && <Text style={styles.scientific}>{plant.scientific}</Text>}
+            {/* Speaker do concorrente (hub do resultado): ouvir o latim. */}
+            {!!plant.scientific && (
+              <View style={styles.scientificRow}>
+                <Text style={styles.scientific}>{plant.scientific}</Text>
+                <Pronounce text={plant.scientific} />
+              </View>
+            )}
             {/* Moved out of the Details receipt: the names people actually call
                 this fish belong with its name, not in the ficha at the bottom.
                 Same text, same i18n key - only the place changed. */}
@@ -310,6 +335,33 @@ export default function FishDetailScreen({ route }) {
           </ZoneBand>
         )}
 
+        {/* Gancho da especialista (hub do resultado, video do concorrente):
+            linha discreta que abre o chat do Botanist com a especie como
+            contexto. */}
+        <TouchableOpacity
+          style={styles.specialistRow}
+          onPress={openSpecialist}
+          activeOpacity={0.8}
+          accessibilityRole="button"
+          accessibilityLabel={t('detail.askSpecialistCta')}
+        >
+          <Ionicons
+            name="sparkles"
+            size={16}
+            color={meta.accent}
+            accessibilityElementsHidden={true}
+            importantForAccessibility="no-hide-descendants"
+          />
+          <Text style={styles.specialistText}>{t('detail.askSpecialistCta')}</Text>
+          <Ionicons
+            name="chevron-forward"
+            size={16}
+            color={colors.textMuted}
+            accessibilityElementsHidden={true}
+            importantForAccessibility="no-hide-descendants"
+          />
+        </TouchableOpacity>
+
         {/* The species reference photo used to be rendered here as its own card.
             It now comes through IdentificationExtras above, which builds
             `similarImages` from the same Fishial photo for every category
@@ -342,13 +394,23 @@ export default function FishDetailScreen({ route }) {
         </PressScale>
 
         <InstallNudgeCard show={!!fromIdentify} accent={meta.accent} />
+
+        {/* Feedback fecha o scroll (hub do resultado, video do concorrente). */}
+        <HelpfulRow category="fish" context="result" />
       </ScrollView>
 
-      {/* Floating save pill, absolute WITHIN the screen; styles.scroll carries
-          paddingBottom >= 96 so the pill never covers the last row (the
-          viewport bug in miniature). Gone once saved - the top bookmark takes
-          over as the state indicator. */}
-      <SaveFab onPress={toggleSave} accent={meta.accent} visible={!saved} />
+      {/* Barra de acao fixa do hub do resultado (video do concorrente),
+          substituindo o SaveFab: Nova foto (so quando veio direto de uma
+          identificacao), Share e a pill dominante de salvar. Absolute WITHIN
+          the screen; styles.scroll keeps paddingBottom >= 120 so the bar never
+          covers the last row. The top-bar bookmark stays as state indicator. */}
+      <ResultActionBar
+        onNew={fromIdentify ? () => navigation.goBack() : null}
+        onShare={handleShare}
+        onSave={toggleSave}
+        saved={saved}
+        accent={meta.accent}
+      />
 
       <AlertModal
         visible={!!alertConfig}
@@ -363,13 +425,23 @@ export default function FishDetailScreen({ route }) {
 
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: colors.background },
-  // paddingBottom >= 96: room for the floating SaveFab (doutrina: a pill that
-  // hides the last row is the viewport bug in miniature).
+  // paddingBottom >= 120: room for the fixed ResultActionBar (hub do
+  // resultado, video do concorrente) - a bar that hides the last row is the
+  // viewport bug in miniature.
   scroll: { padding: 20, paddingBottom: 120 },
   nameRow: { flexDirection: 'row', alignItems: 'flex-start', marginTop: 18 },
   name: { fontSize: 24, fontWeight: '800', color: colors.text },
+  scientificRow: { flexDirection: 'row', alignItems: 'center', gap: 8 },
   scientific: { fontSize: 15, fontStyle: 'italic', color: colors.textSecondary, marginTop: 3 },
   commonNamesLine: { fontSize: 12.5, color: colors.textMuted, marginTop: 4 },
+  specialistRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 8,
+    paddingVertical: 14,
+    paddingHorizontal: 4,
+  },
+  specialistText: { flex: 1, color: colors.text, fontSize: 13.5, fontWeight: '700' },
   confidenceBadge: {
     backgroundColor: colors.accentDark + '33',
     borderRadius: 12,

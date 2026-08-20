@@ -30,7 +30,9 @@
     "vendorEnglishNote": "Vom Bestimmungsdienst, auf Englisch.",
     "translate": "Übersetzen",
     "translating": "Wird übersetzt…",
-    "translateFailed": "Übersetzung gerade nicht möglich."
+    "translateFailed": "Übersetzung gerade nicht möglich.",
+    "yes": "Ja",
+    "no": "Nein"
   },
   "auth": {
     "title": "Zum Identifizieren anmelden",
@@ -232,7 +234,15 @@
     "referencePhoto": "Referenzfoto",
     "referencePhotoAlt": "Referenzfoto von {{name}}",
     "coverageNoteTitle": "Zu diesem Ergebnis",
-    "birdCoverageNote": "Die Vogelbestimmung umfasst 291 Arten, überwiegend nordamerikanische. Vögel außerhalb dieser Liste können auch bei hoher Trefferwahrscheinlichkeit falsch bestimmt werden - nimm das Ergebnis als Ausgangspunkt."
+    "birdCoverageNote": "Die Vogelbestimmung umfasst 291 Arten, überwiegend nordamerikanische. Vögel außerhalb dieser Liste können auch bei hoher Trefferwahrscheinlichkeit falsch bestimmt werden - nimm das Ergebnis als Ausgangspunkt.",
+    "tabSummary": "Übersicht",
+    "tabCare": "Pflege",
+    "tabExplore": "Entdecken",
+    "quickFacts": "Schnelle Fakten",
+    "actionNew": "Neues Foto",
+    "wasHelpful": "War das hilfreich?",
+    "pronounceLabel": "Aussprache anhören",
+    "askSpecialistCta": "Fragen zu dieser Art? Frag die Expertin"
   },
   "disease": {
     "overviewSection": "Übersicht",

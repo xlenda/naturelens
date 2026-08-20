@@ -76,6 +76,14 @@ export function trackResultSaved({ category }) {
   push('result_saved', { category });
 }
 
+// "Was this helpful?" on results and care topics - the denominator of wrong
+// identifications. `context` distinguishes the surface (result page vs a
+// specific care tab); no species name travels (house rule: nothing personal
+// or content-identifying in the dataLayer).
+export function trackResultFeedback({ category, context, useful }) {
+  push({ event: 'result_feedback', category, context, useful: !!useful });
+}
+
 export function trackResultShared({ category, method }) {
   push('result_shared', { category, method });
 }

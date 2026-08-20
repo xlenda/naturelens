@@ -30,7 +30,9 @@
     "vendorEnglishNote": "Z usługi rozpoznawania, po angielsku.",
     "translate": "Przetłumacz",
     "translating": "Tłumaczenie…",
-    "translateFailed": "Nie udało się teraz przetłumaczyć."
+    "translateFailed": "Nie udało się teraz przetłumaczyć.",
+    "yes": "Tak",
+    "no": "Nie"
   },
   "auth": {
     "title": "Zaloguj się, aby rozpocząć identyfikację",
@@ -232,7 +234,15 @@
     "referencePhoto": "Zdjęcie referencyjne",
     "referencePhotoAlt": "Zdjęcie referencyjne: {{name}}",
     "coverageNoteTitle": "O tym wyniku",
-    "birdCoverageNote": "Rozpoznawanie ptaków obejmuje 291 gatunków, głównie północnoamerykańskich. Ptaki spoza tej listy mogą zostać oznaczone błędnie nawet przy wysokiej pewności - potraktuj wynik jako punkt wyjścia."
+    "birdCoverageNote": "Rozpoznawanie ptaków obejmuje 291 gatunków, głównie północnoamerykańskich. Ptaki spoza tej listy mogą zostać oznaczone błędnie nawet przy wysokiej pewności - potraktuj wynik jako punkt wyjścia.",
+    "tabSummary": "Podsumowanie",
+    "tabCare": "Pielęgnacja",
+    "tabExplore": "Odkrywaj",
+    "quickFacts": "Szybkie fakty",
+    "actionNew": "Nowe zdjęcie",
+    "wasHelpful": "Czy to było pomocne?",
+    "pronounceLabel": "Posłuchaj wymowy",
+    "askSpecialistCta": "Pytania o ten gatunek? Zapytaj specjalistkę"
   },
   "disease": {
     "overviewSection": "Przegląd",

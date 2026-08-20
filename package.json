@@ -29,6 +29,7 @@
     "expo-image-picker": "~17.0.11",
     "expo-linear-gradient": "~15.0.8",
     "expo-localization": "~17.0.9",
+    "expo-speech": "^57.0.1",
     "expo-status-bar": "~3.0.9",
     "i18next": "^26.3.4",
     "jose": "^6.2.3",
@@ -46,7 +47,7 @@
   "devDependencies": {
     "@babel/core": "^7.25.2",
     "babel-preset-expo": "~54.0.0",
-    "sharp": "^0.35.3",
-    "chrome-remote-interface": "^0.33.2"
+    "chrome-remote-interface": "^0.33.2",
+    "sharp": "^0.35.3"
   }
 }

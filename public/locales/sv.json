@@ -30,7 +30,9 @@
     "vendorEnglishNote": "Från identifieringstjänsten, på engelska.",
     "translate": "Översätt",
     "translating": "Översätter…",
-    "translateFailed": "Kunde inte översätta just nu."
+    "translateFailed": "Kunde inte översätta just nu.",
+    "yes": "Ja",
+    "no": "Nej"
   },
   "auth": {
     "title": "Logga in för att identifiera",
@@ -232,7 +234,15 @@
     "referencePhoto": "Referensfoto",
     "referencePhotoAlt": "Referensfoto av {{name}}",
     "coverageNoteTitle": "Om detta resultat",
-    "birdCoverageNote": "Fågelidentifieringen omfattar 291 arter, mestadels nordamerikanska. Fåglar utanför listan kan identifieras fel även vid hög säkerhet - se resultatet som en utgångspunkt."
+    "birdCoverageNote": "Fågelidentifieringen omfattar 291 arter, mestadels nordamerikanska. Fåglar utanför listan kan identifieras fel även vid hög säkerhet - se resultatet som en utgångspunkt.",
+    "tabSummary": "Översikt",
+    "tabCare": "Skötsel",
+    "tabExplore": "Utforska",
+    "quickFacts": "Snabbfakta",
+    "actionNew": "Nytt foto",
+    "wasHelpful": "Var detta till hjälp?",
+    "pronounceLabel": "Hör uttalet",
+    "askSpecialistCta": "Frågor om arten? Fråga specialisten"
   },
   "disease": {
     "overviewSection": "Översikt",

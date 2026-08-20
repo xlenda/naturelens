@@ -30,7 +30,9 @@
     "vendorEnglishNote": "Do serviço de identificação, em inglês.",
     "translate": "Traduzir",
     "translating": "Traduzindo…",
-    "translateFailed": "Não foi possível traduzir agora."
+    "translateFailed": "Não foi possível traduzir agora.",
+    "yes": "Sim",
+    "no": "Não"
   },
   "auth": {
     "title": "Entre para identificar",
@@ -282,7 +284,15 @@
     "referencePhoto": "Foto de referência",
     "referencePhotoAlt": "Foto de referência de {{name}}",
     "coverageNoteTitle": "Sobre este resultado",
-    "birdCoverageNote": "A identificação de pássaros cobre 291 espécies, em sua maioria norte-americanas. Aves fora dessa lista podem ser identificadas incorretamente mesmo com alta confiança - use o resultado como ponto de partida."
+    "birdCoverageNote": "A identificação de pássaros cobre 291 espécies, em sua maioria norte-americanas. Aves fora dessa lista podem ser identificadas incorretamente mesmo com alta confiança - use o resultado como ponto de partida.",
+    "tabSummary": "Resumo",
+    "tabCare": "Cuidados",
+    "tabExplore": "Explorar",
+    "quickFacts": "Fatos rápidos",
+    "actionNew": "Nova foto",
+    "wasHelpful": "Isso foi útil?",
+    "pronounceLabel": "Ouvir pronúncia",
+    "askSpecialistCta": "Dúvidas sobre esta espécie? Pergunte à especialista"
   },
   "disease": {
     "overviewSection": "Visão Geral",

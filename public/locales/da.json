@@ -30,7 +30,9 @@
     "vendorEnglishNote": "Fra bestemmelsestjenesten, på engelsk.",
     "translate": "Oversæt",
     "translating": "Oversætter…",
-    "translateFailed": "Kunne ikke oversætte lige nu."
+    "translateFailed": "Kunne ikke oversætte lige nu.",
+    "yes": "Ja",
+    "no": "Nej"
   },
   "auth": {
     "title": "Log ind for at identificere",
@@ -232,7 +234,15 @@
     "referencePhoto": "Referencefoto",
     "referencePhotoAlt": "Referencefoto af {{name}}",
     "coverageNoteTitle": "Om dette resultat",
-    "birdCoverageNote": "Fugleidentifikation dækker 291 arter, hovedsageligt nordamerikanske. Fugle uden for listen kan blive identificeret forkert selv ved høj sikkerhed - brug resultatet som udgangspunkt."
+    "birdCoverageNote": "Fugleidentifikation dækker 291 arter, hovedsageligt nordamerikanske. Fugle uden for listen kan blive identificeret forkert selv ved høj sikkerhed - brug resultatet som udgangspunkt.",
+    "tabSummary": "Oversigt",
+    "tabCare": "Pleje",
+    "tabExplore": "Udforsk",
+    "quickFacts": "Hurtige fakta",
+    "actionNew": "Nyt foto",
+    "wasHelpful": "Var dette nyttigt?",
+    "pronounceLabel": "Hør udtalen",
+    "askSpecialistCta": "Spørgsmål om arten? Spørg specialisten"
   },
   "disease": {
     "overviewSection": "Oversigt",

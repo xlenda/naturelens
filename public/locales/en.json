@@ -30,7 +30,9 @@
     "vendorEnglishNote": "From the identification service, in English.",
     "translate": "Translate",
     "translating": "Translating…",
-    "translateFailed": "Could not translate right now."
+    "translateFailed": "Could not translate right now.",
+    "yes": "Yes",
+    "no": "No"
   },
   "auth": {
     "title": "Sign in to identify",
@@ -282,7 +284,15 @@
     "referencePhoto": "Reference photo",
     "referencePhotoAlt": "Reference photo of {{name}}",
     "coverageNoteTitle": "About this result",
-    "birdCoverageNote": "Bird identification covers 291 species, mostly North American. Birds outside that list may be identified incorrectly even with high confidence - treat the result as a starting point."
+    "birdCoverageNote": "Bird identification covers 291 species, mostly North American. Birds outside that list may be identified incorrectly even with high confidence - treat the result as a starting point.",
+    "tabSummary": "Summary",
+    "tabCare": "Care",
+    "tabExplore": "Explore",
+    "quickFacts": "Quick facts",
+    "actionNew": "New photo",
+    "wasHelpful": "Was this helpful?",
+    "pronounceLabel": "Hear pronunciation",
+    "askSpecialistCta": "Questions about this species? Ask the specialist"
   },
   "disease": {
     "overviewSection": "Overview",

@@ -30,7 +30,9 @@
     "vendorEnglishNote": "来自识别服务，英文原文。",
     "translate": "翻译",
     "translating": "翻译中…",
-    "translateFailed": "目前无法翻译。"
+    "translateFailed": "目前无法翻译。",
+    "yes": "是",
+    "no": "否"
   },
   "auth": {
     "title": "登录以开始识别",
@@ -232,7 +234,15 @@
     "referencePhoto": "参考照片",
     "referencePhotoAlt": "{{name}} 的参考照片",
     "coverageNoteTitle": "关于此结果",
-    "birdCoverageNote": "鸟类识别覆盖 291 个物种，以北美地区为主。列表之外的鸟类即使置信度很高也可能被误判，请将结果作为参考起点。"
+    "birdCoverageNote": "鸟类识别覆盖 291 个物种，以北美地区为主。列表之外的鸟类即使置信度很高也可能被误判，请将结果作为参考起点。",
+    "tabSummary": "概览",
+    "tabCare": "养护",
+    "tabExplore": "探索",
+    "quickFacts": "速览",
+    "actionNew": "重新拍照",
+    "wasHelpful": "这有帮助吗？",
+    "pronounceLabel": "听发音",
+    "askSpecialistCta": "对这个物种有疑问？问问专家"
   },
   "disease": {
     "overviewSection": "概览",

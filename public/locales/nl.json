@@ -30,7 +30,9 @@
     "vendorEnglishNote": "Van de herkenningsdienst, in het Engels.",
     "translate": "Vertalen",
     "translating": "Vertalen…",
-    "translateFailed": "Vertalen lukt nu niet."
+    "translateFailed": "Vertalen lukt nu niet.",
+    "yes": "Ja",
+    "no": "Nee"
   },
   "auth": {
     "title": "Log in om te identificeren",
@@ -232,7 +234,15 @@
     "referencePhoto": "Referentiefoto",
     "referencePhotoAlt": "Referentiefoto van {{name}}",
     "coverageNoteTitle": "Over dit resultaat",
-    "birdCoverageNote": "Vogelherkenning omvat 291 soorten, vooral Noord-Amerikaanse. Vogels buiten die lijst kunnen ook bij hoge zekerheid verkeerd worden herkend - gebruik het resultaat als startpunt."
+    "birdCoverageNote": "Vogelherkenning omvat 291 soorten, vooral Noord-Amerikaanse. Vogels buiten die lijst kunnen ook bij hoge zekerheid verkeerd worden herkend - gebruik het resultaat als startpunt.",
+    "tabSummary": "Overzicht",
+    "tabCare": "Verzorging",
+    "tabExplore": "Ontdekken",
+    "quickFacts": "Snelle feiten",
+    "actionNew": "Nieuwe foto",
+    "wasHelpful": "Was dit nuttig?",
+    "pronounceLabel": "Uitspraak beluisteren",
+    "askSpecialistCta": "Vragen over deze soort? Vraag de specialist"
   },
   "disease": {
     "overviewSection": "Overzicht",

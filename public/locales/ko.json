@@ -30,7 +30,9 @@
     "vendorEnglishNote": "식별 서비스 제공, 영어입니다.",
     "translate": "번역",
     "translating": "번역 중…",
-    "translateFailed": "지금은 번역할 수 없습니다."
+    "translateFailed": "지금은 번역할 수 없습니다.",
+    "yes": "예",
+    "no": "아니요"
   },
   "auth": {
     "title": "로그인하고 식별하기",
@@ -232,7 +234,15 @@
     "referencePhoto": "참고 사진",
     "referencePhotoAlt": "{{name}} 참고 사진",
     "coverageNoteTitle": "이 결과에 대하여",
-    "birdCoverageNote": "새 식별은 291종을 다루며 대부분 북미 지역 종입니다. 목록에 없는 새는 신뢰도가 높아도 잘못 식별될 수 있으니 결과를 참고 자료로만 활용하세요."
+    "birdCoverageNote": "새 식별은 291종을 다루며 대부분 북미 지역 종입니다. 목록에 없는 새는 신뢰도가 높아도 잘못 식별될 수 있으니 결과를 참고 자료로만 활용하세요.",
+    "tabSummary": "요약",
+    "tabCare": "관리",
+    "tabExplore": "탐색",
+    "quickFacts": "빠른 정보",
+    "actionNew": "새 사진",
+    "wasHelpful": "도움이 되었나요?",
+    "pronounceLabel": "발음 듣기",
+    "askSpecialistCta": "이 종에 대해 궁금한가요? 전문가에게 물어보세요"
   },
   "disease": {
     "overviewSection": "개요",

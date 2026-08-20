@@ -30,7 +30,9 @@
     "vendorEnglishNote": "Tanımlama hizmetinden, İngilizce.",
     "translate": "Çevir",
     "translating": "Çevriliyor…",
-    "translateFailed": "Şu anda çevrilemedi."
+    "translateFailed": "Şu anda çevrilemedi.",
+    "yes": "Evet",
+    "no": "Hayır"
   },
   "auth": {
     "title": "Tanımlamak için giriş yap",
@@ -232,7 +234,15 @@
     "referencePhoto": "Referans fotoğrafı",
     "referencePhotoAlt": "{{name}} referans fotoğrafı",
     "coverageNoteTitle": "Bu sonuç hakkında",
-    "birdCoverageNote": "Kuş tanımlama, çoğu Kuzey Amerika’ya ait 291 türü kapsar. Bu listenin dışındaki kuşlar yüksek güvenle bile yanlış tanımlanabilir; sonucu bir başlangıç noktası olarak değerlendirin."
+    "birdCoverageNote": "Kuş tanımlama, çoğu Kuzey Amerika’ya ait 291 türü kapsar. Bu listenin dışındaki kuşlar yüksek güvenle bile yanlış tanımlanabilir; sonucu bir başlangıç noktası olarak değerlendirin.",
+    "tabSummary": "Özet",
+    "tabCare": "Bakım",
+    "tabExplore": "Keşfet",
+    "quickFacts": "Hızlı bilgiler",
+    "actionNew": "Yeni fotoğraf",
+    "wasHelpful": "Bu yardımcı oldu mu?",
+    "pronounceLabel": "Telaffuzu dinle",
+    "askSpecialistCta": "Bu tür hakkında soruların mı var? Uzmana sor"
   },
   "disease": {
     "overviewSection": "Genel Bakış",

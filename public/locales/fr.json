@@ -30,7 +30,9 @@
     "vendorEnglishNote": "Du service d’identification, en anglais.",
     "translate": "Traduire",
     "translating": "Traduction…",
-    "translateFailed": "Traduction impossible pour le moment."
+    "translateFailed": "Traduction impossible pour le moment.",
+    "yes": "Oui",
+    "no": "Non"
   },
   "auth": {
     "title": "Connectez-vous pour identifier",
@@ -232,7 +234,15 @@
     "referencePhoto": "Photo de référence",
     "referencePhotoAlt": "Photo de référence de {{name}}",
     "coverageNoteTitle": "À propos de ce résultat",
-    "birdCoverageNote": "L’identification des oiseaux couvre 291 espèces, majoritairement nord-américaines. Les oiseaux hors de cette liste peuvent être mal identifiés même avec une confiance élevée : considérez le résultat comme un point de départ."
+    "birdCoverageNote": "L’identification des oiseaux couvre 291 espèces, majoritairement nord-américaines. Les oiseaux hors de cette liste peuvent être mal identifiés même avec une confiance élevée : considérez le résultat comme un point de départ.",
+    "tabSummary": "Résumé",
+    "tabCare": "Entretien",
+    "tabExplore": "Explorer",
+    "quickFacts": "En bref",
+    "actionNew": "Nouvelle photo",
+    "wasHelpful": "Est-ce utile ?",
+    "pronounceLabel": "Écouter la prononciation",
+    "askSpecialistCta": "Des questions sur cette espèce ? Demandez à la spécialiste"
   },
   "disease": {
     "overviewSection": "Aperçu",

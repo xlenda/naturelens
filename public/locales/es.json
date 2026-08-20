@@ -30,7 +30,9 @@
     "vendorEnglishNote": "Del servicio de identificación, en inglés.",
     "translate": "Traducir",
     "translating": "Traduciendo…",
-    "translateFailed": "No se pudo traducir ahora."
+    "translateFailed": "No se pudo traducir ahora.",
+    "yes": "Sí",
+    "no": "No"
   },
   "auth": {
     "title": "Inicia sesión para identificar",
@@ -232,7 +234,15 @@
     "referencePhoto": "Foto de referencia",
     "referencePhotoAlt": "Foto de referencia de {{name}}",
     "coverageNoteTitle": "Sobre este resultado",
-    "birdCoverageNote": "La identificación de aves cubre 291 especies, en su mayoría norteamericanas. Las aves fuera de esa lista pueden identificarse incorrectamente incluso con alta confianza: toma el resultado como punto de partida."
+    "birdCoverageNote": "La identificación de aves cubre 291 especies, en su mayoría norteamericanas. Las aves fuera de esa lista pueden identificarse incorrectamente incluso con alta confianza: toma el resultado como punto de partida.",
+    "tabSummary": "Resumen",
+    "tabCare": "Cuidados",
+    "tabExplore": "Explorar",
+    "quickFacts": "Datos rápidos",
+    "actionNew": "Nueva foto",
+    "wasHelpful": "¿Te resultó útil?",
+    "pronounceLabel": "Escuchar pronunciación",
+    "askSpecialistCta": "¿Dudas sobre esta especie? Pregunta a la especialista"
   },
   "disease": {
     "overviewSection": "Resumen",
