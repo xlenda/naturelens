@@ -13,6 +13,7 @@ import InstallNudgeCard from '../components/InstallNudgeCard';
 import { useAppAlert } from '../components/useAppAlert';
 import { colors } from '../components/theme';
 import { CATEGORIES } from '../components/categories';
+import { getSpeciesGroup } from '../components/speciesGroup';
 import { getCollection, saveToCollection, removeFromCollection } from '../components/storage';
 import { shareEntity } from '../components/share';
 import { getSpeciesInfo } from '../components/speciesPhoto';
@@ -178,7 +179,7 @@ export default function SoundDetailScreen({ route }) {
   ].filter((tp) => !!tp.text);
 
   const openTopic = (key) =>
-    navigation.navigate('CareTopics', {
+    navigation.navigate('CareTopics', { groupKey: getSpeciesGroup(plant),
       title: displayName,
       accent: meta.accent,
       category: 'sound',

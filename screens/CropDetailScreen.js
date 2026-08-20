@@ -16,6 +16,7 @@ import DiseaseReport from '../components/DiseaseReport';
 import { colors } from '../components/theme';
 import { getCollection, saveToCollection, removeFromCollection } from '../components/storage';
 import { CATEGORIES } from '../components/categories';
+import { getSpeciesGroup } from '../components/speciesGroup';
 import { shareEntity } from '../components/share';
 import InstallNudgeCard from '../components/InstallNudgeCard';
 import CategoryIcon from '../components/CategoryIcon';
@@ -100,7 +101,7 @@ export default function CropDetailScreen({ route }) {
   ].filter((tp) => !!tp.text);
 
   const openTopic = (key) =>
-    navigation.navigate('CareTopics', {
+    navigation.navigate('CareTopics', { groupKey: getSpeciesGroup(plant),
       title: plant.name,
       accent: meta.accent,
       category: 'crop',

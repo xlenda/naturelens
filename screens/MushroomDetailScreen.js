@@ -18,6 +18,7 @@ import IdentificationExtras from '../components/IdentificationExtras';
 import { colors } from '../components/theme';
 import { getCollection, saveToCollection, removeFromCollection } from '../components/storage';
 import { CATEGORIES } from '../components/categories';
+import { getSpeciesGroup } from '../components/speciesGroup';
 import { shareEntity } from '../components/share';
 import InstallNudgeCard from '../components/InstallNudgeCard';
 import CategoryIcon from '../components/CategoryIcon';
@@ -115,7 +116,7 @@ export default function MushroomDetailScreen({ route }) {
   ].filter(Boolean);
 
   const openTopic = (initialKey) =>
-    navigation.navigate('CareTopics', {
+    navigation.navigate('CareTopics', { groupKey: getSpeciesGroup(plant),
       title: plant.name,
       accent: meta.accent,
       category: 'mushroom',

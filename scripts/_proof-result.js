@@ -131,8 +131,14 @@ const chromePath = CANDIDATES.find((p) => p && fs.existsSync(p));
       (await clickByText(Runtime, Input, 'rega')) ||
       (await clickByText(Runtime, Input, 'luz'));
     if (opened) {
-      await sleep(1800);
+      await sleep(2600);
       await shot(Page, 'r4-manual-abas');
+      // rola ate o miolo profundo (fundamentos / checklist / problemas)
+      for (let k = 0; k < 3; k++) {
+        await scrollBy(Runtime, 620);
+        await sleep(900);
+        await shot(Page, 'm' + (k + 1) + '-manual-profundo');
+      }
       await clickByText(Runtime, Input, 'solo');
       await sleep(1000);
       await shot(Page, 'r5-manual-aba2');

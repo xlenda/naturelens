@@ -79,13 +79,25 @@ export default function CareTopicsScreen() {
 
   const advice = active ? splitAdvice(active.text) : { lead: '', bullets: [] };
 
+  // Chips do indice - so o que a aba REALMENTE tem.
+  const sectionChips = [
+    { key: 'about', icon: 'document-text-outline', label: t('detail.aboutSpecies'), has: !!active?.text },
+    { key: 'group', icon: 'pricetag-outline', label: groupManual?.label, has: !!(groupManual?.advice?.length || groupManual?.checklist?.length) },
+    { key: 'fund', icon: 'school-outline', label: t('detail.fundamentals'), has: !!manual?.advice?.length },
+    { key: 'check', icon: 'checkmark-done-outline', label: t('detail.checklistLabel'), has: !!manual?.checklist?.length },
+    { key: 'prob', icon: 'alert-circle-outline', label: t('detail.problemsLabel'), has: !!manual?.problems?.length },
+  ].filter((c) => c.has && c.label);
+
   // O MIOLO IMENSO (manual editorial por topico, {lang}-manual.json): os
   // conselhos fundamentais, o checklist e os problemas em acordeao que dao a
   // aba a profundidade do concorrente. Pre-escrito nos 17 idiomas e servido
   // estatico (CDN) - nada e gerado por usuario, e por isso escala. null = a
   // aba mostra so o texto da especie, nunca um erro.
   const [manual, setManual] = useState(null);
-  const [openProblem, setOpenProblem] = useState(null);
+  // Primeiro acordeao ABERTO: um acordeao fechado que ninguem toca e
+  // conteudo invisivel - foi assim que o manual inteiro passou
+  // despercebido.
+  const [openProblem, setOpenProblem] = useState(0);
   // Camada POR TIPO: o que muda de grupo para grupo (suculenta rega diferente
   // de frutifera; polinizador se observa diferente de praga). Vem do
   // {lang}-groups.json quando a taxonomia da especie cai num grupo conhecido;
@@ -94,7 +106,7 @@ export default function CareTopicsScreen() {
   useEffect(() => {
     let alive = true;
     setManual(null);
-    setOpenProblem(null);
+    setOpenProblem(0);
     const manualKey = activeKey === 'confusas' ? 'safety' : activeKey === 'overview' ? 'role' : activeKey;
     setGroupManual(null);
     getTopicManual(manualKey, i18nLang).then((m) => {
@@ -177,6 +189,21 @@ export default function CareTopicsScreen() {
                 </View>
               )}
             </View>
+
+            {/* Indice da aba: o que existe abaixo, antes de rolar. Sem isso o
+                manual inteiro ficava invisivel sob a dobra. */}
+            {sectionChips.length > 0 && (
+              <View style={styles.chipsRow}>
+                {sectionChips.map((c) => (
+                  <View key={c.key} style={[styles.sectionChip, { borderColor: accent + '55' }]}>
+                    <Ionicons name={c.icon} size={13} color={accent} />
+                    <Text style={[styles.sectionChipText, { color: accent }]} numberOfLines={1}>
+                      {c.label}
+                    </Text>
+                  </View>
+                ))}
+              </View>
+            )}
 
             {/* Dica com lampada - editorial nosso, generico ao topico. */}
             {!!meta.tip && (
@@ -313,7 +340,7 @@ const styles = StyleSheet.create({
   tabText: { fontSize: 14, fontWeight: '700', color: colors.textMuted, paddingBottom: 8 },
   tabUnderline: { height: 3, borderRadius: 2, alignSelf: 'stretch', backgroundColor: 'transparent' },
   scroll: { padding: 20, paddingTop: 0, paddingBottom: 40 },
-  artBand: { marginHorizontal: -20, height: 148, marginBottom: 14 },
+  artBand: { marginHorizontal: -20, height: 120, marginBottom: 12 },
   artImg: { width: '100%', height: '100%' },
   artFade: { position: 'absolute', left: 0, right: 0, bottom: 0, height: 64 },
   needsCard: {
@@ -391,6 +418,17 @@ const styles = StyleSheet.create({
     marginBottom: 8,
   },
   solutionNum: { fontSize: 14, fontWeight: '800', width: 20 },
+  chipsRow: { flexDirection: 'row', flexWrap: 'wrap', gap: 7, marginTop: 12 },
+  sectionChip: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 5,
+    borderWidth: 1,
+    borderRadius: 14,
+    paddingHorizontal: 10,
+    paddingVertical: 6,
+  },
+  sectionChipText: { fontSize: 11.5, fontWeight: '700', maxWidth: 150 },
   groupHead: { flexDirection: 'row', alignItems: 'center', gap: 7, marginBottom: 10 },
   groupLabel: { fontSize: 12.5, fontWeight: '800', textTransform: 'uppercase', letterSpacing: 0.5 },
 });

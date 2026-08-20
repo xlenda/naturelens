@@ -1,0 +1,875 @@
+{
+  "succulent": {
+    "label": "Succulents & cacti",
+    "topics": {
+      "watering": {
+        "advice": [
+          "The rule for this group is soak-and-dry, not the calendar. Water until the whole root ball is drenched and it runs out of the drainage hole, empty the saucer, then let the substrate dry out completely before the next one — typically every two to three weeks in the growing season, though pot, light and temperature shift that a great deal. The reason is physiological: these are CAM plants that open their stomata at night and keep them shut during the day. Between one pulse of water and the next, what they need is an oxygenated root, not a continuous supply.",
+          "Winter is a genuine rest. Growth happens somewhere around 18 to 29 °C, dormancy between 7 and 13 °C, with watering cut to a minimum every few weeks — just enough to stop it shrivelling. And when wilting shows up, read the texture before you reach for the watering can: a wrinkled but firm leaf is thirst; a yellow, soft, translucent leaf is drowning, and watering again only makes it worse, because rotted roots have already stopped absorbing. Epiphytic forest cacti such as the Christmas cactus are the exception in this group: they take substantially more water and should never dry out completely in spring and summer."
+        ],
+        "checklist": [
+          "Drench the whole root ball until water runs out of the drainage hole, then empty the saucer.",
+          "Wait until the substrate is completely dry before watering again.",
+          "Never leave the pot standing in water.",
+          "In winter rest, water minimally every few weeks — just enough to prevent shrivelling.",
+          "Wrinkled and firm leaf = too little water. Yellow, soft, translucent leaf = too much."
+        ]
+      },
+      "light": {
+        "advice": [
+          "This is the only indoor group that both accepts and asks for direct sun. Succulents want ten or more hours of bright indirect light, with a minimum of six to eight; below that they go leggy and pale — classic etiolation. Desert cacti do best in a window with several hours of direct sun a day, which means a south-facing window in the northern hemisphere and a north-facing one in the southern. Thin, pale growth is a light problem, and no amount of fertiliser corrects it.",
+          "Two caveats matter. When you move the plant outdoors in summer, acclimatise it: start in partial shade, because strong sun burns tissue that formed indoors. And epiphytic cacti want bright but filtered light — an east or west window, a sheer curtain — because they scorch in direct sun."
+        ],
+        "checklist": [
+          "Give six to eight hours of light a day, aiming for ten or more.",
+          "Desert cactus: a window with several hours of direct sun.",
+          "Leggy, pale growth is too little light, not too little fertiliser.",
+          "When moving outdoors in summer, start in partial shade for a few days.",
+          "Epiphytic cactus: bright light, always filtered."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "The substrate is mostly mineral, and the sources disagree on the recipe only to agree on the principle. One university extension recommends one third organic material to two thirds mineral; another asks for equal volumes of a peat-based mix and very coarse sand; the RHS works with two parts of a base compost to one part horticultural grit, topped with grit. The range runs from roughly 30% to 67% mineral fraction, and it exists for one reason only: to make the saturated phase as short as possible. The more humid your environment and the heavier your hand with the watering can, the more mineral you want.",
+          "A snug pot is a rule, not neglect: extra substrate volume holds moisture and rot follows. Repot in spring into a pot only slightly larger, and wait several days before the first watering. Feeding is low in nitrogen and at a reduced rate — half to a quarter of the label dose, every third or fourth watering during the active season, and nothing in winter. Excess nitrogen produces soft tissue, and soft tissue rots. In epiphytic cacti the recipe inverts and organic matter takes over."
+        ],
+        "checklist": [
+          "Mix in at least one third mineral material: perlite, coarse sand, pumice or grit.",
+          "Use a pot only slightly bigger than the current one — slack turns into rot.",
+          "Repot in spring and wait a few days before the first watering.",
+          "Feed at half or a quarter of the dose, and stop entirely in winter.",
+          "Epiphytic cactus inverts the recipe: more organic matter, less mineral."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "The risk here is mechanical and easy to work around: handle spiny species wrapped in newspaper or with thick gloves. Cactus spines and the fine glochids of some species go into skin easily and come out with difficulty, and the moment of greatest exposure is repotting."
+        ],
+        "checklist": [
+          "Handle spiny species with rolled newspaper or thick gloves.",
+          "Prepare the new pot before lifting the plant, to cut the time it spends in your hands.",
+          "Keep spiny specimens out of walkways and away from small children."
+        ]
+      }
+    }
+  },
+
+  "tropicalFoliage": {
+    "label": "Tropical foliage houseplants",
+    "topics": {
+      "watering": {
+        "advice": [
+          "The target for this group is substrate that is evenly moist and never soggy — neither the total drying cycle of succulents nor the constant moisture of ferns. To judge it, push a finger into the substrate up to the first knuckle: dry at the tip means it is time to water. Pot weight and the hollow sound of a knuckle on a terracotta pot work just as well. When you do water, apply it until it runs out of the bottom: that flushes out excess salts and guarantees the lower two thirds of the pot receive water. Then empty the saucer — never leave the plant standing in water.",
+          "Details that make a difference here: if the substrate has dried out badly, water twice — water, wait about thirty minutes, then water again; the water should be between 17 and 22 °C, never hot and never ice cold, and never softened water, because of the sodium and chloride. Prayer plants want distilled or rainwater, because tap-water fluoride browns the leaf margins. And the group carries declared exceptions of its own: dracaenas want the surface dry to the touch before watering, the ZZ plant is watered once or twice a month and only after it has dried out completely, and the weeping fig stays moist in active growth and dries slightly in winter."
+        ],
+        "checklist": [
+          "Keep the substrate evenly moist, never waterlogged.",
+          "Water until it runs out of the bottom, then empty the saucer.",
+          "Use water between 17 and 22 °C; never softened water.",
+          "Prayer plants and dracaenas: prefer distilled or rainwater.",
+          "Very dry substrate: water, wait thirty minutes, then water again."
+        ]
+      },
+      "light": {
+        "advice": [
+          "This group's light tolerance is very wide, and that is precisely where it subdivides. Philodendrons prefer indirect or curtain-filtered sun and tolerate low light — the heartleaf takes very low light — while the tree types want medium to strong light near a window. Dracaenas grow best in bright indirect light, but several tolerate low light well enough to have become an office standard. In reference numbers: low light sits around 75 foot-candles, medium 150, bright 300 and direct 1500.",
+          "Prayer plants are the most restricted subgroup: partial shade, at most two to six hours of direct sun a day, with an explicit warning that direct sun scorches the leaf. Worth remembering that a monstera's fenestration — those characteristic holes — depends on adequate light, and that a true philodendron makes deeply cut leaves but without holes. If the aspects of your room are described by compass points, remember to swap north and south in the southern hemisphere."
+        ],
+        "checklist": [
+          "Bright indirect light is the sweet spot for almost the whole group.",
+          "Prayer plants: partial shade, at most two to six hours of direct sun.",
+          "Dry round spots on the leaf point to too much sun.",
+          "Lower leaves yellowing with a dead growing tip: too little light or too much water.",
+          "If you want fenestration on a monstera, raise the light before changing anything else."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "A general-purpose organic potting mix is enough here — this group has neither the mineral requirement of succulents nor the peat requirement of ferns. What changes the technique is retention: peat-rich mixes hold moisture longer, mixes with bark, sand or perlite drain faster. Choose according to your watering habit and the climate of the house. One important correction: a layer of stones in the bottom of the pot does not improve drainage — it tends to hold moisture inside the pot.",
+          "There is a genuine conflict on record between sources, and the conservative reading is the one to follow. For dracaenas, one extension says to avoid substrates with a high percentage of perlite, keep the pH between 6.0 and 6.5 and not to use fertilisers containing superphosphate, because dracaena is very sensitive to fluoride; for prayer plants, another extension recommends incorporating perlite or vermiculite, and prayer plants are fluoride-sensitive too. There is no explicit reconciliation: for these two, prefer vermiculite or fine bark over perlite and use distilled or rainwater. Feed moderately — brown, curled tips are a sign of excess fertiliser, and the very slow-growing ZZ plant needs only one or two applications across an entire season."
+        ],
+        "checklist": [
+          "A general-purpose mix works; adjust retention with bark or perlite.",
+          "Do not put a layer of stones in the bottom of the pot — it does not drain.",
+          "Dracaenas and prayer plants: prefer vermiculite or fine bark over perlite.",
+          "Keep dracaena pH between 6.0 and 6.5 and avoid superphosphate.",
+          "Brown curled tips: cut the feeding before you change anything else."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "This is the houseplant group with the most concentrated toxicity risk, and the cause is calcium oxalate. All parts of a philodendron are toxic if eaten: the crystals cause burning and irritation of the mouth, lips and tongue, excessive salivation, vomiting and difficulty swallowing. The ZZ plant is classified as not safe for pets. Prayer plant sap can cause skin irritation. None of these plants is dangerous simply to own — the risk is ingestion and prolonged contact with sap, so treat pruning and repotting as glove-on, wash-your-hands-afterwards jobs.",
+          "There is a smaller but real physical risk: self-heading philodendrons have brittle petioles that snap easily, so it is worth keeping them out of walkways. And one observation that saves a scare: black marks on a ZZ plant's stem are normal and indicate healthy growth, not disease."
+        ],
+        "checklist": [
+          "Keep these plants out of reach of small children and pets.",
+          "Wear gloves when pruning or repotting, and wash your hands afterwards.",
+          "Do not leave fallen leaves where plant-chewing animals can reach them.",
+          "Keep self-heading types out of walkways: the petioles break easily.",
+          "Black marks on a ZZ plant stem are normal, not disease."
+        ]
+      }
+    }
+  },
+
+  "fern": {
+    "label": "Ferns & shade plants",
+    "topics": {
+      "watering": {
+        "advice": [
+          "The target is soil that is barely moist at all times, never drying out completely and never left standing in water in the saucer. The most expensive conceptual error in this group is confusing constant moisture with a permanently soggy pot: the sources say, in the same sentence, that the substrate has to retain moisture and drain fast, because the root still needs oxygen. Root rot appears in a fern exactly as it appears in a cactus, only with far less water. And the error signal is ambiguous in both directions — leaflet drop happens from too much water and from too little.",
+          "Air humidity is the limiting factor for this group, not a comfort: the practical target sits between 30% and 50%, and around 50% for the fine-fronded species such as maidenhair. Brown tips on a fern are, first of all, a diagnosis of dry air — not dry substrate — and watering more leads to rot without fixing the symptom. The methods, in order of robustness: double-potting with damp sphagnum, a pebble tray with about six millimetres of water and the pot not touching the water, a humidifier, a terrarium or bathroom for the most delicate species, and only then occasional light misting. Change or wash the tray gravel every three months."
+        ],
+        "checklist": [
+          "Keep the substrate barely moist and never let it dry out completely.",
+          "Do not leave water standing in the saucer: it is the direct route to root rot.",
+          "Brown tips mean low air humidity — treat the air, do not water more.",
+          "Prefer double-potting with sphagnum or a pebble tray over misting.",
+          "Wash or replace the tray gravel every three months."
+        ]
+      },
+      "light": {
+        "advice": [
+          "Moderate indirect light is ideal, with the plant near a cool window — north-facing in the northern hemisphere, south-facing in the southern — or an east window. A direct hot window damages the foliage; if it is your only option, use a sheer curtain to cut the intensity. In numbers, the target band is low to medium light, between 75 and 150 foot-candles.",
+          "There is real variation inside the group: some species tolerate low light and others want bright indirect or filtered sun, so watch your own plant rather than applying a single number. Sun-damaged foliage almost always has an obvious cause — a direct hot window — and the fix is simply to move it or filter the light."
+        ],
+        "checklist": [
+          "Prefer the cool window of the house, or an east-facing one.",
+          "Avoid direct sun from a hot window; use a sheer curtain if there is no alternative.",
+          "Aim for the low-to-medium band, between 75 and 150 foot-candles.",
+          "Scorched foliage is a sign of direct sun, not of thirst."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "The substrate here has to do two things at once: retain moisture and drain fast. One verified recipe is equal parts of a commercial indoor potting mix and peat or leaf mould, with the explicit requirement that it drain quickly to prevent root rot. Another combines peat or sphagnum for retention, sand or gravel for drainage and sterilised loam, with added dolomitic limestone and bone meal. It is the exact opposite of succulents: here the organic fraction dominates, and drainage comes from the coarse material rather than from a mineral proportion. And again, a layer of stones in the bottom of the pot does not drain.",
+          "Feeding is the most restrained of any houseplant group: once a month during the growing season, at about half the recommended rate, nothing in winter — and nothing for six months after dividing or repotting. No other indoor group has such a long holding period, and the reason is direct: ferns suffer leaf scorch when over-fertilised. One chemical warning is specific to this group: pesticide sprays injure many ferns, so read the label carefully and test the product on a small area first. For pests, prefer mechanical methods such as a strong jet of water."
+        ],
+        "checklist": [
+          "Use a substrate that holds moisture and still drains fast.",
+          "Feed at half strength, once a month during the growing season.",
+          "Do not feed in winter, nor for six months after division or repotting.",
+          "Test any spray on a single frond before treating the whole plant.",
+          "Repot and divide in early spring, keeping humidity high for weeks afterwards."
+        ]
+      }
+    }
+  },
+
+  "fruitVeg": {
+    "label": "Fruit trees & vegetables",
+    "topics": {
+      "watering": {
+        "advice": [
+          "Here watering is measured as a weekly depth and has defined phenological windows. Most vegetables want one to two inches a week — the equivalent of 25 to 50 millimetres — with clear peaks: sweet corn wants one and a half to two and a half inches during tasselling, silking and ear fill; beans want one to one and a half during flowering and pod fill. The range is an interval, not a fixed number — a dry climate pushes it up, a humid one down. On loam soil, one inch of water penetrates about six inches of profile, which lets you calculate: wetting thirty centimetres takes roughly two inches of applied water.",
+          "Shallow watering here is not merely less efficient: it interrupts calcium transport. Calcium moves with the transpiration stream and is not remobilised from old tissue into new fruit, so dry-and-drench cycles produce blossom-end rot even with plenty of calcium in the soil. Tomatoes are highly sensitive to irregular watering and answer with blossom-end rot and cracking; peppers answer with flower drop; a cucumber stressed in the reproductive phase gives bitter, misshapen fruit. Sandy soil wants shorter, more frequent watering; clay soil wants less frequent and deeper."
+        ],
+        "checklist": [
+          "Work with a band of 25 to 50 millimetres a week, counting rain and irrigation together.",
+          "Do not miss flowering and fruit fill: that is the window that costs the harvest.",
+          "Prefer deep, spaced watering over short daily ones.",
+          "Blossom-end rot is fixed by regulating watering, not by spraying calcium.",
+          "Match the soil: sandy wants more frequency; clay wants more depth."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "This is the only group whose harvest removes nutrients from the system every single year, and almost every difference in management flows from that. Feeding is recurrent and split into side-dressings, with the ratio changing across the cycle — in field tomato, for example, the side-dressing starts richer in phosphorus and raises the potassium as the plant comes into production. Excess nitrogen has a real cost: figs that fail to ripen, and excessive shoot growth during early bloom and fruiting, which is one of the biggest contributors to blossom-end rot in tomato and pepper.",
+          "pH is decisive and varies a lot inside the group. Apple does well between 5.8 and 6.5, retested about every three years; most leafy vegetables sit between 6.0 and 6.5; and blueberry is the radical exception, at its best between 4.8 and 5.2, needing elemental sulfur applied at least a year before planting. Two rules apply to everything: keep fertiliser at least six inches away from the trunk, and always apply it to moist soil so it does not burn roots. And this is the only group with rotation by botanical family — crops in the same family are susceptible to the same diseases and insects, so do not repeat a family in the same bed for three to four years, or more if you can."
+        ],
+        "checklist": [
+          "Feed in split side-dressings, not in one single dose.",
+          "Soil-test and correct pH for the crop, not for the bed as a whole.",
+          "Keep fertiliser at least six inches from the trunk, always on moist soil.",
+          "Do not repeat the same botanical family in a bed for three to four years.",
+          "Excess nitrogen delays ripening and feeds blossom-end rot."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Fruit thinning is a mandatory operation that exists in no other group. Too heavy a crop gives small fruit, broken branches and alternate bearing, because when a tree is carrying a full crop almost all its energy goes into the fruit and little is left to initiate next year's flowers. Hand-thin apples within six weeks of full bloom, leaving fruit about eight to ten inches apart on the branch; pears, plums and apricots go six to eight inches apart. The natural June drop, with fruit around half an inch to an inch across, does not replace hand thinning — always keep the largest fruit of the cluster unless it is damaged.",
+          "Two operations complete the picture. Pruning an apple tree begins the day it is planted; delaying it produces poor growth and delayed fruiting. And on blueberry, removing every flower in the first and second year is what lets the plant establish — giving up two harvests buys the ones that follow. On fruit trees, keep the late-summer cut-off on feeding, because fruit production and wood maturation compete for the same photosynthate."
+        ],
+        "checklist": [
+          "Thin the fruit within six weeks of full bloom.",
+          "Keep the largest fruit in each cluster unless it is damaged.",
+          "Do not rely on natural drop: it does not replace hand thinning.",
+          "Start shaping the canopy in the planting year, not later.",
+          "Stop feeding fruit trees at the end of summer."
+        ]
+      }
+    }
+  },
+
+  "flowering": {
+    "label": "Flowering & ornamental plants",
+    "topics": {
+      "watering": {
+        "advice": [
+          "Watering here is a weekly depth, not a soak-and-dry cycle: annuals and perennials want at least one to one and a half inches of water a week, counting rain and irrigation together, and the best time is early, so the foliage dries quickly. In roses the same principle is said differently — deep watering promotes a deep root system, while frequent, light watering causes roots to form too near the soil surface.",
+          "Plant health depends on this more than it seems. A rose with recurrent black spot almost always has wet leaves at the end of the day and still air around it: morning sun, a soaker hose instead of a sprinkler, and good air circulation solve more than any spray."
+        ],
+        "checklist": [
+          "Provide at least 25 to 40 millimetres of water a week, counting rainfall.",
+          "Water early, so the foliage dries before nightfall.",
+          "Prefer deep, spaced watering over light, frequent watering.",
+          "On roses, wet the soil and not the leaf."
+        ]
+      },
+      "light": {
+        "advice": [
+          "Most annuals need full sun for at least four to six hours a day to flower well. Roses ask for more: six to eight hours of direct sun, and the morning sun matters especially because it dries the leaves and helps prevent disease.",
+          "One diagnosis fools a lot of people: a floppy perennial with no structure usually means insufficient light — not a lack of fertiliser. Feeding more does not correct it; moving the plant does."
+        ],
+        "checklist": [
+          "Annuals: four to six hours of full sun a day, minimum.",
+          "Roses: six to eight hours, with priority on the morning sun.",
+          "A floppy, sprawling perennial needs relocating, not more fertiliser.",
+          "Watch where the sun falls across the year before committing to a bed."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "Bed preparation is deeper here than in a pot: six to ten inches for annuals and eight to ten for perennials. In clay soil, incorporate at least two inches of composted pine bark, compost or leaf mould; in sandy soil, two to three inches of moisture-holding organic material. The pH target for perennials is 6.0 to 6.5. Mulch is thinner here than on woody plants: two to three inches for annuals and only one to two for perennials, with an explicit warning to avoid overly heavy mulching, because the crown of a perennial rots underneath it.",
+          "The nutritional requirement is intermediate and explicitly capped: a complete fertiliser applied at preparation and repeated at roughly six-week intervals covers it. Far above the mature woody plant, which needs almost nothing, and well below the adult fruit tree. And one important correction to a widespread habit: do not use a high-phosphorus formula as a rule for flowering. High phosphorus rates do not increase the number of flowers, and chronic excess ties up micronutrients such as iron and zinc, producing stunted plants and yellowing leaves — and excess phosphorus comes down very slowly, which may take years. A balanced fertiliser plus a soil test is the safe guidance. Sign of excess in a pot: a white crust on the rim, brown leaf tips and darkened roots."
+        ],
+        "checklist": [
+          "Prepare the soil deep: six to ten inches, incorporating organic matter.",
+          "Use only one to two inches of mulch on perennials, kept away from the crown.",
+          "Feed with a balanced formula, repeating every six weeks.",
+          "Do not use a high-phosphorus formula to force bloom.",
+          "White crust on the pot rim: leach with plenty of water or change the substrate."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "The operation that defines this group is deadheading — removing spent flowers. Taking off faded blooms encourages the plant to produce additional flowers rather than shutting down its blooming cycle for the season; it is the only category where removing the reproductive organ increases the product you want. Pinch them off with your fingers or use sharp shears, and it is fine to take a portion of the stem, not only the flower. Beyond the effect on flowering, this reduces the incidence of disease that develops on decaying plant matter. When planting annuals, pinch off buds and flowers to promote better branching; on perennials, cut back to ground level after bloom to encourage new leaf growth from the base.",
+          "Bulbs are the mirror image: after the flower, the work is recharging. Remove the spent flower to prevent seedpods forming, but never the leaf — leave the foliage until it begins to yellow and die back on its own, and do not tie or braid it, because that reduces the light the leaves can intercept and with it the photosynthesis that stocks next year's bulb. Divide bulbs once the foliage has died back and they are dormant, separating the offsets by gently twisting and pulling; small divisions may take a year or two to flower again. And in autumn, consider leaving seed heads in place: they are a nutritious food resource for wildlife through the winter."
+        ],
+        "checklist": [
+          "Remove spent flowers before they set seed.",
+          "Pinch buds when planting annuals, so the plant branches.",
+          "On bulbs, cut the flower but never the leaf.",
+          "Never tie or braid bulb foliage.",
+          "In autumn, leave some seed heads for wildlife."
+        ]
+      }
+    }
+  },
+
+  "woody": {
+    "label": "Trees & woody shrubs",
+    "topics": {
+      "watering": {
+        "advice": [
+          "This is the only group whose establishment period is measured in years: roughly one year per inch of trunk diameter. A newly planted tree wants daily watering for the first two weeks, every two or three days from the third week to the twelfth, weekly until the first frost and weekly again in the second year. The volume has a formula: one to one and a half gallons per inch of trunk diameter at each watering, spread across the whole root zone rather than at the trunk, wetting six to nine inches of soil.",
+          "Deep watering encourages strong roots and improves heat and drought resilience; frequent shallow watering builds a superficial, dependent root system — which, in a woody plant, is also the one that tears out in a gale. That is why a newly planted tree that wilts despite being watered every day is usually being watered in the wrong place, in insufficient volume. Acid-loving shrubs such as azaleas want deep watering, wetting to at least six to eight inches, and in sandy soil may need watering twice a week in their first year."
+        ],
+        "checklist": [
+          "Water the whole root zone, never the trunk.",
+          "Apply one to one and a half gallons per inch of trunk diameter each time.",
+          "Wet six to nine inches of soil profile.",
+          "Count roughly one year of establishment per inch of trunk.",
+          "Prefer deep, spaced watering over daily shallow watering."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "A mature woody plant in good soil simply does not need fertiliser: not all landscape plants need to be fertilised, and mature trees and shrubs growing in favourable soil conditions require little or no fertiliser. Trees in a fed lawn already help themselves, because their roots intercept nutrients applied to the grass. When you do feed, the ceiling is normative: slow-release nitrogen at two to four pounds per thousand square feet per year, never above six; fast-release at one to two, with a ceiling of four. The application covers the whole area of the canopy projection, from the root flare out to the branch tips, and always on moist soil.",
+          "Acid-loving shrubs are the subgroup that changes everything. Azaleas and rhododendrons want a pH between 4.5 and 6.0, are shallow-rooted and are easily damaged by excessive soil moisture; they take an acid-forming fertiliser near a 2-1-1 ratio, applied lightly in spring and early summer, and never a high-nitrogen feed in late autumn, because that delays dormancy. Yellow new leaves with green veins suggest a high pH locking up iron — but in acid clay soils iron is readily available, so investigate waterlogging before blaming the pH. Mulch is a tool and a weapon: two to four inches thick, kept three to five inches away from the trunk on a young tree and eight to ten on a mature one, extended out to the drip line. Going beyond that creates the mulch volcano, which kills slowly: air cannot penetrate, the soil beneath is depleted of oxygen, constant moisture kills the phloem and the roots are starved of carbohydrates."
+        ],
+        "checklist": [
+          "Do not feed a mature woody plant in good soil — it almost never needs it.",
+          "If you do feed, cover the whole canopy projection and always on moist soil.",
+          "Acid-lovers: pH between 4.5 and 6.0 and a light acid-forming feed in spring.",
+          "Keep mulch away from the trunk, in a flat ring.",
+          "Two to four inches of mulch is enough; more than that is a volcano."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Pruning is irreversible and has anatomical rules. The cut goes just beyond the branch collar — that swollen area at the base of the branch that acts as a natural barrier to decay-causing organisms. Branches over one and a half inches in diameter require the three-cut method, so the bark does not tear down the trunk. And no wound dressing: research has shown that wound dressings and other pruning agents do not prevent decay.",
+          "Timing is decided by the wood that flowers, not by the calendar: plants that flower on the previous year's wood — forsythia, azalea, lilac — are pruned right after they bloom, and those that flower on the current year's wood are pruned before growth starts. A shrub that never flowers has almost always been pruned at the wrong time. Prefer thinning to heading back, because thinning encourages growth inside the plant and returns a natural habit, while heading back thickens the periphery and darkens the interior, with regrowth concentrated within six to eight inches of the cut. To renovate an old shrub without shocking it, use the one-third rule over three years. Adopt the conservative annual ceiling of about 25% of the live crown, and never top a tree: topping removes half or more of the leafy crown, leaves wounds that cannot compartmentalise and exposes the bark to sunscald. Also avoid pruning in the ten weeks before your area's first hard frost."
+        ],
+        "checklist": [
+          "Cut just outside the branch collar, never flush with the trunk.",
+          "Use the three-cut method on branches over one and a half inches.",
+          "Do not apply wound dressing: it does not prevent decay.",
+          "Plants that flower on old wood are pruned right after blooming.",
+          "Remove at most about 25% of the live crown per year, and never top a tree."
+        ]
+      }
+    }
+  },
+
+  "orchid": {
+    "label": "Orchids & epiphytes",
+    "topics": {
+      "watering": {
+        "advice": [
+          "There is no watering calendar here, only a drying criterion: water as soon as the plant dries out, and there is no magic formula such as watering a six-inch pot every seven days. When you water, water properly — water running freely from the drainage holes for a few minutes, until the mix is completely saturated. The concept of deep watering inverts in this group: there is no soil profile to wet, only total saturation followed by fast drying. Light daily misting is the equivalent of shallow watering in a bed: it wets the surface, keeps moisture sitting in the wrong places and never saturates the medium.",
+          "Water quality matters more here than in any other group, because without soil there is no cation exchange complex to buffer salt: use tepid water, preferably rainwater, and never softened water, which carries a lot of sodium. Never leave the pot in a saucer. Each subgroup has its method: tank bromeliads absorb mainly through their leaves and through the cup at the base, which should stay full and be flushed every week to stop minerals concentrating and killing the leaf tips; air plants want a twenty to thirty minute soak once a week — one to two times depending on whether the room is hot and dry or cool and humid — then a shake and a turn upside down to drain; and the Christmas cactus, once buds have set, needs uniformly moist substrate so it does not drop them."
+        ],
+        "checklist": [
+          "Water when it dries out, not by calendar.",
+          "Saturate the medium until water runs freely for a few minutes.",
+          "Use tepid water, rainwater where possible, and never softened water.",
+          "Never leave the pot sitting in a saucer of water.",
+          "Tank bromeliad: keep the cup full and flush it every week."
+        ]
+      },
+      "light": {
+        "advice": [
+          "Most indoor orchids want one to four hours of direct sun. Moth orchids do well between 19 and 30 °C by day and 16 to 19 °C at night, in an east or west window, out of summer sun and away from heaters and draughts. Bromeliads ask for twelve to sixteen hours of relatively bright light a day, and the leaves report back: long, thin and greener leaves mean too little light; shorter, thicker and paler ones mean plenty. Air plants want bright filtered light, never direct sun.",
+          "There is one case where photoperiod outranks intensity. Christmas cacti and their relatives require fourteen or more hours of continuous darkness a day, starting around the middle of September in the northern hemisphere, for at least six weeks — and the operational warning is blunt: even two hours of interrupted lighting will inhibit flower bud set. A lamp left on in the room is enough to cancel the year's flowering."
+        ],
+        "checklist": [
+          "Indoor orchids: one to four hours of direct sun.",
+          "Moth orchid: east or west window, away from heaters and draughts.",
+          "A bromeliad with long, thin, dark leaves is asking for more light.",
+          "Air plant: bright filtered light, never direct sun.",
+          "Christmas cactus: continuous darkness at night for six weeks to set buds."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "There is no soil in this group, and ordinary compost kills: never use loam-based or multipurpose compost, because it suffocates the velamen-covered root. More than that, the substrate has an expiry date and repotting is mandatory, not optional — bark needs replacing roughly every two years, and before that the sign is physical: repot when tiny fragments of the medium start flushing out of the pot during watering. Decomposed bark becomes less airy and more dense, holds onto water longer and rots the roots. It is the only group in which the substrate itself is the cause of programmed death.",
+          "The choice between bark and sphagnum is a decision about environment, not taste: coarse bark in a humid room or greenhouse; a mix higher in sphagnum and fibre in a dry, sunny interior, with more spaced watering and repotting right after flowering. A bark, charcoal and perlite mix is the balanced commercial standard. The pot should be just large enough to contain the root system — too large a container holds moisture and damages orchid roots. Feeding is diluted on principle: half the label strength, with little or no urea, weekly in summer and fortnightly in autumn and winter, skipping the feed every fourth watering to flush salts. Bromeliads go weaker still, at a quarter to an eighth of strength. And remember that several members of this group are monocarpic: a bromeliad slowly declining after flowering is completing its normal cycle, not falling ill — keep the offsets."
+        ],
+        "checklist": [
+          "Never pot into ordinary soil or multipurpose compost.",
+          "Replace the bark every two years, or when fragments flush out while watering.",
+          "Use a pot sized exactly to the root system.",
+          "Feed at half strength and skip the feed every fourth watering.",
+          "A bromeliad dying after flowering is the normal cycle: keep the offsets."
+        ]
+      }
+    }
+  },
+
+  "herb": {
+    "label": "Culinary & aromatic herbs",
+    "topics": {
+      "watering": {
+        "advice": [
+          "This group splits in two, and treating both with the same calendar is the structural mistake. The woody Mediterraneans — rosemary, thyme, oregano, sage, lavender — want spaced watering with real drying in between: their risk is a waterlogged root in winter, not drought in summer. Rosemary hates having wet roots, especially in winter, and once established in the ground it barely needs watering at all; in a pot, water during dry spells but never let the compost get waterlogged.",
+          "The leafy herbs — basil, parsley, mint, lemon balm — want the opposite: a relatively constant supply of soil moisture, because water stress accelerates bolting and toughens the leaf. Water in the morning so the foliage dries before night, and on basil avoid wetting the leaves: use drip or a soaker hose rather than a sprinkler, because a wet leaf in still air is an invitation to downy mildew."
+        ],
+        "checklist": [
+          "Separate the Mediterraneans from the leafy herbs before setting any watering routine.",
+          "Mediterraneans: water spaced out and let the soil genuinely dry between waterings.",
+          "Leafy herbs: keep moisture constant to avoid bolting.",
+          "Water in the morning, never at the end of the day.",
+          "On basil, wet the soil and not the leaf."
+        ]
+      },
+      "light": {
+        "advice": [
+          "Almost all herbs grow best in an area that is sunny for at least six hours a day — and it is the sun that makes the essential oil, which means it is the sun that makes the aroma. Basil prefers full sun but grows reasonably well in six hours of part sun.",
+          "The exceptions are well known and worth respecting: parsley and mint prefer partial shade and languish in strong full sun. If your parsley or mint is struggling in the sunniest bed, that may be exactly the problem."
+        ],
+        "checklist": [
+          "Aim for at least six hours of sun a day for most herbs.",
+          "Parsley and mint accept, and sometimes prefer, partial shade.",
+          "Less sun means less essential oil and less aroma.",
+          "Keep a few pots near the kitchen, for frequent picking."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "Drainage is worth more than fertility here, and this is the only group in which high fertility is a loss: very fertile soils tend to produce lush leaves that lack flavour. The general pH target is 6 to 7, with moderate organic matter. In clay soil, incorporate two to three inches of fine pine bark, pea gravel or coarse compost to a depth of eight to twelve inches; in sandy soil, the same depth of moisture-holding material. A raised bed with a gravel mulch is standard practice in this group, not a luxury.",
+          "Rosemary in heavy soil is not corrected — it is relocated, into a raised bed or a pot with up to 25% horticultural grit by volume. Rosemary growing in the ground needs no feeding at all; the potted one gets a sprinkling of general-purpose granular feed in late spring. Basil is the exception that behaves like a vegetable and takes a measured dose at planting, topped up only if growth stalls. On coriander, light applications of nitrogen keep plants lush, but the source is explicit about avoiding the tendency to over-fertilise. And be careful with mint: plant it in a bottomless container sunk into the bed, because it runs by rhizome and will take the whole space."
+        ],
+        "checklist": [
+          "Put drainage first: raised bed, grit or fine bark incorporated.",
+          "Keep the pH between 6 and 7 and fertility moderate.",
+          "A lush herb with no flavour is a sign of too much fertiliser.",
+          "Rosemary in the ground needs no feeding.",
+          "Plant mint in a bottomless container sunk into the bed."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Harvest has a physiological window: herbs should be harvested just prior to blooming, which is when the essential oils are at their peak. And it has an hour of the day — early morning, after the dew dries but before the heat intensifies. No other group has time of day as a quality variable, and a herb picked in the afternoon has a noticeably weaker aroma. Aromatic flowers are picked before they open fully.",
+          "Pruning here maintains habit and flavour, and every genus has its own rule. On basil, pinch out the growing tips periodically and remove flower buds as soon as they appear, or the leaf turns bitter and the plant stops growing; harvest shoot tips with one or two sets of leaves, leaving enough foliage to regrow. Rosemary gets a light trim every year after the flowers fade, never cutting back into old wood — without that it goes leggy, woody and bare at the base. Sage takes a hard prune in early spring, thyme is trimmed lightly after flowering, and bay is trimmed in summer. Mint, after flowering, can be cut right back to about two inches from the base to renew the leaves."
+        ],
+        "checklist": [
+          "Harvest just before flowering, when the oil is at its peak.",
+          "Harvest early in the morning, once the dew has dried.",
+          "On basil, remove flower buds as soon as they appear.",
+          "On rosemary, trim lightly after flowering and never cut into old wood.",
+          "Renew mint by cutting the clump right back after it flowers."
+        ]
+      }
+    }
+  },
+
+  "pollinator": {
+    "label": "Pollinating insects",
+    "topics": {
+      "role": {
+        "advice": [
+          "About one third of the food we eat depends on the activity of pollinators, and most of that work is not done by the bee you are picturing. In Britain alone there are more than 270 bee species: around 26 bumblebees, over 250 solitary bees and a single honeybee species. Almost all of them are solitary — each female constructs and provisions her nest on her own and dies before the next generation emerges — and the nest is almost never a hive: many nest in bare soil, others in wood cavities, and bumblebees frequently occupy tunnels made by rodents.",
+          "In Brazil the key group is the stingless bees, the Meliponini, native to tropical and subtropical regions; in Pará alone an estimated 109 species are linked to crops such as açaí, melon and watermelon. The group goes well beyond bees: beetles are thought to be among the first insects to visit flowers, hoverflies pollinate as adults while their larvae eat aphids, and butterflies and moths add to the service, even without the buzz pollination that makes bees so efficient per visit."
+        ],
+        "checklist": [
+          "Most bees are solitary and will never form a hive.",
+          "A conical heap of soil in the lawn is the mouth of an active nest tunnel.",
+          "Clean circular cut-outs in a leaf are leafcutter bees collecting nest material.",
+          "A hoverfly has two wings; bees and wasps have four.",
+          "No aphids means no hoverfly larvae: prey is a resource too."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "The real risk is low. Getting stung in your garden is unlikely as long as bees are treated with respect, and solitary bees only use their stings in self-defence, when roughly handled. Stingless bees, as the name says, do not sting — which makes this the safest group to watch closely and to keep at home. The sting risk in this neighbourhood is concentrated in the social wasps, which do have defensive stinging capability at the nest.",
+          "Two caveats close the picture. The larvae of several moths are stinging caterpillars, and that is an entirely different story — check the pest insect group before touching any hairy caterpillar. And keeping stingless bees is a regulated activity, not a free one: in Pará, for example, keepers with up to 99 hives were exempted from environmental licensing but still need to register with the agricultural inspection body. Taking a wild nest follows rules of its own."
+        ],
+        "checklist": [
+          "Watch without handling: a solitary bee only stings if squeezed.",
+          "Stingless bees do not sting — the safest group for close observation.",
+          "Keep your distance from social wasp nests.",
+          "Never touch a hairy caterpillar: the risk lies there, not with the bees.",
+          "Keeping native bees requires registration with the competent authority."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Diversity before quantity: start with eight to ten native plant species covering spring, summer and autumn, planted in patches at least three feet across. Prefer simple, open flowers with a single layer of petals — double flowers hide or eliminate pollen and nectar. Let lawn weeds flower by cutting less often, and provide water, because bees and other pollinators sometimes need to drink. One field method worth copying: observe which plants are popular with pollinators in your neighbourhood, and grow more of those.",
+          "Nesting sites are a resource. Leave areas of well-drained bare soil in full sun, without mulch, for ground-nesting bees, and tolerate the little heaps of soil in the lawn instead of levelling them. A bee hotel works with holes about 3/32 to 3/8 of an inch across, spaced three quarters of an inch apart, three to four inches deep for the smaller holes and five to six for the larger ones, in untreated wood, mounted three to six feet up in a sheltered spot. And the rule that outweighs all the others: never spray open flowers. Avoid broad-spectrum insecticides; if you must treat, apply in the evening, when pollinators are less active."
+        ],
+        "checklist": [
+          "Plant eight to ten native species covering all three seasons.",
+          "Choose single-layered simple flowers, not double ones.",
+          "Leave patches of bare, sunny soil for ground-nesting bees.",
+          "Provide shallow, safe water all year round.",
+          "Never spray open flowers; if you must treat, treat in the evening."
+        ]
+      }
+    }
+  },
+
+  "beneficialInsect": {
+    "label": "Predatory & beneficial insects",
+    "topics": {
+      "role": {
+        "advice": [
+          "These are the garden's natural enemies: predators, which kill and eat many prey over a lifetime, and parasitoids, whose larva develops inside or on a single host and kills it. The numbers are striking — a ladybird may gobble down as many as 5,000 aphids in its life, ground beetles can consume up to their body weight each day, and a lacewing larva takes between 100 and 150 aphids. Integrated pest management built on natural enemies has been reported to cut spraying frequency by 30% to 40% across different crops.",
+          "Life stage changes everything, and that is where the commonest mistake lives. In lacewings and hoverflies only the larva is a predator: the adult lives on nectar, pollen and honeydew. In other words, that strange little creature on the leaf is usually the ally, not the pest. Three field signs are worth learning: a ladybird larva is reddish and alligator-shaped; lacewing eggs sit on hair-like stalks; and a caterpillar carrying a few dozen small white cocoons on its back is already doomed and will release dozens of parasitic wasps — leave it exactly where it is."
+        ],
+        "checklist": [
+          "Identify before you act: many strange larvae on leaves are predators.",
+          "A ladybird larva is reddish and alligator-shaped.",
+          "Eggs on hair-thin stalks are lacewing eggs, not a pest.",
+          "A caterpillar with white cocoons on its back is already parasitised — do not discard it.",
+          "A mantis is an indiscriminate predator: it eats pollinators too."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "Almost nothing here stings. Among the predators, only social wasps have defensive stinging capability; among the parasitoids, only the hunting wasps that build nests in soil or mud. Ichneumon and braconid wasps use that long sting purely as an ovipositor, and it is not defensive.",
+          "But two families bite if handled: assassin bugs insert their proboscis and inject digestive enzymes, and robber flies inject neurotoxic saliva. Do not pick them up. A praying mantis captures with its raptorial legs in a lightning fast motion and will bite if held. And there is one specific case: the invasive Asian lady beetle bites people, especially when trapped between skin and clothing — it does not break the skin or transmit disease, but when disturbed it releases haemolymph that can permanently stain walls, drapes and carpeting, and there are records of allergic reactions such as asthma and hives, with sensitivity unrelated to a person's age or predisposition to allergies. For that beetle, the recommendation is to seal cracks and thresholds, not to spray the garden. An active social wasp nest is watched from a distance."
+        ],
+        "checklist": [
+          "Only social wasps and hunting wasps sting in this group.",
+          "Do not pick up an assassin bug or a robber fly.",
+          "A mantis will bite if you hold it.",
+          "Invasive lady beetles indoors are solved by sealing gaps, not by spraying.",
+          "Watch wasp nests from a distance."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Conserving beats buying. The standard recommendation is habitat and tolerance, not release: protect these predators by avoiding pesticides that kill them, by choosing plants that provide them with pollen, nectar and shelter, and by keeping ants out of pest-infested plants — ants defend aphids and scale insects from predators in exchange for honeydew. Plants named by extension services as adult food include dill, fennel, echinacea, rudbeckia, milkweed and lantana.",
+          "Each group has an environmental requirement. Dragonflies need a body of water: the female lays her eggs by touching the surface and the larva develops submerged — no water, no dragonfly. Ground beetle larvae live in the soil with a limited range, so turning or compacting the ground removes the next generation. And zeroing out the garden's aphids removes the food base of ladybirds, lacewings, hoverflies and parasitic wasps alike: prey is a resource, not an emergency. When treatment is unavoidable, prefer soap, oil or spinosad over pyrethroids, carbamates and organophosphates, precisely to spare parasitic wasps, tachinid flies and ground beetles."
+        ],
+        "checklist": [
+          "Provide nectar and pollen flowers: the adults live on them.",
+          "Keep ants out of infested plants.",
+          "Leave clean standing water if you want dragonflies.",
+          "Do not turn or compact soil where beetle larvae live.",
+          "Tolerate a few aphids: without prey, predators do not stay."
+        ]
+      }
+    }
+  },
+
+  "pestInsect": {
+    "label": "Common pest insects",
+    "topics": {
+      "role": {
+        "advice": [
+          "Pest is a label of context, not of species: it describes economic damage or a health risk in one place at one moment. Mouthparts tell you the type of damage — chewers leave noticeable holes in leaves, wood or fruit; suckers use a straw-like tube and produce stippling, spotting, stunting, yellowing, distorted growth and honeydew. And honeydew is not a disease: it is sugary excretion, and the black patch is sooty mould growing on top of it, which turns things black and reduces photosynthesis. Solve the sucker and the stain goes with it.",
+          "Two keys help in the field. Metamorphosis determines what you will actually find: in gradual metamorphosis it is egg, nymph and adult, with the nymph looking like a wingless adult; in complete metamorphosis it is egg, larva, pupa and adult, and the larva may look nothing like the adult. And habit tells you where to look: suckers concentrate on new, expanding tissue, which is why the young leaf curls first, and aphids, whiteflies and mites live on the underside of the leaf. One curious case: leafcutter ants do not eat the leaf — they cut it to cultivate the fungus they feed on, which makes them a pest in plantations and a keystone organism in native ecosystems."
+        ],
+        "checklist": [
+          "Holes and tears = chewer. Stippling, distortion and stickiness = sucker.",
+          "Sooty mould grows on honeydew: treat the insect, not the stain.",
+          "Always check the underside of the leaf.",
+          "A curled young leaf points to a sucker, not to thirst.",
+          "Not every ladybird is an ally: one lineage is plant-feeding and eats leaves."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "This is where almost all the physical risk in the app's fauna lives — and it is not from the crop pests. Stinging caterpillars have hollow, quill-like hairs connected to poison sacs, which pierce the skin and release the poison; symptoms range from mild itching to pain, swelling, blistering, dermatitis and even intestinal disturbances. First aid: apply and remove adhesive tape repeatedly to pull out the broken spines, wash with warm soap and water, promptly apply an ice pack to prevent swelling and reduce pain, and seek medical attention for a severe reaction. In Brazil the Lonomia caterpillar causes a haemorrhagic picture and threatens both rural and urban populations; surveillance in Paraná recorded 199 cases and five deaths between 1989 and 2000, with antivenom decentralised to strategic points. Most accidents come from brushing against foliage during yard work rather than from an aggressive animal: admire the colourful, fuzzy caterpillar from afar.",
+          "The kissing bug, which transmits Chagas disease, has an official protocol of its own when found: do not squash, squeeze or damage the insect; protect your hand with a glove or a plastic bag; put the insect, preferably alive, into a plastic container with a screw top; and take it to a triatomine information post. Vector transmission happens through the insect's faeces reaching the bite wound, and there is also transmission by ingesting contaminated food or drink. Household prevention means screening doors and windows, using repellent and wearing long sleeves at night."
+        ],
+        "checklist": [
+          "Never touch or brush away a hairy or spiny caterpillar.",
+          "Caterpillar sting: adhesive tape, warm soap and water and an ice pack — and medical care if it worsens.",
+          "If you find a kissing bug, do not crush the insect.",
+          "Collect it with a glove, in a screw-top container, and take it to health surveillance.",
+          "Screen doors and windows and wear long sleeves at night in risk areas."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "This is the only group where the right answer can be to do nothing: the baseline instruction is to monitor and scout to determine insect type and population levels before deciding on any treatment. After that, climb the ladder of least impact. Plain water from a hose washes aphids and mites off. Hand-picking and a homemade trap work — place a small square of old shingle or heavy cardboard under a squash plant, the bugs congregate underneath for shelter, and you simply lift the trap and destroy them. Phenological escape, planting early to dodge the pest's emergence, is control too.",
+          "Only then do products come in: insecticidal soap and oil, which harm fewer non-target insects, reflective mulch against whitefly, Bacillus thuringiensis for young caterpillars, and chemistry last of all, always sprayed in the evening to reduce the impact on pollinating insects. Extension services prefer spinosad over pyrethroids and neonicotinoids precisely to spare parasitic wasps, tachinid flies and ground beetles. Physical barriers are the most underrated control of all, with one condition: row cover has to be removed at flowering, or it blocks the pollinator along with the pest. And record what you saw properly — photographing with a scale item beside the insect, noting the date and which plant and which part of it the insect was feeding on, makes any diagnosis far more reliable."
+        ],
+        "checklist": [
+          "Monitor and count before treating.",
+          "Start with a jet of water, hand-picking and a homemade trap.",
+          "Prefer soap, oil or spinosad over broad-spectrum insecticides.",
+          "Remove row cover at flowering.",
+          "Always spray in the evening, when pollinators are inactive."
+        ]
+      }
+    }
+  },
+
+  "decomposerFungus": {
+    "label": "Decomposer mushrooms",
+    "topics": {
+      "role": {
+        "advice": [
+          "These are saprotrophic fungi: they live on dead organic matter. The fungi that produce these mushrooms are beneficial, because they decompose organic matter in the soil, making nutrients available to other plants. A mushroom in the lawn is almost never a disease — these are naturally occurring fungal organisms doing as nature intended, breaking down once-living material to recycle the energy back into the soil. A fairy ring is a sign of fertility, not of pest: the breakdown releases nitrogen, the grass takes it up and darkens, and that is what draws the dark green circle. Picking the mushroom does not kill the fungus either: the fruiting body is ephemeral, and the organism is the mycelium in the substrate.",
+          "On a living tree, though, the sign is serious. Mushrooms or bracket fungi on trunk or butt are warnings, and many old trees that fall in a storm have already had their strength sharply reduced or even eliminated by decay fungi. Strength loss is difficult for amateurs to detect, and even for professionals to evaluate — which means calling someone trained in decay detection and assessment. In mulch, cannon fungus, bird's nest fungi and puffballs are harmless decomposers, and the brightly coloured yellow or orange slimy masses are slime moulds, which are not even true fungi and do not harm plants."
+        ],
+        "checklist": [
+          "A mushroom in the lawn is organic matter being recycled, not a disease.",
+          "A dark green fairy ring shows released nitrogen, not a pest.",
+          "A mushroom or bracket on the trunk or butt is a structural warning.",
+          "Picking mushrooms does not remove the fungus, only the fruiting body.",
+          "A yellow slimy mass in mulch is a slime mould and does not attack plants."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "Never eat a wild mushroom without in-person identification by an expert. Many species are poisonous, and only an expert can distinguish between edible and poisonous species. Cooking does not fix it: the amanitins are heat stable and are not inactivated by cooking, and there are records of poisoning from breathing in the cooking fumes. A field guide from another region does not transfer — learning how to identify mushrooms in one part of the country or another country is not reliable for identifying mushrooms in another area. The late symptom is the dangerous one: in documented cases, nausea, vomiting and diarrhoea began approximately nine hours after ingestion, and vomiting that starts more than six hours later is a sign of severity, not of indigestion.",
+          "Touching does not poison you — the documented risk is ingestion and, secondarily, inhaling cooking fumes. Even so, wash your hands and keep them away from your mouth. Remove mushrooms from lawns where children or pets are around, because small children tend to put anything, including mushrooms, in their mouths: in a United States review of 2016 to 2018, 25.9% of the patients were five years old or younger. If someone has eaten one, call the poison centre immediately — in the US, 1-800-222-1222; in Brazil, CIATox / Disque-Intoxicação 0800 722 6001. And one sentence matters more than any other in this manual: an identification app does not replace an expert."
+        ],
+        "checklist": [
+          "Do not eat a wild mushroom without in-person expert identification.",
+          "Cooking, drying and home tests do not make a poisonous mushroom safe.",
+          "Vomiting that starts more than six hours later is a sign of severity.",
+          "Remove mushrooms from lawns where children or loose pets play.",
+          "If someone has eaten one, call the poison centre straight away."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "This is the only fungal group that can be cultivated at scale, precisely because it only needs dead substrate: shiitake, oyster, button and enoki mushrooms are all saprotrophs, and growing them means imitating decaying wood or straw. In the garden, management is physical rather than chemical — fungicide is not the answer. Pick the mushrooms for safety, dig out the buried organic matter causing the growth, such as stumps, dead roots, construction debris and accumulated thatch, and aerate the soil to improve infiltration. When establishing a lawn, remove tree stumps and roots first.",
+          "When a fairy ring really does interfere, the damage comes from the dense mycelium, which can inhibit water movement into the soil — the route is aeration to break the fungal mat, plus watering and fertilising within recommended rates. In mulch, mixing in about 40% used mushroom compost suppresses cannon fungus, because it brings in competing microbes; bird's nest fungi and slime moulds need no management beyond a rake. For a tree, prevention is the only real defence, because you cannot save a tree that has decay: water well in drought, aerate the soil, keep two to six inches of organic mulch, feed with slow release, avoid wounding or smothering roots during construction, and prune with correct technique at the correct time. And when photographing, record the cap, the gills or pores underneath, the base of the stipe, the substrate and the host — the base and the substrate are exactly what separates lethal species from edible ones."
+        ],
+        "checklist": [
+          "Do not apply fungicide to a lawn because of mushrooms.",
+          "Dig out the buried wood and roots feeding the fungus.",
+          "Aerate the soil to break up a fairy ring's mycelial mat.",
+          "A tree with decay is not treated: it is prevented, and assessed by a professional.",
+          "When photographing, include the base of the stipe and the substrate."
+        ]
+      }
+    }
+  },
+
+  "mycorrhizalFungus": {
+    "label": "Mycorrhizal mushrooms",
+    "topics": {
+      "role": {
+        "advice": [
+          "The mushroom here is only the visible tip of an underground partnership with plant roots. An estimated 80% to 90% of all plant life is believed to engage in at least one of the seven types of mycorrhiza — which makes this the pattern of the plant kingdom, not the exception. The fungus cannot photosynthesise and cannot fix its own carbon, so it receives all the carbohydrates it needs from the host plant and returns water and mineral nutrients: greater uptake of phosphorus, ammonium and zinc, protection against soil-borne diseases, and greater tolerance of drought and temperature. The advantage is geometric rather than chemical — roots occupy only about 0.5% of the volume of topsoil, and a hypha, being far finer, comes into contact with far more soil per unit volume.",
+          "There are two practical types. Ectomycorrhizas form a sheath on the root and are the ones that produce visible mushrooms; arbuscular mycorrhizas grow inside the root and produce no mushroom at all, only spores in the soil. Orchids depend on mycorrhizal fungi even to germinate, and mycotrophic plants — those that do not photosynthesise enough — obtain their carbon from a host tree through an intermediary fungus. One field distinction is worth keeping: a mycorrhizal mushroom sprouts from the soil near a living tree and indicates that the tree is alive and connected, while a decay bracket sprouts from the trunk or the butt and is a warning of structural risk."
+        ],
+        "checklist": [
+          "Mycorrhizal fungi sprout from soil near a living tree; decay brackets sprout from the trunk.",
+          "The fungus is not eating the tree: it trades carbohydrate for water and minerals.",
+          "A mycorrhizal mushroom indicates established, undisturbed soil.",
+          "Arbuscular mycorrhizas exist in almost every garden and are invisible.",
+          "Native orchids depend on the fungus in their original soil to germinate."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "The same hard rule applies, and it matters even more here: never eat a wild mushroom without in-person identification by an expert. This group holds both the most prized mushrooms in gastronomy and the most lethal ones on the planet — the deadly amanitas belong to one of the dominant ectomycorrhizal families, the very same ecological neighbourhood as the fine edibles. Cooking does not neutralise them: the amanitins are heat stable.",
+          "The typical confusion is precisely with a common edible, and familiarity with species from another region raises the risk rather than lowering it. The latency deceives: nausea and vomiting more than six hours after ingestion are a sign of severity, not of ordinary discomfort. The rule of thumb quoted by a university health service sums it up: if you are not sure, do not eat it. Touching does not poison you — the documented risk is ingestion; wash your hands and keep them away from your mouth. If someone has eaten one, call the poison centre immediately: in Brazil, CIATox / Disque-Intoxicação 0800 722 6001; in the US, 1-800-222-1222."
+        ],
+        "checklist": [
+          "Do not eat a wild mushroom without in-person expert identification.",
+          "This group contains the most lethal species known.",
+          "Cooking does not inactivate amanita toxins.",
+          "A symptom that appears after six hours is a sign of severity.",
+          "When in doubt, do not eat it — and call the poison centre if someone already has."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "This group cannot be cultivated the way saprotrophs can, because it requires the living host plant — that is the economic reason porcini, chanterelle and matsutake are gathered rather than farmed, and why trying to grow them on a substrate fails. And there is a strong practical consequence: over-feeding dismantles the partnership. Additions of nitrogen, phosphorus or complete fertilisers reduce the presence and activity of mycorrhizal fungi, so anyone who wants mycorrhiza feeds sparingly. Slight alterations in soil pH, temperature, organic matter content, overall fertility and moisture may significantly alter colonisation.",
+          "What preserves it is established, undisturbed soil, an intact organic layer and the right host. Ectomycorrhizal communities accumulate over time: younger trees have a reduced community of fungal symbionts compared with mature stands. In practice, the mycorrhizal network of a mature tree is a decades-old asset that construction, land stripping and fumigation destroy in a day and that no bag of product buys back. And be sceptical of the bag: there is very limited unbiased scientific evidence demonstrating that mycorrhizal inoculations make plant establishment more successful, and they are not the miraculous panacea presented in commercial advertisements. Do not dig to see the mycelium, and do not transplant a native terrestrial orchid or a chlorophyll-free plant: without the fungal partner from its original soil, they die."
+        ],
+        "checklist": [
+          "Feed sparingly if you want to preserve the mycorrhiza.",
+          "Avoid soil fumigation and stripping of the topsoil layer.",
+          "Be sceptical of inoculants sold as a miracle fix.",
+          "Do not dig to see the mycelium: the network is the organism.",
+          "Do not transplant native orchids or mycotrophic plants."
+        ]
+      }
+    }
+  },
+
+  "freshwaterFish": {
+    "label": "Freshwater fish",
+    "topics": {
+      "role": {
+        "advice": [
+          "Temperature and dissolved oxygen are the filter that decides everything: before any decision about a body of water, temperature, pH and dissolved oxygen are measured, and fish kills from excessive heat or lack of oxygen are the classic accident in farm ponds. Taxonomic make-up changes from continent to continent — the Neotropics are dominated by characins and catfishes, while the Holarctic runs on carps and minnows, sunfishes, perches and salmonids. The Neotropical freshwater fish fauna is the richest on the planet, with around 71 families and roughly six thousand species, of which 4,475 have been formally described.",
+          "Many species depend on an obligatory spawning migration, the piracema: rheophilic fish swim upriver against the current to spawn, and the physical effort is itself part of the physiological trigger for reproduction. And floodplain lagoons are not puddles, they are nurseries — at flood the river spills over and connects them, drifting eggs and larvae settle there, and when the river drops those juveniles grow up protected until the next flood. Some families work as a thermometer of water quality and others of degradation: fish intolerant of warm, turbid water indicate high-quality water, while catfishes tolerant of high temperature, muddy water and low oxygen thrive exactly where the demanding species have already gone."
+        ],
+        "checklist": [
+          "Suspect dissolved oxygen first in a sudden summer fish kill.",
+          "Strong current over a stony bed indicates rheophilic and migratory species.",
+          "A floodplain lagoon connected at flood is a nursery, not a puddle.",
+          "Only tolerant species present suggests a degraded or already invaded system.",
+          "A shoal forming at the start of the rainy season may be the beginning of a spawning run."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "Here safety is mostly the animal's and the law's. Never release an aquarium, pay-lake or farmed fish into a natural water body: Brazil already has records of around ninety invasive exotic fish species in inland waters, aquaculture is the largest source of introductions — through escapes via effluent, tank failures and fish slipping through cage mesh — and introducing any animal species without a technical opinion and a licence from the competent body is prohibited. Never move fish between basins: a captured fish may only go to another water body if it is native to the same drainage basin.",
+          "Respect the closed season. In Minas Gerais the spawning-run closure runs from 1 November to 28 February, but dates vary by state and by basin, so check the local environmental agency before you go. Do not feed wild fish — feeding alters natural foraging behaviour and concentrates animals artificially. Do not fish for or disturb fish sitting on their nests in spring. And handle as little as possible: put stones and logs back exactly where they were."
+        ],
+        "checklist": [
+          "Never release an aquarium or farmed fish into a river, lake or pond.",
+          "Do not move fish between different drainage basins.",
+          "Check your state's closed-season calendar before fishing.",
+          "Do not feed wild fish.",
+          "Do not disturb fish guarding nests in spring."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Natural diet shifts with the season and tells the story of the environment. The tambaqui eats fruit and seeds during the river flood and, when those run out in the dry season, switches to zooplankton — and by dispersing seeds it takes part in regenerating the Amazon forest. Detritivores and scrapers process bottom organic matter and biofilm, forming the energy base of many Neotropical rivers. Ambush piscivores occupy the local top of the chain and, in a pond, are what stops forage fish overpopulating.",
+          "In a pond or fish farm, feeding has to be dosed so it does not degrade water quality: surplus ration becomes organic matter, consumes oxygen and opens the door to disease and die-offs. Stocking a little of everything for the sake of diversity gives disappointing results, with unbalanced populations and stunted fish; stocking very prolific species fills the pond with stunted fish. Avoid stocking in high summer, when high temperature and low oxygen weaken fish during transport. And remember that cold-water species do not survive summer in most ponds, working only as a stock-and-harvest scheme before the heat arrives."
+        ],
+        "checklist": [
+          "Dose the feed: surplus becomes organic matter and drops the oxygen.",
+          "Do not stock a little of every species hoping for diversity.",
+          "Avoid stocking fish in high summer.",
+          "Read the environment through the water before deciding on any management.",
+          "Photograph and record rather than collect."
+        ]
+      }
+    }
+  },
+
+  "marineFish": {
+    "label": "Marine & reef fish",
+    "topics": {
+      "role": {
+        "advice": [
+          "A reef fish is a diagnosis of the reef, not just a resident. The herbivores — parrotfishes and surgeonfishes — eat the algae that compete with coral and reduce its capacity to survive, grow and reproduce. And functional group matters more than species: parrotfishes have powerful beaks that scrape the substrate as they bite the algae, opening space for new corals to settle, while surgeonfishes graze only the upper part of the algal turf. The greatest negative effect of algae is on the settlement and early survival of corals, so a reef that already has many large adult corals may not benefit immediately from more herbivores, while one whose recovery depends on new recruitment benefits a great deal.",
+          "Protecting herbivores is not a universal solution: the measure works where there genuinely is an algae problem at that site, and where it really does increase the herbivore stock. What you photograph reads the place. Many butterflyfishes suggest live, structured coral nearby. The complete absence of large groupers and snappers on a structured reef is a strong indication of fishing pressure. Thick macroalgal turf covering dead coral, with few parrotfishes and surgeonfishes in sight, indicates insufficient grazing. And even when protected, herbivores take several years to recover — the management has to be proactive rather than reactive."
+        ],
+        "checklist": [
+          "Many butterflyfishes suggest live coral nearby.",
+          "The absence of large predators indicates fishing pressure.",
+          "Thick macroalgae with few herbivores indicates insufficient grazing.",
+          "Sand channels and patches between corals are habitat too.",
+          "Record the date and location: they are worth as much as the photo."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "The central rule is not to touch. Corals are fragile animals and are damaged by a touch, a poke, a kick or a hand placed for balance, and many are protected by law. Do not touch other animals either: the mucus coating that protects fish and many marine invertebrates from infection comes off easily with a hand, a glove or a foot. Physical interaction with manta rays and whale sharks is prohibited by regulation in a marine sanctuary, even if the animal seems to enjoy it. And buoyancy control is ethics, not technique: float above the reef, and if the current is strong hold the mooring line, never the reef.",
+          "Do not feed and do not collect. Feeding fish interrupts the natural feeding behaviour of reef fish, attracts species that do not belong at that spot, and teaches fish to bite swimmers expecting food — in some jurisdictions it is illegal. Nothing leaves the sanctuary, not a shell and not a coral fragment: shells that look empty often have a frightened animal inside, and the genuinely empty ones become shelter for hermit crabs, barnacles, young corals and sponges. For megafauna, the reference legal distances in the United States are 100 yards from whales in general, 50 from sea turtles and 50 from seals and sea lions, with 200 yards for orcas in Washington's inland waters and 500 for the North Atlantic right whale, and 30 minutes as maximum viewing time. Brazilian waters follow their own rules from ICMBio and IBAMA: treat these figures as good practice, not as local law."
+        ],
+        "checklist": [
+          "Do not touch coral or lean on it to steady yourself.",
+          "Do not touch fish, rays or turtles: the protective mucus comes off.",
+          "Do not feed reef fish under any circumstances.",
+          "Do not collect shells, coral fragments or any souvenir.",
+          "Keep your distance from megafauna and limit viewing time."
+        ]
+      }
+    }
+  },
+
+  "gardenBird": {
+    "label": "Garden & urban birds",
+    "topics": {
+      "role": {
+        "advice": [
+          "These are birds that live, feed or nest in yards, squares, urban parks, roofs and roadsides — both natives tolerant of human landscapes and fully synanthropic exotics. All wildlife needs four elements: food, water, cover and space to breed and raise young. In an average yard, the one that runs out first is usually a reliable year-round source of water — not food.",
+          "A good part of the most visible urban birds are exotic: the rock pigeon reached Brazil in the sixteenth century with Portuguese colonisation and is treated today as synanthropic fauna, with health regulations of its own. The official urban control strategy attacks the four elements of water, food, shelter and access — which is the exact opposite of what you do to attract native birds. One design principle is worth adding: interspersion matters. For less mobile species, many small patches of food, water and shelter work better than a few large ones, because the further an animal has to travel, the more exposed to predators it becomes."
+        ],
+        "checklist": [
+          "Water is usually the limiting resource, not food.",
+          "Spread food, water and shelter across several small patches.",
+          "Do not tidy the yard too much: a dying tree and a brush pile are shelter.",
+          "A dominance of pigeons and sparrows indicates a heavily built-up environment.",
+          "The arrival of native fruit-eaters shows your plants are producing."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "The deliberate intervention in this group is the feeder, and it carries a sanitary cost. Diseases that circulate at feeders include mycoplasmal conjunctivitis, salmonellosis, aspergillosis, avian pox and avian influenza. Hygiene is not optional: clean seed feeders every two weeks, and double that frequency at any suspicion of disease, using nine parts water to one part bleach. Scrub visible droppings off before soaking, rinse well and dry before refilling. Rake up droppings and seed hulls from the ground, especially mouldy or wet ones, which also stops you attracting rodents. And spread several feeders around instead of concentrating everything in one, because disease spreads more easily in a confined space with concentrated groups. The same cleaning rule applies to the bird bath.",
+          "When you see a sick bird — red, swollen or discharging eyes, warty growths on unfeathered areas, a thin bird with ruffled feathers — take the feeders down for about two weeks and clean everything, including the surroundings. Do not pick the animal up: only veterinarians or licensed wildlife rehabilitators may legally treat a wild bird. If an oral-faecal disease appears, consider retiring tray feeders, which concentrate contamination most. In the field, be particularly cautious near active nests, nesting colonies, roosts and important feeding sites, limit the use of playback, and exercise caution and restraint when photographing. And the principle that resolves any doubt: in a conflict of interest between the birds and the observer, the welfare of the birds comes first."
+        ],
+        "checklist": [
+          "Clean feeders every two weeks, with one part bleach to nine parts water.",
+          "Rake hulls and droppings from the ground under the feeder.",
+          "Spread several feeders around instead of concentrating everything in one.",
+          "Sick bird: take the feeders down for two weeks and do not touch the animal.",
+          "Limit playback and keep your distance from active nests."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Native plants are worth more than a feeder. The ideal approach supplies as much native food as possible all year round — acorns, nuts, berries, buds, fruit, nectar and seeds — and seed supplementation comes in only when the native supply runs short, above all in winter. Depending on the feeder alone is a fragile solution: it breaks, you travel, and the bird that learned to count on it is left with nothing.",
+          "In practice: provide water in a bird bath, a shallow pool, a plant saucer, a recirculating cascade or even a dripping hose, changing the water regularly in the heat and keeping it available in the cold. Provide cover that varies in size and density — dense shrubs, hollow logs, rock and brush piles, evergreens, tall grass — so each species can choose the right cover for feeding, hiding, escaping bad weather, courting and nesting. Provide space with mature trees, dense shrubbery and nest boxes. If you use a feeder, sunflower seed, nyjer seed, proso millet and cracked corn are the supplements named by extension services, and in summer hummingbirds readily visit nectar feeders. And design with cats in mind: a raised bath with low branches pruned back nearby removes the ambush hiding place."
+        ],
+        "checklist": [
+          "Plant natives that fruit across the whole year.",
+          "Use seed only as a scarcity supplement, above all in winter.",
+          "Keep a reliable source of water available all year.",
+          "Vary the cover: dense shrubs, brush piles, rocks, evergreens.",
+          "Keep the bath raised and free of dense shrubs around it, because of cats."
+        ]
+      }
+    }
+  },
+
+  "forestBird": {
+    "label": "Forest & migratory birds",
+    "topics": {
+      "role": {
+        "advice": [
+          "These are two partly overlapping populations: forest-dependent birds and migratory birds. Of the 1,971 bird species recorded in Brazilian territory, 216 — 10.9% — perform some kind of migration: 141 migratory and 75 partially migratory, a category in which only part of the population moves; another 91 are vagrants. About a third of Brazilian bird families have at least one migratory species, but five families account for more than half of them, with 112 species: tyrant flycatchers with 36, sandpipers with 23, petrels and shearwaters with 22, tanagers with 16 and gulls and terns with 15.",
+          "Large frugivorous forest birds are the forest's infrastructure, not its ornament: toucans and cracids disperse large seeds, and hunting and fragmentation remove exactly the birds whose bills can swallow them. The juçara palm, dominant in the Atlantic Forest, has its fruit eaten by more than 58 bird species. And forest preserved in patches is not the same as forest preserved: diversity falls when the fragments are discontinuous and far apart, or when none is dense enough for survival and reproduction."
+        ],
+        "checklist": [
+          "A dense understorey community indicates continuous, structured forest.",
+          "The disappearance of toucans and cracids indicates hunting or advanced fragmentation.",
+          "Shorebirds concentrating on a mudflat in passage season indicate a stopover site.",
+          "Migration is not yes or no: there are partial migrants and vagrants.",
+          "Altitudinal migration exists in Brazil and is underestimated."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "Playback is the central mistake of this group. The code of birding ethics says to limit the use of recordings and other audio methods of attraction, particularly in heavily birded areas, for locally rare species and for threatened or endangered species — and forest, where birds are hardest to see, is exactly where the temptation peaks.",
+          "Around nests, three risks govern everything: accidental damage to the nest, parental abandonment and attracting predators. Never spend more than one minute near a nest. Visit every three or four days at most. Avoid early morning, when most species lay and when eggs and nestlings cool quickly if the female leaves; avoid dusk and after, when she returns to spend the night; avoid the first days of incubation and the days when the chicks are about to fledge, because they may jump prematurely and survival outside the nest at that stage is low; and avoid cold, damp or rainy weather. Do not leave trails that guide predators, and do not trample vegetation that might expose nests. Never force a female off a nest — wait a few minutes to see whether she leaves on her own, and come back later if she does not. Write your notes only once you are well away from the nest, and knock on a nest box before opening it and again as you open it."
+        ],
+        "checklist": [
+          "Limit playback, above all with rare or threatened species.",
+          "Never spend more than one minute near a nest.",
+          "Avoid checking nests early in the morning, at dusk or in bad weather.",
+          "Never force a female off her nest.",
+          "Write your notes away from the nest and leave no trail to it."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Habitat says a great deal. A shaded understorey in continuous forest indicates low-mobility groups highly sensitive to edge effects; a mature canopy indicates birds that depend on large fruiting trees and on cavities to nest; the forest floor indicates groups very sensitive to hunting; and coast, mudflat and saltpan in passage season indicate a shorebird stopover, an extremely disturbance-sensitive site. Migratory birds depend on habitat in disjunct areas separated by thousands of kilometres, and some depend critically on places they use for only a few days, to rest, moult, feed and build up energy reserves.",
+          "That is why the date matters as much as the place. Because the outbound route is usually different from the return, and birds adjust their trajectory according to conditions, dated records feed route knowledge directly — and a record out of season can be more informative than an ordinary one. Recording a migratory bird without a precise date and location loses exactly the most valuable piece of data. In field practice, stay on the trails, minimise habitat disturbance and preserve standing dead trees, which are nesting cavities for many species."
+        ],
+        "checklist": [
+          "Always record a precise date and location, especially for migratory species.",
+          "One out-of-season record can be worth more than ten ordinary ones.",
+          "Stay on trails and minimise habitat disturbance.",
+          "Preserve standing dead trees: they are nest sites for many species.",
+          "Do not feed wild birds in forest or at a migratory stopover."
+        ]
+      }
+    }
+  },
+
+  "grainCrop": {
+    "label": "Grain & cereal crops",
+    "topics": {
+      "soil": {
+        "advice": [
+          "The central concept of nutrition here is hidden hunger: most crops begin losing yield well before deficiency or toxicity symptoms are evident, and that symptomless loss is high. When a symptom does appear, it always indicates severe hunger — never mild or moderate deficiency. Nutrient mobility decides which leaf to look at: mobile nutrients such as nitrogen, potassium, phosphorus and magnesium show symptoms on the old leaves first, because the plant relocates them to the new ones; immobile nutrients such as calcium and boron show symptoms on the new leaves and at the growing point.",
+          "Some visual patterns in rice serve as a reference: necrosis in an inverted V shape, running from the tip down the margins of an old leaf, points to potassium; very narrow, erect new leaves with a bronzed or purple tint at the tips point to phosphorus; a whole field yellowing at tillering and panicle initiation points to nitrogen; and a deficiency that appears in patches rather than across the whole area is a typical potassium pattern. Herbicide toxicity imitates deficiency, but it appears immediately after spraying — that temporal proximity is what separates the two cases. Finally, grain and silage are not the same crop from the soil's point of view: phosphorus is almost entirely translocated to the grain, followed by nitrogen, while potassium and calcium remain mostly in the straw, so in silage, which also removes the vegetative part, fertility problems appear earlier."
+        ],
+        "checklist": [
+          "Do not wait for a symptom: by the time it shows, the loss has already happened.",
+          "Mobile nutrients show on old leaves; immobile ones on new leaves.",
+          "Diagnose from a soil test and field history, never from a leaf photo alone.",
+          "Damage appearing right after spraying is herbicide, not deficiency.",
+          "Do not use a grain recommendation for a crop destined for silage."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "The decision here is made by counting, not by calendar, and this group has the cheapest standardised sampling of all. The logic rests on three thresholds: the equilibrium level, the economic damage level and the control level, which sits just below it. For corn soil pests, use a soil sample thirty by thirty centimetres and fifteen deep, sieved — for wireworm, two or more insects per sample already call for control, and an average of one per sample already causes significant damage. For fall armyworm, sample the number of attacked plants at five random points within one hectare: in fields with a potential of at least a hundred bags, 10% of plants showing early symptoms already indicates a need for control, and the most sensitive stage is eight to ten leaves. The first sign is larvae scraping the leaves and leaving transparent windows.",
+          "In soybean, the beat cloth is the method: a preferably white cloth, one metre long, stretched between two rows; shake one row vigorously over it and count adults and juveniles, weekly during the critical period. The minimum is six samples up to ten hectares, eight up to thirty and ten up to a hundred, dividing larger areas into hundred-hectare blocks. Sample soil pests before planting, because measures taken after the crop is established are inefficient. Count the nymphs alongside the adults: third to fifth instar stink bugs cause similar damage and make up most of the population in the reproductive period, with an action threshold of two stink bugs per metre of row for grain and one for seed. Sample during the cooler parts of the day, because stink bugs are quick and escape in the heat. This has a measured return: across 196 reference units in Paraná in the 2017/2018 season, integrated pest management cut insecticide applications by more than 43% while keeping yield equivalent. Choose the product by selectivity to natural enemies as well as by cost and toxicity, always follow current MAPA registrations, and treat seed only where there is a history of the problem, never as blind routine."
+        ],
+        "checklist": [
+          "Count before spraying: the decision is by threshold, not by calendar.",
+          "Corn: 10% of plants with scraped leaves already calls for control.",
+          "Soybean: a minimum of ten beat-cloth samples up to a hundred hectares.",
+          "Sample soil pests before planting.",
+          "Count nymphs alongside adults, and sample in the cooler hours of the day."
+        ]
+      }
+    }
+  },
+
+  "vegCrop": {
+    "label": "Vegetable & fruit crops",
+    "topics": {
+      "watering": {
+        "advice": [
+          "Here water is fine management, not watering when you remember: there is a soil tension limit measured in kPa, and it differs by irrigation system. In eggplant, you irrigate when the tensiometer reads 30 to 50 kPa under sprinkler or furrow, or 10 to 15 kPa under drip, using the lower end of the range at the most critical stages, in sandy soils and under high evaporative demand. The sensor goes at 50% of the effective root depth and ten to twenty centimetres from the plant, effective depth being where about 80% of the roots are concentrated.",
+          "Excess water is as damaging as shortage: it drives excessive plant growth, hinders flowering and fruit set, favours soil diseases through inadequate aeration and leaches nutrients. Shortage weighs most at flowering and fruiting, causing flowers and fruit to abort, reducing fruit growth and producing quality defects — misshapen and uneven fruit, blossom-end rot and bitter flavour. Leaf wilting at the end of the morning is a rough but useful sign that irrigation is overdue. And the choice of system is a plant-health decision, not just a hydraulic one: furrow and drip reduce foliar disease because they do not wet the foliage, but against the tomato leafminer sprinkler is an advantage, because it knocks down eggs, larvae and pupae. The decision depends on the problem that dominates your area."
+        ],
+        "checklist": [
+          "Use a different tension limit for drip than for sprinkler or furrow.",
+          "Install the sensor at 50% of effective root depth and ten to twenty centimetres from the plant.",
+          "Do not let water run short during flowering and fruiting.",
+          "Wilting at the end of the morning indicates overdue irrigation.",
+          "Choose the irrigation system according to the problem that dominates your area."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "Excess nutrient has symptoms of its own and unbalances the others. In onion, excess nitrogen produces thick-necked plants, raises susceptibility to foliar disease and shortens post-harvest storage life; excess potassium induces magnesium and calcium deficiency; excess phosphorus induces zinc and copper deficiency. That is why correcting one nutrient without looking at the others usually creates the next problem.",
+          "Mobility tells you which leaf to inspect: nitrogen, potassium, phosphorus and magnesium appear first on the old leaves, while calcium and sulfur appear on the new ones — a new onion leaf falling over without breaking is the calcium signature. Two textures are worth memorising: necrosis that appears abruptly, with no preceding chlorosis, points to zinc, copper or manganese; necrosis with a velvety texture is the characteristic mark of iron, distinct from all the others. In Brazilian soils under normal conditions, only boron and zinc and, in some cases, copper tend to be short for onion. And watch for the false positive: low temperatures, excess water or prolonged drought can produce symptoms very similar to nitrogen deficiency."
+        ],
+        "checklist": [
+          "Do not correct one nutrient without looking at the ones it unbalances.",
+          "Old leaves first: nitrogen, potassium, phosphorus, magnesium. New leaves: calcium, sulfur.",
+          "Abrupt necrosis with no preceding chlorosis suggests zinc, copper or manganese.",
+          "Necrosis with a velvety texture is the mark of iron.",
+          "Cold, waterlogging and drought all imitate nitrogen deficiency."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Management here is cultural and collective before it is chemical. At field level: adopt crop rotation, destroy crop residues immediately after harvest, keep the area free of weeds and other host plants for insects and mites, and use cultivars adapted to the region. At the collective level — and this is what makes the group different — growers have to act together: concentrate planting within each micro-region into the shortest possible window, use inputs in a coordinated way so common problems are faced by everyone at the same time, and systematically disinfest crates and transport to reduce the spread of pests between regions. Inspect regularly, with special attention to field edges and to the weediest spots, because that is where infestation concentrates.",
+          "The greatest pest damage in this group is usually indirect, through virus. Whitefly has been known in Brazil since 1923 and was found on tomato and cabbage in 1993, associated with geminivirus symptoms, with severe outbreaks and losses of up to 50% of production: adults and nymphs inject a sugary substance and a toxin that leave the internal walls of the fruit whitish and spongy and encourage sooty mould. Timing also governs: against the small borer, spraying must begin from flowering, with the jet directed at the flower buds and fruit, because by the time you see a hole in the fruit the larva is already inside. And one editorial safety rule: do not copy an active ingredient or a dose from any source, because pesticide registrations change every season — consult the current MAPA register."
+        ],
+        "checklist": [
+          "Destroy crop residues immediately after harvest.",
+          "Concentrate the micro-region's planting into the smallest possible window.",
+          "Disinfest crates and vehicles between areas.",
+          "Inspect the field edges, not only the middle.",
+          "Start spraying at flowering, not when you see a hole in the fruit."
+        ]
+      }
+    }
+  }
+}

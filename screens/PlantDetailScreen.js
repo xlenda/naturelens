@@ -20,6 +20,7 @@ import DiseaseReport from '../components/DiseaseReport';
 import { colors } from '../components/theme';
 import { getCollection, saveToCollection, removeFromCollection, updateCollectionEntry } from '../components/storage';
 import { CATEGORIES } from '../components/categories';
+import { getSpeciesGroup } from '../components/speciesGroup';
 import { getWateringStatus, WATER_INTERVAL_DAYS } from '../components/watering';
 import { identify } from '../components/identify';
 import { shareEntity } from '../components/share';
@@ -208,7 +209,7 @@ export default function PlantDetailScreen({ route }) {
 
   const openTopic = (initialKey) => {
     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
-    navigation.navigate('CareTopics', {
+    navigation.navigate('CareTopics', { groupKey: getSpeciesGroup(plant),
       title: plant.name,
       accent: meta.accent,
       category: 'plant',

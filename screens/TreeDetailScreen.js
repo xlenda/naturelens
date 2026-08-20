@@ -19,6 +19,7 @@ import DistributionMap from '../components/DistributionMap';
 import { colors } from '../components/theme';
 import { getCollection, saveToCollection, removeFromCollection, updateCollectionEntry } from '../components/storage';
 import { CATEGORIES } from '../components/categories';
+import { getSpeciesGroup } from '../components/speciesGroup';
 import { getWateringStatus, WATER_INTERVAL_DAYS } from '../components/watering';
 import { shareEntity } from '../components/share';
 import InstallNudgeCard from '../components/InstallNudgeCard';
@@ -199,7 +200,7 @@ export default function TreeDetailScreen({ route }) {
 
   const openTopic = (initialKey) => {
     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
-    navigation.navigate('CareTopics', {
+    navigation.navigate('CareTopics', { groupKey: getSpeciesGroup(plant),
       title: plant.name,
       accent: meta.accent,
       category: 'tree',
