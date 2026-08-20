@@ -24,7 +24,15 @@ export default function ResultActionBar({ onNew, onShare, onSave, saved, accent 
   // de uma vez. Na web e no Android sem barra de gestos insets.bottom = 0 e o
   // valor antigo (12) continua valendo, entao nada muda visualmente ali.
   return (
-    <View style={[styles.wrap, { paddingBottom: Math.max(insets.bottom, 12) }]}>
+    // box-none: a barra flutua sobre o scroll, entao sem isto os ~80px de
+    // baixo da tela viravam faixa MORTA - o polegar descansa exatamente ali,
+    // e um arrasto comecado nessa faixa nao rolava nada porque batia na barra
+    // em vez do ScrollView. Com box-none a View so desenha; o toque atravessa
+    // e apenas os BOTOES dentro dela continuam clicaveis (auditoria 20/08).
+    <View
+      style={[styles.wrap, { paddingBottom: Math.max(insets.bottom, 12) }]}
+      pointerEvents="box-none"
+    >
       {!!onNew && (
         <TouchableOpacity
           style={styles.secondary}

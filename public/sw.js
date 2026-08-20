@@ -20,7 +20,7 @@
 //     paid API call against live credits; a cached answer would be a lie.
 //
 // Bump CACHE_VERSION to evict everything on the next activate.
-const CACHE_VERSION = 'naturelens-v2';
+const CACHE_VERSION = 'naturelens-v3';
 const SHELL_CACHE = `${CACHE_VERSION}-shell`;
 const DATA_CACHE = `${CACHE_VERSION}-data`;
 
@@ -86,18 +86,34 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
-  // 2. Content JSON: stale-while-revalidate.
+  // 2. Locale JSON: REDE PRIMEIRO, cache so como rede de seguranca offline.
+  //
+  // Era stale-while-revalidate, e isso entregava o locale ANTIGO na primeira
+  // sessao depois de todo deploy: o bundle novo pedia uma chave que o JSON
+  // velho ainda nao tinha e a tela mostrava o nome cru da chave
+  // ("detail.aboutSpecies" no lugar do titulo). O dono viu isso na pratica.
+  // A revalidacao so ajudava na sessao SEGUINTE - tarde demais.
+  //
+  // Vale para TUDO em /locales/, sem lista de sufixos. Uma lista assim ja
+  // quebrou tres vezes aqui: toda vez que nasce um tipo novo de conteudo
+  // (-manual, -groups, -schedule) alguem esquece de atualizar a lista. Os
+  // arquivos pesados de conteudo ja tem cache proprio em memoria e
+  // AsyncStorage (manualContent.js, groupContent.js, scheduleContent.js),
+  // entao a camada do service worker era redundante para eles de qualquer
+  // jeito - o custo de tirar a esperteza daqui e praticamente zero.
   if (isContentJson(url)) {
     event.respondWith(
       caches.open(DATA_CACHE).then(async (cache) => {
-        const hit = await cache.match(request);
-        const network = fetch(request)
-          .then((response) => {
-            if (response.ok) cache.put(request, response.clone());
-            return response;
-          })
-          .catch(() => null);
-        return hit || (await network) || new Response('{}', { headers: { 'Content-Type': 'application/json' } });
+        try {
+          const response = await fetch(request);
+          if (response.ok) cache.put(request, response.clone());
+          return response;
+        } catch (e) {
+          // Offline: a copia velha e melhor que tela em branco. E o unico
+          // caso em que servir conteudo desatualizado e a resposta certa.
+          const hit = await cache.match(request);
+          return hit || new Response('{}', { headers: { 'Content-Type': 'application/json' } });
+        }
       })
     );
     return;

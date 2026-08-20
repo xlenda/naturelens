@@ -68,6 +68,22 @@ async function main() {
       if (rb.status === 200) ok('bundle serves');
       else fail('bundle serves', `status ${rb.status}`);
     }
+
+    // A animacao de entrada some sem barulho: uma guarda de idempotencia no
+    // patch-pwa.js casava com a propria string 'nl-splash' de um script
+    // vizinho e o splash deixou de ser injetado em TODO build por semanas,
+    // com todos os portoes verdes o tempo todo. Nada aqui prova animacao -
+    // prova que o no chegou ao HTML publicado, que era o elo que faltava.
+    if (html.includes('id="nl-splash"')) ok('splash de entrada');
+    else fail('splash de entrada', 'o no nl-splash nao esta no HTML publicado');
+
+    // O fundo do chrome do PWA precisa ser o MESMO do tema, senao a barra de
+    // status e a emenda do splash aparecem como costura de cor.
+    const tema = fs.readFileSync(path.join(__dirname, '..', 'components', 'theme.js'), 'utf8');
+    const fundo = tema.match(/background:\s*'(#[0-9a-fA-F]{3,8})'/);
+    if (!fundo) skip('cor do chrome', 'nao li background do theme.js');
+    else if (html.includes(`content="${fundo[1]}"`)) ok('cor do chrome', fundo[1]);
+    else fail('cor do chrome', `theme.js diz ${fundo[1]} e o HTML publicado diz outra coisa`);
   } catch (e) {
     fail('index.html', e.message);
   }

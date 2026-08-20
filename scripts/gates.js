@@ -29,6 +29,9 @@ const GATES = [
   // microphone. Chrome's --use-fake-device-for-media-stream makes that askable in
   // CI.
   { name: 'e2e-mic', script: 'e2e-mic.js' },
+  // Toque real em 3 rotas. Os outros portoes nao viam o app travado: eles
+  // provam que a tela MONTA, nao que ela ROLA (20/08).
+  { name: 'scroll', script: 'gate-scroll.js' },
 ];
 
 const outcomes = [];

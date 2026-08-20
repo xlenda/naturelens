@@ -1,5 +1,24 @@
 const fs = require('fs');
 const path = require('path');
+
+// Cor de fundo vinda do TEMA, nao copiada.
+//
+// O chrome do PWA dizia #0E1512 e o splash terminava em #0a100d enquanto o
+// app pintava #070B09: tres tons diferentes de "preto esverdeado", entao a
+// barra de status do celular e a emenda entre o splash e a primeira tela
+// apareciam como costura. Ninguem lembra de atualizar tres lugares quando
+// muda a paleta - por isso o valor agora e LIDO do components/theme.js, que
+// e ESM e nao da pra importar daqui (este script e CommonJS).
+function corDoTema(nome, padrao) {
+  try {
+    const fonte = fs.readFileSync(path.join(__dirname, '..', 'components', 'theme.js'), 'utf8');
+    const achado = fonte.match(new RegExp(nome + ":\\s*'(#[0-9a-fA-F]{3,8})'"));
+    return achado ? achado[1] : padrao;
+  } catch (e) {
+    return padrao;
+  }
+}
+const FUNDO = corDoTema('background', '#070B09');
 const indexPath = path.join(__dirname, '..', 'dist', 'index.html');
 let html = fs.readFileSync(indexPath, 'utf8');
 
@@ -74,7 +93,7 @@ html = html.replace(/<head>/, '<head>\n' + ogInject);
 
 const headInject = [
   '    <link rel="manifest" href="/manifest.json" />',
-  '    <meta name="theme-color" content="#0E1512" />',
+  '    <meta name="theme-color" content="' + FUNDO + '" />',
   '    <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />',
   '    <link rel="icon" href="/icons/favicon-32.png" sizes="32x32" />',
   '    <meta name="apple-mobile-web-app-capable" content="yes" />',
@@ -86,7 +105,7 @@ const headInject = [
   // gate (390x844 viewport) never see it.
   '    <style>',
   '      @media (min-width: 600px) {',
-  '        body { background: radial-gradient(circle at 50% 0%, #17241d 0%, #0a100d 70%); }',
+  '        body { background: radial-gradient(circle at 50% 0%, #17241d 0%, ' + FUNDO + ' 70%); }',
   '        #root {',
   '          max-width: 480px;',
   '          margin: 0 auto;',
@@ -126,32 +145,19 @@ const wheelScroll = [
 ].join(String.fromCharCode(10));
 html = html.replace('</body>', wheelScroll + String.fromCharCode(10) + '</body>');
 
-// Remocao explicita do splash. Ele vive DENTRO do #root para o React
-// substituir sozinho ao montar - mas se por qualquer motivo o no sobreviver
-// (StrictMode, hidratacao parcial, erro no boot), ele fica cobrindo a tela.
-// Este observador tira o no do caminho no instante em que qualquer irmao
-// aparece no #root, e desiste sozinho depois de 12s.
-const splashKiller = [
-  '<script>',
-  '(function () {',
-  "  var root = document.getElementById('root');",
-  '  if (!root) return;',
-  '  function kill() {',
-  "    var s = document.getElementById('nl-splash');",
-  '    if (s && s.parentNode) s.parentNode.removeChild(s);',
-  '  }',
-  '  var obs = new MutationObserver(function () {',
-  "    if (root.children.length > 1 || (root.firstElementChild && root.firstElementChild.id !== 'nl-splash')) {",
-  '      kill();',
-  '      obs.disconnect();',
-  '    }',
-  '  });',
-  '  obs.observe(root, { childList: true });',
-  '  setTimeout(function () { kill(); obs.disconnect(); }, 12000);',
-  '})();',
-  '<' + '/script>',
-].join(String.fromCharCode(10));
-html = html.replace('</body>', splashKiller + String.fromCharCode(10) + '</body>');
+// O "matador de splash" que morava aqui foi REMOVIDO (auditoria 20/08).
+//
+// Ele nasceu de um diagnostico errado: o splash foi acusado de ser o vidro
+// invisivel que travava o scroll. Medicao no navegador provou o contrario -
+// injetei um clone do splash dentro do #root antes do boot e o React o
+// apagou em menos de um frame (react-native-web 0.21 usa createRoot, e o
+// React 19 limpa o container no primeiro commit). O splash nunca capturou
+// toque nenhum; a causa real era a tabBar fora do fluxo.
+//
+// Pior: o script dele continha a string 'nl-splash' e a guarda de
+// idempotencia logo abaixo testa exatamente essa string. Com o matador no
+// HTML, a guarda dava sempre falso e o splash de verdade NUNCA era injetado.
+// A animacao da folha se desenhando esteve morta em todo build desde entao.
 
 // Entry splash: the NatureLens leaf DRAWING ITSELF (stroke-dasharray /
 // stroke-dashoffset, pure CSS, ~1.6s) plus the wordmark fading in.
@@ -168,7 +174,7 @@ html = html.replace('</body>', splashKiller + String.fromCharCode(10) + '</body>
 const splash = [
   '<style>',
   '  #nl-splash{position:fixed;inset:0;display:flex;flex-direction:column;',
-  '    align-items:center;justify-content:center;gap:18px;background:#0E1512;z-index:9999;',
+  '    align-items:center;justify-content:center;gap:18px;background:' + FUNDO + ';z-index:9999;',
   // pointer-events:none e a defesa que faltava: se o React montar SEM
   // limpar este no (foi o que travou o scroll de todas as telas em
   // 20/08 - a camada fixa continuava por cima capturando cada toque),
