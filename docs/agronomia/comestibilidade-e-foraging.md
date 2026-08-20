@@ -1,0 +1,53 @@
+# Comestibilidade e Foraging
+
+Dossiê com conhecimento verificado em fontes de extensão universitária (UMN, Colorado State, NC State, Illinois, Ohio State). Todas as afirmações têm URL lida de verdade.
+
+## Princípios
+
+- **Identificação positiva é obrigatória, sempre pelo nome científico.** "A identificação correta da planta é essencial porque algumas flores são venenosas. (...) Se tiver dúvida, não coma" (regra literal: *if in doubt, do not eat it*). Compre sementes/mudas conferindo o nome latino (gênero + epíteto) para garantir a espécie certa. [Colorado State Extension](https://extension.colostate.edu/resource/edible-flowers) / [UMN Extension](https://extension.umn.edu/flowers/edible-flowers)
+- **Uma parte comestível não torna a planta toda comestível.** Exemplo clássico do ruibarbo: o talo vermelho é comestível, mas folhas, raízes e flores contêm compostos tóxicos. Nunca assuma que "se a flor é segura, a folha também é". [UMN Extension](https://extension.umn.edu/flowers/edible-flowers)
+- **Não existe teste caseiro que separe cogumelo comestível de venenoso.** "There is no test or characteristic to distinguish edible from poisonous mushrooms." A única regra segura é aprender a identificar com certeza as poucas espécies comprovadamente comestíveis e evitar todas as outras. [Ohio State University](https://cfaes.osu.edu/fact-sheet/wild-mushrooms)
+- **Os mitos de cogumelo são todos falsos**: manchar colher de prata, "se descascar pode comer", "cresceu em madeira então é comestível", "animal comeu então é seguro", "cozinhar/secar remove o veneno", "cogumelo branco é seguro" — a extensão de Ohio desmente cada um explicitamente. [Ohio State University](https://cfaes.osu.edu/fact-sheet/wild-mushrooms)
+- **A família da cenoura (Apiaceae) concentra os sósias mais letais.** Poison hemlock (cicuta) tem todas as partes tóxicas e pode matar por falência respiratória; já foi confundida com cenoura selvagem, pastinaca e salsa silvestres. Distinção-chave: cicuta tem caule liso com manchas roxas; a cenoura selvagem (Queen Anne's lace) tem caule piloso. [Illinois Extension](https://extension.illinois.edu/blogs/good-growing/2024-05-31-identifying-danger-toxic-plants-look-carrots)
+- **Nunca coma flores de floricultura, viveiro ou garden center.** Elas não são cultivadas para consumo e podem ter recebido químicos não avaliados para segurança alimentar. Fontes seguras: cultivo próprio sem pesticida, ou flores vendidas na seção de hortifrúti do mercado, embaladas como alimento. [Colorado State Extension](https://extension.colostate.edu/resource/edible-flowers) / [NC State Extension](https://union.ces.ncsu.edu/2021/05/what-flowers-can-you-eat) / [UMN Extension](https://extension.umn.edu/flowers/edible-flowers)
+- **Não colha na beira de estrada nem em área tratada.** Evite flores/plantas de beira de estrada e plantas adubadas com esterco fresco/não compostado. Pesticida sistêmico circula dentro da planta e **não sai na lavagem**. [Colorado State Extension](https://extension.colostate.edu/resource/edible-flowers) / [UMN Extension](https://extension.umn.edu/flowers/edible-flowers)
+- **Introduza alimento novo aos poucos e em pequena quantidade** para conseguir apontar reação alérgica ou desconforto gástrico; mesmo plantas "seguras" podem causar sensibilidade individual. [Colorado State Extension](https://extension.colostate.edu/resource/edible-flowers) / [UMN Extension](https://extension.umn.edu/flowers/edible-flowers)
+- **Na maioria das flores comestíveis, coma só as pétalas.** Remova estames e pistilos — são amargos/tânicos em várias espécies (UMN) e concentram o pólen, o problema para alérgicos (NC State). A base branca da pétala junto ao caule também amarga. [UMN Extension](https://extension.umn.edu/flowers/edible-flowers) / [NC State Extension](https://union.ces.ncsu.edu/2021/05/what-flowers-can-you-eat)
+- **"Comestível" não significa "gostoso", nem "em qualquer preparo".** Edible = pode consumir com segurança; o sabor varia até por local de cultivo. E há condições: sabugueiro (Sambucus) só cozido — flor ou fruto cru, ou fruto verde/vermelho, causa problemas digestivos; borragem tem efeito diurético em grande quantidade. [UMN Extension](https://extension.umn.edu/flowers/edible-flowers)
+- **Foraging tem lei: saiba onde pode colher e quando precisa de licença.** Em florestas estaduais de Minnesota, por exemplo, colher frutinhas e cogumelos para uso pessoal é permitido, mas cortar/remover plantas, colher volume grande ou extrair para venda exige permissão do órgão ambiental; arroz-selvagem e ginseng têm regras especiais. A regra local varia — verifique antes. [UMN Extension](https://extension.umn.edu/natural-resources/goods-your-woods)
+- **Foraging responsável evita espalhar espécie invasora** — siga as diretrizes de biossegurança ao se deslocar entre áreas de coleta. [UMN Extension](https://extension.umn.edu/natural-resources/goods-your-woods)
+
+## Sinais de problemas
+
+- **Envenenamento por cicuta (poison hemlock):** náusea, vômito, confusão e dificuldade respiratória, podendo evoluir para morte por falência respiratória. Ferramenta motorizada (roçadeira) aerossoliza a seiva e cria risco por inalação. [Illinois Extension](https://extension.illinois.edu/blogs/good-growing/2024-05-31-identifying-danger-toxic-plants-look-carrots)
+- **Queimadura por pastinaca-brava (wild parsnip):** a seiva contém furanocumarinas que causam fitofotodermatite — queimadura intensa, bolhas e manchas na pele ao sol; a descoloração pode durar até 2 anos. Flor amarela em umbela, caule liso sem manchas roxas. [Illinois Extension](https://extension.illinois.edu/blogs/good-growing/2024-05-31-identifying-danger-toxic-plants-look-carrots)
+- **Cogumelos: gêneros/nomes citados como venenosos** em Ohio: várias *Amanita* (incl. destroying angel — "venenoso, letal"), *Gyromitra* (falsas morelas, toxinas podem matar), Jack-o'-lantern (*Omphalotus*), green-spored *Lepiota*. [Ohio State University](https://cfaes.osu.edu/fact-sheet/wild-mushrooms)
+- **Flores ornamentais tóxicas comuns em jardim** (lista explícita da CSU): *Aconitum* (acônito), *Digitalis purpurea* (dedaleira), *Narcissus* (narciso), *Nerium oleander* (espirradeira), *Delphinium*, *Convallaria majalis* (lírio-do-vale), *Colchicum*, *Datura*, *Rhododendron*/azaleia. [Colorado State Extension](https://extension.colostate.edu/resource/edible-flowers)
+- **Erro comum:** confiar em livro antigo de jardinagem que "resolve" pesticida com lavagem — sistêmicos não saem; e comer dente-de-leão de gramado tratado com herbicida (a UMN manda colher só de área comprovadamente não tratada). [UMN Extension](https://extension.umn.edu/flowers/edible-flowers)
+
+## Soluções práticas
+
+1. **Antes de comer qualquer coisa silvestre:** identifique com guia confiável e nome científico; em dúvida, descarte. Referência citada pela UMN: *AMA Handbook of Poisonous and Injurious Plants*. [UMN Extension](https://extension.umn.edu/flowers/edible-flowers)
+2. **Para diferenciar cenoura selvagem de cicuta:** cheque o caule (piloso = cenoura selvagem; liso com manchas roxas = cicuta) e use luvas, manga e calça compridas ao manejar; não toque o rosto. [Illinois Extension](https://extension.illinois.edu/blogs/good-growing/2024-05-31-identifying-danger-toxic-plants-look-carrots)
+3. **Fluxo seguro para flores comestíveis:** colher no dia do uso (no máximo 1 dia antes) → lavar suavemente → secar → guardar na geladeira em pote/saco plástico → remover estames, pistilos e base branca da pétala → adicionar ao prato na hora de servir. Use pincel para tirar detritos e insetos. [UMN Extension](https://extension.umn.edu/flowers/edible-flowers) / [NC State Extension](https://union.ces.ncsu.edu/2021/05/what-flowers-can-you-eat)
+4. **Comprou muda em viveiro para virar "comestível"?** Lave o solo com água, transplante removendo o máximo de substrato do torrão e só colha flores das brotações novas crescidas no seu jardim sem pesticida; prefira planta "certified organically grown" ou semente própria. [UMN Extension](https://extension.umn.edu/flowers/edible-flowers)
+5. **Sabugueiro:** remover todos os talos/folhas/casca e sempre cozinhar flores e frutos antes de consumir. [UMN Extension](https://extension.umn.edu/flowers/edible-flowers)
+6. **Cogumelos para iniciante:** limite-se às espécies localmente reconhecidas como seguras e legais de colher (em Minnesota a extensão lista p.ex. morel amarelo, oyster, king bolete, chanterelle, chicken-of-the-woods, hen-of-the-woods, lobster, sweet tooth) e use material de identificação de universidade/micologia — nunca "teste" em casa. [UMN Extension](https://extension.umn.edu/natural-resources/goods-your-woods) / [Ohio State University](https://cfaes.osu.edu/fact-sheet/wild-mushrooms)
+7. **Cheque a regra legal do local** (parque, floresta pública, terra privada) e peça licença quando exigido; volume grande ou venda quase sempre exige permissão. [UMN Extension](https://extension.umn.edu/natural-resources/goods-your-woods)
+
+## Números e faixas seguras de citar
+
+- Flores comestíveis (maioria anuais) pedem **6 a 8 horas de sol por dia**. [UMN Extension](https://extension.umn.edu/flowers/edible-flowers)
+- Colher blossoms **no dia do uso; no máximo 1 dia antes**. [UMN Extension](https://extension.umn.edu/flowers/edible-flowers)
+- Cicuta (poison hemlock) chega a **até ~3 m de altura**. [Illinois Extension](https://extension.illinois.edu/blogs/good-growing/2024-05-31-identifying-danger-toxic-plants-look-carrots)
+- Descoloração de pele por seiva de wild parsnip pode durar **até 2 anos**. [Illinois Extension](https://extension.illinois.edu/blogs/good-growing/2024-05-31-identifying-danger-toxic-plants-look-carrots)
+- O *Minnesota Harvester Handbook* cobre **mais de 20 produtos florestais** além da madeira. [UMN Extension](https://extension.umn.edu/natural-resources/goods-your-woods)
+
+## Bibliografia
+
+- https://extension.umn.edu/flowers/edible-flowers — UMN Extension, "Edible flowers"
+- https://extension.colostate.edu/resource/edible-flowers — Colorado State University Extension, "Edible Flowers" (fact sheet 7.237)
+- https://union.ces.ncsu.edu/2021/05/what-flowers-can-you-eat — NC State Extension, "What Flowers Can You Eat?"
+- https://extension.illinois.edu/blogs/good-growing/2024-05-31-identifying-danger-toxic-plants-look-carrots — Illinois Extension, "Identifying danger: Toxic plants that look like carrots"
+- https://cfaes.osu.edu/fact-sheet/wild-mushrooms — Ohio State University Extension, "Wild Mushrooms" (ex-ohioline plpath-gen-11)
+- https://extension.umn.edu/natural-resources/goods-your-woods — UMN Extension, "Gathering wild-grown plants and fungi (Goods from your woods)"
