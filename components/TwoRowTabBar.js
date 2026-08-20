@@ -267,6 +267,16 @@ const styles = StyleSheet.create({
   chipActive: { backgroundColor: colors.accent + '22' },
   chipLabel: { fontSize: 11, fontWeight: '700' },
   dock: {
+    // Fora do fluxo: com tabBar customizado o React Navigation ignora
+    // tabBarStyle e mede a barra pelo layout dela, reservando a altura na
+    // cena - a tela ficava em 725px de 844 e o scroll morria em 60px
+    // ("nenhuma tela ta travado, nao consigo ir pra baixo"). Absoluto, o
+    // dock flutua sobre a cena, que volta a ocupar a tela inteira. As telas
+    // que o mostram ja tem paddingBottom proprio (40-120px) no scroll.
+    position: 'absolute',
+    left: 0,
+    right: 0,
+    bottom: 0,
     backgroundColor: colors.background,
     paddingHorizontal: 10,
     paddingTop: 6,

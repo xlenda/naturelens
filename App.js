@@ -366,15 +366,6 @@ function AppNavigator() {
             tabBar={(props) => <TwoRowTabBar {...props} />}
             screenOptions={({ route }) => ({
               headerShown: false,
-              // O dock se esconde nas telas de detalhe retornando null - mas o
-              // React Navigation continua RESERVANDO a altura dele, e a cena
-              // ficava cortada em 725px de 844 com o scroll morrendo em 60px
-              // (dono: "nenhuma tela ta travado, nao consigo ir pra baixo").
-              // position:absolute tira a barra do fluxo: a cena passa a ocupar
-              // a tela inteira e o dock flutua por cima onde ele aparece. As
-              // telas que o mostram ja tem paddingBottom proprio (40-120px),
-              // entao nada fica escondido atras dele.
-              tabBarStyle: { position: 'absolute' },
               tabBarActiveTintColor: colors.accent,
               tabBarInactiveTintColor: colors.textMuted,
               tabBarIcon: ({ color, size, focused }) => {
