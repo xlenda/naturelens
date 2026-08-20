@@ -242,7 +242,21 @@
     "actionNew": "重新拍照",
     "wasHelpful": "这有帮助吗？",
     "pronounceLabel": "听发音",
-    "askSpecialistCta": "对这个物种有疑问？问问专家"
+    "askSpecialistCta": "对这个物种有疑问？问问专家",
+    "tipLabel": "小贴士",
+    "needsLabel": "需求",
+    "distribution": "分布",
+    "everyNDays": "每 {{count}} 天",
+    "gbifCredit": "数据：GBIF.org",
+    "tipWatering": "浇水前先摸摸土：表层几厘米干了，就该浇了。",
+    "tipLight": "留意一天中光线在空间里的变化——它比你想象的变化更大。",
+    "tipSoil": "好的排水和好的肥料同样重要：积水的根是在受苦的根。",
+    "tipSafety": "拿不准时，请放在儿童和宠物够不到的地方——也千万不要自行尝食。",
+    "tipUses": "传统用途不等于药方：使用任何植物前，请先咨询专业人士。",
+    "tipCultural": "每个物种都承载着故事——了解它们，会改变我们照料它的方式。",
+    "tipEdible": "只有经专家当面确认，才能视为可食用。",
+    "tipPropagation": "干净锋利的工具，能让扦插成活的几率翻倍。",
+    "tipEcology": "每个物种都有自己的角色——不打扰地观察，是最好的学习方式。"
   },
   "disease": {
     "overviewSection": "概览",

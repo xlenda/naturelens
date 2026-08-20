@@ -15,6 +15,7 @@ import { useTranslation } from 'react-i18next';
 import PlantHero from '../components/PlantHero';
 import SectionCard from '../components/SectionCard';
 import IdentificationExtras from '../components/IdentificationExtras';
+import DistributionMap from '../components/DistributionMap';
 import DiseaseReport from '../components/DiseaseReport';
 import { colors } from '../components/theme';
 import { getCollection, saveToCollection, removeFromCollection, updateCollectionEntry } from '../components/storage';
@@ -182,7 +183,19 @@ export default function PlantDetailScreen({ route }) {
   // tab. Only topics with real text ship - the manual filters again anyway.
   const listText = (v) => (Array.isArray(v) ? v.map((x) => '• ' + x).join('\n') : v);
   const topics = [
-    { key: 'watering', label: t('detail.wateringGuideSection'), text: plant.bestWatering },
+    {
+      key: 'watering',
+      label: t('detail.wateringGuideSection'),
+      text: plant.bestWatering,
+      // Real structured data for the Needs block: the interval map's days and
+      // the 1..3 intensity from the raw Kindwise watering field. Compound
+      // values ("Low ... to Medium") have no interval entry - the label alone
+      // shows, honestly.
+      shortValue: WATER_INTERVAL_DAYS[plant.water]
+        ? t('detail.everyNDays', { count: WATER_INTERVAL_DAYS[plant.water] })
+        : plant.waterLabel || plant.water,
+      level: /high/i.test(plant.water || '') ? 3 : /medium/i.test(plant.water || '') ? 2 : /low/i.test(plant.water || '') ? 1 : undefined,
+    },
     { key: 'light', label: t('detail.lightSection'), text: plant.bestLightCondition },
     { key: 'soil', label: t('detail.soilSection'), text: plant.bestSoilType },
     { key: 'safety', label: t('detail.safetySection'), text: plant.toxicity },
@@ -335,6 +348,10 @@ export default function PlantDetailScreen({ route }) {
         {/* Reference photos, runner-up species and a low-confidence warning -
             all built from data the API already returned. */}
         <IdentificationExtras entity={plant} accent={meta.accent} />
+
+        {/* Mapa de distribuicao REAL (GBIF) - o concorrente desenha o dele;
+            este e ciencia com credito. Some sozinho sem match/offline. */}
+        <DistributionMap scientific={plant.scientific} accent={meta.accent} />
 
         {/* Section order is deliberate ("quente primeiro, ficha depois"):
             safety answers the fear that brought many users here, so it leads;

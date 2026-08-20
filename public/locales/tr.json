@@ -242,7 +242,21 @@
     "actionNew": "Yeni fotoğraf",
     "wasHelpful": "Bu yardımcı oldu mu?",
     "pronounceLabel": "Telaffuzu dinle",
-    "askSpecialistCta": "Bu tür hakkında soruların mı var? Uzmana sor"
+    "askSpecialistCta": "Bu tür hakkında soruların mı var? Uzmana sor",
+    "tipLabel": "İpucu",
+    "needsLabel": "İhtiyaçlar",
+    "distribution": "Yayılım",
+    "everyNDays": "Her {{count}} günde bir",
+    "gbifCredit": "Veri: GBIF.org",
+    "tipWatering": "Sulamadan önce toprağa dokunun: üstteki birkaç santim kuruysa vakti gelmiş demektir.",
+    "tipLight": "Gün boyunca ışığın mekânda nasıl hareket ettiğini izleyin - göründüğünden daha çok değişir.",
+    "tipSoil": "İyi drenaj, iyi gübre kadar önemlidir: suya doymuş kökler acı çeken köklerdir.",
+    "tipSafety": "Şüphedeyseniz çocukların ve evcil hayvanların ulaşamayacağı bir yerde tutun - ve asla kendi başınıza hiçbir şeyin tadına bakmayın.",
+    "tipUses": "Geleneksel kullanım reçete değildir: herhangi bir bitkiyi kullanmadan önce bir uzmana danışın.",
+    "tipCultural": "Her tür hikâyeler taşır - onları bilmek, bitkiye bakışımızı değiştirir.",
+    "tipEdible": "Bir şeyi ancak bir uzman bizzat doğruladığında yenilebilir sayın.",
+    "tipPropagation": "Temiz ve keskin bir alet, çeliğin köklenme şansını ikiye katlar.",
+    "tipEcology": "Her türün bir rolü vardır - müdahale etmeden gözlemlemek öğrenmenin en iyi yoludur."
   },
   "disease": {
     "overviewSection": "Genel Bakış",

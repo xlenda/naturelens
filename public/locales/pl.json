@@ -242,7 +242,21 @@
     "actionNew": "Nowe zdjęcie",
     "wasHelpful": "Czy to było pomocne?",
     "pronounceLabel": "Posłuchaj wymowy",
-    "askSpecialistCta": "Pytania o ten gatunek? Zapytaj specjalistkę"
+    "askSpecialistCta": "Pytania o ten gatunek? Zapytaj specjalistkę",
+    "tipLabel": "Wskazówka",
+    "needsLabel": "Potrzeby",
+    "distribution": "Występowanie",
+    "everyNDays": "Co {{count}} dni",
+    "gbifCredit": "Dane: GBIF.org",
+    "tipWatering": "Zanim podlejesz, dotknij ziemi: jeśli wierzchnie centymetry są suche, to już pora.",
+    "tipLight": "Obserwuj, jak światło wędruje po wnętrzu w ciągu dnia - zmienia się bardziej, niż się wydaje.",
+    "tipSoil": "Dobry drenaż znaczy tyle co dobry nawóz: przemoczone korzenie to cierpiące korzenie.",
+    "tipSafety": "W razie wątpliwości trzymaj roślinę poza zasięgiem dzieci i zwierząt - i nigdy niczego nie próbuj na własną rękę.",
+    "tipUses": "Tradycyjne zastosowanie to nie recepta: skonsultuj się ze specjalistą, zanim użyjesz jakiejkolwiek rośliny.",
+    "tipCultural": "Każdy gatunek niesie ze sobą historie - ich znajomość zmienia sposób, w jaki o niego dbamy.",
+    "tipEdible": "Za jadalne uznawaj tylko to, co ekspert potwierdził osobiście.",
+    "tipPropagation": "Czyste, ostre narzędzie podwaja szanse, że sadzonka się przyjmie.",
+    "tipEcology": "Każdy gatunek ma swoją rolę - obserwacja bez ingerencji to najlepszy sposób nauki."
   },
   "disease": {
     "overviewSection": "Przegląd",

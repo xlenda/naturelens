@@ -242,7 +242,21 @@
     "actionNew": "Nytt foto",
     "wasHelpful": "Var detta till hjälp?",
     "pronounceLabel": "Hör uttalet",
-    "askSpecialistCta": "Frågor om arten? Fråga specialisten"
+    "askSpecialistCta": "Frågor om arten? Fråga specialisten",
+    "tipLabel": "Tips",
+    "needsLabel": "Behov",
+    "distribution": "Utbredning",
+    "everyNDays": "Var {{count}}:e dag",
+    "gbifCredit": "Data: GBIF.org",
+    "tipWatering": "Känn på jorden innan du vattnar: är de översta centimetrarna torra är det dags.",
+    "tipLight": "Se hur ljuset vandrar genom rummet under dagen - det skiftar mer än man tror.",
+    "tipSoil": "Bra dränering betyder lika mycket som bra näring: blöta rötter är rötter som lider.",
+    "tipSafety": "Vid minsta tvekan, håll den utom räckhåll för barn och husdjur - och smaka aldrig på något på egen hand.",
+    "tipUses": "Traditionell användning är inget recept: prata med en expert innan du använder någon växt.",
+    "tipCultural": "Varje art bär på berättelser - att känna till dem förändrar hur vi tar hand om den.",
+    "tipEdible": "Betrakta något som ätbart först när en expert har bekräftat det på plats.",
+    "tipPropagation": "Ett rent och vasst verktyg fördubblar chansen att en stickling rotar sig.",
+    "tipEcology": "Varje art har en roll - att observera utan att ingripa är det bästa sättet att lära sig."
   },
   "disease": {
     "overviewSection": "Översikt",

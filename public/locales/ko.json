@@ -242,7 +242,21 @@
     "actionNew": "새 사진",
     "wasHelpful": "도움이 되었나요?",
     "pronounceLabel": "발음 듣기",
-    "askSpecialistCta": "이 종에 대해 궁금한가요? 전문가에게 물어보세요"
+    "askSpecialistCta": "이 종에 대해 궁금한가요? 전문가에게 물어보세요",
+    "tipLabel": "팁",
+    "needsLabel": "필요 조건",
+    "distribution": "분포",
+    "everyNDays": "{{count}}일마다",
+    "gbifCredit": "데이터: GBIF.org",
+    "tipWatering": "물을 주기 전에 흙을 만져 보세요. 겉흙 몇 센티미터가 말라 있다면 물을 줄 때입니다.",
+    "tipLight": "하루 동안 빛이 공간을 어떻게 지나가는지 살펴보세요. 생각보다 많이 달라집니다.",
+    "tipSoil": "좋은 배수는 좋은 비료만큼 중요합니다. 물에 잠긴 뿌리는 고통받는 뿌리입니다.",
+    "tipSafety": "확실하지 않다면 아이와 반려동물의 손이 닿지 않는 곳에 두고, 절대 함부로 맛보지 마세요.",
+    "tipUses": "전통적인 쓰임은 처방이 아닙니다. 어떤 식물이든 사용하기 전에 전문가와 상담하세요.",
+    "tipCultural": "모든 종은 저마다의 이야기를 품고 있습니다. 그 이야기를 알면 돌보는 마음도 달라집니다.",
+    "tipEdible": "전문가가 직접 확인한 것만 먹을 수 있다고 여기세요.",
+    "tipPropagation": "깨끗하고 잘 드는 도구는 꺾꽂이가 뿌리내릴 확률을 두 배로 높입니다.",
+    "tipEcology": "모든 종에게는 저마다의 역할이 있습니다. 간섭하지 않고 관찰하는 것이 가장 좋은 배움입니다."
   },
   "disease": {
     "overviewSection": "개요",

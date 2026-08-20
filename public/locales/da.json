@@ -242,7 +242,21 @@
     "actionNew": "Nyt foto",
     "wasHelpful": "Var dette nyttigt?",
     "pronounceLabel": "Hør udtalen",
-    "askSpecialistCta": "Spørgsmål om arten? Spørg specialisten"
+    "askSpecialistCta": "Spørgsmål om arten? Spørg specialisten",
+    "tipLabel": "Tip",
+    "needsLabel": "Behov",
+    "distribution": "Udbredelse",
+    "everyNDays": "Hver {{count}}. dag",
+    "gbifCredit": "Data: GBIF.org",
+    "tipWatering": "Mærk på jorden, før du vander: er de øverste centimeter tørre, er det tid.",
+    "tipLight": "Læg mærke til, hvordan lyset flytter sig i rummet i løbet af dagen - det skifter mere, end man tror.",
+    "tipSoil": "God dræning betyder lige så meget som god gødning: våde rødder er rødder, der lider.",
+    "tipSafety": "Er du i tvivl, så hold den uden for børns og kæledyrs rækkevidde - og smag aldrig på noget på egen hånd.",
+    "tipUses": "Traditionel brug er ikke en opskrift: tal med en fagperson, før du bruger nogen plante.",
+    "tipCultural": "Hver art bærer på historier - at kende dem ændrer den måde, vi passer den på.",
+    "tipEdible": "Betragt kun noget som spiseligt, når en ekspert har bekræftet det personligt.",
+    "tipPropagation": "Rent, skarpt værktøj fordobler chancen for, at en stikling slår rod.",
+    "tipEcology": "Hver art har en rolle - at observere uden at gribe ind er den bedste måde at lære på."
   },
   "disease": {
     "overviewSection": "Oversigt",

@@ -242,7 +242,21 @@
     "actionNew": "Nueva foto",
     "wasHelpful": "¿Te resultó útil?",
     "pronounceLabel": "Escuchar pronunciación",
-    "askSpecialistCta": "¿Dudas sobre esta especie? Pregunta a la especialista"
+    "askSpecialistCta": "¿Dudas sobre esta especie? Pregunta a la especialista",
+    "tipLabel": "Consejo",
+    "needsLabel": "Necesidades",
+    "distribution": "Distribución",
+    "everyNDays": "Cada {{count}} días",
+    "gbifCredit": "Datos: GBIF.org",
+    "tipWatering": "Antes de regar, toca la tierra: si los primeros centímetros están secos, es el momento.",
+    "tipLight": "Observa cómo cambia la luz en el espacio a lo largo del día - varía más de lo que parece.",
+    "tipSoil": "Un buen drenaje importa tanto como un buen abono: raíces encharcadas son raíces que sufren.",
+    "tipSafety": "Ante la duda, mantenla fuera del alcance de niños y mascotas - y nunca pruebes nada por tu cuenta.",
+    "tipUses": "El uso tradicional no es una receta: consulta a un profesional antes de usar cualquier planta.",
+    "tipCultural": "Cada especie lleva historias consigo - conocerlas cambia la forma en que la cuidamos.",
+    "tipEdible": "Considera algo comestible solo cuando un experto lo haya confirmado en persona.",
+    "tipPropagation": "Una herramienta limpia y afilada duplica las posibilidades de que un esqueje enraíce.",
+    "tipEcology": "Cada especie tiene un papel - observar sin interferir es la mejor forma de aprender."
   },
   "disease": {
     "overviewSection": "Resumen",

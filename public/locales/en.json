@@ -292,7 +292,21 @@
     "actionNew": "New photo",
     "wasHelpful": "Was this helpful?",
     "pronounceLabel": "Hear pronunciation",
-    "askSpecialistCta": "Questions about this species? Ask the specialist"
+    "askSpecialistCta": "Questions about this species? Ask the specialist",
+    "tipLabel": "Tip",
+    "needsLabel": "Needs",
+    "distribution": "Distribution",
+    "everyNDays": "Every {{count}} days",
+    "gbifCredit": "Data: GBIF.org",
+    "tipWatering": "Before watering, touch the soil: if the top inch is dry, it's time.",
+    "tipLight": "Watch how the light moves through the space during the day - it changes more than it seems.",
+    "tipSoil": "Good drainage matters as much as good fertilizer: soggy roots are suffering roots.",
+    "tipSafety": "When in doubt, keep it out of reach of children and pets - and never taste anything on your own.",
+    "tipUses": "Traditional use is not a prescription: talk to a professional before using any plant.",
+    "tipCultural": "Every species carries stories - knowing them changes how we care for it.",
+    "tipEdible": "Only treat something as edible when an expert has confirmed it in person.",
+    "tipPropagation": "A clean, sharp tool doubles a cutting's chance of taking root.",
+    "tipEcology": "Every species has a role - observing without interfering is the best way to learn."
   },
   "disease": {
     "overviewSection": "Overview",
