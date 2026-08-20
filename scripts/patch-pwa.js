@@ -126,6 +126,33 @@ const wheelScroll = [
 ].join(String.fromCharCode(10));
 html = html.replace('</body>', wheelScroll + String.fromCharCode(10) + '</body>');
 
+// Remocao explicita do splash. Ele vive DENTRO do #root para o React
+// substituir sozinho ao montar - mas se por qualquer motivo o no sobreviver
+// (StrictMode, hidratacao parcial, erro no boot), ele fica cobrindo a tela.
+// Este observador tira o no do caminho no instante em que qualquer irmao
+// aparece no #root, e desiste sozinho depois de 12s.
+const splashKiller = [
+  '<script>',
+  '(function () {',
+  "  var root = document.getElementById('root');",
+  '  if (!root) return;',
+  '  function kill() {',
+  "    var s = document.getElementById('nl-splash');",
+  '    if (s && s.parentNode) s.parentNode.removeChild(s);',
+  '  }',
+  '  var obs = new MutationObserver(function () {',
+  "    if (root.children.length > 1 || (root.firstElementChild && root.firstElementChild.id !== 'nl-splash')) {",
+  '      kill();',
+  '      obs.disconnect();',
+  '    }',
+  '  });',
+  '  obs.observe(root, { childList: true });',
+  '  setTimeout(function () { kill(); obs.disconnect(); }, 12000);',
+  '})();',
+  '<' + '/script>',
+].join(String.fromCharCode(10));
+html = html.replace('</body>', splashKiller + String.fromCharCode(10) + '</body>');
+
 // Entry splash: the NatureLens leaf DRAWING ITSELF (stroke-dasharray /
 // stroke-dashoffset, pure CSS, ~1.6s) plus the wordmark fading in.
 //
@@ -141,7 +168,12 @@ html = html.replace('</body>', wheelScroll + String.fromCharCode(10) + '</body>'
 const splash = [
   '<style>',
   '  #nl-splash{position:fixed;inset:0;display:flex;flex-direction:column;',
-  '    align-items:center;justify-content:center;gap:18px;background:#0E1512;z-index:9999}',
+  '    align-items:center;justify-content:center;gap:18px;background:#0E1512;z-index:9999;',
+  // pointer-events:none e a defesa que faltava: se o React montar SEM
+  // limpar este no (foi o que travou o scroll de todas as telas em
+  // 20/08 - a camada fixa continuava por cima capturando cada toque),
+  // o splash vira decoracao inerte em vez de um vidro invisivel.
+  '    pointer-events:none}',
   '  #nl-splash svg path{fill:none;stroke:#4E9F6B;stroke-width:3.5;stroke-linecap:round;',
   '    stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1;',
   '    animation:nl-draw .9s ease-out forwards}',

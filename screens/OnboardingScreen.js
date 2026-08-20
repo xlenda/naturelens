@@ -207,7 +207,11 @@ const styles = StyleSheet.create({
   // The scene takes the upper half edge to edge; the text keeps the lower
   // half. flex ratios instead of fixed heights so small phones shrink the
   // art, never the copy.
-  sceneWrap: { flex: 1.15, marginTop: -40, overflow: 'hidden' },
+  // O marginTop negativo empurrava a arte pra fora do topo da tela: o livro
+  // de campo aparecia cortado no meio e sobrava vazio embaixo (print do dono,
+  // 20/08). Sem margem negativa a cena inteira cabe, e o fade continua
+  // costurando a base dela na pagina.
+  sceneWrap: { flex: 1.05, overflow: 'hidden' },
   sceneImage: { width: '100%', height: '100%' },
   sceneFade: { position: 'absolute', left: 0, right: 0, bottom: 0, height: 110 },
   body: { flex: 1, alignItems: 'center', justifyContent: 'center', paddingHorizontal: 32 },
