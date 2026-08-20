@@ -335,9 +335,11 @@ export default function PlantDetailScreen({ route }) {
                   tela), mas o paragrafo inteiro do vendor comia a primeira
                   dobra e empurrava os Fatos rapidos pra fora - auditoria de
                   diagramacao 20/08. */}
-              <ExpandableText accent={meta.accent}>
-                <Text style={styles.body}>{plant.toxicity}</Text>
-              </ExpandableText>
+              <ExpandableText
+                text={plant.toxicity}
+                textStyle={styles.body}
+                accent={meta.accent}
+              />
             </SectionCard>
           </ZoneBand>
         )}

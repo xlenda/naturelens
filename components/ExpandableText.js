@@ -20,13 +20,26 @@ import { colors } from './theme';
 //
 // Chaves: common.readMore ja existia nos 17 idiomas (usada nos 4 detalhes);
 // common.readLess foi criada no mesmo lote, tambem nos 17.
-export default function ExpandableText({ children, initial = 1, accent = colors.accent }) {
+export default function ExpandableText({ children, text, textStyle, initial = 1, accent = colors.accent }) {
   const { t } = useTranslation();
   const [open, setOpen] = useState(false);
 
   // toArray ja descarta null/false/undefined, entao um bloco condicional que
   // nao renderizou nao conta como paragrafo.
-  const items = React.Children.toArray(children);
+  let items = React.Children.toArray(children);
+
+  // Um unico bloco de prosa (o caso do aviso de toxicidade: um <Text> com o
+  // paragrafo inteiro do vendor) nao tinha o que cortar - toArray via 1 filho
+  // e o componente devolvia tudo. Quando vem `text`, o corte e por FRASE: a
+  // primeira abre, o resto entra no 'Ver mais'.
+  if (typeof text === 'string' && text.trim()) {
+    const sentences = text.split(/(?<=[.!?])\s+/).filter(Boolean);
+    items = sentences.map((sentence, i) => (
+      <Text key={i} style={textStyle}>
+        {sentence}
+      </Text>
+    ));
+  }
 
   // Fallback (regra do app: dado ausente = bloco nao renderiza): se nao ha
   // nada para cortar, nao existe botao. Nunca um "Ver mais" que abre o vazio.
