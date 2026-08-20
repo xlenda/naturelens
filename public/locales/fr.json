@@ -258,7 +258,12 @@
     "tipPropagation": "Un outil propre et bien affûté double les chances qu'une bouture prenne racine.",
     "tipEcology": "Chaque espèce a un rôle - observer sans intervenir est la meilleure façon d'apprendre.",
     "waterCheckToday": "Vérifier la terre aujourd'hui",
-    "waterCheckInDays": "Vérifier la terre dans {{count}}j"
+    "waterCheckInDays": "Vérifier la terre dans {{count}}j",
+    "aboutSpecies": "À propos de cette espèce",
+    "fundamentals": "Conseils essentiels",
+    "checklistLabel": "Avant de commencer",
+    "problemsLabel": "Signes de problème",
+    "solutionsLabel": "Solutions"
   },
   "disease": {
     "overviewSection": "Aperçu",

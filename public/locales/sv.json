@@ -258,7 +258,12 @@
     "tipPropagation": "Ett rent och vasst verktyg fördubblar chansen att en stickling rotar sig.",
     "tipEcology": "Varje art har en roll - att observera utan att ingripa är det bästa sättet att lära sig.",
     "waterCheckToday": "Känn på jorden idag",
-    "waterCheckInDays": "Känn på jorden om {{count}} d"
+    "waterCheckInDays": "Känn på jorden om {{count}} d",
+    "aboutSpecies": "Om denna art",
+    "fundamentals": "Grundläggande råd",
+    "checklistLabel": "Innan du börjar",
+    "problemsLabel": "Tecken på problem",
+    "solutionsLabel": "Lösningar"
   },
   "disease": {
     "overviewSection": "Översikt",

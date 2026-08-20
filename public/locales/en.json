@@ -308,7 +308,12 @@
     "tipPropagation": "A clean, sharp tool doubles a cutting's chance of taking root.",
     "tipEcology": "Every species has a role - observing without interfering is the best way to learn.",
     "waterCheckToday": "Check the soil today",
-    "waterCheckInDays": "Check the soil in {{count}}d"
+    "waterCheckInDays": "Check the soil in {{count}}d",
+    "aboutSpecies": "About this species",
+    "fundamentals": "Fundamentals",
+    "checklistLabel": "Before you start",
+    "problemsLabel": "Signs of trouble",
+    "solutionsLabel": "Solutions"
   },
   "disease": {
     "overviewSection": "Overview",

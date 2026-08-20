@@ -1,0 +1,875 @@
+{
+  "succulent": {
+    "label": "Suculentas e cactos",
+    "topics": {
+      "watering": {
+        "advice": [
+          "A regra deste grupo é o ciclo encharca-e-seca, não o calendário. Regue molhando o torrão inteiro até escorrer pelo dreno, esvazie o pratinho e então deixe o substrato secar por completo antes da próxima — tipicamente a cada duas ou três semanas na estação de crescimento, embora vaso, luz e temperatura mudem muito esse intervalo. O motivo é fisiológico: são plantas de metabolismo CAM, que abrem os estômatos à noite e os mantêm fechados de dia. Entre um pulso de água e outro, o que elas precisam é de raiz oxigenada, não de fluxo contínuo.",
+          "O inverno é um repouso de verdade: o crescimento acontece por volta de 18 a 29 °C, a dormência entre 7 e 13 °C, com a rega reduzida ao mínimo a cada poucas semanas, só o suficiente para não murchar. E quando aparecer murcha, leia a textura antes de pegar o regador — folha enrugada e firme é sede; folha amarela, mole e translúcida é encharcamento, e regar de novo só piora, porque a raiz apodrecida já parou de absorver. Os cactos epifíticos de floresta, como a flor-de-maio, são a exceção do grupo: pedem substancialmente mais água e nunca devem secar por completo na primavera e no verão."
+        ],
+        "checklist": [
+          "Encharque o torrão inteiro até escorrer pelo dreno e esvazie o pratinho.",
+          "Espere o substrato secar completamente antes de regar de novo.",
+          "Nunca deixe o vaso parado dentro de água.",
+          "No repouso de inverno, rega mínima a cada poucas semanas — só para não murchar.",
+          "Folha enrugada e firme = falta de água. Folha amarela, mole e translúcida = excesso."
+        ]
+      },
+      "light": {
+        "advice": [
+          "Este é o único grupo de interior que aceita e pede sol direto. Suculentas querem dez horas ou mais de luz indireta brilhante, com um mínimo de seis a oito; abaixo disso ficam esguias e pálidas, o estiolamento clássico. Cactos de deserto vão melhor em janela com várias horas de sol direto por dia — no hemisfério sul, a janela quente é a voltada ao norte. Crescimento fino e pálido é sinal de luz insuficiente, e nenhuma dose de adubo corrige isso.",
+          "Duas ressalvas importam. Ao levar a planta para fora no verão, aclimate: comece em meia-sombra, porque sol forte queima o tecido que se formou dentro de casa. E os cactos epifíticos querem luz brilhante porém filtrada — janela leste ou oeste, cortina fina — porque queimam sob sol direto."
+        ],
+        "checklist": [
+          "Garanta de seis a oito horas de luz por dia, mirando em dez ou mais.",
+          "Cacto de deserto: janela com várias horas de sol direto.",
+          "Crescimento esguio e pálido é falta de luz, não falta de adubo.",
+          "Ao mudar para fora no verão, comece em meia-sombra por alguns dias.",
+          "Cacto epifítico: luz brilhante, sempre filtrada."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "O substrato é majoritariamente mineral, e as fontes divergem na receita para convergir no princípio. Uma extensão universitária recomenda um terço de material orgânico para dois terços de mineral; outra pede volumes iguais de substrato turfoso e areia bem grossa; a RHS trabalha com duas partes de substrato de base para uma de grit hortícola, com cobertura de grit na superfície. A faixa vai de cerca de 30% a 67% de fração mineral, e ela existe por um motivo só: encurtar ao máximo a fase em que o substrato fica saturado. Quanto mais úmido o seu ambiente e mais pesada a sua mão na rega, mais mineral você quer.",
+          "Vaso justo é regra, não descuido: volume extra de substrato retém umidade e a podridão vem atrás. Replante na primavera, num vaso apenas ligeiramente maior, e espere vários dias antes da primeira rega. A adubação é baixa em nitrogênio e em dose reduzida — metade ou um quarto da dose do rótulo, a cada três ou quatro regas na fase ativa, e nada no inverno. Excesso de nitrogênio produz tecido mole, que apodrece. Nos cactos epifíticos a receita inverte e a matéria orgânica passa a dominar."
+        ],
+        "checklist": [
+          "Misture no mínimo um terço de material mineral: perlita, areia grossa, pumice ou pedrisco.",
+          "Use vaso só um pouco maior que o atual — folga vira podridão.",
+          "Replante na primavera e espere alguns dias antes da primeira rega.",
+          "Adube a meia ou um quarto da dose, e suspenda no inverno.",
+          "Cacto epifítico inverte a receita: mais matéria orgânica, menos mineral."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "O risco aqui é mecânico e simples de contornar: para manusear espécies espinhosas, enrole a planta em jornal ou use luvas grossas. Espinho de cacto e as glóquidas finas de algumas espécies entram fácil na pele e saem com dificuldade, e o momento de maior exposição é justamente o replantio."
+        ],
+        "checklist": [
+          "Manuseie espécies espinhosas com jornal enrolado ou luvas grossas.",
+          "Prepare o vaso novo antes de tirar a planta do antigo, para reduzir o tempo com ela na mão.",
+          "Mantenha exemplares espinhosos fora de corredores de passagem e do alcance de crianças."
+        ]
+      }
+    }
+  },
+
+  "tropicalFoliage": {
+    "label": "Folhagens tropicais de interior",
+    "topics": {
+      "watering": {
+        "advice": [
+          "A meta deste grupo é substrato uniformemente úmido, nunca encharcado — não é o ciclo de secagem total das suculentas nem a umidade constante das samambaias. Para julgar, enfie o dedo no substrato até a primeira falange: seco na ponta, pode regar. Peso do vaso e som oco ao bater na lateral do vaso de barro funcionam igualmente bem. Quando regar, aplique água até escorrer pelo fundo: isso lava o excesso de sais e garante que os dois terços inferiores do vaso recebam água. Depois, esvazie o pratinho — nunca deixe a planta em água parada.",
+          "Detalhes que fazem diferença aqui: se o substrato secou demais, faça rega dupla — regue, espere cerca de trinta minutos e regue de novo; a água deve estar entre 17 e 22 °C, nunca quente nem gelada, e nunca água de abrandador, pelo sódio e pelo cloreto. Marantáceas pedem água destilada ou de chuva, porque o flúor da torneira deixa a borda da folha marrom. E há exceções declaradas dentro do próprio grupo: dracenas querem a superfície seca ao toque antes da rega, o zamioculcas rega uma ou duas vezes por mês e só depois de secar por completo, e o fícus-benjamim fica úmido no crescimento ativo e seca levemente no inverno."
+        ],
+        "checklist": [
+          "Mantenha o substrato uniformemente úmido, nunca empapado.",
+          "Regue até escorrer pelo fundo e esvazie o pratinho em seguida.",
+          "Use água entre 17 e 22 °C; nunca água de abrandador.",
+          "Marantáceas e dracenas: prefira água destilada ou de chuva.",
+          "Substrato muito seco: regue, espere trinta minutos e regue de novo."
+        ]
+      },
+      "light": {
+        "advice": [
+          "A tolerância de luz deste grupo é muito ampla, e é justamente aqui que ele se subdivide. Filodendros preferem sol indireto ou filtrado por cortina e toleram pouca luz — o de folha-coração aguenta luz muito baixa —, enquanto os tipos arbóreos pedem luz média a forte perto de janela. Dracenas crescem melhor em luz indireta brilhante, mas várias toleram luz baixa a ponto de virarem padrão de escritório. Em números de referência: luz baixa fica em torno de 75 foot-candles, média 150, alta 300 e direta 1500.",
+          "As marantáceas são o subgrupo mais restrito: meia-sombra, no máximo duas a seis horas de sol direto por dia, e o aviso de que sol direto queima a folha. Vale lembrar que a fenestração da monstera — os furos característicos — depende de luz adequada; e que o filodendro verdadeiro faz folha recortada, mas sem furos. Se as posições do seu cômodo forem descritas por pontos cardeais, lembre de inverter norte e sul no hemisfério sul."
+        ],
+        "checklist": [
+          "Luz indireta brilhante é o ponto ótimo para quase todo o grupo.",
+          "Marantáceas: meia-sombra, no máximo duas a seis horas de sol direto.",
+          "Manchas secas e redondas na folha indicam sol excessivo.",
+          "Folha de baixo amarelando com ponta de crescimento morta: falta de luz ou excesso de rega.",
+          "Se quer fenestração na monstera, aumente a luz antes de mudar qualquer outra coisa."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "Aqui basta um substrato orgânico de uso geral — este grupo não tem exigência mineral como as suculentas nem exigência de turfa como as samambaias. O que muda a técnica é a retenção: misturas ricas em turfa seguram umidade por mais tempo, misturas com casca, areia ou perlita drenam mais rápido. Escolha conforme a sua mão na rega e o clima da casa. Uma correção importante: camada de pedras no fundo do vaso não melhora a drenagem — ela tende a reter umidade dentro do vaso.",
+          "Há um conflito real registrado nas fontes e vale seguir a leitura conservadora. Para dracenas, uma extensão manda evitar substratos com alta porcentagem de perlita, manter o pH entre 6,0 e 6,5 e não usar fertilizantes com superfosfato, porque a dracena é muito sensível a flúor; para marantáceas, outra extensão recomenda incorporar perlita ou vermiculita, e a marantácea também é sensível a flúor. Não há reconciliação explícita: para esses dois grupos, prefira vermiculita ou casca fina à perlita e use água destilada ou de chuva. Adube com moderação — pontas marrons e enroladas são sinal de excesso de fertilizante, e o zamioculcas, de crescimento muito lento, precisa de apenas uma ou duas aplicações na estação inteira."
+        ],
+        "checklist": [
+          "Substrato de uso geral resolve; ajuste a retenção com casca ou perlita.",
+          "Não coloque camada de pedras no fundo do vaso — não drena.",
+          "Dracenas e marantáceas: prefira vermiculita ou casca fina à perlita.",
+          "Mantenha o pH da dracena entre 6,0 e 6,5 e evite superfosfato.",
+          "Pontas marrons e enroladas: reduza a adubação antes de qualquer outra coisa."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "Este é o grupo com o risco de toxicidade mais concentrado entre as plantas de interior, e a causa é o oxalato de cálcio. Todas as partes do filodendro são tóxicas se ingeridas: os cristais causam queimação e irritação da boca, dos lábios e da língua, salivação excessiva, vômito e dificuldade de engolir. O zamioculcas é classificado como não seguro para animais de estimação. A seiva das marantáceas pode causar irritação de pele. Nenhuma dessas plantas é perigosa de ter em casa — o risco é de ingestão e de contato prolongado com a seiva, então trate poda e replantio como operações de luva e mãos lavadas.",
+          "Há um risco físico menor, mas real: os filodendros autoportantes têm pecíolos frágeis, que quebram com facilidade — vale afastá-los de corredores de passagem. E uma observação que evita susto: manchas pretas no caule do zamioculcas são normais e indicam crescimento saudável, não doença."
+        ],
+        "checklist": [
+          "Mantenha estas plantas fora do alcance de crianças pequenas e de pets.",
+          "Use luvas ao podar ou replantar e lave as mãos depois.",
+          "Não deixe folhas caídas ao alcance de animais que mastigam plantas.",
+          "Afaste tipos autoportantes de corredores: os pecíolos quebram fácil.",
+          "Manchas pretas no caule do zamioculcas são normais, não doença."
+        ]
+      }
+    }
+  },
+
+  "fern": {
+    "label": "Samambaias e plantas de sombra",
+    "topics": {
+      "watering": {
+        "advice": [
+          "A meta é solo levemente úmido o tempo todo, sem nunca secar por completo e sem nunca deixar água parada no pratinho. O erro conceitual mais caro do grupo é confundir umidade constante com vaso sempre encharcado: as fontes dizem, na mesma frase, que o substrato tem que reter umidade e drenar rápido, porque a raiz continua precisando de oxigênio. Podridão de raiz aparece em samambaia exatamente como aparece em cacto, só que com muito menos água. E o sinal de erro é ambíguo nos dois sentidos — queda de folíolos acontece tanto por excesso quanto por falta.",
+          "A umidade do ar é o fator limitante deste grupo, não conforto: a meta prática fica entre 30% e 50%, e por volta de 50% para as espécies de fronde fina, como as avencas. Ponta marrom em samambaia é, antes de tudo, um diagnóstico de ar seco — não de substrato seco — e regar mais leva à podridão sem resolver o sintoma. Os métodos, em ordem de robustez: vaso duplo com esfagno úmido, bandeja de pedras com cerca de seis milímetros de água e o vaso sem tocar a água, umidificador, terrário ou banheiro para as espécies mais delicadas, e só então borrifação leve ocasional. Troque ou lave o cascalho da bandeja a cada três meses."
+        ],
+        "checklist": [
+          "Mantenha o substrato levemente úmido e nunca deixe secar por completo.",
+          "Não deixe água parada no pratinho: é o caminho direto da podridão de raiz.",
+          "Ponta marrom é umidade do ar baixa — trate o ar, não regue mais.",
+          "Prefira vaso duplo com esfagno ou bandeja de pedras à borrifação.",
+          "Lave ou troque o cascalho da bandeja a cada três meses."
+        ]
+      },
+      "light": {
+        "advice": [
+          "Luz moderada e indireta é o ideal, com a planta perto de uma janela fria — a voltada ao norte no hemisfério norte, ao sul no hemisfério sul — ou de uma janela leste. Janela sul ou oeste direta danifica a folhagem; se for a única opção, use cortina fina para reduzir a intensidade. Em números, a faixa alvo é a de luz baixa a média, entre 75 e 150 foot-candles.",
+          "Existe variação real dentro do grupo: algumas espécies toleram luz baixa e outras precisam de sol indireto brilhante ou filtrado, então observe a sua planta em vez de aplicar um número único. Folhagem danificada por sol tem causa quase sempre óbvia — janela quente direta — e a correção é apenas afastar ou filtrar."
+        ],
+        "checklist": [
+          "Prefira a janela fria da casa ou uma janela leste.",
+          "Evite sol direto de janela quente; use cortina fina se não houver alternativa.",
+          "Mire na faixa de luz baixa a média, entre 75 e 150 foot-candles.",
+          "Folhagem queimada é sinal de sol direto, não de falta de água."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "O substrato deste grupo tem que fazer duas coisas ao mesmo tempo: reter umidade e drenar rápido. Uma receita verificada é partes iguais de substrato comercial para plantas de interior e turfa ou leaf mould, com a exigência explícita de que drene rapidamente para prevenir podridão de raiz. Outra combina turfa ou esfagno para retenção, areia ou cascalho para drenagem e loam esterilizado, com adição de calcário dolomítico e de farinha de osso. É o oposto exato das suculentas: aqui o orgânico domina, e a drenagem vem do material grosso, não da proporção mineral. Camada de pedras no fundo do vaso, de novo, não drena.",
+          "A fertilização é a mais contida de todas as plantas de interior: uma vez por mês na estação de crescimento, a cerca de metade da dose recomendada, nada no inverno — e nada por seis meses depois de dividir ou replantar. Nenhum outro grupo de interior tem carência tão longa, e o motivo é direto: samambaias sofrem queima de folha quando fertilizadas em excesso. Vale ainda um alerta químico específico do grupo: pulverizações de pesticida ferem muitas samambaias, então leia o rótulo com cuidado e teste o produto numa área pequena antes. Para pragas, prefira métodos mecânicos, como jato de água forte."
+        ],
+        "checklist": [
+          "Use um substrato que retenha umidade e ainda assim drene rápido.",
+          "Adube a meia dose, uma vez por mês na estação de crescimento.",
+          "Não adube no inverno, nem nos seis meses após divisão ou replantio.",
+          "Teste qualquer pulverização numa folha só antes de tratar a planta inteira.",
+          "Replante e divida no início da primavera, mantendo umidade alta por semanas depois."
+        ]
+      }
+    }
+  },
+
+  "fruitVeg": {
+    "label": "Frutíferas e hortaliças",
+    "topics": {
+      "watering": {
+        "advice": [
+          "Aqui a rega se mede em lâmina semanal e tem janelas fenológicas definidas. A maioria das hortaliças pede de uma a duas polegadas por semana, o equivalente a 25 a 50 milímetros, com picos claros: milho doce quer de uma e meia a duas e meia polegadas durante o pendoamento, o embonecamento e a formação de espiga; feijão quer de uma a uma e meia durante a floração e o enchimento de vagem. A faixa é intervalo, não número fixo — clima seco puxa para cima, clima úmido para baixo. Em solo franco, uma polegada de água penetra cerca de seis polegadas de perfil, o que permite calcular: para molhar trinta centímetros são necessárias aproximadamente duas polegadas de lâmina.",
+          "A rega superficial aqui não é apenas menos eficiente: ela interrompe o transporte de cálcio. O cálcio se move com o fluxo transpiratório e não é remobilizado de tecidos velhos para o fruto novo, então ciclos de seca e encharque produzem podridão apical mesmo com cálcio de sobra no solo. Tomate é altamente sensível à rega irregular e responde com podridão apical e rachadura; pimentão responde com queda de flor; pepino estressado na fase reprodutiva dá fruto amargo e deformado. Solo arenoso pede rega mais frequente e mais curta; solo argiloso, menos frequente e mais profunda."
+        ],
+        "checklist": [
+          "Trabalhe com uma faixa de 25 a 50 milímetros por semana, somando chuva e irrigação.",
+          "Não falhe na floração e no enchimento de fruto: é a janela que custa a safra.",
+          "Prefira rega profunda e espaçada a regas curtas e diárias.",
+          "Podridão apical se corrige regularizando a rega, não pulverizando cálcio.",
+          "Ajuste ao solo: arenoso pede mais frequência; argiloso, mais profundidade."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "Este é o único grupo em que a colheita retira nutriente do sistema todo ano, e é daí que sai quase toda a diferença de manejo. A adubação é recorrente e parcelada em cobertura, com a proporção mudando ao longo do ciclo — no tomate de mesa, por exemplo, a cobertura começa mais rica em fósforo e vai aumentando o potássio conforme a planta entra em produção. Excesso de nitrogênio tem custo real: figo que não amadurece, e crescimento vegetativo exagerado durante a floração e a frutificação inicial, que é um dos maiores contribuintes para a podridão apical em tomate e pimentão.",
+          "O pH é decisivo e varia bastante dentro do grupo. Macieira vai bem entre 5,8 e 6,5, com reteste a cada três anos; a maioria das folhosas fica entre 6,0 e 6,5; e o mirtilo é a exceção radical, com ótimo entre 4,8 e 5,2, exigindo enxofre elementar aplicado pelo menos um ano antes do plantio. Duas regras que valem para tudo: mantenha o adubo a pelo menos quinze centímetros do tronco e aplique sempre em solo úmido, para não queimar raiz. E este é o único grupo com rotação por família botânica — culturas da mesma família são suscetíveis às mesmas doenças e insetos, então não repita a família no mesmo canteiro por três a quatro anos, ou mais se possível."
+        ],
+        "checklist": [
+          "Aduba em cobertura parcelada, não em dose única.",
+          "Faça análise de solo e corrija o pH para a cultura, não para o canteiro inteiro.",
+          "Mantenha o adubo a pelo menos quinze centímetros do tronco, sempre em solo úmido.",
+          "Não repita a mesma família botânica no canteiro por três a quatro anos.",
+          "Excesso de nitrogênio atrasa a maturação e alimenta a podridão apical."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "O raleio de frutos é uma operação obrigatória que não existe em nenhum outro grupo. Carga demais gera fruto pequeno, quebra de ramo e alternância de produção, porque quando a árvore está com safra cheia quase toda a energia vai para o fruto e sobra pouca para iniciar as flores do ano seguinte. O raleio manual em maçã deve ser feito em até seis semanas da plena floração, deixando os frutos a cerca de vinte a vinte e cinco centímetros um do outro no ramo; pera, ameixa e damasco ficam a quinze a vinte. A queda natural de junho, com frutos de um a dois centímetros e meio de diâmetro, não substitui o raleio manual — deixe sempre a maior fruta do cacho, a não ser que esteja danificada.",
+          "Duas operações completam o quadro. A poda da macieira começa no dia em que a árvore é plantada; adiar produz crescimento ruim e frutificação atrasada. E no mirtilo, remover todas as flores no primeiro e no segundo ano é o que permite a planta se estabelecer — abrir mão de duas safras compra as seguintes. Em frutíferas, mantenha o corte de adubação no fim do verão, porque produção de fruto e maturação da madeira competem pelos mesmos fotoassimilados."
+        ],
+        "checklist": [
+          "Rale os frutos em até seis semanas da plena floração.",
+          "Deixe a maior fruta de cada cacho, salvo se estiver danificada.",
+          "Não conte com a queda natural: ela não substitui o raleio manual.",
+          "Comece a formar a copa no ano do plantio, não depois.",
+          "Suspenda a adubação no fim do verão em frutíferas."
+        ]
+      }
+    }
+  },
+
+  "flowering": {
+    "label": "Floríferas e ornamentais",
+    "topics": {
+      "watering": {
+        "advice": [
+          "A rega aqui é em lâmina semanal, não em ciclo seca-encharca: anuais e perenes pedem pelo menos uma a uma polegada e meia de água por semana, somando chuva e irrigação, e o melhor horário é cedo, para que a folhagem seque rápido. Em roseiras o princípio é o mesmo dito de outro jeito — rega profunda promove sistema radicular profundo, enquanto rega frequente e leve faz as raízes se formarem perto demais da superfície.",
+          "A qualidade sanitária depende disso mais do que parece. Roseira com mancha preta recorrente quase sempre tem folha molhada no fim do dia e ar parado ao redor: sol da manhã, mangueira de gotejamento em vez de aspersão e boa circulação de ar resolvem mais do que qualquer pulverização."
+        ],
+        "checklist": [
+          "Garanta pelo menos 25 a 40 milímetros de água por semana, contando a chuva.",
+          "Regue cedo, para a folhagem secar antes da noite.",
+          "Prefira rega profunda e espaçada a regas leves e frequentes.",
+          "Em roseiras, molhe o solo e não a folha."
+        ]
+      },
+      "light": {
+        "advice": [
+          "A maioria das anuais precisa de sol pleno por pelo menos quatro a seis horas por dia para florescer bem. Roseiras pedem mais: seis a oito horas de sol direto, e o sol da manhã é especialmente importante porque seca as folhas e ajuda a prevenir doença.",
+          "Um diagnóstico que engana muita gente: perene molenga, caída, sem porte, costuma indicar luz insuficiente — não falta de adubo. Adubar mais não corrige; realocar corrige."
+        ],
+        "checklist": [
+          "Anuais: quatro a seis horas de sol pleno por dia, no mínimo.",
+          "Roseiras: seis a oito horas, com prioridade para o sol da manhã.",
+          "Perene caída e desengonçada pede mudança de lugar, não mais adubo.",
+          "Observe onde o sol bate ao longo do ano antes de definir o canteiro."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "O preparo é mais profundo aqui do que em vaso: de quinze a vinte e cinco centímetros para anuais e de vinte a vinte e cinco para perenes. Em solo argiloso, incorpore pelo menos cinco centímetros de casca de pinus compostada, composto ou mofo de folha; em solo arenoso, de cinco a sete centímetros de material orgânico retentor. O pH alvo para perenes fica entre 6,0 e 6,5. A cobertura morta é mais fina aqui do que em lenhosas: dois a três polegadas para anuais e apenas uma a duas para perenes, com aviso explícito de evitar cobertura pesada demais, porque o colo da perene apodrece embaixo dela.",
+          "A exigência nutricional é intermediária e explicitamente limitada: um adubo completo aplicado no preparo e repetido a intervalos de cerca de seis semanas dá conta. Muito acima da lenhosa madura, que quase não precisa de nada, e bem abaixo da frutífera adulta. E uma correção importante contra um hábito difundido: não use fórmula alta em fósforo como regra para florir. Doses altas de fósforo não aumentam o número de flores, e o excesso crônico trava micronutrientes como ferro e zinco, produzindo plantas atrofiadas e folhas amarelas — e o fósforo em excesso baixa muito devagar, podendo levar anos. Adubo equilibrado mais teste de solo é a orientação segura. Sinal de excesso em vaso: crosta branca na borda, ponta de folha marrom e raiz escurecida."
+        ],
+        "checklist": [
+          "Prepare o solo fundo: quinze a vinte e cinco centímetros, incorporando matéria orgânica.",
+          "Use apenas uma a duas polegadas de cobertura morta em perenes, longe do colo.",
+          "Adube com fórmula equilibrada, repetindo a cada seis semanas.",
+          "Não use fórmula alta em fósforo para forçar floração.",
+          "Crosta branca na borda do vaso: lixivie com água em abundância ou troque o substrato."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "A operação que define este grupo é o deadheading — remover as flores gastas. Retirar as flores murchas incentiva a planta a produzir novas flores em vez de encerrar o ciclo de floração da estação; é a única categoria em que remover o órgão reprodutivo aumenta o produto desejado. Pode-se beliscar com os dedos ou usar tesoura afiada, e vale remover também uma porção da haste, não só a flor. Além do efeito na floração, isso reduz a incidência de doenças que se desenvolvem sobre matéria vegetal em decomposição. No plantio de anuais, belisque botões e flores para promover melhor ramificação; em perenes, corte rente ao chão depois da florada para estimular folhagem nova a partir da base.",
+          "Bulbosas são o espelho invertido disso: depois da flor, o trabalho é recarregar. Remova a flor gasta para impedir a formação de vagem de semente, mas nunca a folha — deixe a folhagem até ela começar a amarelar e secar sozinha, e não amarre nem trance, porque isso reduz a luz que as folhas interceptam e, com ela, a fotossíntese que abastece o bulbo do ano seguinte. Divida os bulbos quando a folhagem já secou e eles estão dormentes, separando os bulbilhos com um giro suave; divisões pequenas podem levar um ou dois anos até voltar a florir. E no outono, considere deixar as cabeças de semente no lugar: são alimento nutritivo para a fauna durante o inverno."
+        ],
+        "checklist": [
+          "Remova as flores gastas antes que formem semente.",
+          "Belisque botões no plantio das anuais, para a planta ramificar.",
+          "Em bulbosas, corte a flor mas nunca a folha.",
+          "Nunca amarre nem trance a folhagem de bulbo.",
+          "No outono, deixe algumas cabeças de semente para a fauna."
+        ]
+      }
+    }
+  },
+
+  "woody": {
+    "label": "Árvores e arbustos lenhosos",
+    "topics": {
+      "watering": {
+        "advice": [
+          "Este é o único grupo cujo período de estabelecimento se mede em anos: cerca de um ano por polegada de diâmetro do tronco. Uma árvore recém-plantada quer rega diária nas duas primeiras semanas, a cada dois ou três dias da terceira à décima segunda, semanal até a primeira geada e semanal também no segundo ano. O volume tem fórmula: de um a um litro e meio por centímetro de diâmetro de tronco em cada rega — na prática, de um a um galão e meio por polegada — distribuídos por toda a zona radicular e não no tronco, umedecendo de quinze a vinte e três centímetros de solo.",
+          "Rega profunda estimula raízes fortes e melhora a resistência ao calor e à seca; rega frequente e rasa cria um sistema radicular superficial e dependente, que em lenhosa é também o que arranca em vendaval. Por isso a árvore recém-plantada que murcha mesmo regada todo dia costuma estar sendo regada no lugar errado, com volume insuficiente. Arbustos acidófilos como azaleias pedem rega funda, molhando de quinze a vinte centímetros, e em solo arenoso podem precisar de duas regas por semana no primeiro ano."
+        ],
+        "checklist": [
+          "Regue a zona radicular inteira, nunca o tronco.",
+          "Use de um a um galão e meio por polegada de diâmetro de tronco por rega.",
+          "Umedeça de quinze a vinte e três centímetros de perfil de solo.",
+          "Conte cerca de um ano de estabelecimento por polegada de tronco.",
+          "Prefira rega funda e espaçada a rega diária e rasa."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "Lenhosa madura em solo bom simplesmente não precisa de adubo: nem toda planta de paisagismo precisa ser fertilizada, e árvores e arbustos maduros em condições favoráveis exigem pouco ou nenhum fertilizante. Árvores em gramado adubado já se servem sozinhas, porque as raízes interceptam os nutrientes aplicados na grama. Quando se aduba, o teto é normativo: nitrogênio de liberação lenta entre dois e quatro quilos por mil pés quadrados por ano, sem ultrapassar seis; de liberação rápida entre um e dois, com teto de quatro. A aplicação cobre toda a área da projeção da copa, do colo até a ponta dos galhos, e sempre em solo úmido.",
+          "As acidófilas são o subgrupo que muda tudo. Azaleias e rododendros pedem pH entre 4,5 e 6,0, têm raiz rasa e são facilmente danificados por umidade excessiva no solo; recebem adubo acidificante em relação próxima de 2-1-1, leve, na primavera e no início do verão, e nunca adubo rico em nitrogênio no fim do outono, porque isso atrasa a dormência. Folha nova amarela com nervura verde sugere pH alto travando o ferro — mas em solo argiloso ácido o ferro está disponível, então investigue encharcamento antes de culpar o pH. A cobertura morta é ferramenta e é arma: cinco a dez centímetros de espessura, afastada sete a treze centímetros do tronco em árvore jovem e vinte a vinte e cinco em árvore madura, estendida até a linha de gotejamento. Passar disso cria o vulcão de mulch, que mata devagar: o ar não penetra, o solo perde oxigênio, a umidade constante mata o floema e a raiz fica sem carboidrato."
+        ],
+        "checklist": [
+          "Não adube lenhosa madura em solo bom — ela quase sempre não precisa.",
+          "Se adubar, cubra toda a projeção da copa e sempre em solo úmido.",
+          "Acidófilas: pH entre 4,5 e 6,0 e adubo acidificante leve na primavera.",
+          "Mantenha a cobertura morta afastada do tronco, em anel plano.",
+          "Cinco a dez centímetros de mulch bastam; mais que isso é vulcão."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "A poda é irreversível e tem regras anatômicas. O corte fica logo além do colar do galho — aquela área inchada na base do ramo que funciona como barreira natural contra os organismos da podridão. Galhos acima de quatro centímetros de diâmetro exigem o método de três cortes, para que a casca não rasgue ao longo do tronco. E não se aplica pasta cicatrizante: a pesquisa mostrou que curativos e agentes de poda não previnem a podridão.",
+          "A época é decidida pela madeira que floresce, não pelo calendário: quem floresce na madeira do ano anterior — forsítia, azaleia, lilás — se poda logo depois da flor, e quem floresce na madeira do ano se poda antes da brotação. Arbusto que nunca floresce quase sempre foi podado na hora errada. Prefira o desbaste ao encurtamento, porque o desbaste estimula crescimento no interior da planta e devolve porte natural, enquanto o encurtamento adensa a periferia e escurece o miolo, com o rebrote concentrado a quinze ou vinte centímetros do corte. Para renovar um arbusto velho sem chocar a planta, use a regra do um terço em três anos. Adote o teto conservador de cerca de 25% da copa viva por ano e nunca decapite uma árvore: o topping remove metade ou mais da copa foliar, deixa feridas que não compartimentam e expõe a casca à queimadura solar. Evite ainda podar nas dez semanas que antecedem a primeira geada forte da região."
+        ],
+        "checklist": [
+          "Corte logo fora do colar do galho, nunca rente ao tronco.",
+          "Use o método de três cortes em galhos acima de quatro centímetros.",
+          "Não aplique pasta cicatrizante: ela não previne podridão.",
+          "Quem floresce na madeira velha se poda logo depois da flor.",
+          "Remova no máximo cerca de 25% da copa viva por ano e nunca decapite."
+        ]
+      }
+    }
+  },
+
+  "orchid": {
+    "label": "Orquídeas e epífitas",
+    "topics": {
+      "watering": {
+        "advice": [
+          "Aqui não existe calendário de rega, existe critério de secagem: regue assim que a planta secar, e não há fórmula mágica do tipo regar um vaso de quinze centímetros a cada sete dias. Quando regar, regue de verdade — água correndo livremente pelos furos de drenagem por alguns minutos, até saturar completamente o meio. O conceito de rega profunda se inverte neste grupo: não há perfil de solo para molhar, o que existe é saturação total seguida de secagem rápida. Borrifar de leve todos os dias é o equivalente da rega superficial de canteiro: molha a superfície, mantém umidade parada nos pontos errados e nunca satura o meio.",
+          "A qualidade da água importa mais aqui do que em qualquer outro grupo, porque sem solo não há complexo de troca catiônica para tamponar sal: use água morna, de preferência de chuva, e nunca água de abrandador, que carrega muito sódio. Nunca deixe o vaso no pratinho. Cada subgrupo tem seu método: bromélias-tanque absorvem principalmente pelas folhas e pelo copo, que deve ficar cheio e ser lavado toda semana para impedir a concentração de minerais que mata a ponta da folha; tilândsias querem uma imersão de vinte a trinta minutos por semana — de uma a duas vezes conforme o ambiente esteja quente e seco ou fresco e úmido — e depois ser sacudidas e viradas de cabeça para baixo para drenar; e o cacto-de-natal, depois de formar botão, precisa de substrato uniformemente úmido para não derrubar os botões."
+        ],
+        "checklist": [
+          "Regue quando secar, não por calendário.",
+          "Sature o meio até a água correr livremente por alguns minutos.",
+          "Use água morna, de chuva se possível, e nunca água de abrandador.",
+          "Nunca deixe o vaso descansando no pratinho com água.",
+          "Bromélia-tanque: mantenha o copo cheio e lave-o toda semana."
+        ]
+      },
+      "light": {
+        "advice": [
+          "A maioria das orquídeas de interior quer de uma a quatro horas de sol direto. A falenópsis vai bem entre 19 e 30 °C de dia e 16 e 19 °C à noite, em janela leste ou oeste, fora do sol direto do verão e longe de aquecedores e correntes de ar. Bromélias pedem de doze a dezesseis horas diárias de luz relativamente brilhante, e as folhas denunciam o acerto: folha longa, fina e mais verde indica luz de menos; folha mais curta, mais grossa e mais clara indica luz alta. Tilândsias querem luz brilhante e filtrada, nunca sol direto.",
+          "Há um caso em que o fotoperíodo manda mais que a intensidade. O cacto-de-natal e parentes exigem catorze horas ou mais de escuro contínuo por dia, começando por volta de meados de setembro no hemisfério norte, por pelo menos seis semanas — e o alerta operacional é duro: mesmo duas horas de iluminação interrompida inibem a formação dos botões. Uma lâmpada acesa na sala é suficiente para cancelar a floração do ano."
+        ],
+        "checklist": [
+          "Orquídeas de interior: de uma a quatro horas de sol direto.",
+          "Falenópsis: janela leste ou oeste, longe de aquecedor e corrente de ar.",
+          "Bromélia com folha longa, fina e escura está pedindo mais luz.",
+          "Tilândsia: luz brilhante filtrada, nunca sol direto.",
+          "Cacto-de-natal: escuro contínuo à noite por seis semanas para formar botão."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "Não existe solo neste grupo, e terra comum mata: nunca use substrato de base de terra nem substrato multiuso, porque eles asfixiam a raiz de velame. Mais do que isso, o substrato tem prazo de validade e o replantio é obrigatório, não opcional — a casca precisa ser trocada a cada dois anos aproximadamente, e antes disso o sinal é físico: replante quando fragmentos do meio começarem a sair do vaso durante a rega. A casca decomposta fica menos arejada e mais densa, retém água por mais tempo e apodrece a raiz. É o único grupo em que o próprio substrato é a causa de morte programada.",
+          "A escolha entre casca e esfagno é uma decisão de ambiente, não de gosto: casca grossa em ambiente úmido ou estufa; mistura com mais esfagno e fibra em interior seco e ensolarado, com rega mais espaçada e replantio logo após a floração. Uma mistura de casca, carvão e perlita é o padrão comercial equilibrado. O vaso deve ser apenas grande o suficiente para conter o sistema radicular — recipiente grande demais retém umidade e danifica a raiz. A adubação é diluída por princípio: metade da dose do rótulo, com pouca ou nenhuma ureia, semanal no verão e quinzenal no outono e no inverno, pulando o adubo a cada quarta rega para lixiviar sais. Bromélias vão ainda mais fraco, entre um quarto e um oitavo da força. E lembre que vários membros deste grupo são monocárpicos: bromélia que definha depois de florir está cumprindo o ciclo normal, não adoecendo — conserve os brotos laterais."
+        ],
+        "checklist": [
+          "Nunca plante em terra comum ou substrato multiuso.",
+          "Troque a casca a cada dois anos, ou quando fragmentos saírem na rega.",
+          "Use vaso do tamanho exato do sistema radicular.",
+          "Adube a meia dose e pule o adubo a cada quarta rega.",
+          "Bromélia morrendo após florir é ciclo normal: guarde os filhotes."
+        ]
+      }
+    }
+  },
+
+  "herb": {
+    "label": "Ervas aromáticas",
+    "topics": {
+      "watering": {
+        "advice": [
+          "Este grupo se divide em dois e tratar os dois com o mesmo calendário é o erro estrutural. As mediterrâneas lenhosas — alecrim, tomilho, orégano, sálvia, lavanda — querem rega espaçada com secagem real entre uma e outra: o risco delas é raiz encharcada no inverno, não seca no verão. O alecrim detesta raiz molhada, especialmente no inverno, e uma vez estabelecido no solo praticamente não precisa de rega; em vaso, regue nas secas mas nunca deixe o substrato encharcar.",
+          "As folhosas — manjericão, salsa, hortelã, melissa — querem o oposto: umidade de solo relativamente constante, porque o estresse hídrico acelera o espigamento e endurece a folha. Regue de manhã, para a folhagem secar antes da noite, e no manjericão evite molhar a folha: gotejamento ou mangueira porosa em vez de aspersão, porque folha molhada com ar parado é convite ao míldio."
+        ],
+        "checklist": [
+          "Separe as mediterrâneas das folhosas antes de definir a rega.",
+          "Mediterrâneas: regue espaçado e deixe secar de verdade entre as regas.",
+          "Folhosas: mantenha umidade constante para evitar espigamento.",
+          "Regue de manhã, nunca no fim do dia.",
+          "No manjericão, molhe o solo e não a folha."
+        ]
+      },
+      "light": {
+        "advice": [
+          "Quase todas as ervas crescem melhor num lugar ensolarado por pelo menos seis horas por dia — e o sol é o que faz o óleo essencial, ou seja, é ele que faz o aroma. Manjericão prefere sol pleno, mas se sai razoavelmente bem com seis horas.",
+          "As exceções são conhecidas e vale respeitá-las: salsa e hortelã preferem sombra parcial e definham a pleno sol forte. Se a sua salsa ou hortelã está murchando no canteiro mais ensolarado, o problema pode ser exatamente esse."
+        ],
+        "checklist": [
+          "Mire em pelo menos seis horas de sol por dia para a maioria das ervas.",
+          "Salsa e hortelã aceitam e às vezes preferem meia-sombra.",
+          "Menos sol significa menos óleo essencial e menos aroma.",
+          "Mantenha alguns vasos perto da cozinha, para colher com frequência."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "Aqui a drenagem vale mais que a fertilidade, e este é o único grupo em que fertilidade alta é prejuízo: solos muito férteis tendem a produzir folhas exuberantes e sem sabor. O pH alvo geral fica entre 6 e 7, com matéria orgânica moderada. Em solo argiloso, incorpore de cinco a sete centímetros de casca de pinus fina, pedrisco ou composto grosseiro a vinte ou trinta centímetros de profundidade; em solo arenoso, a mesma espessura de material que retenha umidade. Canteiro elevado com cobertura de cascalho é receita padrão neste grupo, não luxo.",
+          "Alecrim em solo pesado não se corrige: ele muda de lugar — vai para canteiro elevado ou para vaso com até 25% de grit hortícola em volume. Alecrim plantado no solo não precisa de adubo nenhum; o de vaso ganha uma polvilhada de granulado de uso geral no fim da primavera. O manjericão é a exceção que se comporta como hortaliça e aceita uma dose medida no plantio, com complemento apenas se o crescimento parar. No coentro, aplicações leves de nitrogênio mantêm a planta viçosa, mas a fonte é explícita em evitar a tentação de exagerar. E cuidado com a hortelã: plante-a em vaso sem fundo enterrado no canteiro, porque ela corre por rizoma e toma o espaço inteiro."
+        ],
+        "checklist": [
+          "Priorize drenagem: canteiro elevado, grit ou casca fina incorporada.",
+          "Mantenha o pH entre 6 e 7 e a fertilidade moderada.",
+          "Erva bonita e sem sabor é sinal de adubo em excesso.",
+          "Alecrim no solo não precisa de adubação.",
+          "Plante hortelã em recipiente sem fundo enterrado no canteiro."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "A colheita tem janela fisiológica: as ervas devem ser colhidas pouco antes de florescer, que é quando os óleos essenciais estão no pico. E tem hora do dia — no início da manhã, depois que o orvalho secou e antes de o calor apertar. Nenhum outro grupo tem o horário como variável de qualidade, e erva colhida à tarde tem aroma perceptivelmente mais fraco. Flores aromáticas se colhem antes da abertura plena.",
+          "A poda aqui é de manutenção do porte e do sabor, e cada gênero tem sua regra. No manjericão, belisque as pontas periodicamente e remova os botões florais assim que aparecerem, senão a folha amarga e a planta para de crescer; colha pontas de ramo com um ou dois pares de folhas, deixando folhagem suficiente para rebrotar. O alecrim recebe poda leve todo ano, depois da flor, sem nunca entrar na madeira velha — sem isso ele fica pelado por baixo, lenhoso e só com ponta de folha. Sálvia leva poda forte no início da primavera, tomilho é aparado de leve após a floração, e o louro se apara no verão. A hortelã, depois de florir, pode ser cortada inteira a cerca de cinco centímetros da base para renovar as folhas."
+        ],
+        "checklist": [
+          "Colha pouco antes da floração, quando o óleo está no pico.",
+          "Colha de manhã cedo, depois que o orvalho secar.",
+          "No manjericão, remova botões florais assim que aparecerem.",
+          "No alecrim, apare leve depois da flor e nunca corte a madeira velha.",
+          "Renove a hortelã cortando a moita rente depois da floração."
+        ]
+      }
+    }
+  },
+
+  "pollinator": {
+    "label": "Insetos polinizadores",
+    "topics": {
+      "role": {
+        "advice": [
+          "Cerca de um terço do alimento que consumimos depende da atividade de polinizadores, e a maior parte desse trabalho não é feita pela abelha que você está imaginando. Só na Grã-Bretanha existem mais de 270 espécies de abelhas: cerca de 26 mamangavas, mais de 250 solitárias e uma única espécie de abelha-melífera. Quase todas são solitárias — cada fêmea constrói e abastece o próprio ninho sozinha e morre antes de a geração seguinte emergir — e o ninho quase nunca é uma colmeia: muitas nidificam no solo nu, outras em cavidades de madeira, e as mamangavas frequentemente ocupam túneis abertos por roedores.",
+          "No Brasil o grupo-chave são as abelhas sem ferrão, os meliponíneos, nativas das regiões tropicais e subtropicais; só no Pará estima-se a existência de 109 espécies, ligadas a cultivos como açaí, melão e melancia. O grupo vai muito além das abelhas: besouros estão entre os primeiros insetos a visitar flores, moscas-das-flores polinizam quando adultas enquanto suas larvas comem pulgão, e borboletas e mariposas somam serviço, ainda que sem a polinização por vibração que torna as abelhas tão eficientes por visita."
+        ],
+        "checklist": [
+          "A maioria das abelhas é solitária e nunca vai formar colmeia.",
+          "Montinho cônico de terra no gramado é a boca de um ninho ativo.",
+          "Recortes circulares limpos na folha são abelhas cortadeiras coletando material de ninho.",
+          "Mosca-das-flores tem duas asas; abelha e vespa têm quatro.",
+          "Sem pulgão não há larva de mosca-das-flores: presa também é recurso."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "O risco real é baixo. Levar uma ferroada no jardim é improvável desde que as abelhas sejam tratadas com respeito, e as solitárias só usam o ferrão em legítima defesa, quando manuseadas com força. As abelhas sem ferrão, como o nome diz, não ferroam — é o que torna esse grupo o mais seguro para observar de perto e para criar em casa. O risco de ferroada nessa vizinhança está concentrado nas vespas sociais, que têm capacidade de ferroar em defesa do ninho.",
+          "Duas ressalvas fecham o quadro. Larvas de várias mariposas são urticantes, e essa é uma história completamente diferente — veja o grupo de insetos-praga antes de encostar em qualquer lagarta peluda. E criar abelhas sem ferrão é atividade regulada, não livre: no Pará, por exemplo, criadores com até 99 colmeias foram dispensados de licença ambiental, mas ainda assim precisam de cadastro no órgão de fiscalização agropecuária. Captura de ninho silvestre segue regra própria."
+        ],
+        "checklist": [
+          "Observe sem manusear: abelha solitária só ferroa se for apertada.",
+          "Abelha sem ferrão não ferroa — é a mais segura para observação.",
+          "Mantenha distância de ninhos de vespas sociais.",
+          "Nunca toque em lagarta peluda: o risco está nelas, não nas abelhas.",
+          "Criar abelhas nativas exige cadastro no órgão competente."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Diversidade antes de quantidade: comece com oito a dez espécies de plantas nativas cobrindo primavera, verão e outono, plantadas em manchas de pelo menos noventa centímetros de largura. Prefira flores simples, abertas, de uma única camada de pétalas — flores dobradas escondem ou eliminam pólen e néctar. Deixe o gramado florescer cortando com menos frequência, e ofereça água, porque abelhas e outros polinizadores também precisam beber. Um método de campo que vale copiar: observe quais plantas são populares com polinizadores no seu bairro e plante mais dessas.",
+          "Ninho é recurso. Deixe áreas de solo nu, bem drenado e a pleno sol, sem cobertura morta, para as abelhas que nidificam no chão, e tolere os montinhos de terra no gramado em vez de aplainá-los. Um hotel de abelhas funciona com furos de cerca de dois a dez milímetros de diâmetro, espaçados a dois centímetros, com sete a dez centímetros de profundidade para os furos menores e treze a quinze para os maiores, em madeira não tratada, instalado a cerca de um a dois metros de altura em local abrigado. E a regra que vale mais que todas as outras: nunca pulverize flores abertas. Evite inseticidas de amplo espectro; se precisar tratar, faça à noite, quando os polinizadores estão inativos."
+        ],
+        "checklist": [
+          "Plante de oito a dez espécies nativas cobrindo as três estações.",
+          "Escolha flores simples de camada única, não flores dobradas.",
+          "Deixe áreas de solo nu e ensolarado para abelhas de chão.",
+          "Ofereça água rasa e segura o ano todo.",
+          "Nunca pulverize flores abertas; se for tratar, trate à noite."
+        ]
+      }
+    }
+  },
+
+  "beneficialInsect": {
+    "label": "Insetos predadores e benéficos",
+    "topics": {
+      "role": {
+        "advice": [
+          "São os inimigos naturais do jardim: predadores, que matam e comem várias presas ao longo da vida, e parasitoides, cuja larva se desenvolve dentro ou sobre um único hospedeiro e o mata. Os números impressionam — uma joaninha pode devorar até cinco mil pulgões ao longo da vida, besouros-de-solo consomem até o próprio peso por dia, e uma larva de crisopídeo come entre cem e cento e cinquenta pulgões. Um levantamento de manejo integrado apoiado em inimigos naturais aponta redução de 30% a 40% na frequência de pulverizações em diferentes cultivos.",
+          "O estágio de vida muda tudo, e é aí que mora o erro mais comum. Em crisopídeos e moscas-das-flores, só a larva é predadora: o adulto vive de néctar, pólen e honeydew. Ou seja, aquele bichinho estranho na folha costuma ser o aliado, não a praga. Vale aprender três sinais de campo: a larva de joaninha é avermelhada e com formato de jacaré; ovos de crisopídeo ficam em pedúnculos finos como fios de cabelo; e lagarta com algumas dezenas de casulinhos brancos nas costas já está condenada e vai liberar dezenas de vespas parasitoides — deixe onde está."
+        ],
+        "checklist": [
+          "Identifique antes de agir: muita larva estranha na folha é predador.",
+          "Larva de joaninha é avermelhada e com formato de jacaré.",
+          "Ovos em hastes finíssimas são de crisopídeo, não praga.",
+          "Lagarta com casulinhos brancos nas costas já está parasitada — não descarte.",
+          "Louva-a-deus é predador indiscriminado: também come polinizador."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "Quase nada aqui ferroa. Entre os predadores, apenas as vespas sociais têm capacidade de ferroar em defesa; entre os parasitoides, apenas as vespas caçadoras que constroem ninho no solo ou de barro. As vespas ichneumonídeas e braconídeas usam aquele ferrão comprido apenas como ovipositor, e ele não é defensivo.",
+          "Mas duas famílias picam se manuseadas: percevejos-assassinos inserem a probóscide e injetam enzimas digestivas, e moscas-predadoras injetam saliva neurotóxica. Não pegue na mão. Louva-a-deus captura com as pernas raptoriais num movimento muito rápido e morde se for segurado. E há um caso específico: a joaninha asiática invasora morde pessoas, sobretudo quando fica presa entre a pele e a roupa — não rompe a pele nem transmite doença, mas ao ser perturbada libera hemolinfa que pode manchar permanentemente parede, cortina e carpete, e há registros de reações alérgicas como asma e urticária, sem relação com idade ou predisposição prévia. Para ela, a recomendação é vedar frestas e soleiras, não pulverizar o jardim. Ninho ativo de vespa social se observa de longe."
+        ],
+        "checklist": [
+          "Só vespas sociais e vespas caçadoras ferroam neste grupo.",
+          "Não pegue percevejo-assassino nem mosca-predadora na mão.",
+          "Louva-a-deus morde se for segurado.",
+          "Joaninha invasora dentro de casa se resolve vedando frestas, não com spray.",
+          "Observe ninhos de vespas à distância."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Conservar vale mais que comprar. A recomendação padrão é habitat e tolerância, não liberação: proteja esses predadores evitando pesticidas que os matam, escolhendo plantas que ofereçam pólen, néctar e abrigo, e mantendo as formigas longe das plantas infestadas — formigas defendem pulgões e cochonilhas dos predadores em troca de honeydew. Plantas citadas nominalmente pelas extensões como alimento de adultos: endro, funcho, equinácea, rudbéckia, asclépia e lantana.",
+          "Cada grupo tem uma exigência de ambiente. Libélulas precisam de corpo d'água: a fêmea põe os ovos tocando a superfície e a larva se desenvolve submersa — sem água, sem libélula. Larvas de besouro-de-solo vivem no solo com raio de ação limitado, então revolver ou compactar o terreno elimina a geração seguinte. E zerar o pulgão do jardim elimina a base alimentar de joaninhas, crisopídeos, moscas-das-flores e vespas parasitoides: presa é recurso, não emergência. Quando o tratamento for inevitável, prefira sabão, óleo ou spinosad a piretroides, carbamatos e organofosforados, justamente para poupar vespas parasitoides, moscas taquinídeas e besouros-de-solo."
+        ],
+        "checklist": [
+          "Ofereça flores de néctar e pólen: os adultos vivem delas.",
+          "Mantenha formigas fora das plantas infestadas.",
+          "Deixe água parada limpa se quiser libélulas.",
+          "Não revolva nem compacte o solo onde vivem larvas de besouro.",
+          "Tolere um pouco de pulgão: sem presa, o predador não fica."
+        ]
+      }
+    }
+  },
+
+  "pestInsect": {
+    "label": "Insetos-praga comuns",
+    "topics": {
+      "role": {
+        "advice": [
+          "Praga é rótulo de contexto, não de espécie: descreve dano econômico ou risco sanitário num lugar e num momento. O aparelho bucal diz o tipo de dano — mastigadores deixam furos visíveis em folha, madeira ou fruto; sugadores usam um tubo em forma de canudo e produzem pontilhado, manchas, atrofia, amarelamento, crescimento deformado e honeydew. E honeydew não é doença: é excreção açucarada, e a mancha preta é fumagina crescendo em cima dela, que escurece a superfície e reduz a fotossíntese. Resolvido o sugador, a mancha vai embora.",
+          "Duas chaves ajudam no campo. A metamorfose determina o que você vai encontrar: na gradual, ovo, ninfa e adulto, com a ninfa parecida com um adulto sem asa; na completa, ovo, larva, pupa e adulto, e a larva pode não parecer nada com o adulto. E o hábito diz onde olhar: sugadores se concentram em tecido novo em expansão, por isso a folha nova encarquilha primeiro, e pulgões, moscas-brancas e ácaros vivem na face inferior da folha. Um caso curioso: a formiga cortadeira não come a folha — ela corta e leva para cultivar o fungo do qual se alimenta, o que faz dela praga em plantio e organismo-chave em ecossistema nativo."
+        ],
+        "checklist": [
+          "Furo e rasgo = mastigador. Pontilhado, deformação e grude = sugador.",
+          "Fumagina cresce sobre o honeydew: trate o inseto, não a mancha.",
+          "Olhe sempre a face inferior da folha.",
+          "Folha nova encarquilhada aponta para sugador, não para falta de água.",
+          "Nem toda joaninha é aliada: existe linhagem fitófaga que come folha."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "É neste grupo que mora quase todo o risco físico da fauna — e não pelas pragas de lavoura. Lagartas urticantes têm pelos ocos ligados a bolsas de veneno, que perfuram a pele e liberam a toxina; os sintomas vão de coceira leve a dor, inchaço, bolhas, dermatite e até distúrbios intestinais. Primeiros socorros: aplique e remova fita adesiva repetidamente para arrancar as espículas quebradas, lave com água e sabão mornos, aplique prontamente uma bolsa de gelo para evitar inchaço e reduzir a dor, e procure atendimento em reação severa. No Brasil, a lagarta do gênero Lonomia provoca quadro hemorrágico e ameaça população rural e urbana; a vigilância do Paraná registrou 199 casos e cinco óbitos entre 1989 e 2000, com o soro antilonômico descentralizado para pontos estratégicos. A maioria dos acidentes vem de esbarrão em folhagem durante trabalho de quintal — admire a lagarta colorida e peluda de longe.",
+          "O barbeiro, transmissor da doença de Chagas, tem protocolo oficial próprio ao ser encontrado: não esmagar, apertar ou danificar o inseto; proteger a mão com luva ou saco plástico; acondicionar o inseto, preferencialmente vivo, em recipiente plástico com tampa de rosca; e levá-lo a um Posto de Informação de Triatomíneos. A transmissão vetorial se dá pelas fezes do inseto em contato com a lesão da picada, e há também transmissão pela ingestão de alimentos ou bebidas contaminados. A prevenção doméstica é telar portas e janelas, usar repelente e roupa de manga longa à noite."
+        ],
+        "checklist": [
+          "Nunca toque nem espane lagarta peluda ou espinhosa.",
+          "Ferroada de lagarta: fita adesiva, água e sabão mornos e gelo — e serviço médico se agravar.",
+          "Ao encontrar barbeiro, não esmague o inseto.",
+          "Recolha o barbeiro com luva, em pote de tampa de rosca, e leve à vigilância.",
+          "Tele portas e janelas e use manga longa à noite em área de risco."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Este é o único grupo em que a resposta correta pode ser não fazer nada: a instrução base é monitorar e vistoriar para determinar o tipo de inseto e o nível populacional antes de decidir qualquer tratamento. Depois disso, suba a escada do menor impacto. Água sob pressão de mangueira derruba pulgão e ácaro. Catação manual e armadilha caseira funcionam — colocar um pedaço de telha ou papelão grosso sob a planta faz os percevejos se agruparem embaixo, e basta levantar e eliminar. Escape fenológico, plantando cedo para fugir da emergência da praga, também é controle.",
+          "Só então entram os produtos: sabão inseticida e óleo, que atingem menos insetos não alvo, cobertura morta refletiva contra mosca-branca, Bacillus thuringiensis para lagartas jovens, e por último o químico, sempre pulverizado à noite para reduzir o impacto sobre os polinizadores. As extensões preferem spinosad a piretroides e neonicotinoides justamente para poupar vespas parasitoides, moscas taquinídeas e besouros-de-solo. A barreira física é o controle mais subestimado de todos, com uma condição: a manta de cobertura precisa ser removida na floração, senão bloqueia o polinizador junto com a praga. E vale registrar direito o que você viu — fotografar com um objeto de escala ao lado, anotar a data e em que planta e em que parte dela o inseto estava se alimentando torna qualquer diagnóstico muito mais confiável."
+        ],
+        "checklist": [
+          "Monitore e conte antes de tratar.",
+          "Comece pelo jato de água, catação e armadilha caseira.",
+          "Prefira sabão, óleo ou spinosad a inseticidas de amplo espectro.",
+          "Remova a manta de cobertura na floração.",
+          "Pulverize sempre à noite, quando os polinizadores estão inativos."
+        ]
+      }
+    }
+  },
+
+  "decomposerFungus": {
+    "label": "Cogumelos decompositores",
+    "topics": {
+      "role": {
+        "advice": [
+          "São fungos saprotróficos: vivem de matéria orgânica morta. Os fungos que produzem esses cogumelos são benéficos, porque decompõem a matéria orgânica do solo e tornam os nutrientes disponíveis para outras plantas. Cogumelo no gramado quase nunca é doença — são organismos fúngicos naturais fazendo o que a natureza pretende, quebrando material outrora vivo para devolver energia ao solo. O anel-de-fada é sinal de fertilidade, não de praga: a degradação libera nitrogênio, o capim absorve e escurece, e é isso que desenha o círculo verde-escuro. Colher o cogumelo também não mata o fungo: o corpo de frutificação é efêmero, o organismo é o micélio no substrato.",
+          "Mas em árvore viva o sinal é grave. Cogumelos ou orelhas-de-pau no tronco ou na base são um alerta, e muitas árvores velhas que caem em tempestade já tiveram a resistência drasticamente reduzida, ou até eliminada, por fungos de podridão. A perda de resistência é difícil de detectar para leigos e mesmo de avaliar para profissionais — o que significa chamar alguém treinado em detecção e avaliação de podridão. Na cobertura morta, fungo-canhão, ninho-de-passarinho e bolotas-de-pó são decompositores inofensivos; e as massas gelatinosas amarelas ou alaranjadas são mixomicetos, que nem sequer são fungos verdadeiros e não prejudicam as plantas."
+        ],
+        "checklist": [
+          "Cogumelo no gramado é reciclagem de matéria orgânica, não doença.",
+          "Anel-de-fada verde-escuro indica nitrogênio liberado, não praga.",
+          "Cogumelo ou orelha-de-pau no tronco ou na base é alerta estrutural.",
+          "Colher o cogumelo não elimina o fungo, apenas o corpo de frutificação.",
+          "Massa gelatinosa amarela no mulch é mixomiceto e não ataca planta."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "Nunca consuma cogumelo silvestre sem identificação presencial por especialista. Muitas espécies são venenosas e só um especialista consegue distinguir as comestíveis das tóxicas. Cozinhar não resolve: as amanitinas são termoestáveis e não são inativadas pelo cozimento, e há registro de intoxicação por inalar o vapor do cozimento. Guia de campo de outra região não vale — aprender a identificar cogumelos numa parte do país ou em outro país não é confiável para identificar cogumelos em outra área. O sintoma tardio é o perigoso: em casos documentados, náusea, vômito e diarreia começaram cerca de nove horas depois da ingestão, e vômito que começa mais de seis horas depois é sinal de gravidade, não de indigestão.",
+          "Tocar não intoxica — o risco documentado é de ingestão e, secundariamente, de inalação de vapor de cozimento. Ainda assim, lave as mãos e não leve à boca. Remova os cogumelos do gramado quando houver crianças ou animais soltos, porque crianças pequenas colocam qualquer coisa na boca: num levantamento norte-americano de 2016 a 2018, 25,9% dos pacientes atendidos tinham cinco anos ou menos. Em caso de ingestão, ligue imediatamente para o centro de intoxicação — no Brasil, CIATox / Disque-Intoxicação 0800 722 6001. E vale a frase mais importante deste manual: um aplicativo de identificação não substitui um especialista."
+        ],
+        "checklist": [
+          "Não coma cogumelo silvestre sem identificação presencial de especialista.",
+          "Cozinhar, secar ou testes caseiros não tornam um cogumelo tóxico seguro.",
+          "Vômito que começa mais de seis horas depois é sinal de gravidade.",
+          "Remova cogumelos do gramado onde há crianças ou pets soltos.",
+          "Em caso de ingestão, ligue já para o centro de intoxicação."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Este é o único grupo de fungos cultivável em escala, justamente porque só precisa de substrato morto: shiitake, shimeji, champignon e enoki são todos saprotróficos, e cultivá-los é imitar a madeira ou a palha em decomposição. No jardim, o manejo é físico e não químico — fungicida não é a resposta. Colha os cogumelos por segurança, escave a matéria orgânica enterrada que está causando o crescimento, como tocos, raízes mortas, restos de construção e camada de palha acumulada, e areje o solo para melhorar a infiltração. Ao implantar um gramado, remova antes tocos e raízes.",
+          "Quando o anel-de-fada realmente atrapalha, o dano vem do micélio denso, que pode inibir o movimento da água para dentro do solo — a rota é aeração para romper o tapete fúngico, mais rega e adubação dentro das doses recomendadas. Na cobertura morta, misturar cerca de 40% de composto de cogumelo usado suprime o fungo-canhão, porque traz micróbios competidores; ninho-de-passarinho e mixomiceto não pedem manejo nenhum além de um ancinho. Para a árvore, prevenção é a única defesa real, porque não se salva uma árvore que já tem podridão: regar bem na estiagem, arejar o solo, manter de cinco a quinze centímetros de cobertura orgânica, adubar com liberação lenta, evitar ferir ou sufocar raízes em obra e podar com técnica e época corretas. E ao fotografar, registre o chapéu, as lâminas ou poros por baixo, a base do estipe, o substrato e o hospedeiro — a base e o substrato são exatamente o que separa espécies letais de comestíveis."
+        ],
+        "checklist": [
+          "Não aplique fungicida no gramado por causa de cogumelo.",
+          "Escave a madeira e as raízes enterradas que alimentam o fungo.",
+          "Areje o solo para romper o tapete de micélio do anel-de-fada.",
+          "Árvore com podridão não se trata: previne-se, e se avalia com profissional.",
+          "Ao fotografar, inclua a base do estipe e o substrato."
+        ]
+      }
+    }
+  },
+
+  "mycorrhizalFungus": {
+    "label": "Cogumelos micorrízicos",
+    "topics": {
+      "role": {
+        "advice": [
+          "O cogumelo aqui é só a ponta visível de uma sociedade subterrânea com raízes de planta. Estima-se que 80% a 90% de toda a vida vegetal participe de pelo menos um dos sete tipos de micorriza — ou seja, este é o padrão do reino vegetal, não a exceção. O fungo não faz fotossíntese e não fixa o próprio carbono, então recebe todos os carboidratos de que precisa da planta hospedeira e devolve água e nutrientes minerais: mais absorção de fósforo, amônio e zinco, proteção contra doenças de solo e maior tolerância à seca e à temperatura. A vantagem é geométrica, não química — a raiz ocupa apenas cerca de 0,5% do volume do solo superficial, e a hifa, sendo muito mais fina, entra em contato com muito mais solo por unidade de volume.",
+          "Há dois tipos práticos. As ectomicorrizas formam uma bainha na raiz e são as que produzem cogumelo visível; as micorrizas arbusculares crescem dentro da raiz e não produzem cogumelo nenhum, só esporos no solo. As orquídeas dependem de fungos micorrízicos até para germinar, e as plantas micotróficas — as que não fazem fotossíntese suficiente — obtêm carbono de uma árvore hospedeira através de um fungo intermediário. Vale a distinção de campo: cogumelo micorrízico brota do solo, perto de árvore viva, e é indicador de que a árvore está viva e conectada; orelha-de-pau de podridão brota do tronco ou da base e é alerta de risco estrutural."
+        ],
+        "checklist": [
+          "Micorrízico brota do solo perto de árvore viva; poliporo de podridão brota do tronco.",
+          "O fungo não come a árvore: troca carboidrato por água e minerais.",
+          "Cogumelo micorrízico é sinal de solo estabelecido e não revolvido.",
+          "As micorrizas arbusculares existem em quase todo jardim e são invisíveis.",
+          "Orquídeas nativas dependem do fungo do solo de origem para germinar."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "Vale a mesma regra dura, e ela importa ainda mais aqui: nunca consuma cogumelo silvestre sem identificação presencial por especialista. Este grupo concentra ao mesmo tempo os cogumelos mais valorizados na gastronomia e os mais letais do planeta — as amanitas mortais pertencem a uma das famílias ectomicorrízicas dominantes, exatamente a mesma vizinhança ecológica dos comestíveis nobres. Cozinhar não neutraliza: as amanitinas são termoestáveis.",
+          "A confusão típica é justamente com um comestível comum, e a familiaridade com espécies de outra região aumenta o risco em vez de reduzi-lo. A latência engana: náusea e vômito mais de seis horas após a ingestão são sinal de gravidade, não de mal-estar comum. A regra prática citada por um serviço de saúde universitário resume tudo: se você não tem certeza, não coma. Tocar não intoxica — o risco documentado é de ingestão; lave as mãos e não leve à boca. Em caso de ingestão, ligue imediatamente para o centro de intoxicação: no Brasil, CIATox / Disque-Intoxicação 0800 722 6001."
+        ],
+        "checklist": [
+          "Não coma cogumelo silvestre sem identificação presencial de especialista.",
+          "Este grupo contém as espécies mais letais conhecidas.",
+          "Cozimento não inativa a toxina das amanitas.",
+          "Sintoma que aparece depois de seis horas é sinal de gravidade.",
+          "Na dúvida, não coma — e ligue para o centro de intoxicação se alguém comeu."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Este grupo não se cultiva como os saprotróficos, porque exige a planta hospedeira viva — é essa a razão econômica de porcini, chanterelle e matsutake serem colhidos e não produzidos, e por que tentar cultivá-los em substrato falha. E há uma consequência prática forte: adubar demais desmonta a simbiose. Adições de nitrogênio, de fósforo ou de adubos completos reduzem a presença e a atividade dos fungos micorrízicos, então quem quer micorriza aduba com parcimônia. Pequenas alterações de pH, temperatura, teor de matéria orgânica, fertilidade e umidade do solo já podem alterar significativamente a colonização.",
+          "O que preserva é solo estabelecido e não revolvido, camada orgânica intacta e o hospedeiro certo. Comunidades ectomicorrízicas se acumulam com o tempo: árvores mais jovens têm comunidade reduzida de simbiontes em comparação com talhões maduros. Na prática, a rede micorrízica de uma árvore madura é um ativo de décadas — obra, decapagem de terreno e fumigação a destroem em um dia e ela não se compra de volta em saquinho. E convém desconfiar do saquinho: a evidência científica independente de que a inoculação micorrízica torne o estabelecimento de plantas mais bem-sucedido é muito limitada, e ela não é a panaceia milagrosa das propagandas. Não escave para ver o micélio, e não transplante orquídea terrestre nativa nem planta sem clorofila: sem o parceiro fúngico do solo de origem, elas morrem."
+        ],
+        "checklist": [
+          "Adube com parcimônia se quiser preservar a micorriza.",
+          "Evite fumigação e remoção da camada superficial do solo.",
+          "Desconfie de inoculante vendido como solução milagrosa.",
+          "Não escave para ver o micélio: a rede é o organismo.",
+          "Não transplante orquídea nativa nem planta micotrófica."
+        ]
+      }
+    }
+  },
+
+  "freshwaterFish": {
+    "label": "Peixes de água doce",
+    "topics": {
+      "role": {
+        "advice": [
+          "Temperatura e oxigênio dissolvido são o filtro que decide tudo: antes de qualquer decisão sobre um corpo d'água, medem-se temperatura, pH e oxigênio dissolvido, e mortandades por calor excessivo ou falta de oxigênio são o acidente clássico em açudes. A composição taxonômica muda de continente para continente — no Neotrópico mandam os caraciformes e os siluriformes, enquanto no Holártico predominam ciprinídeos, centrarquídeos, percídeos e salmonídeos. A ictiofauna neotropical de água doce é a mais rica do planeta, com cerca de 71 famílias e aproximadamente seis mil espécies, das quais 4.475 efetivamente descritas.",
+          "Muitas espécies dependem de migração reprodutiva obrigatória, a piracema: peixes reofílicos sobem o rio contra a correnteza para desovar, e o esforço físico é parte do estímulo fisiológico da reprodução. E lagoas marginais não são poças, são berçários — na cheia o rio transborda e as conecta, ovos e larvas que descem à deriva se depositam ali, e quando o rio baixa esses alevinos se desenvolvem protegidos até a próxima cheia. Algumas famílias funcionam como termômetro de qualidade de água e outras como termômetro de degradação: peixes intolerantes a água quente e turva indicam água de alta qualidade, enquanto bagres tolerantes a temperatura alta, água barrenta e pouco oxigênio proliferam justamente onde os exigentes já sumiram."
+        ],
+        "checklist": [
+          "Suspeite primeiro de oxigênio dissolvido em mortandade súbita de verão.",
+          "Correnteza forte com fundo de pedra indica espécies reofílicas e migradoras.",
+          "Lagoa marginal conectada na cheia é berçário, não poça.",
+          "Presença só de espécies tolerantes sugere ambiente degradado ou invadido.",
+          "Cardume se formando na entrada da estação chuvosa pode ser início de piracema."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "Aqui a segurança é sobretudo a do animal e a legal. Nunca solte peixe de aquário, de pesqueiro ou de criação em corpo d'água natural: o Brasil já tem registro de cerca de noventa espécies de peixes exóticas invasoras em águas continentais, a piscicultura é a maior responsável pelas introduções — por escape via efluentes, rompimento de tanques e fuga pela malha de tanques-rede — e é vedada a introdução de qualquer espécie animal sem parecer técnico e licença de órgão competente. Nunca mova peixe entre bacias: um peixe capturado só pode ir para outro corpo d'água se for nativo da mesma bacia de drenagem.",
+          "Respeite o defeso. Em Minas Gerais, o período de piracema vai de 1º de novembro a 28 de fevereiro, mas as datas variam por estado e por bacia, então confira o órgão ambiental local antes de sair. Não alimente peixe silvestre — alimentar altera o comportamento natural de forrageio e concentra animais artificialmente. Não pesque nem perturbe peixes sobre os ninhos na primavera. E manuseie o mínimo possível: devolva pedras e troncos exatamente à posição original."
+        ],
+        "checklist": [
+          "Nunca solte peixe de aquário ou de criação em rio, lago ou açude.",
+          "Não transfira peixe entre bacias de drenagem diferentes.",
+          "Confira o calendário de defeso do seu estado antes de pescar.",
+          "Não alimente peixe silvestre.",
+          "Não perturbe peixes que estão sobre ninhos na primavera."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "A alimentação natural muda com a estação e conta a história do ambiente. O tambaqui come frutos e sementes na cheia dos rios e, na falta deles durante a seca, passa a zooplâncton — e ao dispersar sementes participa da regeneração da floresta amazônica. Detritívoros e raspadores processam matéria orgânica de fundo e biofilme, formando a base energética de muitos rios neotropicais. Piscívoros de emboscada ocupam o topo local e, em açude, são o que impede a superpopulação de peixes forrageiros.",
+          "Em açude ou piscicultura, o manejo alimentar precisa ser dosado para não degradar a qualidade da água: ração em excesso vira matéria orgânica, consome oxigênio e abre porta para doença e mortandade. Estocar um pouco de cada espécie para ter diversidade dá resultado decepcionante, com populações desequilibradas e peixe raquítico; estocar espécies muito prolíficas enche o açude de peixe atrofiado. Evite estocagem em pleno verão, quando temperatura alta e oxigênio baixo enfraquecem o peixe durante o transporte. E lembre que espécies de água fria não sobrevivem ao verão da maioria dos açudes, funcionando apenas em esquema de estocar e colher antes do calor."
+        ],
+        "checklist": [
+          "Doseie a ração: excesso vira matéria orgânica e derruba o oxigênio.",
+          "Não estoque um pouco de cada espécie esperando diversidade.",
+          "Evite estocar peixe em pleno verão.",
+          "Leia o ambiente pela água antes de decidir qualquer manejo.",
+          "Fotografe e registre em vez de coletar."
+        ]
+      }
+    }
+  },
+
+  "marineFish": {
+    "label": "Peixes marinhos e recifais",
+    "topics": {
+      "role": {
+        "advice": [
+          "O peixe recifal é um diagnóstico da saúde do recife, não só um habitante. Os herbívoros — peixes-papagaio e cirurgiões — comem as algas que competem com o coral e reduzem sua capacidade de sobreviver, crescer e se reproduzir. E o grupo funcional importa mais que a espécie: os papagaios têm bicos poderosos que raspam o substrato ao morder a alga, abrindo espaço para o assentamento de novos corais, enquanto os cirurgiões pastam apenas a parte superior dos tufos. O maior efeito negativo das algas é sobre o assentamento e a sobrevivência inicial dos corais, então um recife que já tem muitos corais adultos grandes pode não se beneficiar imediatamente de mais herbívoros, enquanto um cuja recuperação depende de recrutamento novo se beneficia muito.",
+          "Proteger herbívoro não é solução universal: a medida funciona quando existe de fato um problema de alga no local e quando ela realmente aumenta o estoque de herbívoros. O que você fotografa lê o lugar. Muitos peixes-borboleta sugerem coral vivo e estruturado no entorno. Ausência total de garoupas e vermelhos grandes num recife estruturado é forte indício de pressão pesqueira. Tufos espessos de macroalga cobrindo coral morto, com poucos papagaios e cirurgiões à vista, indicam herbivoria insuficiente. E mesmo protegidos, herbívoros levam vários anos para se recuperar — o manejo tem de ser proativo, não reativo."
+        ],
+        "checklist": [
+          "Muitos peixes-borboleta sugerem coral vivo por perto.",
+          "Ausência de predadores grandes indica pressão pesqueira.",
+          "Macroalga espessa com poucos herbívoros indica pastejo insuficiente.",
+          "Canais e manchas de areia entre corais também são habitat.",
+          "Registre data e local: eles valem tanto quanto a foto."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "A regra central é não tocar. Corais são animais frágeis e se danificam com toque, cutucada, pisada ou apoio de mão, e muitos são protegidos por lei. Não toque em outros animais: o revestimento de muco que protege peixes e muitos invertebrados marinhos contra infecção sai facilmente com um toque de mão, luva ou pé. A interação física com raias-manta e tubarões-baleia é proibida por regulamento em santuário marinho, mesmo que o animal pareça gostar. E controle de flutuabilidade é ética, não técnica: flutue acima do recife, e se a corrente estiver forte segure na linha do poita, nunca no recife.",
+          "Não alimente e não colete. Alimentar peixe interrompe o comportamento natural de alimentação, atrai espécies que não pertencem àquele ponto e ensina peixes a morder nadadores esperando comida — em algumas jurisdições, é ilegal. Nada sai do santuário, nem concha nem fragmento de coral: conchas que parecem vazias muitas vezes têm um animal assustado dentro, e as realmente vazias viram abrigo de ermitões, cracas, corais jovens e esponjas. Para megafauna, as distâncias legais de referência nos Estados Unidos são de cem jardas para baleias em geral, cinquenta para tartarugas marinhas e cinquenta para focas e leões-marinhos, com duzentas jardas para orcas em águas interiores de Washington e quinhentas para a baleia-franca-do-Atlântico-Norte, e trinta minutos como tempo máximo de observação. Águas brasileiras seguem regramento próprio do ICMBio e do IBAMA: trate esses números como boa prática, não como norma local."
+        ],
+        "checklist": [
+          "Não toque em coral nem se apoie nele para estabilizar.",
+          "Não toque em peixes, raias ou tartarugas: o muco protetor sai.",
+          "Não alimente peixe recifal em nenhuma circunstância.",
+          "Não colete concha, fragmento de coral ou qualquer souvenir.",
+          "Mantenha distância de megafauna e limite o tempo de observação."
+        ]
+      }
+    }
+  },
+
+  "gardenBird": {
+    "label": "Aves de jardim e urbanas",
+    "topics": {
+      "role": {
+        "advice": [
+          "São aves que vivem, se alimentam ou nidificam em quintais, praças, parques urbanos, telhados e beira de estrada — tanto nativas tolerantes ao ambiente antrópico quanto exóticas plenamente sinantrópicas. Toda a fauna precisa de quatro elementos: alimento, água, cobertura e espaço para reproduzir e criar filhotes. Num quintal médio, o que falta primeiro costuma ser uma fonte de água confiável o ano inteiro — não comida.",
+          "Parte importante das aves urbanas mais visíveis é exótica: o pombo-doméstico chegou ao Brasil no século XVI com a colonização portuguesa e hoje é tratado como fauna sinantrópica, com regramento sanitário próprio. A estratégia oficial de controle urbano ataca os quatro As — água, alimento, abrigo e acesso —, que é exatamente o oposto do que se faz para atrair aves nativas. Vale ainda um princípio de desenho: interspersão importa. Para espécies pouco móveis, muitas manchas pequenas de comida, água e abrigo funcionam melhor que poucas manchas grandes, porque quanto mais o animal precisa se deslocar, mais exposto a predador ele fica."
+        ],
+        "checklist": [
+          "Água costuma ser o recurso limitante, não comida.",
+          "Distribua comida, água e abrigo em várias manchas pequenas.",
+          "Não limpe demais o quintal: árvore morrendo e pilha de galhada são abrigo.",
+          "Predomínio de pombo e pardal indica ambiente muito antropizado.",
+          "Aparecimento de frugívoras nativas indica que as plantas estão produzindo."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "A intervenção deliberada deste grupo é o comedouro, e ela tem custo sanitário. Circulam em comedouros a conjuntivite micoplasmática, a salmonelose, a aspergilose, a bouba aviária e a influenza aviária. A higiene não é opcional: limpe comedouros de semente a cada duas semanas, e dobre a frequência a qualquer suspeita de doença, usando nove partes de água para uma de água sanitária. Esfregue as fezes visíveis antes de mergulhar na solução, enxágue bem e seque antes de recarregar. Rastele fezes e cascas de semente do chão, sobretudo as mofadas ou molhadas, o que também evita atrair roedores. E espalhe vários comedouros em vez de concentrar tudo em um, porque doença se espalha mais fácil em espaço confinado com grupos concentrados. A mesma regra de limpeza vale para o bebedouro.",
+          "Ao ver ave doente — olhos vermelhos, inchados ou com secreção, verrugas em áreas sem pena, ave magra com penas eriçadas —, retire os comedouros por cerca de duas semanas e limpe tudo e o entorno. Não pegue no animal: apenas veterinários ou reabilitadores de fauna licenciados podem legalmente tratar ave silvestre. Se aparecer doença de transmissão oral-fecal, considere aposentar comedouros de bandeja, que são os que mais concentram contaminação. No campo, seja particularmente cauteloso perto de ninhos ativos, colônias de nidificação, dormitórios e sítios importantes de alimentação, limite o uso de playback e exerça cautela e contenção ao fotografar. E o princípio que resolve qualquer dúvida: em conflito de interesse entre as aves e o observador, o bem-estar das aves vem primeiro."
+        ],
+        "checklist": [
+          "Limpe comedouros a cada duas semanas, com solução de uma parte de alvejante para nove de água.",
+          "Rastele cascas e fezes do chão sob o comedouro.",
+          "Espalhe vários comedouros em vez de concentrar tudo em um.",
+          "Ave doente: retire os comedouros por duas semanas e não toque no animal.",
+          "Limite playback e mantenha distância de ninhos ativos."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Planta nativa vale mais que comedouro. O manejo ideal fornece o máximo possível de alimento nativo o ano todo — bolotas, nozes, bagas, brotos, frutos, néctar e sementes — e a suplementação com semente entra apenas quando a oferta nativa fica escassa, sobretudo no inverno. Depender só do comedouro é uma solução frágil: ele quebra, você viaja, e a ave que aprendeu a contar com ele fica sem nada.",
+          "Na prática: ofereça água em bebedouro, poça rasa, prato de vaso, cascata recirculante ou até mangueira gotejando, trocando a água regularmente no calor e mantendo-a disponível no frio. Ofereça cobertura variada em tamanho e densidade — arbustos densos, troncos ocos, pilhas de pedra e de galhada, sempre-verdes, capim alto — para que cada espécie escolha a cobertura certa para se alimentar, esconder, escapar do mau tempo, cortejar e nidificar. Ofereça espaço com árvores maduras, arbustaria densa e caixas-ninho. Se usar comedouro, sementes de girassol, semente de níger, milhetes e milho quebrado são o suplemento citado pelas extensões, e no verão beija-flores visitam prontamente bebedouros de néctar. E desenhe pensando no gato: bebedouro elevado e ramos baixos podados perto dele eliminam o esconderijo de emboscada."
+        ],
+        "checklist": [
+          "Plante nativas que frutifiquem ao longo do ano inteiro.",
+          "Use semente apenas como suplemento de escassez, sobretudo no inverno.",
+          "Mantenha uma fonte de água confiável o ano todo.",
+          "Varie a cobertura: arbustos densos, galhada, pedras, sempre-verdes.",
+          "Bebedouro elevado e sem arbusto denso ao redor, por causa dos gatos."
+        ]
+      }
+    }
+  },
+
+  "forestBird": {
+    "label": "Aves de mata e migratórias",
+    "topics": {
+      "role": {
+        "advice": [
+          "São duas populações que se sobrepõem parcialmente: aves dependentes de floresta e aves migratórias. Das 1.971 espécies de aves registradas no território brasileiro, 216 — 10,9% — realizam algum tipo de migração: 141 migratórias e 75 parcialmente migratórias, categoria em que só parte da população se desloca; outras 91 são vagantes. Cerca de um terço das famílias brasileiras tem ao menos uma espécie migratória, mas cinco famílias respondem por mais da metade delas, com 112 espécies: os tiranídeos com 36, os escolopacídeos com 23, os procelariídeos com 22, os traupídeos com 16 e os larídeos com 15.",
+          "Aves de mata grandes e frugívoras são infraestrutura da floresta, não ornamento: tucanos e cracídeos dispersam sementes grandes, e a caça e a fragmentação removem justamente as aves com bico capaz de engolir essas sementes. A palmeira juçara, dominante na Mata Atlântica, tem seus frutos consumidos por mais de 58 espécies de aves. E mata preservada em manchas não equivale a mata preservada: a diversidade cai quando os fragmentos são descontínuos e distantes entre si, ou quando nenhum é denso o bastante para sobrevivência e reprodução."
+        ],
+        "checklist": [
+          "Comunidade de sub-bosque densa indica mata contínua e estruturada.",
+          "Sumiço de tucanos e cracídeos indica caça ou fragmentação avançada.",
+          "Concentração de limícolas em banco de lama na passagem indica sítio de parada.",
+          "Migração não é sim ou não: existem parcialmente migratórias e vagantes.",
+          "Migração altitudinal existe no Brasil e é subestimada."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "O playback é o erro central deste grupo. O código de ética manda limitar o uso de gravações e outros métodos sonoros de atração, particularmente em áreas muito visitadas por observadores, para espécies raras na região e para espécies ameaçadas — e a mata, onde as aves são mais difíceis de ver, é exatamente onde a tentação é maior.",
+          "Perto de ninhos, três riscos mandam: dano acidental ao ninho, abandono parental e atração de predadores. Nunca fique mais de um minuto perto de um ninho. Visite a cada três ou quatro dias, no máximo. Evite o começo da manhã, quando a maioria põe ovos e ovos e ninhegos esfriam rápido se a fêmea sai; evite o anoitecer e depois, quando ela volta para passar a noite; evite os primeiros dias de incubação e os dias em que os filhotes estão prestes a voar, porque podem saltar prematuramente e a sobrevivência fora do ninho nessa fase é baixa; e evite tempo frio, úmido ou chuvoso. Não deixe trilhas que guiem predadores nem pisoteie vegetação que possa expor ninhos. Nunca force a fêmea a sair — espere alguns minutos para ver se ela sai sozinha e volte depois se não sair. Anote suas observações só quando estiver bem longe do ninho, e bata na caixa-ninho antes de abrir e de novo ao abrir."
+        ],
+        "checklist": [
+          "Limite o playback, sobretudo com espécies raras ou ameaçadas.",
+          "Nunca fique mais de um minuto perto de um ninho.",
+          "Evite checar ninho de manhã cedo, ao anoitecer ou com tempo ruim.",
+          "Nunca force uma fêmea a sair do ninho.",
+          "Anote suas observações longe do ninho e não deixe trilha até ele."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "O habitat conta muito. Sub-bosque sombreado de mata contínua indica grupos de baixa mobilidade e alta sensibilidade a borda; dossel de mata madura indica aves que dependem de árvores frutíferas grandes e de ocos para nidificar; chão de mata indica grupos muito sensíveis à caça; costa, banco de lama e salina em época de passagem indicam sítio de parada de limícolas, área de altíssima sensibilidade a perturbação. Aves migratórias dependem de habitat em áreas disjuntas separadas por milhares de quilômetros, e algumas dependem criticamente de lugares que usam por poucos dias, para descansar, mudar penas, alimentar-se e acumular reserva energética.",
+          "Por isso a data importa tanto quanto o lugar. Como a rota de ida costuma ser diferente da de volta e as aves ajustam a trajetória conforme as condições, registros datados alimentam diretamente o conhecimento de rota — e um registro fora de época pode ser mais informativo que o registro comum. Registrar uma migratória sem data e local precisos perde exatamente o dado mais valioso. Na prática de campo, fique nas trilhas, minimize a perturbação do habitat e preserve árvores mortas em pé, que são cavidade de nidificação para muita espécie."
+        ],
+        "checklist": [
+          "Registre sempre data e local precisos, sobretudo em migratórias.",
+          "Um registro fora de época pode valer mais que dez registros comuns.",
+          "Fique nas trilhas e minimize a perturbação do habitat.",
+          "Preserve árvores mortas em pé: são ninho para muita espécie.",
+          "Não alimente ave silvestre em mata nem em sítio de parada."
+        ]
+      }
+    }
+  },
+
+  "grainCrop": {
+    "label": "Lavouras de grãos e cereais",
+    "topics": {
+      "soil": {
+        "advice": [
+          "O conceito central da nutrição aqui é a fome oculta: a maioria das culturas começa a perder produção muito antes de os sintomas de deficiência ou de toxidez estarem evidentes, e essa perda sem sintoma é alta. Quando o sintoma aparece, ele sempre indica fome severa — jamais deficiência leve ou moderada. A mobilidade do nutriente decide em qual folha olhar: nutrientes móveis como nitrogênio, potássio, fósforo e magnésio dão sintoma primeiro nas folhas velhas, porque a planta os realoca para as novas; nutrientes imóveis como cálcio e boro dão sintoma nas folhas novas e no ponto de crescimento.",
+          "Alguns padrões visuais de arroz servem de referência: necrose em forma de V invertido, da ponta para as margens de uma folha velha, aponta para potássio; folhas novas bem estreitas e eretas, com coloração bronzeada ou roxa nas pontas, apontam para fósforo; lavoura inteira amarelada no perfilhamento e na iniciação da panícula aponta para nitrogênio; e deficiência que aparece em manchas, e não na área toda, é padrão típico de potássio. Toxidez de herbicida imita deficiência, mas aparece imediatamente após a pulverização — é a proximidade temporal que separa um caso do outro. Por fim, grão e silagem não são a mesma lavoura do ponto de vista do solo: o fósforo é quase todo translocado para os grãos, seguido do nitrogênio, enquanto potássio e cálcio ficam majoritariamente na palhada, então na silagem, que leva também a parte vegetativa, os problemas de fertilidade aparecem mais cedo."
+        ],
+        "checklist": [
+          "Não espere o sintoma aparecer: quando ele aparece, a perda já ocorreu.",
+          "Nutriente móvel dá sintoma na folha velha; imóvel, na folha nova.",
+          "Diagnostique por análise de solo e histórico, nunca só pela foto da folha.",
+          "Dano que aparece logo após a pulverização é herbicida, não deficiência.",
+          "Não use a recomendação de grão para lavoura destinada a silagem."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "A decisão aqui é por contagem, não por calendário, e este grupo tem a amostragem padronizada mais barata de todas. A lógica se apoia em três limiares: o nível de equilíbrio, o nível de dano econômico e o nível de controle, que fica imediatamente abaixo dele. Para pragas de solo do milho, use amostra de trinta por trinta centímetros e quinze de profundidade, peneirada — em larva-arame, dois ou mais insetos por amostra já pedem controle, e uma média de um por amostra já causa dano significativo. Para lagarta-do-cartucho, amostre o número de plantas atacadas em cinco pontos ao acaso dentro de um hectare: em lavouras com potencial de no mínimo cem sacos, 10% de plantas com sintoma inicial já indica necessidade de controle, e o estádio mais sensível é o de oito a dez folhas. O primeiro sinal é a lagarta raspando a folha e deixando áreas transparentes.",
+          "Na soja, o pano de batida é o método: pano preferencialmente branco, de um metro, estendido entre duas fileiras; sacuda vigorosamente uma fileira sobre ele e conte adultos e formas jovens, semanalmente na época crítica. O mínimo é seis amostragens até dez hectares, oito até trinta e dez até cem, dividindo áreas maiores em talhões de cem. Amostre pragas de solo antes do plantio, porque medidas tomadas depois da cultura instalada são pouco eficientes. Conte as ninfas junto com os adultos: percevejos de terceiro a quinto instar causam dano semelhante e são a maior parte da população no período reprodutivo, com nível de ação de dois percevejos por metro de fileira para grão e um para semente. Amostre nos períodos mais frescos do dia, porque o percevejo é ágil e escapa no calor. Isso tem retorno medido: em 196 unidades de referência no Paraná na safra 2017/2018, o manejo integrado reduziu as aplicações de inseticida em mais de 43% mantendo produtividade equivalente. Escolha o produto por seletividade aos inimigos naturais, além de custo e toxicidade, siga sempre os registros vigentes do MAPA, e trate semente apenas onde há histórico do problema, nunca como rotina cega."
+        ],
+        "checklist": [
+          "Conte antes de pulverizar: a decisão é por limiar, não por calendário.",
+          "Milho: dez por cento de plantas com folha raspada já pede controle.",
+          "Soja: no mínimo dez amostragens de pano de batida até cem hectares.",
+          "Amostre pragas de solo antes do plantio.",
+          "Conte ninfas junto com adultos e amostre nas horas mais frescas do dia."
+        ]
+      }
+    }
+  },
+
+  "vegCrop": {
+    "label": "Lavouras de hortaliças e frutíferas",
+    "topics": {
+      "watering": {
+        "advice": [
+          "Aqui a água é gestão fina, não regar quando lembrar: existe uma tensão-limite de solo medida em kPa, e ela é diferente por sistema de irrigação. Na berinjela, irriga-se quando o tensiômetro indica de 30 a 50 kPa em aspersão ou sulco, ou de 10 a 15 kPa em gotejamento, usando o valor mais baixo da faixa nos estádios mais críticos, em solos arenosos e sob alta demanda evaporativa. O sensor vai a 50% da profundidade efetiva do sistema radicular e a dez ou vinte centímetros da planta, sendo profundidade efetiva aquela onde estão concentradas cerca de 80% das raízes.",
+          "Excesso de água é tão danoso quanto falta: gera crescimento exagerado da planta, dificulta floração e frutificação, favorece doenças de solo pela aeração inadequada e lixivia nutrientes. A falta pesa mais no florescimento e na frutificação, causando abortamento de flores e frutos, redução do crescimento do fruto e defeitos de qualidade — má formação, desuniformidade, podridão apical e sabor amargo. Murchamento das folhas no final da manhã é um sinal grosseiro, mas útil, de que a irrigação está atrasada. E a escolha do sistema é decisão fitossanitária, não só hidráulica: sulco e gotejamento reduzem doenças da parte aérea porque não molham a folhagem, mas contra a traça-do-tomateiro a aspersão é vantajosa, porque derruba ovos, larvas e pupas. A decisão depende do problema dominante na sua área."
+        ],
+        "checklist": [
+          "Use tensão-limite diferente para gotejamento e para aspersão ou sulco.",
+          "Instale o sensor a 50% da profundidade efetiva e a dez ou vinte centímetros da planta.",
+          "Não falhe na água durante o florescimento e a frutificação.",
+          "Murcha no fim da manhã indica irrigação atrasada.",
+          "Escolha o sistema de irrigação pelo problema dominante da sua área."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "Excesso de nutriente tem sintoma próprio e desequilibra os outros. Na cebola, excesso de nitrogênio produz plantas de pescoço grosso, aumenta a suscetibilidade a doenças foliares e diminui a conservação pós-colheita; excesso de potássio induz deficiência de magnésio e de cálcio; excesso de fósforo induz deficiência de zinco e de cobre. Por isso corrigir um nutriente sem olhar os outros costuma criar o problema seguinte.",
+          "A mobilidade diz qual folha inspecionar: nitrogênio, potássio, fósforo e magnésio aparecem primeiro nas folhas velhas, enquanto cálcio e enxofre aparecem nas novas — folha nova de cebola tombando sem se quebrar é a assinatura do cálcio. Duas texturas valem memorizar: necrose que surge de forma abrupta, sem clorose prévia, aponta para zinco, cobre ou manganês; necrose com textura aveludada é a marca característica do ferro, distinta de todas as outras. Nos solos brasileiros, em condições normais, só boro e zinco e, em alguns casos, cobre costumam faltar para a cebola. E atenção ao falso positivo: temperaturas baixas, excesso de água ou seca prolongada podem causar sintomas muito parecidos com deficiência de nitrogênio."
+        ],
+        "checklist": [
+          "Não corrija um nutriente sem olhar os que ele desequilibra.",
+          "Folha velha primeiro: nitrogênio, potássio, fósforo, magnésio. Folha nova: cálcio, enxofre.",
+          "Necrose abrupta sem clorose prévia sugere zinco, cobre ou manganês.",
+          "Necrose com textura aveludada é marca do ferro.",
+          "Frio, encharcamento e seca imitam deficiência de nitrogênio."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "O manejo aqui é cultural e coletivo antes de ser químico. No nível da lavoura: adote rotação de culturas, destrua os restos culturais imediatamente após a colheita, mantenha a área livre de plantas daninhas e de outras hospedeiras de insetos e ácaros, e use cultivares adaptadas à região. No nível coletivo — e é isso que torna este grupo diferente — os produtores precisam agir juntos: concentrar os plantios em cada microrregião no mais curto espaço de tempo, usar insumos de maneira coordenada para que os problemas comuns sejam enfrentados por todos ao mesmo tempo, e desinfestar sistematicamente vasilhames e meios de transporte para reduzir a disseminação de pragas entre regiões. Inspecione periodicamente, com atenção especial às bordas dos campos e aos locais com mais plantas daninhas, porque é ali que a infestação se concentra.",
+          "O maior dano de praga aqui costuma ser indireto, via vírus. A mosca-branca é conhecida no Brasil desde 1923 e foi constatada em tomate e repolho em 1993, associada a sintomas de geminivírus, com surtos severos e perdas de até 50% da produção: adultos e ninfas injetam substância açucarada e toxina que deixam as paredes internas do fruto esbranquiçadas e esponjosas e favorecem a fumagina. O momento também manda: contra a broca pequena, as pulverizações devem começar a partir do florescimento, com o jato dirigido aos botões florais e frutos, porque quando se vê o fruto furado a larva já está dentro. E uma regra de segurança editorial: não copie princípio ativo nem dose de nenhuma fonte, porque o registro de agrotóxico muda por safra — consulte o registro vigente no MAPA."
+        ],
+        "checklist": [
+          "Destrua os restos culturais imediatamente após a colheita.",
+          "Concentre o plantio da microrregião na menor janela possível.",
+          "Desinfeste caixas e veículos entre áreas.",
+          "Inspecione as bordas do campo, não só o miolo.",
+          "Comece as pulverizações no florescimento, não quando vir o fruto furado."
+        ]
+      }
+    }
+  }
+}

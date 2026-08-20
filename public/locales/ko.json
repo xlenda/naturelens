@@ -258,7 +258,12 @@
     "tipPropagation": "깨끗하고 잘 드는 도구는 꺾꽂이가 뿌리내릴 확률을 두 배로 높입니다.",
     "tipEcology": "모든 종에게는 저마다의 역할이 있습니다. 간섭하지 않고 관찰하는 것이 가장 좋은 배움입니다.",
     "waterCheckToday": "오늘 흙 확인하기",
-    "waterCheckInDays": "{{count}}일 후 흙 확인"
+    "waterCheckInDays": "{{count}}일 후 흙 확인",
+    "aboutSpecies": "이 종에 대하여",
+    "fundamentals": "핵심 조언",
+    "checklistLabel": "시작하기 전에",
+    "problemsLabel": "문제 신호",
+    "solutionsLabel": "해결 방법"
   },
   "disease": {
     "overviewSection": "개요",
