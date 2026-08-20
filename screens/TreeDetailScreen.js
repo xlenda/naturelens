@@ -36,6 +36,7 @@ import HelpfulRow from '../components/HelpfulRow';
 import ResultActionBar from '../components/ResultActionBar';
 import QuickFactGrid from '../components/QuickFactGrid';
 import shortFact from '../components/shortFact';
+import ExpandableText from '../components/ExpandableText';
 
 function InfoRow({ label, value, color }) {
   return (
@@ -291,7 +292,13 @@ export default function TreeDetailScreen({ route }) {
         {!!plant.toxicity && (
           <ZoneBand gutter={20}>
             <SectionCard icon="warning-outline" title={t('detail.safetySection')} color={colors.error}>
-              <Text style={styles.body}>{plant.toxicity}</Text>
+              {/* Aviso colapsado: quente-primeiro se mantem (o alerta abre a
+                  tela), mas o paragrafo inteiro do vendor comia a primeira
+                  dobra e empurrava os Fatos rapidos pra fora - auditoria de
+                  diagramacao 20/08. */}
+              <ExpandableText accent={meta.accent}>
+                <Text style={styles.body}>{plant.toxicity}</Text>
+              </ExpandableText>
             </SectionCard>
           </ZoneBand>
         )}
@@ -309,7 +316,9 @@ export default function TreeDetailScreen({ route }) {
                 icon: 'water-outline',
                 color: colors.info,
                 label: t('detail.wateringGuideSection'),
-                value: plant.waterLabel || plant.water,
+                // Nivel curto, nunca o rotulo composto do vendor: era
+                // ele que truncava em 'Baixa (pr...' (auditoria 20/08).
+                value: shortFact('water', plant.waterLabel || plant.water, t),
                 onPress: () => openTopic('watering'),
               },
               {

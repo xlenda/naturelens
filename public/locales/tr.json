@@ -275,7 +275,10 @@
     "toxicShort": "Zehirli",
     "rangeIdeal": "İdeal",
     "rangeOk": "Kabul edilebilir",
-    "rangeBad": "Uygun değil"
+    "rangeBad": "Uygun değil",
+    "waterLow": "Az",
+    "waterMedium": "Orta",
+    "waterHigh": "Çok"
   },
   "disease": {
     "overviewSection": "Genel Bakış",

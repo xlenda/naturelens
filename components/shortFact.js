@@ -37,9 +37,18 @@ const RULES = {
     [/acidic|[aá]cid/i, 'detail.soilAcidic'],
   ],
   toxicity: [[/toxic|t[oó]xic|venenos/i, 'detail.toxicShort']],
+  // Rega: o vendor manda o rotulo composto ('Low (prefers dry soil) to
+  // Medium' / 'Baixa (prefere solo seco) a Media'), que truncava no card em
+  // 'Baixa (pr...'. A ordem casa o PRIMEIRO nivel citado, que e o piso da
+  // faixa - e o dado acionavel ('pode regar pouco'), nao o teto.
+  water: [
+    [/\blow\b|\bbaix/i, 'detail.waterLow'],
+    [/\bmedium\b|\bm[eé]di/i, 'detail.waterMedium'],
+    [/\bhigh\b|\balta?\b/i, 'detail.waterHigh'],
+  ],
 };
 
-// kind: 'light' | 'soil' | 'toxicity'. Devolve a string curta ja traduzida, ou
+// kind: 'light' | 'soil' | 'toxicity' | 'water'. Devolve a string curta ja traduzida, ou
 // null quando nao da pra ser curto sem inventar.
 export default function shortFact(kind, text, t) {
   if (typeof text !== 'string' || !text.trim()) return null;

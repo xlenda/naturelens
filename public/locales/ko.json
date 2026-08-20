@@ -275,7 +275,10 @@
     "toxicShort": "독성",
     "rangeIdeal": "이상적",
     "rangeOk": "허용 가능",
-    "rangeBad": "부적합"
+    "rangeBad": "부적합",
+    "waterLow": "적음",
+    "waterMedium": "보통",
+    "waterHigh": "많음"
   },
   "disease": {
     "overviewSection": "개요",

@@ -275,7 +275,10 @@
     "toxicShort": "有毒",
     "rangeIdeal": "理想",
     "rangeOk": "可接受",
-    "rangeBad": "不適宜"
+    "rangeBad": "不適宜",
+    "waterLow": "少量",
+    "waterMedium": "適中",
+    "waterHigh": "大量"
   },
   "disease": {
     "overviewSection": "概觀",

@@ -275,7 +275,10 @@
     "toxicShort": "Giftig",
     "rangeIdeal": "Ideelt",
     "rangeOk": "Acceptabelt",
-    "rangeBad": "Uegnet"
+    "rangeBad": "Uegnet",
+    "waterLow": "Lidt",
+    "waterMedium": "Middel",
+    "waterHigh": "Meget"
   },
   "disease": {
     "overviewSection": "Oversigt",
