@@ -74,7 +74,13 @@ const STACK_OPTIONS = {
   headerShown: false,
   animationEnabled: true,
   gestureEnabled: false,
-  cardStyle: { backgroundColor: colors.background },
+  // flex: 1 e OBRIGATORIO aqui. Sem ele o card do stack cresce com o
+  // conteudo em vez de ficar do tamanho da tela: o ScrollView de dentro
+  // nunca fica menor que o conteudo, entao nunca vira area rolavel e o
+  // TOQUE nao rola (scrollTop programatico ainda funciona, e foi por isso
+  // que a medicao automatica dizia "ok" enquanto o celular do dono ficava
+  // travado). Mesmo bug ja pago no Cosmic Guide em 09/08.
+  cardStyle: { flex: 1, backgroundColor: colors.background },
   ...TransitionPresets.SlideFromRightIOS,
 };
 

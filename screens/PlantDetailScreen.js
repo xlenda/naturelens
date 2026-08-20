@@ -37,6 +37,7 @@ import PressScale from '../components/PressScale';
 import TopBar, { TopBarIcon } from '../components/TopBar';
 import Pronounce from '../components/Pronounce';
 import HelpfulRow from '../components/HelpfulRow';
+import ShareSpeciesCard from '../components/ShareSpeciesCard';
 import ResultActionBar from '../components/ResultActionBar';
 import QuickFactGrid from '../components/QuickFactGrid';
 import shortFact from '../components/shortFact';
@@ -51,41 +52,10 @@ function InfoRow({ label, value, color }) {
   );
 }
 
-// Card-porta do hub do resultado (video do concorrente): a prosa longa da
-// secao mora no manual CareTopics; aqui fica a porta - icone, label da
-// secao, primeira linha truncada e chevron.
-function TopicDoor({ icon, color, label, preview, onPress }) {
-  return (
-    <TouchableOpacity
-      style={styles.doorCard}
-      onPress={onPress}
-      activeOpacity={0.8}
-      accessibilityRole="button"
-      accessibilityLabel={label}
-    >
-      <View style={[styles.doorIcon, { backgroundColor: color + '22' }]}>
-        <Ionicons
-          name={icon}
-          size={17}
-          color={color}
-          accessibilityElementsHidden={true}
-          importantForAccessibility="no-hide-descendants"
-        />
-      </View>
-      <View style={{ flex: 1 }}>
-        <Text style={[styles.doorLabel, { color }]}>{label}</Text>
-        <Text style={styles.doorPreview} numberOfLines={1}>{preview}</Text>
-      </View>
-      <Ionicons
-        name="chevron-forward"
-        size={16}
-        color={colors.textMuted}
-        accessibilityElementsHidden={true}
-        importantForAccessibility="no-hide-descendants"
-      />
-    </TouchableOpacity>
-  );
-}
+// TopicDoor saiu daqui (tela principal rica - video do concorrente, 20/08):
+// Usos / Significado cultural / Partes comestiveis / Propagacao voltaram a ser
+// SectionCard inline com o texto real. As portas que restam sao os cards da
+// grade de fatos (rega/luz/solo/seguranca), cujo manual profundo vive na aba.
 
 export default function PlantDetailScreen({ route }) {
   const navigation = useNavigation();
@@ -139,9 +109,8 @@ export default function PlantDetailScreen({ route }) {
     }
   };
 
-  // edibleParts/propagation left the receipt for the hub's door cards below -
-  // same i18n labels, same text, new address (hub do resultado, video do
-  // concorrente).
+  // edibleParts/propagation nao voltam pra ficha: eles tem card proprio na
+  // banda de baixo (tela principal rica - video do concorrente, 20/08).
   const infoRows = [
     { label: t('common.nativeOrigin'), value: plant.origin },
     { label: t('detail.wateringNeeds'), value: plant.waterLabel || plant.water },
@@ -153,9 +122,11 @@ export default function PlantDetailScreen({ route }) {
   // perde - ele encosta no proprio nome logo abaixo).
   const showScientific = !!plant.scientific && plant.scientific !== plant.name;
 
-  // Hub do resultado (video do concorrente): long prose moves to the
-  // CareTopicsScreen manual; each quick fact / door card deep-links into one
-  // tab. Only topics with real text ship - the manual filters again anyway.
+  // Abas do manual CareTopics: APROFUNDAMENTO, nao o unico endereco do texto
+  // (tela principal rica - video do concorrente, 20/08). Cada card da grade de
+  // fatos abre a aba do seu topico; uses/cultural/edible/propagation continuam
+  // na lista porque tambem sao abas la, mas agora vivem inline no resultado.
+  // Only topics with real text ship - the manual filters again anyway.
   const listText = (v) => (Array.isArray(v) ? v.map((x) => '• ' + x).join('\n') : v);
   const topics = [
     {
@@ -496,49 +467,42 @@ export default function PlantDetailScreen({ route }) {
         )}
 
         {/* Ficha/recibo band: story context and the technical rows close the
-            screen as a receipt. Guarded like the care band. Story prose became
-            door cards into the CareTopics manual (hub do resultado, video do
-            concorrente). */}
-        {!!(plant.commonUses || plant.culturalSignificance || plant.edibleParts || plant.propagationMethods || infoRows.length > 0) && (
+            screen as a receipt. Guarded like the care band.
+
+            TELA PRINCIPAL RICA (video do concorrente, 20/08): estas quatro
+            secoes tinham virado card-porta de uma linha truncada, e o
+            conhecimento sumiu da tela de resultado. O concorrente empilha
+            Usos / Historia / Adaptacao INLINE no resultado - a aba e
+            aprofundamento, nao o unico endereco do texto. Voltaram a ser
+            SectionCard com o texto real, colapsado no ExpandableText (1a
+            frase + "Ver mais"). As portas ficam SO em rega/luz/solo/seguranca
+            (grade de fatos acima), onde o manual profundo por topico e o
+            valor da aba. Campo ausente = bloco nao renderiza; listText('')
+            cobre tambem a lista vazia que o vendor as vezes devolve. */}
+        {!!(plant.commonUses || plant.culturalSignificance || listText(plant.edibleParts) || listText(plant.propagationMethods) || infoRows.length > 0) && (
         <ZoneBand gutter={20}>
         {!!plant.commonUses && (
-          <TopicDoor
-            icon="construct-outline"
-            color={meta.accent}
-            label={t('detail.commonUsesSection')}
-            preview={plant.commonUses}
-            onPress={() => openTopic('uses')}
-          />
+          <SectionCard icon="construct-outline" title={t('detail.commonUsesSection')} color={meta.accent}>
+            <ExpandableText text={plant.commonUses} textStyle={styles.body} accent={meta.accent} />
+          </SectionCard>
         )}
 
         {!!plant.culturalSignificance && (
-          <TopicDoor
-            icon="book-outline"
-            color={colors.purple}
-            label={t('detail.culturalSignificanceSection')}
-            preview={plant.culturalSignificance}
-            onPress={() => openTopic('cultural')}
-          />
+          <SectionCard icon="book-outline" title={t('detail.culturalSignificanceSection')} color={colors.purple}>
+            <ExpandableText text={plant.culturalSignificance} textStyle={styles.body} accent={meta.accent} />
+          </SectionCard>
         )}
 
-        {!!plant.edibleParts && (
-          <TopicDoor
-            icon="restaurant-outline"
-            color={meta.accent}
-            label={t('detail.edibleParts')}
-            preview={listText(plant.edibleParts)}
-            onPress={() => openTopic('edible')}
-          />
+        {!!listText(plant.edibleParts) && (
+          <SectionCard icon="restaurant-outline" title={t('detail.edibleParts')} color={meta.accent}>
+            <ExpandableText text={listText(plant.edibleParts)} textStyle={styles.body} accent={meta.accent} />
+          </SectionCard>
         )}
 
-        {!!plant.propagationMethods && (
-          <TopicDoor
-            icon="flower-outline"
-            color={colors.info}
-            label={t('detail.propagation')}
-            preview={listText(plant.propagationMethods)}
-            onPress={() => openTopic('propagation')}
-          />
+        {!!listText(plant.propagationMethods) && (
+          <SectionCard icon="flower-outline" title={t('detail.propagation')} color={colors.info}>
+            <ExpandableText text={listText(plant.propagationMethods)} textStyle={styles.body} accent={meta.accent} />
+          </SectionCard>
         )}
 
         {infoRows.length > 0 && (
@@ -603,6 +567,14 @@ export default function PlantDetailScreen({ route }) {
         <InstallNudgeCard show={!!fromIdentify} accent={meta.accent} />
 
         {/* Feedback no fim do scroll (hub do resultado, video do concorrente). */}
+        {/* Compartilhe sua planta - tela principal rica (video do concorrente,
+            20/08): o motor de share estava so atras do icone da TopBar. */}
+        <ShareSpeciesCard
+          entity={plant}
+          categoryLabel={t('categories.plant.label')}
+          accent={meta.accent}
+        />
+
         <HelpfulRow category="plant" context="result" />
       </ScrollView>
 
@@ -662,23 +634,9 @@ const styles = StyleSheet.create({
   confidenceLabel: { fontSize: 10, color: colors.textMuted, fontWeight: '600' },
   confidenceValue: { fontSize: 18, color: colors.accentLight, fontWeight: '800' },
   body: { color: colors.textSecondary, fontSize: 14, lineHeight: 21 },
-  // Hub do resultado (video do concorrente): cards-porta. Os estilos dos
-  // fatos rapidos sairam daqui na auditoria de diagramacao 20/08 - moraram
-  // copiados em 6 telas e agora vivem so em components/QuickFactGrid.js.
-  doorCard: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 12,
-    backgroundColor: colors.card,
-    borderRadius: 16,
-    borderWidth: 1,
-    borderColor: colors.border,
-    padding: 14,
-    marginBottom: 12,
-  },
-  doorIcon: { width: 36, height: 36, borderRadius: 12, alignItems: 'center', justifyContent: 'center' },
-  doorLabel: { fontSize: 14.5, fontWeight: '700' },
-  doorPreview: { fontSize: 12.5, color: colors.textMuted, marginTop: 2 },
+  // Estilos do card-porta sairam com o TopicDoor (tela principal rica - video
+  // do concorrente, 20/08): as portas que restaram sao os cards da grade de
+  // fatos, que vivem em components/QuickFactGrid.js.
   specialistRow: {
     flexDirection: 'row',
     alignItems: 'center',

@@ -28,6 +28,7 @@ import ZoneBand from '../components/ZoneBand';
 import PressScale from '../components/PressScale';
 import ResultActionBar from '../components/ResultActionBar';
 import HelpfulRow from '../components/HelpfulRow';
+import ShareSpeciesCard from '../components/ShareSpeciesCard';
 import Pronounce from '../components/Pronounce';
 import TopBar, { TopBarIcon } from '../components/TopBar';
 
@@ -439,6 +440,14 @@ export default function BirdDetailScreen({ route }) {
         <InstallNudgeCard show={!!fromIdentify} accent={meta.accent} />
 
         {/* Feedback fecha o scroll (hub do resultado, video do concorrente). */}
+        {/* Compartilhe sua planta - tela principal rica (video do concorrente,
+            20/08): o motor de share estava so atras do icone da TopBar. */}
+        <ShareSpeciesCard
+          entity={plant}
+          categoryLabel={t('categories.bird.label')}
+          accent={meta.accent}
+        />
+
         <HelpfulRow category="bird" context="result" />
       </ScrollView>
 

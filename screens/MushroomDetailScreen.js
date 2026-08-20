@@ -32,6 +32,7 @@ import PressScale from '../components/PressScale';
 import TopBar, { TopBarIcon } from '../components/TopBar';
 import Pronounce from '../components/Pronounce';
 import HelpfulRow from '../components/HelpfulRow';
+import ShareSpeciesCard from '../components/ShareSpeciesCard';
 import ResultActionBar from '../components/ResultActionBar';
 import QuickFactGrid from '../components/QuickFactGrid';
 
@@ -421,6 +422,14 @@ export default function MushroomDetailScreen({ route }) {
 
         {/* Foi util? - hub do resultado (video do concorrente): fecha o
             scroll medindo a identificacao. */}
+        {/* Compartilhe sua planta - tela principal rica (video do concorrente,
+            20/08): o motor de share estava so atras do icone da TopBar. */}
+        <ShareSpeciesCard
+          entity={plant}
+          categoryLabel={t('categories.mushroom.label')}
+          accent={meta.accent}
+        />
+
         <HelpfulRow category="mushroom" context="result" />
       </ScrollView>
 

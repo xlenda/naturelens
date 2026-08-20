@@ -278,7 +278,11 @@
     "rangeBad": "Olämpligt",
     "waterLow": "Lite",
     "waterMedium": "Medel",
-    "waterHigh": "Mycket"
+    "waterHigh": "Mycket",
+    "careConditionSection": "Skötselvillkor",
+    "thisMonth": "Den här månaden",
+    "waterInMonth": "Vattna i {{month}}",
+    "propagateInMonth": "Föröka i {{month}}"
   },
   "disease": {
     "overviewSection": "Översikt",

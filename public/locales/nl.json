@@ -278,7 +278,11 @@
     "rangeBad": "Niet geschikt",
     "waterLow": "Weinig",
     "waterMedium": "Matig",
-    "waterHigh": "Veel"
+    "waterHigh": "Veel",
+    "careConditionSection": "Verzorgingsomstandigheden",
+    "thisMonth": "Deze maand",
+    "waterInMonth": "Water geven in {{month}}",
+    "propagateInMonth": "Vermeerderen in {{month}}"
   },
   "disease": {
     "overviewSection": "Overzicht",

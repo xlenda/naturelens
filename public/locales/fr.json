@@ -278,7 +278,11 @@
     "rangeBad": "Inadapté",
     "waterLow": "Faible",
     "waterMedium": "Moyen",
-    "waterHigh": "Élevé"
+    "waterHigh": "Élevé",
+    "careConditionSection": "Conditions d'entretien",
+    "thisMonth": "Ce mois-ci",
+    "waterInMonth": "Arroser en {{month}}",
+    "propagateInMonth": "Multiplier en {{month}}"
   },
   "disease": {
     "overviewSection": "Aperçu",
