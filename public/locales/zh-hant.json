@@ -322,7 +322,29 @@
         "q2": "哪些害蟲最常侵襲{{name}}？",
         "q3": "{{name}}需要多少水？"
       }
-    }
+    },
+    "careProfileTitle": "養護概況",
+    "careLevelLabel": "養護難度",
+    "careEasy": "容易",
+    "careModerate": "適中",
+    "careDemanding": "較難",
+    "maintenanceLabel": "養護頻率",
+    "maintenanceLow": "低",
+    "maintenanceMedium": "中",
+    "maintenanceHigh": "高",
+    "chipPetSafe": "對寵物安全",
+    "scheduleSection": "養護日曆",
+    "scheduleActivity": "事項",
+    "season": {
+      "spring": "春季",
+      "summer": "夏季",
+      "autumn": "秋季",
+      "winter": "冬季"
+    },
+    "scheduleNow": "目前",
+    "scheduleGroupNote": "本日曆針對 {{group}} 這一類群，而非這一具體物種。",
+    "scheduleGroupNoteShort": "本日曆針對該物種所屬的類群，而非這一具體物種。",
+    "scheduleNoLocation": "沒有你的位置資訊，我們無法判斷目前季節，因此沒有標示任何一欄。"
   },
   "disease": {
     "overviewSection": "概觀",

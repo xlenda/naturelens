@@ -26,7 +26,10 @@ const REFERENCE = 'en';
 // third content family forces a conscious update here rather than silently
 // breaking the parity tests (which is exactly what happened when -species was
 // added and only -herbs was excluded).
-const CONTENT_SUFFIXES = ['herbs', 'species', 'manual', 'groups'];
+// 'schedule' entrou com o cronograma de cuidado por estacao - paridade 120%
+// (video do concorrente, 20/08): {lang}-schedule.json e conteudo por GRUPO,
+// nao chrome de UI, e comparar as chaves dele com en.json nao quer dizer nada.
+const CONTENT_SUFFIXES = ['herbs', 'species', 'manual', 'groups', 'schedule'];
 
 function localeFiles(suffix) {
   return fs
@@ -285,5 +288,93 @@ test('every herb in the list has a matching entry in that language detail file',
 
     const withoutId = herbs.filter((h) => !h.id).length;
     assert.equal(withoutId, 0, `${lang}: ${withoutId} ervas sem campo "id"`);
+  }
+});
+
+// --- "Duvidas frequentes" (SpeciesFaq) - paridade 120% (video do concorrente,
+// 20/08). O concorrente entrega FAQ fixo com resposta enlatada; aqui cada linha
+// abre a especialista com a pergunta ja escrita. Duas coisas podem quebrar isso
+// sem ninguem ver, e sao exatamente estas duas:
+//   1. uma tela de resultado deixar de renderizar o bloco (ou renderizar com
+//      uma categoria que nao existe no locale) - o FAQ some calado;
+//   2. alguem escrever, um dia, uma pergunta de cogumelo que convide a comer.
+// A segunda e a que machuca gente.
+test('every result screen renders SpeciesFaq with a category that exists in en.json', () => {
+  const en = load(path.join(LOCALES_DIR, 'en.json'));
+  const screens = {
+    plant: 'PlantDetailScreen',
+    tree: 'TreeDetailScreen',
+    insect: 'InsectDetailScreen',
+    mushroom: 'MushroomDetailScreen',
+    fish: 'FishDetailScreen',
+    bird: 'BirdDetailScreen',
+    crop: 'CropDetailScreen',
+  };
+  for (const [category, screen] of Object.entries(screens)) {
+    const src = fs.readFileSync(path.join(__dirname, 'screens', `${screen}.js`), 'utf8');
+    assert.match(
+      src,
+      new RegExp(String.raw`<SpeciesFaq[\s\S]{0,200}category="${category}"`),
+      `screens/${screen}.js nao renderiza <SpeciesFaq category="${category}">`
+    );
+    assert.ok(en.detail.faq[category], `en.json nao tem detail.faq.${category}`);
+  }
+});
+
+test('every FAQ question in every locale keeps the {{name}} placeholder', () => {
+  // Sem {{name}} a pergunta vira generica e o prefill chega no chat sem dizer
+  // de qual especie se fala - o contexto vai junto, mas a frase mente.
+  for (const { lang, file } of localeFiles()) {
+    const faq = load(file)?.detail?.faq;
+    assert.ok(faq, `${lang}: detail.faq ausente`);
+    for (const category of ['plant', 'tree', 'insect', 'mushroom', 'fish', 'bird', 'crop']) {
+      for (const key of ['q1', 'q2', 'q3']) {
+        const q = faq[category]?.[key];
+        assert.ok(
+          typeof q === 'string' && q.trim(),
+          `${lang}: detail.faq.${category}.${key} vazia`
+        );
+        assert.ok(q.includes('{{name}}'), `${lang}: detail.faq.${category}.${key} perdeu {{name}}`);
+      }
+    }
+  }
+});
+
+test('no mushroom FAQ question invites the reader to eat it', () => {
+  // Lei do dono: no cogumelo a sugestao e SEMPRE reconhecimento/seguranca,
+  // nunca "posso comer?". Um app que identifica cogumelo por foto e sugere
+  // comer o resultado e como isto acaba mal. Uma lista de verbos de "comer"
+  // por idioma - nao um scanner esperto: qualquer pergunta nova de mushroom
+  // que fale em comer, comestivel ou sabor tranca o teste.
+  const EAT = {
+    en: /\beat|edible|taste/i,
+    pt: /comer|comest|sabor/i,
+    es: /comer|comest|sabor/i,
+    de: /essen|essbar|geniess|genieß|schmeck/i,
+    fr: /manger|comestible|goût|gout/i,
+    it: /mangiare|commestibil|sapore/i,
+    nl: /eten|eetbaar|smaak/i,
+    pl: /jeść|jesc|jadaln|smak/i,
+    sv: /äta|ätlig|smak/i,
+    da: /spise|spiselig|smag/i,
+    cs: /jíst|jedl|chuť/i,
+    tr: /yemek|yenir|yenebil/i,
+    ko: /먹|식용/,
+    zh: /吃|食用|可食/,
+    'zh-hant': /吃|食用|可食/,
+    hi: /खाद्य|खाने|खाना|स्वाद/,
+    ar: /أكل|طعم/,
+  };
+  for (const { lang, file } of localeFiles()) {
+    const pattern = EAT[lang];
+    assert.ok(pattern, `sem lista de verbos de "comer" para ${lang}`);
+    const mushroom = load(file).detail.faq.mushroom;
+    for (const key of ['q1', 'q2', 'q3']) {
+      assert.doesNotMatch(
+        mushroom[key],
+        pattern,
+        `${lang}: detail.faq.mushroom.${key} convida a comer o cogumelo`
+      );
+    }
   }
 });

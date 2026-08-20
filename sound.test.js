@@ -20,6 +20,7 @@ const test = require('node:test');
 const assert = require('node:assert');
 const fs = require('fs');
 const path = require('path');
+const { uiLocaleFiles } = require('./test-locales');
 
 const identifySrc = fs.readFileSync(path.join(__dirname, 'api/identify.js'), 'utf8');
 const perchSrc = fs.readFileSync(path.join(__dirname, 'api/_lib/perch.js'), 'utf8');
@@ -83,9 +84,7 @@ test('the overview is not a hardcoded English string', () => {
 
 test('both refusal reasons have a translated message in every locale', () => {
   const dir = path.join(__dirname, 'public/locales');
-  const locales = fs
-    .readdirSync(dir)
-    .filter((f) => f.endsWith('.json') && !/-(herbs|species|manual|groups)\.json$/.test(f));
+  const locales = uiLocaleFiles();
   assert.ok(locales.length === 17, `expected 17 UI locales, found ${locales.length}`);
   for (const file of locales) {
     const j = JSON.parse(fs.readFileSync(path.join(dir, file), 'utf8'));

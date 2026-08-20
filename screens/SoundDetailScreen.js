@@ -28,6 +28,7 @@ import PressScale from '../components/PressScale';
 import ResultActionBar from '../components/ResultActionBar';
 import HelpfulRow from '../components/HelpfulRow';
 import Pronounce from '../components/Pronounce';
+import ExpandableText from '../components/ExpandableText';
 import TopBar, { TopBarIcon } from '../components/TopBar';
 
 // Result of a SOUND identification.
@@ -318,30 +319,30 @@ export default function SoundDetailScreen({ route }) {
             )}
           </SectionCard>
 
-          {/* Hub do resultado (video do concorrente): habitat/curiosidade
-              curados deixam de ser prosa empilhada e viram cards-porta que
-              abrem o manual da especie na aba certa. O overview acima continua
-              inline completo. */}
+          {/* Tela principal rica (video do concorrente, 20/08): habitat e
+              curiosidade curados voltam a ser TEXTO aqui - colapsados na
+              primeira frase - em vez de uma linha truncada que so fazia
+              sentido depois de navegar. O cabecalho continua sendo a porta pro
+              manual, que acrescenta dica, checklist e o material do grupo. O
+              overview acima segue inline e completo. Sem material curado,
+              nada renderiza. */}
           {TOPICS.filter((tp) => tp.key !== 'overview').map((tp) => (
-            <TouchableOpacity
-              key={tp.key}
-              style={styles.doorCard}
-              onPress={() => openTopic(tp.key)}
-              activeOpacity={0.8}
-              accessibilityRole="button"
-              accessibilityLabel={tp.label}
-            >
-              <View style={[styles.doorIcon, { backgroundColor: tp.color + '22' }]}>
-                <Ionicons name={tp.icon} size={16} color={tp.color} />
-              </View>
-              <View style={{ flex: 1 }}>
+            <View key={tp.key} style={styles.doorCard}>
+              <TouchableOpacity
+                style={styles.doorHeader}
+                onPress={() => openTopic(tp.key)}
+                activeOpacity={0.8}
+                accessibilityRole="button"
+                accessibilityLabel={tp.label}
+              >
+                <View style={[styles.doorIcon, { backgroundColor: tp.color + '22' }]}>
+                  <Ionicons name={tp.icon} size={16} color={tp.color} />
+                </View>
                 <Text style={styles.doorLabel}>{tp.label}</Text>
-                <Text style={styles.doorPreview} numberOfLines={1}>
-                  {tp.text}
-                </Text>
-              </View>
-              <Ionicons name="chevron-forward" size={16} color={colors.textMuted} />
-            </TouchableOpacity>
+                <Ionicons name="chevron-forward" size={16} color={colors.textMuted} />
+              </TouchableOpacity>
+              <ExpandableText text={tp.text} textStyle={styles.body} accent={tp.color} />
+            </View>
           ))}
         </ZoneBand>
 
@@ -463,16 +464,22 @@ const styles = StyleSheet.create({
   // Cards-porta do hub do resultado (video do concorrente). Os estilos dos
   // fatos rapidos sairam daqui na auditoria de diagramacao 20/08 junto com a
   // grade (habitat e prosa, nao vira valor curto).
+  // Tela principal rica (video do concorrente, 20/08): o card deixou de ser
+  // uma LINHA tocavel e virou bloco - cabecalho (que ainda abre o manual) +
+  // texto colapsado embaixo.
   doorCard: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 12,
     backgroundColor: colors.surface,
     borderWidth: 1,
     borderColor: colors.border,
     borderRadius: 14,
     padding: 14,
     marginBottom: 10,
+  },
+  doorHeader: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 12,
+    marginBottom: 8,
   },
   doorIcon: {
     width: 32,
@@ -481,8 +488,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  doorLabel: { fontSize: 14, fontWeight: '700', color: colors.text },
-  doorPreview: { fontSize: 12.5, color: colors.textMuted, marginTop: 2 },
+  doorLabel: { fontSize: 14, fontWeight: '700', color: colors.text, flex: 1 },
   specialistCta: {
     flexDirection: 'row',
     alignItems: 'center',

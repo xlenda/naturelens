@@ -15,6 +15,7 @@ import * as Haptics from 'expo-haptics';
 import PlantHero from '../components/PlantHero';
 import SectionCard from '../components/SectionCard';
 import IdentificationExtras from '../components/IdentificationExtras';
+import SeasonChart from '../components/SeasonChart';
 import { colors } from '../components/theme';
 import { getCollection, saveToCollection, removeFromCollection } from '../components/storage';
 import { CATEGORIES } from '../components/categories';
@@ -239,6 +240,13 @@ export default function InsectDetailScreen({ route }) {
             o aparelho esta offline. */}
         <DistributionMap scientific={plant.scientific} accent={meta.accent} />
 
+        {/* Destaque da estacao (paridade 120% - video do concorrente, 20/08):
+            onde ele desenha um grafico de estacao generico, aqui e o
+            histograma REAL de ocorrencias por mes da especie no GBIF. Inseto
+            tem sazonalidade forte (emergencia, voo), entao o mes de registro
+            diz muito. Some sozinho com menos de 30 registros datados. */}
+        <SeasonChart scientific={plant.scientific} accent={meta.accent} />
+
         {/* Safety leads ("quente primeiro"): for insects, "did the thing that
             just stung me matter?" is the question that opened the camera - it
             cannot sit below the encyclopedia paragraph. */}
@@ -264,11 +272,10 @@ export default function InsectDetailScreen({ route }) {
               )}
               {!!plant.dangerDescription && (
                 <View style={hasDanger ? { marginTop: 10 } : null}>
-                  <ExpandableText
-                    text={plant.dangerDescription}
-                    textStyle={styles.body}
-                    accent={meta.accent}
-                  />
+                  {/* Inteiro, nunca colapsado: cortar um aviso de picada ou
+                      veneno na primeira frase pode esconder justamente a parte
+                      grave (auditoria 20/08). */}
+                  <Text style={styles.body}>{plant.dangerDescription}</Text>
                 </View>
               )}
             </SectionCard>

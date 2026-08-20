@@ -322,7 +322,29 @@
         "q2": "Quali parassiti attaccano di più {{name}}?",
         "q3": "Quanta acqua serve a {{name}}?"
       }
-    }
+    },
+    "scheduleSection": "Calendario di cura",
+    "scheduleActivity": "Attività",
+    "season": {
+      "spring": "Primavera",
+      "summer": "Estate",
+      "autumn": "Autunno",
+      "winter": "Inverno"
+    },
+    "scheduleNow": "adesso",
+    "scheduleGroupNote": "Questo calendario è del gruppo {{group}}, non di questa specie esatta.",
+    "scheduleGroupNoteShort": "Questo calendario è del gruppo della specie, non di questa specie esatta.",
+    "scheduleNoLocation": "Senza la tua posizione non sappiamo in che stagione ti trovi, quindi nessuna colonna è evidenziata.",
+    "careProfileTitle": "Profilo di cura",
+    "careLevelLabel": "Livello di cura",
+    "careEasy": "Facile",
+    "careModerate": "Moderato",
+    "careDemanding": "Esigente",
+    "maintenanceLabel": "Manutenzione",
+    "maintenanceLow": "Bassa",
+    "maintenanceMedium": "Media",
+    "maintenanceHigh": "Alta",
+    "chipPetSafe": "Sicura per gli animali"
   },
   "disease": {
     "overviewSection": "Panoramica",

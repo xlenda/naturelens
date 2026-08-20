@@ -187,7 +187,15 @@ export default function TwoRowTabBar({ state, descriptors, navigation }) {
   // DEPOIS dos hooks de proposito: sair antes de useRef/useEffect quebraria a
   // ordem dos hooks entre um render com dock e outro sem (auditoria de
   // diagramacao 20/08).
-  if (HIDE_DOCK_ON.has(focusedLeafName(state.routes[state.index]))) return null;
+  // Barra de ALTURA ZERO, nunca `null`. Medido com toque real (CDP, 390x844)
+  // em producao: tirar a barra do fluxo - devolvendo null OU deixando ela
+  // absoluta - faz a cena crescer ate a altura do conteudo dentro de uma caixa
+  // de 844 com overflow:hidden. O ScrollView nunca vira area rolavel e o dedo
+  // nao rola nada. Como irmao flex de altura 0 ela nao ocupa espaco e a cena
+  // volta a ter altura definida. Foi assim nas 3 rotas medidas.
+  if (HIDE_DOCK_ON.has(focusedLeafName(state.routes[state.index]))) {
+    return <View style={styles.hiddenDock} />;
+  }
 
   const renderChip = ({ route, index }) => {
     const descriptor = descriptors[route.key];
@@ -266,21 +274,18 @@ const styles = StyleSheet.create({
   },
   chipActive: { backgroundColor: colors.accent + '22' },
   chipLabel: { fontSize: 11, fontWeight: '700' },
+  // No FLUXO de proposito. A versao absoluta desta barra foi medida em
+  // producao (toque real, CDP 390x844) e travou o scroll em TODAS as rotas,
+  // inclusive nas que rolavam antes: sem um irmao flex ocupando espaco, a
+  // cena cresce ate a altura do conteudo e o ScrollView nunca fica menor que
+  // ele. A barra reserva a propria altura, e e assim que a cena ganha altura
+  // definida. Nas rotas sem dock existe o hiddenDock (altura 0) no lugar.
   dock: {
-    // Fora do fluxo: com tabBar customizado o React Navigation ignora
-    // tabBarStyle e mede a barra pelo layout dela, reservando a altura na
-    // cena - a tela ficava em 725px de 844 e o scroll morria em 60px
-    // ("nenhuma tela ta travado, nao consigo ir pra baixo"). Absoluto, o
-    // dock flutua sobre a cena, que volta a ocupar a tela inteira. As telas
-    // que o mostram ja tem paddingBottom proprio (40-120px) no scroll.
-    position: 'absolute',
-    left: 0,
-    right: 0,
-    bottom: 0,
     backgroundColor: colors.background,
     paddingHorizontal: 10,
     paddingTop: 6,
   },
+  hiddenDock: { height: 0 },
   bar: {
     backgroundColor: colors.surface,
     borderColor: colors.border,

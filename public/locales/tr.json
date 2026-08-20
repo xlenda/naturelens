@@ -322,7 +322,29 @@
         "q2": "{{name}} en çok hangi zararlılar saldırır?",
         "q3": "{{name}} ne kadar suya ihtiyaç duyar?"
       }
-    }
+    },
+    "scheduleSection": "Bakım takvimi",
+    "scheduleActivity": "İşlem",
+    "season": {
+      "spring": "İlkbahar",
+      "summer": "Yaz",
+      "autumn": "Sonbahar",
+      "winter": "Kış"
+    },
+    "scheduleNow": "şimdi",
+    "scheduleGroupNote": "Bu takvim {{group}} grubu içindir, tam olarak bu tür için değil.",
+    "scheduleGroupNoteShort": "Bu takvim türün ait olduğu grup içindir, tam olarak bu tür için değil.",
+    "scheduleNoLocation": "Konumunuz olmadan hangi mevsimde olduğunuzu bilemeyiz, bu yüzden hiçbir sütun vurgulanmadı.",
+    "careProfileTitle": "Bakım profili",
+    "careLevelLabel": "Bakım seviyesi",
+    "careEasy": "Kolay",
+    "careModerate": "Orta",
+    "careDemanding": "Zahmetli",
+    "maintenanceLabel": "Bakım",
+    "maintenanceLow": "Düşük",
+    "maintenanceMedium": "Orta",
+    "maintenanceHigh": "Yüksek",
+    "chipPetSafe": "Evcil hayvanlar için güvenli"
   },
   "disease": {
     "overviewSection": "Genel Bakış",

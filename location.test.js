@@ -12,6 +12,7 @@ const test = require('node:test');
 const assert = require('node:assert');
 const fs = require('fs');
 const path = require('path');
+const { uiLocaleFiles } = require('./test-locales');
 
 const read = (p) => fs.readFileSync(path.join(__dirname, p), 'utf8');
 const kindwiseSrc = read('api/_lib/kindwise.js');
@@ -55,9 +56,7 @@ test('the client shows a translated message for a service outage', () => {
 
 test('every locale can explain an outage and the location setting', () => {
   const dir = path.join(__dirname, 'public/locales');
-  const locales = fs
-    .readdirSync(dir)
-    .filter((f) => f.endsWith('.json') && !/-(herbs|species|manual|groups)\.json$/.test(f));
+  const locales = uiLocaleFiles();
   assert.equal(locales.length, 17);
   for (const file of locales) {
     const j = JSON.parse(fs.readFileSync(path.join(dir, file), 'utf8'));
@@ -286,9 +285,7 @@ test('the privacy policy discloses that location leaves the device', () => {
   assert.match(screen, /privacy\.locationBody/);
 
   const dir = path.join(__dirname, 'public/locales');
-  const locales = fs
-    .readdirSync(dir)
-    .filter((f) => f.endsWith('.json') && !/-(herbs|species|manual|groups)\.json$/.test(f));
+  const locales = uiLocaleFiles();
   for (const file of locales) {
     const j = JSON.parse(fs.readFileSync(path.join(dir, file), 'utf8'));
     for (const key of ['locationTitle', 'locationBody']) {
@@ -302,9 +299,7 @@ test('the privacy policy discloses that location leaves the device', () => {
 
 test('every locale can label the translate button', () => {
   const dir = path.join(__dirname, 'public/locales');
-  const locales = fs
-    .readdirSync(dir)
-    .filter((f) => f.endsWith('.json') && !/-(herbs|species|manual|groups)\.json$/.test(f));
+  const locales = uiLocaleFiles();
   for (const file of locales) {
     const j = JSON.parse(fs.readFileSync(path.join(dir, file), 'utf8'));
     for (const key of ['translate', 'translating', 'translateFailed']) {

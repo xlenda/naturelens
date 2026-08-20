@@ -322,7 +322,29 @@
         "q2": "ما الآفات التي تصيب {{name}} أكثر؟",
         "q3": "كم من الماء يحتاج {{name}}؟"
       }
-    }
+    },
+    "scheduleSection": "تقويم العناية",
+    "scheduleActivity": "النشاط",
+    "season": {
+      "spring": "الربيع",
+      "summer": "الصيف",
+      "autumn": "الخريف",
+      "winter": "الشتاء"
+    },
+    "scheduleNow": "الآن",
+    "scheduleGroupNote": "هذا التقويم خاص بمجموعة {{group}}، وليس بهذا النوع بالتحديد.",
+    "scheduleGroupNoteShort": "هذا التقويم خاص بمجموعة النوع، وليس بهذا النوع بالتحديد.",
+    "scheduleNoLocation": "بدون موقعك لا يمكننا معرفة الفصل الذي أنت فيه، لذلك لم يتم إبراز أي عمود.",
+    "careProfileTitle": "ملف العناية",
+    "careLevelLabel": "مستوى العناية",
+    "careEasy": "سهلة",
+    "careModerate": "متوسطة",
+    "careDemanding": "تتطلب عناية",
+    "maintenanceLabel": "الصيانة",
+    "maintenanceLow": "منخفضة",
+    "maintenanceMedium": "متوسطة",
+    "maintenanceHigh": "عالية",
+    "chipPetSafe": "آمنة للحيوانات الأليفة"
   },
   "disease": {
     "overviewSection": "نظرة عامة",

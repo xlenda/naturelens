@@ -322,7 +322,29 @@
         "q2": "{{name}} पर सबसे ज़्यादा कौन से कीट लगते हैं?",
         "q3": "{{name}} को कितना पानी चाहिए?"
       }
-    }
+    },
+    "scheduleSection": "देखभाल कैलेंडर",
+    "scheduleActivity": "गतिविधि",
+    "season": {
+      "spring": "वसंत",
+      "summer": "ग्रीष्म",
+      "autumn": "शरद",
+      "winter": "शीत"
+    },
+    "scheduleNow": "अभी",
+    "scheduleGroupNote": "यह कैलेंडर {{group}} समूह के लिए है, ठीक इसी प्रजाति के लिए नहीं।",
+    "scheduleGroupNoteShort": "यह कैलेंडर प्रजाति के समूह के लिए है, ठीक इसी प्रजाति के लिए नहीं।",
+    "scheduleNoLocation": "आपके स्थान के बिना हम नहीं जान सकते कि आपके यहाँ कौन-सा मौसम है, इसलिए कोई कॉलम हाइलाइट नहीं किया गया।",
+    "careProfileTitle": "देखभाल प्रोफ़ाइल",
+    "careLevelLabel": "देखभाल स्तर",
+    "careEasy": "आसान",
+    "careModerate": "मध्यम",
+    "careDemanding": "मांगलिक",
+    "maintenanceLabel": "रखरखाव",
+    "maintenanceLow": "कम",
+    "maintenanceMedium": "मध्यम",
+    "maintenanceHigh": "अधिक",
+    "chipPetSafe": "पालतू जानवरों के लिए सुरक्षित"
   },
   "disease": {
     "overviewSection": "अवलोकन",

@@ -322,7 +322,29 @@
         "q2": "Quels ravageurs attaquent le plus {{name}} ?",
         "q3": "De combien d'eau {{name}} a-t-il besoin ?"
       }
-    }
+    },
+    "scheduleSection": "Calendrier d'entretien",
+    "scheduleActivity": "Activité",
+    "season": {
+      "spring": "Printemps",
+      "summer": "Été",
+      "autumn": "Automne",
+      "winter": "Hiver"
+    },
+    "scheduleNow": "maintenant",
+    "scheduleGroupNote": "Ce calendrier concerne le groupe {{group}}, pas cette espèce précise.",
+    "scheduleGroupNoteShort": "Ce calendrier concerne le groupe de l'espèce, pas cette espèce précise.",
+    "scheduleNoLocation": "Sans votre position, impossible de savoir en quelle saison vous êtes : aucune colonne n'est mise en avant.",
+    "careProfileTitle": "Profil d'entretien",
+    "careLevelLabel": "Niveau d'entretien",
+    "careEasy": "Facile",
+    "careModerate": "Modéré",
+    "careDemanding": "Exigeant",
+    "maintenanceLabel": "Entretien",
+    "maintenanceLow": "Faible",
+    "maintenanceMedium": "Moyen",
+    "maintenanceHigh": "Élevé",
+    "chipPetSafe": "Sans danger pour les animaux"
   },
   "disease": {
     "overviewSection": "Aperçu",

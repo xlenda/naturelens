@@ -322,7 +322,29 @@
         "q2": "¿Qué plagas atacan más a {{name}}?",
         "q3": "¿Cuánta agua necesita {{name}}?"
       }
-    }
+    },
+    "scheduleSection": "Calendario de cuidados",
+    "scheduleActivity": "Actividad",
+    "season": {
+      "spring": "Primavera",
+      "summer": "Verano",
+      "autumn": "Otoño",
+      "winter": "Invierno"
+    },
+    "scheduleNow": "ahora",
+    "scheduleGroupNote": "Este calendario es del grupo {{group}}, no de esta especie exacta.",
+    "scheduleGroupNoteShort": "Este calendario es del grupo de la especie, no de esta especie exacta.",
+    "scheduleNoLocation": "Sin tu ubicación no podemos saber en qué estación estás, así que no se destaca ninguna columna.",
+    "careProfileTitle": "Perfil de cuidado",
+    "careLevelLabel": "Nivel de cuidado",
+    "careEasy": "Fácil",
+    "careModerate": "Moderado",
+    "careDemanding": "Exigente",
+    "maintenanceLabel": "Mantenimiento",
+    "maintenanceLow": "Bajo",
+    "maintenanceMedium": "Medio",
+    "maintenanceHigh": "Alto",
+    "chipPetSafe": "Seguro para mascotas"
   },
   "disease": {
     "overviewSection": "Resumen",

@@ -16,10 +16,12 @@ import PlantHero from '../components/PlantHero';
 import SectionCard from '../components/SectionCard';
 import IdentificationExtras from '../components/IdentificationExtras';
 import DistributionMap from '../components/DistributionMap';
+import SeasonChart from '../components/SeasonChart';
 import { colors } from '../components/theme';
 import { getCollection, saveToCollection, removeFromCollection, updateCollectionEntry } from '../components/storage';
 import { CATEGORIES } from '../components/categories';
 import { getSpeciesGroup } from '../components/speciesGroup';
+import CareSchedule from '../components/CareSchedule';
 import { getWateringStatus, WATER_INTERVAL_DAYS } from '../components/watering';
 import { shareEntity } from '../components/share';
 import InstallNudgeCard from '../components/InstallNudgeCard';
@@ -39,6 +41,8 @@ import ResultActionBar from '../components/ResultActionBar';
 import QuickFactGrid from '../components/QuickFactGrid';
 import CareConditions from '../components/CareConditions';
 import MonthInstructions from '../components/MonthInstructions';
+import CareProfile from '../components/CareProfile';
+import CommonProblems from '../components/CommonProblems';
 import shortFact from '../components/shortFact';
 import ExpandableText from '../components/ExpandableText';
 
@@ -146,14 +150,22 @@ export default function TreeDetailScreen({ route }) {
     { key: 'overview', label: t('common.overview'), text: plant.overview },
   ].filter((tp) => tp.text);
 
-  const openTopic = (initialKey) => {
+  // Grupo curado da especie - a base honesta do CareProfile (paridade 120%,
+  // video do concorrente, 20/08). Lookup puro em tabela, sem rede.
+  const groupKey = getSpeciesGroup(plant);
+
+  // initialProblem: indice do acordeao de problemas, so quando a porta e um
+  // card do carrossel "Problemas Comuns" (paridade 120%). undefined nas outras
+  // portas, e ai o CareTopics abre o primeiro acordeao como sempre.
+  const openTopic = (initialKey, initialProblem) => {
     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
-    navigation.navigate('CareTopics', { groupKey: getSpeciesGroup(plant),
+    navigation.navigate('CareTopics', { groupKey,
       title: plant.name,
       accent: meta.accent,
       category: 'tree',
       topics,
       initialKey,
+      initialProblem,
     });
   };
 
@@ -333,6 +345,16 @@ export default function TreeDetailScreen({ route }) {
         <CareConditions plant={plant} onOpenTopic={openTopic} />
         <MonthInstructions plant={plant} />
 
+        {/* Perfil de cuidado + Problemas Comuns - paridade 120% (video do
+            concorrente, 20/08). Mesma dupla do PlantDetailScreen: dificuldade
+            vinda do GRUPO (dossies em docs/agronomia/grupos) com a rega real da
+            especie ao lado, e o carrossel de problemas montado do manual
+            editorial que ja existe. Sem base, nenhum dos dois renderiza - e em
+            arvore isso e comum, porque lenhosa cai no grupo `woody` so quando a
+            familia esta na tabela. */}
+        <CareProfile groupKey={groupKey} plant={plant} accent={meta.accent} />
+        <CommonProblems topics={topics} accent={meta.accent} onOpen={openTopic} />
+
         {/* Reference photos, runner-up species and a low-confidence warning -
             all built from data the API already returned. Desceu pra depois da
             grade de fatos (auditoria de diagramacao 20/08). */}
@@ -341,6 +363,12 @@ export default function TreeDetailScreen({ route }) {
         {/* Mapa de distribuicao REAL (GBIF) - o concorrente desenha o dele;
             este e ciencia com credito. Some sozinho sem match/offline. */}
         <DistributionMap scientific={plant.scientific} accent={meta.accent} />
+
+        {/* Destaque da estacao (paridade 120% - video do concorrente, 20/08):
+            onde ele desenha um grafico de estacao generico, aqui e o
+            histograma REAL de ocorrencias por mes da especie no GBIF. Some
+            sozinho com menos de 30 registros datados. */}
+        <SeasonChart scientific={plant.scientific} accent={meta.accent} />
 
         {/* Zona de cor (diagramacao-premium): thematic runs of sections live
             in full-bleed bands one shade above the background; the gap between
@@ -359,10 +387,15 @@ export default function TreeDetailScreen({ route }) {
             cards into the CareTopics manual (hub do resultado, video do
             concorrente); watering status stays inline - it is action, not
             reading. */}
-        {!!(plant.bestWatering || plant.bestLightCondition || plant.bestSoilType || wateringStatus) && (
+        {!!(plant.bestWatering || plant.bestLightCondition || plant.bestSoilType || wateringStatus || groupKey) && (
         <ZoneBand gutter={20}>
 
-
+        {/* Cronograma por ESTACAO - a resposta a tabela mes a mes de
+            fertilizacao do concorrente (paridade 120%, video de 20/08). Abre a
+            banda de cuidados porque e a unica peca que responde "o que eu faco
+            AGORA". Devolve null sozinho quando o grupo nao tem cronograma
+            sustentado pelo corpus, entao nao precisa de guarda propria aqui. */}
+        <CareSchedule groupKey={groupKey} accent={meta.accent} />
 
         {!!wateringStatus && (
           <SectionCard icon="water-outline" title={t('detail.wateringSection')} color={colors.info}>

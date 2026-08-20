@@ -6,6 +6,7 @@ import { colors } from './theme';
 import SectionCard from './SectionCard';
 import shortFact from './shortFact';
 import { WATER_INTERVAL_DAYS } from './watering';
+import { firstSentence } from './sentences';
 
 // "Condicao de Cuidado" - tela principal rica (video do concorrente, 20/08).
 //
@@ -21,11 +22,8 @@ import { WATER_INTERVAL_DAYS } from './watering';
 // intervalos de rega. Linha sem dado nao renderiza; sem nenhuma linha o card
 // inteiro some (ausencia honesta).
 
-// A primeira frase da prosa de luz - o "embaixo" da linha de Luz. O corte por
-// frase e o mesmo do ExpandableText; a truncagem visual fica no
-// numberOfLines={1}.
-const firstSentence = (text) =>
-  typeof text === 'string' && text.trim() ? text.trim().split(/(?<=[.!?])\s+/)[0] : null;
+// A primeira frase da prosa de luz sai do helper compartilhado (sentences.js);
+// a truncagem visual fica no numberOfLines={1}.
 
 export default function CareConditions({ plant, onOpenTopic }) {
   const { t } = useTranslation();

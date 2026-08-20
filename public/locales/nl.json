@@ -322,7 +322,29 @@
         "q2": "Welke plagen treffen {{name}} het vaakst?",
         "q3": "Hoeveel water heeft {{name}} nodig?"
       }
-    }
+    },
+    "scheduleSection": "Verzorgingskalender",
+    "scheduleActivity": "Activiteit",
+    "season": {
+      "spring": "Lente",
+      "summer": "Zomer",
+      "autumn": "Herfst",
+      "winter": "Winter"
+    },
+    "scheduleNow": "nu",
+    "scheduleGroupNote": "Deze kalender geldt voor de groep {{group}}, niet voor precies deze soort.",
+    "scheduleGroupNoteShort": "Deze kalender geldt voor de groep van de soort, niet voor precies deze soort.",
+    "scheduleNoLocation": "Zonder je locatie weten we niet in welk seizoen je zit, dus er is geen kolom gemarkeerd.",
+    "careProfileTitle": "Verzorgingsprofiel",
+    "careLevelLabel": "Verzorgingsniveau",
+    "careEasy": "Makkelijk",
+    "careModerate": "Gemiddeld",
+    "careDemanding": "Veeleisend",
+    "maintenanceLabel": "Onderhoud",
+    "maintenanceLow": "Laag",
+    "maintenanceMedium": "Gemiddeld",
+    "maintenanceHigh": "Hoog",
+    "chipPetSafe": "Veilig voor huisdieren"
   },
   "disease": {
     "overviewSection": "Overzicht",

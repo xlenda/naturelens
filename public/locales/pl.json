@@ -322,7 +322,29 @@
         "q2": "Jakie szkodniki najczęściej atakują {{name}}?",
         "q3": "Ile wody potrzebuje {{name}}?"
       }
-    }
+    },
+    "scheduleSection": "Kalendarz pielęgnacji",
+    "scheduleActivity": "Czynność",
+    "season": {
+      "spring": "Wiosna",
+      "summer": "Lato",
+      "autumn": "Jesień",
+      "winter": "Zima"
+    },
+    "scheduleNow": "teraz",
+    "scheduleGroupNote": "Ten kalendarz dotyczy grupy {{group}}, a nie dokładnie tego gatunku.",
+    "scheduleGroupNoteShort": "Ten kalendarz dotyczy grupy gatunku, a nie dokładnie tego gatunku.",
+    "scheduleNoLocation": "Bez Twojej lokalizacji nie wiemy, jaka jest u Ciebie pora roku, więc żadna kolumna nie jest wyróżniona.",
+    "careProfileTitle": "Profil pielęgnacji",
+    "careLevelLabel": "Poziom pielęgnacji",
+    "careEasy": "Łatwa",
+    "careModerate": "Umiarkowana",
+    "careDemanding": "Wymagająca",
+    "maintenanceLabel": "Pielęgnacja",
+    "maintenanceLow": "Niska",
+    "maintenanceMedium": "Średnia",
+    "maintenanceHigh": "Wysoka",
+    "chipPetSafe": "Bezpieczna dla zwierząt"
   },
   "disease": {
     "overviewSection": "Przegląd",

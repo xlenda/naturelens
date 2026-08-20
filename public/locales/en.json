@@ -372,7 +372,29 @@
         "q2": "Which pests attack {{name}} most?",
         "q3": "How much water does {{name}} need?"
       }
-    }
+    },
+    "scheduleSection": "Care Calendar",
+    "scheduleActivity": "Activity",
+    "season": {
+      "spring": "Spring",
+      "summer": "Summer",
+      "autumn": "Autumn",
+      "winter": "Winter"
+    },
+    "scheduleNow": "now",
+    "scheduleGroupNote": "This calendar is for the {{group}} group, not for this exact species.",
+    "scheduleGroupNoteShort": "This calendar is for the species' group, not for this exact species.",
+    "scheduleNoLocation": "Without your location we cannot tell which season you are in, so no column is highlighted.",
+    "careProfileTitle": "Care profile",
+    "careLevelLabel": "Care level",
+    "careEasy": "Easy",
+    "careModerate": "Moderate",
+    "careDemanding": "Demanding",
+    "maintenanceLabel": "Maintenance",
+    "maintenanceLow": "Low",
+    "maintenanceMedium": "Medium",
+    "maintenanceHigh": "High",
+    "chipPetSafe": "Safe for pets"
   },
   "disease": {
     "overviewSection": "Overview",

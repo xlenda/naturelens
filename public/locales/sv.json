@@ -322,7 +322,29 @@
         "q2": "Vilka skadedjur angriper {{name}} mest?",
         "q3": "Hur mycket vatten behöver {{name}}?"
       }
-    }
+    },
+    "scheduleSection": "Skötselkalender",
+    "scheduleActivity": "Aktivitet",
+    "season": {
+      "spring": "Vår",
+      "summer": "Sommar",
+      "autumn": "Höst",
+      "winter": "Vinter"
+    },
+    "scheduleNow": "nu",
+    "scheduleGroupNote": "Den här kalendern gäller gruppen {{group}}, inte just den här arten.",
+    "scheduleGroupNoteShort": "Den här kalendern gäller artens grupp, inte just den här arten.",
+    "scheduleNoLocation": "Utan din plats vet vi inte vilken årstid du har, så ingen kolumn är markerad.",
+    "careProfileTitle": "Skötselprofil",
+    "careLevelLabel": "Skötselnivå",
+    "careEasy": "Lätt",
+    "careModerate": "Måttlig",
+    "careDemanding": "Krävande",
+    "maintenanceLabel": "Underhåll",
+    "maintenanceLow": "Lågt",
+    "maintenanceMedium": "Medel",
+    "maintenanceHigh": "Högt",
+    "chipPetSafe": "Säker för husdjur"
   },
   "disease": {
     "overviewSection": "Översikt",

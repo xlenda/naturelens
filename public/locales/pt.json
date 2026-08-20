@@ -372,7 +372,29 @@
         "q2": "Que pragas mais atacam {{name}}?",
         "q3": "Quanta água {{name}} precisa?"
       }
-    }
+    },
+    "scheduleSection": "Calendário de cuidados",
+    "scheduleActivity": "Atividade",
+    "season": {
+      "spring": "Primavera",
+      "summer": "Verão",
+      "autumn": "Outono",
+      "winter": "Inverno"
+    },
+    "scheduleNow": "agora",
+    "scheduleGroupNote": "Este calendário é do grupo {{group}}, não desta espécie exata.",
+    "scheduleGroupNoteShort": "Este calendário é do grupo da espécie, não desta espécie exata.",
+    "scheduleNoLocation": "Sem a sua localização não dá para saber em que estação você está, então nenhuma coluna fica destacada.",
+    "careProfileTitle": "Perfil de cuidado",
+    "careLevelLabel": "Nível de cuidado",
+    "careEasy": "Fácil",
+    "careModerate": "Moderado",
+    "careDemanding": "Exigente",
+    "maintenanceLabel": "Manutenção",
+    "maintenanceLow": "Baixa",
+    "maintenanceMedium": "Média",
+    "maintenanceHigh": "Alta",
+    "chipPetSafe": "Seguro para pets"
   },
   "disease": {
     "overviewSection": "Visão Geral",

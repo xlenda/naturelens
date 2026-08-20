@@ -42,11 +42,17 @@ export default function BotanistScreen({ route }) {
 
   const suggestions = t('botanist.suggestions', { returnObjects: true });
 
+  // Depende do OBJETO de params, nao da string. Com [route.params?.prefill] a
+  // MESMA pergunta so preenchia o campo uma vez na vida: voltar ao resultado e
+  // tocar de novo na mesma linha do "Duvidas frequentes" (SpeciesFaq, paridade
+  // 120% - video do concorrente, 20/08) trocava de aba com o campo vazio,
+  // porque a dependencia era a string e ela nao mudou. O navigate cria um
+  // params novo a cada toque, entao a identidade do objeto e o gatilho certo.
   useEffect(() => {
     if (route.params?.prefill) {
       setInput(route.params.prefill);
     }
-  }, [route.params?.prefill]);
+  }, [route.params]);
 
   const send = async (textArg) => {
     const text = (textArg ?? input).trim();

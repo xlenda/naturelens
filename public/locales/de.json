@@ -322,7 +322,29 @@
         "q2": "Welche Schädlinge befallen {{name}} am häufigsten?",
         "q3": "Wie viel Wasser braucht {{name}}?"
       }
-    }
+    },
+    "scheduleSection": "Pflegekalender",
+    "scheduleActivity": "Tätigkeit",
+    "season": {
+      "spring": "Frühling",
+      "summer": "Sommer",
+      "autumn": "Herbst",
+      "winter": "Winter"
+    },
+    "scheduleNow": "jetzt",
+    "scheduleGroupNote": "Dieser Kalender gilt für die Gruppe {{group}}, nicht für genau diese Art.",
+    "scheduleGroupNoteShort": "Dieser Kalender gilt für die Gruppe der Art, nicht für genau diese Art.",
+    "scheduleNoLocation": "Ohne deinen Standort wissen wir nicht, welche Jahreszeit bei dir ist – deshalb ist keine Spalte hervorgehoben.",
+    "careProfileTitle": "Pflegeprofil",
+    "careLevelLabel": "Pflegegrad",
+    "careEasy": "Einfach",
+    "careModerate": "Mittel",
+    "careDemanding": "Anspruchsvoll",
+    "maintenanceLabel": "Pflegeaufwand",
+    "maintenanceLow": "Gering",
+    "maintenanceMedium": "Mittel",
+    "maintenanceHigh": "Hoch",
+    "chipPetSafe": "Sicher für Haustiere"
   },
   "disease": {
     "overviewSection": "Übersicht",

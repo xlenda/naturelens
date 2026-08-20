@@ -322,7 +322,29 @@
         "q2": "Jací škůdci nejčastěji napadají {{name}}?",
         "q3": "Kolik vody potřebuje {{name}}?"
       }
-    }
+    },
+    "scheduleSection": "Kalendář péče",
+    "scheduleActivity": "Činnost",
+    "season": {
+      "spring": "Jaro",
+      "summer": "Léto",
+      "autumn": "Podzim",
+      "winter": "Zima"
+    },
+    "scheduleNow": "teď",
+    "scheduleGroupNote": "Tento kalendář platí pro skupinu {{group}}, ne přesně pro tento druh.",
+    "scheduleGroupNoteShort": "Tento kalendář platí pro skupinu daného druhu, ne přesně pro tento druh.",
+    "scheduleNoLocation": "Bez vaší polohy nevíme, jaké je u vás roční období, proto není zvýrazněný žádný sloupec.",
+    "careProfileTitle": "Profil péče",
+    "careLevelLabel": "Náročnost péče",
+    "careEasy": "Snadná",
+    "careModerate": "Střední",
+    "careDemanding": "Náročná",
+    "maintenanceLabel": "Údržba",
+    "maintenanceLow": "Nízká",
+    "maintenanceMedium": "Střední",
+    "maintenanceHigh": "Vysoká",
+    "chipPetSafe": "Bezpečná pro mazlíčky"
   },
   "disease": {
     "overviewSection": "Přehled",

@@ -322,7 +322,29 @@
         "q2": "Hvilke skadedyr angriber {{name}} mest?",
         "q3": "Hvor meget vand har {{name}} brug for?"
       }
-    }
+    },
+    "scheduleSection": "Plejekalender",
+    "scheduleActivity": "Aktivitet",
+    "season": {
+      "spring": "Forår",
+      "summer": "Sommer",
+      "autumn": "Efterår",
+      "winter": "Vinter"
+    },
+    "scheduleNow": "nu",
+    "scheduleGroupNote": "Denne kalender gælder gruppen {{group}}, ikke lige netop denne art.",
+    "scheduleGroupNoteShort": "Denne kalender gælder artens gruppe, ikke lige netop denne art.",
+    "scheduleNoLocation": "Uden din placering ved vi ikke, hvilken årstid du er i, så ingen kolonne er fremhævet.",
+    "careProfileTitle": "Plejeprofil",
+    "careLevelLabel": "Plejeniveau",
+    "careEasy": "Nem",
+    "careModerate": "Moderat",
+    "careDemanding": "Krævende",
+    "maintenanceLabel": "Vedligeholdelse",
+    "maintenanceLow": "Lav",
+    "maintenanceMedium": "Middel",
+    "maintenanceHigh": "Høj",
+    "chipPetSafe": "Sikker for kæledyr"
   },
   "disease": {
     "overviewSection": "Oversigt",

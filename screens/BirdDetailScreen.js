@@ -8,6 +8,7 @@ import { useTranslation } from 'react-i18next';
 import PlantHero from '../components/PlantHero';
 import SectionCard from '../components/SectionCard';
 import IdentificationExtras from '../components/IdentificationExtras';
+import SeasonChart from '../components/SeasonChart';
 import { colors } from '../components/theme';
 import { getCollection, saveToCollection, removeFromCollection } from '../components/storage';
 import { CATEGORIES } from '../components/categories';
@@ -32,6 +33,8 @@ import SpeciesFaq from '../components/SpeciesFaq';
 import ShareSpeciesCard from '../components/ShareSpeciesCard';
 import Pronounce from '../components/Pronounce';
 import TopBar, { TopBarIcon } from '../components/TopBar';
+import ExpandableText from '../components/ExpandableText';
+import DistributionMap from '../components/DistributionMap';
 
 // Deliberately the thinnest detail screen in the app, because the data behind it
 // is genuinely thin: Nyckel's bird classifier returns a label and a confidence
@@ -44,18 +47,15 @@ import TopBar, { TopBarIcon } from '../components/TopBar';
 // come from a curated database keyed by species name - the same pattern already
 // proven by the 98-herb Medicinal Herbs feature - not from this vendor.
 
-// Card-porta do hub do resultado (video do concorrente): a prosa longa da
-// secao mora no manual CareTopics; aqui fica a porta - icone, label da
-// secao, primeira linha truncada e chevron.
-function TopicDoor({ icon, color, label, preview, onPress }) {
-  return (
-    <TouchableOpacity
-      style={styles.doorCard}
-      onPress={onPress}
-      activeOpacity={0.8}
-      accessibilityRole="button"
-      accessibilityLabel={label}
-    >
+// Secao curada da tela principal - tela principal rica (video do concorrente,
+// 20/08). Era um card-porta: label + UMA linha truncada, e o texto inteiro so
+// existia dentro do manual. Agora o texto mora aqui, colapsado na primeira
+// frase, e o cabecalho continua sendo a porta pro manual (que acrescenta
+// checklist, dica e o material do grupo - conteudo que nao esta nesta tela).
+// Sem onPress o cabecalho e so um cabecalho: nao ha manual que valha abrir.
+function TopicBlock({ icon, color, label, text, onPress }) {
+  const header = (
+    <>
       <View style={[styles.doorIcon, { backgroundColor: color + '22' }]}>
         <Ionicons
           name={icon}
@@ -65,18 +65,36 @@ function TopicDoor({ icon, color, label, preview, onPress }) {
           importantForAccessibility="no-hide-descendants"
         />
       </View>
-      <View style={{ flex: 1 }}>
-        <Text style={[styles.doorLabel, { color }]}>{label}</Text>
-        <Text style={styles.doorPreview} numberOfLines={1}>{preview}</Text>
-      </View>
-      <Ionicons
-        name="chevron-forward"
-        size={16}
-        color={colors.textMuted}
-        accessibilityElementsHidden={true}
-        importantForAccessibility="no-hide-descendants"
-      />
-    </TouchableOpacity>
+      <Text style={[styles.doorLabel, { color }]}>{label}</Text>
+      {!!onPress && (
+        <Ionicons
+          name="chevron-forward"
+          size={16}
+          color={colors.textMuted}
+          accessibilityElementsHidden={true}
+          importantForAccessibility="no-hide-descendants"
+        />
+      )}
+    </>
+  );
+
+  return (
+    <View style={styles.doorCard}>
+      {onPress ? (
+        <TouchableOpacity
+          style={styles.doorHeader}
+          onPress={onPress}
+          activeOpacity={0.8}
+          accessibilityRole="button"
+          accessibilityLabel={label}
+        >
+          {header}
+        </TouchableOpacity>
+      ) : (
+        <View style={styles.doorHeader}>{header}</View>
+      )}
+      <ExpandableText text={text} textStyle={styles.body} accent={color} />
+    </View>
   );
 }
 
@@ -289,6 +307,26 @@ export default function BirdDetailScreen({ route }) {
         {/* Runner-up species and the low-confidence warning. */}
         <IdentificationExtras entity={plant} accent={meta.accent} />
 
+        {/* Mapa de distribuicao REAL (GBIF) - tela principal rica (video do
+            concorrente, 20/08): o classificador nao devolve area de ocorrencia
+            nenhuma, e essa e justamente a pergunta que a nota de cobertura
+            levanta ("sera que essa especie existe aqui?"). Some sozinho quando
+            o nome cientifico nao casa com um taxon ou o aparelho esta
+            offline - Nyckel nem sempre manda cientifico. */}
+        <DistributionMap scientific={plant.scientific} accent={meta.accent} />
+
+        {/* Destaque da estacao (paridade 120% - video do concorrente, 20/08):
+            onde ele desenha um grafico de estacao generico, aqui e o
+            histograma REAL de ocorrencias por mes da especie no GBIF. Para ave
+            e o dado mais forte da tela: migracao e, por definicao, movimento
+            CICLICO E SAZONAL entre sitio reprodutivo e area de invernada, e o
+            corpus registra que o pecado do registro de migratoria e vir sem
+            data - "perde-se o dado mais valioso: o padrao sazonal e a rota"
+            (CEMAVE cap. 2, docs/agronomia/grupos/aves-de-mata-e-migratorias.md).
+            E exatamente essa data, somada, que o grafico mostra. Some sozinho
+            com menos de 30 registros datados. */}
+        <SeasonChart scientific={plant.scientific} accent={meta.accent} />
+
         {/* Auditoria de diagramacao 20/08: a grade de fatos rapidos saiu daqui.
             O unico fato que esta tela tinha era o habitat curado, que e PROSA
             ("Warm, shallow coral reefs and lagoons from the Red Sea to...") -
@@ -316,45 +354,27 @@ export default function BirdDetailScreen({ route }) {
               <SectionCard icon="document-text-outline" title={t('common.overview')} color={meta.accent}>
                 <Text style={styles.body}>{curated.overview}</Text>
               </SectionCard>
-              {/* Hub do resultado (video do concorrente): as secoes longas
-                  deixam de ser prosa empilhada e viram cards-porta pro manual
-                  CareTopics. Sem manual (menos de 2 topicos) os cards inline
-                  originais continuam - mesmo texto, mesmas chaves. */}
-              {hasManual ? (
-                <>
-                  {!!curated.habitat && (
-                    <TopicDoor
-                      icon="earth-outline"
-                      color={colors.info}
-                      label={t('fieldGuide.habitat')}
-                      preview={curated.habitat}
-                      onPress={() => openTopic('habitat')}
-                    />
-                  )}
-                  {!!curated.curiosity && (
-                    <TopicDoor
-                      icon="sparkles-outline"
-                      color={colors.warning}
-                      label={t('fieldGuide.curiosity')}
-                      preview={curated.curiosity}
-                      onPress={() => openTopic('curiosity')}
-                    />
-                  )}
-                </>
-              ) : (
-                <>
-                  {!!curated.habitat && (
-                    <SectionCard icon="earth-outline" title={t('fieldGuide.habitat')} color={colors.info}>
-                      <Text style={styles.body}>{curated.habitat}</Text>
-                    </SectionCard>
-                  )}
-                  {!!curated.curiosity && (
-                    <SectionCard icon="sparkles-outline" title={t('fieldGuide.curiosity')} color={colors.warning}>
-                      <Text style={styles.body}>{curated.curiosity}</Text>
-                    </SectionCard>
-                  )}
-                </>
-              )}
+              {/* Tela principal rica (video do concorrente, 20/08): habitat e
+                  curiosidade voltam a ser TEXTO nesta tela - colapsados na
+                  primeira frase - em vez de duas linhas truncadas que so
+                  faziam sentido depois de navegar. O cabecalho segue abrindo o
+                  manual quando ele existe (>= 2 topicos); sem manual, e so um
+                  cabecalho. Campo vazio nao gera bloco. */}
+              {[
+                { key: 'habitat', icon: 'earth-outline', color: colors.info, label: t('fieldGuide.habitat'), text: curated.habitat },
+                { key: 'curiosity', icon: 'sparkles-outline', color: colors.warning, label: t('fieldGuide.curiosity'), text: curated.curiosity },
+              ]
+                .filter((b) => !!b.text)
+                .map((b) => (
+                  <TopicBlock
+                    key={b.key}
+                    icon={b.icon}
+                    color={b.color}
+                    label={b.label}
+                    text={b.text}
+                    onPress={hasManual ? () => openTopic(b.key) : null}
+                  />
+                ))}
             </>
           ) : (
             /* No curated entry for this species. Nyckel gives an English label and
@@ -500,16 +520,22 @@ const styles = StyleSheet.create({
   scientific: { fontSize: 15, fontStyle: 'italic', color: colors.textSecondary, marginTop: 3 },
   // Fatos rapidos: estilos removidos na auditoria de diagramacao 20/08
   // junto com a grade (habitat e prosa, nao vira valor curto).
+  // Bloco curado da tela principal (video do concorrente, 20/08): o card
+  // deixou de ser uma LINHA tocavel e virou um bloco - cabecalho (que ainda
+  // abre o manual) + o texto colapsado embaixo.
   doorCard: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 10,
     backgroundColor: colors.card,
     borderRadius: 16,
     borderWidth: 1,
     borderColor: colors.border,
     padding: 14,
     marginBottom: 16,
+  },
+  doorHeader: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 10,
+    marginBottom: 8,
   },
   doorIcon: {
     width: 34,
@@ -518,8 +544,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  doorLabel: { fontSize: 14.5, fontWeight: '700' },
-  doorPreview: { fontSize: 12.5, color: colors.textMuted, marginTop: 2 },
+  doorLabel: { fontSize: 14.5, fontWeight: '700', flex: 1 },
   specialistRow: {
     flexDirection: 'row',
     alignItems: 'center',

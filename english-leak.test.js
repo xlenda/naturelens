@@ -19,6 +19,7 @@ const test = require('node:test');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
+const { uiLocaleFiles } = require('./test-locales');
 
 const read = (p) => fs.readFileSync(path.join(__dirname, p), 'utf8');
 
@@ -91,9 +92,7 @@ test('auth failures are reported with a code, not English prose', () => {
 
 test('every locale can phrase every auth failure', () => {
   const dir = path.join(__dirname, 'public', 'locales');
-  const locales = fs
-    .readdirSync(dir)
-    .filter((f) => f.endsWith('.json') && !/-(herbs|species|manual|groups)\.json$/.test(f));
+  const locales = uiLocaleFiles();
   assert.equal(locales.length, 17);
 
   for (const file of locales) {

@@ -11,6 +11,7 @@ import NatureScene from '../components/NatureScene';
 import HelpfulRow from '../components/HelpfulRow';
 import RangeBar from '../components/RangeBar';
 import ExpandableText from '../components/ExpandableText';
+import { splitSentences } from '../components/sentences';
 import { getTopicManual, manualKeyFor } from '../components/manualContent';
 import { getGroupTopic } from '../components/groupContent';
 
@@ -47,10 +48,7 @@ const TOPIC_META = {
 // Splits the vendor prose into a lead sentence and scannable bullets - a
 // faithful REFORMAT (same words, same order), never a rewrite.
 function splitAdvice(text) {
-  const sentences = String(text)
-    .split(/(?<=[.!?])\s+/)
-    .map((s) => s.trim())
-    .filter(Boolean);
+  const sentences = splitSentences(String(text));
   if (sentences.length <= 2) return { lead: sentences.join(' '), bullets: [] };
   return { lead: sentences[0], bullets: sentences.slice(1) };
 }

@@ -55,6 +55,11 @@ function applyDocumentDirection(code) {
   document.documentElement.lang = code;
 }
 
+/** O codigo sob o qual o i18next vai PROCURAR as chaves deste idioma. */
+function bundleCodeFor(code) {
+  return i18n.services?.languageUtils?.formatLanguageCode?.(code) || code;
+}
+
 async function loadLanguage(code) {
   if (loadedLanguages.has(code)) return;
 
@@ -80,7 +85,13 @@ async function loadLanguage(code) {
   }
   if (!translation) throw new Error(`Could not load locale "${code}"`);
 
-  i18n.addResourceBundle(code, 'translation', translation, true, true);
+  // O i18next NORMALIZA o codigo na hora de procurar a chave ('zh-hant' vira
+  // 'zh-Hant'), mas addResourceBundle guarda sob o codigo cru. Sem normalizar
+  // aqui, a cadeia de busca fica ['zh-Hant', 'zh', 'en'], nenhuma casa com o
+  // bundle 'zh-hant', e o chines tradicional INTEIRO cai pro ingles. Medido no
+  // proprio i18next, nao deduzido (auditoria 20/08). Vale so para o bundle: a
+  // chave de storage @textmarker_language continua guardando o codigo cru.
+  i18n.addResourceBundle(bundleCodeFor(code), 'translation', translation, true, true);
   loadedLanguages.add(code);
   if (Platform.OS !== 'web') {
     AsyncStorage.setItem(cacheKey, JSON.stringify(translation)).catch(() => {});

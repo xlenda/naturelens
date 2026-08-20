@@ -32,6 +32,7 @@ import HelpfulRow from '../components/HelpfulRow';
 import SpeciesFaq from '../components/SpeciesFaq';
 import Pronounce from '../components/Pronounce';
 import TopBar, { TopBarIcon } from '../components/TopBar';
+import ExpandableText from '../components/ExpandableText';
 
 export default function CropDetailScreen({ route }) {
   const navigation = useNavigation();
@@ -191,28 +192,30 @@ export default function CropDetailScreen({ route }) {
         <ZoneBand gutter={20}>
           <DiseaseReport disease={disease} />
 
-          {/* Hub do resultado (video do concorrente): cada leitura longa e um
-              card-porta que abre o manual da especie na aba certa. */}
+          {/* Tela principal rica (video do concorrente, 20/08): fora o
+              relatorio de doenca, esta tela era uma pilha de linhas truncadas -
+              usos, significado cultural, partes comestiveis - e o texto so
+              existia dentro do manual. Agora cada leitura mostra o texto REAL
+              aqui, colapsado na primeira frase, e o cabecalho segue abrindo o
+              manual (que acrescenta dica, checklist e material do grupo).
+              Campo ausente nao vira topico, entao nada renderiza vazio. */}
           {TOPICS.map((tp) => (
-            <TouchableOpacity
-              key={tp.key}
-              style={styles.doorCard}
-              onPress={() => openTopic(tp.key)}
-              activeOpacity={0.8}
-              accessibilityRole="button"
-              accessibilityLabel={tp.label}
-            >
-              <View style={[styles.doorIcon, { backgroundColor: tp.color + '22' }]}>
-                <Ionicons name={tp.icon} size={16} color={tp.color} />
-              </View>
-              <View style={{ flex: 1 }}>
+            <View key={tp.key} style={styles.doorCard}>
+              <TouchableOpacity
+                style={styles.doorHeader}
+                onPress={() => openTopic(tp.key)}
+                activeOpacity={0.8}
+                accessibilityRole="button"
+                accessibilityLabel={tp.label}
+              >
+                <View style={[styles.doorIcon, { backgroundColor: tp.color + '22' }]}>
+                  <Ionicons name={tp.icon} size={16} color={tp.color} />
+                </View>
                 <Text style={styles.doorLabel}>{tp.label}</Text>
-                <Text style={styles.doorPreview} numberOfLines={1}>
-                  {tp.text}
-                </Text>
-              </View>
-              <Ionicons name="chevron-forward" size={16} color={colors.textMuted} />
-            </TouchableOpacity>
+                <Ionicons name="chevron-forward" size={16} color={colors.textMuted} />
+              </TouchableOpacity>
+              <ExpandableText text={tp.text} textStyle={styles.body} accent={tp.color} />
+            </View>
           ))}
         </ZoneBand>
 
@@ -311,11 +314,10 @@ const styles = StyleSheet.create({
   sciRow: { flexDirection: 'row', alignItems: 'center', gap: 8 },
   scientific: { fontSize: 15, fontStyle: 'italic', color: colors.textSecondary, marginTop: 3 },
   commonNames: { fontSize: 12.5, color: colors.textMuted, marginTop: 4 },
-  // Cards-porta do hub do resultado (video do concorrente).
+  // Blocos de leitura da tela principal (video do concorrente, 20/08): o card
+  // deixou de ser uma LINHA tocavel e virou bloco - cabecalho (que ainda abre
+  // o manual) + texto colapsado embaixo.
   doorCard: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 12,
     backgroundColor: colors.surface,
     borderWidth: 1,
     borderColor: colors.border,
@@ -323,6 +325,13 @@ const styles = StyleSheet.create({
     padding: 14,
     marginBottom: 10,
   },
+  doorHeader: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 12,
+    marginBottom: 8,
+  },
+  body: { color: colors.textSecondary, fontSize: 14, lineHeight: 21 },
   doorIcon: {
     width: 32,
     height: 32,
@@ -330,8 +339,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  doorLabel: { fontSize: 14, fontWeight: '700', color: colors.text },
-  doorPreview: { fontSize: 12.5, color: colors.textMuted, marginTop: 2 },
+  doorLabel: { fontSize: 14, fontWeight: '700', color: colors.text, flex: 1 },
   specialistCta: {
     flexDirection: 'row',
     alignItems: 'center',

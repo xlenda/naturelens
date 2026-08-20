@@ -3,6 +3,7 @@ import { Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { useTranslation } from 'react-i18next';
 import { colors } from './theme';
+import { splitSentences } from './sentences';
 
 // "Ver mais" para PROSA LONGA (auditoria de diagramacao 20/08).
 //
@@ -33,9 +34,10 @@ export default function ExpandableText({ children, text, textStyle, initial = 1,
   // e o componente devolvia tudo. Quando vem `text`, o corte e por FRASE: a
   // primeira abre, o resto entra no 'Ver mais'.
   if (typeof text === 'string' && text.trim()) {
-    const sentences = text.split(/(?<=[.!?])\s+/).filter(Boolean);
-    items = sentences.map((sentence, i) => (
-      <Text key={i} style={textStyle}>
+    items = splitSentences(text).map((sentence, i) => (
+      // marginTop a partir da segunda: sem ele as frases abertas viravam um
+      // bloco unico colado, sem respiro nenhum (auditoria de 20/08).
+      <Text key={i} style={[textStyle, i > 0 && styles.nextSentence]}>
         {sentence}
       </Text>
     ));
@@ -66,6 +68,7 @@ export default function ExpandableText({ children, text, textStyle, initial = 1,
 }
 
 const styles = StyleSheet.create({
+  nextSentence: { marginTop: 8 },
   toggle: {
     flexDirection: 'row',
     alignItems: 'center',

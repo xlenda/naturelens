@@ -37,12 +37,28 @@ import { getTaxonKey, GBIF_UA } from './gbifTaxonKey';
 // mesma linguagem visual do RangeBar: trilho + preenchimento.
 
 // Abaixo disso o histograma e ruido, nao sazonalidade.
-const MIN_RECORDS = 30;
+export const MIN_RECORDS = 30;
 const BAR_H = 64;
 
 // Mes sem nenhum registro fica com barra 0 (o trilho vazio ja diz "nenhum");
 // mes com registro ganha 3px de piso para nao sumir ao lado de um pico grande.
-const barHeight = (count, max) => (count === 0 ? 0 : Math.max(3, Math.round((count / max) * BAR_H)));
+export const barHeight = (count, max) =>
+  count === 0 ? 0 : Math.max(3, Math.round((count / max) * BAR_H));
+
+// Resposta do GBIF -> 12 posicoes (janeiro..dezembro). Exportada porque e o
+// unico pedaco com armadilha real, e SeasonChart.test.js a exercita contra a
+// resposta de verdade da API: as contagens vem ordenadas por VOLUME e nao por
+// mes, e um mes sem nenhuma ocorrencia simplesmente NAO APARECE na lista - ler
+// isso por indice, e nao pelo campo name, embaralharia o ano inteiro.
+export function monthCounts(json) {
+  const counts = (json?.facets || []).find((f) => f?.field === 'MONTH')?.counts || [];
+  const arr = new Array(12).fill(0);
+  counts.forEach((c) => {
+    const m = parseInt(c?.name, 10);
+    if (m >= 1 && m <= 12) arr[m - 1] = c?.count || 0;
+  });
+  return arr;
+}
 
 export default function SeasonChart({ scientific, accent = colors.accent }) {
   const { t, i18n } = useTranslation();
@@ -62,15 +78,7 @@ export default function SeasonChart({ scientific, accent = colors.accent }) {
         );
         if (!r.ok) return;
         const d = await r.json();
-        // As contagens vem ordenadas por VOLUME, nao por mes, e um mes sem
-        // nenhuma ocorrencia simplesmente nao aparece na lista.
-        const counts = (d?.facets || []).find((f) => f?.field === 'MONTH')?.counts || [];
-        const arr = new Array(12).fill(0);
-        counts.forEach((c) => {
-          const m = parseInt(c?.name, 10);
-          if (m >= 1 && m <= 12) arr[m - 1] = c?.count || 0;
-        });
-        if (alive) setMonths(arr);
+        if (alive) setMonths(monthCounts(d));
       } catch (e) {
         // offline / GBIF fora do ar: bloco nao renderiza
       }
