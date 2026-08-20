@@ -337,7 +337,7 @@ export default function IdentifyScreen() {
       <NatureScene accent={meta.accent} />
       <ScrollView contentContainerStyle={styles.scroll} showsVerticalScrollIndicator={false}>
         <View style={styles.headerRow}>
-          <View>
+          <View style={styles.headerTitleWrap}>
             <Text style={styles.hello} accessibilityRole="header">
               {t('identify.identifierTitle', { category: t(`categories.${category}.label`) })}
             </Text>
@@ -661,6 +661,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginBottom: 20,
   },
+  headerTitleWrap: { flex: 1, paddingRight: 10 },
   headerBtns: { flexDirection: 'row', alignItems: 'center', gap: 8 },
   gearBtn: {
     width: 40,
