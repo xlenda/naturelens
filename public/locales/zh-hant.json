@@ -193,7 +193,10 @@
     "offlineTitle": "你目前離線",
     "offlineBody": "辨識需要連網。你的收藏和「探索」頁面離線也能用。",
     "serviceDownTitle": "服務不可用",
-    "serviceDownBody": "該辨識服務暫時出現問題，請幾分鐘後再試——不是你的照片的問題。"
+    "serviceDownBody": "該辨識服務暫時出現問題，請幾分鐘後再試——不是你的照片的問題。",
+    "poseWhole": "整體",
+    "poseClose": "特寫",
+    "poseOther": "另一角度"
   },
   "detail": {
     "profileTitle": "{{category}}檔案",
@@ -2319,7 +2322,8 @@
     "sectionLegal": "法律條款",
     "sectionAccount": "帳戶",
     "tellFriends": "推薦給朋友",
-    "linkCopied": "連結已複製"
+    "linkCopied": "連結已複製",
+    "validUntil": "有效期至 {{date}}"
   },
   "books": {
     "shelfTitle": "圖書",

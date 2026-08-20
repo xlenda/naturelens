@@ -193,7 +193,10 @@
     "offlineTitle": "Du är offline",
     "offlineBody": "Identifiering kräver internet. Din samling och Upptäck-fliken fungerar ändå.",
     "serviceDownTitle": "Tjänsten är inte tillgänglig",
-    "serviceDownBody": "Den här identifieringstjänsten krånglar just nu. Försök igen om några minuter - det är inte ditt foto."
+    "serviceDownBody": "Den här identifieringstjänsten krånglar just nu. Försök igen om några minuter - det är inte ditt foto.",
+    "poseWhole": "Helhet",
+    "poseClose": "Närbild",
+    "poseOther": "Annan vinkel"
   },
   "detail": {
     "profileTitle": "{{category}}-profil",
@@ -2319,7 +2322,8 @@
     "sectionLegal": "Juridiskt",
     "sectionAccount": "Konto",
     "tellFriends": "Tipsa vänner",
-    "linkCopied": "Länk kopierad"
+    "linkCopied": "Länk kopierad",
+    "validUntil": "Giltig till {{date}}"
   },
   "books": {
     "shelfTitle": "Böcker",

@@ -114,11 +114,20 @@ export async function startCheckout(plan = 'monthly') {
 // signed-in header for an account they no longer have. Losing it on reload just
 // means the next status call fills it in again.
 let lastKnownEmail = null;
+let lastPeriodEnd = null;
 
 /** @returns the signed-in e-mail, or null. Only meaningful after
  *  getSubscriptionStatus() has run at least once. */
 export function getLinkedEmail() {
   return lastKnownEmail;
+}
+
+/** ISO date the current paid period runs to, or null. Real server data -
+ *  it feeds the member card's "valid until", the same honest device as the
+ *  competitor's gold card expiry line. Only meaningful after
+ *  getSubscriptionStatus() has run at least once. */
+export function getPeriodEnd() {
+  return lastPeriodEnd;
 }
 
 export async function getSubscriptionStatus() {
@@ -139,6 +148,7 @@ export async function getSubscriptionStatus() {
 
     const data = await response.json();
     lastKnownEmail = data.email || null;
+    lastPeriodEnd = data.currentPeriodEnd || null;
     return data.status || null;
   } catch (e) {
     return undefined; // network failure is "don't know", not "no access"

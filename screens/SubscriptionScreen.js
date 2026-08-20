@@ -17,9 +17,12 @@ import { colors, shadow } from '../components/theme';
 import {
   getSubscriptionStatus,
   startCheckout,
+  getLinkedEmail,
+  getPeriodEnd,
   PLAN_PRICES,
   PLAN_ORDER,
 } from '../components/subscription';
+import MemberCard from '../components/MemberCard';
 import { trackPaywallShown, trackPaywallDismissed } from '../components/tracking';
 
 // "My subscription".
@@ -113,6 +116,14 @@ export default function SubscriptionScreen() {
       </View>
 
       <ScrollView contentContainerStyle={styles.scroll} showsVerticalScrollIndicator={false}>
+        {/* The member card, first - for a paying user this screen opens with
+            the thing they own (competitor's gold-card device), then the
+            plain-words status below it. */}
+        {isActive && (
+          <View style={styles.memberCardGap}>
+            <MemberCard status={status} email={getLinkedEmail()} periodEnd={getPeriodEnd()} />
+          </View>
+        )}
         <View style={[styles.statusCard, isActive && styles.statusCardActive]}>
           <Ionicons
             name={isActive ? 'checkmark-circle' : isUnknown ? 'help-circle-outline' : 'lock-open-outline'}
@@ -264,6 +275,7 @@ const styles = StyleSheet.create({
   },
   topTitle: { fontSize: 16, fontWeight: '700', color: colors.text },
   scroll: { padding: 20, paddingBottom: 40 },
+  memberCardGap: { marginBottom: 18 },
   statusCard: {
     backgroundColor: colors.surface,
     borderRadius: 18,

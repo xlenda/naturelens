@@ -193,7 +193,10 @@
     "offlineTitle": "Du er offline",
     "offlineBody": "Identifikation kræver internet. Din samling og Opdag-fanen virker stadig.",
     "serviceDownTitle": "Tjenesten er utilgængelig",
-    "serviceDownBody": "Denne bestemmelsestjeneste har et problem lige nu. Prøv igen om et par minutter - det er ikke dit foto."
+    "serviceDownBody": "Denne bestemmelsestjeneste har et problem lige nu. Prøv igen om et par minutter - det er ikke dit foto.",
+    "poseWhole": "Helhed",
+    "poseClose": "Nærbillede",
+    "poseOther": "Anden vinkel"
   },
   "detail": {
     "profileTitle": "{{category}}-profil",
@@ -2319,7 +2322,8 @@
     "sectionLegal": "Juridisk",
     "sectionAccount": "Konto",
     "tellFriends": "Fortæl dine venner",
-    "linkCopied": "Link kopieret"
+    "linkCopied": "Link kopieret",
+    "validUntil": "Gyldig til {{date}}"
   },
   "books": {
     "shelfTitle": "Bøger",

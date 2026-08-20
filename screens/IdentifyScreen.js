@@ -471,45 +471,57 @@ export default function IdentifyScreen() {
           {scanning ? t('identify.identifying') : t('identify.tapToIdentify')}
         </Text>
 
-        {/* Multi-angle queue. Only offered where it actually helps: fish and
-            bird vendors take a single image, so promising extra angles there
-            would be a feature that quietly does nothing. */}
+        {/* Modo 3 fotos GUIADO (o "360" do concorrente, visto no video: tres
+            slots de miniatura visiveis na camera com a pose de cada um). O
+            obturador grande tira a foto principal (Inteiro); os dois slots
+            seguintes abrem a camera para De perto e Outro angulo - so o
+            PROXIMO slot vazio fica ativo, entao a sequencia se ensina sozinha.
+            Kindwise: as 3 fotos viajam num request so = 1 credito. So onde o
+            vendor realmente usa varias fotos (fish/bird ficam de fora). */}
         {category !== 'fish' && category !== 'bird' && (
           <View style={styles.anglesBlock}>
-            {extraPhotos.length > 0 && (
-              <View style={styles.anglesRow}>
-                {extraPhotos.map((p, i) => (
-                  <TouchableOpacity
-                    key={p.uri + i}
-                    style={styles.angleThumbWrap}
-                    onPress={() => removeAngle(i)}
-                    disabled={scanning}
-                    accessibilityRole="button"
-                    accessibilityLabel={t('identify.removeAngleLabel', { index: i + 1 })}
-                  >
-                    <Image source={{ uri: p.uri }} style={styles.angleThumb} />
-                    <View style={styles.angleRemove}>
-                      <Ionicons name="close" size={12} color={colors.white} />
-                    </View>
-                  </TouchableOpacity>
-                ))}
+            <View style={styles.poseRow}>
+              <View style={styles.poseSlot}>
+                <View style={[styles.poseThumb, styles.poseMain, { borderColor: meta.accent + '88' }]}>
+                  <Ionicons name="camera" size={18} color={meta.accent} />
+                </View>
+                <Text style={styles.poseLabel}>{t('identify.poseWhole')}</Text>
               </View>
-            )}
-
-            {extraPhotos.length < MAX_PHOTOS - 1 && !scanning && (
-              <TouchableOpacity
-                style={styles.addAngleBtn}
-                activeOpacity={0.8}
-                onPress={handleAddAngle}
-                accessibilityRole="button"
-                accessibilityLabel={t('identify.addAngle')}
-              >
-                <Ionicons name="add-circle-outline" size={17} color={meta.accent} />
-                <Text style={[styles.addAngleText, { color: meta.accent }]}>
-                  {extraPhotos.length === 0 ? t('identify.addAngle') : t('identify.addAnotherAngle')}
-                </Text>
-              </TouchableOpacity>
-            )}
+              {[0, 1].map((i) => {
+                const p = extraPhotos[i];
+                const label = i === 0 ? t('identify.poseClose') : t('identify.poseOther');
+                const isNext = extraPhotos.length === i;
+                return (
+                  <View key={i} style={styles.poseSlot}>
+                    {p ? (
+                      <TouchableOpacity
+                        style={styles.poseThumbWrap}
+                        onPress={() => removeAngle(i)}
+                        disabled={scanning}
+                        accessibilityRole="button"
+                        accessibilityLabel={t('identify.removeAngleLabel', { index: i + 1 })}
+                      >
+                        <Image source={{ uri: p.uri }} style={styles.poseThumbImg} />
+                        <View style={styles.angleRemove}>
+                          <Ionicons name="close" size={12} color={colors.white} />
+                        </View>
+                      </TouchableOpacity>
+                    ) : (
+                      <TouchableOpacity
+                        style={[styles.poseThumb, isNext && { borderColor: meta.accent + '88' }]}
+                        onPress={handleAddAngle}
+                        disabled={scanning || !isNext}
+                        accessibilityRole="button"
+                        accessibilityLabel={t('identify.addAngle')}
+                      >
+                        <Ionicons name="add" size={20} color={isNext ? meta.accent : colors.textMuted} />
+                      </TouchableOpacity>
+                    )}
+                    <Text style={styles.poseLabel}>{label}</Text>
+                  </View>
+                );
+              })}
+            </View>
 
             {extraPhotos.length > 0 && (
               <Text style={styles.anglesHint}>
@@ -742,15 +754,24 @@ const styles = StyleSheet.create({
     marginTop: 10,
     fontWeight: '600',
   },
-  anglesBlock: { alignItems: 'center', marginTop: 14, gap: 10 },
-  anglesRow: { flexDirection: 'row', gap: 8 },
-  angleThumbWrap: { position: 'relative' },
-  angleThumb: {
-    width: 54,
-    height: 54,
-    borderRadius: 10,
-    backgroundColor: colors.surfaceElevated,
+  poseRow: { flexDirection: 'row', justifyContent: 'center', gap: 16 },
+  poseSlot: { alignItems: 'center', gap: 5 },
+  poseThumb: {
+    width: 56,
+    height: 56,
+    borderRadius: 14,
+    borderWidth: 1.5,
+    borderStyle: 'dashed',
+    borderColor: colors.border,
+    backgroundColor: colors.surface,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
+  poseMain: { borderStyle: 'solid' },
+  poseThumbWrap: { width: 56, height: 56 },
+  poseThumbImg: { width: 56, height: 56, borderRadius: 14 },
+  poseLabel: { fontSize: 10.5, color: colors.textMuted, maxWidth: 72, textAlign: 'center' },
+  anglesBlock: { alignItems: 'center', marginTop: 14, gap: 10 },
   angleRemove: {
     position: 'absolute',
     top: -5,
@@ -762,18 +783,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  addAngleBtn: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 6,
-    paddingVertical: 8,
-    paddingHorizontal: 14,
-    borderRadius: 20,
-    borderWidth: 1,
-    borderColor: colors.border,
-    backgroundColor: colors.surface,
-  },
-  addAngleText: { fontSize: 12.5, fontWeight: '700' },
   anglesHint: { color: colors.textMuted, fontSize: 11.5, textAlign: 'center' },
   actionsRow: { flexDirection: 'row', gap: 12, marginTop: 24 },
   // The flex the PressScale wrapper needs so the two cards still share the row

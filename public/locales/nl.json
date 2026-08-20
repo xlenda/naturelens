@@ -193,7 +193,10 @@
     "offlineTitle": "Je bent offline",
     "offlineBody": "Herkenning vereist internet. Je collectie en het tabblad Ontdekken werken gewoon door.",
     "serviceDownTitle": "Dienst niet beschikbaar",
-    "serviceDownBody": "Deze herkenningsdienst heeft even een probleem. Probeer het over een paar minuten opnieuw - het ligt niet aan je foto."
+    "serviceDownBody": "Deze herkenningsdienst heeft even een probleem. Probeer het over een paar minuten opnieuw - het ligt niet aan je foto.",
+    "poseWhole": "Geheel",
+    "poseClose": "Close-up",
+    "poseOther": "Andere hoek"
   },
   "detail": {
     "profileTitle": "{{category}}-profiel",
@@ -2319,7 +2322,8 @@
     "sectionLegal": "Juridisch",
     "sectionAccount": "Account",
     "tellFriends": "Vertel het je vrienden",
-    "linkCopied": "Link gekopieerd"
+    "linkCopied": "Link gekopieerd",
+    "validUntil": "Geldig tot {{date}}"
   },
   "books": {
     "shelfTitle": "Boeken",

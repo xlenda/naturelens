@@ -193,7 +193,10 @@
     "offlineTitle": "Jsi offline",
     "offlineBody": "Určování vyžaduje internet. Tvá sbírka a záložka Objevovat fungují i bez připojení.",
     "serviceDownTitle": "Služba není dostupná",
-    "serviceDownBody": "Tato určovací služba má problém. Zkus to za pár minut znovu - není to tvou fotkou."
+    "serviceDownBody": "Tato určovací služba má problém. Zkus to za pár minut znovu - není to tvou fotkou.",
+    "poseWhole": "Celek",
+    "poseClose": "Detail",
+    "poseOther": "Jiný úhel"
   },
   "detail": {
     "profileTitle": "Profil: {{category}}",
@@ -2319,7 +2322,8 @@
     "sectionLegal": "Právní informace",
     "sectionAccount": "Účet",
     "tellFriends": "Doporučit přátelům",
-    "linkCopied": "Odkaz zkopírován"
+    "linkCopied": "Odkaz zkopírován",
+    "validUntil": "Platné do {{date}}"
   },
   "books": {
     "shelfTitle": "Knihy",

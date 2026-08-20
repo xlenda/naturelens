@@ -193,7 +193,10 @@
     "offlineTitle": "오프라인 상태입니다",
     "offlineBody": "식별에는 인터넷이 필요합니다. 컬렉션과 탐색 탭은 오프라인에서도 사용할 수 있습니다.",
     "serviceDownTitle": "서비스를 사용할 수 없습니다",
-    "serviceDownBody": "이 식별 서비스에 일시적인 문제가 있습니다. 몇 분 뒤에 다시 시도해 주세요. 사진 문제가 아닙니다."
+    "serviceDownBody": "이 식별 서비스에 일시적인 문제가 있습니다. 몇 분 뒤에 다시 시도해 주세요. 사진 문제가 아닙니다.",
+    "poseWhole": "전체",
+    "poseClose": "근접",
+    "poseOther": "다른 각도"
   },
   "detail": {
     "profileTitle": "{{category}} 프로필",
@@ -2319,7 +2322,8 @@
     "sectionLegal": "법적 고지",
     "sectionAccount": "계정",
     "tellFriends": "친구에게 알리기",
-    "linkCopied": "링크가 복사되었습니다"
+    "linkCopied": "링크가 복사되었습니다",
+    "validUntil": "{{date}}까지 유효"
   },
   "books": {
     "shelfTitle": "책",

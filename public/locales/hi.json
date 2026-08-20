@@ -193,7 +193,10 @@
     "offlineTitle": "आप ऑफ़लाइन हैं",
     "offlineBody": "पहचान के लिए इंटरनेट चाहिए। आपका संग्रह और खोजें टैब ऑफ़लाइन भी चलते हैं।",
     "serviceDownTitle": "सेवा उपलब्ध नहीं",
-    "serviceDownBody": "इस पहचान सेवा में अभी दिक्कत है। कुछ मिनट बाद फिर कोशिश करें — गलती आपकी तस्वीर की नहीं है।"
+    "serviceDownBody": "इस पहचान सेवा में अभी दिक्कत है। कुछ मिनट बाद फिर कोशिश करें — गलती आपकी तस्वीर की नहीं है।",
+    "poseWhole": "पूरा",
+    "poseClose": "क़रीब से",
+    "poseOther": "दूसरा कोण"
   },
   "detail": {
     "profileTitle": "{{category}} प्रोफ़ाइल",
@@ -2319,7 +2322,8 @@
     "sectionLegal": "कानूनी",
     "sectionAccount": "खाता",
     "tellFriends": "दोस्तों को बताएं",
-    "linkCopied": "लिंक कॉपी हो गया"
+    "linkCopied": "लिंक कॉपी हो गया",
+    "validUntil": "{{date}} तक मान्य"
   },
   "books": {
     "shelfTitle": "किताबें",

@@ -193,7 +193,10 @@
     "offlineTitle": "Sei offline",
     "offlineBody": "L’identificazione richiede una connessione. La tua collezione e la scheda Scopri funzionano comunque.",
     "serviceDownTitle": "Servizio non disponibile",
-    "serviceDownBody": "Questo servizio di identificazione ha un problema. Riprova tra qualche minuto: non è la tua foto."
+    "serviceDownBody": "Questo servizio di identificazione ha un problema. Riprova tra qualche minuto: non è la tua foto.",
+    "poseWhole": "Intero",
+    "poseClose": "Primo piano",
+    "poseOther": "Altra angolazione"
   },
   "detail": {
     "profileTitle": "Profilo di {{category}}",
@@ -2319,7 +2322,8 @@
     "sectionLegal": "Note legali",
     "sectionAccount": "Account",
     "tellFriends": "Consiglia agli amici",
-    "linkCopied": "Link copiato"
+    "linkCopied": "Link copiato",
+    "validUntil": "Valido fino al {{date}}"
   },
   "books": {
     "shelfTitle": "Libri",

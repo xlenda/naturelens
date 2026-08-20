@@ -193,7 +193,10 @@
     "offlineTitle": "Çevrimdışısın",
     "offlineBody": "Tanımlama internet gerektirir. Koleksiyonun ve Keşfet sekmesi çalışmaya devam eder.",
     "serviceDownTitle": "Hizmet kullanılamıyor",
-    "serviceDownBody": "Bu tanımlama hizmetinde geçici bir sorun var. Birkaç dakika sonra tekrar dene - sorun fotoğrafında değil."
+    "serviceDownBody": "Bu tanımlama hizmetinde geçici bir sorun var. Birkaç dakika sonra tekrar dene - sorun fotoğrafında değil.",
+    "poseWhole": "Tamamı",
+    "poseClose": "Yakın çekim",
+    "poseOther": "Başka açı"
   },
   "detail": {
     "profileTitle": "{{category}} Profili",
@@ -2319,7 +2322,8 @@
     "sectionLegal": "Yasal",
     "sectionAccount": "Hesap",
     "tellFriends": "Arkadaşlarına öner",
-    "linkCopied": "Bağlantı kopyalandı"
+    "linkCopied": "Bağlantı kopyalandı",
+    "validUntil": "{{date}} tarihine kadar geçerli"
   },
   "books": {
     "shelfTitle": "Kitaplar",

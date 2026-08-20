@@ -10,9 +10,10 @@ import TopBar from '../components/TopBar';
 import NatureScene from '../components/NatureScene';
 import PressScale from '../components/PressScale';
 import AlertModal from '../components/AlertModal';
+import MemberCard from '../components/MemberCard';
 import { useAppAlert } from '../components/useAppAlert';
 import { SUPPORTED_LANGUAGES } from '../i18n';
-import { getSubscriptionStatus, getLinkedEmail } from '../components/subscription';
+import { getSubscriptionStatus, getLinkedEmail, getPeriodEnd } from '../components/subscription';
 import { deleteAccount, signOut } from '../components/restore';
 import { resetDeviceId } from '../components/deviceId';
 import { getCollection, clearCollection, clearProfilePhoto } from '../components/storage';
@@ -290,15 +291,25 @@ export default function SettingsScreen() {
         {/* Membership first - the competitor's Settings opens with it, and it
             is the row a paying user comes here to find. */}
         <Text style={styles.eyebrow}>{t('settings.sectionMembership')}</Text>
-        <View style={styles.card}>
-          <Row
-            icon="card-outline"
-            label={t('subscription.title')}
-            value={subStatus === 'active' ? t('paywall.subscribed') : ''}
+        {subStatus === 'active' ? (
+          // The differentiated membership object (competitor's gold-card
+          // device): subscribers see their card, not a settings row.
+          <MemberCard
+            status={subStatus}
+            email={accountEmail}
+            periodEnd={getPeriodEnd()}
             onPress={() => navigation.navigate('Subscription')}
-            last
           />
-        </View>
+        ) : (
+          <View style={styles.card}>
+            <Row
+              icon="card-outline"
+              label={t('subscription.title')}
+              onPress={() => navigation.navigate('Subscription')}
+              last
+            />
+          </View>
+        )}
 
         <Text style={styles.eyebrow}>{t('settings.sectionGeneral')}</Text>
         <View style={styles.card}>

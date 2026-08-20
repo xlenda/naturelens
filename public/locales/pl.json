@@ -193,7 +193,10 @@
     "offlineTitle": "Jesteś offline",
     "offlineBody": "Rozpoznawanie wymaga internetu. Twoja kolekcja i zakładka Odkrywaj działają dalej.",
     "serviceDownTitle": "Usługa niedostępna",
-    "serviceDownBody": "Ta usługa rozpoznawania ma chwilowy problem. Spróbuj ponownie za kilka minut - to nie wina Twojego zdjęcia."
+    "serviceDownBody": "Ta usługa rozpoznawania ma chwilowy problem. Spróbuj ponownie za kilka minut - to nie wina Twojego zdjęcia.",
+    "poseWhole": "Całość",
+    "poseClose": "Zbliżenie",
+    "poseOther": "Inny kąt"
   },
   "detail": {
     "profileTitle": "Profil: {{category}}",
@@ -2319,7 +2322,8 @@
     "sectionLegal": "Informacje prawne",
     "sectionAccount": "Konto",
     "tellFriends": "Poleć znajomym",
-    "linkCopied": "Link skopiowany"
+    "linkCopied": "Link skopiowany",
+    "validUntil": "Ważne do {{date}}"
   },
   "books": {
     "shelfTitle": "Książki",

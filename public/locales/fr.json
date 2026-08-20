@@ -193,7 +193,10 @@
     "offlineTitle": "Vous êtes hors ligne",
     "offlineBody": "L’identification nécessite une connexion. Votre collection et l’onglet Découvrir fonctionnent toujours.",
     "serviceDownTitle": "Service indisponible",
-    "serviceDownBody": "Ce service d’identification a un souci. Réessayez dans quelques minutes - ce n’est pas votre photo."
+    "serviceDownBody": "Ce service d’identification a un souci. Réessayez dans quelques minutes - ce n’est pas votre photo.",
+    "poseWhole": "En entier",
+    "poseClose": "Gros plan",
+    "poseOther": "Autre angle"
   },
   "detail": {
     "profileTitle": "Profil de {{category}}",
@@ -2319,7 +2322,8 @@
     "sectionLegal": "Mentions légales",
     "sectionAccount": "Compte",
     "tellFriends": "Recommander à des amis",
-    "linkCopied": "Lien copié"
+    "linkCopied": "Lien copié",
+    "validUntil": "Valable jusqu'au {{date}}"
   },
   "books": {
     "shelfTitle": "Livres",

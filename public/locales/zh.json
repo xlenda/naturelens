@@ -193,7 +193,10 @@
     "offlineTitle": "你当前离线",
     "offlineBody": "识别需要联网。你的收藏和「发现」页面离线也能用。",
     "serviceDownTitle": "服务不可用",
-    "serviceDownBody": "该识别服务暂时出现问题，请几分钟后再试——不是你的照片的问题。"
+    "serviceDownBody": "该识别服务暂时出现问题，请几分钟后再试——不是你的照片的问题。",
+    "poseWhole": "整体",
+    "poseClose": "特写",
+    "poseOther": "另一角度"
   },
   "detail": {
     "profileTitle": "{{category}}档案",
@@ -2319,7 +2322,8 @@
     "sectionLegal": "法律条款",
     "sectionAccount": "账户",
     "tellFriends": "推荐给朋友",
-    "linkCopied": "链接已复制"
+    "linkCopied": "链接已复制",
+    "validUntil": "有效期至 {{date}}"
   },
   "books": {
     "shelfTitle": "图书",

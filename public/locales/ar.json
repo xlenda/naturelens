@@ -193,7 +193,10 @@
     "offlineTitle": "أنت غير متصل",
     "offlineBody": "التعرّف يحتاج إلى إنترنت. مجموعتك وتبويب استكشف يعملان دون اتصال.",
     "serviceDownTitle": "الخدمة غير متاحة",
-    "serviceDownBody": "خدمة التعرّف هذه تواجه مشكلة الآن. حاول مجددًا بعد بضع دقائق — المشكلة ليست في صورتك."
+    "serviceDownBody": "خدمة التعرّف هذه تواجه مشكلة الآن. حاول مجددًا بعد بضع دقائق — المشكلة ليست في صورتك.",
+    "poseWhole": "كامل",
+    "poseClose": "لقطة قريبة",
+    "poseOther": "زاوية أخرى"
   },
   "detail": {
     "profileTitle": "ملف {{category}}",
@@ -2319,7 +2322,8 @@
     "sectionLegal": "الشؤون القانونية",
     "sectionAccount": "الحساب",
     "tellFriends": "أخبر أصدقاءك",
-    "linkCopied": "تم نسخ الرابط"
+    "linkCopied": "تم نسخ الرابط",
+    "validUntil": "صالح حتى {{date}}"
   },
   "books": {
     "shelfTitle": "الكتب",

@@ -98,6 +98,34 @@ const headInject = [
 ].join('\n');
 html = html.replace('</head>', headInject + '\n  </head>');
 
+// Mouse-wheel -> horizontal scroll nas faixas (estante de Livros, trending,
+// achados recentes). RN-web so rola strips horizontais com gesto de
+// touch/trackpad e esconde a barrinha; usuario de MOUSE no desktop ficava
+// travado ("nao consigo scrollar para a direita"). Um listener global:
+// se a roda girar sobre um elemento horizontalmente rolavel (e que nao rola
+// na vertical), converte deltaY em scrollLeft. So para ponteiro fino (mouse).
+const wheelScroll = [
+  '<script>',
+  "if (matchMedia('(pointer: fine)').matches) {",
+  "  document.addEventListener('wheel', function (e) {",
+  '    var el = e.target;',
+  '    while (el && el !== document.body) {',
+  '      var canX = el.scrollWidth > el.clientWidth + 8;',
+  '      var canY = el.scrollHeight > el.clientHeight + 8;',
+  '      if (canX && !canY) {',
+  '        var before = el.scrollLeft;',
+  '        el.scrollLeft += (Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY);',
+  '        if (el.scrollLeft !== before) { e.preventDefault(); }',
+  '        return;',
+  '      }',
+  '      el = el.parentElement;',
+  '    }',
+  "  }, { passive: false });",
+  '}',
+  '<' + '/script>',
+].join(String.fromCharCode(10));
+html = html.replace('</body>', wheelScroll + String.fromCharCode(10) + '</body>');
+
 // Entry splash: the NatureLens leaf DRAWING ITSELF (stroke-dasharray /
 // stroke-dashoffset, pure CSS, ~1.6s) plus the wordmark fading in.
 //

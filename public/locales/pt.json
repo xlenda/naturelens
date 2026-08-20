@@ -243,7 +243,10 @@
     "offlineTitle": "Você está sem internet",
     "offlineBody": "Identificar precisa de conexão. Sua coleção e a aba Descobrir continuam funcionando offline.",
     "serviceDownTitle": "Serviço indisponível",
-    "serviceDownBody": "Este serviço de identificação está com problema. Tente de novo em alguns minutos — não é a sua foto."
+    "serviceDownBody": "Este serviço de identificação está com problema. Tente de novo em alguns minutos — não é a sua foto.",
+    "poseWhole": "Inteiro",
+    "poseClose": "De perto",
+    "poseOther": "Outro ângulo"
   },
   "detail": {
     "profileTitle": "Perfil de {{category}}",
@@ -2319,7 +2322,8 @@
     "sectionLegal": "Legal",
     "sectionAccount": "Conta",
     "tellFriends": "Indique a amigos",
-    "linkCopied": "Link copiado"
+    "linkCopied": "Link copiado",
+    "validUntil": "Válido até {{date}}"
   },
   "books": {
     "shelfTitle": "Livros",

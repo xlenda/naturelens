@@ -243,7 +243,10 @@
     "offlineTitle": "You are offline",
     "offlineBody": "Identification needs an internet connection. Your collection and the Discover tab still work offline.",
     "serviceDownTitle": "Service unavailable",
-    "serviceDownBody": "This identification service is having a moment. Please try again in a few minutes - it is not your photo."
+    "serviceDownBody": "This identification service is having a moment. Please try again in a few minutes - it is not your photo.",
+    "poseWhole": "Full view",
+    "poseClose": "Close-up",
+    "poseOther": "Another angle"
   },
   "detail": {
     "profileTitle": "{{category}} Profile",
@@ -2319,7 +2322,8 @@
     "sectionLegal": "Legal",
     "sectionAccount": "Account",
     "tellFriends": "Tell friends",
-    "linkCopied": "Link copied"
+    "linkCopied": "Link copied",
+    "validUntil": "Valid until {{date}}"
   },
   "books": {
     "shelfTitle": "Books",

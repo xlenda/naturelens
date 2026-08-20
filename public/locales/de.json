@@ -193,7 +193,10 @@
     "offlineTitle": "Du bist offline",
     "offlineBody": "Zum Bestimmen wird Internet gebraucht. Deine Sammlung und der Entdecken-Tab funktionieren weiter.",
     "serviceDownTitle": "Dienst nicht verfügbar",
-    "serviceDownBody": "Dieser Bestimmungsdienst hat gerade ein Problem. Versuche es in ein paar Minuten erneut - es liegt nicht an deinem Foto."
+    "serviceDownBody": "Dieser Bestimmungsdienst hat gerade ein Problem. Versuche es in ein paar Minuten erneut - es liegt nicht an deinem Foto.",
+    "poseWhole": "Ganz",
+    "poseClose": "Nahaufnahme",
+    "poseOther": "Anderer Winkel"
   },
   "detail": {
     "profileTitle": "{{category}}-Profil",
@@ -2319,7 +2322,8 @@
     "sectionLegal": "Rechtliches",
     "sectionAccount": "Konto",
     "tellFriends": "Freunden empfehlen",
-    "linkCopied": "Link kopiert"
+    "linkCopied": "Link kopiert",
+    "validUntil": "Gültig bis {{date}}"
   },
   "books": {
     "shelfTitle": "Bücher",
