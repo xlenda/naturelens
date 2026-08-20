@@ -85,7 +85,7 @@ test('both refusal reasons have a translated message in every locale', () => {
   const dir = path.join(__dirname, 'public/locales');
   const locales = fs
     .readdirSync(dir)
-    .filter((f) => f.endsWith('.json') && !/-(herbs|species|manual)\.json$/.test(f));
+    .filter((f) => f.endsWith('.json') && !/-(herbs|species|manual|groups)\.json$/.test(f));
   assert.ok(locales.length === 17, `expected 17 UI locales, found ${locales.length}`);
   for (const file of locales) {
     const j = JSON.parse(fs.readFileSync(path.join(dir, file), 'utf8'));

@@ -57,7 +57,7 @@ test('every locale can explain an outage and the location setting', () => {
   const dir = path.join(__dirname, 'public/locales');
   const locales = fs
     .readdirSync(dir)
-    .filter((f) => f.endsWith('.json') && !/-(herbs|species|manual)\.json$/.test(f));
+    .filter((f) => f.endsWith('.json') && !/-(herbs|species|manual|groups)\.json$/.test(f));
   assert.equal(locales.length, 17);
   for (const file of locales) {
     const j = JSON.parse(fs.readFileSync(path.join(dir, file), 'utf8'));
@@ -288,7 +288,7 @@ test('the privacy policy discloses that location leaves the device', () => {
   const dir = path.join(__dirname, 'public/locales');
   const locales = fs
     .readdirSync(dir)
-    .filter((f) => f.endsWith('.json') && !/-(herbs|species|manual)\.json$/.test(f));
+    .filter((f) => f.endsWith('.json') && !/-(herbs|species|manual|groups)\.json$/.test(f));
   for (const file of locales) {
     const j = JSON.parse(fs.readFileSync(path.join(dir, file), 'utf8'));
     for (const key of ['locationTitle', 'locationBody']) {
@@ -304,7 +304,7 @@ test('every locale can label the translate button', () => {
   const dir = path.join(__dirname, 'public/locales');
   const locales = fs
     .readdirSync(dir)
-    .filter((f) => f.endsWith('.json') && !/-(herbs|species|manual)\.json$/.test(f));
+    .filter((f) => f.endsWith('.json') && !/-(herbs|species|manual|groups)\.json$/.test(f));
   for (const file of locales) {
     const j = JSON.parse(fs.readFileSync(path.join(dir, file), 'utf8'));
     for (const key of ['translate', 'translating', 'translateFailed']) {

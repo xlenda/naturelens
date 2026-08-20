@@ -26,7 +26,7 @@ const REFERENCE = 'en';
 // third content family forces a conscious update here rather than silently
 // breaking the parity tests (which is exactly what happened when -species was
 // added and only -herbs was excluded).
-const CONTENT_SUFFIXES = ['herbs', 'species', 'manual'];
+const CONTENT_SUFFIXES = ['herbs', 'species', 'manual', 'groups'];
 
 function localeFiles(suffix) {
   return fs
