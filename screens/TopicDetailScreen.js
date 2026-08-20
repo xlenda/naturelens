@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useNavigation } from '@react-navigation/native';
 import { useTranslation } from 'react-i18next';
 import { Ionicons } from '@expo/vector-icons';
@@ -31,6 +31,7 @@ const SYMPTOM_KEYS = [
 ];
 
 export default function TopicDetailScreen({ route }) {
+  const insets = useSafeAreaInsets();
   const navigation = useNavigation();
   const { t } = useTranslation();
   const { topicKey, icon, color } = route.params;
@@ -77,8 +78,11 @@ export default function TopicDetailScreen({ route }) {
         <View style={styles.iconBtn} />
       </View>
 
+      {/* Esta tela entrou no HIDE_DOCK_ON (auditoria 20/08) e o dock era quem
+          carregava o respiro de baixo. Com ele fora, os 40px fixos deixam a
+          ultima linha embaixo da barra de gestos em aparelho sem botao. */}
       <ScrollView
-        contentContainerStyle={styles.scroll}
+        contentContainerStyle={[styles.scroll, { paddingBottom: 40 + insets.bottom }]}
         showsVerticalScrollIndicator={false}
         // A fração rolada da página ≈ fração das linhas já vistas (a lista
         // domina a altura da página). O erro do cabeçalho sobra pra CIMA, o

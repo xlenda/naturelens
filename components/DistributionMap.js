@@ -23,6 +23,10 @@ export default function DistributionMap({ scientific, accent = colors.accent }) 
 
   useEffect(() => {
     let alive = true;
+    // Limpa antes de resolver o proximo: sem isto a especie nova herdava o
+    // mapa da anterior enquanto o lookup rodava - e ficava com ele para sempre
+    // quando o nome novo nao casava com taxon nenhum (ou sumia).
+    setTaxonKey(null);
     // offline / GBIF down / sem match: getTaxonKey devolve null e a secao
     // simplesmente nao renderiza.
     getTaxonKey(scientific).then((key) => {

@@ -344,7 +344,25 @@
     "maintenanceLow": "منخفضة",
     "maintenanceMedium": "متوسطة",
     "maintenanceHigh": "عالية",
-    "chipPetSafe": "آمنة للحيوانات الأليفة"
+    "chipPetSafe": "آمنة للحيوانات الأليفة",
+    "speciesCareSection": "العناية بهذا النوع",
+    "speciesCareNote": "هذه الأرقام تخص {{species}} نفسها، وليس مجموعتها.",
+    "speciesCareSource": "المصدر: {{citation}}",
+    "usdaMoisture": "الحاجة إلى الماء",
+    "usdaDrought": "تحمّل الجفاف",
+    "usdaFertility": "الحاجة إلى السماد",
+    "usdaShade": "تحمّل الظل",
+    "usdaPh": "حموضة التربة (pH)",
+    "usdaTempMin": "يتحمّل حتى",
+    "usdaRootDepth": "أدنى عمق للتربة",
+    "usdaBloom": "الإزهار",
+    "levelLow": "منخفض",
+    "levelMedium": "متوسط",
+    "levelHigh": "مرتفع",
+    "levelNone": "لا يوجد",
+    "bloomEarly": "أوائل {{season}}",
+    "bloomMid": "منتصف {{season}}",
+    "bloomLate": "أواخر {{season}}"
   },
   "disease": {
     "overviewSection": "نظرة عامة",
@@ -2443,7 +2461,8 @@
     "free": "مجاني",
     "unlockFor": "افتح مقابل {{count}} رمزًا",
     "chaptersLabel": "الفصول",
-    "notEnoughTokens": "لا توجد رموز كافية بعد — تعرّف على الأنواع لكسب المزيد."
+    "notEnoughTokens": "لا توجد رموز كافية بعد — تعرّف على الأنواع لكسب المزيد.",
+    "missingBody": "لم يعد هذا الكتاب متاحًا."
   },
   "about": {
     "appInfo": "معلومات التطبيق",
@@ -2451,6 +2470,7 @@
     "visitSite": "زيارة الموقع",
     "fullDocLabel": "المستند القانوني الكامل",
     "whatBody": "يتعرّف NatureLens على النباتات والحشرات والفطر والمحاصيل والأسماك والطيور وحتى الأصوات من صورة أو تسجيل، ويحوّل اكتشافاتك إلى مجموعة طبيعية شخصية.",
-    "creditsBody": "التعرّف بواسطة Kindwise (النباتات والحشرات والفطر والمحاصيل) وFishial (الأسماك) وNyckel (الطيور) ونموذج الصوت الخاص بنا. صور مرجعية من Wikipedia / Wikimedia Commons، مع ذكر المصدر حيث تظهر. دردشة الخبيرة يجيب عنها ذكاء اصطناعي (Anthropic)."
+    "creditsBody": "التعرّف بواسطة Kindwise (النباتات والحشرات والفطر والمحاصيل) وFishial (الأسماك) وNyckel (الطيور) ونموذج الصوت الخاص بنا. صور مرجعية من Wikipedia / Wikimedia Commons، مع ذكر المصدر حيث تظهر. دردشة الخبيرة يجيب عنها ذكاء اصطناعي (Anthropic).",
+    "creditsGbif": "خرائط الانتشار والرسوم الموسمية من GBIF.org، يتم الاستعلام عنها بالاسم العلمي للنوع — ولا تُرسل أي بيانات عنك."
   }
 }

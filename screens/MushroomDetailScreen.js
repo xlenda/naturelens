@@ -7,7 +7,7 @@ import {
   TouchableOpacity,
   Linking,
 } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useNavigation } from '@react-navigation/native';
 import { Ionicons } from '@expo/vector-icons';
 import * as Haptics from 'expo-haptics';
@@ -59,6 +59,7 @@ export default function MushroomDetailScreen({ route }) {
   const { plant, fromIdentify } = route.params;
   const meta = CATEGORIES.mushroom;
   const { t } = useTranslation();
+  const insets = useSafeAreaInsets();
   const [saved, setSaved] = useState(false);
   const [savedEntryId, setSavedEntryId] = useState(plant.savedId || null);
   const { alertConfig, showAlert, hideAlert } = useAppAlert();
@@ -130,17 +131,19 @@ export default function MushroomDetailScreen({ route }) {
 
   // Fatos rapidos (hub do resultado): valor curto HONESTO do proprio campo.
   // Sem topico nenhum nao ha porta para abrir - a grade some junto.
+  //
+  // Cada `key` daqui TEM que existir em `topics`: o CareTopics ignora um
+  // initialKey desconhecido e cai no primeiro tab da lista. O card de
+  // comestibilidade usava key 'edibility', que nunca existiu em topics, entao
+  // tocar em "comestivel" abria "Confundido com" - a aba errada. Ele saiu da
+  // grade em vez de ganhar uma aba: a comestibilidade ja aparece inteira na
+  // pilula colorida logo acima, e fabricar uma aba "Partes Comestiveis" de
+  // manual generico para COGUMELO seria induzir consumo, exatamente o que a
+  // doutrina desta tela proibe. Fica so a porta que leva a algum lugar.
   const quickFacts =
     topics.length === 0
       ? []
       : [
-          !!plant.edibility && {
-            key: 'edibility',
-            icon: 'restaurant-outline',
-            color: edColor,
-            label: null,
-            value: plant.edibility,
-          },
           plant.lookAlike?.length > 0 && {
             key: 'confusas',
             icon: 'eye-outline',
@@ -179,7 +182,13 @@ export default function MushroomDetailScreen({ route }) {
         }
       />
 
-      <ScrollView contentContainerStyle={styles.scroll} showsVerticalScrollIndicator={false}>
+      {/* A ResultActionBar cresce com insets.bottom, entao o respiro do scroll
+          tem que crescer junto - o dock, que carregava a area segura nesta
+          rota, nao existe mais aqui (HIDE_DOCK_ON). */}
+      <ScrollView
+        contentContainerStyle={[styles.scroll, { paddingBottom: 120 + insets.bottom }]}
+        showsVerticalScrollIndicator={false}
+      >
         <PlantHero
           photoUri={plant.photoUri}
           similarImages={plant.similarImages}
@@ -232,7 +241,13 @@ export default function MushroomDetailScreen({ route }) {
                 accessibilityElementsHidden={true}
                 importantForAccessibility="no-hide-descendants"
               />
-              <Text style={[styles.typePillText, { color: edColor }]}>{plant.edibility}</Text>
+              {/* Cor pelo valor CRU (edColor), texto pelo rotulo traduzido. Traduzir
+                  o valor no lugar faria um cogumelo MORTAL cair no laranja de
+                  aviso comum, porque a cor e escolhida casando a palavra em
+                  ingles (auditoria 20/08). */}
+              <Text style={[styles.typePillText, { color: edColor }]}>
+                {plant.edibilityLabel || plant.edibility}
+              </Text>
             </View>
           )}
         </View>

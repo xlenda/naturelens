@@ -344,7 +344,25 @@
     "maintenanceLow": "Nízká",
     "maintenanceMedium": "Střední",
     "maintenanceHigh": "Vysoká",
-    "chipPetSafe": "Bezpečná pro mazlíčky"
+    "chipPetSafe": "Bezpečná pro mazlíčky",
+    "speciesCareSection": "Péče o tento druh",
+    "speciesCareNote": "Tyto hodnoty platí pro samotný druh {{species}}, ne pro jeho skupinu.",
+    "speciesCareSource": "Zdroj: {{citation}}",
+    "usdaMoisture": "Potřeba vody",
+    "usdaDrought": "Odolnost vůči suchu",
+    "usdaFertility": "Potřeba hnojiva",
+    "usdaShade": "Snášenlivost stínu",
+    "usdaPh": "pH půdy",
+    "usdaTempMin": "Snese až do",
+    "usdaRootDepth": "Minimální hloubka půdy",
+    "usdaBloom": "Kvetení",
+    "levelLow": "Nízká",
+    "levelMedium": "Střední",
+    "levelHigh": "Vysoká",
+    "levelNone": "Žádná",
+    "bloomEarly": "{{season}} (začátek)",
+    "bloomMid": "{{season}} (polovina)",
+    "bloomLate": "{{season}} (konec)"
   },
   "disease": {
     "overviewSection": "Přehled",
@@ -2443,7 +2461,8 @@
     "free": "Zdarma",
     "unlockFor": "Odemknout za {{count}} tokenů",
     "chaptersLabel": "Kapitoly",
-    "notEnoughTokens": "Zatím nemáš dost tokenů — identifikuj druhy a získej další."
+    "notEnoughTokens": "Zatím nemáš dost tokenů — identifikuj druhy a získej další.",
+    "missingBody": "Tato kniha už není k dispozici."
   },
   "about": {
     "appInfo": "Informace o aplikaci",
@@ -2451,6 +2470,7 @@
     "visitSite": "Navštívit web",
     "fullDocLabel": "Úplný právní dokument",
     "whatBody": "NatureLens rozpozná rostliny, hmyz, houby, plodiny, ryby, ptáky a dokonce i zvuky z fotografie nebo nahrávky a promění vaše nálezy v osobní přírodní sbírku.",
-    "creditsBody": "Identifikaci zajišťují Kindwise (rostliny, hmyz, houby, plodiny), Fishial (ryby), Nyckel (ptáci) a náš vlastní zvukový model. Referenční fotografie pocházejí z Wikipedia / Wikimedia Commons, s uvedením autora tam, kde se zobrazují. Chat se specialistkou zodpovídá AI (Anthropic)."
+    "creditsBody": "Identifikaci zajišťují Kindwise (rostliny, hmyz, houby, plodiny), Fishial (ryby), Nyckel (ptáci) a náš vlastní zvukový model. Referenční fotografie pocházejí z Wikipedia / Wikimedia Commons, s uvedením autora tam, kde se zobrazují. Chat se specialistkou zodpovídá AI (Anthropic).",
+    "creditsGbif": "Mapy rozšíření a sezónní grafy z GBIF.org, dotazované podle vědeckého názvu druhu – žádné údaje o vás se neodesílají."
   }
 }

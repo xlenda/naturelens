@@ -325,9 +325,15 @@ const CATEGORIES = {
       // point where the name is still the vendor's English (translateEntity
       // runs after) - and dropping it means the screen falls into the healthy
       // card it already has for `disease: null`.
-      const topDisease = data?.result?.disease?.suggestions?.find(
-        (s) => !/^healthy\b/i.test((s?.name || '').trim())
-      );
+      //
+      // Filtrar a lista PROMOVIA a sugestao seguinte: o vendor dizia "sadia" e
+      // a planta recebia o laudo do palpite 2, com nome de doenca, gravidade
+      // e tratamento. Sadia agora quer dizer NENHUMA doenca - e o palpite
+      // descartado e sempre o do topo, o unico que o vendor esta afirmando.
+      const diseaseTop = data?.result?.disease?.suggestions?.[0];
+      const topDisease = /^healthy\b/i.test((diseaseTop?.name || '').trim())
+        ? null
+        : diseaseTop;
       if (!topCrop && !topDisease) return { notFound: true };
 
       const diseaseDetails = topDisease?.details || {};
@@ -339,6 +345,14 @@ const CATEGORIES = {
           name: topCrop?.name || 'Unknown crop',
           scientific: topCrop?.scientific_name || null,
           confidence: Math.round((topCrop?.probability || 0) * 100),
+          // Taxonomia crua para a camada por TIPO. Sem ela a tabela de lavoura
+          // do speciesGroup (CROP_FAMILY: grainCrop/vegCrop) nunca era
+          // alcancada - dois grupos curados existiam sem nenhum caminho ate
+          // eles. E a familia da PLANTA, nunca a do patogeno: o manual e sobre
+          // o que esta plantado. Null quando o vendor nao manda taxonomia, e
+          // ai o cartao de grupo simplesmente nao entra.
+          family: topCrop?.details?.taxonomy?.family || null,
+          ord: topCrop?.details?.taxonomy?.order || null,
           disease: topDisease
             ? {
                 name: topDisease.name,
@@ -442,6 +456,15 @@ const CATEGORIES = {
           // translation - see the comment above.
           overviewIsProse: vendorIsProse,
           origin: origin || null,
+          // Taxonomia crua para a camada por TIPO. speciesGroup tem 45 familias
+          // de agua doce e 63 marinhas mapeadas, mais os proprios grupos de
+          // ordem ("ordem antes de familia" para a fauna neotropical) - e o
+          // peixe nunca mandava nem uma nem outra, entao esses dois grupos
+          // curados eram inalcancaveis. O bloco fishangler-data ja entrega
+          // genus/species; family/order sao lidos do mesmo bloco e ficam null
+          // quando ele nao os traz, que e o comportamento de hoje.
+          family: fa.family || null,
+          ord: fa.order || null,
           commonNames: fa.commonNames?.length ? fa.commonNames.join(', ') : null,
           synonyms: fa.scientificNames?.length ? fa.scientificNames.join(', ') : null,
           referencePhoto: fa.photo?.mediaUri || null,

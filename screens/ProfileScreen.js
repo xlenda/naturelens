@@ -40,7 +40,12 @@ export default function ProfileScreen() {
   // Derivados da MESMA lista que load() já busca - zero fetch novo.
   const [latestByCategory, setLatestByCategory] = useState({});
   const [recentPhotos, setRecentPhotos] = useState([]);
-  const [subStatus, setSubStatus] = useState(null);
+  // undefined = ainda nao sei (carregando, offline, 429, erro de servidor).
+  // getSubscriptionStatus so devolve null quando o servidor RESPONDEU que nao
+  // ha assinatura - tratar "nao sei" como "nao assina" e o que jogava CTA de
+  // compra na cara de quem ja paga. Mesmo contrato de tres estados da
+  // SubscriptionScreen.
+  const [subStatus, setSubStatus] = useState(undefined);
   const [accountEmail, setAccountEmail] = useState(null);
   const [checkingOut, setCheckingOut] = useState(false);
   const [paywallVisible, setPaywallVisible] = useState(false);
@@ -462,31 +467,39 @@ export default function ProfileScreen() {
           </TouchableOpacity>
         </PressScale>
 
-        <View style={styles.accountCard}>
-          {subStatus === 'active' ? (
-            <View style={styles.subscribedPill}>
-              <Ionicons name="checkmark-circle" size={16} color={colors.accent} />
-              <Text style={styles.subscribedText}>{t('paywall.subscribed')}</Text>
-            </View>
-          ) : (
-            <TouchableOpacity
-              style={[styles.subscribeBtn, checkingOut && { opacity: 0.6 }]}
-              onPress={() => setPaywallVisible(true)}
-              disabled={checkingOut}
-              activeOpacity={0.85}
-              accessibilityRole="button"
-              accessibilityLabel={t('paywall.subscribe')}
-            >
-              <Text style={styles.subscribeBtnText}>
-                {checkingOut ? t('paywall.subscribing') : t('paywall.subscribe')}
-              </Text>
-            </TouchableOpacity>
-          )}
-          {/* The old "already subscribed on another device? Restore access"
-              link lived here. It is now the account row at the top of this
-              screen, where signing in belongs - repeating it inside the
-              subscription card would offer the same door twice. */}
-        </View>
+        {/* Duas portas fechadas de proposito, e o card inteiro some quando
+            nenhuma se aplica:
+            - build de loja (Platform.OS !== 'web'): CTA de compra nao pode
+              existir num APK, e aqui ela era morta de qualquer jeito -
+              startCheckout lanca fora da web. Politica de pagamentos do Play.
+            - subStatus undefined: "nao sei" nao vira "nao assina". */}
+        {(subStatus === 'active' || (subStatus === null && Platform.OS === 'web')) && (
+          <View style={styles.accountCard}>
+            {subStatus === 'active' ? (
+              <View style={styles.subscribedPill}>
+                <Ionicons name="checkmark-circle" size={16} color={colors.accent} />
+                <Text style={styles.subscribedText}>{t('paywall.subscribed')}</Text>
+              </View>
+            ) : (
+              <TouchableOpacity
+                style={[styles.subscribeBtn, checkingOut && { opacity: 0.6 }]}
+                onPress={() => setPaywallVisible(true)}
+                disabled={checkingOut}
+                activeOpacity={0.85}
+                accessibilityRole="button"
+                accessibilityLabel={t('paywall.subscribe')}
+              >
+                <Text style={styles.subscribeBtnText}>
+                  {checkingOut ? t('paywall.subscribing') : t('paywall.subscribe')}
+                </Text>
+              </TouchableOpacity>
+            )}
+            {/* The old "already subscribed on another device? Restore access"
+                link lived here. It is now the account row at the top of this
+                screen, where signing in belongs - repeating it inside the
+                subscription card would offer the same door twice. */}
+          </View>
+        )}
 
         {subStatus === 'active' && (
           <View style={styles.accountCard}>

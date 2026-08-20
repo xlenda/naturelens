@@ -5,9 +5,17 @@
 //
 // WHY FAMILY AND NOT SPECIES: the per-group manual answers "a cactus needs less
 // water than a fruit tree" - a statement about the TYPE, not about one species.
-// api/identify.js already forwards `family` and `ord` (taxonomy.family /
-// taxonomy.order) on the plant, tree, insect and mushroom categories precisely
-// to feed this table. Those two fields are never shown raw to the reader.
+// api/identify.js forwards `family` and `ord` (taxonomy.family / taxonomy.order)
+// precisely to feed this table. Those two fields are never shown raw.
+//
+// WHICH CATEGORIES ACTUALLY SEND THEM is the api's business, not this file's,
+// and it changes: plant, tree, insect and mushroom have sent them since day
+// one, crop and fish read them from their own vendor block and may still send
+// null, and bird/sound send nothing at all today. This module therefore never
+// assumes the fields are there. When they arrive, the table answers; when they
+// do not, the answer is `null` and the reader gets the universal manual with no
+// visible hole. What must never happen is the middle ground - guessing a group
+// from the category alone and showing a confident manual for the wrong type.
 //
 // WHY THERE IS ALSO A GENUS TABLE: the dossiers are explicit that family alone
 // gets several very common houseplants WRONG - "Classificar pela familia da o
@@ -85,11 +93,29 @@ const TAXON = {
   'ficus carica': 'fruitVeg',
   vaccinium: 'fruitVeg', // Ericaceae, but grouped by the organ harvested
   artocarpus: 'fruitVeg',
+  // Same "organ harvested" rule (frutiferas-e-hortalicas.md: "o discriminante e
+  // o orgao colhido, nao o parentesco"). Ananas is the one Bromeliaceae the
+  // dossiers file as food - lavouras-hortalicas-e-frutiferas.md lists
+  // *Ananas comosus* - so it must not inherit the epiphyte watering of its
+  // family, which is built around bark, no soil and a leaf reservoir.
+  ananas: 'fruitVeg',
+  // Poaceae as a whole is not mappable (see the note above FAMILY), but sweet
+  // corn is named in frutiferas-e-hortalicas.md as a garden vegetable.
+  zea: 'fruitVeg',
 
   // --- Insects whose family sits in the other camp ---------------------------
   // insetos-praga-comuns.md: Epilachna is "a unica linhagem de joaninha que
   // entra neste grupo" - a leaf-eating Coccinellidae.
   epilachna: 'pestInsect',
+  // Pieridae is in BOTH insect dossiers: the adults are nectar visitors
+  // (insetos-polinizadores.md) and the larvae are the brassica caterpillars of
+  // insetos-praga-comuns.md ("Plutellidae / Noctuidae / Pieridae em
+  // brassicas", Clemson Cole Crop Insect Pests). The family therefore stays
+  // pollinator - what is photographed is the adult on a flower - and only the
+  // cabbage white is pulled out. BINOMIAL and not genus on purpose: *Pieris*
+  // is also the Ericaceae shrub of arvores-e-arbustos-lenhosos.md, and a genus
+  // key would turn an andromeda bush into a pest insect.
+  'pieris rapae': 'pestInsect',
   // Reduviidae are beneficial assassin bugs EXCEPT subfamily Triatominae, the
   // Chagas vectors, which carry the app's most serious safety protocol.
   triatoma: 'pestInsect',
@@ -179,7 +205,45 @@ const CROP_FAMILY = {
   oxalidaceae: 'vegCrop',
 };
 
-/** Family -> group, for every other category. */
+/**
+ * Families whose group only becomes single-valued once you know WHAT was
+ * photographed. Consulted right before FAMILY, and only for the category
+ * listed - any other category falls through to `null`, which is the honest
+ * answer for a family the dossiers split across three groups.
+ */
+const FAMILY_BY_CATEGORY = {
+  // The only palm the dossiers describe is the INDOOR one:
+  // folhagens-tropicais-de-interior.md and samambaias-e-plantas-de-sombra.md
+  // both name *Chamaedorea elegans*, in a pot and in a terrarium. A grown
+  // coconut is not that plant, so on the tree category Arecaceae stays
+  // unmapped instead of collecting houseplant watering advice.
+  arecaceae: { plant: 'tropicalFoliage' },
+  // arvores-e-arbustos-lenhosos.md defines its group by "madeira persistente +
+  // gemas aereas, nao o porte" - a Fabaceae photographed as a TREE has both by
+  // definition. In a bed the same family is bean, pea or clover, three
+  // different destinations, so there it stays unmapped.
+  fabaceae: { tree: 'woody' },
+};
+
+/**
+ * Family -> group, for every other category.
+ *
+ * TWO HUGE FAMILIES ARE MISSING ON PURPOSE, and adding them would be the bug,
+ * not the fix:
+ *  - Poaceae. Outside a field it is lawn, bamboo and ornamental grass, and the
+ *    corpus has no dossier for any of those. Its only garden entry is sweet
+ *    corn (frutiferas-e-hortalicas.md), handled by genus in TAXON; the cereals
+ *    are handled by CROP_FAMILY.
+ *  - Euphorbiaceae. The corpus scatters it across three groups: succulent
+ *    *Euphorbia* (suculentas-e-cactos.md), *Manihot* as a crop
+ *    (lavouras-hortalicas-e-frutiferas.md, reached through CROP_FAMILY) and
+ *    *Ricinus* on the high-danger list of seguranca-plantas-toxicas.md. And
+ *    the split is not even at genus level: the same *Euphorbia* covers the
+ *    spiny succulents that "enganam muito" and the poinsettia, which is
+ *    watered like any flowering pot plant. Nothing in the identified entity
+ *    tells those apart, so mapping the family would hand a soak-and-dry desert
+ *    regime to the exact plants the dossier warns are only cactus-shaped.
+ */
 const FAMILY = {
   // ---- Suculentas e cactos -------------------------------------------------
   cactaceae: 'succulent', // desert cacti; the forest ones are caught by TAXON
@@ -508,9 +572,15 @@ const FAMILY = {
   laridae: 'gardenBird',
   charadriidae: 'gardenBird',
   phasianidae: 'gardenBird',
-  anatidae: 'gardenBird',
-  ardeidae: 'gardenBird',
   // Forest-exclusive and migratory-exclusive families.
+  // Anatidae and Ardeidae belong HERE, not above: neither appears in the
+  // "quem entra neste grupo" tables of aves-de-jardim-e-urbanas.md, and both
+  // are listed by name in aves-de-mata-e-migratorias.md among the families
+  // relevant on the migratory axis. The garden manual is a bird-feeder manual
+  // (seed, hygiene, cats) and has nothing to say to someone looking at a heron
+  // or a duck on the water.
+  anatidae: 'forestBird',
+  ardeidae: 'forestBird',
   ramphastidae: 'forestBird',
   bucconidae: 'forestBird',
   galbulidae: 'forestBird',
@@ -603,6 +673,21 @@ export function getSpeciesGroup(entity) {
   const family = norm(entity.family);
   const ord = norm(entity.ord);
 
+  // A commercial field is a different manual from a backyard bed, so `crop`
+  // answers from ONE table and stops there.
+  //
+  // It has to run before TAXON, not after: TAXON only knows garden and
+  // houseplant cases, and its `lactuca`, `daucus`, `apium`, `allium` and
+  // `cichorium` keys are precisely the biggest vegetable crops there are. With
+  // the genus checked first, a field of *Lactuca sativa* was reading the
+  // backyard manual (frutiferas-e-hortalicas.md) instead of the field one
+  // (lavouras-hortalicas-e-frutiferas.md) - different scale, different
+  // irrigation, different rotation.
+  //
+  // And when the family is missing the answer is `null`, deliberately: a crop
+  // with no taxonomy gets the universal manual, never the garden one.
+  if (category === 'crop') return CROP_FAMILY[family] || null;
+
   // Binomial first, then genus. `scientific` is "Genus species" for every
   // category that sends it; anything else simply misses both lookups.
   const scientific = norm(entity.scientific);
@@ -613,9 +698,7 @@ export function getSpeciesGroup(entity) {
     if (TAXON[genus]) return TAXON[genus];
   }
 
-  // A commercial field is a different manual from a backyard bed, even for the
-  // identical family - so `crop` gets its own table before the general one.
-  if (category === 'crop' && CROP_FAMILY[family]) return CROP_FAMILY[family];
+  if (FAMILY_BY_CATEGORY[family]) return FAMILY_BY_CATEGORY[family][category] || null;
 
   if (FAMILY[family]) return FAMILY[family];
   if (ORDER[ord]) return ORDER[ord];
@@ -668,10 +751,57 @@ export function selfCheck() {
   eq(getSpeciesGroup({ category: 'plant', family: 'Moraceae', scientific: 'Ficus lyrata' }), 'tropicalFoliage', 'Ficus houseplant');
   eq(getSpeciesGroup({ category: 'plant', family: 'Moraceae', scientific: 'Ficus carica' }), 'fruitVeg', 'Ficus fig');
 
-  // The crop table only applies on the crop category.
+  // An epiphytic cactus is NOT a desert cactus - same family, opposite water
+  // regime (suculentas-e-cactos.md: "manejo oposto"). Both directions checked,
+  // so collapsing them back into one group fails here.
+  const desert = getSpeciesGroup({ category: 'plant', family: 'Cactaceae', scientific: 'Echinocactus grusonii' });
+  const forest = getSpeciesGroup({ category: 'plant', family: 'Cactaceae', scientific: 'Schlumbergera truncata' });
+  eq(desert, 'succulent', 'desert cactus');
+  eq(forest, 'orchid', 'forest cactus');
+  if (desert === forest) throw new Error('epiphytic cactus resolved to the desert group');
+  eq(getSpeciesGroup({ category: 'plant', family: 'Cactaceae', scientific: 'Rhipsalis baccifera' }), 'orchid', 'Rhipsalis');
+
+  // The crop table only applies on the crop category, and it wins over the
+  // garden genus overrides - a field of lettuce is not a backyard bed.
   eq(getSpeciesGroup({ category: 'crop', family: 'Poaceae' }), 'grainCrop', 'crop poaceae');
   eq(getSpeciesGroup({ category: 'crop', family: 'Solanaceae' }), 'vegCrop', 'crop solanaceae');
   eq(getSpeciesGroup({ category: 'plant', family: 'Solanaceae' }), 'fruitVeg', 'garden solanaceae');
+  eq(
+    getSpeciesGroup({ category: 'crop', family: 'Asteraceae', scientific: 'Lactuca sativa' }),
+    'vegCrop',
+    'crop beats the garden genus'
+  );
+  eq(getSpeciesGroup({ category: 'crop', scientific: 'Lactuca sativa' }), null, 'crop without family');
+
+  // Waterfowl read the migratory manual, not the bird-feeder one.
+  eq(getSpeciesGroup({ category: 'bird', family: 'Ardeidae' }), 'forestBird', 'heron');
+  eq(getSpeciesGroup({ category: 'bird', family: 'Anatidae' }), 'forestBird', 'duck');
+  eq(getSpeciesGroup({ category: 'bird', family: 'Turdidae' }), 'gardenBird', 'thrush stays a garden bird');
+
+  // Cabbage white: pest by binomial, while the family stays a pollinator and
+  // the homonym shrub genus is untouched.
+  eq(
+    getSpeciesGroup({ category: 'insect', family: 'Pieridae', scientific: 'Pieris rapae' }),
+    'pestInsect',
+    'Pieris rapae'
+  );
+  eq(getSpeciesGroup({ category: 'insect', family: 'Pieridae', scientific: 'Colias croceus' }), 'pollinator', 'other Pieridae');
+  eq(getSpeciesGroup({ category: 'plant', family: 'Ericaceae', scientific: 'Pieris japonica' }), 'woody', 'Pieris the shrub');
+
+  // Pineapple is food, not an epiphyte, on both scales.
+  eq(getSpeciesGroup({ category: 'plant', family: 'Bromeliaceae', scientific: 'Ananas comosus' }), 'fruitVeg', 'pineapple');
+  eq(getSpeciesGroup({ category: 'crop', family: 'Bromeliaceae', scientific: 'Ananas comosus' }), 'vegCrop', 'pineapple field');
+  eq(getSpeciesGroup({ category: 'plant', family: 'Bromeliaceae', scientific: 'Tillandsia usneoides' }), 'orchid', 'air plant');
+
+  // Families that answer only for one category, and stay silent for the other.
+  eq(getSpeciesGroup({ category: 'plant', family: 'Arecaceae' }), 'tropicalFoliage', 'indoor palm');
+  eq(getSpeciesGroup({ category: 'tree', family: 'Arecaceae' }), null, 'grown palm');
+  eq(getSpeciesGroup({ category: 'tree', family: 'Fabaceae' }), 'woody', 'legume tree');
+  eq(getSpeciesGroup({ category: 'plant', family: 'Fabaceae' }), null, 'legume in a bed');
+
+  // Deliberate gaps: a group here would be a wrong manual, not a missing one.
+  eq(getSpeciesGroup({ category: 'plant', family: 'Euphorbiaceae' }), null, 'Euphorbiaceae stays unmapped');
+  eq(getSpeciesGroup({ category: 'plant', family: 'Poaceae' }), null, 'Poaceae stays unmapped');
 
   // Order is the fallback, never a shortcut past a known family.
   eq(getSpeciesGroup({ category: 'fish', ord: 'Characiformes' }), 'freshwaterFish', 'order fallback');

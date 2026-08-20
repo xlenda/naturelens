@@ -344,7 +344,25 @@
     "maintenanceLow": "Laag",
     "maintenanceMedium": "Gemiddeld",
     "maintenanceHigh": "Hoog",
-    "chipPetSafe": "Veilig voor huisdieren"
+    "chipPetSafe": "Veilig voor huisdieren",
+    "speciesCareSection": "Verzorging van deze soort",
+    "speciesCareNote": "Deze cijfers gelden voor {{species}} zelf, niet voor de groep.",
+    "speciesCareSource": "Bron: {{citation}}",
+    "usdaMoisture": "Waterbehoefte",
+    "usdaDrought": "Droogtetolerantie",
+    "usdaFertility": "Mestbehoefte",
+    "usdaShade": "Schaduwtolerantie",
+    "usdaPh": "pH van de grond",
+    "usdaTempMin": "Verdraagt tot",
+    "usdaRootDepth": "Minimale grondlaag",
+    "usdaBloom": "Bloei",
+    "levelLow": "Laag",
+    "levelMedium": "Gemiddeld",
+    "levelHigh": "Hoog",
+    "levelNone": "Geen",
+    "bloomEarly": "{{season}} (begin)",
+    "bloomMid": "{{season}} (midden)",
+    "bloomLate": "{{season}} (eind)"
   },
   "disease": {
     "overviewSection": "Overzicht",
@@ -2443,7 +2461,8 @@
     "free": "Gratis",
     "unlockFor": "Ontgrendel voor {{count}} tokens",
     "chaptersLabel": "Hoofdstukken",
-    "notEnoughTokens": "Nog niet genoeg tokens – identificeer soorten om meer te verdienen."
+    "notEnoughTokens": "Nog niet genoeg tokens – identificeer soorten om meer te verdienen.",
+    "missingBody": "Dit boek is niet meer beschikbaar."
   },
   "about": {
     "appInfo": "App-info",
@@ -2451,6 +2470,7 @@
     "visitSite": "Website bezoeken",
     "fullDocLabel": "Volledig juridisch document",
     "whatBody": "NatureLens herkent planten, insecten, paddenstoelen, gewassen, vissen, vogels en zelfs geluiden op basis van een foto of opname, en maakt van je vondsten een persoonlijke natuurcollectie.",
-    "creditsBody": "Identificatie door Kindwise (planten, insecten, paddenstoelen, gewassen), Fishial (vissen), Nyckel (vogels) en ons eigen geluidsmodel. Referentiefoto's van Wikipedia / Wikimedia Commons, met bronvermelding waar ze verschijnen. Specialistenchat beantwoord door AI (Anthropic)."
+    "creditsBody": "Identificatie door Kindwise (planten, insecten, paddenstoelen, gewassen), Fishial (vissen), Nyckel (vogels) en ons eigen geluidsmodel. Referentiefoto's van Wikipedia / Wikimedia Commons, met bronvermelding waar ze verschijnen. Specialistenchat beantwoord door AI (Anthropic).",
+    "creditsGbif": "Verspreidingskaarten en seizoensgrafieken van GBIF.org, opgevraagd met de wetenschappelijke naam van de soort — er worden geen gegevens over jou verstuurd."
   }
 }

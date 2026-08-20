@@ -46,7 +46,7 @@ const BOTTOM_ROW = new Set(['Collection', 'Profile', 'Discover', 'Botanist']);
 const HIDE_DOCK_ON = new Set([
   'PlantDetail', 'TreeDetail', 'InsectDetail', 'MushroomDetail', 'CropDetail',
   'FishDetail', 'BirdDetail', 'SoundDetail', 'CareTopics', 'HerbDetail',
-  'SpeciesDetail', 'FieldGuide', 'Book', 'Settings', 'Language', 'About',
+  'SpeciesDetail', 'TopicDetail', 'FieldGuide', 'Book', 'Settings', 'Language', 'About',
   'Privacy', 'Terms', 'Help', 'Subscription', 'RestoreAccess', 'Store',
   'Achievements', 'MonthlyRecap',
 ]);

@@ -1,6 +1,6 @@
 import React, { useState, useCallback } from 'react';
 import { View, Text, StyleSheet, ScrollView, TouchableOpacity, Platform } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useNavigation, useFocusEffect } from '@react-navigation/native';
 import { useTranslation } from 'react-i18next';
 import { Ionicons } from '@expo/vector-icons';
@@ -26,6 +26,7 @@ import { trackRewardRedeemed } from '../components/tracking';
 export default function BookScreen({ route }) {
   const navigation = useNavigation();
   const { t } = useTranslation();
+  const insets = useSafeAreaInsets();
   const { alertConfig, showAlert, hideAlert } = useAppAlert();
   const book = getBook(route.params?.bookId);
 
@@ -41,8 +42,58 @@ export default function BookScreen({ route }) {
     }, [book])
   );
 
+  // A MESMA barra de topo nos dois estados. Era exatamente ela que faltava no
+  // caminho do livro inexistente: sem chevron a tela nao tinha saida.
+  const topBar = (heading) => (
+    <View style={styles.topBar}>
+      <TouchableOpacity
+        style={styles.iconBtn}
+        onPress={() => navigation.goBack()}
+        accessibilityRole="button"
+        accessibilityLabel={t('common.goBack')}
+      >
+        <BackChevron size={22} color={colors.text} />
+      </TouchableOpacity>
+      <Text style={styles.topTitle} accessibilityRole="header" numberOfLines={1}>
+        {heading}
+      </Text>
+      <View style={styles.iconBtn} />
+    </View>
+  );
+
   // After the hooks on purpose - hook order must not depend on a bad param.
-  if (!book) return null;
+  //
+  // Livro que nao existe (id antigo num atalho salvo, catalogo reorganizado):
+  // era `return null`, ou seja tela 100% vazia, sem topo e sem chevron - so
+  // fechando o app. Agora diz o que houve e devolve a pessoa de onde veio.
+  if (!book) {
+    return (
+      <SafeAreaView style={styles.container} edges={['top']}>
+        {topBar(t('books.shelfTitle'))}
+        <View style={styles.missing}>
+          <Ionicons
+            name="book-outline"
+            size={40}
+            color={colors.textMuted}
+            accessibilityElementsHidden={true}
+            importantForAccessibility="no-hide-descendants"
+          />
+          <Text style={styles.missingText}>{t('books.missingBody')}</Text>
+          <PressScale>
+            <TouchableOpacity
+              style={styles.missingBtn}
+              onPress={() => navigation.goBack()}
+              activeOpacity={0.85}
+              accessibilityRole="button"
+              accessibilityLabel={t('common.goBack')}
+            >
+              <Text style={styles.missingBtnText}>{t('common.goBack')}</Text>
+            </TouchableOpacity>
+          </PressScale>
+        </View>
+      </SafeAreaView>
+    );
+  }
 
   const title = t(`discover.topics.${book.topicKey}.title`);
   const chaptersRaw = t(`discover.topics.${book.topicKey}.species`, { returnObjects: true });
@@ -125,22 +176,15 @@ export default function BookScreen({ route }) {
 
   return (
     <SafeAreaView style={styles.container} edges={['top']}>
-      <View style={styles.topBar}>
-        <TouchableOpacity
-          style={styles.iconBtn}
-          onPress={() => navigation.goBack()}
-          accessibilityRole="button"
-          accessibilityLabel={t('common.goBack')}
-        >
-          <BackChevron size={22} color={colors.text} />
-        </TouchableOpacity>
-        <Text style={styles.topTitle} accessibilityRole="header" numberOfLines={1}>
-          {title}
-        </Text>
-        <View style={styles.iconBtn} />
-      </View>
+      {topBar(title)}
 
-      <ScrollView contentContainerStyle={styles.scroll} showsVerticalScrollIndicator={false}>
+      {/* insets.bottom: o dock some nesta rota (HIDE_DOCK_ON) e era ele que
+          carregava o respiro da area segura de baixo - sem isto a ultima linha
+          encosta na barra de gestos. */}
+      <ScrollView
+        contentContainerStyle={[styles.scroll, { paddingBottom: 40 + insets.bottom }]}
+        showsVerticalScrollIndicator={false}
+      >
         {/* Capa-hero: the cover species' real photo as a full-bleed tile,
             fading into the page background (PlantHero pattern). FindThumb
             degrades to the collection icon when the photo cannot load. */}
@@ -232,6 +276,16 @@ const styles = StyleSheet.create({
   },
   topTitle: { flex: 1, fontSize: 16, fontWeight: '700', color: colors.text, textAlign: 'center', marginHorizontal: 8 },
   scroll: { padding: 20, paddingTop: 0, paddingBottom: 40 },
+  missing: { flex: 1, alignItems: 'center', justifyContent: 'center', gap: 14, padding: 32 },
+  missingText: { color: colors.textSecondary, fontSize: 14.5, lineHeight: 21, textAlign: 'center' },
+  missingBtn: {
+    backgroundColor: colors.accent,
+    borderRadius: 14,
+    paddingHorizontal: 26,
+    paddingVertical: 13,
+    ...shadow,
+  },
+  missingBtnText: { color: colors.white, fontWeight: '700', fontSize: 14.5 },
   // Full-bleed: negative margins cancel the scroll gutter so the cover photo
   // reaches both edges; the fade melts it into the page background.
   hero: {

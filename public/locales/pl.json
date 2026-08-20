@@ -344,7 +344,25 @@
     "maintenanceLow": "Niska",
     "maintenanceMedium": "Średnia",
     "maintenanceHigh": "Wysoka",
-    "chipPetSafe": "Bezpieczna dla zwierząt"
+    "chipPetSafe": "Bezpieczna dla zwierząt",
+    "speciesCareSection": "Pielęgnacja tego gatunku",
+    "speciesCareNote": "Te wartości dotyczą samego gatunku {{species}}, a nie jego grupy.",
+    "speciesCareSource": "Źródło: {{citation}}",
+    "usdaMoisture": "Potrzeba wody",
+    "usdaDrought": "Odporność na suszę",
+    "usdaFertility": "Potrzeba nawozu",
+    "usdaShade": "Tolerancja cienia",
+    "usdaPh": "pH gleby",
+    "usdaTempMin": "Wytrzymuje do",
+    "usdaRootDepth": "Minimalna głębokość gleby",
+    "usdaBloom": "Kwitnienie",
+    "levelLow": "Niska",
+    "levelMedium": "Średnia",
+    "levelHigh": "Wysoka",
+    "levelNone": "Brak",
+    "bloomEarly": "{{season}} (początek)",
+    "bloomMid": "{{season}} (środek)",
+    "bloomLate": "{{season}} (koniec)"
   },
   "disease": {
     "overviewSection": "Przegląd",
@@ -2443,7 +2461,8 @@
     "free": "Za darmo",
     "unlockFor": "Odblokuj za {{count}} tokenów",
     "chaptersLabel": "Rozdziały",
-    "notEnoughTokens": "Za mało tokenów — identyfikuj gatunki, aby zdobyć więcej."
+    "notEnoughTokens": "Za mało tokenów — identyfikuj gatunki, aby zdobyć więcej.",
+    "missingBody": "Ta książka nie jest już dostępna."
   },
   "about": {
     "appInfo": "Informacje o aplikacji",
@@ -2451,6 +2470,7 @@
     "visitSite": "Odwiedź stronę",
     "fullDocLabel": "Pełny dokument prawny",
     "whatBody": "NatureLens rozpoznaje rośliny, owady, grzyby, uprawy, ryby, ptaki, a nawet dźwięki na podstawie zdjęcia lub nagrania i zamienia Twoje znaleziska w osobistą kolekcję przyrodniczą.",
-    "creditsBody": "Identyfikacja: Kindwise (rośliny, owady, grzyby, uprawy), Fishial (ryby), Nyckel (ptaki) oraz nasz własny model dźwięku. Zdjęcia referencyjne z Wikipedia / Wikimedia Commons, z podaniem autorstwa tam, gdzie się pojawiają. Czat ze specjalistką obsługiwany przez AI (Anthropic)."
+    "creditsBody": "Identyfikacja: Kindwise (rośliny, owady, grzyby, uprawy), Fishial (ryby), Nyckel (ptaki) oraz nasz własny model dźwięku. Zdjęcia referencyjne z Wikipedia / Wikimedia Commons, z podaniem autorstwa tam, gdzie się pojawiają. Czat ze specjalistką obsługiwany przez AI (Anthropic).",
+    "creditsGbif": "Mapy występowania i wykresy sezonowe z GBIF.org, pobierane na podstawie naukowej nazwy gatunku — żadne Twoje dane nie są wysyłane."
   }
 }

@@ -344,7 +344,25 @@
     "maintenanceLow": "Lav",
     "maintenanceMedium": "Middel",
     "maintenanceHigh": "Høj",
-    "chipPetSafe": "Sikker for kæledyr"
+    "chipPetSafe": "Sikker for kæledyr",
+    "speciesCareSection": "Pleje af denne art",
+    "speciesCareNote": "Disse tal gælder {{species}} selv, ikke dens gruppe.",
+    "speciesCareSource": "Kilde: {{citation}}",
+    "usdaMoisture": "Vandbehov",
+    "usdaDrought": "Tørketolerance",
+    "usdaFertility": "Gødningsbehov",
+    "usdaShade": "Skyggetolerance",
+    "usdaPh": "Jordens pH",
+    "usdaTempMin": "Tåler ned til",
+    "usdaRootDepth": "Mindste jorddybde",
+    "usdaBloom": "Blomstring",
+    "levelLow": "Lav",
+    "levelMedium": "Middel",
+    "levelHigh": "Høj",
+    "levelNone": "Ingen",
+    "bloomEarly": "{{season}} (tidlig)",
+    "bloomMid": "{{season}} (midt)",
+    "bloomLate": "{{season}} (sen)"
   },
   "disease": {
     "overviewSection": "Oversigt",
@@ -2443,7 +2461,8 @@
     "free": "Gratis",
     "unlockFor": "Lås op for {{count}} tokens",
     "chaptersLabel": "Kapitler",
-    "notEnoughTokens": "Ikke nok tokens endnu – identificér arter for at optjene flere."
+    "notEnoughTokens": "Ikke nok tokens endnu – identificér arter for at optjene flere.",
+    "missingBody": "Denne bog er ikke længere tilgængelig."
   },
   "about": {
     "appInfo": "Appinfo",
@@ -2451,6 +2470,7 @@
     "visitSite": "Besøg webstedet",
     "fullDocLabel": "Fuldt juridisk dokument",
     "whatBody": "NatureLens identificerer planter, insekter, svampe, afgrøder, fisk, fugle og endda lyde ud fra et foto eller en optagelse og forvandler dine fund til en personlig natursamling.",
-    "creditsBody": "Identifikation af Kindwise (planter, insekter, svampe, afgrøder), Fishial (fisk), Nyckel (fugle) og vores egen lydmodel. Referencefotos fra Wikipedia / Wikimedia Commons, krediteret hvor de vises. Specialistchat besvares af AI (Anthropic)."
+    "creditsBody": "Identifikation af Kindwise (planter, insekter, svampe, afgrøder), Fishial (fisk), Nyckel (fugle) og vores egen lydmodel. Referencefotos fra Wikipedia / Wikimedia Commons, krediteret hvor de vises. Specialistchat besvares af AI (Anthropic).",
+    "creditsGbif": "Udbredelseskort og sæsondiagrammer fra GBIF.org, hentet ud fra artens videnskabelige navn – der sendes ingen oplysninger om dig."
   }
 }

@@ -344,7 +344,25 @@
     "maintenanceLow": "Düşük",
     "maintenanceMedium": "Orta",
     "maintenanceHigh": "Yüksek",
-    "chipPetSafe": "Evcil hayvanlar için güvenli"
+    "chipPetSafe": "Evcil hayvanlar için güvenli",
+    "speciesCareSection": "Bu türün bakımı",
+    "speciesCareNote": "Bu değerler {{species}} türünün kendisine aittir, grubuna değil.",
+    "speciesCareSource": "Kaynak: {{citation}}",
+    "usdaMoisture": "Su ihtiyacı",
+    "usdaDrought": "Kuraklık toleransı",
+    "usdaFertility": "Gübre ihtiyacı",
+    "usdaShade": "Gölge toleransı",
+    "usdaPh": "Toprak pH'ı",
+    "usdaTempMin": "Dayandığı en düşük sıcaklık",
+    "usdaRootDepth": "En az toprak derinliği",
+    "usdaBloom": "Çiçeklenme",
+    "levelLow": "Düşük",
+    "levelMedium": "Orta",
+    "levelHigh": "Yüksek",
+    "levelNone": "Yok",
+    "bloomEarly": "{{season}} başı",
+    "bloomMid": "{{season}} ortası",
+    "bloomLate": "{{season}} sonu"
   },
   "disease": {
     "overviewSection": "Genel Bakış",
@@ -2443,7 +2461,8 @@
     "free": "Ücretsiz",
     "unlockFor": "{{count}} token karşılığında aç",
     "chaptersLabel": "Bölümler",
-    "notEnoughTokens": "Henüz yeterli token yok — daha fazla kazanmak için türleri tanımla."
+    "notEnoughTokens": "Henüz yeterli token yok — daha fazla kazanmak için türleri tanımla.",
+    "missingBody": "Bu kitap artık mevcut değil."
   },
   "about": {
     "appInfo": "Uygulama bilgisi",
@@ -2451,6 +2470,7 @@
     "visitSite": "Web sitesini ziyaret et",
     "fullDocLabel": "Tam yasal belge",
     "whatBody": "NatureLens bir fotoğraf veya kayıttan bitkileri, böcekleri, mantarları, ekinleri, balıkları, kuşları ve hatta sesleri tanımlar ve bulduklarınızı kişisel bir doğa koleksiyonuna dönüştürür.",
-    "creditsBody": "Tanımlama: Kindwise (bitkiler, böcekler, mantarlar, ekinler), Fishial (balıklar), Nyckel (kuşlar) ve kendi ses modelimiz. Referans fotoğraflar Wikipedia / Wikimedia Commons kaynaklıdır ve göründükleri yerde kaynak belirtilmiştir. Uzman sohbeti yapay zekâ (Anthropic) tarafından yanıtlanır."
+    "creditsBody": "Tanımlama: Kindwise (bitkiler, böcekler, mantarlar, ekinler), Fishial (balıklar), Nyckel (kuşlar) ve kendi ses modelimiz. Referans fotoğraflar Wikipedia / Wikimedia Commons kaynaklıdır ve göründükleri yerde kaynak belirtilmiştir. Uzman sohbeti yapay zekâ (Anthropic) tarafından yanıtlanır.",
+    "creditsGbif": "Yayılış haritaları ve mevsim grafikleri GBIF.org'dan, türün bilimsel adıyla sorgulanarak alınır — sizinle ilgili hiçbir veri gönderilmez."
   }
 }

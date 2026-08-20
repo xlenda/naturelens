@@ -8,8 +8,9 @@ import {
   KeyboardAvoidingView,
   Platform,
   ActivityIndicator,
+  ScrollView,
 } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useNavigation } from '@react-navigation/native';
 import { useTranslation } from 'react-i18next';
 import { Ionicons } from '@expo/vector-icons';
@@ -22,6 +23,7 @@ import { requestRestoreCode, verifyRestoreCode, signInWithPassword, getGoogleSig
 export default function RestoreAccessScreen() {
   const navigation = useNavigation();
   const { t } = useTranslation();
+  const insets = useSafeAreaInsets();
 
   const [mode, setMode] = useState('code'); // 'code' | 'password'
   const [step, setStep] = useState('email'); // 'email' | 'code' | 'done'
@@ -123,7 +125,18 @@ export default function RestoreAccessScreen() {
         style={{ flex: 1 }}
         behavior={Platform.OS === 'ios' ? 'padding' : undefined}
       >
-        <View style={styles.content}>
+        {/* Sem ScrollView esta tela nao rolava NADA: em aparelho pequeno (ou
+            com o teclado aberto) o botao de enviar o codigo ficava abaixo da
+            dobra e era inalcancavel - o unico caminho de quem pagou pra
+            destravar o aparelho. insets.bottom porque o dock some nesta rota
+            (HIDE_DOCK_ON) e era ele que dava o respiro de baixo.
+            keyboardShouldPersistTaps: com TextInput dentro de ScrollView o
+            primeiro toque no botao so fecharia o teclado. */}
+        <ScrollView
+          contentContainerStyle={[styles.content, { paddingBottom: 24 + insets.bottom }]}
+          showsVerticalScrollIndicator={false}
+          keyboardShouldPersistTaps="handled"
+        >
           {step === 'email' && Platform.OS === 'web' && (
             <TouchableOpacity
               style={styles.googleBtn}
@@ -305,7 +318,7 @@ export default function RestoreAccessScreen() {
               </TouchableOpacity>
             </>
           )}
-        </View>
+        </ScrollView>
       </KeyboardAvoidingView>
     </SafeAreaView>
   );
@@ -331,7 +344,9 @@ const styles = StyleSheet.create({
   },
   iconBtnPlaceholder: { width: 40, height: 40 },
   topTitle: { fontSize: 16, fontWeight: '700', color: colors.text },
-  content: { flex: 1, padding: 20, paddingTop: 24 },
+  // flexGrow, nunca flex: num contentContainerStyle o flex: 1 prende o
+  // conteudo na altura da janela e o ScrollView volta a nao rolar.
+  content: { flexGrow: 1, padding: 20, paddingTop: 24 },
   googleBtn: {
     flexDirection: 'row',
     alignItems: 'center',

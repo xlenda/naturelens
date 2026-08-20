@@ -344,7 +344,25 @@
     "maintenanceLow": "Lågt",
     "maintenanceMedium": "Medel",
     "maintenanceHigh": "Högt",
-    "chipPetSafe": "Säker för husdjur"
+    "chipPetSafe": "Säker för husdjur",
+    "speciesCareSection": "Skötsel av denna art",
+    "speciesCareNote": "Dessa värden gäller {{species}} själv, inte dess grupp.",
+    "speciesCareSource": "Källa: {{citation}}",
+    "usdaMoisture": "Vattenbehov",
+    "usdaDrought": "Torktålighet",
+    "usdaFertility": "Gödselbehov",
+    "usdaShade": "Skuggtålighet",
+    "usdaPh": "Jordens pH",
+    "usdaTempMin": "Tål ned till",
+    "usdaRootDepth": "Minsta jorddjup",
+    "usdaBloom": "Blomning",
+    "levelLow": "Låg",
+    "levelMedium": "Medel",
+    "levelHigh": "Hög",
+    "levelNone": "Ingen",
+    "bloomEarly": "{{season}} (tidig)",
+    "bloomMid": "{{season}} (mitten)",
+    "bloomLate": "{{season}} (sen)"
   },
   "disease": {
     "overviewSection": "Översikt",
@@ -2443,7 +2461,8 @@
     "free": "Gratis",
     "unlockFor": "Lås upp för {{count}} tokens",
     "chaptersLabel": "Kapitel",
-    "notEnoughTokens": "Inte tillräckligt med tokens än – identifiera arter för att tjäna fler."
+    "notEnoughTokens": "Inte tillräckligt med tokens än – identifiera arter för att tjäna fler.",
+    "missingBody": "Den här boken är inte längre tillgänglig."
   },
   "about": {
     "appInfo": "Appinfo",
@@ -2451,6 +2470,7 @@
     "visitSite": "Besök webbplatsen",
     "fullDocLabel": "Fullständigt juridiskt dokument",
     "whatBody": "NatureLens identifierar växter, insekter, svampar, grödor, fiskar, fåglar och till och med ljud utifrån ett foto eller en inspelning, och gör dina fynd till en personlig natursamling.",
-    "creditsBody": "Identifiering av Kindwise (växter, insekter, svampar, grödor), Fishial (fiskar), Nyckel (fåglar) och vår egen ljudmodell. Referensfoton från Wikipedia / Wikimedia Commons, med erkännande där de visas. Specialistchatten besvaras av AI (Anthropic)."
+    "creditsBody": "Identifiering av Kindwise (växter, insekter, svampar, grödor), Fishial (fiskar), Nyckel (fåglar) och vår egen ljudmodell. Referensfoton från Wikipedia / Wikimedia Commons, med erkännande där de visas. Specialistchatten besvaras av AI (Anthropic).",
+    "creditsGbif": "Utbredningskartor och säsongsdiagram från GBIF.org, hämtade med artens vetenskapliga namn – inga uppgifter om dig skickas."
   }
 }

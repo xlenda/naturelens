@@ -344,7 +344,25 @@
     "scheduleNow": "目前",
     "scheduleGroupNote": "本日曆針對 {{group}} 這一類群，而非這一具體物種。",
     "scheduleGroupNoteShort": "本日曆針對該物種所屬的類群，而非這一具體物種。",
-    "scheduleNoLocation": "沒有你的位置資訊，我們無法判斷目前季節，因此沒有標示任何一欄。"
+    "scheduleNoLocation": "沒有你的位置資訊，我們無法判斷目前季節，因此沒有標示任何一欄。",
+    "speciesCareSection": "該物種的養護",
+    "speciesCareNote": "這些數值針對 {{species}} 本身，而非它所屬的類群。",
+    "speciesCareSource": "來源：{{citation}}",
+    "usdaMoisture": "需水量",
+    "usdaDrought": "耐旱性",
+    "usdaFertility": "需肥量",
+    "usdaShade": "耐陰性",
+    "usdaPh": "土壤 pH",
+    "usdaTempMin": "可耐最低溫度",
+    "usdaRootDepth": "最小土層深度",
+    "usdaBloom": "花期",
+    "levelLow": "低",
+    "levelMedium": "中",
+    "levelHigh": "高",
+    "levelNone": "無",
+    "bloomEarly": "{{season}}初",
+    "bloomMid": "{{season}}中",
+    "bloomLate": "{{season}}末"
   },
   "disease": {
     "overviewSection": "概觀",
@@ -2443,7 +2461,8 @@
     "free": "免費",
     "unlockFor": "用 {{count}} 代幣解鎖",
     "chaptersLabel": "章節",
-    "notEnoughTokens": "代幣不足——識別物種來賺取更多。"
+    "notEnoughTokens": "代幣不足——識別物種來賺取更多。",
+    "missingBody": "這本書已不再提供。"
   },
   "about": {
     "appInfo": "應用程式資訊",
@@ -2451,6 +2470,7 @@
     "visitSite": "造訪網站",
     "fullDocLabel": "完整法律文件",
     "whatBody": "NatureLens 可透過照片或錄音辨識植物、昆蟲、蘑菇、農作物、魚類、鳥類甚至聲音，並將你的發現變成專屬的自然收藏。",
-    "creditsBody": "辨識由 Kindwise（植物、昆蟲、蘑菇、農作物）、Fishial（魚類）、Nyckel（鳥類）以及我們自己的聲音模型提供。參考照片來自 Wikipedia / Wikimedia Commons，並在出現處註明來源。專家聊天由 AI（Anthropic）回答。"
+    "creditsBody": "辨識由 Kindwise（植物、昆蟲、蘑菇、農作物）、Fishial（魚類）、Nyckel（鳥類）以及我們自己的聲音模型提供。參考照片來自 Wikipedia / Wikimedia Commons，並在出現處註明來源。專家聊天由 AI（Anthropic）回答。",
+    "creditsGbif": "分布地圖與季節圖表來自 GBIF.org，僅以物種的學名查詢，不會傳送任何關於你的資料。"
   }
 }

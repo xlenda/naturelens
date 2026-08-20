@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet, ScrollView, TouchableOpacity, Image, Platform, Linking } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, TouchableOpacity, Image, Platform } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useNavigation } from '@react-navigation/native';
 import { useTranslation } from 'react-i18next';
@@ -11,6 +11,9 @@ import PressScale from '../components/PressScale';
 
 const APP_VERSION = '1.0.0';
 const APP_URL = 'https://naturelensapp.cloud';
+// Endereco sem esquema, para IMPRIMIR no build de loja (ver o par de rotas la
+// embaixo). Nome de dominio nao passa por i18n.
+const APP_HOST = APP_URL.replace(/^https?:\/\//, '');
 
 // About the App - the competitor's trio (app info / credits / links) as its
 // own screen, reached from the Settings "About" section. Identity block first
@@ -46,14 +49,11 @@ export default function AboutScreen() {
   const navigation = useNavigation();
   const { t } = useTranslation();
 
-  // window.open on web (Linking.openURL is flaky in some mobile browsers /
-  // PWA standalone), Linking everywhere else - the app's standard split.
+  // So a web abre o site: no build de loja este botao nao existe mais (ver a
+  // linha do site no card de links). window.open em vez de Linking.openURL
+  // porque este ultimo e instavel em navegador mobile / PWA standalone.
   const openSite = () => {
-    if (Platform.OS === 'web') {
-      window.open(APP_URL, '_blank', 'noopener');
-    } else {
-      Linking.openURL(APP_URL);
-    }
+    window.open(APP_URL, '_blank', 'noopener');
   };
 
   return (
@@ -78,11 +78,34 @@ export default function AboutScreen() {
           <View style={styles.creditsBlock}>
             <Text style={styles.creditsTitle}>{t('about.creditsTitle')}</Text>
             <Text style={styles.creditsBody}>{t('about.creditsBody')}</Text>
+            {/* O GBIF recebe dado de TODO usuario (mapa de distribuicao e
+                grafico de estacao consultam a base pelo nome cientifico), e
+                estava creditado so na legenda de dentro do mapa. Credito
+                proprio aqui, dizendo o que sai daqui pra la. */}
+            <Text style={styles.creditsBody}>{t('about.creditsGbif')}</Text>
           </View>
         </View>
 
         <View style={styles.card}>
-          <LinkRow icon="globe-outline" label={t('about.visitSite')} onPress={openSite} />
+          {/* O site tem checkout Hotmart a dois toques da home, entao no build
+              de loja ele nao pode ser um LINK - politica de pagamentos do
+              Play. Vira o endereco como texto morto: sem toque, sem chevron,
+              sem window.open. Mesmo recurso do PaywallModal, que cita o site
+              em texto e nao oferece caminho de compra nenhum no APK. */}
+          {Platform.OS === 'web' ? (
+            <LinkRow icon="globe-outline" label={t('about.visitSite')} onPress={openSite} />
+          ) : (
+            <View style={[styles.row, styles.rowDivider]}>
+              <Ionicons
+                name="globe-outline"
+                size={19}
+                color={colors.accentLight}
+                accessibilityElementsHidden={true}
+                importantForAccessibility="no-hide-descendants"
+              />
+              <Text style={styles.rowLabel}>{APP_HOST}</Text>
+            </View>
+          )}
           <LinkRow
             icon="document-lock-outline"
             label={t('profile.privacyPolicy')}

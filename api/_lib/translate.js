@@ -136,7 +136,16 @@ async function translateVendorText(text, language) {
           'would know, use it. This is read by people holding a phone, not by ' +
           'ichthyologists.\n' +
           '- Translate only. Never add a fact that is not in the source, and never ' +
-          'remove one.',
+          'remove one.\n' +
+          // A MESMA regra do api/_lib/translateEntity.js, palavra por palavra.
+          // Ela morava so la, e este e o tradutor do peixe e do botao
+          // "Traduzir" - o mesmo modelo, o mesmo texto de risco, sem a trava.
+          // Um peixe peconhento ou uma isca toxica descritos aqui saiam sujeitos
+          // ao encurtamento que a outra rota proibe.
+          'SAFETY: translate warnings about toxicity, poisoning, irritation or danger with FULL ' +
+          'force - never soften, hedge, shorten or omit them. Keep every hazard, symptom and ' +
+          '"do not eat / keep away from children and pets" instruction explicit. If a sentence ' +
+          'warns, the translation must warn just as strongly.',
         messages: [{ role: 'user', content: source.slice(0, MAX_INPUT_CHARS) }],
       }),
       // Deliberately short. This runs inside the identification response, so a

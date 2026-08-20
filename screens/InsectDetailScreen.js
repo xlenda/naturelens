@@ -265,8 +265,12 @@ export default function InsectDetailScreen({ route }) {
             <SectionCard icon="warning-outline" title={t('detail.safetySection')} color={dangerColor}>
               {hasDanger && (
                 <View style={styles.tagRow}>
-                  {plant.danger.map((d) => (
-                    <Tag key={d} label={d} color={dangerColor} />
+                  {/* Rotulo traduzido pareado por INDICE com a tag crua: a cor
+                      de risco alto e escolhida casando o valor em ingles
+                      (HIGH_RISK_TAGS), entao a tag crua tem que sobreviver
+                      mesmo com a tela em outro idioma (auditoria 20/08). */}
+                  {plant.danger.map((d, i) => (
+                    <Tag key={d} label={plant.dangerLabel?.[i] || d} color={dangerColor} />
                   ))}
                 </View>
               )}

@@ -344,7 +344,25 @@
     "maintenanceLow": "낮음",
     "maintenanceMedium": "보통",
     "maintenanceHigh": "높음",
-    "chipPetSafe": "반려동물에게 안전"
+    "chipPetSafe": "반려동물에게 안전",
+    "speciesCareSection": "이 종의 관리",
+    "speciesCareNote": "이 수치는 {{species}} 자체의 값이며, 소속 그룹의 값이 아닙니다.",
+    "speciesCareSource": "출처: {{citation}}",
+    "usdaMoisture": "물 요구량",
+    "usdaDrought": "가뭄 내성",
+    "usdaFertility": "비료 요구량",
+    "usdaShade": "그늘 내성",
+    "usdaPh": "토양 pH",
+    "usdaTempMin": "견디는 최저 온도",
+    "usdaRootDepth": "최소 흙 깊이",
+    "usdaBloom": "개화 시기",
+    "levelLow": "낮음",
+    "levelMedium": "보통",
+    "levelHigh": "높음",
+    "levelNone": "없음",
+    "bloomEarly": "{{season}} 초",
+    "bloomMid": "{{season}} 중",
+    "bloomLate": "{{season}} 말"
   },
   "disease": {
     "overviewSection": "개요",
@@ -2443,7 +2461,8 @@
     "free": "무료",
     "unlockFor": "토큰 {{count}}개로 잠금 해제",
     "chaptersLabel": "챕터",
-    "notEnoughTokens": "토큰이 부족합니다. 종을 식별하여 더 모아보세요."
+    "notEnoughTokens": "토큰이 부족합니다. 종을 식별하여 더 모아보세요.",
+    "missingBody": "이 책은 더 이상 제공되지 않습니다."
   },
   "about": {
     "appInfo": "앱 정보",
@@ -2451,6 +2470,7 @@
     "visitSite": "웹사이트 방문",
     "fullDocLabel": "전체 법적 문서",
     "whatBody": "NatureLens는 사진이나 녹음으로 식물, 곤충, 버섯, 농작물, 물고기, 새, 심지어 소리까지 식별하고, 발견한 것들을 나만의 자연 컬렉션으로 만들어 줍니다.",
-    "creditsBody": "식별은 Kindwise(식물, 곤충, 버섯, 농작물), Fishial(물고기), Nyckel(새) 및 자체 소리 모델이 담당합니다. 참고 사진은 Wikipedia / Wikimedia Commons에서 가져왔으며, 표시되는 곳에 출처를 밝힙니다. 전문가 채팅은 AI(Anthropic)가 답변합니다."
+    "creditsBody": "식별은 Kindwise(식물, 곤충, 버섯, 농작물), Fishial(물고기), Nyckel(새) 및 자체 소리 모델이 담당합니다. 참고 사진은 Wikipedia / Wikimedia Commons에서 가져왔으며, 표시되는 곳에 출처를 밝힙니다. 전문가 채팅은 AI(Anthropic)가 답변합니다.",
+    "creditsGbif": "분포 지도와 계절 그래프는 GBIF.org에서 가져오며, 종의 학명으로만 조회합니다. 사용자에 대한 정보는 전송되지 않습니다."
   }
 }

@@ -95,7 +95,13 @@ export default function DiseaseReport({ disease }) {
         {!!disease.severity && (
           <View style={[styles.typePill, { backgroundColor: sevColor + '22' }]}>
             <Ionicons name="warning-outline" size={13} color={sevColor} />
-            <Text style={[styles.typePillText, { color: sevColor }]}>{t('disease.severitySuffix', { severity: disease.severity })}</Text>
+            {/* Cor pela severidade CRUA, texto pelo rotulo traduzido - mesma
+                regra do cogumelo e do inseto: SEVERITY_COLORS casa a palavra
+                em ingles, entao traduzir no lugar apagaria o vermelho de uma
+                doenca grave (auditoria 20/08). */}
+            <Text style={[styles.typePillText, { color: sevColor }]}>
+              {t('disease.severitySuffix', { severity: disease.severityLabel || disease.severity })}
+            </Text>
           </View>
         )}
       </View>

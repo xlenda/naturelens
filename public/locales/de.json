@@ -344,7 +344,25 @@
     "maintenanceLow": "Gering",
     "maintenanceMedium": "Mittel",
     "maintenanceHigh": "Hoch",
-    "chipPetSafe": "Sicher für Haustiere"
+    "chipPetSafe": "Sicher für Haustiere",
+    "speciesCareSection": "Pflege dieser Art",
+    "speciesCareNote": "Diese Werte gelten für {{species}} selbst, nicht für ihre Gruppe.",
+    "speciesCareSource": "Quelle: {{citation}}",
+    "usdaMoisture": "Wasserbedarf",
+    "usdaDrought": "Trockenheitstoleranz",
+    "usdaFertility": "Düngerbedarf",
+    "usdaShade": "Schattenverträglichkeit",
+    "usdaPh": "Boden-pH",
+    "usdaTempMin": "Verträgt bis",
+    "usdaRootDepth": "Mindest-Bodentiefe",
+    "usdaBloom": "Blüte",
+    "levelLow": "Gering",
+    "levelMedium": "Mittel",
+    "levelHigh": "Hoch",
+    "levelNone": "Keine",
+    "bloomEarly": "{{season}} (früh)",
+    "bloomMid": "{{season}} (Mitte)",
+    "bloomLate": "{{season}} (spät)"
   },
   "disease": {
     "overviewSection": "Übersicht",
@@ -2443,7 +2461,8 @@
     "free": "Kostenlos",
     "unlockFor": "Für {{count}} Token freischalten",
     "chaptersLabel": "Kapitel",
-    "notEnoughTokens": "Noch nicht genug Token – bestimme Arten, um mehr zu verdienen."
+    "notEnoughTokens": "Noch nicht genug Token – bestimme Arten, um mehr zu verdienen.",
+    "missingBody": "Dieses Buch ist nicht mehr verfügbar."
   },
   "about": {
     "appInfo": "App-Info",
@@ -2451,6 +2470,7 @@
     "visitSite": "Website besuchen",
     "fullDocLabel": "Vollständiges Rechtsdokument",
     "whatBody": "NatureLens erkennt Pflanzen, Insekten, Pilze, Nutzpflanzen, Fische, Vögel und sogar Geräusche anhand eines Fotos oder einer Aufnahme und verwandelt deine Funde in eine persönliche Natursammlung.",
-    "creditsBody": "Bestimmung durch Kindwise (Pflanzen, Insekten, Pilze, Nutzpflanzen), Fishial (Fische), Nyckel (Vögel) und unser eigenes Klangmodell. Referenzfotos von Wikipedia / Wikimedia Commons, mit Quellenangabe dort, wo sie erscheinen. Experten-Chat beantwortet von KI (Anthropic)."
+    "creditsBody": "Bestimmung durch Kindwise (Pflanzen, Insekten, Pilze, Nutzpflanzen), Fishial (Fische), Nyckel (Vögel) und unser eigenes Klangmodell. Referenzfotos von Wikipedia / Wikimedia Commons, mit Quellenangabe dort, wo sie erscheinen. Experten-Chat beantwortet von KI (Anthropic).",
+    "creditsGbif": "Verbreitungskarten und Saisondiagramme von GBIF.org, abgefragt über den wissenschaftlichen Artnamen – es werden keine Daten über dich gesendet."
   }
 }

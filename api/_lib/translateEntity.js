@@ -35,13 +35,48 @@ const ELIGIBLE_KEYS = [
   'edibleParts',
   'propagationMethods',
   'disease',
+  // As palavras de risco do cogumelo e do inseto ficavam de fora, entao quem
+  // lia em portugues via o cartao inteiro traduzido e o rotulo de perigo em
+  // ingles: 'deadly', 'poisonous', 'highly venomous'. Uma palavra de perigo
+  // que o leitor nao entende e pior que texto nenhum - e justamente a palavra
+  // pela qual ele abriu a tela.
+  //
+  // `edibility` e `danger` NAO estao aqui de proposito - eles viajam pelo
+  // caminho de ROTULO logo abaixo. O valor cru em ingles e a CHAVE que decide
+  // a cor do aviso (EDIBILITY_COLORS no cogumelo, HIGH_RISK_TAGS no inseto):
+  // traduzido no lugar, um cogumelo MORTAL cairia no laranja de aviso comum em
+  // vez do vermelho. O leitor precisa das duas coisas - a palavra no idioma
+  // dele E a cor certa -, e so o par valor-cru + rotulo-traduzido entrega as
+  // duas.
+  'dangerDescription',
 ];
+
+// Campos onde o valor cru e CHAVE de alguma decisao na tela e por isso nao
+// pode ser traduzido no lugar: a traducao vai para `<campo>Label` e o original
+// fica como dado. Comecou com `water` (chave do mapa de intervalo de rega em
+// components/watering.js) e virou tabela quando a cor do risco passou pelo
+// mesmo problema. `caminho` diz onde o campo mora dentro da entidade.
+const ROTULOS = [
+  { caminho: [], campo: 'water' },
+  { caminho: [], campo: 'edibility' },
+  { caminho: [], campo: 'danger' },
+  { caminho: ['disease'], campo: 'severity' },
+];
+
+// Campos que NUNCA viajam, em qualquer profundidade. A URL da doenca voltava
+// REESCRITA pelo modelo e ia direto para o Linking.openURL do DiseaseReport -
+// um link morto entregue como fonte. Nome e nome cientifico sao identidade
+// (a doutrina do topo deste arquivo) e o DiseaseReport ainda compara os dois
+// para reconhecer o laudo-fantasma: traduzir um e nao o outro apagaria a
+// comparacao. Aqui so viaja prosa.
+const NEVER_TRANSLATE = ['url', 'name', 'scientific', 'id'];
 
 // Collects every translatable string under the eligible keys as {text, set}
 // pairs, so the reply can be written back exactly where each string came from.
 function collect(entity) {
   const items = [];
   const visit = (container, key) => {
+    if (NEVER_TRANSLATE.includes(key)) return;
     const v = container[key];
     if (typeof v === 'string') {
       const t = v.trim();
@@ -65,18 +100,30 @@ function collect(entity) {
     visit(entity, topKey);
   }
 
-  // `water` is special: its raw English value ("Medium", "Low (prefers dry
-  // soil)") doubles as the KEY of the watering-interval map on the client
-  // (components/watering.js) - translating it in place would silently kill
-  // the watering feature. The translation goes to `waterLabel` for display
-  // and the original stays as data.
-  if (typeof entity.water === 'string' && entity.water.trim().length >= 3) {
-    items.push({
-      text: entity.water.trim(),
-      set: (val) => {
-        entity.waterLabel = val;
-      },
-    });
+  // Rotulos: traduz para `<campo>Label` e deixa o valor cru intacto.
+  for (const { caminho, campo } of ROTULOS) {
+    let dono = entity;
+    for (const passo of caminho) {
+      dono = dono?.[passo];
+      if (!dono || typeof dono !== 'object') break;
+    }
+    if (!dono || typeof dono !== 'object') continue;
+
+    const valor = dono[campo];
+    const rotulo = campo + 'Label';
+
+    if (typeof valor === 'string' && valor.trim().length >= 3) {
+      items.push({ text: valor.trim(), set: (val) => { dono[rotulo] = val; } });
+    } else if (Array.isArray(valor)) {
+      // Array (as tags de perigo do inseto): o rotulo e um array na MESMA
+      // ordem, para a tela poder parear tag crua com tag traduzida por indice.
+      dono[rotulo] = valor.slice();
+      valor.forEach((item, i) => {
+        if (typeof item === 'string' && item.trim().length >= 3) {
+          items.push({ text: item.trim(), set: (val) => { dono[rotulo][i] = val; } });
+        }
+      });
+    }
   }
 
   return items;

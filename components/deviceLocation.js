@@ -54,6 +54,19 @@ const FAILURE_BACKOFF_MS = 5 * 60 * 1000;
 // and not a permanent flag.
 const DENIED_RETRY_MS = 24 * 60 * 60 * 1000;
 
+// ATENCAO (auditoria 20/08): no build NATIVO isto e sempre false. O React
+// Native nao tem navigator.geolocation - ele so existe no navegador. Ou seja,
+// no APK a localizacao nunca liga, e com ela caem tres coisas: o destaque de
+// estacao do cronograma (o usuario do hemisferio sul ve as 4 colunas iguais),
+// o contexto "perto de voce" do mapa, e a dica de local mandada ao Kindwise.
+//
+// Nao esta "quebrado em silencio": cada tela que depende disso ja trata o null
+// e explica na tela por que nao ha destaque. Mas so volta a funcionar no APK
+// com expo-location, e isso e DECISAO do dono, nao correcao tecnica: ligar
+// localizacao no Android adiciona a permissao ACCESS_COARSE_LOCATION e obriga
+// a declarar coleta de localizacao no formulario de Seguranca de Dados do
+// Google Play. Enquanto essa decisao nao for tomada, a degradacao honesta e o
+// comportamento certo - nao instale expo-location "so pra resolver o aviso".
 export function canUseLocation() {
   return typeof navigator !== 'undefined' && !!navigator.geolocation;
 }

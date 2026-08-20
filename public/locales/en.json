@@ -394,7 +394,25 @@
     "maintenanceLow": "Low",
     "maintenanceMedium": "Medium",
     "maintenanceHigh": "High",
-    "chipPetSafe": "Safe for pets"
+    "chipPetSafe": "Safe for pets",
+    "speciesCareSection": "Care for this species",
+    "speciesCareNote": "These figures are for {{species}} itself, not for its group.",
+    "speciesCareSource": "Source: {{citation}}",
+    "usdaMoisture": "Water use",
+    "usdaDrought": "Drought tolerance",
+    "usdaFertility": "Fertilizer demand",
+    "usdaShade": "Shade tolerance",
+    "usdaPh": "Soil pH",
+    "usdaTempMin": "Withstands down to",
+    "usdaRootDepth": "Minimum soil depth",
+    "usdaBloom": "Flowering",
+    "levelLow": "Low",
+    "levelMedium": "Medium",
+    "levelHigh": "High",
+    "levelNone": "None",
+    "bloomEarly": "Early {{season}}",
+    "bloomMid": "Mid {{season}}",
+    "bloomLate": "Late {{season}}"
   },
   "disease": {
     "overviewSection": "Overview",
@@ -2443,7 +2461,8 @@
     "free": "Free",
     "unlockFor": "Unlock for {{count}} tokens",
     "chaptersLabel": "Chapters",
-    "notEnoughTokens": "Not enough tokens yet — identify species to earn more."
+    "notEnoughTokens": "Not enough tokens yet — identify species to earn more.",
+    "missingBody": "This book is not available any more."
   },
   "about": {
     "appInfo": "App info",
@@ -2451,6 +2470,7 @@
     "visitSite": "Visit the website",
     "fullDocLabel": "Full legal document",
     "whatBody": "NatureLens identifies plants, insects, mushrooms, crops, fish, birds and even sounds from a photo or recording, and turns your finds into a personal nature collection.",
-    "creditsBody": "Identification by Kindwise (plants, insects, mushrooms, crops), Fishial (fish), Nyckel (birds) and our own sound model. Reference photos from Wikipedia / Wikimedia Commons, credited where they appear. Specialist chat answered by AI (Anthropic)."
+    "creditsBody": "Identification by Kindwise (plants, insects, mushrooms, crops), Fishial (fish), Nyckel (birds) and our own sound model. Reference photos from Wikipedia / Wikimedia Commons, credited where they appear. Specialist chat answered by AI (Anthropic).",
+    "creditsGbif": "Distribution maps and seasonal charts from GBIF.org, queried by the species' scientific name — no data about you is sent."
   }
 }

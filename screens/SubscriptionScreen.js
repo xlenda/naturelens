@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from 'react';
-import { View, Text, StyleSheet, ScrollView, TouchableOpacity, Linking, Platform } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, TouchableOpacity, Platform } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useNavigation, useFocusEffect } from '@react-navigation/native';
 import { Ionicons } from '@expo/vector-icons';
@@ -84,13 +84,12 @@ export default function SubscriptionScreen() {
     }
   };
 
+  // So a web chama isto (o botao nao existe no build de loja). O ramo com
+  // Linking.openURL saiu junto: abrir o checkout do processador de dentro do
+  // APK e a propria violacao, entao nem morto ele pode continuar no bundle.
   const openHotmart = () => {
     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
-    if (Platform.OS === 'web' && typeof window !== 'undefined') {
-      window.open(HOTMART_ACCOUNT_URL, '_blank');
-    } else {
-      Linking.openURL(HOTMART_ACCOUNT_URL);
-    }
+    if (typeof window !== 'undefined') window.open(HOTMART_ACCOUNT_URL, '_blank');
   };
 
   return (
@@ -189,7 +188,13 @@ export default function SubscriptionScreen() {
             {/* The cancellation answer, stated plainly instead of buried. */}
             <Text style={styles.sectionTitle}>{t('subscription.manageTitle')}</Text>
             <Text style={styles.manageBody}>{t('subscription.manageBody')}</Text>
-            {Platform.OS === 'web' ? (
+            {/* No build de loja nao sobra endereco NENHUM do processador de
+                pagamento - nem como link, nem como texto selecionavel. Um
+                consumer.hotmart.com impresso na tela e um caminho de cobranca
+                de fora a dois toques (copiar, colar no navegador), que e
+                exatamente o que a politica de pagamentos do Play proibe. O
+                manageBody acima ja explica em palavras onde se cancela. */}
+            {Platform.OS === 'web' && (
               <PressScale>
                 <TouchableOpacity
                   style={styles.secondaryBtn}
@@ -202,13 +207,6 @@ export default function SubscriptionScreen() {
                   <Text style={styles.secondaryBtnText}>{t('subscription.openHotmart')}</Text>
                 </TouchableOpacity>
               </PressScale>
-            ) : (
-              // No tappable external link in the store build - the address as
-              // selectable text keeps the cancellation path honest without a
-              // CTA the review could read as an outside-billing flow.
-              <Text style={styles.manageBody} selectable>
-                {HOTMART_ACCOUNT_URL}
-              </Text>
             )}
           </ZoneBand>
         )}

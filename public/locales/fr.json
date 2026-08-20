@@ -344,7 +344,25 @@
     "maintenanceLow": "Faible",
     "maintenanceMedium": "Moyen",
     "maintenanceHigh": "Élevé",
-    "chipPetSafe": "Sans danger pour les animaux"
+    "chipPetSafe": "Sans danger pour les animaux",
+    "speciesCareSection": "Soins de cette espèce",
+    "speciesCareNote": "Ces chiffres concernent {{species}} elle-même, et non son groupe.",
+    "speciesCareSource": "Source : {{citation}}",
+    "usdaMoisture": "Consommation d'eau",
+    "usdaDrought": "Tolérance à la sécheresse",
+    "usdaFertility": "Exigence en engrais",
+    "usdaShade": "Tolérance à l'ombre",
+    "usdaPh": "pH du sol",
+    "usdaTempMin": "Résiste jusqu'à",
+    "usdaRootDepth": "Profondeur de sol minimale",
+    "usdaBloom": "Floraison",
+    "levelLow": "Faible",
+    "levelMedium": "Moyenne",
+    "levelHigh": "Élevée",
+    "levelNone": "Aucune",
+    "bloomEarly": "{{season}} (début)",
+    "bloomMid": "{{season}} (milieu)",
+    "bloomLate": "{{season}} (fin)"
   },
   "disease": {
     "overviewSection": "Aperçu",
@@ -2443,7 +2461,8 @@
     "free": "Gratuit",
     "unlockFor": "Débloquer pour {{count}} jetons",
     "chaptersLabel": "Chapitres",
-    "notEnoughTokens": "Pas encore assez de jetons – identifiez des espèces pour en gagner plus."
+    "notEnoughTokens": "Pas encore assez de jetons – identifiez des espèces pour en gagner plus.",
+    "missingBody": "Ce livre n'est plus disponible."
   },
   "about": {
     "appInfo": "Infos de l'app",
@@ -2451,6 +2470,7 @@
     "visitSite": "Visiter le site",
     "fullDocLabel": "Document juridique complet",
     "whatBody": "NatureLens identifie les plantes, insectes, champignons, cultures, poissons, oiseaux et même les sons à partir d'une photo ou d'un enregistrement, et transforme vos trouvailles en une collection nature personnelle.",
-    "creditsBody": "Identification par Kindwise (plantes, insectes, champignons, cultures), Fishial (poissons), Nyckel (oiseaux) et notre propre modèle sonore. Photos de référence issues de Wikipedia / Wikimedia Commons, créditées là où elles apparaissent. Chat de la spécialiste assuré par une IA (Anthropic)."
+    "creditsBody": "Identification par Kindwise (plantes, insectes, champignons, cultures), Fishial (poissons), Nyckel (oiseaux) et notre propre modèle sonore. Photos de référence issues de Wikipedia / Wikimedia Commons, créditées là où elles apparaissent. Chat de la spécialiste assuré par une IA (Anthropic).",
+    "creditsGbif": "Cartes de répartition et graphiques saisonniers issus de GBIF.org, interrogés par le nom scientifique de l'espèce — aucune donnée vous concernant n'est envoyée."
   }
 }

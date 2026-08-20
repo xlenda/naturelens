@@ -14,7 +14,19 @@ test('nenhum arquivo do app usa lookbehind em regex', () => {
   // O motivo de este helper existir: `(?<=` e SyntaxError de PARSE no Safari
   // < 16.4 e derruba o BUNDLE INTEIRO, nao so a tela. Este portao impede a
   // quarta copia de voltar.
-  const dirs = ['components', 'screens', 'api', 'scripts'];
+  // So o codigo que roda no NAVEGADOR. scripts/ e api/ rodam em Node (build e
+  // Vercel), onde lookbehind funciona desde sempre - proibir la seria portao
+  // mentindo sobre o risco. public/ entra porque o service worker roda no
+  // navegador do usuario igual ao bundle.
+  const dirs = ['components', 'screens', 'public'];
+  for (const arquivoRaiz of ['App.js', 'i18n.js']) {
+    const p = path.join(__dirname, arquivoRaiz);
+    if (!fs.existsSync(p)) continue;
+    assert.ok(
+      !fs.readFileSync(p, 'utf8').includes('(?<='),
+      `${arquivoRaiz} usa lookbehind - o app abre em branco em iOS 15. Use splitSentences().`
+    );
+  }
   for (const dir of dirs) {
     const full = path.join(__dirname, dir);
     if (!fs.existsSync(full)) continue;

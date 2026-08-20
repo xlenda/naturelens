@@ -344,7 +344,25 @@
     "maintenanceLow": "कम",
     "maintenanceMedium": "मध्यम",
     "maintenanceHigh": "अधिक",
-    "chipPetSafe": "पालतू जानवरों के लिए सुरक्षित"
+    "chipPetSafe": "पालतू जानवरों के लिए सुरक्षित",
+    "speciesCareSection": "इस प्रजाति की देखभाल",
+    "speciesCareNote": "ये आंकड़े {{species}} के अपने हैं, इसके समूह के नहीं।",
+    "speciesCareSource": "स्रोत: {{citation}}",
+    "usdaMoisture": "पानी की ज़रूरत",
+    "usdaDrought": "सूखा सहनशीलता",
+    "usdaFertility": "खाद की ज़रूरत",
+    "usdaShade": "छाया सहनशीलता",
+    "usdaPh": "मिट्टी का pH",
+    "usdaTempMin": "न्यूनतम तापमान",
+    "usdaRootDepth": "न्यूनतम मिट्टी की गहराई",
+    "usdaBloom": "फूल आने का समय",
+    "levelLow": "कम",
+    "levelMedium": "मध्यम",
+    "levelHigh": "अधिक",
+    "levelNone": "कोई नहीं",
+    "bloomEarly": "{{season}} की शुरुआत",
+    "bloomMid": "{{season}} का मध्य",
+    "bloomLate": "{{season}} का अंत"
   },
   "disease": {
     "overviewSection": "अवलोकन",
@@ -2443,7 +2461,8 @@
     "free": "मुफ़्त",
     "unlockFor": "{{count}} टोकन में अनलॉक करें",
     "chaptersLabel": "अध्याय",
-    "notEnoughTokens": "अभी पर्याप्त टोकन नहीं हैं — और पाने के लिए प्रजातियाँ पहचानें।"
+    "notEnoughTokens": "अभी पर्याप्त टोकन नहीं हैं — और पाने के लिए प्रजातियाँ पहचानें।",
+    "missingBody": "यह किताब अब उपलब्ध नहीं है।"
   },
   "about": {
     "appInfo": "ऐप जानकारी",
@@ -2451,6 +2470,7 @@
     "visitSite": "वेबसाइट देखें",
     "fullDocLabel": "पूर्ण कानूनी दस्तावेज़",
     "whatBody": "NatureLens फ़ोटो या रिकॉर्डिंग से पौधों, कीड़ों, मशरूम, फ़सलों, मछलियों, पक्षियों और यहाँ तक कि आवाज़ों की पहचान करता है, और आपकी खोजों को एक निजी प्रकृति संग्रह में बदल देता है।",
-    "creditsBody": "पहचान Kindwise (पौधे, कीड़े, मशरूम, फ़सलें), Fishial (मछलियाँ), Nyckel (पक्षी) और हमारे अपने ध्वनि मॉडल द्वारा की जाती है। संदर्भ फ़ोटो Wikipedia / Wikimedia Commons से हैं, जहाँ वे दिखती हैं वहाँ श्रेय दिया गया है। विशेषज्ञ चैट का उत्तर AI (Anthropic) देता है।"
+    "creditsBody": "पहचान Kindwise (पौधे, कीड़े, मशरूम, फ़सलें), Fishial (मछलियाँ), Nyckel (पक्षी) और हमारे अपने ध्वनि मॉडल द्वारा की जाती है। संदर्भ फ़ोटो Wikipedia / Wikimedia Commons से हैं, जहाँ वे दिखती हैं वहाँ श्रेय दिया गया है। विशेषज्ञ चैट का उत्तर AI (Anthropic) देता है।",
+    "creditsGbif": "वितरण मानचित्र और मौसमी ग्राफ़ GBIF.org से आते हैं, जिन्हें प्रजाति के वैज्ञानिक नाम से खोजा जाता है — आपका कोई डेटा नहीं भेजा जाता।"
   }
 }

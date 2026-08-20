@@ -344,7 +344,25 @@
     "maintenanceLow": "Bassa",
     "maintenanceMedium": "Media",
     "maintenanceHigh": "Alta",
-    "chipPetSafe": "Sicura per gli animali"
+    "chipPetSafe": "Sicura per gli animali",
+    "speciesCareSection": "Cura di questa specie",
+    "speciesCareNote": "Questi valori riguardano {{species}} in sé, non il suo gruppo.",
+    "speciesCareSource": "Fonte: {{citation}}",
+    "usdaMoisture": "Necessità d'acqua",
+    "usdaDrought": "Tolleranza alla siccità",
+    "usdaFertility": "Necessità di concime",
+    "usdaShade": "Tolleranza all'ombra",
+    "usdaPh": "pH del terreno",
+    "usdaTempMin": "Resiste fino a",
+    "usdaRootDepth": "Profondità minima del terreno",
+    "usdaBloom": "Fioritura",
+    "levelLow": "Bassa",
+    "levelMedium": "Media",
+    "levelHigh": "Alta",
+    "levelNone": "Nessuna",
+    "bloomEarly": "{{season}} (inizio)",
+    "bloomMid": "{{season}} (metà)",
+    "bloomLate": "{{season}} (fine)"
   },
   "disease": {
     "overviewSection": "Panoramica",
@@ -2443,7 +2461,8 @@
     "free": "Gratis",
     "unlockFor": "Sblocca per {{count}} token",
     "chaptersLabel": "Capitoli",
-    "notEnoughTokens": "Token insufficienti: identifica specie per guadagnarne altri."
+    "notEnoughTokens": "Token insufficienti: identifica specie per guadagnarne altri.",
+    "missingBody": "Questo libro non è più disponibile."
   },
   "about": {
     "appInfo": "Info sull'app",
@@ -2451,6 +2470,7 @@
     "visitSite": "Visita il sito",
     "fullDocLabel": "Documento legale completo",
     "whatBody": "NatureLens identifica piante, insetti, funghi, colture, pesci, uccelli e persino suoni da una foto o una registrazione, e trasforma le tue scoperte in una collezione naturalistica personale.",
-    "creditsBody": "Identificazione a cura di Kindwise (piante, insetti, funghi, colture), Fishial (pesci), Nyckel (uccelli) e del nostro modello sonoro. Foto di riferimento da Wikipedia / Wikimedia Commons, con credito dove appaiono. Chat della specialista gestita da IA (Anthropic)."
+    "creditsBody": "Identificazione a cura di Kindwise (piante, insetti, funghi, colture), Fishial (pesci), Nyckel (uccelli) e del nostro modello sonoro. Foto di riferimento da Wikipedia / Wikimedia Commons, con credito dove appaiono. Chat della specialista gestita da IA (Anthropic).",
+    "creditsGbif": "Mappe di distribuzione e grafici stagionali da GBIF.org, interrogati con il nome scientifico della specie: non viene inviato alcun dato su di te."
   }
 }

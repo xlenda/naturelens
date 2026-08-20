@@ -7,7 +7,7 @@ import {
   TouchableOpacity,
   Linking,
 } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useNavigation } from '@react-navigation/native';
 import { Ionicons } from '@expo/vector-icons';
 import * as Haptics from 'expo-haptics';
@@ -22,6 +22,7 @@ import { getCollection, saveToCollection, removeFromCollection, updateCollection
 import { CATEGORIES } from '../components/categories';
 import { getSpeciesGroup } from '../components/speciesGroup';
 import CareSchedule from '../components/CareSchedule';
+import SpeciesCareCard from '../components/SpeciesCareCard';
 import { getWateringStatus, WATER_INTERVAL_DAYS } from '../components/watering';
 import { shareEntity } from '../components/share';
 import InstallNudgeCard from '../components/InstallNudgeCard';
@@ -65,6 +66,7 @@ export default function TreeDetailScreen({ route }) {
   const { plant, fromIdentify } = route.params;
   const meta = CATEGORIES.tree;
   const { t } = useTranslation();
+  const insets = useSafeAreaInsets();
   const [saved, setSaved] = useState(false);
   const [savedEntryId, setSavedEntryId] = useState(plant.savedId || null);
   const [lastWateredAt, setLastWateredAt] = useState(plant.lastWateredAt || plant.savedAt || null);
@@ -222,7 +224,13 @@ export default function TreeDetailScreen({ route }) {
         }
       />
 
-      <ScrollView contentContainerStyle={styles.scroll} showsVerticalScrollIndicator={false}>
+      {/* A ResultActionBar cresce com insets.bottom, entao o respiro do scroll
+          tem que crescer junto - o dock, que carregava a area segura nesta
+          rota, nao existe mais aqui (HIDE_DOCK_ON). */}
+      <ScrollView
+        contentContainerStyle={[styles.scroll, { paddingBottom: 120 + insets.bottom }]}
+        showsVerticalScrollIndicator={false}
+      >
         {/* Hero compacto (auditoria de diagramacao 20/08): 220 -> 150, pra
             primeira dobra caber FATO e nao so foto. `height` ja era prop
             opcional do PlantHero - passar 150 daqui mantem o default de 220
@@ -396,6 +404,12 @@ export default function TreeDetailScreen({ route }) {
             AGORA". Devolve null sozinho quando o grupo nao tem cronograma
             sustentado pelo corpus, entao nao precisa de guarda propria aqui. */}
         <CareSchedule groupKey={groupKey} accent={meta.accent} />
+        {/* Depois do cronograma de proposito (quente-primeiro): o cronograma
+            responde "o que eu faco agora" e este card e ficha tecnica, entao
+            ele fecha como recibo. Cai pro grupo DIZENDO que e do grupo quando
+            a especie nao esta no banco do USDA - o que e o caso da maioria das
+            tropicais de vaso, e o card nunca finge o contrario. */}
+        <SpeciesCareCard scientific={plant.scientific} groupKey={groupKey} accent={meta.accent} />
 
         {!!wateringStatus && (
           <SectionCard icon="water-outline" title={t('detail.wateringSection')} color={colors.info}>
@@ -462,6 +476,22 @@ export default function TreeDetailScreen({ route }) {
         {!!listText(plant.edibleParts) && (
           <SectionCard icon="restaurant-outline" title={t('detail.edibleParts')} color={meta.accent}>
             <ExpandableText text={listText(plant.edibleParts)} textStyle={styles.body} accent={meta.accent} />
+            {/* O mesmo aviso que a tela de Cogumelo carrega, colado na
+                afirmacao que ele desmente. FORA do ExpandableText de
+                proposito: "Partes Comestiveis" e uma afirmacao de comida, e um
+                aviso escondido atras de "Ver mais" nao e aviso. Reusa
+                terms.accuracyBody - mesma fonte de verdade, ja traduzida nos
+                17 idiomas, nenhuma chave nova. */}
+            <View style={styles.edibilityNote}>
+              <Ionicons
+                name="warning-outline"
+                size={18}
+                color={colors.warning}
+                accessibilityElementsHidden={true}
+                importantForAccessibility="no-hide-descendants"
+              />
+              <Text style={styles.edibilityNoteText}>{t('terms.accuracyBody')}</Text>
+            </View>
           </SectionCard>
         )}
 
@@ -604,6 +634,18 @@ const styles = StyleSheet.create({
   confidenceLabel: { fontSize: 10, color: colors.textMuted, fontWeight: '600' },
   confidenceValue: { fontSize: 18, color: colors.accentLight, fontWeight: '800' },
   body: { color: colors.textSecondary, fontSize: 14, lineHeight: 21 },
+  // Copia literal do aviso da tela de Cogumelo, para as duas lerem igual.
+  edibilityNote: {
+    flexDirection: 'row',
+    backgroundColor: colors.warning + '14',
+    borderRadius: 14,
+    padding: 14,
+    marginTop: 14,
+    borderWidth: 1,
+    borderColor: colors.warning + '3C',
+    alignItems: 'flex-start',
+  },
+  edibilityNoteText: { flex: 1, color: colors.textSecondary, fontSize: 12.5, marginLeft: 10, lineHeight: 18 },
   // Estilos do card-porta sairam com o TopicDoor (tela principal rica - video
   // do concorrente, 20/08): as portas que restaram sao os cards da grade de
   // fatos, que vivem em components/QuickFactGrid.js.

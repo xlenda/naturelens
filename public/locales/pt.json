@@ -394,7 +394,25 @@
     "maintenanceLow": "Baixa",
     "maintenanceMedium": "Média",
     "maintenanceHigh": "Alta",
-    "chipPetSafe": "Seguro para pets"
+    "chipPetSafe": "Seguro para pets",
+    "speciesCareSection": "Cuidados desta espécie",
+    "speciesCareNote": "Estes números são da própria {{species}}, não do grupo dela.",
+    "speciesCareSource": "Fonte: {{citation}}",
+    "usdaMoisture": "Necessidade de água",
+    "usdaDrought": "Tolerância à seca",
+    "usdaFertility": "Necessidade de adubo",
+    "usdaShade": "Tolerância à sombra",
+    "usdaPh": "pH do solo",
+    "usdaTempMin": "Aguenta até",
+    "usdaRootDepth": "Profundidade mínima de solo",
+    "usdaBloom": "Floração",
+    "levelLow": "Baixa",
+    "levelMedium": "Média",
+    "levelHigh": "Alta",
+    "levelNone": "Nenhuma",
+    "bloomEarly": "{{season}} (início)",
+    "bloomMid": "{{season}} (meio)",
+    "bloomLate": "{{season}} (fim)"
   },
   "disease": {
     "overviewSection": "Visão Geral",
@@ -2443,7 +2461,8 @@
     "free": "Grátis",
     "unlockFor": "Desbloquear por {{count}} tokens",
     "chaptersLabel": "Capítulos",
-    "notEnoughTokens": "Ainda faltam tokens — identifique espécies para ganhar mais."
+    "notEnoughTokens": "Ainda faltam tokens — identifique espécies para ganhar mais.",
+    "missingBody": "Este livro não está mais disponível."
   },
   "about": {
     "appInfo": "Informações do app",
@@ -2451,6 +2470,7 @@
     "visitSite": "Visitar o site",
     "fullDocLabel": "Documento legal completo",
     "whatBody": "O NatureLens identifica plantas, insetos, cogumelos, lavouras, peixes, pássaros e até sons a partir de uma foto ou gravação, e transforma seus achados numa coleção pessoal da natureza.",
-    "creditsBody": "Identificação por Kindwise (plantas, insetos, cogumelos, lavouras), Fishial (peixes), Nyckel (pássaros) e nosso próprio modelo de som. Fotos de referência da Wikipedia / Wikimedia Commons, com crédito onde aparecem. Chat da especialista respondido por IA (Anthropic)."
+    "creditsBody": "Identificação por Kindwise (plantas, insetos, cogumelos, lavouras), Fishial (peixes), Nyckel (pássaros) e nosso próprio modelo de som. Fotos de referência da Wikipedia / Wikimedia Commons, com crédito onde aparecem. Chat da especialista respondido por IA (Anthropic).",
+    "creditsGbif": "Mapas de distribuição e gráficos de estação do GBIF.org, consultados pelo nome científico da espécie — nenhum dado seu é enviado."
   }
 }

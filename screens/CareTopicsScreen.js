@@ -43,7 +43,21 @@ const TOPIC_META = {
   role: { icon: 'leaf', tip: 'detail.tipEcology', art: require('../assets/topics/ecology.jpg') },
   confusas: { icon: 'eye', tip: 'detail.tipSafety', art: require('../assets/topics/safety.jpg') },
   overview: { icon: 'document-text', tip: 'detail.tipEcology', art: require('../assets/topics/ecology.jpg') },
+  // Curiosidade so aparece em ave e som, e nao tem verbete equivalente em
+  // {lang}-manual.json - por isso ganha entrada propria em vez de apelido:
+  // arte e dica sim, manual nao. Inventar um verbete de curiosidade seria
+  // conteudo nosso fingindo ser do manual.
+  curiosity: { icon: 'sparkles', tip: 'detail.tipCultural', art: require('../assets/topics/cultural.jpg') },
 };
+
+// Abas que sao o MESMO topico com outro nome, porque cada tela de detalhe
+// batizou o campo do seu jeito: a lavoura manda 'commonUses'/'edibleParts'
+// onde a planta manda 'uses'/'edible', e ave/som mandam 'habitat', que e o
+// papel ecologico visto pelo lado do lugar. Sem o apelido essas abas abriam
+// sem banda de ilustracao, sem dica e sem manual - as unicas da tela com esse
+// aspecto, e o leitor le tela pela metade como conteudo faltando. Elas ficam:
+// o texto que trazem e curado e real, e e o unico manual que ave e som tem.
+const TOPIC_ALIAS = { commonUses: 'uses', edibleParts: 'edible', habitat: 'role' };
 
 // Splits the vendor prose into a lead sentence and scannable bullets - a
 // faithful REFORMAT (same words, same order), never a rewrite.
@@ -68,7 +82,8 @@ export default function CareTopicsScreen() {
     valid.some((tp) => tp.key === initialKey) ? initialKey : valid[0]?.key
   );
   const active = valid.find((tp) => tp.key === activeKey);
-  const meta = TOPIC_META[activeKey] || {};
+  const canonKey = TOPIC_ALIAS[activeKey] || activeKey;
+  const meta = TOPIC_META[canonKey] || {};
   const bodyRef = useRef(null);
 
   useEffect(() => {
@@ -121,7 +136,7 @@ export default function CareTopicsScreen() {
     // Trocou de aba, o acordeao volta ao primeiro; na aba que veio pelo deep
     // link ele mantem o problema pedido.
     setOpenProblem(activeKey === initialKey ? initialProblem || 0 : 0);
-    const manualKey = manualKeyFor(activeKey);
+    const manualKey = manualKeyFor(canonKey);
     setGroupManual(null);
     getTopicManual(manualKey, i18nLang).then((m) => {
       if (alive) setManual(m);
@@ -130,7 +145,7 @@ export default function CareTopicsScreen() {
       if (alive) setGroupManual(g);
     });
     return () => { alive = false; };
-  }, [activeKey, i18nLang, groupKey, initialKey, initialProblem]);
+  }, [activeKey, canonKey, i18nLang, groupKey, initialKey, initialProblem]);
 
   // Chips do indice - so o que a aba REALMENTE tem.
   //

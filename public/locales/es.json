@@ -344,7 +344,25 @@
     "maintenanceLow": "Bajo",
     "maintenanceMedium": "Medio",
     "maintenanceHigh": "Alto",
-    "chipPetSafe": "Seguro para mascotas"
+    "chipPetSafe": "Seguro para mascotas",
+    "speciesCareSection": "Cuidados de esta especie",
+    "speciesCareNote": "Estas cifras son de la propia {{species}}, no de su grupo.",
+    "speciesCareSource": "Fuente: {{citation}}",
+    "usdaMoisture": "Necesidad de agua",
+    "usdaDrought": "Tolerancia a la sequía",
+    "usdaFertility": "Necesidad de abono",
+    "usdaShade": "Tolerancia a la sombra",
+    "usdaPh": "pH del suelo",
+    "usdaTempMin": "Resiste hasta",
+    "usdaRootDepth": "Profundidad mínima de suelo",
+    "usdaBloom": "Floración",
+    "levelLow": "Baja",
+    "levelMedium": "Media",
+    "levelHigh": "Alta",
+    "levelNone": "Ninguna",
+    "bloomEarly": "{{season}} (inicio)",
+    "bloomMid": "{{season}} (mitad)",
+    "bloomLate": "{{season}} (final)"
   },
   "disease": {
     "overviewSection": "Resumen",
@@ -2443,7 +2461,8 @@
     "free": "Gratis",
     "unlockFor": "Desbloquear por {{count}} tokens",
     "chaptersLabel": "Capítulos",
-    "notEnoughTokens": "Aún faltan tokens: identifica especies para ganar más."
+    "notEnoughTokens": "Aún faltan tokens: identifica especies para ganar más.",
+    "missingBody": "Este libro ya no está disponible."
   },
   "about": {
     "appInfo": "Información de la app",
@@ -2451,6 +2470,7 @@
     "visitSite": "Visitar el sitio",
     "fullDocLabel": "Documento legal completo",
     "whatBody": "NatureLens identifica plantas, insectos, setas, cultivos, peces, aves e incluso sonidos a partir de una foto o grabación, y convierte tus hallazgos en una colección personal de naturaleza.",
-    "creditsBody": "Identificación por Kindwise (plantas, insectos, setas, cultivos), Fishial (peces), Nyckel (aves) y nuestro propio modelo de sonido. Fotos de referencia de Wikipedia / Wikimedia Commons, con crédito donde aparecen. Chat de la especialista respondido por IA (Anthropic)."
+    "creditsBody": "Identificación por Kindwise (plantas, insectos, setas, cultivos), Fishial (peces), Nyckel (aves) y nuestro propio modelo de sonido. Fotos de referencia de Wikipedia / Wikimedia Commons, con crédito donde aparecen. Chat de la especialista respondido por IA (Anthropic).",
+    "creditsGbif": "Mapas de distribución y gráficos de temporada de GBIF.org, consultados por el nombre científico de la especie: no se envía ningún dato tuyo."
   }
 }

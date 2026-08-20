@@ -344,7 +344,25 @@
     "maintenanceLow": "低",
     "maintenanceMedium": "中",
     "maintenanceHigh": "高",
-    "chipPetSafe": "对宠物安全"
+    "chipPetSafe": "对宠物安全",
+    "speciesCareSection": "该物种的养护",
+    "speciesCareNote": "这些数值针对 {{species}} 本身，而非它所属的类群。",
+    "speciesCareSource": "来源：{{citation}}",
+    "usdaMoisture": "需水量",
+    "usdaDrought": "耐旱性",
+    "usdaFertility": "需肥量",
+    "usdaShade": "耐阴性",
+    "usdaPh": "土壤 pH",
+    "usdaTempMin": "可耐最低温度",
+    "usdaRootDepth": "最小土层深度",
+    "usdaBloom": "花期",
+    "levelLow": "低",
+    "levelMedium": "中",
+    "levelHigh": "高",
+    "levelNone": "无",
+    "bloomEarly": "{{season}}初",
+    "bloomMid": "{{season}}中",
+    "bloomLate": "{{season}}末"
   },
   "disease": {
     "overviewSection": "概览",
@@ -2443,7 +2461,8 @@
     "free": "免费",
     "unlockFor": "用 {{count}} 代币解锁",
     "chaptersLabel": "章节",
-    "notEnoughTokens": "代币不足——识别物种来赚取更多。"
+    "notEnoughTokens": "代币不足——识别物种来赚取更多。",
+    "missingBody": "这本书已不再提供。"
   },
   "about": {
     "appInfo": "应用信息",
@@ -2451,6 +2470,7 @@
     "visitSite": "访问网站",
     "fullDocLabel": "完整法律文件",
     "whatBody": "NatureLens 可通过照片或录音识别植物、昆虫、蘑菇、农作物、鱼类、鸟类甚至声音，并把你的发现变成一份专属的自然收藏。",
-    "creditsBody": "识别由 Kindwise（植物、昆虫、蘑菇、农作物）、Fishial（鱼类）、Nyckel（鸟类）以及我们自己的声音模型提供。参考照片来自 Wikipedia / Wikimedia Commons，并在出现处注明来源。专家聊天由 AI（Anthropic）回答。"
+    "creditsBody": "识别由 Kindwise（植物、昆虫、蘑菇、农作物）、Fishial（鱼类）、Nyckel（鸟类）以及我们自己的声音模型提供。参考照片来自 Wikipedia / Wikimedia Commons，并在出现处注明来源。专家聊天由 AI（Anthropic）回答。",
+    "creditsGbif": "分布地图和季节图表来自 GBIF.org，仅以物种的学名查询，不会发送任何关于你的数据。"
   }
 }

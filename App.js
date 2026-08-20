@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { View, Platform } from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
-import { NavigationContainer } from '@react-navigation/native';
+import { NavigationContainer, useNavigationContainerRef } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator, TransitionPresets } from '@react-navigation/stack';
 import { Ionicons } from '@expo/vector-icons';
@@ -292,6 +292,39 @@ function AppNavigator() {
   // sessionStorage (see components/restore.js).
   const [googleSignInResult, setGoogleSignInResult] = useState(null);
 
+  // Botao VOLTAR do Android no PWA.
+  //
+  // O react-navigation nao liga o historico do navegador sozinho: como o app
+  // nunca empurrava nada no history, o voltar do sistema saia do PWA em vez de
+  // fechar a tela aberta. No build NATIVO o problema nao existe (o stack ja
+  // escuta o botao fisico), por isso tudo aqui e guardado por Platform.
+  //
+  // Linking do react-navigation resolveria - e passaria a escrever URLs de
+  // rota que ninguem pode recarregar: PlantDetail so existe com
+  // route.params.plant, entao um F5 nessa URL quebraria a tela. Espelhar o
+  // historico na mao e o caminho curto que nao cria essa porta.
+  //
+  // Uma unica entrada extra enquanto houver tela para fechar: o popstate gasta
+  // essa entrada virando goBack, e o proximo onStateChange repoe se ainda
+  // sobrar pilha. Voltar pelo chevron da tela deixa a entrada sem uso - custa
+  // no maximo UM toque de voltar sem efeito, nunca sair do app sem querer.
+  const navigationRef = useNavigationContainerRef();
+  const syncHistory = () => {
+    if (Platform.OS !== 'web') return;
+    if (navigationRef.canGoBack() && !window.history.state?.nlBack) {
+      window.history.pushState({ nlBack: true }, '');
+    }
+  };
+
+  useEffect(() => {
+    if (Platform.OS !== 'web') return;
+    const onPop = () => {
+      if (navigationRef.canGoBack()) navigationRef.goBack();
+    };
+    window.addEventListener('popstate', onPop);
+    return () => window.removeEventListener('popstate', onPop);
+  }, []);
+
   useEffect(() => {
     if (Platform.OS !== 'web') return;
     const params = new URLSearchParams(window.location.search);
@@ -364,7 +397,7 @@ function AppNavigator() {
     <GestureHandlerRootView style={{ flex: 1 }}>
       <SafeAreaProvider>
         <StatusBar style="light" />
-        <NavigationContainer>
+        <NavigationContainer ref={navigationRef} onStateChange={syncHistory}>
           <Tab.Navigator
             // Custom two-row bar: with 8-10 tabs the default single-row layout
             // squeezed each label into ~36px and they visibly overlapped.

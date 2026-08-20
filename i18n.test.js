@@ -29,21 +29,26 @@ const REFERENCE = 'en';
 // 'schedule' entrou com o cronograma de cuidado por estacao - paridade 120%
 // (video do concorrente, 20/08): {lang}-schedule.json e conteudo por GRUPO,
 // nao chrome de UI, e comparar as chaves dele com en.json nao quer dizer nada.
-const CONTENT_SUFFIXES = ['herbs', 'species', 'manual', 'groups', 'schedule'];
+// A lista-negra de sufixos que morava aqui foi REMOVIDA (20/08).
+//
+// Ela quebrou o deploy quatro vezes: cada tipo novo de conteudo estatico
+// (-manual, -groups, -schedule, species-care) passava a ser contado como
+// idioma de interface, e o portao de paridade acusava "faltam 746 chaves" num
+// arquivo que nunca foi locale de UI. O erro nao estava no conteudo novo - a
+// lista e que era o lugar errado de decidir. Agora quem manda e a lista
+// BRANCA do SUPPORTED_LANGUAGES (i18n.js), a unica fonte de verdade de quais
+// idiomas existem. Conteudo novo nao mexe mais em teste nenhum.
+const { uiLocaleFiles } = require('./test-locales');
 
 function localeFiles(suffix) {
-  return fs
-    .readdirSync(LOCALES_DIR)
-    .filter((f) => f.endsWith('.json'))
-    .filter((f) =>
-      suffix
-        ? f.endsWith(`-${suffix}.json`)
-        : !CONTENT_SUFFIXES.some((s) => f.endsWith(`-${s}.json`))
-    )
-    .map((f) => ({
-      lang: suffix ? f.replace(`-${suffix}.json`, '') : f.replace('.json', ''),
-      file: path.join(LOCALES_DIR, f),
-    }));
+  const arquivos = suffix
+    ? fs.readdirSync(LOCALES_DIR).filter((f) => f.endsWith(`-${suffix}.json`))
+    : uiLocaleFiles();
+
+  return arquivos.map((f) => ({
+    lang: suffix ? f.replace(`-${suffix}.json`, '') : f.replace('.json', ''),
+    file: path.join(LOCALES_DIR, f),
+  }));
 }
 
 function load(file) {
