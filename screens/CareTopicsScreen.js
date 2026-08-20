@@ -10,6 +10,7 @@ import TopBar from '../components/TopBar';
 import NatureScene from '../components/NatureScene';
 import HelpfulRow from '../components/HelpfulRow';
 import { getTopicManual } from '../components/manualContent';
+import { getGroupTopic } from '../components/groupContent';
 
 // The species MANUAL, diagrammed like the competitor's (studied frame by
 // frame from the owner's 6-minute video) instead of "um monte de texto em
@@ -56,7 +57,7 @@ export default function CareTopicsScreen() {
   const route = useRoute();
   const { t, i18n } = useTranslation();
   const i18nLang = i18n.language;
-  const { title, accent = colors.accent, category = 'plant', topics = [], initialKey } = route.params || {};
+  const { title, accent = colors.accent, category = 'plant', topics = [], initialKey, groupKey } = route.params || {};
 
   const valid = topics.filter((tp) => tp && tp.key && tp.text);
   const [activeKey, setActiveKey] = useState(
@@ -85,16 +86,25 @@ export default function CareTopicsScreen() {
   // aba mostra so o texto da especie, nunca um erro.
   const [manual, setManual] = useState(null);
   const [openProblem, setOpenProblem] = useState(null);
+  // Camada POR TIPO: o que muda de grupo para grupo (suculenta rega diferente
+  // de frutifera; polinizador se observa diferente de praga). Vem do
+  // {lang}-groups.json quando a taxonomia da especie cai num grupo conhecido;
+  // null = a aba mostra so o universal, sem buraco visivel.
+  const [groupManual, setGroupManual] = useState(null);
   useEffect(() => {
     let alive = true;
     setManual(null);
     setOpenProblem(null);
     const manualKey = activeKey === 'confusas' ? 'safety' : activeKey === 'overview' ? 'role' : activeKey;
+    setGroupManual(null);
     getTopicManual(manualKey, i18nLang).then((m) => {
       if (alive) setManual(m);
     });
+    getGroupTopic(groupKey, manualKey, i18nLang).then((g) => {
+      if (alive) setGroupManual(g);
+    });
     return () => { alive = false; };
-  }, [activeKey, i18nLang]);
+  }, [activeKey, i18nLang, groupKey]);
 
   return (
     <SafeAreaView style={styles.container} edges={['top']}>
@@ -192,6 +202,28 @@ export default function CareTopicsScreen() {
               ))}
             </View>
           </>
+        )}
+
+        {/* POR TIPO - o que muda neste grupo (suculentas, frutiferas,
+            polinizadores...). Vem antes do universal: o especifico manda. */}
+        {(groupManual?.advice?.length > 0 || groupManual?.checklist?.length > 0) && (
+          <View style={[styles.adviceCard, { borderColor: accent + '55' }]}>
+            <View style={styles.groupHead}>
+              <Ionicons name="pricetag" size={15} color={accent} />
+              <Text style={[styles.groupLabel, { color: accent }]}>{groupManual.label}</Text>
+            </View>
+            {(groupManual.advice || []).map((para, i) => (
+              <Text key={i} style={styles.body}>
+                {para}
+              </Text>
+            ))}
+            {(groupManual.checklist || []).map((item, i) => (
+              <View key={'c' + i} style={styles.checkRow}>
+                <Ionicons name="checkmark-circle" size={17} color={accent} />
+                <Text style={styles.checkText}>{item}</Text>
+              </View>
+            ))}
+          </View>
         )}
 
         {/* CONSELHOS FUNDAMENTAIS - o manual editorial profundo. */}
@@ -359,4 +391,6 @@ const styles = StyleSheet.create({
     marginBottom: 8,
   },
   solutionNum: { fontSize: 14, fontWeight: '800', width: 20 },
+  groupHead: { flexDirection: 'row', alignItems: 'center', gap: 7, marginBottom: 10 },
+  groupLabel: { fontSize: 12.5, fontWeight: '800', textTransform: 'uppercase', letterSpacing: 0.5 },
 });

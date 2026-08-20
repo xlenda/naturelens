@@ -1,0 +1,389 @@
+{
+  "watering": {
+    "advice": [
+      "Dobre podlewanie to w mniejszym stopniu kwestia częstotliwości, a w większym — obserwacji. Rośliny piją w różnym tempie, zależnie od światła, temperatury, wielkości doniczki i pory roku, więc sztywny harmonogram prawie zawsze zawodzi. Zamiast tego naucz się czytać samą glebę: wciśnij palec w wierzchnią warstwę, poczuj ciężar doniczki i zwróć uwagę, jak układają się liście. Gdy wierzch podłoża przeschnie, większość roślin jest gotowa na wodę; gdy wciąż jest chłodny i wilgotny, poczekanie jest niemal zawsze bezpieczniejszym wyborem.",
+      "Kiedy już podlewasz, podlewaj porządnie. Lej wodę powoli i równomiernie po całej powierzchni, aż zacznie wypływać przez otwory drenażowe — to gwarantuje, że woda dotarła do całej strefy korzeniowej, i wypłukuje nagromadzone sole mineralne. Płytkie łyki zwilżają tylko powierzchnię i zachęcają korzenie do pozostawania przy górze, gdzie szybko wysychają i przegrzewają się. Zawsze opróżniaj potem podstawkę — korzenie stojące w wodzie duszą się bez tlenu i właśnie tak ginie większość roślin domowych.",
+      "Dostosowuj się do pór roku, a nie do kalendarza. W ciepłych miesiącach aktywnego wzrostu rośliny zużywają wodę szybko; w chłodniejszych, ciemniejszych miesiącach wzrost zwalnia i ta sama doniczka może pozostawać wilgotna znacznie dłużej. Zimna, mokra gleba zimą to częsty cichy zabójca, więc gdy światła i ciepła ubywa, pozwalaj podłożu przesychać mocniej między podlewaniami. Gdy tylko możesz, używaj wody o temperaturze pokojowej — lodowata woda szokuje korzenie, zwłaszcza u gatunków tropikalnych."
+    ],
+    "checklist": [
+      "Przed podlaniem sprawdzaj glebę palcem, nie kalendarz",
+      "Podlewaj obficie, aż woda wypłynie od spodu",
+      "Opróżniaj podstawkę — nigdy nie zostawiaj korzeni stojących w wodzie",
+      "Ogranicz podlewanie w zimne, ciemne miesiące",
+      "Używaj wody o temperaturze pokojowej, kiedy tylko możesz",
+      "Podnieś doniczkę: lekka znaczy sucha, ciężka — wciąż wilgotna"
+    ],
+    "problems": [
+      {
+        "title": "Przelanie",
+        "symptoms": [
+          "Żółknące liście, miękkie lub oklapnięte, często zaczynając od dolnych",
+          "Gleba pozostająca mokra przez wiele dni, czasem o kwaśnym lub stęchłym zapachu",
+          "Brązowe, rozmiękłe korzenie zamiast jędrnych i jasnych; ziemiórki unoszące się nad podłożem"
+        ],
+        "solutions": [
+          "Natychmiast przerwij podlewanie i przenieś roślinę w jasne, przewiewne miejsce, aby gleba mogła przeschnąć",
+          "Sprawdź korzenie: wysuń roślinę z doniczki, przytnij czystymi nożyczkami wszystkie brązowe, rozmiękłe fragmenty i przesadź do świeżego, dobrze przepuszczalnego podłoża",
+          "Od tej pory podlewaj tylko wtedy, gdy wierzch gleby przeschnie, i za każdym razem upewniaj się, że doniczka swobodnie odprowadza wodę"
+        ]
+      },
+      {
+        "title": "Przesuszenie",
+        "symptoms": [
+          "Więdnące, opadające liście, które podnoszą się wkrótce po podlaniu",
+          "Suche, kruche brzegi i końcówki liści; liście mogą zwijać się do środka",
+          "Gleba odstająca od ścianek doniczki; doniczka wydaje się nienaturalnie lekka"
+        ],
+        "solutions": [
+          "Podlewaj powoli i dogłębnie; jeśli gleba odpycha wodę, wstaw doniczkę na jakiś czas do miski z wodą, aby nawodniła się od dołu",
+          "Gdy bryła korzeniowa znów będzie równomiernie wilgotna, wróć do regularnych kontroli — bardzo sucha gleba często potrzebuje dwóch delikatnych podlań w odstępie kilku minut, aby dobrze wchłonąć wodę",
+          "Jeśli roślina wysycha szybciej, niż nadążasz podlewać, rozważ nieco większą doniczkę albo podłoże zatrzymujące odrobinę więcej wilgoci"
+        ]
+      }
+    ]
+  },
+  "light": {
+    "advice": [
+      "Światło to pożywienie rośliny — woda i nawóz jedynie wspierają to, co światło czyni możliwym. Ogrodnicy opisują światło w szerokich pasmach: pełne słońce (bezpośrednie promienie przez większą część dnia), częściowe słońce lub półcień (bezpośrednie światło przez część dnia, często łagodniejsze poranne słońce), jasne światło rozproszone (dość jasne, by rzucać miękki cień, ale bez bezpośrednich promieni) oraz cień. Umiejętność określenia, w które pasmo trafia dane miejsce w domu czy ogrodzie, to najbardziej przydatna umiejętność w całej pielęgnacji roślin.",
+      "Aby odczytać pomieszczenie, obserwuj je przez cały dzień. Okno wychodzące na południe (na półkuli północnej) daje najsilniejsze i najdłuższe światło; wschodnie — łagodne poranne słońce; zachodnie — gorętsze słońce popołudniowe; północne pozostaje miękkie i rozproszone. Odległość ma ogromne znaczenie — natężenie światła gwałtownie spada z każdym krokiem od okna, więc roślina metr od szyby może otrzymywać ułamek tego, co dostałaby na parapecie. Cienkie firanki, przyciemniane szyby i przeszkody na zewnątrz dodatkowo ograniczają światło.",
+      "Przenosząc jakąkolwiek roślinę w jaśniejsze warunki, aklimatyzuj ją stopniowo. Liście przystosowują się do światła, w którym wyrosły, a nagły skok — z wnętrza na pełne słońce, z cienia na nasłonecznioną ścianę — może poparzyć nawet gatunki kochające słońce. Zwiększaj ekspozycję krok po kroku przez kilka tygodni, zaczynając od łagodnego porannego światła, i obserwuj liście: wyblakłe plamy oznaczają, że idziesz za szybko, a świeże, zwarte przyrosty — że roślina dobrze się odnajduje."
+    ],
+    "checklist": [
+      "Określ swoje pasmo światła: pełne słońce, częściowe, jasne rozproszone lub cień",
+      "Obserwuj miejsce przez cały dzień, zanim postawisz tam roślinę",
+      "Pamiętaj, że natężenie światła szybko spada wraz z odległością od okna",
+      "Aklimatyzuj rośliny stopniowo do każdego jaśniejszego miejsca",
+      "Obracaj doniczki od czasu do czasu, aby wzrost był równomierny",
+      "Przecieraj zakurzone liście — kurz po cichu kradnie światło"
+    ],
+    "problems": [
+      {
+        "title": "Za dużo światła (poparzenie słoneczne)",
+        "symptoms": [
+          "Wyblakłe, spłowiałe lub papierowe plamy na liściach najbardziej wystawionych na słońce",
+          "Suche, brązowe plamy lub brzegi pojawiające się po przeniesieniu w jaśniejsze miejsce",
+          "Liście wyglądające na sprane lub żółtawe mimo prawidłowego podlewania"
+        ],
+        "solutions": [
+          "Odsuń roślinę od bezpośrednich promieni albo przefiltruj światło cienką firanką",
+          "Przytnij mocno poparzone liście, gdy masz pewność, że tkanka obumarła — nie zregenerują się, a ich usunięcie przekierowuje energię",
+          "Jeśli roślina rzeczywiście potrzebuje więcej słońca, wprowadzaj silniejsze światło powoli, przez kilka tygodni"
+        ]
+      },
+      {
+        "title": "Za mało światła (etiolacja)",
+        "symptoms": [
+          "Długie, wyciągnięte pędy z dużymi odstępami między liśćmi, mocno pochylone w stronę okna",
+          "Nowe liście wyrastające mniejsze i bledsze niż starsze",
+          "Rośliny o pstrych liściach tracące wzory; rośliny kwitnące odmawiające kwitnienia"
+        ],
+        "solutions": [
+          "Przesuń roślinę bliżej okna lub do jaśniejszego pomieszczenia, dostosowując ją stopniowo",
+          "Gdy roślina stoi już w lepszym świetle, przytnij wyciągnięte pędy, aby zachęcić ją do pełniejszego pokroju",
+          "Tam, gdzie naturalnego światła naprawdę brakuje, zwykła lampa do uprawy o pełnym spektrum na codziennym wyłączniku czasowym działa zaskakująco dobrze"
+        ]
+      }
+    ]
+  },
+  "soil": {
+    "advice": [
+      "Zdrowa gleba to żywa struktura, nie zwykła ziemia. Korzenie potrzebują od niej trzech rzeczy naraz: wilgoci, powietrza i oparcia. Dobra gleba trzyma wodę jak wyżęta gąbka — wilgotna w całości, nigdy rozmokła — zachowując przy tym kieszenie powietrza między cząstkami. Ta równowaga wynika ze struktury: gruby materiał (kora, perlit, piasek, żwirek) otwiera kanały drenażowe, a drobna materia organiczna (kompost, włókno kokosowe, ziemia liściowa) zatrzymuje wilgoć i karmi glebowe życie, które z kolei karmi roślinę.",
+      "W pojemnikach drenaż nie podlega negocjacjom. Każda doniczka potrzebuje otworów, a mieszanka w środku musi swobodnie przepuszczać nadmiar wody; warstwa kamyków na dnie nie naprawi zbitego podłoża — jedynie przesuwa strefę zalania bliżej korzeni. Jeśli po podlaniu woda długo stoi na powierzchni albo przelatuje na wylot, nie ciemniąc gleby, struktura wymaga poprawy. Materia organiczna to wielki mediator: poprawia zarówno zatrzymywanie wody w mieszankach piaszczystych, jak i drenaż w ciężkich.",
+      "pH — czyli to, jak kwaśna lub zasadowa jest gleba — po cichu decyduje, które składniki odżywcze korzenie są w stanie faktycznie pobrać. Większość roślin ogrodowych i domowych czuje się dobrze w zakresie od lekko kwaśnego do obojętnego, a problemy pojawiają się głównie na skrajach, gdzie składniki odżywcze zostają chemicznie zablokowane, nawet jeśli są obecne. Zamiast gonić za liczbami, wprowadzaj do gleby hojne ilości dobrze rozłożonej materii organicznej, która naturalnie buforuje pH, i drąż temat tylko wtedy, gdy roślina wykazuje uporczywe niedobory, których nie tłumaczą podlewanie ani światło."
+    ],
+    "checklist": [
+      "Upewnij się, że każdy pojemnik ma prawdziwe otwory drenażowe",
+      "Celuj w glebę, która po podlaniu przypomina wyżętą gąbkę",
+      "Domieszaj gruby materiał dla powietrza, materię organiczną dla wilgoci i życia",
+      "Odpuść mit warstwy kamyków — napraw zamiast tego mieszankę",
+      "Odświeżaj lub uzupełniaj podłoże w doniczkach, gdy z czasem osiada i się zbija",
+      "Ściółkuj rabaty na zewnątrz, by chronić strukturę i glebowe życie"
+    ],
+    "problems": [
+      {
+        "title": "Zbita, zalana gleba",
+        "symptoms": [
+          "Woda stojąca na powierzchni lub odpływająca wyjątkowo powoli",
+          "Gleba gęsta, ciężka i pozbawiona powietrza; może pojawić się kwaśny zapach",
+          "Roślina marnieje mimo starannego podlewania — żółknięcie, więdnięcie, zatrzymany wzrost"
+        ],
+        "solutions": [
+          "W doniczkach: przesadź do świeżej mieszanki wzbogaconej grubym materiałem, jak perlit lub kora, delikatnie rozluźniając bryłę korzeniową",
+          "Na rabatach: wprowadzaj materię organiczną widłami zamiast gwałtownie przekopywać glebę i unikaj chodzenia po mokrej ziemi",
+          "Ogranicz podlewanie, póki struktura się regeneruje, i pozwalaj powierzchni przesychać między podlewaniami"
+        ]
+      },
+      {
+        "title": "Uboga, wyjałowiona gleba",
+        "symptoms": [
+          "Blade liście, słabe pędy i niewielki lub żaden nowy przyrost w sezonie",
+          "Woda przelatująca przez doniczkę na wylot, nie nawilżając jej naprawdę",
+          "Podłoże w doniczce skurczone, stwardniałe lub odstające od ścianek"
+        ],
+        "solutions": [
+          "Przesadź do świeżej mieszanki dobrej jakości — ziemia doniczkowa się zużywa i żaden nawóz w pełni nie ożywi zapadniętej struktury",
+          "W sezonie wzrostu nawoź lekko i regularnie zamiast mocno naraz; silne dawki mogą poparzyć korzenie",
+          "Na zewnątrz buduj żyzność powoli kompostem i ściółką, które karmią glebę, a nie tylko roślinę"
+        ]
+      }
+    ]
+  },
+  "safety": {
+    "advice": [
+      "Życie wśród roślin, grzybów i owadów to jedna z cichych przyjemności życia, a kilka stałych nawyków czyni je bezpiecznym. Podstawowa zasada jest prosta: nigdy nie jedz, nie próbuj ani nie zaparzaj niczego, czego nie zidentyfikowano z całkowitą pewnością. Identyfikacja z aplikacji, także tej, to punkt wyjścia do nauki — nigdy zielone światło do spożycia. Wiele trujących gatunków to przekonujący sobowtórzy jadalnych, a w przypadku grzybów margines błędu bywa zerowy.",
+      "W domu — wiedz, co uprawiasz. Niektóre popularne rośliny doniczkowe i ogrodowe mogą podrażniać skórę lub szkodzić po przeżuciu, więc trzymaj je poza zasięgiem małych dzieci i zwierząt, a dzieci wcześnie ucz, że liście i jagody nie są jedzeniem, chyba że zaufany dorosły powie inaczej. Zakładaj rękawice do cięższego przycinania i przy nieznanych gatunkach, unikaj dotykania twarzy w trakcie pracy i porządnie myj potem ręce. Sok niektórych roślin może uwrażliwiać skórę na słońce, więc szybkie spłukanie każdego soku to dobry odruch.",
+      "Na szlaku patrz hojnie, a dotykaj wybiórczo. Obserwuj owady, nie biorąc ich do rąk, zostawiaj grzyby tam, gdzie rosną, chyba że towarzyszy ci doświadczony przewodnik, i przyjmij, że nieznane jagody są poza menu. Jeśli ktoś w twoim domu ma znane alergie na rośliny lub użądlenia, noś jego leki i wiedz, jak ich użyć. Nic z tego nie wymaga strachu — jedynie tego samego spokojnego szacunku, jaki okazujesz nurtowi rzeki czy gorącej kuchence."
+    ],
+    "checklist": [
+      "Nigdy nie spożywaj niczego bez pewnej identyfikacji na poziomie eksperta",
+      "Trzymaj wątpliwe rośliny poza zasięgiem dzieci i zwierząt",
+      "Zakładaj rękawice do przycinania i przy nieznanych gatunkach; potem myj ręce",
+      "Szybko spłukuj sok roślinny ze skóry",
+      "Obserwuj dzikie grzyby i owady, nie dotykając ich",
+      "Zapisz w telefonie numer lokalnego centrum toksykologicznego"
+    ],
+    "problems": [
+      {
+        "title": "Kontakt skóry z drażniącym gatunkiem",
+        "symptoms": [
+          "Zaczerwienienie, swędzenie, pieczenie lub wysypka w miejscu kontaktu rośliny ze skórą",
+          "Pęcherze lub smugowate ślady pojawiające się kilka godzin po kontakcie",
+          "Reakcja nasilająca się po wystawieniu zmienionego miejsca na słońce"
+        ],
+        "solutions": [
+          "Jak najszybciej dokładnie umyj to miejsce mydłem i chłodną wodą, wypierz też odzież, która dotknęła rośliny",
+          "Nie drap i chroń to miejsce przed bezpośrednim słońcem, aż się uspokoi",
+          "Jeśli reakcja jest silna, rozszerza się, obejmuje okolice oczu lub ust albo wiąże się z jakąkolwiek trudnością w oddychaniu, natychmiast szukaj pomocy medycznej"
+        ]
+      },
+      {
+        "title": "Przypadkowe spożycie",
+        "symptoms": [
+          "Dziecko lub zwierzę przeżuło albo połknęło część niezidentyfikowanej rośliny lub grzyba",
+          "Podrażnienie ust lub gardła, ślinienie, nudności, wymioty lub nietypowa senność",
+          "Czasem na początku brak jakichkolwiek objawów — ich brak nie jest dowodem bezpieczeństwa"
+        ],
+        "solutions": [
+          "Nie wywołuj wymiotów i nie podawaj jedzenia, mleka ani domowych sposobów, chyba że zaleci to specjalista",
+          "Usuń z ust resztki rośliny i zachowaj próbkę lub zdjęcie dokładnie tego, co zostało zjedzone",
+          "Natychmiast skontaktuj się z centrum toksykologicznym lub pogotowiem — w przypadku zwierząt z całodobowym weterynarzem — nawet jeśli osoba lub zwierzę wydaje się w porządku"
+        ]
+      }
+    ]
+  },
+  "uses": {
+    "advice": [
+      "Historia ludzkości jest zapisana w roślinach. Dały nam podstawowe pożywienie i przyprawy, drewno na schronienie i statki, włókna jak bawełna, len i konopie na tkaniny i liny, barwniki, żywice, perfumy oraz codzienną radość ogrodnictwa ozdobnego. Zrozumienie, jak dany gatunek był używany, otwiera okno zarówno na botanikę, jak i na historię — ta sama roślina może być uprawą na jednym kontynencie, świętym symbolem na drugim i ulubienicą ogrodów na trzecim.",
+      "Medycyna tradycyjna zasługuje w równej mierze na szczególny szacunek i szczególną ostrożność. Niezliczone współczesne leki wywodzą się z roślin używanych przez tradycyjnych uzdrowicieli i to dziedzictwo jest naprawdę niezwykłe. Ale tradycyjne użycie to zapis historii, nie dowód bezpieczeństwa czy skuteczności — dawka, sposób przygotowania, część rośliny i osoba, która ją przyjmuje, całkowicie zmieniają wynik. Nigdy nie lecz się roślinami na podstawie czegoś, co przeczytano, także w tej aplikacji; zawsze najpierw skonsultuj się z wykwalifikowanym pracownikiem ochrony zdrowia.",
+      "Cokolwiek przyciąga cię do roślin użytkowych, niech prowadzi cię etyka. Zbieraj tylko to, co potrafisz z pewnością zidentyfikować i co wolno ci zabrać, przedkładaj źródła uprawne nad dzikie i bierz z umiarem, aby populacje mogły się odbudować. Nadmierne zbiory zepchnęły ukochane gatunki lecznicze i ozdobne ku rzadkości w wielu regionach. Najlepsi praktycy myślą pokoleniami: zbierają tak, jakby oni sami, ich sąsiedzi i ich wnuki mieli wrócić w to samo miejsce."
+    ],
+    "checklist": [
+      "Traktuj tradycyjne zastosowania jak historię do nauki, nie instrukcję do stosowania",
+      "Przed jakimkolwiek użyciem leczniczym skonsultuj się ze specjalistą ochrony zdrowia",
+      "Kupuj ze źródeł uprawnych i etycznych, kiedy to możliwe",
+      "Zbieraj z umiarem i legalnie — znaj lokalne przepisy",
+      "Nigdy nie zbieraj gatunków rzadkich, chronionych ani wolno rosnących",
+      "Zapisuj, czego się uczysz; wiedza o roślinach użytkowych jest warta zachowania"
+    ],
+    "problems": [
+      {
+        "title": "Stosowanie roślin bez fachowej porady",
+        "symptoms": [
+          "Przygotowywanie herbat, nalewek lub leków z gatunku zidentyfikowanego tylko aplikacją albo z pamięci",
+          "Kierowanie się dawkowaniem z mediów społecznościowych lub zasłyszanych opinii",
+          "Łączenie ziołowych środków z lekami na receptę bez informowania lekarza"
+        ],
+        "solutions": [
+          "Wstrzymaj stosowanie, dopóki tożsamości i bezpieczeństwa rośliny nie potwierdzi wykwalifikowany ekspert",
+          "Omów każdy środek roślinny z pracownikiem ochrony zdrowia, zwłaszcza przy innych lekach, ciąży lub istniejących schorzeniach",
+          "Traktuj informacje z tej aplikacji jako kontekst edukacyjny, nigdy jako receptę"
+        ]
+      },
+      {
+        "title": "Rabunkowe zbieranie",
+        "symptoms": [
+          "Stanowiska dzikiego gatunku wyraźnie kurczące się lub znikające rok po roku",
+          "Zbiory zabierające korzenie, korę lub całe rośliny zamiast części odnawialnych",
+          "Zbieranie na obszarach chronionych lub ignorowanie lokalnych zasad zbioru"
+        ],
+        "solutions": [
+          "Stosuj zasadę powściągliwości zbieracza: bierz tylko niewielki ułamek tego, co znajdziesz, i wyłącznie z obfitych stanowisk",
+          "Wybieraj części odnawialne — liście, część kwiatów, część owoców — zamiast korzeni i kory, które często kosztują roślinę życie",
+          "Wspieraj programy upraw i kupuj materiał z upraw; ewidentnie nielegalne zbiory zgłaszaj lokalnym władzom"
+        ]
+      }
+    ]
+  },
+  "cultural": {
+    "advice": [
+      "Każdy gatunek, który żył obok ludzi, niesie w sobie opowieści. Rośliny i grzyby pojawiają się w mitach o stworzeniu, obrzędach weselnych, rytuałach pogrzebowych, godłach narodowych, wierszach i przysłowiach; dąb znaczy jedno w jednej tradycji i coś zupełnie innego w drugiej. Poznawanie tych warstw zamienia spacer po parku w wędrówkę przez ludzką wyobraźnię — same nazwy często przechowują stulecia obserwacji, humoru i wierzeń.",
+      "Folklor to także zapis prawdziwej wiedzy, przefiltrowanej przez pokolenia. Opowieści o tym, które rośliny leczą, szkodzą, chronią lub przepowiadają pogodę, często kodują autentyczne obserwacje obok czystej poezji, a odróżnianie jednego od drugiego to część przyjemności. Podchodź do tych tradycji jak pełen szacunku gość: należą do żywych kultur, nie do muzeum, a wspólnoty, które je pielęgnują, są ich najlepszymi interpretatorami.",
+      "Badając kulturową historię gatunku, sięgaj po źródła bliskie samej tradycji — autorów ze wspólnot, regionalnych badaczy, zbiory muzeów i archiwów — i notuj, skąd pochodzi każda opowieść. Powtarzanie legendy wraz z jej pochodzeniem honoruje ludzi, którzy ją stworzyli; powtarzanie jej bez źródła powoli ich wymazuje. Ciekawość plus przypisanie źródła — oto cała metoda."
+    ],
+    "checklist": [
+      "Sprawdzaj nazwy ludowe i lokalne — kryją skondensowaną historię",
+      "Notuj, z jakiej kultury i regionu pochodzi każda opowieść",
+      "W miarę możliwości sięgaj po źródła z wnętrza tradycji",
+      "Ciesz się symboliką, nie traktując jej jak biologii",
+      "Dziel się legendami razem z ich pochodzeniem",
+      "Pytaj o zgodę, zanim sfotografujesz coś lub zbierzesz w miejscach świętych albo wspólnotowych"
+    ],
+    "problems": [
+      {
+        "title": "Mit a fakt",
+        "symptoms": [
+          "Zakładanie, że roślina jest bezpieczna do jedzenia lub stosowania, bo „ludzie zawsze jej używali”",
+          "Odczytywanie znaczeń symbolicznych — szczęścia, ochrony, uzdrowienia — jako właściwości fizycznych",
+          "Ufanie szeroko powtarzanej opowieści bardziej właśnie dlatego, że jest szeroko powtarzana"
+        ],
+        "solutions": [
+          "Trzymaj w głowie dwie półki: co roślina znaczy i co roślina robi — obie to prawdziwa wiedza, ale odpowiadają na różne pytania",
+          "Wszystko, co dotyczy bezpieczeństwa lub spożycia, weryfikuj we współczesnych źródłach eksperckich, niezależnie od wieku tradycji",
+          "Ciesz się mitem na jego własnych zasadach; nie musi być dosłownie prawdziwy, by był kulturowo cenny"
+        ]
+      },
+      {
+        "title": "Przypisanie i szacunek",
+        "symptoms": [
+          "Opowiadanie historii lub ceremonii bez wzmianki o ludziach, do których należą",
+          "Przedstawianie tradycji jednej kultury jako uniwersalnego lub ogólnego folkloru",
+          "Używanie świętych roślin lub symboli jako zwykłej dekoracji, bez zrozumienia ich wagi"
+        ],
+        "solutions": [
+          "Ilekroć dzielisz się opowieścią, wymieniaj kulturę, region i miejsce, w którym ją poznano",
+          "Gdy tradycja jest żywa i święta, kieruj się wskazaniami samej wspólnoty co do tego, co i jak można udostępniać",
+          "Pozwól ciekawości dojrzeć do relacji: czytaj autorów ze wspólnot, odwiedzaj centra kultury i wspieraj strażników tej wiedzy"
+        ]
+      }
+    ]
+  },
+  "edible": {
+    "advice": [
+      "Bezpieczne zbieractwo opiera się na jednej nienaruszalnej zasadzie: pewna identyfikacja, na trzy sposoby, za każdym razem. Zanim cokolwiek dzikiego dotknie twoich ust, powinno się dać potwierdzić gatunek po wielu niezależnych cechach — liściu, kwiecie, owocu, korze, zapachu, siedlisku, porze roku — skonfrontowanych z co najmniej jednym wiarygodnym przewodnikiem terenowym i najlepiej zweryfikowanych osobiście przez doświadczonego zbieracza. Jeśli choć jedna kontrola pozostawia wątpliwość, odpowiedź brzmi: nie. Podpowiedź aplikacji, także tej, to początek identyfikacji, nigdy jej koniec.",
+      "Jadalność rzadko bywa cechą typu tak-albo-nie całej rośliny. Wiele gatunków ma jedną część jadalną i inne szkodliwe; wiele jest bezpiecznych tylko w określonym stadium dojrzałości albo dopiero po właściwym przygotowaniu, jak dokładne ugotowanie. „Jadalny” w źródłach zawsze oznacza właściwą część, we właściwym stadium, przygotowaną we właściwy sposób. Próbując jakiegokolwiek nowego dzikiego pożywienia, które rygorystycznie potwierdzono, zjedz najpierw niewielką ilość i odczekaj dobę — indywidualne nadwrażliwości zdarzają się nawet przy gatunkach naprawdę jadalnych.",
+      "Etyczne zbieractwo chroni zarówno ciebie, jak i ziemię. Zbieraj tylko tam, gdzie to legalne, a środowisko czyste — pobocza dróg, opryskiwane pola i tereny przemysłowe potrafią skazić nawet doskonale jadalne gatunki. Bierz z umiarem, zostawiaj dużo dzikiej przyrodzie i odrostom, i nigdy nie ogołacaj stanowiska do zera. Stary nawyk zbieraczy wart jest przejęcia w całości: znaj swoją roślinę, znaj swoje miejsce, bierz niewiele i daj temu miejscu powód, by przyjęło cię z powrotem."
+    ],
+    "checklist": [
+      "Potwierdzaj tożsamość po wielu niezależnych cechach, nigdy po jednej",
+      "Sprawdzaj w przewodniku terenowym i u doświadczonej osoby",
+      "Dowiedz się, która część, w jakim stadium i po jakim przygotowaniu jest bezpieczna",
+      "Gdy zostaje jakakolwiek wątpliwość: nie jedz",
+      "Nowe dzikie pożywienie próbuj w małych ilościach, po jednym naraz",
+      "Zbieraj legalnie, z czystych miejsc, i zostawiaj dużo za sobą"
+    ],
+    "problems": [
+      {
+        "title": "Mylenie podobnych gatunków",
+        "symptoms": [
+          "Identyfikacja oparta na jednej cesze, jednym zdjęciu lub ogólnym wrażeniu",
+          "Okaz zgadza się z większością, ale nie z całością opisu z przewodnika",
+          "W tej samej rodzinie istnieją znani groźni sobowtórzy — częste u grzybów, dzikich marchwi i pietruszek oraz wielu jagód"
+        ],
+        "solutions": [
+          "Zatrzymaj się przy pierwszej rozbieżności: prawdziwe dopasowanie zgadza się w każdej cesze, a jeden błędny szczegół oznacza inny gatunek",
+          "Poznaj niebezpieczne sobowtóry swojego regionu równie dokładnie jak same gatunki jadalne — najpierw ucz się tego, co może zabić",
+          "Zanim znalezisko trafi do kuchni, pokaż je ekspertowi lub lokalnej grupie zbieraczy; przy grzybach traktuj to jako obowiązek"
+        ]
+      },
+      {
+        "title": "Nieodpowiednie przygotowanie",
+        "symptoms": [
+          "Jedzenie na surowo gatunku, o którym tradycja i źródła mówią, że musi być ugotowany",
+          "Użycie niewłaściwej części poprawnie zidentyfikowanej rośliny",
+          "Dolegliwości trawienne po zjedzeniu rzekomo jadalnego znaleziska"
+        ],
+        "solutions": [
+          "Dokładnie przestrzegaj instrukcji przygotowania z wiarygodnych źródeł — wymogi gotowania istnieją, bo ciepło neutralizuje realne związki",
+          "Dopasuj część i stadium do źródła: właściwy gatunek, ale zła część, to nadal zły posiłek",
+          "Jeśli ktoś się rozchoruje, zachowaj próbkę tego, co zjedzono, i szybko szukaj porady medycznej, zamiast czekać, aż przejdzie"
+        ]
+      }
+    ]
+  },
+  "propagation": {
+    "advice": [
+      "Rozmnażanie to cicha magia ogrodnictwa: jedna roślina staje się wieloma, za darmo. Trzy drzwi wejściowe to sadzonki, podział i siew. Sadzonka bierze zdrowy pęd lub liść i namawia go do wypuszczenia własnych korzeni; podział rozdziela kępiastą roślinę na gotowe mniejsze rośliny; siew zaczyna od zera i wynagradza cierpliwość najszerszymi możliwościami. Każdy gatunek ma metody, które preferuje, ale zasady u podstaw są wspólne niemal dla wszystkich.",
+      "Przy sadzonkach o powodzeniu decydują trzy rzeczy: zdrowy materiał, czyste cięcia i stabilne warunki. Pobieraj sadzonki z silnych, wolnych od chorób przyrostów, tnij tuż pod węzłem — miejscem, gdzie liście łączą się z pędem i gdzie koncentruje się energia ukorzeniania — i usuwaj dolne liście, aby nic nie gniło pod powierzchnią. Czy ukorzeniasz w wodzie, czy w lekkim, przewiewnym podłożu, daj sadzonkom jasne rozproszone światło, łagodne ciepło i wysoką wilgotność, i oprzyj się pokusie ich podciągania dla sprawdzenia postępów; nowe liście to ogłoszenie, że korzenie istnieją.",
+      "Higiena i wyczucie czasu to dwa najbardziej niedoceniane składniki. Czyść narzędzia alkoholem lub płomieniem przed cięciami i między nimi — brudne ostrze przenosi chorobę prosto w świeże rany. Rozmnażaj w czasie aktywnego wzrostu, zwykle od wiosny do wczesnego lata, gdy roślina ma energię na zbyciu; materiał pobrany z rośliny uśpionej lub zestresowanej zaczyna życie z gorszej pozycji. I pobieraj więcej sadzonek, niż potrzebujesz: nawet eksperci tracą pewien procent, a zapasowe robią za świetne prezenty."
+    ],
+    "checklist": [
+      "Rozmnażaj wyłącznie ze zdrowych, silnych, wolnych od szkodników roślin",
+      "Sterylizuj ostrza przed cięciami i między nimi",
+      "Tnij tuż pod węzłem; usuwaj liście, które znalazłyby się pod powierzchnią",
+      "Zapewnij jasne rozproszone światło, ciepło i wilgotność — nie bezpośrednie słońce",
+      "Utrzymuj podłoże wilgotne, ale nigdy rozmokłe",
+      "Pobieraj zapasowe sadzonki; pewne straty są normalne nawet u ekspertów"
+    ],
+    "problems": [
+      {
+        "title": "Gnijące sadzonki",
+        "symptoms": [
+          "Pęd brązowiejący, czerniejący lub robiący się przezroczysty od podstawy w górę",
+          "Miękka, śliska konsystencja i kwaśny zapach wody lub podłoża",
+          "Liście zapadające się zamiast łagodnie więdnąć"
+        ],
+        "solutions": [
+          "Wyraźnie zgniłe sadzonki wyrzuć i zacznij od nowa — zgnilizna wędruje w górę i rzadko się cofa",
+          "Jeśli ucierpiała tylko podstawa, przytnij sterylnym ostrzem wyraźnie powyżej uszkodzenia i zacznij od nowa w świeżej wodzie lub podłożu",
+          "Zapobiegnij powtórce: czystsze narzędzia, świeższa i regularnie wymieniana woda, lżejsze i bardziej przewiewne podłoże oraz żadnych liści pod powierzchnią"
+        ]
+      },
+      {
+        "title": "Sadzonki, które nie chcą się ukorzenić",
+        "symptoms": [
+          "Mijają tygodnie bez korzeni, choć sadzonka wciąż wygląda na żywą",
+          "Sadzonka powoli żółknie i traci siły bez żadnej zmiany",
+          "U podstawy tworzy się kalus, ale korzenie nigdy nie nadchodzą"
+        ],
+        "solutions": [
+          "Najpierw sprawdź warunki: większość zastojów bierze się ze zbyt małej ilości światła, zbyt niskiej temperatury lub suchego powietrza — popraw je, zanim obwinisz sadzonkę",
+          "Przytnij podstawę pod kątem, poniżej węzła, aby odsłonić świeżą tkankę, a przy opornych gatunkach rozważ ukorzeniacz",
+          "Bądź cierpliwy stosownie do gatunku: jedne ukorzeniają się w dni, inne potrzebują miesięcy — dopóki sadzonka jest jędrna i zielona, wciąż próbuje"
+        ]
+      }
+    ]
+  },
+  "role": {
+    "advice": [
+      "Żaden gatunek nie żyje samotnie. Każda roślina, grzyb i owad pełni rolę w sieci zależności: rośliny kwitnące karmią zapylacze, które z kolei zawiązują nasiona i owoce karmiące ptaki i ssaki; liście karmią gąsienice, które karmią pisklęta; grzyby i owady rozkładające przetwarzają opadłą materię i zwracają jej składniki glebie, z której wyrasta następne pokolenie. Poznanie roli gatunku — co karmi, komu daje schronienie, z kim współpracuje i od kogo zależy — zamienia identyfikację z nazywania w rozumienie.",
+      "Najbogatszym sposobem dostrzegania tych ról jest cierpliwa obserwacja o niskim wpływie. Usiądź nieruchomo przy kwitnącej roślinie na kilka minut i policz jej gości; wracaj do tego samego drzewa przez kolejne pory roku i patrz, jak zmienia się jego obsada; delikatnie odwróć kłodę i odłóż ją dokładnie tak, jak leżała. Fotografuj zamiast zbierać, w wrażliwych siedliskach trzymaj się szlaków, zachowuj pełen szacunku dystans od gniazd i nor i pozwól dzikim zwierzętom decydować o odległości między wami. Paradoks przyrodnika polega na tym, że im mniej ingerujesz, tym więcej widzisz.",
+      "Twój ogród, balkon czy parapet to działający fragment ekosystemu. Doniczka kwitnących ziół karmi zapylacze; kąt z liśćmi daje schronienie zimującym owadom; rezygnacja z pestycydów utrzymuje sieć pokarmową w całości, od mszycy po ptaka śpiewającego. Małe wybory mnożą się przez całe dzielnice — ta sama uwaga, którą poświęcasz roślinie doniczkowej, skierowana na zewnątrz, po cichu naprawia sieć wokół ciebie."
+    ],
+    "checklist": [
+      "Pytaj o każdy gatunek: co karmi i co się nim żywi?",
+      "Obserwuj cicho i zostawiaj każde miejsce takim, jakim je zastano",
+      "Fotografuj zamiast zbierać",
+      "Odkładaj wszystko, co odwrócisz, dokładnie na miejsce",
+      "Sadź kwiaty, zostaw trochę dzikich kątów, odpuść pestycydy",
+      "Notuj obserwacje — zapisy w czasie odsłaniają sieć"
+    ],
+    "problems": [
+      {
+        "title": "Gatunki nie na swoim miejscu (inwazyjne)",
+        "symptoms": [
+          "Jeden gatunek zaściełający teren i wypierający zróżnicowaną rodzimą roślinność",
+          "Szybkie, agresywne rozprzestrzenianie się daleko poza miejsce posadzenia",
+          "Wyraźnie mniej owadów, ptaków i dzikich kwiatów tam, gdzie dominuje"
+        ],
+        "solutions": [
+          "Dowiedz się, które gatunki uznaje się za inwazyjne w twoim regionie — ta sama roślina może być niegroźna u siebie i niszczycielska gdzie indziej",
+          "Nigdy nie wyrzucaj odpadów ogrodowych, zawartości akwarium ani niechcianych roślin na dzikie tereny czy do cieków wodnych",
+          "Do ogrodu wybieraj gatunki rodzime lub dobrze wychowane i wspieraj lokalne akcje usuwania, jeśli istnieją"
+        ]
+      },
+      {
+        "title": "Spadek liczby zapylaczy",
+        "symptoms": [
+          "Kwiaty kwitnące przy niewielu odwiedzających owadach lub bez żadnych",
+          "Rośliny owocowe i warzywne kwitnące dobrze, ale zawiązujące mało owoców",
+          "Wyraźnie mniej pszczół, motyli i bzygów niż w poprzednich sezonach"
+        ],
+        "solutions": [
+          "Sadź sztafetę kwiatów, aby coś kwitło przez cały sezon wegetacyjny, przedkładając proste, otwarte kwiaty nad gęste, pełne",
+          "Wyeliminuj insektycydy, zwłaszcza na czymkolwiek kwitnącym, i toleruj trochę nadgryzionych liści jako czynsz płacony ekosystemowi",
+          "Zapewnij cichą infrastrukturę: nietknięte kąty, płaty gołej ziemi, puste łodygi zostawione na zimę i płytkie poidło z kamieniami do lądowania"
+        ]
+      }
+    ]
+  }
+}

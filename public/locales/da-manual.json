@@ -1,0 +1,389 @@
+{
+  "watering": {
+    "advice": [
+      "God vanding handler mindre om hyppighed og mere om observation. Planter drikker i forskelligt tempo alt efter lys, temperatur, pottestørrelse og årstid, så en fast plan slår næsten altid fejl. Lær i stedet at læse selve jorden: tryk en finger ned i det øverste lag, mærk pottens vægt, og læg mærke til, hvordan bladene holder sig. Når jordens overflade er tørret ud, er de fleste planter klar til en tår; når den stadig er kølig og fugtig, er det næsten altid det sikreste valg at vente.",
+      "Når du vander, så vand grundigt. Hæld langsomt og jævnt over hele overfladen, indtil vandet løber ud gennem drænhullerne — det garanterer, at hele rodzonen er nået, og skyller ophobede mineralsalte ud. Overfladiske sjatter fugter kun overfladen og opmuntrer rødderne til at blive nær toppen, hvor de hurtigt tørrer ud og bliver overophedede. Tøm altid underskålen bagefter — rødder, der står i vand, udsultes for ilt, og det er sådan, de fleste stueplanter går tabt.",
+      "Justér efter årstiderne frem for kalenderen. I varme måneder med aktiv vækst bruger planter vandet hurtigt; i køligere, mørkere måneder går væksten i stå, og den samme potte kan holde sig fugtig langt længere. Kold, våd jord om vinteren er en almindelig lydløs dræber, så lad jorden tørre mere ud mellem vandingerne, når lys og varme aftager. Brug så vidt muligt vand ved stuetemperatur — iskoldt vand chokerer rødderne, især hos tropiske arter."
+    ],
+    "checklist": [
+      "Tjek jorden med fingeren, før du vander, ikke kalenderen",
+      "Vand grundigt, indtil det løber ud af bunden",
+      "Tøm underskålen — lad aldrig rødder stå i vand",
+      "Skru ned for vandingen i kolde, mørke måneder",
+      "Brug vand ved stuetemperatur, når du kan",
+      "Løft potten: let betyder tør, tung betyder stadig fugtig"
+    ],
+    "problems": [
+      {
+        "title": "Overvanding",
+        "symptoms": [
+          "Gulnende blade, der føles bløde eller slappe, ofte begyndende nedefra",
+          "Jord, der forbliver våd i dagevis, nogle gange med en sur eller muggen lugt",
+          "Brune, grødede rødder i stedet for faste, lyse; sørgemyg, der svæver over jorden"
+        ],
+        "solutions": [
+          "Stop vandingen med det samme, og flyt planten et lyst og luftigt sted hen, så jorden kan tørre",
+          "Tjek rødderne: tag planten ud af potten, klip alle brune, grødede dele væk med en ren saks, og plant om i frisk, veldrænende jord",
+          "Vand fremover kun, når jordens overflade er tørret ud, og tjek hver gang, at potten dræner frit"
+        ]
+      },
+      {
+        "title": "Undervanding",
+        "symptoms": [
+          "Visne eller hængende blade, der retter sig kort efter vanding",
+          "Tørre, sprøde bladkanter og -spidser; bladene kan rulle indad",
+          "Jord, der trækker sig væk fra pottens sider; potten føles usædvanligt let"
+        ],
+        "solutions": [
+          "Vand langsomt og grundigt; hvis jorden afviser vandet, så stil potten i et fad med vand et stykke tid, så den kan suge fugt nedefra",
+          "Når rodklumpen igen er jævnt fugtig, så genoptag de faste tjek — meget tør jord har ofte brug for to nænsomme vandinger med få minutters mellemrum for at optage vandet ordentligt",
+          "Hvis planten tørrer hurtigere ud, end du kan følge med, så overvej en lidt større potte eller en jordblanding, der holder lidt mere på fugten"
+        ]
+      }
+    ]
+  },
+  "light": {
+    "advice": [
+      "Lys er plantens føde — vand og gødning understøtter kun det, som lyset gør muligt. Dyrkere beskriver lys i brede bånd: fuld sol (direkte stråler det meste af dagen), halvsol eller halvskygge (direkte lys en del af dagen, ofte den mildere morgensol), lyst indirekte lys (lyst nok til at kaste en blød skygge, men uden direkte stråler) og skygge. At vide, hvilket bånd et sted i dit hjem eller din have hører til, er den mest nyttige færdighed i al plantepasning.",
+      "For at aflæse et rum skal du iagttage det i løbet af en hel dag. Et sydvendt vindue (på den nordlige halvkugle) giver det stærkeste og længste lys; øst giver mild morgensol; vest giver varmere eftermiddagssol; nord forbliver blødt og diffust. Afstand betyder enormt meget — lysintensiteten falder brat for hvert skridt væk fra vinduet, så en plante en meter fra glasset kan modtage en brøkdel af, hvad den ville få i vindueskarmen. Tynde gardiner, tonet glas og forhindringer udenfor reducerer lyset yderligere.",
+      "Når du flytter en plante til lysere forhold, skal du akklimatisere den gradvist. Blade tilpasser sig det lys, de voksede frem i, og et pludseligt spring — indefra ud i fuld sol, fra skygge til en solbeskinnet mur — kan svide selv solelskende arter. Øg eksponeringen trin for trin over et par uger, begyndende med mild morgensol, og hold øje med løvet: blegede pletter betyder for hurtigt, mens frisk, kompakt nyvækst betyder, at planten falder godt til."
+    ],
+    "checklist": [
+      "Find dit lysbånd: fuld sol, halvsol, lyst indirekte eller skygge",
+      "Iagttag stedet en hel dag, før du placerer en plante der",
+      "Husk, at intensiteten falder hurtigt med afstanden til vinduet",
+      "Akklimatisér planter gradvist til enhver lysere placering",
+      "Drej potterne af og til, så væksten forbliver jævn",
+      "Tør støvede blade af — støv stjæler lys i det skjulte"
+    ],
+    "problems": [
+      {
+        "title": "For meget lys (solsvidning)",
+        "symptoms": [
+          "Blegede, falmede eller papiragtige pletter på de blade, der er mest udsat for solen",
+          "Tørre brune pletter eller kanter, der viser sig efter en flytning til et lysere sted",
+          "Blade, der ser udvaskede eller gullige ud generelt trods god vanding"
+        ],
+        "solutions": [
+          "Flyt planten væk fra de direkte stråler, eller filtrér lyset med et tyndt gardin",
+          "Klip hårdt svedne blade af, når du er sikker på, at vævet er dødt — de kommer sig ikke, og at fjerne dem sender energien andre steder hen",
+          "Genindfør stærkere lys langsomt over uger, hvis planten reelt ønsker mere sol"
+        ]
+      },
+      {
+        "title": "For lidt lys (etiolering)",
+        "symptoms": [
+          "Lange, strakte stængler med store mellemrum mellem bladene, kraftigt hældende mod vinduet",
+          "Nye blade, der kommer mindre og blegere end de ældre",
+          "Brogede planter, der mister deres mønstre; blomstrende planter, der nægter at blomstre"
+        ],
+        "solutions": [
+          "Flyt planten tættere på et vindue eller til et lysere rum, og justér gradvist",
+          "Beskær ranglet vækst, når planten står i bedre lys, for at fremme en fyldigere form",
+          "Hvor naturligt lys virkelig er en mangelvare, virker en simpel fuldspektrum-vækstlampe på en daglig timer forbavsende godt"
+        ]
+      }
+    ]
+  },
+  "soil": {
+    "advice": [
+      "Sund jord er en levende struktur, ikke bare muld. Rødder har brug for tre ting fra den på én gang: fugt, luft og forankring. God jord holder på vandet som en vredet svamp — fugtig hele vejen igennem, aldrig gennemblødt — mens den bevarer luftlommer mellem partiklerne. Den balance kommer fra strukturen: groft materiale (bark, perlit, sand, grus) åbner drænkanaler, mens fint organisk materiale (kompost, kokosfibre, bladmuld) holder på fugten og nærer det jordliv, der igen nærer planten.",
+      "Dræning er ikke til forhandling i potter. Enhver potte skal have huller, og blandingen indeni skal lade overskydende vand passere frit; et lag småsten i bunden reparerer ikke en tæt blanding — det løfter blot den vandlidende zone tættere på rødderne. Hvis vandet står længe på overfladen efter vanding, eller fosser lige igennem uden at gøre jorden mørkere, skal strukturen rettes op. Organisk materiale er den store mægler: det forbedrer både vandtilbageholdelsen i sandede blandinger og dræningen i tunge.",
+      "pH — hvor sur eller basisk jorden er — styrer i det stille, hvilke næringsstoffer rødderne rent faktisk kan optage. De fleste have- og stueplanter trives i et let surt til neutralt spænd, og problemer opstår mest i yderpunkterne, hvor næringsstoffer bliver kemisk låst inde, selv når de er til stede. I stedet for at jagte tal, så arbejd rigelige mængder velomsat organisk materiale ned, som naturligt stabiliserer pH, og gå kun videre i undersøgelsen, hvis en plante viser vedvarende næringsmangler, som vanding og lys ikke kan forklare."
+    ],
+    "checklist": [
+      "Tjek, at enhver potte har rigtige drænhuller",
+      "Sigt efter jord, der føles som en vredet svamp efter vanding",
+      "Bland groft materiale i for luft, organisk materiale for fugt og liv",
+      "Drop myten om stenlaget — ret blandingen i stedet",
+      "Forny eller topdress pottejorden, når den synker sammen og pakker med tiden",
+      "Dæk udendørs bede med jorddække for at beskytte struktur og jordliv"
+    ],
+    "problems": [
+      {
+        "title": "Kompakt, vandlidende jord",
+        "symptoms": [
+          "Vand, der samler sig på overfladen eller dræner ekstremt langsomt",
+          "Jorden er tæt, tung og lufttom; kan udvikle en sur lugt",
+          "Planten sygner hen trods omhyggelig vanding — gulfarvning, visnen, gået i stå"
+        ],
+        "solutions": [
+          "For potter: plant om i frisk blanding forbedret med groft materiale som perlit eller bark, og løsn rodklumpen nænsomt",
+          "For bede: arbejd organisk materiale ned med en greb i stedet for at vende jorden voldsomt, og undgå at gå på våd jord",
+          "Skru ned for vandingen, mens strukturen kommer sig, og lad overfladen tørre mellem vandingerne"
+        ]
+      },
+      {
+        "title": "Mager, udpint jord",
+        "symptoms": [
+          "Blege blade, svage stængler og lidt eller ingen ny vækst i sæsonen",
+          "Vand, der fosser lige gennem potten uden rigtigt at fugte den",
+          "Pottejord, der er skrumpet, hærdet eller har sluppet pottens vægge"
+        ],
+        "solutions": [
+          "Plant om i frisk kvalitetsjord — pottejord slides op, og ingen gødning genopliver fuldt ud en kollapset struktur",
+          "Gød let og regelmæssigt i vækstsæsonen frem for kraftigt på én gang; stærke doser kan svide rødderne",
+          "Udendørs opbygges frugtbarheden langsomt med kompost og jorddække, som nærer jorden og ikke kun planten"
+        ]
+      }
+    ]
+  },
+  "safety": {
+    "advice": [
+      "At leve med planter, svampe og insekter er en af livets stille glæder, og nogle få faste vaner gør det til en sikker en af slagsen. Grundreglen er enkel: spis, smag eller bryg aldrig noget, du ikke har identificeret med fuldstændig sikkerhed. En app-identifikation, inklusive denne, er et udgangspunkt for læring — aldrig grønt lys til at spise. Mange giftige arter er overbevisende dobbeltgængere til spiselige, og især hos svampe kan fejlmarginen være nul.",
+      "Derhjemme skal du kende det, du dyrker. Nogle almindelige stueplanter og havearter kan irritere huden eller være skadelige at tygge på, så hold planterne uden for små børns og kæledyrs rækkevidde, og lær tidligt børnene, at blade og bær ikke er mad, medmindre en voksen, de stoler på, siger det. Brug handsker ved kraftig beskæring, eller når du håndterer ukendte arter, undgå at røre dit ansigt, mens du arbejder, og vask hænderne grundigt bagefter. Saften fra nogle planter kan gøre huden følsom over for sollys, så at skylle al saft af med det samme er en god refleks.",
+      "Ude på stien skal du se gavmildt og røre selektivt. Iagttag insekter uden at håndtere dem, lad svampene stå, medmindre du er med en erfaren guide, og gå ud fra, at ukendte bær ikke er på menuen. Hvis nogen i din husstand har kendte allergier over for planter eller stik, så medbring deres medicin, og vid, hvordan den bruges. Intet af dette kræver frygt — blot den samme rolige respekt, som du ville vise en flodstrøm eller et varmt komfur."
+    ],
+    "checklist": [
+      "Indtag aldrig noget uden sikker identifikation på ekspertniveau",
+      "Hold tvivlsomme planter uden for børns og kæledyrs rækkevidde",
+      "Brug handsker ved beskæring og ukendte arter; vask hænder bagefter",
+      "Skyl straks plantesaft af huden",
+      "Iagttag vilde svampe og insekter uden at røre dem",
+      "Gem nummeret til Giftlinjen på din telefon"
+    ],
+    "problems": [
+      {
+        "title": "Hudkontakt med en irriterende art",
+        "symptoms": [
+          "Rødme, kløe, svie eller udslæt, hvor planten rørte huden",
+          "Vabler eller stribede mærker, der viser sig timer efter kontakten",
+          "En reaktion, der forværres efter sol på det ramte område"
+        ],
+        "solutions": [
+          "Vask området grundigt med sæbe og køligt vand hurtigst muligt, og vask alt tøj, der har rørt planten",
+          "Undgå at kradse, og hold området væk fra direkte sollys, mens det falder til ro",
+          "Hvis reaktionen er kraftig, breder sig, sidder nær øjne eller mund eller indebærer nogen form for åndedrætsbesvær, så søg læge med det samme"
+        ]
+      },
+      {
+        "title": "Utilsigtet indtagelse",
+        "symptoms": [
+          "Et barn eller kæledyr har tygget på eller slugt en del af en uidentificeret plante eller svamp",
+          "Irritation i mund eller hals, savlen, kvalme, opkast eller usædvanlig døsighed",
+          "Nogle gange slet ingen symptomer i starten — fravær af symptomer er ikke bevis på sikkerhed"
+        ],
+        "solutions": [
+          "Fremkald ikke opkastning, og giv ikke mad, mælk eller husråd, medmindre en fagperson beder dig om det",
+          "Fjern eventuelle planterester fra munden, og gem en prøve eller et foto af præcis det, der blev spist",
+          "Kontakt Giftlinjen eller alarmcentralen med det samme — for kæledyr en vagtdyrlæge — også selvom personen eller dyret virker upåvirket"
+        ]
+      }
+    ]
+  },
+  "uses": {
+    "advice": [
+      "Menneskehedens historie er skrevet i planter. De har givet os basisføde og krydderier, tømmer til ly og skibe, fibre som bomuld, hør og hamp til stof og reb, farvestoffer, harpikser, parfumer og den rene daglige glæde ved prydhaven. At forstå, hvordan en art er blevet brugt, åbner et vindue til både botanik og historie — den samme plante kan være en afgrøde på ét kontinent, et helligt symbol på et andet og en havefavorit på et tredje.",
+      "Traditionel medicin fortjener særlig respekt og særlig forsigtighed i lige mål. Utallige moderne lægemidler kan spores tilbage til planter brugt af traditionelle healere, og den arv er ægte bemærkelsesværdig. Men traditionel brug er en historisk optegnelse, ikke et bevis på sikkerhed eller virkning — dosis, tilberedning, plantedel og personen, der tager den, ændrer resultatet fuldstændigt. Behandl aldrig dig selv med planter på baggrund af noget, du har læst, heller ikke i denne app; rådfør dig altid først med kvalificeret sundhedspersonale.",
+      "Hvad end der trækker dig mod nytteplanter, så lad etikken føre an. Høst kun det, du kan identificere med sikkerhed og har lov til at tage, foretræk dyrkede kilder frem for vilde, og tag beskedent, så bestandene kan komme sig. Overhøstning har drevet elskede medicinal- og prydarter mod sjældenhed i mange egne. De bedste udøvere tænker i generationer: de høster, som om de selv, deres naboer og deres børnebørn alle vender tilbage til det samme sted."
+    ],
+    "checklist": [
+      "Betragt traditionelle anvendelser som historie at lære af, ikke instrukser at følge",
+      "Rådfør dig med sundhedspersonale før enhver medicinsk brug",
+      "Køb fra dyrkede, etiske kilder, når det er muligt",
+      "Høst nænsomt og lovligt — kend dine lokale regler",
+      "Høst aldrig sjældne, fredede eller langsomt voksende arter",
+      "Skriv ned, hvad du lærer; viden om nytteplanter er værd at bevare"
+    ],
+    "problems": [
+      {
+        "title": "Brug af planter uden ordentlig vejledning",
+        "symptoms": [
+          "At lave te, tinkturer eller midler af en art, der kun er identificeret med app eller efter hukommelsen",
+          "At følge doseringsråd fra sociale medier eller rygter",
+          "At kombinere plantemidler med receptmedicin uden at fortælle det til en læge"
+        ],
+        "solutions": [
+          "Stop brugen, indtil plantens identitet og sikkerhed er bekræftet af en kvalificeret ekspert",
+          "Drøft ethvert plantebaseret middel med sundhedspersonale, især sammen med anden medicin, graviditet eller eksisterende sygdomme",
+          "Betragt denne apps oplysninger som lærerig baggrund, aldrig som en recept"
+        ]
+      },
+      {
+        "title": "Rovdrift ved høst",
+        "symptoms": [
+          "Bestande af en vild art, der synligt skrumper eller forsvinder år for år",
+          "Høst, der tager rødder, bark eller hele planter frem for fornybare dele",
+          "Indsamling i fredede områder eller uden hensyn til lokale høstregler"
+        ],
+        "solutions": [
+          "Følg samlerens regel om mådehold: tag kun en lille brøkdel af det, du finder, og kun fra rigelige bestande",
+          "Foretræk fornybare dele — blade, nogle blomster, noget frugt — frem for rødder og bark, der ofte koster planten livet",
+          "Støt dyrkningsprogrammer, og køb dyrket materiale; anmeld åbenlys ulovlig høst til de lokale myndigheder"
+        ]
+      }
+    ]
+  },
+  "cultural": {
+    "advice": [
+      "Enhver art, der har levet side om side med mennesker, bærer på fortællinger. Planter og svampe optræder i skabelsesmyter, bryllupsritualer, begravelsesskikke, nationalsymboler, digte og ordsprog; et egetræ betyder én ting i én tradition og noget helt andet i en anden. At lære disse lag at kende forvandler en tur i parken til en vandring gennem menneskets forestillingsverden — alene navnene bevarer ofte århundreders iagttagelse, humor og tro.",
+      "Folketro er også en optegnelse af virkelig viden, filtreret gennem generationer. Fortællinger om, hvilke planter der læger, skader, beskytter eller spår vejr, koder ofte ægte iagttagelser side om side med ren poesi, og at skelne det ene fra det andet er en del af fornøjelsen. Nærm dig disse traditioner som en respektfuld gæst: de tilhører levende kulturer, ikke et museum, og de fællesskaber, der holder dem i live, er deres bedste fortolkere.",
+      "Når du undersøger en arts kulturhistorie, så foretræk kilder tæt på selve traditionen — forfattere fra fællesskabet, regionale forskere, museums- og arkivsamlinger — og notér, hvor hver fortælling stammer fra. At gengive en legende med dens oprindelse hæfter ære på de mennesker, der skabte den; at gengive den uden oprindelse udvisker dem langsomt. Nysgerrighed plus kildeangivelse er hele metoden."
+    ],
+    "checklist": [
+      "Slå lokale navne og folkenavne op — de gemmer på fortættet historie",
+      "Notér, hvilken kultur og region hver fortælling kommer fra",
+      "Foretræk kilder inde fra traditionen, når det er muligt",
+      "Nyd symbolikken uden at behandle den som biologi",
+      "Del legender med deres oprindelse påhæftet",
+      "Spørg, før du fotograferer eller samler på hellige steder eller i fællesskabers områder"
+    ],
+    "problems": [
+      {
+        "title": "Myte kontra fakta",
+        "symptoms": [
+          "At antage, at en plante er sikker at spise eller bruge, fordi 'folk altid har brugt den'",
+          "At læse symbolske betydninger — held, beskyttelse, helbredelse — som fysiske egenskaber",
+          "At stole mere på en vidt udbredt fortælling, netop fordi den er vidt udbredt"
+        ],
+        "solutions": [
+          "Hav to hylder i hovedet: hvad en plante betyder, og hvad en plante gør — begge er sand viden, men de besvarer forskellige spørgsmål",
+          "Efterprøv alt, der handler om sikkerhed eller indtagelse, mod moderne ekspertkilder, uanset hvor gammel traditionen er",
+          "Nyd myten på dens egne præmisser; den behøver ikke at være bogstaveligt sand for at være kulturelt dyrebar"
+        ]
+      },
+      {
+        "title": "Kildeangivelse og respekt",
+        "symptoms": [
+          "At genfortælle historier eller ceremonier uden at nævne det folk, de tilhører",
+          "At fremstille én kulturs tradition som universel eller generisk folketro",
+          "At bruge hellige planter eller symboler som tilfældig pynt uden at forstå deres vægt"
+        ],
+        "solutions": [
+          "Nævn kulturen, regionen og hvor du lærte hver fortælling, hver gang du deler den",
+          "Når en tradition er levende og hellig, så følg fællesskabets egen vejledning om, hvad der må deles, og hvordan",
+          "Lad nysgerrigheden modnes til en relation: læs forfattere fra fællesskabet, besøg kulturcentre, og støt dem, der vogter over denne viden"
+        ]
+      }
+    ]
+  },
+  "edible": {
+    "advice": [
+      "Sikker sanketur hviler på én ubrydelig regel: positiv identifikation, ad tre veje, hver gang. Før noget vildt rører dine læber, skal du kunne bekræfte arten ved flere uafhængige kendetegn — blad, blomst, frugt, bark, duft, voksested, årstid — krydstjekket mod mindst én pålidelig felthåndbog og helst efterprøvet på stedet af en erfaren sanker. Hvis et eneste tjek efterlader tvivl, er svaret nej. Et app-forslag, inklusive fra denne, er begyndelsen på en identifikation, aldrig afslutningen.",
+      "Spiselighed er sjældent en ja-eller-nej-egenskab ved en hel plante. Mange arter har én spiselig del og andre dele, der er skadelige; mange er kun sikre på et bestemt modenhedstrin eller først efter korrekt tilberedning, såsom grundig kogning. 'Spiselig' i en opslagsbog betyder altid den rigtige del, på det rigtige trin, tilberedt på den rigtige måde. Når du prøver ny vild mad, som du har bekræftet omhyggeligt, så spis først en lille mængde og vent en dag — individuel følsomhed findes selv over for ægte spiselige arter.",
+      "Etisk sankning beskytter både dig og landskabet. Saml kun, hvor det er lovligt, og hvor miljøet er rent — vejkanter, sprøjtede marker og industrigrunde kan forurene selv fuldt spiselige arter. Tag beskedent, efterlad rigeligt til dyrelivet og genvæksten, og ribbet aldrig et sted helt. De gamle sankeres skik er værd at overtage i sin helhed: kend din plante, kend dit sted, tag lidt, og giv stedet en grund til at byde dig velkommen tilbage."
+    ],
+    "checklist": [
+      "Bekræft identiteten ved flere uafhængige kendetegn, aldrig kun ét",
+      "Krydstjek med en felthåndbog og en erfaren person",
+      "Lær, hvilken del, hvilket trin og hvilken tilberedning der er sikker",
+      "Når der er den mindste tvivl: spis det ikke",
+      "Prøv ny vild mad i små mængder, én slags ad gangen",
+      "Sank lovligt, fra rene steder, og efterlad rigeligt"
+    ],
+    "problems": [
+      {
+        "title": "Forveksling af arter, der ligner hinanden",
+        "symptoms": [
+          "Identifikation baseret på ét kendetegn, ét enkelt foto eller helhedsindtrykket",
+          "Fundet stemmer med det meste, men ikke det hele, af felthåndbogens beskrivelse",
+          "Kendte farlige dobbeltgængere findes i samme familie — almindeligt hos svampe, vilde gulerødder og persillearter og mange bær"
+        ],
+        "solutions": [
+          "Stands ved den første uoverensstemmelse: et rigtigt match stemmer på hvert kendetegn, og én forkert detalje betyder en anden art",
+          "Lær din egns farlige dobbeltgængere lige så grundigt som de spiselige selv — studér først det, der kan slå dig ihjel",
+          "Vis dit fund til en ekspert eller en lokal sankegruppe, før det nogensinde når køkkenet; med svampe skal du betragte det som obligatorisk"
+        ]
+      },
+      {
+        "title": "Utilstrækkelig tilberedning",
+        "symptoms": [
+          "At spise en art rå, som tradition og opslagsværker siger skal tilberedes",
+          "At bruge den forkerte del af en korrekt identificeret plante",
+          "Maveproblemer efter at have spist et angiveligt spiseligt fund"
+        ],
+        "solutions": [
+          "Følg tilberedningsanvisninger fra pålidelige kilder til punkt og prikke — krav om kogning findes, fordi varme neutraliserer virkelige stoffer",
+          "Match del og trin med opslagsværket: rigtig art, men forkert del, er stadig det forkerte måltid",
+          "Hvis nogen bliver syge, så gem en prøve af det spiste, og søg straks lægehjælp i stedet for at vente og se"
+        ]
+      }
+    ]
+  },
+  "propagation": {
+    "advice": [
+      "Formering er havens stille magi: én plante bliver til mange, gratis. De tre indgange er stiklinger, deling og frø. En stikling tager en sund stængel eller et blad og overtaler det til at slå egne rødder; deling skiller en tueformet plante ad i færdige, mindre planter; frø begynder helt forfra og belønner tålmodighed med de bredeste muligheder. Hver art har metoder, den foretrækker, men de bagvedliggende principper deles af næsten alle.",
+      "For stiklinger afgør tre ting succesen: sundt materiale, rene snit og stabile forhold. Tag stiklinger fra kraftig, sygdomsfri vækst, skær lige under en knude — leddet, hvor bladene møder stænglen, hvor rodenergien samler sig — og fjern de nederste blade, så intet rådner under overfladen. Uanset om du roder i vand eller i en let, luftig blanding, så giv stiklingerne lyst indirekte lys, mild varme og høj luftfugtighed, og modstå trangen til at hive i dem for at tjekke fremskridt; nye blade er meddelelsen om, at rødderne findes.",
+      "Hygiejne og timing er de to mest undervurderede ingredienser. Rens værktøjet med sprit eller en flamme før og mellem snittene — en beskidt klinge spreder sygdom direkte ind i friske sår. Formér i den aktive vækstperiode, som regel fra forår til forsommer, hvor planten har energi til overs; materiale fra en hvilende eller stresset plante starter livet med et handicap. Og tag flere stiklinger, end du skal bruge: selv eksperter mister en andel, og de overskydende bliver fine gaver."
+    ],
+    "checklist": [
+      "Formér kun fra sunde, kraftige planter uden skadedyr",
+      "Sterilisér klingerne før og mellem snittene",
+      "Skær lige under en knude; fjern blade, der ville sidde under overfladen",
+      "Giv lyst indirekte lys, varme og fugtighed — ikke direkte sol",
+      "Hold mediet fugtigt, men aldrig sjaskvådt",
+      "Tag ekstra stiklinger; nogle tab er normale selv for eksperter"
+    ],
+    "problems": [
+      {
+        "title": "Stiklinger, der rådner",
+        "symptoms": [
+          "Stænglen bliver brun, sort eller gennemsigtig fra basen og opefter",
+          "En blød, slimet konsistens og en sur lugt i vandet eller mediet",
+          "Blade, der kollapser i stedet for at visne stille"
+        ],
+        "solutions": [
+          "Kassér tydeligt rådne stiklinger, og begynd forfra — råd vandrer opad og vender sjældent",
+          "Hvis kun basen er ramt, så skær om et godt stykke over skaden med en steril klinge, og start forfra i frisk vand eller ny blanding",
+          "Forebyg en gentagelse: renere værktøj, friskere vand skiftet jævnligt, et lettere og mere luftigt medium og ingen blade under overfladen"
+        ]
+      },
+      {
+        "title": "Stiklinger, der ikke vil slå rod",
+        "symptoms": [
+          "Der går uger uden rødder, selvom stiklingen stadig ser levende ud",
+          "Stiklingen gulner langsomt og mister kraft uden forandring",
+          "Der dannes kallus ved basen, men rødderne kommer aldrig"
+        ],
+        "solutions": [
+          "Tjek forholdene først: de fleste standsninger skyldes for lidt lys, for lidt varme eller tør luft — justér det, før du giver stiklingen skylden",
+          "Skær basen om i en vinkel under en knude for at blotlægge frisk væv, og overvej rodhormon til modvillige arter",
+          "Vær tålmodig efter arten: nogle slår rod på dage, andre tager måneder — så længe stiklingen er fast og grøn, prøver den stadig"
+        ]
+      }
+    ]
+  },
+  "role": {
+    "advice": [
+      "Ingen art lever alene. Enhver plante, svamp og ethvert insekt udfylder en rolle i et net af relationer: blomstrende planter fodrer bestøvere, som til gengæld sætter de frø og frugter, der fodrer fugle og pattedyr; blade fodrer larver, der fodrer fugleunger; svampe og nedbrydende insekter omsætter det nedfaldne og fører næringen tilbage til den jord, der bærer næste generation. At lære en arts rolle at kende — hvad den fodrer, giver ly, samarbejder med og afhænger af — forvandler identifikation fra navngivning til forståelse.",
+      "Den rigeste måde at se disse roller på er tålmodig observation med let aftryk. Sid stille ved en blomstrende plante i et par minutter, og tæl dens gæster; vend tilbage til det samme træ gennem årstiderne, og se rollelisten skifte; vend forsigtigt en træstamme, og læg den tilbage præcis, som den lå. Fotografér frem for at samle, bliv på stierne i sårbare naturområder, hold respektfuld afstand til reder og huler, og lad dyrene bestemme afstanden mellem jer. Naturkenderens paradoks er, at jo mindre du blander dig, desto mere ser du.",
+      "Din egen have, altan eller vindueskarm er et fungerende stykke af økosystemet. En potte med blomstrende krydderurter fodrer bestøvere; et hjørne med visne blade giver ly til overvintrende insekter; at droppe pesticider holder fødenettet intakt fra bladlus til sangfugl. Små valg mangedobles gennem hele kvarterer — den samme opmærksomhed, du giver en stueplante, vendt udad, reparerer i det stille nettet omkring dig."
+    ],
+    "checklist": [
+      "Spørg om enhver art: hvad fodrer den, og hvad lever af den?",
+      "Observér stille, og efterlad hvert sted, som du fandt det",
+      "Fotografér i stedet for at samle",
+      "Læg alt, du vender, tilbage på dets nøjagtige plads",
+      "Plant blomster, behold nogle vilde hjørner, drop pesticiderne",
+      "Notér dine iagttagelser — optegnelser over tid afslører nettet"
+    ],
+    "problems": [
+      {
+        "title": "Arter det forkerte sted (invasive)",
+        "symptoms": [
+          "En enkelt art, der dækker et område og fortrænger varieret hjemmehørende vækst",
+          "Hurtig, aggressiv spredning langt ud over, hvor den blev plantet",
+          "Mærkbart færre insekter, fugle eller vilde blomster, hvor den dominerer"
+        ],
+        "solutions": [
+          "Lær, hvilke arter der regnes som invasive i din egn — den samme plante kan være harmløs derhjemme og ødelæggende andetsteds",
+          "Smid aldrig haveaffald, akvarieindhold eller uønskede planter ud i naturen eller i vandløb",
+          "Vælg hjemmehørende eller velopdragne arter til din have, og støt lokale bekæmpelsesindsatser, hvor de findes"
+        ]
+      },
+      {
+        "title": "Tilbagegang af bestøvere",
+        "symptoms": [
+          "Blomster, der blomstrer med få eller ingen besøgende insekter",
+          "Frugt- og grøntsagsplanter, der blomstrer fint, men sætter kun lidt frugt",
+          "Mærkbart færre bier, sommerfugle og svirrefluer end i tidligere sæsoner"
+        ],
+        "solutions": [
+          "Plant en stafet af blomster, så noget blomstrer hele vækstsæsonen, og foretræk enkle, åbne blomster frem for tætte fyldte",
+          "Drop insektmidler helt, især på alt, der blomstrer, og tål lidt gnavede blade som husleje betalt til økosystemet",
+          "Sørg for den stille infrastruktur: uforstyrrede hjørner, pletter af bar jord, hule stængler, der får lov at stå, og et lavt vandfad med sten at lande på"
+        ]
+      }
+    ]
+  }
+}

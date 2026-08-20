@@ -1,0 +1,389 @@
+{
+  "watering": {
+    "advice": [
+      "Richtig gießen hat weniger mit Häufigkeit zu tun als mit Beobachtung. Pflanzen trinken je nach Licht, Temperatur, Topfgröße und Jahreszeit unterschiedlich schnell — ein fester Gießplan scheitert deshalb fast immer. Lerne stattdessen, die Erde selbst zu lesen: Drücke einen Finger in die oberste Schicht, spüre das Gewicht des Topfes und achte darauf, wie die Blätter sich halten. Ist die Oberfläche der Erde abgetrocknet, sind die meisten Pflanzen bereit für einen Schluck; fühlt sie sich noch kühl und feucht an, ist Warten fast immer die sicherere Wahl.",
+      "Wenn du gießt, dann gründlich. Gieße langsam und gleichmäßig über die gesamte Oberfläche, bis Wasser aus den Abzugslöchern läuft — so ist sicher, dass der gesamte Wurzelbereich erreicht wurde, und angesammelte Mineralsalze werden ausgespült. Flache Schlückchen benetzen nur die Oberfläche und verleiten die Wurzeln, oben zu bleiben, wo sie schnell austrocknen und überhitzen. Leere danach immer den Untersetzer — Wurzeln, die im Wasser stehen, bekommen keinen Sauerstoff, und genau so gehen die meisten Zimmerpflanzen verloren.",
+      "Passe dich den Jahreszeiten an, nicht dem Kalender. In den warmen Monaten aktiven Wachstums verbrauchen Pflanzen Wasser schnell; in den kühleren, dunkleren Monaten verlangsamt sich das Wachstum, und derselbe Topf bleibt viel länger feucht. Kalte, nasse Erde im Winter ist ein häufiger stiller Killer — lass die Erde also stärker zwischen den Gießgängen abtrocknen, wenn Licht und Wärme nachlassen. Verwende nach Möglichkeit zimmerwarmes Wasser: Eiskaltes Wasser schockt die Wurzeln, besonders bei tropischen Arten."
+    ],
+    "checklist": [
+      "Prüfe die Erde mit dem Finger, bevor du gießt — nicht den Kalender",
+      "Gieße durchdringend, bis Wasser unten herausläuft",
+      "Leere den Untersetzer — lass Wurzeln nie im Wasser stehen",
+      "Reduziere das Gießen in kalten, dunklen Monaten",
+      "Verwende zimmerwarmes Wasser, wann immer möglich",
+      "Hebe den Topf an: leicht heißt trocken, schwer heißt noch feucht"
+    ],
+    "problems": [
+      {
+        "title": "Überwässerung",
+        "symptoms": [
+          "Vergilbende Blätter, die weich oder schlaff wirken, oft zuerst unten",
+          "Erde, die tagelang nass bleibt, manchmal mit saurem oder muffigem Geruch",
+          "Braune, matschige Wurzeln statt fester, heller; Trauermücken, die über der Erde schwirren"
+        ],
+        "solutions": [
+          "Stell das Gießen sofort ein und bring die Pflanze an einen hellen, luftigen Platz, damit die Erde trocknen kann",
+          "Prüfe die Wurzeln: Nimm die Pflanze aus dem Topf, schneide braune, matschige Stellen mit einer sauberen Schere weg und topfe sie in frisches, gut durchlässiges Substrat um",
+          "Gieße künftig erst, wenn die Erdoberfläche abgetrocknet ist, und vergewissere dich jedes Mal, dass der Topf frei abfließen kann"
+        ]
+      },
+      {
+        "title": "Unterwässerung",
+        "symptoms": [
+          "Welke, hängende Blätter, die sich kurz nach dem Gießen wieder aufrichten",
+          "Trockene, knusprige Blattränder und -spitzen; Blätter rollen sich mitunter nach innen",
+          "Erde, die sich vom Topfrand löst; der Topf fühlt sich ungewöhnlich leicht an"
+        ],
+        "solutions": [
+          "Gieße langsam und durchdringend; stößt die Erde das Wasser ab, stelle den Topf eine Weile in ein Wasserbad, damit sie sich von unten vollsaugen kann",
+          "Ist der Wurzelballen wieder gleichmäßig feucht, nimm die regelmäßigen Kontrollen wieder auf — sehr trockene Erde braucht oft zwei sanfte Gießgänge im Abstand weniger Minuten, um richtig aufzunehmen",
+          "Trocknet die Pflanze schneller aus, als du hinterherkommst, erwäge einen etwas größeren Topf oder ein Substrat, das etwas mehr Feuchtigkeit hält"
+        ]
+      }
+    ]
+  },
+  "light": {
+    "advice": [
+      "Licht ist die Nahrungsquelle der Pflanze — Wasser und Dünger stützen nur, was das Licht möglich macht. Gärtner beschreiben Licht in groben Stufen: volle Sonne (direkte Strahlen über weite Teile des Tages), Halbsonne oder Halbschatten (direktes Licht für einen Teil des Tages, oft die mildere Morgensonne), helles indirektes Licht (hell genug für einen weichen Schatten, aber ohne direkte Strahlen) und Schatten. Zu wissen, in welche Stufe ein Platz in Wohnung oder Garten fällt, ist die nützlichste Fähigkeit der ganzen Pflanzenpflege.",
+      "Um einen Raum zu lesen, beobachte ihn über einen ganzen Tag. Ein Südfenster (auf der Nordhalbkugel) liefert das stärkste, längste Licht; Osten bringt sanfte Morgensonne, Westen heißere Nachmittagssonne, Norden bleibt weich und diffus. Die Entfernung zählt enorm — die Lichtintensität fällt mit jedem Schritt vom Fenster weg steil ab, sodass eine Pflanze einen Meter hinter der Scheibe nur einen Bruchteil dessen bekommt, was sie auf der Fensterbank erhielte. Gardinen, getöntes Glas und Hindernisse draußen mindern das Licht zusätzlich.",
+      "Wenn du eine Pflanze an einen helleren Platz bringst, gewöhne sie schrittweise ein. Blätter passen sich dem Licht an, in dem sie gewachsen sind, und ein plötzlicher Sprung — von drinnen in die volle Sonne, aus dem Schatten an eine sonnige Wand — kann selbst sonnenliebende Arten verbrennen. Steigere die Exposition über ein paar Wochen Stück für Stück, beginnend mit sanfter Morgensonne, und beobachte das Laub: Ausgeblichene Stellen heißen zu schnell, frischer, kompakter Neuaustrieb heißt, die Pflanze lebt sich gut ein."
+    ],
+    "checklist": [
+      "Bestimme deine Lichtstufe: volle Sonne, Halbsonne, hell-indirekt oder Schatten",
+      "Beobachte den Platz einen ganzen Tag lang, bevor du eine Pflanze dorthin stellst",
+      "Denk daran: Die Intensität fällt mit dem Abstand zum Fenster rapide ab",
+      "Gewöhne Pflanzen schrittweise an jeden helleren Standort",
+      "Drehe die Töpfe ab und zu, damit der Wuchs gleichmäßig bleibt",
+      "Wische staubige Blätter ab — Staub stiehlt still das Licht"
+    ],
+    "problems": [
+      {
+        "title": "Zu viel Licht (Sonnenbrand)",
+        "symptoms": [
+          "Ausgeblichene, verblasste oder papierartige Stellen auf den sonnigsten Blättern",
+          "Knusprig-braune Flecken oder Ränder, die nach einem Umzug an einen helleren Platz auftauchen",
+          "Blätter, die trotz guter Bewässerung insgesamt ausgewaschen oder gelblich wirken"
+        ],
+        "solutions": [
+          "Nimm die Pflanze aus den direkten Strahlen oder filtere das Licht mit einer Gardine",
+          "Schneide stark verbrannte Blätter ab, sobald du sicher bist, dass das Gewebe tot ist — es erholt sich nicht, und das Entfernen lenkt die Energie um",
+          "Führe stärkeres Licht über Wochen langsam wieder ein, wenn die Pflanze wirklich mehr Sonne möchte"
+        ]
+      },
+      {
+        "title": "Zu wenig Licht (Vergeilung)",
+        "symptoms": [
+          "Lange, gestreckte Triebe mit großen Abständen zwischen den Blättern, die sich stark zum Fenster neigen",
+          "Neue Blätter, die kleiner und blasser nachkommen als die alten",
+          "Panaschierte Pflanzen verlieren ihre Musterung; Blühpflanzen verweigern die Blüte"
+        ],
+        "solutions": [
+          "Rücke die Pflanze näher ans Fenster oder in einen helleren Raum — schrittweise angepasst",
+          "Schneide vergeilte Triebe zurück, sobald die Pflanze besseres Licht hat, um einen volleren Wuchs anzuregen",
+          "Wo natürliches Licht wirklich knapp ist, leistet eine einfache Vollspektrum-Pflanzenlampe an einer Zeitschaltuhr erstaunlich gute Dienste"
+        ]
+      }
+    ]
+  },
+  "soil": {
+    "advice": [
+      "Gesunde Erde ist ein lebendiges Gefüge, nicht bloß Dreck. Wurzeln brauchen drei Dinge zugleich von ihr: Feuchtigkeit, Luft und Halt. Gute Erde hält Wasser wie ein ausgewrungener Schwamm — durchgehend feucht, nie durchnässt — und bewahrt dabei Luftkammern zwischen ihren Partikeln. Dieses Gleichgewicht kommt aus der Struktur: Grobes Material (Rinde, Perlit, Sand, Splitt) öffnet Drainagekanäle, während feine organische Substanz (Kompost, Kokosfaser, Lauberde) Feuchtigkeit speichert und das Bodenleben nährt, das wiederum die Pflanze nährt.",
+      "Drainage ist im Topf nicht verhandelbar. Jeder Topf braucht Löcher, und das Substrat darin muss überschüssiges Wasser frei durchlassen; eine Kieselschicht am Boden repariert kein dichtes Substrat — sie hebt die Staunässezone nur näher an die Wurzeln. Steht Wasser nach dem Gießen lange auf der Oberfläche oder rauscht es durch, ohne die Erde dunkel zu färben, muss die Struktur korrigiert werden. Organische Substanz ist die große Vermittlerin: Sie verbessert sowohl die Wasserspeicherung in sandigen Mischungen als auch die Drainage in schweren.",
+      "Der pH-Wert — wie sauer oder alkalisch ein Boden ist — steuert im Stillen, welche Nährstoffe die Wurzeln tatsächlich aufnehmen können. Die meisten Garten- und Zimmerpflanzen sind in einem leicht sauren bis neutralen Bereich zufrieden, und Probleme zeigen sich vor allem an den Extremen, wo Nährstoffe chemisch festgelegt werden, obwohl sie vorhanden sind. Statt Zahlen hinterherzujagen, arbeite großzügig gut verrottete organische Substanz ein, die den pH-Wert auf natürliche Weise abpuffert, und forsche erst weiter, wenn eine Pflanze hartnäckige Mängel zeigt, die Gießen und Licht nicht erklären."
+    ],
+    "checklist": [
+      "Vergewissere dich, dass jeder Topf echte Abzugslöcher hat",
+      "Ziel ist Erde, die sich nach dem Gießen wie ein ausgewrungener Schwamm anfühlt",
+      "Mische grobes Material für Luft und organische Substanz für Feuchtigkeit und Leben unter",
+      "Vergiss den Kieselschicht-Mythos — korrigiere stattdessen die Mischung",
+      "Erneuere oder ergänze Topferde, wenn sie mit der Zeit zusammensackt und verdichtet",
+      "Mulche Gartenbeete, um Struktur und Bodenleben zu schützen"
+    ],
+    "problems": [
+      {
+        "title": "Verdichtete, vernässte Erde",
+        "symptoms": [
+          "Wasser sammelt sich auf der Oberfläche oder versickert extrem langsam",
+          "Die Erde ist dicht, schwer und luftlos; mitunter entwickelt sie einen sauren Geruch",
+          "Die Pflanze baut trotz sorgfältigen Gießens ab — Vergilben, Welken, stockendes Wachstum"
+        ],
+        "solutions": [
+          "Bei Töpfen: Topfe in frisches, mit grobem Material wie Perlit oder Rinde angereichertes Substrat um und lockere dabei sanft den Wurzelballen",
+          "Bei Beeten: Arbeite organische Substanz mit einer Grabegabel ein, statt den Boden gewaltsam umzugraben, und betritt keinen nassen Boden",
+          "Reduziere das Gießen, während sich die Struktur erholt, und lass die Oberfläche zwischen den Gießgängen abtrocknen"
+        ]
+      },
+      {
+        "title": "Magere, ausgelaugte Erde",
+        "symptoms": [
+          "Blasse Blätter, schwache Triebe und kaum oder kein Neuaustrieb in der Saison",
+          "Wasser rauscht durch den Topf, ohne ihn wirklich zu befeuchten",
+          "Die Topferde ist geschrumpft, verhärtet oder hat sich von den Topfwänden gelöst"
+        ],
+        "solutions": [
+          "Topfe in frisches, hochwertiges Substrat um — Topferde nutzt sich ab, und kein Dünger belebt eine zusammengebrochene Struktur vollständig wieder",
+          "Dünge während der Wachstumszeit leicht und regelmäßig statt viel auf einmal; starke Gaben können die Wurzeln verbrennen",
+          "Baue im Freien die Fruchtbarkeit langsam mit Kompost und Mulch auf, die den Boden nähren und nicht nur die Pflanze"
+        ]
+      }
+    ]
+  },
+  "safety": {
+    "advice": [
+      "Mit Pflanzen, Pilzen und Insekten zu leben ist eine der stillen Freuden des Lebens, und ein paar feste Gewohnheiten machen sie zu einer sicheren. Die Grundregel ist einfach: Iss, koste oder brühe niemals etwas auf, das du nicht mit absoluter Sicherheit bestimmt hast. Eine App-Bestimmung, auch die dieser App, ist ein Ausgangspunkt zum Lernen — niemals grünes Licht für den Verzehr. Viele giftige Arten sind überzeugende Doppelgänger essbarer Arten, und gerade bei Pilzen kann die Fehlertoleranz null betragen.",
+      "Kenne zu Hause, was du anbaust. Manche verbreiteten Zimmer- und Gartenpflanzen können die Haut reizen oder beim Zerkauen schaden — halte Pflanzen deshalb außer Reichweite kleiner Kinder und Haustiere, und bring Kindern früh bei, dass Blätter und Beeren kein Essen sind, solange kein vertrauter Erwachsener es erlaubt. Trage Handschuhe bei kräftigem Rückschnitt oder im Umgang mit unbekannten Arten, fass dir bei der Arbeit nicht ins Gesicht und wasch dir danach gründlich die Hände. Der Saft mancher Pflanzen kann die Haut lichtempfindlich machen — Pflanzensaft sofort abzuspülen ist deshalb ein guter Reflex.",
+      "Auf dem Weg draußen: Schau großzügig, fass wählerisch an. Beobachte Insekten, ohne sie in die Hand zu nehmen, lass Pilze stehen, wo sie stehen, sofern du nicht mit einem erfahrenen Führer unterwegs bist, und geh davon aus, dass unbekannte Beeren nicht auf der Speisekarte stehen. Hat jemand in deinem Haushalt bekannte Pflanzen- oder Stichallergien, trage die Medikamente bei dir und wisse, wie man sie anwendet. Nichts davon verlangt Angst — nur denselben ruhigen Respekt, den du einer Flussströmung oder einem heißen Herd entgegenbringen würdest."
+    ],
+    "checklist": [
+      "Verzehre niemals etwas ohne sichere Bestimmung auf Expertenniveau",
+      "Halte fragwürdige Pflanzen außer Reichweite von Kindern und Haustieren",
+      "Trage Handschuhe beim Schneiden und bei unbekannten Arten; wasch danach die Hände",
+      "Spüle Pflanzensaft umgehend von der Haut",
+      "Beobachte wilde Pilze und Insekten, ohne sie anzufassen",
+      "Speichere die Nummer deiner Giftnotrufzentrale im Handy"
+    ],
+    "problems": [
+      {
+        "title": "Hautkontakt mit einer reizenden Art",
+        "symptoms": [
+          "Rötung, Juckreiz, Brennen oder Ausschlag an der Kontaktstelle",
+          "Blasen oder streifige Spuren, die Stunden nach dem Kontakt erscheinen",
+          "Eine Reaktion, die sich nach Sonneneinstrahlung auf die betroffene Stelle verschlimmert"
+        ],
+        "solutions": [
+          "Wasche die Stelle so schnell wie möglich gründlich mit Seife und kühlem Wasser, und wasche auch Kleidung, die die Pflanze berührt hat",
+          "Kratze nicht, und halte die Stelle aus der direkten Sonne, während sie sich beruhigt",
+          "Ist die Reaktion heftig, breitet sie sich aus, sitzt sie nahe an Augen oder Mund oder tritt irgendeine Atemnot auf, suche sofort ärztliche Hilfe"
+        ]
+      },
+      {
+        "title": "Versehentliches Verschlucken",
+        "symptoms": [
+          "Ein Kind oder Haustier hat Teile einer unbestimmten Pflanze oder eines Pilzes zerkaut oder verschluckt",
+          "Reizung von Mund oder Rachen, Speicheln, Übelkeit, Erbrechen oder ungewöhnliche Schläfrigkeit",
+          "Manchmal zunächst gar keine Symptome — Symptomfreiheit ist kein Beweis für Sicherheit"
+        ],
+        "solutions": [
+          "Löse kein Erbrechen aus und gib weder Essen, Milch noch Hausmittel, sofern es kein Fachpersonal anordnet",
+          "Entferne Pflanzenreste aus dem Mund und bewahre eine Probe oder ein Foto genau dessen auf, was gegessen wurde",
+          "Kontaktiere sofort den Giftnotruf oder den Rettungsdienst — bei Haustieren eine tierärztliche Notfallpraxis — selbst wenn Mensch oder Tier unauffällig wirkt"
+        ]
+      }
+    ]
+  },
+  "uses": {
+    "advice": [
+      "Die Geschichte der Menschheit ist in Pflanzen geschrieben. Sie schenkten uns Grundnahrungsmittel und Gewürze, Holz für Häuser und Schiffe, Fasern wie Baumwolle, Flachs und Hanf für Stoff und Seil, Farbstoffe, Harze, Parfums und die tägliche Freude des Ziergartens. Zu verstehen, wie eine Art genutzt wurde, öffnet ein Fenster in Botanik und Geschichte zugleich — dieselbe Pflanze kann auf einem Kontinent Feldfrucht sein, auf einem anderen heiliges Symbol und auf einem dritten Gartenliebling.",
+      "Traditionelle Medizin verdient besonderen Respekt und besondere Vorsicht zu gleichen Teilen. Unzählige moderne Medikamente gehen auf Pflanzen zurück, die von traditionellen Heilern genutzt wurden, und dieses Erbe ist wahrhaft bemerkenswert. Doch traditionelle Nutzung ist ein Geschichtszeugnis, kein Beweis für Sicherheit oder Wirksamkeit — Dosierung, Zubereitung, Pflanzenteil und die Person, die sie einnimmt, verändern das Ergebnis vollständig. Behandle dich niemals selbst mit Pflanzen aufgrund von etwas, das du gelesen hast, auch nicht in dieser App; sprich immer zuerst mit qualifiziertem medizinischem Fachpersonal.",
+      "Was auch immer dich zu Nutzpflanzen zieht — lass die Ethik führen. Ernte nur, was du sicher bestimmen kannst und nehmen darfst, bevorzuge kultivierte Quellen gegenüber wilden und nimm maßvoll, damit sich die Bestände erholen können. Übernutzung hat beliebte Heil- und Zierarten in vielen Regionen an den Rand der Knappheit gedrängt. Die Besten denken in Generationen: Sie ernten so, als würden sie selbst, ihre Nachbarn und ihre Enkel alle an dieselbe Stelle zurückkehren."
+    ],
+    "checklist": [
+      "Betrachte traditionelle Nutzungen als Geschichte zum Lernen, nicht als Anleitung zum Befolgen",
+      "Sprich vor jeder medizinischen Anwendung mit medizinischem Fachpersonal",
+      "Kaufe möglichst aus kultivierten, ethischen Quellen",
+      "Ernte sparsam und legal — kenne die Regeln vor Ort",
+      "Ernte niemals seltene, geschützte oder langsam wachsende Arten",
+      "Halte fest, was du lernst; Wissen über Nutzpflanzen ist es wert, bewahrt zu werden"
+    ],
+    "problems": [
+      {
+        "title": "Pflanzennutzung ohne fachliche Begleitung",
+        "symptoms": [
+          "Tees, Tinkturen oder Heilmittel aus einer Art zubereiten, die nur per App oder aus dem Gedächtnis bestimmt wurde",
+          "Dosierungsempfehlungen aus sozialen Medien oder vom Hörensagen folgen",
+          "Pflanzliche Mittel mit verschriebenen Medikamenten kombinieren, ohne es der Ärztin oder dem Arzt zu sagen"
+        ],
+        "solutions": [
+          "Setze die Anwendung aus, bis Identität und Sicherheit der Pflanze von qualifizierten Fachleuten bestätigt sind",
+          "Besprich jedes pflanzliche Mittel mit medizinischem Fachpersonal, besonders neben anderen Medikamenten, in der Schwangerschaft oder bei bestehenden Erkrankungen",
+          "Betrachte die Informationen dieser App als Bildungskontext, niemals als Rezept"
+        ]
+      },
+      {
+        "title": "Raubbau beim Sammeln",
+        "symptoms": [
+          "Bestände einer wilden Art, die Jahr für Jahr sichtbar schrumpfen oder verschwinden",
+          "Ernten, die Wurzeln, Rinde oder ganze Pflanzen nehmen statt nachwachsender Teile",
+          "Sammeln in Schutzgebieten oder das Ignorieren lokaler Sammelregeln"
+        ],
+        "solutions": [
+          "Folge der Zurückhaltungsregel der Sammler: Nimm nur einen kleinen Bruchteil dessen, was du findest, und nur aus üppigen Beständen",
+          "Bevorzuge nachwachsende Teile — Blätter, einige Blüten, einige Früchte — gegenüber Wurzeln und Rinde, die die Pflanze oft das Leben kosten",
+          "Unterstütze Anbauprogramme und kaufe kultiviertes Material; melde offensichtlich illegales Sammeln den örtlichen Behörden"
+        ]
+      }
+    ]
+  },
+  "cultural": {
+    "advice": [
+      "Jede Art, die an der Seite der Menschen gelebt hat, trägt Geschichten in sich. Pflanzen und Pilze erscheinen in Schöpfungsmythen, Hochzeitsritualen, Bestattungsriten, Nationalemblemen, Gedichten und Sprichwörtern; eine Eiche bedeutet in einer Tradition das eine und in einer anderen etwas völlig anderes. Diese Schichten kennenzulernen verwandelt einen Spaziergang im Park in einen Gang durch die menschliche Vorstellungskraft — allein die Namen bewahren oft Jahrhunderte an Beobachtung, Humor und Glauben.",
+      "Folklore ist zugleich ein Archiv echten Wissens, gefiltert durch Generationen. Geschichten darüber, welche Pflanzen heilen, schaden, schützen oder das Wetter vorhersagen, verschlüsseln oft echte Beobachtungen neben reiner Poesie, und das eine vom anderen zu unterscheiden gehört zum Vergnügen. Nähere dich diesen Traditionen als respektvoller Gast: Sie gehören lebendigen Kulturen, nicht einem Museum, und die Gemeinschaften, die sie bewahren, sind ihre besten Ausleger.",
+      "Wenn du die Kulturgeschichte einer Art erforschst, bevorzuge Quellen nahe an der Tradition selbst — Autorinnen und Autoren aus der Gemeinschaft, regionale Gelehrte, Museums- und Archivbestände — und notiere, woher eine Geschichte stammt. Eine Legende mit ihrer Herkunft weiterzuerzählen ehrt die Menschen, die sie erschaffen haben; sie ihrer Herkunft beraubt weiterzuerzählen löscht sie langsam aus. Neugier plus Quellenangabe — das ist die ganze Methode."
+    ],
+    "checklist": [
+      "Schlag lokale und volkstümliche Namen nach — sie speichern verdichtete Geschichte",
+      "Notiere, aus welcher Kultur und Region jede Geschichte stammt",
+      "Bevorzuge nach Möglichkeit Quellen aus der Tradition selbst",
+      "Genieße Symbolik, ohne sie für Biologie zu halten",
+      "Teile Legenden immer mitsamt ihrer Herkunft",
+      "Frage um Erlaubnis, bevor du an heiligen oder gemeinschaftlichen Orten fotografierst oder sammelst"
+    ],
+    "problems": [
+      {
+        "title": "Mythos vs. Fakt",
+        "symptoms": [
+          "Annehmen, eine Pflanze sei sicher zu essen oder zu nutzen, weil 'die Menschen sie schon immer genutzt haben'",
+          "Symbolische Bedeutungen — Glück, Schutz, Heilung — als physische Eigenschaften lesen",
+          "Einer viel wiederholten Geschichte mehr trauen, gerade weil sie viel wiederholt wird"
+        ],
+        "solutions": [
+          "Führe zwei Regale im Kopf: was eine Pflanze bedeutet und was eine Pflanze bewirkt — beides ist echtes Wissen, aber es beantwortet verschiedene Fragen",
+          "Prüfe alles, was Sicherheit oder Verzehr betrifft, an modernen Fachquellen — ganz gleich, wie alt die Tradition ist",
+          "Genieße den Mythos in seinen eigenen Bahnen; er muss nicht wörtlich wahr sein, um kulturell kostbar zu sein"
+        ]
+      },
+      {
+        "title": "Zuschreibung und Respekt",
+        "symptoms": [
+          "Geschichten oder Zeremonien nacherzählen, ohne die Menschen zu nennen, denen sie gehören",
+          "Die Tradition einer Kultur als universelle oder generische Folklore darstellen",
+          "Heilige Pflanzen oder Symbole als beiläufige Dekoration nutzen, ohne ihr Gewicht zu verstehen"
+        ],
+        "solutions": [
+          "Nenne Kultur, Region und die Quelle jeder Geschichte, wann immer du sie teilst",
+          "Ist eine Tradition lebendig und heilig, folge den Vorgaben der Gemeinschaft dazu, was wie geteilt werden darf",
+          "Lass Neugier zu Beziehung reifen: Lies Autorinnen und Autoren der Gemeinschaft, besuche Kulturzentren und unterstütze die Hüter des Wissens"
+        ]
+      }
+    ]
+  },
+  "edible": {
+    "advice": [
+      "Sicheres Sammeln ruht auf einer unverbrüchlichen Regel: eindeutige Bestimmung, auf drei Wegen, jedes Mal. Bevor irgendetwas Wildes deine Lippen berührt, solltest du die Art anhand mehrerer unabhängiger Merkmale bestätigen können — Blatt, Blüte, Frucht, Rinde, Geruch, Standort, Jahreszeit —, abgeglichen mit mindestens einem verlässlichen Bestimmungsbuch und idealerweise persönlich geprüft von einer erfahrenen Sammlerin oder einem erfahrenen Sammler. Lässt auch nur eine Prüfung Zweifel, lautet die Antwort Nein. Ein App-Vorschlag, auch der dieser App, ist der Anfang einer Bestimmung — niemals ihr Ende.",
+      "Essbarkeit ist selten eine Ja-oder-Nein-Eigenschaft der ganzen Pflanze. Viele Arten haben einen essbaren Teil und andere, schädliche Teile; viele sind nur in einem bestimmten Reifestadium sicher oder nur nach richtiger Zubereitung, etwa gründlichem Garen. 'Essbar' bedeutet in einem Nachschlagewerk immer: der richtige Teil, im richtigen Stadium, richtig zubereitet. Probierst du ein neues, rigoros bestätigtes Wildgericht, iss zuerst eine kleine Menge und warte einen Tag — individuelle Empfindlichkeiten gibt es selbst bei wirklich essbaren Arten.",
+      "Ethisches Sammeln schützt dich und das Land. Sammle nur dort, wo es erlaubt ist und die Umgebung sauber — Straßenränder, gespritzte Felder und Industrieflächen können selbst tadellos essbare Arten belasten. Nimm maßvoll, lass reichlich für die Tierwelt und den Nachwuchs zurück und plündere niemals einen Bestand vollständig. Die alte Sammlergewohnheit lohnt es, ganz zu übernehmen: Kenne deine Pflanze, kenne deinen Ort, nimm wenig — und gib der Stelle einen Grund, dich wiederzusehen."
+    ],
+    "checklist": [
+      "Bestätige die Identität anhand mehrerer unabhängiger Merkmale, nie nur eines",
+      "Gleiche mit einem Bestimmungsbuch und einer erfahrenen Person ab",
+      "Lerne, welcher Teil, welches Stadium und welche Zubereitung sicher ist",
+      "Bleibt irgendein Zweifel: iss es nicht",
+      "Probiere neue Wildpflanzen in kleinen Mengen, eine nach der anderen",
+      "Sammle legal, an sauberen Orten, und lass reichlich stehen"
+    ],
+    "problems": [
+      {
+        "title": "Verwechslung ähnlicher Arten",
+        "symptoms": [
+          "Bestimmung anhand eines einzigen Merkmals, eines einzigen Fotos oder des Gesamteindrucks",
+          "Das Exemplar passt zu den meisten, aber nicht zu allen Angaben des Bestimmungsbuchs",
+          "In derselben Familie existieren bekannte gefährliche Doppelgänger — häufig bei Pilzen, wilden Möhren- und Petersilienarten und vielen Beeren"
+        ],
+        "solutions": [
+          "Stopp beim ersten Widerspruch: Ein echter Treffer stimmt in jedem Merkmal überein, und ein einziges falsches Detail bedeutet eine andere Art",
+          "Lerne die gefährlichen Doppelgänger deiner Region so gründlich wie die essbaren Arten selbst — studiere zuerst, was dich töten könnte",
+          "Bring deinen Fund zu Fachleuten oder einer lokalen Sammelgruppe, bevor er je die Küche erreicht; bei Pilzen betrachte das als Pflicht"
+        ]
+      },
+      {
+        "title": "Unzureichende Zubereitung",
+        "symptoms": [
+          "Eine Art roh essen, die laut Tradition und Fachliteratur gegart werden muss",
+          "Den falschen Teil einer richtig bestimmten Pflanze verwenden",
+          "Verdauungsbeschwerden nach dem Verzehr eines angeblich essbaren Fundes"
+        ],
+        "solutions": [
+          "Befolge Zubereitungsanweisungen verlässlicher Quellen exakt — Garvorgaben existieren, weil Hitze echte Stoffe unschädlich macht",
+          "Gleiche Teil und Stadium mit der Referenz ab: richtige Art, falscher Teil ist immer noch die falsche Mahlzeit",
+          "Wird jemand krank, bewahre eine Probe des Gegessenen auf und hole umgehend ärztlichen Rat ein, statt abzuwarten"
+        ]
+      }
+    ]
+  },
+  "propagation": {
+    "advice": [
+      "Vermehrung ist die stille Magie des Gärtnerns: Aus einer Pflanze werden viele — kostenlos. Die drei Türen hinein sind Stecklinge, Teilung und Aussaat. Ein Steckling nimmt einen gesunden Trieb oder ein Blatt und überredet ihn, eigene Wurzeln zu bilden; die Teilung zerlegt eine horstbildende Pflanze in fertige kleinere Pflanzen; die Aussaat beginnt bei null und belohnt Geduld mit den größten Möglichkeiten. Jede Art hat ihre bevorzugten Methoden, doch die Grundprinzipien gelten für fast alle.",
+      "Bei Stecklingen entscheiden drei Dinge über den Erfolg: gesundes Material, saubere Schnitte und stabile Bedingungen. Nimm Stecklinge von kräftigem, krankheitsfreiem Austrieb, schneide knapp unter einem Knoten — der Stelle, wo Blätter auf den Trieb treffen und sich die Bewurzelungsenergie sammelt — und entferne die unteren Blätter, damit unter der Oberfläche nichts fault. Ob im Wasser oder in einem leichten, luftigen Substrat: Gib Stecklingen helles indirektes Licht, sanfte Wärme und hohe Luftfeuchtigkeit, und widerstehe dem Drang, an ihnen zu ziehen, um den Fortschritt zu prüfen; neue Blätter sind die Ankündigung, dass Wurzeln existieren.",
+      "Hygiene und Timing sind die beiden am meisten unterschätzten Zutaten. Reinige Werkzeuge vor und zwischen den Schnitten mit Alkohol oder über der Flamme — eine schmutzige Klinge trägt Krankheiten direkt in frische Wunden. Vermehre während des aktiven Wachstums, meist vom Frühjahr bis in den Frühsommer, wenn die Pflanze Energie übrig hat; Material von einer ruhenden oder gestressten Pflanze startet mit einem Nachteil ins Leben. Und nimm mehr Stecklinge, als du brauchst: Selbst Profis verlieren einen Teil, und die übrigen sind wunderbare Geschenke."
+    ],
+    "checklist": [
+      "Vermehre nur von gesunden, kräftigen, schädlingsfreien Pflanzen",
+      "Sterilisiere die Klingen vor und zwischen den Schnitten",
+      "Schneide knapp unter einem Knoten; entferne Blätter, die unter die Oberfläche kämen",
+      "Gib helles indirektes Licht, Wärme und Luftfeuchte — keine direkte Sonne",
+      "Halte das Medium feucht, aber nie durchnässt",
+      "Nimm zusätzliche Stecklinge; ein paar Verluste sind selbst für Profis normal"
+    ],
+    "problems": [
+      {
+        "title": "Stecklinge, die faulen",
+        "symptoms": [
+          "Der Trieb wird von der Basis her braun, schwarz oder durchscheinend",
+          "Eine weiche, schleimige Konsistenz und saurer Geruch im Wasser oder Substrat",
+          "Blätter, die zusammenbrechen, statt sanft zu welken"
+        ],
+        "solutions": [
+          "Entsorge eindeutig faule Stecklinge und beginne neu — Fäulnis wandert nach oben und kehrt selten um",
+          "Ist nur die Basis betroffen, schneide mit steriler Klinge deutlich oberhalb des Schadens nach und starte in frischem Wasser oder Substrat neu",
+          "Verhindere die Wiederholung: sauberere Werkzeuge, regelmäßig gewechseltes frisches Wasser, ein leichteres, luftigeres Medium und keine Blätter unter der Oberfläche"
+        ]
+      },
+      {
+        "title": "Stecklinge, die nicht wurzeln wollen",
+        "symptoms": [
+          "Wochen vergehen ohne Wurzeln, obwohl der Steckling noch lebendig aussieht",
+          "Der Steckling vergilbt langsam und verliert Kraft, ohne dass sich etwas ändert",
+          "An der Basis bildet sich Kallus, aber Wurzeln folgen nie"
+        ],
+        "solutions": [
+          "Prüfe zuerst die Bedingungen: Die meisten Stillstände gehen auf zu wenig Licht, zu wenig Wärme oder trockene Luft zurück — korrigiere das, bevor du den Steckling beschuldigst",
+          "Schneide die Basis schräg unterhalb eines Knotens nach, um frisches Gewebe freizulegen, und erwäge Bewurzelungshormon für zögerliche Arten",
+          "Hab Geduld je nach Art: Manche wurzeln in Tagen, andere brauchen Monate — solange der Steckling fest und grün ist, versucht er es noch"
+        ]
+      }
+    ]
+  },
+  "role": {
+    "advice": [
+      "Keine Art lebt allein. Jede Pflanze, jeder Pilz und jedes Insekt hat eine Rolle in einem Beziehungsgeflecht: Blühpflanzen ernähren Bestäuber, die wiederum die Samen und Früchte ansetzen, die Vögel und Säugetiere ernähren; Blätter ernähren Raupen, die Nestlinge ernähren; Pilze und zersetzende Insekten bauen Gefallenes ab und geben seine Nährstoffe an den Boden zurück, der die nächste Generation großzieht. Die Rolle einer Art zu lernen — was sie ernährt, beherbergt, mit wem sie sich verbündet und wovon sie abhängt — verwandelt Bestimmung vom Benennen ins Verstehen.",
+      "Der reichste Weg, diese Rollen zu sehen, ist geduldige, behutsame Beobachtung. Sitz ein paar Minuten still bei einer blühenden Pflanze und zähle ihre Besucher; kehre über die Jahreszeiten zum selben Baum zurück und sieh zu, wie sein Ensemble wechselt; drehe einen Stamm behutsam um und lege ihn exakt so zurück, wie er lag. Fotografiere statt zu sammeln, bleib in empfindlichen Lebensräumen auf den Wegen, halte respektvollen Abstand zu Nestern und Bauen und lass die Tiere die Distanz zwischen euch bestimmen. Das Paradox des Naturkundlers: Je weniger du eingreifst, desto mehr siehst du.",
+      "Dein eigener Garten, Balkon oder Fenstersims ist ein funktionierendes Stück Ökosystem. Ein Topf blühender Kräuter ernährt Bestäuber; eine Ecke Falllaub beherbergt überwinternde Insekten; der Verzicht auf Pestizide hält das Nahrungsnetz intakt, von der Blattlaus bis zum Singvogel. Kleine Entscheidungen vervielfachen sich über Nachbarschaften hinweg — dieselbe Aufmerksamkeit, die du einer Zimmerpflanze schenkst, nach außen gewandt, repariert still das Geflecht um dich herum."
+    ],
+    "checklist": [
+      "Frag bei jeder Art: Was ernährt sie, und was ernährt sich von ihr?",
+      "Beobachte leise und hinterlasse jeden Ort, wie du ihn vorgefunden hast",
+      "Fotografiere, statt zu sammeln",
+      "Lege alles, was du umdrehst, exakt an seine Position zurück",
+      "Pflanze Blumen, lass ein paar wilde Ecken, verzichte auf Pestizide",
+      "Notiere deine Sichtungen — Aufzeichnungen über die Zeit enthüllen das Geflecht"
+    ],
+    "problems": [
+      {
+        "title": "Arten am falschen Ort (Invasive)",
+        "symptoms": [
+          "Eine einzige Art überzieht eine Fläche und verdrängt den vielfältigen heimischen Bewuchs",
+          "Schnelle, aggressive Ausbreitung weit über den Pflanzort hinaus",
+          "Merklich weniger Insekten, Vögel oder Wildblumen, wo sie dominiert"
+        ],
+        "solutions": [
+          "Lerne, welche Arten in deiner Region als invasiv gelten — dieselbe Pflanze kann zu Hause harmlos und in der Fremde zerstörerisch sein",
+          "Kippe niemals Gartenabfälle, Aquarieninhalte oder unerwünschte Pflanzen in die freie Natur oder in Gewässer",
+          "Wähle heimische oder gut verträgliche Arten für deinen Garten und unterstütze lokale Entfernungsaktionen, wo es sie gibt"
+        ]
+      },
+      {
+        "title": "Bestäuberrückgang",
+        "symptoms": [
+          "Blüten stehen offen, doch kaum oder keine Insekten besuchen sie",
+          "Obst- und Gemüsepflanzen blühen gut, setzen aber wenig Frucht an",
+          "Merklich weniger Bienen, Schmetterlinge und Schwebfliegen als in früheren Jahren"
+        ],
+        "solutions": [
+          "Pflanze eine Blühstaffel, damit über die ganze Saison etwas blüht, und bevorzuge einfache, offene Blüten gegenüber dichten gefüllten",
+          "Verzichte auf Insektizide, besonders auf allem, was blüht, und dulde ein paar angeknabberte Blätter als Miete ans Ökosystem",
+          "Stelle die stille Infrastruktur bereit: ungestörte Ecken, offene Bodenstellen, stehen gelassene hohle Stängel und eine flache Wasserschale mit Landesteinen"
+        ]
+      }
+    ]
+  }
+}

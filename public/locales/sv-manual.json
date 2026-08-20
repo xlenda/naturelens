@@ -1,0 +1,389 @@
+{
+  "watering": {
+    "advice": [
+      "Att vattna väl handlar mindre om frekvens och mer om observation. Växter dricker i olika takt beroende på ljus, temperatur, krukstorlek och årstid, så ett fast schema misslyckas nästan alltid. Lär dig i stället att läsa själva jorden: tryck ner ett finger i det översta lagret, känn på krukans vikt och lägg märke till hur bladen håller sig. När jordens yta har torkat är de flesta växter redo för en klunk; när den fortfarande är sval och fuktig är det nästan alltid säkrast att vänta.",
+      "När du väl vattnar, vattna ordentligt. Häll långsamt och jämnt över hela ytan tills vattnet rinner ut genom dräneringshålen — det garanterar att hela rotzonen har nåtts och sköljer ut ansamlade mineralsalter. Ytliga klunkar fuktar bara ytan och uppmuntrar rötterna att stanna nära toppen, där de snabbt torkar ut och överhettas. Töm alltid fatet efteråt — rötter som står i vatten svälts på syre, och det är så de flesta krukväxter går förlorade.",
+      "Anpassa efter årstiderna snarare än kalendern. Under varma månader med aktiv tillväxt förbrukar växter vatten snabbt; under svalare, mörkare månader saktar tillväxten ner och samma kruka kan hålla sig fuktig mycket längre. Kall, blöt jord på vintern är en vanlig tyst dödare, så låt jorden torka ut mer mellan vattningarna när ljus och värme avtar. Använd rumstempererat vatten när det går — iskallt vatten chockar rötterna, särskilt hos tropiska arter."
+    ],
+    "checklist": [
+      "Känn på jorden med fingret innan du vattnar, inte på kalendern",
+      "Vattna grundligt tills det rinner ut i botten",
+      "Töm fatet — låt aldrig rötter stå i vatten",
+      "Minska vattningen under kalla, mörka månader",
+      "Använd rumstempererat vatten när du kan",
+      "Lyft krukan: lätt betyder torr, tung betyder fortfarande fuktig"
+    ],
+    "problems": [
+      {
+        "title": "Övervattning",
+        "symptoms": [
+          "Gulnande blad som känns mjuka eller slappa, ofta med början nedtill",
+          "Jord som förblir blöt i dagar, ibland med en sur eller unken lukt",
+          "Bruna, mosiga rötter i stället för fasta, ljusa; sorgmyggor som svävar över jorden"
+        ],
+        "solutions": [
+          "Sluta vattna omedelbart och flytta växten till en ljus och luftig plats så att jorden kan torka",
+          "Kontrollera rötterna: dra försiktigt upp växten ur krukan, klipp bort alla bruna, mosiga delar med en ren sax och plantera om i färsk, väldränerad jord",
+          "Vattna framöver bara när jordens yta har torkat, och kontrollera varje gång att krukan dränerar fritt"
+        ]
+      },
+      {
+        "title": "Undervattning",
+        "symptoms": [
+          "Vissnande eller hängande blad som piggnar till kort efter vattning",
+          "Torra, spröda bladkanter och bladspetsar; bladen kan rulla sig inåt",
+          "Jord som släpper från krukans sidor; krukan känns ovanligt lätt"
+        ],
+        "solutions": [
+          "Vattna långsamt och grundligt; om jorden stöter bort vattnet, ställ krukan i ett fat med vatten en stund så att den kan återfuktas underifrån",
+          "När rotklumpen är jämnt fuktig igen, återgå till regelbundna kontroller — mycket torr jord behöver ofta två varsamma vattningar med några minuters mellanrum för att ta upp vattnet ordentligt",
+          "Om växten torkar ut snabbare än du hinner med, överväg en något större kruka eller en jord som håller lite mer fukt"
+        ]
+      }
+    ]
+  },
+  "light": {
+    "advice": [
+      "Ljus är växtens föda — vatten och gödsel stöttar bara det som ljuset gör möjligt. Odlare beskriver ljus i breda band: full sol (direkta strålar under större delen av dagen), halvsol eller halvskugga (direkt ljus under en del av dagen, ofta mildare morgonsol), ljust indirekt ljus (ljust nog att kasta en mjuk skugga, men utan direkta strålar) och skugga. Att veta vilket band en plats i ditt hem eller din trädgård tillhör är den enskilt mest användbara färdigheten i växtvård.",
+      "För att läsa av ett rum, betrakta det under en hel dag. Ett söderfönster (på norra halvklotet) ger det starkaste och mest långvariga ljuset; öster ger mild morgonsol; väster ger hetare eftermiddagssol; norr förblir mjukt och diffust. Avståndet betyder enormt mycket — ljusintensiteten faller brant för varje steg bort från fönstret, så en växt en meter från glaset kan få en bråkdel av vad den skulle få på fönsterbrädan. Tunna gardiner, tonat glas och hinder utomhus minskar ljuset ytterligare.",
+      "När du flyttar en växt till ljusare förhållanden, acklimatisera den gradvis. Blad anpassar sig till det ljus de växte fram i, och ett plötsligt hopp — inifrån till full sol, från skugga till en solig vägg — kan bränna även solälskande arter. Öka exponeringen steg för steg under ett par veckor, med början i mild morgonsol, och håll ögonen på bladverket: blekta fläckar betyder för snabbt, medan frisk, kompakt nytillväxt betyder att växten finner sig väl tillrätta."
+    ],
+    "checklist": [
+      "Identifiera ditt ljusband: full sol, halvsol, ljust indirekt eller skugga",
+      "Betrakta platsen under en hel dag innan du ställer dit en växt",
+      "Kom ihåg att intensiteten faller snabbt med avståndet från fönstret",
+      "Acklimatisera växter gradvis till varje ljusare plats",
+      "Vrid krukorna då och då så att tillväxten blir jämn",
+      "Torka av dammiga blad — damm stjäl ljus i det tysta"
+    ],
+    "problems": [
+      {
+        "title": "För mycket ljus (solbränna)",
+        "symptoms": [
+          "Blekta, urblekta eller pappersaktiga fläckar på de blad som är mest utsatta för solen",
+          "Torra bruna fläckar eller kanter som dyker upp efter en flytt till en ljusare plats",
+          "Blad som ser urtvättade eller gulaktiga ut trots god vattning"
+        ],
+        "solutions": [
+          "Flytta växten bort från direkta strålar eller filtrera ljuset med en tunn gardin",
+          "Klipp bort svårt brända blad när du är säker på att vävnaden är död — de återhämtar sig inte, och att ta bort dem styr om energin",
+          "Återinför starkare ljus långsamt under flera veckor om växten verkligen vill ha mer sol"
+        ]
+      },
+      {
+        "title": "För lite ljus (etiolering)",
+        "symptoms": [
+          "Långa, utdragna stjälkar med stora mellanrum mellan bladen, kraftigt lutande mot fönstret",
+          "Nya blad som kommer in mindre och blekare än de äldre",
+          "Brokbladiga växter som tappar sina mönster; blommande växter som vägrar blomma"
+        ],
+        "solutions": [
+          "Flytta växten närmare ett fönster eller till ett ljusare rum, och justera gradvis",
+          "Beskär rangliga skott när växten står i bättre ljus för att uppmuntra en fylligare form",
+          "Där naturligt ljus verkligen är knappt fungerar en enkel växtlampa med fullt spektrum på en daglig timer förvånansvärt bra"
+        ]
+      }
+    ]
+  },
+  "soil": {
+    "advice": [
+      "Frisk jord är en levande struktur, inte bara mull. Rötterna behöver tre saker av den på samma gång: fukt, luft och förankring. Bra jord håller vatten som en urvriden svamp — fuktig rakt igenom, aldrig genomdränkt — samtidigt som den bevarar luftfickor mellan partiklarna. Den balansen kommer från strukturen: grovt material (bark, perlit, sand, grus) öppnar dräneringskanaler, medan fint organiskt material (kompost, kokosfiber, lövmull) håller fukt och göder jordlivet som i sin tur göder växten.",
+      "Dränering är inte förhandlingsbar i krukor. Varje kruka behöver hål, och jorden i den måste låta överskottsvatten passera fritt; ett lager småsten i botten fixar inte en kompakt jord — det lyfter bara den vattensjuka zonen närmare rötterna. Om vattnet blir stående länge på ytan efter vattning, eller rusar rakt igenom utan att mörkna jorden, behöver strukturen rättas till. Organiskt material är den stora medlaren: det förbättrar både vattenhållningen i sandiga jordar och dräneringen i tunga.",
+      "pH — hur sur eller basisk jorden är — styr i det tysta vilka näringsämnen rötterna faktiskt kan ta upp. De flesta trädgårds- och krukväxter trivs i ett svagt surt till neutralt spann, och problem uppstår främst i ytterlägena, där näringen blir kemiskt låst även när den finns där. I stället för att jaga siffror, arbeta ner rikliga mängder väl förmultnat organiskt material, som buffrar pH naturligt, och gräv djupare bara om en växt visar ihållande näringsbrister som vattning och ljus inte kan förklara."
+    ],
+    "checklist": [
+      "Kontrollera att varje kruka har riktiga dräneringshål",
+      "Sikta på jord som känns som en urvriden svamp efter vattning",
+      "Blanda i grovt material för luft, organiskt material för fukt och liv",
+      "Skippa myten om stenlagret — åtgärda jorden i stället",
+      "Förnya eller toppdressa krukjorden när den sjunker ihop och packas med tiden",
+      "Täck utomhusrabatter med marktäckning för att skydda struktur och jordliv"
+    ],
+    "problems": [
+      {
+        "title": "Kompakt, vattensjuk jord",
+        "symptoms": [
+          "Vatten som samlas på ytan eller dränerar extremt långsamt",
+          "Jorden är tät, tung och luftlös; kan utveckla en sur lukt",
+          "Växten tynar trots noggrann vattning — gulnad, vissnande, avstannad tillväxt"
+        ],
+        "solutions": [
+          "För krukor: plantera om i färsk jord förbättrad med grovt material som perlit eller bark, och lossa rotklumpen varsamt",
+          "För rabatter: arbeta ner organiskt material med en grep i stället för att vända jorden våldsamt, och undvik att gå på blöt mark",
+          "Minska vattningen medan strukturen återhämtar sig, och låt ytan torka mellan vattningarna"
+        ]
+      },
+      {
+        "title": "Mager, utarmad jord",
+        "symptoms": [
+          "Bleka blad, svaga stjälkar och liten eller ingen ny tillväxt under säsongen",
+          "Vatten som rusar rakt igenom krukan utan att verkligen fukta den",
+          "Krukjord som har krympt, hårdnat eller släppt från krukans väggar"
+        ],
+        "solutions": [
+          "Plantera om i färsk kvalitetsjord — krukjord slits ut, och ingen gödsel återupplivar helt en kollapsad struktur",
+          "Göd lätt och regelbundet under växtsäsongen i stället för mycket på en gång; starka doser kan bränna rötterna",
+          "Utomhus, bygg upp bördigheten långsamt med kompost och marktäckning, som göder jorden och inte bara växten"
+        ]
+      }
+    ]
+  },
+  "safety": {
+    "advice": [
+      "Att leva med växter, svampar och insekter är en av livets stilla glädjeämnen, och några stadiga vanor gör det till en säker sådan. Grundregeln är enkel: ät, smaka eller brygg aldrig något som du inte har identifierat med fullständig säkerhet. En app-identifiering, inklusive den här, är en startpunkt för lärande — aldrig ett klartecken för konsumtion. Många giftiga arter är övertygande dubbelgångare till ätliga, och särskilt bland svampar kan felmarginalen vara noll.",
+      "Hemma, känn till vad du odlar. Vissa vanliga krukväxter och trädgårdsarter kan irritera huden eller vara skadliga om de tuggas, så håll växterna utom räckhåll för små barn och husdjur, och lär barnen tidigt att blad och bär inte är mat om inte en betrodd vuxen säger det. Använd handskar vid tyngre beskärning eller när du hanterar okända arter, undvik att röra ansiktet medan du arbetar och tvätta händerna väl efteråt. Saven från vissa växter kan göra huden känslig för solljus, så att skölja bort all sav direkt är en god reflex.",
+      "Ute på stigen, titta generöst och rör selektivt. Betrakta insekter utan att hantera dem, låt svampar stå kvar om du inte är med en erfaren guide, och utgå från att okända bär inte står på menyn. Om någon i ditt hushåll har kända växt- eller stickallergier, bär med er medicinen och vet hur den används. Inget av detta kräver rädsla — bara samma lugna respekt som du skulle visa en flodström eller en het spis."
+    ],
+    "checklist": [
+      "Konsumera aldrig något utan säker identifiering på expertnivå",
+      "Håll tveksamma växter utom räckhåll för barn och husdjur",
+      "Använd handskar vid beskärning och okända arter; tvätta händerna efteråt",
+      "Skölj snabbt bort växtsav från huden",
+      "Betrakta vilda svampar och insekter utan att röra dem",
+      "Spara numret till Giftinformationscentralen i din telefon"
+    ],
+    "problems": [
+      {
+        "title": "Hudkontakt med en irriterande art",
+        "symptoms": [
+          "Rodnad, klåda, sveda eller utslag där växten rörde vid huden",
+          "Blåsor eller strimmiga märken som dyker upp timmar efter kontakten",
+          "En reaktion som förvärras efter solexponering på det drabbade området"
+        ],
+        "solutions": [
+          "Tvätta området grundligt med tvål och svalt vatten så snart som möjligt, och tvätta kläder som rört vid växten",
+          "Undvik att klia, och håll området borta från direkt solljus medan det lugnar sig",
+          "Om reaktionen är kraftig, sprider sig, sitter nära ögon eller mun, eller innebär någon som helst andningssvårighet, sök vård omedelbart"
+        ]
+      },
+      {
+        "title": "Oavsiktligt intag",
+        "symptoms": [
+          "Ett barn eller husdjur har tuggat på eller svalt en del av en oidentifierad växt eller svamp",
+          "Irritation i mun eller svalg, dregling, illamående, kräkningar eller ovanlig dåsighet",
+          "Ibland inga symtom alls i början — frånvaro av symtom är inget bevis på säkerhet"
+        ],
+        "solutions": [
+          "Framkalla inte kräkning och ge inte mat, mjölk eller huskurer om inte en yrkesperson säger till dig att göra det",
+          "Ta bort eventuella växtrester ur munnen, och spara ett prov eller foto av exakt vad som ätits",
+          "Kontakta Giftinformationscentralen eller larmtjänsten omedelbart — för husdjur en akutveterinär — även om personen eller djuret verkar må bra"
+        ]
+      }
+    ]
+  },
+  "uses": {
+    "advice": [
+      "Mänsklighetens historia är skriven i växter. De har gett oss basföda och kryddor, timmer till skydd och skepp, fibrer som bomull, lin och hampa till tyg och rep, färgämnen, hartser, parfymer och den rena vardagsglädjen i prydnadsodling. Att förstå hur en art har använts öppnar ett fönster mot både botanik och historia — samma växt kan vara en gröda på en kontinent, en helig symbol på en annan och en trädgårdsfavorit på en tredje.",
+      "Traditionell medicin förtjänar särskild respekt och särskild försiktighet i lika mått. Otaliga moderna läkemedel har sitt ursprung i växter som använts av traditionella läkekunniga, och det arvet är genuint anmärkningsvärt. Men traditionell användning är ett historiskt vittnesbörd, inte ett bevis på säkerhet eller effekt — dos, beredning, växtdel och personen som tar den förändrar utfallet helt. Självmedicinera aldrig med växter utifrån något du läst, inklusive i den här appen; rådfråga alltid först kvalificerad hälso- och sjukvårdspersonal.",
+      "Vad som än drar dig till nyttoväxter, låt etiken leda. Skörda bara det du kan identifiera med säkerhet och har tillåtelse att ta, föredra odlade källor framför vilda, och ta måttfullt så att bestånden kan återhämta sig. Överskörd har drivit älskade medicinal- och prydnadsarter mot sällsynthet i många regioner. De bästa utövarna tänker i generationer: de skördar som om de själva, deras grannar och deras barnbarn alla skulle återvända till samma plats."
+    ],
+    "checklist": [
+      "Betrakta traditionella användningar som historia att lära av, inte instruktioner att följa",
+      "Rådfråga sjukvårdspersonal före all medicinsk användning",
+      "Köp från odlade, etiska källor när det är möjligt",
+      "Skörda varsamt och lagligt — känn till dina lokala regler",
+      "Skörda aldrig sällsynta, fridlysta eller långsamväxande arter",
+      "Anteckna vad du lär dig; kunskap om nyttoväxter är värd att bevara"
+    ],
+    "problems": [
+      {
+        "title": "Att använda växter utan riktig vägledning",
+        "symptoms": [
+          "Att bereda te, tinkturer eller huskurer av en art som identifierats enbart via app eller ur minnet",
+          "Att följa doseringsråd från sociala medier eller hörsägen",
+          "Att kombinera växtbaserade medel med receptbelagd medicin utan att berätta för en läkare"
+        ],
+        "solutions": [
+          "Avbryt användningen tills växtens identitet och säkerhet har bekräftats av en kvalificerad expert",
+          "Diskutera alla växtbaserade medel med sjukvårdspersonal, särskilt vid annan medicinering, graviditet eller befintliga sjukdomar",
+          "Betrakta appens information som pedagogiskt sammanhang, aldrig som ett recept"
+        ]
+      },
+      {
+        "title": "Rovdrift vid skörd",
+        "symptoms": [
+          "Bestånd av en vild art som synbart krymper eller försvinner år för år",
+          "Skörd som tar rötter, bark eller hela växter i stället för förnybara delar",
+          "Insamling i skyddade områden eller i strid med lokala skörderegler"
+        ],
+        "solutions": [
+          "Följ plockarens återhållsamhetsregel: ta bara en liten del av vad du hittar, och bara från rikliga bestånd",
+          "Föredra förnybara delar — blad, en del blommor, en del frukt — framför rötter och bark, som ofta kostar växten livet",
+          "Stöd odlingsprogram och köp odlat material; anmäl uppenbart olaglig skörd till lokala myndigheter"
+        ]
+      }
+    ]
+  },
+  "cultural": {
+    "advice": [
+      "Varje art som har levt sida vid sida med människor bär på berättelser. Växter och svampar dyker upp i skapelsemyter, bröllopsritualer, begravningsriter, nationalsymboler, dikter och ordspråk; en ek betyder en sak i en tradition och något helt annat i en annan. Att lära sig dessa lager förvandlar en promenad i parken till en vandring genom mänsklig fantasi — bara namnen bevarar ofta århundraden av observation, humor och tro.",
+      "Folktron är också ett arkiv av verklig kunskap, silad genom generationer. Berättelser om vilka växter som läker, skadar, skyddar eller spår väder kodar ofta äkta iakttagelser sida vid sida med ren poesi, och att skilja det ena från det andra är en del av nöjet. Närma dig dessa traditioner som en respektfull gäst: de tillhör levande kulturer, inte ett museum, och de gemenskaper som förvaltar dem är deras bästa uttolkare.",
+      "När du utforskar en arts kulturhistoria, föredra källor nära själva traditionen — författare ur gemenskapen, regionala forskare, musei- och arkivsamlingar — och notera var varje berättelse kommer ifrån. Att återge en legend med dess ursprung angivet hedrar människorna som skapade den; att återge den utan ursprung raderar dem sakta. Nyfikenhet plus källhänvisning är hela metoden."
+    ],
+    "checklist": [
+      "Slå upp lokala namn och folknamn — de rymmer komprimerad historia",
+      "Notera vilken kultur och region varje berättelse kommer från",
+      "Föredra källor inifrån traditionen när det är möjligt",
+      "Njut av symboliken utan att behandla den som biologi",
+      "Dela legender med deras ursprung angivet",
+      "Fråga innan du fotograferar eller samlar på heliga platser eller i gemenskapers marker"
+    ],
+    "problems": [
+      {
+        "title": "Myt kontra fakta",
+        "symptoms": [
+          "Att anta att en växt är säker att äta eller använda för att ”folk alltid har använt den”",
+          "Att läsa symboliska betydelser — tur, skydd, läkning — som fysiska egenskaper",
+          "Att lita mer på en vitt spridd berättelse just för att den är vitt spridd"
+        ],
+        "solutions": [
+          "Håll två hyllor i huvudet: vad en växt betyder och vad en växt gör — båda är sann kunskap, men de svarar på olika frågor",
+          "Verifiera allt som rör säkerhet eller konsumtion mot moderna expertkällor, oavsett hur gammal traditionen är",
+          "Njut av myten på dess egna villkor; den behöver inte vara bokstavligt sann för att vara kulturellt dyrbar"
+        ]
+      },
+      {
+        "title": "Erkännande och respekt",
+        "symptoms": [
+          "Att återberätta historier eller ceremonier utan att nämna folket de tillhör",
+          "Att framställa en kulturs tradition som universell eller allmän folktro",
+          "Att använda heliga växter eller symboler som lättvindig dekoration utan att förstå deras tyngd"
+        ],
+        "solutions": [
+          "Namnge kulturen, regionen och var du lärde dig varje berättelse när du delar den",
+          "När en tradition är levande och helig, följ gemenskapens egen vägledning om vad som får delas och hur",
+          "Låt nyfikenheten fördjupas till en relation: läs författare ur gemenskapen, besök kulturcentra och stöd kunskapens förvaltare"
+        ]
+      }
+    ]
+  },
+  "edible": {
+    "advice": [
+      "Säker vildplockning vilar på en obruten regel: säker identifiering, på tre sätt, varje gång. Innan något vilt rör dina läppar ska du kunna bekräfta arten genom flera oberoende kännetecken — blad, blomma, frukt, bark, doft, växtplats, årstid — dubbelkollade mot minst en tillförlitlig fälthandbok och helst verifierade på plats av en erfaren plockare. Om en enda kontroll lämnar tvivel är svaret nej. Ett app-förslag, inklusive från den här appen, är början på en identifiering, aldrig slutet.",
+      "Ätlighet är sällan en ja-eller-nej-egenskap hos en hel växt. Många arter har en ätlig del och andra delar som är skadliga; många är säkra endast i ett visst mognadsstadium, eller först efter rätt tillagning, som grundlig kokning. ”Ätlig” i en referens betyder alltid rätt del, i rätt stadium, tillagad på rätt sätt. När du provar en ny vild föda som du noggrant har bekräftat, ät först en liten mängd och vänta en dag — individuella känsligheter finns även för genuint ätliga arter.",
+      "Etisk plockning skyddar både dig och marken. Samla bara där det är lagligt och miljön är ren — vägrenar, besprutade fält och industriområden kan förorena även fullt ätliga arter. Ta måttfullt, lämna gott om åt vilda djur och återväxt, och skövla aldrig ett bestånd. De gamla plockarnas vana är värd att ta till sig i sin helhet: känn din växt, känn din plats, ta lite, och ge platsen en anledning att välkomna dig tillbaka."
+    ],
+    "checklist": [
+      "Bekräfta identiteten genom flera oberoende kännetecken, aldrig bara ett",
+      "Dubbelkolla med en fälthandbok och en erfaren person",
+      "Lär dig vilken del, vilket stadium och vilken tillagning som är säker",
+      "När minsta tvivel kvarstår: ät det inte",
+      "Prova ny vild föda i små mängder, en i taget",
+      "Plocka lagligt, från rena platser, och lämna gott om kvar"
+    ],
+    "problems": [
+      {
+        "title": "Förväxling av lika arter",
+        "symptoms": [
+          "Identifiering baserad på ett enda kännetecken, ett enda foto eller helhetsintrycket",
+          "Exemplaret stämmer med det mesta, men inte allt, i fälthandbokens beskrivning",
+          "Kända farliga dubbelgångare finns i samma familj — vanligt bland svampar, vilda morötter och persiljor och många bär"
+        ],
+        "solutions": [
+          "Stanna vid första avvikelsen: en riktig träff stämmer på varje kännetecken, och en enda felaktig detalj betyder en annan art",
+          "Lär dig din regions farliga dubbelgångare lika grundligt som de ätliga arterna — studera först det som kan döda dig",
+          "Ta med ditt fynd till en expert eller lokal plockargrupp innan det någonsin når köket; med svampar, betrakta detta som obligatoriskt"
+        ]
+      },
+      {
+        "title": "Otillräcklig tillagning",
+        "symptoms": [
+          "Att äta rå en art som tradition och referenser säger måste tillagas",
+          "Att använda fel del av en korrekt identifierad växt",
+          "Magbesvär efter att ha ätit ett förment ätligt fynd"
+        ],
+        "solutions": [
+          "Följ tillagningsanvisningar från tillförlitliga källor exakt — kokningskrav finns för att värme neutraliserar verkliga ämnen",
+          "Matcha del och stadium mot referensen: rätt art men fel del är fortfarande fel måltid",
+          "Om någon blir sjuk, spara ett prov av det som ätits och sök vård snarast i stället för att vänta ut det"
+        ]
+      }
+    ]
+  },
+  "propagation": {
+    "advice": [
+      "Förökning är trädgårdsodlingens stilla magi: en växt blir många, gratis. De tre vägarna in är sticklingar, delning och frö. En stickling tar en frisk stjälk eller ett blad och övertalar det att slå egna rötter; delning delar en tuvbildande växt i färdiga mindre plantor; frö börjar från noll och belönar tålamod med de vidaste möjligheterna. Varje art har metoder den föredrar, men de underliggande principerna delas av nästan alla.",
+      "För sticklingar avgör tre saker framgången: friskt material, rena snitt och stabila förhållanden. Ta sticklingar från kraftig, sjukdomsfri tillväxt, skär strax under en nod — leden där bladen möter stjälken, där rotningsenergin koncentreras — och ta bort de nedre bladen så att inget ruttnar under ytan. Oavsett om du rotar i vatten eller i en lätt, luftig jord, ge sticklingarna ljust indirekt ljus, mild värme och hög luftfuktighet, och motstå frestelsen att dra i dem för att kolla framstegen; nya blad är beskedet om att rötterna finns.",
+      "Hygien och timing är de två mest underskattade ingredienserna. Rengör verktygen med sprit eller låga före och mellan snitten — ett smutsigt blad sprider sjukdom rakt in i färska sår. Föröka under aktiv tillväxt, vanligen vår till försommar, när växten har energi över; material taget från en vilande eller stressad växt börjar livet i underläge. Och ta fler sticklingar än du behöver: även experter förlorar en andel, och de överblivna blir fina presenter."
+    ],
+    "checklist": [
+      "Föröka endast från friska, kraftiga växter utan skadedjur",
+      "Sterilisera bladen före och mellan snitten",
+      "Skär strax under en nod; ta bort blad som skulle hamna under ytan",
+      "Ge ljust indirekt ljus, värme och fuktighet — inte direkt sol",
+      "Håll mediet fuktigt men aldrig genomblött",
+      "Ta extra sticklingar; vissa förluster är normala även för experter"
+    ],
+    "problems": [
+      {
+        "title": "Sticklingar som ruttnar",
+        "symptoms": [
+          "Stjälken blir brun, svart eller genomskinlig från basen och uppåt",
+          "En mjuk, slemmig konsistens och en sur lukt i vattnet eller mediet",
+          "Blad som kollapsar i stället för att vissna stillsamt"
+        ],
+        "solutions": [
+          "Släng tydligt ruttna sticklingar och börja om — röta vandrar uppåt och vänder sällan",
+          "Om bara basen är drabbad, skär om en bra bit ovanför skadan med ett sterilt blad och börja om i färskt vatten eller ny jord",
+          "Förebygg en upprepning: renare verktyg, färskare vatten som byts regelbundet, ett lättare och luftigare medium, och inga blad under ytan"
+        ]
+      },
+      {
+        "title": "Sticklingar som inte vill rota sig",
+        "symptoms": [
+          "Veckor går utan rötter, fastän sticklingen fortfarande ser levande ut",
+          "Sticklingen gulnar sakta och tappar kraft utan förändring",
+          "Kallus bildas vid basen men rötterna kommer aldrig"
+        ],
+        "solutions": [
+          "Kontrollera förhållandena först: de flesta stopp beror på för lite ljus, för lite värme eller torr luft — justera detta innan du skyller på sticklingen",
+          "Skär om basen i vinkel strax under en nod för att blotta färsk vävnad, och överväg rotningshormon för motsträviga arter",
+          "Ha tålamod efter art: vissa rotar sig på dagar, andra tar månader — så länge sticklingen är fast och grön försöker den fortfarande"
+        ]
+      }
+    ]
+  },
+  "role": {
+    "advice": [
+      "Ingen art lever ensam. Varje växt, svamp och insekt har en roll i ett nät av relationer: blommande växter föder pollinatörer, som i sin tur sätter de frön och frukter som föder fåglar och däggdjur; blad föder larver som föder fågelungar; svampar och nedbrytande insekter bryter ner fallen materia och återför dess näring till jorden som föder nästa generation. Att lära sig en arts roll — vad den föder, skyddar, samarbetar med och beror av — förvandlar identifiering från namngivning till förståelse.",
+      "Det rikaste sättet att se dessa roller är tålmodig observation med lätt fotavtryck. Sitt stilla nära en blommande växt i några minuter och räkna dess besökare; återvänd till samma träd genom årstiderna och se dess rollista förändras; vänd varsamt på en stock och lägg tillbaka den exakt som den låg. Fotografera i stället för att samla, håll dig till stigar i känsliga miljöer, håll respektfullt avstånd till bon och gryt, och låt djuren avgöra avståndet mellan er. Naturforskarens paradox är att ju mindre du ingriper, desto mer ser du.",
+      "Din egen trädgård, balkong eller fönsterbräda är en fungerande del av ekosystemet. En kruka med blommande örter föder pollinatörer; en hörna med lövförna skyddar övervintrande insekter; att avstå från bekämpningsmedel håller näringsväven intakt från bladlus till sångfågel. Små val mångfaldigas över hela kvarter — samma omsorg som du ger en krukväxt, vänd utåt, lagar i det tysta väven omkring dig."
+    ],
+    "checklist": [
+      "Fråga om varje art: vad föder den, och vad livnär sig på den?",
+      "Observera stilla och lämna varje plats som du fann den",
+      "Fotografera i stället för att samla",
+      "Lägg tillbaka allt du vänder på i dess exakta läge",
+      "Plantera blommor, spara några vilda hörn, hoppa över bekämpningsmedlen",
+      "Anteckna dina fynd — noteringar över tid avslöjar väven"
+    ],
+    "problems": [
+      {
+        "title": "Arter på fel plats (invasiva)",
+        "symptoms": [
+          "En enda art som täcker ett område och tränger undan varierad inhemsk växtlighet",
+          "Snabb, aggressiv spridning långt bortom där den planterades",
+          "Märkbart färre insekter, fåglar eller vilda blommor där den dominerar"
+        ],
+        "solutions": [
+          "Lär dig vilka arter som räknas som invasiva i din region — samma växt kan vara harmlös hemma och förödande någon annanstans",
+          "Dumpa aldrig trädgårdsavfall, akvarieinnehåll eller oönskade växter i naturen eller i vattendrag",
+          "Välj inhemska eller skötsamma arter till din trädgård, och stöd lokala bekämpningsinsatser där de finns"
+        ]
+      },
+      {
+        "title": "Pollinatörernas tillbakagång",
+        "symptoms": [
+          "Blommor som blommar med få eller inga besökande insekter",
+          "Frukt- och grönsaksplantor som blommar fint men sätter lite frukt",
+          "Märkbart färre bin, fjärilar och blomflugor än under tidigare säsonger"
+        ],
+        "solutions": [
+          "Plantera en stafett av blommor så att något blommar under hela växtsäsongen, och föredra enkla, öppna blommor framför täta fyllda",
+          "Sluta helt med insektsmedel, särskilt på något som blommar, och tolerera några gnagda blad som hyra betald till ekosystemet",
+          "Erbjud den tysta infrastrukturen: ostörda hörn, fläckar av bar jord, ihåliga stjälkar som får stå kvar, och ett grunt vattenfat med landningsstenar"
+        ]
+      }
+    ]
+  }
+}

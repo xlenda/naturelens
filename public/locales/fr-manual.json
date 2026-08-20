@@ -1,0 +1,389 @@
+{
+  "watering": {
+    "advice": [
+      "Bien arroser est moins une question de fréquence que d'observation. Les plantes boivent à des rythmes différents selon la lumière, la température, la taille du pot et la saison ; un calendrier fixe échoue donc presque toujours. Apprenez plutôt à lire le terreau lui-même : enfoncez un doigt dans la couche supérieure, soupesez le pot et observez la tenue des feuilles. Quand la surface du terreau a séché, la plupart des plantes sont prêtes à boire ; quand elle est encore fraîche et humide, attendre est presque toujours le choix le plus sûr.",
+      "Quand vous arrosez, arrosez en profondeur. Versez lentement et uniformément sur toute la surface jusqu'à ce que l'eau s'échappe par les trous de drainage : cela garantit que toute la zone racinaire a été atteinte et évacue les sels minéraux accumulés. Les petites gorgées superficielles ne mouillent que la surface et incitent les racines à rester en haut, où elles sèchent et surchauffent vite. Videz toujours la soucoupe ensuite — des racines qui trempent dans l'eau sont privées d'oxygène, et c'est ainsi que se perdent la plupart des plantes d'intérieur.",
+      "Ajustez au fil des saisons plutôt que du calendrier. Pendant les mois chauds de croissance active, les plantes consomment l'eau rapidement ; pendant les mois plus froids et plus sombres, la croissance ralentit et le même pot peut rester humide bien plus longtemps. Un terreau froid et détrempé en hiver est un tueur silencieux très répandu : laissez donc le terreau sécher davantage entre les arrosages quand la lumière et la chaleur diminuent. Autant que possible, utilisez de l'eau à température ambiante — l'eau glacée choque les racines, surtout chez les espèces tropicales."
+    ],
+    "checklist": [
+      "Vérifiez le terreau avec le doigt avant d'arroser, pas le calendrier",
+      "Arrosez en profondeur jusqu'à ce que l'eau s'écoule par le fond",
+      "Videz la soucoupe — ne laissez jamais les racines tremper dans l'eau",
+      "Réduisez l'arrosage pendant les mois froids et sombres",
+      "Utilisez de l'eau à température ambiante quand vous le pouvez",
+      "Soulevez le pot : léger signifie sec, lourd signifie encore humide"
+    ],
+    "problems": [
+      {
+        "title": "Excès d'arrosage",
+        "symptoms": [
+          "Feuilles jaunissantes, molles ou flétries, souvent en commençant par le bas",
+          "Terreau qui reste mouillé pendant des jours, parfois avec une odeur aigre ou de moisi",
+          "Racines brunes et molles au lieu de fermes et claires ; moucherons de terreau voletant au-dessus de la terre"
+        ],
+        "solutions": [
+          "Cessez d'arroser immédiatement et placez la plante dans un endroit lumineux et aéré pour que le terreau sèche",
+          "Examinez les racines : sortez la plante de son pot, coupez les parties brunes et molles avec des ciseaux propres et rempotez dans un mélange frais et bien drainant",
+          "Désormais, n'arrosez que lorsque la surface du terreau a séché, et vérifiez chaque fois que le pot draine librement"
+        ]
+      },
+      {
+        "title": "Manque d'arrosage",
+        "symptoms": [
+          "Feuilles flétries ou tombantes qui se redressent peu après l'arrosage",
+          "Bords et pointes secs et cassants ; les feuilles peuvent s'enrouler vers l'intérieur",
+          "Terreau qui se rétracte des parois du pot ; le pot semble anormalement léger"
+        ],
+        "solutions": [
+          "Arrosez lentement et en profondeur ; si le terreau repousse l'eau, laissez tremper le pot un moment dans une bassine d'eau pour qu'il se réhydrate par le bas",
+          "Une fois la motte de nouveau uniformément humide, reprenez les contrôles réguliers — un terreau très sec a souvent besoin de deux arrosages doux à quelques minutes d'intervalle pour bien absorber",
+          "Si la plante sèche plus vite que vous ne pouvez suivre, envisagez un pot un peu plus grand ou un mélange qui retient un peu plus d'humidité"
+        ]
+      }
+    ]
+  },
+  "light": {
+    "advice": [
+      "La lumière est la nourriture de la plante — l'eau et l'engrais ne font que soutenir ce que la lumière rend possible. Les jardiniers décrivent la lumière en grandes catégories : plein soleil (rayons directs une bonne partie de la journée), soleil partiel ou mi-ombre (lumière directe une partie de la journée, souvent le soleil plus doux du matin), lumière indirecte vive (assez claire pour projeter une ombre douce, mais sans rayons directs) et ombre. Savoir dans quelle catégorie tombe chaque coin de votre intérieur ou de votre jardin est la compétence la plus utile de tout le soin des plantes.",
+      "Pour lire une pièce, observez-la au fil d'une journée entière. Une fenêtre orientée au sud (dans l'hémisphère nord) offre la lumière la plus forte et la plus longue ; l'est donne un soleil doux le matin ; l'ouest, un soleil plus chaud l'après-midi ; le nord reste doux et diffus. La distance compte énormément — l'intensité lumineuse chute brutalement à chaque pas qui vous éloigne de la fenêtre, si bien qu'une plante à un mètre de la vitre peut recevoir une fraction de ce qu'elle recevrait sur le rebord. Voilages, vitres teintées et obstacles extérieurs réduisent encore la lumière.",
+      "Quand vous déplacez une plante vers des conditions plus lumineuses, acclimatez-la progressivement. Les feuilles s'adaptent à la lumière dans laquelle elles ont grandi, et un saut brutal — de l'intérieur au plein soleil, de l'ombre à un mur ensoleillé — peut brûler même les espèces qui aiment le soleil. Augmentez l'exposition pas à pas sur deux ou trois semaines, en commençant par la douce lumière du matin, et surveillez le feuillage : des zones décolorées signifient trop vite, tandis qu'une pousse neuve, fraîche et compacte montre que la plante s'installe bien."
+    ],
+    "checklist": [
+      "Identifiez votre catégorie de lumière : plein soleil, partiel, indirecte vive ou ombre",
+      "Observez l'endroit sur une journée entière avant d'y installer une plante",
+      "Rappelez-vous que l'intensité chute vite en s'éloignant de la fenêtre",
+      "Acclimatez les plantes progressivement à toute position plus lumineuse",
+      "Tournez les pots de temps en temps pour une croissance régulière",
+      "Essuyez les feuilles poussiéreuses — la poussière vole la lumière en silence"
+    ],
+    "problems": [
+      {
+        "title": "Trop de lumière (brûlure de soleil)",
+        "symptoms": [
+          "Zones décolorées, pâlies ou parcheminées sur les feuilles les plus exposées au soleil",
+          "Taches ou bords bruns et secs apparus après un déplacement vers un endroit plus lumineux",
+          "Feuilles à l'aspect délavé ou jaunâtre dans l'ensemble malgré un bon arrosage"
+        ],
+        "solutions": [
+          "Sortez la plante des rayons directs ou filtrez la lumière avec un voilage",
+          "Coupez les feuilles gravement brûlées une fois certain que le tissu est mort — elles ne se rétabliront pas, et les retirer redirige l'énergie",
+          "Réintroduisez une lumière plus forte lentement, sur plusieurs semaines, si la plante réclame vraiment plus de soleil"
+        ]
+      },
+      {
+        "title": "Trop peu de lumière (étiolement)",
+        "symptoms": [
+          "Tiges longues et étirées avec de grands écarts entre les feuilles, penchant fortement vers la fenêtre",
+          "Nouvelles feuilles plus petites et plus pâles que les anciennes",
+          "Plantes panachées perdant leurs motifs ; plantes fleuries refusant de fleurir"
+        ],
+        "solutions": [
+          "Rapprochez la plante d'une fenêtre ou installez-la dans une pièce plus lumineuse, en ajustant progressivement",
+          "Taillez les pousses étiolées une fois la plante mieux éclairée, pour encourager une silhouette plus fournie",
+          "Là où la lumière naturelle manque vraiment, une simple lampe horticole à spectre complet sur minuterie quotidienne fonctionne remarquablement bien"
+        ]
+      }
+    ]
+  },
+  "soil": {
+    "advice": [
+      "Un sol sain est une structure vivante, pas de la simple terre. Les racines lui demandent trois choses à la fois : humidité, air et ancrage. Un bon sol retient l'eau comme une éponge essorée — humide de part en part, jamais détrempé — tout en gardant des poches d'air entre ses particules. Cet équilibre vient de la structure : les matériaux grossiers (écorce, perlite, sable, gravier fin) ouvrent des canaux de drainage, tandis que la matière organique fine (compost, fibre de coco, terreau de feuilles) retient l'humidité et nourrit la vie du sol, qui à son tour nourrit la plante.",
+      "Le drainage n'est pas négociable en pot. Chaque pot a besoin de trous, et le mélange à l'intérieur doit laisser passer librement l'excès d'eau ; une couche de billes ou de cailloux au fond ne corrige pas un mélange dense — elle rapproche simplement la zone détrempée des racines. Si l'eau stagne longtemps en surface après l'arrosage, ou file tout droit sans assombrir le terreau, la structure doit être corrigée. La matière organique est la grande médiatrice : elle améliore aussi bien la rétention d'eau dans les mélanges sableux que le drainage dans les mélanges lourds.",
+      "Le pH — le degré d'acidité ou d'alcalinité du sol — contrôle en silence quels nutriments les racines peuvent réellement absorber. La plupart des plantes de jardin et d'intérieur se plaisent dans une plage légèrement acide à neutre, et les problèmes surgissent surtout aux extrêmes, où les nutriments se retrouvent chimiquement verrouillés même lorsqu'ils sont présents. Plutôt que de courir après les chiffres, incorporez de généreuses quantités de matière organique bien décomposée, qui tamponne le pH naturellement, et n'enquêtez plus avant que si une plante montre des carences persistantes que l'arrosage et la lumière n'expliquent pas."
+    ],
+    "checklist": [
+      "Vérifiez que chaque pot possède de vrais trous de drainage",
+      "Visez un sol qui ressemble à une éponge essorée après l'arrosage",
+      "Mélangez du matériau grossier pour l'air, de la matière organique pour l'humidité et la vie",
+      "Oubliez le mythe de la couche de cailloux — corrigez plutôt le mélange",
+      "Renouvelez ou surfacez le terreau des pots à mesure qu'il s'affaisse et se compacte",
+      "Paillez les massifs extérieurs pour protéger la structure et la vie du sol"
+    ],
+    "problems": [
+      {
+        "title": "Sol compacté et détrempé",
+        "symptoms": [
+          "L'eau stagne en surface ou s'écoule extrêmement lentement",
+          "Sol dense, lourd et privé d'air ; peut développer une odeur aigre",
+          "La plante décline malgré un arrosage soigné — jaunissement, flétrissement, croissance à l'arrêt"
+        ],
+        "solutions": [
+          "En pot : rempotez dans un mélange frais enrichi de matériau grossier comme la perlite ou l'écorce, en desserrant doucement la motte",
+          "En pleine terre : incorporez de la matière organique à la fourche plutôt que de retourner le sol violemment, et évitez de marcher sur un sol mouillé",
+          "Réduisez l'arrosage pendant que la structure se rétablit, et laissez la surface sécher entre deux arrosages"
+        ]
+      },
+      {
+        "title": "Sol pauvre et épuisé",
+        "symptoms": [
+          "Feuilles pâles, tiges faibles et peu ou pas de nouvelle croissance en saison",
+          "L'eau traverse le pot d'un trait sans vraiment l'humidifier",
+          "Le terreau du pot s'est rétracté, durci ou décollé des parois"
+        ],
+        "solutions": [
+          "Rempotez avec un mélange frais et de qualité — le terreau s'épuise, et aucun engrais ne ressuscite pleinement une structure effondrée",
+          "Fertilisez légèrement et régulièrement pendant la saison de croissance plutôt que massivement d'un coup ; les doses fortes peuvent brûler les racines",
+          "En extérieur, bâtissez la fertilité lentement avec du compost et du paillis, qui nourrissent le sol et pas seulement la plante"
+        ]
+      }
+    ]
+  },
+  "safety": {
+    "advice": [
+      "Vivre avec les plantes, les champignons et les insectes est l'un des plaisirs paisibles de l'existence, et quelques habitudes solides en font un plaisir sûr. La règle fondamentale est simple : ne mangez, ne goûtez et n'infusez jamais rien que vous n'ayez identifié avec une certitude absolue. Une identification par application, y compris celle-ci, est un point de départ pour apprendre — jamais un feu vert pour la consommation. Beaucoup d'espèces toxiques sont des sosies convaincants d'espèces comestibles, et avec les champignons en particulier, la marge d'erreur peut être nulle.",
+      "Chez vous, connaissez ce que vous cultivez. Certaines plantes d'intérieur et de jardin courantes peuvent irriter la peau ou être nocives si elles sont mâchées : gardez-les hors de portée des jeunes enfants et des animaux, et apprenez tôt aux enfants que feuilles et baies ne sont pas de la nourriture, sauf si un adulte de confiance le confirme. Portez des gants pour les tailles importantes ou la manipulation d'espèces inconnues, évitez de vous toucher le visage en travaillant et lavez-vous bien les mains ensuite. La sève de certaines plantes peut sensibiliser la peau au soleil : rincer toute sève sans attendre est un bon réflexe.",
+      "Sur les sentiers, regardez généreusement et touchez avec discernement. Observez les insectes sans les manipuler, laissez les champignons là où ils poussent sauf en compagnie d'un guide expérimenté, et considérez que les baies inconnues sont hors menu. Si un membre de votre foyer a des allergies connues aux plantes ou aux piqûres, emportez son traitement et sachez l'utiliser. Rien de tout cela n'exige de la peur — seulement le même respect tranquille que vous accorderiez au courant d'une rivière ou à une plaque brûlante."
+    ],
+    "checklist": [
+      "Ne consommez jamais rien sans identification certaine, de niveau expert",
+      "Gardez les plantes douteuses hors de portée des enfants et des animaux",
+      "Portez des gants pour la taille et les espèces inconnues ; lavez-vous les mains ensuite",
+      "Rincez rapidement toute sève de la peau",
+      "Observez champignons et insectes sauvages sans les manipuler",
+      "Enregistrez le numéro du centre antipoison local dans votre téléphone"
+    ],
+    "problems": [
+      {
+        "title": "Contact cutané avec une espèce irritante",
+        "symptoms": [
+          "Rougeur, démangeaison, brûlure ou éruption là où la plante a touché la peau",
+          "Cloques ou marques en traînées apparaissant des heures après le contact",
+          "Réaction qui s'aggrave après exposition au soleil de la zone touchée"
+        ],
+        "solutions": [
+          "Lavez soigneusement la zone au savon et à l'eau fraîche dès que possible, et lavez aussi les vêtements qui ont touché la plante",
+          "Évitez de gratter et gardez la zone à l'abri du soleil direct pendant qu'elle s'apaise",
+          "Si la réaction est sévère, s'étend, touche les yeux ou la bouche, ou s'accompagne de la moindre difficulté à respirer, consultez immédiatement un médecin"
+        ]
+      },
+      {
+        "title": "Ingestion accidentelle",
+        "symptoms": [
+          "Un enfant ou un animal a mâché ou avalé une partie d'une plante ou d'un champignon non identifié",
+          "Irritation de la bouche ou de la gorge, salivation, nausées, vomissements ou somnolence inhabituelle",
+          "Parfois aucun symptôme au début — l'absence de symptômes n'est pas une preuve d'innocuité"
+        ],
+        "solutions": [
+          "Ne faites pas vomir et ne donnez ni nourriture, ni lait, ni remèdes maison sauf sur instruction d'un professionnel",
+          "Retirez tout reste végétal de la bouche et conservez un échantillon ou une photo exacte de ce qui a été ingéré",
+          "Contactez immédiatement le centre antipoison ou les urgences — pour un animal, un vétérinaire d'urgence — même si la personne ou l'animal semble aller bien"
+        ]
+      }
+    ]
+  },
+  "uses": {
+    "advice": [
+      "L'histoire de l'humanité est écrite dans les plantes. Elles nous ont donné aliments de base et épices, bois pour les abris et les navires, fibres comme le coton, le lin et le chanvre pour l'étoffe et la corde, teintures, résines, parfums et la joie quotidienne du jardinage d'ornement. Comprendre comment une espèce a été utilisée ouvre une fenêtre à la fois sur la botanique et sur l'histoire — la même plante peut être culture vivrière sur un continent, symbole sacré sur un autre et favorite des jardins sur un troisième.",
+      "La médecine traditionnelle mérite un respect particulier et une prudence particulière, à parts égales. D'innombrables médicaments modernes trouvent leur origine dans des plantes utilisées par les guérisseurs traditionnels, et cet héritage est réellement remarquable. Mais l'usage traditionnel est un témoignage historique, pas une preuve de sécurité ou d'efficacité — le dosage, la préparation, la partie de la plante et la personne qui la prend changent entièrement le résultat. Ne vous soignez jamais vous-même avec des plantes sur la foi de quelque chose que vous avez lu, y compris dans cette application ; consultez toujours d'abord un professionnel de santé qualifié.",
+      "Quoi qui vous attire vers les plantes utiles, laissez l'éthique guider. Ne récoltez que ce que vous pouvez identifier avec certitude et êtes autorisé à prendre, préférez les sources cultivées aux sources sauvages, et prélevez avec modération pour que les populations se reconstituent. La surexploitation a poussé des espèces médicinales et ornementales très aimées vers la rareté dans bien des régions. Les meilleurs praticiens pensent en générations : ils récoltent comme si eux-mêmes, leurs voisins et leurs petits-enfants devaient tous revenir au même endroit."
+    ],
+    "checklist": [
+      "Traitez les usages traditionnels comme une histoire à apprendre, pas des instructions à suivre",
+      "Consultez un professionnel de santé avant tout usage médicinal",
+      "Achetez auprès de sources cultivées et éthiques quand c'est possible",
+      "Récoltez peu et légalement — connaissez les règles locales",
+      "Ne récoltez jamais d'espèces rares, protégées ou à croissance lente",
+      "Notez ce que vous apprenez ; le savoir sur les plantes utiles mérite d'être conservé"
+    ],
+    "problems": [
+      {
+        "title": "Utiliser des plantes sans encadrement",
+        "symptoms": [
+          "Préparer tisanes, teintures ou remèdes à partir d'une espèce identifiée seulement par application ou de mémoire",
+          "Suivre des conseils de dosage venus des réseaux sociaux ou du ouï-dire",
+          "Associer des remèdes végétaux à des médicaments sur ordonnance sans en parler au médecin"
+        ],
+        "solutions": [
+          "Suspendez l'usage jusqu'à ce que l'identité et la sécurité de la plante soient confirmées par un expert qualifié",
+          "Discutez de tout remède à base de plantes avec un professionnel de santé, surtout en cas d'autres traitements, de grossesse ou de pathologies existantes",
+          "Considérez les informations de cette application comme un contexte éducatif, jamais comme une prescription"
+        ]
+      },
+      {
+        "title": "Récolte prédatrice",
+        "symptoms": [
+          "Populations d'une espèce sauvage qui rétrécissent ou disparaissent visiblement d'année en année",
+          "Récolte qui prélève racines, écorces ou plantes entières plutôt que des parties renouvelables",
+          "Cueillette dans des zones protégées ou au mépris des règles locales de récolte"
+        ],
+        "solutions": [
+          "Suivez la règle de retenue du cueilleur : ne prenez qu'une petite fraction de ce que vous trouvez, et seulement dans des populations abondantes",
+          "Préférez les parties renouvelables — feuilles, quelques fleurs, quelques fruits — aux racines et aux écorces, qui coûtent souvent la vie à la plante",
+          "Soutenez les programmes de culture et achetez du matériel cultivé ; signalez aux autorités locales toute récolte manifestement illégale"
+        ]
+      }
+    ]
+  },
+  "cultural": {
+    "advice": [
+      "Chaque espèce qui a vécu aux côtés des humains porte des histoires. Plantes et champignons apparaissent dans les mythes de création, les rituels de mariage, les rites funéraires, les emblèmes nationaux, les poèmes et les proverbes ; un chêne signifie une chose dans une tradition et tout autre chose dans une autre. Apprendre ces strates transforme une promenade au parc en voyage dans l'imaginaire humain — les noms à eux seuls conservent souvent des siècles d'observation, d'humour et de croyance.",
+      "Le folklore est aussi une archive de savoir réel, filtrée par les générations. Les histoires sur les plantes qui guérissent, blessent, protègent ou annoncent le temps encodent souvent des observations authentiques à côté de pure poésie, et distinguer l'une de l'autre fait partie du plaisir. Abordez ces traditions en invité respectueux : elles appartiennent à des cultures vivantes, pas à un musée, et les communautés qui les entretiennent en sont les meilleures interprètes.",
+      "Quand vous recherchez l'histoire culturelle d'une espèce, privilégiez les sources proches de la tradition elle-même — auteurs de la communauté, chercheurs régionaux, collections de musées et d'archives — et notez d'où vient chaque histoire. Répéter une légende avec son origine attachée honore ceux qui l'ont créée ; la répéter dépouillée de son origine les efface lentement. Curiosité plus attribution : c'est toute la méthode."
+    ],
+    "checklist": [
+      "Cherchez les noms locaux et populaires — ils condensent l'histoire",
+      "Notez de quelle culture et de quelle région vient chaque histoire",
+      "Privilégiez si possible les sources issues de la tradition elle-même",
+      "Savourez le symbolisme sans le prendre pour de la biologie",
+      "Partagez les légendes avec leurs origines attachées",
+      "Demandez avant de photographier ou de collecter sur des sites sacrés ou communautaires"
+    ],
+    "problems": [
+      {
+        "title": "Mythe ou réalité",
+        "symptoms": [
+          "Supposer qu'une plante est sûre à manger ou à utiliser parce que « les gens l'ont toujours utilisée »",
+          "Lire les significations symboliques — chance, protection, guérison — comme des propriétés physiques",
+          "Faire davantage confiance à une histoire très répétée précisément parce qu'elle est très répétée"
+        ],
+        "solutions": [
+          "Gardez deux étagères en tête : ce qu'une plante signifie et ce qu'une plante fait — les deux sont de vrais savoirs, mais ils répondent à des questions différentes",
+          "Vérifiez tout ce qui touche à la sécurité ou à la consommation auprès de sources expertes modernes, quelle que soit l'ancienneté de la tradition",
+          "Savourez le mythe pour lui-même ; il n'a pas besoin d'être littéralement vrai pour être culturellement précieux"
+        ]
+      },
+      {
+        "title": "Attribution et respect",
+        "symptoms": [
+          "Raconter des histoires ou des cérémonies sans mentionner le peuple auquel elles appartiennent",
+          "Présenter la tradition d'une culture comme un folklore universel ou générique",
+          "Utiliser des plantes ou des symboles sacrés comme simple décoration sans en comprendre le poids"
+        ],
+        "solutions": [
+          "Nommez la culture, la région et la source de chaque histoire chaque fois que vous la partagez",
+          "Quand une tradition est vivante et sacrée, suivez les indications de la communauté elle-même sur ce qui peut être partagé et comment",
+          "Laissez la curiosité mûrir en relation : lisez les auteurs de la communauté, visitez les centres culturels et soutenez les gardiens du savoir"
+        ]
+      }
+    ]
+  },
+  "edible": {
+    "advice": [
+      "La cueillette sûre repose sur une règle inviolable : identification positive, par trois voies, à chaque fois. Avant que quoi que ce soit de sauvage ne touche vos lèvres, vous devez pouvoir confirmer l'espèce par plusieurs caractéristiques indépendantes — feuille, fleur, fruit, écorce, odeur, habitat, saison — recoupées avec au moins un guide de terrain fiable et, idéalement, vérifiées en personne par un cueilleur expérimenté. Si une seule vérification laisse un doute, la réponse est non. Une suggestion d'application, y compris celle-ci, est le début d'une identification, jamais sa fin.",
+      "La comestibilité est rarement une propriété en oui-ou-non de la plante entière. Beaucoup d'espèces ont une partie comestible et d'autres parties nocives ; beaucoup ne sont sûres qu'à un certain stade de maturité, ou seulement après une préparation adéquate comme une cuisson complète. « Comestible » dans une référence signifie toujours la bonne partie, au bon stade, préparée de la bonne manière. Quand vous essayez un nouvel aliment sauvage rigoureusement confirmé, mangez-en d'abord une petite quantité et attendez un jour — des sensibilités individuelles existent même envers des espèces authentiquement comestibles.",
+      "La cueillette éthique protège à la fois vous et le territoire. Ne cueillez que là où c'est légal et où l'environnement est propre — bords de route, champs traités et sites industriels peuvent contaminer même des espèces parfaitement comestibles. Prélevez avec modération, laissez-en largement pour la faune et la repousse, et ne dépouillez jamais complètement un coin. La vieille habitude des cueilleurs mérite d'être adoptée en entier : connaissez votre plante, connaissez votre lieu, prenez peu, et donnez à l'endroit une raison de vous accueillir de nouveau."
+    ],
+    "checklist": [
+      "Confirmez l'identité par plusieurs caractéristiques indépendantes, jamais une seule",
+      "Recoupez avec un guide de terrain et une personne expérimentée",
+      "Apprenez quelle partie, à quel stade et avec quelle préparation est sûre",
+      "Au moindre doute persistant : ne le mangez pas",
+      "Goûtez les nouveaux aliments sauvages en petites quantités, un à la fois",
+      "Cueillez légalement, dans des lieux propres, et laissez-en largement derrière vous"
+    ],
+    "problems": [
+      {
+        "title": "Confusion entre espèces sosies",
+        "symptoms": [
+          "Identification fondée sur une seule caractéristique, une seule photo ou une impression d'ensemble",
+          "Le spécimen correspond à la plupart, mais pas à la totalité, de la description du guide",
+          "Des sosies dangereux bien connus existent dans la même famille — fréquent chez les champignons, les carottes et persils sauvages et de nombreuses baies"
+        ],
+        "solutions": [
+          "Arrêtez-vous à la première discordance : une vraie correspondance concorde sur chaque caractéristique, et un seul détail faux signifie une autre espèce",
+          "Apprenez les sosies dangereux de votre région aussi à fond que les comestibles eux-mêmes — étudiez d'abord ce qui pourrait vous tuer",
+          "Apportez votre trouvaille à un expert ou à un groupe local de cueillette avant qu'elle n'atteigne la cuisine ; avec les champignons, considérez cela comme obligatoire"
+        ]
+      },
+      {
+        "title": "Préparation inadéquate",
+        "symptoms": [
+          "Manger crue une espèce que la tradition et les références disent devoir être cuite",
+          "Utiliser la mauvaise partie d'une plante correctement identifiée",
+          "Troubles digestifs après avoir mangé une trouvaille supposée comestible"
+        ],
+        "solutions": [
+          "Suivez exactement les instructions de préparation de sources fiables — les exigences de cuisson existent parce que la chaleur neutralise des composés bien réels",
+          "Faites correspondre partie et stade à la référence : bonne espèce, mauvaise partie reste un mauvais repas",
+          "Si quelqu'un tombe malade, conservez un échantillon de ce qui a été mangé et demandez rapidement un avis médical plutôt que d'attendre que ça passe"
+        ]
+      }
+    ]
+  },
+  "propagation": {
+    "advice": [
+      "La multiplication est la magie discrète du jardinage : une plante en devient plusieurs, gratuitement. Les trois portes d'entrée sont la bouture, la division et le semis. La bouture prend une tige ou une feuille saine et la persuade de produire ses propres racines ; la division sépare une plante en touffe en petites plantes toutes prêtes ; le semis part de zéro et récompense la patience par les possibilités les plus vastes. Chaque espèce a ses méthodes préférées, mais les principes de fond sont partagés par presque toutes.",
+      "Pour les boutures, trois choses décident du succès : un matériel sain, des coupes nettes et des conditions stables. Prélevez des boutures sur des pousses vigoureuses et exemptes de maladies, coupez juste sous un nœud — la jonction où les feuilles rejoignent la tige, là où se concentre l'énergie d'enracinement — et retirez les feuilles du bas pour que rien ne pourrisse sous la surface. Que l'enracinement se fasse dans l'eau ou dans un substrat léger et aéré, offrez aux boutures une lumière indirecte vive, une chaleur douce et une forte humidité, et résistez à l'envie de tirer dessus pour vérifier les progrès ; les nouvelles feuilles sont l'annonce que les racines existent.",
+      "L'hygiène et le moment sont les deux ingrédients les plus sous-estimés. Nettoyez les outils à l'alcool ou à la flamme avant et entre les coupes — une lame sale transmet la maladie droit dans les plaies fraîches. Multipliez pendant la croissance active, généralement du printemps au début de l'été, quand la plante a de l'énergie à revendre ; un matériel prélevé sur une plante dormante ou stressée démarre dans la vie avec un handicap. Et prélevez plus de boutures qu'il ne vous en faut : même les experts en perdent un pourcentage, et les surplus font de très beaux cadeaux."
+    ],
+    "checklist": [
+      "Ne multipliez qu'à partir de plantes saines, vigoureuses et sans parasites",
+      "Stérilisez les lames avant et entre les coupes",
+      "Coupez juste sous un nœud ; retirez les feuilles qui resteraient sous la surface",
+      "Offrez lumière indirecte vive, chaleur et humidité — pas de soleil direct",
+      "Gardez le substrat humide mais jamais détrempé",
+      "Prélevez des boutures en plus ; quelques pertes sont normales même chez les experts"
+    ],
+    "problems": [
+      {
+        "title": "Boutures qui pourrissent",
+        "symptoms": [
+          "Tige qui devient brune, noire ou translucide de la base vers le haut",
+          "Texture molle et visqueuse, odeur aigre dans l'eau ou le substrat",
+          "Feuilles qui s'effondrent au lieu de flétrir doucement"
+        ],
+        "solutions": [
+          "Jetez les boutures nettement pourries et recommencez — la pourriture monte et se renverse rarement",
+          "Si seule la base est touchée, recoupez bien au-dessus des dégâts avec une lame stérile et repartez dans une eau ou un substrat frais",
+          "Évitez la récidive : outils plus propres, eau fraîche changée régulièrement, substrat plus léger et aéré, et aucune feuille sous la surface"
+        ]
+      },
+      {
+        "title": "Boutures qui refusent de s'enraciner",
+        "symptoms": [
+          "Des semaines passent sans racines, bien que la bouture semble encore vivante",
+          "La bouture jaunit lentement et perd son énergie sans changement",
+          "Un cal se forme à la base, mais les racines ne suivent jamais"
+        ],
+        "solutions": [
+          "Vérifiez d'abord les conditions : la plupart des blocages viennent d'un manque de lumière, d'un manque de chaleur ou d'un air sec — ajustez cela avant d'accuser la bouture",
+          "Recoupez la base en biseau sous un nœud pour exposer un tissu frais, et envisagez une hormone d'enracinement pour les espèces récalcitrantes",
+          "Soyez patient selon l'espèce : certaines s'enracinent en quelques jours, d'autres mettent des mois — tant que la bouture est ferme et verte, elle essaie encore"
+        ]
+      }
+    ]
+  },
+  "role": {
+    "advice": [
+      "Aucune espèce ne vit seule. Chaque plante, champignon et insecte occupe un rôle dans un réseau de relations : les plantes à fleurs nourrissent les pollinisateurs, qui nouent à leur tour les graines et les fruits qui nourrissent oiseaux et mammifères ; les feuilles nourrissent des chenilles qui nourrissent des oisillons ; champignons et insectes décomposeurs désassemblent la matière tombée et rendent ses nutriments au sol qui élève la génération suivante. Apprendre le rôle d'une espèce — ce qu'elle nourrit, abrite, avec qui elle s'associe et de quoi elle dépend — transforme l'identification : nommer devient comprendre.",
+      "La façon la plus riche de voir ces rôles est l'observation patiente et discrète. Asseyez-vous immobile près d'une plante en fleurs quelques minutes et comptez ses visiteurs ; revenez au même arbre au fil des saisons et regardez sa distribution changer ; retournez délicatement un tronc et reposez-le exactement comme il était. Photographiez plutôt que de collecter, restez sur les sentiers dans les habitats sensibles, gardez une distance respectueuse des nids et des terriers, et laissez la faune décider de la distance entre vous. Le paradoxe du naturaliste : moins vous intervenez, plus vous voyez.",
+      "Votre jardin, votre balcon ou votre rebord de fenêtre est un fragment fonctionnel de l'écosystème. Un pot d'herbes en fleurs nourrit les pollinisateurs ; un coin de feuilles mortes abrite les insectes qui hivernent ; renoncer aux pesticides garde la chaîne alimentaire intacte, du puceron à l'oiseau chanteur. Les petits choix se multiplient à l'échelle des quartiers — la même attention que vous portez à une plante d'intérieur, tournée vers l'extérieur, répare en silence le réseau qui vous entoure."
+    ],
+    "checklist": [
+      "Demandez de chaque espèce : que nourrit-elle, et qu'est-ce qui s'en nourrit ?",
+      "Observez en silence et laissez chaque site tel que vous l'avez trouvé",
+      "Photographiez au lieu de collecter",
+      "Remettez à sa position exacte tout ce que vous retournez",
+      "Plantez des fleurs, gardez des coins sauvages, renoncez aux pesticides",
+      "Notez vos observations — les relevés dans le temps révèlent le réseau"
+    ],
+    "problems": [
+      {
+        "title": "Espèces hors de leur place (invasives)",
+        "symptoms": [
+          "Une seule espèce recouvrant une zone et étouffant la végétation indigène variée",
+          "Propagation rapide et agressive bien au-delà de l'endroit où elle a été plantée",
+          "Nettement moins d'insectes, d'oiseaux ou de fleurs sauvages là où elle domine"
+        ],
+        "solutions": [
+          "Apprenez quelles espèces sont considérées comme invasives dans votre région — la même plante peut être inoffensive chez elle et destructrice ailleurs",
+          "Ne jetez jamais déchets de jardin, contenus d'aquarium ou plantes indésirables dans la nature ou les cours d'eau",
+          "Choisissez des espèces indigènes ou sages pour votre jardin, et soutenez les campagnes locales d'arrachage là où elles existent"
+        ]
+      },
+      {
+        "title": "Déclin des pollinisateurs",
+        "symptoms": [
+          "Des fleurs épanouies avec peu ou pas d'insectes visiteurs",
+          "Des plantes potagères et fruitières qui fleurissent bien mais nouent peu de fruits",
+          "Nettement moins d'abeilles, de papillons et de syrphes que lors des saisons passées"
+        ],
+        "solutions": [
+          "Plantez un relais de fleurs pour que quelque chose fleurisse toute la saison, en préférant les fleurs simples et ouvertes aux doubles trop denses",
+          "Éliminez les insecticides, surtout sur tout ce qui est en fleur, et tolérez quelques feuilles grignotées comme un loyer payé à l'écosystème",
+          "Fournissez l'infrastructure discrète : coins non dérangés, plaques de sol nu, tiges creuses laissées debout et une coupelle d'eau peu profonde avec des pierres pour se poser"
+        ]
+      }
+    ]
+  }
+}

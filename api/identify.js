@@ -125,6 +125,11 @@ function mapPlantLike(data, category, emptyOverview) {
     confidence: Math.round((top.probability || 0) * 100),
     overview: details.description?.value || emptyOverview,
     origin: origin || null,
+    // Raw taxonomy for the type layer (cacto rega diferente de frutifera -
+    // dono, 20/08): family/order feed the curated family->group table on the
+    // client; never shown raw.
+    family: details.taxonomy?.family || null,
+    ord: details.taxonomy?.order || null,
     water: waterLabels.length ? waterLabels.join(' to ') : null,
     edibleParts: details.edible_parts?.length ? details.edible_parts.join(', ') : null,
     propagationMethods: details.propagation_methods?.length
@@ -225,6 +230,9 @@ const CATEGORIES = {
           confidence: Math.round((top.probability || 0) * 100),
           overview: details.description?.value || null,
           origin: origin || null,
+          // Taxonomia crua para a camada por TIPO (grupo por familia/ordem).
+          family: details.taxonomy?.family || null,
+          ord: details.taxonomy?.order || null,
           danger: details.danger?.length ? details.danger : null,
           dangerDescription: details.danger_description || null,
           role: details.role?.length ? details.role : null,
@@ -274,6 +282,9 @@ const CATEGORIES = {
           confidence: Math.round((top.probability || 0) * 100),
           overview: details.description?.value || null,
           origin: origin || null,
+          // Taxonomia crua para a camada por TIPO (grupo por familia/ordem).
+          family: details.taxonomy?.family || null,
+          ord: details.taxonomy?.order || null,
           edibility: details.edibility || null,
           psychoactive: typeof details.psychoactive === 'boolean' ? details.psychoactive : null,
           lookAlike: details.look_alike?.length

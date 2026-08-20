@@ -1,0 +1,389 @@
+{
+  "watering": {
+    "advice": [
+      "Innaffiare bene riguarda meno la frequenza e più l'osservazione. Le piante bevono a ritmi diversi a seconda della luce, della temperatura, della dimensione del vaso e della stagione, quindi un calendario fisso fallisce quasi sempre. Impara invece a leggere il terriccio stesso: affonda un dito nello strato superiore, senti il peso del vaso e osserva come si reggono le foglie. Quando la superficie del terriccio si è asciugata, la maggior parte delle piante è pronta a bere; quando è ancora fresca e umida, aspettare è quasi sempre la scelta più sicura.",
+      "Quando innaffi, innaffia a fondo. Versa l'acqua lentamente e in modo uniforme su tutta la superficie finché non esce dai fori di drenaggio: questo garantisce che l'intera zona delle radici sia stata raggiunta e dilava i sali minerali accumulati. I sorsi superficiali bagnano solo la superficie e spingono le radici a restare in alto, dove si seccano e si surriscaldano in fretta. Svuota sempre il sottovaso dopo — le radici lasciate nell'acqua restano senza ossigeno, ed è così che si perde la maggior parte delle piante da appartamento.",
+      "Regolati con le stagioni, non con il calendario. Nei mesi caldi di crescita attiva le piante consumano acqua rapidamente; nei mesi più freddi e bui la crescita rallenta e lo stesso vaso può restare umido molto più a lungo. Il terriccio freddo e zuppo in inverno è un killer silenzioso molto comune, quindi lascia asciugare di più il terriccio tra un'annaffiatura e l'altra quando luce e calore diminuiscono. Quando possibile, usa acqua a temperatura ambiente: l'acqua gelida provoca uno shock alle radici, soprattutto nelle specie tropicali."
+    ],
+    "checklist": [
+      "Controlla il terriccio con il dito prima di innaffiare, non il calendario",
+      "Innaffia a fondo finché l'acqua non esce dal basso",
+      "Svuota il sottovaso — non lasciare mai le radici nell'acqua",
+      "Riduci le annaffiature nei mesi freddi e bui",
+      "Usa acqua a temperatura ambiente quando puoi",
+      "Solleva il vaso: leggero significa asciutto, pesante significa ancora umido"
+    ],
+    "problems": [
+      {
+        "title": "Eccesso d'acqua",
+        "symptoms": [
+          "Foglie ingiallite, molli o afflosciate, spesso a partire da quelle in basso",
+          "Terriccio che resta bagnato per giorni, a volte con odore acido o di muffa",
+          "Radici marroni e molli invece che sode e chiare; moscerini dei funghi che aleggiano sul terriccio"
+        ],
+        "solutions": [
+          "Smetti subito di innaffiare e sposta la pianta in un posto luminoso e arieggiato perché il terriccio possa asciugare",
+          "Controlla le radici: sfila la pianta dal vaso, elimina le parti marroni e molli con forbici pulite e rinvasa in un substrato fresco e ben drenante",
+          "D'ora in poi innaffia solo quando la superficie del terriccio si è asciugata, e verifica ogni volta che il vaso dreni liberamente"
+        ]
+      },
+      {
+        "title": "Carenza d'acqua",
+        "symptoms": [
+          "Foglie appassite o cadenti che si riprendono poco dopo l'annaffiatura",
+          "Bordi e punte secchi e croccanti; le foglie possono arricciarsi verso l'interno",
+          "Terriccio che si stacca dalle pareti del vaso; il vaso sembra insolitamente leggero"
+        ],
+        "solutions": [
+          "Innaffia lentamente e a fondo; se il terriccio respinge l'acqua, immergi il vaso per un po' in una bacinella d'acqua perché si reidrati dal basso",
+          "Quando la zolla è di nuovo uniformemente umida, riprendi i controlli regolari — un terriccio molto secco spesso ha bisogno di due annaffiature delicate a pochi minuti di distanza per assorbire bene",
+          "Se la pianta si asciuga più in fretta di quanto riesci a starle dietro, valuta un vaso leggermente più grande o un substrato che trattenga un po' più di umidità"
+        ]
+      }
+    ]
+  },
+  "light": {
+    "advice": [
+      "La luce è il nutrimento della pianta: acqua e concime sostengono soltanto ciò che la luce rende possibile. I coltivatori descrivono la luce in fasce ampie: pieno sole (raggi diretti per gran parte della giornata), sole parziale o mezz'ombra (luce diretta per parte della giornata, spesso il sole più mite del mattino), luce indiretta brillante (abbastanza luminosa da proiettare un'ombra tenue, ma senza raggi diretti) e ombra. Sapere in quale fascia rientra ogni angolo della tua casa o del tuo giardino è la singola competenza più utile nella cura delle piante.",
+      "Per leggere una stanza, osservala nell'arco di un'intera giornata. Una finestra esposta a sud (nell'emisfero nord) offre la luce più intensa e prolungata; l'est regala un sole mattutino delicato; l'ovest un sole pomeridiano più caldo; il nord resta morbido e diffuso. La distanza conta moltissimo: l'intensità luminosa crolla a ogni passo di distanza dalla finestra, così una pianta a un metro dal vetro può ricevere una frazione di quanto riceverebbe sul davanzale. Tende leggere, vetri oscurati e ostacoli esterni riducono la luce ancora di più.",
+      "Quando sposti una pianta in condizioni più luminose, abituala gradualmente. Le foglie si adattano alla luce in cui sono cresciute, e un salto improvviso — dall'interno al pieno sole, dall'ombra a un muro assolato — può bruciare persino le specie amanti del sole. Aumenta l'esposizione passo dopo passo nell'arco di un paio di settimane, iniziando dalla luce mite del mattino, e osserva il fogliame: chiazze sbiadite significano troppo in fretta, mentre una crescita nuova, fresca e compatta indica che la pianta si sta ambientando bene."
+    ],
+    "checklist": [
+      "Identifica la tua fascia di luce: pieno sole, parziale, indiretta brillante o ombra",
+      "Osserva il punto per un'intera giornata prima di collocarci una pianta",
+      "Ricorda che l'intensità cala in fretta allontanandosi dalla finestra",
+      "Abitua le piante gradualmente a ogni posizione più luminosa",
+      "Ruota i vasi di tanto in tanto perché la crescita resti uniforme",
+      "Spolvera le foglie impolverate — la polvere ruba luce in silenzio"
+    ],
+    "problems": [
+      {
+        "title": "Troppa luce (scottatura solare)",
+        "symptoms": [
+          "Chiazze sbiadite, scolorite o cartacee sulle foglie più esposte al sole",
+          "Macchie o bordi marroni e secchi comparsi dopo lo spostamento in un punto più luminoso",
+          "Foglie dall'aspetto slavato o giallastro nel complesso nonostante annaffiature corrette"
+        ],
+        "solutions": [
+          "Sposta la pianta fuori dai raggi diretti o filtra la luce con una tenda leggera",
+          "Taglia le foglie gravemente bruciate quando sei certo che il tessuto sia morto — non si riprenderanno, e rimuoverle reindirizza l'energia",
+          "Reintroduci una luce più forte lentamente, nell'arco di settimane, se la pianta desidera davvero più sole"
+        ]
+      },
+      {
+        "title": "Troppo poca luce (eziolatura)",
+        "symptoms": [
+          "Steli lunghi e allungati con ampi spazi tra le foglie, fortemente inclinati verso la finestra",
+          "Foglie nuove che spuntano più piccole e pallide delle precedenti",
+          "Piante variegate che perdono le loro fantasie; piante da fiore che si rifiutano di fiorire"
+        ],
+        "solutions": [
+          "Avvicina la pianta a una finestra o portala in una stanza più luminosa, regolando gradualmente",
+          "Pota la crescita filata quando la pianta è in una luce migliore, per favorire una forma più piena",
+          "Dove la luce naturale scarseggia davvero, una semplice lampada da coltivazione a spettro completo con timer giornaliero funziona sorprendentemente bene"
+        ]
+      }
+    ]
+  },
+  "soil": {
+    "advice": [
+      "Un suolo sano è una struttura viva, non semplice terra. Le radici gli chiedono tre cose insieme: umidità, aria e ancoraggio. Un buon terriccio trattiene l'acqua come una spugna strizzata — umido dappertutto, mai fradicio — mantenendo sacche d'aria tra le particelle. Quell'equilibrio nasce dalla struttura: il materiale grossolano (corteccia, perlite, sabbia, ghiaino) apre canali di drenaggio, mentre la materia organica fine (compost, fibra di cocco, terriccio di foglie) trattiene l'umidità e nutre la vita del suolo che a sua volta nutre la pianta.",
+      "Il drenaggio non è negoziabile nei vasi. Ogni vaso ha bisogno di fori, e il substrato al suo interno deve lasciar passare liberamente l'acqua in eccesso; uno strato di sassolini sul fondo non corregge un substrato compatto — avvicina soltanto la zona ristagnante alle radici. Se l'acqua ristagna a lungo in superficie dopo l'annaffiatura, o la attraversa di colpo senza scurire il terriccio, la struttura va corretta. La materia organica è la grande mediatrice: migliora sia la ritenzione idrica nei substrati sabbiosi sia il drenaggio in quelli pesanti.",
+      "Il pH — quanto un suolo è acido o alcalino — controlla in silenzio quali nutrienti le radici possono davvero assorbire. La maggior parte delle piante da giardino e da appartamento sta bene in un intervallo da leggermente acido a neutro, e i problemi compaiono soprattutto agli estremi, dove i nutrienti restano chimicamente bloccati anche se presenti. Invece di rincorrere i numeri, incorpora abbondante materia organica ben decomposta, che tampona il pH in modo naturale, e indaga oltre solo se una pianta mostra carenze persistenti che acqua e luce non spiegano."
+    ],
+    "checklist": [
+      "Verifica che ogni vaso abbia veri fori di drenaggio",
+      "Punta a un terriccio che sembri una spugna strizzata dopo l'annaffiatura",
+      "Mescola materiale grossolano per l'aria e materia organica per umidità e vita",
+      "Dimentica il mito dello strato di sassolini — correggi invece il substrato",
+      "Rinnova o rabbocca il terriccio dei vasi man mano che si abbassa e si compatta",
+      "Pacciama le aiuole esterne per proteggere la struttura e la vita del suolo"
+    ],
+    "problems": [
+      {
+        "title": "Suolo compattato e ristagnante",
+        "symptoms": [
+          "L'acqua ristagna in superficie o drena con estrema lentezza",
+          "Terriccio denso, pesante e privo d'aria; può sviluppare un odore acido",
+          "La pianta deperisce nonostante annaffiature attente — ingiallimento, appassimento, crescita ferma"
+        ],
+        "solutions": [
+          "Nei vasi: rinvasa in un substrato fresco arricchito di materiale grossolano come perlite o corteccia, allentando delicatamente la zolla",
+          "Nelle aiuole: incorpora materia organica con un forcone invece di rivoltare il terreno con violenza, ed evita di calpestare il suolo bagnato",
+          "Riduci le annaffiature mentre la struttura si riprende, e lascia asciugare la superficie tra un'annaffiatura e l'altra"
+        ]
+      },
+      {
+        "title": "Suolo povero ed esausto",
+        "symptoms": [
+          "Foglie pallide, steli deboli e poca o nessuna crescita nuova in stagione",
+          "L'acqua attraversa il vaso di colpo senza inumidirlo davvero",
+          "Il terriccio del vaso si è ritirato, indurito o staccato dalle pareti"
+        ],
+        "solutions": [
+          "Rinvasa con un substrato fresco e di qualità — la terra dei vasi si esaurisce, e nessun concime rianima del tutto una struttura collassata",
+          "Concima poco e con regolarità durante la stagione di crescita invece che molto in una volta; le dosi forti possono bruciare le radici",
+          "All'aperto, costruisci la fertilità lentamente con compost e pacciamatura, che nutrono il suolo e non solo la pianta"
+        ]
+      }
+    ]
+  },
+  "safety": {
+    "advice": [
+      "Vivere con piante, funghi e insetti è uno dei piaceri quieti della vita, e poche abitudini salde lo rendono un piacere sicuro. La regola fondamentale è semplice: non mangiare, assaggiare o mettere in infusione mai nulla che tu non abbia identificato con assoluta certezza. Un'identificazione tramite app, compresa questa, è un punto di partenza per imparare — mai un via libera al consumo. Molte specie tossiche sono sosia convincenti di specie commestibili, e con i funghi in particolare il margine d'errore può essere zero.",
+      "In casa, conosci ciò che coltivi. Alcune comuni piante da appartamento e da giardino possono irritare la pelle o essere dannose se masticate, quindi tienile fuori dalla portata di bambini piccoli e animali domestici, e insegna presto ai bambini che foglie e bacche non sono cibo a meno che un adulto di fiducia non lo confermi. Indossa i guanti per le potature impegnative o quando maneggi specie sconosciute, evita di toccarti il viso mentre lavori e lavati bene le mani dopo. La linfa di alcune piante può sensibilizzare la pelle alla luce solare, quindi sciacquare subito qualsiasi linfa è un buon riflesso.",
+      "Sul sentiero, guarda con generosità e tocca con criterio. Osserva gli insetti senza maneggiarli, lascia i funghi dove stanno a meno che tu non sia con una guida esperta, e dai per scontato che le bacche sconosciute siano fuori dal menù. Se qualcuno in famiglia ha allergie note a piante o punture, porta con te i suoi farmaci e sappi come usarli. Nulla di tutto ciò richiede paura — solo lo stesso rispetto tranquillo che riserveresti alla corrente di un fiume o a un fornello caldo."
+    ],
+    "checklist": [
+      "Non consumare mai nulla senza un'identificazione certa, da esperti",
+      "Tieni le piante dubbie fuori dalla portata di bambini e animali",
+      "Indossa i guanti per potature e specie sconosciute; lavati le mani dopo",
+      "Sciacqua subito la linfa dalla pelle",
+      "Osserva funghi e insetti selvatici senza toccarli",
+      "Salva sul telefono il numero del centro antiveleni locale"
+    ],
+    "problems": [
+      {
+        "title": "Contatto cutaneo con una specie irritante",
+        "symptoms": [
+          "Rossore, prurito, bruciore o eruzione dove la pianta ha toccato la pelle",
+          "Vesciche o segni a strisce che compaiono ore dopo il contatto",
+          "Reazione che peggiora dopo l'esposizione al sole della zona colpita"
+        ],
+        "solutions": [
+          "Lava a fondo la zona con sapone e acqua fresca il prima possibile, e lava anche gli indumenti che hanno toccato la pianta",
+          "Evita di grattarti e tieni la zona lontana dal sole diretto mentre si calma",
+          "Se la reazione è grave, si estende, è vicina a occhi o bocca, o comporta qualsiasi difficoltà respiratoria, cerca subito assistenza medica"
+        ]
+      },
+      {
+        "title": "Ingestione accidentale",
+        "symptoms": [
+          "Un bambino o un animale ha masticato o ingoiato parte di una pianta o di un fungo non identificato",
+          "Irritazione di bocca o gola, salivazione, nausea, vomito o sonnolenza insolita",
+          "A volte nessun sintomo all'inizio — l'assenza di sintomi non è prova di sicurezza"
+        ],
+        "solutions": [
+          "Non indurre il vomito e non somministrare cibo, latte o rimedi casalinghi se non su indicazione di un professionista",
+          "Rimuovi eventuali residui vegetali dalla bocca e conserva un campione o una foto esatta di ciò che è stato ingerito",
+          "Contatta subito il centro antiveleni o il pronto soccorso — per gli animali, un veterinario d'urgenza — anche se la persona o l'animale sembra stare bene"
+        ]
+      }
+    ]
+  },
+  "uses": {
+    "advice": [
+      "La storia dell'umanità è scritta nelle piante. Ci hanno dato alimenti base e spezie, legname per rifugi e navi, fibre come cotone, lino e canapa per stoffe e corde, tinture, resine, profumi e la gioia quotidiana del giardinaggio ornamentale. Capire come una specie è stata usata apre una finestra sia sulla botanica sia sulla storia — la stessa pianta può essere coltura in un continente, simbolo sacro in un altro e beniamina dei giardini in un terzo.",
+      "La medicina tradizionale merita in egual misura rispetto speciale e cautela speciale. Innumerevoli farmaci moderni affondano le radici in piante usate dai guaritori tradizionali, e quell'eredità è davvero straordinaria. Ma l'uso tradizionale è una testimonianza storica, non una prova di sicurezza o efficacia — dose, preparazione, parte della pianta e persona che la assume cambiano completamente il risultato. Non curarti mai da solo con le piante sulla base di qualcosa che hai letto, anche in questa app; consulta sempre prima un professionista sanitario qualificato.",
+      "Qualunque cosa ti attiri verso le piante utili, lascia che sia l'etica a guidare. Raccogli solo ciò che sai identificare con certezza e che ti è consentito prendere, preferisci le fonti coltivate a quelle selvatiche, e preleva con moderazione perché le popolazioni possano riprendersi. La raccolta eccessiva ha spinto amate specie medicinali e ornamentali verso la scarsità in molte regioni. I migliori praticanti pensano in generazioni: raccolgono come se loro, i vicini e i nipoti dovessero tutti tornare nello stesso posto."
+    ],
+    "checklist": [
+      "Tratta gli usi tradizionali come storia da cui imparare, non istruzioni da seguire",
+      "Consulta un professionista sanitario prima di qualsiasi uso medicinale",
+      "Acquista da fonti coltivate ed etiche quando possibile",
+      "Raccogli poco e nel rispetto della legge — conosci le regole locali",
+      "Non raccogliere mai specie rare, protette o a crescita lenta",
+      "Annota ciò che impari; il sapere sulle piante utili merita di essere custodito"
+    ],
+    "problems": [
+      {
+        "title": "Usare le piante senza una guida adeguata",
+        "symptoms": [
+          "Preparare tisane, tinture o rimedi da una specie identificata solo tramite app o a memoria",
+          "Seguire dosaggi consigliati sui social o per sentito dire",
+          "Combinare rimedi vegetali con farmaci su prescrizione senza dirlo al medico"
+        ],
+        "solutions": [
+          "Sospendi l'uso finché identità e sicurezza della pianta non sono confermate da un esperto qualificato",
+          "Parla di qualsiasi rimedio a base di piante con un professionista sanitario, soprattutto insieme ad altri farmaci, in gravidanza o con patologie esistenti",
+          "Considera le informazioni di questa app come contesto educativo, mai come una prescrizione"
+        ]
+      },
+      {
+        "title": "Raccolta predatoria",
+        "symptoms": [
+          "Popolazioni di una specie selvatica che si riducono o scompaiono visibilmente anno dopo anno",
+          "Raccolte che prelevano radici, cortecce o piante intere invece di parti rinnovabili",
+          "Raccogliere in aree protette o ignorare le regole locali di raccolta"
+        ],
+        "solutions": [
+          "Segui la regola di misura del raccoglitore: prendi solo una piccola frazione di ciò che trovi, e solo da popolazioni abbondanti",
+          "Preferisci le parti rinnovabili — foglie, qualche fiore, qualche frutto — a radici e cortecce, che spesso costano la vita alla pianta",
+          "Sostieni i programmi di coltivazione e acquista materiale coltivato; segnala alle autorità locali le raccolte palesemente illegali"
+        ]
+      }
+    ]
+  },
+  "cultural": {
+    "advice": [
+      "Ogni specie che ha vissuto accanto alle persone porta con sé delle storie. Piante e funghi compaiono nei miti della creazione, nei riti nuziali, nei riti funebri, negli emblemi nazionali, nelle poesie e nei proverbi; una quercia significa una cosa in una tradizione e tutt'altro in un'altra. Imparare questi strati trasforma una passeggiata al parco in un viaggio nell'immaginazione umana — i nomi da soli conservano spesso secoli di osservazione, umorismo e credenze.",
+      "Il folclore è anche un archivio di conoscenza reale, filtrata dalle generazioni. Le storie su quali piante curano, feriscono, proteggono o prevedono il tempo spesso codificano osservazioni autentiche accanto a pura poesia, e distinguere le une dall'altra è parte del piacere. Avvicinati a queste tradizioni come un ospite rispettoso: appartengono a culture vive, non a un museo, e le comunità che le custodiscono ne sono le migliori interpreti.",
+      "Quando ricerchi la storia culturale di una specie, privilegia le fonti vicine alla tradizione stessa — autori delle comunità, studiosi regionali, collezioni di musei e archivi — e annota da dove viene ogni storia. Ripetere una leggenda con la sua origine allegata onora chi l'ha creata; ripeterla spogliata dell'origine li cancella lentamente. Curiosità più attribuzione: è tutto il metodo."
+    ],
+    "checklist": [
+      "Cerca i nomi locali e popolari — custodiscono storia condensata",
+      "Annota da quale cultura e regione proviene ogni storia",
+      "Privilegia fonti interne alla tradizione quando possibile",
+      "Goditi il simbolismo senza trattarlo come biologia",
+      "Condividi le leggende insieme alle loro origini",
+      "Chiedi il permesso prima di fotografare o raccogliere in luoghi sacri o comunitari"
+    ],
+    "problems": [
+      {
+        "title": "Mito contro realtà",
+        "symptoms": [
+          "Presumere che una pianta sia sicura da mangiare o usare perché «la gente l'ha sempre usata»",
+          "Leggere i significati simbolici — fortuna, protezione, guarigione — come proprietà fisiche",
+          "Fidarsi di più di una storia molto ripetuta proprio perché è molto ripetuta"
+        ],
+        "solutions": [
+          "Tieni due scaffali nella mente: ciò che una pianta significa e ciò che una pianta fa — entrambi sono vera conoscenza, ma rispondono a domande diverse",
+          "Verifica tutto ciò che riguarda sicurezza o consumo su fonti esperte moderne, per quanto antica sia la tradizione",
+          "Goditi il mito nei suoi termini; non ha bisogno di essere letteralmente vero per essere culturalmente prezioso"
+        ]
+      },
+      {
+        "title": "Attribuzione e rispetto",
+        "symptoms": [
+          "Raccontare storie o cerimonie senza menzionare il popolo a cui appartengono",
+          "Presentare la tradizione di una cultura come folclore universale o generico",
+          "Usare piante o simboli sacri come decorazione casuale senza comprenderne il peso"
+        ],
+        "solutions": [
+          "Nomina la cultura, la regione e dove hai appreso ogni storia ogni volta che la condividi",
+          "Quando una tradizione è viva e sacra, segui le indicazioni della comunità stessa su cosa può essere condiviso e come",
+          "Lascia che la curiosità maturi in relazione: leggi autori delle comunità, visita i centri culturali e sostieni i custodi del sapere"
+        ]
+      }
+    ]
+  },
+  "edible": {
+    "advice": [
+      "Raccogliere in sicurezza poggia su una regola inviolabile: identificazione positiva, per tre vie, ogni volta. Prima che qualcosa di selvatico tocchi le tue labbra, devi poter confermare la specie tramite più caratteristiche indipendenti — foglia, fiore, frutto, corteccia, odore, habitat, stagione — incrociate con almeno una guida da campo autorevole e, idealmente, verificate di persona da un raccoglitore esperto. Se anche un solo controllo lascia dubbi, la risposta è no. Un suggerimento di un'app, compresa questa, è l'inizio di un'identificazione, mai la sua fine.",
+      "La commestibilità è raramente una proprietà sì-o-no dell'intera pianta. Molte specie hanno una parte commestibile e altre parti dannose; molte sono sicure solo a un certo stadio di maturazione, o solo dopo una preparazione adeguata come una cottura completa. «Commestibile» in un testo di riferimento significa sempre la parte giusta, allo stadio giusto, preparata nel modo giusto. Quando provi un nuovo cibo selvatico che hai confermato rigorosamente, mangiane prima una piccola quantità e aspetta un giorno — esistono sensibilità individuali anche verso specie genuinamente commestibili.",
+      "La raccolta etica protegge te e il territorio. Raccogli solo dove è legale e l'ambiente è pulito — bordi stradali, campi trattati e siti industriali possono contaminare anche specie perfettamente commestibili. Preleva con moderazione, lascia in abbondanza per la fauna e la ricrescita, e non spogliare mai completamente un luogo. La vecchia abitudine dei raccoglitori merita di essere adottata per intero: conosci la tua pianta, conosci il tuo posto, prendi poco, e dai al luogo un motivo per riaccoglierti."
+    ],
+    "checklist": [
+      "Conferma l'identità tramite più caratteristiche indipendenti, mai una sola",
+      "Incrocia con una guida da campo e con una persona esperta",
+      "Impara quale parte, a quale stadio e con quale preparazione è sicura",
+      "Se resta qualsiasi dubbio: non mangiarlo",
+      "Prova i nuovi cibi selvatici in piccole quantità, uno alla volta",
+      "Raccogli legalmente, in luoghi puliti, e lasciane in abbondanza"
+    ],
+    "problems": [
+      {
+        "title": "Confondere specie sosia",
+        "symptoms": [
+          "Identificazione basata su una sola caratteristica, una sola foto o l'impressione generale",
+          "L'esemplare corrisponde alla maggior parte, ma non a tutta, la descrizione della guida",
+          "Nella stessa famiglia esistono sosia pericolosi ben noti — frequente con funghi, carote e prezzemoli selvatici e molte bacche"
+        ],
+        "solutions": [
+          "Fermati alla prima discrepanza: una vera corrispondenza concorda su ogni caratteristica, e un solo dettaglio sbagliato significa un'altra specie",
+          "Impara i sosia pericolosi della tua regione a fondo quanto le specie commestibili — studia per primo ciò che potrebbe ucciderti",
+          "Porta il tuo ritrovamento a un esperto o a un gruppo locale di raccolta prima che arrivi in cucina; con i funghi, consideralo obbligatorio"
+        ]
+      },
+      {
+        "title": "Preparazione inadeguata",
+        "symptoms": [
+          "Mangiare cruda una specie che tradizione e testi dicono debba essere cotta",
+          "Usare la parte sbagliata di una pianta identificata correttamente",
+          "Disturbi digestivi dopo aver mangiato un ritrovamento presunto commestibile"
+        ],
+        "solutions": [
+          "Segui alla lettera le istruzioni di preparazione di fonti autorevoli — i requisiti di cottura esistono perché il calore neutralizza composti reali",
+          "Fai corrispondere parte e stadio al testo di riferimento: specie giusta con parte sbagliata resta il pasto sbagliato",
+          "Se qualcuno si sente male, conserva un campione di ciò che è stato mangiato e chiedi presto un parere medico invece di aspettare che passi"
+        ]
+      }
+    ]
+  },
+  "propagation": {
+    "advice": [
+      "La propagazione è la magia silenziosa del giardinaggio: una pianta diventa molte, gratis. Le tre porte d'ingresso sono talea, divisione e seme. La talea prende uno stelo o una foglia sani e li convince a mettere radici proprie; la divisione separa una pianta a cespo in piante più piccole già pronte; il seme parte da zero e ripaga la pazienza con le possibilità più ampie. Ogni specie ha i metodi che preferisce, ma i principi di fondo sono condivisi da quasi tutte.",
+      "Per le talee, tre cose decidono il successo: materiale sano, tagli puliti e condizioni stabili. Preleva le talee da una crescita vigorosa e priva di malattie, taglia appena sotto un nodo — il punto in cui le foglie incontrano lo stelo, dove si concentra l'energia di radicazione — e rimuovi le foglie inferiori perché nulla marcisca sotto la superficie. Che tu faccia radicare in acqua o in un substrato leggero e arieggiato, offri alle talee luce indiretta brillante, calore delicato e umidità alta, e resisti alla tentazione di tirarle per controllare i progressi; le foglie nuove sono l'annuncio che le radici esistono.",
+      "Igiene e tempismo sono i due ingredienti più sottovalutati. Pulisci gli attrezzi con alcol o alla fiamma prima e tra un taglio e l'altro — una lama sporca diffonde le malattie direttamente nelle ferite fresche. Propaga durante la crescita attiva, di solito dalla primavera all'inizio dell'estate, quando la pianta ha energia da vendere; il materiale prelevato da una pianta dormiente o stressata inizia la vita in svantaggio. E preleva più talee del necessario: persino gli esperti ne perdono una parte, e quelle in più diventano ottimi regali."
+    ],
+    "checklist": [
+      "Propaga solo da piante sane, vigorose e senza parassiti",
+      "Sterilizza le lame prima e tra un taglio e l'altro",
+      "Taglia appena sotto un nodo; rimuovi le foglie che resterebbero sotto la superficie",
+      "Offri luce indiretta brillante, calore e umidità — mai sole diretto",
+      "Mantieni il substrato umido ma mai fradicio",
+      "Preleva talee in più; qualche perdita è normale anche per gli esperti"
+    ],
+    "problems": [
+      {
+        "title": "Talee che marciscono",
+        "symptoms": [
+          "Stelo che diventa marrone, nero o traslucido dalla base verso l'alto",
+          "Consistenza molle e viscida e odore acido nell'acqua o nel substrato",
+          "Foglie che collassano invece di appassire dolcemente"
+        ],
+        "solutions": [
+          "Scarta le talee chiaramente marce e ricomincia — il marciume sale e raramente torna indietro",
+          "Se solo la base è colpita, ritaglia ben sopra il danno con una lama sterile e ricomincia in acqua o substrato freschi",
+          "Previeni la ricaduta: attrezzi più puliti, acqua fresca cambiata regolarmente, un substrato più leggero e arieggiato e nessuna foglia sotto la superficie"
+        ]
+      },
+      {
+        "title": "Talee che non radicano",
+        "symptoms": [
+          "Passano settimane senza radici, benché la talea sembri ancora viva",
+          "La talea ingiallisce lentamente e perde energia senza cambiamenti",
+          "Alla base si forma il callo, ma le radici non arrivano mai"
+        ],
+        "solutions": [
+          "Controlla prima le condizioni: la maggior parte degli stalli dipende da poca luce, poco calore o aria secca — sistemale prima di incolpare la talea",
+          "Ritaglia la base in obliquo sotto un nodo per esporre tessuto fresco, e valuta un ormone radicante per le specie riluttanti",
+          "Porta pazienza a seconda della specie: alcune radicano in giorni, altre impiegano mesi — finché la talea è soda e verde, ci sta ancora provando"
+        ]
+      }
+    ]
+  },
+  "role": {
+    "advice": [
+      "Nessuna specie vive da sola. Ogni pianta, fungo e insetto occupa un ruolo in una rete di relazioni: le piante da fiore nutrono gli impollinatori, che a loro volta fanno allegare i semi e i frutti che nutrono uccelli e mammiferi; le foglie nutrono i bruchi che nutrono i nidiacei; funghi e insetti decompositori smontano la materia caduta e ne restituiscono i nutrienti al suolo che cresce la generazione successiva. Imparare il ruolo di una specie — cosa nutre, cosa ripara, con chi si associa e da cosa dipende — trasforma l'identificazione dal dare un nome al comprendere.",
+      "Il modo più ricco di vedere questi ruoli è l'osservazione paziente e a basso impatto. Siediti immobile vicino a una pianta in fiore per qualche minuto e conta i suoi visitatori; torna allo stesso albero attraverso le stagioni e guarda cambiare il suo cast di personaggi; capovolgi un tronco con delicatezza e riposalo esattamente com'era. Fotografa invece di raccogliere, resta sui sentieri negli habitat sensibili, mantieni una distanza rispettosa da nidi e tane, e lascia che sia la fauna a decidere la distanza tra voi. Il paradosso del naturalista è che meno interferisci, più vedi.",
+      "Il tuo giardino, balcone o davanzale è un pezzo funzionante dell'ecosistema. Un vaso di erbe aromatiche in fiore nutre gli impollinatori; un angolo di foglie secche ripara gli insetti che svernano; rinunciare ai pesticidi mantiene intatta la rete alimentare dall'afide all'uccello canoro. Le piccole scelte si moltiplicano nei quartieri — la stessa attenzione che dedichi a una pianta da appartamento, rivolta all'esterno, ripara in silenzio la rete intorno a te."
+    ],
+    "checklist": [
+      "Chiediti di ogni specie: cosa nutre, e cosa si nutre di lei?",
+      "Osserva in silenzio e lascia ogni luogo come l'hai trovato",
+      "Fotografa invece di raccogliere",
+      "Rimetti nella posizione esatta tutto ciò che capovolgi",
+      "Pianta fiori, conserva angoli selvatici, rinuncia ai pesticidi",
+      "Annota i tuoi avvistamenti — i registri nel tempo rivelano la rete"
+    ],
+    "problems": [
+      {
+        "title": "Specie fuori posto (invasive)",
+        "symptoms": [
+          "Una singola specie che ricopre un'area soffocando la variegata vegetazione autoctona",
+          "Diffusione rapida e aggressiva ben oltre il punto in cui è stata piantata",
+          "Nettamente meno insetti, uccelli o fiori selvatici dove domina"
+        ],
+        "solutions": [
+          "Impara quali specie sono considerate invasive nella tua regione — la stessa pianta può essere innocua a casa sua e distruttiva altrove",
+          "Non gettare mai scarti di giardino, contenuti d'acquario o piante indesiderate in aree naturali o corsi d'acqua",
+          "Scegli specie autoctone o ben educate per il tuo giardino, e sostieni le iniziative locali di rimozione dove esistono"
+        ]
+      },
+      {
+        "title": "Declino degli impollinatori",
+        "symptoms": [
+          "Fiori sbocciati con pochi o nessun insetto in visita",
+          "Ortaggi e piante da frutto che fioriscono bene ma allegano pochi frutti",
+          "Nettamente meno api, farfalle e sirfidi rispetto alle stagioni passate"
+        ],
+        "solutions": [
+          "Pianta una staffetta di fiori perché qualcosa sia sempre in fioritura per tutta la stagione, preferendo fiori semplici e aperti ai doppi troppo densi",
+          "Elimina gli insetticidi, soprattutto su qualsiasi cosa in fiore, e tollera qualche foglia rosicchiata come affitto pagato all'ecosistema",
+          "Offri l'infrastruttura silenziosa: angoli indisturbati, chiazze di suolo nudo, steli cavi lasciati in piedi e una ciotola d'acqua bassa con pietre per l'atterraggio"
+        ]
+      }
+    ]
+  }
+}

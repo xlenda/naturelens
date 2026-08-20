@@ -1,0 +1,389 @@
+{
+  "watering": {
+    "advice": [
+      "İyi sulama, sıklıktan çok gözlem işidir. Bitkiler ışığa, sıcaklığa, saksı boyutuna ve mevsime göre farklı hızlarda su içer; bu yüzden sabit bir program neredeyse her zaman başarısız olur. Bunun yerine toprağın kendisini okumayı öğrenin: parmağınızı üst katmana bastırın, saksının ağırlığını hissedin ve yaprakların duruşuna dikkat edin. Toprağın üstü kuruduğunda çoğu bitki suya hazırdır; hâlâ serin ve nemliyse beklemek neredeyse her zaman daha güvenli seçimdir.",
+      "Suladığınızda ise iyice sulayın. Suyu, drenaj deliklerinden dışarı akana dek tüm yüzeye yavaş ve eşit biçimde dökün — bu, kök bölgesinin tamamına ulaşıldığını garanti eder ve birikmiş mineral tuzlarını yıkayıp götürür. Yüzeysel yudumlar yalnızca üstü ıslatır ve kökleri, hızla kuruyup aşırı ısındıkları yüzeye yakın kalmaya teşvik eder. Ardından tabağı mutlaka boşaltın — suda bekleyen kökler oksijensiz kalır ve çoğu ev bitkisi işte böyle kaybedilir.",
+      "Takvime göre değil, mevsimlere göre ayarlayın. Aktif büyümenin yaşandığı sıcak aylarda bitkiler suyu hızla kullanır; daha serin ve karanlık aylarda büyüme yavaşlar ve aynı saksı çok daha uzun süre nemli kalabilir. Kışın soğuk ve ıslak toprak yaygın bir sessiz katildir; bu yüzden ışık ve sıcaklık azaldığında sulamalar arasında toprağın daha fazla kurumasına izin verin. Mümkün olduğunda oda sıcaklığında su kullanın — buz gibi su, özellikle tropik türlerde kökleri şoka sokar."
+    ],
+    "checklist": [
+      "Sulamadan önce takvimi değil, toprağı parmağınızla kontrol edin",
+      "Su alttan akana kadar derinlemesine sulayın",
+      "Tabağı boşaltın — kökleri asla suda bekletmeyin",
+      "Soğuk ve karanlık aylarda sulamayı azaltın",
+      "Mümkün oldukça oda sıcaklığında su kullanın",
+      "Saksıyı kaldırın: hafifse kurumuş, ağırsa hâlâ nemli demektir"
+    ],
+    "problems": [
+      {
+        "title": "Aşırı sulama",
+        "symptoms": [
+          "Genellikle alttan başlayarak sararan, yumuşak veya gevşek yapraklar",
+          "Günlerce ıslak kalan, bazen ekşi veya küf kokusu yayan toprak",
+          "Sıkı ve açık renkli kökler yerine kahverengi, lapa gibi kökler; toprağın üzerinde uçuşan mantar sinekleri"
+        ],
+        "solutions": [
+          "Sulamayı hemen durdurun ve toprağın kuruyabilmesi için bitkiyi aydınlık, havadar bir yere taşıyın",
+          "Kökleri kontrol edin: bitkiyi saksısından çıkarın, kahverengi ve lapa gibi kısımları temiz bir makasla kesin ve taze, iyi drene olan bir harca yeniden dikin",
+          "Bundan sonra yalnızca toprağın üstü kuruduğunda sulayın ve her seferinde saksının suyu rahatça tahliye ettiğinden emin olun"
+        ]
+      },
+      {
+        "title": "Yetersiz sulama",
+        "symptoms": [
+          "Sulamadan kısa süre sonra canlanan solgun veya sarkık yapraklar",
+          "Kuru, gevrek yaprak kenarları ve uçları; yapraklar içe doğru kıvrılabilir",
+          "Saksının kenarlarından çekilen toprak; alışılmadık derecede hafif gelen saksı"
+        ],
+        "solutions": [
+          "Yavaş ve derinlemesine sulayın; toprak suyu itiyorsa saksıyı bir süre su dolu bir kaba oturtun ki alttan yeniden nem çekebilsin",
+          "Kök topağı yeniden eşit biçimde nemlendiğinde düzenli kontrollere geri dönün — çok kuru toprak, suyu düzgün emebilmek için genellikle birkaç dakika arayla iki nazik sulama ister",
+          "Bitki siz yetişemeden kuruyorsa biraz daha büyük bir saksı veya nemi biraz daha fazla tutan bir harç düşünün"
+        ]
+      }
+    ]
+  },
+  "light": {
+    "advice": [
+      "Işık bitkinin besin kaynağıdır — su ve gübre yalnızca ışığın mümkün kıldığını destekler. Yetiştiriciler ışığı geniş bantlarla tanımlar: tam güneş (günün büyük bölümünde doğrudan ışınlar), yarı güneş veya yarı gölge (günün bir bölümünde doğrudan ışık, çoğu zaman daha yumuşak sabah güneşi), parlak dolaylı ışık (yumuşak bir gölge düşürecek kadar parlak, ama doğrudan ışınsız) ve gölge. Evinizdeki veya bahçenizdeki bir noktanın hangi banda girdiğini bilmek, bitki bakımındaki en yararlı tek beceridir.",
+      "Bir odayı okumak için onu gün boyunca izleyin. Güneye bakan bir pencere (kuzey yarımkürede) en güçlü ve en uzun ışığı verir; doğu yumuşak sabah güneşi sunar; batı daha sıcak öğleden sonra güneşi getirir; kuzey ise yumuşak ve dağınık kalır. Mesafe muazzam önem taşır — ışık yoğunluğu pencereden uzaklaşılan her adımda hızla düşer; camdan bir metre uzaktaki bir bitki, pervazda alacağının yalnızca küçük bir kısmını alabilir. Tül perdeler, renkli camlar ve dışarıdaki engeller ışığı daha da azaltır.",
+      "Herhangi bir bitkiyi daha parlak koşullara taşırken onu kademeli olarak alıştırın. Yapraklar içinde büyüdükleri ışığa uyum sağlar ve ani bir sıçrama — iç mekândan tam güneşe, gölgeden güneşli bir duvara — güneşi seven türleri bile yakabilir. Maruziyeti birkaç hafta boyunca adım adım artırın, yumuşak sabah ışığıyla başlayın ve yaprakları izleyin: solmuş lekeler çok hızlı gittiğinizi, taze ve sıkı yeni sürgünler ise bitkinin iyi uyum sağladığını gösterir."
+    ],
+    "checklist": [
+      "Işık bandınızı belirleyin: tam güneş, yarı güneş, parlak dolaylı veya gölge",
+      "Bitkiyi yerleştirmeden önce o noktayı bütün bir gün izleyin",
+      "Yoğunluğun pencereden uzaklaştıkça hızla düştüğünü unutmayın",
+      "Bitkileri daha parlak her konuma kademeli olarak alıştırın",
+      "Büyüme dengeli kalsın diye saksıları ara sıra döndürün",
+      "Tozlu yaprakları silin — toz, ışığı sessizce çalar"
+    ],
+    "problems": [
+      {
+        "title": "Fazla ışık (güneş yanığı)",
+        "symptoms": [
+          "Güneşe en çok maruz kalan yapraklarda solmuş, rengi atmış veya kâğıtsı lekeler",
+          "Daha parlak bir yere taşındıktan sonra beliren kuru kahverengi lekeler veya kenarlar",
+          "İyi sulamaya rağmen genel olarak soluk veya sarımsı görünen yapraklar"
+        ],
+        "solutions": [
+          "Bitkiyi doğrudan ışınlardan uzaklaştırın veya ışığı tül bir perdeyle süzün",
+          "Dokunun öldüğünden emin olduğunuzda kötü yanmış yaprakları kesin — kendilerine gelmezler ve onları kaldırmak enerjiyi yönlendirir",
+          "Bitki gerçekten daha fazla güneş istiyorsa daha güçlü ışığı haftalara yayarak yavaşça geri getirin"
+        ]
+      },
+      {
+        "title": "Yetersiz ışık (uzayıp incelme)",
+        "symptoms": [
+          "Yaprakları arasında geniş boşluklar olan, pencereye doğru iyice eğilmiş uzun ve gergin gövdeler",
+          "Eskilerinden daha küçük ve daha soluk çıkan yeni yapraklar",
+          "Desenlerini kaybeden alacalı bitkiler; çiçek açmayı reddeden çiçekli bitkiler"
+        ],
+        "solutions": [
+          "Bitkiyi pencereye yaklaştırın veya daha aydınlık bir odaya taşıyın, geçişi kademeli yapın",
+          "Bitki daha iyi ışığa kavuştuğunda cılız uzamış sürgünleri budayarak daha dolgun bir form teşvik edin",
+          "Doğal ışığın gerçekten kıt olduğu yerlerde, günlük zamanlayıcıya bağlı basit bir tam spektrum bitki lambası şaşırtıcı derecede iyi çalışır"
+        ]
+      }
+    ]
+  },
+  "soil": {
+    "advice": [
+      "Sağlıklı toprak canlı bir yapıdır, sıradan toprak değil. Kökler ondan aynı anda üç şey ister: nem, hava ve tutunma. İyi toprak suyu sıkılmış bir sünger gibi tutar — baştan sona nemli, asla sırılsıklam değil — ve parçacıkları arasında hava cepleri barındırır. Bu denge yapıdan gelir: kaba malzeme (ağaç kabuğu, perlit, kum, mıcır) drenaj kanalları açarken, ince organik madde (kompost, hindistan cevizi lifi, yaprak çürüntüsü) nemi tutar ve bitkiyi besleyen toprak canlılığını besler.",
+      "Saksılarda drenaj pazarlık konusu değildir. Her saksının deliklere ihtiyacı vardır ve içindeki harç, fazla suyun serbestçe geçmesine izin vermelidir; dibe serilen bir çakıl katmanı yoğun bir harcı düzeltmez — yalnızca su basmış bölgeyi köklere yaklaştırır. Sulamadan sonra su yüzeyde uzun süre bekliyorsa ya da toprağı koyulaştırmadan doğruca akıp gidiyorsa, yapının düzeltilmesi gerekir. Organik madde büyük arabulucudur: kumlu karışımlarda su tutmayı, ağır olanlarda ise drenajı iyileştirir.",
+      "pH — toprağın ne kadar asidik veya alkali olduğu — köklerin hangi besinleri gerçekten emebileceğini sessizce belirler. Çoğu bahçe ve ev bitkisi hafif asidik ile nötr arasındaki aralıktan memnundur; sorunlar esas olarak, besinler mevcut olsa bile kimyasal olarak kilitlendiği uç noktalarda ortaya çıkar. Rakamların peşinden koşmak yerine toprağa bolca iyi çürümüş organik madde karıştırın — pH'ı doğal olarak dengeler — ve yalnızca bitki, sulama ve ışıkla açıklanamayan inatçı besin eksiklikleri gösterirse daha derine inin."
+    ],
+    "checklist": [
+      "Her saksıda gerçek drenaj delikleri olduğundan emin olun",
+      "Sulamadan sonra sıkılmış sünger gibi hissettiren bir toprak hedefleyin",
+      "Hava için kaba malzeme, nem ve canlılık için organik madde karıştırın",
+      "Çakıl katmanı efsanesini boş verin — bunun yerine harcı düzeltin",
+      "Zamanla çöküp sıkışan saksı toprağını yenileyin veya üstten takviye edin",
+      "Yapıyı ve toprak canlılığını korumak için dış mekân tarhlarını malçlayın"
+    ],
+    "problems": [
+      {
+        "title": "Sıkışmış, su basmış toprak",
+        "symptoms": [
+          "Yüzeyde göllenen veya son derece yavaş süzülen su",
+          "Yoğun, ağır ve havasız toprak; ekşi bir koku geliştirebilir",
+          "Özenli sulamaya rağmen gerileyen bitki — sararma, solma, duraklamış büyüme"
+        ],
+        "solutions": [
+          "Saksılar için: kök topağını nazikçe gevşeterek, perlit veya ağaç kabuğu gibi kaba malzemeyle zenginleştirilmiş taze harca yeniden dikin",
+          "Tarhlar için: toprağı hoyratça altüst etmek yerine organik maddeyi bir bel çatalıyla karıştırın ve ıslak zeminde yürümekten kaçının",
+          "Yapı toparlanırken sulamayı azaltın ve sulamalar arasında yüzeyin kurumasına izin verin"
+        ]
+      },
+      {
+        "title": "Fakir, tükenmiş toprak",
+        "symptoms": [
+          "Soluk yapraklar, zayıf gövdeler ve sezon içinde çok az yeni büyüme ya da hiç büyüme olmaması",
+          "Saksıyı gerçekten nemlendirmeden doğruca akıp giden su",
+          "Büzülmüş, sertleşmiş veya saksı duvarlarından çekilmiş toprak"
+        ],
+        "solutions": [
+          "Taze ve kaliteli harçla yeniden dikin — saksı toprağı yıpranır ve hiçbir gübre çökmüş bir yapıyı tam olarak canlandıramaz",
+          "Büyüme mevsiminde bir seferde yoğun vermek yerine hafif ve düzenli besleyin; güçlü dozlar kökleri yakabilir",
+          "Dış mekânda verimliliği kompost ve malçla yavaş yavaş kurun; bunlar yalnızca bitkiyi değil, toprağı besler"
+        ]
+      }
+    ]
+  },
+  "safety": {
+    "advice": [
+      "Bitkilerle, mantarlarla ve böceklerle yaşamak hayatın sessiz keyiflerinden biridir ve birkaç sağlam alışkanlık bunu güvenli kılar. Temel kural basittir: tam bir kesinlikle tanımlamadığınız hiçbir şeyi asla yemeyin, tatmayın veya demlemeyin. Bir uygulama tanımlaması — bu uygulama dahil — öğrenmek için bir başlangıç noktasıdır; tüketim için asla yeşil ışık değildir. Pek çok zehirli tür, yenilebilir olanların ikna edici benzerleridir ve özellikle mantarlarda hata payı sıfır olabilir.",
+      "Evde, ne yetiştirdiğinizi bilin. Bazı yaygın ev ve bahçe bitkileri cildi tahriş edebilir ya da çiğnendiğinde zararlı olabilir; bu yüzden bitkileri küçük çocukların ve evcil hayvanların erişiminden uzak tutun ve çocuklara, güvendikleri bir yetişkin onaylamadıkça yaprakların ve meyvelerin yiyecek olmadığını erkenden öğretin. Ağır budamada veya tanımadığınız türleri tutarken eldiven takın, çalışırken yüzünüze dokunmaktan kaçının ve ardından ellerinizi iyice yıkayın. Bazı bitkilerin özsuyu cildi güneş ışığına duyarlı hale getirebilir; bu yüzden bulaşan özsuyu hemen durulamak iyi bir reflekstir.",
+      "Doğa yürüyüşünde cömertçe bakın, seçici dokunun. Böcekleri ellemeden gözlemleyin, deneyimli bir rehberle değilseniz mantarları yerlerinde bırakın ve bilinmeyen meyvelerin menüde olmadığını varsayın. Evinizde bitki veya sokma alerjisi bilinen biri varsa ilacını yanınızda taşıyın ve nasıl kullanılacağını bilin. Bunların hiçbiri korku gerektirmez — yalnızca bir nehir akıntısına veya sıcak bir ocağa göstereceğiniz sakin saygının aynısını ister."
+    ],
+    "checklist": [
+      "Uzman düzeyinde kesin tanımlama olmadan asla hiçbir şey tüketmeyin",
+      "Şüpheli bitkileri çocukların ve evcil hayvanların erişiminden uzak tutun",
+      "Budamada ve yabancı türlerde eldiven takın; sonrasında ellerinizi yıkayın",
+      "Bitki özsuyunu ciltten hemen durulayın",
+      "Yabani mantarları ve böcekleri ellemeden gözlemleyin",
+      "Bölgenizin zehir danışma hattı numarasını telefonunuza kaydedin"
+    ],
+    "problems": [
+      {
+        "title": "Tahriş edici bir türle cilt teması",
+        "symptoms": [
+          "Bitkinin cilde değdiği yerde kızarıklık, kaşıntı, yanma veya döküntü",
+          "Temastan saatler sonra beliren kabarcıklar veya çizgi şeklinde izler",
+          "Etkilenen bölge güneşe maruz kaldıktan sonra kötüleşen reaksiyon"
+        ],
+        "solutions": [
+          "Bölgeyi mümkün olan en kısa sürede sabun ve serin suyla iyice yıkayın; bitkiye değen giysileri de yıkayın",
+          "Kaşımaktan kaçının ve bölge yatışırken doğrudan güneş ışığından uzak tutun",
+          "Reaksiyon şiddetliyse, yayılıyorsa, göz veya ağız çevresindeyse ya da herhangi bir nefes darlığı içeriyorsa derhal tıbbi yardım alın"
+        ]
+      },
+      {
+        "title": "Kazara yutma",
+        "symptoms": [
+          "Bir çocuk veya evcil hayvan, tanımlanmamış bir bitkinin ya da mantarın bir kısmını çiğnedi veya yuttu",
+          "Ağız veya boğaz tahrişi, salya artışı, bulantı, kusma veya alışılmadık uyuşukluk",
+          "Bazen başlangıçta hiçbir belirti olmaz — belirti yokluğu güvenlik kanıtı değildir"
+        ],
+        "solutions": [
+          "Bir uzman söylemedikçe kusturmayın; yiyecek, süt veya ev ilaçları vermeyin",
+          "Ağızdaki bitki kalıntılarını çıkarın ve tam olarak neyin yendiğine dair bir örnek veya fotoğraf saklayın",
+          "Kişi veya hayvan iyi görünse bile derhal zehir danışmayı ya da acil servisi arayın — evcil hayvanlar için acil veterineri"
+        ]
+      }
+    ]
+  },
+  "uses": {
+    "advice": [
+      "İnsanlığın hikâyesi bitkilerde yazılıdır. Bize temel gıdaları ve baharatları, barınak ve gemiler için keresteyi, kumaş ve halat için pamuk, keten ve kenevir gibi lifleri, boyaları, reçineleri, parfümleri ve süs bahçeciliğinin katıksız günlük sevincini verdiler. Bir türün nasıl kullanıldığını anlamak, hem botaniğe hem tarihe açılan bir pencere sunar — aynı bitki bir kıtada mahsul, diğerinde kutsal bir simge, üçüncüsünde ise bahçelerin gözdesi olabilir.",
+      "Geleneksel tıp, eşit ölçüde özel saygıyı ve özel ihtiyatı hak eder. Sayısız modern ilaç, kökenini geleneksel şifacıların kullandığı bitkilerden alır ve bu miras gerçekten olağanüstüdür. Ancak geleneksel kullanım bir tarih kaydıdır; güvenlik veya etkinlik kanıtı değildir — doz, hazırlanış, kullanılan bitki kısmı ve onu alan kişi sonucu tamamen değiştirir. Okuduğunuz bir şeye dayanarak — bu uygulama dahil — bitkilerle asla kendi kendinizi tedavi etmeyin; önce mutlaka nitelikli bir sağlık uzmanına danışın.",
+      "Sizi faydalı bitkilere çeken ne olursa olsun, etik yol göstersin. Yalnızca kesin olarak tanımlayabildiğinizi ve almanıza izin verileni toplayın, yabani kaynaklar yerine kültüre alınmış olanları tercih edin ve popülasyonlar toparlanabilsin diye ölçülü alın. Aşırı toplama, sevilen tıbbi ve süs türlerini birçok bölgede kıtlığa sürükledi. En iyi uygulayıcılar nesillerle düşünür: kendilerinin, komşularının ve torunlarının aynı yere geri döneceğini bilerek toplarlar."
+    ],
+    "checklist": [
+      "Geleneksel kullanımları izlenecek talimat değil, ders çıkarılacak tarih olarak görün",
+      "Herhangi bir tıbbi kullanımdan önce bir sağlık uzmanına danışın",
+      "Mümkün olduğunda kültüre alınmış, etik kaynaklardan satın alın",
+      "Az ve yasal toplayın — yerel kuralları bilin",
+      "Nadir, korunan veya yavaş büyüyen türleri asla toplamayın",
+      "Öğrendiklerinizi kaydedin; faydalı bitki bilgisi saklanmaya değer"
+    ],
+    "problems": [
+      {
+        "title": "Doğru rehberlik olmadan bitki kullanmak",
+        "symptoms": [
+          "Yalnızca uygulamayla veya ezberden tanımlanan bir türden çay, tentür veya ilaç hazırlamak",
+          "Sosyal medyadan ya da kulaktan dolma bilgilerden doz tavsiyesi izlemek",
+          "Bitkisel ilaçları doktora söylemeden reçeteli ilaçlarla birleştirmek"
+        ],
+        "solutions": [
+          "Bitkinin kimliği ve güvenliği nitelikli bir uzman tarafından doğrulanana kadar kullanımı durdurun",
+          "Her bitkisel çözümü bir sağlık uzmanıyla konuşun; özellikle başka ilaçlar, hamilelik veya mevcut rahatsızlıklar söz konusuysa",
+          "Bu uygulamanın bilgilerini eğitici bağlam olarak görün, asla reçete olarak değil"
+        ]
+      },
+      {
+        "title": "Yağmacı toplama",
+        "symptoms": [
+          "Yabani bir türün alanlarının yıldan yıla gözle görülür biçimde küçülmesi veya yok olması",
+          "Yenilenebilir kısımlar yerine kökleri, kabukları veya bitkilerin tamamını alan toplama",
+          "Korunan alanlarda toplamak veya yerel toplama kurallarını yok saymak"
+        ],
+        "solutions": [
+          "Toplayıcının ölçülülük kuralına uyun: bulduğunuzun yalnızca küçük bir kısmını, o da yalnızca bol alanlardan alın",
+          "Yenilenebilir kısımları tercih edin — yapraklar, bir miktar çiçek, bir miktar meyve — kökler ve kabuk çoğu zaman bitkinin hayatına mal olur",
+          "Kültüre alma programlarını destekleyin ve kültüre alınmış malzeme satın alın; bariz yasa dışı toplamayı yerel yetkililere bildirin"
+        ]
+      }
+    ]
+  },
+  "cultural": {
+    "advice": [
+      "İnsanlarla yan yana yaşamış her tür hikâyeler taşır. Bitkiler ve mantarlar yaratılış mitlerinde, düğün ritüellerinde, cenaze törenlerinde, ulusal simgelerde, şiirlerde ve atasözlerinde belirir; bir meşe bir gelenekte bir şey, başka bir gelenekte bambaşka bir şey ifade eder. Bu katmanları öğrenmek, parkta bir yürüyüşü insan hayal gücünde bir yolculuğa dönüştürür — yalnızca isimler bile çoğu zaman yüzyılların gözlemini, mizahını ve inancını saklar.",
+      "Folklor aynı zamanda nesillerden süzülmüş gerçek bilginin de kaydıdır. Hangi bitkilerin iyileştirdiğine, zarar verdiğine, koruduğuna veya havayı önceden haber verdiğine dair hikâyeler, saf şiirin yanında çoğu zaman gerçek gözlemleri de şifreler; birini diğerinden ayırt etmek keyfin bir parçasıdır. Bu geleneklere saygılı bir misafir gibi yaklaşın: onlar bir müzeye değil, yaşayan kültürlere aittir ve onları yaşatan topluluklar en iyi yorumcularıdır.",
+      "Bir türün kültürel tarihini araştırırken geleneğin kendisine yakın kaynakları tercih edin — topluluk içinden yazarlar, bölgesel araştırmacılar, müze ve arşiv koleksiyonları — ve her hikâyenin nereden geldiğini not edin. Bir efsaneyi kökeniyle birlikte aktarmak onu yaratan insanları onurlandırır; kökeninden koparıp aktarmak ise onları yavaş yavaş siler. Merak artı kaynak göstermek — yöntemin tamamı budur."
+    ],
+    "checklist": [
+      "Yerel ve halk arasındaki isimlere bakın — sıkıştırılmış tarih barındırırlar",
+      "Her hikâyenin hangi kültürden ve bölgeden geldiğini not edin",
+      "Mümkün olduğunda geleneğin içinden kaynakları tercih edin",
+      "Sembolizmin tadını çıkarın ama onu biyoloji gibi görmeyin",
+      "Efsaneleri kökenleriyle birlikte paylaşın",
+      "Kutsal veya topluluğa ait yerlerde fotoğraf çekmeden ya da toplamadan önce izin isteyin"
+    ],
+    "problems": [
+      {
+        "title": "Mit ile gerçek",
+        "symptoms": [
+          "Bir bitkinin 'insanlar onu hep kullandı' diye yenmesinin veya kullanılmasının güvenli olduğunu varsaymak",
+          "Sembolik anlamları — şans, koruma, şifa — fiziksel özellikler gibi okumak",
+          "Çok tekrarlanan bir hikâyeye sırf çok tekrarlandığı için daha fazla güvenmek"
+        ],
+        "solutions": [
+          "Zihninizde iki raf tutun: bitkinin ne anlama geldiği ve bitkinin ne yaptığı — ikisi de gerçek bilgidir ama farklı soruları yanıtlar",
+          "Güvenlik veya tüketimle ilgili her şeyi, gelenek ne kadar eski olursa olsun modern uzman kaynaklarla doğrulayın",
+          "Mitin tadını kendi şartlarında çıkarın; kültürel olarak değerli olması için kelimenin tam anlamıyla doğru olması gerekmez"
+        ]
+      },
+      {
+        "title": "Kaynak gösterme ve saygı",
+        "symptoms": [
+          "Hikâyeleri veya törenleri, ait oldukları insanlardan hiç söz etmeden yeniden anlatmak",
+          "Bir kültürün geleneğini evrensel veya sıradan folklor gibi sunmak",
+          "Kutsal bitkileri veya sembolleri ağırlıklarını anlamadan gündelik süs olarak kullanmak"
+        ],
+        "solutions": [
+          "Bir hikâyeyi her paylaştığınızda kültürü, bölgeyi ve onu nereden öğrendiğinizi belirtin",
+          "Bir gelenek yaşıyor ve kutsalsa, neyin nasıl paylaşılabileceği konusunda topluluğun kendi rehberliğine uyun",
+          "Merakın ilişkiye dönüşmesine izin verin: topluluk içinden yazarları okuyun, kültür merkezlerini ziyaret edin ve bilginin bekçilerini destekleyin"
+        ]
+      }
+    ]
+  },
+  "edible": {
+    "advice": [
+      "Güvenli toplayıcılık, tek bir çiğnenemez kurala dayanır: her seferinde, üç yoldan, kesin tanımlama. Yabani herhangi bir şey dudaklarınıza değmeden önce türü birden çok bağımsız özellikle — yaprak, çiçek, meyve, kabuk, koku, yaşam alanı, mevsim — doğrulayabilmeli, bunları en az bir güvenilir arazi rehberiyle çapraz kontrol etmeli ve ideal olarak deneyimli bir toplayıcıya bizzat onaylatmalısınız. Tek bir kontrol bile şüphe bırakıyorsa yanıt hayırdır. Bir uygulama önerisi — bu uygulama dahil — bir tanımlamanın başlangıcıdır, asla sonu değil.",
+      "Yenilebilirlik, nadiren bütün bir bitkinin evet-hayır özelliğidir. Birçok türün bir kısmı yenilebilirken diğer kısımları zararlıdır; birçoğu yalnızca belirli bir olgunluk aşamasında ya da iyice pişirmek gibi doğru bir hazırlıktan sonra güvenlidir. Bir kaynaktaki 'yenilebilir' ifadesi her zaman doğru kısım, doğru aşamada, doğru şekilde hazırlanmış demektir. Titizlikle doğruladığınız yeni bir yabani yiyeceği denerken önce küçük bir miktar yiyin ve bir gün bekleyin — gerçekten yenilebilir türlere karşı bile bireysel hassasiyetler vardır.",
+      "Etik toplayıcılık hem sizi hem toprağı korur. Yalnızca yasal olduğu ve çevrenin temiz olduğu yerlerden toplayın — yol kenarları, ilaçlanmış tarlalar ve sanayi alanları, kusursuz yenilebilir türleri bile kirletebilir. Ölçülü alın, yaban hayatına ve yeniden büyümeye bolca bırakın ve bir alanı asla tamamen soymayın. Eski toplayıcıların alışkanlığını bütünüyle benimsemeye değer: bitkini tanı, yerini tanı, az al ve o alana seni yeniden ağırlaması için bir neden bırak."
+    ],
+    "checklist": [
+      "Kimliği asla tek özellikle değil, birden çok bağımsız özellikle doğrulayın",
+      "Bir arazi rehberiyle ve deneyimli biriyle çapraz kontrol yapın",
+      "Hangi kısmın, hangi aşamada ve hangi hazırlıkla güvenli olduğunu öğrenin",
+      "En ufak bir şüphe kaldıysa: yemeyin",
+      "Yeni yabani yiyecekleri az miktarda, her seferinde bir tane deneyin",
+      "Yasal ve temiz yerlerden toplayın, geride bolca bırakın"
+    ],
+    "problems": [
+      {
+        "title": "Benzer türleri karıştırmak",
+        "symptoms": [
+          "Tek bir özelliğe, tek bir fotoğrafa veya genel izlenime dayalı tanımlama",
+          "Örnek, arazi rehberindeki tanımın çoğuna uyuyor ama tamamına değil",
+          "Aynı familyada bilinen tehlikeli benzerler var — mantarlarda, yabani havuç ve maydanozlarda ve birçok meyvede yaygın"
+        ],
+        "solutions": [
+          "İlk uyumsuzlukta durun: gerçek bir eşleşme her özellikte uyuşur ve tek bir yanlış ayrıntı başka bir tür demektir",
+          "Bölgenizin tehlikeli benzerlerini, yenilebilir türlerin kendileri kadar iyi öğrenin — önce sizi öldürebilecek olanı çalışın",
+          "Bulduğunuzu mutfağa girmeden önce bir uzmana veya yerel toplayıcı grubuna gösterin; mantarlarda bunu zorunluluk sayın"
+        ]
+      },
+      {
+        "title": "Yetersiz hazırlık",
+        "symptoms": [
+          "Geleneğin ve kaynakların pişirilmesi gerektiğini söylediği bir türü çiğ yemek",
+          "Doğru tanımlanmış bir bitkinin yanlış kısmını kullanmak",
+          "Sözde yenilebilir bir buluntuyu yedikten sonra sindirim rahatsızlığı"
+        ],
+        "solutions": [
+          "Güvenilir kaynakların hazırlama talimatlarını harfiyen izleyin — pişirme şartları, ısı gerçek bileşikleri etkisizleştirdiği için vardır",
+          "Kısmı ve aşamayı kaynakla eşleştirin: doğru tür, yanlış kısım yine yanlış bir öğündür",
+          "Biri rahatsızlanırsa yenilen şeyden bir örnek saklayın ve geçmesini beklemek yerine hemen tıbbi görüş alın"
+        ]
+      }
+    ]
+  },
+  "propagation": {
+    "advice": [
+      "Çoğaltma, bahçeciliğin sessiz büyüsüdür: bir bitki bedavaya birçok bitkiye dönüşür. İçeri açılan üç kapı çelik, bölme ve tohumdur. Çelik, sağlıklı bir gövdeyi veya yaprağı alıp kendi köklerini çıkarmaya ikna eder; bölme, kümeler halinde büyüyen bir bitkiyi hazır küçük bitkilere ayırır; tohum sıfırdan başlar ve sabrı en geniş olasılıklarla ödüllendirir. Her türün tercih ettiği yöntemler vardır ama temeldeki ilkeler hemen hepsinde ortaktır.",
+      "Çeliklerde başarıyı üç şey belirler: sağlıklı malzeme, temiz kesimler ve istikrarlı koşullar. Çelikleri güçlü, hastalıksız sürgünlerden alın, boğumun hemen altından kesin — yaprakların gövdeyle buluştuğu, köklenme enerjisinin yoğunlaştığı eklem — ve yüzeyin altında hiçbir şey çürümesin diye alt yaprakları temizleyin. İster suda ister hafif ve havadar bir harçta köklendirin, çeliklere parlak dolaylı ışık, yumuşak sıcaklık ve yüksek nem verin; ilerlemeyi kontrol etmek için onları çekiştirme dürtüsüne direnin — yeni yapraklar, köklerin var olduğunun ilanıdır.",
+      "Hijyen ve zamanlama, en az takdir edilen iki malzemedir. Aletleri kesimlerden önce ve kesimler arasında alkolle veya alevle temizleyin — kirli bir bıçak hastalığı doğrudan taze yaralara taşır. Aktif büyüme döneminde çoğaltın; genellikle ilkbahardan yaz başına dek, bitkinin harcayacak enerjisi varken. Uykudaki veya stresli bir bitkiden alınan malzeme hayata dezavantajlı başlar. Ve ihtiyacınızdan fazla çelik alın: uzmanlar bile bir kısmını kaybeder ve fazlalıklar güzel hediyeler olur."
+    ],
+    "checklist": [
+      "Yalnızca sağlıklı, güçlü ve zararsız bitkilerden çoğaltın",
+      "Bıçakları kesimlerden önce ve kesimler arasında sterilize edin",
+      "Boğumun hemen altından kesin; yüzeyin altında kalacak yaprakları çıkarın",
+      "Parlak dolaylı ışık, sıcaklık ve nem verin — doğrudan güneş değil",
+      "Ortamı nemli tutun ama asla sırılsıklam etmeyin",
+      "Yedek çelik alın; uzmanlar için bile bazı kayıplar normaldir"
+    ],
+    "problems": [
+      {
+        "title": "Çürüyen çelikler",
+        "symptoms": [
+          "Tabandan yukarı doğru kahverengiye, siyaha dönen veya saydamlaşan gövde",
+          "Suda ya da ortamda yumuşak, sümüksü bir doku ve ekşi bir koku",
+          "Nazikçe solmak yerine bir anda çöken yapraklar"
+        ],
+        "solutions": [
+          "Açıkça çürümüş çelikleri atın ve baştan başlayın — çürüme yukarı ilerler ve nadiren geri döner",
+          "Yalnızca taban etkilendiyse hasarın epey üstünden steril bir bıçakla yeniden kesin ve taze suda veya harçta yeniden başlayın",
+          "Tekrarını önleyin: daha temiz aletler, düzenli değiştirilen daha taze su, daha hafif ve havadar bir ortam, yüzeyin altında yaprak yok"
+        ]
+      },
+      {
+        "title": "Köklenmeyen çelikler",
+        "symptoms": [
+          "Çelik hâlâ canlı görünse de haftalar kök çıkmadan geçiyor",
+          "Çelik hiçbir değişiklik olmadan yavaşça sararıyor ve gücünü yitiriyor",
+          "Tabanda kallus oluşuyor ama kökler bir türlü gelmiyor"
+        ],
+        "solutions": [
+          "Önce koşulları kontrol edin: duraklamaların çoğu az ışıktan, az sıcaklıktan veya kuru havadan kaynaklanır — çeliği suçlamadan önce bunları düzeltin",
+          "Taze dokuyu açığa çıkarmak için tabanı boğumun altından açılı olarak yeniden kesin ve inatçı türler için köklendirme hormonu düşünün",
+          "Türüne göre sabırlı olun: bazıları günler içinde köklenir, bazıları aylar alır — çelik sıkı ve yeşil kaldıkça hâlâ deniyordur"
+        ]
+      }
+    ]
+  },
+  "role": {
+    "advice": [
+      "Hiçbir tür yalnız yaşamaz. Her bitki, mantar ve böcek bir ilişkiler ağında rol üstlenir: çiçekli bitkiler tozlayıcıları besler; onlar da kuşları ve memelileri besleyen tohumları ve meyveleri bağlar; yapraklar, yuvadaki yavruları besleyen tırtılları besler; mantarlar ve ayrıştırıcı böcekler düşen maddeyi parçalayıp besinlerini bir sonraki nesli büyüten toprağa geri verir. Bir türün rolünü öğrenmek — neyi beslediğini, neye barınak olduğunu, kiminle ortaklık kurduğunu ve neye bağımlı olduğunu — tanımlamayı adlandırmaktan anlamaya dönüştürür.",
+      "Bu rolleri görmenin en zengin yolu sabırlı, düşük etkili gözlemdir. Çiçekli bir bitkinin yanında birkaç dakika kıpırdamadan oturup ziyaretçilerini sayın; aynı ağaca mevsimler boyunca dönüp kadrosunun değişişini izleyin; bir kütüğü nazikçe çevirin ve tam olarak eski haline geri koyun. Toplamak yerine fotoğraflayın, hassas yaşam alanlarında patikalardan ayrılmayın, yuvalara ve inlere saygılı bir mesafede durun ve aranızdaki mesafeye yaban hayatının karar vermesine izin verin. Doğa gözlemcisinin paradoksu şudur: ne kadar az müdahale ederseniz o kadar çok görürsünüz.",
+      "Kendi bahçeniz, balkonunuz veya pencere pervazınız, ekosistemin işleyen bir parçasıdır. Bir saksı çiçekli şifalı ot tozlayıcıları besler; bir köşedeki yaprak döküntüsü kışlayan böcekleri barındırır; pestisitlerden vazgeçmek, besin ağını yaprak bitinden ötücü kuşa dek sağlam tutar. Küçük seçimler mahalleler boyunca çoğalır — bir ev bitkisine gösterdiğiniz özenin aynısı, dışa çevrildiğinde çevrenizdeki ağı sessizce onarır."
+    ],
+    "checklist": [
+      "Her tür için sorun: neyi besliyor ve onunla ne besleniyor?",
+      "Sessizce gözlemleyin ve her yeri bulduğunuz gibi bırakın",
+      "Toplamak yerine fotoğraflayın",
+      "Çevirdiğiniz her şeyi tam eski konumuna geri koyun",
+      "Çiçek ekin, birkaç yabani köşe bırakın, pestisitleri atlayın",
+      "Gözlemlerinizi not edin — zamanla biriken kayıtlar ağı ortaya çıkarır"
+    ],
+    "problems": [
+      {
+        "title": "Yerinden olmuş türler (istilacılar)",
+        "symptoms": [
+          "Tek bir türün bir alanı kaplayıp çeşitlilik gösteren yerli bitki örtüsünü boğması",
+          "Ekildiği yerin çok ötesine hızlı, agresif yayılma",
+          "Baskın olduğu yerlerde gözle görülür biçimde daha az böcek, kuş veya kır çiçeği"
+        ],
+        "solutions": [
+          "Bölgenizde hangi türlerin istilacı sayıldığını öğrenin — aynı bitki kendi yurdunda zararsız, başka yerde yıkıcı olabilir",
+          "Bahçe atıklarını, akvaryum içeriğini veya istenmeyen bitkileri asla doğal alanlara ya da su yollarına dökmeyin",
+          "Bahçeniz için yerli veya uslu türleri seçin ve varsa yerel temizleme çalışmalarını destekleyin"
+        ]
+      },
+      {
+        "title": "Tozlayıcıların azalması",
+        "symptoms": [
+          "Az sayıda ziyaretçi böcekle veya hiç ziyaretçisiz açan çiçekler",
+          "Bol çiçek açan ama az meyve bağlayan meyve ve sebze bitkileri",
+          "Geçmiş sezonlara göre gözle görülür biçimde daha az arı, kelebek ve çiçek sineği"
+        ],
+        "solutions": [
+          "Bütün büyüme mevsimi boyunca bir şeyler açsın diye çiçeklerden bir bayrak yarışı ekin; yoğun katmerliler yerine sade, açık çiçekleri tercih edin",
+          "Böcek ilaçlarını, özellikle çiçekteki hiçbir şeyde kullanmayın ve birkaç kemirilmiş yaprağı ekosisteme ödenen kira olarak hoş görün",
+          "Sessiz altyapıyı sağlayın: dokunulmamış köşeler, çıplak toprak parçaları, ayakta bırakılmış içi boş saplar ve konma taşlı sığ bir su kabı"
+        ]
+      }
+    ]
+  }
+}
