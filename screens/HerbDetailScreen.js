@@ -160,13 +160,21 @@ export default function HerbDetailScreen({ route }) {
               <Text style={styles.body}>{details.overview}</Text>
             </SectionCard>
 
-            <SectionCard icon="flask-outline" title={t('discover.preparationLabel')} color={colors.info}>
-              <Text style={styles.body}>{details.preparation}</Text>
-            </SectionCard>
+            {/* Guarded: restricted herbs (controlled substances, banned
+                internal use) ship with the history and NO preparation or
+                benefits - a titled empty card would read as a dead button,
+                and the absence itself is the safety decision. */}
+            {!!details.preparation && (
+              <SectionCard icon="flask-outline" title={t('discover.preparationLabel')} color={colors.info}>
+                <Text style={styles.body}>{details.preparation}</Text>
+              </SectionCard>
+            )}
 
-            <SectionCard icon="checkmark-circle-outline" title={t('discover.benefitsLabel')} color={colors.accent}>
-              <Text style={styles.body}>{details.benefits}</Text>
-            </SectionCard>
+            {!!details.benefits && (
+              <SectionCard icon="checkmark-circle-outline" title={t('discover.benefitsLabel')} color={colors.accent}>
+                <Text style={styles.body}>{details.benefits}</Text>
+              </SectionCard>
+            )}
           </>
         )}
 

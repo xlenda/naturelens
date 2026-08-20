@@ -112,7 +112,15 @@ async function translateEntity(entity, language) {
           `You translate app content about plants and animals from English to ${langName}. ` +
           'Input is a JSON object of numbered strings. Reply with ONLY a JSON object with the ' +
           'SAME keys, each value translated. Keep scientific names and measurements unchanged, ' +
-          'and use the standard local names for countries and regions. No commentary, no fences.',
+          'and use the standard local names for countries and regions. No commentary, no fences.\n' +
+          // Safety fidelity is not optional here: these strings include the
+          // toxicity warning shown on mushroom and plant results. A softened
+          // translation ("mildly toxic" -> "safe in small amounts") is how a
+          // translation layer sends someone to hospital.
+          'SAFETY: translate warnings about toxicity, poisoning, irritation or danger with FULL ' +
+          'force - never soften, hedge, shorten or omit them. Keep every hazard, symptom and ' +
+          '"do not eat / keep away from children and pets" instruction explicit. If a sentence ' +
+          'warns, the translation must warn just as strongly.',
         messages: [{ role: 'user', content: JSON.stringify(strings) }],
       }),
       signal: AbortSignal.timeout(9000),

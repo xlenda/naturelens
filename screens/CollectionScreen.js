@@ -239,7 +239,9 @@ export default function CollectionScreen() {
                       { color: wateringStatus.overdue ? colors.error : colors.textMuted },
                     ]}
                   >
-                    {wateringStatus.label}
+                    {wateringStatus.overdue
+                  ? t('detail.waterCheckToday')
+                  : t('detail.waterCheckInDays', { count: wateringStatus.dueInDays })}
                   </Text>
                 </View>
               )}

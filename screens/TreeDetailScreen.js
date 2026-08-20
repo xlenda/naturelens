@@ -400,7 +400,9 @@ export default function TreeDetailScreen({ route }) {
                   { color: wateringStatus.overdue ? colors.error : colors.textSecondary },
                 ]}
               >
-                {wateringStatus.label}
+                {wateringStatus.overdue
+                  ? t('detail.waterCheckToday')
+                  : t('detail.waterCheckInDays', { count: wateringStatus.dueInDays })}
               </Text>
               <TouchableOpacity
                 style={styles.waterBtn}

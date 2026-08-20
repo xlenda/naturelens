@@ -274,3 +274,27 @@ test('location never stalls a scan more than once', () => {
   assert.match(src, /DENIED_RETRY_MS/);
   assert.match(src, /setItem\(DENIED_KEY, String\(Date\.now\(\)\)\)/);
 });
+
+test('no user-visible English is built inside components/', () => {
+  // The gap that shipped 'Water today' / 'Water in 5d' to all 17 languages:
+  // this file only ever scanned screens/, so a label assembled in a component
+  // was invisible to the gate. Rendering text is UI, and UI text is t().
+  const dir = path.join(__dirname, 'components');
+  const suspicious =
+    /(?:label|title|message|text)\s*:\s*(?:`|')(?:[A-Z][a-z]+ )(?:[a-z]|\$\{)/;
+  const offenders = [];
+  // legalTexts.js is a DATA module of the full bilingual legal documents, and
+  // ErrorBoundary ships its own three-language copy because it renders when
+  // i18n itself may have failed to load. Both are deliberate.
+  const EXEMPT = new Set(['legalTexts.js', 'ErrorBoundary.js']);
+  for (const file of fs.readdirSync(dir)) {
+    if (!file.endsWith('.js') || EXEMPT.has(file)) continue;
+    const src = fs.readFileSync(path.join(dir, file), 'utf8');
+    for (const line of src.split('\n')) {
+      // Comments and dataLayer event names are not user-visible.
+      if (/^\s*(\/\/|\*)/.test(line) || /event\s*:/.test(line)) continue;
+      if (suspicious.test(line)) offenders.push(`${file}: ${line.trim().slice(0, 70)}`);
+    }
+  }
+  assert.deepEqual(offenders, [], 'build user text with t(), not string literals');
+});

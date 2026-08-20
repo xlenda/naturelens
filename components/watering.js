@@ -17,9 +17,9 @@ export function getWateringStatus(entry) {
   const dueInDays = intervalDays - daysSince;
   const overdue = dueInDays <= 0;
 
-  return {
-    overdue,
-    dueInDays,
-    label: overdue ? 'Water today' : `Water in ${dueInDays}d`,
-  };
+  // Sem `label` aqui de proposito: uma string montada neste modulo sai em
+  // ingles para os 17 idiomas (foi o que aconteceu ate 20/08 - inclusive no
+  // layout RTL do arabe). As telas traduzem com t('detail.waterCheckToday')
+  // / t('detail.waterCheckInDays', { count }).
+  return { overdue, dueInDays };
 }

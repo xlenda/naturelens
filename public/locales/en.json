@@ -306,7 +306,9 @@
     "tipCultural": "Every species carries stories - knowing them changes how we care for it.",
     "tipEdible": "Only treat something as edible when an expert has confirmed it in person.",
     "tipPropagation": "A clean, sharp tool doubles a cutting's chance of taking root.",
-    "tipEcology": "Every species has a role - observing without interfering is the best way to learn."
+    "tipEcology": "Every species has a role - observing without interfering is the best way to learn.",
+    "waterCheckToday": "Check the soil today",
+    "waterCheckInDays": "Check the soil in {{count}}d"
   },
   "disease": {
     "overviewSection": "Overview",
