@@ -3,6 +3,7 @@
     "overview": "Overview",
     "details": "Details",
     "readMore": "Read more",
+    "readLess": "Read less",
     "confidence": "Confidence",
     "nativeOrigin": "Native Origin",
     "save": "Save to My Collection",
@@ -313,7 +314,18 @@
     "fundamentals": "Fundamentals",
     "checklistLabel": "Before you start",
     "problemsLabel": "Signs of trouble",
-    "solutionsLabel": "Solutions"
+    "solutionsLabel": "Solutions",
+    "lightFullSun": "Full sun",
+    "lightPartial": "Partial shade",
+    "lightShade": "Shade",
+    "soilWellDrained": "Well-drained",
+    "soilSandy": "Sandy",
+    "soilLoam": "Loam",
+    "soilAcidic": "Acidic",
+    "toxicShort": "Toxic",
+    "rangeIdeal": "Ideal",
+    "rangeOk": "Acceptable",
+    "rangeBad": "Not suitable"
   },
   "disease": {
     "overviewSection": "Overview",

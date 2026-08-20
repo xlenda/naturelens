@@ -33,6 +33,7 @@ import TopBar, { TopBarIcon } from '../components/TopBar';
 import Pronounce from '../components/Pronounce';
 import HelpfulRow from '../components/HelpfulRow';
 import ResultActionBar from '../components/ResultActionBar';
+import QuickFactGrid from '../components/QuickFactGrid';
 
 const EDIBILITY_COLORS = {
   choice: colors.accent,
@@ -284,47 +285,15 @@ export default function MushroomDetailScreen({ route }) {
         </SectionCard>
         </ZoneBand>
 
-        {/* Fatos rapidos - hub do resultado (video do concorrente): grade 2
-            colunas de cards compactos; cada card navega pro manual da especie
-            ja aberto no topico certo. */}
-        {quickFacts.length > 0 && (
-          <View style={styles.factsWrap}>
-            <Text style={styles.factsTitle} accessibilityRole="header">
-              {t('detail.quickFacts')}
-            </Text>
-            <View style={styles.factsGrid}>
-              {quickFacts.map((f) => (
-                <TouchableOpacity
-                  key={f.key}
-                  style={styles.factCard}
-                  activeOpacity={0.8}
-                  onPress={() => openTopic(f.key)}
-                  accessibilityRole="button"
-                  accessibilityLabel={f.label || f.value}
-                >
-                  <Ionicons
-                    name={f.icon}
-                    size={18}
-                    color={f.color}
-                    accessibilityElementsHidden={true}
-                    importantForAccessibility="no-hide-descendants"
-                  />
-                  <View style={{ flex: 1 }}>
-                    {!!f.label && <Text style={styles.factLabel}>{f.label}</Text>}
-                    <Text style={styles.factValue} numberOfLines={2}>{f.value}</Text>
-                  </View>
-                  <Ionicons
-                    name="chevron-forward"
-                    size={14}
-                    color={colors.textMuted}
-                    accessibilityElementsHidden={true}
-                    importantForAccessibility="no-hide-descendants"
-                  />
-                </TouchableOpacity>
-              ))}
-            </View>
-          </View>
-        )}
+        {/* Fatos rapidos (auditoria de diagramacao 20/08): o bloco copiado nas
+            6 telas virou um componente so. Os dois valores daqui - a
+            comestibilidade e o primeiro sosia - ja sao curtos de origem
+            (rotulo do vendor e nome de especie), entao nao passam pelo
+            shortFact; quem descarta card sem valor e o proprio componente. */}
+        <QuickFactGrid
+          accent={meta.accent}
+          facts={quickFacts.map((f) => ({ ...f, onPress: () => openTopic(f.key) }))}
+        />
 
         {/* Look-alike - hub do resultado (video do concorrente): a lista deixa
             a pilha de SectionCards e vira card-porta para o manual. Guarded:
@@ -529,25 +498,9 @@ const styles = StyleSheet.create({
   },
   edibilityNoteText: { flex: 1, color: colors.textSecondary, fontSize: 12.5, marginLeft: 10, lineHeight: 18 },
   body: { color: colors.textSecondary, fontSize: 14, lineHeight: 21 },
-  // Hub do resultado (video do concorrente): grade de fatos rapidos,
-  // cards-porta e o gancho da especialista.
-  factsWrap: { marginBottom: 4 },
-  factsTitle: { fontSize: 16, fontWeight: '800', color: colors.text, marginBottom: 10 },
-  factsGrid: { flexDirection: 'row', flexWrap: 'wrap', gap: 10 },
-  factCard: {
-    flexBasis: '46%',
-    flexGrow: 1,
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 8,
-    backgroundColor: colors.surface,
-    borderRadius: 14,
-    borderWidth: 1,
-    borderColor: colors.border,
-    padding: 12,
-  },
-  factLabel: { fontSize: 11, fontWeight: '700', color: colors.textMuted, marginBottom: 2 },
-  factValue: { fontSize: 13, fontWeight: '600', color: colors.text, lineHeight: 17 },
+  // Hub do resultado (video do concorrente): cards-porta e o gancho da
+  // especialista. Os estilos dos fatos rapidos sairam daqui na auditoria de
+  // diagramacao 20/08 - moram so em components/QuickFactGrid.js.
   doorCard: {
     flexDirection: 'row',
     alignItems: 'center',

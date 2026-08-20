@@ -279,34 +279,11 @@ export default function SoundDetailScreen({ route }) {
 
         <IdentificationExtras entity={plant} accent={meta.accent} />
 
-        {/* Fatos rapidos (hub do resultado, video do concorrente): grade de
-            cards compactos que navegam pro manual. Sound so tem material real
-            pro habitat curado - sem material, nao força. */}
-        {!!curated?.habitat && (
-          <View style={styles.factsWrap}>
-            <Text style={styles.factsTitle}>{t('detail.quickFacts')}</Text>
-            <View style={styles.factsGrid}>
-              <TouchableOpacity
-                style={styles.factCard}
-                onPress={() => openTopic('habitat')}
-                activeOpacity={0.8}
-                accessibilityRole="button"
-                accessibilityLabel={t('fieldGuide.habitat')}
-              >
-                <View style={[styles.factIcon, { backgroundColor: colors.info + '22' }]}>
-                  <Ionicons name="earth-outline" size={15} color={colors.info} />
-                </View>
-                <View style={{ flex: 1 }}>
-                  <Text style={styles.factLabel}>{t('fieldGuide.habitat')}</Text>
-                  <Text style={styles.factValue} numberOfLines={2}>
-                    {curated.habitat.split('\n')[0]}
-                  </Text>
-                </View>
-                <Ionicons name="chevron-forward" size={14} color={colors.textMuted} />
-              </TouchableOpacity>
-            </View>
-          </View>
-        )}
+        {/* Auditoria de diagramacao 20/08: a grade de fatos rapidos saiu daqui.
+            O unico fato desta tela era o habitat curado, que e PROSA - nao ha
+            palavra-chave que vire valor curto sem inventar, e o card so sabia
+            se cortar com "...". Nada se perdeu: o mesmo habitat continua logo
+            abaixo como card-porta, que abre o texto inteiro no manual. */}
 
         {/* Zona de cor: the reading about the species - overview plus the
             curated habitat/curiosity when we have them - lives in one
@@ -483,31 +460,9 @@ const styles = StyleSheet.create({
   scientific: { fontSize: 15, fontStyle: 'italic', color: colors.textSecondary, marginTop: 3 },
   commonNames: { fontSize: 12.5, color: colors.textMuted, marginTop: 4 },
   taxonLine: { fontSize: 12.5, color: colors.textMuted, marginTop: 4 },
-  // Fatos rapidos + cards-porta do hub do resultado (video do concorrente).
-  factsWrap: { marginBottom: 16 },
-  factsTitle: { fontSize: 15, fontWeight: '800', color: colors.text, marginBottom: 10 },
-  factsGrid: { flexDirection: 'row', flexWrap: 'wrap', gap: 10 },
-  factCard: {
-    flexBasis: '48%',
-    flexGrow: 1,
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 8,
-    backgroundColor: colors.surface,
-    borderWidth: 1,
-    borderColor: colors.border,
-    borderRadius: 14,
-    padding: 12,
-  },
-  factIcon: {
-    width: 28,
-    height: 28,
-    borderRadius: 9,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  factLabel: { fontSize: 11, fontWeight: '700', color: colors.textMuted },
-  factValue: { fontSize: 12.5, color: colors.textSecondary, marginTop: 2 },
+  // Cards-porta do hub do resultado (video do concorrente). Os estilos dos
+  // fatos rapidos sairam daqui na auditoria de diagramacao 20/08 junto com a
+  // grade (habitat e prosa, nao vira valor curto).
   doorCard: {
     flexDirection: 'row',
     alignItems: 'center',

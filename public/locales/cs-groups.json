@@ -1,0 +1,857 @@
+{
+  "succulent": {
+    "label": "Sukulenty a kaktusy",
+    "topics": {
+      "watering": {
+        "advice": [
+          "Pravidlem této skupiny je promočit a nechat vyschnout, nikoli kalendář. Zalévejte, dokud není celý kořenový bal nasycený a voda nevyteče odtokovým otvorem, misku vylijte a pak nechte substrát před další zálivkou úplně proschnout — ve vegetační sezoně to bývá jednou za dva až tři týdny, i když květináč, světlo a teplota to výrazně posouvají. Důvod je fyziologický: jde o CAM rostliny, které otevírají průduchy v noci a přes den je drží zavřené. Mezi jedním a druhým impulzem vody potřebují okysličený kořen, ne nepřetržitý přísun.",
+          "Zima je skutečný odpočinek. Růst probíhá zhruba mezi 18 a 29 °C, dormance mezi 7 a 13 °C, přičemž zálivka se omezuje na minimum jednou za několik týdnů — jen tolik, aby rostlina neseschla. A když se objeví vadnutí, přečtěte si nejprve strukturu pletiva, než sáhnete po konvi: svraštělý, ale pevný list znamená žízeň; žlutý, měkký a průsvitný list se topí a další zálivka to jen zhorší, protože zahnilé kořeny už přestaly přijímat vodu. Epifytické lesní kaktusy, jako je vánoční kaktus, jsou v této skupině výjimkou: potřebují podstatně více vody a na jaře a v létě by nikdy neměly vyschnout úplně."
+        ],
+        "checklist": [
+          "Promočte celý kořenový bal, dokud voda nevyteče odtokovým otvorem, a pak misku vylijte.",
+          "Před další zálivkou počkejte, až bude substrát úplně suchý.",
+          "Nikdy nenechávejte květináč stát ve vodě.",
+          "Během zimního odpočinku zalévejte minimálně jednou za několik týdnů — jen tolik, aby rostlina neseschla.",
+          "Svraštělý a pevný list = málo vody. Žlutý, měkký, průsvitný list = příliš mnoho."
+        ]
+      },
+      "light": {
+        "advice": [
+          "Tohle je jediná pokojová skupina, která přímé slunce nejen snese, ale přímo si o ně říká. Sukulenty chtějí deset a více hodin jasného nepřímého světla, minimálně šest až osm; pod touto hranicí se vytahují a blednou — klasická etiolace. Pouštním kaktusům se nejlépe daří v okně s několika hodinami přímého slunce denně, což u nás znamená okno na jih. Tenký, bledý přírůstek je problém se světlem a žádné množství hnojiva ho nespraví.",
+          "Záleží na dvou výhradách. Když rostlinu v létě přesunete ven, aklimatizujte ji: začněte v polostínu, protože silné slunce spálí pletivo, které se vytvořilo uvnitř. A epifytické kaktusy chtějí jasné, ale filtrované světlo — východní nebo západní okno, lehkou záclonu — protože na přímém slunci se spálí."
+        ],
+        "checklist": [
+          "Dopřejte šest až osm hodin světla denně, ideálně deset a více.",
+          "Pouštní kaktus: okno s několika hodinami přímého slunce.",
+          "Vytáhlý, bledý růst znamená málo světla, ne málo hnojiva.",
+          "Při přesunu ven v létě začněte na několik dní v polostínu.",
+          "Epifytický kaktus: jasné světlo, vždy filtrované."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "Substrát je převážně minerální a zdroje se neshodnou na receptu jen proto, aby se shodly na principu. Jedna univerzitní poradenská služba doporučuje jednu třetinu organického materiálu ke dvěma třetinám minerálního; jiná žádá stejné objemy rašelinového substrátu a velmi hrubého písku; RHS pracuje se dvěma díly základního kompostu na jeden díl zahradnického štěrku, s posypem ze štěrku navrch. Rozpětí sahá zhruba od 30 % do 67 % minerálního podílu a existuje jen z jediného důvodu: aby byla nasycená fáze co nejkratší. Čím vlhčí je vaše prostředí a čím štědřejší ruku máte na konvi, tím víc minerální složky chcete.",
+          "Těsný květináč je pravidlo, ne nedbalost: přebytečný objem substrátu drží vlhkost a následuje hniloba. Přesazujte na jaře do květináče jen o málo většího a s první zálivkou počkejte několik dní. Hnojení je chudé na dusík a v nižší dávce — polovina až čtvrtina dávky z etikety, každou třetí nebo čtvrtou zálivku během aktivní sezony a v zimě vůbec. Nadbytek dusíku vytváří měkká pletiva a měkká pletiva hnijí. U epifytických kaktusů se recept obrací a přebírá ho organická hmota."
+        ],
+        "checklist": [
+          "Přimíchejte alespoň jednu třetinu minerálního materiálu: perlit, hrubý písek, pemzu nebo štěrk.",
+          "Použijte květináč jen o málo větší než ten současný — volné místo se promění v hnilobu.",
+          "Přesazujte na jaře a s první zálivkou počkejte několik dní.",
+          "Hnojte poloviční nebo čtvrtinovou dávkou a v zimě přestaňte úplně.",
+          "Epifytický kaktus recept obrací: více organické hmoty, méně minerální složky."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "Riziko je tu mechanické a snadno se mu vyhnete: trnité druhy berte do ruky zabalené v novinách nebo v silných rukavicích. Trny kaktusů a jemné glochidy některých druhů se do kůže dostanou snadno a ven jdou těžko a chvílí největšího vystavení je přesazování."
+        ],
+        "checklist": [
+          "Trnité druhy berte do ruky přes srolované noviny nebo v silných rukavicích.",
+          "Nový květináč připravte dřív, než rostlinu zvednete, ať v rukou stráví co nejméně času.",
+          "Trnité exempláře nedávejte do průchozích míst ani do dosahu malých dětí."
+        ]
+      }
+    }
+  },
+  "tropicalFoliage": {
+    "label": "Tropické listové pokojovky",
+    "topics": {
+      "watering": {
+        "advice": [
+          "Cílem této skupiny je rovnoměrně vlhký, nikdy rozbahněný substrát — ani úplný vysychací cyklus sukulentů, ani stálá vlhkost kapradin. Posoudíte to tak, že zatlačíte prst do substrátu po první kloub: sucho na špičce znamená čas na zálivku. Stejně dobře poslouží hmotnost květináče nebo dutý zvuk klouby o terakotový květináč. Když zaléváte, lijte, dokud voda nevyteče spodem: tím se vyplaví přebytečné soli a zaručíte, že se voda dostane i do spodních dvou třetin květináče. Pak misku vylijte — nikdy nenechávejte rostlinu stát ve vodě.",
+          "Detaily, na kterých tu záleží: pokud substrát silně proschl, zalijte dvakrát — zalít, počkat asi třicet minut a zalít znovu; voda by měla mít mezi 17 a 22 °C, nikdy horká a nikdy ledová, a nikdy změkčená voda, kvůli sodíku a chloridům. Marantovité chtějí destilovanou nebo dešťovou vodu, protože fluorid z kohoutku hnědne okraje listů. A skupina má i své vlastní přiznané výjimky: dracény chtějí před zálivkou povrch suchý na dotek, zamiokulkas se zalévá jednou až dvakrát měsíčně a teprve poté, co úplně proschl, a fíkus benjamín zůstává v aktivním růstu vlhký a v zimě mírně proschne."
+        ],
+        "checklist": [
+          "Držte substrát rovnoměrně vlhký, nikdy podmáčený.",
+          "Zalévejte, dokud voda nevyteče spodem, pak misku vylijte.",
+          "Používejte vodu mezi 17 a 22 °C; nikdy změkčenou.",
+          "Marantovité a dracény: raději destilovaná nebo dešťová voda.",
+          "Velmi suchý substrát: zalít, počkat třicet minut a zalít znovu."
+        ]
+      },
+      "light": {
+        "advice": [
+          "Světelná tolerance téhle skupiny je velmi široká a přesně tam se skupina dělí. Filodendrony dávají přednost nepřímému nebo záclonou filtrovanému slunci a snesou i málo světla — srdčitý druh zvládne opravdu slabé osvětlení — zatímco stromovité typy chtějí střední až silné světlo blízko okna. Dracény rostou nejlépe v jasném nepřímém světle, ale několik jich snáší slabé světlo natolik dobře, že se z nich stal kancelářský standard. V referenčních číslech: slabé světlo se pohybuje kolem 800 luxů, střední kolem 1600, jasné kolem 3200 a přímé kolem 16000.",
+          "Marantovité jsou nejomezenější podskupina: polostín, nejvýše dvě až šest hodin přímého slunce denně, s výslovným upozorněním, že přímé slunce list spálí. Stojí za to pamatovat, že fenestrace monstery — ty charakteristické díry — závisí na dostatku světla a že pravý filodendron tvoří hluboce dělené listy, ale bez děr. Pokud si polohy pokojů popisujete podle světových stran, pamatujte, že v našich zeměpisných šířkách přichází nejsilnější světlo od jihu a nejmírnější od severu."
+        ],
+        "checklist": [
+          "Jasné nepřímé světlo je ideál pro téměř celou skupinu.",
+          "Marantovité: polostín, nejvýše dvě až šest hodin přímého slunce.",
+          "Suché kulaté skvrny na listu ukazují na příliš mnoho slunce.",
+          "Žloutnoucí spodní listy s odumřelým vrcholem: málo světla nebo příliš vody.",
+          "Chcete-li u monstery fenestraci, přidejte nejdřív světlo, teprve pak měňte cokoli jiného."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "Tady stačí univerzální organický substrát pro pokojovky — tahle skupina nemá ani minerální nároky sukulentů, ani rašelinové nároky kapradin. Techniku mění zádržnost: substráty bohaté na rašelinu drží vlhkost déle, směsi s kůrou, pískem nebo perlitem odvádějí vodu rychleji. Vybírejte podle svého zálivkového návyku a klimatu v bytě. Jedna důležitá oprava: vrstva kamínků na dně květináče drenáž nezlepšuje — spíš drží vlhkost uvnitř květináče.",
+          "Mezi zdroji je doložený skutečný rozpor a řídit se má tím konzervativnějším čtením. U dracén jedna poradenská služba říká vyhýbat se substrátům s vysokým podílem perlitu, držet pH mezi 6,0 a 6,5 a nepoužívat hnojiva se superfosfátem, protože dracéna je velmi citlivá na fluorid; u marantovitých jiná poradenská služba doporučuje zapracovat perlit nebo vermikulit — a marantovité jsou na fluorid citlivé také. Výslovné sladění neexistuje: u těchto dvou dejte přednost vermikulitu nebo jemné kůře před perlitem a používejte destilovanou nebo dešťovou vodu. Hnojte umírněně — hnědé, zkroucené špičky jsou známkou přehnojení a velmi pomalu rostoucí zamiokulkas potřebuje za celou sezonu jen jednu až dvě dávky."
+        ],
+        "checklist": [
+          "Univerzální substrát funguje; zádržnost dolaďte kůrou nebo perlitem.",
+          "Nedávejte na dno květináče vrstvu kamínků — vodu neodvede.",
+          "Dracény a marantovité: raději vermikulit nebo jemná kůra než perlit.",
+          "Držte pH u dracény mezi 6,0 a 6,5 a vyhněte se superfosfátu.",
+          "Hnědé zkroucené špičky: dřív než cokoli jiného omezte hnojení."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "Tohle je skupina pokojovek s nejkoncentrovanějším rizikem toxicity a příčinou je šťavelan vápenatý. Všechny části filodendronu jsou při požití jedovaté: krystaly způsobují pálení a podráždění úst, rtů a jazyka, nadměrné slinění, zvracení a potíže s polykáním. Zamiokulkas je klasifikován jako nebezpečný pro domácí zvířata. Míza marantovitých může dráždit pokožku. Žádná z těchto rostlin není nebezpečná jen tím, že ji máte doma — riziko je požití a dlouhodobý kontakt s mízou, takže řez a přesazování berte jako práci v rukavicích, po níž si umyjete ruce.",
+          "Existuje i menší, ale reálné fyzické riziko: samonosné filodendrony mají křehké řapíky, které se snadno zlomí, takže se vyplatí nedávat je do průchozích míst. A jedno pozorování, které ušetří leknutí: černé skvrny na stonku zamiokulkasu jsou normální a značí zdravý růst, ne chorobu."
+        ],
+        "checklist": [
+          "Držte tyto rostliny mimo dosah malých dětí a domácích zvířat.",
+          "Při řezu nebo přesazování noste rukavice a poté si umyjte ruce.",
+          "Nenechávejte opadané listy tam, kde na ně dosáhnou zvířata okusující rostliny.",
+          "Samonosné typy nedávejte do průchozích míst: řapíky se snadno lámou.",
+          "Černé skvrny na stonku zamiokulkasu jsou normální, ne choroba."
+        ]
+      }
+    }
+  },
+  "fern": {
+    "label": "Kapradiny a stínomilné rostliny",
+    "topics": {
+      "watering": {
+        "advice": [
+          "Cílem je půda, která je trvale jen sotva vlhká, nikdy zcela nevyschne a nikdy nezůstane stát ve vodě v misce. Nejdražším pojmovým omylem téhle skupiny je zaměňovat stálou vlhkost za trvale rozbahněný květináč: zdroje v jedné a téže větě říkají, že substrát musí zadržovat vlhkost a rychle odvádět vodu, protože kořen pořád potřebuje kyslík. Kořenová hniloba se u kapradiny objeví přesně tak jako u kaktusu, jen s daleko menším množstvím vody. A chybový signál je obousměrně nejednoznačný — opad lístků nastává z přemokření i z nedostatku vody.",
+          "Vzdušná vlhkost je pro tuto skupinu limitující faktor, ne pohodlí: praktický cíl leží mezi 30 % a 50 % a kolem 50 % u druhů s jemnými listy, jako je netíkovec. Hnědé špičky u kapradiny jsou v prvé řadě diagnózou suchého vzduchu — ne suchého substrátu — a další zálivka vede k hnilobě, aniž by příznak spravila. Metody v pořadí spolehlivosti: dvojitý květináč s vlhkým rašeliníkem, miska s oblázky a asi šesti milimetry vody, kde se květináč vody nedotýká, zvlhčovač, terárium nebo koupelna pro nejcitlivější druhy a teprve pak občasné lehké rosení. Štěrk v misce vyměňte nebo umyjte každé tři měsíce."
+        ],
+        "checklist": [
+          "Držte substrát sotva vlhký a nikdy ho nenechte úplně vyschnout.",
+          "Nenechávejte vodu stát v misce: je to přímá cesta ke kořenové hnilobě.",
+          "Hnědé špičky znamenají nízkou vzdušnou vlhkost — řešte vzduch, nezalévejte víc.",
+          "Dejte přednost dvojitému květináči s rašeliníkem nebo misce s oblázky před rosením.",
+          "Štěrk v misce umyjte nebo vyměňte každé tři měsíce."
+        ]
+      },
+      "light": {
+        "advice": [
+          "Ideální je mírné nepřímé světlo, s rostlinou u chladného okna — u nás tedy severního — nebo u okna východního. Přímé horké okno listy poškozuje; pokud je to vaše jediná možnost, ztlumte intenzitu lehkou záclonou. V číslech je cílovým pásmem slabé až střední světlo, mezi 800 a 1600 luxy.",
+          "Uvnitř skupiny existuje skutečná rozmanitost: některé druhy snesou slabé světlo, jiné chtějí jasné nepřímé nebo filtrované slunce, takže sledujte spíš svou konkrétní rostlinu než jediné číslo. Sluncem poškozené listy mají téměř vždy zřejmou příčinu — přímé horké okno — a náprava je prostě přemístit rostlinu nebo světlo filtrovat."
+        ],
+        "checklist": [
+          "Dejte přednost chladnému oknu v bytě, nebo východnímu.",
+          "Vyhněte se přímému slunci z horkého okna; není-li zbytí, použijte lehkou záclonu.",
+          "Mířte do slabého až středního pásma, mezi 800 a 1600 luxy.",
+          "Spálené listy jsou známkou přímého slunce, ne žízně."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "Substrát tu musí zvládnout dvě věci naráz: zadržovat vlhkost a rychle odvádět vodu. Jedním ověřeným receptem jsou stejné díly běžného substrátu pro pokojovky a rašeliny nebo listovky, s výslovným požadavkem, aby rychle odváděl vodu a předešel tak kořenové hnilobě. Jiný kombinuje rašelinu nebo rašeliník pro zádržnost, písek nebo štěrk pro drenáž a sterilizovanou hlinitou zeminu, s přídavkem dolomitického vápence a kostní moučky. Je to přesný opak sukulentů: tady dominuje organický podíl a drenáž zajišťuje hrubý materiál, ne minerální poměr. A znovu: vrstva kamínků na dně květináče vodu neodvádí.",
+          "Hnojení je nejzdrženlivější ze všech skupin pokojovek: jednou měsíčně během vegetační sezony, zhruba poloviční doporučenou dávkou, v zimě vůbec — a vůbec po dobu šesti měsíců po dělení nebo přesazení. Žádná jiná pokojová skupina nemá tak dlouhou pauzu a důvod je přímý: kapradiny při přehnojení trpí spálením listů. Jedno chemické varování je pro tuto skupinu specifické: postřiky proti škůdcům mnoha kapradinám škodí, takže si pečlivě přečtěte etiketu a přípravek nejdřív vyzkoušejte na malé ploše. Proti škůdcům dejte přednost mechanickým metodám, například silnému proudu vody."
+        ],
+        "checklist": [
+          "Používejte substrát, který drží vlhkost a přesto rychle odvádí vodu.",
+          "Hnojte polovičním roztokem, jednou měsíčně během vegetační sezony.",
+          "Nehnojte v zimě ani šest měsíců po dělení či přesazení.",
+          "Každý postřik vyzkoušejte na jediném listu, než ošetříte celou rostlinu.",
+          "Přesazujte a dělte časně na jaře a týdny poté udržujte vysokou vzdušnou vlhkost."
+        ]
+      }
+    }
+  },
+  "fruitVeg": {
+    "label": "Ovocné stromy a zelenina",
+    "topics": {
+      "watering": {
+        "advice": [
+          "Tady se zálivka měří jako týdenní úhrn a má definovaná fenologická okna. Většina zeleniny chce 25 až 50 milimetrů týdně — tedy zhruba dva a půl až pět centimetrů srážek — s jasnými vrcholy: kukuřice cukrová chce 40 až 65 milimetrů během metání, kvetení blizen a nalévání palic; fazole chtějí 25 až 40 milimetrů během kvetení a nalévání lusků. Rozpětí je interval, ne pevné číslo — suché klima ho posouvá nahoru, vlhké dolů. Na hlinité půdě pronikne 25 milimetrů vody asi patnáct centimetrů do profilu, což vám umožní počítat: promočit třicet centimetrů znamená zhruba 50 milimetrů dodané vody.",
+          "Mělká zálivka tady není jen méně účinná: přerušuje transport vápníku. Vápník se pohybuje s transpiračním proudem a nepřesouvá se ze starých pletiv do nových plodů, takže cykly vyschnutí a promáčení plodí květnou hnilobu i při dostatku vápníku v půdě. Rajčata jsou vysoce citlivá na nepravidelnou zálivku a odpovídají květnou hnilobou a praskáním; papriky odpovídají opadem květů; okurka stresovaná v reprodukční fázi dá hořké a deformované plody. Písčitá půda chce kratší a častější zálivku; jílovitá chce méně častou a hlubší."
+        ],
+        "checklist": [
+          "Pracujte s pásmem 25 až 50 milimetrů týdně, počítejte déšť i závlahu dohromady.",
+          "Nezmeškejte kvetení a nalévání plodů: to je okno, které stojí úrodu.",
+          "Dejte přednost hluboké zálivce s odstupem před krátkými denními dávkami.",
+          "Květná hniloba se řeší srovnáním zálivky, ne postřikem vápníkem.",
+          "Přizpůsobte se půdě: písčitá chce vyšší četnost, jílovitá větší hloubku."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "Tohle je jediná skupina, jejíž sklizeň odebírá živiny ze systému každý jediný rok, a skoro každý rozdíl v péči z toho plyne. Hnojení je opakované a rozdělené do přihnojování, přičemž poměr se během cyklu mění — u polního rajčete například přihnojování začíná bohatší na fosfor a s nástupem plodnosti se zvyšuje draslík. Nadbytek dusíku má reálnou cenu: fíky, které nedozrají, a nadměrný růst výhonů během časného kvetení a plodnosti, což je jeden z největších původců květné hniloby u rajčete a papriky.",
+          "pH je rozhodující a uvnitř skupiny se hodně liší. Jabloni se daří mezi 5,8 a 6,5, s opakovaným rozborem zhruba každé tři roky; většina listové zeleniny sedí mezi 6,0 a 6,5; a borůvka je radikální výjimka, nejlépe jí je mezi 4,8 a 5,2 a potřebuje elementární síru dodanou nejméně rok před výsadbou. Dvě pravidla platí pro všechno: držte hnojivo alespoň patnáct centimetrů od kmene a vždy ho aplikujte na vlhkou půdu, aby nespálilo kořeny. A tohle je jediná skupina se střídáním podle botanických čeledí — plodiny téže čeledi jsou náchylné ke stejným chorobám a hmyzu, takže neopakujte čeleď na stejném záhonu tři až čtyři roky, a raději déle."
+        ],
+        "checklist": [
+          "Hnojte v dělených dávkách přihnojováním, ne jedinou dávkou.",
+          "Nechte půdu rozebrat a upravte pH pro danou plodinu, ne pro záhon jako celek.",
+          "Držte hnojivo alespoň patnáct centimetrů od kmene, vždy na vlhké půdě.",
+          "Neopakujte tutéž botanickou čeleď na záhonu tři až čtyři roky.",
+          "Nadbytek dusíku oddaluje zrání a živí květnou hnilobu."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Probírka plodů je povinná operace, která v žádné jiné skupině neexistuje. Příliš bohatá násada dá malé plody, polámané větve a střídavou plodnost, protože strom s plnou násadou dává téměř všechnu energii do plodů a málo jí zbývá na založení květů pro příští rok. Jablka proberte ručně do šesti týdnů od plného květu a nechte plody asi dvacet až pětadvacet centimetrů od sebe na větvi; hrušky, švestky a meruňky jdou patnáct až dvacet centimetrů od sebe. Přirozený červnový opad, kdy mají plody kolem jednoho až dvou a půl centimetru v průměru, ruční probírku nenahrazuje — vždy ponechte největší plod ze shluku, pokud není poškozený.",
+          "Obrázek doplňují dvě operace. Řez jabloně začíná dnem, kdy ji zasadíte; jeho odkládání dává slabý růst a opožděnou plodnost. A u borůvky je odstranění každého květu v prvním a druhém roce právě to, co rostlině umožní se zakořenit — vzdát se dvou sklizní kupuje ty následující. U ovocných stromů dodržujte konec hnojení v pozdním létě, protože tvorba plodů a vyzrávání dřeva soupeří o tentýž produkt fotosyntézy."
+        ],
+        "checklist": [
+          "Plody proberte do šesti týdnů od plného květu.",
+          "V každém shluku ponechte největší plod, pokud není poškozený.",
+          "Nespoléhejte na přirozený opad: ruční probírku nenahradí.",
+          "Tvarovat korunu začněte už v roce výsadby, ne později.",
+          "Ovocné stromy přestaňte hnojit koncem léta."
+        ]
+      }
+    }
+  },
+  "flowering": {
+    "label": "Kvetoucí a okrasné rostliny",
+    "topics": {
+      "watering": {
+        "advice": [
+          "Zálivka je tu týdenní úhrn, ne cyklus promočit a nechat vyschnout: letničky a trvalky chtějí alespoň 25 až 40 milimetrů vody týdně, přičemž se počítá déšť i závlaha dohromady, a nejlepší je zalévat brzy, aby listy rychle oschly. U růží se totéž říká jinak — hluboká zálivka podporuje hluboký kořenový systém, zatímco častá lehká zálivka nutí kořeny tvořit se příliš blízko povrchu půdy.",
+          "Zdraví rostliny na tom závisí víc, než se zdá. Růže s opakovanou černou skvrnitostí má téměř vždy na konci dne mokré listy a kolem sebe stojatý vzduch: ranní slunce, hadicová zálivka místo postřikovače a dobrá cirkulace vzduchu vyřeší víc než jakýkoli postřik."
+        ],
+        "checklist": [
+          "Dopřejte alespoň 25 až 40 milimetrů vody týdně, i se srážkami.",
+          "Zalévejte brzy, aby listy oschly před setměním.",
+          "Dejte přednost hluboké zálivce s odstupem před lehkou a častou.",
+          "U růží smáčejte půdu, ne list."
+        ]
+      },
+      "light": {
+        "advice": [
+          "Většina letniček potřebuje k dobrému kvetení plné slunce alespoň čtyři až šest hodin denně. Růže chtějí víc: šest až osm hodin přímého slunce, a zvlášť záleží na ranním slunci, protože osuší listy a pomáhá předcházet chorobám.",
+          "Jedna diagnóza mate spoustu lidí: polehlá trvalka bez struktury obvykle znamená nedostatek světla — ne nedostatek hnojiva. Víc hnojení to nespraví; přesazení na jiné místo ano."
+        ],
+        "checklist": [
+          "Letničky: minimálně čtyři až šest hodin plného slunce denně.",
+          "Růže: šest až osm hodin, s prioritou na ranní slunce.",
+          "Polehlá, rozvalená trvalka potřebuje přesadit, ne přihnojit.",
+          "Než se rozhodnete pro záhon, sledujte celý rok, kam dopadá slunce."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "Příprava záhonu je tu hlubší než v květináči: patnáct až pětadvacet centimetrů pro letničky a dvacet až pětadvacet pro trvalky. Do jílovité půdy zapracujte alespoň pět centimetrů kompostované borové kůry, kompostu nebo listovky; do písčité pět až osm centimetrů organického materiálu, který drží vlhkost. Cílové pH pro trvalky je 6,0 až 6,5. Mulč je tu tenčí než u dřevin: pět až osm centimetrů pro letničky a jen dva až pět pro trvalky, s výslovným varováním před příliš silným mulčováním, protože kořenový krček trvalky pod ním zahnívá.",
+          "Nároky na výživu jsou střední a výslovně omezené: pokryje je kompletní hnojivo dodané při přípravě a opakované zhruba v šestitýdenních intervalech. Daleko nad vzrostlou dřevinou, která nepotřebuje skoro nic, a hluboko pod dospělým ovocným stromem. A jedna důležitá oprava rozšířeného zvyku: nepoužívejte hnojivo s vysokým obsahem fosforu jako pravidlo pro kvetení. Vysoké dávky fosforu počet květů nezvyšují a chronický nadbytek váže mikroživiny, jako je železo a zinek, což dává zakrslé rostliny a žloutnoucí listy — a přebytek fosforu klesá velmi pomalu, což může trvat roky. Bezpečným vodítkem je vyvážené hnojivo plus rozbor půdy. Známka nadbytku v květináči: bílý povlak na okraji, hnědé špičky listů a ztmavlé kořeny."
+        ],
+        "checklist": [
+          "Připravte půdu do hloubky: patnáct až pětadvacet centimetrů, se zapracovanou organickou hmotou.",
+          "Na trvalky dejte jen dva až pět centimetrů mulče a držte ho dál od kořenového krčku.",
+          "Hnojte vyváženou formulí a opakujte každých šest týdnů.",
+          "Nepoužívejte hnojivo s vysokým obsahem fosforu k vynucení květu.",
+          "Bílý povlak na okraji květináče: propláchněte velkým množstvím vody nebo vyměňte substrát."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Operací, která tuhle skupinu definuje, je odstraňování odkvetlých květů. Odebrání odkvetlých květů pobízí rostlinu, aby vytvořila další, místo aby na tuto sezonu kvetení uzavřela; je to jediná kategorie, kde odstranění rozmnožovacího orgánu zvyšuje produkt, o který stojíte. Vyštipujte je prsty nebo použijte ostré nůžky a klidně si vezměte i kus stonku, ne jen samotný květ. Kromě vlivu na kvetení to snižuje výskyt chorob, které se vyvíjejí na tlejících zbytcích rostlin. Při výsadbě letniček vyštipujte poupata a květy, aby se rostlina lépe větvila; u trvalek po odkvětu seřízněte až k zemi, aby ze základu narostly nové listy.",
+          "Cibuloviny jsou zrcadlovým obrazem: po květu je prací dobíjení. Odkvetlý květ odstraňte, aby se netvořily tobolky se semeny, ale nikdy ne list — listy nechte, dokud samy nezačnou žloutnout a odumírat, a nesvazujte je ani neplette do copánků, protože to snižuje množství světla, které listy zachytí, a s ním i fotosyntézu, jež plní cibuli na příští rok. Cibule dělte, až listy odumřou a rostliny jsou v dormanci, a dceřiné cibulky oddělujte jemným pootočením a tahem; malým dílkům může trvat rok až dva, než znovu vykvetou. A na podzim zvažte, že semeníky ponecháte na místě: přes zimu jsou výživným zdrojem potravy pro volně žijící živočichy."
+        ],
+        "checklist": [
+          "Odstraňujte odkvetlé květy dřív, než nasadí semena.",
+          "Při výsadbě letniček vyštipujte poupata, aby se rostlina rozvětvila.",
+          "U cibulovin odstřihněte květ, ale nikdy list.",
+          "Nikdy nesvazujte ani nezaplétejte listy cibulovin.",
+          "Na podzim nechte část semeníků pro volně žijící živočichy."
+        ]
+      }
+    }
+  },
+  "woody": {
+    "label": "Stromy a dřevnaté keře",
+    "topics": {
+      "watering": {
+        "advice": [
+          "Tohle je jediná skupina, jejíž doba zakořeňování se měří v letech: zhruba rok na každé dva a půl centimetru průměru kmene. Čerstvě vysazený strom chce první dva týdny denní zálivku, od třetího do dvanáctého týdne jednou za dva až tři dny, pak jednou týdně do prvních mrazů a znovu jednou týdně i ve druhém roce. Objem má vzorec: čtyři až šest litrů na každé dva a půl centimetru průměru kmene při každé zálivce, rozdělené po celé kořenové zóně a ne ke kmeni, s promočením patnácti až dvaadvaceti centimetrů půdy.",
+          "Hluboká zálivka podporuje silné kořeny a zlepšuje odolnost vůči horku a suchu; častá mělká zálivka buduje povrchový, závislý kořenový systém — a ten se u dřeviny při vichřici také vytrhne. Proto čerstvě vysazený strom, který vadne, přestože ho zaléváte každý den, obvykle dostává vodu na špatné místo a v nedostatečném objemu. Kyselomilné keře, jako jsou azalky, chtějí hlubokou zálivku s promočením alespoň patnácti až dvaceti centimetrů a v písčité půdě mohou v prvním roce potřebovat zálivku dvakrát týdně."
+        ],
+        "checklist": [
+          "Zalévejte celou kořenovou zónu, nikdy ne kmen.",
+          "Dodejte pokaždé čtyři až šest litrů na každé dva a půl centimetru průměru kmene.",
+          "Promočte patnáct až dvaadvacet centimetrů půdního profilu.",
+          "Počítejte zhruba rok zakořeňování na každé dva a půl centimetru kmene.",
+          "Dejte přednost hluboké zálivce s odstupem před denním mělkým zaléváním."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "Vzrostlá dřevina v dobré půdě hnojivo prostě nepotřebuje: ne všechny rostliny v zahradě je nutné hnojit a vzrostlé stromy a keře v příznivých půdních podmínkách vyžadují hnojivo jen málo, nebo vůbec. Stromy v hnojeném trávníku si už pomáhají samy, protože jejich kořeny zachycují živiny dodané trávě. Když už hnojíte, strop je daný normou: pomalu rozpustný dusík v dávce jeden až dva kilogramy na 100 metrů čtverečních za rok, nikdy víc než tři; rychle rozpustný půl kilogramu až kilogram, se stropem dva kilogramy. Aplikace pokrývá celou plochu průmětu koruny, od kořenových náběhů až po konce větví, a vždy na vlhkou půdu.",
+          "Kyselomilné keře jsou podskupinou, která mění všechno. Azalky a rododendrony chtějí pH mezi 4,5 a 6,0, koření mělce a snadno je poškodí nadměrná půdní vlhkost; snesou kyselé hnojivo v poměru blízkém 2-1-1, aplikované lehce na jaře a v prvních letních týdnech, a nikdy hnojivo s vysokým obsahem dusíku v pozdním podzimu, protože to oddaluje dormanci. Žluté mladé listy se zelenou žilnatinou naznačují vysoké pH, které váže železo — ale v kyselých jílovitých půdách je železo snadno dostupné, takže dřív než pH vinit prověřte podmáčení. Mulč je nástroj i zbraň: pět až deset centimetrů silný, u mladého stromu držený osm až třináct centimetrů od kmene a u vzrostlého dvacet až pětadvacet, rozprostřený až k okapové linii koruny. Cokoli nad to vytváří mulčovou sopku, která zabíjí pomalu: vzduch nemůže dovnitř, půda pod ní přijde o kyslík, stálá vlhkost usmrtí lýko a kořeny hladovějí po sacharidech."
+        ],
+        "checklist": [
+          "Nehnojte vzrostlou dřevinu v dobré půdě — téměř nikdy to nepotřebuje.",
+          "Pokud hnojíte, pokryjte celý průmět koruny a vždy na vlhkou půdu.",
+          "Kyselomilné druhy: pH mezi 4,5 a 6,0 a lehká dávka kyselého hnojiva na jaře.",
+          "Držte mulč dál od kmene, v plochém prstenci.",
+          "Pět až deset centimetrů mulče stačí; víc už je sopka."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Řez je nevratný a má anatomická pravidla. Řez vede těsně za větevním límečkem — tím ztluštělým místem na bázi větve, které funguje jako přirozená bariéra proti organismům způsobujícím hnilobu. Větve o průměru nad čtyři centimetry vyžadují trojfázový řez, aby kůra nestrhla pás po kmeni. A žádné balzámy na rány: výzkum ukázal, že nátěry na rány ani jiné prostředky po řezu hnilobě nezabrání.",
+          "O načasování rozhoduje dřevo, které kvete, ne kalendář: rostliny kvetoucí na loňském dřevě — zlatice, azalka, šeřík — se řežou hned po odkvětu a ty, které kvetou na letošním dřevě, ještě před rašením. Keř, který nikdy nekvete, byl téměř vždy řezán ve špatnou dobu. Dejte přednost probírce před zakracováním, protože probírka podporuje růst uvnitř rostliny a vrací jí přirozený habitus, zatímco zakracování zahušťuje obvod a zatemňuje vnitřek, přičemž nový růst se soustředí do patnácti až dvaceti centimetrů od řezu. Starý keř zmladíte bez šoku pravidlem jedné třetiny rozloženým do tří let. Držte se konzervativního ročního stropu kolem 25 % živé koruny a nikdy stromu nesesazujte korunu: sesazení odebere polovinu i více olistěné koruny, zanechá rány, které rostlina nedokáže uzavřít, a vystaví kůru spálení sluncem. Vyhněte se také řezu v deseti týdnech před prvním silným mrazem ve vaší oblasti."
+        ],
+        "checklist": [
+          "Řežte těsně za větevním límečkem, nikdy zarovno s kmenem.",
+          "U větví o průměru nad čtyři centimetry použijte trojfázový řez.",
+          "Nepoužívejte balzám na rány: hnilobě nezabrání.",
+          "Rostliny kvetoucí na starém dřevě se řežou hned po odkvětu.",
+          "Odeberte nanejvýš kolem 25 % živé koruny za rok a nikdy stromu nesesazujte korunu."
+        ]
+      }
+    }
+  },
+  "orchid": {
+    "label": "Orchideje a epifyty",
+    "topics": {
+      "watering": {
+        "advice": [
+          "Žádný kalendář zálivky tu neexistuje, jen kritérium proschnutí: zalévejte, jakmile rostlina proschne, a žádná kouzelná formule typu zalít patnácticentimetrový květináč každých sedm dní neplatí. Když zaléváte, zalévejte pořádně — voda musí několik minut volně vytékat z odtokových otvorů, dokud není substrát zcela nasycený. Pojem hluboké zálivky se v této skupině obrací: není tu žádný půdní profil k promočení, jen úplné nasycení následované rychlým proschnutím. Lehké denní rosení je ekvivalentem mělké zálivky na záhoně: smáčí povrch, drží vlhkost na špatných místech a substrát nikdy nenasytí.",
+          "Na kvalitě vody tu záleží víc než v kterékoli jiné skupině, protože bez půdy chybí sorpční komplex, který by soli tlumil: používejte vlažnou vodu, nejlépe dešťovou, a nikdy změkčenou, která nese hodně sodíku. Nikdy nenechávejte květináč v misce. Každá podskupina má svou metodu: nádržkové bromélie přijímají vodu hlavně listy a nálevkou u báze, která má zůstat plná a jednou týdně se propláchnout, aby se v ní nekoncentrovaly minerály a nezabíjely špičky listů; tilandsie chtějí jednou týdně dvaceti- až třicetiminutovou koupel — jednou až dvakrát podle toho, jestli je v místnosti horko a sucho, nebo chládek a vlhko — a pak setřepat a obrátit dnem vzhůru, aby okapaly; a vánoční kaktus potřebuje po nasazení poupat rovnoměrně vlhký substrát, aby je neshodil."
+        ],
+        "checklist": [
+          "Zalévejte, když rostlina proschne, ne podle kalendáře.",
+          "Nasyťte substrát, dokud voda několik minut volně nevytéká.",
+          "Používejte vlažnou vodu, pokud možno dešťovou, a nikdy změkčenou.",
+          "Nikdy nenechávejte květináč stát v misce s vodou.",
+          "Nádržková bromélie: držte nálevku plnou a jednou týdně ji propláchněte."
+        ]
+      },
+      "light": {
+        "advice": [
+          "Většina pokojových orchidejí chce jednu až čtyři hodiny přímého slunce. Můrovcům se daří mezi 19 a 30 °C přes den a 16 až 19 °C v noci, ve východním nebo západním okně, mimo letní slunce a dál od topení a průvanu. Bromélie žádají dvanáct až šestnáct hodin poměrně jasného světla denně a listy podávají hlášení: dlouhé, tenké a zelenější listy znamenají málo světla; kratší, silnější a světlejší znamenají dostatek. Tilandsie chtějí jasné filtrované světlo, nikdy přímé slunce.",
+          "Existuje jeden případ, kdy fotoperioda převáží nad intenzitou. Vánoční kaktusy a jejich příbuzní vyžadují čtrnáct a více hodin nepřerušené tmy denně, počínaje zhruba polovinou září na severní polokouli, a to nejméně šest týdnů — a provozní varování je bez obalu: i dvě hodiny přerušeného osvětlení zablokují nasazení květních poupat. Rozsvícená lampa v místnosti stačí ke zrušení celoročního kvetení."
+        ],
+        "checklist": [
+          "Pokojové orchideje: jedna až čtyři hodiny přímého slunce.",
+          "Můrovec: východní nebo západní okno, dál od topení a průvanu.",
+          "Bromélie s dlouhými, tenkými a tmavými listy si říká o víc světla.",
+          "Tilandsie: jasné filtrované světlo, nikdy přímé slunce.",
+          "Vánoční kaktus: šest týdnů nepřerušené noční tmy, aby nasadil poupata."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "V téhle skupině není žádná zemina a běžný substrát zabíjí: nikdy nepoužívejte hlinité ani univerzální substráty, protože udusí kořen pokrytý velamenem. A navíc má substrát datum spotřeby a přesazování je povinné, ne volitelné — kůru je třeba měnit zhruba každé dva roky a ještě před tím je signál fyzický: přesazujte, jakmile z květináče začnou při zálivce vyplavovat drobné úlomky substrátu. Rozložená kůra je méně vzdušná a hustší, drží vodu déle a kořeny hnijí. Je to jediná skupina, kde je příčinou programované smrti sám substrát.",
+          "Volba mezi kůrou a rašeliníkem je rozhodnutí o prostředí, ne o vkusu: hrubá kůra do vlhké místnosti nebo skleníku; směs s vyšším podílem rašeliníku a vláken do suchého, slunného interiéru, s většími rozestupy mezi zálivkami a s přesazením hned po odkvětu. Směs kůry, dřevěného uhlí a perlitu je vyvážený komerční standard. Květináč má být jen tak velký, aby se do něj vešel kořenový systém — příliš velká nádoba drží vlhkost a kořenům orchidejí škodí. Hnojení je zásadně naředěné: poloviční dávka z etikety, s malým množstvím močoviny nebo vůbec žádnou, týdně v létě a jednou za čtrnáct dní na podzim a v zimě, přičemž každou čtvrtou zálivku hnojení vynecháte, aby se vyplavily soli. Bromélie jdou ještě níž, na čtvrtinu až osminu dávky. A pamatujte, že několik zástupců této skupiny je monokarpických: bromélie, která po odkvětu pomalu chřadne, dokončuje svůj normální cyklus, není nemocná — odnože si ponechte."
+        ],
+        "checklist": [
+          "Nikdy nesázejte do běžné zeminy ani univerzálního substrátu.",
+          "Kůru vyměňte každé dva roky, nebo jakmile se při zálivce vyplavují úlomky.",
+          "Použijte květináč přesně na míru kořenovému systému.",
+          "Hnojte polovičním roztokem a každou čtvrtou zálivku hnojení vynechejte.",
+          "Bromélie hynoucí po odkvětu je normální cyklus: odnože si ponechte."
+        ]
+      }
+    }
+  },
+  "herb": {
+    "label": "Kuchyňské a aromatické byliny",
+    "topics": {
+      "watering": {
+        "advice": [
+          "Tahle skupina se dělí na dvě poloviny a zacházet s oběma podle stejného kalendáře je strukturální chyba. Dřevnaté středomořské byliny — rozmarýn, tymián, oregano, šalvěj, levandule — chtějí zálivku s odstupy a se skutečným proschnutím mezi nimi: jejich rizikem je podmáčený kořen v zimě, ne sucho v létě. Rozmarýn nesnáší mokré kořeny, zvlášť v zimě, a jakmile se v půdě zakoření, zálivku už sotva potřebuje; v květináči zalévejte v obdobích sucha, ale substrát nikdy nenechte podmáčet.",
+          "Listové byliny — bazalka, petržel, máta, meduňka — chtějí pravý opak: poměrně stálý přísun půdní vlhkosti, protože vodní stres urychluje vybíhání do květu a list tuhne. Zalévejte ráno, aby listy do noci oschly, a u bazalky se vyhněte smáčení listů: použijte kapkovou závlahu nebo hadici místo postřikovače, protože mokrý list ve stojatém vzduchu je pozvánkou pro plíseň."
+        ],
+        "checklist": [
+          "Než nastavíte jakýkoli režim zálivky, oddělte středomořské byliny od listových.",
+          "Středomořské: zalévejte s odstupy a nechte půdu mezi zálivkami skutečně proschnout.",
+          "Listové byliny: držte vlhkost stálou, aby nevybíhaly do květu.",
+          "Zalévejte ráno, nikdy na konci dne.",
+          "U bazalky smáčejte půdu, ne list."
+        ]
+      },
+      "light": {
+        "advice": [
+          "Téměř všem bylinám se nejlépe daří na místě, které je slunné alespoň šest hodin denně — a je to slunce, co tvoří silici, což znamená, že je to slunce, co tvoří vůni. Bazalka dává přednost plnému slunci, ale docela dobře roste i při šesti hodinách částečného oslunění.",
+          "Výjimky jsou dobře známé a stojí za respekt: petržel a máta dávají přednost polostínu a na silném plném slunci strádají. Pokud vám petržel nebo máta živoří v nejslunnějším záhonu, může to být přesně ten problém."
+        ],
+        "checklist": [
+          "U většiny bylin mířte na alespoň šest hodin slunce denně.",
+          "Petržel a máta polostín snesou a někdy mu dávají přednost.",
+          "Méně slunce znamená méně silic a méně vůně.",
+          "Pár květináčů si nechte u kuchyně, na časté sklízení."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "Drenáž má tady větší cenu než úrodnost a tohle je jediná skupina, ve které je vysoká úrodnost ztrátou: velmi úrodné půdy mají sklon plodit bujné listy bez chuti. Obecným cílem pH je 6 až 7, s mírným obsahem organické hmoty. Do jílovité půdy zapracujte pět až osm centimetrů jemné borové kůry, drobného štěrku nebo hrubého kompostu do hloubky dvaceti až třiceti centimetrů; do písčité stejnou hloubku materiálu, který drží vlhkost. Vyvýšený záhon s mulčem ze štěrku je v této skupině běžnou praxí, ne luxusem.",
+          "Rozmarýn v těžké půdě se nenapravuje — přesazuje se, do vyvýšeného záhonu nebo do květináče s až 25 % zahradnického štěrku v objemu. Rozmarýn rostoucí v půdě nepotřebuje hnojit vůbec; ten v květináči dostane koncem jara špetku univerzálního granulovaného hnojiva. Bazalka je výjimka, která se chová jako zelenina a při výsadbě bere odměřenou dávku, doplněnou jen tehdy, když se růst zastaví. U koriandru udrží lehké dávky dusíku rostliny bujné, ale zdroj výslovně varuje před sklonem k přehnojování. A pozor na mátu: sázejte ji do nádoby bez dna zapuštěné do záhonu, protože se šíří oddenky a zabere celý prostor."
+        ],
+        "checklist": [
+          "Na prvním místě drenáž: vyvýšený záhon, zapracovaný štěrk nebo jemná kůra.",
+          "Držte pH mezi 6 a 7 a úrodnost mírnou.",
+          "Bujná bylina bez chuti je známkou přehnojení.",
+          "Rozmarýn v půdě hnojit nepotřebuje.",
+          "Mátu sázejte do nádoby bez dna zapuštěné do záhonu."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Sklizeň má fyziologické okno: byliny je třeba sklízet těsně před rozkvětem, kdy jsou silice na vrcholu. A má i svou denní hodinu — časné ráno, poté co oschne rosa, ale než zesílí horko. Žádná jiná skupina nemá denní dobu jako proměnnou kvality a bylina utržená odpoledne má znatelně slabší vůni. Aromatické květy se sbírají dřív, než se plně otevřou.",
+          "Řez tu udržuje habitus i chuť a každý rod má vlastní pravidlo. U bazalky pravidelně vyštipujte vrcholy a květní poupata odstraňujte, jakmile se objeví, jinak list zhořkne a rostlina přestane růst; sklízejte vrcholky výhonů s jedním nebo dvěma páry listů a nechte dost listoví na obrůstání. Rozmarýn dostane každý rok lehký sestřih po odkvětu, nikdy ne řez do starého dřeva — bez toho se vytáhne, zdřevnatí a zespodu vyholí. Šalvěj snese tvrdý řez časně na jaře, tymián se lehce sestřihne po odkvětu a vavřín se stříhá v létě. Máta se po odkvětu dá seříznout až asi pět centimetrů nad bází, aby obnovila listy."
+        ],
+        "checklist": [
+          "Sklízejte těsně před kvetením, kdy jsou silice na vrcholu.",
+          "Sklízejte časně ráno, jakmile oschne rosa.",
+          "U bazalky odstraňujte květní poupata, jakmile se objeví.",
+          "Rozmarýn po odkvětu jen lehce sestřihněte a nikdy nezasahujte do starého dřeva.",
+          "Mátu obnovte tak, že trs po odkvětu seříznete až k zemi."
+        ]
+      }
+    }
+  },
+  "pollinator": {
+    "label": "Opylující hmyz",
+    "topics": {
+      "role": {
+        "advice": [
+          "Asi třetina potravy, kterou jíme, závisí na činnosti opylovačů, a většinu té práce nedělá včela, kterou si právě představujete. Jen v Británii žije přes 270 druhů včel: kolem 26 čmeláků, více než 250 samotářských včel a jediný druh včely medonosné. Téměř všechny jsou samotářské — každá samice si hnízdo staví a zásobuje sama a umírá dřív, než se vylíhne další generace — a hnízdem téměř nikdy není úl: mnohé hnízdí v holé půdě, jiné v dutinách ve dřevě a čmeláci často obsazují chodby vyhrabané hlodavci.",
+          "V Brazílii je klíčovou skupinou bezžihadlé včely, Meliponini, původní v tropických a subtropických oblastech; jen ve státě Pará je s plodinami, jako je açaí, meloun a vodní meloun, spojeno odhadem 109 druhů. Skupina zdaleka nekončí u včel: brouci jsou považováni za jedny z prvních hmyzích návštěvníků květů, pestřenky opylují jako dospělci, zatímco jejich larvy žerou mšice, a k této službě přispívají i motýli, byť bez vibračního opylení, které dělá včely tak účinnými na jednu návštěvu."
+        ],
+        "checklist": [
+          "Většina včel je samotářská a úl nikdy nevytvoří.",
+          "Kuželovitá hromádka hlíny v trávníku je ústí činné hnízdní chodby.",
+          "Čisté kruhové výřezy v listu jsou včely čalounice sbírající materiál na hnízdo.",
+          "Pestřenka má dvě křídla; včely a vosy mají čtyři.",
+          "Žádné mšice znamená žádné larvy pestřenek: kořist je také zdroj."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "Skutečné riziko je nízké. Bodnutí na vlastní zahradě je nepravděpodobné, pokud se ke včelám chováte s respektem, a samotářské včely používají žihadlo jen v sebeobraně, když se s nimi hrubě zachází. Bezžihadlé včely, jak název říká, nebodají — což z nich dělá nejbezpečnější skupinu k pozorování zblízka i k chovu doma. Riziko bodnutí je v tomto sousedství soustředěno u sociálních vos, které schopnost obranného bodnutí u hnízda skutečně mají.",
+          "Obrázek uzavírají dvě výhrady. Larvy několika motýlů jsou žahavé housenky a to je úplně jiný příběh — než sáhnete na jakoukoli chlupatou housenku, podívejte se do skupiny škodlivého hmyzu. A chov bezžihadlých včel je regulovaná činnost, ne volná: ve státě Pará byli například chovatelé s nejvýše 99 úly osvobozeni od environmentálního povolení, ale stále se musí registrovat u zemědělské inspekce. Odběr divokého hnízda se řídí vlastními pravidly."
+        ],
+        "checklist": [
+          "Pozorujte a nesahejte: samotářská včela bodne, jen když ji stisknete.",
+          "Bezžihadlé včely nebodají — nejbezpečnější skupina k pozorování zblízka.",
+          "Od hnízd sociálních vos si držte odstup.",
+          "Nikdy nesahejte na chlupatou housenku: riziko je tam, ne u včel.",
+          "Chov původních včel vyžaduje registraci u příslušného úřadu."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Rozmanitost před množstvím: začněte osmi až deseti druhy domácích rostlin pokrývajícími jaro, léto a podzim, vysazenými ve skupinách alespoň metr širokých. Dejte přednost jednoduchým, otevřeným květům s jedinou vrstvou korunních lístků — plnokvěté odrůdy pyl a nektar skrývají nebo úplně postrádají. Nechte plevele v trávníku rozkvést tím, že budete sekat méně často, a zajistěte vodu, protože včely a další opylovači se občas potřebují napít. Jedna terénní metoda stojí za napodobení: sledujte, které rostliny jsou u vás v okolí u opylovačů oblíbené, a pěstujte jich víc.",
+          "Hnízdiště jsou zdroj. Ponechte plochy dobře propustné holé půdy na plném slunci, bez mulče, pro včely hnízdící v zemi, a hromádky hlíny v trávníku spíš tolerujte, než abyste je zarovnávali. Hmyzí hotel funguje s otvory zhruba 2 až 10 milimetrů širokými, rozestupem asi dva centimetry, hloubkou osm až deset centimetrů u menších otvorů a třináct až patnáct u větších, v neošetřeném dřevě, upevněný jeden až dva metry nad zemí na chráněném místě. A pravidlo, které váží víc než všechna ostatní: nikdy nestříkejte otevřené květy. Vyhněte se širokospektrým insekticidům; pokud musíte zasáhnout, aplikujte večer, kdy jsou opylovači méně aktivní."
+        ],
+        "checklist": [
+          "Vysaďte osm až deset domácích druhů pokrývajících všechna tři období.",
+          "Volte jednoduché květy s jedinou vrstvou lístků, ne plnokvěté.",
+          "Ponechte plochy holé, slunné půdy pro včely hnízdící v zemi.",
+          "Zajistěte celoročně mělkou a bezpečnou vodu.",
+          "Nikdy nestříkejte otevřené květy; pokud musíte zasáhnout, zasahujte večer."
+        ]
+      }
+    }
+  },
+  "beneficialInsect": {
+    "label": "Draví a užiteční členovci",
+    "topics": {
+      "role": {
+        "advice": [
+          "Tohle jsou přirození nepřátelé zahrady: predátoři, kteří za život zabijí a sežerou mnoho kořisti, a parazitoidi, jejichž larva se vyvíjí uvnitř jediného hostitele nebo na něm a nakonec ho usmrtí. Čísla jsou působivá — slunéčko může za život zhltnout až 5 000 mšic, střevlíci dokážou denně spotřebovat množství odpovídající vlastní hmotnosti a larva zlatoočky si vezme 100 až 150 mšic. U integrované ochrany postavené na přirozených nepřátelích byl napříč různými plodinami popsán pokles četnosti postřiků o 30 % až 40 %.",
+          "Vývojové stadium mění všechno a přesně tam se skrývá nejčastější chyba. U zlatooček a pestřenek je predátorem jen larva: dospělec žije z nektaru, pylu a medovice. Jinými slovy, ten podivný tvoreček na listu je obvykle spojenec, ne škůdce. Tři terénní znaky stojí za naučení: larva slunéčka je načervenalá a tvarem připomíná krokodýla; vajíčka zlatoočky sedí na vláknitých stopkách; a housenka nesoucí na hřbetě pár desítek malých bílých zámotků je už odsouzená a vypustí desítky parazitických vosiček — nechte ji přesně tam, kde je."
+        ],
+        "checklist": [
+          "Než zasáhnete, určete druh: mnoho podivných larev na listech jsou predátoři.",
+          "Larva slunéčka je načervenalá a tvarem připomíná krokodýla.",
+          "Vajíčka na vlasově tenkých stopkách patří zlatoočce, ne škůdci.",
+          "Housenka s bílými zámotky na hřbetě je už parazitovaná — nelikvidujte ji.",
+          "Kudlanka je nevybíravý predátor: žere i opylovače."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "Téměř nic tady nebodá. Z predátorů mají schopnost obranného bodnutí jen sociální vosy; z parazitoidů jen lovčí vosy, které staví hnízda v zemi nebo z bláta. Lumci a lumčíci používají to dlouhé žihadlo výhradně jako kladélko a k obraně neslouží.",
+          "Dvě čeledi ale při manipulaci koušou: zákeřnice zabodnou sosák a vstříknou trávicí enzymy a roupci vstřikují neurotoxické sliny. Neberte je do ruky. Kudlanka nábožná loví bleskovým pohybem loupeživých končetin a když ji držíte, kousne. A je tu jeden konkrétní případ: invazní slunéčko východní kouše lidi, zvlášť když uvízne mezi kůží a oblečením — kůži neprokousne ani nepřenáší nemoci, ale při vyrušení vypouští hemolymfu, která může trvale zabarvit stěny, závěsy a koberce, a jsou doloženy alergické reakce, jako je astma a kopřivka, přičemž citlivost nesouvisí s věkem člověka ani s jeho sklonem k alergiím. U tohoto brouka je doporučením utěsnit spáry a prahy, ne stříkat zahradu. Činné hnízdo sociálních vos se pozoruje z povzdálí."
+        ],
+        "checklist": [
+          "V této skupině bodají jen sociální vosy a vosy lovčí.",
+          "Neberte do ruky zákeřnici ani roupce.",
+          "Kudlanka kousne, když ji budete držet.",
+          "Invazní slunéčka v domě se řeší utěsněním spár, ne postřikem.",
+          "Vosí hnízda pozorujte z povzdálí."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Ochrana je lepší než nákup. Standardním doporučením je stanoviště a tolerance, ne vypouštění: chraňte tyto predátory tím, že se vyhnete pesticidům, které je hubí, že zvolíte rostliny poskytující jim pyl, nektar a úkryt, a že budete držet mravence pryč od napadených rostlin — mravenci brání mšice a červce před predátory výměnou za medovici. Mezi rostliny, které poradenské služby jmenují jako potravu dospělců, patří kopr, fenykl, echinacea, třapatka, klejicha a lantana.",
+          "Každá skupina má nárok na určité prostředí. Vážky potřebují vodní plochu: samice klade vajíčka dotykem hladiny a larva se vyvíjí pod vodou — bez vody není vážka. Larvy střevlíků žijí v půdě s omezeným akčním rádiusem, takže rytí nebo utužování země odstraňuje další generaci. A vynulování mšic na zahradě odebírá potravní základnu slunéčkům, zlatoočkám, pestřenkám i parazitickým vosičkám: kořist je zdroj, ne nouzový stav. Když je zásah nevyhnutelný, dejte přednost mýdlu, oleji nebo spinosadu před pyrethroidy, karbamáty a organofosfáty, právě proto, abyste ušetřili parazitické vosičky, kuklice a střevlíky."
+        ],
+        "checklist": [
+          "Zajistěte nektarodárné a pylodárné květy: dospělci z nich žijí.",
+          "Držte mravence pryč od napadených rostlin.",
+          "Chcete-li vážky, nechte na zahradě čistou stojatou vodu.",
+          "Neryjte ani neutužujte půdu tam, kde žijí larvy střevlíků.",
+          "Tolerujte pár mšic: bez kořisti predátoři nezůstanou."
+        ]
+      }
+    }
+  },
+  "pestInsect": {
+    "label": "Běžní hmyzí škůdci",
+    "topics": {
+      "role": {
+        "advice": [
+          "Škůdce je označení dané kontextem, ne druhem: popisuje hospodářskou škodu nebo zdravotní riziko na jednom místě v jednom okamžiku. Typ ústního ústrojí prozradí typ poškození — kousaví zanechávají v listech, dřevě nebo plodech nápadné díry; savý hmyz používá trubičku jako brčko a produkuje drobné tečkování, skvrny, zakrslost, žloutnutí, deformovaný růst a medovici. A medovice není choroba: je to sladký výměšek a černý povlak jsou černě, které na ní rostou, barví vše do černa a snižují fotosyntézu. Vyřešte savého škůdce a skvrna zmizí s ním.",
+          "V terénu pomohou dva klíče. Proměna určuje, co vlastně najdete: u proměny nedokonalé je to vajíčko, nymfa a dospělec, přičemž nymfa vypadá jako dospělec bez křídel; u proměny dokonalé je to vajíčko, larva, kukla a dospělec a larva nemusí dospělce připomínat vůbec. A způsob života napoví, kde hledat: savý hmyz se soustředí na nová, rostoucí pletiva, a proto se mladý list kroutí jako první, a mšice, molice a roztoči žijí na spodní straně listu. Jeden zajímavý případ: mravenci střihači list nežerou — ustřihnou ho, aby na něm pěstovali houbu, kterou se živí, což z nich dělá škůdce na plantážích a klíčový organismus v původních ekosystémech."
+        ],
+        "checklist": [
+          "Díry a natržení = kousavý škůdce. Tečkování, deformace a lepkavost = savý škůdce.",
+          "Černě rostou na medovici: ošetřete hmyz, ne povlak.",
+          "Vždy zkontrolujte spodní stranu listu.",
+          "Zkroucený mladý list ukazuje na savého škůdce, ne na žízeň.",
+          "Ne každé slunéčko je spojenec: jedna vývojová linie se živí rostlinami a okusuje listy."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "Právě tady leží téměř celé fyzické riziko fauny v této aplikaci — a nepochází od škůdců na plodinách. Žahavé housenky mají duté chloupky podobné brkům, napojené na jedové váčky, které proniknou kůží a jed uvolní; příznaky sahají od mírného svědění po bolest, otok, puchýře, dermatitidu a dokonce střevní potíže. První pomoc: opakovaně přilepte a strhněte lepicí pásku, abyste vytáhli zalomené chloupky, omyjte teplou vodou a mýdlem, neprodleně přiložte led, aby se předešlo otoku a zmírnila bolest, a při silné reakci vyhledejte lékaře. V Brazílii způsobuje housenka rodu Lonomia hemoragický obraz a ohrožuje venkovské i městské obyvatelstvo; sledování ve státě Paraná zaznamenalo mezi lety 1989 a 2000 celkem 199 případů a pět úmrtí, přičemž antisérum bylo rozmístěno na strategická místa. Většina nehod vzniká otřením o listí při práci na zahradě, ne od útočného zvířete: barevnou, chlupatou housenku obdivujte z povzdálí.",
+          "Ploštice rodu Triatoma, které přenášejí Chagasovu nemoc, mají při nálezu vlastní oficiální postup: hmyz nemačkejte, netlačte na něj ani ho nepoškozujte; chraňte si ruku rukavicí nebo igelitovým sáčkem; vložte hmyz, pokud možno živý, do plastové nádobky se šroubovacím uzávěrem; a odneste ho na sběrné místo pro triatominy. K přenosu vektorem dochází tak, že se trus hmyzu dostane do ranky po bodnutí, a existuje i přenos požitím kontaminované potravy nebo nápoje. Prevence v domácnosti znamená sítě v dveřích a oknech, používání repelentu a dlouhé rukávy v noci."
+        ],
+        "checklist": [
+          "Nikdy nesahejte na chlupatou nebo ostnitou housenku ani ji nesmetávejte.",
+          "Zásah housenkou: lepicí páska, teplá voda s mýdlem a led — a lékař, pokud se to zhoršuje.",
+          "Pokud najdete ploštici rodu Triatoma, hmyz nerozmáčkněte.",
+          "Seberte ji v rukavici, do nádobky se šroubovacím uzávěrem, a odneste na hygienickou stanici.",
+          "V rizikových oblastech mějte v dveřích a oknech sítě a v noci noste dlouhé rukávy."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Tohle je jediná skupina, kde správnou odpovědí může být neudělat nic: výchozím pokynem je sledovat a monitorovat, určit typ hmyzu a velikost populace, a teprve pak rozhodovat o jakémkoli zásahu. Potom stoupejte po žebříčku nejmenšího dopadu. Prostá voda z hadice smyje mšice i roztoče. Ruční sběr a domácí past fungují — položte pod tykev malý kus staré střešní šindele nebo silné lepenky, ploštice se pod ním shromáždí kvůli úkrytu a vy past prostě zvednete a hmyz zlikvidujete. Fenologický únik, tedy dřívější výsev, který se vyhne líhnutí škůdce, je také ochrana.",
+          "Teprve pak přijdou na řadu přípravky: insekticidní mýdlo a olej, které škodí menšímu počtu necílových druhů, reflexní mulč proti molicím, Bacillus thuringiensis na mladé housenky a chemie až úplně nakonec, vždy s postřikem večer, aby se omezil dopad na opylující hmyz. Poradenské služby dávají přednost spinosadu před pyrethroidy a neonikotinoidy právě proto, aby ušetřily parazitické vosičky, kuklice a střevlíky. Fyzické bariéry jsou nejvíc podceňovanou ochranou vůbec, s jednou podmínkou: netkanou textilii je nutné v době kvetení sundat, jinak vyloučí spolu se škůdcem i opylovače. A pořádně si zaznamenejte, co jste viděli — fotografie s předmětem pro měřítko vedle hmyzu, poznámka o datu a o tom, na které rostlině a na které její části se hmyz živil, udělá jakékoli určení mnohem spolehlivější."
+        ],
+        "checklist": [
+          "Před zásahem sledujte a počítejte.",
+          "Začněte proudem vody, ručním sběrem a domácí pastí.",
+          "Dejte přednost mýdlu, oleji nebo spinosadu před širokospektrými insekticidy.",
+          "V době kvetení sundejte netkanou textilii.",
+          "Stříkejte vždy večer, kdy opylovači nelétají."
+        ]
+      }
+    }
+  },
+  "decomposerFungus": {
+    "label": "Rozkladné houby",
+    "topics": {
+      "role": {
+        "advice": [
+          "Jde o saprotrofní houby: živí se mrtvou organickou hmotou. Houby, které tyto plodnice vytvářejí, jsou prospěšné, protože rozkládají organickou hmotu v půdě a zpřístupňují živiny dalším rostlinám. Houba v trávníku téměř nikdy není chorobou — jsou to přirozeně se vyskytující houbové organismy, které dělají přesně to, co příroda zamýšlela: rozkládají kdysi živý materiál a vracejí energii zpět do půdy. Čarodějný kruh je známkou úrodnosti, ne škůdce: rozklad uvolňuje dusík, tráva ho přijme a ztmavne, a právě to kreslí tmavě zelený kruh. Utržení houby houbu nezabije: plodnice je pomíjivá a vlastním organismem je podhoubí v substrátu.",
+          "Na živém stromě je ale takový znak vážný. Houby nebo choroše na kmeni či patě kmene jsou varováním a mnoho starých stromů, které padnou při bouři, mělo pevnost už předtím prudce sníženou nebo zcela zničenou dřevokaznými houbami. Ztrátu pevnosti je pro laika těžké odhalit a i pro odborníka obtížné vyhodnotit — což znamená zavolat někoho vyškoleného v detekci a posuzování hniloby. V mulči jsou kulovnička (Sphaerobolus), číšovkovité houby a pýchavky neškodní rozkladači a jasně zbarvené žluté nebo oranžové slizovité hmoty jsou hlenky, které nejsou ani pravými houbami a rostlinám neškodí."
+        ],
+        "checklist": [
+          "Houba v trávníku je recyklovaná organická hmota, ne choroba.",
+          "Tmavě zelený čarodějný kruh ukazuje uvolněný dusík, ne škůdce.",
+          "Houba nebo choroš na kmeni či patě kmene je varováním o statice.",
+          "Sběr hub houbu neodstraní, jen její plodnici.",
+          "Žlutá slizovitá hmota v mulči je hlenka a rostliny nenapadá."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "Nikdy nejezte divoce rostoucí houbu bez osobního určení odborníkem. Mnoho druhů je jedovatých a jen odborník dokáže rozlišit jedlé a jedovaté druhy. Vaření to nespraví: amanitiny jsou tepelně stabilní a varem se neinaktivují a jsou doloženy otravy z nadýchání výparů při vaření. Atlas hub z jiného regionu se nedá přenést — naučit se určovat houby v jedné části země nebo v jiné zemi není spolehlivé pro určování hub v jiné oblasti. Nebezpečný je pozdní příznak: v doložených případech začaly nevolnost, zvracení a průjem přibližně devět hodin po požití a zvracení, které začne později než za šest hodin, je známkou závažnosti, ne špatného trávení.",
+          "Dotykem se neotrávíte — doloženým rizikem je požití a druhotně vdechnutí výparů při vaření. I tak si umyjte ruce a nedávejte je k ústům. Z trávníků, kde se pohybují děti nebo domácí zvířata, houby odstraňte, protože malé děti mají sklon dávat si do úst cokoli, houby nevyjímaje: v přehledu ze Spojených států za roky 2016 až 2018 bylo 25,9 % pacientů ve věku pěti let nebo mladších. Pokud někdo houbu snědl, okamžitě volejte toxikologické informační středisko — v USA 1-800-222-1222; v Brazílii CIATox / Disque-Intoxicação 0800 722 6001. A jedna věta váží v celém tomhle manuálu víc než kterákoli jiná: aplikace na určování nenahradí odborníka."
+        ],
+        "checklist": [
+          "Nejezte divoce rostoucí houbu bez osobního určení odborníkem.",
+          "Vaření, sušení ani domácí zkoušky z jedovaté houby bezpečnou neudělají.",
+          "Zvracení, které začne později než za šest hodin, je známkou závažnosti.",
+          "Odstraňte houby z trávníků, kde si hrají děti nebo volně pobíhající zvířata.",
+          "Pokud někdo houbu snědl, okamžitě volejte toxikologické informační středisko."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Tohle je jediná houbová skupina, kterou lze pěstovat ve velkém, právě proto, že jí stačí mrtvý substrát: houba shiitake, hlíva, žampion i penízovka jsou saprotrofové a jejich pěstování znamená napodobit tlející dřevo nebo slámu. Na zahradě je zásah spíš fyzický než chemický — fungicid odpovědí není. Houby ze zahrady seberte kvůli bezpečnosti, vykopejte zakopanou organickou hmotu, která růst živí, tedy pařezy, odumřelé kořeny, stavební suť a nahromaděnou plsť, a půdu provzdušněte, aby lépe vsakovala. Při zakládání trávníku nejprve odstraňte pařezy a kořeny stromů.",
+          "Když čarodějný kruh skutečně překáží, škodu působí husté podhoubí, které může bránit pohybu vody do půdy — cestou je provzdušnění, které houbový plst prolomí, plus zálivka a hnojení v doporučených dávkách. V mulči potlačí kulovničku přimíchání asi 40 % vyčerpaného substrátu po pěstování hub, protože přinese konkurenční mikroby; číšovkovité houby a hlenky nepotřebují nic víc než hrábě. U stromu je jedinou skutečnou obranou prevence, protože strom, který má hnilobu, už nezachráníte: v suchu dobře zalévejte, provzdušňujte půdu, udržujte pět až patnáct centimetrů organického mulče, hnojte pomalu rozpustným hnojivem, při stavbě se vyhněte poranění a zasypání kořenů a řežte správnou technikou ve správný čas. A při fotografování zachyťte klobouk, lupeny nebo póry na spodní straně, bázi třeně, substrát i hostitele — právě báze a substrát oddělují smrtelné druhy od jedlých."
+        ],
+        "checklist": [
+          "Neaplikujte na trávník fungicid kvůli houbám.",
+          "Vykopejte zakopané dřevo a kořeny, které houbu živí.",
+          "Provzdušněte půdu, abyste rozrušili houbový plst čarodějného kruhu.",
+          "Strom s hnilobou se neléčí: předchází se tomu a posuzuje ho odborník.",
+          "Při fotografování zahrňte bázi třeně a substrát."
+        ]
+      }
+    }
+  },
+  "mycorrhizalFungus": {
+    "label": "Mykorhizní houby",
+    "topics": {
+      "role": {
+        "advice": [
+          "Houba je tady jen viditelnou špičkou podzemního partnerství s kořeny rostlin. Odhaduje se, že 80 % až 90 % veškerého rostlinstva vstupuje alespoň do jednoho ze sedmi typů mykorhizy — což z toho dělá pravidlo rostlinné říše, ne výjimku. Houba nedokáže fotosyntetizovat ani si vázat vlastní uhlík, takže všechny potřebné sacharidy dostává od hostitelské rostliny a vrací vodu a minerální živiny: lepší příjem fosforu, amonných iontů a zinku, ochranu před půdními chorobami a vyšší odolnost vůči suchu a teplotě. Výhoda je spíš geometrická než chemická — kořeny zabírají jen asi 0,5 % objemu ornice a hyfa, protože je mnohem jemnější, přijde na jednotku objemu do styku s mnohem větším množstvím půdy.",
+          "Existují dva praktické typy. Ektomykorhizy tvoří na kořeni plášť a jsou to právě ony, kdo vytváří viditelné plodnice; arbuskulární mykorhizy rostou uvnitř kořene a žádnou plodnici netvoří vůbec, jen výtrusy v půdě. Orchideje závisejí na mykorhizních houbách i při samotném klíčení a mykotrofní rostliny — ty, které dostatečně nefotosyntetizují — získávají uhlík z hostitelského stromu přes houbového prostředníka. Jedno terénní rozlišení stojí za zapamatování: mykorhizní houba vyrůstá z půdy poblíž živého stromu a značí, že strom žije a je propojený, zatímco choroš dřevokazné houby vyrůstá z kmene nebo z paty kmene a je varováním o riziku statiky."
+        ],
+        "checklist": [
+          "Mykorhizní houby vyrůstají z půdy poblíž živého stromu; choroše dřevokazných hub z kmene.",
+          "Houba strom nežere: vyměňuje sacharidy za vodu a minerály.",
+          "Mykorhizní houba značí zavedenou, nenarušenou půdu.",
+          "Arbuskulární mykorhizy existují téměř v každé zahradě a jsou neviditelné.",
+          "Původní orchideje závisejí při klíčení na houbě ze své původní půdy."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "Platí totéž tvrdé pravidlo a tady záleží ještě víc: nikdy nejezte divoce rostoucí houbu bez osobního určení odborníkem. Tahle skupina obsahuje jak nejcennější houby gastronomie, tak ty nejsmrtelnější na planetě — smrtelně jedovaté muchomůrky patří do jedné z dominantních ektomykorhizních čeledí, tedy do naprosto stejného ekologického sousedství jako vybrané jedlé druhy. Vaření je nezneškodní: amanitiny jsou tepelně stabilní.",
+          "Typická záměna je právě s běžnou jedlou houbou a známost druhů z jiného regionu riziko spíš zvyšuje, než snižuje. Latence klame: nevolnost a zvracení později než šest hodin po požití jsou známkou závažnosti, ne obyčejné nevolnosti. Pravidlo, které cituje jedna univerzitní zdravotní služba, to shrnuje: pokud si nejste jisti, nejezte to. Dotykem se neotrávíte — doloženým rizikem je požití; umyjte si ruce a nedávejte je k ústům. Pokud někdo houbu snědl, okamžitě volejte toxikologické informační středisko: v Brazílii CIATox / Disque-Intoxicação 0800 722 6001; v USA 1-800-222-1222."
+        ],
+        "checklist": [
+          "Nejezte divoce rostoucí houbu bez osobního určení odborníkem.",
+          "Tahle skupina obsahuje nejsmrtelnější známé druhy.",
+          "Vaření toxiny muchomůrek neinaktivuje.",
+          "Příznak, který se objeví po šesti hodinách, je známkou závažnosti.",
+          "Při pochybnostech nejezte — a pokud už někdo snědl, volejte toxikologické středisko."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Tuhle skupinu nelze pěstovat tak jako saprotrofy, protože vyžaduje živou hostitelskou rostlinu — to je ekonomický důvod, proč se hřiby, lišky a matsutake sbírají místo pěstování a proč pokusy vypěstovat je na substrátu selhávají. A plyne z toho silný praktický důsledek: přehnojení partnerství rozloží. Dodávky dusíku, fosforu nebo kompletních hnojiv snižují přítomnost a aktivitu mykorhizních hub, takže kdo chce mykorhizu, hnojí střídmě. I mírné změny půdního pH, teploty, obsahu organické hmoty, celkové úrodnosti a vlhkosti mohou kolonizaci výrazně změnit.",
+          "Co ji uchová, je zavedená, nenarušená půda, neporušená organická vrstva a správný hostitel. Ektomykorhizní společenstva se hromadí v čase: mladší stromy mají ve srovnání se vzrostlými porosty chudší společenstvo houbových symbiontů. V praxi je mykorhizní síť vzrostlého stromu majetkem starým desítky let, který stavba, skrývka půdy a fumigace zničí za jediný den a který žádný pytlík přípravku nekoupí zpátky. A k tomu pytlíku buďte skeptičtí: existuje jen velmi omezené nezaujaté vědecké doložení toho, že mykorhizní očkování zlepšuje ujímavost rostlin, a nejde o zázračný všelék, jak je podávají reklamy. Nekopejte, abyste podhoubí viděli, a nepřesazujte původní pozemní orchidej ani rostlinu bez chlorofylu: bez houbového partnera ze své původní půdy uhynou."
+        ],
+        "checklist": [
+          "Hnojte střídmě, chcete-li mykorhizu zachovat.",
+          "Vyhněte se fumigaci půdy a skrývce svrchní vrstvy.",
+          "K očkovacím přípravkům prodávaným jako zázrak buďte skeptičtí.",
+          "Nekopejte, abyste viděli podhoubí: organismem je celá síť.",
+          "Nepřesazujte původní orchideje ani mykotrofní rostliny."
+        ]
+      }
+    }
+  },
+  "freshwaterFish": {
+    "label": "Sladkovodní ryby",
+    "topics": {
+      "role": {
+        "advice": [
+          "Teplota a rozpuštěný kyslík jsou filtrem, který rozhoduje o všem: před jakýmkoli rozhodnutím o vodní ploše se měří teplota, pH a rozpuštěný kyslík a úhyny ryb z nadměrného horka nebo nedostatku kyslíku jsou klasickou nehodou v rybnících na farmách. Taxonomické složení se mění kontinent od kontinentu — v neotropech dominují trnobřiší a sumci, zatímco holarktida stojí na kaprovitých, okounkovitých, okounovitých a lososovitých. Neotropická sladkovodní rybí fauna je nejbohatší na planetě, s asi 71 čeleděmi a zhruba šesti tisíci druhy, z nichž 4 475 bylo formálně popsáno.",
+          "Mnoho druhů závisí na povinné třecí migraci, zvané piracema: reofilní ryby plavou proti proudu vzhůru řekou, aby se vytřely, a samotné fyzické úsilí je součástí fyziologického spouštěče rozmnožování. A tůně v záplavové nivě nejsou louže, jsou to školky — při povodni se řeka rozlije a propojí je, unášená jikry a larvy se v nich usadí, a když voda opadne, ti mladí jedinci tam vyrůstají chráněni až do další povodně. Některé čeledi fungují jako teploměr kvality vody a jiné jako teploměr degradace: ryby netolerující teplou a zakalenou vodu značí vodu vysoké kvality, zatímco sumci snášející vysokou teplotu, kalnou vodu a málo kyslíku prosperují přesně tam, odkud náročné druhy už zmizely."
+        ],
+        "checklist": [
+          "Při náhlém letním úhynu ryb podezřívejte nejprve rozpuštěný kyslík.",
+          "Silný proud nad kamenitým dnem značí reofilní a tažné druhy.",
+          "Tůň v nivě propojená při povodni je školka, ne louže.",
+          "Přítomnost pouze tolerantních druhů naznačuje degradovaný nebo už zavlečený systém.",
+          "Hejno, které se tvoří na začátku období dešťů, může být začátkem třecího tahu."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "Tady jde o bezpečnost hlavně na straně zvířete a zákona. Nikdy nevypouštějte akvarijní, sportovní ani chovanou rybu do přírodní vodní plochy: Brazílie už eviduje kolem devadesáti invazních nepůvodních druhů ryb ve vnitrozemských vodách, akvakultura je největším zdrojem introdukcí — úniky s odpadní vodou, protržením nádrží a proklouznutím ryb oky klecí — a vysazení jakéhokoli živočišného druhu bez odborného posudku a povolení příslušného úřadu je zakázané. Nikdy nepřenášejte ryby mezi povodími: ulovená ryba smí do jiné vodní plochy jen tehdy, je-li v témže povodí původní.",
+          "Respektujte dobu hájení. Ve státě Minas Gerais trvá hájení v době tahu od 1. listopadu do 28. února, ale termíny se liší podle státu i povodí, takže si to před výjezdem ověřte u místního úřadu životního prostředí. Nekrmte divoké ryby — krmení mění přirozené chování při hledání potravy a uměle koncentruje zvířata. Na jaře nelovte ryby sedící na hnízdech ani je nerušte. A manipulujte co nejméně: kameny a kmeny vracejte přesně tam, kde byly."
+        ],
+        "checklist": [
+          "Nikdy nevypouštějte akvarijní ani chovanou rybu do řeky, jezera či rybníka.",
+          "Nepřenášejte ryby mezi různými povodími.",
+          "Před rybařením si ověřte kalendář doby hájení ve svém regionu.",
+          "Nekrmte divoké ryby.",
+          "Na jaře nerušte ryby střežící hnízda."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Přirozená potrava se mění se sezonou a vypráví příběh prostředí. Tambaqui žere během povodně na řece plody a semena a když v období sucha dojdou, přejde na zooplankton — a tím, že rozšiřuje semena, se podílí na obnově amazonského pralesa. Detritofágové a seškrabávači zpracovávají organickou hmotu ze dna a biofilm a tvoří energetickou základnu mnoha neotropických řek. Číhající rybožraví predátoři obsazují místní vrchol potravního řetězce a v rybníce jsou právě tím, co brání přemnožení drobných ryb.",
+          "V rybníce nebo na farmě je nutné krmení dávkovat tak, aby nezhoršilo kvalitu vody: přebytečné krmivo se stane organickou hmotou, spotřebuje kyslík a otevře dveře nemocem a úhynům. Vysadit od každého druhu kousek kvůli rozmanitosti dává zklamání v podobě nevyvážených populací a zakrslých ryb; vysazení velmi plodných druhů naplní rybník zakrslými rybami. Vyhněte se vysazování ve vrcholném létě, kdy vysoká teplota a nízký obsah kyslíku ryby při transportu oslabují. A pamatujte, že studenomilné druhy ve většině rybníků léto nepřežijí a fungují jen jako režim vysadit a sklidit před příchodem veder."
+        ],
+        "checklist": [
+          "Dávkujte krmivo: přebytek se mění v organickou hmotu a sráží kyslík.",
+          "Nevysazujte od každého druhu kousek v naději na rozmanitost.",
+          "Vyhněte se vysazování ryb ve vrcholném létě.",
+          "Než rozhodnete o jakémkoli zásahu, přečtěte si prostředí skrz vodu.",
+          "Raději fotografujte a zaznamenávejte, než sbírejte."
+        ]
+      }
+    }
+  },
+  "marineFish": {
+    "label": "Mořské a útesové ryby",
+    "topics": {
+      "role": {
+        "advice": [
+          "Útesová ryba je diagnózou útesu, ne jen jeho obyvatelem. Býložravci — ryby papouščí a bodloci — spásají řasy, které soupeří s korálem a snižují jeho schopnost přežít, růst a rozmnožovat se. A na funkční skupině záleží víc než na druhu: ryby papouščí mají mohutné zobáky, které při okusování řas seškrabují podklad a otevírají prostor pro usazení nových korálů, zatímco bodloci spásají jen vrchní část řasového nárostu. Nejsilnější negativní vliv mají řasy na usazování a časné přežívání korálů, takže útes, který už má mnoho velkých dospělých korálů, nemusí z většího počtu býložravců okamžitě těžit, zatímco ten, jehož obnova závisí na nových přírůstcích, těží velmi.",
+          "Ochrana býložravců není univerzálním řešením: opatření funguje tam, kde na daném místě skutečně existuje problém s řasami a kde stavy býložravců opravdu zvýší. To, co vyfotíte, čte dané místo. Hodně klipek naznačuje živý, strukturovaný korál poblíž. Úplná absence velkých kaniců a chňapalů na strukturovaném útesu je silnou indicií rybolovného tlaku. Hustý nárost makrořas pokrývající mrtvý korál, s pár rybami papouščími a bodloci v dohledu, značí nedostatečné spásání. A i když jsou býložravci chráněni, trvá jejich obnova několik let — péče musí být spíš předvídavá než reaktivní."
+        ],
+        "checklist": [
+          "Hodně klipek naznačuje živý korál poblíž.",
+          "Absence velkých predátorů značí rybolovný tlak.",
+          "Husté makrořasy s malým počtem býložravců značí nedostatečné spásání.",
+          "Písčité kanály a plochy mezi korály jsou také stanovištěm.",
+          "Zaznamenejte datum a místo: mají cenu jako sama fotografie."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "Ústředním pravidlem je nesahat. Korály jsou křehcí živočichové a poškodí je dotek, šťouchnutí, kopnutí ploutví i ruka opřená kvůli rovnováze a mnohé jsou chráněny zákonem. Nesahejte ani na ostatní živočichy: slizová vrstva, která chrání ryby a mnoho mořských bezobratlých před infekcí, se snadno setře rukou, rukavicí nebo nohou. Fyzická interakce s mantami a žraloky velrybími je v mořské rezervaci předpisem zakázaná, i kdyby si ji zvíře zdánlivě užívalo. A ovládání vztlaku je etika, ne technika: vznášejte se nad útesem, a je-li proud silný, držte se kotevního lana, nikdy útesu.",
+          "Nekrmte a nesbírejte. Krmení ryb narušuje přirozené potravní chování útesových ryb, láká druhy, které na dané místo nepatří, a učí ryby kousat plavce v očekávání potravy — v některých jurisdikcích je nezákonné. Z rezervace neodchází nic, ani mušle, ani úlomek korálu: mušle, které vypadají prázdné, mají uvnitř často vyděšeného živočicha, a ty skutečně prázdné se stanou úkrytem pro poustevníčky, svijonožce, mladé korály a houby. U megafauny jsou referenčními zákonnými vzdálenostmi ve Spojených státech 90 metrů od velryb obecně, 45 od mořských želv a 45 od tuleňů a lachtanů, 180 metrů u kosatek ve vnitřních vodách státu Washington a 450 u velryby biskajské, s maximální dobou pozorování 30 minut. Brazilské vody se řídí vlastními pravidly ICMBio a IBAMA: berte tato čísla jako dobrou praxi, ne jako místní zákon."
+        ],
+        "checklist": [
+          "Nesahejte na korál ani se o něj neopírejte kvůli rovnováze.",
+          "Nesahejte na ryby, rejnoky ani želvy: ochranný sliz se setře.",
+          "Za žádných okolností nekrmte útesové ryby.",
+          "Nesbírejte mušle, úlomky korálu ani žádný suvenýr.",
+          "Držte si od megafauny odstup a omezte dobu pozorování."
+        ]
+      }
+    }
+  },
+  "gardenBird": {
+    "label": "Zahradní a městští ptáci",
+    "topics": {
+      "role": {
+        "advice": [
+          "Jsou to ptáci, kteří žijí, hledají potravu nebo hnízdí na zahradách, náměstích, v městských parcích, na střechách a podél cest — jak původní druhy tolerující lidskou krajinu, tak zcela synantropní nepůvodní druhy. Všechna volně žijící zvířata potřebují čtyři věci: potravu, vodu, kryt a prostor k rozmnožování a odchovu mláďat. V průměrné zahradě dojde jako první obvykle spolehlivý celoroční zdroj vody — ne potravy.",
+          "Dobrá část nejnápadnějších městských ptáků je nepůvodní: holub skalní dorazil do Brazílie v šestnáctém století s portugalskou kolonizací a dnes se s ním zachází jako se synantropní faunou, s vlastními hygienickými předpisy. Oficiální strategie regulace ve městech útočí na tytéž čtyři prvky — vodu, potravu, úkryt a přístup — což je přesný opak toho, co děláte, když chcete přilákat původní ptáky. Jeden návrhový princip stojí za doplnění: záleží na prostorovém promísení. U méně pohyblivých druhů funguje mnoho malých plošek s potravou, vodou a úkrytem lépe než pár velkých, protože čím dál musí zvíře cestovat, tím víc je vystaveno predátorům."
+        ],
+        "checklist": [
+          "Limitujícím zdrojem bývá voda, ne potrava.",
+          "Rozprostřete potravu, vodu a úkryt do několika malých plošek.",
+          "Neuklízejte zahradu příliš: odumírající strom a hromada klestí jsou úkryt.",
+          "Převaha holubů a vrabců značí silně zastavěné prostředí.",
+          "Příchod původních plodožravců ukazuje, že vaše rostliny plodí."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "Záměrným zásahem v této skupině je krmítko a nese s sebou hygienickou cenu. Mezi choroby, které u krmítek kolují, patří mykoplazmová konjunktivitida, salmonelóza, aspergilóza, ptačí neštovice a ptačí chřipka. Hygiena není volitelná: krmítka se zrním čistěte každé dva týdny a při jakémkoli podezření na nemoc tuto frekvenci zdvojnásobte, v poměru devět dílů vody na jeden díl chlorového bělidla. Viditelný trus před namočením odškrábejte, dobře opláchněte a před dalším naplněním nechte oschnout. Trus a slupky ze semen z země shrabujte, zvlášť ty plesnivé nebo mokré, čímž zároveň nepřilákáte hlodavce. A rozmístěte několik krmítek místo toho, abyste vše soustředili do jednoho, protože ve stísněném prostoru s nahuštěnými skupinami se nemoc šíří snadněji. Totéž pravidlo úklidu platí i pro ptačí napajedlo.",
+          "Když uvidíte nemocného ptáka — červené, oteklé nebo mokvající oči, bradavičnaté výrůstky na neopeřených místech, hubený pták s načepýřeným peřím — sundejte krmítka asi na dva týdny a všechno vyčistěte, včetně okolí. Zvíře neberte do ruky: divokého ptáka smějí legálně léčit jen veterináři nebo držitelé oprávnění k rehabilitaci volně žijících zvířat. Objeví-li se choroba přenášená fekálně-orální cestou, zvažte vyřazení miskových krmítek, která kontaminaci soustředí nejvíc. V terénu buďte obzvlášť obezřetní poblíž obsazených hnízd, hnízdních kolonií, nocovišť a významných potravních míst, omezte používání playbacku a při fotografování postupujte opatrně a zdrženlivě. A princip, který vyřeší každou pochybnost: při střetu zájmů mezi ptáky a pozorovatelem má přednost blaho ptáků."
+        ],
+        "checklist": [
+          "Čistěte krmítka každé dva týdny, v poměru jeden díl bělidla na devět dílů vody.",
+          "Shrabujte slupky a trus ze země pod krmítkem.",
+          "Rozmístěte několik krmítek místo toho, abyste vše soustředili do jednoho.",
+          "Nemocný pták: sundejte krmítka na dva týdny a na zvíře nesahejte.",
+          "Omezte playback a držte si odstup od obsazených hnízd."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Původní rostliny mají větší cenu než krmítko. Ideální přístup dodává co nejvíc původní potravy po celý rok — žaludy, ořechy, bobule, pupeny, plody, nektar a semena — a přikrmování zrním přichází na řadu, jen když původní nabídka nestačí, především v zimě. Spoléhat se jen na krmítko je křehké řešení: rozbije se, vy odjedete a pták, který se na ně naučil spoléhat, zůstane bez ničeho.",
+          "V praxi: zajistěte vodu v ptačím napajedle, mělké tůňce, podmisce od květináče, cirkulující kaskádě nebo třeba v kapající hadici, v horku vodu pravidelně měňte a v chladu ji držte dostupnou. Zajistěte kryt různé velikosti a hustoty — husté keře, duté kmeny, hromady kamení a klestí, stálezelené dřeviny, vysokou trávu — aby si každý druh mohl zvolit ten správný kryt pro hledání potravy, ukrytí, únik před nepohodou, námluvy i hnízdění. Zajistěte prostor vzrostlými stromy, hustým keřovým patrem a budkami. Pokud používáte krmítko, poradenské služby jmenují jako doplněk slunečnicová semena, semeno nyger, proso a drcenou kukuřici, a v létě rádi zavítají ke krmítkům s nektarem kolibříci. A myslete při návrhu na kočky: vyvýšené napajedlo s ořezanými nízkými větvemi v okolí odstraní úkryt pro číhanou."
+        ],
+        "checklist": [
+          "Vysazujte původní druhy, které plodí po celý rok.",
+          "Zrní používejte jen jako doplněk v době nouze, především v zimě.",
+          "Držte spolehlivý zdroj vody dostupný celoročně.",
+          "Obměňujte kryt: husté keře, hromady klestí, kameny, stálezelené dřeviny.",
+          "Napajedlo držte vyvýšené a bez hustých keřů kolem, kvůli kočkám."
+        ]
+      }
+    }
+  },
+  "forestBird": {
+    "label": "Lesní a tažní ptáci",
+    "topics": {
+      "role": {
+        "advice": [
+          "Jde o dvě částečně se překrývající populace: ptáky vázané na les a ptáky tažné. Z 1 971 druhů ptáků zaznamenaných na brazilském území podniká 216 — tedy 10,9 % — nějakou formu migrace: 141 tažných a 75 částečně tažných, což je kategorie, v níž se stěhuje jen část populace; dalších 91 jsou zatoulanci. Zhruba třetina brazilských ptačích čeledí má alespoň jeden tažný druh, ale více než polovinu z nich tvoří pět čeledí se 112 druhy: tyranovití s 36, slukovití s 23, buřňákovití s 22, tangarovití s 16 a rackovití s rybákovitými s 15.",
+          "Velcí plodožraví lesní ptáci jsou infrastrukturou lesa, ne jeho ozdobou: tukani a hokovití rozšiřují velká semena a lov i fragmentace odstraňují právě ty ptáky, jejichž zobák je dokáže spolknout. Palmu juçara, dominantní v Atlantském lese, spásá na plodech více než 58 druhů ptáků. A les zachovaný v ostrůvcích není totéž co les zachovaný: rozmanitost klesá, když jsou fragmenty nespojité a daleko od sebe, nebo když žádný z nich není dost hustý pro přežití a rozmnožování."
+        ],
+        "checklist": [
+          "Bohaté společenstvo podrostu značí souvislý, strukturovaný les.",
+          "Zmizení tukanů a hokovitých značí lov nebo pokročilou fragmentaci.",
+          "Bahňáci soustředění na bahnité mělčině v době tahu značí tahovou zastávku.",
+          "Tah není ano nebo ne: existují částeční migranti i zatoulanci.",
+          "Výškový tah v Brazílii existuje a je podceňovaný."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "Playback je ústřední chybou této skupiny. Etický kodex pozorování ptáků říká omezit používání nahrávek a dalších zvukových metod přivábení, zvlášť v místech s vysokým návštěvnickým tlakem, u lokálně vzácných druhů a u druhů ohrožených nebo kriticky ohrožených — a právě v lese, kde jsou ptáci nejhůř k vidění, je pokušení největší.",
+          "Kolem hnízd vládnou tři rizika: náhodné poškození hnízda, opuštění rodiči a přilákání predátorů. Nikdy nestrávte u hnízda víc než jednu minutu. Navštěvujte je nejvýše jednou za tři až čtyři dny. Vyhněte se časnému ránu, kdy většina druhů snáší vejce a kdy vejce i mláďata rychle vychladnou, pokud samice odletí; vyhněte se soumraku a době po něm, kdy se vrací na noc; vyhněte se prvním dnům inkubace a dnům, kdy se mláďata chystají vylétnout, protože mohou vyskočit předčasně a přežití mimo hnízdo je v té fázi nízké; a vyhněte se chladnému, vlhkému nebo deštivému počasí. Nezanechávejte stopy, které navedou predátory, a nešlapejte vegetaci, která by mohla hnízda odhalit. Nikdy samici z hnízda nevyhánějte — počkejte pár minut, jestli odletí sama, a pokud ne, vraťte se později. Poznámky si zapisujte, teprve když jste od hnízda dost daleko, a na budku před otevřením zaklepejte a zaklepejte znovu, když ji otevíráte."
+        ],
+        "checklist": [
+          "Omezte playback, především u vzácných nebo ohrožených druhů.",
+          "Nikdy nestrávte u hnízda víc než jednu minutu.",
+          "Vyhněte se kontrole hnízd časně ráno, za soumraku nebo za nepohody.",
+          "Nikdy samici z hnízda nevyhánějte.",
+          "Poznámky si pište dál od hnízda a nenechávejte k němu vyšlapanou stopu."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Stanoviště prozradí hodně. Zastíněný podrost v souvislém lese značí málo pohyblivé skupiny velmi citlivé na okrajový efekt; vzrostlé korunové patro značí ptáky závislé na velkých plodících stromech a na dutinách k hnízdění; lesní dno značí skupiny velmi citlivé na lov; a pobřeží, bahnitá mělčina a solné pánve v době tahu značí zastávku bahňáků, tedy místo mimořádně citlivé na rušení. Tažní ptáci závisejí na stanovištích v odloučených oblastech vzdálených tisíce kilometrů a někteří kriticky závisejí na místech, která využívají jen několik dní, aby si odpočinuli, přepeřili, nakrmili se a vytvořili energetické rezervy.",
+          "Proto na datu záleží stejně jako na místě. Protože cesta tam bývá jiná než cesta zpět a ptáci svou trajektorii přizpůsobují podmínkám, datované záznamy přímo živí poznání tahových tras — a záznam mimo sezonu může být informativnější než ten běžný. Zaznamenat tažného ptáka bez přesného data a místa znamená ztratit právě ten nejcennější údaj. V terénní praxi zůstávejte na stezkách, minimalizujte rušení stanoviště a chraňte stojící suché stromy, které jsou pro mnoho druhů hnízdními dutinami."
+        ],
+        "checklist": [
+          "Vždy zaznamenejte přesné datum a místo, zvlášť u tažných druhů.",
+          "Jeden záznam mimo sezonu může mít větší cenu než deset běžných.",
+          "Zůstávejte na stezkách a minimalizujte rušení stanoviště.",
+          "Chraňte stojící suché stromy: jsou hnízdištěm mnoha druhů.",
+          "Nekrmte divoké ptáky v lese ani na tahové zastávce."
+        ]
+      }
+    }
+  },
+  "grainCrop": {
+    "label": "Obilniny a zrniny",
+    "topics": {
+      "soil": {
+        "advice": [
+          "Ústředním pojmem výživy je tady skrytý hlad: většina plodin začíná ztrácet výnos dávno předtím, než jsou příznaky nedostatku nebo toxicity zjevné, a tahle ztráta bez příznaků je vysoká. Když se příznak konečně objeví, značí vždy těžký hlad — nikdy mírný nebo střední nedostatek. Pohyblivost živiny rozhoduje o tom, na který list se dívat: pohyblivé živiny, jako je dusík, draslík, fosfor a hořčík, ukážou příznaky nejprve na starých listech, protože je rostlina přesouvá do nových; nepohyblivé živiny, jako je vápník a bor, se projeví na nových listech a ve vzrostném vrcholu.",
+          "Několik vizuálních vzorců u rýže slouží jako vodítko: nekróza ve tvaru obráceného V, postupující od špičky dolů po okrajích starého listu, ukazuje na draslík; velmi úzké, vzpřímené nové listy s bronzovým nebo fialovým nádechem na špičkách ukazují na fosfor; celé pole žloutnoucí v době odnožování a zakládání laty ukazuje na dusík; a nedostatek, který se objeví v ohniscích místo po celé ploše, je typickým obrazem draslíku. Toxicita herbicidu nedostatek napodobuje, ale objeví se hned po postřiku — právě ta časová blízkost oba případy odlišuje. A nakonec: zrno a siláž nejsou z pohledu půdy táž plodina: fosfor se téměř celý přesouvá do zrna, následován dusíkem, zatímco draslík a vápník zůstávají většinou ve slámě, takže u siláže, která odebírá i vegetativní část, se problémy s úrodností objeví dřív."
+        ],
+        "checklist": [
+          "Nečekejte na příznak: než se ukáže, ke ztrátě už došlo.",
+          "Pohyblivé živiny se projeví na starých listech, nepohyblivé na nových.",
+          "Diagnostikujte z rozboru půdy a historie pozemku, nikdy jen z fotky listu.",
+          "Poškození, které se objeví hned po postřiku, je herbicid, ne nedostatek.",
+          "Nepoužívejte doporučení pro zrno u porostu určeného na siláž."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Rozhodnutí se tady dělá počítáním, ne podle kalendáře, a tahle skupina má nejlevnější standardizovaný odběr vzorků ze všech. Logika stojí na třech prazích: rovnovážná hladina, hladina hospodářské škody a hladina zásahu, která leží těsně pod ní. U půdních škůdců kukuřice použijte půdní vzorek třicet krát třicet centimetrů a patnáct hluboký, prosátý — u drátovců si zásah žádají už dva a více jedinců na vzorek a průměr jednoho na vzorek už působí významnou škodu. U Spodoptera frugiperda odeberte počet napadených rostlin na pěti náhodných bodech v rámci jednoho hektaru: na pozemcích s potenciálem alespoň sta pytlů už 10 % rostlin s časnými příznaky značí potřebu zásahu a nejcitlivější fází je osm až deset listů. Prvním znakem jsou housenky seškrabávající listy a zanechávající průsvitná okénka.",
+          "U sóji je metodou klepací plachta: nejlépe bílá plachta, metr dlouhá, natažená mezi dvěma řádky; jeden řádek nad ní energicky protřepejte a spočítejte dospělce i mláďata, a to týdně během kritického období. Minimum je šest vzorků do deseti hektarů, osm do třiceti a deset do sta, přičemž větší plochy se dělí na stohektarové bloky. Půdní škůdce vzorkujte před setím, protože opatření přijatá po zapojení porostu jsou neúčinná. Počítejte nymfy spolu s dospělci: kněžice ve třetím až pátém instaru působí podobnou škodu a v reprodukčním období tvoří většinu populace, s prahem zásahu dvě kněžice na metr řádku u zrna a jedna u osiva. Vzorkujte v chladnějších částech dne, protože kněžice jsou rychlé a v horku unikají. Má to měřitelnou návratnost: napříč 196 referenčními jednotkami ve státě Paraná v sezoně 2017/2018 snížila integrovaná ochrana počet aplikací insekticidů o více než 43 % při zachování srovnatelného výnosu. Přípravek vybírejte i podle šetrnosti k přirozeným nepřátelům, nejen podle ceny a toxicity, vždy se řiďte platnými registracemi MAPA a osivo mořte jen tam, kde má problém historii, nikdy naslepo jako rutinu."
+        ],
+        "checklist": [
+          "Před postřikem počítejte: rozhoduje práh, ne kalendář.",
+          "Kukuřice: 10 % rostlin se seškrabanými listy si už žádá zásah.",
+          "Sója: minimálně deset vzorků klepací plachtou do sta hektarů.",
+          "Půdní škůdce vzorkujte před setím.",
+          "Počítejte nymfy spolu s dospělci a vzorkujte v chladnějších hodinách dne."
+        ]
+      }
+    }
+  },
+  "vegCrop": {
+    "label": "Zelenina a ovocné plodiny",
+    "topics": {
+      "watering": {
+        "advice": [
+          "Voda je tady jemné řízení, ne zálivka, když si vzpomenete: existuje mez půdní tenze měřená v kPa a liší se podle závlahového systému. U lilku zavlažujete, když tenziometr ukáže 30 až 50 kPa při postřiku nebo brázdové závlaze, nebo 10 až 15 kPa u kapkové závlahy, přičemž v nejkritičtějších fázích, na písčitých půdách a při vysoké výparné poptávce používáte spodní hranici rozpětí. Čidlo jde do 50 % efektivní hloubky kořenů a deset až dvacet centimetrů od rostliny, přičemž efektivní hloubkou je ta, kde je soustředěno asi 80 % kořenů.",
+          "Přebytek vody škodí stejně jako nedostatek: žene nadměrný růst rostliny, brání kvetení a nasazení plodů, kvůli nedostatečnému provzdušnění nahrává půdním chorobám a vyplavuje živiny. Nedostatek váží nejvíc při kvetení a plodnosti, protože způsobuje opad květů a plodů, omezuje růst plodů a plodí vady kvality — deformované a nevyrovnané plody, květnou hnilobu a hořkou chuť. Vadnutí listů na konci dopoledne je hrubý, ale užitečný znak, že závlaha měla přijít dřív. A volba systému je rozhodnutí o zdraví porostu, ne jen o hydraulice: brázdová a kapková závlaha snižují listové choroby, protože nesmáčejí listy, ale proti makadlovce rajčatové je výhodou postřik, protože sráží vajíčka, larvy i kukly. Rozhodnutí závisí na tom, který problém ve vaší oblasti převládá."
+        ],
+        "checklist": [
+          "U kapkové závlahy používejte jinou mez tenze než u postřiku či brázdy.",
+          "Umístěte čidlo do 50 % efektivní hloubky kořenů a deset až dvacet centimetrů od rostliny.",
+          "Nenechte vodu dojít během kvetení a plodnosti.",
+          "Vadnutí na konci dopoledne značí opožděnou závlahu.",
+          "Závlahový systém volte podle problému, který ve vaší oblasti převládá."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "Nadbytek živiny má vlastní příznaky a rozhodí ostatní. U cibule dává nadbytek dusíku rostliny s tlustým krkem, zvyšuje náchylnost k listovým chorobám a zkracuje skladovatelnost po sklizni; nadbytek draslíku vyvolá nedostatek hořčíku a vápníku; nadbytek fosforu vyvolá nedostatek zinku a mědi. Právě proto náprava jedné živiny bez ohledu na ostatní obvykle vytvoří další problém.",
+          "Pohyblivost vám řekne, který list prohlédnout: dusík, draslík, fosfor a hořčík se projeví nejdřív na starých listech, zatímco vápník a síra na nových — nový list cibule, který se položí, aniž by se zlomil, je podpisem vápníku. Dvě textury stojí za zapamatování: nekróza, která se objeví náhle, bez předchozí chlorózy, ukazuje na zinek, měď nebo mangan; nekróza se sametovou texturou je charakteristickým znakem železa, odlišným od všech ostatních. V brazilských půdách za normálních podmínek mívá cibule nedostatek jen boru a zinku a v některých případech mědi. A pozor na falešně pozitivní nález: nízké teploty, přebytek vody nebo dlouhotrvající sucho mohou vyvolat příznaky velmi podobné nedostatku dusíku."
+        ],
+        "checklist": [
+          "Nenapravujte jednu živinu bez ohledu na ty, které tím rozhodíte.",
+          "Nejdřív staré listy: dusík, draslík, fosfor, hořčík. Nové listy: vápník, síra.",
+          "Náhlá nekróza bez předchozí chlorózy naznačuje zinek, měď nebo mangan.",
+          "Nekróza se sametovou texturou je znakem železa.",
+          "Chlad, podmáčení i sucho napodobují nedostatek dusíku."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Ochrana je tu nejprve agrotechnická a společná, teprve pak chemická. Na úrovni pozemku: zaveďte střídání plodin, posklizňové zbytky zlikvidujte ihned po sklizni, udržujte plochu bez plevelů a dalších hostitelských rostlin hmyzu a roztočů a používejte odrůdy přizpůsobené regionu. Na společné úrovni — a právě tím je tahle skupina jiná — musí pěstitelé jednat společně: soustředit výsadbu v každém mikroregionu do co nejkratšího okna, používat vstupy koordinovaně, aby společné problémy čelili všichni ve stejnou dobu, a systematicky dezinfikovat přepravky i dopravu, aby se omezilo šíření škůdců mezi regiony. Kontrolujte pravidelně, se zvláštní pozorností k okrajům pozemku a k nejzaplevelenějším místům, protože právě tam se napadení soustředí.",
+          "Největší škoda od škůdců je v této skupině obvykle nepřímá, přes viry. Molice je v Brazílii známa od roku 1923 a v roce 1993 byla nalezena na rajčeti a zelí ve spojení s příznaky geminiviru, s těžkými ohnisky a ztrátami až 50 % produkce: dospělci a nymfy vstřikují sladkou látku a toxin, které nechávají vnitřní stěny plodu bělavé a houbovité a podporují černě. Rozhoduje i načasování: proti malému vrtači plodů musí postřik začít od kvetení, s proudem směřovaným na květní poupata a plody, protože ve chvíli, kdy uvidíte v plodu díru, je larva už uvnitř. A jedno redakční bezpečnostní pravidlo: neopisujte účinnou látku ani dávku z žádného zdroje, protože registrace přípravků se každou sezonu mění — nahlédněte do aktuálního registru MAPA."
+        ],
+        "checklist": [
+          "Posklizňové zbytky zlikvidujte ihned po sklizni.",
+          "Soustřeďte výsadbu v mikroregionu do co nejmenšího okna.",
+          "Mezi plochami dezinfikujte přepravky i vozidla.",
+          "Kontrolujte okraje pozemku, ne jen jeho střed.",
+          "Se stříkáním začněte při kvetení, ne až uvidíte v plodu díru."
+        ]
+      }
+    }
+  }
+}

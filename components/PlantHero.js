@@ -43,6 +43,30 @@ import { getSpeciesPhoto } from './speciesPhoto';
 // The screens' horizontal padding, cancelled so the art reaches both edges.
 const GUTTER = 20;
 
+// How many reference photos the mosaic swallows - and which entries count.
+//
+// Exported because IdentificationExtras renders the SAME array a few hundred
+// pixels below: until now every result showed the first two references TWICE,
+// once inside the mosaic and once in the "Reference photos" card, in 100% of
+// results (auditoria de diagramacao 20/08 - a duplicata custava ~24% da
+// viewport). The count lives here, next to the code that consumes it, so the
+// two components can never drift apart again.
+const MOSAIC_REFS = 2;
+
+// The usable references: an entry without a url renders as a broken square.
+export function heroRefs(similarImages) {
+  return Array.isArray(similarImages) ? similarImages.filter((s) => s && s.url) : [];
+}
+
+// How many of them THIS entity's hero already showed. Zero unless the mosaic
+// actually rendered - every other hero state (both-photos, single photo,
+// icon-on-gradient) consumes no reference from the array at all.
+export function heroRefCount(entity) {
+  return entity?.photoUri && heroRefs(entity.similarImages).length >= MOSAIC_REFS
+    ? MOSAIC_REFS
+    : 0;
+}
+
 export default function PlantHero({
   photoUri,
   scientific,
@@ -88,11 +112,11 @@ export default function PlantHero({
     />
   );
 
-  const refs = Array.isArray(similarImages) ? similarImages.filter((s) => s && s.url) : [];
+  const refs = heroRefs(similarImages);
 
   // 1. Mosaic: your photo dominant, two references stacked beside it.
-  if (photoUri && refs.length >= 2) {
-    const extra = refs.length - 2;
+  if (photoUri && refs.length >= MOSAIC_REFS) {
+    const extra = refs.length - MOSAIC_REFS;
     return (
       <View style={[styles.hero, styles.split, { height }]}>
         <View style={styles.mosaicMain}>

@@ -1,0 +1,857 @@
+{
+  "succulent": {
+    "label": "Succulentes et cactus",
+    "topics": {
+      "watering": {
+        "advice": [
+          "La règle de ce groupe, c'est tremper puis laisser sécher, pas le calendrier. Arrosez jusqu'à ce que toute la motte soit détrempée et que l'eau s'échappe par le trou de drainage, videz la soucoupe, puis laissez le substrat sécher complètement avant l'arrosage suivant — en général toutes les deux à trois semaines pendant la saison de croissance, même si le pot, la lumière et la température modifient beaucoup ce rythme. La raison est physiologique : ce sont des plantes CAM, qui ouvrent leurs stomates la nuit et les gardent fermés le jour. Entre deux apports d'eau, ce dont elles ont besoin, c'est d'une racine oxygénée, pas d'une alimentation continue.",
+          "L'hiver est un vrai repos. La croissance se situe autour de 18 à 29 °C, la dormance entre 7 et 13 °C, avec un arrosage réduit au minimum toutes les quelques semaines — juste assez pour éviter que la plante se ratatine. Et quand le flétrissement apparaît, lisez la texture avant de saisir l'arrosoir : une feuille ridée mais ferme, c'est la soif ; une feuille jaune, molle et translucide, c'est la noyade, et arroser de nouveau ne fait qu'aggraver les choses, car des racines pourries ont déjà cessé d'absorber. Les cactus de forêt épiphytes, comme le cactus de Noël, sont l'exception du groupe : ils boivent nettement plus et ne doivent jamais sécher complètement au printemps et en été."
+        ],
+        "checklist": [
+          "Détrempez toute la motte jusqu'à ce que l'eau s'écoule par le trou de drainage, puis videz la soucoupe.",
+          "Attendez que le substrat soit complètement sec avant d'arroser de nouveau.",
+          "Ne laissez jamais le pot tremper dans l'eau.",
+          "Pendant le repos hivernal, arrosez très peu toutes les quelques semaines — juste assez pour éviter que la plante se ratatine.",
+          "Feuille ridée et ferme = pas assez d'eau. Feuille jaune, molle et translucide = trop d'eau."
+        ]
+      },
+      "light": {
+        "advice": [
+          "C'est le seul groupe d'intérieur qui accepte et réclame le soleil direct. Les succulentes veulent dix heures ou plus de lumière vive indirecte, avec un minimum de six à huit ; en dessous, elles filent et pâlissent — l'étiolement classique. Les cactus de désert se plaisent le mieux devant une fenêtre offrant plusieurs heures de soleil direct par jour, c'est-à-dire une fenêtre exposée au sud dans l'hémisphère nord, et exposée au nord dans l'hémisphère sud. Une croissance fine et pâle est un problème de lumière, et aucune dose d'engrais ne la corrige.",
+          "Deux réserves comptent. Quand vous sortez la plante dehors en été, acclimatez-la : commencez à mi-ombre, car un soleil fort brûle les tissus formés à l'intérieur. Et les cactus épiphytes veulent une lumière vive mais filtrée — une fenêtre à l'est ou à l'ouest, un voilage — parce qu'ils grillent au soleil direct."
+        ],
+        "checklist": [
+          "Offrez six à huit heures de lumière par jour, en visant dix ou plus.",
+          "Cactus de désert : une fenêtre avec plusieurs heures de soleil direct.",
+          "Une croissance filante et pâle, c'est trop peu de lumière, pas trop peu d'engrais.",
+          "En sortant la plante dehors en été, commencez à mi-ombre pendant quelques jours.",
+          "Cactus épiphyte : lumière vive, toujours filtrée."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "Le substrat est majoritairement minéral, et les sources ne divergent sur la recette que pour s'accorder sur le principe. Un service d'extension universitaire recommande un tiers de matière organique pour deux tiers de minéral ; un autre demande des volumes égaux de mélange à base de tourbe et de sable très grossier ; la RHS travaille avec deux parts de terreau de base pour une part de gravillon horticole, avec un surfaçage de gravillon. La fourchette va d'environ 30 % à 67 % de fraction minérale, et elle n'existe que pour une raison : rendre la phase saturée aussi courte que possible. Plus votre environnement est humide et plus vous avez la main lourde à l'arrosoir, plus il vous faut de minéral.",
+          "Un pot juste à la taille est une règle, pas de la négligence : un volume de substrat supplémentaire retient l'humidité, et la pourriture suit. Rempotez au printemps dans un pot à peine plus grand, et attendez plusieurs jours avant le premier arrosage. La fertilisation est pauvre en azote et à dose réduite — la moitié ou le quart de la dose indiquée, un arrosage sur trois ou quatre pendant la saison active, et rien en hiver. L'excès d'azote produit des tissus mous, et les tissus mous pourrissent. Chez les cactus épiphytes, la recette s'inverse et la matière organique prend le dessus."
+        ],
+        "checklist": [
+          "Incorporez au moins un tiers de matériau minéral : perlite, sable grossier, pierre ponce ou gravillon.",
+          "Utilisez un pot à peine plus grand que l'actuel — le volume en trop se transforme en pourriture.",
+          "Rempotez au printemps et attendez quelques jours avant le premier arrosage.",
+          "Fertilisez à la moitié ou au quart de la dose, et arrêtez totalement en hiver.",
+          "Le cactus épiphyte inverse la recette : plus de matière organique, moins de minéral."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "Le risque est ici mécanique et facile à contourner : manipulez les espèces épineuses enveloppées dans du papier journal ou avec des gants épais. Les épines de cactus et les fines glochides de certaines espèces entrent facilement dans la peau et en ressortent difficilement, et le moment d'exposition maximale est le rempotage."
+        ],
+        "checklist": [
+          "Manipulez les espèces épineuses avec du papier journal roulé ou des gants épais.",
+          "Préparez le nouveau pot avant de soulever la plante, pour réduire le temps qu'elle passe dans vos mains.",
+          "Gardez les sujets épineux hors des passages et loin des jeunes enfants."
+        ]
+      }
+    }
+  },
+  "tropicalFoliage": {
+    "label": "Plantes d'intérieur au feuillage tropical",
+    "topics": {
+      "watering": {
+        "advice": [
+          "L'objectif de ce groupe est un substrat uniformément humide et jamais détrempé — ni le cycle de dessèchement total des succulentes, ni l'humidité constante des fougères. Pour l'évaluer, enfoncez un doigt dans le substrat jusqu'à la première phalange : sec au bout du doigt, il est temps d'arroser. Le poids du pot et le son creux d'un doigt frappé contre un pot en terre cuite fonctionnent tout aussi bien. Quand vous arrosez, versez jusqu'à ce que l'eau s'écoule par le fond : cela évacue l'excès de sels et garantit que les deux tiers inférieurs du pot reçoivent de l'eau. Videz ensuite la soucoupe — ne laissez jamais la plante tremper dans l'eau.",
+          "Les détails qui font la différence ici : si le substrat s'est fortement desséché, arrosez en deux fois — arrosez, attendez une trentaine de minutes, puis arrosez de nouveau ; l'eau doit être entre 17 et 22 °C, jamais chaude ni glacée, et jamais adoucie, à cause du sodium et du chlorure. Les marantas veulent de l'eau distillée ou de pluie, car le fluor de l'eau du robinet brunit le bord des feuilles. Et le groupe compte ses propres exceptions déclarées : les dracaenas veulent la surface sèche au toucher avant l'arrosage, le ZZ s'arrose une à deux fois par mois et seulement après un dessèchement complet, et le figuier pleureur reste humide en croissance active et sèche légèrement en hiver."
+        ],
+        "checklist": [
+          "Gardez le substrat uniformément humide, jamais gorgé d'eau.",
+          "Arrosez jusqu'à ce que l'eau s'écoule par le fond, puis videz la soucoupe.",
+          "Utilisez une eau entre 17 et 22 °C ; jamais d'eau adoucie.",
+          "Marantas et dracaenas : préférez l'eau distillée ou de pluie.",
+          "Substrat très sec : arrosez, attendez trente minutes, puis arrosez de nouveau."
+        ]
+      },
+      "light": {
+        "advice": [
+          "La tolérance à la lumière de ce groupe est très large, et c'est précisément là qu'il se subdivise. Les philodendrons préfèrent un soleil indirect ou filtré par un voilage et tolèrent la faible lumière — le philodendron scandens supporte une lumière très faible — tandis que les formes arborescentes veulent une lumière moyenne à forte près d'une fenêtre. Les dracaenas poussent mieux en lumière vive indirecte, mais plusieurs tolèrent assez bien la faible lumière pour être devenus un standard de bureau. En chiffres de référence : la lumière faible se situe autour de 800 lux, la moyenne 1 500, la vive 3 000 et la directe 16 000.",
+          "Les marantas forment le sous-groupe le plus exigeant : mi-ombre, deux à six heures de soleil direct par jour au maximum, avec un avertissement explicite — le soleil direct brûle la feuille. Bon à retenir : la fenestration d'un monstera — ces découpes caractéristiques — dépend d'une lumière suffisante, et un véritable philodendron fait des feuilles profondément découpées mais sans trous. Si les expositions de votre pièce sont décrites par des points cardinaux, pensez à inverser le nord et le sud dans l'hémisphère sud."
+        ],
+        "checklist": [
+          "La lumière vive indirecte est le point idéal pour presque tout le groupe.",
+          "Marantas : mi-ombre, deux à six heures de soleil direct au maximum.",
+          "Des taches rondes et sèches sur la feuille signalent trop de soleil.",
+          "Feuilles du bas qui jaunissent avec un bourgeon terminal mort : trop peu de lumière ou trop d'eau.",
+          "Pour obtenir la fenestration d'un monstera, augmentez la lumière avant de changer quoi que ce soit d'autre."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "Un terreau organique polyvalent suffit ici — ce groupe n'a ni l'exigence minérale des succulentes ni l'exigence de tourbe des fougères. Ce qui change la technique, c'est la rétention : les mélanges riches en tourbe retiennent l'humidité plus longtemps, ceux à base d'écorce, de sable ou de perlite drainent plus vite. Choisissez selon votre habitude d'arrosage et le climat de la maison. Une correction importante : une couche de cailloux au fond du pot n'améliore pas le drainage — elle a plutôt tendance à retenir l'humidité dans le pot.",
+          "Il existe un véritable conflit déclaré entre les sources, et c'est la lecture prudente qu'il faut suivre. Pour les dracaenas, un service d'extension conseille d'éviter les substrats à forte proportion de perlite, de maintenir le pH entre 6.0 et 6.5 et de ne pas utiliser d'engrais contenant du superphosphate, car le dracaena est très sensible au fluor ; pour les marantas, un autre service recommande d'incorporer de la perlite ou de la vermiculite, et les marantas sont elles aussi sensibles au fluor. Aucune réconciliation explicite n'existe : pour ces deux-là, préférez la vermiculite ou l'écorce fine à la perlite, et utilisez de l'eau distillée ou de pluie. Fertilisez modérément — des pointes brunes et recroquevillées sont un signe d'excès d'engrais, et le ZZ, à croissance très lente, ne demande qu'une ou deux applications sur toute une saison."
+        ],
+        "checklist": [
+          "Un mélange polyvalent convient ; ajustez la rétention avec de l'écorce ou de la perlite.",
+          "Ne mettez pas de couche de cailloux au fond du pot — elle ne draine pas.",
+          "Dracaenas et marantas : préférez la vermiculite ou l'écorce fine à la perlite.",
+          "Maintenez le pH du dracaena entre 6.0 et 6.5 et évitez le superphosphate.",
+          "Pointes brunes et recroquevillées : réduisez la fertilisation avant de changer autre chose."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "C'est le groupe de plantes d'intérieur où le risque de toxicité est le plus concentré, et la cause est l'oxalate de calcium. Toutes les parties d'un philodendron sont toxiques en cas d'ingestion : les cristaux provoquent brûlure et irritation de la bouche, des lèvres et de la langue, une salivation excessive, des vomissements et des difficultés à avaler. Le ZZ est classé comme non sûr pour les animaux de compagnie. La sève des marantas peut irriter la peau. Aucune de ces plantes n'est dangereuse du simple fait de la posséder — le risque, c'est l'ingestion et le contact prolongé avec la sève : traitez donc la taille et le rempotage comme des travaux à faire avec des gants, en vous lavant les mains ensuite.",
+          "Il existe un risque physique plus modeste mais réel : les philodendrons non grimpants ont des pétioles cassants qui se brisent facilement, mieux vaut donc les garder hors des passages. Et une observation qui évite une frayeur : les marques noires sur la tige d'un ZZ sont normales et signalent une croissance saine, pas une maladie."
+        ],
+        "checklist": [
+          "Gardez ces plantes hors de portée des jeunes enfants et des animaux.",
+          "Portez des gants pour tailler ou rempoter, et lavez-vous les mains ensuite.",
+          "Ne laissez pas traîner les feuilles tombées là où des animaux grignoteurs peuvent les atteindre.",
+          "Gardez les formes non grimpantes hors des passages : les pétioles cassent facilement.",
+          "Les marques noires sur la tige d'un ZZ sont normales, ce n'est pas une maladie."
+        ]
+      }
+    }
+  },
+  "fern": {
+    "label": "Fougères et plantes d'ombre",
+    "topics": {
+      "watering": {
+        "advice": [
+          "L'objectif est un sol à peine humide en permanence, qui ne sèche jamais complètement et qui ne trempe jamais dans l'eau de la soucoupe. L'erreur conceptuelle la plus coûteuse dans ce groupe est de confondre humidité constante et pot détrempé en permanence : les sources disent, dans la même phrase, que le substrat doit retenir l'humidité et drainer vite, parce que la racine a toujours besoin d'oxygène. La pourriture des racines apparaît chez une fougère exactement comme chez un cactus, simplement avec beaucoup moins d'eau. Et le signal d'erreur est ambigu dans les deux sens — la chute des folioles vient d'un excès d'eau comme d'un manque.",
+          "L'humidité de l'air est le facteur limitant de ce groupe, pas un confort : la cible pratique se situe entre 30 % et 50 %, et autour de 50 % pour les espèces à frondes fines comme le capillaire. Des pointes brunes sur une fougère sont d'abord un diagnostic d'air sec — pas de substrat sec — et arroser davantage mène à la pourriture sans corriger le symptôme. Les méthodes, par ordre de robustesse : le double empotage avec de la sphaigne humide, un plateau de galets avec environ six millimètres d'eau et le pot qui ne touche pas l'eau, un humidificateur, un terrarium ou une salle de bain pour les espèces les plus délicates, et seulement ensuite une brumisation légère occasionnelle. Changez ou lavez les galets du plateau tous les trois mois."
+        ],
+        "checklist": [
+          "Gardez le substrat à peine humide et ne le laissez jamais sécher complètement.",
+          "Ne laissez pas d'eau stagner dans la soucoupe : c'est la route directe vers la pourriture des racines.",
+          "Des pointes brunes signifient un air trop sec — traitez l'air, n'arrosez pas plus.",
+          "Préférez le double empotage avec de la sphaigne ou un plateau de galets à la brumisation.",
+          "Lavez ou remplacez les galets du plateau tous les trois mois."
+        ]
+      },
+      "light": {
+        "advice": [
+          "Une lumière indirecte modérée est l'idéal, la plante placée près d'une fenêtre fraîche — exposée au nord dans l'hémisphère nord, au sud dans l'hémisphère sud — ou d'une fenêtre à l'est. Une fenêtre chaude en plein soleil abîme le feuillage ; si c'est votre seule option, utilisez un voilage pour couper l'intensité. En chiffres, la plage visée est celle de la lumière faible à moyenne, entre 800 et 1 500 lux.",
+          "La variation à l'intérieur du groupe est réelle : certaines espèces tolèrent la faible lumière et d'autres veulent une lumière vive indirecte ou un soleil filtré, alors observez votre propre plante plutôt que d'appliquer un chiffre unique. Un feuillage abîmé par le soleil a presque toujours une cause évidente — une fenêtre chaude en plein soleil — et la solution est simplement de déplacer la plante ou de filtrer la lumière."
+        ],
+        "checklist": [
+          "Préférez la fenêtre fraîche de la maison, ou celle exposée à l'est.",
+          "Évitez le soleil direct d'une fenêtre chaude ; utilisez un voilage s'il n'y a pas d'alternative.",
+          "Visez la plage faible à moyenne, entre 800 et 1 500 lux.",
+          "Un feuillage brûlé est un signe de soleil direct, pas de soif."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "Le substrat doit ici faire deux choses à la fois : retenir l'humidité et drainer vite. Une recette vérifiée mélange à parts égales un terreau du commerce pour plantes d'intérieur et de la tourbe ou du terreau de feuilles, avec l'exigence explicite qu'il draine rapidement pour prévenir la pourriture des racines. Une autre combine tourbe ou sphaigne pour la rétention, sable ou gravier pour le drainage et terre franche stérilisée, avec un ajout de chaux dolomitique et de poudre d'os. C'est exactement l'inverse des succulentes : ici la fraction organique domine, et le drainage vient du matériau grossier plutôt que d'une proportion minérale. Et là encore, une couche de cailloux au fond du pot ne draine pas.",
+          "La fertilisation est la plus mesurée de tous les groupes d'intérieur : une fois par mois pendant la saison de croissance, à environ la moitié de la dose recommandée, rien en hiver — et rien pendant six mois après une division ou un rempotage. Aucun autre groupe d'intérieur n'observe une pause aussi longue, et la raison est directe : les fougères souffrent de brûlures foliaires quand on les sur-fertilise. Un avertissement chimique est propre à ce groupe : les pulvérisations de pesticides blessent de nombreuses fougères, alors lisez attentivement l'étiquette et testez d'abord le produit sur une petite zone. Contre les ravageurs, préférez les méthodes mécaniques, comme un jet d'eau puissant."
+        ],
+        "checklist": [
+          "Utilisez un substrat qui retient l'humidité tout en drainant vite.",
+          "Fertilisez à demi-dose, une fois par mois pendant la saison de croissance.",
+          "Ne fertilisez pas en hiver, ni pendant six mois après une division ou un rempotage.",
+          "Testez toute pulvérisation sur une seule fronde avant de traiter la plante entière.",
+          "Rempotez et divisez au début du printemps, en maintenant une humidité élevée pendant les semaines qui suivent."
+        ]
+      }
+    }
+  },
+  "fruitVeg": {
+    "label": "Arbres fruitiers et légumes",
+    "topics": {
+      "watering": {
+        "advice": [
+          "Ici, l'arrosage se mesure en hauteur d'eau hebdomadaire et comporte des fenêtres phénologiques définies. La plupart des légumes veulent 2,5 à 5 centimètres par semaine — l'équivalent de 25 à 50 millimètres — avec des pics nets : le maïs sucré demande 4 à 6 centimètres pendant la sortie des panicules, l'apparition des soies et le remplissage des épis ; les haricots demandent 2,5 à 4 centimètres pendant la floraison et le remplissage des gousses. La fourchette est un intervalle, pas un chiffre fixe — un climat sec la fait monter, un climat humide la fait descendre. En sol limoneux, 2,5 centimètres d'eau pénètrent environ 15 centimètres de profil, ce qui permet de calculer : mouiller trente centimètres demande à peu près 5 centimètres d'eau apportée.",
+          "Un arrosage superficiel n'est pas seulement moins efficace ici : il interrompt le transport du calcium. Le calcium circule avec le flux de transpiration et n'est pas remobilisé des vieux tissus vers les fruits en formation ; les cycles sécheresse-inondation produisent donc la nécrose apicale même avec beaucoup de calcium dans le sol. La tomate est très sensible à l'irrégularité de l'arrosage et répond par la nécrose apicale et l'éclatement des fruits ; le poivron répond par la chute des fleurs ; un concombre stressé en phase reproductive donne des fruits amers et déformés. Un sol sableux veut des arrosages plus courts et plus fréquents ; un sol argileux, des arrosages moins fréquents et plus profonds."
+        ],
+        "checklist": [
+          "Travaillez avec une plage de 25 à 50 millimètres par semaine, pluie et irrigation confondues.",
+          "Ne manquez pas la floraison et le remplissage des fruits : c'est la fenêtre qui coûte la récolte.",
+          "Préférez des arrosages profonds et espacés à de courts arrosages quotidiens.",
+          "La nécrose apicale se corrige en régularisant l'arrosage, pas en pulvérisant du calcium.",
+          "Adaptez-vous au sol : le sableux veut plus de fréquence, l'argileux plus de profondeur."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "C'est le seul groupe dont la récolte retire des nutriments du système chaque année, et presque toutes les différences de conduite en découlent. La fertilisation est récurrente et fractionnée en apports d'entretien, avec un rapport qui change au fil du cycle — chez la tomate de plein champ, par exemple, l'apport commence plus riche en phosphore puis augmente le potassium à mesure que la plante entre en production. L'excès d'azote a un coût réel : des figues qui ne mûrissent pas, et une croissance excessive des pousses pendant la première floraison et la fructification, l'un des plus gros contributeurs à la nécrose apicale chez la tomate et le poivron.",
+          "Le pH est décisif et varie beaucoup à l'intérieur du groupe. Le pommier se plaît entre 5.8 et 6.5, à revérifier tous les trois ans environ ; la plupart des légumes-feuilles se situent entre 6.0 et 6.5 ; et le bleuet est l'exception radicale, au mieux entre 4.8 et 5.2, exigeant du soufre élémentaire appliqué au moins un an avant la plantation. Deux règles valent pour tout : gardez l'engrais à au moins 15 centimètres du tronc, et appliquez-le toujours sur un sol humide pour ne pas brûler les racines. Et c'est le seul groupe qui pratique la rotation par famille botanique — les cultures d'une même famille sont sensibles aux mêmes maladies et aux mêmes insectes, alors ne répétez pas une famille dans la même planche pendant trois à quatre ans, ou plus si vous le pouvez."
+        ],
+        "checklist": [
+          "Fertilisez en apports fractionnés, pas en une seule dose.",
+          "Analysez le sol et corrigez le pH pour la culture, pas pour la planche dans son ensemble.",
+          "Gardez l'engrais à au moins 15 centimètres du tronc, toujours sur sol humide.",
+          "Ne répétez pas la même famille botanique dans une planche pendant trois à quatre ans.",
+          "L'excès d'azote retarde la maturité et nourrit la nécrose apicale."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "L'éclaircissage des fruits est une opération obligatoire qui n'existe dans aucun autre groupe. Une charge trop lourde donne de petits fruits, des branches cassées et une alternance de production, car lorsqu'un arbre porte une récolte pleine, presque toute son énergie part dans les fruits et il reste peu de chose pour initier les fleurs de l'année suivante. Éclaircissez les pommes à la main dans les six semaines suivant la pleine floraison, en laissant les fruits à environ 20 à 25 centimètres les uns des autres sur la branche ; poires, prunes et abricots se placent à 15 à 20 centimètres. La chute naturelle de juin, avec des fruits de 1 à 2,5 centimètres de diamètre, ne remplace pas l'éclaircissage manuel — gardez toujours le plus gros fruit du bouquet, sauf s'il est abîmé.",
+          "Deux opérations complètent le tableau. La taille d'un pommier commence le jour de sa plantation ; la retarder produit une croissance médiocre et une mise à fruit tardive. Et chez le bleuet, retirer toutes les fleurs la première et la deuxième année est ce qui permet à la plante de s'installer — renoncer à deux récoltes achète toutes les suivantes. Sur les arbres fruitiers, respectez l'arrêt de fertilisation en fin d'été, car la production de fruits et la maturation du bois se disputent les mêmes photosynthétats."
+        ],
+        "checklist": [
+          "Éclaircissez les fruits dans les six semaines suivant la pleine floraison.",
+          "Gardez le plus gros fruit de chaque bouquet, sauf s'il est abîmé.",
+          "Ne comptez pas sur la chute naturelle : elle ne remplace pas l'éclaircissage manuel.",
+          "Commencez à former la charpente dès l'année de plantation, pas plus tard.",
+          "Arrêtez de fertiliser les arbres fruitiers à la fin de l'été."
+        ]
+      }
+    }
+  },
+  "flowering": {
+    "label": "Plantes à fleurs et ornementales",
+    "topics": {
+      "watering": {
+        "advice": [
+          "L'arrosage se compte ici en hauteur d'eau hebdomadaire, et non en cycle tremper-sécher : annuelles et vivaces veulent au moins 2,5 à 4 centimètres d'eau par semaine, pluie et irrigation confondues, et le meilleur moment est tôt, pour que le feuillage sèche vite. Chez les rosiers, le même principe se dit autrement : un arrosage profond favorise un système racinaire profond, tandis qu'un arrosage fréquent et léger fait se former les racines trop près de la surface du sol.",
+          "La santé de la plante en dépend plus qu'il n'y paraît. Un rosier atteint de taches noires à répétition a presque toujours des feuilles mouillées en fin de journée et de l'air immobile autour de lui : un soleil du matin, un tuyau poreux plutôt qu'un arroseur et une bonne circulation d'air résolvent plus de choses que n'importe quel traitement."
+        ],
+        "checklist": [
+          "Apportez au moins 25 à 40 millimètres d'eau par semaine, pluie comprise.",
+          "Arrosez tôt, pour que le feuillage sèche avant la nuit.",
+          "Préférez des arrosages profonds et espacés à des arrosages légers et fréquents.",
+          "Sur les rosiers, mouillez le sol et non la feuille."
+        ]
+      },
+      "light": {
+        "advice": [
+          "La plupart des annuelles ont besoin de plein soleil pendant au moins quatre à six heures par jour pour bien fleurir. Les rosiers en demandent plus : six à huit heures de soleil direct, et le soleil du matin compte particulièrement, car il sèche les feuilles et aide à prévenir les maladies.",
+          "Un diagnostic trompe beaucoup de monde : une vivace avachie, sans structure, manque en général de lumière — et non d'engrais. Fertiliser davantage n'y change rien ; déplacer la plante, oui."
+        ],
+        "checklist": [
+          "Annuelles : quatre à six heures de plein soleil par jour, au minimum.",
+          "Rosiers : six à huit heures, avec priorité au soleil du matin.",
+          "Une vivace avachie et étalée a besoin d'être déplacée, pas de plus d'engrais.",
+          "Observez où le soleil tombe au fil de l'année avant de vous engager sur un emplacement."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "La préparation d'une planche va plus profond qu'en pot : 15 à 25 centimètres pour les annuelles et 20 à 25 pour les vivaces. En sol argileux, incorporez au moins 5 centimètres d'écorce de pin compostée, de compost ou de terreau de feuilles ; en sol sableux, 5 à 8 centimètres de matière organique retenant l'humidité. Le pH visé pour les vivaces est de 6.0 à 6.5. Le paillage est ici plus mince que sur les ligneux : 5 à 8 centimètres pour les annuelles et seulement 2,5 à 5 pour les vivaces, avec un avertissement explicite — évitez un paillage trop épais, car le collet d'une vivace pourrit en dessous.",
+          "Le besoin nutritionnel est intermédiaire et explicitement plafonné : un engrais complet appliqué à la préparation et renouvelé environ toutes les six semaines suffit. Bien au-dessus du ligneux adulte, qui n'a presque besoin de rien, et bien en dessous de l'arbre fruitier adulte. Et une correction importante à une habitude répandue : n'utilisez pas systématiquement une formule riche en phosphore pour la floraison. Des doses élevées de phosphore n'augmentent pas le nombre de fleurs, et un excès chronique bloque des micronutriments comme le fer et le zinc, produisant des plantes rabougries et des feuilles jaunissantes — et un excès de phosphore redescend très lentement, ce qui peut prendre des années. Un engrais équilibré plus une analyse de sol, voilà la consigne sûre. Signe d'excès en pot : une croûte blanche sur le rebord, des pointes de feuilles brunes et des racines noircies."
+        ],
+        "checklist": [
+          "Préparez le sol en profondeur : 15 à 25 centimètres, en incorporant de la matière organique.",
+          "N'utilisez que 2,5 à 5 centimètres de paillis sur les vivaces, en l'écartant du collet.",
+          "Fertilisez avec une formule équilibrée, à renouveler toutes les six semaines.",
+          "N'utilisez pas de formule riche en phosphore pour forcer la floraison.",
+          "Croûte blanche sur le rebord du pot : lessivez avec beaucoup d'eau ou changez le substrat."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "L'opération qui définit ce groupe, c'est la suppression des fleurs fanées. Retirer les fleurs passées encourage la plante à en produire d'autres au lieu d'arrêter son cycle de floraison pour la saison ; c'est la seule catégorie où retirer l'organe reproducteur augmente le produit recherché. Pincez-les entre les doigts ou utilisez un sécateur bien affûté, et il est tout à fait acceptable d'emporter une portion de tige, pas seulement la fleur. Au-delà de l'effet sur la floraison, cela réduit l'incidence des maladies qui se développent sur la matière végétale en décomposition. À la plantation des annuelles, pincez boutons et fleurs pour favoriser une meilleure ramification ; sur les vivaces, rabattez au ras du sol après la floraison pour encourager une nouvelle pousse de feuilles à la base.",
+          "Les bulbes sont l'image inversée : après la fleur, le travail consiste à recharger. Retirez la fleur fanée pour empêcher la formation des capsules de graines, mais jamais la feuille — laissez le feuillage jusqu'à ce qu'il jaunisse et dépérisse de lui-même, et ne le nouez ni ne le tressez, car cela réduit la lumière que les feuilles peuvent intercepter, et avec elle la photosynthèse qui garnit le bulbe de l'année prochaine. Divisez les bulbes une fois le feuillage desséché et les bulbes en dormance, en séparant les caïeux par une torsion et une traction douces ; les petites divisions peuvent mettre un an ou deux avant de refleurir. Et à l'automne, envisagez de laisser les têtes de graines en place : elles constituent une ressource alimentaire nutritive pour la faune tout l'hiver."
+        ],
+        "checklist": [
+          "Retirez les fleurs fanées avant qu'elles ne montent en graines.",
+          "Pincez les boutons à la plantation des annuelles, pour que la plante se ramifie.",
+          "Sur les bulbes, coupez la fleur mais jamais la feuille.",
+          "Ne nouez ni ne tressez jamais le feuillage des bulbes.",
+          "À l'automne, laissez quelques têtes de graines pour la faune."
+        ]
+      }
+    }
+  },
+  "woody": {
+    "label": "Arbres et arbustes ligneux",
+    "topics": {
+      "watering": {
+        "advice": [
+          "C'est le seul groupe dont la période d'installation se mesure en années : environ un an pour chaque 2,5 centimètres de diamètre du tronc. Un arbre fraîchement planté veut un arrosage quotidien les deux premières semaines, tous les deux ou trois jours de la troisième à la douzième, une fois par semaine jusqu'aux premières gelées, et de nouveau une fois par semaine la deuxième année. Le volume répond à une formule : 4 à 6 litres par 2,5 centimètres de diamètre du tronc à chaque arrosage, répartis sur toute la zone racinaire plutôt qu'au pied du tronc, en mouillant 15 à 25 centimètres de sol.",
+          "Un arrosage profond encourage des racines fortes et améliore la résistance à la chaleur et à la sécheresse ; des arrosages fréquents et superficiels construisent un système racinaire de surface et dépendant — celui-là même qui, chez un ligneux, s'arrache lors d'un coup de vent. C'est pourquoi un arbre récemment planté qui flétrit malgré un arrosage quotidien est en général arrosé au mauvais endroit, en volume insuffisant. Les arbustes de terre de bruyère comme les azalées veulent un arrosage profond, mouillant au moins 15 à 20 centimètres, et en sol sableux ils peuvent demander deux arrosages par semaine la première année."
+        ],
+        "checklist": [
+          "Arrosez toute la zone racinaire, jamais le tronc.",
+          "Apportez 4 à 6 litres par 2,5 centimètres de diamètre du tronc à chaque fois.",
+          "Mouillez 15 à 25 centimètres de profil de sol.",
+          "Comptez environ un an d'installation pour chaque 2,5 centimètres de tronc.",
+          "Préférez des arrosages profonds et espacés à des arrosages quotidiens superficiels."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "Un ligneux adulte dans un bon sol n'a tout simplement pas besoin d'engrais : toutes les plantes du jardin n'ont pas à être fertilisées, et les arbres et arbustes adultes qui poussent dans des conditions de sol favorables ne demandent que peu ou pas d'engrais. Les arbres plantés dans une pelouse fertilisée se servent déjà tout seuls, car leurs racines interceptent les nutriments apportés au gazon. Quand vous fertilisez, le plafond est normatif : azote à libération lente à raison de 1 à 2 kilos pour 100 mètres carrés et par an, jamais plus de 3 ; à libération rapide, 0,5 à 1 kilo, avec un plafond de 2. L'apport couvre toute la surface de la projection du houppier, du collet jusqu'à l'extrémité des branches, et toujours sur sol humide.",
+          "Les arbustes de terre de bruyère sont le sous-groupe qui change tout. Azalées et rhododendrons veulent un pH entre 4.5 et 6.0, ont un enracinement superficiel et souffrent facilement d'un excès d'humidité dans le sol ; ils acceptent un engrais acidifiant proche d'un rapport 2-1-1, appliqué légèrement au printemps et au début de l'été, et jamais une fertilisation riche en azote à la fin de l'automne, car cela retarde la dormance. De jeunes feuilles jaunes à nervures vertes suggèrent un pH élevé qui bloque le fer — mais dans les sols argileux acides le fer est facilement disponible : cherchez donc l'excès d'eau avant d'accuser le pH. Le paillage est un outil et une arme : 5 à 10 centimètres d'épaisseur, tenu à 8 à 12 centimètres du tronc sur un jeune arbre et à 20 à 25 sur un sujet mature, étendu jusqu'à l'aplomb des branches. Aller au-delà crée le volcan de paillis, qui tue lentement : l'air ne pénètre plus, le sol en dessous est privé d'oxygène, l'humidité constante tue le phloème et les racines manquent de glucides."
+        ],
+        "checklist": [
+          "Ne fertilisez pas un ligneux adulte dans un bon sol — il n'en a presque jamais besoin.",
+          "Si vous fertilisez, couvrez toute la projection du houppier, et toujours sur sol humide.",
+          "Terre de bruyère : pH entre 4.5 et 6.0 et une fertilisation acidifiante légère au printemps.",
+          "Gardez le paillis à distance du tronc, en anneau plat.",
+          "5 à 10 centimètres de paillis suffisent ; au-delà, c'est un volcan."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "La taille est irréversible et obéit à des règles anatomiques. La coupe se fait juste au-delà du bourrelet de la branche — ce renflement à la base de la branche qui fait barrière naturelle aux organismes de pourriture. Les branches de plus de 4 centimètres de diamètre exigent la méthode des trois coupes, pour que l'écorce ne se déchire pas le long du tronc. Et pas de mastic : la recherche a montré que les mastics cicatrisants et autres produits de taille n'empêchent pas la pourriture.",
+          "Le moment est décidé par le bois qui porte les fleurs, pas par le calendrier : les plantes qui fleurissent sur le bois de l'année précédente — forsythia, azalée, lilas — se taillent juste après la floraison, et celles qui fleurissent sur le bois de l'année se taillent avant le départ de la végétation. Un arbuste qui ne fleurit jamais a presque toujours été taillé au mauvais moment. Préférez l'éclaircissage au rabattage, car l'éclaircissage encourage la pousse à l'intérieur de la plante et rend un port naturel, tandis que le rabattage épaissit la périphérie et assombrit l'intérieur, avec une repousse concentrée dans les 15 à 20 centimètres qui suivent la coupe. Pour rénover un vieil arbuste sans le choquer, appliquez la règle du tiers sur trois ans. Adoptez le plafond annuel prudent d'environ 25 % du houppier vivant, et n'étêtez jamais un arbre : l'étêtage retire la moitié ou plus de la couronne feuillée, laisse des plaies qui ne peuvent pas se compartimenter et expose l'écorce aux brûlures du soleil. Évitez aussi de tailler dans les dix semaines qui précèdent les premières fortes gelées de votre région."
+        ],
+        "checklist": [
+          "Coupez juste à l'extérieur du bourrelet, jamais au ras du tronc.",
+          "Utilisez la méthode des trois coupes sur les branches de plus de 4 centimètres.",
+          "N'appliquez pas de mastic cicatrisant : il n'empêche pas la pourriture.",
+          "Les plantes qui fleurissent sur le vieux bois se taillent juste après la floraison.",
+          "Retirez au plus 25 % environ du houppier vivant par an, et n'étêtez jamais un arbre."
+        ]
+      }
+    }
+  },
+  "orchid": {
+    "label": "Orchidées et épiphytes",
+    "topics": {
+      "watering": {
+        "advice": [
+          "Il n'y a pas de calendrier d'arrosage ici, seulement un critère de dessèchement : arrosez dès que la plante a séché, et il n'existe aucune formule magique du type arroser un pot de 15 centimètres tous les sept jours. Quand vous arrosez, arrosez pour de bon — l'eau doit couler librement par les trous de drainage pendant quelques minutes, jusqu'à saturation complète du mélange. La notion d'arrosage profond s'inverse dans ce groupe : il n'y a pas de profil de sol à mouiller, seulement une saturation totale suivie d'un séchage rapide. Une brumisation légère quotidienne équivaut à un arrosage superficiel en pleine terre : elle mouille la surface, laisse l'humidité stagner aux mauvais endroits et ne sature jamais le substrat.",
+          "La qualité de l'eau compte ici plus que dans tout autre groupe, car sans terre il n'y a pas de complexe d'échange cationique pour tamponner les sels : utilisez une eau tiède, de préférence de pluie, et jamais d'eau adoucie, qui apporte beaucoup de sodium. Ne laissez jamais le pot dans une soucoupe. Chaque sous-groupe a sa méthode : les broméliacées à réservoir absorbent surtout par les feuilles et par la coupe centrale à la base, qui doit rester pleine et être rincée chaque semaine pour éviter que les minéraux ne se concentrent et ne brûlent la pointe des feuilles ; les filles de l'air veulent un bain de vingt à trente minutes une fois par semaine — une à deux fois selon que la pièce est chaude et sèche ou fraîche et humide — puis une secousse et un retournement pour les égoutter ; et le cactus de Noël, une fois les boutons formés, a besoin d'un substrat uniformément humide pour ne pas les laisser tomber."
+        ],
+        "checklist": [
+          "Arrosez quand le substrat a séché, pas selon le calendrier.",
+          "Saturez le substrat jusqu'à ce que l'eau coule librement pendant quelques minutes.",
+          "Utilisez une eau tiède, de pluie si possible, et jamais d'eau adoucie.",
+          "Ne laissez jamais le pot tremper dans une soucoupe pleine d'eau.",
+          "Broméliacée à réservoir : gardez la coupe pleine et rincez-la chaque semaine."
+        ]
+      },
+      "light": {
+        "advice": [
+          "La plupart des orchidées d'intérieur veulent une à quatre heures de soleil direct. Les phalaenopsis se plaisent entre 19 et 30 °C le jour et 16 à 19 °C la nuit, devant une fenêtre à l'est ou à l'ouest, à l'abri du soleil d'été et loin des radiateurs et des courants d'air. Les broméliacées demandent douze à seize heures de lumière relativement vive par jour, et les feuilles font leur rapport : des feuilles longues, fines et plus vertes signalent trop peu de lumière ; plus courtes, plus épaisses et plus pâles, elles en ont assez. Les filles de l'air veulent une lumière vive filtrée, jamais de soleil direct.",
+          "Il existe un cas où la photopériode l'emporte sur l'intensité. Les cactus de Noël et leurs proches exigent quatorze heures ou plus d'obscurité continue par jour, à partir de la mi-septembre environ dans l'hémisphère nord, pendant au moins six semaines — et l'avertissement pratique est sans détour : deux heures seulement d'éclairage venant interrompre la nuit empêchent la formation des boutons floraux. Une lampe laissée allumée dans la pièce suffit à annuler la floraison de l'année."
+        ],
+        "checklist": [
+          "Orchidées d'intérieur : une à quatre heures de soleil direct.",
+          "Phalaenopsis : fenêtre à l'est ou à l'ouest, loin des radiateurs et des courants d'air.",
+          "Une broméliacée aux feuilles longues, fines et foncées réclame plus de lumière.",
+          "Fille de l'air : lumière vive filtrée, jamais de soleil direct.",
+          "Cactus de Noël : une obscurité continue la nuit pendant six semaines pour former les boutons."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "Il n'y a pas de terre dans ce groupe, et un terreau ordinaire tue : n'utilisez jamais de terreau à base de terre franche ni de terreau universel, car il asphyxie la racine couverte de vélamen. Plus encore, le substrat a une date de péremption et le rempotage est obligatoire, pas facultatif — l'écorce doit être remplacée environ tous les deux ans, et avant cela le signe est physique : rempotez quand de minuscules fragments de substrat commencent à sortir du pot pendant l'arrosage. Une écorce décomposée devient moins aérée et plus dense, retient l'eau plus longtemps et fait pourrir les racines. C'est le seul groupe où le substrat lui-même est la cause d'une mort programmée.",
+          "Le choix entre écorce et sphaigne est une décision d'environnement, pas de goût : écorce grossière dans une pièce humide ou une serre ; un mélange plus riche en sphaigne et en fibre dans un intérieur sec et ensoleillé, avec des arrosages plus espacés et un rempotage juste après la floraison. Un mélange d'écorce, de charbon de bois et de perlite est le standard équilibré du commerce. Le pot doit être juste assez grand pour contenir le système racinaire — un contenant trop grand retient l'humidité et abîme les racines d'orchidée. La fertilisation est diluée par principe : la moitié de la dose indiquée, avec peu ou pas d'urée, chaque semaine en été et tous les quinze jours en automne et en hiver, en sautant l'engrais un arrosage sur quatre pour lessiver les sels. Les broméliacées vont encore plus faible, au quart ou au huitième de la dose. Et rappelez-vous que plusieurs membres de ce groupe sont monocarpiques : une broméliacée qui décline lentement après la floraison achève son cycle normal, elle n'est pas malade — gardez les rejets."
+        ],
+        "checklist": [
+          "Ne rempotez jamais dans de la terre ordinaire ou du terreau universel.",
+          "Remplacez l'écorce tous les deux ans, ou dès que des fragments sortent du pot pendant l'arrosage.",
+          "Utilisez un pot dimensionné exactement au système racinaire.",
+          "Fertilisez à demi-dose et sautez l'engrais un arrosage sur quatre.",
+          "Une broméliacée qui meurt après la floraison suit son cycle normal : gardez les rejets."
+        ]
+      }
+    }
+  },
+  "herb": {
+    "label": "Herbes culinaires et aromatiques",
+    "topics": {
+      "watering": {
+        "advice": [
+          "Ce groupe se divise en deux, et les traiter tous les deux avec le même calendrier est l'erreur structurelle. Les méditerranéennes ligneuses — romarin, thym, origan, sauge, lavande — veulent des arrosages espacés avec un vrai dessèchement entre deux : leur risque, c'est une racine noyée en hiver, pas la sécheresse en été. Le romarin déteste avoir les racines mouillées, surtout en hiver, et une fois installé en pleine terre il n'a presque plus besoin d'arrosage ; en pot, arrosez pendant les périodes sèches mais ne laissez jamais le terreau se gorger d'eau.",
+          "Les herbes feuillues — basilic, persil, menthe, mélisse — veulent l'inverse : une humidité du sol relativement constante, car le stress hydrique accélère la montée en graines et durcit la feuille. Arrosez le matin pour que le feuillage sèche avant la nuit, et sur le basilic évitez de mouiller les feuilles : utilisez le goutte-à-goutte ou un tuyau poreux plutôt qu'un arroseur, car une feuille mouillée dans un air immobile est une invitation au mildiou."
+        ],
+        "checklist": [
+          "Séparez les méditerranéennes des herbes feuillues avant de fixer la moindre routine d'arrosage.",
+          "Méditerranéennes : arrosages espacés, et laissez le sol sécher pour de bon entre deux.",
+          "Herbes feuillues : gardez une humidité constante pour éviter la montée en graines.",
+          "Arrosez le matin, jamais en fin de journée.",
+          "Sur le basilic, mouillez le sol et non la feuille."
+        ]
+      },
+      "light": {
+        "advice": [
+          "Presque toutes les herbes poussent mieux dans un emplacement ensoleillé au moins six heures par jour — et c'est le soleil qui fabrique l'huile essentielle, donc c'est le soleil qui fabrique l'arôme. Le basilic préfère le plein soleil mais pousse raisonnablement bien avec six heures de soleil partiel.",
+          "Les exceptions sont bien connues et méritent d'être respectées : le persil et la menthe préfèrent la mi-ombre et dépérissent en plein soleil intense. Si votre persil ou votre menthe peine dans la planche la plus ensoleillée, c'est peut-être exactement le problème."
+        ],
+        "checklist": [
+          "Visez au moins six heures de soleil par jour pour la plupart des herbes.",
+          "Le persil et la menthe acceptent, et parfois préfèrent, la mi-ombre.",
+          "Moins de soleil, c'est moins d'huile essentielle et moins d'arôme.",
+          "Gardez quelques pots près de la cuisine, pour cueillir souvent."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "Le drainage vaut ici plus que la fertilité, et c'est le seul groupe où une forte fertilité est une perte : les sols très riches ont tendance à produire des feuilles luxuriantes qui manquent de goût. Le pH visé, en général, est de 6 à 7, avec une matière organique modérée. En sol argileux, incorporez 5 à 8 centimètres d'écorce de pin fine, de gravillon ou de compost grossier sur une profondeur de 20 à 30 centimètres ; en sol sableux, la même profondeur de matériau retenant l'humidité. Une planche surélevée avec un paillage de gravier est une pratique standard dans ce groupe, pas un luxe.",
+          "Le romarin en sol lourd ne se corrige pas — il se déplace, dans une planche surélevée ou un pot contenant jusqu'à 25 % de gravillon horticole en volume. Le romarin en pleine terre n'a besoin d'aucune fertilisation ; celui en pot reçoit une poignée d'engrais granulé universel à la fin du printemps. Le basilic est l'exception qui se comporte comme un légume et accepte une dose mesurée à la plantation, complétée seulement si la croissance stagne. Sur la coriandre, de légers apports d'azote gardent les plantes bien fournies, mais la source est explicite : évitez la tendance à sur-fertiliser. Et attention à la menthe : plantez-la dans un contenant sans fond enfoncé dans la planche, car elle court par rhizomes et prendra toute la place."
+        ],
+        "checklist": [
+          "Mettez le drainage en premier : planche surélevée, gravillon ou écorce fine incorporés.",
+          "Maintenez le pH entre 6 et 7 et une fertilité modérée.",
+          "Une herbe luxuriante et sans goût est un signe d'excès d'engrais.",
+          "Le romarin en pleine terre n'a besoin d'aucune fertilisation.",
+          "Plantez la menthe dans un contenant sans fond enfoncé dans la planche."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "La récolte a une fenêtre physiologique : les herbes se récoltent juste avant la floraison, au moment où les huiles essentielles sont à leur maximum. Et elle a une heure de la journée — tôt le matin, une fois la rosée évaporée mais avant que la chaleur ne s'installe. Aucun autre groupe n'a l'heure de la journée comme variable de qualité, et une herbe cueillie l'après-midi a un arôme nettement plus faible. Les fleurs aromatiques se cueillent avant leur ouverture complète.",
+          "La taille entretient ici le port et le goût, et chaque genre a sa règle. Sur le basilic, pincez régulièrement les extrémités des pousses et retirez les boutons floraux dès qu'ils apparaissent, sans quoi la feuille devient amère et la plante cesse de pousser ; récoltez les extrémités de pousse avec une ou deux paires de feuilles, en laissant assez de feuillage pour repartir. Le romarin reçoit une taille légère chaque année après la fin de la floraison, sans jamais couper dans le vieux bois — faute de quoi il file, devient ligneux et se dénude à la base. La sauge accepte une taille sévère au début du printemps, le thym se rafraîchit légèrement après la floraison, et le laurier se taille en été. La menthe, après la floraison, peut être rabattue à environ 5 centimètres de la base pour renouveler les feuilles."
+        ],
+        "checklist": [
+          "Récoltez juste avant la floraison, quand l'huile est à son maximum.",
+          "Récoltez tôt le matin, une fois la rosée évaporée.",
+          "Sur le basilic, retirez les boutons floraux dès qu'ils apparaissent.",
+          "Sur le romarin, taillez légèrement après la floraison et ne coupez jamais dans le vieux bois.",
+          "Renouvelez la menthe en rabattant la touffe après la floraison."
+        ]
+      }
+    }
+  },
+  "pollinator": {
+    "label": "Insectes pollinisateurs",
+    "topics": {
+      "role": {
+        "advice": [
+          "Environ un tiers de ce que nous mangeons dépend de l'activité des pollinisateurs, et l'essentiel de ce travail n'est pas assuré par l'abeille que vous avez en tête. Rien qu'en Grande-Bretagne, on compte plus de 270 espèces d'abeilles : environ 26 bourdons, plus de 250 abeilles solitaires et une seule espèce d'abeille domestique. Presque toutes sont solitaires — chaque femelle construit et approvisionne son nid toute seule et meurt avant l'émergence de la génération suivante — et le nid n'est presque jamais une ruche : beaucoup nichent dans le sol nu, d'autres dans des cavités du bois, et les bourdons occupent fréquemment des galeries creusées par des rongeurs.",
+          "Au Brésil, le groupe clé est celui des abeilles sans dard, les Meliponini, natives des régions tropicales et subtropicales ; dans le seul État du Pará, on estime à 109 le nombre d'espèces liées à des cultures comme l'açaí, le melon et la pastèque. Le groupe va bien au-delà des abeilles : on pense que les coléoptères comptent parmi les premiers insectes à avoir visité les fleurs, les syrphes pollinisent à l'état adulte tandis que leurs larves dévorent les pucerons, et les papillons de jour comme de nuit s'ajoutent au service, même sans la pollinisation vibratile qui rend les abeilles si efficaces à chaque visite."
+        ],
+        "checklist": [
+          "La plupart des abeilles sont solitaires et ne formeront jamais de ruche.",
+          "Un petit tas de terre conique dans la pelouse est l'entrée d'une galerie de nid active.",
+          "Des découpes circulaires nettes dans une feuille, ce sont des mégachiles qui récoltent de quoi tapisser leur nid.",
+          "Un syrphe a deux ailes ; abeilles et guêpes en ont quatre.",
+          "Pas de pucerons, pas de larves de syrphes : la proie est une ressource, elle aussi."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "Le risque réel est faible. Se faire piquer dans son jardin est peu probable tant que l'on traite les abeilles avec respect, et les abeilles solitaires n'utilisent leur dard qu'en légitime défense, quand on les manipule brutalement. Les abeilles sans dard, comme leur nom l'indique, ne piquent pas — ce qui en fait le groupe le plus sûr à observer de près et à garder chez soi. Dans ce voisinage, le risque de piqûre se concentre chez les guêpes sociales, qui disposent, elles, d'une véritable capacité de piqûre défensive au nid.",
+          "Deux réserves complètent le tableau. Les chenilles de plusieurs papillons de nuit sont urticantes, et c'est une tout autre histoire — consultez le groupe des insectes nuisibles avant de toucher la moindre chenille velue. Et l'élevage d'abeilles sans dard est une activité réglementée, pas libre : au Pará, par exemple, les éleveurs possédant jusqu'à 99 ruches ont été dispensés de licence environnementale, mais doivent tout de même s'enregistrer auprès de l'organisme d'inspection agricole. Prélever un nid sauvage obéit à ses propres règles."
+        ],
+        "checklist": [
+          "Observez sans manipuler : une abeille solitaire ne pique que si on l'écrase.",
+          "Les abeilles sans dard ne piquent pas — le groupe le plus sûr pour l'observation rapprochée.",
+          "Gardez vos distances avec les nids de guêpes sociales.",
+          "Ne touchez jamais une chenille velue : le risque est là, pas chez les abeilles.",
+          "L'élevage d'abeilles natives exige un enregistrement auprès de l'autorité compétente."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "La diversité avant la quantité : commencez par huit à dix espèces de plantes indigènes couvrant le printemps, l'été et l'automne, plantées en taches d'au moins un mètre de large. Préférez les fleurs simples et ouvertes, à une seule rangée de pétales — les fleurs doubles cachent ou éliminent le pollen et le nectar. Laissez fleurir les herbes de la pelouse en tondant moins souvent, et fournissez de l'eau, car les abeilles et les autres pollinisateurs ont parfois besoin de boire. Une méthode de terrain à copier : observez quelles plantes ont du succès auprès des pollinisateurs dans votre quartier, et cultivez-en davantage.",
+          "Les sites de nidification sont une ressource. Laissez des zones de sol nu bien drainé en plein soleil, sans paillis, pour les abeilles terricoles, et tolérez les petits tas de terre dans la pelouse au lieu de les niveler. Un hôtel à abeilles fonctionne avec des trous d'environ 2 à 10 millimètres de diamètre, espacés d'environ 2 centimètres, de 8 à 10 centimètres de profondeur pour les plus petits et de 13 à 15 pour les plus grands, dans du bois non traité, installé à un ou deux mètres de hauteur dans un endroit abrité. Et la règle qui l'emporte sur toutes les autres : ne traitez jamais des fleurs ouvertes. Évitez les insecticides à large spectre ; si vous devez traiter, faites-le le soir, quand les pollinisateurs sont moins actifs."
+        ],
+        "checklist": [
+          "Plantez huit à dix espèces indigènes couvrant les trois saisons.",
+          "Choisissez des fleurs simples à une seule rangée de pétales, pas des fleurs doubles.",
+          "Laissez des plages de sol nu et ensoleillé pour les abeilles terricoles.",
+          "Fournissez de l'eau peu profonde et sûre toute l'année.",
+          "Ne traitez jamais des fleurs ouvertes ; si vous devez traiter, traitez le soir."
+        ]
+      }
+    }
+  },
+  "beneficialInsect": {
+    "label": "Insectes prédateurs et auxiliaires",
+    "topics": {
+      "role": {
+        "advice": [
+          "Ce sont les ennemis naturels du jardin : les prédateurs, qui tuent et mangent de nombreuses proies au cours de leur vie, et les parasitoïdes, dont la larve se développe dans ou sur un hôte unique et finit par le tuer. Les chiffres sont frappants — une coccinelle peut engloutir jusqu'à 5 000 pucerons dans sa vie, les carabes peuvent consommer chaque jour l'équivalent de leur propre poids, et une larve de chrysope prend entre 100 et 150 pucerons. La lutte intégrée fondée sur les ennemis naturels a permis, selon les rapports, de réduire la fréquence des traitements de 30 % à 40 % selon les cultures.",
+          "Le stade de vie change tout, et c'est là que se loge l'erreur la plus courante. Chez les chrysopes et les syrphes, seule la larve est prédatrice : l'adulte vit de nectar, de pollen et de miellat. Autrement dit, cette étrange petite créature sur la feuille est en général l'alliée, pas le nuisible. Trois signes de terrain méritent d'être appris : une larve de coccinelle est rougeâtre et a une silhouette d'alligator ; les œufs de chrysope sont posés au bout de fins pédoncules ; et une chenille portant quelques dizaines de petits cocons blancs sur le dos est déjà condamnée et libérera des dizaines de guêpes parasitoïdes — laissez-la exactement où elle est."
+        ],
+        "checklist": [
+          "Identifiez avant d'agir : beaucoup de larves étranges sur les feuilles sont des prédateurs.",
+          "Une larve de coccinelle est rougeâtre et a une silhouette d'alligator.",
+          "Des œufs au bout de pédoncules fins comme des cheveux sont des œufs de chrysope, pas un ravageur.",
+          "Une chenille portant des cocons blancs sur le dos est déjà parasitée — ne la jetez pas.",
+          "Une mante est un prédateur indiscriminé : elle mange aussi les pollinisateurs."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "Presque rien ici ne pique. Parmi les prédateurs, seules les guêpes sociales ont une capacité de piqûre défensive ; parmi les parasitoïdes, seules les guêpes chasseresses qui construisent des nids dans le sol ou dans la boue. Les ichneumons et les braconides utilisent ce long dard uniquement comme ovipositeur, et il n'a rien de défensif.",
+          "Mais deux familles mordent si on les manipule : les réduves enfoncent leur rostre et injectent des enzymes digestives, et les asilides injectent une salive neurotoxique. Ne les prenez pas dans la main. Une mante religieuse capture avec ses pattes ravisseuses en un mouvement fulgurant et mord si on la tient. Et il y a un cas précis : la coccinelle asiatique invasive mord les gens, surtout lorsqu'elle se retrouve coincée entre la peau et un vêtement — elle ne perce pas la peau et ne transmet pas de maladie, mais quand on la dérange elle libère une hémolymphe qui peut tacher définitivement murs, rideaux et moquettes, et des réactions allergiques comme de l'asthme et de l'urticaire ont été rapportées, la sensibilité n'ayant aucun rapport avec l'âge de la personne ou sa prédisposition aux allergies. Pour cette coccinelle, la recommandation est de colmater fissures et seuils, pas de traiter le jardin. Un nid de guêpes sociales actif s'observe à distance."
+        ],
+        "checklist": [
+          "Seules les guêpes sociales et les guêpes chasseresses piquent dans ce groupe.",
+          "Ne prenez pas une réduve ou un asilide dans la main.",
+          "Une mante mord si vous la tenez.",
+          "Les coccinelles invasives à l'intérieur se règlent en colmatant les ouvertures, pas en traitant.",
+          "Observez les nids de guêpes à distance."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Conserver vaut mieux qu'acheter. La recommandation standard, c'est l'habitat et la tolérance, pas le lâcher : protégez ces prédateurs en évitant les pesticides qui les tuent, en choisissant des plantes qui leur fournissent pollen, nectar et abri, et en tenant les fourmis à l'écart des plantes infestées — les fourmis défendent pucerons et cochenilles contre les prédateurs en échange de miellat. Parmi les plantes citées par les services d'extension comme nourriture des adultes : aneth, fenouil, échinacée, rudbeckia, asclépiade et lantana.",
+          "Chaque groupe a son exigence de milieu. Les libellules ont besoin d'un point d'eau : la femelle pond en touchant la surface et la larve se développe immergée — pas d'eau, pas de libellule. Les larves de carabes vivent dans le sol avec un rayon d'action limité : retourner ou tasser la terre supprime donc la génération suivante. Et faire tomber à zéro les pucerons du jardin retire d'un coup la base alimentaire des coccinelles, des chrysopes, des syrphes et des guêpes parasitoïdes : la proie est une ressource, pas une urgence. Quand un traitement est inévitable, préférez le savon, l'huile ou le spinosad aux pyréthrinoïdes, carbamates et organophosphorés, précisément pour épargner les guêpes parasitoïdes, les tachinaires et les carabes."
+        ],
+        "checklist": [
+          "Offrez des fleurs à nectar et à pollen : les adultes en vivent.",
+          "Tenez les fourmis à l'écart des plantes infestées.",
+          "Laissez une eau stagnante propre si vous voulez des libellules.",
+          "Ne retournez ni ne tassez le sol où vivent les larves de carabes.",
+          "Tolérez quelques pucerons : sans proies, les prédateurs ne restent pas."
+        ]
+      }
+    }
+  },
+  "pestInsect": {
+    "label": "Insectes nuisibles courants",
+    "topics": {
+      "role": {
+        "advice": [
+          "Nuisible est une étiquette de contexte, pas d'espèce : elle décrit un dommage économique ou un risque sanitaire, en un lieu et à un moment donnés. Les pièces buccales vous disent le type de dégâts — les broyeurs laissent des trous bien visibles dans les feuilles, le bois ou les fruits ; les suceurs utilisent un tube en forme de paille et produisent des piqûres décolorées, des taches, un rabougrissement, un jaunissement, des déformations et du miellat. Et le miellat n'est pas une maladie : c'est une excrétion sucrée, et la plaque noire est la fumagine qui pousse par-dessus, noircit tout et réduit la photosynthèse. Réglez le suceur, et la tache s'en va avec lui.",
+          "Deux clés aident sur le terrain. La métamorphose détermine ce que vous allez réellement trouver : dans la métamorphose graduelle, il y a l'œuf, la nymphe et l'adulte, la nymphe ressemblant à un adulte sans ailes ; dans la métamorphose complète, il y a l'œuf, la larve, la pupe et l'adulte, et la larve peut n'avoir aucune ressemblance avec l'adulte. Et les mœurs vous disent où regarder : les suceurs se concentrent sur les tissus jeunes en expansion, ce qui explique que la jeune feuille s'enroule en premier, et pucerons, aleurodes et acariens vivent sous la feuille. Un cas curieux : les fourmis coupe-feuilles ne mangent pas la feuille — elles la coupent pour cultiver le champignon dont elles se nourrissent, ce qui en fait un fléau dans les plantations et un organisme clé dans les écosystèmes natifs."
+        ],
+        "checklist": [
+          "Trous et déchirures = broyeur. Piqûres décolorées, déformations et surface collante = suceur.",
+          "La fumagine pousse sur le miellat : traitez l'insecte, pas la tache.",
+          "Regardez toujours sous la feuille.",
+          "Une jeune feuille enroulée signale un suceur, pas la soif.",
+          "Toutes les coccinelles ne sont pas des alliées : une lignée est phytophage et mange les feuilles."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "C'est ici que se concentre presque tout le risque physique de la faune de l'application — et il ne vient pas des ravageurs des cultures. Les chenilles urticantes portent des soies creuses, en forme de plume, reliées à des glandes à venin, qui percent la peau et libèrent le poison ; les symptômes vont de légères démangeaisons à la douleur, l'œdème, les cloques, la dermatite et même des troubles intestinaux. Premiers soins : appliquez et retirez du ruban adhésif à plusieurs reprises pour extraire les soies brisées, lavez à l'eau tiède et au savon, appliquez rapidement une poche de glace pour prévenir l'œdème et réduire la douleur, et consultez un médecin en cas de réaction sévère. Au Brésil, la chenille Lonomia provoque un tableau hémorragique et menace les populations rurales comme urbaines ; la surveillance au Paraná a enregistré 199 cas et cinq décès entre 1989 et 2000, avec un sérum décentralisé vers des points stratégiques. La plupart des accidents viennent d'un frôlement du feuillage pendant les travaux de jardin plutôt que d'un animal agressif : admirez de loin la chenille colorée et duveteuse.",
+          "La punaise triatome, qui transmet la maladie de Chagas, a son propre protocole officiel lorsqu'on la trouve : n'écrasez pas, ne pressez pas et n'abîmez pas l'insecte ; protégez votre main avec un gant ou un sac plastique ; placez l'insecte, vivant de préférence, dans un récipient en plastique à couvercle vissé ; et portez-le à un poste d'information sur les triatomes. La transmission vectorielle se fait par les déjections de l'insecte qui atteignent la plaie de piqûre, et il existe aussi une transmission par ingestion d'aliments ou de boissons contaminés. La prévention domestique passe par des moustiquaires aux portes et aux fenêtres, l'usage de répulsif et le port de manches longues la nuit."
+        ],
+        "checklist": [
+          "Ne touchez jamais une chenille velue ou épineuse, et ne la chassez pas de la main.",
+          "Piqûre de chenille : ruban adhésif, eau tiède savonneuse et poche de glace — et un médecin si cela s'aggrave.",
+          "Si vous trouvez une punaise triatome, n'écrasez pas l'insecte.",
+          "Récupérez-la avec un gant, dans un récipient à couvercle vissé, et portez-la à la surveillance sanitaire.",
+          "Posez des moustiquaires aux portes et aux fenêtres et portez des manches longues la nuit dans les zones à risque."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "C'est le seul groupe où la bonne réponse peut être de ne rien faire : la consigne de base est de surveiller et de prospecter pour déterminer le type d'insecte et le niveau de population avant toute décision de traitement. Ensuite, montez l'échelle du moindre impact. Un simple jet d'eau au tuyau élimine pucerons et acariens. Le ramassage à la main et un piège maison fonctionnent — posez un petit carré de vieux bardeau ou de carton épais sous un plant de courge, les punaises se rassemblent dessous pour s'abriter, et il ne reste qu'à soulever le piège et à les détruire. L'esquive phénologique, semer tôt pour éviter l'émergence du ravageur, est elle aussi une forme de lutte.",
+          "Ce n'est qu'ensuite que viennent les produits : savon insecticide et huile, qui touchent moins d'insectes non ciblés, paillis réfléchissant contre l'aleurode, Bacillus thuringiensis pour les jeunes chenilles, et la chimie en tout dernier, toujours pulvérisée le soir pour réduire l'impact sur les insectes pollinisateurs. Les services d'extension préfèrent le spinosad aux pyréthrinoïdes et aux néonicotinoïdes, précisément pour épargner les guêpes parasitoïdes, les tachinaires et les carabes. Les barrières physiques sont la lutte la plus sous-estimée de toutes, à une condition : le voile de forçage doit être retiré à la floraison, sinon il bloque le pollinisateur en même temps que le ravageur. Et notez correctement ce que vous avez vu — photographier avec un objet servant d'échelle à côté de l'insecte, noter la date, la plante et la partie de la plante dont l'insecte se nourrissait rend tout diagnostic bien plus fiable."
+        ],
+        "checklist": [
+          "Surveillez et comptez avant de traiter.",
+          "Commencez par un jet d'eau, le ramassage à la main et un piège maison.",
+          "Préférez le savon, l'huile ou le spinosad aux insecticides à large spectre.",
+          "Retirez le voile de forçage à la floraison.",
+          "Pulvérisez toujours le soir, quand les pollinisateurs sont inactifs."
+        ]
+      }
+    }
+  },
+  "decomposerFungus": {
+    "label": "Champignons décomposeurs",
+    "topics": {
+      "role": {
+        "advice": [
+          "Ce sont des champignons saprotrophes : ils vivent de matière organique morte. Les champignons qui produisent ces carpophores sont bénéfiques, car ils décomposent la matière organique du sol et rendent les nutriments disponibles pour les autres plantes. Un champignon dans la pelouse n'est presque jamais une maladie — ce sont des organismes fongiques naturels qui font ce que la nature attend d'eux : dégrader de la matière autrefois vivante pour restituer l'énergie au sol. Un rond de sorcière est un signe de fertilité, pas de nuisance : la dégradation libère de l'azote, l'herbe l'absorbe et fonce, et c'est ce qui dessine le cercle vert sombre. Cueillir le champignon ne tue pas non plus l'organisme : le carpophore est éphémère, et le champignon lui-même, c'est le mycélium dans le substrat.",
+          "Sur un arbre vivant, en revanche, le signe est sérieux. Des champignons ou des polypores sur le tronc ou au pied sont des avertissements, et beaucoup de vieux arbres qui tombent lors d'une tempête ont déjà vu leur résistance fortement réduite, voire supprimée, par des champignons de pourriture. La perte de résistance est difficile à détecter pour un amateur, et même à évaluer pour un professionnel — ce qui veut dire faire appel à quelqu'un de formé à la détection et à l'évaluation des pourritures. Dans le paillis, le champignon-canon, les champignons nids d'oiseaux et les vesses-de-loup sont des décomposeurs inoffensifs, et les masses gluantes jaune vif ou orange sont des myxomycètes, qui ne sont même pas de vrais champignons et ne nuisent pas aux plantes."
+        ],
+        "checklist": [
+          "Un champignon dans la pelouse, c'est de la matière organique recyclée, pas une maladie.",
+          "Un rond de sorcière vert sombre montre de l'azote libéré, pas une nuisance.",
+          "Un champignon ou un polypore sur le tronc ou au pied est un avertissement structurel.",
+          "Cueillir les champignons n'élimine pas le champignon, seulement le carpophore.",
+          "Une masse gluante jaune dans le paillis est un myxomycète et n'attaque pas les plantes."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "Ne mangez jamais un champignon sauvage sans identification en personne par un expert. De nombreuses espèces sont vénéneuses, et seul un expert peut distinguer les espèces comestibles des espèces toxiques. La cuisson n'y change rien : les amanitines sont thermostables et ne sont pas inactivées par la cuisson, et il existe des cas d'intoxication par inhalation des vapeurs de cuisson. Un guide de terrain d'une autre région ne se transpose pas — avoir appris à identifier les champignons dans une région ou dans un autre pays n'est pas fiable pour les identifier ailleurs. Le symptôme tardif est le dangereux : dans des cas documentés, nausées, vomissements et diarrhée ont commencé environ neuf heures après l'ingestion, et des vomissements qui débutent plus de six heures après sont un signe de gravité, pas d'indigestion.",
+          "Toucher n'empoisonne pas — le risque documenté est l'ingestion et, secondairement, l'inhalation des vapeurs de cuisson. Malgré tout, lavez-vous les mains et ne les portez pas à la bouche. Retirez les champignons des pelouses fréquentées par des enfants ou des animaux, car les tout-petits ont tendance à tout porter à la bouche, champignons compris : dans une revue états-unienne portant sur 2016 à 2018, 25.9 % des patients avaient cinq ans ou moins. Si quelqu'un en a mangé un, appelez immédiatement le centre antipoison — aux États-Unis, le 1-800-222-1222 ; au Brésil, le CIATox / Disque-Intoxicação 0800 722 6001. Et une phrase compte plus que toutes les autres dans ce manuel : une application d'identification ne remplace pas un expert."
+        ],
+        "checklist": [
+          "Ne mangez pas un champignon sauvage sans identification en personne par un expert.",
+          "La cuisson, le séchage et les tests maison ne rendent pas sûr un champignon vénéneux.",
+          "Des vomissements qui débutent plus de six heures après sont un signe de gravité.",
+          "Retirez les champignons des pelouses où jouent des enfants ou des animaux en liberté.",
+          "Si quelqu'un en a mangé un, appelez tout de suite le centre antipoison."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "C'est le seul groupe fongique cultivable à grande échelle, précisément parce qu'il ne lui faut qu'un substrat mort : shiitake, pleurote, champignon de Paris et enoki sont tous saprotrophes, et les cultiver revient à imiter du bois ou de la paille en décomposition. Au jardin, la gestion est physique et non chimique — le fongicide n'est pas la réponse. Cueillez les champignons par précaution, dégagez la matière organique enterrée qui alimente la pousse — souches, racines mortes, gravats de chantier et feutre accumulé — et aérez le sol pour améliorer l'infiltration. Quand vous installez une pelouse, retirez d'abord les souches et les racines.",
+          "Quand un rond de sorcière gêne vraiment, le dommage vient du mycélium dense, qui peut empêcher l'eau de pénétrer dans le sol — la voie est l'aération pour rompre le feutre fongique, plus l'arrosage et la fertilisation dans les doses recommandées. Dans le paillis, incorporer environ 40 % de compost de champignonnière usagé freine le champignon-canon, car il apporte des microbes concurrents ; les champignons nids d'oiseaux et les myxomycètes ne demandent rien de plus qu'un coup de râteau. Pour un arbre, la prévention est la seule vraie défense, car on ne sauve pas un arbre atteint de pourriture : arrosez bien en période de sécheresse, aérez le sol, maintenez 5 à 15 centimètres de paillis organique, fertilisez en libération lente, évitez de blesser ou d'étouffer les racines pendant des travaux, et taillez avec la bonne technique au bon moment. Et quand vous photographiez, documentez le chapeau, les lames ou les pores en dessous, la base du pied, le substrat et l'hôte — la base et le substrat sont exactement ce qui sépare les espèces mortelles des comestibles."
+        ],
+        "checklist": [
+          "N'appliquez pas de fongicide sur une pelouse à cause de champignons.",
+          "Dégagez le bois et les racines enterrés qui nourrissent le champignon.",
+          "Aérez le sol pour rompre le feutre mycélien d'un rond de sorcière.",
+          "Un arbre atteint de pourriture ne se soigne pas : il se prévient, et s'évalue par un professionnel.",
+          "Quand vous photographiez, incluez la base du pied et le substrat."
+        ]
+      }
+    }
+  },
+  "mycorrhizalFungus": {
+    "label": "Champignons mycorhiziens",
+    "topics": {
+      "role": {
+        "advice": [
+          "Le champignon n'est ici que la pointe visible d'un partenariat souterrain avec les racines des plantes. On estime que 80 % à 90 % de la vie végétale s'engage dans au moins l'un des sept types de mycorhize — ce qui en fait la règle du règne végétal, pas l'exception. Le champignon ne photosynthétise pas et ne fixe pas son propre carbone : il reçoit donc de la plante hôte tous les glucides dont il a besoin et rend de l'eau et des nutriments minéraux — meilleure absorption du phosphore, de l'ammonium et du zinc, protection contre les maladies du sol, et meilleure tolérance à la sécheresse et à la température. L'avantage est géométrique plutôt que chimique — les racines n'occupent qu'environ 0.5 % du volume de la couche arable, et une hyphe, bien plus fine, entre en contact avec beaucoup plus de sol par unité de volume.",
+          "Il existe deux types pratiques. Les ectomycorhizes forment un manchon autour de la racine et ce sont elles qui produisent des champignons visibles ; les mycorhizes arbusculaires se développent à l'intérieur de la racine et ne produisent aucun champignon, seulement des spores dans le sol. Les orchidées dépendent des champignons mycorhiziens jusque pour germer, et les plantes mycotrophes — celles qui ne photosynthétisent pas assez — obtiennent leur carbone d'un arbre hôte par l'intermédiaire d'un champignon. Une distinction de terrain mérite d'être retenue : un champignon mycorhizien sort du sol près d'un arbre vivant et indique que l'arbre est vivant et connecté, tandis qu'un polypore de pourriture sort du tronc ou du pied et signale un risque structurel."
+        ],
+        "checklist": [
+          "Les champignons mycorhiziens sortent du sol près d'un arbre vivant ; les polypores de pourriture sortent du tronc.",
+          "Le champignon ne mange pas l'arbre : il échange des glucides contre de l'eau et des minéraux.",
+          "Un champignon mycorhizien indique un sol installé et non perturbé.",
+          "Les mycorhizes arbusculaires existent dans presque tous les jardins et sont invisibles.",
+          "Les orchidées indigènes dépendent du champignon de leur sol d'origine pour germer."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "La même règle absolue s'applique, et elle compte encore plus ici : ne mangez jamais un champignon sauvage sans identification en personne par un expert. Ce groupe abrite à la fois les champignons les plus prisés de la gastronomie et les plus mortels de la planète — les amanites mortelles appartiennent à l'une des familles ectomycorhiziennes dominantes, exactement le même voisinage écologique que les grands comestibles. La cuisson ne les neutralise pas : les amanitines sont thermostables.",
+          "La confusion typique se fait justement avec un comestible courant, et connaître les espèces d'une autre région augmente le risque au lieu de le réduire. La latence trompe : des nausées et des vomissements plus de six heures après l'ingestion sont un signe de gravité, pas un simple inconfort. La règle empirique citée par un service de santé universitaire résume tout : dans le doute, ne le mangez pas. Toucher n'empoisonne pas — le risque documenté est l'ingestion ; lavez-vous les mains et ne les portez pas à la bouche. Si quelqu'un en a mangé un, appelez immédiatement le centre antipoison : au Brésil, le CIATox / Disque-Intoxicação 0800 722 6001 ; aux États-Unis, le 1-800-222-1222."
+        ],
+        "checklist": [
+          "Ne mangez pas un champignon sauvage sans identification en personne par un expert.",
+          "Ce groupe contient les espèces les plus mortelles connues.",
+          "La cuisson n'inactive pas les toxines des amanites.",
+          "Un symptôme qui apparaît après six heures est un signe de gravité.",
+          "Dans le doute, ne le mangez pas — et appelez le centre antipoison si quelqu'un l'a déjà fait."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Ce groupe ne se cultive pas comme les saprotrophes, car il exige la plante hôte vivante — c'est la raison économique pour laquelle cèpes, girolles et matsutake se cueillent au lieu de se cultiver, et pourquoi tenter de les faire pousser sur un substrat échoue. Et il y a une conséquence pratique forte : trop fertiliser démonte le partenariat. Les apports d'azote, de phosphore ou d'engrais complets réduisent la présence et l'activité des champignons mycorhiziens : qui veut des mycorhizes fertilise donc avec parcimonie. De légères modifications du pH du sol, de la température, de la teneur en matière organique, de la fertilité globale et de l'humidité peuvent altérer significativement la colonisation.",
+          "Ce qui la préserve, c'est un sol installé et non perturbé, une couche organique intacte et le bon hôte. Les communautés ectomycorhiziennes s'accumulent avec le temps : les arbres jeunes ont une communauté de symbiotes fongiques réduite par rapport aux peuplements mûrs. En pratique, le réseau mycorhizien d'un arbre mûr est un capital de plusieurs décennies que des travaux, un décapage du terrain ou une fumigation détruisent en un jour et qu'aucun sac de produit ne rachète. Et méfiez-vous du sac : il existe très peu de preuves scientifiques impartiales démontrant que les inoculations mycorhiziennes améliorent la reprise des plantes, et elles ne sont pas la panacée miraculeuse présentée par les publicités commerciales. Ne creusez pas pour voir le mycélium, et ne transplantez pas une orchidée terrestre indigène ni une plante dépourvue de chlorophylle : sans le partenaire fongique de leur sol d'origine, elles meurent."
+        ],
+        "checklist": [
+          "Fertilisez avec parcimonie si vous voulez préserver la mycorhize.",
+          "Évitez la fumigation du sol et le décapage de la couche arable.",
+          "Méfiez-vous des inoculants vendus comme une solution miracle.",
+          "Ne creusez pas pour voir le mycélium : le réseau, c'est l'organisme.",
+          "Ne transplantez pas d'orchidées indigènes ni de plantes mycotrophes."
+        ]
+      }
+    }
+  },
+  "freshwaterFish": {
+    "label": "Poissons d'eau douce",
+    "topics": {
+      "role": {
+        "advice": [
+          "La température et l'oxygène dissous sont le filtre qui décide de tout : avant toute décision concernant un plan d'eau, on mesure la température, le pH et l'oxygène dissous, et les mortalités de poissons dues à une chaleur excessive ou à un manque d'oxygène sont l'accident classique des étangs de ferme. La composition taxonomique change d'un continent à l'autre — le Néotropique est dominé par les characidés et les poissons-chats, tandis que l'Holarctique fonctionne avec les carpes et les vairons, les centrarchidés, les perches et les salmonidés. La faune de poissons d'eau douce néotropicale est la plus riche de la planète, avec environ 71 familles et quelque six mille espèces, dont 4 475 ont été formellement décrites.",
+          "Beaucoup d'espèces dépendent d'une migration de reproduction obligatoire, la piracema : les poissons rhéophiles remontent le courant pour frayer, et l'effort physique fait lui-même partie du déclencheur physiologique de la reproduction. Et les lagunes de plaine d'inondation ne sont pas des flaques, ce sont des nurseries — à la crue, le fleuve déborde et les connecte, les œufs et les larves à la dérive s'y installent, et quand le fleuve baisse ces juvéniles grandissent protégés jusqu'à la crue suivante. Certaines familles servent de thermomètre de la qualité de l'eau et d'autres de la dégradation : les poissons qui ne tolèrent pas une eau chaude et turbide indiquent une eau de bonne qualité, tandis que les poissons-chats tolérants aux fortes températures, à l'eau boueuse et au faible oxygène prospèrent exactement là où les espèces exigeantes ont déjà disparu."
+        ],
+        "checklist": [
+          "Devant une mortalité soudaine en été, soupçonnez d'abord l'oxygène dissous.",
+          "Un courant fort sur un fond de pierres indique des espèces rhéophiles et migratrices.",
+          "Une lagune de plaine d'inondation connectée à la crue est une nurserie, pas une flaque.",
+          "La présence des seules espèces tolérantes suggère un système dégradé ou déjà envahi.",
+          "Un banc qui se forme au début de la saison des pluies peut être le début d'une montaison."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "Ici, la sécurité est surtout celle de l'animal et celle de la loi. Ne relâchez jamais un poisson d'aquarium, de pêche payante ou d'élevage dans un milieu naturel : le Brésil compte déjà environ quatre-vingt-dix espèces de poissons exotiques envahissantes dans ses eaux intérieures, l'aquaculture est la première source d'introductions — par des fuites dans les effluents, des ruptures de bassins et des poissons qui passent à travers les mailles des cages — et introduire une espèce animale sans avis technique ni autorisation de l'organisme compétent est interdit. Ne déplacez jamais de poissons d'un bassin versant à un autre : un poisson capturé ne peut rejoindre un autre milieu que s'il est natif du même bassin.",
+          "Respectez la période de fermeture. Au Minas Gerais, la fermeture liée à la montaison court du 1er novembre au 28 février, mais les dates varient selon l'État et le bassin : renseignez-vous auprès de l'agence environnementale locale avant de partir. Ne nourrissez pas les poissons sauvages — le nourrissage modifie le comportement alimentaire naturel et concentre artificiellement les animaux. Ne pêchez pas et ne dérangez pas les poissons installés sur leurs nids au printemps. Et manipulez le moins possible : remettez pierres et branches exactement là où elles étaient."
+        ],
+        "checklist": [
+          "Ne relâchez jamais un poisson d'aquarium ou d'élevage dans une rivière, un lac ou un étang.",
+          "Ne déplacez pas de poissons d'un bassin versant à un autre.",
+          "Vérifiez le calendrier de fermeture de la pêche de votre région avant de pêcher.",
+          "Ne nourrissez pas les poissons sauvages.",
+          "Ne dérangez pas les poissons qui gardent leurs nids au printemps."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Le régime naturel change avec la saison et raconte l'histoire du milieu. Le tambaqui mange fruits et graines pendant la crue et, quand ils viennent à manquer en saison sèche, passe au zooplancton — et en dispersant les graines il participe à la régénération de la forêt amazonienne. Les détritivores et les racleurs traitent la matière organique du fond et le biofilm, formant la base énergétique de nombreux fleuves néotropicaux. Les piscivores à l'affût occupent le sommet local de la chaîne et, dans un étang, ce sont eux qui empêchent les poissons fourrage de pulluler.",
+          "Dans un étang ou une pisciculture, l'alimentation doit être dosée pour ne pas dégrader la qualité de l'eau : la ration excédentaire devient matière organique, consomme de l'oxygène et ouvre la porte aux maladies et aux mortalités. Empoissonner un peu de tout au nom de la diversité donne des résultats décevants, avec des populations déséquilibrées et des poissons rabougris ; empoissonner avec des espèces très prolifiques remplit l'étang de poissons rabougris. Évitez l'empoissonnement en plein été, quand la température élevée et le faible oxygène affaiblissent les poissons pendant le transport. Et rappelez-vous que les espèces d'eau froide ne survivent pas à l'été dans la plupart des étangs : elles ne fonctionnent qu'en schéma d'empoissonnement et récolte avant l'arrivée de la chaleur."
+        ],
+        "checklist": [
+          "Dosez l'aliment : l'excédent devient matière organique et fait chuter l'oxygène.",
+          "N'empoissonnez pas avec un peu de chaque espèce en espérant de la diversité.",
+          "Évitez d'empoissonner en plein été.",
+          "Lisez le milieu à travers l'eau avant toute décision de gestion.",
+          "Photographiez et notez plutôt que de collecter."
+        ]
+      }
+    }
+  },
+  "marineFish": {
+    "label": "Poissons marins et de récif",
+    "topics": {
+      "role": {
+        "advice": [
+          "Un poisson de récif est un diagnostic du récif, pas seulement un résident. Les herbivores — poissons-perroquets et poissons-chirurgiens — mangent les algues qui concurrencent le corail et réduisent sa capacité à survivre, à croître et à se reproduire. Et le groupe fonctionnel compte plus que l'espèce : les poissons-perroquets ont un bec puissant qui racle le substrat en mordant les algues, ouvrant de la place à l'installation de nouveaux coraux, tandis que les poissons-chirurgiens ne broutent que la partie supérieure du gazon algal. Le plus grand effet négatif des algues porte sur l'installation et la survie précoce des coraux : un récif qui possède déjà de nombreux grands coraux adultes peut donc ne pas profiter immédiatement d'herbivores supplémentaires, tandis que celui dont la récupération dépend d'un nouveau recrutement en profite énormément.",
+          "Protéger les herbivores n'est pas une solution universelle : la mesure fonctionne là où il existe réellement un problème d'algues sur le site, et là où elle augmente vraiment le stock d'herbivores. Ce que vous photographiez raconte le lieu. Beaucoup de poissons-papillons suggèrent du corail vivant et structuré à proximité. L'absence totale de grands mérous et vivaneaux sur un récif structuré est une forte indication de pression de pêche. Un gazon de macroalgues épais recouvrant du corail mort, avec peu de poissons-perroquets et de poissons-chirurgiens en vue, indique un broutage insuffisant. Et même protégés, les herbivores mettent plusieurs années à se rétablir — la gestion doit être proactive plutôt que réactive."
+        ],
+        "checklist": [
+          "Beaucoup de poissons-papillons suggèrent du corail vivant à proximité.",
+          "L'absence de grands prédateurs indique une pression de pêche.",
+          "Des macroalgues épaisses avec peu d'herbivores indiquent un broutage insuffisant.",
+          "Les chenaux et les plages de sable entre les coraux sont eux aussi un habitat.",
+          "Notez la date et le lieu : ils valent autant que la photo."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "La règle centrale est de ne pas toucher. Les coraux sont des animaux fragiles, abîmés par un contact, un coup de doigt, un coup de palme ou une main posée pour se stabiliser, et beaucoup sont protégés par la loi. Ne touchez pas non plus les autres animaux : le mucus qui protège les poissons et de nombreux invertébrés marins de l'infection s'enlève facilement avec une main, un gant ou un pied. L'interaction physique avec les raies manta et les requins-baleines est interdite par le règlement dans un sanctuaire marin, même si l'animal semble l'apprécier. Et le contrôle de la flottabilité est une question d'éthique, pas de technique : flottez au-dessus du récif, et si le courant est fort tenez la ligne de mouillage, jamais le récif.",
+          "Ne nourrissez pas et ne collectez pas. Nourrir les poissons interrompt le comportement alimentaire naturel des poissons de récif, attire des espèces qui n'ont rien à faire à cet endroit et apprend aux poissons à mordre les nageurs en attendant de la nourriture — dans certaines juridictions, c'est illégal. Rien ne sort du sanctuaire, ni un coquillage ni un fragment de corail : les coquillages qui semblent vides abritent souvent un animal effrayé, et ceux qui sont vraiment vides deviennent l'abri de bernard-l'ermite, de balanes, de jeunes coraux et d'éponges. Pour la mégafaune, les distances légales de référence aux États-Unis sont de 90 mètres pour les baleines en général, 45 pour les tortues marines et 45 pour les phoques et otaries, avec 180 mètres pour les orques dans les eaux intérieures de l'État de Washington et 450 pour la baleine noire de l'Atlantique Nord, et 30 minutes de temps d'observation maximum. Les eaux brésiliennes suivent leurs propres règles, émises par l'ICMBio et l'IBAMA : considérez ces chiffres comme de bonnes pratiques, pas comme la loi locale."
+        ],
+        "checklist": [
+          "Ne touchez pas le corail et ne vous appuyez pas dessus pour vous stabiliser.",
+          "Ne touchez pas les poissons, les raies ni les tortues : le mucus protecteur s'enlève.",
+          "Ne nourrissez les poissons de récif sous aucun prétexte.",
+          "Ne collectez ni coquillages, ni fragments de corail, ni le moindre souvenir.",
+          "Gardez vos distances avec la mégafaune et limitez le temps d'observation."
+        ]
+      }
+    }
+  },
+  "gardenBird": {
+    "label": "Oiseaux des jardins et des villes",
+    "topics": {
+      "role": {
+        "advice": [
+          "Ce sont les oiseaux qui vivent, se nourrissent ou nichent dans les jardins, les places, les parcs urbains, les toitures et les bords de route — aussi bien des espèces natives tolérantes des paysages humains que des exotiques totalement synanthropes. Toute faune sauvage a besoin de quatre éléments : nourriture, eau, couvert et espace pour se reproduire et élever ses jeunes. Dans un jardin ordinaire, celui qui vient à manquer en premier est en général une source d'eau fiable toute l'année — pas la nourriture.",
+          "Une bonne part des oiseaux urbains les plus visibles sont exotiques : le pigeon biset est arrivé au Brésil au XVIe siècle avec la colonisation portugaise et il est aujourd'hui traité comme faune synanthrope, avec sa propre réglementation sanitaire. La stratégie officielle de contrôle en ville s'attaque aux quatre éléments — eau, nourriture, abri et accès — ce qui est exactement l'inverse de ce que l'on fait pour attirer les oiseaux natifs. Un principe d'aménagement mérite d'être ajouté : l'entrelacement compte. Pour les espèces peu mobiles, de nombreuses petites taches de nourriture, d'eau et d'abri valent mieux que quelques grandes, car plus un animal doit se déplacer, plus il s'expose aux prédateurs."
+        ],
+        "checklist": [
+          "L'eau est en général la ressource limitante, pas la nourriture.",
+          "Répartissez nourriture, eau et abri en plusieurs petites taches.",
+          "Ne rangez pas trop le jardin : un arbre dépérissant et un tas de branches sont des abris.",
+          "Une dominance de pigeons et de moineaux indique un environnement fortement bâti.",
+          "L'arrivée d'oiseaux frugivores natifs montre que vos plantes produisent."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "L'intervention délibérée dans ce groupe, c'est la mangeoire, et elle a un coût sanitaire. Parmi les maladies qui circulent aux mangeoires : la conjonctivite à mycoplasmes, la salmonellose, l'aspergillose, la variole aviaire et la grippe aviaire. L'hygiène n'est pas facultative : nettoyez les mangeoires à graines toutes les deux semaines, et doublez cette fréquence au moindre soupçon de maladie, avec neuf volumes d'eau pour un volume d'eau de Javel. Brossez les fientes visibles avant le trempage, rincez bien et laissez sécher avant de remplir. Ratissez au sol les fientes et les enveloppes de graines, surtout moisies ou mouillées, ce qui évite aussi d'attirer les rongeurs. Et répartissez plusieurs mangeoires plutôt que de tout concentrer en une seule, car la maladie se propage plus facilement dans un espace confiné où les groupes sont concentrés. La même règle de nettoyage vaut pour la vasque à oiseaux.",
+          "Quand vous voyez un oiseau malade — yeux rouges, gonflés ou suintants, excroissances verruqueuses sur les zones sans plumes, oiseau maigre aux plumes ébouriffées — retirez les mangeoires pendant environ deux semaines et nettoyez tout, y compris les abords. Ne prenez pas l'animal en main : seuls les vétérinaires ou les centres de soins agréés ont le droit de soigner un oiseau sauvage. Si une maladie oro-fécale apparaît, envisagez de renoncer aux mangeoires-plateaux, qui concentrent le plus la contamination. Sur le terrain, soyez particulièrement prudent près des nids actifs, des colonies de nidification, des dortoirs et des sites d'alimentation importants, limitez l'usage de la repasse, et faites preuve de prudence et de retenue en photographiant. Et le principe qui tranche tous les doutes : en cas de conflit d'intérêt entre les oiseaux et l'observateur, le bien-être des oiseaux passe en premier."
+        ],
+        "checklist": [
+          "Nettoyez les mangeoires toutes les deux semaines, avec un volume d'eau de Javel pour neuf volumes d'eau.",
+          "Ratissez enveloppes de graines et fientes au sol sous la mangeoire.",
+          "Répartissez plusieurs mangeoires au lieu de tout concentrer en une seule.",
+          "Oiseau malade : retirez les mangeoires pendant deux semaines et ne touchez pas l'animal.",
+          "Limitez la repasse et gardez vos distances avec les nids actifs."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Les plantes indigènes valent mieux qu'une mangeoire. L'approche idéale fournit autant de nourriture native que possible toute l'année — glands, noix, baies, bourgeons, fruits, nectar et graines — et le complément en graines n'intervient que lorsque l'offre naturelle vient à manquer, surtout en hiver. Ne dépendre que de la mangeoire est une solution fragile : elle casse, vous partez en voyage, et l'oiseau qui avait appris à compter dessus se retrouve sans rien.",
+          "En pratique : offrez de l'eau dans une vasque, un bassin peu profond, une soucoupe de pot, une cascade à recirculation ou même un tuyau qui goutte, en changeant l'eau régulièrement pendant les chaleurs et en la maintenant accessible par temps froid. Offrez un couvert varié en taille et en densité — arbustes denses, troncs creux, tas de pierres et de branches, persistants, herbes hautes — pour que chaque espèce puisse choisir l'abri qui convient pour se nourrir, se cacher, échapper au mauvais temps, parader et nicher. Offrez de l'espace avec des arbres mûrs, des massifs denses et des nichoirs. Si vous utilisez une mangeoire, graines de tournesol, graines de nyjer, millet proso et maïs concassé sont les compléments cités par les services d'extension, et en été les colibris fréquentent volontiers les abreuvoirs à nectar. Et concevez en pensant aux chats : une vasque surélevée, avec les branches basses taillées aux alentours, supprime la cachette d'où part l'embuscade."
+        ],
+        "checklist": [
+          "Plantez des espèces indigènes qui fructifient tout au long de l'année.",
+          "N'utilisez les graines qu'en complément de disette, surtout en hiver.",
+          "Gardez une source d'eau fiable disponible toute l'année.",
+          "Variez le couvert : arbustes denses, tas de branches, pierres, persistants.",
+          "Gardez la vasque surélevée et dégagée des arbustes denses, à cause des chats."
+        ]
+      }
+    }
+  },
+  "forestBird": {
+    "label": "Oiseaux forestiers et migrateurs",
+    "topics": {
+      "role": {
+        "advice": [
+          "Ce sont deux populations qui se recoupent en partie : les oiseaux dépendants de la forêt et les oiseaux migrateurs. Sur les 1 971 espèces d'oiseaux recensées sur le territoire brésilien, 216 — soit 10.9 % — effectuent une migration d'un type ou d'un autre : 141 migratrices et 75 partiellement migratrices, catégorie où seule une partie de la population se déplace ; 91 autres sont erratiques. Environ un tiers des familles d'oiseaux brésiliennes comptent au moins une espèce migratrice, mais cinq familles en rassemblent plus de la moitié, avec 112 espèces : les tyrannidés avec 36, les bécasseaux avec 23, les pétrels et puffins avec 22, les tangaras avec 16 et les mouettes et sternes avec 15.",
+          "Les grands oiseaux frugivores forestiers sont l'infrastructure de la forêt, pas son ornement : toucans et cracidés dispersent les grosses graines, et la chasse et la fragmentation retirent exactement les oiseaux dont le bec peut les avaler. Le palmier juçara, dominant dans la Forêt atlantique, voit ses fruits consommés par plus de 58 espèces d'oiseaux. Et une forêt préservée en fragments n'équivaut pas à une forêt préservée : la diversité chute quand les fragments sont discontinus et éloignés les uns des autres, ou quand aucun n'est assez dense pour permettre la survie et la reproduction."
+        ],
+        "checklist": [
+          "Une communauté dense de sous-bois indique une forêt continue et structurée.",
+          "La disparition des toucans et des cracidés indique la chasse ou une fragmentation avancée.",
+          "Des limicoles concentrés sur une vasière en période de passage indiquent une halte migratoire.",
+          "La migration n'est pas une question de oui ou non : il y a des migrateurs partiels et des erratiques.",
+          "La migration altitudinale existe au Brésil et reste sous-estimée."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "La repasse est l'erreur centrale de ce groupe. Le code d'éthique de l'ornithologie de terrain demande de limiter l'usage des enregistrements et des autres méthodes sonores d'attraction, en particulier dans les zones très fréquentées par les observateurs, pour les espèces localement rares et pour les espèces menacées ou en danger — et la forêt, où les oiseaux sont les plus difficiles à voir, est justement l'endroit où la tentation est la plus forte.",
+          "Autour des nids, trois risques commandent tout : l'endommagement accidentel du nid, l'abandon par les parents et l'attraction des prédateurs. Ne restez jamais plus d'une minute près d'un nid. Visitez tous les trois ou quatre jours au maximum. Évitez le petit matin, quand la plupart des espèces pondent et quand œufs et poussins refroidissent vite si la femelle s'absente ; évitez le crépuscule et après, quand elle revient passer la nuit ; évitez les premiers jours d'incubation et les jours où les poussins sont sur le point de s'envoler, car ils peuvent sauter prématurément et la survie hors du nid à ce stade est faible ; et évitez le temps froid, humide ou pluvieux. Ne laissez pas de sentes qui guideraient les prédateurs, et ne piétinez pas la végétation susceptible d'exposer des nids. Ne forcez jamais une femelle à quitter son nid — attendez quelques minutes pour voir si elle part d'elle-même, et revenez plus tard si ce n'est pas le cas. N'écrivez vos notes qu'une fois bien éloigné du nid, et frappez sur un nichoir avant de l'ouvrir, puis de nouveau au moment de l'ouvrir."
+        ],
+        "checklist": [
+          "Limitez la repasse, surtout avec les espèces rares ou menacées.",
+          "Ne restez jamais plus d'une minute près d'un nid.",
+          "Évitez de contrôler les nids tôt le matin, au crépuscule ou par mauvais temps.",
+          "Ne forcez jamais une femelle à quitter son nid.",
+          "Rédigez vos notes loin du nid et ne laissez aucune piste qui y mène."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "L'habitat en dit long. Un sous-bois ombragé en forêt continue indique des groupes peu mobiles, très sensibles aux effets de lisière ; une canopée mûre indique des oiseaux qui dépendent de grands arbres fruitiers et de cavités pour nicher ; le sol forestier indique des groupes très sensibles à la chasse ; et le littoral, la vasière et le marais salant en période de passage indiquent une halte de limicoles, un site extrêmement sensible au dérangement. Les oiseaux migrateurs dépendent d'habitats situés dans des zones disjointes, séparées par des milliers de kilomètres, et certains dépendent de façon critique de lieux qu'ils n'utilisent que quelques jours, pour se reposer, muer, se nourrir et refaire leurs réserves d'énergie.",
+          "C'est pourquoi la date compte autant que le lieu. Comme le trajet aller diffère en général du retour, et que les oiseaux ajustent leur trajectoire selon les conditions, des observations datées alimentent directement la connaissance des routes — et une donnée hors saison peut être plus informative qu'une donnée ordinaire. Enregistrer un oiseau migrateur sans date ni localisation précises fait perdre exactement l'information la plus précieuse. Sur le terrain, restez sur les sentiers, limitez au maximum le dérangement de l'habitat et préservez les arbres morts sur pied, qui sont autant de cavités de nidification pour de nombreuses espèces."
+        ],
+        "checklist": [
+          "Notez toujours une date et un lieu précis, surtout pour les espèces migratrices.",
+          "Une observation hors saison peut valoir plus que dix observations ordinaires.",
+          "Restez sur les sentiers et limitez le dérangement de l'habitat.",
+          "Préservez les arbres morts sur pied : ce sont des sites de nidification pour beaucoup d'espèces.",
+          "Ne nourrissez pas les oiseaux sauvages en forêt ni sur une halte migratoire."
+        ]
+      }
+    }
+  },
+  "grainCrop": {
+    "label": "Céréales et cultures de grains",
+    "topics": {
+      "soil": {
+        "advice": [
+          "Le concept central de la nutrition est ici la faim cachée : la plupart des cultures commencent à perdre du rendement bien avant que les symptômes de carence ou de toxicité soient visibles, et cette perte sans symptôme est élevée. Quand un symptôme finit par apparaître, il indique toujours une faim sévère — jamais une carence légère ou modérée. La mobilité des nutriments décide de la feuille à examiner : les nutriments mobiles comme l'azote, le potassium, le phosphore et le magnésium montrent d'abord des symptômes sur les vieilles feuilles, car la plante les relocalise vers les nouvelles ; les nutriments immobiles comme le calcium et le bore montrent des symptômes sur les nouvelles feuilles et au point de croissance.",
+          "Quelques profils visuels chez le riz servent de référence : une nécrose en V inversé, partant de la pointe et descendant le long des marges d'une vieille feuille, oriente vers le potassium ; des feuilles nouvelles très étroites et dressées, avec une teinte bronzée ou violacée à l'extrémité, orientent vers le phosphore ; toute une parcelle qui jaunit au tallage et à l'initiation paniculaire oriente vers l'azote ; et une carence qui apparaît par taches plutôt que sur toute la surface est un profil typique du potassium. La toxicité d'un herbicide imite la carence, mais elle apparaît immédiatement après la pulvérisation — c'est cette proximité dans le temps qui sépare les deux cas. Enfin, grain et ensilage ne sont pas la même culture du point de vue du sol : le phosphore est presque entièrement transféré au grain, suivi de l'azote, tandis que le potassium et le calcium restent surtout dans la paille ; en ensilage, qui exporte aussi la partie végétative, les problèmes de fertilité apparaissent donc plus tôt."
+        ],
+        "checklist": [
+          "N'attendez pas le symptôme : quand il se voit, la perte est déjà faite.",
+          "Les nutriments mobiles se voient sur les vieilles feuilles ; les immobiles sur les nouvelles.",
+          "Diagnostiquez à partir d'une analyse de sol et de l'historique de la parcelle, jamais d'une seule photo de feuille.",
+          "Un dégât qui apparaît juste après une pulvérisation, c'est l'herbicide, pas une carence.",
+          "N'utilisez pas une recommandation prévue pour le grain sur une culture destinée à l'ensilage."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "La décision se prend ici en comptant, pas au calendrier, et ce groupe possède l'échantillonnage standardisé le moins cher de tous. La logique repose sur trois seuils : le niveau d'équilibre, le niveau de dommage économique et le niveau de contrôle, juste en dessous. Pour les ravageurs du sol en maïs, utilisez un échantillon de sol de trente centimètres sur trente et quinze de profondeur, tamisé — pour le taupin, deux insectes ou plus par échantillon appellent déjà un contrôle, et une moyenne d'un par échantillon cause déjà des dégâts significatifs. Pour la légionnaire d'automne, comptez le nombre de plants attaqués en cinq points au hasard dans un hectare : dans les parcelles ayant un potentiel d'au moins cent sacs, 10 % de plants présentant des symptômes précoces indiquent déjà un besoin de contrôle, et le stade le plus sensible est celui de huit à dix feuilles. Le premier signe, ce sont les larves qui raclent les feuilles et laissent des fenêtres transparentes.",
+          "En soja, le drap de battage est la méthode : un drap de préférence blanc, d'un mètre de long, tendu entre deux rangs ; secouez vigoureusement un rang au-dessus et comptez adultes et juvéniles, chaque semaine pendant la période critique. Le minimum est de six échantillons jusqu'à dix hectares, huit jusqu'à trente et dix jusqu'à cent, en divisant les surfaces plus grandes en blocs de cent hectares. Échantillonnez les ravageurs du sol avant le semis, car les mesures prises une fois la culture installée sont inefficaces. Comptez les nymphes en même temps que les adultes : les punaises du troisième au cinquième stade causent des dégâts semblables et forment l'essentiel de la population en période reproductive, avec un seuil d'intervention de deux punaises par mètre de rang pour le grain et d'une pour la semence. Échantillonnez aux heures les plus fraîches de la journée, car les punaises sont rapides et s'échappent à la chaleur. Le retour est mesuré : sur 196 unités de référence au Paraná lors de la campagne 2017/2018, la lutte intégrée a réduit les applications d'insecticides de plus de 43 % tout en maintenant un rendement équivalent. Choisissez le produit selon sa sélectivité envers les ennemis naturels autant que selon son coût et sa toxicité, respectez toujours les homologations en vigueur du MAPA, et ne traitez la semence que là où le problème a un historique, jamais en routine aveugle."
+        ],
+        "checklist": [
+          "Comptez avant de pulvériser : la décision se prend par seuil, pas au calendrier.",
+          "Maïs : 10 % de plants aux feuilles raclées appellent déjà un contrôle.",
+          "Soja : un minimum de dix échantillons au drap de battage jusqu'à cent hectares.",
+          "Échantillonnez les ravageurs du sol avant le semis.",
+          "Comptez les nymphes en même temps que les adultes, et échantillonnez aux heures les plus fraîches."
+        ]
+      }
+    }
+  },
+  "vegCrop": {
+    "label": "Cultures maraîchères et fruitières",
+    "topics": {
+      "watering": {
+        "advice": [
+          "L'eau est ici une gestion fine, pas un arrosage quand on y pense : il existe une limite de tension du sol mesurée en kPa, et elle diffère selon le système d'irrigation. Chez l'aubergine, on irrigue quand le tensiomètre indique 30 à 50 kPa en aspersion ou en sillon, ou 10 à 15 kPa en goutte-à-goutte, en retenant le bas de la fourchette aux stades les plus critiques, en sols sableux et sous forte demande évaporative. Le capteur se place à 50 % de la profondeur racinaire effective et à dix ou vingt centimètres de la plante, la profondeur effective étant celle où se concentrent environ 80 % des racines.",
+          "L'excès d'eau est aussi dommageable que le manque : il pousse la plante à une croissance excessive, gêne la floraison et la nouaison, favorise les maladies du sol par une aération insuffisante et lessive les nutriments. Le manque pèse le plus à la floraison et à la fructification : il fait avorter fleurs et fruits, réduit la croissance des fruits et produit des défauts de qualité — fruits déformés et irréguliers, nécrose apicale et goût amer. Un flétrissement du feuillage en fin de matinée est un signe grossier mais utile d'une irrigation en retard. Et le choix du système est une décision phytosanitaire, pas seulement hydraulique : le sillon et le goutte-à-goutte réduisent les maladies foliaires parce qu'ils ne mouillent pas le feuillage, mais contre la mineuse de la tomate l'aspersion est un avantage, car elle fait tomber œufs, larves et pupes. La décision dépend du problème qui domine chez vous."
+        ],
+        "checklist": [
+          "Utilisez une limite de tension différente en goutte-à-goutte et en aspersion ou en sillon.",
+          "Installez le capteur à 50 % de la profondeur racinaire effective et à dix ou vingt centimètres de la plante.",
+          "Ne laissez pas l'eau manquer pendant la floraison et la fructification.",
+          "Un flétrissement en fin de matinée indique une irrigation en retard.",
+          "Choisissez le système d'irrigation selon le problème qui domine chez vous."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "L'excès d'un nutriment a ses propres symptômes et déséquilibre les autres. Chez l'oignon, l'excès d'azote produit des plantes au collet épais, augmente la sensibilité aux maladies foliaires et raccourcit la conservation après récolte ; l'excès de potassium induit une carence en magnésium et en calcium ; l'excès de phosphore induit une carence en zinc et en cuivre. C'est pourquoi corriger un nutriment sans regarder les autres crée en général le problème suivant.",
+          "La mobilité vous dit quelle feuille inspecter : azote, potassium, phosphore et magnésium apparaissent d'abord sur les vieilles feuilles, tandis que le calcium et le soufre apparaissent sur les nouvelles — une jeune feuille d'oignon qui se couche sans se casser est la signature du calcium. Deux textures méritent d'être mémorisées : une nécrose qui apparaît brutalement, sans chlorose préalable, oriente vers le zinc, le cuivre ou le manganèse ; une nécrose de texture veloutée est la marque caractéristique du fer, distincte de toutes les autres. Dans les sols brésiliens en conditions normales, seuls le bore et le zinc et, dans certains cas, le cuivre ont tendance à manquer à l'oignon. Et méfiez-vous du faux positif : des températures basses, un excès d'eau ou une sécheresse prolongée peuvent produire des symptômes très proches d'une carence en azote."
+        ],
+        "checklist": [
+          "Ne corrigez pas un nutriment sans regarder ceux qu'il déséquilibre.",
+          "Vieilles feuilles d'abord : azote, potassium, phosphore, magnésium. Nouvelles feuilles : calcium, soufre.",
+          "Une nécrose brutale sans chlorose préalable suggère le zinc, le cuivre ou le manganèse.",
+          "Une nécrose de texture veloutée est la marque du fer.",
+          "Le froid, l'engorgement et la sécheresse imitent tous une carence en azote."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "La conduite est ici culturale et collective avant d'être chimique. À l'échelle de la parcelle : pratiquez la rotation des cultures, détruisez les résidus de récolte immédiatement après la récolte, gardez la zone libre d'adventices et d'autres plantes hôtes d'insectes et d'acariens, et utilisez des variétés adaptées à la région. À l'échelle collective — et c'est ce qui distingue ce groupe — les producteurs doivent agir ensemble : concentrer les semis de chaque micro-région dans la fenêtre la plus courte possible, utiliser les intrants de façon coordonnée pour que les problèmes communs soient affrontés par tous en même temps, et désinfecter systématiquement caisses et transports pour réduire la diffusion des ravageurs entre régions. Inspectez régulièrement, avec une attention particulière aux bordures de parcelle et aux endroits les plus enherbés, car c'est là que se concentre l'infestation.",
+          "Les plus gros dégâts de ravageurs dans ce groupe sont en général indirects, par les virus. L'aleurode est connue au Brésil depuis 1923 et a été trouvée sur tomate et chou en 1993, associée à des symptômes de géminivirus, avec des foyers sévères et des pertes allant jusqu'à 50 % de la production : adultes et nymphes injectent une substance sucrée et une toxine qui laissent les parois internes du fruit blanchâtres et spongieuses et favorisent la fumagine. Le calendrier commande aussi : contre la petite chenille foreuse, la pulvérisation doit commencer dès la floraison, jet dirigé vers les boutons floraux et les fruits, car lorsque vous voyez un trou dans le fruit la larve est déjà à l'intérieur. Et une règle rédactionnelle de sécurité : ne recopiez ni matière active ni dose depuis une source quelconque, car les homologations de produits phytosanitaires changent à chaque campagne — consultez le registre en vigueur du MAPA."
+        ],
+        "checklist": [
+          "Détruisez les résidus de récolte immédiatement après la récolte.",
+          "Concentrez les semis de la micro-région dans la fenêtre la plus courte possible.",
+          "Désinfectez caisses et véhicules entre les parcelles.",
+          "Inspectez les bordures de parcelle, pas seulement le centre.",
+          "Commencez la pulvérisation à la floraison, pas quand vous voyez un trou dans le fruit."
+        ]
+      }
+    }
+  }
+}

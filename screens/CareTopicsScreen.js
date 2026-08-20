@@ -9,6 +9,8 @@ import { colors } from '../components/theme';
 import TopBar from '../components/TopBar';
 import NatureScene from '../components/NatureScene';
 import HelpfulRow from '../components/HelpfulRow';
+import RangeBar from '../components/RangeBar';
+import ExpandableText from '../components/ExpandableText';
 import { getTopicManual } from '../components/manualContent';
 import { getGroupTopic } from '../components/groupContent';
 
@@ -16,7 +18,7 @@ import { getGroupTopic } from '../components/groupContent';
 // frame from the owner's 6-minute video) instead of "um monte de texto em
 // abas" - his exact complaint about v1. Every tab now has the same editorial
 // skeleton the competitor repeats: illustration band -> Needs block (icon +
-// real short value + gauge when the data is structured) -> lightbulb tip ->
+// real short value + range ruler when the data is structured) -> lightbulb tip ->
 // the vendor's real text as a lead sentence plus scannable bullet points ->
 // per-tab feedback. Honesty split: the VALUES and the ADVICE text are the
 // vendor's real, translated data; the illustration and the one-line tip are
@@ -25,7 +27,8 @@ import { getGroupTopic } from '../components/groupContent';
 //
 // params: { title, accent, category, topics:[{key,label,text,shortValue?,level?}], initialKey }
 //   level: 1..3 watering intensity (real data - the raw Kindwise watering
-//   field), drawn as the 3-drop gauge.
+//   field). Drawn as the RangeBar ruler since 20/08 - it replaced the 3-drop
+//   gauge, which encoded the same number with no scale around it.
 
 const TOPIC_META = {
   watering: { icon: 'water', tip: 'detail.tipWatering', art: require('../assets/topics/watering.jpg') },
@@ -74,19 +77,24 @@ export default function CareTopicsScreen() {
 
   const selectTab = (key) => {
     setActiveKey(key);
+    sectionY.current = {}; // aba nova, alturas antigas nao valem mais
     bodyRef.current?.scrollTo({ y: 0, animated: false });
   };
 
-  const advice = active ? splitAdvice(active.text) : { lead: '', bullets: [] };
+  // Auditoria de diagramacao 20/08, correcao 14: as abas cortavam no meio
+  // ("Usos Co") sem nenhum sinal de que havia mais - a barra parecia um bug de
+  // texto, nao uma lista rolavel. O fade na borda direita e o sinal; ele some
+  // quando ja se chegou ao fim, senao vira enfeite permanente e mente sobre
+  // ter conteudo escondido.
+  const tabsBox = useRef({ view: 0, content: 0, x: 0 });
+  const [tabsFade, setTabsFade] = useState(false);
+  const measureTabs = (patch) => {
+    Object.assign(tabsBox.current, patch);
+    const { view, content, x } = tabsBox.current;
+    setTabsFade(view > 0 && content - x - view > 4);
+  };
 
-  // Chips do indice - so o que a aba REALMENTE tem.
-  const sectionChips = [
-    { key: 'about', icon: 'document-text-outline', label: t('detail.aboutSpecies'), has: !!active?.text },
-    { key: 'group', icon: 'pricetag-outline', label: groupManual?.label, has: !!(groupManual?.advice?.length || groupManual?.checklist?.length) },
-    { key: 'fund', icon: 'school-outline', label: t('detail.fundamentals'), has: !!manual?.advice?.length },
-    { key: 'check', icon: 'checkmark-done-outline', label: t('detail.checklistLabel'), has: !!manual?.checklist?.length },
-    { key: 'prob', icon: 'alert-circle-outline', label: t('detail.problemsLabel'), has: !!manual?.problems?.length },
-  ].filter((c) => c.has && c.label);
+  const advice = active ? splitAdvice(active.text) : { lead: '', bullets: [] };
 
   // O MIOLO IMENSO (manual editorial por topico, {lang}-manual.json): os
   // conselhos fundamentais, o checklist e os problemas em acordeao que dao a
@@ -118,6 +126,60 @@ export default function CareTopicsScreen() {
     return () => { alive = false; };
   }, [activeKey, i18nLang, groupKey]);
 
+  // Chips do indice - so o que a aba REALMENTE tem.
+  //
+  // Auditoria de diagramacao 20/08, correcao 13: eram <View> decorativos. Um
+  // indice que nao leva a lugar nenhum e pior que nenhum indice - o usuario
+  // toca, nada acontece, e ele conclui que a tela esta quebrada. Agora cada
+  // chip rola ate a secao.
+  //
+  // Este bloco tambem estava ACIMA dos useState de `manual`/`groupManual` e
+  // lia as duas variaveis: TDZ (`Cannot access 'manual' before
+  // initialization`), ou seja, a tela lancava a cada render. Ficar depois dos
+  // hooks e o que faz os chips existirem de verdade.
+  const sectionChips = [
+    { key: 'about', icon: 'document-text-outline', label: t('detail.aboutSpecies'), has: !!active?.text },
+    { key: 'group', icon: 'pricetag-outline', label: groupManual?.label, has: !!(groupManual?.advice?.length || groupManual?.checklist?.length) },
+    { key: 'fund', icon: 'school-outline', label: t('detail.fundamentals'), has: !!manual?.advice?.length },
+    { key: 'check', icon: 'checkmark-done-outline', label: t('detail.checklistLabel'), has: !!manual?.checklist?.length },
+    { key: 'prob', icon: 'alert-circle-outline', label: t('detail.problemsLabel'), has: !!manual?.problems?.length },
+  ].filter((c) => c.has && c.label);
+
+  // Como o chip acha a secao. Duas medidas, e as duas sao precisas:
+  //
+  //  1. measureLayout contra getInnerViewNode() - medido NA HORA do toque, e
+  //     por isso imune ao "Ver mais" de um card acima ter empurrado tudo para
+  //     baixo depois. Existe nos dois lados: no RN-web o usePlatformMethods
+  //     pendura measureLayout no node e o ScrollView expoe getInnerViewNode.
+  //  2. o y guardado no onLayout, so como rede: se a medida 1 nao existir no
+  //     ambiente, o chip ainda rola (para o lugar de quando montou) em vez de
+  //     virar de novo um enfeite que nao faz nada.
+  //
+  // O onLayout do RN-web e ResizeObserver: dispara na montagem e quando a
+  // secao MUDA DE TAMANHO, nunca quando so foi empurrada - dai a medida 1
+  // mandar.
+  const sectionY = useRef({});
+  const sectionNodes = useRef({});
+  const sectionProps = (key) => ({
+    ref: (node) => {
+      sectionNodes.current[key] = node;
+    },
+    onLayout: (e) => {
+      sectionY.current[key] = e.nativeEvent.layout.y;
+    },
+  });
+  const scrollToY = (y) => bodyRef.current?.scrollTo({ y: Math.max(0, y - 8), animated: true });
+  const goToSection = (key) => {
+    const node = sectionNodes.current[key];
+    const inner = bodyRef.current?.getInnerViewNode?.();
+    if (node?.measureLayout && inner) {
+      node.measureLayout(inner, (x, y) => scrollToY(y), () => {});
+      return;
+    }
+    const cached = sectionY.current[key];
+    if (typeof cached === 'number') scrollToY(cached);
+  };
+
   return (
     <SafeAreaView style={styles.container} edges={['top']}>
       {/* Cenario em camadas: first child, pointerEvents none inside. */}
@@ -127,7 +189,15 @@ export default function CareTopicsScreen() {
 
       {/* Tab bar horizontal rolavel - underline curto na ativa. */}
       <View style={styles.tabsWrap}>
-        <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.tabsContent}>
+        <ScrollView
+          horizontal
+          showsHorizontalScrollIndicator={false}
+          contentContainerStyle={styles.tabsContent}
+          onLayout={(e) => measureTabs({ view: e.nativeEvent.layout.width })}
+          onContentSizeChange={(w) => measureTabs({ content: w })}
+          onScroll={(e) => measureTabs({ x: e.nativeEvent.contentOffset.x })}
+          scrollEventThrottle={16}
+        >
           {valid.map((tp) => {
             const isActive = tp.key === activeKey;
             return (
@@ -145,6 +215,15 @@ export default function CareTopicsScreen() {
             );
           })}
         </ScrollView>
+        {tabsFade && (
+          <LinearGradient
+            colors={['transparent', colors.sky]}
+            start={{ x: 0, y: 0.5 }}
+            end={{ x: 1, y: 0.5 }}
+            style={styles.tabsFade}
+            pointerEvents="none"
+          />
+        )}
       </View>
 
       <ScrollView ref={bodyRef} contentContainerStyle={styles.scroll} showsVerticalScrollIndicator={false}>
@@ -163,29 +242,50 @@ export default function CareTopicsScreen() {
 
         {!!active && (
           <>
-            {/* NECESSIDADES - o dado curto real em destaque, com o medidor de
-                3 gotas quando a intensidade de rega existe (dado estruturado
-                do vendor, nao invencao). */}
+            {/* NECESSIDADES - o dado curto real em destaque, com a REGUA DE
+                FAIXA quando a intensidade de rega existe (dado estruturado do
+                vendor, nao invencao).
+
+                Auditoria de diagramacao 20/08: a regua SUBSTITUI o medidor de
+                3 gotas em vez de conviver com ele. Sao o MESMO dado (level
+                1..3) e repetir um dado em duas codificacoes dentro do mesmo
+                card e redundancia, nao reforco - o diretor de arte leria as
+                gotas como enfeite. E a regua diz estritamente mais: as gotas
+                davam a CONTAGEM ("2 de 3") sem nenhuma referencia, a regua da
+                a POSICAO da faixa dentro da escala inteira, com o que sobra de
+                cada lado. A escala continua sendo a mesma 1..3 do vendor. */}
             <View style={styles.needsCard}>
-              <View style={[styles.needsIcon, { backgroundColor: accent + '22' }]}>
-                <Ionicons name={meta.icon || 'leaf'} size={22} color={accent} />
+              <View style={styles.needsRow}>
+                <View style={[styles.needsIcon, { backgroundColor: accent + '22' }]}>
+                  <Ionicons name={meta.icon || 'leaf'} size={22} color={accent} />
+                </View>
+                <View style={{ flex: 1 }}>
+                  <Text style={styles.needsLabel}>{t('detail.needsLabel')}</Text>
+                  <Text style={[styles.needsValue, { color: accent }]} numberOfLines={2}>
+                    {active.shortValue || active.label}
+                  </Text>
+                </View>
               </View>
-              <View style={{ flex: 1 }}>
-                <Text style={styles.needsLabel}>{t('detail.needsLabel')}</Text>
-                <Text style={[styles.needsValue, { color: accent }]} numberOfLines={2}>
-                  {active.shortValue || active.label}
-                </Text>
-              </View>
-              {!!active.level && (
-                <View style={styles.gauge} accessibilityElementsHidden={true}>
-                  {[1, 2, 3].map((n) => (
-                    <Ionicons
-                      key={n}
-                      name="water"
-                      size={18}
-                      color={n <= active.level ? accent : colors.border}
-                    />
-                  ))}
+
+              {/* A faixa da especie e o proprio passo dela na escala
+                  (level +/- meio passo); a margem aceitavel sai daquela
+                  largura dentro da RangeBar, nunca de um numero inventado
+                  sobre a especie. Sem level (ou fora de 1..3) o bloco
+                  simplesmente nao existe. */}
+              {activeKey === 'watering' && active.level >= 1 && active.level <= 3 && (
+                <View style={styles.needsRuler}>
+                  <RangeBar
+                    min={1}
+                    max={3}
+                    idealMin={active.level - 0.5}
+                    idealMax={active.level + 0.5}
+                    accent={accent}
+                    labels={{
+                      ideal: t('detail.rangeIdeal'),
+                      ok: t('detail.rangeOk'),
+                      bad: t('detail.rangeBad'),
+                    }}
+                  />
                 </View>
               )}
             </View>
@@ -195,12 +295,21 @@ export default function CareTopicsScreen() {
             {sectionChips.length > 0 && (
               <View style={styles.chipsRow}>
                 {sectionChips.map((c) => (
-                  <View key={c.key} style={[styles.sectionChip, { borderColor: accent + '55' }]}>
+                  <TouchableOpacity
+                    key={c.key}
+                    style={[styles.sectionChip, { borderColor: accent + '55' }]}
+                    onPress={() => goToSection(c.key)}
+                    activeOpacity={0.7}
+                    // "button", nao "link": o RN-web transforma role=link num
+                    // <a> sem href, que nao recebe foco de teclado.
+                    accessibilityRole="button"
+                    accessibilityLabel={c.label}
+                  >
                     <Ionicons name={c.icon} size={13} color={accent} />
                     <Text style={[styles.sectionChipText, { color: accent }]} numberOfLines={1}>
                       {c.label}
                     </Text>
-                  </View>
+                  </TouchableOpacity>
                 ))}
               </View>
             )}
@@ -217,16 +326,21 @@ export default function CareTopicsScreen() {
             )}
 
             {/* O texto REAL do vendor, reformatado fielmente: frase-lider +
-                bullets escaneaveis (mesmas palavras, mesma ordem). */}
-            <View style={styles.adviceCard}>
+                bullets escaneaveis (mesmas palavras, mesma ordem).
+                Auditoria de diagramacao 20/08: a frase-lider abre sozinha e os
+                bullets vem no "Ver mais" - nenhuma palavra foi cortada, so
+                dobrada. */}
+            <View style={styles.adviceCard} {...sectionProps('about')}>
               <Text style={styles.adviceTitle}>{t('detail.aboutSpecies')}</Text>
-              {!!advice.lead && <Text style={styles.lead}>{advice.lead}</Text>}
-              {advice.bullets.map((b, i) => (
-                <View key={i} style={styles.bulletRow}>
-                  <View style={[styles.bulletDot, { backgroundColor: accent }]} />
-                  <Text style={styles.bulletText}>{b}</Text>
-                </View>
-              ))}
+              <ExpandableText accent={accent}>
+                {!!advice.lead && <Text style={styles.lead}>{advice.lead}</Text>}
+                {advice.bullets.map((b, i) => (
+                  <View key={i} style={styles.bulletRow}>
+                    <View style={[styles.bulletDot, { backgroundColor: accent }]} />
+                    <Text style={styles.bulletText}>{b}</Text>
+                  </View>
+                ))}
+              </ExpandableText>
             </View>
           </>
         )}
@@ -234,7 +348,7 @@ export default function CareTopicsScreen() {
         {/* POR TIPO - o que muda neste grupo (suculentas, frutiferas,
             polinizadores...). Vem antes do universal: o especifico manda. */}
         {(groupManual?.advice?.length > 0 || groupManual?.checklist?.length > 0) && (
-          <View style={[styles.adviceCard, { borderColor: accent + '55' }]}>
+          <View style={[styles.adviceCard, { borderColor: accent + '55' }]} {...sectionProps('group')}>
             <View style={styles.groupHead}>
               <Ionicons name="pricetag" size={15} color={accent} />
               <Text style={[styles.groupLabel, { color: accent }]}>{groupManual.label}</Text>
@@ -253,21 +367,26 @@ export default function CareTopicsScreen() {
           </View>
         )}
 
-        {/* CONSELHOS FUNDAMENTAIS - o manual editorial profundo. */}
+        {/* CONSELHOS FUNDAMENTAIS - o manual editorial profundo.
+            Auditoria de diagramacao 20/08: eram ~24 linhas corridas e tudo o
+            que vinha depois (checklist, problemas) morria sob a dobra. Primeiro
+            paragrafo aberto, o resto no "Ver mais". */}
         {manual?.advice?.length > 0 && (
-          <View style={styles.adviceCard}>
+          <View style={styles.adviceCard} {...sectionProps('fund')}>
             <Text style={styles.adviceTitle}>{t('detail.fundamentals')}</Text>
-            {manual.advice.map((para, i) => (
-              <Text key={i} style={styles.body}>
-                {para}
-              </Text>
-            ))}
+            <ExpandableText accent={accent}>
+              {manual.advice.map((para, i) => (
+                <Text key={i} style={styles.body}>
+                  {para}
+                </Text>
+              ))}
+            </ExpandableText>
           </View>
         )}
 
         {/* ANTES DE COMECAR - checklist com check. */}
         {manual?.checklist?.length > 0 && (
-          <View style={styles.adviceCard}>
+          <View style={styles.adviceCard} {...sectionProps('check')}>
             <Text style={styles.adviceTitle}>{t('detail.checklistLabel')}</Text>
             {manual.checklist.map((item, i) => (
               <View key={i} style={styles.checkRow}>
@@ -281,7 +400,7 @@ export default function CareTopicsScreen() {
         {/* SINAIS DE PROBLEMAS - acordeoes (titulo fechado; sintomas +
             solucoes numeradas ao expandir), dispositivo do concorrente. */}
         {manual?.problems?.length > 0 && (
-          <View style={styles.adviceCard}>
+          <View style={styles.adviceCard} {...sectionProps('prob')}>
             <Text style={styles.adviceTitle}>{t('detail.problemsLabel')}</Text>
             {manual.problems.map((prob, i) => {
               const open = openProblem === i;
@@ -335,6 +454,10 @@ export default function CareTopicsScreen() {
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: colors.background },
   tabsWrap: { borderBottomWidth: 1, borderBottomColor: colors.border },
+  // Fade da borda direita das abas. colors.sky (nao background) porque e o
+  // tom que o NatureScene pinta no ALTO da tela - fundir com o fundo errado
+  // deixaria uma faixa visivel.
+  tabsFade: { position: 'absolute', right: 0, top: 0, bottom: 1, width: 34 },
   tabsContent: { paddingHorizontal: 12, gap: 4 },
   tab: { paddingHorizontal: 12, paddingTop: 6, paddingBottom: 0, alignItems: 'center' },
   tabText: { fontSize: 14, fontWeight: '700', color: colors.textMuted, paddingBottom: 8 },
@@ -343,16 +466,17 @@ const styles = StyleSheet.create({
   artBand: { marginHorizontal: -20, height: 120, marginBottom: 12 },
   artImg: { width: '100%', height: '100%' },
   artFade: { position: 'absolute', left: 0, right: 0, bottom: 0, height: 64 },
+  // Vira COLUNA: a linha icone+valor continua igual, a regua entra embaixo
+  // ocupando a largura toda do card (auditoria de diagramacao 20/08).
   needsCard: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 12,
     backgroundColor: colors.surface,
     borderRadius: 16,
     borderWidth: 1,
     borderColor: colors.border,
     padding: 16,
   },
+  needsRow: { flexDirection: 'row', alignItems: 'center', gap: 12 },
+  needsRuler: { marginTop: 14 },
   needsIcon: {
     width: 46,
     height: 46,
@@ -368,7 +492,6 @@ const styles = StyleSheet.create({
     letterSpacing: 0.5,
   },
   needsValue: { fontSize: 16, fontWeight: '800', marginTop: 2 },
-  gauge: { flexDirection: 'row', gap: 2 },
   tipBox: {
     flexDirection: 'row',
     alignItems: 'flex-start',

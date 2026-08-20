@@ -1,0 +1,857 @@
+{
+  "succulent": {
+    "label": "Sukkulenten & Kakteen",
+    "topics": {
+      "watering": {
+        "advice": [
+          "Die Regel für diese Gruppe heißt durchdringend gießen und komplett abtrocknen lassen — nicht der Kalender. Gieße, bis der gesamte Wurzelballen durchtränkt ist und Wasser aus dem Abzugsloch läuft, leere den Untersetzer und lass das Substrat danach vollständig austrocknen, bevor der nächste Gießgang kommt — in der Wachstumszeit typischerweise alle zwei bis drei Wochen, wobei Topf, Licht und Temperatur das erheblich verschieben. Der Grund ist physiologisch: Das sind CAM-Pflanzen, die ihre Spaltöffnungen nachts öffnen und tagsüber geschlossen halten. Zwischen einem Wasserimpuls und dem nächsten brauchen sie eine sauerstoffversorgte Wurzel, keine Dauerversorgung.",
+          "Der Winter ist eine echte Ruhephase. Wachstum findet etwa zwischen 18 und 29 °C statt, die Ruhephase zwischen 7 und 13 °C, und das Gießen wird auf ein Minimum alle paar Wochen reduziert — gerade genug, damit die Pflanze nicht schrumpelt. Und wenn Welke auftritt, lies erst die Textur, bevor du zur Gießkanne greifst: Ein runzeliges, aber festes Blatt ist Durst; ein gelbes, weiches, glasiges Blatt ertrinkt, und erneutes Gießen macht es nur schlimmer, weil verfaulte Wurzeln längst aufgehört haben aufzunehmen. Epiphytische Waldkakteen wie der Weihnachtskaktus sind die Ausnahme in dieser Gruppe: Sie brauchen deutlich mehr Wasser und sollten im Frühjahr und Sommer nie vollständig austrocknen."
+        ],
+        "checklist": [
+          "Durchtränke den ganzen Wurzelballen, bis Wasser aus dem Abzugsloch läuft, und leere dann den Untersetzer.",
+          "Warte, bis das Substrat vollständig trocken ist, bevor du wieder gießt.",
+          "Lass den Topf nie im Wasser stehen.",
+          "In der Winterruhe alle paar Wochen minimal gießen — gerade genug gegen das Schrumpeln.",
+          "Runzeliges, festes Blatt = zu wenig Wasser. Gelbes, weiches, glasiges Blatt = zu viel."
+        ]
+      },
+      "light": {
+        "advice": [
+          "Das ist die einzige Zimmergruppe, die direkte Sonne nicht nur verträgt, sondern verlangt. Sukkulenten wollen zehn oder mehr Stunden helles indirektes Licht, mindestens aber sechs bis acht; darunter werden sie lang und blass — die klassische Vergeilung. Wüstenkakteen stehen am besten an einem Fenster mit mehreren Stunden direkter Sonne am Tag, im deutschsprachigen Raum also an einem Südfenster. Dünner, blasser Wuchs ist ein Lichtproblem, und kein Dünger der Welt korrigiert das.",
+          "Zwei Einschränkungen zählen. Wenn du die Pflanze im Sommer nach draußen stellst, gewöhne sie schrittweise daran: Beginne im Halbschatten, denn starke Sonne verbrennt Gewebe, das im Zimmer gewachsen ist. Und epiphytische Kakteen wollen helles, aber gefiltertes Licht — ein Ost- oder Westfenster, ein leichter Vorhang —, weil sie in direkter Sonne verbrennen."
+        ],
+        "checklist": [
+          "Gib sechs bis acht Stunden Licht am Tag, angestrebt sind zehn oder mehr.",
+          "Wüstenkaktus: ein Fenster mit mehreren Stunden direkter Sonne.",
+          "Langer, blasser Wuchs bedeutet zu wenig Licht, nicht zu wenig Dünger.",
+          "Beim Umzug nach draußen im Sommer einige Tage im Halbschatten beginnen.",
+          "Epiphytischer Kaktus: helles Licht, immer gefiltert."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "Das Substrat ist überwiegend mineralisch, und die Quellen sind sich beim Rezept nur uneins, um sich beim Prinzip einig zu sein. Eine Universitäts-Extension empfiehlt ein Drittel organisches Material auf zwei Drittel mineralisches; eine andere verlangt gleiche Volumenanteile einer torfbasierten Mischung und sehr grobem Sand; die RHS arbeitet mit zwei Teilen Basiskompost auf einen Teil Gartenkies, oben abgedeckt mit Kies. Die Spanne reicht von rund 30% bis 67% mineralischem Anteil, und sie existiert aus einem einzigen Grund: die gesättigte Phase so kurz wie möglich zu halten. Je feuchter deine Umgebung und je großzügiger deine Hand an der Gießkanne, desto mineralischer sollte es sein.",
+          "Ein knapper Topf ist eine Regel, keine Vernachlässigung: Zusätzliches Substratvolumen hält Feuchtigkeit, und Fäulnis folgt. Topfe im Frühjahr in einen nur wenig größeren Topf um und warte mehrere Tage bis zum ersten Gießen. Gedüngt wird stickstoffarm und in reduzierter Dosis — die Hälfte bis ein Viertel der Angabe auf dem Etikett, bei jedem dritten oder vierten Gießgang in der aktiven Zeit, im Winter gar nicht. Zu viel Stickstoff erzeugt weiches Gewebe, und weiches Gewebe fault. Bei epiphytischen Kakteen kehrt sich das Rezept um, und die organische Substanz übernimmt."
+        ],
+        "checklist": [
+          "Mische mindestens ein Drittel mineralisches Material ein: Perlit, groben Sand, Bims oder Kies.",
+          "Nimm einen Topf, der nur wenig größer ist als der jetzige — Spielraum wird zu Fäulnis.",
+          "Topfe im Frühjahr um und warte ein paar Tage bis zum ersten Gießen.",
+          "Dünge mit der Hälfte oder einem Viertel der Dosis und stelle im Winter ganz ein.",
+          "Epiphytischer Kaktus kehrt das Rezept um: mehr organische Substanz, weniger Mineralisches."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "Das Risiko ist hier mechanisch und leicht zu umgehen: Fasse stachelige Arten mit Zeitungspapier umwickelt oder mit dicken Handschuhen an. Kakteenstacheln und die feinen Glochiden mancher Arten dringen leicht in die Haut ein und lassen sich nur schwer wieder entfernen, und der Moment der größten Exposition ist das Umtopfen."
+        ],
+        "checklist": [
+          "Fasse stachelige Arten mit gerolltem Zeitungspapier oder dicken Handschuhen an.",
+          "Bereite den neuen Topf vor, bevor du die Pflanze anhebst — das verkürzt die Zeit in deinen Händen.",
+          "Halte stachelige Exemplare aus Laufwegen und von kleinen Kindern fern."
+        ]
+      }
+    }
+  },
+  "tropicalFoliage": {
+    "label": "Tropische Blattpflanzen fürs Zimmer",
+    "topics": {
+      "watering": {
+        "advice": [
+          "Das Ziel dieser Gruppe ist ein gleichmäßig feuchtes, nie nasses Substrat — weder der komplette Trockenzyklus der Sukkulenten noch die Dauerfeuchte der Farne. Um das zu beurteilen, steck einen Finger bis zum ersten Gelenk ins Substrat: Ist es an der Fingerkuppe trocken, ist Gießzeit. Das Gewicht des Topfes und der hohle Klang, wenn du mit dem Knöchel an einen Terrakottatopf klopfst, funktionieren genauso gut. Wenn du gießt, dann so lange, bis Wasser unten herausläuft: Das spült überschüssige Salze aus und stellt sicher, dass die unteren zwei Drittel des Topfes Wasser bekommen. Danach den Untersetzer leeren — lass die Pflanze nie im Wasser stehen.",
+          "Details, die hier den Unterschied machen: Ist das Substrat stark ausgetrocknet, gieße zweimal — gießen, etwa dreißig Minuten warten, dann noch einmal gießen; das Wasser sollte zwischen 17 und 22 °C haben, nie heiß und nie eiskalt, und niemals enthärtetes Wasser, wegen Natrium und Chlorid. Maranten wollen destilliertes Wasser oder Regenwasser, weil das Fluorid im Leitungswasser die Blattränder braun werden lässt. Und die Gruppe bringt eigene erklärte Ausnahmen mit: Dracaenen wollen eine oberflächlich abgetrocknete Erde, bevor gegossen wird, die Glücksfeder wird ein- bis zweimal im Monat gegossen und nur, nachdem sie vollständig abgetrocknet ist, und die Birkenfeige bleibt im aktiven Wachstum feucht und trocknet im Winter leicht ab."
+        ],
+        "checklist": [
+          "Halte das Substrat gleichmäßig feucht, nie staunass.",
+          "Gieße, bis Wasser unten herausläuft, und leere dann den Untersetzer.",
+          "Verwende Wasser zwischen 17 und 22 °C; niemals enthärtetes Wasser.",
+          "Maranten und Dracaenen: destilliertes Wasser oder Regenwasser bevorzugen.",
+          "Sehr trockenes Substrat: gießen, dreißig Minuten warten, noch einmal gießen."
+        ]
+      },
+      "light": {
+        "advice": [
+          "Die Lichttoleranz dieser Gruppe ist sehr breit, und genau daran teilt sie sich auf. Philodendren bevorzugen indirekte oder durch einen Vorhang gefilterte Sonne und vertragen wenig Licht — der Kletterphilodendron kommt mit sehr wenig aus —, während die baumförmigen Typen mittleres bis starkes Licht nah am Fenster wollen. Dracaenen wachsen am besten in hellem indirektem Licht, doch mehrere vertragen schwaches Licht gut genug, um zum Bürostandard geworden zu sein. In Referenzzahlen: Schwaches Licht liegt bei rund 800 Lux, mittleres bei 1.600, helles bei 3.000 und direktes bei 15.000.",
+          "Maranten sind die am stärksten eingeschränkte Untergruppe: Halbschatten, höchstens zwei bis sechs Stunden direkte Sonne am Tag, mit dem ausdrücklichen Hinweis, dass direkte Sonne das Blatt verbrennt. Erinnernswert ist, dass die Fensterung einer Monstera — diese charakteristischen Löcher — von ausreichend Licht abhängt und dass ein echter Philodendron tief eingeschnittene Blätter bildet, aber ohne Löcher. Wenn du die Lage deiner Räume nach Himmelsrichtungen beschreibst: Im deutschsprachigen Raum ist Süden die hellste und Norden die dunkelste Seite."
+        ],
+        "checklist": [
+          "Helles indirektes Licht ist für fast die ganze Gruppe der Idealpunkt.",
+          "Maranten: Halbschatten, höchstens zwei bis sechs Stunden direkte Sonne.",
+          "Trockene runde Flecken auf dem Blatt deuten auf zu viel Sonne.",
+          "Untere Blätter vergilben bei abgestorbener Triebspitze: zu wenig Licht oder zu viel Wasser.",
+          "Willst du Fensterung bei einer Monstera, erhöhe zuerst das Licht, bevor du irgendetwas anderes änderst."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "Eine gute Universalerde reicht hier — diese Gruppe hat weder den Mineralbedarf der Sukkulenten noch den Torfbedarf der Farne. Was die Technik verändert, ist die Speicherfähigkeit: Torfreiche Mischungen halten Feuchtigkeit länger, Mischungen mit Rinde, Sand oder Perlit leiten schneller ab. Wähle nach deiner Gießgewohnheit und dem Klima im Haus. Eine wichtige Korrektur: Eine Schicht Steine im Topfboden verbessert die Drainage nicht — sie hält die Feuchtigkeit eher im Topf.",
+          "Es gibt einen echten dokumentierten Widerspruch zwischen den Quellen, und man folgt am besten der konservativen Lesart. Für Dracaenen sagt eine Extension, Substrate mit hohem Perlitanteil zu vermeiden, den pH-Wert zwischen 6.0 und 6.5 zu halten und keine superphosphathaltigen Dünger zu verwenden, weil Dracaena sehr fluoridempfindlich ist; für Maranten empfiehlt eine andere Extension, Perlit oder Vermiculit einzuarbeiten — und Maranten sind ebenfalls fluoridempfindlich. Eine ausdrückliche Auflösung gibt es nicht: Bevorzuge bei diesen beiden Vermiculit oder feine Rinde statt Perlit und verwende destilliertes Wasser oder Regenwasser. Dünge maßvoll — braune, eingerollte Spitzen sind ein Zeichen für zu viel Dünger, und die sehr langsam wachsende Glücksfeder braucht nur ein bis zwei Gaben über eine ganze Saison."
+        ],
+        "checklist": [
+          "Eine Universalmischung funktioniert; die Speicherfähigkeit regelst du mit Rinde oder Perlit.",
+          "Leg keine Steinschicht in den Topfboden — sie drainiert nicht.",
+          "Dracaenen und Maranten: Vermiculit oder feine Rinde statt Perlit.",
+          "Halte den pH-Wert bei Dracaena zwischen 6.0 und 6.5 und meide Superphosphat.",
+          "Braune, eingerollte Spitzen: reduziere zuerst die Düngung, bevor du etwas anderes änderst."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "Das ist die Zimmerpflanzengruppe mit dem am stärksten konzentrierten Vergiftungsrisiko, und die Ursache heißt Calciumoxalat. Alle Teile eines Philodendrons sind beim Verzehr giftig: Die Kristalle verursachen Brennen und Reizungen an Mund, Lippen und Zunge, starken Speichelfluss, Erbrechen und Schluckbeschwerden. Die Glücksfeder gilt als nicht sicher für Haustiere. Der Saft von Maranten kann Hautreizungen auslösen. Keine dieser Pflanzen ist gefährlich, nur weil du sie besitzt — das Risiko sind Verzehr und längerer Kontakt mit dem Saft; behandle Rückschnitt und Umtopfen deshalb als Arbeiten mit Handschuhen und mit Händewaschen danach.",
+          "Es gibt ein kleineres, aber reales körperliches Risiko: Aufrecht wachsende Philodendren haben spröde Blattstiele, die leicht abbrechen — halte sie also besser aus Laufwegen fern. Und eine Beobachtung, die dir einen Schrecken erspart: Schwarze Male am Stamm einer Glücksfeder sind normal und zeigen gesundes Wachstum an, keine Krankheit."
+        ],
+        "checklist": [
+          "Halte diese Pflanzen außer Reichweite von kleinen Kindern und Haustieren.",
+          "Trag Handschuhe beim Schneiden und Umtopfen und wasch dir danach die Hände.",
+          "Lass abgefallene Blätter nicht dort liegen, wo knabbernde Tiere sie erreichen.",
+          "Halte aufrecht wachsende Typen aus Laufwegen fern: Die Blattstiele brechen leicht.",
+          "Schwarze Male am Stamm einer Glücksfeder sind normal, keine Krankheit."
+        ]
+      }
+    }
+  },
+  "fern": {
+    "label": "Farne & Schattenpflanzen",
+    "topics": {
+      "watering": {
+        "advice": [
+          "Das Ziel ist eine jederzeit nur leicht feuchte Erde, die nie vollständig austrocknet und nie im Wasser des Untersetzers steht. Der teuerste Denkfehler in dieser Gruppe ist, konstante Feuchte mit einem dauerhaft nassen Topf zu verwechseln: Die Quellen sagen im selben Satz, dass das Substrat Feuchtigkeit halten und schnell abfließen lassen muss, weil die Wurzel trotzdem Sauerstoff braucht. Wurzelfäule tritt bei einem Farn genauso auf wie bei einem Kaktus, nur mit weit weniger Wasser. Und das Fehlersignal ist in beide Richtungen mehrdeutig — Fiederblättchen fallen bei zu viel und bei zu wenig Wasser ab.",
+          "Die Luftfeuchtigkeit ist für diese Gruppe der begrenzende Faktor, kein Komfort: Der praktische Zielbereich liegt zwischen 30% und 50%, bei feinfiedrigen Arten wie dem Frauenhaarfarn eher bei 50%. Braune Spitzen an einem Farn sind zuallererst die Diagnose trockener Luft — nicht trockenen Substrats —, und mehr zu gießen führt zu Fäulnis, ohne das Symptom zu beheben. Die Methoden, nach Verlässlichkeit geordnet: Doppeltopf mit feuchtem Sphagnum, ein Kiesuntersetzer mit etwa sechs Millimetern Wasser, wobei der Topf das Wasser nicht berührt, ein Luftbefeuchter, ein Terrarium oder das Badezimmer für die empfindlichsten Arten — und erst dann gelegentliches leichtes Besprühen. Wechsle oder wasche den Kies im Untersetzer alle drei Monate."
+        ],
+        "checklist": [
+          "Halte das Substrat leicht feucht und lass es nie vollständig austrocknen.",
+          "Lass kein Wasser im Untersetzer stehen: Das ist der direkte Weg zur Wurzelfäule.",
+          "Braune Spitzen bedeuten zu trockene Luft — behandle die Luft, gieße nicht mehr.",
+          "Bevorzuge Doppeltopf mit Sphagnum oder Kiesuntersetzer gegenüber dem Besprühen.",
+          "Wasche oder ersetze den Kies im Untersetzer alle drei Monate."
+        ]
+      },
+      "light": {
+        "advice": [
+          "Mäßiges indirektes Licht ist ideal, mit der Pflanze an einem kühlen Fenster — im deutschsprachigen Raum also einem Nordfenster — oder an einem Ostfenster. Ein direkt besonntes, heißes Fenster schädigt das Laub; ist es deine einzige Option, dämpfe die Intensität mit einem leichten Vorhang. In Zahlen liegt der Zielbereich bei schwachem bis mittlerem Licht, zwischen rund 800 und 1.600 Lux.",
+          "Innerhalb der Gruppe gibt es echte Unterschiede: Manche Arten vertragen wenig Licht, andere wollen helles indirektes oder gefiltertes Sonnenlicht — beobachte also lieber deine eigene Pflanze, statt eine einzige Zahl anzuwenden. Sonnengeschädigtes Laub hat fast immer eine offensichtliche Ursache — ein direkt besonntes, heißes Fenster — und die Lösung besteht schlicht darin, die Pflanze zu versetzen oder das Licht zu filtern."
+        ],
+        "checklist": [
+          "Bevorzuge das kühle Fenster der Wohnung oder ein Ostfenster.",
+          "Meide direkte Sonne an einem heißen Fenster; nutze einen leichten Vorhang, wenn es keine Alternative gibt.",
+          "Ziel ist der Bereich schwach bis mittel, zwischen rund 800 und 1.600 Lux.",
+          "Verbranntes Laub ist ein Zeichen für direkte Sonne, nicht für Durst."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "Das Substrat muss hier zwei Dinge gleichzeitig leisten: Feuchtigkeit halten und schnell abfließen lassen. Ein belegtes Rezept sind gleiche Teile einer handelsüblichen Zimmerpflanzenerde und Torf oder Laubkompost, mit der ausdrücklichen Bedingung, dass es schnell abfließt, um Wurzelfäule zu verhindern. Ein anderes kombiniert Torf oder Sphagnum zur Speicherung, Sand oder Kies zur Drainage und sterilisierte Lehmerde, ergänzt um dolomitischen Kalk und Knochenmehl. Es ist das genaue Gegenteil der Sukkulenten: Hier dominiert der organische Anteil, und die Drainage kommt aus dem groben Material statt aus einem Mineralanteil. Und noch einmal: Eine Schicht Steine im Topfboden drainiert nicht.",
+          "Die Düngung ist die zurückhaltendste aller Zimmerpflanzengruppen: einmal im Monat während der Wachstumszeit, mit etwa der Hälfte der empfohlenen Dosis, im Winter gar nicht — und sechs Monate lang gar nicht nach Teilung oder Umtopfen. Keine andere Zimmergruppe hat eine so lange Wartezeit, und der Grund ist unmittelbar: Farne bekommen Blattverbrennungen, wenn sie überdüngt werden. Eine chemische Warnung gilt speziell für diese Gruppe: Pflanzenschutzsprays schädigen viele Farne, lies also das Etikett sorgfältig und teste das Mittel zuerst an einer kleinen Stelle. Gegen Schädlinge sind mechanische Methoden wie ein kräftiger Wasserstrahl die bessere Wahl."
+        ],
+        "checklist": [
+          "Verwende ein Substrat, das Feuchtigkeit hält und trotzdem schnell abfließt.",
+          "Dünge mit halber Konzentration, einmal im Monat während der Wachstumszeit.",
+          "Dünge nicht im Winter und sechs Monate lang nicht nach Teilung oder Umtopfen.",
+          "Teste jedes Spray an einem einzelnen Wedel, bevor du die ganze Pflanze behandelst.",
+          "Topfe um und teile im zeitigen Frühjahr und halte die Luftfeuchtigkeit danach wochenlang hoch."
+        ]
+      }
+    }
+  },
+  "fruitVeg": {
+    "label": "Obstbäume & Gemüse",
+    "topics": {
+      "watering": {
+        "advice": [
+          "Hier wird das Gießen als wöchentliche Wasserhöhe gemessen und hat klar definierte phänologische Fenster. Die meisten Gemüsearten wollen 25 bis 50 Millimeter pro Woche — also zweieinhalb bis fünf Zentimeter — mit deutlichen Spitzen: Zuckermais will rund vier bis sechs Zentimeter während Rispenschieben, Seidenbildung und Kolbenfüllung; Bohnen wollen zweieinhalb bis vier Zentimeter während Blüte und Hülsenfüllung. Die Spanne ist ein Intervall, keine feste Zahl — trockenes Klima schiebt sie nach oben, feuchtes nach unten. Auf lehmigem Boden dringen zweieinhalb Zentimeter Wasser etwa fünfzehn Zentimeter tief ins Profil ein, womit du rechnen kannst: Dreißig Zentimeter zu durchfeuchten kostet ungefähr fünf Zentimeter ausgebrachtes Wasser.",
+          "Flaches Gießen ist hier nicht bloß weniger effizient: Es unterbricht den Calciumtransport. Calcium wandert mit dem Transpirationsstrom und wird nicht aus altem Gewebe in junge Früchte umverteilt, weshalb Zyklen aus Austrocknen und Durchtränken Blütenendfäule erzeugen, selbst wenn reichlich Calcium im Boden ist. Tomaten reagieren höchst empfindlich auf unregelmäßiges Gießen und antworten mit Blütenendfäule und Aufplatzen; Paprika antwortet mit Blütenfall; eine Gurke, die in der reproduktiven Phase Stress hat, bringt bittere, missgestaltete Früchte. Sandboden will kürzere, häufigere Gaben; Tonboden will seltenere und tiefere."
+        ],
+        "checklist": [
+          "Arbeite mit einer Spanne von 25 bis 50 Millimetern pro Woche, Regen und Bewässerung zusammengerechnet.",
+          "Verpass Blüte und Fruchtfüllung nicht: Das ist das Fenster, das die Ernte kostet.",
+          "Bevorzuge tiefe Gaben mit Abstand gegenüber kurzen täglichen.",
+          "Blütenendfäule behebst du über geregeltes Gießen, nicht über Calciumspritzungen.",
+          "Richte dich nach dem Boden: Sand will mehr Häufigkeit, Ton mehr Tiefe."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "Das ist die einzige Gruppe, deren Ernte dem System jedes Jahr Nährstoffe entzieht, und fast jeder Unterschied in der Pflege folgt daraus. Gedüngt wird wiederkehrend und aufgeteilt in Kopfdüngungen, wobei sich das Verhältnis über den Zyklus verschiebt — bei der Freilandtomate etwa startet die Kopfdüngung phosphorreicher und erhöht das Kalium, sobald die Pflanze in die Produktion geht. Zu viel Stickstoff hat einen realen Preis: Feigen, die nicht ausreifen, und übermäßiges Triebwachstum während früher Blüte und Fruchtbildung, einer der größten Treiber der Blütenendfäule bei Tomate und Paprika.",
+          "Der pH-Wert ist entscheidend und variiert innerhalb der Gruppe stark. Apfel steht gut zwischen 5.8 und 6.5, etwa alle drei Jahre nachgemessen; die meisten Blattgemüse liegen zwischen 6.0 und 6.5; und die Heidelbeere ist die radikale Ausnahme, am besten zwischen 4.8 und 5.2, wofür Elementarschwefel mindestens ein Jahr vor der Pflanzung ausgebracht werden muss. Zwei Regeln gelten für alles: Halte den Dünger mindestens fünfzehn Zentimeter vom Stamm entfernt und bringe ihn immer auf feuchten Boden aus, damit er keine Wurzeln verbrennt. Und das ist die einzige Gruppe mit Fruchtfolge nach botanischer Familie — Kulturen derselben Familie sind für dieselben Krankheiten und Insekten anfällig, wiederhole eine Familie also drei bis vier Jahre lang nicht im selben Beet, gern auch länger."
+        ],
+        "checklist": [
+          "Dünge in aufgeteilten Kopfdüngungen, nicht in einer einzigen Gabe.",
+          "Lass den Boden untersuchen und korrigiere den pH-Wert für die Kultur, nicht fürs Beet als Ganzes.",
+          "Halte den Dünger mindestens fünfzehn Zentimeter vom Stamm entfernt, immer auf feuchtem Boden.",
+          "Wiederhole dieselbe botanische Familie drei bis vier Jahre lang nicht im selben Beet.",
+          "Zu viel Stickstoff verzögert die Reife und füttert die Blütenendfäule."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Das Ausdünnen der Früchte ist eine Pflichtmaßnahme, die es in keiner anderen Gruppe gibt. Ein zu schwerer Behang bringt kleine Früchte, gebrochene Äste und Alternanz, denn wenn ein Baum voll trägt, geht fast seine gesamte Energie in die Früchte und es bleibt wenig übrig, um die Blüten des nächsten Jahres anzulegen. Dünne Äpfel innerhalb von sechs Wochen nach der Vollblüte von Hand aus und lass etwa zwanzig bis fünfundzwanzig Zentimeter Abstand zwischen den Früchten am Ast; bei Birnen, Pflaumen und Aprikosen sind es fünfzehn bis zwanzig Zentimeter. Der natürliche Junifall, bei dem die Früchte etwa ein bis zweieinhalb Zentimeter groß sind, ersetzt das Ausdünnen von Hand nicht — behalte immer die größte Frucht des Büschels, außer sie ist beschädigt.",
+          "Zwei Maßnahmen vervollständigen das Bild. Der Schnitt eines Apfelbaums beginnt am Tag der Pflanzung; wer damit wartet, bekommt schwachen Wuchs und späteren Ertrag. Und bei der Heidelbeere ist es das Entfernen jeder Blüte im ersten und zweiten Jahr, das die Pflanze etablieren lässt — der Verzicht auf zwei Ernten erkauft alle folgenden. Bei Obstbäumen behältst du den Düngestopp im Spätsommer bei, weil Fruchtproduktion und Holzausreife um dasselbe Photosyntheseprodukt konkurrieren."
+        ],
+        "checklist": [
+          "Dünne die Früchte innerhalb von sechs Wochen nach der Vollblüte aus.",
+          "Behalte die größte Frucht jedes Büschels, außer sie ist beschädigt.",
+          "Verlass dich nicht auf den natürlichen Fruchtfall: Er ersetzt das Ausdünnen von Hand nicht.",
+          "Beginne mit dem Kronenaufbau im Pflanzjahr, nicht später.",
+          "Stelle die Düngung von Obstbäumen am Ende des Sommers ein."
+        ]
+      }
+    }
+  },
+  "flowering": {
+    "label": "Blüh- & Zierpflanzen",
+    "topics": {
+      "watering": {
+        "advice": [
+          "Gegossen wird hier nach wöchentlicher Wasserhöhe, nicht im Zyklus aus Durchtränken und Abtrocknen: Einjährige und Stauden wollen mindestens 25 bis 40 Millimeter Wasser pro Woche, Regen und Bewässerung zusammengerechnet, und der beste Zeitpunkt ist früh am Tag, damit das Laub schnell abtrocknet. Bei Rosen wird dasselbe Prinzip anders formuliert — tiefes Gießen fördert ein tiefes Wurzelsystem, während häufiges, leichtes Gießen dazu führt, dass sich die Wurzeln zu nah an der Bodenoberfläche bilden.",
+          "Die Pflanzengesundheit hängt daran mehr, als es scheint. Eine Rose mit wiederkehrendem Sternrußtau hat fast immer nasse Blätter am Ende des Tages und stehende Luft um sich herum: Morgensonne, ein Perlschlauch statt eines Sprengers und gute Luftzirkulation lösen mehr als jedes Spritzmittel."
+        ],
+        "checklist": [
+          "Gib mindestens 25 bis 40 Millimeter Wasser pro Woche, den Regen mitgerechnet.",
+          "Gieße früh am Tag, damit das Laub vor der Nacht abtrocknet.",
+          "Bevorzuge tiefe Gaben mit Abstand gegenüber leichtem, häufigem Gießen.",
+          "Bei Rosen den Boden nässen, nicht das Blatt."
+        ]
+      },
+      "light": {
+        "advice": [
+          "Die meisten Einjährigen brauchen volle Sonne für mindestens vier bis sechs Stunden am Tag, um gut zu blühen. Rosen verlangen mehr: sechs bis acht Stunden direkte Sonne, und die Morgensonne zählt besonders, weil sie die Blätter trocknet und Krankheiten vorbeugen hilft.",
+          "Eine Diagnose führt viele in die Irre: Eine Staude, die auseinanderfällt und keine Struktur hat, leidet meist unter zu wenig Licht — nicht unter Düngermangel. Mehr zu düngen korrigiert das nicht; die Pflanze zu versetzen schon."
+        ],
+        "checklist": [
+          "Einjährige: mindestens vier bis sechs Stunden volle Sonne am Tag.",
+          "Rosen: sechs bis acht Stunden, mit Vorrang für die Morgensonne.",
+          "Eine auseinanderfallende, sperrige Staude braucht einen neuen Platz, nicht mehr Dünger.",
+          "Beobachte übers Jahr, wohin die Sonne fällt, bevor du dich auf ein Beet festlegst."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "Die Beetvorbereitung geht hier tiefer als im Topf: fünfzehn bis fünfundzwanzig Zentimeter für Einjährige und zwanzig bis fünfundzwanzig für Stauden. In Tonboden arbeitest du mindestens fünf Zentimeter kompostierte Kiefernrinde, Kompost oder Laubkompost ein; in Sandboden fünf bis acht Zentimeter feuchtigkeitshaltendes organisches Material. Der pH-Zielwert für Stauden liegt bei 6.0 bis 6.5. Der Mulch ist hier dünner als bei Gehölzen: fünf bis acht Zentimeter für Einjährige und nur zwei bis fünf für Stauden, mit dem ausdrücklichen Hinweis, zu schweres Mulchen zu vermeiden, weil der Wurzelhals einer Staude darunter fault.",
+          "Der Nährstoffbedarf ist mittel und ausdrücklich gedeckelt: Ein Volldünger bei der Vorbereitung, wiederholt in Abständen von etwa sechs Wochen, deckt ihn ab. Weit über dem ausgewachsenen Gehölz, das fast nichts braucht, und deutlich unter dem tragenden Obstbaum. Und eine wichtige Korrektur an einer verbreiteten Gewohnheit: Verwende nicht grundsätzlich einen phosphorbetonten Dünger für die Blüte. Hohe Phosphorgaben erhöhen die Zahl der Blüten nicht, und ein chronischer Überschuss legt Mikronährstoffe wie Eisen und Zink fest, was zu kümmerndem Wuchs und vergilbenden Blättern führt — und überschüssiger Phosphor baut sich nur sehr langsam ab, was Jahre dauern kann. Ein ausgewogener Dünger plus Bodenanalyse ist die sichere Richtschnur. Zeichen für Überschuss im Topf: eine weiße Kruste am Topfrand, braune Blattspitzen und dunkel verfärbte Wurzeln."
+        ],
+        "checklist": [
+          "Bereite den Boden tief vor: fünfzehn bis fünfundzwanzig Zentimeter, mit eingearbeiteter organischer Substanz.",
+          "Verwende bei Stauden nur zwei bis fünf Zentimeter Mulch und halte ihn vom Wurzelhals fern.",
+          "Dünge mit einer ausgewogenen Formulierung und wiederhole alle sechs Wochen.",
+          "Verwende keinen phosphorbetonten Dünger, um die Blüte zu erzwingen.",
+          "Weiße Kruste am Topfrand: mit reichlich Wasser durchspülen oder das Substrat wechseln."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Die Maßnahme, die diese Gruppe definiert, ist das Ausputzen — das Entfernen verblühter Blüten. Verblühtes abzunehmen bringt die Pflanze dazu, weitere Blüten zu bilden, statt ihren Blühzyklus für die Saison zu beenden; es ist die einzige Kategorie, in der das Entfernen des Fortpflanzungsorgans genau das Produkt vermehrt, das du willst. Zwick sie mit den Fingern ab oder nimm eine scharfe Schere, und es ist völlig in Ordnung, ein Stück Stiel mitzunehmen, nicht nur die Blüte. Über die Wirkung auf die Blüte hinaus senkt das die Häufigkeit von Krankheiten, die sich auf verrottendem Pflanzenmaterial entwickeln. Beim Pflanzen von Einjährigen zwickst du Knospen und Blüten ab, um eine bessere Verzweigung zu fördern; Stauden schneidest du nach der Blüte bodennah zurück, damit neues Laub aus der Basis treibt.",
+          "Zwiebelpflanzen sind das Spiegelbild: Nach der Blüte besteht die Arbeit im Wiederaufladen. Entferne die verblühte Blüte, damit sich keine Samenkapseln bilden, aber niemals das Blatt — lass das Laub stehen, bis es von selbst zu vergilben und einzuziehen beginnt, und binde oder flechte es nicht, weil das die Lichtmenge verringert, die die Blätter aufnehmen können, und damit die Photosynthese, die die Zwiebel für das nächste Jahr auffüllt. Teile Zwiebeln, sobald das Laub eingezogen ist und sie ruhen, und trenne die Brutzwiebeln durch sanftes Drehen und Ziehen ab; kleine Teilstücke brauchen manchmal ein bis zwei Jahre, bis sie wieder blühen. Und im Herbst lohnt es sich, Samenstände stehen zu lassen: Sie sind über den Winter eine nahrhafte Futterquelle für Wildtiere."
+        ],
+        "checklist": [
+          "Entferne verblühte Blüten, bevor sie Samen ansetzen.",
+          "Zwick beim Pflanzen von Einjährigen die Knospen ab, damit sich die Pflanze verzweigt.",
+          "Bei Zwiebelpflanzen die Blüte schneiden, aber nie das Blatt.",
+          "Binde oder flechte Zwiebellaub niemals.",
+          "Lass im Herbst einige Samenstände für Wildtiere stehen."
+        ]
+      }
+    }
+  },
+  "woody": {
+    "label": "Bäume & Gehölze",
+    "topics": {
+      "watering": {
+        "advice": [
+          "Das ist die einzige Gruppe, deren Anwachsphase in Jahren gemessen wird: grob ein Jahr pro zweieinhalb Zentimeter Stammdurchmesser. Ein frisch gepflanzter Baum will in den ersten zwei Wochen täglich gegossen werden, von der dritten bis zur zwölften Woche alle zwei bis drei Tage, danach wöchentlich bis zum ersten Frost und im zweiten Jahr erneut wöchentlich. Für die Menge gibt es eine Formel: vier bis sechs Liter pro zweieinhalb Zentimeter Stammdurchmesser bei jedem Gießgang, verteilt über die gesamte Wurzelzone statt am Stamm, sodass fünfzehn bis zwanzig Zentimeter Boden durchfeuchtet werden.",
+          "Tiefes Gießen fördert kräftige Wurzeln und verbessert die Hitze- und Trockenheitstoleranz; häufiges, flaches Gießen baut ein oberflächliches, abhängiges Wurzelsystem auf — bei einem Gehölz genau jenes, das im Sturm herausreißt. Deshalb wird ein frisch gepflanzter Baum, der trotz täglichen Gießens welkt, meist an der falschen Stelle und in zu geringer Menge gegossen. Säureliebende Sträucher wie Azaleen wollen tief gegossen werden, mit Durchfeuchtung von mindestens fünfzehn bis zwanzig Zentimetern, und brauchen in Sandboden im ersten Jahr womöglich zweimal pro Woche Wasser."
+        ],
+        "checklist": [
+          "Gieße die gesamte Wurzelzone, niemals den Stamm.",
+          "Gib jedes Mal vier bis sechs Liter pro zweieinhalb Zentimeter Stammdurchmesser.",
+          "Durchfeuchte fünfzehn bis zwanzig Zentimeter Bodenprofil.",
+          "Rechne mit grob einem Jahr Anwachszeit pro zweieinhalb Zentimeter Stammdurchmesser.",
+          "Bevorzuge tiefe Gaben mit Abstand gegenüber täglichem flachem Gießen."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "Ein ausgewachsenes Gehölz in gutem Boden braucht schlicht keinen Dünger: Nicht alle Gartenpflanzen müssen gedüngt werden, und ausgewachsene Bäume und Sträucher auf günstigen Bodenverhältnissen brauchen wenig bis gar nichts. Bäume in einem gedüngten Rasen bedienen sich ohnehin selbst, weil ihre Wurzeln die für das Gras ausgebrachten Nährstoffe abfangen. Wenn du doch düngst, ist die Obergrenze normativ: Langzeitstickstoff mit ein bis zwei Kilogramm pro 100 Quadratmeter und Jahr, nie über drei; schnell verfügbarer Stickstoff mit einem halben bis einem Kilogramm, mit einer Obergrenze von zwei. Ausgebracht wird über die gesamte Fläche der Kronenprojektion, vom Wurzelanlauf bis zu den Zweigspitzen, und immer auf feuchten Boden.",
+          "Säureliebende Sträucher sind die Untergruppe, die alles verändert. Azaleen und Rhododendren wollen einen pH-Wert zwischen 4.5 und 6.0, wurzeln flach und nehmen bei zu viel Bodenfeuchte leicht Schaden; sie vertragen einen sauer wirkenden Dünger nahe am Verhältnis 2-1-1, leicht ausgebracht im Frühjahr und Frühsommer, und nie eine stickstoffreiche Gabe im Spätherbst, weil das die Winterruhe verzögert. Gelbe junge Blätter mit grünen Adern deuten auf einen hohen pH-Wert, der Eisen festlegt — in sauren Tonböden ist Eisen aber gut verfügbar, prüfe also erst auf Staunässe, bevor du den pH-Wert verantwortlich machst. Mulch ist Werkzeug und Waffe zugleich: fünf bis zehn Zentimeter dick, bei einem jungen Baum acht bis zwölf Zentimeter vom Stamm entfernt gehalten und bei einem ausgewachsenen zwanzig bis fünfundzwanzig, ausgedehnt bis zur Traufkante. Wer darüber hinausgeht, baut den Mulchvulkan, und der tötet langsam: Luft dringt nicht mehr ein, dem Boden darunter fehlt Sauerstoff, die Dauerfeuchte tötet das Phloem, und den Wurzeln gehen die Kohlenhydrate aus."
+        ],
+        "checklist": [
+          "Dünge ein ausgewachsenes Gehölz in gutem Boden nicht — es braucht das fast nie.",
+          "Wenn du düngst, dann über die ganze Kronenprojektion und immer auf feuchten Boden.",
+          "Säureliebende: pH-Wert zwischen 4.5 und 6.0 und eine leichte sauer wirkende Gabe im Frühjahr.",
+          "Halte den Mulch vom Stamm fern, in einem flachen Ring.",
+          "Fünf bis zehn Zentimeter Mulch reichen; mehr davon ist ein Vulkan."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Der Schnitt ist unumkehrbar und folgt anatomischen Regeln. Geschnitten wird knapp außerhalb des Astrings — jener verdickten Zone am Astansatz, die als natürliche Barriere gegen fäuleerregende Organismen wirkt. Äste ab etwa vier Zentimetern Durchmesser verlangen den Dreischnitt, damit die Rinde nicht am Stamm herunterreißt. Und keine Wundverschlussmittel: Die Forschung hat gezeigt, dass Wundverschlussmittel und andere Schnittpräparate Fäule nicht verhindern.",
+          "Über den Zeitpunkt entscheidet das Holz, das blüht, nicht der Kalender: Pflanzen, die am vorjährigen Holz blühen — Forsythie, Azalee, Flieder —, werden direkt nach der Blüte geschnitten, und die am diesjährigen Holz blühen, vor dem Austrieb. Ein Strauch, der nie blüht, wurde fast immer zum falschen Zeitpunkt geschnitten. Bevorzuge das Auslichten gegenüber dem Einkürzen, denn Auslichten fördert den Wuchs im Inneren der Pflanze und stellt eine natürliche Form wieder her, während Einkürzen die Peripherie verdichtet und das Innere verdunkelt, mit Neuaustrieb, der sich innerhalb von fünfzehn bis zwanzig Zentimetern um den Schnitt konzentriert. Um einen alten Strauch zu verjüngen, ohne ihn zu schocken, nimm die Ein-Drittel-Regel über drei Jahre. Halte dich an die konservative Jahresobergrenze von etwa 25% der lebenden Krone und kappe niemals einen Baum: Kappen entfernt die Hälfte oder mehr der belaubten Krone, hinterlässt Wunden, die sich nicht abschotten können, und setzt die Rinde dem Rindenbrand aus. Vermeide außerdem den Schnitt in den zehn Wochen vor dem ersten starken Frost in deiner Region."
+        ],
+        "checklist": [
+          "Schneide knapp außerhalb des Astrings, nie bündig am Stamm.",
+          "Nimm bei Ästen ab etwa vier Zentimetern Durchmesser den Dreischnitt.",
+          "Trag kein Wundverschlussmittel auf: Es verhindert keine Fäule.",
+          "Pflanzen, die am alten Holz blühen, werden direkt nach der Blüte geschnitten.",
+          "Entferne höchstens etwa 25% der lebenden Krone pro Jahr und kappe niemals einen Baum."
+        ]
+      }
+    }
+  },
+  "orchid": {
+    "label": "Orchideen & Epiphyten",
+    "topics": {
+      "watering": {
+        "advice": [
+          "Hier gibt es keinen Gießkalender, nur ein Trockenheitskriterium: Gieße, sobald die Pflanze abgetrocknet ist, und es gibt keine Zauberformel wie die, einen 15-Zentimeter-Topf alle sieben Tage zu gießen. Und wenn du gießt, dann richtig — mehrere Minuten lang läuft Wasser frei aus den Abzugslöchern, bis das Substrat vollständig gesättigt ist. Das Konzept des tiefen Gießens kehrt sich in dieser Gruppe um: Es gibt kein Bodenprofil zu durchfeuchten, nur vollständige Sättigung mit anschließendem schnellem Abtrocknen. Tägliches leichtes Besprühen entspricht dem flachen Gießen im Beet: Es benetzt die Oberfläche, hält Feuchtigkeit an den falschen Stellen und sättigt das Medium nie.",
+          "Die Wasserqualität zählt hier mehr als in jeder anderen Gruppe, denn ohne Erde gibt es keinen Kationenaustauscher, der Salze abpuffert: Verwende lauwarmes Wasser, am besten Regenwasser, und niemals enthärtetes Wasser, das viel Natrium mitbringt. Lass den Topf nie im Untersetzer stehen. Jede Untergruppe hat ihre Methode: Zisternenbromelien nehmen vor allem über die Blätter und über den Trichter an der Basis auf, der gefüllt bleiben und jede Woche durchgespült werden sollte, damit sich keine Mineralien aufkonzentrieren und die Blattspitzen töten; Tillandsien wollen einmal pro Woche ein zwanzig- bis dreißigminütiges Bad — ein- bis zweimal, je nachdem, ob der Raum heiß und trocken oder kühl und feucht ist —, danach abschütteln und kopfüber abtropfen lassen; und der Weihnachtskaktus braucht, sobald die Knospen angesetzt sind, gleichmäßig feuchtes Substrat, damit er sie nicht abwirft."
+        ],
+        "checklist": [
+          "Gieße, wenn es abgetrocknet ist, nicht nach Kalender.",
+          "Sättige das Medium, bis mehrere Minuten lang Wasser frei durchläuft.",
+          "Verwende lauwarmes Wasser, wenn möglich Regenwasser, und niemals enthärtetes.",
+          "Lass den Topf nie in einem Untersetzer voll Wasser stehen.",
+          "Zisternenbromelie: Trichter gefüllt halten und jede Woche durchspülen."
+        ]
+      },
+      "light": {
+        "advice": [
+          "Die meisten Zimmerorchideen wollen ein bis vier Stunden direkte Sonne. Schmetterlingsorchideen stehen gut bei 19 bis 30 °C am Tag und 16 bis 19 °C in der Nacht, an einem Ost- oder Westfenster, außerhalb der Sommersonne und fern von Heizkörpern und Zugluft. Bromelien verlangen zwölf bis sechzehn Stunden relativ helles Licht am Tag, und die Blätter melden zurück: lange, dünne und grünere Blätter bedeuten zu wenig Licht; kürzere, dickere und blassere bedeuten reichlich. Tillandsien wollen helles gefiltertes Licht, nie direkte Sonne.",
+          "Es gibt einen Fall, in dem die Tageslänge über die Intensität siegt. Weihnachtskakteen und ihre Verwandten brauchen vierzehn oder mehr Stunden ununterbrochene Dunkelheit am Tag, im deutschsprachigen Raum beginnend etwa Mitte September, und das über mindestens sechs Wochen — und die praktische Warnung ist unmissverständlich: Schon zwei Stunden unterbrochener Beleuchtung hemmen den Blütenknospenansatz. Eine Lampe, die im Zimmer brennen bleibt, reicht aus, um die Blüte des Jahres zu streichen."
+        ],
+        "checklist": [
+          "Zimmerorchideen: ein bis vier Stunden direkte Sonne.",
+          "Schmetterlingsorchidee: Ost- oder Westfenster, fern von Heizkörpern und Zugluft.",
+          "Eine Bromelie mit langen, dünnen, dunklen Blättern bittet um mehr Licht.",
+          "Tillandsie: helles gefiltertes Licht, nie direkte Sonne.",
+          "Weihnachtskaktus: sechs Wochen lang ununterbrochene Dunkelheit in der Nacht, damit er Knospen ansetzt."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "In dieser Gruppe gibt es keine Erde, und normale Blumenerde tötet: Verwende niemals lehmhaltige oder Universalerde, weil sie die vom Velamen umhüllte Wurzel erstickt. Mehr noch, das Substrat hat ein Verfallsdatum, und Umtopfen ist Pflicht, nicht Kür — Rinde muss etwa alle zwei Jahre ersetzt werden, und schon davor ist das Zeichen körperlich sichtbar: Topfe um, sobald beim Gießen winzige Substratkrümel aus dem Topf gespült werden. Zersetzte Rinde wird weniger luftig und dichter, hält das Wasser länger und lässt die Wurzeln faulen. Es ist die einzige Gruppe, in der das Substrat selbst die Ursache eines programmierten Todes ist.",
+          "Die Wahl zwischen Rinde und Sphagnum ist eine Entscheidung über die Umgebung, nicht über den Geschmack: grobe Rinde in einem feuchten Raum oder Gewächshaus; eine Mischung mit mehr Sphagnum und Fasern in einem trockenen, sonnigen Innenraum, mit größeren Gießabständen und Umtopfen direkt nach der Blüte. Eine Mischung aus Rinde, Holzkohle und Perlit ist der ausgewogene Handelsstandard. Der Topf sollte gerade groß genug sein, um das Wurzelsystem zu fassen — ein zu großes Gefäß hält Feuchtigkeit und schädigt Orchideenwurzeln. Gedüngt wird grundsätzlich verdünnt: halbe Etikettendosis, mit wenig oder ohne Harnstoff, wöchentlich im Sommer und alle zwei Wochen im Herbst und Winter, wobei du bei jedem vierten Gießgang den Dünger weglässt, um Salze auszuspülen. Bromelien gehen noch schwächer, auf ein Viertel bis ein Achtel der Dosis. Und denk daran, dass mehrere Vertreter dieser Gruppe monokarp sind: Eine Bromelie, die nach der Blüte langsam abbaut, vollendet ihren normalen Zyklus und wird nicht krank — behalte die Kindel."
+        ],
+        "checklist": [
+          "Topfe nie in normale Erde oder Universalerde.",
+          "Ersetze die Rinde alle zwei Jahre oder sobald beim Gießen Krümel herausgespült werden.",
+          "Nimm einen Topf, der genau auf das Wurzelsystem passt.",
+          "Dünge mit halber Dosis und lass den Dünger bei jedem vierten Gießgang weg.",
+          "Eine Bromelie, die nach der Blüte stirbt, folgt dem normalen Zyklus: Behalte die Kindel."
+        ]
+      }
+    }
+  },
+  "herb": {
+    "label": "Küchen- & Gewürzkräuter",
+    "topics": {
+      "watering": {
+        "advice": [
+          "Diese Gruppe teilt sich in zwei Hälften, und beide nach demselben Kalender zu behandeln ist der strukturelle Fehler. Die verholzenden Mediterranen — Rosmarin, Thymian, Oregano, Salbei, Lavendel — wollen Gießen mit Abstand und echtem Abtrocknen dazwischen: Ihr Risiko ist eine nasse Wurzel im Winter, nicht die Trockenheit im Sommer. Rosmarin hasst nasse Wurzeln, besonders im Winter, und braucht, einmal im Boden eingewachsen, kaum noch Wasser; im Topf gießt du in Trockenphasen, lässt die Erde aber nie staunass werden.",
+          "Die Blattkräuter — Basilikum, Petersilie, Minze, Zitronenmelisse — wollen das Gegenteil: eine relativ konstante Bodenfeuchte, weil Wasserstress das Schossen beschleunigt und das Blatt zäh macht. Gieße morgens, damit das Laub vor der Nacht abtrocknet, und vermeide es, beim Basilikum die Blätter zu benetzen: Nutze Tropfschlauch oder Perlschlauch statt Sprenger, denn ein nasses Blatt in stehender Luft ist eine Einladung an den Falschen Mehltau."
+        ],
+        "checklist": [
+          "Trenne die Mediterranen von den Blattkräutern, bevor du irgendeine Gießroutine festlegst.",
+          "Mediterrane: mit Abstand gießen und den Boden dazwischen wirklich abtrocknen lassen.",
+          "Blattkräuter: Feuchtigkeit konstant halten, um Schossen zu vermeiden.",
+          "Gieße morgens, nie am Ende des Tages.",
+          "Beim Basilikum den Boden nässen, nicht das Blatt."
+        ]
+      },
+      "light": {
+        "advice": [
+          "Fast alle Kräuter wachsen am besten an einem Platz, der mindestens sechs Stunden am Tag sonnig ist — und es ist die Sonne, die das ätherische Öl macht, also die Sonne, die das Aroma macht. Basilikum bevorzugt volle Sonne, wächst aber auch mit sechs Stunden Halbsonne recht gut.",
+          "Die Ausnahmen sind bekannt und verdienen Respekt: Petersilie und Minze bevorzugen Halbschatten und kümmern in praller Sonne. Wenn deine Petersilie oder Minze im sonnigsten Beet schwächelt, ist genau das womöglich das Problem."
+        ],
+        "checklist": [
+          "Ziel sind mindestens sechs Stunden Sonne am Tag für die meisten Kräuter.",
+          "Petersilie und Minze akzeptieren Halbschatten und bevorzugen ihn manchmal sogar.",
+          "Weniger Sonne bedeutet weniger ätherisches Öl und weniger Aroma.",
+          "Stell ein paar Töpfe nah an die Küche, fürs häufige Ernten."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "Drainage ist hier mehr wert als Fruchtbarkeit, und das ist die einzige Gruppe, in der hohe Fruchtbarkeit ein Verlust ist: Sehr fruchtbare Böden bringen tendenziell üppige Blätter ohne Geschmack hervor. Der allgemeine pH-Zielwert liegt bei 6 bis 7, bei mäßigem Anteil organischer Substanz. In Tonboden arbeitest du fünf bis acht Zentimeter feine Kiefernrinde, Erbsenkies oder groben Kompost auf zwanzig bis dreißig Zentimeter Tiefe ein; in Sandboden dieselbe Tiefe mit feuchtigkeitshaltendem Material. Ein Hochbeet mit Kiesmulch ist in dieser Gruppe Standard, kein Luxus.",
+          "Rosmarin in schwerem Boden wird nicht korrigiert — er wird umgesiedelt, in ein Hochbeet oder einen Topf mit bis zu 25% Gartenkies nach Volumen. Rosmarin im Freiland braucht überhaupt keinen Dünger; der im Topf bekommt im späten Frühjahr eine Prise Universal-Granulatdünger. Basilikum ist die Ausnahme, die sich wie ein Gemüse verhält und bei der Pflanzung eine abgemessene Gabe bekommt, nachgelegt nur, wenn das Wachstum stockt. Bei Koriander halten leichte Stickstoffgaben die Pflanzen üppig, doch die Quelle ist ausdrücklich: Vermeide die Neigung zum Überdüngen. Und sei vorsichtig mit Minze: Pflanze sie in ein bodenloses Gefäß, das du ins Beet einsenkst, denn sie läuft über Rhizome und nimmt sonst den ganzen Platz."
+        ],
+        "checklist": [
+          "Setze die Drainage an erste Stelle: Hochbeet, Kies oder eingearbeitete feine Rinde.",
+          "Halte den pH-Wert zwischen 6 und 7 und die Fruchtbarkeit mäßig.",
+          "Ein üppiges Kraut ohne Geschmack ist ein Zeichen für zu viel Dünger.",
+          "Rosmarin im Freiland braucht keinen Dünger.",
+          "Pflanze Minze in ein bodenloses Gefäß, das du ins Beet einsenkst."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Die Ernte hat ein physiologisches Fenster: Kräuter werden kurz vor der Blüte geerntet, denn dann stehen die ätherischen Öle auf ihrem Höhepunkt. Und sie hat eine Tageszeit — der frühe Morgen, nachdem der Tau abgetrocknet ist, aber bevor die Hitze zunimmt. Keine andere Gruppe hat die Tageszeit als Qualitätsvariable, und ein nachmittags gepflücktes Kraut duftet spürbar schwächer. Aromatische Blüten werden gepflückt, bevor sie sich ganz öffnen.",
+          "Der Schnitt erhält hier Form und Aroma, und jede Gattung hat ihre eigene Regel. Beim Basilikum zwickst du regelmäßig die Triebspitzen aus und entfernst Blütenknospen, sobald sie erscheinen, sonst wird das Blatt bitter und die Pflanze stellt das Wachstum ein; ernte Triebspitzen mit ein oder zwei Blattpaaren und lass genug Laub zum Nachwachsen stehen. Rosmarin bekommt jedes Jahr nach dem Verblühen einen leichten Rückschnitt, niemals ins alte Holz hinein — ohne das wird er lang, verholzt und unten kahl. Salbei verträgt im zeitigen Frühjahr einen kräftigen Rückschnitt, Thymian wird nach der Blüte leicht gestutzt und Lorbeer im Sommer geschnitten. Minze kannst du nach der Blüte bis auf etwa fünf Zentimeter über dem Boden zurückschneiden, um das Laub zu erneuern."
+        ],
+        "checklist": [
+          "Ernte kurz vor der Blüte, wenn das Öl auf dem Höhepunkt steht.",
+          "Ernte früh am Morgen, sobald der Tau abgetrocknet ist.",
+          "Entferne beim Basilikum die Blütenknospen, sobald sie erscheinen.",
+          "Stutze Rosmarin nach der Blüte leicht und schneide nie ins alte Holz.",
+          "Erneuere Minze, indem du den Horst nach der Blüte tief zurückschneidest."
+        ]
+      }
+    }
+  },
+  "pollinator": {
+    "label": "Bestäubende Insekten",
+    "topics": {
+      "role": {
+        "advice": [
+          "Etwa ein Drittel der Nahrung, die wir essen, hängt von der Arbeit der Bestäuber ab, und der größte Teil dieser Arbeit stammt nicht von der Biene, die du dir gerade vorstellst. Allein in Großbritannien gibt es mehr als 270 Bienenarten: rund 26 Hummeln, über 250 Solitärbienen und eine einzige Honigbienenart. Fast alle leben solitär — jedes Weibchen baut und versorgt sein Nest allein und stirbt, bevor die nächste Generation schlüpft — und das Nest ist fast nie ein Stock: Viele nisten im offenen Boden, andere in Holzhohlräumen, und Hummeln beziehen häufig Gänge, die Nagetiere angelegt haben.",
+          "In Brasilien ist die Schlüsselgruppe die der stachellosen Bienen, der Meliponini, heimisch in tropischen und subtropischen Regionen; allein in Pará werden schätzungsweise 109 Arten mit Kulturen wie Açaí, Melone und Wassermelone in Verbindung gebracht. Die Gruppe geht weit über Bienen hinaus: Käfer gelten als eine der ersten Insektengruppen, die Blüten besuchten, Schwebfliegen bestäuben als erwachsene Tiere, während ihre Larven Blattläuse fressen, und Schmetterlinge und Nachtfalter ergänzen die Leistung, auch ohne die Vibrationsbestäubung, die Bienen pro Besuch so effizient macht."
+        ],
+        "checklist": [
+          "Die meisten Bienen leben solitär und werden nie ein Volk bilden.",
+          "Ein kegelförmiger Erdhaufen im Rasen ist der Eingang eines aktiven Nestgangs.",
+          "Saubere kreisrunde Ausschnitte in einem Blatt sind Blattschneiderbienen beim Sammeln von Nistmaterial.",
+          "Eine Schwebfliege hat zwei Flügel; Bienen und Wespen haben vier.",
+          "Keine Blattläuse heißt keine Schwebfliegenlarven: Beute ist auch eine Ressource."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "Das tatsächliche Risiko ist gering. Im eigenen Garten gestochen zu werden ist unwahrscheinlich, solange man Bienen mit Respekt behandelt, und Solitärbienen setzen ihren Stachel nur zur Selbstverteidigung ein, wenn man sie grob anfasst. Stachellose Bienen stechen, wie der Name sagt, nicht — was diese Gruppe zur sichersten macht, um sie aus der Nähe zu beobachten und zu Hause zu halten. Das Stichrisiko in dieser Nachbarschaft konzentriert sich auf die sozialen Wespen, die am Nest tatsächlich verteidigungsbereit stechen.",
+          "Zwei Einschränkungen runden das Bild ab. Die Raupen mehrerer Nachtfalter sind Brennhaarraupen, und das ist eine völlig andere Geschichte — sieh in der Gruppe der Schadinsekten nach, bevor du eine behaarte Raupe anfasst. Und die Haltung stachelloser Bienen ist eine regulierte Tätigkeit, keine freie: In Pará etwa wurden Halter mit bis zu 99 Völkern von der Umweltgenehmigung befreit, müssen sich aber weiterhin bei der Agraraufsicht registrieren. Für die Entnahme eines Wildnests gelten eigene Regeln."
+        ],
+        "checklist": [
+          "Beobachten statt anfassen: Eine Solitärbiene sticht nur, wenn man sie quetscht.",
+          "Stachellose Bienen stechen nicht — die sicherste Gruppe für die Nahbeobachtung.",
+          "Halte Abstand zu Nestern sozialer Wespen.",
+          "Fass nie eine behaarte Raupe an: Dort liegt das Risiko, nicht bei den Bienen.",
+          "Die Haltung heimischer Bienen erfordert eine Registrierung bei der zuständigen Behörde."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Vielfalt vor Menge: Beginne mit acht bis zehn heimischen Pflanzenarten, die Frühjahr, Sommer und Herbst abdecken, gepflanzt in Flächen von mindestens einem Meter Durchmesser. Bevorzuge einfache, offene Blüten mit einer einzigen Blütenblattreihe — gefüllte Blüten verstecken Pollen und Nektar oder haben gar keine mehr. Lass Wildkräuter im Rasen blühen, indem du seltener mähst, und stell Wasser bereit, denn Bienen und andere Bestäuber müssen manchmal trinken. Eine Feldmethode, die zum Kopieren taugt: Beobachte, welche Pflanzen bei den Bestäubern in deiner Nachbarschaft beliebt sind, und pflanze mehr davon.",
+          "Nistplätze sind eine Ressource. Lass in voller Sonne Flächen mit gut durchlässigem, offenem Boden ohne Mulch stehen, für bodennistende Bienen, und dulde die kleinen Erdhäufchen im Rasen, statt sie einzuebnen. Ein Bienenhotel funktioniert mit Löchern von etwa 2 bis 10 Millimetern Durchmesser, in rund zwei Zentimetern Abstand, acht bis zehn Zentimeter tief für die kleineren und dreizehn bis fünfzehn für die größeren, in unbehandeltem Holz, angebracht in ein bis zwei Metern Höhe an einem geschützten Platz. Und die Regel, die alle anderen überwiegt: Sprühe niemals auf offene Blüten. Meide Breitband-Insektizide; wenn du behandeln musst, tu es abends, wenn die Bestäuber weniger aktiv sind."
+        ],
+        "checklist": [
+          "Pflanze acht bis zehn heimische Arten, die alle drei Jahreszeiten abdecken.",
+          "Wähle einfache, ungefüllte Blüten statt gefüllter.",
+          "Lass Flächen mit offenem, sonnigem Boden für bodennistende Bienen frei.",
+          "Stell das ganze Jahr über flaches, sicheres Wasser bereit.",
+          "Sprühe nie auf offene Blüten; wenn du behandeln musst, dann abends."
+        ]
+      }
+    }
+  },
+  "beneficialInsect": {
+    "label": "Räuberische & nützliche Insekten",
+    "topics": {
+      "role": {
+        "advice": [
+          "Das sind die natürlichen Gegenspieler im Garten: Räuber, die im Lauf ihres Lebens viele Beutetiere töten und fressen, und Parasitoide, deren Larve in oder auf einem einzigen Wirt heranwächst und ihn tötet. Die Zahlen sind bemerkenswert — ein Marienkäfer verschlingt in seinem Leben bis zu 5.000 Blattläuse, Laufkäfer können täglich bis zu ihrem eigenen Körpergewicht fressen, und eine Florfliegenlarve schafft zwischen 100 und 150 Blattläuse. Von integriertem Pflanzenschutz, der auf natürlichen Gegenspielern aufbaut, wird berichtet, dass er die Spritzhäufigkeit über verschiedene Kulturen hinweg um 30% bis 40% senkt.",
+          "Das Lebensstadium ändert alles, und genau dort sitzt der häufigste Fehler. Bei Florfliegen und Schwebfliegen ist nur die Larve räuberisch: Das erwachsene Tier lebt von Nektar, Pollen und Honigtau. Anders gesagt: Dieses seltsame kleine Wesen auf dem Blatt ist meist der Verbündete, nicht der Schädling. Drei Feldzeichen lohnen sich zu lernen: Eine Marienkäferlarve ist rötlich und krokodilförmig; Florfliegeneier sitzen auf haarfeinen Stielen; und eine Raupe, die ein paar Dutzend kleine weiße Kokons auf dem Rücken trägt, ist bereits verloren und wird Dutzende Schlupfwespen entlassen — lass sie genau dort, wo sie ist."
+        ],
+        "checklist": [
+          "Bestimme erst, dann handle: Viele seltsame Larven auf Blättern sind Räuber.",
+          "Eine Marienkäferlarve ist rötlich und krokodilförmig.",
+          "Eier auf haarfeinen Stielen sind Florfliegeneier, kein Schädling.",
+          "Eine Raupe mit weißen Kokons auf dem Rücken ist bereits parasitiert — wirf sie nicht weg.",
+          "Eine Gottesanbeterin ist ein wahlloser Räuber: Sie frisst auch Bestäuber."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "Hier sticht so gut wie nichts. Unter den Räubern haben nur soziale Wespen eine verteidigende Stechfähigkeit; unter den Parasitoiden nur die Grabwespen, die Nester in Boden oder Lehm bauen. Schlupf- und Brackwespen nutzen ihren langen Stachel ausschließlich als Legebohrer, und der dient nicht der Verteidigung.",
+          "Zwei Familien beißen aber, wenn man sie anfasst: Raubwanzen stechen ihren Rüssel ein und injizieren Verdauungsenzyme, und Raubfliegen injizieren neurotoxischen Speichel. Nimm sie nicht in die Hand. Eine Gottesanbeterin greift blitzschnell mit ihren Fangbeinen zu und beißt, wenn man sie festhält. Und es gibt einen speziellen Fall: Der invasive Asiatische Marienkäfer beißt Menschen, besonders wenn er zwischen Haut und Kleidung eingeklemmt wird — er verletzt die Haut nicht und überträgt keine Krankheiten, doch bei Störung gibt er Hämolymphe ab, die Wände, Vorhänge und Teppiche dauerhaft verfärben kann, und es gibt Berichte über allergische Reaktionen wie Asthma und Nesselsucht, wobei die Empfindlichkeit unabhängig von Alter oder allergischer Veranlagung ist. Für diesen Käfer lautet die Empfehlung, Ritzen und Türschwellen abzudichten, nicht den Garten zu spritzen. Ein aktives Nest sozialer Wespen beobachtet man aus der Ferne."
+        ],
+        "checklist": [
+          "In dieser Gruppe stechen nur soziale Wespen und Grabwespen.",
+          "Nimm keine Raubwanze und keine Raubfliege in die Hand.",
+          "Eine Gottesanbeterin beißt, wenn du sie festhältst.",
+          "Invasive Marienkäfer im Haus löst man durch Abdichten von Spalten, nicht durch Spritzen.",
+          "Beobachte Wespennester aus der Ferne."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Erhalten schlägt Kaufen. Die Standardempfehlung heißt Lebensraum und Toleranz, nicht Aussetzen: Schütze diese Räuber, indem du Pestizide meidest, die sie töten, Pflanzen wählst, die ihnen Pollen, Nektar und Unterschlupf bieten, und Ameisen von befallenen Pflanzen fernhältst — Ameisen verteidigen Blattläuse und Schildläuse gegen Räuber, im Tausch gegen Honigtau. Als Nahrung für die erwachsenen Tiere nennen die Beratungsdienste unter anderem Dill, Fenchel, Echinacea, Rudbeckia, Seidenpflanze und Lantana.",
+          "Jede Gruppe hat eine Umweltanforderung. Libellen brauchen ein Gewässer: Das Weibchen legt seine Eier ab, indem es die Wasseroberfläche berührt, und die Larve entwickelt sich unter Wasser — kein Wasser, keine Libelle. Laufkäferlarven leben mit begrenztem Aktionsradius im Boden, weshalb Umgraben oder Verdichten die nächste Generation beseitigt. Und die Blattläuse im Garten auf null zu bringen entzieht Marienkäfern, Florfliegen, Schwebfliegen und Schlupfwespen gleichermaßen die Nahrungsgrundlage: Beute ist eine Ressource, kein Notfall. Wenn eine Behandlung unvermeidlich ist, bevorzuge Seife, Öl oder Spinosad gegenüber Pyrethroiden, Carbamaten und Organophosphaten, gerade um Schlupfwespen, Raupenfliegen und Laufkäfer zu schonen."
+        ],
+        "checklist": [
+          "Biete Nektar- und Pollenpflanzen an: Die erwachsenen Tiere leben davon.",
+          "Halte Ameisen von befallenen Pflanzen fern.",
+          "Lass sauberes stehendes Wasser stehen, wenn du Libellen willst.",
+          "Grabe oder verdichte den Boden nicht dort, wo Laufkäferlarven leben.",
+          "Dulde ein paar Blattläuse: Ohne Beute bleiben keine Räuber."
+        ]
+      }
+    }
+  },
+  "pestInsect": {
+    "label": "Häufige Schadinsekten",
+    "topics": {
+      "role": {
+        "advice": [
+          "Schädling ist ein Etikett des Kontexts, nicht der Art: Es beschreibt wirtschaftlichen Schaden oder ein Gesundheitsrisiko an einem Ort zu einem bestimmten Zeitpunkt. Die Mundwerkzeuge verraten dir die Art des Schadens — Beißer hinterlassen deutlich sichtbare Löcher in Blättern, Holz oder Früchten; Sauger nutzen einen strohhalmartigen Rüssel und erzeugen Sprenkelung, Flecken, Kümmerwuchs, Vergilbung, verformtes Wachstum und Honigtau. Und Honigtau ist keine Krankheit: Er ist eine zuckrige Ausscheidung, und der schwarze Belag darauf ist Rußtau, der alles schwärzt und die Photosynthese mindert. Löse das Saugerproblem, und der Fleck geht mit.",
+          "Zwei Schlüssel helfen im Feld. Die Metamorphose bestimmt, was du tatsächlich findest: Bei unvollständiger Metamorphose gibt es Ei, Nymphe und Adulttier, wobei die Nymphe wie ein flügelloses Adulttier aussieht; bei vollständiger Metamorphose gibt es Ei, Larve, Puppe und Adulttier, und die Larve kann dem Adulttier überhaupt nicht ähneln. Und die Lebensweise sagt dir, wo du suchen musst: Sauger konzentrieren sich auf junges, sich streckendes Gewebe, weshalb sich das junge Blatt zuerst einrollt, und Blattläuse, Weiße Fliegen und Milben leben auf der Blattunterseite. Ein kurioser Fall: Blattschneiderameisen fressen das Blatt nicht — sie schneiden es, um den Pilz zu kultivieren, von dem sie leben, was sie in Plantagen zum Schädling und in heimischen Ökosystemen zur Schlüsselart macht."
+        ],
+        "checklist": [
+          "Löcher und Risse = Beißer. Sprenkelung, Verformung und Klebrigkeit = Sauger.",
+          "Rußtau wächst auf Honigtau: Behandle das Insekt, nicht den Fleck.",
+          "Prüfe immer die Blattunterseite.",
+          "Ein eingerolltes junges Blatt deutet auf einen Sauger, nicht auf Durst.",
+          "Nicht jeder Marienkäfer ist ein Verbündeter: Eine Linie ernährt sich von Pflanzen und frisst Blätter."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "Hier steckt fast das gesamte körperliche Risiko der Tierwelt dieser App — und es geht nicht von den Kulturschädlingen aus. Brennhaarraupen haben hohle, borstenartige Haare, die mit Giftdrüsen verbunden sind; sie durchdringen die Haut und geben das Gift ab. Die Symptome reichen von leichtem Juckreiz bis zu Schmerzen, Schwellung, Blasenbildung, Dermatitis und sogar Magen-Darm-Beschwerden. Erste Hilfe: Klebeband wiederholt aufkleben und abziehen, um die abgebrochenen Haare herauszuziehen, mit warmem Wasser und Seife waschen, umgehend einen Eisbeutel auflegen, um die Schwellung zu verhindern und den Schmerz zu lindern, und bei schwerer Reaktion ärztliche Hilfe suchen. In Brasilien verursacht die Lonomia-Raupe ein hämorrhagisches Krankheitsbild und bedroht Land- wie Stadtbevölkerung; die Überwachung in Paraná verzeichnete 199 Fälle und fünf Todesfälle zwischen 1989 und 2000, wobei das Gegengift auf strategische Punkte verteilt wurde. Die meisten Unfälle entstehen dadurch, dass man bei der Gartenarbeit Laub streift, nicht durch ein aggressives Tier: Bewundere die bunte, flauschige Raupe aus der Ferne.",
+          "Für die Raubwanze, die die Chagas-Krankheit überträgt, gilt ein eigenes offizielles Vorgehen, wenn du eine findest: das Insekt nicht zerdrücken, quetschen oder beschädigen; die Hand mit einem Handschuh oder einer Plastiktüte schützen; das Insekt möglichst lebend in einen Plastikbehälter mit Schraubdeckel setzen; und es zu einer Meldestelle für Triatominen bringen. Die Übertragung durch den Vektor geschieht, wenn der Kot des Insekts in die Stichwunde gelangt, und es gibt auch eine Übertragung über den Verzehr kontaminierter Lebensmittel oder Getränke. Vorbeugung im Haushalt heißt Fliegengitter an Türen und Fenstern, Repellent und lange Ärmel in der Nacht."
+        ],
+        "checklist": [
+          "Fass eine behaarte oder bedornte Raupe nie an und streif sie nicht ab.",
+          "Raupenbrennen: Klebeband, warmes Wasser mit Seife und ein Eisbeutel — und ärztliche Hilfe, wenn es schlimmer wird.",
+          "Wenn du eine Raubwanze findest, zerdrücke das Insekt nicht.",
+          "Sammle sie mit Handschuh in einem Behälter mit Schraubdeckel ein und bring sie zur Gesundheitsbehörde.",
+          "Bring in Risikogebieten Fliegengitter an Türen und Fenstern an und trag nachts lange Ärmel."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Das ist die einzige Gruppe, in der die richtige Antwort lauten kann, nichts zu tun: Die Grundanweisung ist, zu beobachten und zu zählen, um Insektenart und Populationsstärke zu bestimmen, bevor über eine Behandlung entschieden wird. Danach steigst du die Leiter des geringsten Eingriffs hinauf. Klares Wasser aus dem Schlauch wäscht Blattläuse und Milben ab. Absammeln und eine selbstgebaute Falle funktionieren — leg ein kleines Stück alter Dachschindel oder feste Pappe unter eine Kürbispflanze, die Wanzen versammeln sich darunter, um Schutz zu suchen, und du hebst die Falle einfach an und vernichtest sie. Auch phänologisches Ausweichen, also früh zu pflanzen, um dem Schlupf des Schädlings zu entgehen, ist Bekämpfung.",
+          "Erst dann kommen Mittel ins Spiel: Insektizidseife und Öl, die weniger Nichtzielinsekten schaden, reflektierender Mulch gegen die Weiße Fliege, Bacillus thuringiensis für junge Raupen und Chemie ganz zum Schluss, immer abends ausgebracht, um die Wirkung auf bestäubende Insekten zu verringern. Die Beratungsdienste bevorzugen Spinosad gegenüber Pyrethroiden und Neonicotinoiden, gerade um Schlupfwespen, Raupenfliegen und Laufkäfer zu schonen. Physische Barrieren sind die am meisten unterschätzte Maßnahme überhaupt, mit einer Bedingung: Das Kulturschutznetz muss zur Blüte entfernt werden, sonst sperrt es mit dem Schädling auch den Bestäuber aus. Und dokumentiere ordentlich, was du gesehen hast — mit einem Größenvergleich neben dem Insekt zu fotografieren, das Datum zu notieren und festzuhalten, an welcher Pflanze und an welchem Pflanzenteil das Insekt gefressen hat, macht jede Bestimmung deutlich verlässlicher."
+        ],
+        "checklist": [
+          "Beobachte und zähle, bevor du behandelst.",
+          "Beginne mit einem Wasserstrahl, Absammeln und einer selbstgebauten Falle.",
+          "Bevorzuge Seife, Öl oder Spinosad gegenüber Breitband-Insektiziden.",
+          "Entferne das Kulturschutznetz zur Blüte.",
+          "Sprühe immer abends, wenn die Bestäuber inaktiv sind."
+        ]
+      }
+    }
+  },
+  "decomposerFungus": {
+    "label": "Zersetzerpilze",
+    "topics": {
+      "role": {
+        "advice": [
+          "Das sind saprotrophe Pilze: Sie leben von toter organischer Substanz. Die Pilze, die diese Fruchtkörper bilden, sind nützlich, weil sie organische Substanz im Boden zersetzen und Nährstoffe für andere Pflanzen verfügbar machen. Ein Pilz im Rasen ist fast nie eine Krankheit — das sind natürlich vorkommende Pilzorganismen, die genau das tun, was die Natur vorgesehen hat: einst lebendes Material abbauen, um die Energie in den Boden zurückzuführen. Ein Hexenring ist ein Zeichen von Fruchtbarkeit, nicht von Befall: Beim Abbau wird Stickstoff frei, das Gras nimmt ihn auf und dunkelt nach, und genau das zeichnet den dunkelgrünen Kreis. Den Pilz zu pflücken tötet ihn auch nicht: Der Fruchtkörper ist vergänglich, der Organismus ist das Myzel im Substrat.",
+          "An einem lebenden Baum ist das Zeichen dagegen ernst. Pilze oder Konsolen an Stamm oder Stammfuß sind Warnungen, und viele alte Bäume, die im Sturm fallen, hatten ihre Festigkeit durch Fäulepilze bereits stark verringert oder ganz verloren. Der Festigkeitsverlust ist für Laien schwer zu erkennen und selbst für Fachleute schwer zu bewerten — was heißt: jemanden hinzuziehen, der in Fäuleerkennung und -bewertung ausgebildet ist. Im Mulch sind Kugelschusspilz, Teuerlinge und Boviste harmlose Zersetzer, und die leuchtend gelben oder orangefarbenen Schleimmassen sind Schleimpilze, die nicht einmal echte Pilze sind und Pflanzen nicht schaden."
+        ],
+        "checklist": [
+          "Ein Pilz im Rasen ist recycelte organische Substanz, keine Krankheit.",
+          "Ein dunkelgrüner Hexenring zeigt freigesetzten Stickstoff, keinen Befall.",
+          "Ein Pilz oder eine Konsole an Stamm oder Stammfuß ist eine statische Warnung.",
+          "Pilze zu pflücken entfernt nicht den Pilz, nur den Fruchtkörper.",
+          "Eine gelbe Schleimmasse im Mulch ist ein Schleimpilz und greift keine Pflanzen an."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "Iss niemals einen Wildpilz ohne persönliche Bestimmung durch eine Fachperson. Viele Arten sind giftig, und nur eine Fachperson kann essbare von giftigen Arten unterscheiden. Kochen löst das nicht: Die Amanitine sind hitzestabil und werden beim Kochen nicht inaktiviert, und es gibt dokumentierte Vergiftungen durch das Einatmen der Kochdämpfe. Ein Bestimmungsbuch aus einer anderen Region lässt sich nicht übertragen — zu lernen, wie man Pilze in einem Landesteil oder einem anderen Land bestimmt, ist für die Bestimmung in einem anderen Gebiet nicht verlässlich. Gefährlich ist das späte Symptom: In dokumentierten Fällen begannen Übelkeit, Erbrechen und Durchfall etwa neun Stunden nach dem Verzehr, und Erbrechen, das erst nach mehr als sechs Stunden einsetzt, ist ein Zeichen für Schwere, nicht für eine Magenverstimmung.",
+          "Anfassen vergiftet dich nicht — das dokumentierte Risiko ist der Verzehr und, nachrangig, das Einatmen von Kochdämpfen. Wasch dir trotzdem die Hände und fass dir nicht an den Mund. Entferne Pilze aus Rasenflächen, auf denen Kinder oder Haustiere unterwegs sind, denn kleine Kinder stecken alles in den Mund, auch Pilze: In einer US-Auswertung von 2016 bis 2018 waren 25.9% der Patienten fünf Jahre alt oder jünger. Hat jemand einen gegessen, ruf sofort die Vergiftungszentrale an — im deutschsprachigen Raum den regionalen Giftnotruf, in den USA 1-800-222-1222, in Brasilien CIATox / Disque-Intoxicação 0800 722 6001. Und ein Satz wiegt in diesem Handbuch schwerer als jeder andere: Eine Bestimmungs-App ersetzt keine Fachperson."
+        ],
+        "checklist": [
+          "Iss keinen Wildpilz ohne persönliche Bestimmung durch eine Fachperson.",
+          "Kochen, Trocknen und Hausmittel machen einen Giftpilz nicht sicher.",
+          "Erbrechen, das erst nach mehr als sechs Stunden einsetzt, ist ein Zeichen für Schwere.",
+          "Entferne Pilze aus Rasenflächen, auf denen Kinder oder freilaufende Haustiere spielen.",
+          "Hat jemand einen gegessen, ruf sofort die Vergiftungszentrale an."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Das ist die einzige Pilzgruppe, die sich im großen Maßstab kultivieren lässt, gerade weil sie nur totes Substrat braucht: Shiitake, Austernseitling, Champignon und Enoki sind alle Saprotrophe, und sie anzubauen heißt, morsches Holz oder Stroh nachzubilden. Im Garten ist das Management physisch statt chemisch — Fungizid ist nicht die Antwort. Pflücke die Pilze aus Sicherheitsgründen ab, grabe die vergrabene organische Substanz aus, die das Wachstum nährt, also Stubben, tote Wurzeln, Bauschutt und angesammelten Rasenfilz, und belüfte den Boden, um die Versickerung zu verbessern. Beim Anlegen eines Rasens entfernst du zuerst Baumstubben und Wurzeln.",
+          "Wenn ein Hexenring wirklich stört, kommt der Schaden vom dichten Myzel, das die Wasserbewegung in den Boden hemmen kann — der Weg ist Belüften, um den Pilzfilz aufzubrechen, dazu Gießen und Düngen innerhalb der empfohlenen Mengen. Im Mulch unterdrückt das Einmischen von etwa 40% gebrauchtem Champignonsubstrat den Kugelschusspilz, weil es konkurrierende Mikroben mitbringt; Teuerlinge und Schleimpilze brauchen nicht mehr Management als einen Rechen. Bei einem Baum ist Vorbeugung die einzige echte Verteidigung, denn einen Baum mit Fäule kannst du nicht mehr retten: in Trockenheit gut wässern, den Boden belüften, fünf bis fünfzehn Zentimeter organischen Mulch halten, mit Langzeitdünger versorgen, Wurzeln bei Bauarbeiten nicht verletzen oder ersticken und mit korrekter Technik zur richtigen Zeit schneiden. Und beim Fotografieren erfasst du Hut, die Lamellen oder Poren darunter, die Stielbasis, das Substrat und den Wirt — Basis und Substrat sind genau das, was tödliche Arten von essbaren trennt."
+        ],
+        "checklist": [
+          "Bring wegen Pilzen kein Fungizid auf den Rasen aus.",
+          "Grabe das vergrabene Holz und die Wurzeln aus, die den Pilz nähren.",
+          "Belüfte den Boden, um den Myzelfilz eines Hexenrings aufzubrechen.",
+          "Ein Baum mit Fäule wird nicht behandelt: Man beugt vor und lässt ihn fachlich beurteilen.",
+          "Fotografiere immer mit Stielbasis und Substrat im Bild."
+        ]
+      }
+    }
+  },
+  "mycorrhizalFungus": {
+    "label": "Mykorrhizapilze",
+    "topics": {
+      "role": {
+        "advice": [
+          "Der Pilz ist hier nur die sichtbare Spitze einer unterirdischen Partnerschaft mit Pflanzenwurzeln. Schätzungsweise 80% bis 90% aller Pflanzen gehen mindestens eine der sieben Mykorrhiza-Formen ein — was das zum Normalfall des Pflanzenreichs macht, nicht zur Ausnahme. Der Pilz kann keine Photosynthese betreiben und keinen eigenen Kohlenstoff binden, also bezieht er alle Kohlenhydrate, die er braucht, von der Wirtspflanze und gibt Wasser und Mineralstoffe zurück: bessere Aufnahme von Phosphor, Ammonium und Zink, Schutz vor bodenbürtigen Krankheiten und höhere Toleranz gegenüber Trockenheit und Temperatur. Der Vorteil ist geometrisch, nicht chemisch — Wurzeln nehmen nur etwa 0.5% des Volumens des Oberbodens ein, und eine Hyphe, die weit feiner ist, kommt pro Volumeneinheit mit weit mehr Boden in Kontakt.",
+          "Praktisch gibt es zwei Typen. Ektomykorrhizen bilden einen Mantel um die Wurzel und sind die, die sichtbare Fruchtkörper hervorbringen; arbuskuläre Mykorrhizen wachsen im Inneren der Wurzel und bringen überhaupt keinen Fruchtkörper hervor, nur Sporen im Boden. Orchideen sind schon zum Keimen auf Mykorrhizapilze angewiesen, und mykotrophe Pflanzen — solche, die nicht genug Photosynthese betreiben — beziehen ihren Kohlenstoff über einen vermittelnden Pilz von einem Wirtsbaum. Eine Unterscheidung fürs Feld lohnt sich zu merken: Ein Mykorrhizapilz sprießt aus dem Boden nahe einem lebenden Baum und zeigt, dass der Baum lebt und verbunden ist, während eine Fäulekonsole aus Stamm oder Stammfuß wächst und vor einem statischen Risiko warnt."
+        ],
+        "checklist": [
+          "Mykorrhizapilze sprießen aus dem Boden nahe einem lebenden Baum; Fäulekonsolen wachsen aus dem Stamm.",
+          "Der Pilz frisst den Baum nicht: Er tauscht Kohlenhydrate gegen Wasser und Mineralstoffe.",
+          "Ein Mykorrhizapilz zeigt gewachsenen, ungestörten Boden an.",
+          "Arbuskuläre Mykorrhizen gibt es in fast jedem Garten, und sie sind unsichtbar.",
+          "Heimische Orchideen brauchen zum Keimen den Pilz aus ihrem ursprünglichen Boden."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "Dieselbe harte Regel gilt, und hier wiegt sie noch schwerer: Iss niemals einen Wildpilz ohne persönliche Bestimmung durch eine Fachperson. In dieser Gruppe stehen die begehrtesten Speisepilze der Gastronomie und die tödlichsten des Planeten nebeneinander — die tödlichen Amanita-Arten gehören zu einer der dominierenden ektomykorrhizalen Familien, also in dieselbe ökologische Nachbarschaft wie die feinen Speisepilze. Kochen macht sie nicht unschädlich: Die Amanitine sind hitzestabil.",
+          "Die typische Verwechslung passiert genau mit einem verbreiteten Speisepilz, und Vertrautheit mit Arten aus einer anderen Region erhöht das Risiko, statt es zu senken. Die Latenz täuscht: Übelkeit und Erbrechen mehr als sechs Stunden nach dem Verzehr sind ein Zeichen für Schwere, nicht für ein gewöhnliches Unwohlsein. Die Faustregel, die ein Universitätsgesundheitsdienst zitiert, bringt es auf den Punkt: Wenn du nicht sicher bist, iss ihn nicht. Anfassen vergiftet dich nicht — das dokumentierte Risiko ist der Verzehr; wasch dir die Hände und fass dir nicht an den Mund. Hat jemand einen gegessen, ruf sofort die Vergiftungszentrale an: im deutschsprachigen Raum den regionalen Giftnotruf, in Brasilien CIATox / Disque-Intoxicação 0800 722 6001, in den USA 1-800-222-1222."
+        ],
+        "checklist": [
+          "Iss keinen Wildpilz ohne persönliche Bestimmung durch eine Fachperson.",
+          "Diese Gruppe enthält die tödlichsten bekannten Arten.",
+          "Kochen inaktiviert die Amanita-Gifte nicht.",
+          "Ein Symptom, das erst nach sechs Stunden auftritt, ist ein Zeichen für Schwere.",
+          "Im Zweifel nicht essen — und die Vergiftungszentrale anrufen, wenn es schon jemand getan hat."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Diese Gruppe lässt sich nicht kultivieren wie die Saprotrophen, weil sie die lebende Wirtspflanze braucht — das ist der wirtschaftliche Grund, warum Steinpilz, Pfifferling und Matsutake gesammelt und nicht angebaut werden, und warum der Versuch scheitert, sie auf einem Substrat zu ziehen. Und es gibt eine starke praktische Folge: Überdüngung zerlegt die Partnerschaft. Gaben von Stickstoff, Phosphor oder Volldünger verringern Vorkommen und Aktivität der Mykorrhizapilze; wer also Mykorrhiza will, düngt sparsam. Schon leichte Veränderungen von Boden-pH, Temperatur, Gehalt an organischer Substanz, allgemeiner Fruchtbarkeit und Feuchtigkeit können die Besiedlung erheblich verändern.",
+          "Was sie erhält, ist gewachsener, ungestörter Boden, eine intakte organische Auflage und der richtige Wirt. Ektomykorrhiza-Gemeinschaften bauen sich über die Zeit auf: Jüngere Bäume haben eine kleinere Gemeinschaft pilzlicher Symbionten als alte Bestände. In der Praxis ist das Mykorrhiza-Netzwerk eines alten Baumes ein jahrzehntealtes Kapital, das Bauarbeiten, das Abschieben des Oberbodens und Begasung an einem Tag zerstören und das keine Tüte Produkt zurückkauft. Und sei skeptisch gegenüber der Tüte: Es gibt nur sehr begrenzte unabhängige wissenschaftliche Belege dafür, dass Mykorrhiza-Impfungen das Anwachsen von Pflanzen erfolgreicher machen, und sie sind nicht das Wundermittel, als das die Werbung sie darstellt. Grabe nicht, um das Myzel zu sehen, und verpflanze keine heimische Erdorchidee und keine chlorophyllfreie Pflanze: Ohne den Pilzpartner aus ihrem ursprünglichen Boden sterben sie."
+        ],
+        "checklist": [
+          "Dünge sparsam, wenn du die Mykorrhiza erhalten willst.",
+          "Vermeide Bodenbegasung und das Abschieben der Oberbodenschicht.",
+          "Sei skeptisch gegenüber Impfmitteln, die als Wundermittel verkauft werden.",
+          "Grabe nicht, um das Myzel zu sehen: Das Netzwerk ist der Organismus.",
+          "Verpflanze keine heimischen Orchideen und keine mykotrophen Pflanzen."
+        ]
+      }
+    }
+  },
+  "freshwaterFish": {
+    "label": "Süßwasserfische",
+    "topics": {
+      "role": {
+        "advice": [
+          "Temperatur und gelöster Sauerstoff sind der Filter, der alles entscheidet: Vor jeder Entscheidung über ein Gewässer werden Temperatur, pH-Wert und gelöster Sauerstoff gemessen, und Fischsterben durch übermäßige Hitze oder Sauerstoffmangel ist der klassische Unfall in Hofteichen. Die taxonomische Zusammensetzung wechselt von Kontinent zu Kontinent — in der Neotropis dominieren Salmler und Welse, während die Holarktis von Karpfenfischen, Sonnenbarschen, Barschen und Salmoniden geprägt ist. Die neotropische Süßwasserfischfauna ist die reichste des Planeten, mit rund 71 Familien und etwa sechstausend Arten, von denen 4.475 formal beschrieben sind.",
+          "Viele Arten sind auf eine obligatorische Laichwanderung angewiesen, die Piracema: Rheophile Fische schwimmen gegen die Strömung flussaufwärts zum Laichen, und die körperliche Anstrengung ist selbst Teil des physiologischen Auslösers für die Fortpflanzung. Und Auenlagunen sind keine Pfützen, sie sind Kinderstuben — beim Hochwasser tritt der Fluss über und verbindet sie, treibende Eier und Larven setzen sich dort ab, und wenn der Fluss fällt, wachsen diese Jungfische geschützt heran, bis zum nächsten Hochwasser. Manche Familien funktionieren als Thermometer der Wasserqualität und andere als Anzeiger der Degradation: Fische, die warmes, trübes Wasser nicht vertragen, zeigen hohe Wasserqualität an, während Welse, die hohe Temperatur, schlammiges Wasser und wenig Sauerstoff vertragen, genau dort gedeihen, wo die anspruchsvollen Arten längst verschwunden sind."
+        ],
+        "checklist": [
+          "Verdächtige bei einem plötzlichen Fischsterben im Sommer zuerst den gelösten Sauerstoff.",
+          "Starke Strömung über steinigem Grund weist auf rheophile und wandernde Arten hin.",
+          "Eine bei Hochwasser angebundene Auenlagune ist eine Kinderstube, keine Pfütze.",
+          "Nur tolerante Arten deuten auf ein degradiertes oder bereits invadiertes System hin.",
+          "Ein Schwarm, der sich zu Beginn der Regenzeit bildet, kann der Anfang eines Laichzugs sein."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "Hier geht es bei der Sicherheit vor allem um das Tier und um das Gesetz. Setze niemals einen Aquarien-, Angelteich- oder Zuchtfisch in ein natürliches Gewässer aus: In Brasilien sind bereits rund neunzig invasive exotische Fischarten in Binnengewässern dokumentiert, die Aquakultur ist die größte Quelle von Einschleppungen — über Abwasser, Beckenschäden und Fische, die durch die Netzmaschen schlüpfen — und das Einbringen einer Tierart ohne fachliches Gutachten und Genehmigung der zuständigen Behörde ist verboten. Verschiebe Fische nie zwischen Einzugsgebieten: Ein gefangener Fisch darf nur in ein anderes Gewässer, wenn er im selben Einzugsgebiet heimisch ist.",
+          "Halte dich an die Schonzeit. In Minas Gerais läuft die Laichzugschonzeit vom 1. November bis 28. Februar, doch die Termine unterscheiden sich je nach Bundesstaat und Einzugsgebiet — im deutschsprachigen Raum je nach Bundesland und Gewässer —, prüfe also vorher bei der zuständigen Behörde. Füttere keine wilden Fische: Füttern verändert das natürliche Suchverhalten und konzentriert Tiere künstlich. Beangle und störe im Frühjahr keine Fische, die auf ihren Nestern sitzen. Und fass so wenig wie möglich an: Leg Steine und Totholz genau dorthin zurück, wo sie lagen."
+        ],
+        "checklist": [
+          "Setze nie einen Aquarien- oder Zuchtfisch in Fluss, See oder Teich aus.",
+          "Verschiebe Fische nicht zwischen verschiedenen Einzugsgebieten.",
+          "Prüfe vor dem Angeln den Schonzeitkalender deiner Region.",
+          "Füttere keine wilden Fische.",
+          "Störe im Frühjahr keine Fische, die ihre Nester bewachen."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Die natürliche Nahrung wechselt mit der Jahreszeit und erzählt die Geschichte des Lebensraums. Der Tambaqui frisst während des Flusshochwassers Früchte und Samen und stellt, wenn die in der Trockenzeit ausgehen, auf Zooplankton um — und indem er Samen verbreitet, beteiligt er sich an der Regeneration des Amazonaswaldes. Detritusfresser und Aufwuchsfresser verarbeiten organisches Material vom Grund und den Biofilm und bilden die Energiebasis vieler neotropischer Flüsse. Lauerjäger unter den Fischfressern besetzen die lokale Spitze der Nahrungskette und sind in einem Teich das, was die Futterfische am Überhandnehmen hindert.",
+          "In einem Teich oder einer Fischzucht muss das Futter dosiert werden, damit es die Wasserqualität nicht verschlechtert: Überschüssige Ration wird zu organischer Substanz, verbraucht Sauerstoff und öffnet Krankheiten und Massensterben die Tür. Von allem ein bisschen zu besetzen, der Vielfalt zuliebe, führt zu enttäuschenden Ergebnissen, mit unausgewogenen Beständen und verbutteten Fischen; sehr fruchtbare Arten zu besetzen füllt den Teich mit verbutteten Fischen. Vermeide das Besetzen im Hochsommer, wenn hohe Temperatur und wenig Sauerstoff die Fische beim Transport schwächen. Und denk daran, dass Kaltwasserarten in den meisten Teichen den Sommer nicht überleben und nur als Besatz-und-Abfischen-Modell vor der Hitze funktionieren."
+        ],
+        "checklist": [
+          "Dosiere das Futter: Überschuss wird zu organischer Substanz und senkt den Sauerstoff.",
+          "Besetze nicht von jeder Art ein bisschen, in der Hoffnung auf Vielfalt.",
+          "Vermeide es, im Hochsommer Fische zu besetzen.",
+          "Lies den Lebensraum über das Wasser, bevor du irgendeine Maßnahme entscheidest.",
+          "Fotografiere und dokumentiere, statt zu sammeln."
+        ]
+      }
+    }
+  },
+  "marineFish": {
+    "label": "Meeres- & Riff-Fische",
+    "topics": {
+      "role": {
+        "advice": [
+          "Ein Rifffisch ist eine Diagnose des Riffs, nicht bloß ein Bewohner. Die Pflanzenfresser — Papageifische und Doktorfische — fressen die Algen, die mit der Koralle konkurrieren und ihre Fähigkeit mindern, zu überleben, zu wachsen und sich fortzupflanzen. Und die funktionelle Gruppe zählt mehr als die Art: Papageifische haben kräftige Schnäbel, die beim Abbeißen der Algen das Substrat abschaben und Platz für die Ansiedlung neuer Korallen schaffen, während Doktorfische nur den oberen Teil des Algenrasens abweiden. Die stärkste negative Wirkung der Algen betrifft Ansiedlung und frühes Überleben der Korallen, weshalb ein Riff, das bereits viele große adulte Korallen hat, von mehr Pflanzenfressern nicht sofort profitiert, während eines, dessen Erholung von neuem Nachwuchs abhängt, sehr stark profitiert.",
+          "Pflanzenfresser zu schützen ist keine Universallösung: Die Maßnahme wirkt dort, wo an diesem Ort tatsächlich ein Algenproblem besteht und wo sie den Bestand der Pflanzenfresser wirklich erhöht. Was du fotografierst, liest den Ort. Viele Falterfische deuten auf lebende, strukturierte Korallen in der Nähe hin. Das vollständige Fehlen großer Zackenbarsche und Schnapper an einem strukturierten Riff ist ein starker Hinweis auf Fischereidruck. Ein dichter Makroalgenrasen über toter Koralle, mit wenigen Papagei- und Doktorfischen in Sicht, zeigt zu geringen Fraßdruck. Und selbst unter Schutz brauchen Pflanzenfresser mehrere Jahre zur Erholung — das Management muss vorausschauend sein statt reaktiv."
+        ],
+        "checklist": [
+          "Viele Falterfische deuten auf lebende Korallen in der Nähe hin.",
+          "Das Fehlen großer Räuber zeigt Fischereidruck an.",
+          "Dichte Makroalgen bei wenigen Pflanzenfressern zeigen zu geringen Fraßdruck.",
+          "Sandrinnen und Flecken zwischen den Korallen sind ebenfalls Lebensraum.",
+          "Halte Datum und Ort fest: Sie sind so viel wert wie das Foto."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "Die zentrale Regel heißt: nicht anfassen. Korallen sind zerbrechliche Tiere und nehmen schon durch eine Berührung, einen Stups, einen Flossenschlag oder eine zum Abstützen aufgesetzte Hand Schaden, und viele stehen unter gesetzlichem Schutz. Fass auch andere Tiere nicht an: Die Schleimschicht, die Fische und viele Meereswirbellose vor Infektionen schützt, löst sich schon an einer Hand, einem Handschuh oder einem Fuß. Körperlicher Kontakt mit Mantarochen und Walhaien ist in einem Meeresschutzgebiet per Verordnung verboten, selbst wenn das Tier ihn zu genießen scheint. Und Tarierung ist Ethik, nicht Technik: Schwebe über dem Riff, und halte dich bei starker Strömung an der Bojenleine fest, niemals am Riff.",
+          "Nicht füttern und nicht sammeln. Fische zu füttern unterbricht das natürliche Fressverhalten der Rifffische, zieht Arten an, die an diesen Ort nicht gehören, und bringt Fischen bei, nach Schwimmern zu schnappen in Erwartung von Futter — in manchen Ländern ist es schlicht illegal. Aus dem Schutzgebiet geht nichts heraus, keine Muschel und kein Korallenbruchstück: Muscheln, die leer aussehen, haben oft ein verängstigtes Tier darin, und die wirklich leeren werden zum Unterschlupf für Einsiedlerkrebse, Seepocken, junge Korallen und Schwämme. Für Meeresgroßtiere gelten in den Vereinigten Staaten als rechtliche Referenzabstände 90 Meter zu Walen allgemein, 45 zu Meeresschildkröten und 45 zu Robben und Seelöwen, dazu 180 Meter für Orcas in den Küstengewässern von Washington und 450 für den Nordatlantischen Glattwal, sowie 30 Minuten als maximale Beobachtungszeit. In brasilianischen Gewässern gelten eigene Regeln von ICMBio und IBAMA, in Europa je nach Land eigene Vorgaben: Nimm diese Zahlen als gute Praxis, nicht als lokales Recht."
+        ],
+        "checklist": [
+          "Fass keine Koralle an und stütz dich nicht daran ab.",
+          "Fass keine Fische, Rochen oder Schildkröten an: Die schützende Schleimschicht löst sich.",
+          "Füttere Rifffische unter keinen Umständen.",
+          "Sammle keine Muscheln, Korallenstücke oder sonstige Souvenirs.",
+          "Halte Abstand zu Meeresgroßtieren und begrenze die Beobachtungszeit."
+        ]
+      }
+    }
+  },
+  "gardenBird": {
+    "label": "Garten- & Stadtvögel",
+    "topics": {
+      "role": {
+        "advice": [
+          "Das sind Vögel, die in Gärten, auf Plätzen, in Stadtparks, auf Dächern und an Straßenrändern leben, fressen oder nisten — heimische Arten, die menschlich geprägte Landschaften vertragen, ebenso wie vollständig synanthrope exotische Arten. Alle Wildtiere brauchen vier Dinge: Nahrung, Wasser, Deckung und Raum, um sich fortzupflanzen und Junge aufzuziehen. In einem durchschnittlichen Garten geht meist zuerst eine verlässliche, ganzjährige Wasserquelle aus — nicht die Nahrung.",
+          "Ein guter Teil der sichtbarsten Stadtvögel ist exotisch: Die Straßentaube erreichte Brasilien im 16. Jahrhundert mit der portugiesischen Kolonisierung und gilt heute als synanthrope Fauna mit eigenen gesundheitsrechtlichen Regelungen. Die offizielle Strategie zur Kontrolle im Stadtgebiet greift die vier Elemente Wasser, Nahrung, Unterschlupf und Zugang an — also genau das Gegenteil dessen, was man tut, um heimische Vögel anzulocken. Ein Gestaltungsprinzip lohnt die Ergänzung: Verzahnung zählt. Für weniger mobile Arten funktionieren viele kleine Inseln aus Nahrung, Wasser und Deckung besser als wenige große, denn je weiter ein Tier ziehen muss, desto stärker setzt es sich Fressfeinden aus."
+        ],
+        "checklist": [
+          "Wasser ist meist die begrenzende Ressource, nicht die Nahrung.",
+          "Verteile Nahrung, Wasser und Deckung auf mehrere kleine Inseln.",
+          "Räum den Garten nicht zu gründlich auf: Ein absterbender Baum und ein Reisighaufen sind Unterschlupf.",
+          "Ein Übergewicht von Tauben und Sperlingen zeigt eine stark bebaute Umgebung an.",
+          "Das Auftauchen heimischer Fruchtfresser zeigt, dass deine Pflanzen tragen."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "Der bewusste Eingriff in dieser Gruppe ist die Futterstelle, und sie hat einen hygienischen Preis. Zu den Krankheiten, die an Futterstellen kursieren, gehören die Mykoplasmen-Konjunktivitis, Salmonellose, Aspergillose, Vogelpocken und die Vogelgrippe. Hygiene ist nicht optional: Reinige Körnerfutterstellen alle zwei Wochen und bei jedem Krankheitsverdacht doppelt so oft, mit neun Teilen Wasser auf einen Teil Bleichmittel. Schrubbe sichtbaren Kot ab, bevor du einweichst, spüle gründlich und lass alles trocknen, bevor du neu füllst. Harke Kot und Samenschalen vom Boden auf, besonders verschimmelte oder nasse — das verhindert zugleich, dass du Nagetiere anlockst. Und verteile mehrere Futterstellen, statt alles an einer zu konzentrieren, denn auf engem Raum mit dichten Gruppen breiten sich Krankheiten leichter aus. Für die Vogeltränke gilt dieselbe Reinigungsregel.",
+          "Wenn du einen kranken Vogel siehst — gerötete, geschwollene oder nässende Augen, warzige Wucherungen an unbefiederten Stellen, ein magerer Vogel mit aufgeplustertem Gefieder —, nimm die Futterstellen etwa zwei Wochen lang ab und reinige alles, auch die Umgebung. Nimm das Tier nicht auf: Einen Wildvogel dürfen rechtlich nur Tierärztinnen und Tierärzte oder zugelassene Wildtierauffangstationen behandeln. Tritt eine oral-fäkal übertragene Krankheit auf, überlege, Futtertabletts ganz aufzugeben, weil sie die Kontamination am stärksten konzentrieren. Im Gelände sei besonders vorsichtig in der Nähe besetzter Nester, Brutkolonien, Schlafplätze und wichtiger Nahrungsflächen, begrenze den Einsatz von Klangattrappen und fotografiere mit Vorsicht und Zurückhaltung. Und das Prinzip, das jeden Zweifel auflöst: Bei einem Interessenkonflikt zwischen den Vögeln und der beobachtenden Person hat das Wohl der Vögel Vorrang."
+        ],
+        "checklist": [
+          "Reinige Futterstellen alle zwei Wochen, mit einem Teil Bleichmittel auf neun Teile Wasser.",
+          "Harke Schalen und Kot vom Boden unter der Futterstelle auf.",
+          "Verteile mehrere Futterstellen, statt alles an einer zu konzentrieren.",
+          "Kranker Vogel: Futterstellen zwei Wochen abnehmen und das Tier nicht anfassen.",
+          "Begrenze Klangattrappen und halte Abstand zu besetzten Nestern."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Heimische Pflanzen sind mehr wert als eine Futterstelle. Der ideale Ansatz liefert das ganze Jahr über so viel heimische Nahrung wie möglich — Eicheln, Nüsse, Beeren, Knospen, Früchte, Nektar und Samen — und die Zufütterung mit Körnern kommt erst dann ins Spiel, wenn das natürliche Angebot knapp wird, vor allem im Winter. Sich allein auf die Futterstelle zu verlassen ist eine fragile Lösung: Sie geht kaputt, du verreist, und der Vogel, der gelernt hat, damit zu rechnen, steht ohne da.",
+          "In der Praxis: Stell Wasser bereit, in einer Vogeltränke, einem flachen Becken, einem Pflanzuntersetzer, einem umlaufenden Wasserlauf oder auch nur einem tropfenden Schlauch, wechsle das Wasser bei Hitze regelmäßig und halte es auch bei Kälte verfügbar. Biete Deckung in unterschiedlicher Größe und Dichte — dichte Sträucher, hohle Stämme, Stein- und Reisighaufen, immergrüne Gehölze, hohes Gras —, damit jede Art die passende Deckung zum Fressen, Verstecken, Ausweichen vor schlechtem Wetter, Balzen und Nisten wählen kann. Biete Raum mit alten Bäumen, dichtem Gebüsch und Nistkästen. Wenn du eine Futterstelle nutzt, sind Sonnenblumenkerne, Nigersaat, Rispenhirse und Bruchmais die von den Beratungsdiensten genannten Ergänzungen, und im Sommer nehmen Kolibris Nektarspender bereitwillig an. Und plane mit Katzen im Kopf: Eine erhöhte Tränke mit zurückgeschnittenen tiefen Zweigen ringsum nimmt dem Ansitz das Versteck."
+        ],
+        "checklist": [
+          "Pflanze heimische Arten, die übers ganze Jahr Früchte tragen.",
+          "Nutze Körner nur als Ergänzung in knappen Zeiten, vor allem im Winter.",
+          "Halte das ganze Jahr über eine verlässliche Wasserquelle bereit.",
+          "Variiere die Deckung: dichte Sträucher, Reisighaufen, Steine, immergrüne Gehölze.",
+          "Halte die Tränke erhöht und die Umgebung frei von dichten Sträuchern — wegen der Katzen."
+        ]
+      }
+    }
+  },
+  "forestBird": {
+    "label": "Wald- & Zugvögel",
+    "topics": {
+      "role": {
+        "advice": [
+          "Das sind zwei sich teilweise überschneidende Gruppen: waldgebundene Vögel und Zugvögel. Von den 1.971 Vogelarten, die auf brasilianischem Staatsgebiet nachgewiesen sind, ziehen 216 — 10.9% — in irgendeiner Form: 141 ziehende und 75 teilziehende Arten, eine Kategorie, in der nur ein Teil der Population wandert; weitere 91 sind Irrgäste. Etwa ein Drittel der brasilianischen Vogelfamilien hat mindestens eine ziehende Art, doch fünf Familien stellen mit 112 Arten mehr als die Hälfte davon: Tyrannen mit 36, Schnepfenvögel mit 23, Sturmvögel und Sturmtaucher mit 22, Tangaren mit 16 und Möwen und Seeschwalben mit 15.",
+          "Große fruchtfressende Waldvögel sind die Infrastruktur des Waldes, nicht seine Zierde: Tukane und Hokkos verbreiten große Samen, und Jagd und Zerschneidung entfernen genau die Vögel, deren Schnäbel sie schlucken können. Die Juçara-Palme, die in der Mata Atlântica dominiert, hat Früchte, die von mehr als 58 Vogelarten gefressen werden. Und in Flecken erhaltener Wald ist nicht dasselbe wie erhaltener Wald: Die Vielfalt sinkt, wenn die Fragmente unzusammenhängend und weit voneinander entfernt sind oder wenn keines dicht genug für Überleben und Fortpflanzung ist."
+        ],
+        "checklist": [
+          "Eine artenreiche Gemeinschaft im Unterwuchs zeigt zusammenhängenden, strukturierten Wald an.",
+          "Das Verschwinden von Tukanen und Hokkos zeigt Jagd oder fortgeschrittene Zerschneidung an.",
+          "Watvögel, die sich in der Zugzeit auf einer Schlickfläche sammeln, zeigen einen Rastplatz an.",
+          "Zug ist keine Ja-oder-Nein-Frage: Es gibt Teilzieher und Irrgäste.",
+          "Höhenzug gibt es in Brasilien, und er wird unterschätzt."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "Die Klangattrappe ist der zentrale Fehler dieser Gruppe. Der Ethikkodex für Vogelbeobachtung verlangt, den Einsatz von Aufnahmen und anderen akustischen Anlockmethoden zu begrenzen, besonders in stark frequentierten Gebieten, bei lokal seltenen Arten und bei bedrohten oder gefährdeten Arten — und ausgerechnet im Wald, wo Vögel am schwersten zu sehen sind, ist die Versuchung am größten.",
+          "Rund um Nester bestimmen drei Risiken alles: die versehentliche Beschädigung des Nests, die Aufgabe durch die Eltern und das Anlocken von Fressfeinden. Halte dich nie länger als eine Minute in Nestnähe auf. Kontrolliere höchstens alle drei bis vier Tage. Meide den frühen Morgen, wenn die meisten Arten legen und wenn Eier und Nestlinge schnell auskühlen, falls das Weibchen fortgeht; meide die Dämmerung und die Zeit danach, wenn es zum Übernachten zurückkehrt; meide die ersten Bruttage und die Tage, an denen die Jungen kurz vor dem Ausfliegen stehen, weil sie sonst vorzeitig springen und ihre Überlebenschance außerhalb des Nests in diesem Stadium gering ist; und meide kaltes, feuchtes oder regnerisches Wetter. Hinterlasse keine Pfade, die Fressfeinde hinführen, und tritt keine Vegetation nieder, die Nester freilegen könnte. Zwinge ein Weibchen niemals vom Nest — warte ein paar Minuten, ob es von selbst geht, und komm später wieder, wenn nicht. Schreib deine Notizen erst, wenn du weit vom Nest entfernt bist, und klopfe an einen Nistkasten, bevor du ihn öffnest, und noch einmal beim Öffnen."
+        ],
+        "checklist": [
+          "Begrenze Klangattrappen, vor allem bei seltenen oder bedrohten Arten.",
+          "Halte dich nie länger als eine Minute in Nestnähe auf.",
+          "Meide Nestkontrollen am frühen Morgen, in der Dämmerung und bei schlechtem Wetter.",
+          "Zwinge ein Weibchen niemals vom Nest.",
+          "Schreib deine Notizen abseits des Nests und hinterlasse keine Spur dorthin."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Der Lebensraum sagt viel. Ein beschatteter Unterwuchs in zusammenhängendem Wald weist auf wenig mobile Gruppen hin, die sehr empfindlich auf Randeffekte reagieren; ein alter Kronenraum weist auf Vögel hin, die auf große fruchtende Bäume und auf Höhlen zum Nisten angewiesen sind; der Waldboden weist auf Gruppen hin, die sehr empfindlich auf Jagd reagieren; und Küste, Schlickfläche und Salzpfanne in der Zugzeit weisen auf einen Rastplatz von Watvögeln hin, einen extrem störungsempfindlichen Ort. Zugvögel sind auf Lebensräume in getrennten Gebieten angewiesen, die Tausende Kilometer auseinanderliegen, und manche hängen entscheidend an Orten, die sie nur wenige Tage nutzen, um zu rasten, zu mausern, zu fressen und Energiereserven aufzubauen.",
+          "Deshalb zählt das Datum genauso viel wie der Ort. Weil der Hinweg meist ein anderer ist als der Rückweg und Vögel ihre Route den Bedingungen anpassen, fließen datierte Nachweise direkt in das Wissen über Zugwege ein — und ein Nachweis außerhalb der Saison kann aufschlussreicher sein als ein gewöhnlicher. Einen Zugvogel ohne genaues Datum und genauen Ort zu dokumentieren verliert genau die wertvollste Information. In der Feldpraxis heißt das: auf den Wegen bleiben, die Störung des Lebensraums minimieren und stehendes Totholz erhalten, das für viele Arten Nisthöhlen bereithält."
+        ],
+        "checklist": [
+          "Halte immer genaues Datum und genauen Ort fest, besonders bei ziehenden Arten.",
+          "Ein Nachweis außerhalb der Saison kann mehr wert sein als zehn gewöhnliche.",
+          "Bleib auf den Wegen und minimiere die Störung des Lebensraums.",
+          "Erhalte stehendes Totholz: Es ist für viele Arten Nistplatz.",
+          "Füttere keine wilden Vögel im Wald oder an einem Rastplatz des Vogelzugs."
+        ]
+      }
+    }
+  },
+  "grainCrop": {
+    "label": "Getreide- & Körnerkulturen",
+    "topics": {
+      "soil": {
+        "advice": [
+          "Der zentrale Begriff der Ernährung heißt hier verborgener Hunger: Die meisten Kulturen verlieren Ertrag längst, bevor Mangel- oder Toxizitätssymptome sichtbar werden, und dieser symptomlose Verlust ist hoch. Wenn ein Symptom dann doch auftritt, zeigt es immer starken Hunger an — nie einen leichten oder mittleren Mangel. Die Mobilität des Nährstoffs entscheidet, welches Blatt du dir ansiehst: Mobile Nährstoffe wie Stickstoff, Kalium, Phosphor und Magnesium zeigen Symptome zuerst an den alten Blättern, weil die Pflanze sie in die neuen umlagert; immobile Nährstoffe wie Calcium und Bor zeigen Symptome an den neuen Blättern und am Vegetationspunkt.",
+          "Einige optische Muster bei Reis dienen als Referenz: Nekrose in Form eines umgekehrten V, die von der Spitze an den Rändern eines alten Blattes herabläuft, deutet auf Kalium; sehr schmale, aufrechte neue Blätter mit bronzefarbenem oder violettem Ton an den Spitzen deuten auf Phosphor; ein ganzes Feld, das zur Bestockung und zum Rispenansatz vergilbt, deutet auf Stickstoff; und ein Mangel, der nesterweise statt flächendeckend auftritt, ist ein typisches Kaliummuster. Herbizidschäden imitieren einen Mangel, treten aber unmittelbar nach der Spritzung auf — diese zeitliche Nähe ist es, die beide Fälle trennt. Und schließlich sind Korn und Silage aus Sicht des Bodens nicht dieselbe Kultur: Phosphor wird fast vollständig ins Korn verlagert, gefolgt von Stickstoff, während Kalium und Calcium überwiegend im Stroh bleiben — bei der Silage, die auch den vegetativen Teil abfährt, treten Fruchtbarkeitsprobleme deshalb früher auf."
+        ],
+        "checklist": [
+          "Warte nicht auf ein Symptom: Wenn es sichtbar wird, ist der Verlust schon eingetreten.",
+          "Mobile Nährstoffe zeigen sich an alten Blättern; immobile an neuen.",
+          "Diagnostiziere aus Bodenanalyse und Schlaghistorie, nie allein aus einem Blattfoto.",
+          "Ein Schaden direkt nach der Spritzung ist Herbizid, kein Mangel.",
+          "Verwende keine Kornempfehlung für einen Bestand, der zu Silage wird."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Die Entscheidung fällt hier durch Zählen, nicht durch den Kalender, und diese Gruppe hat die günstigste standardisierte Bonitur überhaupt. Die Logik ruht auf drei Schwellen: dem Gleichgewichtsniveau, der wirtschaftlichen Schadensschwelle und der Bekämpfungsschwelle, die knapp darunter liegt. Für Bodenschädlinge im Mais nimmst du eine Bodenprobe von dreißig mal dreißig Zentimetern und fünfzehn Zentimetern Tiefe und siebst sie — bei Drahtwürmern verlangen zwei oder mehr Tiere je Probe schon eine Bekämpfung, und im Schnitt ein Tier je Probe verursacht bereits nennenswerten Schaden. Beim Heerwurm bonitierst du die Zahl befallener Pflanzen an fünf zufälligen Punkten je Hektar: In Beständen mit einem Potenzial von mindestens hundert Sack zeigen 10% der Pflanzen mit frühen Symptomen schon Bekämpfungsbedarf an, und das empfindlichste Stadium sind acht bis zehn Blätter. Das erste Zeichen sind Larven, die die Blätter schaben und durchsichtige Fenster hinterlassen.",
+          "Bei Soja ist das Klopftuch die Methode: ein möglichst weißes Tuch von einem Meter Länge, zwischen zwei Reihen ausgespannt; eine Reihe kräftig darüber ausschütteln und Adulte wie Jungtiere zählen, wöchentlich im kritischen Zeitraum. Das Minimum sind sechs Proben bis zehn Hektar, acht bis dreißig und zehn bis hundert, wobei größere Flächen in Blöcke von hundert Hektar geteilt werden. Bonitiere Bodenschädlinge vor der Aussaat, denn Maßnahmen nach dem Etablieren des Bestands sind ineffizient. Zähle die Nymphen zusammen mit den Adulten: Wanzen im dritten bis fünften Larvenstadium verursachen ähnlichen Schaden und stellen in der reproduktiven Phase den größten Teil der Population, mit einer Bekämpfungsschwelle von zwei Wanzen je Meter Reihe für Korn und einer für Saatgut. Bonitiere in den kühleren Tagesstunden, weil Wanzen schnell sind und in der Hitze entwischen. Das hat einen messbaren Ertrag: Über 196 Referenzflächen in Paraná in der Saison 2017/2018 senkte der integrierte Pflanzenschutz die Insektizidanwendungen um mehr als 43% bei gleichbleibendem Ertrag. Wähle das Mittel auch nach seiner Schonung natürlicher Gegenspieler, nicht nur nach Kosten und Toxizität, halte dich immer an die aktuellen MAPA-Zulassungen und beize Saatgut nur dort, wo es eine Vorgeschichte des Problems gibt, nie als blinde Routine."
+        ],
+        "checklist": [
+          "Zähle, bevor du spritzt: Die Entscheidung fällt über Schwellen, nicht über den Kalender.",
+          "Mais: 10% der Pflanzen mit geschabten Blättern verlangen bereits eine Bekämpfung.",
+          "Soja: mindestens zehn Klopftuchproben bis hundert Hektar.",
+          "Bonitiere Bodenschädlinge vor der Aussaat.",
+          "Zähle Nymphen zusammen mit den Adulten und bonitiere in den kühleren Tagesstunden."
+        ]
+      }
+    }
+  },
+  "vegCrop": {
+    "label": "Gemüse- & Obstkulturen",
+    "topics": {
+      "watering": {
+        "advice": [
+          "Wasser ist hier feine Steuerung und kein Gießen, wenn man gerade daran denkt: Es gibt eine in kPa gemessene Grenze der Bodenspannung, und sie unterscheidet sich je nach Bewässerungssystem. Bei der Aubergine bewässerst du, wenn das Tensiometer 30 bis 50 kPa bei Beregnung oder Furchenbewässerung anzeigt, oder 10 bis 15 kPa bei Tropfbewässerung, wobei du in den kritischsten Stadien, auf Sandböden und bei hoher Verdunstungsnachfrage das untere Ende der Spanne nimmst. Der Sensor kommt auf 50% der effektiven Wurzeltiefe und zehn bis zwanzig Zentimeter von der Pflanze entfernt, wobei die effektive Tiefe dort liegt, wo sich etwa 80% der Wurzeln konzentrieren.",
+          "Zu viel Wasser schadet genauso wie zu wenig: Es treibt übermäßiges Pflanzenwachstum, behindert Blüte und Fruchtansatz, begünstigt durch unzureichende Durchlüftung Bodenkrankheiten und wäscht Nährstoffe aus. Wassermangel wiegt zur Blüte und Fruchtbildung am schwersten, lässt Blüten und Früchte abfallen, bremst das Fruchtwachstum und erzeugt Qualitätsmängel — missgestaltete und ungleichmäßige Früchte, Blütenendfäule und bitteren Geschmack. Welke am Ende des Vormittags ist ein grobes, aber brauchbares Zeichen dafür, dass die Bewässerung überfällig ist. Und die Wahl des Systems ist eine pflanzengesundheitliche Entscheidung, nicht nur eine hydraulische: Furche und Tropfschlauch verringern Blattkrankheiten, weil sie das Laub nicht benetzen, doch gegen die Tomatenminiermotte ist die Beregnung im Vorteil, weil sie Eier, Larven und Puppen herunterspült. Die Entscheidung hängt davon ab, welches Problem in deiner Region dominiert."
+        ],
+        "checklist": [
+          "Nimm für die Tropfbewässerung eine andere Spannungsgrenze als für Beregnung oder Furche.",
+          "Setz den Sensor auf 50% der effektiven Wurzeltiefe und zehn bis zwanzig Zentimeter von der Pflanze entfernt.",
+          "Lass das Wasser während Blüte und Fruchtbildung nicht knapp werden.",
+          "Welke am Ende des Vormittags zeigt eine überfällige Bewässerung an.",
+          "Wähle das Bewässerungssystem nach dem Problem, das in deiner Region dominiert."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "Ein Nährstoffüberschuss hat eigene Symptome und bringt die anderen aus dem Gleichgewicht. Bei der Zwiebel erzeugt zu viel Stickstoff dickhalsige Pflanzen, erhöht die Anfälligkeit für Blattkrankheiten und verkürzt die Lagerfähigkeit nach der Ernte; zu viel Kalium ruft Magnesium- und Calciummangel hervor; zu viel Phosphor ruft Zink- und Kupfermangel hervor. Deshalb schafft es meist das nächste Problem, wenn man einen Nährstoff korrigiert, ohne auf die anderen zu schauen.",
+          "Die Mobilität sagt dir, welches Blatt du prüfen musst: Stickstoff, Kalium, Phosphor und Magnesium erscheinen zuerst an den alten Blättern, während Calcium und Schwefel an den neuen auftreten — ein neues Zwiebelblatt, das umknickt, ohne zu brechen, ist die Signatur von Calcium. Zwei Texturen lohnen sich zu merken: Nekrose, die abrupt und ohne vorangehende Chlorose auftritt, deutet auf Zink, Kupfer oder Mangan; Nekrose mit samtiger Textur ist das charakteristische Zeichen von Eisen und unterscheidet sich von allen anderen. In brasilianischen Böden sind unter normalen Bedingungen nur Bor und Zink und in manchen Fällen Kupfer für die Zwiebel tendenziell knapp. Und achte auf den falschen Befund: Niedrige Temperaturen, zu viel Wasser oder anhaltende Trockenheit können Symptome erzeugen, die einem Stickstoffmangel sehr ähneln."
+        ],
+        "checklist": [
+          "Korrigiere keinen Nährstoff, ohne auf die zu schauen, die er aus dem Gleichgewicht bringt.",
+          "Alte Blätter zuerst: Stickstoff, Kalium, Phosphor, Magnesium. Neue Blätter: Calcium, Schwefel.",
+          "Abrupte Nekrose ohne vorangehende Chlorose deutet auf Zink, Kupfer oder Mangan.",
+          "Nekrose mit samtiger Textur ist das Zeichen von Eisen.",
+          "Kälte, Staunässe und Trockenheit imitieren alle einen Stickstoffmangel."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Das Management ist hier zuerst pflanzenbaulich und gemeinschaftlich, erst dann chemisch. Auf Schlagebene: Fruchtfolge einhalten, Ernterückstände sofort nach der Ernte vernichten, die Fläche frei von Unkraut und anderen Wirtspflanzen für Insekten und Milben halten und regional angepasste Sorten verwenden. Auf der gemeinschaftlichen Ebene — und das unterscheidet diese Gruppe von allen anderen — müssen die Anbauer gemeinsam handeln: die Pflanzung innerhalb jeder Mikroregion auf das kürzestmögliche Zeitfenster konzentrieren, Betriebsmittel abgestimmt einsetzen, damit gemeinsame Probleme alle zur selben Zeit treffen, und Kisten und Transportmittel systematisch desinfizieren, um die Ausbreitung von Schädlingen zwischen Regionen zu bremsen. Kontrolliere regelmäßig, mit besonderem Blick auf die Schlagränder und die verunkrautetsten Stellen, denn dort konzentriert sich der Befall.",
+          "Der größte Schädlingsschaden dieser Gruppe entsteht meist indirekt, über Viren. Die Weiße Fliege ist in Brasilien seit 1923 bekannt und wurde 1993 an Tomate und Kohl gefunden, verbunden mit Geminivirus-Symptomen, mit schweren Ausbrüchen und Verlusten von bis zu 50% der Produktion: Adulte und Nymphen injizieren eine zuckrige Substanz und ein Toxin, die die Innenwände der Frucht weißlich und schwammig zurücklassen und Rußtau begünstigen. Auch der Zeitpunkt bestimmt mit: Gegen den kleinen Fruchtbohrer muss die Spritzung ab der Blüte beginnen, mit dem Strahl auf Blütenknospen und Früchte gerichtet, denn wenn du das Loch in der Frucht siehst, sitzt die Larve schon drinnen. Und eine redaktionelle Sicherheitsregel: Übernimm keinen Wirkstoff und keine Dosis aus irgendeiner Quelle, denn Pflanzenschutzzulassungen ändern sich jede Saison — sieh im aktuellen MAPA-Register nach."
+        ],
+        "checklist": [
+          "Vernichte Ernterückstände sofort nach der Ernte.",
+          "Konzentriere die Pflanzung der Mikroregion auf das kleinstmögliche Zeitfenster.",
+          "Desinfiziere Kisten und Fahrzeuge zwischen den Flächen.",
+          "Kontrolliere die Schlagränder, nicht nur die Mitte.",
+          "Beginne mit der Spritzung zur Blüte, nicht wenn du ein Loch in der Frucht siehst."
+        ]
+      }
+    }
+  }
+}

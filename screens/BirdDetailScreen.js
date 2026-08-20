@@ -42,40 +42,6 @@ import TopBar, { TopBarIcon } from '../components/TopBar';
 // come from a curated database keyed by species name - the same pattern already
 // proven by the 98-herb Medicinal Herbs feature - not from this vendor.
 
-// Fato rapido do hub do resultado (video do concorrente): card compacto -
-// icone colorido, valor curto honesto do proprio campo, chevron - que
-// deep-linka na aba certa do manual CareTopics.
-function QuickFact({ icon, color, label, value, onPress }) {
-  return (
-    <TouchableOpacity
-      style={styles.factCard}
-      onPress={onPress}
-      activeOpacity={0.8}
-      accessibilityRole="button"
-      accessibilityLabel={label}
-    >
-      <View style={styles.factTop}>
-        <Ionicons
-          name={icon}
-          size={15}
-          color={color}
-          accessibilityElementsHidden={true}
-          importantForAccessibility="no-hide-descendants"
-        />
-        <Text style={styles.factLabel} numberOfLines={1}>{label}</Text>
-        <Ionicons
-          name="chevron-forward"
-          size={13}
-          color={colors.textMuted}
-          accessibilityElementsHidden={true}
-          importantForAccessibility="no-hide-descendants"
-        />
-      </View>
-      <Text style={styles.factValue} numberOfLines={2}>{value}</Text>
-    </TouchableOpacity>
-  );
-}
-
 // Card-porta do hub do resultado (video do concorrente): a prosa longa da
 // secao mora no manual CareTopics; aqui fica a porta - icone, label da
 // secao, primeira linha truncada e chevron.
@@ -321,24 +287,13 @@ export default function BirdDetailScreen({ route }) {
         {/* Runner-up species and the low-confidence warning. */}
         <IdentificationExtras entity={plant} accent={meta.accent} />
 
-        {/* Quick facts (hub do resultado, video do concorrente): a primeira
-            linha do habitat como card compacto que deep-linka na aba certa do
-            manual. So aparece quando o manual existe pra receber o toque - a
-            truncagem e honesta porque a porta abre o texto inteiro. */}
-        {hasManual && !!curated.habitat && (
-          <View style={styles.factsBlock}>
-            <Text style={styles.factsTitle}>{t('detail.quickFacts')}</Text>
-            <View style={styles.factsGrid}>
-              <QuickFact
-                icon="earth-outline"
-                color={colors.info}
-                label={t('fieldGuide.habitat')}
-                value={curated.habitat}
-                onPress={() => openTopic('habitat')}
-              />
-            </View>
-          </View>
-        )}
+        {/* Auditoria de diagramacao 20/08: a grade de fatos rapidos saiu daqui.
+            O unico fato que esta tela tinha era o habitat curado, que e PROSA
+            ("Warm, shallow coral reefs and lagoons from the Red Sea to...") -
+            nao ha palavra-chave que vire valor curto sem inventar, entao o
+            card so sabia se truncar com "..." e era isso que fazia a tela
+            parecer prototipo. Nada se perdeu: o mesmo habitat continua logo
+            abaixo como card-porta, que abre o texto inteiro no manual. */}
 
         {/* Curated content, when we have it for this species.
             Nyckel returns a label and a confidence and nothing else - no
@@ -521,21 +476,8 @@ const styles = StyleSheet.create({
   name: { fontSize: 24, fontWeight: '800', color: colors.text },
   scientificRow: { flexDirection: 'row', alignItems: 'center', gap: 8 },
   scientific: { fontSize: 15, fontStyle: 'italic', color: colors.textSecondary, marginTop: 3 },
-  factsBlock: { marginBottom: 16 },
-  factsTitle: { fontSize: 15, fontWeight: '700', color: colors.text, marginBottom: 10 },
-  factsGrid: { flexDirection: 'row', flexWrap: 'wrap', gap: 10 },
-  factCard: {
-    flexBasis: '47%',
-    flexGrow: 1,
-    backgroundColor: colors.card,
-    borderRadius: 14,
-    borderWidth: 1,
-    borderColor: colors.border,
-    padding: 12,
-  },
-  factTop: { flexDirection: 'row', alignItems: 'center', gap: 6, marginBottom: 6 },
-  factLabel: { flex: 1, fontSize: 11.5, fontWeight: '700', color: colors.textMuted },
-  factValue: { fontSize: 12.5, color: colors.text, lineHeight: 17 },
+  // Fatos rapidos: estilos removidos na auditoria de diagramacao 20/08
+  // junto com a grade (habitat e prosa, nao vira valor curto).
   doorCard: {
     flexDirection: 'row',
     alignItems: 'center',

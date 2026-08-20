@@ -37,7 +37,29 @@ function TreatmentList({ title, items, color }) {
 export default function DiseaseReport({ disease }) {
   const { t } = useTranslation();
 
-  if (!disease) {
+  // The vendor answers a healthy plant with a pseudo-disease called "healthy",
+  // which rendered as a report about nothing: the same word as title AND as the
+  // italic scientific name right under it, plus a raw taxonomy pill ("Abiotic")
+  // (auditoria de diagramacao 20/08). The root cause is cut in api/identify.js,
+  // where the name is still English and unambiguous; this guard covers the finds
+  // ALREADY saved in someone's collection, where the name came back translated
+  // and no string test would work in 17 languages.
+  //
+  // Signature of the placeholder: name identical to the scientific name AND not
+  // one field of content. A real report always carries at least one of these -
+  // the check stays conservative on purpose, because hiding an actual disease
+  // behind an all-clear is the one mistake that matters here.
+  const isPlaceholder =
+    disease &&
+    !!disease.name &&
+    disease.name === disease.scientific &&
+    !disease.overview &&
+    !disease.symptoms?.length &&
+    !disease.treatment &&
+    !disease.spreading &&
+    !disease.url;
+
+  if (!disease || isPlaceholder) {
     return (
       <SectionCard icon="checkmark-circle-outline" title={t('disease.healthStatusSection')} color={colors.accent}>
         <Text style={styles.body}>{t('disease.noDiseaseDetected')}</Text>
@@ -52,7 +74,11 @@ export default function DiseaseReport({ disease }) {
       <View style={styles.diseaseHeader}>
         <View style={{ flex: 1 }}>
           <Text style={styles.diseaseName}>{disease.name}</Text>
-          {!!disease.scientific && <Text style={styles.diseaseSci}>{disease.scientific}</Text>}
+          {/* Never the same word twice, once bold and once in italic - the same
+              guard the alternatives rows already use (IdentificationExtras). */}
+          {!!disease.scientific && disease.scientific !== disease.name && (
+            <Text style={styles.diseaseSci}>{disease.scientific}</Text>
+          )}
         </View>
         <View style={styles.diseaseConfidence}>
           <Text style={styles.confidenceLabel}>{t('disease.match')}</Text>

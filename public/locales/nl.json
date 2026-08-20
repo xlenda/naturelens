@@ -3,6 +3,7 @@
     "overview": "Overzicht",
     "details": "Details",
     "readMore": "Meer lezen",
+    "readLess": "Minder lezen",
     "confidence": "Betrouwbaarheid",
     "nativeOrigin": "Oorspronkelijke Herkomst",
     "save": "Opslaan in Mijn Collectie",
@@ -263,7 +264,18 @@
     "fundamentals": "Basisadvies",
     "checklistLabel": "Voor je begint",
     "problemsLabel": "Probleemsignalen",
-    "solutionsLabel": "Oplossingen"
+    "solutionsLabel": "Oplossingen",
+    "lightFullSun": "Volle zon",
+    "lightPartial": "Halfschaduw",
+    "lightShade": "Schaduw",
+    "soilWellDrained": "Goed doorlatend",
+    "soilSandy": "Zandig",
+    "soilLoam": "Leem",
+    "soilAcidic": "Zuur",
+    "toxicShort": "Giftig",
+    "rangeIdeal": "Ideaal",
+    "rangeOk": "Acceptabel",
+    "rangeBad": "Niet geschikt"
   },
   "disease": {
     "overviewSection": "Overzicht",

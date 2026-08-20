@@ -3,6 +3,7 @@
     "overview": "Resumen",
     "details": "Detalles",
     "readMore": "Leer más",
+    "readLess": "Leer menos",
     "confidence": "Confianza",
     "nativeOrigin": "Origen Nativo",
     "save": "Guardar en Mi Colección",
@@ -263,7 +264,18 @@
     "fundamentals": "Consejos fundamentales",
     "checklistLabel": "Antes de empezar",
     "problemsLabel": "Señales de problemas",
-    "solutionsLabel": "Soluciones"
+    "solutionsLabel": "Soluciones",
+    "lightFullSun": "Pleno sol",
+    "lightPartial": "Media sombra",
+    "lightShade": "Sombra",
+    "soilWellDrained": "Bien drenado",
+    "soilSandy": "Arenoso",
+    "soilLoam": "Franco",
+    "soilAcidic": "Ácido",
+    "toxicShort": "Tóxico",
+    "rangeIdeal": "Ideal",
+    "rangeOk": "Aceptable",
+    "rangeBad": "No adecuado"
   },
   "disease": {
     "overviewSection": "Resumen",

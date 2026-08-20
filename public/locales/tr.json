@@ -3,6 +3,7 @@
     "overview": "Genel Bakış",
     "details": "Detaylar",
     "readMore": "Devamını oku",
+    "readLess": "Daha az göster",
     "confidence": "Güven Oranı",
     "nativeOrigin": "Doğal Yaşam Alanı",
     "save": "Koleksiyonuma Kaydet",
@@ -263,7 +264,18 @@
     "fundamentals": "Temel öneriler",
     "checklistLabel": "Başlamadan önce",
     "problemsLabel": "Sorun belirtileri",
-    "solutionsLabel": "Çözümler"
+    "solutionsLabel": "Çözümler",
+    "lightFullSun": "Tam güneş",
+    "lightPartial": "Yarı gölge",
+    "lightShade": "Gölge",
+    "soilWellDrained": "İyi drene",
+    "soilSandy": "Kumlu",
+    "soilLoam": "Tınlı",
+    "soilAcidic": "Asidik",
+    "toxicShort": "Zehirli",
+    "rangeIdeal": "İdeal",
+    "rangeOk": "Kabul edilebilir",
+    "rangeBad": "Uygun değil"
   },
   "disease": {
     "overviewSection": "Genel Bakış",

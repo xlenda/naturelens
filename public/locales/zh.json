@@ -3,6 +3,7 @@
     "overview": "概览",
     "details": "详情",
     "readMore": "阅读更多",
+    "readLess": "收起",
     "confidence": "置信度",
     "nativeOrigin": "原产地",
     "save": "保存到我的收藏",
@@ -263,7 +264,18 @@
     "fundamentals": "基础要点",
     "checklistLabel": "开始之前",
     "problemsLabel": "问题迹象",
-    "solutionsLabel": "解决方法"
+    "solutionsLabel": "解决方法",
+    "lightFullSun": "全日照",
+    "lightPartial": "半阴",
+    "lightShade": "阴处",
+    "soilWellDrained": "排水良好",
+    "soilSandy": "沙质",
+    "soilLoam": "壤土",
+    "soilAcidic": "酸性",
+    "toxicShort": "有毒",
+    "rangeIdeal": "理想",
+    "rangeOk": "可接受",
+    "rangeBad": "不适宜"
   },
   "disease": {
     "overviewSection": "概览",

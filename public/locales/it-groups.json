@@ -1,0 +1,857 @@
+{
+  "succulent": {
+    "label": "Succulente e cactus",
+    "topics": {
+      "watering": {
+        "advice": [
+          "La regola di questo gruppo è inzuppa-e-asciuga, non il calendario. Innaffia finché tutta la zolla non è ben imbevuta e l'acqua non esce dal foro di drenaggio, svuota il sottovaso, poi lascia asciugare completamente il substrato prima dell'annaffiatura successiva — di norma ogni due o tre settimane nella stagione di crescita, anche se vaso, luce e temperatura spostano parecchio questo intervallo. Il motivo è fisiologico: sono piante CAM, che aprono gli stomi di notte e li tengono chiusi durante il giorno. Tra un impulso d'acqua e il successivo, ciò di cui hanno bisogno è una radice ossigenata, non un apporto continuo.",
+          "L'inverno è un riposo vero. La crescita avviene più o meno tra i 18 e i 29 °C, la dormienza tra i 7 e i 13 °C, con le annaffiature ridotte al minimo ogni poche settimane — quanto basta per evitare che la pianta si raggrinzisca. E quando compare l'afflosciamento, leggi la consistenza prima di prendere l'annaffiatoio: una foglia raggrinzita ma soda è sete; una foglia gialla, molle e translucida sta annegando, e innaffiare ancora non fa che peggiorare le cose, perché le radici marce hanno già smesso di assorbire. I cactus epifiti di foresta, come il cactus di Natale, sono l'eccezione del gruppo: bevono molta più acqua e in primavera ed estate non devono mai asciugarsi del tutto."
+        ],
+        "checklist": [
+          "Bagna tutta la zolla finché l'acqua non esce dal foro di drenaggio, poi svuota il sottovaso.",
+          "Aspetta che il substrato sia completamente asciutto prima di innaffiare di nuovo.",
+          "Non lasciare mai il vaso a mollo nell'acqua.",
+          "Nel riposo invernale innaffia pochissimo ogni poche settimane — quanto basta per evitare che si raggrinzisca.",
+          "Foglia raggrinzita e soda = poca acqua. Foglia gialla, molle e translucida = troppa."
+        ]
+      },
+      "light": {
+        "advice": [
+          "È l'unico gruppo da appartamento che accetta il sole diretto e anzi lo richiede. Le succulente vogliono dieci o più ore di luce indiretta intensa, con un minimo di sei-otto; sotto quella soglia filano e impallidiscono — la classica eziolatura. I cactus del deserto danno il meglio davanti a una finestra con diverse ore di sole diretto al giorno, quindi esposta a sud nell'emisfero nord e a nord in quello sud. La crescita sottile e pallida è un problema di luce, e nessuna dose di concime la corregge.",
+          "Contano due avvertenze. Quando in estate sposti la pianta all'aperto, abituala gradualmente: parti dalla mezz'ombra, perché il sole forte brucia i tessuti formati in casa. E i cactus epifiti vogliono luce intensa ma filtrata — una finestra a est o a ovest, una tenda leggera — perché al sole diretto si scottano."
+        ],
+        "checklist": [
+          "Garantisci da sei a otto ore di luce al giorno, puntando a dieci o più.",
+          "Cactus del deserto: una finestra con diverse ore di sole diretto.",
+          "La crescita filata e pallida è poca luce, non poco concime.",
+          "Quando la porti fuori in estate, comincia in mezz'ombra per qualche giorno.",
+          "Cactus epifita: luce intensa, sempre filtrata."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "Il substrato è in gran parte minerale, e le fonti discordano sulla ricetta solo per concordare sul principio. Un servizio extension universitario consiglia un terzo di materiale organico e due terzi di minerale; un altro chiede volumi uguali di una miscela a base di torba e di sabbia molto grossolana; la RHS lavora con due parti di terriccio base e una parte di graniglia orticola, con una copertura di graniglia in superficie. La forbice va grosso modo dal 30% al 67% di frazione minerale, ed esiste per un solo motivo: rendere la fase di saturazione più breve possibile. Più il tuo ambiente è umido e più hai la mano pesante con l'annaffiatoio, più minerale ti serve.",
+          "Un vaso attillato è una regola, non trascuratezza: il volume di substrato in più trattiene umidità, e il marciume segue. Rinvasa in primavera in un vaso solo di poco più grande, e aspetta diversi giorni prima della prima annaffiatura. La concimazione è povera di azoto e a dose ridotta — da metà a un quarto di quella indicata in etichetta, ogni terza o quarta annaffiatura durante la stagione attiva, e niente d'inverno. L'azoto in eccesso produce tessuti molli, e i tessuti molli marciscono. Nei cactus epifiti la ricetta si ribalta e la sostanza organica prende il sopravvento."
+        ],
+        "checklist": [
+          "Aggiungi almeno un terzo di materiale minerale: perlite, sabbia grossolana, pomice o graniglia.",
+          "Usa un vaso solo di poco più grande di quello attuale — lo spazio in eccesso diventa marciume.",
+          "Rinvasa in primavera e aspetta qualche giorno prima della prima annaffiatura.",
+          "Concima a metà o a un quarto della dose, e sospendi del tutto in inverno.",
+          "Il cactus epifita ribalta la ricetta: più sostanza organica, meno minerale."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "Qui il rischio è meccanico e facile da aggirare: maneggia le specie spinose avvolgendole nella carta di giornale o con guanti spessi. Le spine dei cactus e i glochidi sottili di alcune specie entrano nella pelle con facilità e ne escono con difficoltà, e il momento di massima esposizione è il rinvaso."
+        ],
+        "checklist": [
+          "Maneggia le specie spinose con carta di giornale arrotolata o guanti spessi.",
+          "Prepara il vaso nuovo prima di sollevare la pianta, per ridurre il tempo che passa tra le tue mani.",
+          "Tieni gli esemplari spinosi lontano dai passaggi e dalla portata dei bambini piccoli."
+        ]
+      }
+    }
+  },
+  "tropicalFoliage": {
+    "label": "Piante da appartamento a fogliame tropicale",
+    "topics": {
+      "watering": {
+        "advice": [
+          "L'obiettivo di questo gruppo è un substrato uniformemente umido e mai zuppo — né il ciclo di asciugatura totale delle succulente né l'umidità costante delle felci. Per valutarlo, affonda un dito nel substrato fino alla prima nocca: se la punta esce asciutta, è il momento di innaffiare. Il peso del vaso e il suono vuoto delle nocche su un vaso di terracotta funzionano altrettanto bene. Quando innaffi, prosegui finché l'acqua non esce dal fondo: così dilavi i sali in eccesso e garantisci che anche i due terzi inferiori del vaso ricevano acqua. Poi svuota il sottovaso — non lasciare mai la pianta ferma nell'acqua.",
+          "Dettagli che qui fanno la differenza: se il substrato si è asciugato troppo, innaffia due volte — innaffia, aspetta una trentina di minuti, poi innaffia di nuovo; l'acqua deve stare tra i 17 e i 22 °C, mai calda e mai ghiacciata, e mai acqua addolcita, per via del sodio e del cloruro. Le maranta vogliono acqua distillata o piovana, perché il fluoruro dell'acqua di rubinetto fa imbrunire i bordi delle foglie. E il gruppo porta con sé eccezioni dichiarate: le dracene vogliono la superficie asciutta al tatto prima dell'annaffiatura, la zamioculcas si innaffia una o due volte al mese e solo dopo che si è asciugata del tutto, e il ficus benjamin resta umido durante la crescita attiva e si asciuga leggermente d'inverno."
+        ],
+        "checklist": [
+          "Mantieni il substrato uniformemente umido, mai fradicio.",
+          "Innaffia finché l'acqua non esce dal fondo, poi svuota il sottovaso.",
+          "Usa acqua tra i 17 e i 22 °C; mai acqua addolcita.",
+          "Maranta e dracene: preferisci acqua distillata o piovana.",
+          "Substrato molto asciutto: innaffia, aspetta trenta minuti, poi innaffia di nuovo."
+        ]
+      },
+      "light": {
+        "advice": [
+          "La tolleranza alla luce di questo gruppo è amplissima, ed è proprio lì che il gruppo si suddivide. I filodendri preferiscono il sole indiretto o filtrato da una tenda e tollerano la penombra — il filodendro cuoriforme sopporta luce molto scarsa — mentre le forme arboree vogliono luce da media a intensa vicino a una finestra. Le dracene crescono meglio in luce indiretta intensa, ma diverse tollerano la penombra abbastanza bene da essere diventate uno standard da ufficio. In numeri di riferimento: la luce scarsa si aggira sugli 800 lux, quella media sui 1.500, quella intensa sui 3.000 e quella diretta sui 16.000.",
+          "Le maranta sono il sottogruppo più vincolato: mezz'ombra, al massimo da due a sei ore di sole diretto al giorno, con un avvertimento esplicito — il sole diretto brucia la foglia. Vale la pena ricordare che la fenestratura della monstera — i suoi buchi caratteristici — dipende da una luce adeguata, e che un vero filodendro produce foglie profondamente incise ma senza buchi. Se descrivi le esposizioni della stanza con i punti cardinali, ricorda di invertire nord e sud nell'emisfero sud."
+        ],
+        "checklist": [
+          "La luce indiretta intensa è il punto ideale per quasi tutto il gruppo.",
+          "Maranta: mezz'ombra, al massimo da due a sei ore di sole diretto.",
+          "Macchie tonde e secche sulla foglia indicano troppo sole.",
+          "Foglie basse che ingialliscono con l'apice vegetativo morto: poca luce o troppa acqua.",
+          "Se vuoi la fenestratura sulla monstera, alza la luce prima di cambiare qualsiasi altra cosa."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "Qui basta un terriccio universale organico — questo gruppo non ha né l'esigenza minerale delle succulente né quella di torba delle felci. Ciò che cambia la tecnica è la ritenzione: le miscele ricche di torba trattengono l'umidità più a lungo, quelle con corteccia, sabbia o perlite drenano più in fretta. Scegli in base alla tua abitudine di annaffiatura e al clima di casa. Una correzione importante: uno strato di sassi sul fondo del vaso non migliora il drenaggio — anzi tende a trattenere l'umidità dentro il vaso.",
+          "Tra le fonti c'è un conflitto vero e documentato, e la lettura da seguire è quella prudente. Per le dracene, un servizio extension universitario dice di evitare substrati con un'alta percentuale di perlite, di tenere il pH tra 6.0 e 6.5 e di non usare concimi contenenti superfosfato, perché la dracena è molto sensibile al fluoruro; per le maranta, un altro extension consiglia di incorporare perlite o vermiculite, e anche le maranta sono sensibili al fluoruro. Non esiste una conciliazione esplicita: per queste due, preferisci vermiculite o corteccia fine alla perlite e usa acqua distillata o piovana. Concima con moderazione — punte brune e arricciate segnalano un eccesso di concime, e la zamioculcas, lentissima a crescere, ha bisogno solo di una o due somministrazioni in tutta la stagione."
+        ],
+        "checklist": [
+          "Un terriccio universale va bene; regola la ritenzione con corteccia o perlite.",
+          "Non mettere uno strato di sassi sul fondo del vaso — non drena.",
+          "Dracene e maranta: preferisci vermiculite o corteccia fine alla perlite.",
+          "Tieni il pH della dracena tra 6.0 e 6.5 ed evita il superfosfato.",
+          "Punte brune e arricciate: taglia la concimazione prima di cambiare altro."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "È il gruppo di piante da appartamento con il rischio di tossicità più concentrato, e la causa è l'ossalato di calcio. Tutte le parti di un filodendro sono tossiche se ingerite: i cristalli provocano bruciore e irritazione di bocca, labbra e lingua, salivazione eccessiva, vomito e difficoltà a deglutire. La zamioculcas è classificata come non sicura per gli animali domestici. La linfa della maranta può causare irritazione cutanea. Nessuna di queste piante è pericolosa per il solo fatto di averla in casa — il rischio è l'ingestione e il contatto prolungato con la linfa, quindi tratta potatura e rinvaso come operazioni da fare con i guanti, lavandoti le mani subito dopo.",
+          "C'è un rischio fisico minore ma reale: i filodendri a portamento eretto hanno piccioli fragili che si spezzano con facilità, quindi conviene tenerli fuori dai passaggi. E un'osservazione che evita uno spavento: le macchie nere sul fusto di una zamioculcas sono normali e indicano una crescita sana, non una malattia."
+        ],
+        "checklist": [
+          "Tieni queste piante fuori dalla portata di bambini piccoli e animali domestici.",
+          "Indossa i guanti quando poti o rinvasi, e lavati le mani dopo.",
+          "Non lasciare le foglie cadute dove possono arrivare animali che sgranocchiano le piante.",
+          "Tieni le forme a portamento eretto fuori dai passaggi: i piccioli si rompono facilmente.",
+          "Le macchie nere sul fusto di una zamioculcas sono normali, non una malattia."
+        ]
+      }
+    }
+  },
+  "fern": {
+    "label": "Felci e piante da ombra",
+    "topics": {
+      "watering": {
+        "advice": [
+          "L'obiettivo è un terriccio appena umido in ogni momento, che non si asciughi mai del tutto e non resti mai a mollo nell'acqua del sottovaso. L'errore concettuale più costoso di questo gruppo è confondere l'umidità costante con un vaso perennemente fradicio: le fonti dicono, nella stessa frase, che il substrato deve trattenere l'umidità e drenare in fretta, perché la radice ha comunque bisogno di ossigeno. Il marciume radicale compare in una felce esattamente come compare in un cactus, solo con molta meno acqua. E il segnale d'allarme è ambiguo in entrambe le direzioni — la caduta delle pinnule avviene sia per troppa acqua sia per troppo poca.",
+          "L'umidità dell'aria è il fattore limitante di questo gruppo, non un vezzo: l'obiettivo pratico sta tra il 30% e il 50%, e intorno al 50% per le specie a fronde sottili come il capelvenere. Le punte brune su una felce sono, prima di tutto, una diagnosi di aria secca — non di substrato secco — e innaffiare di più porta al marciume senza risolvere il sintomo. I metodi, in ordine di solidità: il doppio vaso con sfagno umido, un vassoio di ciottoli con circa sei millimetri d'acqua e il vaso che non tocca l'acqua, un umidificatore, un terrario o il bagno per le specie più delicate, e solo alla fine qualche leggera nebulizzazione occasionale. Cambia o lava la ghiaia del vassoio ogni tre mesi."
+        ],
+        "checklist": [
+          "Mantieni il substrato appena umido e non lasciarlo mai asciugare del tutto.",
+          "Non lasciare acqua ferma nel sottovaso: è la via diretta al marciume radicale.",
+          "Le punte brune indicano aria poco umida — cura l'aria, non innaffiare di più.",
+          "Preferisci il doppio vaso con sfagno o il vassoio di ciottoli alla nebulizzazione.",
+          "Lava o sostituisci la ghiaia del vassoio ogni tre mesi."
+        ]
+      },
+      "light": {
+        "advice": [
+          "La luce indiretta moderata è l'ideale, con la pianta vicino a una finestra fresca — esposta a nord nell'emisfero nord, a sud in quello sud — oppure a una finestra a est. Una finestra calda e diretta danneggia il fogliame; se è la tua unica opzione, usa una tenda leggera per smorzare l'intensità. In numeri, la fascia da centrare è quella da scarsa a media, tra gli 800 e i 1.500 lux.",
+          "All'interno del gruppo la variabilità è reale: alcune specie tollerano la penombra e altre vogliono luce indiretta intensa o sole filtrato, quindi osserva la tua pianta invece di applicare un numero unico. Il fogliame danneggiato dal sole ha quasi sempre una causa evidente — una finestra calda ed esposta al sole diretto — e il rimedio è semplicemente spostarla o filtrare la luce."
+        ],
+        "checklist": [
+          "Preferisci la finestra fresca della casa, oppure quella a est.",
+          "Evita il sole diretto di una finestra calda; se non hai alternative, usa una tenda leggera.",
+          "Punta alla fascia da scarsa a media, tra gli 800 e i 1.500 lux.",
+          "Il fogliame bruciato è segno di sole diretto, non di sete."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "Qui il substrato deve fare due cose insieme: trattenere l'umidità e drenare in fretta. Una ricetta verificata è parti uguali di terriccio commerciale per piante d'appartamento e torba o terriccio di foglie, con la richiesta esplicita che dreni rapidamente per prevenire il marciume radicale. Un'altra combina torba o sfagno per la ritenzione, sabbia o ghiaia per il drenaggio e terra di medio impasto sterilizzata, con l'aggiunta di calcare dolomitico e farina d'ossa. È l'esatto contrario delle succulente: qui domina la frazione organica, e il drenaggio arriva dal materiale grossolano più che da una proporzione minerale. E, di nuovo, uno strato di sassi sul fondo del vaso non drena.",
+          "La concimazione è la più parsimoniosa di qualsiasi gruppo da appartamento: una volta al mese durante la stagione di crescita, a circa metà della dose consigliata, niente d'inverno — e niente per sei mesi dopo una divisione o un rinvaso. Nessun altro gruppo da interno ha un'attesa così lunga, e il motivo è diretto: le felci subiscono bruciature fogliari quando vengono concimate troppo. Un avvertimento chimico è specifico di questo gruppo: gli antiparassitari spray danneggiano molte felci, quindi leggi l'etichetta con attenzione e prova il prodotto prima su una piccola area. Contro i parassiti, preferisci metodi meccanici come un forte getto d'acqua."
+        ],
+        "checklist": [
+          "Usa un substrato che trattenga l'umidità e che dreni comunque in fretta.",
+          "Concima a metà dose, una volta al mese durante la stagione di crescita.",
+          "Non concimare d'inverno, né per sei mesi dopo una divisione o un rinvaso.",
+          "Prova qualsiasi spray su una sola fronda prima di trattare tutta la pianta.",
+          "Rinvasa e dividi a inizio primavera, mantenendo alta l'umidità nelle settimane successive."
+        ]
+      }
+    }
+  },
+  "fruitVeg": {
+    "label": "Alberi da frutto e ortaggi",
+    "topics": {
+      "watering": {
+        "advice": [
+          "Qui l'annaffiatura si misura come lama d'acqua settimanale e ha finestre fenologiche definite. La maggior parte degli ortaggi vuole da 2,5 a 5 centimetri a settimana — l'equivalente di 25-50 millimetri — con picchi ben precisi: il mais dolce ne vuole da 4 a 6 centimetri durante la fioritura maschile, l'emissione delle sete e il riempimento della spiga; i fagioli da 2,5 a 4 centimetri durante la fioritura e il riempimento del baccello. Quella forbice è un intervallo, non un numero fisso — un clima secco lo alza, uno umido lo abbassa. Su terreno di medio impasto, 2,5 centimetri d'acqua penetrano per circa 15 centimetri di profilo, il che ti permette di calcolare: bagnare trenta centimetri richiede all'incirca 5 centimetri d'acqua distribuita.",
+          "Qui l'annaffiatura superficiale non è soltanto meno efficiente: interrompe il trasporto del calcio. Il calcio si muove con il flusso traspiratorio e non viene rimobilizzato dai tessuti vecchi verso i frutti nuovi, quindi i cicli asciutto-e-inzuppato producono marciume apicale anche con abbondante calcio nel terreno. Il pomodoro è molto sensibile alle annaffiature irregolari e risponde con marciume apicale e spaccature; il peperone risponde con la cascola dei fiori; un cetriolo stressato in fase riproduttiva dà frutti amari e deformi. Il terreno sabbioso vuole annaffiature più brevi e frequenti; quello argilloso meno frequenti e più profonde."
+        ],
+        "checklist": [
+          "Lavora con una fascia di 25-50 millimetri a settimana, contando insieme pioggia e irrigazione.",
+          "Non mancare la fioritura e il riempimento del frutto: è la finestra che costa il raccolto.",
+          "Preferisci annaffiature profonde e distanziate a quelle brevi e quotidiane.",
+          "Il marciume apicale si risolve regolando l'acqua, non spruzzando calcio.",
+          "Adattati al terreno: il sabbioso vuole più frequenza, l'argilloso più profondità."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "È l'unico gruppo il cui raccolto sottrae nutrienti al sistema ogni singolo anno, e quasi tutte le differenze di gestione discendono da lì. La concimazione è ricorrente e frazionata in interventi di copertura, con il rapporto che cambia lungo il ciclo — nel pomodoro in pieno campo, per esempio, la copertura parte più ricca di fosforo e alza il potassio man mano che la pianta entra in produzione. L'azoto in eccesso ha un costo reale: fichi che non arrivano a maturazione, e una crescita vegetativa eccessiva durante la prima fioritura e la fruttificazione, che è uno dei maggiori responsabili del marciume apicale in pomodoro e peperone.",
+          "Il pH è decisivo e varia molto all'interno del gruppo. Il melo si trova bene tra 5.8 e 6.5, da ricontrollare ogni tre anni circa; la maggior parte degli ortaggi da foglia sta tra 6.0 e 6.5; e il mirtillo è l'eccezione radicale, al meglio tra 4.8 e 5.2, con zolfo elementare da applicare almeno un anno prima dell'impianto. Due regole valgono per tutti: tieni il concime ad almeno 15 centimetri dal tronco, e applicalo sempre su terreno umido perché non bruci le radici. E questo è l'unico gruppo con la rotazione per famiglia botanica — le colture della stessa famiglia sono soggette alle stesse malattie e agli stessi insetti, quindi non ripetere una famiglia nella stessa aiuola per tre o quattro anni, o di più se puoi."
+        ],
+        "checklist": [
+          "Concima in più interventi di copertura, non in un'unica dose.",
+          "Analizza il terreno e correggi il pH per la coltura, non per l'aiuola nel suo insieme.",
+          "Tieni il concime ad almeno 15 centimetri dal tronco, sempre su terreno umido.",
+          "Non ripetere la stessa famiglia botanica in un'aiuola per tre o quattro anni.",
+          "L'azoto in eccesso ritarda la maturazione e alimenta il marciume apicale."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Il diradamento dei frutti è un'operazione obbligatoria che non esiste in nessun altro gruppo. Un carico eccessivo dà frutti piccoli, rami spezzati e alternanza di produzione, perché quando un albero porta un carico pieno quasi tutta la sua energia va nei frutti e ne resta poca per differenziare i fiori dell'anno successivo. Dirada a mano le mele entro sei settimane dalla piena fioritura, lasciando i frutti a circa 20-25 centimetri l'uno dall'altro sul ramo; per pere, susine e albicocche vai su 15-20 centimetri. La cascola naturale di giugno, con frutti di 1-2,5 centimetri di diametro, non sostituisce il diradamento manuale — tieni sempre il frutto più grande del grappolo, a meno che non sia danneggiato.",
+          "Due operazioni completano il quadro. La potatura di un melo comincia il giorno stesso in cui lo pianti; rimandarla produce crescita scarsa e fruttificazione ritardata. E sul mirtillo, togliere ogni fiore nel primo e nel secondo anno è ciò che permette alla pianta di affermarsi — rinunciare a due raccolti compra tutti quelli che verranno. Sugli alberi da frutto, mantieni lo stop alla concimazione di fine estate, perché la produzione dei frutti e la maturazione del legno competono per lo stesso fotosintetizzato."
+        ],
+        "checklist": [
+          "Dirada i frutti entro sei settimane dalla piena fioritura.",
+          "Tieni il frutto più grande di ogni grappolo, a meno che non sia danneggiato.",
+          "Non contare sulla cascola naturale: non sostituisce il diradamento a mano.",
+          "Comincia a formare la chioma nell'anno d'impianto, non dopo.",
+          "Smetti di concimare gli alberi da frutto a fine estate."
+        ]
+      }
+    }
+  },
+  "flowering": {
+    "label": "Piante da fiore e ornamentali",
+    "topics": {
+      "watering": {
+        "advice": [
+          "Qui l'acqua si misura come lama settimanale, non come ciclo inzuppa-e-asciuga: annuali e perenni vogliono almeno da 2,5 a 4 centimetri d'acqua a settimana, contando insieme pioggia e irrigazione, e il momento migliore è la mattina presto, così il fogliame asciuga in fretta. Nelle rose lo stesso principio si dice in altro modo: l'annaffiatura profonda favorisce un apparato radicale profondo, mentre annaffiature frequenti e leggere fanno formare le radici troppo vicino alla superficie del terreno.",
+          "La salute della pianta dipende da questo più di quanto sembri. Una rosa con macchia nera ricorrente ha quasi sempre le foglie bagnate a fine giornata e aria ferma intorno: sole del mattino, un tubo poroso al posto dell'irrigatore e una buona circolazione d'aria risolvono più di qualsiasi trattamento."
+        ],
+        "checklist": [
+          "Fornisci almeno 25-40 millimetri d'acqua a settimana, contando la pioggia.",
+          "Innaffia presto, così il fogliame asciuga prima di sera.",
+          "Preferisci annaffiature profonde e distanziate a quelle leggere e frequenti.",
+          "Sulle rose, bagna il terreno e non la foglia."
+        ]
+      },
+      "light": {
+        "advice": [
+          "La maggior parte delle annuali ha bisogno di pieno sole per almeno quattro-sei ore al giorno per fiorire bene. Le rose chiedono di più: da sei a otto ore di sole diretto, e il sole del mattino conta in modo particolare perché asciuga le foglie e aiuta a prevenire le malattie.",
+          "Una diagnosi inganna molte persone: una perenne afflosciata e senza struttura di solito significa luce insufficiente — non carenza di concime. Concimare di più non la corregge; spostare la pianta sì."
+        ],
+        "checklist": [
+          "Annuali: da quattro a sei ore di pieno sole al giorno, come minimo.",
+          "Rose: da sei a otto ore, con priorità al sole del mattino.",
+          "Una perenne afflosciata e sdraiata va spostata, non concimata di più.",
+          "Osserva dove cade il sole nell'arco dell'anno prima di impegnare un'aiuola."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "Qui la preparazione dell'aiuola è più profonda che in vaso: da 15 a 25 centimetri per le annuali e da 20 a 25 per le perenni. In terreno argilloso, incorpora almeno 5 centimetri di corteccia di pino compostata, compost o terriccio di foglie; in terreno sabbioso, 5-8 centimetri di materiale organico che trattenga l'umidità. Il pH da centrare per le perenni è 6.0-6.5. La pacciamatura qui è più sottile che sulle piante legnose: 5-8 centimetri per le annuali e solo 2,5-5 per le perenni, con un avvertimento esplicito a evitare pacciamature troppo pesanti, perché sotto di esse il colletto di una perenne marcisce.",
+          "Il fabbisogno nutritivo è intermedio ed esplicitamente limitato: un concime completo somministrato alla preparazione e ripetuto ogni sei settimane circa lo copre. Molto sopra la pianta legnosa adulta, che non ha bisogno quasi di nulla, e ben sotto l'albero da frutto adulto. E una correzione importante a un'abitudine diffusa: non usare per regola una formula ad alto contenuto di fosforo per la fioritura. Dosi elevate di fosforo non aumentano il numero dei fiori, e l'eccesso cronico blocca i micronutrienti come ferro e zinco, producendo piante stentate e foglie ingiallite — e il fosforo in eccesso scende molto lentamente, cosa che può richiedere anni. Un concime bilanciato più un'analisi del terreno sono la guida sicura. Segno di eccesso in vaso: una crosta bianca sul bordo, punte fogliari brune e radici scurite."
+        ],
+        "checklist": [
+          "Prepara il terreno in profondità: da 15 a 25 centimetri, incorporando sostanza organica.",
+          "Usa solo 2,5-5 centimetri di pacciamatura sulle perenni, tenendola lontana dal colletto.",
+          "Concima con una formula bilanciata, ripetendo ogni sei settimane.",
+          "Non usare una formula ad alto contenuto di fosforo per forzare la fioritura.",
+          "Crosta bianca sul bordo del vaso: dilava con abbondante acqua o cambia il substrato."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "L'operazione che definisce questo gruppo è la rimozione dei fiori appassiti, il cosiddetto deadheading. Togliere i fiori sfioriti spinge la pianta a produrne altri invece di chiudere il ciclo di fioritura per la stagione; è l'unica categoria in cui rimuovere l'organo riproduttivo aumenta il prodotto che desideri. Staccali con le dita o usa forbici affilate, e va benissimo prendere anche una porzione di stelo, non solo il fiore. Oltre all'effetto sulla fioritura, questo riduce l'incidenza delle malattie che si sviluppano sul materiale vegetale in decomposizione. Quando metti a dimora le annuali, pizzica boccioli e fiori per favorire una ramificazione migliore; sulle perenni, taglia a livello del terreno dopo la fioritura per stimolare nuova vegetazione dalla base.",
+          "I bulbi sono l'immagine speculare: dopo il fiore, il lavoro è ricaricare. Rimuovi il fiore appassito per evitare che si formino le capsule dei semi, ma mai la foglia — lascia il fogliame finché non comincia a ingiallire e seccare da solo, e non legarlo né intrecciarlo, perché così riduci la luce che le foglie possono intercettare e con essa la fotosintesi che riempie il bulbo dell'anno prossimo. Dividi i bulbi quando il fogliame è ormai secco e sono in riposo, staccando i bulbilli con una leggera torsione e trazione; le divisioni piccole possono metterci un anno o due prima di tornare a fiorire. E in autunno, valuta di lasciare in piedi le infruttescenze: sono una risorsa alimentare nutriente per la fauna selvatica per tutto l'inverno."
+        ],
+        "checklist": [
+          "Rimuovi i fiori appassiti prima che vadano a seme.",
+          "Pizzica i boccioli quando metti a dimora le annuali, così la pianta ramifica.",
+          "Sui bulbi, taglia il fiore ma mai la foglia.",
+          "Non legare né intrecciare mai il fogliame dei bulbi.",
+          "In autunno, lascia qualche infruttescenza per la fauna selvatica."
+        ]
+      }
+    }
+  },
+  "woody": {
+    "label": "Alberi e arbusti legnosi",
+    "topics": {
+      "watering": {
+        "advice": [
+          "È l'unico gruppo il cui periodo di attecchimento si misura in anni: all'incirca un anno ogni 2,5 centimetri di diametro del tronco. Un albero appena piantato vuole un'annaffiatura quotidiana per le prime due settimane, ogni due o tre giorni dalla terza alla dodicesima, settimanale fino alla prima gelata e di nuovo settimanale il secondo anno. Il volume ha una formula: da 4 a 6 litri ogni 2,5 centimetri di diametro del tronco a ogni annaffiatura, distribuiti su tutta la zona radicale e non contro il tronco, bagnando da 15 a 23 centimetri di terreno.",
+          "L'annaffiatura profonda favorisce radici robuste e migliora la resistenza al caldo e alla siccità; annaffiature frequenti e superficiali costruiscono un apparato radicale superficiale e dipendente — che, in una pianta legnosa, è anche quello che si strappa via alla prima burrasca. Ecco perché un albero appena piantato che appassisce nonostante venga innaffiato ogni giorno di solito riceve l'acqua nel posto sbagliato e in volume insufficiente. Gli arbusti acidofili come le azalee vogliono annaffiature profonde, che bagnino almeno 15-20 centimetri, e in terreno sabbioso nel primo anno possono aver bisogno di due annaffiature a settimana."
+        ],
+        "checklist": [
+          "Innaffia tutta la zona radicale, mai il tronco.",
+          "Somministra da 4 a 6 litri ogni 2,5 centimetri di diametro del tronco a ogni intervento.",
+          "Bagna da 15 a 23 centimetri di profilo del terreno.",
+          "Conta all'incirca un anno di attecchimento ogni 2,5 centimetri di diametro del tronco.",
+          "Preferisci annaffiature profonde e distanziate a quelle quotidiane e superficiali."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "Una pianta legnosa adulta in un buon terreno semplicemente non ha bisogno di concime: non tutte le piante ornamentali vanno concimate, e alberi e arbusti adulti che crescono in condizioni di suolo favorevoli richiedono poco o nessun concime. Gli alberi in un prato concimato si servono già da soli, perché le loro radici intercettano i nutrienti distribuiti sull'erba. Quando concimi, il tetto è normativo: azoto a lenta cessione da 1 a 2 kg per 100 metri quadrati all'anno, mai oltre i 3; a cessione rapida da 0,5 a 1 kg, con un tetto di 2. La distribuzione copre tutta l'area della proiezione della chioma, dal colletto fino alla punta dei rami, e sempre su terreno umido.",
+          "Gli arbusti acidofili sono il sottogruppo che cambia tutte le carte in tavola. Azalee e rododendri vogliono un pH tra 4.5 e 6.0, hanno radici superficiali e vengono danneggiati facilmente da un'umidità eccessiva del terreno; accettano un concime acidificante con rapporto vicino a 2-1-1, applicato in dose leggera in primavera e a inizio estate, e mai una concimazione ricca di azoto a fine autunno, perché ritarda l'entrata in dormienza. Foglie nuove gialle con le nervature verdi suggeriscono un pH alto che blocca il ferro — ma nei terreni argillosi acidi il ferro è prontamente disponibile, quindi indaga sui ristagni idrici prima di dare la colpa al pH. La pacciamatura è uno strumento e un'arma: spessa da 5 a 10 centimetri, tenuta a 8-12 centimetri dal tronco su un albero giovane e a 20-25 su uno adulto, ed estesa fino alla proiezione della chioma. Andare oltre crea il vulcano di pacciame, che uccide lentamente: l'aria non penetra, il terreno sottostante si impoverisce di ossigeno, l'umidità costante uccide il floema e le radici restano a corto di carboidrati."
+        ],
+        "checklist": [
+          "Non concimare una pianta legnosa adulta in un buon terreno — non ne ha quasi mai bisogno.",
+          "Se concimi, copri tutta la proiezione della chioma e fallo sempre su terreno umido.",
+          "Acidofile: pH tra 4.5 e 6.0 e una leggera concimazione acidificante in primavera.",
+          "Tieni la pacciamatura lontana dal tronco, in un anello piatto.",
+          "Da 5 a 10 centimetri di pacciamatura bastano; oltre è un vulcano."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "La potatura è irreversibile e ha regole anatomiche. Il taglio va appena oltre il collare del ramo — quell'area ingrossata alla base del ramo che funziona da barriera naturale contro gli organismi che provocano la carie. I rami di oltre 4 centimetri di diametro richiedono il metodo dei tre tagli, perché la corteccia non si strappi lungo il tronco. E niente mastice: la ricerca ha dimostrato che mastici e altri prodotti da taglio non prevengono la carie del legno.",
+          "Il momento lo decide il legno che fiorisce, non il calendario: le piante che fioriscono sul legno dell'anno precedente — forsizia, azalea, lillà — si potano subito dopo la fioritura, e quelle che fioriscono sul legno dell'anno si potano prima che la vegetazione riparta. Un arbusto che non fiorisce mai è stato quasi sempre potato nel momento sbagliato. Preferisci il diradamento alla spuntatura, perché il diradamento stimola la crescita all'interno della pianta e restituisce un portamento naturale, mentre la spuntatura infittisce la periferia e oscura l'interno, con il ricaccio concentrato entro 15-20 centimetri dal taglio. Per rinnovare un arbusto vecchio senza traumatizzarlo, usa la regola di un terzo distribuita su tre anni. Adotta il tetto annuale prudente di circa il 25% della chioma viva, e non capitozzare mai un albero: la capitozzatura elimina metà o più della chioma fogliare, lascia ferite che non riescono a compartimentare ed espone la corteccia alle scottature. Evita anche di potare nelle dieci settimane che precedono la prima gelata forte della tua zona."
+        ],
+        "checklist": [
+          "Taglia appena fuori dal collare del ramo, mai a filo del tronco.",
+          "Usa il metodo dei tre tagli sui rami di oltre 4 centimetri.",
+          "Non applicare mastice: non previene la carie del legno.",
+          "Le piante che fioriscono sul legno vecchio si potano subito dopo la fioritura.",
+          "Asporta al massimo circa il 25% della chioma viva all'anno, e non capitozzare mai un albero."
+        ]
+      }
+    }
+  },
+  "orchid": {
+    "label": "Orchidee ed epifite",
+    "topics": {
+      "watering": {
+        "advice": [
+          "Qui non esiste un calendario di annaffiatura, solo un criterio di asciugatura: innaffia appena la pianta si asciuga, e non c'è nessuna formula magica del tipo innaffiare un vaso da 15 centimetri ogni sette giorni. Quando innaffi, fallo per bene — l'acqua deve scorrere liberamente dai fori di drenaggio per qualche minuto, finché il substrato non è completamente saturo. In questo gruppo il concetto di annaffiatura profonda si ribalta: non c'è un profilo di terreno da bagnare, solo una saturazione totale seguita da un'asciugatura rapida. La nebulizzazione leggera quotidiana equivale all'annaffiatura superficiale in un'aiuola: bagna la superficie, lascia l'umidità ferma nei posti sbagliati e non satura mai il substrato.",
+          "La qualità dell'acqua conta qui più che in qualsiasi altro gruppo, perché senza terreno non c'è un complesso di scambio cationico a tamponare i sali: usa acqua tiepida, preferibilmente piovana, e mai acqua addolcita, che porta con sé molto sodio. Non lasciare mai il vaso nel sottovaso. Ogni sottogruppo ha il suo metodo: le bromelie a cisterna assorbono soprattutto attraverso le foglie e attraverso la coppa alla base, che va tenuta piena e risciacquata ogni settimana perché i minerali non si concentrino uccidendo le punte delle foglie; le tillandsie vogliono un ammollo da venti a trenta minuti una volta a settimana — una o due volte a seconda che la stanza sia calda e secca oppure fresca e umida — poi una scrollata e un capovolgimento per farle sgocciolare; e il cactus di Natale, una volta formati i boccioli, ha bisogno di un substrato uniformemente umido per non farli cadere."
+        ],
+        "checklist": [
+          "Innaffia quando si asciuga, non secondo il calendario.",
+          "Satura il substrato finché l'acqua non scorre libera per qualche minuto.",
+          "Usa acqua tiepida, piovana quando puoi, e mai acqua addolcita.",
+          "Non lasciare mai il vaso a bagno nell'acqua del sottovaso.",
+          "Bromelia a cisterna: tieni la coppa piena e risciacquala ogni settimana."
+        ]
+      },
+      "light": {
+        "advice": [
+          "La maggior parte delle orchidee da appartamento vuole da una a quattro ore di sole diretto. Le Phalaenopsis si trovano bene tra i 19 e i 30 °C di giorno e tra i 16 e i 19 °C di notte, davanti a una finestra a est o a ovest, fuori dal sole estivo e lontano da termosifoni e correnti d'aria. Le bromelie chiedono da dodici a sedici ore al giorno di luce relativamente intensa, e le foglie te lo riferiscono: foglie lunghe, sottili e più verdi significano poca luce; foglie più corte, più spesse e più chiare significano che ne hanno in abbondanza. Le tillandsie vogliono luce intensa e filtrata, mai sole diretto.",
+          "C'è un caso in cui il fotoperiodo conta più dell'intensità. I cactus di Natale e i loro parenti richiedono quattordici o più ore di buio continuo al giorno, a partire da metà settembre circa nell'emisfero nord, per almeno sei settimane — e l'avvertimento operativo è netto: bastano due ore di luce a interrompere il buio per inibire la formazione dei boccioli. Una lampada lasciata accesa nella stanza è sufficiente ad annullare la fioritura dell'anno."
+        ],
+        "checklist": [
+          "Orchidee da appartamento: da una a quattro ore di sole diretto.",
+          "Phalaenopsis: finestra a est o a ovest, lontano da termosifoni e correnti d'aria.",
+          "Una bromelia con foglie lunghe, sottili e scure sta chiedendo più luce.",
+          "Tillandsia: luce intensa e filtrata, mai sole diretto.",
+          "Cactus di Natale: buio continuo di notte per sei settimane per formare i boccioli."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "In questo gruppo non c'è terra, e il terriccio comune uccide: non usare mai terriccio a base di terra né terriccio universale, perché soffocano la radice rivestita di velamen. Non solo: il substrato ha una data di scadenza e il rinvaso è obbligatorio, non facoltativo — il bark va sostituito grosso modo ogni due anni, e prima ancora il segnale è fisico: rinvasa quando durante l'annaffiatura cominciano a uscire dal vaso minuscoli frammenti di substrato. Il bark decomposto diventa meno arieggiato e più denso, trattiene l'acqua più a lungo e fa marcire le radici. È l'unico gruppo in cui il substrato stesso è la causa di una morte programmata.",
+          "La scelta tra bark e sfagno è una decisione sull'ambiente, non sul gusto: bark grossolano in una stanza umida o in serra; una miscela più ricca di sfagno e fibra in un interno secco e soleggiato, con annaffiature più distanziate e rinvaso subito dopo la fioritura. Una miscela di bark, carbone e perlite è lo standard commerciale equilibrato. Il vaso deve essere appena sufficiente a contenere l'apparato radicale — un contenitore troppo grande trattiene umidità e danneggia le radici dell'orchidea. La concimazione è diluita per principio: metà della dose in etichetta, con poca o nessuna urea, settimanale d'estate e ogni due settimane in autunno e in inverno, saltando la concimazione ogni quarta annaffiatura per dilavare i sali. Le bromelie vanno ancora più deboli, da un quarto a un ottavo della dose. E ricorda che diversi membri di questo gruppo sono monocarpici: una bromelia che declina lentamente dopo la fioritura sta completando il suo ciclo normale, non si sta ammalando — conserva i polloni."
+        ],
+        "checklist": [
+          "Non rinvasare mai in terra comune o terriccio universale.",
+          "Sostituisci il bark ogni due anni, o quando durante l'annaffiatura escono frammenti dal vaso.",
+          "Usa un vaso dimensionato esattamente sull'apparato radicale.",
+          "Concima a metà dose e salta la concimazione ogni quarta annaffiatura.",
+          "Una bromelia che muore dopo la fioritura è il ciclo normale: conserva i polloni."
+        ]
+      }
+    }
+  },
+  "herb": {
+    "label": "Erbe aromatiche e da cucina",
+    "topics": {
+      "watering": {
+        "advice": [
+          "Questo gruppo si divide in due, e trattare entrambe le metà con lo stesso calendario è l'errore strutturale. Le mediterranee legnose — rosmarino, timo, origano, salvia, lavanda — vogliono annaffiature distanziate con una vera asciugatura in mezzo: il loro rischio è una radice inzuppata d'inverno, non la siccità d'estate. Il rosmarino detesta avere le radici bagnate, soprattutto d'inverno, e una volta affermato in piena terra non ha quasi bisogno d'acqua; in vaso, innaffialo nei periodi asciutti ma non lasciare mai il terriccio zuppo.",
+          "Le aromatiche da foglia — basilico, prezzemolo, menta, melissa — vogliono l'opposto: un apporto di umidità del terreno relativamente costante, perché lo stress idrico accelera la salita a seme e indurisce la foglia. Innaffia al mattino, così il fogliame asciuga prima di sera, e sul basilico evita di bagnare le foglie: usa un impianto a goccia o un tubo poroso invece dell'irrigatore, perché una foglia bagnata in aria ferma è un invito alla peronospora."
+        ],
+        "checklist": [
+          "Separa le mediterranee dalle aromatiche da foglia prima di impostare qualsiasi routine di annaffiatura.",
+          "Mediterranee: annaffiature distanziate e terreno che si asciuga davvero tra una e l'altra.",
+          "Aromatiche da foglia: mantieni l'umidità costante per evitare la salita a seme.",
+          "Innaffia al mattino, mai a fine giornata.",
+          "Sul basilico, bagna il terreno e non la foglia."
+        ]
+      },
+      "light": {
+        "advice": [
+          "Quasi tutte le aromatiche crescono meglio in una posizione soleggiata per almeno sei ore al giorno — ed è il sole a produrre l'olio essenziale, il che significa che è il sole a produrre l'aroma. Il basilico preferisce il pieno sole ma cresce discretamente anche con sei ore di sole parziale.",
+          "Le eccezioni sono note e vanno rispettate: prezzemolo e menta preferiscono la mezz'ombra e languiscono sotto il pieno sole intenso. Se il tuo prezzemolo o la tua menta faticano nell'aiuola più assolata, il problema potrebbe essere esattamente quello."
+        ],
+        "checklist": [
+          "Punta ad almeno sei ore di sole al giorno per la maggior parte delle aromatiche.",
+          "Prezzemolo e menta accettano, e a volte preferiscono, la mezz'ombra.",
+          "Meno sole significa meno olio essenziale e meno aroma.",
+          "Tieni qualche vaso vicino alla cucina, per raccogliere spesso."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "Qui il drenaggio vale più della fertilità, e questo è l'unico gruppo in cui l'alta fertilità è una perdita: i terreni molto fertili tendono a produrre foglie rigogliose ma prive di sapore. Il pH da centrare in generale è tra 6 e 7, con sostanza organica moderata. In terreno argilloso, incorpora 5-8 centimetri di corteccia di pino fine, ghiaietto o compost grossolano per una profondità di 20-30 centimetri; in terreno sabbioso, la stessa profondità di materiale che trattenga l'umidità. In questo gruppo un'aiuola rialzata con pacciamatura di ghiaia è prassi standard, non un lusso.",
+          "Il rosmarino in terreno pesante non si corregge — si sposta, in un'aiuola rialzata o in un vaso con fino al 25% di graniglia orticola in volume. Il rosmarino coltivato in piena terra non ha bisogno di alcuna concimazione; quello in vaso riceve una spolverata di concime granulare universale a fine primavera. Il basilico è l'eccezione che si comporta da ortaggio e prende una dose misurata all'impianto, integrata solo se la crescita si ferma. Sul coriandolo, applicazioni leggere di azoto mantengono le piante rigogliose, ma la fonte è esplicita sull'evitare la tendenza a concimare troppo. E fai attenzione con la menta: piantala in un contenitore senza fondo interrato nell'aiuola, perché corre per rizoma e si prende tutto lo spazio."
+        ],
+        "checklist": [
+          "Metti il drenaggio al primo posto: aiuola rialzata, graniglia o corteccia fine incorporata.",
+          "Tieni il pH tra 6 e 7 e la fertilità moderata.",
+          "Un'aromatica rigogliosa e senza sapore è segno di troppo concime.",
+          "Il rosmarino in piena terra non va concimato.",
+          "Pianta la menta in un contenitore senza fondo interrato nell'aiuola."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "La raccolta ha una finestra fisiologica: le aromatiche vanno raccolte appena prima della fioritura, che è quando gli oli essenziali sono al massimo. E ha un'ora del giorno — la mattina presto, dopo che la rugiada è asciugata ma prima che il caldo si intensifichi. Nessun altro gruppo ha l'ora del giorno come variabile di qualità, e un'erba raccolta nel pomeriggio ha un aroma sensibilmente più debole. I fiori aromatici si raccolgono prima che si aprano del tutto.",
+          "Qui la potatura mantiene portamento e sapore, e ogni genere ha la sua regola. Sul basilico, cima periodicamente gli apici vegetativi e togli i boccioli fiorali appena compaiono, altrimenti la foglia diventa amara e la pianta smette di crescere; raccogli le cime dei getti con uno o due palchi di foglie, lasciando abbastanza fogliame per ricacciare. Il rosmarino riceve una spuntatura leggera ogni anno dopo la sfioritura, senza mai tagliare nel legno vecchio — senza quella spuntatura fila, si lignifica e si spoglia alla base. La salvia sopporta una potatura decisa a inizio primavera, il timo si spunta leggermente dopo la fioritura e l'alloro si pota d'estate. La menta, dopo la fioritura, si può tagliare fino a circa 5 centimetri dalla base per rinnovare le foglie."
+        ],
+        "checklist": [
+          "Raccogli appena prima della fioritura, quando l'olio è al massimo.",
+          "Raccogli la mattina presto, quando la rugiada è asciugata.",
+          "Sul basilico, togli i boccioli fiorali appena compaiono.",
+          "Sul rosmarino, spunta leggermente dopo la fioritura e non tagliare mai nel legno vecchio.",
+          "Rinnova la menta tagliando il cespo a raso dopo la fioritura."
+        ]
+      }
+    }
+  },
+  "pollinator": {
+    "label": "Insetti impollinatori",
+    "topics": {
+      "role": {
+        "advice": [
+          "Circa un terzo del cibo che mangiamo dipende dall'attività degli impollinatori, e la maggior parte di quel lavoro non la fa l'ape che stai immaginando. Nella sola Gran Bretagna esistono più di 270 specie di api: circa 26 bombi, oltre 250 api solitarie e una sola specie di ape mellifera. Quasi tutte sono solitarie — ogni femmina costruisce e rifornisce il nido da sola e muore prima che emerga la generazione successiva — e il nido non è quasi mai un alveare: molte nidificano nel terreno nudo, altre in cavità del legno, e i bombi occupano di frequente gallerie scavate dai roditori.",
+          "In Brasile il gruppo chiave è quello delle api senza pungiglione, i Meliponini, native delle regioni tropicali e subtropicali; nel solo Pará si stima che 109 specie siano legate a colture come açaí, melone e anguria. Il gruppo va ben oltre le api: si ritiene che i coleotteri siano stati tra i primi insetti a visitare i fiori, i sirfidi impollinano da adulti mentre le loro larve divorano afidi, e farfalle e falene si aggiungono al servizio, pur senza quell'impollinazione per vibrazione che rende le api così efficienti a ogni visita."
+        ],
+        "checklist": [
+          "La maggior parte delle api è solitaria e non formerà mai un alveare.",
+          "Un mucchietto conico di terra nel prato è l'imboccatura di una galleria di nido attiva.",
+          "I ritagli circolari netti su una foglia sono api tagliafoglie che raccolgono materiale per il nido.",
+          "Un sirfide ha due ali; api e vespe ne hanno quattro.",
+          "Niente afidi significa niente larve di sirfide: anche la preda è una risorsa."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "Il rischio reale è basso. Farsi pungere nel proprio giardino è improbabile finché le api vengono trattate con rispetto, e le api solitarie usano il pungiglione solo per difendersi, quando vengono maneggiate bruscamente. Le api senza pungiglione, come dice il nome, non pungono — il che ne fa il gruppo più sicuro da osservare da vicino e da tenere in casa. In questo vicinato il rischio di puntura si concentra nelle vespe sociali, che hanno una vera capacità difensiva di puntura presso il nido.",
+          "Due precisazioni chiudono il quadro. Le larve di diverse falene sono bruchi urticanti, e quella è tutta un'altra storia — consulta il gruppo degli insetti dannosi prima di toccare qualsiasi bruco peloso. E allevare api senza pungiglione è un'attività regolamentata, non libera: in Pará, per esempio, gli allevatori con un massimo di 99 arnie sono stati esentati dalla licenza ambientale ma devono comunque registrarsi presso l'organo di controllo agricolo. Il prelievo di un nido selvatico segue regole tutte sue."
+        ],
+        "checklist": [
+          "Osserva senza toccare: un'ape solitaria punge solo se la stringi.",
+          "Le api senza pungiglione non pungono — il gruppo più sicuro da osservare da vicino.",
+          "Tieni le distanze dai nidi di vespe sociali.",
+          "Non toccare mai un bruco peloso: il rischio è lì, non nelle api.",
+          "Allevare api native richiede la registrazione presso l'autorità competente."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Prima la diversità, poi la quantità: parti da otto-dieci specie di piante native che coprano primavera, estate e autunno, piantate a macchie larghe almeno un metro. Preferisci fiori semplici e aperti, con un solo strato di petali — i fiori doppi nascondono o eliminano polline e nettare. Lascia fiorire le erbe spontanee del prato tagliando meno spesso, e metti a disposizione dell'acqua, perché api e altri impollinatori ogni tanto hanno bisogno di bere. Un metodo sul campo che vale la pena copiare: osserva quali piante sono più frequentate dagli impollinatori nel tuo quartiere, e coltiva soprattutto quelle.",
+          "I siti di nidificazione sono una risorsa. Lascia zone di terreno nudo e ben drenato in pieno sole, senza pacciamatura, per le api che nidificano nel suolo, e tollera i mucchietti di terra sul prato invece di spianarli. Un albergo per api funziona con fori di diametro compreso tra 2 e 10 millimetri, distanziati circa 2 centimetri l'uno dall'altro, profondi 8-10 centimetri per i fori più piccoli e 13-15 per i più grandi, in legno non trattato, montato a un'altezza tra uno e due metri in un punto riparato. E la regola che pesa più di tutte le altre: non irrorare mai i fiori aperti. Evita gli insetticidi ad ampio spettro; se devi proprio trattare, fallo di sera, quando gli impollinatori sono meno attivi."
+        ],
+        "checklist": [
+          "Pianta otto-dieci specie native che coprano tutte e tre le stagioni.",
+          "Scegli fiori semplici a un solo strato di petali, non doppi.",
+          "Lascia zone di terreno nudo e assolato per le api che nidificano nel suolo.",
+          "Metti a disposizione acqua bassa e sicura tutto l'anno.",
+          "Non irrorare mai i fiori aperti; se devi trattare, tratta di sera."
+        ]
+      }
+    }
+  },
+  "beneficialInsect": {
+    "label": "Insetti predatori e utili",
+    "topics": {
+      "role": {
+        "advice": [
+          "Sono i nemici naturali del giardino: i predatori, che uccidono e mangiano molte prede nell'arco della vita, e i parassitoidi, la cui larva si sviluppa dentro o sopra un singolo ospite e lo uccide. I numeri colpiscono — una coccinella può divorare fino a 5.000 afidi in tutta la vita, i carabidi possono consumarne ogni giorno l'equivalente del proprio peso, e una larva di crisopa ne prende tra 100 e 150. La difesa integrata costruita sui nemici naturali ha ridotto, stando a quanto riportato, la frequenza dei trattamenti dal 30% al 40% in colture diverse.",
+          "Lo stadio vitale cambia tutto, ed è lì che vive l'errore più comune. Nelle crisope e nei sirfidi solo la larva è predatrice: l'adulto vive di nettare, polline e melata. In altre parole, quella creaturina strana sulla foglia di solito è l'alleata, non il parassita. Vale la pena imparare tre segnali sul campo: una larva di coccinella è rossiccia e ha la forma di un piccolo coccodrillo; le uova di crisopa stanno in cima a peduncoli sottili come capelli; e un bruco che porta sul dorso qualche decina di piccoli bozzoli bianchi è già condannato e libererà decine di vespe parassite — lascialo esattamente dov'è."
+        ],
+        "checklist": [
+          "Identifica prima di agire: molte larve strane sulle foglie sono predatori.",
+          "Una larva di coccinella è rossiccia e ha la forma di un piccolo coccodrillo.",
+          "Le uova su peduncoli sottili come capelli sono uova di crisopa, non un parassita.",
+          "Un bruco con bozzoli bianchi sul dorso è già parassitizzato — non buttarlo via.",
+          "La mantide è un predatore indiscriminato: mangia anche gli impollinatori."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "Qui non punge quasi nulla. Tra i predatori, solo le vespe sociali hanno una capacità difensiva di puntura; tra i parassitoidi, solo le vespe cacciatrici che costruiscono nidi nel terreno o nel fango. Gli icneumonidi e i braconidi usano quel lungo pungiglione soltanto come ovopositore, e non ha funzione difensiva.",
+          "Ma due famiglie mordono se maneggiate: i ridùvidi infilano il rostro e iniettano enzimi digestivi, e gli asilidi iniettano saliva neurotossica. Non raccoglierli. La mantide religiosa cattura con le zampe raptatorie in un movimento fulmineo e morde se la tieni in mano. E c'è un caso specifico: la coccinella asiatica invasiva morde le persone, soprattutto quando resta intrappolata tra la pelle e i vestiti — non lacera la pelle né trasmette malattie, ma quando è disturbata rilascia emolinfa che può macchiare in modo permanente pareti, tende e moquette, e sono documentate reazioni allergiche come asma e orticaria, con una sensibilità che non dipende né dall'età né dalla predisposizione alle allergie della persona. Per quella coccinella la raccomandazione è sigillare fessure e soglie, non irrorare il giardino. Un nido attivo di vespe sociali si osserva da lontano."
+        ],
+        "checklist": [
+          "In questo gruppo pungono solo le vespe sociali e le vespe cacciatrici.",
+          "Non raccogliere un ridùvide o un asilide.",
+          "La mantide morde se la tieni in mano.",
+          "Le coccinelle invasive in casa si risolvono sigillando le fessure, non irrorando.",
+          "Osserva i nidi di vespe da lontano."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Conservare batte comprare. La raccomandazione standard è habitat e tolleranza, non il lancio: proteggi questi predatori evitando i pesticidi che li uccidono, scegliendo piante che offrano loro polline, nettare e riparo, e tenendo le formiche lontane dalle piante infestate — le formiche difendono afidi e cocciniglie dai predatori in cambio di melata. Tra le piante indicate dai servizi extension come cibo per gli adulti ci sono aneto, finocchio, echinacea, rudbeckia, Asclepias e lantana.",
+          "Ogni gruppo ha un'esigenza ambientale. Le libellule hanno bisogno di uno specchio d'acqua: la femmina depone le uova sfiorando la superficie e la larva si sviluppa sommersa — niente acqua, niente libellule. Le larve di carabide vivono nel terreno con un raggio d'azione limitato, quindi lavorare o compattare il suolo elimina la generazione successiva. E azzerare gli afidi del giardino toglie la base alimentare a coccinelle, crisope, sirfidi e vespe parassite tutti insieme: la preda è una risorsa, non un'emergenza. Quando il trattamento è inevitabile, preferisci sapone, olio o spinosad ai piretroidi, ai carbammati e agli organofosforati, proprio per risparmiare vespe parassite, tachinidi e carabidi."
+        ],
+        "checklist": [
+          "Offri fiori da nettare e polline: gli adulti vivono di quelli.",
+          "Tieni le formiche lontane dalle piante infestate.",
+          "Lascia acqua ferma e pulita se vuoi le libellule.",
+          "Non lavorare né compattare il suolo dove vivono le larve di carabide.",
+          "Tollera qualche afide: senza prede, i predatori non restano."
+        ]
+      }
+    }
+  },
+  "pestInsect": {
+    "label": "Insetti dannosi comuni",
+    "topics": {
+      "role": {
+        "advice": [
+          "Dannoso è un'etichetta di contesto, non di specie: descrive un danno economico o un rischio sanitario in un luogo e in un momento precisi. L'apparato boccale ti dice il tipo di danno — i masticatori lasciano fori evidenti in foglie, legno o frutti; i succhiatori usano un tubo simile a una cannuccia e producono punteggiature, macchie, arresto di crescita, ingiallimenti, deformazioni della vegetazione e melata. E la melata non è una malattia: è un'escrezione zuccherina, e la patina nera è la fumaggine che ci cresce sopra, annerisce tutto e riduce la fotosintesi. Risolvi il succhiatore e la macchia se ne va con lui.",
+          "Due chiavi aiutano sul campo. La metamorfosi determina che cosa troverai davvero: nella metamorfosi graduale hai uovo, neanide e adulto, con la neanide che somiglia a un adulto senza ali; nella metamorfosi completa hai uovo, larva, pupa e adulto, e la larva può non somigliare per niente all'adulto. E il comportamento ti dice dove guardare: i succhiatori si concentrano sui tessuti nuovi in accrescimento, ed è per questo che la foglia giovane si arriccia per prima, mentre afidi, aleurodidi e acari vivono sulla pagina inferiore della foglia. Un caso curioso: le formiche tagliafoglie non mangiano la foglia — la tagliano per coltivare il fungo di cui si nutrono, il che le rende un parassita nelle piantagioni e un organismo chiave negli ecosistemi nativi."
+        ],
+        "checklist": [
+          "Fori e lacerazioni = masticatore. Punteggiature, deformazioni e appiccicume = succhiatore.",
+          "La fumaggine cresce sulla melata: tratta l'insetto, non la macchia.",
+          "Controlla sempre la pagina inferiore della foglia.",
+          "Una foglia giovane arricciata indica un succhiatore, non la sete.",
+          "Non tutte le coccinelle sono alleate: una linea è fitofaga e mangia le foglie."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "È qui che vive quasi tutto il rischio fisico della fauna presente nell'app — e non arriva dai parassiti delle colture. I bruchi urticanti hanno peli cavi a forma di aculeo collegati a sacche di veleno, che perforano la pelle e rilasciano la tossina; i sintomi vanno dal prurito lieve al dolore, gonfiore, vesciche, dermatite e persino disturbi intestinali. Primo soccorso: applica e stacca ripetutamente del nastro adesivo per estrarre gli aculei spezzati, lava con acqua tiepida e sapone, applica subito una borsa del ghiaccio per prevenire il gonfiore e ridurre il dolore, e rivolgiti a un medico in caso di reazione grave. In Brasile il bruco del genere Lonomia provoca un quadro emorragico e minaccia sia le popolazioni rurali sia quelle urbane; la sorveglianza nel Paraná ha registrato 199 casi e cinque decessi tra il 1989 e il 2000, con il siero decentrato in punti strategici. La maggior parte degli incidenti nasce dallo sfiorare il fogliame durante i lavori in giardino, non da un animale aggressivo: il bruco colorato e peloso si ammira da lontano.",
+          "Il triatoma, che trasmette la malattia di Chagas, ha un protocollo ufficiale tutto suo quando lo trovi: non schiacciarlo, non stringerlo e non danneggiare l'insetto; proteggi la mano con un guanto o un sacchetto di plastica; metti l'insetto, preferibilmente vivo, in un contenitore di plastica con tappo a vite; e portalo a un punto informativo sui triatomini. La trasmissione vettoriale avviene quando le feci dell'insetto raggiungono la ferita della puntura, e c'è anche la trasmissione per ingestione di cibi o bevande contaminati. La prevenzione domestica significa zanzariere a porte e finestre, repellente e maniche lunghe di notte."
+        ],
+        "checklist": [
+          "Non toccare né scacciare mai un bruco peloso o spinoso.",
+          "Puntura da bruco: nastro adesivo, acqua tiepida e sapone e una borsa del ghiaccio — e cure mediche se peggiora.",
+          "Se trovi un triatoma, non schiacciare l'insetto.",
+          "Raccoglilo con un guanto, in un contenitore con tappo a vite, e portalo alla sorveglianza sanitaria.",
+          "Metti le zanzariere a porte e finestre e indossa maniche lunghe di notte nelle aree a rischio."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "È l'unico gruppo in cui la risposta giusta può essere non fare nulla: l'istruzione di base è monitorare e ispezionare per determinare il tipo di insetto e i livelli di popolazione prima di decidere qualsiasi trattamento. Poi si sale la scala del minor impatto. Un semplice getto d'acqua dal tubo lava via afidi e acari. La raccolta a mano e una trappola artigianale funzionano — metti un quadrato di vecchia tegola o di cartone spesso sotto una pianta di zucca, gli insetti si radunano sotto in cerca di riparo, e a te basta sollevare la trappola ed eliminarli. Anche la fuga fenologica, seminare presto per schivare lo sfarfallamento del parassita, è controllo.",
+          "Solo a quel punto entrano i prodotti: sapone e olio insetticida, che danneggiano meno insetti non bersaglio, pacciamatura riflettente contro l'aleurodide, Bacillus thuringiensis per i bruchi giovani, e la chimica per ultima, sempre irrorata di sera per ridurre l'impatto sugli insetti impollinatori. I servizi extension preferiscono lo spinosad ai piretroidi e ai neonicotinoidi proprio per risparmiare vespe parassite, tachinidi e carabidi. Le barriere fisiche sono il controllo più sottovalutato in assoluto, a una condizione: il tessuto di copertura va tolto alla fioritura, altrimenti blocca l'impollinatore insieme al parassita. E registra bene ciò che hai visto — fotografare con un oggetto di riferimento accanto all'insetto, annotare la data, la pianta e la parte su cui l'insetto si stava nutrendo rende qualsiasi diagnosi molto più affidabile."
+        ],
+        "checklist": [
+          "Monitora e conta prima di trattare.",
+          "Comincia con un getto d'acqua, la raccolta a mano e una trappola artigianale.",
+          "Preferisci sapone, olio o spinosad agli insetticidi ad ampio spettro.",
+          "Togli il tessuto di copertura alla fioritura.",
+          "Irrora sempre di sera, quando gli impollinatori sono inattivi."
+        ]
+      }
+    }
+  },
+  "decomposerFungus": {
+    "label": "Funghi decompositori",
+    "topics": {
+      "role": {
+        "advice": [
+          "Sono funghi saprotrofi: vivono di materia organica morta. I funghi che producono questi corpi fruttiferi sono utili, perché decompongono la sostanza organica nel terreno, rendendo i nutrienti disponibili ad altre piante. Un fungo nel prato non è quasi mai una malattia — sono organismi fungini presenti in natura che fanno esattamente ciò che la natura ha previsto: demolire materiale un tempo vivo per riciclarne l'energia nel suolo. Un cerchio delle streghe è un segno di fertilità, non un parassita: la demolizione libera azoto, l'erba lo assorbe e scurisce, ed è questo a disegnare il cerchio verde intenso. Nemmeno raccogliere il fungo uccide l'organismo: il corpo fruttifero è effimero, e l'organismo è il micelio nel substrato.",
+          "Su un albero vivo, però, il segnale è serio. Funghi o mensole sul tronco o al piede sono avvertimenti, e molti alberi vecchi che cadono durante un temporale hanno già visto la propria resistenza ridotta drasticamente, o addirittura annullata, dai funghi della carie. La perdita di resistenza è difficile da rilevare per un dilettante e persino da valutare per un professionista — il che significa chiamare qualcuno formato nel rilevamento e nella valutazione della carie. Nella pacciamatura, il fungo cannone, i funghi a nido d'uccello e le vesce sono decompositori innocui, e le masse gelatinose dai colori vivaci, gialle o arancioni, sono mixomiceti, che non sono nemmeno funghi veri e non danneggiano le piante."
+        ],
+        "checklist": [
+          "Un fungo nel prato è sostanza organica che viene riciclata, non una malattia.",
+          "Un cerchio delle streghe verde intenso mostra azoto liberato, non un parassita.",
+          "Un fungo o una mensola sul tronco o al piede è un avvertimento strutturale.",
+          "Raccogliere i funghi non elimina l'organismo, solo il corpo fruttifero.",
+          "Una massa gelatinosa gialla nella pacciamatura è un mixomicete e non attacca le piante."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "Non mangiare mai un fungo selvatico senza un'identificazione di persona da parte di un esperto. Molte specie sono velenose, e solo un esperto sa distinguere tra specie commestibili e velenose. La cottura non risolve: le amanitine sono termostabili e non vengono inattivate dalla cottura, e ci sono casi documentati di avvelenamento per aver respirato i vapori di cottura. Una guida da campo di un'altra regione non è trasferibile — imparare a identificare i funghi in una parte del Paese, o in un altro Paese, non è affidabile per identificare i funghi di un'altra zona. Il sintomo tardivo è quello pericoloso: nei casi documentati, nausea, vomito e diarrea sono comparsi circa nove ore dopo l'ingestione, e un vomito che inizia dopo più di sei ore è un segno di gravità, non di indigestione.",
+          "Toccarli non avvelena — il rischio documentato è l'ingestione e, in secondo luogo, l'inalazione dei vapori di cottura. Anche così, lavati le mani e tienile lontane dalla bocca. Togli i funghi dai prati frequentati da bambini o animali domestici, perché i bambini piccoli tendono a mettere in bocca qualsiasi cosa, funghi compresi: in una revisione statunitense sul periodo 2016-2018, il 25,9% dei pazienti aveva cinque anni o meno. Se qualcuno ne ha mangiato uno, chiama subito il centro antiveleni — negli Stati Uniti, 1-800-222-1222; in Brasile, CIATox / Disque-Intoxicação 0800 722 6001. E una frase conta più di ogni altra in questo manuale: un'app di identificazione non sostituisce un esperto."
+        ],
+        "checklist": [
+          "Non mangiare un fungo selvatico senza l'identificazione di persona di un esperto.",
+          "Cottura, essiccazione e prove casalinghe non rendono sicuro un fungo velenoso.",
+          "Un vomito che inizia dopo più di sei ore è un segno di gravità.",
+          "Togli i funghi dai prati dove giocano bambini o animali domestici liberi.",
+          "Se qualcuno ne ha mangiato uno, chiama subito il centro antiveleni."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "È l'unico gruppo fungino coltivabile su larga scala, proprio perché ha bisogno solo di substrato morto: shiitake, pleurotus, champignon ed enoki sono tutti saprotrofi, e coltivarli significa imitare legno o paglia in decomposizione. In giardino la gestione è fisica, non chimica — il fungicida non è la risposta. Raccogli i funghi per sicurezza, estrai la sostanza organica sepolta che ne alimenta la crescita, come ceppaie, radici morte, detriti di cantiere e feltro accumulato, e arieggia il terreno per migliorare l'infiltrazione. Quando prepari un prato nuovo, togli prima ceppaie e radici.",
+          "Quando un cerchio delle streghe interferisce davvero, il danno viene dal micelio denso, che può ostacolare il movimento dell'acqua nel terreno — la strada è l'arieggiatura per rompere il feltro fungino, più annaffiature e concimazioni entro le dosi consigliate. Nella pacciamatura, mescolare circa il 40% di substrato esausto da fungaia contiene il fungo cannone, perché introduce microbi concorrenti; i funghi a nido d'uccello e i mixomiceti non richiedono altra gestione che un colpo di rastrello. Per un albero la prevenzione è l'unica vera difesa, perché un albero con la carie non si può salvare: innaffialo bene in siccità, arieggia il terreno, mantieni da 5 a 15 centimetri di pacciamatura organica, concima a lenta cessione, evita di ferirlo o di soffocarne le radici durante i lavori edili, e pota con la tecnica corretta nel momento corretto. E quando fotografi, documenta il cappello, le lamelle o i pori sotto di esso, la base del gambo, il substrato e l'ospite — la base e il substrato sono esattamente ciò che separa le specie letali da quelle commestibili."
+        ],
+        "checklist": [
+          "Non trattare il prato con fungicida per colpa dei funghi.",
+          "Estrai il legno e le radici sepolte che alimentano il fungo.",
+          "Arieggia il terreno per rompere il feltro miceliare di un cerchio delle streghe.",
+          "Un albero con la carie non si cura: si previene, e lo valuta un professionista.",
+          "Quando fotografi, includi la base del gambo e il substrato."
+        ]
+      }
+    }
+  },
+  "mycorrhizalFungus": {
+    "label": "Funghi micorrizici",
+    "topics": {
+      "role": {
+        "advice": [
+          "Qui il fungo è solo la punta visibile di una collaborazione sotterranea con le radici delle piante. Si stima che dall'80% al 90% di tutta la vita vegetale sia coinvolta in almeno uno dei sette tipi di micorriza — il che fa di questa la norma del regno vegetale, non l'eccezione. Il fungo non fotosintetizza e non riesce a fissare il proprio carbonio, quindi riceve dalla pianta ospite tutti i carboidrati che gli servono e restituisce acqua e nutrienti minerali: maggiore assorbimento di fosforo, ammonio e zinco, protezione dalle malattie che vivono nel terreno e più tolleranza alla siccità e alla temperatura. Il vantaggio è geometrico più che chimico — le radici occupano solo lo 0,5% circa del volume dello strato superficiale del suolo, e un'ifa, essendo molto più sottile, entra in contatto con molto più terreno a parità di volume.",
+          "Esistono due tipi pratici. Le ectomicorrize formano un manicotto sulla radice e sono quelle che producono funghi visibili; le micorrize arbuscolari crescono dentro la radice e non producono alcun fungo, solo spore nel terreno. Le orchidee dipendono dai funghi micorrizici perfino per germinare, e le piante micotrofiche — quelle che non fotosintetizzano abbastanza — ricavano il proprio carbonio da un albero ospite attraverso un fungo intermediario. Vale la pena tenere a mente una distinzione da campo: un fungo micorrizico spunta dal terreno vicino a un albero vivo e indica che l'albero è vivo e connesso, mentre una mensola da carie spunta dal tronco o dal piede ed è un avvertimento di rischio strutturale."
+        ],
+        "checklist": [
+          "I funghi micorrizici spuntano dal terreno vicino a un albero vivo; le mensole da carie spuntano dal tronco.",
+          "Il fungo non sta mangiando l'albero: scambia carboidrati con acqua e minerali.",
+          "Un fungo micorrizico indica un suolo affermato e indisturbato.",
+          "Le micorrize arbuscolari esistono in quasi ogni giardino e sono invisibili.",
+          "Le orchidee native dipendono dal fungo del loro terreno d'origine per germinare."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "Vale la stessa regola ferrea, e qui conta ancora di più: non mangiare mai un fungo selvatico senza un'identificazione di persona da parte di un esperto. Questo gruppo racchiude sia i funghi più pregiati della gastronomia sia i più letali del pianeta — le amanite mortali appartengono a una delle famiglie ectomicorriziche dominanti, esattamente lo stesso vicinato ecologico dei buoni commestibili. La cottura non le neutralizza: le amanitine sono termostabili.",
+          "La confusione tipica è proprio con un commestibile comune, e la familiarità con specie di un'altra regione alza il rischio invece di abbassarlo. La latenza inganna: nausea e vomito a più di sei ore dall'ingestione sono un segno di gravità, non un disturbo qualunque. La regola pratica citata da un servizio sanitario universitario riassume tutto: se non sei sicuro, non mangiarlo. Toccarli non avvelena — il rischio documentato è l'ingestione; lavati le mani e tienile lontane dalla bocca. Se qualcuno ne ha mangiato uno, chiama subito il centro antiveleni: in Brasile, CIATox / Disque-Intoxicação 0800 722 6001; negli Stati Uniti, 1-800-222-1222."
+        ],
+        "checklist": [
+          "Non mangiare un fungo selvatico senza l'identificazione di persona di un esperto.",
+          "Questo gruppo contiene le specie più letali che si conoscano.",
+          "La cottura non inattiva le tossine delle amanite.",
+          "Un sintomo che compare dopo sei ore è un segno di gravità.",
+          "Nel dubbio, non mangiarlo — e chiama il centro antiveleni se qualcuno l'ha già fatto."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Questo gruppo non si può coltivare come i saprotrofi, perché richiede la pianta ospite viva — è la ragione economica per cui porcini, finferli e matsutake si raccolgono invece di coltivarli, e per cui provare a farli crescere su un substrato non funziona. E ne deriva una conseguenza pratica forte: concimare troppo smonta la collaborazione. Le aggiunte di azoto, fosforo o concimi completi riducono la presenza e l'attività dei funghi micorrizici, quindi chi vuole la micorriza concima con parsimonia. Lievi variazioni di pH del terreno, temperatura, contenuto di sostanza organica, fertilità complessiva e umidità possono alterare in modo significativo la colonizzazione.",
+          "Ciò che la preserva è un suolo affermato e indisturbato, uno strato organico integro e l'ospite giusto. Le comunità ectomicorriziche si accumulano nel tempo: gli alberi più giovani hanno una comunità di simbionti fungini ridotta rispetto ai popolamenti maturi. In pratica, la rete micorrizica di un albero adulto è un patrimonio costruito in decenni che cantieri, scotico del terreno e fumigazioni distruggono in un giorno e che nessun sacchetto di prodotto ricompra. E sii scettico proprio verso il sacchetto: le prove scientifiche indipendenti che dimostrino che le inoculazioni micorriziche rendono più efficace l'attecchimento delle piante sono molto limitate, e non sono la panacea miracolosa presentata nelle pubblicità. Non scavare per vedere il micelio, e non trapiantare un'orchidea terrestre nativa o una pianta priva di clorofilla: senza il partner fungino del loro terreno d'origine, muoiono."
+        ],
+        "checklist": [
+          "Concima con parsimonia se vuoi preservare la micorriza.",
+          "Evita la fumigazione del suolo e l'asportazione dello strato superficiale.",
+          "Sii scettico verso gli inoculanti venduti come rimedio miracoloso.",
+          "Non scavare per vedere il micelio: la rete è l'organismo.",
+          "Non trapiantare orchidee native o piante micotrofiche."
+        ]
+      }
+    }
+  },
+  "freshwaterFish": {
+    "label": "Pesci d'acqua dolce",
+    "topics": {
+      "role": {
+        "advice": [
+          "Temperatura e ossigeno disciolto sono il filtro che decide tutto: prima di qualsiasi decisione su un corpo d'acqua si misurano temperatura, pH e ossigeno disciolto, e le morie di pesci per calore eccessivo o mancanza di ossigeno sono l'incidente classico dei laghetti aziendali. La composizione tassonomica cambia da continente a continente — nei Neotropici dominano caracidi e siluriformi, mentre l'Olartica va avanti a ciprinidi, centrarchidi, percidi e salmonidi. La fauna ittica d'acqua dolce neotropicale è la più ricca del pianeta, con circa 71 famiglie e all'incirca seimila specie, di cui 4.475 formalmente descritte.",
+          "Molte specie dipendono da una migrazione riproduttiva obbligata, la piracema: i pesci reofili risalgono il fiume controcorrente per deporre, e lo sforzo fisico è esso stesso parte dell'innesco fisiologico della riproduzione. E le lagune di piana alluvionale non sono pozzanghere, sono vivai — durante la piena il fiume straripa e le collega, uova e larve alla deriva vi si depositano, e quando il fiume cala quei giovani crescono protetti fino alla piena successiva. Alcune famiglie funzionano da termometro della qualità dell'acqua e altre del degrado: i pesci che non tollerano acque calde e torbide indicano acqua di alta qualità, mentre i siluriformi tolleranti alle temperature elevate, all'acqua fangosa e alla scarsità di ossigeno prosperano esattamente dove le specie esigenti se ne sono già andate."
+        ],
+        "checklist": [
+          "In una moria estiva improvvisa, sospetta per prima cosa l'ossigeno disciolto.",
+          "Corrente forte su fondo sassoso indica specie reofile e migratrici.",
+          "Una laguna di piana alluvionale collegata durante la piena è un vivaio, non una pozzanghera.",
+          "La presenza delle sole specie tolleranti suggerisce un sistema degradato o già invaso.",
+          "Un banco che si forma all'inizio della stagione delle piogge può essere l'avvio di una risalita riproduttiva."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "Qui la sicurezza è soprattutto quella dell'animale e della legge. Non liberare mai in un corpo idrico naturale un pesce d'acquario, da laghetto di pesca a pagamento o d'allevamento: il Brasile conta già circa novanta specie ittiche esotiche invasive nelle acque interne, l'acquacoltura è la maggiore fonte di introduzioni — per fughe attraverso gli scarichi, cedimenti delle vasche e pesci che passano dalle maglie delle gabbie — e introdurre qualsiasi specie animale senza un parere tecnico e una licenza dell'organo competente è vietato. Non spostare mai i pesci tra bacini: un pesce catturato può andare in un altro corpo idrico solo se è nativo dello stesso bacino idrografico.",
+          "Rispetta il fermo pesca. Nel Minas Gerais il fermo per la risalita riproduttiva va dal 1° novembre al 28 febbraio, ma le date variano da Stato a Stato e da bacino a bacino, quindi verifica con l'agenzia ambientale locale prima di uscire. Non dare da mangiare ai pesci selvatici — l'alimentazione altera il comportamento naturale di ricerca del cibo e concentra gli animali artificialmente. Non pescare né disturbare i pesci che in primavera stanno sui nidi. E maneggia il meno possibile: rimetti sassi e tronchi esattamente dov'erano."
+        ],
+        "checklist": [
+          "Non liberare mai un pesce d'acquario o d'allevamento in un fiume, in un lago o in uno stagno.",
+          "Non spostare i pesci tra bacini idrografici diversi.",
+          "Controlla il calendario del fermo pesca della tua regione prima di pescare.",
+          "Non dare da mangiare ai pesci selvatici.",
+          "Non disturbare i pesci che sorvegliano i nidi in primavera."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "La dieta naturale cambia con la stagione e racconta la storia dell'ambiente. Il tambaqui mangia frutti e semi durante la piena del fiume e, quando finiscono nella stagione secca, passa allo zooplancton — e disperdendo i semi partecipa alla rigenerazione della foresta amazzonica. Detritivori e raschiatori lavorano la sostanza organica del fondo e il biofilm, formando la base energetica di molti fiumi neotropicali. I piscivori d'agguato occupano il vertice locale della catena e, in uno stagno, sono ciò che impedisce ai pesci foraggio di sovrappopolare.",
+          "In uno stagno o in un allevamento, il mangime va dosato per non degradare la qualità dell'acqua: la razione in eccesso diventa sostanza organica, consuma ossigeno e apre la porta a malattie e morie. Immettere un po' di tutto in nome della diversità dà risultati deludenti, con popolazioni squilibrate e pesci stentati; immettere specie molto prolifiche riempie lo stagno di pesci stentati. Evita le immissioni in piena estate, quando temperatura alta e ossigeno basso indeboliscono i pesci durante il trasporto. E ricorda che le specie d'acqua fredda non sopravvivono all'estate nella maggior parte degli stagni, e funzionano solo come schema di immissione e raccolta prima che arrivi il caldo."
+        ],
+        "checklist": [
+          "Dosa il mangime: l'eccesso diventa sostanza organica e abbassa l'ossigeno.",
+          "Non immettere un po' di ogni specie sperando nella diversità.",
+          "Evita di immettere pesci in piena estate.",
+          "Leggi l'ambiente attraverso l'acqua prima di decidere qualsiasi gestione.",
+          "Fotografa e annota invece di raccogliere."
+        ]
+      }
+    }
+  },
+  "marineFish": {
+    "label": "Pesci marini e di barriera",
+    "topics": {
+      "role": {
+        "advice": [
+          "Un pesce di barriera è una diagnosi della barriera, non solo un residente. Gli erbivori — pesci pappagallo e pesci chirurgo — mangiano le alghe che competono con il corallo e ne riducono la capacità di sopravvivere, crescere e riprodursi. E il gruppo funzionale conta più della specie: i pesci pappagallo hanno becchi potenti che raschiano il substrato mentre mordono le alghe, aprendo spazio all'insediamento di nuovi coralli, mentre i pesci chirurgo brucano solo la parte superiore del feltro algale. L'effetto negativo maggiore delle alghe riguarda l'insediamento e la prima sopravvivenza dei coralli, quindi una barriera che ha già molti coralli adulti di grandi dimensioni può non trarre beneficio immediato da più erbivori, mentre una il cui recupero dipende dal reclutamento nuovo ne trae moltissimo.",
+          "Proteggere gli erbivori non è una soluzione universale: la misura funziona dove esiste davvero un problema di alghe in quel sito, e dove aumenta davvero lo stock di erbivori. Ciò che fotografi legge il posto. Molti pesci farfalla suggeriscono corallo vivo e strutturato lì vicino. L'assenza totale di grandi cernie e lutiani su una barriera strutturata è un forte indizio di pressione di pesca. Un feltro spesso di macroalghe che ricopre il corallo morto, con pochi pesci pappagallo e pesci chirurgo in vista, indica un pascolo insufficiente. E anche quando sono protetti, gli erbivori impiegano diversi anni a riprendersi — la gestione deve essere proattiva, non reattiva."
+        ],
+        "checklist": [
+          "Molti pesci farfalla suggeriscono corallo vivo lì vicino.",
+          "L'assenza di grandi predatori indica pressione di pesca.",
+          "Macroalghe spesse con pochi erbivori indicano un pascolo insufficiente.",
+          "Anche i canali e le chiazze di sabbia tra i coralli sono habitat.",
+          "Annota data e luogo: valgono quanto la foto."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "La regola centrale è non toccare. I coralli sono animali fragili e vengono danneggiati da un tocco, da un colpetto, da una pinneggiata o da una mano appoggiata per tenersi in equilibrio, e molti sono protetti dalla legge. Non toccare nemmeno gli altri animali: lo strato di muco che protegge i pesci e molti invertebrati marini dalle infezioni si stacca facilmente con una mano, un guanto o un piede. L'interazione fisica con mante e squali balena è vietata dai regolamenti in un santuario marino, anche se l'animale sembra gradirla. E il controllo dell'assetto è etica, non tecnica: galleggia sopra la barriera, e se la corrente è forte tieniti alla cima dell'ormeggio, mai alla barriera.",
+          "Non dare da mangiare e non raccogliere. Nutrire i pesci interrompe il comportamento alimentare naturale dei pesci di barriera, attira specie che a quel punto non appartengono e insegna ai pesci a mordere i nuotatori aspettandosi cibo — in alcune giurisdizioni è illegale. Dal santuario non esce nulla, né una conchiglia né un frammento di corallo: le conchiglie che sembrano vuote spesso hanno dentro un animale spaventato, e quelle davvero vuote diventano rifugio per paguri, balani, coralli giovani e spugne. Per la megafauna, le distanze legali di riferimento negli Stati Uniti sono 90 metri dalle balene in generale, 45 dalle tartarughe marine e 45 da foche e leoni marini, con 180 metri per le orche nelle acque interne dello Stato di Washington e 450 per la balena franca nordatlantica, e 30 minuti come tempo massimo di osservazione. Le acque brasiliane seguono regole proprie di ICMBio e IBAMA: considera queste cifre buone pratiche, non legge locale."
+        ],
+        "checklist": [
+          "Non toccare il corallo e non appoggiarti a esso per stabilizzarti.",
+          "Non toccare pesci, razze o tartarughe: il muco protettivo si stacca.",
+          "Non dare da mangiare ai pesci di barriera in nessuna circostanza.",
+          "Non raccogliere conchiglie, frammenti di corallo o qualsiasi souvenir.",
+          "Tieni le distanze dalla megafauna e limita il tempo di osservazione."
+        ]
+      }
+    }
+  },
+  "gardenBird": {
+    "label": "Uccelli di giardino e di città",
+    "topics": {
+      "role": {
+        "advice": [
+          "Sono uccelli che vivono, si nutrono o nidificano in cortili, piazze, parchi urbani, tetti e bordi stradali — sia specie native tolleranti dei paesaggi umani sia esotiche pienamente sinantropiche. Tutta la fauna selvatica ha bisogno di quattro elementi: cibo, acqua, riparo e spazio per riprodursi e allevare i piccoli. In un giardino medio, il primo a mancare di solito è una fonte d'acqua affidabile tutto l'anno — non il cibo.",
+          "Buona parte degli uccelli urbani più visibili è esotica: il piccione domestico è arrivato in Brasile nel Cinquecento con la colonizzazione portoghese ed è trattato oggi come fauna sinantropica, con una normativa sanitaria propria. La strategia ufficiale di controllo urbano attacca i quattro elementi — acqua, cibo, riparo e accesso — cioè l'esatto contrario di ciò che si fa per attirare gli uccelli nativi. Vale la pena aggiungere un principio di progettazione: l'alternanza conta. Per le specie meno mobili, molte piccole macchie di cibo, acqua e riparo funzionano meglio di poche macchie grandi, perché più un animale deve spostarsi, più si espone ai predatori."
+        ],
+        "checklist": [
+          "Di solito la risorsa limitante è l'acqua, non il cibo.",
+          "Distribuisci cibo, acqua e riparo su più macchie piccole.",
+          "Non riordinare troppo il giardino: un albero che muore e una catasta di rami sono riparo.",
+          "Un predominio di piccioni e passeri indica un ambiente fortemente cementificato.",
+          "L'arrivo di frugivori nativi dimostra che le tue piante stanno producendo."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "L'intervento deliberato in questo gruppo è la mangiatoia, e ha un costo sanitario. Tra le malattie che circolano alle mangiatoie ci sono la congiuntivite da micoplasma, la salmonellosi, l'aspergillosi, il vaiolo aviario e l'influenza aviaria. L'igiene non è facoltativa: pulisci le mangiatoie per semi ogni due settimane, e raddoppia la frequenza al minimo sospetto di malattia, usando nove parti d'acqua e una di candeggina. Raschia via gli escrementi visibili prima dell'ammollo, risciacqua bene e asciuga prima di riempire di nuovo. Rastrella da terra escrementi e pule dei semi, soprattutto se ammuffiti o bagnati: così eviti anche di attirare i roditori. E distribuisci più mangiatoie invece di concentrare tutto in una, perché in uno spazio ristretto e con gruppi concentrati le malattie si diffondono più facilmente. La stessa regola di pulizia vale per la vaschetta dell'acqua.",
+          "Quando vedi un uccello malato — occhi rossi, gonfi o con secrezioni, escrescenze verrucose sulle aree senza piume, un uccello magro con il piumaggio arruffato — togli le mangiatoie per un paio di settimane e pulisci tutto, dintorni compresi. Non raccogliere l'animale: solo i veterinari o i centri di recupero autorizzati possono legalmente curare un uccello selvatico. Se compare una malattia a trasmissione oro-fecale, valuta di eliminare le mangiatoie a vassoio, che concentrano di più la contaminazione. Sul campo, usa particolare cautela vicino a nidi attivi, colonie di nidificazione, dormitori e siti di alimentazione importanti, limita l'uso del playback, e fotografa con prudenza e misura. E il principio che scioglie ogni dubbio: in un conflitto di interessi tra gli uccelli e l'osservatore, il benessere degli uccelli viene prima."
+        ],
+        "checklist": [
+          "Pulisci le mangiatoie ogni due settimane, con una parte di candeggina e nove d'acqua.",
+          "Rastrella pule ed escrementi da terra sotto la mangiatoia.",
+          "Distribuisci più mangiatoie invece di concentrare tutto in una.",
+          "Uccello malato: togli le mangiatoie per due settimane e non toccare l'animale.",
+          "Limita il playback e tieni le distanze dai nidi attivi."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Le piante native valgono più di una mangiatoia. L'approccio ideale fornisce quanto più cibo nativo possibile durante tutto l'anno — ghiande, noci, bacche, gemme, frutti, nettare e semi — e l'integrazione con i semi entra in scena solo quando l'offerta naturale scarseggia, soprattutto d'inverno. Dipendere dalla sola mangiatoia è una soluzione fragile: si rompe, tu parti in viaggio, e l'uccello che aveva imparato a contarci resta senza nulla.",
+          "In pratica: metti a disposizione acqua in una vaschetta, una pozza bassa, un sottovaso, una cascatella a ricircolo o perfino un tubo che gocciola, cambiandola spesso con il caldo e mantenendola disponibile con il freddo. Offri ripari di dimensioni e densità diverse — arbusti fitti, tronchi cavi, cataste di sassi e di rami, sempreverdi, erba alta — così ogni specie può scegliere il riparo giusto per nutrirsi, nascondersi, sfuggire al maltempo, corteggiare e nidificare. Offri spazio con alberi maturi, siepi fitte e cassette nido. Se usi una mangiatoia, semi di girasole, semi di niger, miglio proso e mais spezzato sono gli integratori indicati dai servizi extension, e d'estate i colibrì frequentano volentieri gli alimentatori a nettare. E progetta pensando ai gatti: una vaschetta rialzata, con i rami bassi lì attorno potati, elimina il nascondiglio dell'agguato."
+        ],
+        "checklist": [
+          "Pianta specie native che fruttifichino lungo tutto l'anno.",
+          "Usa i semi solo come integrazione nei periodi di scarsità, soprattutto d'inverno.",
+          "Tieni disponibile tutto l'anno una fonte d'acqua affidabile.",
+          "Varia i ripari: arbusti fitti, cataste di rami, sassi, sempreverdi.",
+          "Tieni la vaschetta rialzata e libera da arbusti fitti intorno, per via dei gatti."
+        ]
+      }
+    }
+  },
+  "forestBird": {
+    "label": "Uccelli di foresta e migratori",
+    "topics": {
+      "role": {
+        "advice": [
+          "Sono due popolazioni che si sovrappongono in parte: gli uccelli dipendenti dalla foresta e gli uccelli migratori. Delle 1.971 specie di uccelli registrate in territorio brasiliano, 216 — il 10,9% — compiono qualche forma di migrazione: 141 migratrici e 75 parzialmente migratrici, categoria in cui si sposta solo una parte della popolazione; altre 91 sono accidentali. Circa un terzo delle famiglie di uccelli brasiliani ha almeno una specie migratrice, ma cinque famiglie ne raccolgono più della metà, con 112 specie: i tiranni con 36, i piovanelli con 23, le procellarie e le berte con 22, le tangare con 16 e i gabbiani e le sterne con 15.",
+          "I grandi uccelli frugivori di foresta sono l'infrastruttura della foresta, non il suo ornamento: tucani e cracidi disperdono semi grandi, e la caccia e la frammentazione tolgono di mezzo proprio gli uccelli il cui becco riesce a inghiottirli. La palma juçara, dominante nella Mata Atlântica, ha frutti mangiati da più di 58 specie di uccelli. E foresta conservata a macchie non è la stessa cosa di foresta conservata: la diversità cala quando i frammenti sono discontinui e lontani tra loro, o quando nessuno di essi è abbastanza denso da consentire sopravvivenza e riproduzione."
+        ],
+        "checklist": [
+          "Una comunità fitta di sottobosco indica foresta continua e strutturata.",
+          "La scomparsa di tucani e cracidi indica caccia o frammentazione avanzata.",
+          "Limicoli concentrati su una piana fangosa in stagione di passo indicano un sito di sosta.",
+          "La migrazione non è un sì o un no: esistono migratori parziali e specie accidentali.",
+          "La migrazione altitudinale esiste in Brasile ed è sottovalutata."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "Il playback è l'errore centrale di questo gruppo. Il codice etico del birdwatching invita a limitare l'uso di registrazioni e di altri metodi acustici di richiamo, in particolare nelle zone molto frequentate dai birdwatcher, per le specie localmente rare e per quelle minacciate o in pericolo — e la foresta, dove gli uccelli sono più difficili da vedere, è esattamente il luogo in cui la tentazione è massima.",
+          "Intorno ai nidi comandano tre rischi: il danno accidentale al nido, l'abbandono da parte dei genitori e il richiamo dei predatori. Non fermarti mai più di un minuto vicino a un nido. Visitalo al massimo ogni tre o quattro giorni. Evita le prime ore del mattino, quando la maggior parte delle specie depone e quando uova e nidiacei si raffreddano in fretta se la femmina si allontana; evita il crepuscolo e le ore successive, quando lei torna a passare la notte; evita i primi giorni di incubazione e i giorni in cui i piccoli stanno per involarsi, perché potrebbero saltare fuori prematuramente e a quello stadio la sopravvivenza fuori dal nido è bassa; ed evita il tempo freddo, umido o piovoso. Non lasciare tracce che guidino i predatori, e non calpestare la vegetazione che potrebbe esporre i nidi. Non costringere mai una femmina a lasciare il nido — aspetta qualche minuto per vedere se esce da sola, e torna più tardi se non lo fa. Scrivi i tuoi appunti solo quando sei ben lontano dal nido, e bussa a una cassetta nido prima di aprirla e di nuovo mentre la apri."
+        ],
+        "checklist": [
+          "Limita il playback, soprattutto con specie rare o minacciate.",
+          "Non fermarti mai più di un minuto vicino a un nido.",
+          "Evita di controllare i nidi la mattina presto, al crepuscolo o con il maltempo.",
+          "Non costringere mai una femmina a lasciare il nido.",
+          "Scrivi gli appunti lontano dal nido e non lasciare tracce che portino fin lì."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "L'habitat dice moltissimo. Un sottobosco ombroso in foresta continua indica gruppi poco mobili e molto sensibili all'effetto margine; una volta arborea matura indica uccelli che dipendono da grandi alberi da frutto e da cavità per nidificare; il suolo della foresta indica gruppi molto sensibili alla caccia; e costa, piana fangosa e salina in stagione di passo indicano una sosta di limicoli, un sito estremamente sensibile al disturbo. Gli uccelli migratori dipendono da habitat in aree disgiunte separate da migliaia di chilometri, e alcuni dipendono in modo critico da luoghi che usano per pochi giorni soltanto, per riposare, mutare le penne, alimentarsi e accumulare riserve energetiche.",
+          "Ecco perché la data conta quanto il luogo. Poiché la rotta di andata è di solito diversa da quella di ritorno, e gli uccelli aggiustano la traiettoria in base alle condizioni, le osservazioni datate alimentano direttamente la conoscenza delle rotte — e un'osservazione fuori stagione può essere più informativa di una ordinaria. Registrare un uccello migratore senza una data e una località precise fa perdere proprio il dato più prezioso. Nella pratica di campo, resta sui sentieri, riduci al minimo il disturbo dell'habitat e conserva gli alberi morti in piedi, che sono cavità di nidificazione per molte specie."
+        ],
+        "checklist": [
+          "Registra sempre data e località precise, soprattutto per le specie migratrici.",
+          "Un'osservazione fuori stagione può valere più di dieci ordinarie.",
+          "Resta sui sentieri e riduci al minimo il disturbo dell'habitat.",
+          "Conserva gli alberi morti in piedi: sono siti di nidificazione per molte specie.",
+          "Non dare da mangiare agli uccelli selvatici in foresta o in un sito di sosta migratoria."
+        ]
+      }
+    }
+  },
+  "grainCrop": {
+    "label": "Cereali e colture da granella",
+    "topics": {
+      "soil": {
+        "advice": [
+          "Il concetto centrale della nutrizione qui è la fame nascosta: la maggior parte delle colture comincia a perdere resa molto prima che i sintomi di carenza o di tossicità siano evidenti, e quella perdita senza sintomi è alta. Quando un sintomo compare, indica sempre una fame grave — mai una carenza lieve o moderata. La mobilità dei nutrienti decide quale foglia guardare: i nutrienti mobili come azoto, potassio, fosforo e magnesio mostrano i sintomi prima sulle foglie vecchie, perché la pianta li trasferisce a quelle nuove; i nutrienti immobili come calcio e boro mostrano i sintomi sulle foglie nuove e sull'apice vegetativo.",
+          "Alcuni schemi visivi nel riso servono da riferimento: una necrosi a V rovesciata, che scende dalla punta lungo i margini di una foglia vecchia, indica il potassio; foglie nuove molto strette ed erette con una sfumatura bronzata o violacea in punta indicano il fosforo; un intero campo che ingiallisce all'accestimento e all'iniziazione della pannocchia indica l'azoto; e una carenza che compare a chiazze anziché su tutta l'area è uno schema tipico del potassio. La fitotossicità da erbicida imita la carenza, ma compare subito dopo il trattamento — è quella vicinanza temporale a separare i due casi. Infine, granella e insilato non sono la stessa coltura dal punto di vista del suolo: il fosforo viene traslocato quasi interamente nella granella, seguito dall'azoto, mentre potassio e calcio restano in gran parte nella paglia, quindi nell'insilato, che asporta anche la parte vegetativa, i problemi di fertilità compaiono prima."
+        ],
+        "checklist": [
+          "Non aspettare il sintomo: quando si vede, la perdita è già avvenuta.",
+          "I nutrienti mobili si manifestano sulle foglie vecchie; quelli immobili sulle foglie nuove.",
+          "Diagnostica dall'analisi del terreno e dalla storia dell'appezzamento, mai da una sola foto di una foglia.",
+          "Un danno che compare subito dopo il trattamento è erbicida, non carenza.",
+          "Non usare una raccomandazione per granella su una coltura destinata all'insilato."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Qui la decisione si prende contando, non guardando il calendario, e questo gruppo ha il campionamento standardizzato più economico di tutti. La logica poggia su tre soglie: il livello di equilibrio, il livello di danno economico e il livello di controllo, che sta appena sotto. Per i parassiti del terreno nel mais, usa un campione di suolo di trenta per trenta centimetri e quindici di profondità, setacciato — per l'elateride, due o più insetti per campione richiedono già il controllo, e una media di uno per campione provoca già un danno significativo. Per lo spodottero, campiona il numero di piante attaccate in cinque punti a caso entro un ettaro: negli appezzamenti con un potenziale di almeno cento sacchi, il 10% di piante con sintomi iniziali indica già la necessità di controllo, e lo stadio più sensibile è quello delle otto-dieci foglie. Il primo segnale sono le larve che raschiano le foglie lasciando finestrelle trasparenti.",
+          "Nella soia il metodo è il telo di battitura: un telo preferibilmente bianco, lungo un metro, teso tra due file; scuoti energicamente una fila sopra di esso e conta adulti e giovani, ogni settimana durante il periodo critico. Il minimo è sei campioni fino a dieci ettari, otto fino a trenta e dieci fino a cento, dividendo le superfici maggiori in blocchi da cento ettari. Campiona i parassiti del terreno prima della semina, perché le misure prese a coltura già insediata sono inefficienti. Conta le neanidi insieme agli adulti: le cimici dal terzo al quinto stadio provocano un danno simile e costituiscono la maggior parte della popolazione nel periodo riproduttivo, con una soglia d'intervento di due cimici per metro lineare di fila per la granella e una per il seme. Campiona nelle ore più fresche della giornata, perché le cimici sono rapide e con il caldo scappano. Il ritorno è misurato: su 196 unità di riferimento nel Paraná nella campagna 2017/2018, la difesa integrata ha ridotto le applicazioni di insetticida di oltre il 43% mantenendo una resa equivalente. Scegli il prodotto anche in base alla selettività verso i nemici naturali, oltre che per costo e tossicità, segui sempre le registrazioni MAPA in vigore, e tratta il seme solo dove esiste uno storico del problema, mai come routine cieca."
+        ],
+        "checklist": [
+          "Conta prima di irrorare: la decisione si prende per soglia, non per calendario.",
+          "Mais: il 10% di piante con foglie raschiate richiede già il controllo.",
+          "Soia: un minimo di dieci campioni con il telo di battitura fino a cento ettari.",
+          "Campiona i parassiti del terreno prima della semina.",
+          "Conta le neanidi insieme agli adulti, e campiona nelle ore più fresche della giornata."
+        ]
+      }
+    }
+  },
+  "vegCrop": {
+    "label": "Colture orticole e frutticole",
+    "topics": {
+      "watering": {
+        "advice": [
+          "Qui l'acqua è gestione fine, non un'annaffiatura quando te ne ricordi: esiste un limite di tensione del terreno misurato in kPa, e cambia a seconda del sistema d'irrigazione. Nella melanzana si irriga quando il tensiometro segna da 30 a 50 kPa con aspersione o solco, oppure da 10 a 15 kPa a goccia, usando l'estremità bassa dell'intervallo negli stadi più critici, nei terreni sabbiosi e in condizioni di forte domanda evaporativa. Il sensore va posto al 50% della profondità radicale effettiva e a dieci-venti centimetri dalla pianta, dove per profondità effettiva si intende quella in cui si concentra circa l'80% delle radici.",
+          "L'acqua in eccesso è dannosa quanto la carenza: spinge una crescita vegetativa eccessiva, ostacola fioritura e allegagione, favorisce le malattie del terreno per via della scarsa aerazione e dilava i nutrienti. La carenza pesa soprattutto in fioritura e fruttificazione, facendo abortire fiori e frutti, riducendo l'accrescimento dei frutti e producendo difetti qualitativi — frutti deformi e irregolari, marciume apicale e sapore amaro. Foglie appassite a fine mattinata sono un segnale grossolano ma utile che l'irrigazione è in ritardo. E la scelta del sistema è una decisione fitosanitaria, non solo idraulica: solco e goccia riducono le malattie fogliari perché non bagnano la vegetazione, ma contro la tignola del pomodoro l'aspersione è un vantaggio, perché abbatte uova, larve e pupe. La decisione dipende dal problema che domina la tua zona."
+        ],
+        "checklist": [
+          "Usa un limite di tensione diverso per la goccia rispetto ad aspersione e solco.",
+          "Installa il sensore al 50% della profondità radicale effettiva e a dieci-venti centimetri dalla pianta.",
+          "Non far mancare l'acqua durante fioritura e fruttificazione.",
+          "L'appassimento a fine mattinata indica un'irrigazione in ritardo.",
+          "Scegli il sistema d'irrigazione in base al problema che domina la tua zona."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "L'eccesso di un nutriente ha sintomi propri e squilibra gli altri. Nella cipolla, l'azoto in eccesso produce piante dal colletto grosso, aumenta la sensibilità alle malattie fogliari e accorcia la conservabilità dopo la raccolta; il potassio in eccesso induce carenza di magnesio e calcio; il fosforo in eccesso induce carenza di zinco e rame. Ecco perché correggere un nutriente senza guardare gli altri di solito crea il problema successivo.",
+          "La mobilità ti dice quale foglia ispezionare: azoto, potassio, fosforo e magnesio compaiono prima sulle foglie vecchie, mentre calcio e zolfo compaiono su quelle nuove — una foglia nuova di cipolla che si piega senza spezzarsi è la firma del calcio. Vale la pena memorizzare due consistenze: una necrosi che compare di colpo, senza clorosi che la preceda, indica zinco, rame o manganese; una necrosi dalla consistenza vellutata è il marchio caratteristico del ferro, distinto da tutti gli altri. Nei terreni brasiliani in condizioni normali, per la cipolla tendono a scarseggiare solo il boro e lo zinco e, in certi casi, il rame. E attenzione al falso positivo: temperature basse, eccesso d'acqua o siccità prolungata possono produrre sintomi molto simili a una carenza di azoto."
+        ],
+        "checklist": [
+          "Non correggere un nutriente senza guardare quelli che squilibra.",
+          "Prima le foglie vecchie: azoto, potassio, fosforo, magnesio. Foglie nuove: calcio, zolfo.",
+          "Una necrosi improvvisa senza clorosi che la preceda suggerisce zinco, rame o manganese.",
+          "Una necrosi dalla consistenza vellutata è il marchio del ferro.",
+          "Freddo, ristagno idrico e siccità imitano tutti la carenza di azoto."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Qui la gestione è colturale e collettiva prima di essere chimica. A livello di campo: adotta la rotazione, distruggi i residui colturali subito dopo la raccolta, tieni l'area libera da infestanti e da altre piante ospiti di insetti e acari, e usa cultivar adatte alla regione. A livello collettivo — ed è questo a rendere diverso il gruppo — i coltivatori devono agire insieme: concentrare la semina di ciascuna micro-regione nella finestra più stretta possibile, usare i mezzi tecnici in modo coordinato perché i problemi comuni vengano affrontati da tutti nello stesso momento, e disinfestare sistematicamente cassette e mezzi di trasporto per ridurre la diffusione dei parassiti tra regioni. Ispeziona regolarmente, con attenzione particolare ai bordi del campo e ai punti più infestati dalle erbe, perché è lì che l'infestazione si concentra.",
+          "In questo gruppo il danno maggiore dei parassiti è di solito indiretto, attraverso i virus. L'aleurodide è noto in Brasile dal 1923 ed è stato trovato su pomodoro e cavolo nel 1993, associato a sintomi da geminivirus, con focolai gravi e perdite fino al 50% della produzione: adulti e neanidi iniettano una sostanza zuccherina e una tossina che lasciano le pareti interne del frutto biancastre e spugnose e favoriscono la fumaggine. Anche il tempismo comanda: contro la piccola tignola i trattamenti vanno iniziati dalla fioritura, con il getto diretto ai bottoni fiorali e ai frutti, perché quando vedi un foro nel frutto la larva è già dentro. E una regola editoriale di sicurezza: non copiare un principio attivo o una dose da nessuna fonte, perché le registrazioni dei fitofarmaci cambiano a ogni stagione — consulta il registro MAPA in vigore."
+        ],
+        "checklist": [
+          "Distruggi i residui colturali subito dopo la raccolta.",
+          "Concentra la semina della micro-regione nella finestra più stretta possibile.",
+          "Disinfesta cassette e veicoli tra un'area e l'altra.",
+          "Ispeziona i bordi del campo, non solo il centro.",
+          "Comincia a trattare alla fioritura, non quando vedi un foro nel frutto."
+        ]
+      }
+    }
+  }
+}

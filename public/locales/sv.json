@@ -3,6 +3,7 @@
     "overview": "Översikt",
     "details": "Detaljer",
     "readMore": "Läs mer",
+    "readLess": "Läs mindre",
     "confidence": "Säkerhet",
     "nativeOrigin": "Naturligt ursprung",
     "save": "Spara i min samling",
@@ -263,7 +264,18 @@
     "fundamentals": "Grundläggande råd",
     "checklistLabel": "Innan du börjar",
     "problemsLabel": "Tecken på problem",
-    "solutionsLabel": "Lösningar"
+    "solutionsLabel": "Lösningar",
+    "lightFullSun": "Full sol",
+    "lightPartial": "Halvskugga",
+    "lightShade": "Skugga",
+    "soilWellDrained": "Väldränerad",
+    "soilSandy": "Sandig",
+    "soilLoam": "Lerjord",
+    "soilAcidic": "Sur",
+    "toxicShort": "Giftig",
+    "rangeIdeal": "Idealiskt",
+    "rangeOk": "Acceptabelt",
+    "rangeBad": "Olämpligt"
   },
   "disease": {
     "overviewSection": "Översikt",

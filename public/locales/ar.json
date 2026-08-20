@@ -3,6 +3,7 @@
     "overview": "نظرة عامة",
     "details": "التفاصيل",
     "readMore": "اقرأ المزيد",
+    "readLess": "عرض أقل",
     "confidence": "مستوى الثقة",
     "nativeOrigin": "الموطن الأصلي",
     "save": "حفظ في مجموعتي",
@@ -263,7 +264,18 @@
     "fundamentals": "نصائح أساسية",
     "checklistLabel": "قبل أن تبدأ",
     "problemsLabel": "علامات المشاكل",
-    "solutionsLabel": "الحلول"
+    "solutionsLabel": "الحلول",
+    "lightFullSun": "شمس كاملة",
+    "lightPartial": "ظل جزئي",
+    "lightShade": "ظل",
+    "soilWellDrained": "جيدة التصريف",
+    "soilSandy": "رملية",
+    "soilLoam": "طميية",
+    "soilAcidic": "حمضية",
+    "toxicShort": "سام",
+    "rangeIdeal": "مثالي",
+    "rangeOk": "مقبول",
+    "rangeBad": "غير مناسب"
   },
   "disease": {
     "overviewSection": "نظرة عامة",

@@ -1,0 +1,857 @@
+{
+  "succulent": {
+    "label": "Suckulenter och kaktusar",
+    "topics": {
+      "watering": {
+        "advice": [
+          "Regeln för den här gruppen är genomvattna och låt torka, inte kalendern. Vattna tills hela rotklumpen är genomdränkt och det rinner ut ur dräneringshålet, töm fatet, och låt sedan substratet torka ut helt innan nästa gång — typiskt varannan till var tredje vecka under växtsäsongen, även om kruka, ljus och temperatur förskjuter det en hel del. Skälet är fysiologiskt: det här är CAM-växter som öppnar sina klyvöppningar på natten och håller dem stängda på dagen. Mellan den ena vattenpulsen och den nästa är det en syresatt rot de behöver, inte en jämn tillförsel.",
+          "Vintern är en verklig vila. Tillväxten sker någonstans mellan 18 och 29 °C, viloperioden mellan 7 och 13 °C, med vattningen nedskuren till ett minimum med några veckors mellanrum — precis nog för att växten inte ska skrumpna. Och när slokandet dyker upp: läs av strukturen innan du sträcker dig efter vattenkannan. Ett skrynkligt men fast blad är törst; ett gult, mjukt, genomskinligt blad är dränkning, och att vattna igen gör bara saken värre, eftersom ruttnade rötter redan har slutat ta upp vatten. Epifytiska skogskaktusar som julkaktus är gruppens undantag: de tar betydligt mer vatten och ska aldrig torka ut helt under vår och sommar."
+        ],
+        "checklist": [
+          "Genomdränk hela rotklumpen tills vattnet rinner ut ur dräneringshålet, och töm sedan fatet.",
+          "Vänta tills substratet är helt torrt innan du vattnar igen.",
+          "Låt aldrig krukan stå i vatten.",
+          "Under vintervilan: vattna minimalt med några veckors mellanrum — precis nog för att motverka skrumpning.",
+          "Skrynkligt men fast blad = för lite vatten. Gult, mjukt, genomskinligt blad = för mycket."
+        ]
+      },
+      "light": {
+        "advice": [
+          "Det här är den enda inomhusgruppen som både tål och kräver direkt sol. Suckulenter vill ha tio timmar eller mer av ljust indirekt ljus, med minst sex till åtta; under det blir de gängliga och bleka — klassisk etiolering. Ökenkaktusar trivs bäst i ett fönster med flera timmars direkt sol om dagen, vilket på våra breddgrader på norra halvklotet betyder ett söderfönster. Tunn, blek tillväxt är ett ljusproblem, och ingen mängd gödsel rättar till det.",
+          "Två förbehåll spelar roll. När du flyttar ut växten på sommaren: acklimatisera den, börja i halvskugga, eftersom stark sol bränner vävnad som bildats inomhus. Och epifytiska kaktusar vill ha ljust men filtrerat ljus — ett öster- eller västerfönster, en tunn gardin — eftersom de bränns i direkt sol."
+        ],
+        "checklist": [
+          "Ge sex till åtta timmars ljus om dagen, och sikta på tio eller mer.",
+          "Ökenkaktus: ett fönster med flera timmars direkt sol.",
+          "Gänglig, blek tillväxt är för lite ljus, inte för lite gödsel.",
+          "När du flyttar ut på sommaren: börja i halvskugga i några dagar.",
+          "Epifytisk kaktus: ljust läge, alltid filtrerat."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "Substratet är till största delen mineraliskt, och källorna är oense om receptet bara för att vara eniga om principen. En universitetsrådgivning rekommenderar en tredjedel organiskt material mot två tredjedelar mineral; en annan ber om lika delar av en torvbaserad blandning och mycket grov sand; RHS arbetar med två delar baskompost mot en del trädgårdsgrus, toppat med grus. Spannet går från ungefär 30% till 67% mineralandel, och det finns av ett enda skäl: att göra den vattenmättade fasen så kort som möjligt. Ju fuktigare din miljö är och ju frikostigare din hand med vattenkannan, desto mer mineral vill du ha.",
+          "En trång kruka är en regel, inte försumlighet: extra substratvolym håller fukt, och röta följer. Plantera om på våren i en kruka som bara är obetydligt större, och vänta flera dagar före den första vattningen. Gödslingen är kvävefattig och nedsatt — halva till en fjärdedel av dosen på förpackningen, var tredje eller fjärde vattning under den aktiva säsongen, och ingenting på vintern. Överskott av kväve ger mjuk vävnad, och mjuk vävnad ruttnar. Hos epifytiska kaktusar vänds receptet upp och ner och det organiska materialet tar över."
+        ],
+        "checklist": [
+          "Blanda in minst en tredjedel mineraliskt material: perlit, grov sand, pimpsten eller grus.",
+          "Använd en kruka som bara är obetydligt större än den nuvarande — utrymme blir röta.",
+          "Plantera om på våren och vänta några dagar före den första vattningen.",
+          "Gödsla med halva eller en fjärdedels dos, och sluta helt på vintern.",
+          "Epifytisk kaktus vänder på receptet: mer organiskt material, mindre mineral."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "Risken här är mekanisk och lätt att gå runt: hantera taggiga arter inlindade i tidningspapper eller med tjocka handskar. Kaktustaggar och de fina glochiderna hos vissa arter går lätt in i huden och kommer ut med svårighet, och ögonblicket med störst exponering är omplanteringen."
+        ],
+        "checklist": [
+          "Hantera taggiga arter med hoprullat tidningspapper eller tjocka handskar.",
+          "Gör i ordning den nya krukan innan du lyfter växten, så att tiden i dina händer blir kortare.",
+          "Håll taggiga exemplar borta från passager och utom räckhåll för små barn."
+        ]
+      }
+    }
+  },
+  "tropicalFoliage": {
+    "label": "Tropiska bladväxter inomhus",
+    "topics": {
+      "watering": {
+        "advice": [
+          "Målet för den här gruppen är ett substrat som är jämnt fuktigt och aldrig blött — varken suckulenternas totala torkcykel eller ormbunkarnas ständiga fukt. För att bedöma det: tryck ner ett finger i substratet till första knogen, torrt vid fingertoppen betyder att det är dags att vattna. Krukans vikt och det ihåliga ljudet av en knoge mot en terrakottakruka fungerar precis lika bra. När du vattnar, häll tills det rinner ut i botten: det sköljer ut överskott av salter och garanterar att krukans nedre två tredjedelar får vatten. Töm sedan fatet — låt aldrig växten stå i vatten.",
+          "Detaljer som gör skillnad här: om substratet har torkat ut ordentligt, vattna två gånger — vattna, vänta ungefär trettio minuter, vattna igen; vattnet ska hålla mellan 17 och 22 °C, aldrig varmt och aldrig iskallt, och aldrig avhärdat vatten, på grund av natriumet och kloriden. Marantaväxter vill ha destillerat vatten eller regnvatten, eftersom fluoriden i kranvatten gör bladkanterna bruna. Och gruppen bär på egna uttalade undantag: dracenor vill ha ytan torr att ta på innan de vattnas, ZZ-växten vattnas en eller två gånger i månaden och bara efter att den har torkat ut helt, och björkfikusen hålls fuktig under aktiv tillväxt och får torka något på vintern."
+        ],
+        "checklist": [
+          "Håll substratet jämnt fuktigt, aldrig vattensjukt.",
+          "Vattna tills det rinner ut i botten, och töm sedan fatet.",
+          "Använd vatten mellan 17 och 22 °C; aldrig avhärdat vatten.",
+          "Marantaväxter och dracenor: föredra destillerat vatten eller regnvatten.",
+          "Mycket torrt substrat: vattna, vänta trettio minuter, vattna igen."
+        ]
+      },
+      "light": {
+        "advice": [
+          "Gruppens ljustolerans är mycket bred, och det är precis där den delar upp sig. Philodendron föredrar indirekt eller gardinfiltrerad sol och tål svagt ljus — den hjärtbladiga klarar mycket svagt ljus — medan de trädformiga typerna vill ha medelstarkt till starkt ljus nära ett fönster. Dracenor växer bäst i ljust indirekt ljus, men flera tål svagt ljus tillräckligt bra för att ha blivit en kontorsstandard. I referenssiffror: svagt ljus ligger runt 800 lux, medel 1 600, ljust 3 000 och direkt 16 000.",
+          "Marantaväxterna är den mest begränsade undergruppen: halvskugga, som mest två till sex timmars direkt sol om dagen, med en uttalad varning för att direkt sol bränner bladet. Värt att komma ihåg att en monsteras fenestrering — de karaktäristiska hålen — beror på tillräckligt ljus, och att en äkta philodendron gör djupt flikiga blad men utan hål. Väderstrecken här utgår från norra halvklotet, alltså samma förhållanden som i Sverige: söderfönstret är det starkaste och norrfönstret det svagaste."
+        ],
+        "checklist": [
+          "Ljust indirekt ljus är den bästa punkten för nästan hela gruppen.",
+          "Marantaväxter: halvskugga, som mest två till sex timmars direkt sol.",
+          "Torra runda fläckar på bladet pekar på för mycket sol.",
+          "Nedre blad som gulnar med en död växtpunkt: för lite ljus eller för mycket vatten.",
+          "Vill du ha fenestrering på en monstera: höj ljuset innan du ändrar något annat."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "En allmän organisk planteringsjord räcker här — den här gruppen har varken suckulenternas mineralkrav eller ormbunkarnas torvkrav. Det som ändrar tekniken är hållförmågan: torvrika blandningar håller fukt längre, blandningar med bark, sand eller perlit dränerar snabbare. Välj efter din vattningsvana och husets klimat. En viktig rättelse: ett lager sten i botten av krukan förbättrar inte dräneringen — det tenderar tvärtom att hålla kvar fukt inne i krukan.",
+          "Det finns en verklig motsättning mellan källorna, och det är den försiktiga läsningen som gäller. För dracenor säger en rådgivningstjänst att man ska undvika substrat med hög andel perlit, hålla pH mellan 6.0 och 6.5 och inte använda gödsel som innehåller superfosfat, eftersom dracena är mycket känslig för fluorid; för marantaväxter rekommenderar en annan rådgivningstjänst att man blandar in perlit eller vermikulit, och marantaväxter är också fluoridkänsliga. Någon uttalad förening av de två finns inte: för just de här två, föredra vermikulit eller fin bark framför perlit och använd destillerat vatten eller regnvatten. Gödsla måttligt — bruna, krulliga bladspetsar är ett tecken på för mycket gödsel, och den mycket långsamväxande ZZ-växten behöver bara en eller två givor under en hel säsong."
+        ],
+        "checklist": [
+          "En allmän jordblandning fungerar; justera hållförmågan med bark eller perlit.",
+          "Lägg inte ett lager sten i botten av krukan — det dränerar inte.",
+          "Dracenor och marantaväxter: föredra vermikulit eller fin bark framför perlit.",
+          "Håll dracenans pH mellan 6.0 och 6.5 och undvik superfosfat.",
+          "Bruna krulliga spetsar: dra ner på gödslingen innan du ändrar något annat."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "Det här är den krukväxtgrupp som bär den mest koncentrerade förgiftningsrisken, och orsaken är kalciumoxalat. Alla delar av en philodendron är giftiga om de äts: kristallerna orsakar sveda och irritation i mun, läppar och tunga, kraftig salivering, kräkningar och svårigheter att svälja. ZZ-växten klassas som inte säker för husdjur. Saven från marantaväxter kan ge hudirritation. Ingen av de här växterna är farlig bara för att man äger den — risken ligger i förtäring och långvarig kontakt med saven, så behandla beskärning och omplantering som jobb med handskar på och handtvätt efteråt.",
+          "Det finns en mindre men verklig fysisk risk: upprättväxande philodendronarter har spröda bladskaft som knäcks lätt, så det lönar sig att hålla dem borta från passager. Och en iakttagelse som besparar dig en skräck: svarta märken på ZZ-växtens stjälk är normala och tyder på frisk tillväxt, inte på sjukdom."
+        ],
+        "checklist": [
+          "Håll de här växterna utom räckhåll för små barn och husdjur.",
+          "Använd handskar när du beskär eller planterar om, och tvätta händerna efteråt.",
+          "Lämna inte nedfallna blad där växtätande djur kan nå dem.",
+          "Håll upprättväxande typer borta från passager: bladskaften bryts lätt.",
+          "Svarta märken på en ZZ-växts stjälk är normala, inte sjukdom."
+        ]
+      }
+    }
+  },
+  "fern": {
+    "label": "Ormbunkar och skuggväxter",
+    "topics": {
+      "watering": {
+        "advice": [
+          "Målet är jord som är nätt och jämnt fuktig hela tiden, som aldrig torkar ut helt och aldrig lämnas stående i vatten i fatet. Det dyraste tankefelet i den här gruppen är att förväxla jämn fukt med en permanent blöt kruka: källorna säger, i samma mening, att substratet måste hålla fukt och dränera snabbt, eftersom roten fortfarande behöver syre. Rotröta uppträder i en ormbunke precis som den gör i en kaktus, bara med långt mindre vatten. Och felsignalen är tvetydig åt båda hållen — småbladen faller av både av för mycket vatten och av för lite.",
+          "Luftfuktigheten är den begränsande faktorn för den här gruppen, inte en bekvämlighet: det praktiska målet ligger mellan 30% och 50%, och runt 50% för arter med finflikiga blad som venushår. Bruna spetsar på en ormbunke är i första hand en diagnos på torr luft — inte på torrt substrat — och att vattna mer leder till röta utan att åtgärda symtomet. Metoderna, i ordning efter robusthet: dubbelkruka med fuktig vitmossa, ett fat med småsten och ungefär sex millimeter vatten där krukan inte rör vattnet, en luftfuktare, ett terrarium eller badrummet för de känsligaste arterna, och först därefter tillfällig lätt duschning. Byt eller skölj gruset i fatet var tredje månad."
+        ],
+        "checklist": [
+          "Håll substratet nätt och jämnt fuktigt och låt det aldrig torka ut helt.",
+          "Låt inte vatten bli stående i fatet: det är den raka vägen till rotröta.",
+          "Bruna spetsar betyder låg luftfuktighet — behandla luften, vattna inte mer.",
+          "Föredra dubbelkruka med vitmossa eller ett fat med småsten framför duschning.",
+          "Skölj eller byt gruset i fatet var tredje månad."
+        ]
+      },
+      "light": {
+        "advice": [
+          "Måttligt indirekt ljus är idealet, med växten nära ett svalt fönster — ett norrfönster på våra breddgrader — eller ett österfönster. Ett direkt, hett fönster skadar bladverket; är det ditt enda alternativ, använd en tunn gardin för att dämpa intensiteten. I siffror ligger målbandet på svagt till medelstarkt ljus, mellan 800 och 1 600 lux.",
+          "Det finns verklig variation inom gruppen: vissa arter tål svagt ljus och andra vill ha ljust indirekt eller filtrerad sol, så håll ögonen på din egen växt snarare än att tillämpa en enda siffra. Solskadat bladverk har nästan alltid en uppenbar orsak — ett direkt, hett fönster — och lösningen är helt enkelt att flytta växten eller filtrera ljuset."
+        ],
+        "checklist": [
+          "Föredra husets svala fönster, eller ett i österläge.",
+          "Undvik direkt sol från ett hett fönster; använd en tunn gardin om det inte finns något alternativ.",
+          "Sikta på bandet svagt till medelstarkt, mellan 800 och 1 600 lux.",
+          "Bränt bladverk är ett tecken på direkt sol, inte på törst."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "Substratet här måste göra två saker samtidigt: hålla fukt och dränera snabbt. Ett belagt recept är lika delar av en kommersiell krukväxtjord och torv eller lövkompost, med det uttalade kravet att det ska dränera snabbt för att förhindra rotröta. Ett annat kombinerar torv eller vitmossa för hållförmågan, sand eller grus för dräneringen och steriliserad lerjord, med tillsats av dolomitkalk och benmjöl. Det är den exakta motsatsen till suckulenterna: här dominerar den organiska andelen, och dräneringen kommer från det grova materialet snarare än från en mineralandel. Och återigen: ett lager sten i botten av krukan dränerar inte.",
+          "Gödslingen är den mest återhållsamma av alla krukväxtgrupper: en gång i månaden under växtsäsongen, med ungefär halva den rekommenderade dosen, ingenting på vintern — och ingenting under sex månader efter delning eller omplantering. Ingen annan inomhusgrupp har en så lång karens, och skälet är rakt på sak: ormbunkar får brända blad när de övergödslas. En kemisk varning är specifik för den här gruppen: bekämpningssprayer skadar många ormbunkar, så läs etiketten noga och testa medlet på en liten yta först. Mot skadedjur, föredra mekaniska metoder som en kraftig vattenstråle."
+        ],
+        "checklist": [
+          "Använd ett substrat som håller fukt och ändå dränerar snabbt.",
+          "Gödsla med halv styrka, en gång i månaden under växtsäsongen.",
+          "Gödsla inte på vintern, och inte under sex månader efter delning eller omplantering.",
+          "Testa varje spray på ett enda blad innan du behandlar hela växten.",
+          "Plantera om och dela tidigt på våren, och håll luftfuktigheten hög i veckorna efteråt."
+        ]
+      }
+    }
+  },
+  "fruitVeg": {
+    "label": "Fruktträd och grönsaker",
+    "topics": {
+      "watering": {
+        "advice": [
+          "Här mäts vattningen som ett veckodjup och har definierade fenologiska fönster. De flesta grönsaker vill ha 25 till 50 millimeter i veckan — med tydliga toppar: sockermajs vill ha ungefär 4 till 6 centimeter under vippning, silketrådning och kolvfyllnad; bönor vill ha 2,5 till 4 centimeter under blomning och baljfyllnad. Spannet är ett intervall, inte en fast siffra — ett torrt klimat trycker upp det, ett fuktigt ner. På mullrik mojord tränger 2,5 centimeter vatten ner ungefär 15 centimeter i profilen, vilket låter dig räkna: att blöta trettio centimeter tar ungefär 5 centimeter tillförd vattenmängd.",
+          "Ytlig vattning är här inte bara mindre effektiv: den avbryter kalciumtransporten. Kalcium rör sig med transpirationsströmmen och flyttas inte om från gammal vävnad till ny frukt, så cykler av torka och dränkning ger pistillröta även med gott om kalcium i jorden. Tomater är mycket känsliga för oregelbunden vattning och svarar med pistillröta och sprickor; paprika svarar med blomfall; en gurka som stressas i den reproduktiva fasen ger beska, missformade frukter. Sandjord vill ha kortare och tätare vattning; lerjord vill ha glesare och djupare."
+        ],
+        "checklist": [
+          "Arbeta med ett band på 25 till 50 millimeter i veckan, där regn och bevattning räknas ihop.",
+          "Missa inte blomning och fruktfyllnad: det är fönstret som kostar skörden.",
+          "Föredra djup vattning med mellanrum framför korta dagliga.",
+          "Pistillröta åtgärdas genom att reglera vattningen, inte genom att spruta kalcium.",
+          "Anpassa efter jorden: sandjord vill ha mer frekvens, lerjord mer djup."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "Det här är den enda gruppen vars skörd tar ut näring ur systemet varje enskilt år, och nästan varje skillnad i skötsel följer av det. Gödslingen är återkommande och uppdelad i kompletteringsgivor, med förhållandet som ändras under cykeln — i frilandstomat börjar till exempel kompletteringsgivan rikare på fosfor och höjer kaliumet när plantan går in i produktion. Överskott av kväve har en verklig kostnad: fikon som aldrig mognar, och överdriven skottillväxt under tidig blomning och fruktsättning, vilket är en av de största bidragsgivarna till pistillröta i tomat och paprika.",
+          "pH är avgörande och varierar mycket inom gruppen. Äpple trivs mellan 5.8 och 6.5, med ny provtagning ungefär vart tredje år; de flesta bladgrönsaker ligger mellan 6.0 och 6.5; och blåbär är det radikala undantaget, som bäst mellan 4.8 och 5.2, och behöver elementärt svavel tillfört minst ett år före plantering. Två regler gäller för allt: håll gödseln minst 15 centimeter från stammen, och tillför den alltid på fuktig jord så att den inte bränner rötterna. Och det här är den enda gruppen med växtföljd efter botanisk familj — grödor i samma familj är mottagliga för samma sjukdomar och insekter, så upprepa inte en familj i samma bädd på tre till fyra år, eller mer om du kan."
+        ],
+        "checklist": [
+          "Gödsla i uppdelade kompletteringsgivor, inte i en enda dos.",
+          "Ta jordprov och korrigera pH för grödan, inte för bädden som helhet.",
+          "Håll gödseln minst 15 centimeter från stammen, alltid på fuktig jord.",
+          "Upprepa inte samma botaniska familj i en bädd på tre till fyra år.",
+          "Överskott av kväve fördröjer mognaden och göder pistillrötan."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Fruktgallring är ett obligatoriskt moment som inte finns i någon annan grupp. En för tung skörd ger små frukter, brutna grenar och växelbärning, eftersom nästan all energi går till frukten när ett träd bär full skörd och lite blir kvar till att anlägga nästa års blommor. Handgallra äpplen inom sex veckor efter full blom, och lämna frukterna ungefär 20 till 25 centimeter från varandra på grenen; päron, plommon och aprikoser ska stå 15 till 20 centimeter isär. Det naturliga junifallet, med frukter kring 1 till 2,5 centimeter i diameter, ersätter inte handgallringen — behåll alltid den största frukten i klasen om den inte är skadad.",
+          "Två moment fullbordar bilden. Beskärningen av ett äppelträd börjar den dag det planteras; att skjuta upp den ger dålig tillväxt och försenad fruktsättning. Och på blåbär är det borttagandet av varenda blomma under första och andra året som låter plantan etablera sig — att avstå två skördar köper de som kommer sedan. På fruktträd, håll fast vid att sluta gödsla i slutet av sommaren, eftersom fruktproduktion och vedmognad konkurrerar om samma assimilat."
+        ],
+        "checklist": [
+          "Gallra frukten inom sex veckor efter full blom.",
+          "Behåll den största frukten i varje klase om den inte är skadad.",
+          "Lita inte på det naturliga fruktfallet: det ersätter inte handgallringen.",
+          "Börja forma kronan redan planteringsåret, inte senare.",
+          "Sluta gödsla fruktträd i slutet av sommaren."
+        ]
+      }
+    }
+  },
+  "flowering": {
+    "label": "Blommande växter och prydnadsväxter",
+    "topics": {
+      "watering": {
+        "advice": [
+          "Vattningen här är ett veckodjup, inte en cykel av dränkning och torka: ettåriga och perenna växter vill ha minst 2,5 till 4 centimeter vatten i veckan, där regn och bevattning räknas ihop, och den bästa tidpunkten är tidigt, så att bladverket torkar snabbt. Hos rosor sägs samma princip på ett annat sätt — djup vattning främjar ett djupt rotsystem, medan tät och lätt vattning får rötterna att bildas för nära markytan.",
+          "Växthälsan hänger på det här mer än man tror. En ros med återkommande svartfläcksjuka har nästan alltid blöta blad i slutet av dagen och stillastående luft omkring sig: morgonsol, en droppslang i stället för en spridare och god luftcirkulation löser mer än någon spray."
+        ],
+        "checklist": [
+          "Ge minst 25 till 40 millimeter vatten i veckan, där regnet räknas med.",
+          "Vattna tidigt, så att bladverket hinner torka före kvällen.",
+          "Föredra djup vattning med mellanrum framför lätt och tät.",
+          "På rosor: blöt jorden och inte bladet."
+        ]
+      },
+      "light": {
+        "advice": [
+          "De flesta ettåriga behöver full sol i minst fyra till sex timmar om dagen för att blomma väl. Rosor begär mer: sex till åtta timmars direkt sol, och morgonsolen betyder särskilt mycket eftersom den torkar bladen och hjälper till att förebygga sjukdom.",
+          "En diagnos lurar många: en slokande perenn utan struktur betyder oftast för lite ljus — inte brist på gödsel. Att gödsla mer rättar inte till det; att flytta växten gör det."
+        ],
+        "checklist": [
+          "Ettåriga: fyra till sex timmars full sol om dagen, som minst.",
+          "Rosor: sex till åtta timmar, med morgonsolen som prioritet.",
+          "En slokande, utbredd perenn behöver flyttas, inte mer gödsel.",
+          "Håll koll på var solen faller under året innan du bestämmer dig för en rabatt."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "Bäddberedningen är djupare här än i en kruka: 15 till 25 centimeter för ettåriga och 20 till 25 för perenner. I lerjord, blanda in minst 5 centimeter komposterad tallbark, kompost eller lövkompost; i sandjord, 5 till 8 centimeter fukthållande organiskt material. pH-målet för perenner är 6.0 till 6.5. Marktäckningen är tunnare här än på vedartade växter: 5 till 8 centimeter för ettåriga och bara 2 till 5 för perenner, med en uttalad varning för alltför tung täckning, eftersom rothalsen på en perenn ruttnar under den.",
+          "Näringsbehovet är mellanliggande och uttalat begränsat: en fullgödsel tillförd vid beredningen och upprepad med ungefär sex veckors mellanrum täcker det. Långt över den vuxna vedartade växten, som behöver nästan ingenting, och klart under det vuxna fruktträdet. Och en viktig rättelse av en utbredd vana: använd inte en fosforrik formula som regel för blomning. Höga fosforgivor ökar inte antalet blommor, och ett kroniskt överskott binder mikronäringsämnen som järn och zink, vilket ger hämmade plantor och gulnande blad — och ett fosforöverskott går ner mycket långsamt, vilket kan ta år. En balanserad gödsel plus ett jordprov är den säkra vägledningen. Tecken på överskott i en kruka: en vit skorpa på kanten, bruna bladspetsar och mörknade rötter."
+        ],
+        "checklist": [
+          "Bered jorden djupt: 15 till 25 centimeter, med inblandat organiskt material.",
+          "Använd bara 2 till 5 centimeter marktäckning på perenner, och håll den borta från rothalsen.",
+          "Gödsla med en balanserad formula, upprepad var sjätte vecka.",
+          "Använd inte en fosforrik formula för att tvinga fram blomning.",
+          "Vit skorpa på krukkanten: skölj igenom med rikligt med vatten eller byt substrat."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Momentet som definierar den här gruppen är att putsa bort överblommat — att ta bort de vissna blommorna. Att avlägsna förblommade blommor får växten att producera fler blommor i stället för att stänga ner sin blomningscykel för säsongen; det är den enda kategorin där borttagandet av fortplantningsorganet ökar den produkt du vill ha. Nyp av dem med fingrarna eller använd en vass sax, och det går bra att ta en bit av stjälken, inte bara blomman. Utöver effekten på blomningen minskar det förekomsten av sjukdom som utvecklas i nedbrytande växtdelar. När du planterar ettåriga: nyp av knoppar och blommor för att främja bättre förgrening; på perenner, klipp ner till marknivå efter blomningen för att locka fram ny bladtillväxt från basen.",
+          "Lökväxterna är spegelbilden: efter blomman är arbetet att ladda om. Ta bort den överblommade blomman så att inga frökapslar bildas, men aldrig bladet — låt bladverket sitta kvar tills det börjar gulna och vissna ner av sig självt, och bind eller fläta det inte, eftersom det minskar ljuset som bladen kan fånga upp och därmed fotosyntesen som fyller nästa års lök. Dela lökar när bladverket har vissnat ner och de är i vila, och separera sidolökarna genom att försiktigt vrida och dra; små delningar kan behöva ett eller två år innan de blommar igen. Och på hösten, överväg att låta fröställningarna stå kvar: de är en näringsrik matresurs för vilda djur vintern igenom."
+        ],
+        "checklist": [
+          "Ta bort överblommade blommor innan de sätter frö.",
+          "Nyp av knopparna när du planterar ettåriga, så att plantan förgrenar sig.",
+          "På lökväxter: klipp blomman men aldrig bladet.",
+          "Bind eller fläta aldrig lökväxternas bladverk.",
+          "Låt några fröställningar stå kvar på hösten, för djurlivet."
+        ]
+      }
+    }
+  },
+  "woody": {
+    "label": "Träd och vedartade buskar",
+    "topics": {
+      "watering": {
+        "advice": [
+          "Det här är den enda gruppen vars etableringstid mäts i år: ungefär ett år per 2,5 centimeter stamdiameter. Ett nyplanterat träd vill ha daglig vattning de första två veckorna, varannan eller var tredje dag från tredje till tolfte veckan, varje vecka fram till den första frosten och varje vecka igen under det andra året. Volymen har en formel: 4 till 6 liter per 2,5 centimeter stamdiameter vid varje vattning, fördelat över hela rotzonen i stället för vid stammen, så att 15 till 20 centimeter jord blöts igenom.",
+          "Djup vattning främjar starka rötter och förbättrar tåligheten mot värme och torka; tät och ytlig vattning bygger ett ytligt, beroende rotsystem — som i en vedartad växt också är det som slits upp i en storm. Det är därför ett nyplanterat träd som slokar trots att det vattnas varje dag oftast vattnas på fel plats, i otillräcklig mängd. Surjordsbuskar som azalea vill ha djup vattning som blöter ner minst 15 till 20 centimeter, och i sandjord kan de behöva vattnas två gånger i veckan under sitt första år."
+        ],
+        "checklist": [
+          "Vattna hela rotzonen, aldrig stammen.",
+          "Ge 4 till 6 liter per 2,5 centimeter stamdiameter varje gång.",
+          "Blöt igenom 15 till 20 centimeter av jordprofilen.",
+          "Räkna med ungefär ett års etablering per 2,5 centimeter stam.",
+          "Föredra djup vattning med mellanrum framför daglig ytlig vattning."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "En vuxen vedartad växt i god jord behöver helt enkelt ingen gödsel: alla växter i en anläggning behöver inte gödslas, och vuxna träd och buskar som växer under gynnsamma jordförhållanden kräver lite eller ingen gödsel alls. Träd i en gödslad gräsmatta hjälper sig redan själva, eftersom deras rötter fångar upp näring som tillförts gräset. När du väl gödslar är taket normerande: långsamverkande kväve med 1 till 2 kilo per 100 kvadratmeter och år, aldrig över 3; snabbverkande med 0,5 till 1 kilo, med ett tak på 2. Givan täcker hela ytan under kronans projektion, från rothalsen ut till grenspetsarna, och alltid på fuktig jord.",
+          "Surjordsbuskarna är den undergrupp som ändrar allt. Azalea och rododendron vill ha ett pH mellan 4.5 och 6.0, är ytligt rotade och skadas lätt av för mycket markfukt; de tar en surgörande gödsel nära förhållandet 2-1-1, tillförd sparsamt på våren och försommaren, och aldrig en kväverik giva sent på hösten, eftersom det fördröjer invintringen. Gula nya blad med gröna nerver antyder ett högt pH som låser järnet — men i sura lerjordar är järnet lättillgängligt, så undersök om jorden är vattensjuk innan du skyller på pH. Marktäckning är både ett verktyg och ett vapen: 5 till 10 centimeter tjockt, hållet 8 till 12 centimeter från stammen på ett ungt träd och 20 till 25 på ett äldre, utdraget ända till droppzonen. Går man längre än så skapas täckvulkanen, som dödar långsamt: luften kan inte tränga in, jorden under töms på syre, den ständiga fukten dödar floemet och rötterna svälts på kolhydrater."
+        ],
+        "checklist": [
+          "Gödsla inte en vuxen vedartad växt i god jord — den behöver det nästan aldrig.",
+          "Om du gödslar: täck hela kronprojektionen och gör det alltid på fuktig jord.",
+          "Surjordsväxter: pH mellan 4.5 och 6.0 och en lätt surgörande giva på våren.",
+          "Håll marktäckningen borta från stammen, i en flat ring.",
+          "5 till 10 centimeter täckmaterial räcker; mer än så är en vulkan."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Beskärning är oåterkallelig och har anatomiska regler. Snittet läggs precis utanför grenkragen — den svullna zonen vid grenens bas som fungerar som en naturlig barriär mot rötsvampar. Grenar över 4 centimeter i diameter kräver trestegsmetoden med tre snitt, så att barken inte slits ner längs stammen. Och ingen sårbalsam: forskningen har visat att sårbalsam och andra beskärningsmedel inte förhindrar röta.",
+          "Tidpunkten avgörs av veden som blommar, inte av kalendern: växter som blommar på fjolårsveden — forsythia, azalea, syren — beskärs direkt efter blomningen, och de som blommar på årets ved beskärs innan tillväxten börjar. En buske som aldrig blommar har nästan alltid beskurits vid fel tidpunkt. Föredra gallring framför avkortning, eftersom gallring främjar tillväxt inne i växten och ger tillbaka ett naturligt växtsätt, medan avkortning förtätar periferin och mörklägger insidan, med återväxten koncentrerad inom 15 till 20 centimeter från snittet. För att föryngra en gammal buske utan att chocka den, använd tredjedelsregeln över tre år. Håll dig till det försiktiga årliga taket på ungefär 25% av den levande kronan, och toppkapa aldrig ett träd: toppkapning tar bort halva den bladbärande kronan eller mer, lämnar sår som inte kan kapslas in och blottar barken för solskållning. Undvik också att beskära under de tio veckorna före traktens första hårda frost."
+        ],
+        "checklist": [
+          "Skär precis utanför grenkragen, aldrig jäms med stammen.",
+          "Använd trestegsmetoden på grenar över 4 centimeter.",
+          "Använd inte sårbalsam: det förhindrar inte röta.",
+          "Växter som blommar på gammal ved beskärs direkt efter blomningen.",
+          "Ta bort som mest ungefär 25% av den levande kronan per år, och toppkapa aldrig ett träd."
+        ]
+      }
+    }
+  },
+  "orchid": {
+    "label": "Orkidéer och epifyter",
+    "topics": {
+      "watering": {
+        "advice": [
+          "Här finns ingen vattningskalender, bara ett torkkriterium: vattna så snart växten har torkat upp, och det finns ingen magisk formel av typen att vattna en kruka på 15 centimeter var sjunde dag. När du vattnar, gör det ordentligt — vatten som rinner fritt ur dräneringshålen i några minuter, tills mediet är helt mättat. Begreppet djup vattning vänds upp och ner i den här gruppen: det finns ingen jordprofil att blöta, bara total mättnad följd av snabb upptorkning. Lätt daglig duschning är motsvarigheten till ytlig vattning i en rabatt: den fuktar ytan, låter fukten ligga kvar på fel ställen och mättar aldrig mediet.",
+          "Vattenkvaliteten betyder mer här än i någon annan grupp, eftersom det utan jord inte finns något katjonbyteskomplex som buffrar salt: använd ljummet vatten, helst regnvatten, och aldrig avhärdat vatten, som bär på mycket natrium. Låt aldrig krukan stå i ett fat. Varje undergrupp har sin metod: tankbromeliaer tar främst upp vatten genom bladen och genom tratten vid basen, som ska hållas full och sköljas ur varje vecka så att mineraler inte koncentreras och dödar bladspetsarna; luftväxter vill ha ett bad på tjugo till trettio minuter en gång i veckan — en till två gånger beroende på om rummet är varmt och torrt eller svalt och fuktigt — och sedan en skakning och en vändning upp och ner för att rinna av; och julkaktusen behöver, när knopparna väl har satts, ett jämnt fuktigt substrat för att inte fälla dem."
+        ],
+        "checklist": [
+          "Vattna när det har torkat upp, inte efter kalendern.",
+          "Mätta mediet tills vattnet rinner fritt i några minuter.",
+          "Använd ljummet vatten, helst regnvatten, och aldrig avhärdat vatten.",
+          "Låt aldrig krukan stå i ett fat med vatten.",
+          "Tankbromelia: håll tratten full och skölj ur den varje vecka."
+        ]
+      },
+      "light": {
+        "advice": [
+          "De flesta orkidéer inomhus vill ha en till fyra timmars direkt sol. Brudorkidéer trivs mellan 19 och 30 °C på dagen och 16 till 19 °C på natten, i ett öster- eller västerfönster, undan sommarsolen och borta från element och drag. Bromeliaer begär tolv till sexton timmars relativt ljust ljus om dagen, och bladen rapporterar tillbaka: långa, tunna och grönare blad betyder för lite ljus; kortare, tjockare och blekare betyder gott om det. Luftväxter vill ha ljust filtrerat ljus, aldrig direkt sol.",
+          "Det finns ett fall där fotoperioden går före intensiteten. Julkaktus och dess släktingar kräver fjorton timmar eller mer av sammanhängande mörker per dygn, med start någon gång i mitten av september på våra breddgrader, i minst sex veckor — och den praktiska varningen är rak: redan två timmars avbrott med ljus hämmar knoppsättningen. En lampa som lämnas tänd i rummet räcker för att stryka årets blomning."
+        ],
+        "checklist": [
+          "Orkidéer inomhus: en till fyra timmars direkt sol.",
+          "Brudorkidé: öster- eller västerfönster, borta från element och drag.",
+          "En bromelia med långa, tunna, mörka blad ber om mer ljus.",
+          "Luftväxt: ljust filtrerat ljus, aldrig direkt sol.",
+          "Julkaktus: sammanhängande mörker på natten i sex veckor för att sätta knopp."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "Det finns ingen jord i den här gruppen, och vanlig planteringsjord dödar: använd aldrig lerbaserad jord eller allroundjord, eftersom den kväver roten med dess velamenlager. Mer än så har substratet ett utgångsdatum, och omplantering är obligatorisk, inte valfri — barken behöver bytas ungefär vartannat år, och redan innan dess är tecknet fysiskt: plantera om när små fragment av mediet börjar spolas ut ur krukan vid vattning. Nedbruten bark blir mindre luftig och mer kompakt, håller kvar vatten längre och får rötterna att ruttna. Det är den enda gruppen där själva substratet är orsaken till en programmerad död.",
+          "Valet mellan bark och vitmossa är ett beslut om miljö, inte om smak: grov bark i ett fuktigt rum eller växthus; en blandning med mer vitmossa och fiber i en torr, solig inomhusmiljö, med glesare vattning och omplantering direkt efter blomningen. En blandning av bark, träkol och perlit är den balanserade kommersiella standarden. Krukan ska vara precis så stor att den rymmer rotsystemet — en för stor kruka håller fukt och skadar orkidérötter. Gödslingen är utspädd av princip: halva styrkan på förpackningen, med lite eller inget urea, varje vecka på sommaren och varannan vecka på hösten och vintern, med givan överhoppad var fjärde vattning för att skölja ut salter. Bromeliaer går ännu svagare, en fjärdedel till en åttondel av styrkan. Och kom ihåg att flera medlemmar i den här gruppen är monokarpiska: en bromelia som långsamt tynar bort efter blomningen fullbordar sin normala cykel, den blir inte sjuk — spara sidoskotten."
+        ],
+        "checklist": [
+          "Plantera aldrig i vanlig jord eller allroundjord.",
+          "Byt barken vartannat år, eller när fragment spolas ut vid vattning.",
+          "Använd en kruka som är måttad exakt efter rotsystemet.",
+          "Gödsla med halv styrka och hoppa över givan var fjärde vattning.",
+          "En bromelia som dör efter blomningen följer den normala cykeln: spara sidoskotten."
+        ]
+      }
+    }
+  },
+  "herb": {
+    "label": "Kryddor och aromatiska örter",
+    "topics": {
+      "watering": {
+        "advice": [
+          "Den här gruppen delar sig i två, och att behandla båda efter samma kalender är det strukturella misstaget. De vedartade medelhavsörterna — rosmarin, timjan, oregano, salvia, lavendel — vill ha gles vattning med verklig upptorkning emellan: deras risk är en vattensjuk rot på vintern, inte torka på sommaren. Rosmarin avskyr att ha blöta rötter, särskilt vintertid, och när den väl har etablerat sig på friland behöver den knappt vattnas alls; i kruka vattnar du under torrperioder men låter aldrig jorden bli vattensjuk.",
+          "Bladörterna — basilika, persilja, mynta, citronmeliss — vill ha motsatsen: en relativt jämn tillgång på markfukt, eftersom vattenstress påskyndar stocklöpningen och gör bladet segt. Vattna på morgonen så att bladverket hinner torka före natten, och undvik att blöta bladen på basilika: använd droppbevattning eller en droppslang i stället för en spridare, eftersom ett blött blad i stillastående luft är en inbjudan till bladmögel."
+        ],
+        "checklist": [
+          "Skilj medelhavsörterna från bladörterna innan du sätter någon vattningsrutin.",
+          "Medelhavsörter: vattna glest och låt jorden torka upp på riktigt mellan gångerna.",
+          "Bladörter: håll fukten jämn för att undvika stocklöpning.",
+          "Vattna på morgonen, aldrig i slutet av dagen.",
+          "På basilika: blöt jorden och inte bladet."
+        ]
+      },
+      "light": {
+        "advice": [
+          "Nästan alla kryddor växer bäst på en plats som är solig i minst sex timmar om dagen — och det är solen som gör den eteriska oljan, vilket betyder att det är solen som gör aromen. Basilika föredrar full sol men växer hyfsat i sex timmars halvsol.",
+          "Undantagen är välkända och värda att respektera: persilja och mynta föredrar halvskugga och tynar i stark full sol. Om din persilja eller mynta kämpar i den soligaste bädden kan det vara precis det som är problemet."
+        ],
+        "checklist": [
+          "Sikta på minst sex timmars sol om dagen för de flesta kryddor.",
+          "Persilja och mynta accepterar, och föredrar ibland, halvskugga.",
+          "Mindre sol betyder mindre eterisk olja och mindre arom.",
+          "Håll några krukor nära köket, för täta skördar."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "Dräneringen är värd mer än bördigheten här, och det här är den enda gruppen där hög bördighet är en förlust: mycket bördiga jordar tenderar att ge frodiga blad som saknar smak. Det allmänna pH-målet är 6 till 7, med måttlig mullhalt. I lerjord, blanda in 5 till 8 centimeter fin tallbark, ärtsingel eller grov kompost ner till 20 till 30 centimeters djup; i sandjord, samma djup med fukthållande material. En upphöjd odlingsbädd med grustäckning är standardpraxis i den här gruppen, inte en lyx.",
+          "Rosmarin i tung jord korrigeras inte — den flyttas, till en upphöjd bädd eller en kruka med upp till 25% trädgårdsgrus räknat på volymen. Rosmarin som växer på friland behöver ingen gödsling alls; den i kruka får en nypa allroundgödsel i granulat sent på våren. Basilika är undantaget som beter sig som en grönsak och tar en avvägd giva vid plantering, påfylld bara om tillväxten stannar av. På koriander håller lätta kvävegivor plantorna frodiga, men källan är tydlig med att man ska undvika benägenheten att övergödsla. Och var försiktig med mynta: plantera den i en kruka utan botten nedsänkt i bädden, eftersom den löper med jordstammar och tar hela utrymmet."
+        ],
+        "checklist": [
+          "Sätt dräneringen först: upphöjd bädd, grus eller fin bark inblandat.",
+          "Håll pH mellan 6 och 7 och bördigheten måttlig.",
+          "En frodig krydda utan smak är ett tecken på för mycket gödsel.",
+          "Rosmarin på friland behöver ingen gödsling.",
+          "Plantera mynta i en kruka utan botten, nedsänkt i bädden."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Skörden har ett fysiologiskt fönster: kryddor ska skördas strax före blomningen, som är när de eteriska oljorna står på topp. Och den har en timme på dygnet — tidig morgon, efter att daggen torkat men innan värmen tar fart. Ingen annan grupp har tiden på dygnet som en kvalitetsvariabel, och en krydda plockad på eftermiddagen har märkbart svagare arom. Aromatiska blommor plockas innan de öppnar sig helt.",
+          "Beskärningen håller här både växtsätt och smak, och varje släkte har sin egen regel. På basilika: nyp av topparna med jämna mellanrum och ta bort blomknopparna så fort de visar sig, annars blir bladet beskt och plantan slutar växa; skörda skottspetsar med ett eller två bladpar och lämna kvar tillräckligt med blad för återväxt. Rosmarin får en lätt putsning varje år när blomningen tonat bort, aldrig ett snitt ner i den gamla veden — utan det blir den gänglig, förvedad och naken vid basen. Salvia tål en hård beskärning tidigt på våren, timjan putsas lätt efter blomningen och lager putsas på sommaren. Mynta kan efter blomningen klippas ända ner till ungefär 5 centimeter från basen för att förnya bladen."
+        ],
+        "checklist": [
+          "Skörda strax före blomningen, när oljan står på topp.",
+          "Skörda tidigt på morgonen, när daggen har torkat.",
+          "På basilika: ta bort blomknopparna så fort de visar sig.",
+          "På rosmarin: putsa lätt efter blomningen och skär aldrig ner i gammal ved.",
+          "Förnya myntan genom att klippa ner tuvan ordentligt efter blomningen."
+        ]
+      }
+    }
+  },
+  "pollinator": {
+    "label": "Pollinerande insekter",
+    "topics": {
+      "role": {
+        "advice": [
+          "Ungefär en tredjedel av maten vi äter beror på pollinerarnas arbete, och det mesta av det arbetet utförs inte av det bi du föreställer dig. Bara i Storbritannien finns det mer än 270 biarter: omkring 26 humlor, över 250 solitärbin och en enda honungsbiart. Nästan alla är solitära — varje hona bygger och förser sitt bo på egen hand och dör innan nästa generation kläcks — och boet är nästan aldrig en kupa: många bygger i bar jord, andra i håligheter i ved, och humlor tar ofta över gångar som gnagare grävt.",
+          "I Brasilien är nyckelgruppen de gaddlösa bina, Meliponini, som hör hemma i tropiska och subtropiska regioner; bara i delstaten Pará beräknas 109 arter vara knutna till grödor som açaí, melon och vattenmelon. Gruppen sträcker sig långt bortom bin: skalbaggar anses vara bland de första insekterna som besökte blommor, blomflugor pollinerar som vuxna medan deras larver äter bladlöss, och fjärilar och nattfjärilar bidrar till tjänsten, även utan den vibrationspollinering som gör bin så effektiva per besök."
+        ],
+        "checklist": [
+          "De flesta bin är solitära och kommer aldrig att bilda ett samhälle.",
+          "En konisk hög med jord i gräsmattan är mynningen på en aktiv bogång.",
+          "Rena runda urklipp i ett blad är bladskärarbin som samlar bomaterial.",
+          "En blomfluga har två vingar; bin och getingar har fyra.",
+          "Inga bladlöss betyder inga blomflugelarver: bytet är också en resurs."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "Den verkliga risken är låg. Att bli stucken i sin egen trädgård är osannolikt så länge bin behandlas med respekt, och solitärbin använder bara gadden i självförsvar, när de hanteras hårdhänt. Gaddlösa bin sticks inte, som namnet säger — vilket gör det här till den säkraste gruppen att studera på nära håll och att hålla hemma. Stickrisken i det här grannskapet är koncentrerad till de sociala getingarna, som mycket riktigt har försvarsgadd vid boet.",
+          "Två förbehåll fullbordar bilden. Larverna hos flera nattfjärilar är brännhåriga, och det är en helt annan historia — kolla gruppen skadeinsekter innan du rör vid någon hårig larv. Och att hålla gaddlösa bin är en reglerad verksamhet, inte en fri: i Pará undantogs till exempel biodlare med upp till 99 samhällen från miljötillstånd men måste ändå registrera sig hos jordbrukets tillsynsmyndighet. Att ta ett vilt bo följer egna regler."
+        ],
+        "checklist": [
+          "Titta utan att hantera: ett solitärbi sticks bara om det kläms.",
+          "Gaddlösa bin sticks inte — den säkraste gruppen för närstudier.",
+          "Håll avstånd till bon av sociala getingar.",
+          "Rör aldrig en hårig larv: risken ligger där, inte hos bina.",
+          "Att hålla inhemska bin kräver registrering hos behörig myndighet."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Mångfald före mängd: börja med åtta till tio inhemska växtarter som täcker vår, sommar och höst, planterade i grupper på minst en meter i diameter. Föredra enkla, öppna blommor med ett enda lager kronblad — fyllda blommor gömmer eller eliminerar pollen och nektar. Låt ogräset i gräsmattan blomma genom att klippa mer sällan, och tillhandahåll vatten, eftersom bin och andra pollinerare ibland behöver dricka. En fältmetod värd att kopiera: iaktta vilka växter som är populära bland pollinerarna i ditt närområde, och odla mer av just dem.",
+          "Boplatser är en resurs. Lämna ytor med väldränerad bar jord i full sol, utan marktäckning, åt marklevande bin, och tolerera de små jordhögarna i gräsmattan i stället för att jämna ut dem. Ett bihotell fungerar med hål på ungefär 2 till 10 millimeter i diameter, med ungefär 2 centimeters mellanrum, 8 till 10 centimeter djupa för de mindre hålen och 13 till 15 för de större, i obehandlat trä, monterat en till två meter upp på en skyddad plats. Och regeln som väger tyngre än alla andra: spruta aldrig på öppna blommor. Undvik bredverkande insektsmedel; måste du behandla, gör det på kvällen, när pollinerarna är mindre aktiva."
+        ],
+        "checklist": [
+          "Plantera åtta till tio inhemska arter som täcker alla tre årstiderna.",
+          "Välj enkla blommor med ett lager kronblad, inte fyllda.",
+          "Lämna fläckar av bar, solig jord åt marklevande bin.",
+          "Erbjud grunt, säkert vatten året runt.",
+          "Spruta aldrig på öppna blommor; måste du behandla, gör det på kvällen."
+        ]
+      }
+    }
+  },
+  "beneficialInsect": {
+    "label": "Rovinsekter och nyttoinsekter",
+    "topics": {
+      "role": {
+        "advice": [
+          "Det här är trädgårdens naturliga fiender: rovdjur, som dödar och äter många byten under sin livstid, och parasitoider, vars larv utvecklas inuti eller på en enda värd och dödar den. Siffrorna är slående — en nyckelpiga kan sätta i sig så mycket som 5 000 bladlöss under sitt liv, jordlöpare kan äta upp till sin egen kroppsvikt varje dag, och en guldögonsländelarv tar mellan 100 och 150 bladlöss. Integrerat växtskydd byggt på naturliga fiender har rapporterats minska sprutfrekvensen med 30% till 40% i olika grödor.",
+          "Livsstadiet ändrar allt, och det är där det vanligaste misstaget bor. Hos guldögonsländor och blomflugor är det bara larven som är rovdjur: den vuxna lever på nektar, pollen och honungsdagg. Med andra ord är den där konstiga lilla varelsen på bladet oftast den allierade, inte skadegöraren. Tre fälttecken är värda att lära sig: en nyckelpigelarv är rödaktig och formad som en alligator; guldögonsländans ägg sitter på hårfina skaft; och en larv som bär på några dussin små vita kokonger på ryggen är redan dödsdömd och kommer att släppa ifrån sig dussintals parasitsteklar — låt den vara precis där den är."
+        ],
+        "checklist": [
+          "Identifiera innan du agerar: många konstiga larver på blad är rovdjur.",
+          "En nyckelpigelarv är rödaktig och formad som en alligator.",
+          "Ägg på hårfina skaft är guldögonsländans ägg, inte en skadegörare.",
+          "En larv med vita kokonger på ryggen är redan parasiterad — kasta den inte.",
+          "En bönsyrsa är ett urskillningslöst rovdjur: den äter pollinerare också."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "Nästan ingenting här sticks. Bland rovdjuren har bara sociala getingar försvarsgadd; bland parasitoiderna bara de rovsteklar som bygger bon i jord eller lera. Brokparasitsteklar och bracksteklar använder sitt långa spröt enbart som äggläggningsrör, och det är inte defensivt.",
+          "Men två familjer bits om man hanterar dem: rovskinnbaggar för in sin snabel och sprutar in matsmältningsenzymer, och rovflugor injicerar neurotoxisk saliv. Plocka inte upp dem. En bönsyrsa fångar med sina griparmar i en blixtsnabb rörelse och bits om man håller i den. Och det finns ett specifikt fall: den invasiva asiatiska nyckelpigan bits på människor, särskilt när den fastnar mellan hud och kläder — den går inte igenom huden och överför ingen sjukdom, men när den störs avger den hemolymfa som permanent kan fläcka väggar, gardiner och heltäckningsmattor, och det finns rapporter om allergiska reaktioner som astma och nässelutslag, där känsligheten är oberoende av personens ålder eller allergibenägenhet. För just den skalbaggen är rekommendationen att täta sprickor och trösklar, inte att spruta i trädgården. Ett aktivt getingbo betraktas på avstånd."
+        ],
+        "checklist": [
+          "Bara sociala getingar och rovsteklar sticks i den här gruppen.",
+          "Plocka inte upp en rovskinnbagge eller en rovfluga.",
+          "En bönsyrsa bits om du håller i den.",
+          "Invasiva nyckelpigor inomhus löses genom att täta springor, inte genom att spruta.",
+          "Betrakta getingbon på avstånd."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Att bevara slår att köpa. Standardrekommendationen är livsmiljö och tolerans, inte utsättning: skydda de här rovdjuren genom att undvika bekämpningsmedel som dödar dem, genom att välja växter som ger dem pollen, nektar och skydd, och genom att hålla myror borta från angripna växter — myror försvarar bladlöss och sköldlöss mot rovdjur i utbyte mot honungsdagg. Växter som rådgivningstjänsterna nämner som föda för de vuxna är dill, fänkål, echinacea, rudbeckia, sidenört och lantana.",
+          "Varje grupp har ett miljökrav. Trollsländor behöver en vattensamling: honan lägger sina ägg genom att nudda ytan och larven utvecklas under vattnet — utan vatten, ingen trollslända. Jordlöparlarver lever i marken med begränsad räckvidd, så att gräva om eller packa jorden tar bort nästa generation. Och att nolla trädgårdens bladlöss tar bort matbasen för nyckelpigor, guldögonsländor, blomflugor och parasitsteklar på en gång: bytet är en resurs, inte ett nödläge. När behandling är oundviklig, föredra såpa, olja eller spinosad framför pyretroider, karbamater och organofosfater, just för att skona parasitsteklar, parasitflugor och jordlöpare."
+        ],
+        "checklist": [
+          "Erbjud nektar- och pollenblommor: de vuxna lever på dem.",
+          "Håll myror borta från angripna växter.",
+          "Lämna rent stillastående vatten om du vill ha trollsländor.",
+          "Gräv inte om och packa inte jord där skalbaggslarver lever.",
+          "Tolerera några bladlöss: utan byten stannar inte rovdjuren."
+        ]
+      }
+    }
+  },
+  "pestInsect": {
+    "label": "Vanliga skadeinsekter",
+    "topics": {
+      "role": {
+        "advice": [
+          "Skadegörare är en etikett som beror på sammanhanget, inte på arten: den beskriver ekonomisk skada eller en hälsorisk på en plats i ett visst ögonblick. Munnens byggnad talar om vilken typ av skada det handlar om — de bitande lämnar tydliga hål i blad, ved eller frukt; de sugande använder ett sugrörsliknande spröt och ger punktmönstrad avfärgning, fläckar, hämmad tillväxt, gulnad, förvridna skott och honungsdagg. Och honungsdagg är ingen sjukdom: det är en sockrig utsöndring, och den svarta beläggningen är sotdagg som växer ovanpå den, svärtar ner och minskar fotosyntesen. Lös sugaren, så följer fläcken med.",
+          "Två nycklar hjälper ute i fält. Förvandlingen avgör vad du faktiskt kommer att hitta: vid ofullständig förvandling är det ägg, nymf och vuxen, där nymfen ser ut som en vinglös vuxen; vid fullständig förvandling är det ägg, larv, puppa och vuxen, och larven kan sakna varje likhet med den vuxna. Och levnadssättet talar om var du ska leta: de sugande koncentrerar sig till ny vävnad i tillväxt, vilket är därför det unga bladet krullar sig först, och bladlöss, mjöllöss och kvalster lever på bladets undersida. Ett kuriöst fall: bladskärarmyror äter inte bladet — de skär det för att odla svampen de lever av, vilket gör dem till skadegörare i planteringar och till en nyckelorganism i inhemska ekosystem."
+        ],
+        "checklist": [
+          "Hål och trasiga kanter = bitande. Punktavfärgning, förvridning och klibbighet = sugande.",
+          "Sotdaggen växer på honungsdagg: behandla insekten, inte fläcken.",
+          "Kontrollera alltid bladets undersida.",
+          "Ett krulligt ungt blad pekar på en sugare, inte på törst.",
+          "Alla nyckelpigor är inte allierade: en linje är växtätande och äter blad."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "Det är här nästan hela den fysiska risken i appens fauna bor — och den kommer inte från skadegörarna i odlingen. Brännhåriga larver har ihåliga, taggliknande hår kopplade till giftsäckar, som tränger genom huden och frisätter giftet; symtomen sträcker sig från mild klåda till smärta, svullnad, blåsbildning, hudinflammation och till och med magbesvär. Första hjälpen: sätt på och dra av tejp om och om igen för att få ut de avbrutna taggarna, tvätta med varmt vatten och tvål, lägg snabbt på en isförpackning för att förhindra svullnad och lindra smärtan, och sök vård vid en kraftig reaktion. I Brasilien orsakar larven av Lonomia en blödningsbild och hotar både landsbygds- och stadsbefolkning; övervakningen i delstaten Paraná registrerade 199 fall och fem dödsfall mellan 1989 och 2000, med serum utplacerat på strategiska punkter. De flesta olyckor kommer av att man snuddar vid bladverk under trädgårdsarbete snarare än av ett aggressivt djur: beundra den färgglada, ludna larven på håll.",
+          "Triatominbaggen, som överför Chagas sjukdom, har ett eget officiellt protokoll när den hittas: krossa, kläm eller skada inte insekten; skydda handen med en handske eller en plastpåse; lägg insekten, helst levande, i en plastburk med skruvlock; och lämna in den till en mottagningsplats för triatominer. Smitta via vektorn sker genom att insektens avföring når bettsåret, och det finns också smitta genom att äta eller dricka något förorenat. Förebyggande i hemmet betyder insektsnät för dörrar och fönster, myggmedel och långärmat på kvällen."
+        ],
+        "checklist": [
+          "Rör aldrig vid och borsta aldrig bort en hårig eller taggig larv.",
+          "Brännskada av larv: tejp, varmt vatten och tvål och en isförpackning — och vård om det förvärras.",
+          "Hittar du en triatominbagge: krossa inte insekten.",
+          "Samla in den med handske, i en burk med skruvlock, och lämna in den till hälsomyndigheten.",
+          "Sätt nät för dörrar och fönster och bär långärmat på kvällen i riskområden."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Det här är den enda gruppen där det rätta svaret kan vara att inte göra någonting: grundinstruktionen är att övervaka och räkna för att fastställa insektstyp och populationsnivå innan man bestämmer sig för någon behandling. Därefter klättrar du på stegen med minst påverkan. Rent vatten ur en slang spolar av bladlöss och kvalster. Handplockning och en hemmagjord fälla fungerar — lägg en liten bit gammal takpapp eller tjock kartong under en pumpaplanta, skadedjuren samlas under den för att söka skydd, och du lyfter helt enkelt fällan och tar bort dem. Fenologisk flykt, att så tidigt för att undvika skadegörarens kläckning, är också kontroll.",
+          "Först därefter kommer preparaten in: såpa och olja mot insekter, som skadar färre icke-målinsekter, reflekterande marktäckning mot mjöllöss, Bacillus thuringiensis mot unga larver, och kemin allra sist, alltid sprutad på kvällen för att minska påverkan på pollinerande insekter. Rådgivningstjänsterna föredrar spinosad framför pyretroider och neonikotinoider, just för att skona parasitsteklar, parasitflugor och jordlöpare. Fysiska barriärer är den mest underskattade kontrollen av alla, med ett villkor: fiberduken måste tas bort vid blomningen, annars stänger den ute pollineraren tillsammans med skadegöraren. Och dokumentera ordentligt det du såg — att fotografera med ett måttföremål bredvid insekten, anteckna datum och vilken växt och vilken del av den insekten åt på, gör varje diagnos långt mer tillförlitlig."
+        ],
+        "checklist": [
+          "Övervaka och räkna innan du behandlar.",
+          "Börja med en vattenstråle, handplockning och en hemmagjord fälla.",
+          "Föredra såpa, olja eller spinosad framför bredverkande insektsmedel.",
+          "Ta bort fiberduken vid blomningen.",
+          "Spruta alltid på kvällen, när pollinerarna är inaktiva."
+        ]
+      }
+    }
+  },
+  "decomposerFungus": {
+    "label": "Nedbrytande svampar",
+    "topics": {
+      "role": {
+        "advice": [
+          "Det här är saprotrofa svampar: de lever på död organisk substans. Svamparna som bildar de här fruktkropparna är nyttiga, eftersom de bryter ner organiskt material i jorden och gör näring tillgänglig för andra växter. En svamp i gräsmattan är nästan aldrig en sjukdom — det är naturligt förekommande svamporganismer som gör precis det naturen tänkt sig, bryter ner en gång levande material för att återföra energin till jorden. En häxring är ett tecken på bördighet, inte på angrepp: nedbrytningen frigör kväve, gräset tar upp det och mörknar, och det är det som ritar den mörkgröna cirkeln. Att plocka svampen dödar heller inte svampen: fruktkroppen är kortlivad, och organismen är mycelet i substratet.",
+          "På ett levande träd är tecknet däremot allvarligt. Svampar eller tickor på stam eller stambas är varningar, och många gamla träd som faller i en storm har redan fått sin hållfasthet kraftigt nedsatt eller helt utraderad av rötsvampar. Förlorad hållfasthet är svår för amatörer att upptäcka, och svår även för yrkesfolk att bedöma — vilket betyder att man ska ringa någon utbildad i att spåra och bedöma röta. I marktäckning är kanonsvamp, brödkorgssvampar och röksvampar ofarliga nedbrytare, och de klargula eller orange slemmiga massorna är slemsvampar, som inte ens är riktiga svampar och inte skadar växter."
+        ],
+        "checklist": [
+          "En svamp i gräsmattan är organiskt material som återvinns, inte en sjukdom.",
+          "En mörkgrön häxring visar frigjort kväve, inte ett angrepp.",
+          "En svamp eller ticka på stammen eller stambasen är en varning om hållfastheten.",
+          "Att plocka svamp tar inte bort svampen, bara fruktkroppen.",
+          "En gul slemmig massa i marktäckningen är en slemsvamp och angriper inte växter."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "Ät aldrig en vild svamp utan artbestämning på plats av en expert. Många arter är giftiga, och bara en expert kan skilja ätliga arter från giftiga. Tillagning löser det inte: amanitinerna är värmestabila och inaktiveras inte av tillagning, och det finns rapporter om förgiftning efter att ha andats in ångorna vid matlagningen. En fältflora från en annan region kan inte överföras — att ha lärt sig känna igen svamp i en del av landet eller i ett annat land är ingen tillförlitlig grund för att artbestämma svamp i ett annat område. Det är det sena symtomet som är det farliga: i dokumenterade fall började illamående, kräkningar och diarré ungefär nio timmar efter förtäring, och kräkningar som sätter in mer än sex timmar efteråt är ett tecken på allvar, inte på magknip.",
+          "Att röra vid svampen förgiftar dig inte — den dokumenterade risken är förtäring och, i andra hand, inandning av ångor vid tillagning. Tvätta ändå händerna och håll dem borta från munnen. Ta bort svamp från gräsmattor där barn eller husdjur rör sig, eftersom små barn stoppar i sig vad som helst, svamp inbegripet: i en amerikansk genomgång av 2016 till 2018 var 25.9% av patienterna fem år eller yngre. Har någon ätit av en svamp, ring giftinformationen omedelbart — i USA 1-800-222-1222, i Brasilien CIATox / Disque-Intoxicação 0800 722 6001. Och en mening väger tyngre än någon annan i den här handboken: en identifieringsapp ersätter inte en expert."
+        ],
+        "checklist": [
+          "Ät inte vild svamp utan artbestämning på plats av en expert.",
+          "Tillagning, torkning och hemmatester gör ingen giftig svamp ofarlig.",
+          "Kräkningar som sätter in mer än sex timmar efteråt är ett tecken på allvar.",
+          "Ta bort svamp från gräsmattor där barn eller lösgående husdjur leker.",
+          "Har någon ätit av en svamp: ring giftinformationen direkt."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Det här är den enda svampgruppen som går att odla i stor skala, just för att den bara behöver dött substrat: shiitake, ostronskivling, champinjon och enokitake är alla saprotrofer, och att odla dem betyder att härma murken ved eller halm. I trädgården är skötseln fysisk snarare än kemisk — fungicid är inte svaret. Plocka bort svamparna för säkerhets skull, gräv upp det begravda organiska materialet som föder tillväxten, som stubbar, döda rötter, byggavfall och samlad gräsfilt, och luft jorden för att förbättra infiltrationen. När du anlägger en gräsmatta: ta bort stubbar och rötter först.",
+          "När en häxring verkligen ställer till besvär kommer skadan från det täta mycelet, som kan hindra vattnet från att röra sig ner i jorden — vägen är luftning för att bryta upp svampmattan, plus vattning och gödsling inom rekommenderade givor. I marktäckning dämpar en inblandning av ungefär 40% använd champinjonkompost kanonsvampen, eftersom den för in konkurrerande mikrober; brödkorgssvampar och slemsvampar behöver ingen åtgärd utöver en kratta. För ett träd är förebyggande det enda verkliga försvaret, eftersom man inte kan rädda ett träd som redan har röta: vattna ordentligt vid torka, luft jorden, håll 5 till 15 centimeter organisk marktäckning, gödsla med långsamverkande medel, undvik att skada eller kväva rötterna vid byggarbeten, och beskär med rätt teknik vid rätt tidpunkt. Och när du fotograferar: dokumentera hatten, skivorna eller porerna under, fotens bas, substratet och värdträdet — basen och substratet är precis det som skiljer dödliga arter från ätliga."
+        ],
+        "checklist": [
+          "Sprid inte fungicid på en gräsmatta för att det växer svamp där.",
+          "Gräv upp den begravda veden och rötterna som föder svampen.",
+          "Luft jorden för att bryta upp häxringens mycelmatta.",
+          "Ett träd med röta behandlas inte: det förebyggs, och bedöms av en fackman.",
+          "När du fotograferar: ha med fotens bas och substratet."
+        ]
+      }
+    }
+  },
+  "mycorrhizalFungus": {
+    "label": "Mykorrhizasvampar",
+    "topics": {
+      "role": {
+        "advice": [
+          "Svampen är här bara den synliga spetsen av ett underjordiskt samarbete med växtrötter. Uppskattningsvis 80% till 90% av allt växtliv anses ingå i minst en av de sju typerna av mykorrhiza — vilket gör det här till växtrikets mönster, inte undantaget. Svampen kan inte fotosyntetisera och kan inte binda eget kol, så den får allt kolhydrat den behöver från värdväxten och lämnar tillbaka vatten och mineralnäring: bättre upptag av fosfor, ammonium och zink, skydd mot jordburna sjukdomar och större tålighet mot torka och temperatur. Fördelen är geometrisk snarare än kemisk — rötterna upptar bara ungefär 0.5% av matjordens volym, och en hyf, som är långt finare, får kontakt med långt mer jord per volymenhet.",
+          "Det finns två praktiska typer. Ektomykorrhiza bildar en mantel på roten och är den som ger synliga fruktkroppar; arbuskulär mykorrhiza växer inne i roten och ger ingen fruktkropp alls, bara sporer i jorden. Orkidéer är beroende av mykorrhizasvampar redan för att gro, och mykotrofa växter — de som inte fotosyntetiserar tillräckligt — får sitt kol från ett värdträd via en förmedlande svamp. En fältskillnad är värd att hålla fast vid: en mykorrhizasvamp skjuter upp ur marken nära ett levande träd och visar att trädet lever och är uppkopplat, medan en rötticka skjuter ut ur stammen eller stambasen och är en varning om hållfastheten."
+        ],
+        "checklist": [
+          "Mykorrhizasvampar skjuter upp ur marken nära ett levande träd; röttickor skjuter ut ur stammen.",
+          "Svampen äter inte trädet: den byter kolhydrat mot vatten och mineraler.",
+          "En mykorrhizasvamp visar på etablerad, ostörd mark.",
+          "Arbuskulär mykorrhiza finns i nästan varje trädgård och är osynlig.",
+          "Inhemska orkidéer behöver svampen i sin ursprungliga jord för att gro."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "Samma hårda regel gäller, och den väger ännu tyngre här: ät aldrig en vild svamp utan artbestämning på plats av en expert. Den här gruppen rymmer både gastronomins mest eftertraktade svampar och planetens dödligaste — de dödliga flugsvamparna hör till en av de dominerande ektomykorrhizabildande familjerna, alltså exakt samma ekologiska grannskap som de fina matsvamparna. Tillagning oskadliggör dem inte: amanitinerna är värmestabila.",
+          "Den typiska förväxlingen sker just med en vanlig matsvamp, och vana vid arter från en annan region höjer risken i stället för att sänka den. Fördröjningen bedrar: illamående och kräkningar mer än sex timmar efter förtäring är ett tecken på allvar, inte på vanligt obehag. Tumregeln som en universitetshälsovård citerar sammanfattar det: är du inte säker, ät den inte. Att röra vid svampen förgiftar dig inte — den dokumenterade risken är förtäring; tvätta händerna och håll dem borta från munnen. Har någon ätit av en svamp, ring giftinformationen omedelbart: i Brasilien CIATox / Disque-Intoxicação 0800 722 6001, i USA 1-800-222-1222."
+        ],
+        "checklist": [
+          "Ät inte vild svamp utan artbestämning på plats av en expert.",
+          "Den här gruppen innehåller de dödligaste arter vi känner till.",
+          "Tillagning inaktiverar inte flugsvampsgifterna.",
+          "Ett symtom som dyker upp efter sex timmar är ett tecken på allvar.",
+          "Är du tveksam: ät den inte — och ring giftinformationen om någon redan gjort det."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Den här gruppen går inte att odla som saprotroferna, eftersom den kräver den levande värdväxten — det är det ekonomiska skälet till att karljohan, kantarell och matsutake plockas i stället för att odlas, och till att försök att driva dem på ett substrat misslyckas. Och det finns en stark praktisk följd: övergödsling monterar ner samarbetet. Tillskott av kväve, fosfor eller fullgödsel minskar mykorrhizasvamparnas närvaro och aktivitet, så den som vill ha mykorrhiza gödslar sparsamt. Små förändringar i markens pH, temperatur, mullhalt, allmänna bördighet och fukt kan påtagligt förändra koloniseringen.",
+          "Det som bevarar den är etablerad, ostörd mark, ett intakt organiskt skikt och rätt värd. Ektomykorrhizasamhällen byggs upp över tid: yngre träd har ett mindre samhälle av svamppartner jämfört med mogna bestånd. I praktiken är ett moget träds mykorrhizanätverk en decennielång tillgång som byggarbeten, avbaning av marken och gasning förstör på en dag och som ingen påse med produkt köper tillbaka. Och var skeptisk mot påsen: det finns mycket begränsad opartisk vetenskaplig evidens för att inympad mykorrhiza gör etableringen av växter mer framgångsrik, och den är inte det mirakelmedel som marknadsföringen utlovar. Gräv inte för att se mycelet, och flytta inte en inhemsk markorkidé eller en klorofyllfri växt: utan svamppartnern från sin ursprungliga jord dör de."
+        ],
+        "checklist": [
+          "Gödsla sparsamt om du vill bevara mykorrhizan.",
+          "Undvik att gasa jorden och att bana av matjordsskiktet.",
+          "Var skeptisk mot ympmedel som säljs som mirakelmedel.",
+          "Gräv inte för att se mycelet: nätverket är organismen.",
+          "Flytta inte inhemska orkidéer eller mykotrofa växter."
+        ]
+      }
+    }
+  },
+  "freshwaterFish": {
+    "label": "Sötvattensfiskar",
+    "topics": {
+      "role": {
+        "advice": [
+          "Temperatur och löst syre är filtret som avgör allt: före varje beslut om en vattensamling mäts temperatur, pH och löst syre, och fiskdöd av för hög värme eller syrebrist är den klassiska olyckan i dammar. Den taxonomiska sammansättningen skiftar från kontinent till kontinent — neotropiska vatten domineras av characiner och malfiskar, medan holarktis går på karpfiskar och elritsor, solabborrar, abborrar och laxfiskar. Den neotropiska sötvattensfaunan är den artrikaste på planeten, med omkring 71 familjer och ungefär sex tusen arter, varav 4 475 är formellt beskrivna.",
+          "Många arter är beroende av en obligatorisk lekvandring, piracema: reofila fiskar simmar uppför floden mot strömmen för att leka, och den fysiska ansträngningen är i sig en del av den fysiologiska utlösaren för fortplantningen. Och svämplanets lagunar är inga pölar, de är barnkammare — vid högvatten svämmar floden över och kopplar ihop dem, driftande ägg och larver hamnar där, och när floden sjunker växer de ungfiskarna upp skyddade fram till nästa översvämning. Vissa familjer fungerar som en termometer på vattenkvalitet och andra på förstörelse: fiskar som inte tål varmt, grumligt vatten visar på vatten av hög kvalitet, medan malfiskar som tål hög temperatur, lerigt vatten och lågt syre frodas precis där de krävande arterna redan försvunnit."
+        ],
+        "checklist": [
+          "Misstänk löst syre först vid en plötslig fiskdöd på sommaren.",
+          "Stark ström över stenig botten visar på reofila och vandrande arter.",
+          "En svämplanslagun som kopplas på vid högvatten är en barnkammare, inte en pöl.",
+          "Bara toleranta arter på plats antyder ett förstört eller redan invaderat system.",
+          "Ett stim som formas i början av regnperioden kan vara början på en lekvandring."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "Här handlar säkerheten mest om djuret och om lagen. Släpp aldrig ut en fisk från akvarium, betalsjö eller odling i ett naturligt vatten: Brasilien har redan noteringar om ett nittiotal invasiva främmande fiskarter i inlandsvatten, vattenbruket är den största källan till introduktioner — genom rymningar via avloppsvatten, trasiga bassänger och fisk som slinker ut genom kassarnas nät — och att introducera någon djurart utan sakkunnigt utlåtande och tillstånd från behörig myndighet är förbjudet. Flytta aldrig fisk mellan avrinningsområden: en fångad fisk får bara gå till ett annat vatten om den är inhemsk i samma avrinningsområde.",
+          "Respektera fredningstiden. I Minas Gerais löper lekvandringsfredningen från 1 november till 28 februari, men datumen varierar mellan delstater och avrinningsområden, så kolla den lokala miljömyndigheten innan du ger dig ut. Mata inte vild fisk — utfodring förändrar det naturliga födosöket och samlar djur på ett konstlat sätt. Fiska inte efter och stör inte fisk som ligger på sina lekgropar på våren. Och hantera så lite som möjligt: lägg tillbaka stenar och stockar exakt där de låg."
+        ],
+        "checklist": [
+          "Släpp aldrig ut akvariefisk eller odlad fisk i en å, sjö eller damm.",
+          "Flytta inte fisk mellan olika avrinningsområden.",
+          "Kolla fredningstiderna där du är innan du fiskar.",
+          "Mata inte vild fisk.",
+          "Stör inte fisk som vaktar lekgropar på våren."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Den naturliga födan skiftar med årstiden och berättar miljöns historia. Tambaquin äter frukt och frön under flodens högvatten och byter, när de tar slut under torrperioden, till djurplankton — och genom att sprida frön deltar den i att återskapa Amazonas skog. Detritusätare och avbetare bearbetar organiskt material och biofilm på botten och bildar energibasen i många neotropiska floder. Fiskätare som jagar från bakhåll intar den lokala toppen av kedjan och är, i en damm, det som hindrar bytesfisken från att bli för talrik.",
+          "I en damm eller en fiskodling måste utfodringen doseras så att den inte försämrar vattenkvaliteten: överbliven foderranson blir organiskt material, förbrukar syre och öppnar dörren för sjukdom och massdöd. Att sätta ut lite av allt för mångfaldens skull ger nedslående resultat, med obalanserade populationer och småvuxna fiskar; att sätta ut mycket produktiva arter fyller dammen med hämmade fiskar. Undvik utsättning i högsommarvärmen, när hög temperatur och lågt syre försvagar fisken under transporten. Och kom ihåg att kallvattenarter inte överlever sommaren i de flesta dammar och bara fungerar som utsättning och skörd innan värmen kommer."
+        ],
+        "checklist": [
+          "Dosera fodret: överskottet blir organiskt material och sänker syret.",
+          "Sätt inte ut lite av varje art i hopp om mångfald.",
+          "Undvik att sätta ut fisk i högsommarvärmen.",
+          "Läs miljön genom vattnet innan du bestämmer dig för någon åtgärd.",
+          "Fotografera och anteckna hellre än att samla in."
+        ]
+      }
+    }
+  },
+  "marineFish": {
+    "label": "Havs- och revfiskar",
+    "topics": {
+      "role": {
+        "advice": [
+          "En revfisk är en diagnos på revet, inte bara en invånare. Växtätarna — papegojfiskar och kirurgfiskar — äter algerna som konkurrerar med korallen och minskar dess förmåga att överleva, växa och föröka sig. Och funktionell grupp betyder mer än art: papegojfiskar har kraftiga näbbar som skrapar underlaget när de biter av algerna och öppnar plats för nya koraller att slå sig ner, medan kirurgfiskar bara betar av algmattans övre del. Algernas största negativa effekt ligger på korallernas etablering och tidiga överlevnad, så ett rev som redan har många stora vuxna koraller kanske inte vinner något omedelbart på fler växtätare, medan ett vars återhämtning hänger på ny rekrytering vinner mycket.",
+          "Att skydda växtätarna är ingen universallösning: åtgärden fungerar där det verkligen finns ett algproblem på just den platsen, och där den verkligen ökar beståndet av växtätare. Det du fotograferar läser av platsen. Många fjärilsfiskar antyder levande, strukturerad korall i närheten. Att stora grouper och snappare helt saknas på ett strukturerat rev är en stark indikation på fisketryck. Tjock makroalgmatta som täcker död korall, med få papegojfiskar och kirurgfiskar i sikte, visar på otillräcklig betning. Och även när de skyddas tar det flera år för växtätarna att återhämta sig — förvaltningen måste vara förutseende snarare än reagerande."
+        ],
+        "checklist": [
+          "Många fjärilsfiskar antyder levande korall i närheten.",
+          "Frånvaron av stora rovfiskar visar på fisketryck.",
+          "Tjocka makroalger med få växtätare visar på otillräcklig betning.",
+          "Sandrännor och fläckar mellan korallerna är också livsmiljö.",
+          "Anteckna datum och plats: de är värda lika mycket som fotot."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "Den centrala regeln är att inte röra. Koraller är ömtåliga djur och skadas av en beröring, en knuff, ett fenspark eller en hand som sätts ner för att hålla balansen, och många är skyddade i lag. Rör inte vid andra djur heller: slemskiktet som skyddar fiskar och många marina ryggradslösa djur mot infektion lossnar lätt av en hand, en handske eller en fot. Fysisk kontakt med mantarockor och valhajar är förbjuden enligt reglerna i ett marint reservat, även om djuret verkar tycka om det. Och att kontrollera sin flytkraft är etik, inte teknik: sväva ovanför revet, och håll i förtöjningslinan om strömmen är stark, aldrig i revet.",
+          "Mata inte och samla inte. Att mata fisk avbryter revfiskarnas naturliga födosök, drar till sig arter som inte hör hemma på platsen och lär fiskarna att nappa på simmare i väntan på mat — på vissa håll är det olagligt. Ingenting lämnar reservatet, varken ett snäckskal eller en korallbit: skal som ser tomma ut har ofta ett skrämt djur inuti, och de som verkligen är tomma blir bostad åt eremitkräftor, havstulpaner, unga koraller och svampdjur. För megafauna är de rättsliga referensavstånden i USA 90 meter från valar i allmänhet, 45 från havssköldpaddor och 45 från sälar och sjölejon, med 180 meter för späckhuggare i delstaten Washingtons inre vatten och 450 för nordkaparen, och 30 minuter som längsta betraktelsetid. Brasilianska vatten följer sina egna regler från ICMBio och IBAMA: behandla de här siffrorna som god praxis, inte som lokal lag."
+        ],
+        "checklist": [
+          "Rör inte vid korall och luta dig inte mot den för att hålla balansen.",
+          "Rör inte vid fisk, rockor eller sköldpaddor: skyddsslemmet lossnar.",
+          "Mata aldrig revfisk, under några omständigheter.",
+          "Samla inte snäckskal, korallbitar eller några souvenirer alls.",
+          "Håll avstånd till megafauna och begränsa betraktelsetiden."
+        ]
+      }
+    }
+  },
+  "gardenBird": {
+    "label": "Trädgårds- och stadsfåglar",
+    "topics": {
+      "role": {
+        "advice": [
+          "Det här är fåglar som lever, äter eller häckar på tomter, torg, i stadsparker, på tak och längs vägkanter — både inhemska arter som tål mänskliga landskap och helt synantropa främmande arter. Allt vilt behöver fyra saker: mat, vatten, skydd och plats att föröka sig och föda upp ungar på. På en genomsnittlig tomt är det som först tar slut oftast en pålitlig vattenkälla året runt — inte maten.",
+          "En god del av de mest synliga stadsfåglarna är främmande arter: klippduvan nådde Brasilien på 1500-talet med den portugisiska koloniseringen och behandlas i dag som synantrop fauna, med egna hälsoregler. Den officiella strategin för kontroll i städer angriper de fyra sakerna vatten, mat, skydd och tillträde — vilket är den exakta motsatsen till vad man gör för att locka inhemska fåglar. En gestaltningsprincip är värd att lägga till: hur miljöerna vävs in i varandra spelar roll. För arter som rör sig kortare sträckor fungerar många små fläckar av mat, vatten och skydd bättre än några få stora, eftersom ju längre ett djur måste förflytta sig, desto mer utsatt för rovdjur blir det."
+        ],
+        "checklist": [
+          "Vattnet är oftast den begränsande resursen, inte maten.",
+          "Sprid ut mat, vatten och skydd på flera små fläckar.",
+          "Städa inte tomten för mycket: ett döende träd och en rishög är skydd.",
+          "En övervikt av duvor och sparvar visar på en hårt bebyggd miljö.",
+          "När inhemska fruktätare dyker upp betyder det att dina växter bär."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "Det medvetna ingreppet i den här gruppen är fågelmatningen, och den har ett hygieniskt pris. Sjukdomar som cirkulerar vid matplatser är bland andra mykoplasmaorsakad ögoninflammation, salmonellos, aspergillos, fågelkoppor och fågelinfluensa. Hygienen är inte valfri: rengör fröautomater varannan vecka, och dubbla den frekvensen vid minsta misstanke om sjukdom, med nio delar vatten till en del klorin. Skrubba bort synlig spillning innan du blötlägger, skölj ordentligt och låt torka innan du fyller på. Kratta bort spillning och fröskal från marken, särskilt möglade eller blöta, vilket också hindrar dig från att locka gnagare. Och sprid ut flera matplatser i stället för att samla allt på en, eftersom sjukdom sprids lättare på en trång yta med koncentrerade flockar. Samma rengöringsregel gäller fågelbadet.",
+          "När du ser en sjuk fågel — röda, svullna eller rinnande ögon, vårtliknande utväxter på fjäderlösa partier, en mager fågel med rufsiga fjädrar — ta ner matplatserna i ungefär två veckor och rengör allt, omgivningen inräknad. Plocka inte upp djuret: bara veterinärer eller licensierade viltrehabiliterare får lagligen behandla en vild fågel. Dyker en fekal-oral sjukdom upp, överväg att pensionera matborden, som koncentrerar smittan mest. Ute i fält, var särskilt försiktig nära aktiva bon, häckningskolonier, övernattningsplatser och viktiga födoplatser, begränsa uppspelningen av läten, och visa återhållsamhet och omdöme när du fotograferar. Och principen som löser varje tveksamhet: i en intressekonflikt mellan fåglarna och observatören går fåglarnas välfärd först."
+        ],
+        "checklist": [
+          "Rengör matplatserna varannan vecka, med en del klorin till nio delar vatten.",
+          "Kratta bort skal och spillning från marken under matplatsen.",
+          "Sprid ut flera matplatser i stället för att samla allt på en.",
+          "Sjuk fågel: ta ner matplatserna i två veckor och rör inte djuret.",
+          "Begränsa uppspelning av läten och håll avstånd till aktiva bon."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Inhemska växter är värda mer än en matautomat. Det ideala är att erbjuda så mycket inhemsk föda som möjligt året runt — ekollon, nötter, bär, knoppar, frukt, nektar och frön — och att fröfoder kommer in först när den naturliga tillgången tryter, framför allt på vintern. Att enbart luta sig mot matningen är en skör lösning: den går sönder, du reser bort, och fågeln som lärt sig räkna med den blir utan.",
+          "I praktiken: erbjud vatten i ett fågelbad, en grund damm, ett krukfat, en cirkulerande kaskad eller till och med en droppande slang, byt vattnet regelbundet i värmen och håll det tillgängligt i kylan. Erbjud skydd som varierar i storlek och täthet — täta buskar, ihåliga stockar, sten- och rishögar, vintergröna växter, högt gräs — så att varje art kan välja rätt skydd för att äta, gömma sig, undkomma dåligt väder, uppvakta och häcka. Erbjud utrymme med mogna träd, täta buskage och holkar. Använder du en matplats är solrosfrön, nigerfrön, hirs och krossad majs de tillskott som rådgivningstjänsterna nämner, och på sommaren besöker kolibrier gärna nektarmatare. Och planera med katterna i åtanke: ett upphöjt fågelbad med låga grenar nedklippta i närheten tar bort gömstället för bakhållet."
+        ],
+        "checklist": [
+          "Plantera inhemska växter som bär frukt över hela året.",
+          "Använd frö bara som tillskott vid brist, framför allt på vintern.",
+          "Håll en pålitlig vattenkälla tillgänglig året runt.",
+          "Variera skyddet: täta buskar, rishögar, sten, vintergröna växter.",
+          "Håll fågelbadet upphöjt och fritt från täta buskar runt om, på grund av katterna."
+        ]
+      }
+    }
+  },
+  "forestBird": {
+    "label": "Skogs- och flyttfåglar",
+    "topics": {
+      "role": {
+        "advice": [
+          "Det här är två delvis överlappande populationer: skogsberoende fåglar och flyttfåglar. Av de 1 971 fågelarter som noterats på brasilianskt territorium genomför 216 — 10.9% — någon form av flyttning: 141 flyttande och 75 delvis flyttande, en kategori där bara en del av populationen förflyttar sig; ytterligare 91 är tillfälliga gäster. Ungefär en tredjedel av de brasilianska fågelfamiljerna har minst en flyttande art, men fem familjer står för mer än hälften av dem, med 112 arter: tyranner med 36, snäppor med 23, petreller och liror med 22, tangaror med 16 och måsar och tärnor med 15.",
+          "Stora fruktätande skogsfåglar är skogens infrastruktur, inte dess prydnad: tukaner och hokkofåglar sprider stora frön, och jakt och fragmentering tar bort just de fåglar vars näbbar kan svälja dem. Juçara-palmen, dominerande i Atlantskogen, får sina frukter uppätna av mer än 58 fågelarter. Och skog bevarad i fläckar är inte samma sak som bevarad skog: mångfalden faller när fragmenten är osammanhängande och ligger långt isär, eller när inget av dem är tillräckligt tätt för överlevnad och fortplantning."
+        ],
+        "checklist": [
+          "Ett rikt fågelliv i undervegetationen visar på sammanhängande, strukturerad skog.",
+          "När tukaner och hokkofåglar försvinner tyder det på jakt eller långt gången fragmentering.",
+          "Vadare som samlas på en lerslätt under flyttperioden visar på en rastplats.",
+          "Flyttning är inte ja eller nej: det finns delvis flyttande arter och tillfälliga gäster.",
+          "Höjdvandring förekommer i Brasilien och är underskattad."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "Uppspelning av läten är den här gruppens centrala misstag. Fågelskådningens etiska kod säger att man ska begränsa användningen av inspelningar och andra ljudmetoder för att locka fram fåglar, särskilt i hårt skådade områden, för lokalt sällsynta arter och för hotade eller utrotningshotade arter — och skogen, där fåglar är som svårast att se, är precis där frestelsen är störst.",
+          "Kring bon styr tre risker allting: att boet skadas av misstag, att föräldrarna överger det och att rovdjur lockas dit. Stanna aldrig mer än en minut nära ett bo. Besök som mest var tredje eller fjärde dag. Undvik tidig morgon, när de flesta arter lägger ägg och när ägg och ungar kyls snabbt om honan lämnar boet; undvik skymningen och tiden därefter, när hon kommer tillbaka för natten; undvik ruvningens första dagar och dagarna när ungarna är på väg att lämna boet, eftersom de kan hoppa i förtid och överlevnaden utanför boet är låg i det skedet; och undvik kallt, fuktigt eller regnigt väder. Lämna inga stigar som leder rovdjur rätt, och trampa inte ner växtlighet som kan blotta bon. Tvinga aldrig upp en hona från boet — vänta några minuter och se om hon lämnar det av sig själv, och kom tillbaka senare om hon inte gör det. Skriv dina anteckningar först när du kommit ordentligt bort från boet, och knacka på en holk innan du öppnar den och en gång till medan du öppnar."
+        ],
+        "checklist": [
+          "Begränsa uppspelning av läten, framför allt vid sällsynta eller hotade arter.",
+          "Stanna aldrig mer än en minut nära ett bo.",
+          "Undvik att kontrollera bon tidigt på morgonen, i skymningen eller i dåligt väder.",
+          "Tvinga aldrig upp en hona från hennes bo.",
+          "Skriv dina anteckningar borta från boet och lämna inget spår dit."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Livsmiljön säger mycket. En skuggig undervegetation i sammanhängande skog visar på grupper med kort räckvidd som är mycket känsliga för kanteffekter; ett moget krontak visar på fåglar som är beroende av stora fruktbärande träd och av håligheter att häcka i; skogsgolvet visar på grupper som är mycket känsliga för jakt; och kust, lerslätt och saltpanna under flyttperioden visar på en rastplats för vadare, en ytterst störningskänslig plats. Flyttfåglar är beroende av livsmiljöer i åtskilda områden separerade av tusentals kilometer, och vissa är kritiskt beroende av platser de använder i bara några dagar, för att vila, rugga, äta och bygga upp energireserver.",
+          "Det är därför datumet betyder lika mycket som platsen. Eftersom utflyttningsvägen oftast skiljer sig från återvägen, och fåglar justerar sin färdväg efter förhållandena, går daterade noteringar rakt in i kunskapen om flyttvägarna — och en notering utanför säsong kan säga mer än en vanlig. Att dokumentera en flyttfågel utan exakt datum och plats förlorar just det mest värdefulla dataslaget. I fält: håll dig på stigarna, minimera störningen av livsmiljön och bevara stående döda träd, som är häckningshål för många arter."
+        ],
+        "checklist": [
+          "Notera alltid exakt datum och plats, särskilt för flyttande arter.",
+          "En notering utanför säsong kan vara värd mer än tio vanliga.",
+          "Håll dig på stigarna och minimera störningen av livsmiljön.",
+          "Bevara stående döda träd: de är boplatser för många arter.",
+          "Mata inte vilda fåglar i skogen eller på en rastplats under flytten."
+        ]
+      }
+    }
+  },
+  "grainCrop": {
+    "label": "Spannmål och stråsäd",
+    "topics": {
+      "soil": {
+        "advice": [
+          "Näringslärans centrala begrepp här är dold hunger: de flesta grödor börjar tappa skörd långt innan symtom på brist eller toxicitet syns, och den symtomfria förlusten är stor. När ett symtom väl dyker upp visar det alltid på svår hunger — aldrig på lindrig eller måttlig brist. Näringsämnets rörlighet avgör vilket blad du ska titta på: rörliga ämnen som kväve, kalium, fosfor och magnesium visar symtom på de gamla bladen först, eftersom plantan flyttar dem till de nya; orörliga ämnen som kalcium och bor visar symtom på de nya bladen och i tillväxtpunkten.",
+          "Några visuella mönster i ris fungerar som referens: nekros i form av ett upp- och nedvänt V, som löper från spetsen ner längs kanterna på ett gammalt blad, pekar på kalium; mycket smala, upprätta nya blad med en bronsfärgad eller lila ton i spetsarna pekar på fosfor; ett helt fält som gulnar vid bestockning och vippanläggning pekar på kväve; och en brist som uppträder fläckvis i stället för över hela ytan är ett typiskt kaliummönster. Herbicidskada härmar brist, men den dyker upp omedelbart efter sprutningen — det är den tidsmässiga närheten som skiljer de två fallen åt. Slutligen är kärna och ensilage inte samma gröda sett ur jordens perspektiv: fosforn flyttas nästan helt till kärnan, följd av kvävet, medan kalium och kalcium till största delen stannar i halmen, så i ensilage, som också för bort den vegetativa delen, dyker bördighetsproblemen upp tidigare."
+        ],
+        "checklist": [
+          "Vänta inte på ett symtom: när det syns har förlusten redan skett.",
+          "Rörliga näringsämnen visar sig på gamla blad; orörliga på nya blad.",
+          "Diagnostisera utifrån jordprov och fältets historik, aldrig utifrån ett bladfoto ensamt.",
+          "Skada som dyker upp direkt efter sprutning är herbicid, inte brist.",
+          "Använd inte en rekommendation för kärnskörd på en gröda avsedd för ensilage."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Beslutet här fattas genom att räkna, inte efter kalender, och den här gruppen har den billigaste standardiserade provtagningen av alla. Logiken vilar på tre trösklar: jämviktsnivån, den ekonomiska skadenivån och kontrollnivån, som ligger strax under den. För markskadegörare i majs, använd ett jordprov på trettio gånger trettio centimeter och femton på djupet, sållat — för knäpparlarver kräver två eller fler insekter per prov redan kontroll, och ett medeltal på en per prov gör redan betydande skada. För höstarmélarven, räkna antalet angripna plantor på fem slumpvisa punkter inom en hektar: i fält med en potential på minst hundra säckar visar 10% av plantorna med tidiga symtom redan på ett behov av kontroll, och det känsligaste stadiet är åtta till tio blad. Det första tecknet är larver som skrapar på bladen och lämnar genomskinliga fönster.",
+          "I sojaböna är bankduken metoden: en helst vit duk, en meter lång, spänd mellan två rader; skaka en rad kraftigt över den och räkna vuxna och unga, varje vecka under den kritiska perioden. Minimum är sex prov upp till tio hektar, åtta upp till trettio och tio upp till hundra, med större arealer indelade i block om hundra hektar. Provta markskadegörare före sådd, eftersom åtgärder som sätts in efter att grödan etablerats är ineffektiva. Räkna nymferna tillsammans med de vuxna: bärfisar i tredje till femte stadiet gör liknande skada och utgör merparten av populationen under den reproduktiva perioden, med en åtgärdströskel på två bärfisar per meter rad för kärnskörd och en för utsäde. Provta under dygnets svalare timmar, eftersom bärfisar är snabba och flyr i värmen. Det har en uppmätt avkastning: över 196 referensenheter i Paraná under säsongen 2017/2018 skar integrerat växtskydd ner insektsmedelsbehandlingarna med mer än 43% med bibehållen skörd. Välj preparat efter skonsamhet mot naturliga fiender lika mycket som efter kostnad och toxicitet, följ alltid MAPA:s gällande registreringar, och betsa utsäde bara där problemet har en historik, aldrig som blind rutin."
+        ],
+        "checklist": [
+          "Räkna innan du sprutar: beslutet fattas på tröskel, inte på kalender.",
+          "Majs: 10% av plantorna med skrapade blad kräver redan kontroll.",
+          "Sojaböna: minst tio bankduksprov upp till hundra hektar.",
+          "Provta markskadegörare före sådd.",
+          "Räkna nymfer tillsammans med vuxna, och provta under dygnets svalare timmar."
+        ]
+      }
+    }
+  },
+  "vegCrop": {
+    "label": "Grönsaks- och fruktodlingar",
+    "topics": {
+      "watering": {
+        "advice": [
+          "Här är vatten finjusterad skötsel, inte att vattna när man kommer på det: det finns en gräns för markens vattenspänning mätt i kPa, och den skiljer sig mellan bevattningssystem. I aubergine bevattnar du när tensiometern visar 30 till 50 kPa vid spridar- eller fårbevattning, eller 10 till 15 kPa vid droppbevattning, och använder den lägre delen av intervallet i de mest kritiska stadierna, i sandjordar och vid hög avdunstning. Givaren placeras på 50% av det effektiva rotdjupet och tio till tjugo centimeter från plantan, där det effektiva djupet är det där ungefär 80% av rötterna är samlade.",
+          "För mycket vatten är lika skadligt som för lite: det driver överdriven bladtillväxt, hämmar blomning och fruktsättning, gynnar jordburna sjukdomar genom otillräcklig luftning och lakar ur näring. Bristen väger tyngst vid blomning och fruktsättning, då blommor och frukter aborteras, fruktens tillväxt hämmas och kvalitetsfel uppstår — missformade och ojämna frukter, pistillröta och besk smak. Blad som slokar i slutet av förmiddagen är ett grovt men användbart tecken på att bevattningen är försenad. Och valet av system är ett växtskyddsbeslut, inte bara ett hydrauliskt: fårbevattning och droppbevattning minskar bladsjukdomar eftersom de inte blöter bladverket, men mot tomatmalen är spridarbevattning en fördel, eftersom den slår ner ägg, larver och puppor. Beslutet beror på vilket problem som dominerar i ditt område."
+        ],
+        "checklist": [
+          "Använd en annan spänningsgräns för droppbevattning än för spridare eller fåror.",
+          "Placera givaren på 50% av effektivt rotdjup och tio till tjugo centimeter från plantan.",
+          "Låt inte vattnet tryta under blomning och fruktsättning.",
+          "Slokande blad i slutet av förmiddagen visar på försenad bevattning.",
+          "Välj bevattningssystem efter det problem som dominerar i ditt område."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "Näringsöverskott har egna symtom och rubbar de andra ämnena. I lök ger överskott av kväve plantor med tjock hals, höjer mottagligheten för bladsjukdomar och förkortar lagringstiden efter skörd; överskott av kalium framkallar brist på magnesium och kalcium; överskott av fosfor framkallar brist på zink och koppar. Det är därför att korrigera ett näringsämne utan att se på de andra oftast skapar nästa problem.",
+          "Rörligheten talar om vilket blad du ska granska: kväve, kalium, fosfor och magnesium visar sig först på de gamla bladen, medan kalcium och svavel visar sig på de nya — ett nytt lökblad som viker sig utan att brytas av är kalciumets signatur. Två strukturer är värda att memorera: nekros som dyker upp abrupt, utan föregående kloros, pekar på zink, koppar eller mangan; nekros med sammetsaktig struktur är järnets karaktäristiska märke, skilt från alla andra. I brasilianska jordar under normala förhållanden är det bara bor och zink och, i vissa fall, koppar som tenderar att vara knappa för lök. Och håll utkik efter falska positiva: låga temperaturer, för mycket vatten eller långvarig torka kan ge symtom mycket lika kvävebrist."
+        ],
+        "checklist": [
+          "Korrigera inte ett näringsämne utan att se på dem det rubbar.",
+          "Gamla blad först: kväve, kalium, fosfor, magnesium. Nya blad: kalcium, svavel.",
+          "Abrupt nekros utan föregående kloros antyder zink, koppar eller mangan.",
+          "Nekros med sammetsaktig struktur är järnets märke.",
+          "Kyla, vattensjuk jord och torka härmar alla kvävebrist."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Skötseln här är odlingsteknisk och kollektiv innan den är kemisk. På fältnivå: tillämpa växtföljd, förstör skörderesterna direkt efter skörd, håll ytan fri från ogräs och andra värdväxter för insekter och kvalster, och använd sorter anpassade till regionen. På den kollektiva nivån — och det är det som gör gruppen annorlunda — måste odlarna agera tillsammans: samla planteringen inom varje mikroregion till kortast möjliga fönster, använd insatsvaror samordnat så att gemensamma problem möts av alla samtidigt, och desinficera systematiskt lådor och transporter för att minska spridningen av skadegörare mellan regioner. Inspektera regelbundet, med särskild uppmärksamhet på fältkanterna och de mest ogräsrika punkterna, eftersom det är där angreppen samlas.",
+          "Den största skadegörarskadan i den här gruppen är oftast indirekt, genom virus. Mjöllusen har varit känd i Brasilien sedan 1923 och hittades på tomat och kål 1993, kopplad till symtom av geminivirus, med svåra utbrott och förluster på upp till 50% av produktionen: vuxna och nymfer sprutar in en sockrig substans och ett toxin som lämnar fruktens inre väggar vitaktiga och svampiga och gynnar sotdagg. Tidpunkten styr också: mot den lilla fruktborraren måste sprutningen börja från blomningen, med strålen riktad mot blomknoppar och frukter, eftersom larven redan är inne i frukten när du ser ett hål i den. Och en redaktionell säkerhetsregel: kopiera aldrig en verksam substans eller en dos från någon källa, eftersom registreringarna av växtskyddsmedel ändras varje säsong — konsultera MAPA:s gällande register."
+        ],
+        "checklist": [
+          "Förstör skörderesterna direkt efter skörd.",
+          "Samla mikroregionens plantering till minsta möjliga fönster.",
+          "Desinficera lådor och fordon mellan områden.",
+          "Inspektera fältkanterna, inte bara mitten.",
+          "Börja spruta vid blomningen, inte när du ser ett hål i frukten."
+        ]
+      }
+    }
+  }
+}

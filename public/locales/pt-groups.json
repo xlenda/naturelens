@@ -53,7 +53,6 @@
       }
     }
   },
-
   "tropicalFoliage": {
     "label": "Folhagens tropicais de interior",
     "topics": {
@@ -72,7 +71,7 @@
       },
       "light": {
         "advice": [
-          "A tolerância de luz deste grupo é muito ampla, e é justamente aqui que ele se subdivide. Filodendros preferem sol indireto ou filtrado por cortina e toleram pouca luz — o de folha-coração aguenta luz muito baixa —, enquanto os tipos arbóreos pedem luz média a forte perto de janela. Dracenas crescem melhor em luz indireta brilhante, mas várias toleram luz baixa a ponto de virarem padrão de escritório. Em números de referência: luz baixa fica em torno de 75 foot-candles, média 150, alta 300 e direta 1500.",
+          "A tolerância de luz deste grupo é muito ampla, e é justamente aqui que ele se subdivide. Filodendros preferem sol indireto ou filtrado por cortina e toleram pouca luz — o de folha-coração aguenta luz muito baixa —, enquanto os tipos arbóreos pedem luz média a forte perto de janela. Dracenas crescem melhor em luz indireta brilhante, mas várias toleram luz baixa a ponto de virarem padrão de escritório. Em números de referência: luz baixa fica em torno de 800 lux, média 1600, alta 3200 e direta 16000.",
           "As marantáceas são o subgrupo mais restrito: meia-sombra, no máximo duas a seis horas de sol direto por dia, e o aviso de que sol direto queima a folha. Vale lembrar que a fenestração da monstera — os furos característicos — depende de luz adequada; e que o filodendro verdadeiro faz folha recortada, mas sem furos. Se as posições do seu cômodo forem descritas por pontos cardeais, lembre de inverter norte e sul no hemisfério sul."
         ],
         "checklist": [
@@ -111,7 +110,6 @@
       }
     }
   },
-
   "fern": {
     "label": "Samambaias e plantas de sombra",
     "topics": {
@@ -130,13 +128,13 @@
       },
       "light": {
         "advice": [
-          "Luz moderada e indireta é o ideal, com a planta perto de uma janela fria — a voltada ao norte no hemisfério norte, ao sul no hemisfério sul — ou de uma janela leste. Janela sul ou oeste direta danifica a folhagem; se for a única opção, use cortina fina para reduzir a intensidade. Em números, a faixa alvo é a de luz baixa a média, entre 75 e 150 foot-candles.",
+          "Luz moderada e indireta é o ideal, com a planta perto de uma janela fria — a voltada ao norte no hemisfério norte, ao sul no hemisfério sul — ou de uma janela leste. Janela sul ou oeste direta danifica a folhagem; se for a única opção, use cortina fina para reduzir a intensidade. Em números, a faixa alvo é a de luz baixa a média, entre 800 e 1600 lux.",
           "Existe variação real dentro do grupo: algumas espécies toleram luz baixa e outras precisam de sol indireto brilhante ou filtrado, então observe a sua planta em vez de aplicar um número único. Folhagem danificada por sol tem causa quase sempre óbvia — janela quente direta — e a correção é apenas afastar ou filtrar."
         ],
         "checklist": [
           "Prefira a janela fria da casa ou uma janela leste.",
           "Evite sol direto de janela quente; use cortina fina se não houver alternativa.",
-          "Mire na faixa de luz baixa a média, entre 75 e 150 foot-candles.",
+          "Mire na faixa de luz baixa a média, entre 800 e 1600 lux.",
           "Folhagem queimada é sinal de sol direto, não de falta de água."
         ]
       },
@@ -155,13 +153,12 @@
       }
     }
   },
-
   "fruitVeg": {
     "label": "Frutíferas e hortaliças",
     "topics": {
       "watering": {
         "advice": [
-          "Aqui a rega se mede em lâmina semanal e tem janelas fenológicas definidas. A maioria das hortaliças pede de uma a duas polegadas por semana, o equivalente a 25 a 50 milímetros, com picos claros: milho doce quer de uma e meia a duas e meia polegadas durante o pendoamento, o embonecamento e a formação de espiga; feijão quer de uma a uma e meia durante a floração e o enchimento de vagem. A faixa é intervalo, não número fixo — clima seco puxa para cima, clima úmido para baixo. Em solo franco, uma polegada de água penetra cerca de seis polegadas de perfil, o que permite calcular: para molhar trinta centímetros são necessárias aproximadamente duas polegadas de lâmina.",
+          "Aqui a rega se mede em lâmina semanal e tem janelas fenológicas definidas. A maioria das hortaliças pede de 25 a 50 milímetros por semana, com picos claros: milho doce quer de 40 a 65 milímetros durante o pendoamento, o embonecamento e a formação de espiga; feijão quer de 25 a 40 durante a floração e o enchimento de vagem. A faixa é intervalo, não número fixo — clima seco puxa para cima, clima úmido para baixo. Em solo franco, 25 milímetros de água penetram cerca de quinze centímetros de perfil, o que permite calcular: para molhar trinta centímetros são necessários aproximadamente 50 milímetros de lâmina.",
           "A rega superficial aqui não é apenas menos eficiente: ela interrompe o transporte de cálcio. O cálcio se move com o fluxo transpiratório e não é remobilizado de tecidos velhos para o fruto novo, então ciclos de seca e encharque produzem podridão apical mesmo com cálcio de sobra no solo. Tomate é altamente sensível à rega irregular e responde com podridão apical e rachadura; pimentão responde com queda de flor; pepino estressado na fase reprodutiva dá fruto amargo e deformado. Solo arenoso pede rega mais frequente e mais curta; solo argiloso, menos frequente e mais profunda."
         ],
         "checklist": [
@@ -200,13 +197,12 @@
       }
     }
   },
-
   "flowering": {
     "label": "Floríferas e ornamentais",
     "topics": {
       "watering": {
         "advice": [
-          "A rega aqui é em lâmina semanal, não em ciclo seca-encharca: anuais e perenes pedem pelo menos uma a uma polegada e meia de água por semana, somando chuva e irrigação, e o melhor horário é cedo, para que a folhagem seque rápido. Em roseiras o princípio é o mesmo dito de outro jeito — rega profunda promove sistema radicular profundo, enquanto rega frequente e leve faz as raízes se formarem perto demais da superfície.",
+          "A rega aqui é em lâmina semanal, não em ciclo seca-encharca: anuais e perenes pedem pelo menos de 25 a 40 milímetros de água por semana, somando chuva e irrigação, e o melhor horário é cedo, para que a folhagem seque rápido. Em roseiras o princípio é o mesmo dito de outro jeito — rega profunda promove sistema radicular profundo, enquanto rega frequente e leve faz as raízes se formarem perto demais da superfície.",
           "A qualidade sanitária depende disso mais do que parece. Roseira com mancha preta recorrente quase sempre tem folha molhada no fim do dia e ar parado ao redor: sol da manhã, mangueira de gotejamento em vez de aspersão e boa circulação de ar resolvem mais do que qualquer pulverização."
         ],
         "checklist": [
@@ -230,12 +226,12 @@
       },
       "soil": {
         "advice": [
-          "O preparo é mais profundo aqui do que em vaso: de quinze a vinte e cinco centímetros para anuais e de vinte a vinte e cinco para perenes. Em solo argiloso, incorpore pelo menos cinco centímetros de casca de pinus compostada, composto ou mofo de folha; em solo arenoso, de cinco a sete centímetros de material orgânico retentor. O pH alvo para perenes fica entre 6,0 e 6,5. A cobertura morta é mais fina aqui do que em lenhosas: dois a três polegadas para anuais e apenas uma a duas para perenes, com aviso explícito de evitar cobertura pesada demais, porque o colo da perene apodrece embaixo dela.",
+          "O preparo é mais profundo aqui do que em vaso: de quinze a vinte e cinco centímetros para anuais e de vinte a vinte e cinco para perenes. Em solo argiloso, incorpore pelo menos cinco centímetros de casca de pinus compostada, composto ou mofo de folha; em solo arenoso, de cinco a sete centímetros de material orgânico retentor. O pH alvo para perenes fica entre 6,0 e 6,5. A cobertura morta é mais fina aqui do que em lenhosas: cinco a oito centímetros para anuais e apenas dois a cinco para perenes, com aviso explícito de evitar cobertura pesada demais, porque o colo da perene apodrece embaixo dela.",
           "A exigência nutricional é intermediária e explicitamente limitada: um adubo completo aplicado no preparo e repetido a intervalos de cerca de seis semanas dá conta. Muito acima da lenhosa madura, que quase não precisa de nada, e bem abaixo da frutífera adulta. E uma correção importante contra um hábito difundido: não use fórmula alta em fósforo como regra para florir. Doses altas de fósforo não aumentam o número de flores, e o excesso crônico trava micronutrientes como ferro e zinco, produzindo plantas atrofiadas e folhas amarelas — e o fósforo em excesso baixa muito devagar, podendo levar anos. Adubo equilibrado mais teste de solo é a orientação segura. Sinal de excesso em vaso: crosta branca na borda, ponta de folha marrom e raiz escurecida."
         ],
         "checklist": [
           "Prepare o solo fundo: quinze a vinte e cinco centímetros, incorporando matéria orgânica.",
-          "Use apenas uma a duas polegadas de cobertura morta em perenes, longe do colo.",
+          "Use apenas dois a cinco centímetros de cobertura morta em perenes, longe do colo.",
           "Adube com fórmula equilibrada, repetindo a cada seis semanas.",
           "Não use fórmula alta em fósforo para forçar floração.",
           "Crosta branca na borda do vaso: lixivie com água em abundância ou troque o substrato."
@@ -256,26 +252,25 @@
       }
     }
   },
-
   "woody": {
     "label": "Árvores e arbustos lenhosos",
     "topics": {
       "watering": {
         "advice": [
-          "Este é o único grupo cujo período de estabelecimento se mede em anos: cerca de um ano por polegada de diâmetro do tronco. Uma árvore recém-plantada quer rega diária nas duas primeiras semanas, a cada dois ou três dias da terceira à décima segunda, semanal até a primeira geada e semanal também no segundo ano. O volume tem fórmula: de um a um litro e meio por centímetro de diâmetro de tronco em cada rega — na prática, de um a um galão e meio por polegada — distribuídos por toda a zona radicular e não no tronco, umedecendo de quinze a vinte e três centímetros de solo.",
+          "Este é o único grupo cujo período de estabelecimento se mede em anos: cerca de um ano por dois centímetros e meio de diâmetro do tronco. Uma árvore recém-plantada quer rega diária nas duas primeiras semanas, a cada dois ou três dias da terceira à décima segunda, semanal até a primeira geada e semanal também no segundo ano. O volume tem fórmula: de quatro a seis litros por dois centímetros e meio de diâmetro de tronco em cada rega, distribuídos por toda a zona radicular e não no tronco, umedecendo de quinze a vinte e três centímetros de solo.",
           "Rega profunda estimula raízes fortes e melhora a resistência ao calor e à seca; rega frequente e rasa cria um sistema radicular superficial e dependente, que em lenhosa é também o que arranca em vendaval. Por isso a árvore recém-plantada que murcha mesmo regada todo dia costuma estar sendo regada no lugar errado, com volume insuficiente. Arbustos acidófilos como azaleias pedem rega funda, molhando de quinze a vinte centímetros, e em solo arenoso podem precisar de duas regas por semana no primeiro ano."
         ],
         "checklist": [
           "Regue a zona radicular inteira, nunca o tronco.",
-          "Use de um a um galão e meio por polegada de diâmetro de tronco por rega.",
+          "Use de quatro a seis litros por dois centímetros e meio de diâmetro de tronco por rega.",
           "Umedeça de quinze a vinte e três centímetros de perfil de solo.",
-          "Conte cerca de um ano de estabelecimento por polegada de tronco.",
+          "Conte cerca de um ano de estabelecimento por dois centímetros e meio de tronco.",
           "Prefira rega funda e espaçada a rega diária e rasa."
         ]
       },
       "soil": {
         "advice": [
-          "Lenhosa madura em solo bom simplesmente não precisa de adubo: nem toda planta de paisagismo precisa ser fertilizada, e árvores e arbustos maduros em condições favoráveis exigem pouco ou nenhum fertilizante. Árvores em gramado adubado já se servem sozinhas, porque as raízes interceptam os nutrientes aplicados na grama. Quando se aduba, o teto é normativo: nitrogênio de liberação lenta entre dois e quatro quilos por mil pés quadrados por ano, sem ultrapassar seis; de liberação rápida entre um e dois, com teto de quatro. A aplicação cobre toda a área da projeção da copa, do colo até a ponta dos galhos, e sempre em solo úmido.",
+          "Lenhosa madura em solo bom simplesmente não precisa de adubo: nem toda planta de paisagismo precisa ser fertilizada, e árvores e arbustos maduros em condições favoráveis exigem pouco ou nenhum fertilizante. Árvores em gramado adubado já se servem sozinhas, porque as raízes interceptam os nutrientes aplicados na grama. Quando se aduba, o teto é normativo: nitrogênio de liberação lenta entre um e dois quilos por cem metros quadrados por ano, sem ultrapassar três; de liberação rápida entre meio quilo e um, com teto de dois. A aplicação cobre toda a área da projeção da copa, do colo até a ponta dos galhos, e sempre em solo úmido.",
           "As acidófilas são o subgrupo que muda tudo. Azaleias e rododendros pedem pH entre 4,5 e 6,0, têm raiz rasa e são facilmente danificados por umidade excessiva no solo; recebem adubo acidificante em relação próxima de 2-1-1, leve, na primavera e no início do verão, e nunca adubo rico em nitrogênio no fim do outono, porque isso atrasa a dormência. Folha nova amarela com nervura verde sugere pH alto travando o ferro — mas em solo argiloso ácido o ferro está disponível, então investigue encharcamento antes de culpar o pH. A cobertura morta é ferramenta e é arma: cinco a dez centímetros de espessura, afastada sete a treze centímetros do tronco em árvore jovem e vinte a vinte e cinco em árvore madura, estendida até a linha de gotejamento. Passar disso cria o vulcão de mulch, que mata devagar: o ar não penetra, o solo perde oxigênio, a umidade constante mata o floema e a raiz fica sem carboidrato."
         ],
         "checklist": [
@@ -301,7 +296,6 @@
       }
     }
   },
-
   "orchid": {
     "label": "Orquídeas e epífitas",
     "topics": {
@@ -346,7 +340,6 @@
       }
     }
   },
-
   "herb": {
     "label": "Ervas aromáticas",
     "topics": {
@@ -403,7 +396,6 @@
       }
     }
   },
-
   "pollinator": {
     "label": "Insetos polinizadores",
     "topics": {
@@ -448,7 +440,6 @@
       }
     }
   },
-
   "beneficialInsect": {
     "label": "Insetos predadores e benéficos",
     "topics": {
@@ -493,7 +484,6 @@
       }
     }
   },
-
   "pestInsect": {
     "label": "Insetos-praga comuns",
     "topics": {
@@ -538,7 +528,6 @@
       }
     }
   },
-
   "decomposerFungus": {
     "label": "Cogumelos decompositores",
     "topics": {
@@ -583,7 +572,6 @@
       }
     }
   },
-
   "mycorrhizalFungus": {
     "label": "Cogumelos micorrízicos",
     "topics": {
@@ -628,7 +616,6 @@
       }
     }
   },
-
   "freshwaterFish": {
     "label": "Peixes de água doce",
     "topics": {
@@ -673,7 +660,6 @@
       }
     }
   },
-
   "marineFish": {
     "label": "Peixes marinhos e recifais",
     "topics": {
@@ -693,7 +679,7 @@
       "safety": {
         "advice": [
           "A regra central é não tocar. Corais são animais frágeis e se danificam com toque, cutucada, pisada ou apoio de mão, e muitos são protegidos por lei. Não toque em outros animais: o revestimento de muco que protege peixes e muitos invertebrados marinhos contra infecção sai facilmente com um toque de mão, luva ou pé. A interação física com raias-manta e tubarões-baleia é proibida por regulamento em santuário marinho, mesmo que o animal pareça gostar. E controle de flutuabilidade é ética, não técnica: flutue acima do recife, e se a corrente estiver forte segure na linha do poita, nunca no recife.",
-          "Não alimente e não colete. Alimentar peixe interrompe o comportamento natural de alimentação, atrai espécies que não pertencem àquele ponto e ensina peixes a morder nadadores esperando comida — em algumas jurisdições, é ilegal. Nada sai do santuário, nem concha nem fragmento de coral: conchas que parecem vazias muitas vezes têm um animal assustado dentro, e as realmente vazias viram abrigo de ermitões, cracas, corais jovens e esponjas. Para megafauna, as distâncias legais de referência nos Estados Unidos são de cem jardas para baleias em geral, cinquenta para tartarugas marinhas e cinquenta para focas e leões-marinhos, com duzentas jardas para orcas em águas interiores de Washington e quinhentas para a baleia-franca-do-Atlântico-Norte, e trinta minutos como tempo máximo de observação. Águas brasileiras seguem regramento próprio do ICMBio e do IBAMA: trate esses números como boa prática, não como norma local."
+          "Não alimente e não colete. Alimentar peixe interrompe o comportamento natural de alimentação, atrai espécies que não pertencem àquele ponto e ensina peixes a morder nadadores esperando comida — em algumas jurisdições, é ilegal. Nada sai do santuário, nem concha nem fragmento de coral: conchas que parecem vazias muitas vezes têm um animal assustado dentro, e as realmente vazias viram abrigo de ermitões, cracas, corais jovens e esponjas. Para megafauna, as distâncias legais de referência nos Estados Unidos são de noventa metros para baleias em geral, quarenta e cinco para tartarugas marinhas e quarenta e cinco para focas e leões-marinhos, com cento e oitenta metros para orcas em águas interiores de Washington e quatrocentos e cinquenta para a baleia-franca-do-Atlântico-Norte, e trinta minutos como tempo máximo de observação. Águas brasileiras seguem regramento próprio do ICMBio e do IBAMA: trate esses números como boa prática, não como norma local."
         ],
         "checklist": [
           "Não toque em coral nem se apoie nele para estabilizar.",
@@ -705,7 +691,6 @@
       }
     }
   },
-
   "gardenBird": {
     "label": "Aves de jardim e urbanas",
     "topics": {
@@ -750,7 +735,6 @@
       }
     }
   },
-
   "forestBird": {
     "label": "Aves de mata e migratórias",
     "topics": {
@@ -795,7 +779,6 @@
       }
     }
   },
-
   "grainCrop": {
     "label": "Lavouras de grãos e cereais",
     "topics": {
@@ -827,7 +810,6 @@
       }
     }
   },
-
   "vegCrop": {
     "label": "Lavouras de hortaliças e frutíferas",
     "topics": {

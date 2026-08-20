@@ -26,6 +26,53 @@ import { colors } from './theme';
 // sections, unlike categories which come from CATEGORIES.
 const BOTTOM_ROW = new Set(['Collection', 'Profile', 'Discover', 'Botanist']);
 
+// Auditoria de diagramacao 20/08: nestas rotas o dock some INTEIRO - as duas
+// fileiras, nao so os chips de categoria. Sao ~120px de dock + o respiro do
+// wrapper devolvidos a leitura em toda tela de detalhe e no manual.
+//
+// Por que null e nao "so a fileira de navegacao": dentro do perfil de uma
+// especie o seletor de categoria de scan nao significa nada, e a fileira de
+// navegacao ali e pior que inutil - trocar de aba a partir de um detalhe deixa
+// a pilha da aba antiga empilhada, entao voltar nela reabre o detalhe que a
+// pessoa achou que tinha fechado. O padrao nativo (hidesBottomBarWhenPushed)
+// faz exatamente isto.
+//
+// Conferido rota a rota antes de esconder: TODAS as 24 tem chevron de voltar no
+// topo - as 9 de detalhe + CareTopics/Settings/Language/About via TopBar com
+// onBack, as outras 10 com TouchableOpacity + BackChevron proprio. Ninguem fica
+// preso. Nenhuma tela do app le useBottomTabBarHeight e todas ja carregam o
+// proprio paddingBottom no scroll (40-120px), entao sumir com o dock nao corta
+// conteudo nem deixa buraco.
+const HIDE_DOCK_ON = new Set([
+  'PlantDetail', 'TreeDetail', 'InsectDetail', 'MushroomDetail', 'CropDetail',
+  'FishDetail', 'BirdDetail', 'SoundDetail', 'CareTopics', 'HerbDetail',
+  'SpeciesDetail', 'FieldGuide', 'Book', 'Settings', 'Language', 'About',
+  'Privacy', 'Terms', 'Help', 'Subscription', 'RestoreAccess', 'Store',
+  'Achievements', 'MonthlyRecap',
+]);
+
+// state.routes[state.index] e o TAB, nao a tela: a tela real vive na pilha
+// daquela aba. Desce ate a folha em vez de olhar so um nivel, porque a arvore
+// pode ganhar profundidade (Discover -> TopicDetail -> ... ) sem ninguem
+// lembrar de mexer aqui.
+//
+// No primeiro render o state aninhado ainda nao existe (a pilha so se registra
+// depois de montar): ai a folha e o proprio tab, o nome nao esta na lista e o
+// dock aparece - default seguro, porque o erro barato e mostrar o dock demais,
+// nunca esconder num lugar sem saida. O fallback `routes.length - 1` e o mesmo
+// do getFocusedRouteNameFromRoute do react-navigation: numa pilha o topo e o
+// que esta em foco quando index vem undefined.
+function focusedLeafName(route) {
+  let current = route;
+  while (current?.state?.routes?.length) {
+    const nested = current.state;
+    const next = nested.routes[nested.index ?? nested.routes.length - 1];
+    if (!next) break;
+    current = next;
+  }
+  return current?.name;
+}
+
 // Above this many scan tabs, one row stops being readable and gets split in
 // two. 6 is the measured limit: on a 360px screen that is 60px per cell, which
 // fits the longest translated label at the compact font size. A 7th cell drops
@@ -136,6 +183,11 @@ export default function TwoRowTabBar({ state, descriptors, navigation }) {
       scrollRef.current.scrollTo({ x: Math.max(0, activeScanPos * 92 - 92), animated: true });
     }
   }, [activeScanPos]);
+
+  // DEPOIS dos hooks de proposito: sair antes de useRef/useEffect quebraria a
+  // ordem dos hooks entre um render com dock e outro sem (auditoria de
+  // diagramacao 20/08).
+  if (HIDE_DOCK_ON.has(focusedLeafName(state.routes[state.index]))) return null;
 
   const renderChip = ({ route, index }) => {
     const descriptor = descriptors[route.key];

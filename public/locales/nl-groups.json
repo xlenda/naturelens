@@ -1,0 +1,857 @@
+{
+  "succulent": {
+    "label": "Vetplanten & cactussen",
+    "topics": {
+      "watering": {
+        "advice": [
+          "De regel voor deze groep is doordrenken-en-opdrogen, niet de kalender. Geef water tot de hele kluit doordrenkt is en het uit het drainagegat loopt, leeg de schotel en laat het substraat daarna helemaal opdrogen voor de volgende beurt — meestal om de twee tot drie weken in het groeiseizoen, al verschuiven pot, licht en temperatuur dat behoorlijk. De reden is fysiologisch: dit zijn CAM-planten die hun huidmondjes 's nachts openen en overdag gesloten houden. Tussen de ene waterbeurt en de volgende hebben ze geen constante toevoer nodig, maar een wortel met zuurstof.",
+          "De winter is een echte rustperiode. Groei gebeurt ergens tussen 18 en 29 °C, rust tussen 7 en 13 °C, waarbij je het water terugbrengt tot een minimum om de paar weken — net genoeg om verschrompelen te voorkomen. En als er verwelking optreedt, lees dan eerst de structuur voor je naar de gieter grijpt: een gerimpeld maar stevig blad is dorst; een geel, zacht, doorschijnend blad verdrinkt, en nog eens water geven maakt het alleen erger, omdat rotte wortels toch al gestopt zijn met opnemen. Epifytische boscactussen zoals de kerstcactus zijn de uitzondering in deze groep: die vragen aanzienlijk meer water en mogen in het voorjaar en de zomer nooit volledig uitdrogen."
+        ],
+        "checklist": [
+          "Doordrenk de hele kluit tot het water uit het drainagegat loopt en leeg dan de schotel.",
+          "Wacht tot het substraat helemaal droog is voor je opnieuw water geeft.",
+          "Laat de pot nooit in water staan.",
+          "Geef in de winterrust minimaal water om de paar weken — net genoeg tegen verschrompelen.",
+          "Gerimpeld en stevig blad = te weinig water. Geel, zacht, doorschijnend blad = te veel."
+        ]
+      },
+      "light": {
+        "advice": [
+          "Dit is de enige groep binnenshuis die directe zon zowel verdraagt als vraagt. Vetplanten willen tien uur of meer helder indirect licht, met een minimum van zes tot acht; daaronder gaan ze lang uitrekken en verbleken — klassiek etiolement. Woestijncactussen doen het het best voor een raam met een paar uur directe zon per dag, wat bij ons een raam op het zuiden betekent (op het zuidelijk halfrond juist een raam op het noorden). Dunne, bleke groei is een lichtprobleem, en geen enkele hoeveelheid meststof corrigeert dat.",
+          "Twee kanttekeningen doen ertoe. Als je de plant in de zomer naar buiten verhuist, laat hem dan wennen: begin in halfschaduw, want felle zon verbrandt weefsel dat binnen is gevormd. En epifytische cactussen willen helder maar gefilterd licht — een raam op het oosten of westen, een vitrage — omdat ze in directe zon verbranden."
+        ],
+        "checklist": [
+          "Geef zes tot acht uur licht per dag, en mik op tien of meer.",
+          "Woestijncactus: een raam met een paar uur directe zon.",
+          "Lange, bleke groei is te weinig licht, niet te weinig meststof.",
+          "Zet de plant bij de verhuizing naar buiten in de zomer eerst een paar dagen in halfschaduw.",
+          "Epifytische cactus: helder licht, altijd gefilterd."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "Het substraat is overwegend mineraal, en de bronnen zijn het alleen over het recept oneens om het over het principe eens te zijn. De ene universitaire extensiedienst adviseert een derde organisch materiaal op twee derde mineraal; een andere vraagt gelijke volumes van een veenmengsel en heel grof zand; de RHS werkt met twee delen basiscompost op één deel tuinbouwgrit, afgedekt met grit. De marge loopt van ruwweg 30% tot 67% minerale fractie, en die bestaat om één enkele reden: de verzadigde fase zo kort mogelijk maken. Hoe vochtiger je omgeving en hoe guller je hand met de gieter, hoe meer mineraal je wilt.",
+          "Een krappe pot is een regel, geen verwaarlozing: extra substraatvolume houdt vocht vast en rot volgt. Verpot in het voorjaar naar een pot die maar iets groter is, en wacht een paar dagen met de eerste waterbeurt. De bemesting is laag in stikstof en in verlaagde dosis — de helft tot een kwart van wat op het etiket staat, elke derde of vierde waterbeurt in het actieve seizoen, en niets in de winter. Te veel stikstof geeft zacht weefsel, en zacht weefsel rot. Bij epifytische cactussen keert het recept om en neemt organisch materiaal het over."
+        ],
+        "checklist": [
+          "Meng er minstens een derde mineraal materiaal doorheen: perliet, grof zand, puimsteen of grit.",
+          "Gebruik een pot die maar iets groter is dan de huidige — ruimte wordt rot.",
+          "Verpot in het voorjaar en wacht een paar dagen met de eerste waterbeurt.",
+          "Bemest met de helft of een kwart van de dosis, en stop volledig in de winter.",
+          "De epifytische cactus keert het recept om: meer organisch materiaal, minder mineraal."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "Het risico is hier mechanisch en makkelijk te omzeilen: pak stekelige soorten vast met krantenpapier eromheen of met dikke handschoenen. Cactusstekels en de fijne glochiden van sommige soorten dringen makkelijk de huid binnen en komen er moeizaam weer uit, en het moment van de grootste blootstelling is het verpotten."
+        ],
+        "checklist": [
+          "Pak stekelige soorten vast met opgerold krantenpapier of dikke handschoenen.",
+          "Maak de nieuwe pot klaar voor je de plant optilt, zodat hij korter in je handen zit.",
+          "Houd stekelige exemplaren uit looproutes en uit de buurt van kleine kinderen."
+        ]
+      }
+    }
+  },
+  "tropicalFoliage": {
+    "label": "Tropische bladplanten",
+    "topics": {
+      "watering": {
+        "advice": [
+          "Het doel voor deze groep is substraat dat gelijkmatig vochtig is en nooit doorweekt — niet de volledige droogcyclus van vetplanten en niet het constante vocht van varens. Om dat te beoordelen duw je een vinger tot het eerste kootje in het substraat: droog aan de top betekent tijd om water te geven. Het gewicht van de pot en de holle klank van een knokkel op een terracotta pot werken net zo goed. Geef water tot het onderuit de pot loopt: zo spoel je overtollige zouten weg en weet je zeker dat de onderste twee derde van de pot water krijgt. Leeg daarna de schotel — laat de plant nooit in water staan.",
+          "Details die hier verschil maken: is het substraat flink uitgedroogd, geef dan twee keer water — water geven, ongeveer dertig minuten wachten en opnieuw water geven; het water hoort tussen 17 en 22 °C te zijn, nooit heet en nooit ijskoud, en nooit onthard water, vanwege het natrium en het chloride. Gebedsplanten willen gedistilleerd water of regenwater, omdat het fluoride in kraanwater de bladranden bruin maakt. En de groep heeft haar eigen verklaarde uitzonderingen: dracaena's willen dat het oppervlak droog aanvoelt voor je water geeft, de ZZ-plant krijgt één of twee keer per maand water en pas nadat hij helemaal is opgedroogd, en de treurvijg blijft vochtig in de actieve groei en droogt in de winter iets verder uit."
+        ],
+        "checklist": [
+          "Houd het substraat gelijkmatig vochtig, nooit doorweekt.",
+          "Geef water tot het onderuit de pot loopt en leeg dan de schotel.",
+          "Gebruik water tussen 17 en 22 °C; nooit onthard water.",
+          "Gebedsplanten en dracaena's: liefst gedistilleerd water of regenwater.",
+          "Heel droog substraat: water geven, dertig minuten wachten, opnieuw water geven."
+        ]
+      },
+      "light": {
+        "advice": [
+          "De lichttolerantie van deze groep is heel breed, en precies daar valt ze uiteen. Philodendrons houden van indirecte of door een gordijn gefilterde zon en verdragen weinig licht — de hartbladige neemt zelfs heel weinig licht — terwijl de boomvormige types middelmatig tot sterk licht bij een raam willen. Dracaena's groeien het best in helder indirect licht, maar meerdere verdragen weinig licht goed genoeg om een kantoorstandaard te zijn geworden. In referentiegetallen: weinig licht ligt rond 800 lux, gemiddeld 1.500, helder 3.000 en direct 15.000.",
+          "Gebedsplanten zijn de meest beperkte subgroep: halfschaduw, hoogstens twee tot zes uur directe zon per dag, met een expliciete waarschuwing dat directe zon het blad verbrandt. Het is de moeite waard te onthouden dat de fenestratie van een monstera — die karakteristieke gaten — afhangt van voldoende licht, en dat een echte philodendron diep ingesneden bladeren maakt, maar zonder gaten. Worden de ramen in je huis met windrichtingen beschreven, houd er dan rekening mee dat deze vuistregels voor het noordelijk halfrond gelden — op het zuidelijk halfrond verwissel je noord en zuid."
+        ],
+        "checklist": [
+          "Helder indirect licht is de gouden middenweg voor bijna de hele groep.",
+          "Gebedsplanten: halfschaduw, hoogstens twee tot zes uur directe zon.",
+          "Droge ronde vlekken op het blad wijzen op te veel zon.",
+          "Vergelende onderste bladeren met een afgestorven groeipunt: te weinig licht of te veel water.",
+          "Wil je fenestratie op een monstera, verhoog dan eerst het licht voor je iets anders verandert."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "Een universele organische potgrond volstaat hier — deze groep heeft noch de minerale behoefte van vetplanten, noch de veenbehoefte van varens. Wat de techniek verandert is het vasthoudend vermogen: veenrijke mengsels houden langer vocht vast, mengsels met boomschors, zand of perliet draineren sneller. Kies op basis van je giergewoonte en het klimaat in huis. Eén belangrijke correctie: een laag stenen op de bodem van de pot verbetert de drainage niet — die houdt het vocht juist in de pot.",
+          "Er staat een echt conflict tussen de bronnen op papier, en de behoudende lezing is die je moet volgen. Voor dracaena's zegt de ene extensiedienst dat je substraten met een hoog percentage perliet moet vermijden, de pH tussen 6,0 en 6,5 moet houden en geen meststoffen met superfosfaat moet gebruiken, omdat dracaena erg gevoelig is voor fluoride; voor gebedsplanten adviseert een andere extensiedienst juist perliet of vermiculiet door het mengsel, en gebedsplanten zijn óók fluoridegevoelig. Er is geen expliciete verzoening: kies voor deze twee liever vermiculiet of fijne boomschors boven perliet en gebruik gedistilleerd water of regenwater. Bemest matig — bruine, gekrulde punten zijn een teken van te veel meststof, en de heel traag groeiende ZZ-plant heeft aan één of twee giften per heel seizoen genoeg."
+        ],
+        "checklist": [
+          "Een universeel mengsel werkt; stuur het vasthoudend vermogen bij met boomschors of perliet.",
+          "Leg geen laag stenen op de bodem van de pot — dat draineert niet.",
+          "Dracaena's en gebedsplanten: liever vermiculiet of fijne boomschors dan perliet.",
+          "Houd de pH van dracaena tussen 6,0 en 6,5 en vermijd superfosfaat.",
+          "Bruine gekrulde punten: minder bemesten voor je iets anders verandert."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "Dit is de kamerplantengroep met het meest geconcentreerde vergiftigingsrisico, en de oorzaak is calciumoxalaat. Alle delen van een philodendron zijn giftig bij inname: de kristallen veroorzaken een branderig gevoel en irritatie van mond, lippen en tong, overmatig speekselen, braken en slikproblemen. De ZZ-plant staat te boek als niet veilig voor huisdieren. Het sap van gebedsplanten kan huidirritatie geven. Geen van deze planten is gevaarlijk om simpelweg in huis te hebben — het risico zit in inname en langdurig contact met het sap, dus behandel snoeien en verpotten als klussen met handschoenen aan en handen wassen achteraf.",
+          "Er is een kleiner maar reëel fysiek risico: zelfdragende, niet-klimmende philodendrons hebben brosse bladstelen die makkelijk breken, dus het loont ze uit looproutes te houden. En één observatie die je een schrikmoment bespaart: zwarte plekken op de stengel van een ZZ-plant zijn normaal en wijzen op gezonde groei, niet op ziekte."
+        ],
+        "checklist": [
+          "Houd deze planten buiten bereik van kleine kinderen en huisdieren.",
+          "Draag handschoenen bij snoeien of verpotten en was daarna je handen.",
+          "Laat afgevallen bladeren niet liggen waar dieren die aan planten knagen erbij kunnen.",
+          "Houd zelfdragende types uit looproutes: de bladstelen breken makkelijk.",
+          "Zwarte plekken op de stengel van een ZZ-plant zijn normaal, geen ziekte."
+        ]
+      }
+    }
+  },
+  "fern": {
+    "label": "Varens & schaduwplanten",
+    "topics": {
+      "watering": {
+        "advice": [
+          "Het doel is grond die altijd nét vochtig is, die nooit helemaal uitdroogt en nooit in water in de schotel blijft staan. De duurste denkfout in deze groep is constant vocht verwarren met een permanent doorweekte pot: de bronnen zeggen in dezelfde zin dat het substraat vocht moet vasthouden én snel moet draineren, want de wortel heeft nog steeds zuurstof nodig. Wortelrot verschijnt bij een varen precies zoals bij een cactus, alleen met veel minder water. En het foutsignaal is naar twee kanten dubbelzinnig — blaadjes vallen af door te veel water én door te weinig.",
+          "De luchtvochtigheid is de beperkende factor voor deze groep, geen luxe: het praktische doel ligt tussen 30% en 50%, en rond de 50% voor soorten met fijne bladeren zoals venushaar. Bruine punten op een varen zijn in de eerste plaats een diagnose van droge lucht — niet van droog substraat — en méér water geven leidt tot rot zonder het symptoom op te lossen. De methoden, in volgorde van betrouwbaarheid: dubbel potten met vochtig sphagnum, een schaal met kiezels en ongeveer zes millimeter water waarbij de pot het water niet raakt, een luchtbevochtiger, een terrarium of de badkamer voor de meest kwetsbare soorten, en pas daarna af en toe licht nevelen. Ververs of was het grind in de schaal elke drie maanden."
+        ],
+        "checklist": [
+          "Houd het substraat nét vochtig en laat het nooit helemaal uitdrogen.",
+          "Laat geen water in de schotel staan: dat is de directe route naar wortelrot.",
+          "Bruine punten betekenen lage luchtvochtigheid — behandel de lucht, geef niet meer water.",
+          "Kies liever dubbel potten met sphagnum of een kiezelschaal dan nevelen.",
+          "Was of vervang het grind in de schaal elke drie maanden."
+        ]
+      },
+      "light": {
+        "advice": [
+          "Gematigd indirect licht is ideaal, met de plant bij een koel raam — bij ons dus op het noorden, op het zuidelijk halfrond op het zuiden — of een raam op het oosten. Een heet raam in de volle zon beschadigt het blad; is dat je enige optie, gebruik dan een vitrage om de intensiteit te temperen. In cijfers is de doelband weinig tot gemiddeld licht, tussen 800 en 1.500 lux.",
+          "Er zit echte variatie in de groep: sommige soorten verdragen weinig licht en andere willen helder indirect of gefilterd zonlicht, dus kijk naar je eigen plant in plaats van één getal toe te passen. Zonschade aan het blad heeft bijna altijd een duidelijke oorzaak — een heet raam in de volle zon — en de oplossing is simpelweg verplaatsen of het licht filteren."
+        ],
+        "checklist": [
+          "Kies het koele raam van het huis, of een raam op het oosten.",
+          "Vermijd directe zon van een heet raam; gebruik een vitrage als er geen alternatief is.",
+          "Mik op de band van weinig tot gemiddeld, tussen 800 en 1.500 lux.",
+          "Verbrand blad is een teken van directe zon, niet van dorst."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "Het substraat moet hier twee dingen tegelijk doen: vocht vasthouden en snel draineren. Eén geverifieerd recept is gelijke delen commerciële kamerplantengrond en veen of bladaarde, met de expliciete eis dat het snel draineert om wortelrot te voorkomen. Een ander combineert veen of sphagnum voor het vasthouden, zand of grind voor de drainage en gesteriliseerde leemgrond, met toevoeging van dolomietkalk en beendermeel. Het is het exacte tegenovergestelde van vetplanten: hier domineert de organische fractie, en de drainage komt uit het grove materiaal in plaats van uit een minerale verhouding. En nogmaals: een laag stenen op de bodem van de pot draineert niet.",
+          "De bemesting is de meest terughoudende van alle kamerplantengroepen: één keer per maand tijdens het groeiseizoen, op ongeveer de helft van de aanbevolen dosis, niets in de winter — en niets gedurende zes maanden na het scheuren of verpotten. Geen enkele andere binnengroep heeft zo'n lange wachttijd, en de reden is direct: varens krijgen bladverbranding bij overbemesting. Eén chemische waarschuwing is specifiek voor deze groep: pesticidesprays beschadigen veel varens, dus lees het etiket zorgvuldig en test het middel eerst op een klein stukje. Kies bij plagen liever mechanische methoden, zoals een krachtige waterstraal."
+        ],
+        "checklist": [
+          "Gebruik een substraat dat vocht vasthoudt en toch snel draineert.",
+          "Bemest op halve sterkte, één keer per maand tijdens het groeiseizoen.",
+          "Bemest niet in de winter, en ook niet gedurende zes maanden na scheuren of verpotten.",
+          "Test elke spray op één blad voor je de hele plant behandelt.",
+          "Verpot en scheur in het vroege voorjaar en houd de luchtvochtigheid daarna wekenlang hoog."
+        ]
+      }
+    }
+  },
+  "fruitVeg": {
+    "label": "Fruitbomen & groenten",
+    "topics": {
+      "watering": {
+        "advice": [
+          "Hier wordt water geven gemeten als een wekelijkse laagdikte en heeft het duidelijke fenologische vensters. De meeste groenten willen 25 tot 50 millimeter per week — een laag van 2,5 tot 5 centimeter — met heldere pieken: suikermaïs wil 4 tot 6 centimeter tijdens pluimvorming, zijdedraadvorming en kolfvulling; bonen willen 2,5 tot 4 centimeter tijdens bloei en peulvulling. De marge is een interval, geen vast getal — een droog klimaat duwt hem omhoog, een vochtig klimaat omlaag. Op leemgrond dringt 2,5 centimeter water ongeveer 15 centimeter het profiel in, en daarmee kun je rekenen: dertig centimeter bevochtigen kost ruwweg 5 centimeter toegediend water.",
+          "Oppervlakkig water geven is hier niet alleen minder efficiënt: het onderbreekt het calciumtransport. Calcium beweegt mee met de verdampingsstroom en wordt niet uit oud weefsel opnieuw naar nieuw fruit verplaatst, dus cycli van uitdrogen-en-doordrenken geven neusrot, zelfs met volop calcium in de bodem. Tomaten zijn zeer gevoelig voor onregelmatig water geven en antwoorden met neusrot en scheuren; paprika's antwoorden met bloemval; een komkommer die in de reproductieve fase stress krijgt geeft bittere, misvormde vruchten. Zandgrond wil kortere, frequentere beurten; kleigrond wil minder vaak en dieper."
+        ],
+        "checklist": [
+          "Werk met een band van 25 tot 50 millimeter per week, regen en beregening bij elkaar geteld.",
+          "Mis de bloei en de vruchtvulling niet: dat is het venster dat de oogst kost.",
+          "Kies liever diepe, gespreide beurten dan korte dagelijkse.",
+          "Neusrot los je op door het water geven te regelen, niet door calcium te spuiten.",
+          "Stem af op de grond: zand wil meer frequentie; klei wil meer diepte."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "Dit is de enige groep waarvan de oogst elk jaar opnieuw voedingsstoffen uit het systeem haalt, en bijna elk verschil in beheer vloeit daaruit voort. De bemesting is terugkerend en verdeeld over bijbemestingen, waarbij de verhouding door de cyclus heen verandert — bij tomaat in de volle grond bijvoorbeeld begint de bijbemesting rijker aan fosfor en gaat het kalium omhoog naarmate de plant in productie komt. Te veel stikstof heeft een reële prijs: vijgen die niet afrijpen, en te sterke scheutgroei tijdens de vroege bloei en vruchtzetting, wat een van de grootste veroorzakers is van neusrot bij tomaat en paprika.",
+          "De pH is doorslaggevend en varieert sterk binnen de groep. Appel doet het goed tussen 5,8 en 6,5, ongeveer om de drie jaar opnieuw getest; de meeste bladgroenten zitten tussen 6,0 en 6,5; en blauwe bes is de radicale uitzondering, op zijn best tussen 4,8 en 5,2, waarvoor elementaire zwavel minstens een jaar voor het planten moet worden toegediend. Twee regels gelden voor alles: houd meststof minstens 15 centimeter bij de stam vandaan, en breng hem altijd aan op vochtige grond zodat hij de wortels niet verbrandt. En dit is de enige groep met vruchtwisseling per plantenfamilie — gewassen uit dezelfde familie zijn vatbaar voor dezelfde ziekten en insecten, dus herhaal een familie drie tot vier jaar niet in hetzelfde bed, of langer als het kan."
+        ],
+        "checklist": [
+          "Bemest in verdeelde bijbemestingen, niet in één enkele gift.",
+          "Test de grond en corrigeer de pH voor het gewas, niet voor het bed als geheel.",
+          "Houd meststof minstens 15 centimeter van de stam, altijd op vochtige grond.",
+          "Herhaal dezelfde plantenfamilie drie tot vier jaar niet in een bed.",
+          "Te veel stikstof vertraagt de afrijping en voedt neusrot."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Vruchtdunning is een verplichte handeling die in geen enkele andere groep bestaat. Een te zware dracht geeft kleine vruchten, gebroken takken en beurtjaren, want als een boom een volle dracht draagt gaat bijna al zijn energie naar het fruit en blijft er weinig over om de bloemen van volgend jaar aan te leggen. Dun appels met de hand binnen zes weken na de volle bloei, en laat de vruchten ongeveer 20 tot 25 centimeter uit elkaar aan de tak staan; peren, pruimen en abrikozen krijgen 15 tot 20 centimeter. De natuurlijke junirui, met vruchten van ongeveer één tot twee centimeter doorsnede, vervangt het handmatig dunnen niet — houd altijd de grootste vrucht van de tros aan, tenzij die beschadigd is.",
+          "Twee handelingen maken het beeld compleet. Het snoeien van een appelboom begint op de dag dat hij wordt geplant; uitstel geeft slechte groei en late vruchtdracht. En bij blauwe bes is het weghalen van elke bloem in het eerste en tweede jaar precies wat de plant laat wortelen — twee oogsten opgeven koopt alle oogsten die volgen. Houd bij fruitbomen de stopdatum voor bemesting aan het eind van de zomer aan, want vruchtproductie en het uitrijpen van het hout concurreren om dezelfde assimilaten."
+        ],
+        "checklist": [
+          "Dun de vruchten binnen zes weken na de volle bloei.",
+          "Houd de grootste vrucht van elke tros aan, tenzij die beschadigd is.",
+          "Vertrouw niet op de natuurlijke rui: die vervangt het handmatig dunnen niet.",
+          "Begin de kroon te vormen in het plantjaar, niet later.",
+          "Stop met het bemesten van fruitbomen aan het eind van de zomer."
+        ]
+      }
+    }
+  },
+  "flowering": {
+    "label": "Bloeiende & sierplanten",
+    "topics": {
+      "watering": {
+        "advice": [
+          "Water geven is hier een wekelijkse laagdikte, geen cyclus van doordrenken-en-opdrogen: eenjarigen en vaste planten willen minstens 25 tot 40 millimeter water per week, regen en beregening bij elkaar geteld, en het beste moment is vroeg, zodat het blad snel opdroogt. Bij rozen wordt hetzelfde principe anders verwoord — diep water geven bevordert een diep wortelstelsel, terwijl vaak en licht water geven de wortels te dicht bij het bodemoppervlak laat vormen.",
+          "De gezondheid van de plant hangt hier meer van af dan het lijkt. Een roos met terugkerende sterroetdauw heeft bijna altijd natte bladeren aan het eind van de dag en stilstaande lucht om zich heen: ochtendzon, een druppelslang in plaats van een sproeier en goede luchtcirculatie lossen meer op dan welke spray dan ook."
+        ],
+        "checklist": [
+          "Geef minstens 25 tot 40 millimeter water per week, regenval meegeteld.",
+          "Geef vroeg water, zodat het blad opdroogt voor het donker wordt.",
+          "Kies liever diepe, gespreide beurten dan lichte, frequente.",
+          "Maak bij rozen de grond nat en niet het blad."
+        ]
+      },
+      "light": {
+        "advice": [
+          "De meeste eenjarigen hebben volle zon nodig, minstens vier tot zes uur per dag, om goed te bloeien. Rozen vragen meer: zes tot acht uur directe zon, en juist de ochtendzon telt, omdat die de bladeren droogt en ziekte helpt voorkomen.",
+          "Eén diagnose zet veel mensen op het verkeerde been: een slappe vaste plant zonder structuur betekent meestal te weinig licht — geen gebrek aan meststof. Meer bemesten corrigeert dat niet; de plant verplaatsen wel."
+        ],
+        "checklist": [
+          "Eenjarigen: vier tot zes uur volle zon per dag, minimaal.",
+          "Rozen: zes tot acht uur, met voorrang voor de ochtendzon.",
+          "Een slappe, uitzakkende vaste plant moet verhuizen, niet meer meststof krijgen.",
+          "Kijk het hele jaar door waar de zon valt voor je een bed vastlegt."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "De voorbereiding van het bed gaat hier dieper dan in een pot: 15 tot 25 centimeter voor eenjarigen en 20 tot 25 voor vaste planten. Werk in kleigrond minstens 5 centimeter gecomposteerde dennenschors, compost of bladaarde door; in zandgrond 5 tot 8 centimeter vochtvasthoudend organisch materiaal. De pH-doelwaarde voor vaste planten is 6,0 tot 6,5. De mulchlaag is hier dunner dan bij houtige planten: 5 tot 8 centimeter voor eenjarigen en maar 2,5 tot 5 voor vaste planten, met een expliciete waarschuwing tegen te zwaar mulchen, omdat het hart van een vaste plant eronder wegrot.",
+          "De voedingsbehoefte is gemiddeld en expliciet begrensd: een volledige meststof bij de voorbereiding, herhaald met tussenpozen van ongeveer zes weken, dekt de lading. Ver boven de volgroeide houtige plant, die vrijwel niets nodig heeft, en ruim onder de volwassen fruitboom. En één belangrijke correctie op een wijdverbreide gewoonte: gebruik niet standaard een fosforrijke formule om bloei te stimuleren. Hoge fosforgiften verhogen het aantal bloemen niet, en een chronisch overschot legt micronutriënten als ijzer en zink vast, wat achterblijvende planten en vergelende bladeren geeft — en een fosforoverschot zakt heel traag weg, wat jaren kan duren. Een gebalanceerde meststof plus een grondanalyse is het veilige advies. Teken van overschot in een pot: een witte korst op de rand, bruine bladpunten en donker verkleurde wortels."
+        ],
+        "checklist": [
+          "Bereid de grond diep voor: 15 tot 25 centimeter, met organisch materiaal erdoor.",
+          "Gebruik maar 2,5 tot 5 centimeter mulch op vaste planten, en houd het hart vrij.",
+          "Bemest met een gebalanceerde formule, elke zes weken herhaald.",
+          "Gebruik geen fosforrijke formule om bloei af te dwingen.",
+          "Witte korst op de potrand: doorspoelen met volop water of het substraat vervangen."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "De handeling die deze groep definieert is deadheading — het verwijderen van uitgebloeide bloemen. Uitgebloeide bloemen weghalen stimuleert de plant om extra bloemen te maken in plaats van de bloeicyclus voor het seizoen af te sluiten; het is de enige categorie waarin het verwijderen van het voortplantingsorgaan juist méér oplevert van wat je wilt. Knijp ze af met je vingers of gebruik een scherpe schaar, en het mag gerust met een stuk steel erbij, niet alleen de bloem. Naast het effect op de bloei verlaagt dit ook de kans op ziekten die zich op rottend plantmateriaal ontwikkelen. Knijp bij het planten van eenjarigen de knoppen en bloemen eraf zodat de plant beter vertakt; snoei vaste planten na de bloei terug tot op de grond om nieuwe bladgroei vanuit de basis te stimuleren.",
+          "Bollen zijn het spiegelbeeld: na de bloem is het werk juist opladen. Verwijder de uitgebloeide bloem om zaaddozen te voorkomen, maar nooit het blad — laat het loof staan tot het uit zichzelf begint te vergelen en af te sterven, en bind of vlecht het niet, want dat vermindert het licht dat de bladeren kunnen opvangen en daarmee de fotosynthese die de bol voor volgend jaar volmaakt. Deel bollen zodra het loof is afgestorven en ze in rust zijn, en maak de broedbollen los door voorzichtig te draaien en te trekken; kleine delen kunnen er een jaar of twee over doen voor ze weer bloeien. En overweeg in het najaar zaadhoofden te laten staan: ze zijn de hele winter een voedzame voedselbron voor dieren."
+        ],
+        "checklist": [
+          "Verwijder uitgebloeide bloemen voor ze zaad zetten.",
+          "Knijp de knoppen af bij het planten van eenjarigen, zodat de plant vertakt.",
+          "Knip bij bollen de bloem af, maar nooit het blad.",
+          "Bind of vlecht het loof van bollen nooit op.",
+          "Laat in het najaar een deel van de zaadhoofden staan voor de dieren."
+        ]
+      }
+    }
+  },
+  "woody": {
+    "label": "Bomen & houtige struiken",
+    "topics": {
+      "watering": {
+        "advice": [
+          "Dit is de enige groep waarvan de vestigingsperiode in jaren wordt gemeten: ruwweg één jaar per 2,5 centimeter stamdiameter. Een pas geplante boom wil de eerste twee weken dagelijks water, van de derde tot de twaalfde week om de twee of drie dagen, daarna wekelijks tot de eerste vorst en in het tweede jaar opnieuw wekelijks. Voor het volume bestaat een formule: vier tot zes liter per 2,5 centimeter stamdiameter per beurt, verdeeld over de hele wortelzone in plaats van bij de stam, waarbij je 15 tot 20 centimeter grond bevochtigt.",
+          "Diep water geven stimuleert sterke wortels en verbetert de weerbaarheid tegen hitte en droogte; vaak en oppervlakkig water geven bouwt een oppervlakkig, afhankelijk wortelstelsel — bij een houtige plant is dat ook het wortelstelsel dat bij storm uit de grond scheurt. Daarom wordt een pas geplante boom die verwelkt ondanks dagelijks water meestal op de verkeerde plek en in te klein volume begoten. Zuurminnende struiken zoals azalea's willen diep water, waarbij je tot minstens 15 à 20 centimeter bevochtigt, en op zandgrond kunnen ze in hun eerste jaar twee keer per week water nodig hebben."
+        ],
+        "checklist": [
+          "Geef water aan de hele wortelzone, nooit aan de stam.",
+          "Geef elke keer vier tot zes liter per 2,5 centimeter stamdiameter.",
+          "Bevochtig 15 tot 20 centimeter van het bodemprofiel.",
+          "Reken op ongeveer één jaar vestiging per 2,5 centimeter stamdiameter.",
+          "Kies liever diepe, gespreide beurten dan dagelijks oppervlakkig water."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "Een volgroeide houtige plant in goede grond heeft simpelweg geen meststof nodig: niet alle beplanting in de tuin hoeft bemest te worden, en volgroeide bomen en struiken op gunstige bodems vragen weinig tot geen mest. Bomen in een bemest gazon helpen zichzelf al, omdat hun wortels de voeding onderscheppen die voor het gras bedoeld is. Bemest je toch, dan is het plafond normatief: langzaam werkende stikstof op één tot twee kilo per 100 vierkante meter per jaar, nooit boven de drie; snel werkende op een halve tot één kilo, met een plafond van twee. De gift dekt het hele oppervlak van de kruinprojectie, van de wortelaanzet tot aan de uiteinden van de takken, en gaat altijd op vochtige grond.",
+          "Zuurminnende struiken zijn de subgroep die alles verandert. Azalea's en rododendrons willen een pH tussen 4,5 en 6,0, wortelen ondiep en raken makkelijk beschadigd door te veel bodemvocht; ze verdragen een verzurende meststof rond een 2-1-1-verhouding, licht toegediend in het voorjaar en de vroege zomer, en nooit een stikstofrijke gift in het late najaar, omdat die de winterrust uitstelt. Gele jonge bladeren met groene nerven wijzen op een hoge pH die ijzer vastlegt — maar in zure kleigronden is ijzer goed beschikbaar, dus onderzoek eerst wateroverlast voor je de pH de schuld geeft. Mulch is tegelijk gereedschap en wapen: vijf tot tien centimeter dik, acht tot twaalf centimeter van de stam gehouden bij een jonge boom en twintig tot vijfentwintig bij een volgroeide, uitgestrekt tot aan de druiplijn. Ga je daaroverheen, dan krijg je de mulchvulkaan, die langzaam doodt: lucht komt er niet doorheen, de grond eronder raakt zuurstofloos, het constante vocht doodt het floëem en de wortels komen zonder koolhydraten te zitten."
+        ],
+        "checklist": [
+          "Bemest een volgroeide houtige plant in goede grond niet — hij heeft het bijna nooit nodig.",
+          "Bemest je toch, dek dan de hele kruinprojectie en doe het altijd op vochtige grond.",
+          "Zuurminnaars: pH tussen 4,5 en 6,0 en een lichte verzurende gift in het voorjaar.",
+          "Houd mulch van de stam vandaan, in een vlakke ring.",
+          "Vijf tot tien centimeter mulch is genoeg; meer is een vulkaan."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Snoeien is onomkeerbaar en heeft anatomische regels. De snede gaat net voorbij de takkraag — die verdikking aan de voet van de tak die als natuurlijke barrière werkt tegen rotverwekkende organismen. Takken dikker dan vier centimeter vragen om de driesnedemethode, zodat de bast niet langs de stam naar beneden scheurt. En geen wondafdekmiddel: onderzoek heeft aangetoond dat wondafdekmiddelen en andere snoeimiddelen rot niet voorkomen.",
+          "Het moment wordt bepaald door het hout dat bloeit, niet door de kalender: planten die bloeien op het hout van vorig jaar — forsythia, azalea, sering — snoei je meteen na de bloei, en die op het hout van dit jaar bloeien snoei je voordat de groei begint. Een struik die nooit bloeit is bijna altijd op het verkeerde moment gesnoeid. Kies liever uitdunnen dan inkorten, want uitdunnen stimuleert groei binnenin de plant en geeft een natuurlijke habitus terug, terwijl inkorten de buitenkant verdicht en het binnenste verduistert, met hergroei geconcentreerd binnen vijftien tot twintig centimeter van de snede. Om een oude struik te verjongen zonder hem te shockeren gebruik je de eenderderegel over drie jaar. Houd het behoudende jaarplafond van ongeveer 25% van de levende kroon aan, en top een boom nooit: toppen haalt de helft of meer van de bebladerde kroon weg, laat wonden achter die niet kunnen compartimenteren en stelt de bast bloot aan bastverbranding. Vermijd ook snoeien in de tien weken voor de eerste strenge vorst in jouw regio."
+        ],
+        "checklist": [
+          "Snoei net buiten de takkraag, nooit vlak langs de stam.",
+          "Gebruik de driesnedemethode bij takken dikker dan vier centimeter.",
+          "Gebruik geen wondafdekmiddel: het voorkomt geen rot.",
+          "Planten die op oud hout bloeien snoei je meteen na de bloei.",
+          "Haal per jaar hooguit zo'n 25% van de levende kroon weg, en top een boom nooit."
+        ]
+      }
+    }
+  },
+  "orchid": {
+    "label": "Orchideeën & epifyten",
+    "topics": {
+      "watering": {
+        "advice": [
+          "Hier bestaat geen giet-kalender, alleen een droogcriterium: geef water zodra de plant is opgedroogd, en er is geen toverformule zoals een pot van vijftien centimeter elke zeven dagen. En geef je water, doe het dan goed — water dat een paar minuten vrij uit de drainagegaten loopt, tot het mengsel volledig verzadigd is. Het idee van diep water geven keert in deze groep om: er is geen bodemprofiel om te bevochtigen, alleen totale verzadiging gevolgd door snel opdrogen. Dagelijks licht nevelen is het equivalent van oppervlakkig water geven in een border: het maakt het oppervlak nat, houdt vocht vast op de verkeerde plekken en verzadigt het medium nooit.",
+          "Waterkwaliteit telt hier zwaarder dan in welke andere groep ook, want zonder grond is er geen kationenuitwisselingscomplex dat zout buffert: gebruik lauw water, bij voorkeur regenwater, en nooit onthard water, dat veel natrium bevat. Laat de pot nooit in een schotel staan. Elke subgroep heeft zijn eigen methode: tankbromelia's nemen vooral op via hun bladeren en via de trechter aan de basis, die vol moet blijven en elke week doorgespoeld moet worden om te voorkomen dat mineralen zich concentreren en de bladpunten doden; luchtplanten willen één keer per week twintig tot dertig minuten weken — één tot twee keer, afhankelijk van of de kamer warm en droog is of koel en vochtig — daarna uitschudden en ondersteboven laten uitlekken; en de kerstcactus heeft, zodra de knoppen zijn gezet, gelijkmatig vochtig substraat nodig zodat hij ze niet laat vallen."
+        ],
+        "checklist": [
+          "Geef water als het is opgedroogd, niet volgens de kalender.",
+          "Verzadig het medium tot het water een paar minuten vrij doorloopt.",
+          "Gebruik lauw water, waar mogelijk regenwater, en nooit onthard water.",
+          "Laat de pot nooit in een schotel met water staan.",
+          "Tankbromelia: houd de trechter vol en spoel hem elke week door."
+        ]
+      },
+      "light": {
+        "advice": [
+          "De meeste orchideeën binnenshuis willen één tot vier uur directe zon. Vlinderorchideeën doen het goed tussen 19 en 30 °C overdag en 16 tot 19 °C 's nachts, voor een raam op het oosten of westen, uit de zomerzon en weg van verwarming en tocht. Bromelia's vragen twaalf tot zestien uur relatief helder licht per dag, en de bladeren rapporteren terug: lange, dunne en groenere bladeren betekenen te weinig licht; kortere, dikkere en blekere betekenen genoeg. Luchtplanten willen helder gefilterd licht, nooit directe zon.",
+          "Er is één geval waarin de daglengte zwaarder weegt dan de intensiteit. Kerstcactussen en hun verwanten hebben veertien uur of meer aaneengesloten duisternis per dag nodig, vanaf ongeveer half september op het noordelijk halfrond, gedurende minstens zes weken — en de praktische waarschuwing is onomwonden: zelfs twee uur onderbrekende verlichting remt de aanleg van bloemknoppen. Eén lamp die in de kamer aan blijft is genoeg om de bloei van dat jaar te annuleren."
+        ],
+        "checklist": [
+          "Orchideeën binnenshuis: één tot vier uur directe zon.",
+          "Vlinderorchidee: raam op het oosten of westen, weg van verwarming en tocht.",
+          "Een bromelia met lange, dunne, donkere bladeren vraagt om meer licht.",
+          "Luchtplant: helder gefilterd licht, nooit directe zon.",
+          "Kerstcactus: zes weken lang aaneengesloten duisternis 's nachts om knop te zetten."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "In deze groep is er geen aarde, en gewone potgrond is dodelijk: gebruik nooit een leemhoudende of universele potgrond, want die verstikt de wortel met zijn velamenlaag. Sterker nog, het substraat heeft een houdbaarheidsdatum en verpotten is verplicht, niet optioneel — schors moet ongeveer elke twee jaar vervangen worden, en het teken daarvoor is fysiek: verpot zodra er tijdens het water geven kleine stukjes van het medium uit de pot beginnen te spoelen. Verteerde schors wordt minder luchtig en dichter, houdt langer water vast en laat de wortels rotten. Het is de enige groep waarin het substraat zelf de oorzaak van een geprogrammeerde dood is.",
+          "De keuze tussen schors en sphagnum is een beslissing over de omgeving, geen kwestie van smaak: grove schors in een vochtige kamer of kas; een mengsel met meer sphagnum en vezel in een droog, zonnig interieur, met meer gespreide waterbeurten en verpotten meteen na de bloei. Een mengsel van schors, houtskool en perliet is de gebalanceerde commerciële standaard. De pot hoort net groot genoeg te zijn om het wortelstelsel te bevatten — een te grote pot houdt vocht vast en beschadigt orchideeënwortels. De bemesting is uit principe verdund: de helft van wat op het etiket staat, met weinig of geen ureum, wekelijks in de zomer en om de twee weken in het najaar en de winter, waarbij je elke vierde waterbeurt de mest overslaat om zouten weg te spoelen. Bromelia's gaan nog zwakker, op een kwart tot een achtste van de sterkte. En onthoud dat meerdere leden van deze groep monocarp zijn: een bromelia die na de bloei langzaam achteruitgaat maakt zijn normale cyclus af, hij wordt niet ziek — bewaar de jonge spruiten."
+        ],
+        "checklist": [
+          "Pot nooit op in gewone aarde of universele potgrond.",
+          "Vervang de schors om de twee jaar, of zodra er stukjes uitspoelen tijdens het water geven.",
+          "Gebruik een pot die precies op het wortelstelsel is afgestemd.",
+          "Bemest op halve sterkte en sla elke vierde waterbeurt de mest over.",
+          "Een bromelia die na de bloei afsterft volgt de normale cyclus: bewaar de spruiten."
+        ]
+      }
+    }
+  },
+  "herb": {
+    "label": "Keuken- & aromatische kruiden",
+    "topics": {
+      "watering": {
+        "advice": [
+          "Deze groep valt in tweeën uiteen, en beide met dezelfde kalender behandelen is de structurele fout. De houtige mediterrane kruiden — rozemarijn, tijm, oregano, salie, lavendel — willen gespreide beurten met echte droogte ertussen: hun risico is een verzopen wortel in de winter, niet droogte in de zomer. Rozemarijn heeft een hekel aan natte wortels, vooral in de winter, en eenmaal ingeworteld in de volle grond heeft hij vrijwel geen water nodig; in een pot geef je water tijdens droge periodes, maar laat je de potgrond nooit verzadigd raken.",
+          "De bladkruiden — basilicum, peterselie, munt, citroenmelisse — willen het omgekeerde: een tamelijk constante toevoer van bodemvocht, want waterstress versnelt het doorschieten en maakt het blad taai. Geef 's ochtends water zodat het blad opdroogt voor de nacht, en maak bij basilicum de bladeren niet nat: gebruik druppelslang of poreuze slang in plaats van een sproeier, want een nat blad in stilstaande lucht is een uitnodiging voor valse meeldauw."
+        ],
+        "checklist": [
+          "Scheid de mediterrane van de bladkruiden voor je welke gietroutine dan ook instelt.",
+          "Mediterrane kruiden: gespreid water geven en de grond er echt tussendoor laten opdrogen.",
+          "Bladkruiden: houd het vocht constant om doorschieten te voorkomen.",
+          "Geef 's ochtends water, nooit aan het eind van de dag.",
+          "Maak bij basilicum de grond nat en niet het blad."
+        ]
+      },
+      "light": {
+        "advice": [
+          "Bijna alle kruiden groeien het best op een plek die minstens zes uur per dag zonnig is — en het is de zon die de etherische olie maakt, wat betekent dat het de zon is die het aroma maakt. Basilicum houdt van volle zon, maar groeit redelijk goed in zes uur halfzon.",
+          "De uitzonderingen zijn bekend en het respecteren waard: peterselie en munt hebben liever halfschaduw en kwijnen weg in felle volle zon. Sukkelt je peterselie of munt in het zonnigste bed, dan kan dat precies het probleem zijn."
+        ],
+        "checklist": [
+          "Mik voor de meeste kruiden op minstens zes uur zon per dag.",
+          "Peterselie en munt accepteren halfschaduw, en hebben die soms zelfs liever.",
+          "Minder zon betekent minder etherische olie en minder aroma.",
+          "Houd een paar potten bij de keuken, om vaak te kunnen plukken."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "Drainage is hier meer waard dan vruchtbaarheid, en dit is de enige groep waarin hoge vruchtbaarheid verlies oplevert: erg vruchtbare grond geeft doorgaans weelderige bladeren zonder smaak. De algemene pH-doelwaarde is 6 tot 7, met matig organisch materiaal. Werk in kleigrond vijf tot acht centimeter fijne dennenschors, fijn grind of grove compost door tot een diepte van twintig tot dertig centimeter; in zandgrond dezelfde diepte vochtvasthoudend materiaal. Een verhoogd bed met een mulchlaag van grind is in deze groep standaardpraktijk, geen luxe.",
+          "Rozemarijn in zware grond corrigeer je niet — die verhuis je, naar een verhoogd bed of een pot met tot 25 volumeprocent tuinbouwgrit. Rozemarijn in de volle grond hoeft helemaal niet bemest te worden; die in een pot krijgt eind voorjaar een handje universele korrelmest. Basilicum is de uitzondering die zich als een groente gedraagt en bij het planten een afgemeten dosis krijgt, alleen aangevuld als de groei stokt. Bij koriander houden lichte stikstofgiften de planten weelderig, maar de bron is expliciet over het vermijden van de neiging tot overbemesten. En wees voorzichtig met munt: plant hem in een bodemloze bak die je in het bed ingraaft, want hij loopt uit via wortelstokken en neemt anders de hele ruimte in."
+        ],
+        "checklist": [
+          "Zet drainage voorop: verhoogd bed, grit of fijne schors erdoorheen gewerkt.",
+          "Houd de pH tussen 6 en 7 en de vruchtbaarheid matig.",
+          "Een weelderig kruid zonder smaak is een teken van te veel meststof.",
+          "Rozemarijn in de volle grond hoeft niet bemest te worden.",
+          "Plant munt in een bodemloze bak die je in het bed ingraaft."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "De oogst heeft een fysiologisch venster: kruiden oogst je vlak voor de bloei, want dan staan de etherische oliën op hun hoogtepunt. En er is een tijdstip: 's ochtends vroeg, nadat de dauw is opgedroogd maar voor de hitte toeslaat. Geen enkele andere groep heeft het tijdstip van de dag als kwaliteitsvariabele, en een kruid dat 's middags is geplukt heeft merkbaar minder aroma. Aromatische bloemen pluk je voor ze helemaal opengaan.",
+          "Snoeien houdt hier de habitus en de smaak in stand, en elk geslacht heeft zijn eigen regel. Knijp bij basilicum regelmatig de groeitoppen uit en verwijder bloemknoppen zodra ze verschijnen, anders wordt het blad bitter en stopt de plant met groeien; oogst scheuttoppen met één of twee bladparen en laat genoeg blad staan om weer uit te lopen. Rozemarijn krijgt elk jaar een lichte snoeibeurt nadat de bloemen zijn uitgebloeid, waarbij je nooit in het oude hout snijdt — zonder dat wordt hij lang, verhout en kaal aan de basis. Salie krijgt in het vroege voorjaar een stevige snoeibeurt, tijm knip je licht bij na de bloei en laurier snoei je in de zomer. Munt kun je na de bloei helemaal terugknippen tot ongeveer vijf centimeter boven de basis om het blad te vernieuwen."
+        ],
+        "checklist": [
+          "Oogst vlak voor de bloei, als de olie op zijn hoogtepunt staat.",
+          "Oogst 's ochtends vroeg, zodra de dauw is opgedroogd.",
+          "Verwijder bij basilicum de bloemknoppen zodra ze verschijnen.",
+          "Knip rozemarijn licht bij na de bloei en snijd nooit in het oude hout.",
+          "Vernieuw munt door de pol na de bloei helemaal terug te knippen."
+        ]
+      }
+    }
+  },
+  "pollinator": {
+    "label": "Bestuivende insecten",
+    "topics": {
+      "role": {
+        "advice": [
+          "Ongeveer een derde van het voedsel dat we eten hangt af van het werk van bestuivers, en het meeste van dat werk wordt niet gedaan door de bij die je voor je ziet. Alleen al in Groot-Brittannië leven meer dan 270 bijensoorten: zo'n 26 hommels, ruim 250 solitaire bijen en één enkele honingbijsoort. Vrijwel allemaal zijn ze solitair — elk vrouwtje bouwt en bevoorraadt haar nest alleen en sterft voordat de volgende generatie uitkomt — en het nest is bijna nooit een korf: veel soorten nestelen in kale grond, andere in holtes in hout, en hommels betrekken vaak gangen die door knaagdieren zijn gemaakt.",
+          "In Brazilië is de sleutelgroep de angelloze bijen, de Meliponini, inheems in tropische en subtropische streken; alleen al in Pará zijn naar schatting 109 soorten verbonden aan gewassen als açaí, meloen en watermeloen. De groep reikt veel verder dan bijen: kevers behoren vermoedelijk tot de eerste insecten die bloemen bezochten, zweefvliegen bestuiven als volwassen dier terwijl hun larven bladluizen eten, en vlinders en nachtvlinders dragen ook aan de dienst bij, zelfs zonder de trilbestuiving die bijen per bezoek zo efficiënt maakt."
+        ],
+        "checklist": [
+          "De meeste bijen zijn solitair en zullen nooit een volk vormen.",
+          "Een kegelvormig hoopje aarde in het gazon is de opening van een actieve nestgang.",
+          "Strak uitgeknipte ronde stukjes uit een blad zijn behangersbijen die nestmateriaal verzamelen.",
+          "Een zweefvlieg heeft twee vleugels; bijen en wespen hebben er vier.",
+          "Geen bladluizen betekent geen zweefvlieglarven: prooi is óók een hulpbron."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "Het werkelijke risico is klein. Gestoken worden in je eigen tuin is onwaarschijnlijk zolang je bijen met respect behandelt, en solitaire bijen gebruiken hun angel alleen ter verdediging, als ze ruw worden vastgepakt. Angelloze bijen steken, zoals de naam zegt, niet — wat dit de veiligste groep maakt om van dichtbij te bekijken en thuis te houden. Het steekrisico in deze buurt zit geconcentreerd bij de sociale wespen, die bij het nest wél een verdedigend steekvermogen hebben.",
+          "Twee kanttekeningen maken het beeld compleet. De rupsen van verschillende nachtvlinders zijn brandharige rupsen, en dat is een heel ander verhaal — raadpleeg de groep van schadelijke insecten voor je een behaarde rups aanraakt. En het houden van angelloze bijen is een gereguleerde activiteit, geen vrije: in Pará bijvoorbeeld zijn houders met maximaal 99 kasten vrijgesteld van milieuvergunning, maar moeten ze zich nog steeds registreren bij de landbouwinspectiedienst. Voor het weghalen van een wild nest gelden weer eigen regels."
+        ],
+        "checklist": [
+          "Kijk zonder vast te pakken: een solitaire bij steekt alleen als je haar fijnknijpt.",
+          "Angelloze bijen steken niet — de veiligste groep om van dichtbij te bekijken.",
+          "Houd afstand van nesten van sociale wespen.",
+          "Raak nooit een behaarde rups aan: daar zit het risico, niet bij de bijen.",
+          "Voor het houden van inheemse bijen is registratie bij de bevoegde instantie nodig."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Diversiteit gaat voor hoeveelheid: begin met acht tot tien inheemse plantensoorten die het voorjaar, de zomer en het najaar dekken, geplant in vlakken van minstens een meter breed. Kies bij voorkeur eenvoudige, open bloemen met één krans bloemblaadjes — gevulde bloemen verbergen stuifmeel en nectar of hebben ze helemaal niet. Laat het onkruid in het gazon bloeien door minder vaak te maaien, en zorg voor water, want bijen en andere bestuivers moeten soms drinken. Eén veldmethode is het kopiëren waard: kijk welke planten bij jou in de buurt populair zijn bij bestuivers, en plant daar meer van.",
+          "Nestplekken zijn een hulpbron. Laat stukken goed doorlatende kale grond in de volle zon vrij, zonder mulch, voor bijen die in de grond nestelen, en tolereer de kleine hoopjes aarde in het gazon in plaats van ze glad te strijken. Een bijenhotel werkt met gaten van ongeveer 2 tot 10 millimeter doorsnee, twee centimeter uit elkaar, acht tot tien centimeter diep voor de kleinere gaten en twaalf tot vijftien voor de grotere, in onbehandeld hout, opgehangen op één tot twee meter hoogte op een beschutte plek. En de regel die alle andere overtreft: spuit nooit op open bloemen. Vermijd breedwerkende insecticiden; moet je toch behandelen, doe het dan 's avonds, wanneer bestuivers minder actief zijn."
+        ],
+        "checklist": [
+          "Plant acht tot tien inheemse soorten die alle drie de seizoenen dekken.",
+          "Kies eenvoudige bloemen met één krans blaadjes, geen gevulde.",
+          "Laat plekken kale, zonnige grond liggen voor bijen die in de grond nestelen.",
+          "Zorg het hele jaar door voor ondiep, veilig water.",
+          "Spuit nooit op open bloemen; moet je behandelen, doe het dan 's avonds."
+        ]
+      }
+    }
+  },
+  "beneficialInsect": {
+    "label": "Roofinsecten & nuttige insecten",
+    "topics": {
+      "role": {
+        "advice": [
+          "Dit zijn de natuurlijke vijanden van de tuin: predatoren, die in hun leven veel prooien doden en opeten, en parasitoïden, waarvan de larve zich in of op één enkele gastheer ontwikkelt en die daarbij doodt. De cijfers zijn opvallend — een lieveheersbeestje kan in zijn leven wel 5.000 bladluizen wegwerken, loopkevers kunnen dagelijks tot hun eigen lichaamsgewicht verorberen, en een gaasvlieglarve pakt er tussen de 100 en 150. Van geïntegreerde plaagbestrijding die op natuurlijke vijanden steunt is gerapporteerd dat ze het aantal bespuitingen in verschillende teelten met 30% tot 40% terugbrengt.",
+          "Het levensstadium verandert alles, en daar zit de meest gemaakte fout. Bij gaasvliegen en zweefvliegen is alleen de larve een predator: het volwassen dier leeft van nectar, stuifmeel en honingdauw. Met andere woorden, dat vreemde beestje op het blad is meestal de bondgenoot, niet de plaag. Drie veldkenmerken zijn het leren waard: een lieveheersbeestjelarve is roodachtig en heeft de vorm van een kleine krokodil; gaasvliegeieren zitten op haardunne steeltjes; en een rups die een paar dozijn kleine witte cocons op zijn rug draagt is al ten dode opgeschreven en zal tientallen sluipwespen loslaten — laat hem precies liggen waar hij ligt."
+        ],
+        "checklist": [
+          "Identificeer voor je ingrijpt: veel vreemde larven op bladeren zijn predatoren.",
+          "Een lieveheersbeestjelarve is roodachtig en krokodilvormig.",
+          "Eieren op haardunne steeltjes zijn gaasvliegeieren, geen plaag.",
+          "Een rups met witte cocons op zijn rug is al geparasiteerd — gooi hem niet weg.",
+          "Een bidsprinkhaan is een kieskeurige predator noch een vriend: hij eet ook bestuivers."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "Vrijwel niets hier steekt. Onder de predatoren hebben alleen sociale wespen een verdedigend steekvermogen; onder de parasitoïden alleen de jachtwespen die nesten bouwen in grond of leem. Sluipwespen uit de Ichneumonidae en de Braconidae gebruiken die lange angel puur als legboor, en die is niet defensief.",
+          "Maar twee families bijten als je ze vastpakt: roofwantsen steken hun snuit in de huid en spuiten verteringsenzymen in, en roofvliegen injecteren neurotoxisch speeksel. Pak ze niet op. Een bidsprinkhaan grijpt met zijn vangpoten in een bliksemsnelle beweging en bijt als je hem vasthoudt. En er is één specifiek geval: het invasieve Aziatische lieveheersbeestje bijt mensen, vooral wanneer het klem zit tussen huid en kleding — het beschadigt de huid niet en draagt geen ziekten over, maar bij verstoring scheidt het hemolymfe af die muren, gordijnen en vloerbedekking blijvend kan vlekken, en er zijn meldingen van allergische reacties zoals astma en netelroos, waarbij de gevoeligheid losstaat van iemands leeftijd of aanleg voor allergieën. Voor dat kevertje luidt het advies: dicht kieren en drempels af, spuit niet in de tuin. Een actief nest van sociale wespen bekijk je van een afstand."
+        ],
+        "checklist": [
+          "Alleen sociale wespen en jachtwespen steken in deze groep.",
+          "Pak een roofwants of een roofvlieg niet op.",
+          "Een bidsprinkhaan bijt als je hem vasthoudt.",
+          "Invasieve lieveheersbeestjes binnenshuis los je op door kieren te dichten, niet door te spuiten.",
+          "Bekijk wespennesten van een afstand."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Behouden werkt beter dan kopen. De standaardaanbeveling is leefgebied en tolerantie, geen uitzetten: bescherm deze predatoren door pesticiden te vermijden die hen doden, door planten te kiezen die hun stuifmeel, nectar en schuilplaats bieden, en door mieren weg te houden van door plagen aangetaste planten — mieren verdedigen bladluizen en schildluizen tegen predatoren in ruil voor honingdauw. Planten die door extensiediensten worden genoemd als voedsel voor de volwassen dieren zijn onder meer dille, venkel, echinacea, rudbeckia, zijdeplant en lantana.",
+          "Elke groep heeft een eis aan de omgeving. Libellen hebben water nodig: het vrouwtje legt haar eieren door het wateroppervlak aan te tikken en de larve ontwikkelt zich onder water — geen water, geen libel. Larven van loopkevers leven in de grond met een beperkte actieradius, dus spitten of verdichten haalt de volgende generatie weg. En de bladluizen in de tuin tot nul terugbrengen haalt de voedselbasis weg van lieveheersbeestjes, gaasvliegen, zweefvliegen én sluipwespen: prooi is een hulpbron, geen noodgeval. Is behandelen onvermijdelijk, kies dan zeep, olie of spinosad boven pyrethroïden, carbamaten en organofosfaten, juist om sluipwespen, sluipvliegen en loopkevers te sparen."
+        ],
+        "checklist": [
+          "Zorg voor nectar- en stuifmeelbloemen: daar leven de volwassen dieren van.",
+          "Houd mieren weg van aangetaste planten.",
+          "Laat schoon, stilstaand water liggen als je libellen wilt.",
+          "Spit of verdicht geen grond waar keverlarven leven.",
+          "Tolereer een paar bladluizen: zonder prooi blijven predatoren niet."
+        ]
+      }
+    }
+  },
+  "pestInsect": {
+    "label": "Veelvoorkomende plaaginsecten",
+    "topics": {
+      "role": {
+        "advice": [
+          "Plaag is een etiket van context, niet van soort: het beschrijft economische schade of een gezondheidsrisico op één plek op één moment. De monddelen vertellen je het type schade — bijtende insecten laten duidelijke gaten achter in blad, hout of vrucht; zuigende insecten gebruiken een rietje-achtige buis en veroorzaken spikkeling, vlekken, achterblijvende groei, vergeling, misvormde groei en honingdauw. En honingdauw is geen ziekte: het is een suikerrijke uitscheiding, en de zwarte aanslag is roetdauw die daarop groeit, alles zwart maakt en de fotosynthese vermindert. Los de zuiger op en de vlek verdwijnt vanzelf.",
+          "Twee sleutels helpen in het veld. De gedaanteverwisseling bepaalt wat je daadwerkelijk aantreft: bij de onvolledige gedaanteverwisseling is het ei, nimf en volwassen dier, waarbij de nimf op een ongevleugeld volwassen dier lijkt; bij de volledige is het ei, larve, pop en volwassen dier, en kan de larve totaal niet op het volwassen dier lijken. En de leefwijze vertelt je waar je moet kijken: zuigers concentreren zich op jong, uitgroeiend weefsel, en daarom krult het jonge blad als eerste, en bladluizen, witte vliegen en mijten leven aan de onderkant van het blad. Eén merkwaardig geval: bladsnijdersmieren eten het blad niet — ze knippen het om de schimmel te kweken waarvan ze leven, wat hen tot een plaag maakt in plantages en tot een sleutelorganisme in inheemse ecosystemen."
+        ],
+        "checklist": [
+          "Gaten en scheuren = bijter. Spikkeling, misvorming en kleverigheid = zuiger.",
+          "Roetdauw groeit op honingdauw: behandel het insect, niet de vlek.",
+          "Controleer altijd de onderkant van het blad.",
+          "Een gekruld jong blad wijst op een zuiger, niet op dorst.",
+          "Niet elk lieveheersbeestje is een bondgenoot: één lijn eet planten en vreet blad."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "Hier zit vrijwel al het fysieke risico van de fauna in deze app — en niet bij de gewasplagen. Brandharige rupsen hebben holle, penachtige haren die met gifblaasjes verbonden zijn, die de huid doorboren en het gif afgeven; de symptomen lopen van milde jeuk tot pijn, zwelling, blaarvorming, dermatitis en zelfs darmklachten. Eerste hulp: druk plakband er herhaaldelijk op en trek het weer los om de afgebroken haren eruit te halen, was met warm water en zeep, leg meteen een coldpack tegen zwelling en pijn, en zoek medische hulp bij een ernstige reactie. In Brazilië veroorzaakt de Lonomia-rups een bloedingsbeeld en bedreigt hij zowel de plattelands- als de stadsbevolking; de surveillance in Paraná registreerde tussen 1989 en 2000 199 gevallen en vijf doden, met tegengif gedecentraliseerd naar strategische punten. De meeste ongevallen komen door langs blad strijken tijdens tuinwerk, niet door een agressief dier: bewonder de kleurige, harige rups van een afstand.",
+          "Voor de zoenwants, die de ziekte van Chagas overdraagt, geldt een eigen officieel protocol als je hem vindt: plet, knijp of beschadig het insect niet; bescherm je hand met een handschoen of een plastic zakje; doe het insect, bij voorkeur levend, in een plastic potje met schroefdeksel; en breng het naar een informatiepost voor triatominen. Overdracht door de vector gebeurt doordat de uitwerpselen van het insect in de bijtwond terechtkomen, en er is ook overdracht via het eten of drinken van besmet voedsel. Preventie in huis betekent horren voor deuren en ramen, gebruik van insectenwerend middel en 's avonds lange mouwen dragen."
+        ],
+        "checklist": [
+          "Raak een harige of stekelige rups nooit aan en veeg hem nooit weg.",
+          "Brandhaarwond: plakband, warm water met zeep en een coldpack — en medische hulp als het verergert.",
+          "Vind je een zoenwants, plet het insect dan niet.",
+          "Vang hem met een handschoen, in een potje met schroefdeksel, en breng hem naar de gezondheidsdienst.",
+          "Plaats horren voor deuren en ramen en draag 's avonds lange mouwen in risicogebieden."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Dit is de enige groep waarin het juiste antwoord niets doen kan zijn: de basisinstructie is monitoren en tellen om het type insect en de omvang van de populatie vast te stellen voordat je over welke behandeling dan ook beslist. Klim daarna de ladder van de kleinste impact op. Gewoon water uit de tuinslang spoelt bladluizen en mijten eraf. Handmatig verwijderen en een zelfgemaakte val werken — leg een klein stukje oude dakshingle of stevig karton onder een pompoenplant, de wantsen verzamelen zich eronder om te schuilen, en je tilt de val simpelweg op en ruimt ze op. Fenologisch ontwijken, vroeg planten om het uitkomen van de plaag te ontlopen, is ook bestrijding.",
+          "Pas daarna komen de middelen: insectenzeep en olie, die minder niet-doelinsecten schaden, reflecterende mulch tegen witte vlieg, Bacillus thuringiensis voor jonge rupsen, en chemie als allerlaatste, altijd 's avonds gespoten om de impact op bestuivende insecten te beperken. Extensiediensten kiezen spinosad boven pyrethroïden en neonicotinoïden, juist om sluipwespen, sluipvliegen en loopkevers te sparen. Fysieke barrières zijn de meest onderschatte bestrijding van allemaal, met één voorwaarde: het insectengaas moet weg bij de bloei, anders houdt het samen met de plaag ook de bestuiver buiten. En leg goed vast wat je zag — fotograferen met een maatobject naast het insect, de datum noteren en vastleggen op welke plant en op welk deel daarvan het insect zat te eten, maakt elke diagnose veel betrouwbaarder."
+        ],
+        "checklist": [
+          "Monitor en tel voor je behandelt.",
+          "Begin met een waterstraal, handmatig verwijderen en een zelfgemaakte val.",
+          "Kies zeep, olie of spinosad boven breedwerkende insecticiden.",
+          "Haal het insectengaas weg zodra de bloei begint.",
+          "Spuit altijd 's avonds, wanneer bestuivers niet actief zijn."
+        ]
+      }
+    }
+  },
+  "decomposerFungus": {
+    "label": "Afbrekende paddenstoelen",
+    "topics": {
+      "role": {
+        "advice": [
+          "Dit zijn saprotrofe schimmels: ze leven van dood organisch materiaal. De schimmels die deze paddenstoelen voortbrengen zijn nuttig, want ze breken organisch materiaal in de bodem af en maken zo voedingsstoffen beschikbaar voor andere planten. Een paddenstoel in het gazon is vrijwel nooit een ziekte — dit zijn van nature voorkomende schimmelorganismen die doen wat de natuur bedoelde: ooit levend materiaal afbreken om de energie terug te geven aan de bodem. Een heksenkring is een teken van vruchtbaarheid, geen plaag: bij de afbraak komt stikstof vrij, het gras neemt die op en wordt donkerder, en dat tekent de donkergroene cirkel. Een paddenstoel plukken doodt de schimmel ook niet: het vruchtlichaam is kortstondig, en het organisme is het mycelium in het substraat.",
+          "Op een levende boom is het teken echter ernstig. Paddenstoelen of consolezwammen op de stam of de stamvoet zijn waarschuwingen, en veel oude bomen die bij storm omvallen hebben hun stevigheid al sterk zien verminderen of zelfs verdwijnen door houtafbrekende schimmels. Verlies aan stevigheid is voor amateurs moeilijk te detecteren en zelfs voor professionals moeilijk te beoordelen — wat betekent: schakel iemand in die is opgeleid in het opsporen en beoordelen van houtrot. In mulch zijn de kogelwerper, nestzwammetjes en stuifzwammen onschuldige afbrekers, en de felgele of oranje slijmerige massa's zijn slijmzwammen, die niet eens echte schimmels zijn en planten geen schade doen."
+        ],
+        "checklist": [
+          "Een paddenstoel in het gazon is organisch materiaal dat wordt gerecycled, geen ziekte.",
+          "Een donkergroene heksenkring toont vrijgekomen stikstof, geen plaag.",
+          "Een paddenstoel of consolezwam op de stam of stamvoet is een structurele waarschuwing.",
+          "Paddenstoelen plukken verwijdert de schimmel niet, alleen het vruchtlichaam.",
+          "Een gele slijmerige massa in mulch is een slijmzwam en tast planten niet aan."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "Eet nooit een wilde paddenstoel zonder identificatie ter plekke door een expert. Veel soorten zijn giftig, en alleen een expert kan eetbare van giftige soorten onderscheiden. Koken lost dat niet op: de amanitines zijn hittestabiel en worden door koken niet onschadelijk gemaakt, en er zijn meldingen van vergiftiging door het inademen van kookdampen. Een veldgids uit een andere regio is niet overdraagbaar — leren hoe je paddenstoelen herkent in het ene deel van het land of in een ander land is niet betrouwbaar om paddenstoelen in een ander gebied te herkennen. Het late symptoom is het gevaarlijke: in gedocumenteerde gevallen begonnen misselijkheid, braken en diarree ongeveer negen uur na inname, en braken dat pas na meer dan zes uur begint is een teken van ernst, niet van een slechte maag.",
+          "Aanraken vergiftigt je niet — het gedocumenteerde risico is inname en, in tweede instantie, het inademen van kookdampen. Was toch je handen en houd ze bij je mond vandaan. Haal paddenstoelen weg uit gazons waar kinderen of huisdieren komen, want kleine kinderen stoppen nu eenmaal alles in hun mond, paddenstoelen inbegrepen: in een Amerikaans overzicht over 2016 tot 2018 was 25,9% van de patiënten vijf jaar of jonger. Heeft iemand ervan gegeten, bel dan meteen het vergiftigingencentrum — in de VS 1-800-222-1222; in Brazilië CIATox / Disque-Intoxicação 0800 722 6001. En één zin telt zwaarder dan alle andere in dit handboek: een herkenningsapp vervangt geen expert."
+        ],
+        "checklist": [
+          "Eet geen wilde paddenstoel zonder identificatie ter plekke door een expert.",
+          "Koken, drogen en huis-tuin-en-keukentests maken een giftige paddenstoel niet veilig.",
+          "Braken dat pas na meer dan zes uur begint is een teken van ernst.",
+          "Haal paddenstoelen weg uit gazons waar kinderen of loslopende huisdieren spelen.",
+          "Heeft iemand ervan gegeten, bel dan direct het vergiftigingencentrum."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Dit is de enige schimmelgroep die op schaal gekweekt kan worden, juist omdat ze alleen dood substraat nodig heeft: shiitake, oesterzwam, champignon en enoki zijn allemaal saprotrofen, en ze kweken betekent rottend hout of stro nabootsen. In de tuin is het beheer fysiek in plaats van chemisch — een fungicide is niet het antwoord. Pluk de paddenstoelen voor de veiligheid, graaf het begraven organisch materiaal weg dat de groei voedt, zoals stronken, dode wortels, bouwafval en opgehoopte viltlaag, en belucht de grond om de infiltratie te verbeteren. Verwijder bij de aanleg van een gazon eerst boomstronken en wortels.",
+          "Als een heksenkring echt hinder geeft, komt de schade van het dichte mycelium, dat de beweging van water de bodem in kan blokkeren — de route is beluchten om de schimmelmat te breken, plus water geven en bemesten binnen de aanbevolen doseringen. In mulch onderdrukt het doormengen van ongeveer 40% gebruikte champignoncompost de kogelwerper, omdat het concurrerende microben meebrengt; nestzwammetjes en slijmzwammen vragen geen beheer verder dan een hark. Voor een boom is preventie de enige echte verdediging, want een boom met houtrot kun je niet redden: geef goed water bij droogte, belucht de grond, houd vijf tot vijftien centimeter organische mulch aan, bemest met langzaam werkende meststof, vermijd wonden of het verstikken van wortels tijdens bouwwerkzaamheden, en snoei met de juiste techniek op het juiste moment. En leg bij het fotograferen de hoed vast, de plaatjes of poriën aan de onderkant, de voet van de steel, het substraat en de gastheer — juist de voet en het substraat scheiden dodelijke soorten van eetbare."
+        ],
+        "checklist": [
+          "Gebruik geen fungicide op een gazon vanwege paddenstoelen.",
+          "Graaf het begraven hout en de wortels weg die de schimmel voeden.",
+          "Belucht de grond om de myceliummat van een heksenkring open te breken.",
+          "Een boom met houtrot behandel je niet: die voorkom je, en laat je door een professional beoordelen.",
+          "Leg bij het fotograferen de voet van de steel en het substraat vast."
+        ]
+      }
+    }
+  },
+  "mycorrhizalFungus": {
+    "label": "Mycorrhizapaddenstoelen",
+    "topics": {
+      "role": {
+        "advice": [
+          "De paddenstoel is hier alleen het zichtbare topje van een ondergronds partnerschap met plantenwortels. Naar schatting gaat 80% tot 90% van al het plantenleven ten minste één van de zeven typen mycorrhiza aan — wat dit tot het patroon van het plantenrijk maakt, niet tot de uitzondering. De schimmel kan niet fotosynthetiseren en zijn eigen koolstof niet vastleggen, dus krijgt hij alle koolhydraten die hij nodig heeft van de gastplant en geeft daarvoor water en minerale voedingsstoffen terug: een betere opname van fosfor, ammonium en zink, bescherming tegen bodemziekten en meer tolerantie voor droogte en temperatuur. Het voordeel is geometrisch in plaats van chemisch — wortels vullen maar zo'n 0,5% van het volume van de bovengrond, en een hyfe, die veel fijner is, maakt per volume-eenheid contact met veel meer grond.",
+          "Er zijn twee praktische typen. Ectomycorrhiza's vormen een mantel om de wortel en zijn degene die zichtbare paddenstoelen voortbrengen; arbusculaire mycorrhiza's groeien binnen in de wortel en maken helemaal geen paddenstoel, alleen sporen in de grond. Orchideeën zijn zelfs om te kiemen afhankelijk van mycorrhizaschimmels, en mycotrofe planten — die niet genoeg fotosynthetiseren — halen hun koolstof via een bemiddelende schimmel uit een gastboom. Eén veldonderscheid is het onthouden waard: een mycorrhizapaddenstoel komt uit de grond op bij een levende boom en geeft aan dat die boom leeft en verbonden is, terwijl een houtrotconsole uit de stam of de stamvoet komt en een waarschuwing is voor structureel risico."
+        ],
+        "checklist": [
+          "Mycorrhizaschimmels komen op uit de grond bij een levende boom; houtrotconsoles komen uit de stam.",
+          "De schimmel eet de boom niet op: hij ruilt koolhydraat voor water en mineralen.",
+          "Een mycorrhizapaddenstoel wijst op gevestigde, ongestoorde bodem.",
+          "Arbusculaire mycorrhiza's zitten in vrijwel elke tuin en zijn onzichtbaar.",
+          "Inheemse orchideeën hebben de schimmel uit hun oorspronkelijke bodem nodig om te kiemen."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "Dezelfde harde regel geldt, en hier telt hij nog zwaarder: eet nooit een wilde paddenstoel zonder identificatie ter plekke door een expert. In deze groep zitten zowel de meest gewaardeerde paddenstoelen van de gastronomie als de dodelijkste van de planeet — de dodelijke amanieten horen bij een van de dominante ectomycorrhizafamilies, precies dezelfde ecologische buurt als de fijne eetbare soorten. Koken maakt ze niet onschadelijk: de amanitines zijn hittestabiel.",
+          "De typische verwarring is juist met een gewone eetbare soort, en vertrouwdheid met soorten uit een andere regio verhoogt het risico in plaats van het te verlagen. De latentie misleidt: misselijkheid en braken die meer dan zes uur na inname optreden zijn een teken van ernst, niet van gewoon ongemak. De vuistregel die een universitaire gezondheidsdienst aanhaalt vat het samen: weet je het niet zeker, eet het dan niet. Aanraken vergiftigt je niet — het gedocumenteerde risico is inname; was je handen en houd ze bij je mond vandaan. Heeft iemand ervan gegeten, bel dan meteen het vergiftigingencentrum: in Brazilië CIATox / Disque-Intoxicação 0800 722 6001; in de VS 1-800-222-1222."
+        ],
+        "checklist": [
+          "Eet geen wilde paddenstoel zonder identificatie ter plekke door een expert.",
+          "In deze groep zitten de dodelijkste soorten die we kennen.",
+          "Koken maakt de gifstoffen van amanieten niet onschadelijk.",
+          "Een symptoom dat pas na zes uur verschijnt is een teken van ernst.",
+          "Twijfel je, eet het dan niet — en bel het vergiftigingencentrum als iemand het al gedaan heeft."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Deze groep kun je niet kweken zoals saprotrofen, omdat ze de levende gastplant nodig heeft — dat is de economische reden dat eekhoorntjesbrood, cantharel en matsutake worden verzameld in plaats van geteeld, en waarom ze op een substraat kweken mislukt. En er is een sterk praktisch gevolg: te veel bemesten sloopt het partnerschap. Giften van stikstof, fosfor of volledige meststoffen verlagen de aanwezigheid en de activiteit van mycorrhizaschimmels, dus wie mycorrhiza wil, bemest spaarzaam. Kleine veranderingen in bodem-pH, temperatuur, gehalte aan organisch materiaal, algehele vruchtbaarheid en vocht kunnen de kolonisatie al aanzienlijk veranderen.",
+          "Wat het in stand houdt is gevestigde, ongestoorde bodem, een intacte organische laag en de juiste gastheer. Ectomycorrhizagemeenschappen bouwen zich over de tijd op: jongere bomen hebben een kleinere gemeenschap van schimmelsymbionten dan volgroeide opstanden. In de praktijk is het mycorrhizanetwerk van een volgroeide boom een decennia oud bezit dat bouwwerkzaamheden, het afschrapen van de bodem en grondontsmetting op één dag vernietigen en dat geen enkele zak product terugkoopt. En wees sceptisch over die zak: er is heel weinig onafhankelijk wetenschappelijk bewijs dat mycorrhiza-entingen planten beter doen aanslaan, en ze zijn niet het wondermiddel dat in commerciële advertenties wordt gepresenteerd. Graaf niet om het mycelium te zien, en verplant geen inheemse aardorchidee of bladgroenloze plant: zonder de schimmelpartner uit hun oorspronkelijke bodem gaan ze dood."
+        ],
+        "checklist": [
+          "Bemest spaarzaam als je de mycorrhiza wilt behouden.",
+          "Vermijd grondontsmetting en het afschrapen van de bovenste bodemlaag.",
+          "Wees sceptisch over entpreparaten die als wondermiddel worden verkocht.",
+          "Graaf niet om het mycelium te zien: het netwerk ís het organisme.",
+          "Verplant geen inheemse orchideeën of mycotrofe planten."
+        ]
+      }
+    }
+  },
+  "freshwaterFish": {
+    "label": "Zoetwatervissen",
+    "topics": {
+      "role": {
+        "advice": [
+          "Temperatuur en opgelost zuurstof zijn de filter die alles bepaalt: voor welke beslissing over een watergang dan ook meet je temperatuur, pH en opgelost zuurstof, en vissterfte door te veel hitte of zuurstofgebrek is het klassieke ongeluk in vijvers op het platteland. De taxonomische samenstelling verschilt per continent — de Neotropen worden gedomineerd door karperzalmen en meervallen, terwijl het Holarctisch gebied draait op karpers en witvis, zonnebaarzen, baarzen en zalmachtigen. De neotropische zoetwatervisfauna is de rijkste van de planeet, met zo'n 71 families en ruwweg zesduizend soorten, waarvan er 4.475 formeel beschreven zijn.",
+          "Veel soorten zijn afhankelijk van een verplichte paaitrek, de piracema: reofiele vissen zwemmen tegen de stroom in stroomopwaarts om te paaien, en de fysieke inspanning is zelf onderdeel van de fysiologische prikkel tot voortplanting. En lagunes in de overstromingsvlakte zijn geen plassen, het zijn kraamkamers — bij hoogwater treedt de rivier buiten haar oevers en verbindt ze, meedrijvende eieren en larven zetten zich daar af, en als het water zakt groeien die jonge vissen beschut op tot het volgende hoogwater. Sommige families werken als thermometer voor waterkwaliteit en andere voor aantasting: vissen die warm, troebel water niet verdragen wijzen op water van hoge kwaliteit, terwijl meervallen die hoge temperatuur, modderig water en weinig zuurstof wél verdragen juist gedijen waar de veeleisende soorten al verdwenen zijn."
+        ],
+        "checklist": [
+          "Verdenk bij plotselinge vissterfte in de zomer eerst het opgeloste zuurstof.",
+          "Sterke stroming over een stenige bodem wijst op reofiele en trekkende soorten.",
+          "Een lagune die bij hoogwater in verbinding staat is een kraamkamer, geen plas.",
+          "Alleen tolerante soorten aanwezig wijst op een aangetast of al binnengedrongen systeem.",
+          "Een school die zich vormt aan het begin van het regenseizoen kan het begin van een paaitrek zijn."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "Hier gaat veiligheid vooral over het dier en over de wet. Zet nooit een aquariumvis, een vis uit een commerciële visvijver of een kweekvis uit in natuurlijk water: Brazilië heeft al meldingen van zo'n negentig invasieve exotische vissoorten in binnenwateren, aquacultuur is de grootste bron van introducties — via ontsnappingen met het afvalwater, kapotte bakken en vissen die door het gaas van kooien glippen — en het introduceren van welke diersoort dan ook zonder technisch advies en een vergunning van de bevoegde instantie is verboden. Verplaats nooit vis tussen stroomgebieden: een gevangen vis mag alleen naar een ander water als hij inheems is in hetzelfde stroomgebied.",
+          "Respecteer de gesloten tijd. In Minas Gerais loopt het paaiverbod van 1 november tot 28 februari, maar de data verschillen per staat en per stroomgebied, dus informeer bij de plaatselijke milieudienst voor je gaat. Voer wilde vissen niet — voeren verandert het natuurlijke zoekgedrag en concentreert dieren kunstmatig. Vis niet op vissen die in het voorjaar op hun nest zitten en stoor ze niet. En hanteer zo min mogelijk: leg stenen en takken precies terug waar ze lagen."
+        ],
+        "checklist": [
+          "Zet nooit een aquariumvis of kweekvis uit in een rivier, meer of vijver.",
+          "Verplaats geen vis tussen verschillende stroomgebieden.",
+          "Controleer de kalender van de gesloten tijd in jouw regio voor je gaat vissen.",
+          "Voer wilde vissen niet.",
+          "Stoor in het voorjaar geen vissen die hun nest bewaken."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Het natuurlijke dieet verschuift met het seizoen en vertelt het verhaal van de omgeving. De tambaqui eet vruchten en zaden tijdens het hoogwater van de rivier en schakelt, als die in het droge seizoen opraken, over op zoöplankton — en door zaden te verspreiden draagt hij bij aan de regeneratie van het Amazonewoud. Detrituseters en afgrazers verwerken organisch materiaal van de bodem en biofilm, en vormen de energiebasis van veel neotropische rivieren. Viseters die vanuit een hinderlaag jagen bezetten de plaatselijke top van de keten en zijn in een vijver precies wat voorkomt dat prooivis zich te sterk vermeerdert.",
+          "In een vijver of viskwekerij moet het voer zo gedoseerd worden dat het de waterkwaliteit niet aantast: overtollig voer wordt organisch materiaal, verbruikt zuurstof en zet de deur open voor ziekte en sterfte. Van alles een beetje uitzetten omwille van de diversiteit geeft teleurstellende resultaten, met ongebalanceerde populaties en vissen die niet doorgroeien; heel productieve soorten uitzetten vult de vijver met vissen die klein blijven. Vermijd uitzetten in het hoogseizoen van de zomer, wanneer hoge temperatuur en weinig zuurstof de vis tijdens het transport verzwakken. En onthoud dat koudwatersoorten in de meeste vijvers de zomer niet overleven en alleen werken als een uitzet-en-oogstschema voordat de hitte komt."
+        ],
+        "checklist": [
+          "Doseer het voer: de rest wordt organisch materiaal en laat het zuurstof zakken.",
+          "Zet niet van elke soort een beetje uit in de hoop op diversiteit.",
+          "Vermijd het uitzetten van vis in het hoogseizoen van de zomer.",
+          "Lees de omgeving af aan het water voor je over welk beheer dan ook beslist.",
+          "Fotografeer en noteer liever dan te verzamelen."
+        ]
+      }
+    }
+  },
+  "marineFish": {
+    "label": "Zee- & rifvissen",
+    "topics": {
+      "role": {
+        "advice": [
+          "Een rifvis is een diagnose van het rif, niet alleen een bewoner. De planteneters — papegaaivissen en doktersvissen — eten de algen die met het koraal concurreren en zijn vermogen om te overleven, groeien en zich voort te planten verminderen. En de functionele groep telt zwaarder dan de soort: papegaaivissen hebben krachtige snavels die het substraat afschrapen terwijl ze de algen afbijten, waardoor er ruimte vrijkomt voor nieuwe koralen om zich te vestigen, terwijl doktersvissen alleen het bovenste deel van het algentapijt afgrazen. Het grootste negatieve effect van algen zit op de vestiging en de vroege overleving van koralen, dus een rif dat al veel grote volwassen koralen heeft, profiteert misschien niet meteen van meer planteneters, terwijl een rif waarvan het herstel afhangt van nieuwe aanwas er juist enorm van profiteert.",
+          "Planteneters beschermen is geen universele oplossing: de maatregel werkt waar er op die plek werkelijk een algenprobleem is, en waar hij de stand van de planteneters ook echt vergroot. Wat je fotografeert leest de plek. Veel koraalvlinders wijzen op levend, structuurrijk koraal in de buurt. Het volledig ontbreken van grote tandbaarzen en snappers op een structuurrijk rif is een sterke aanwijzing voor visserijdruk. Een dik tapijt van macroalgen over dood koraal, met weinig papegaaivissen en doktersvissen in zicht, wijst op onvoldoende begrazing. En zelfs beschermd hebben planteneters meerdere jaren nodig om te herstellen — het beheer moet proactief zijn in plaats van reactief."
+        ],
+        "checklist": [
+          "Veel koraalvlinders wijzen op levend koraal in de buurt.",
+          "Het ontbreken van grote roofvissen wijst op visserijdruk.",
+          "Dikke macroalgen met weinig planteneters wijzen op onvoldoende begrazing.",
+          "Zandgeulen en zandvlakken tussen de koralen zijn ook leefgebied.",
+          "Noteer datum en locatie: die zijn net zoveel waard als de foto."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "De centrale regel is: niet aanraken. Koralen zijn kwetsbare dieren die beschadigd raken door een aanraking, een por, een trap of een hand die je even neerzet om je evenwicht te bewaren, en veel soorten zijn wettelijk beschermd. Raak ook andere dieren niet aan: de slijmlaag die vissen en veel zeeongewervelden tegen infectie beschermt, gaat er makkelijk af door een hand, een handschoen of een voet. Fysiek contact met mantaroggen en walvishaaien is in een zeereservaat wettelijk verboden, ook als het dier het lijkt te waarderen. En drijfvermogen beheersen is ethiek, geen techniek: zweef boven het rif, en houd je bij sterke stroming vast aan de boeilijn, nooit aan het rif.",
+          "Niet voeren en niet verzamelen. Vissen voeren onderbreekt het natuurlijke voedselzoekgedrag van rifvissen, trekt soorten aan die niet op die plek horen en leert vissen om zwemmers te bijten in de verwachting van eten — in sommige rechtsgebieden is het verboden. Er verlaat niets het reservaat, geen schelp en geen stukje koraal: schelpen die leeg lijken hebben vaak een verschrikt dier binnenin, en de werkelijk lege worden schuilplaats voor heremietkreeften, zeepokken, jonge koralen en sponzen. Voor megafauna gelden in de Verenigde Staten wettelijke referentieafstanden van 90 meter tot walvissen in het algemeen, 45 tot zeeschildpadden en 45 tot zeehonden en zeeleeuwen, met 180 meter voor orka's in de binnenwateren van Washington en 450 voor de Noord-Atlantische noordkaper, en 30 minuten als maximale kijktijd. In Braziliaanse wateren gelden eigen regels van ICMBio en IBAMA: behandel deze cijfers als goede praktijk, niet als plaatselijke wet."
+        ],
+        "checklist": [
+          "Raak koraal niet aan en steun er niet op om je evenwicht te bewaren.",
+          "Raak vissen, roggen of schildpadden niet aan: de beschermende slijmlaag gaat eraf.",
+          "Voer rifvissen onder geen enkele omstandigheid.",
+          "Verzamel geen schelpen, stukjes koraal of welk souvenir dan ook.",
+          "Houd afstand van megafauna en beperk de kijktijd."
+        ]
+      }
+    }
+  },
+  "gardenBird": {
+    "label": "Tuin- & stadsvogels",
+    "topics": {
+      "role": {
+        "advice": [
+          "Dit zijn vogels die leven, eten of nestelen in tuinen, op pleinen, in stadsparken, op daken en langs wegen — zowel inheemse soorten die het landschap van de mens verdragen als volledig synantrope exoten. Alle wilde dieren hebben vier elementen nodig: voedsel, water, dekking en ruimte om te broeden en jongen groot te brengen. In een doorsnee tuin is wat als eerste opraakt meestal een betrouwbare bron van water het hele jaar door — niet voedsel.",
+          "Een flink deel van de meest zichtbare stadsvogels is exoot: de rotsduif bereikte Brazilië in de zestiende eeuw met de Portugese kolonisatie en wordt tegenwoordig behandeld als synantrope fauna, met eigen gezondheidsvoorschriften. De officiële strategie voor beheersing in de stad valt juist die vier elementen aan — water, voedsel, schuilplaats en toegang — en dat is precies het tegenovergestelde van wat je doet om inheemse vogels aan te trekken. Eén ontwerpprincipe is het toevoegen waard: de verdeling telt. Voor minder mobiele soorten werken veel kleine plekjes met voedsel, water en schuilgelegenheid beter dan een paar grote, want hoe verder een dier moet reizen, hoe meer het wordt blootgesteld aan roofdieren."
+        ],
+        "checklist": [
+          "Water is meestal de beperkende hulpbron, niet voedsel.",
+          "Verdeel voedsel, water en schuilgelegenheid over meerdere kleine plekjes.",
+          "Ruim de tuin niet te netjes op: een stervende boom en een takkenhoop zijn schuilplaats.",
+          "Een overwicht van duiven en mussen wijst op een sterk bebouwde omgeving.",
+          "De komst van inheemse vruchteneters laat zien dat je planten produceren."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "De bewuste ingreep in deze groep is de voedertafel, en die heeft een hygiënische prijs. Ziekten die rond voedertafels circuleren zijn onder meer mycoplasma-conjunctivitis, salmonellose, aspergillose, vogelpokken en vogelgriep. Hygiëne is niet optioneel: maak zaadvoederbakken elke twee weken schoon, en verdubbel die frequentie bij elk vermoeden van ziekte, met negen delen water op één deel chloorbleekmiddel. Schrob zichtbare uitwerpselen eraf voor je hem laat weken, spoel goed na en laat drogen voor je bijvult. Hark uitwerpselen en zaaddoppen van de grond weg, vooral beschimmelde of natte, want daarmee voorkom je ook dat je knaagdieren aantrekt. En verspreid meerdere voederplekken in plaats van alles op één punt te concentreren, want ziekte verspreidt zich makkelijker in een krappe ruimte met geconcentreerde groepen. Dezelfde schoonmaakregel geldt voor het vogelbad.",
+          "Zie je een zieke vogel — rode, gezwollen of tranende ogen, wratachtige uitgroeisels op onbevederde delen, een magere vogel met opgezet verenkleed — haal de voederplekken dan ongeveer twee weken weg en maak alles schoon, ook de omgeving. Pak het dier niet op: alleen dierenartsen of erkende opvangmedewerkers mogen een wilde vogel wettelijk behandelen. Duikt er een ziekte op die via de mond en de uitwerpselen gaat, overweeg dan om plateauvoederbakken uit te faseren, want die concentreren de besmetting het sterkst. Wees in het veld extra voorzichtig bij actieve nesten, broedkolonies, slaapplaatsen en belangrijke voedselplekken, beperk het gebruik van playback en betracht terughoudendheid bij het fotograferen. En het principe dat elke twijfel oplost: bij een belangenconflict tussen de vogels en de waarnemer gaat het welzijn van de vogels voor."
+        ],
+        "checklist": [
+          "Maak voederbakken elke twee weken schoon, met één deel chloorbleekmiddel op negen delen water.",
+          "Hark doppen en uitwerpselen weg van de grond onder de voederplek.",
+          "Verspreid meerdere voederplekken in plaats van alles op één punt te concentreren.",
+          "Zieke vogel: haal de voederplekken twee weken weg en raak het dier niet aan.",
+          "Beperk playback en houd afstand van actieve nesten."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Inheemse planten zijn meer waard dan een voedertafel. De ideale aanpak levert het hele jaar door zoveel mogelijk inheems voedsel — eikels, noten, bessen, knoppen, vruchten, nectar en zaden — en bijvoeren met zaad komt er pas bij als het inheemse aanbod tekortschiet, vooral in de winter. Alleen op de voedertafel leunen is een kwetsbare oplossing: hij gaat stuk, jij gaat op reis, en de vogel die erop leerde rekenen staat met lege handen.",
+          "In de praktijk: zorg voor water in een vogelbad, een ondiepe poel, een plantenschotel, een rondpompende cascade of zelfs een druppelende slang, ververs het water regelmatig in de hitte en houd het beschikbaar in de kou. Zorg voor dekking die varieert in omvang en dichtheid — dichte struiken, holle stammen, steen- en takkenhopen, groenblijvers, hoog gras — zodat elke soort de juiste dekking kan kiezen om te eten, zich te verstoppen, slecht weer te ontvluchten, te baltsen en te nestelen. Zorg voor ruimte met volgroeide bomen, dicht struikgewas en nestkasten. Gebruik je een voedertafel, dan zijn zonnebloempitten, nigerzaad, pluimgierst en gebroken maïs de aanvullingen die extensiediensten noemen, en in de zomer bezoeken kolibries graag nectarvoederflesjes. En ontwerp met katten in gedachten: een verhoogd bad met de lage takken in de buurt weggesnoeid haalt de schuilplaats voor de hinderlaag weg."
+        ],
+        "checklist": [
+          "Plant inheemse soorten die het hele jaar door vrucht dragen.",
+          "Gebruik zaad alleen als aanvulling bij schaarste, vooral in de winter.",
+          "Houd het hele jaar een betrouwbare waterbron beschikbaar.",
+          "Varieer de dekking: dichte struiken, takkenhopen, stenen, groenblijvers.",
+          "Zet het bad verhoogd en houd het vrij van dichte struiken eromheen, vanwege katten."
+        ]
+      }
+    }
+  },
+  "forestBird": {
+    "label": "Bos- & trekvogels",
+    "topics": {
+      "role": {
+        "advice": [
+          "Dit zijn twee elkaar deels overlappende populaties: bosafhankelijke vogels en trekvogels. Van de 1.971 vogelsoorten die op Braziliaans grondgebied zijn vastgesteld, doen er 216 — 10,9% — aan een vorm van trek: 141 trekkende en 75 gedeeltelijk trekkende soorten, een categorie waarin maar een deel van de populatie zich verplaatst; nog eens 91 zijn dwaalgasten. Ongeveer een derde van de Braziliaanse vogelfamilies heeft minstens één trekkende soort, maar vijf families vormen meer dan de helft daarvan, met 112 soorten: tirannen met 36, strandlopers met 23, stormvogels en pijlstormvogels met 22, tangaren met 16 en meeuwen en sterns met 15.",
+          "Grote vruchtenetende bosvogels zijn de infrastructuur van het bos, niet zijn versiering: toekans en hokkovogels verspreiden grote zaden, en jacht en versnippering halen juist de vogels weg waarvan de snavel die zaden kan doorslikken. De juçarapalm, dominant in het Atlantisch Regenwoud, heeft vruchten die door meer dan 58 vogelsoorten worden gegeten. En bos dat in stukjes bewaard blijft is niet hetzelfde als bewaard bos: de diversiteit daalt wanneer de fragmenten niet aaneengesloten zijn en ver uit elkaar liggen, of wanneer geen ervan dicht genoeg is voor overleving en voortplanting."
+        ],
+        "checklist": [
+          "Een rijke gemeenschap in de ondergroei wijst op aaneengesloten, structuurrijk bos.",
+          "Het verdwijnen van toekans en hokkovogels wijst op jacht of vergevorderde versnippering.",
+          "Steltlopers die zich in de trektijd op een slikplaat verzamelen wijzen op een pleisterplaats.",
+          "Trek is geen kwestie van ja of nee: er zijn gedeeltelijke trekkers en dwaalgasten.",
+          "Hoogtetrek bestaat in Brazilië en wordt onderschat."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "Playback is de centrale fout van deze groep. De gedragscode voor vogelaars zegt dat je het gebruik van opnames en andere geluidsmethoden om vogels te lokken moet beperken, zeker in gebieden waar veel gevogeld wordt, bij plaatselijk zeldzame soorten en bij bedreigde soorten — en juist in het bos, waar vogels het moeilijkst te zien zijn, is de verleiding het grootst.",
+          "Rond nesten sturen drie risico's alles: onbedoelde schade aan het nest, verlating door de ouders en het aantrekken van roofdieren. Blijf nooit langer dan één minuut bij een nest. Kom hooguit om de drie of vier dagen kijken. Vermijd de vroege ochtend, wanneer de meeste soorten eieren leggen en wanneer eieren en nestjongen snel afkoelen als het vrouwtje wegvliegt; vermijd de schemering en de tijd daarna, wanneer ze terugkeert om de nacht door te brengen; vermijd de eerste dagen van het broeden en de dagen waarop de jongen op het punt staan uit te vliegen, want ze kunnen dan te vroeg springen en de overleving buiten het nest is in dat stadium laag; en vermijd koud, vochtig of regenachtig weer. Laat geen sporen achter die roofdieren de weg wijzen, en vertrap geen begroeiing waardoor nesten bloot komen te liggen. Dwing een vrouwtje nooit van haar nest — wacht een paar minuten om te zien of ze uit zichzelf vertrekt, en kom later terug als dat niet gebeurt. Schrijf je aantekeningen pas op als je goed en wel bij het nest vandaan bent, en klop op een nestkast voor je hem opent en nog eens terwijl je hem opent."
+        ],
+        "checklist": [
+          "Beperk playback, vooral bij zeldzame of bedreigde soorten.",
+          "Blijf nooit langer dan één minuut bij een nest.",
+          "Controleer nesten niet vroeg in de ochtend, in de schemering of bij slecht weer.",
+          "Dwing een vrouwtje nooit van haar nest.",
+          "Schrijf je aantekeningen op afstand van het nest en laat er geen spoor naartoe achter."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Het leefgebied zegt veel. Een beschaduwde ondergroei in aaneengesloten bos wijst op weinig mobiele groepen die zeer gevoelig zijn voor randeffecten; een volgroeid kronendak wijst op vogels die afhankelijk zijn van grote vruchtdragende bomen en van holtes om in te nestelen; de bosbodem wijst op groepen die zeer gevoelig zijn voor jacht; en kust, slikplaat en zoutpan in de trektijd wijzen op een pleisterplaats voor steltlopers, een plek die extreem gevoelig is voor verstoring. Trekvogels zijn afhankelijk van leefgebieden in losse gebieden die duizenden kilometers uit elkaar liggen, en sommige zijn kritisch afhankelijk van plekken die ze maar een paar dagen gebruiken om te rusten, te ruien, te eten en energiereserves op te bouwen.",
+          "Daarom telt de datum net zo zwaar als de plek. Omdat de heenroute meestal anders is dan de terugweg, en vogels hun traject aanpassen aan de omstandigheden, voeden waarnemingen mét datum de kennis over routes rechtstreeks — en een waarneming buiten het seizoen kan informatiever zijn dan een gewone. Een trekvogel vastleggen zonder precieze datum en locatie laat juist het waardevolste gegeven verloren gaan. In de praktijk in het veld: blijf op de paden, verstoor het leefgebied zo min mogelijk en spaar staand dood hout, want dat zijn nestholtes voor veel soorten."
+        ],
+        "checklist": [
+          "Noteer altijd een precieze datum en locatie, zeker bij trekkende soorten.",
+          "Eén waarneming buiten het seizoen kan meer waard zijn dan tien gewone.",
+          "Blijf op de paden en verstoor het leefgebied zo min mogelijk.",
+          "Spaar staand dood hout: het zijn nestplaatsen voor veel soorten.",
+          "Voer geen wilde vogels in het bos of op een pleisterplaats van trekvogels."
+        ]
+      }
+    }
+  },
+  "grainCrop": {
+    "label": "Granen & graangewassen",
+    "topics": {
+      "soil": {
+        "advice": [
+          "Het centrale begrip in de voeding is hier verborgen honger: de meeste gewassen beginnen opbrengst te verliezen ruim voordat symptomen van gebrek of toxiciteit zichtbaar zijn, en dat verlies zonder symptomen is groot. Verschijnt er wél een symptoom, dan wijst dat altijd op ernstige honger — nooit op een licht of matig tekort. De mobiliteit van de voedingsstof bepaalt naar welk blad je moet kijken: mobiele elementen als stikstof, kalium, fosfor en magnesium tonen de symptomen eerst op de oude bladeren, omdat de plant ze naar de nieuwe verplaatst; immobiele elementen als calcium en boor tonen de symptomen op de nieuwe bladeren en bij het groeipunt.",
+          "Een paar visuele patronen in rijst dienen als referentie: necrose in de vorm van een omgekeerde V, van de punt langs de randen van een oud blad omlaag, wijst op kalium; heel smalle, rechtopstaande nieuwe bladeren met een bronzen of paarse zweem aan de punten wijzen op fosfor; een heel veld dat vergeelt bij de uitstoeling en de pluimaanleg wijst op stikstof; en een gebrek dat in plekken verschijnt in plaats van over het hele perceel is een typisch kaliumpatroon. Herbicideschade bootst een gebrek na, maar verschijnt onmiddellijk na het spuiten — die nabijheid in tijd is wat de twee gevallen scheidt. En tot slot: graan en kuilvoer zijn vanuit de bodem gezien niet hetzelfde gewas: fosfor wordt vrijwel volledig naar de korrel verplaatst, gevolgd door stikstof, terwijl kalium en calcium grotendeels in het stro achterblijven, dus bij kuilvoer, waarbij ook het vegetatieve deel wordt afgevoerd, duiken problemen met de vruchtbaarheid eerder op."
+        ],
+        "checklist": [
+          "Wacht niet op een symptoom: tegen de tijd dat het zichtbaar is, is het verlies al geleden.",
+          "Mobiele elementen tonen zich op oude bladeren; immobiele op nieuwe.",
+          "Stel de diagnose op een grondanalyse en de perceelshistorie, nooit op een bladfoto alleen.",
+          "Schade die vlak na het spuiten verschijnt is herbicide, geen gebrek.",
+          "Gebruik geen graanadvies voor een gewas dat voor kuilvoer bestemd is."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "De beslissing valt hier op basis van tellen, niet van de kalender, en deze groep heeft de goedkoopste gestandaardiseerde bemonstering van allemaal. De logica rust op drie drempels: het evenwichtsniveau, het niveau van economische schade en het bestrijdingsniveau, dat daar net onder ligt. Gebruik voor bodemplagen in maïs een grondmonster van dertig bij dertig centimeter en vijftien diep, gezeefd — voor de ritnaald vragen twee of meer insecten per monster al om bestrijding, en een gemiddelde van één per monster veroorzaakt al aanzienlijke schade. Voor de herfstlegerworm bemonster je het aantal aangetaste planten op vijf willekeurige punten binnen één hectare: op percelen met een potentieel van minstens honderd zakken wijst 10% van de planten met beginnende symptomen al op de noodzaak van bestrijding, en het gevoeligste stadium is acht tot tien bladeren. Het eerste teken zijn larven die het blad afschrapen en doorzichtige venstertjes achterlaten.",
+          "In soja is het schudkleed de methode: een bij voorkeur wit kleed van één meter lang, uitgespreid tussen twee rijen; schud één rij er stevig boven uit en tel volwassen dieren en jonge stadia, wekelijks tijdens de kritieke periode. Het minimum is zes monsters tot tien hectare, acht tot dertig en tien tot honderd, waarbij je grotere percelen in blokken van honderd hectare verdeelt. Bemonster bodemplagen vóór het planten, want maatregelen die je neemt als het gewas eenmaal staat zijn inefficiënt. Tel de nimfen samen met de volwassen dieren: schildwantsen in het derde tot vijfde stadium veroorzaken vergelijkbare schade en vormen het grootste deel van de populatie in de reproductieve periode, met een ingrijpdrempel van twee schildwantsen per meter rij voor graan en één voor zaaizaad. Bemonster in de koelere delen van de dag, want schildwantsen zijn snel en ontsnappen in de hitte. Dat heeft een gemeten rendement: over 196 referentie-eenheden in Paraná in het seizoen 2017/2018 verminderde geïntegreerde plaagbestrijding het aantal insecticidebespuitingen met meer dan 43% bij een gelijkblijvende opbrengst. Kies het middel op selectiviteit voor natuurlijke vijanden én op kosten en toxiciteit, volg altijd de geldende registraties van MAPA, en behandel zaaizaad alleen waar het probleem een voorgeschiedenis heeft, nooit als blinde routine."
+        ],
+        "checklist": [
+          "Tel voor je spuit: de beslissing gaat op drempelwaarde, niet op kalender.",
+          "Maïs: 10% van de planten met afgeschraapt blad vraagt al om bestrijding.",
+          "Soja: minimaal tien schudkleedmonsters tot honderd hectare.",
+          "Bemonster bodemplagen vóór het planten.",
+          "Tel nimfen samen met volwassen dieren, en bemonster in de koelere uren van de dag."
+        ]
+      }
+    }
+  },
+  "vegCrop": {
+    "label": "Groente- & vruchtgewassen",
+    "topics": {
+      "watering": {
+        "advice": [
+          "Water is hier fijnbeheer, geen water geven als je eraan denkt: er bestaat een grenswaarde voor de bodemspanning, gemeten in kPa, en die verschilt per irrigatiesysteem. Bij aubergine beregen je zodra de tensiometer 30 tot 50 kPa aangeeft bij beregening of vorenbevloeiing, of 10 tot 15 kPa bij druppelirrigatie, waarbij je de onderkant van de marge aanhoudt in de meest kritieke stadia, op zandgronden en bij hoge verdampingsvraag. De sensor gaat op 50% van de effectieve worteldiepte en tien tot twintig centimeter van de plant, waarbij de effectieve diepte die is waar ongeveer 80% van de wortels zit.",
+          "Te veel water is net zo schadelijk als te weinig: het jaagt de plantengroei te sterk aan, hindert de bloei en de vruchtzetting, bevordert bodemziekten door onvoldoende beluchting en spoelt voedingsstoffen uit. Tekort weegt het zwaarst tijdens bloei en vruchtdracht, waardoor bloemen en vruchten afvallen, de vruchtgroei afneemt en er kwaliteitsgebreken ontstaan — misvormde en ongelijke vruchten, neusrot en bittere smaak. Verwelkend blad aan het eind van de ochtend is een grof maar bruikbaar teken dat de beregening te lang op zich laat wachten. En de keuze van het systeem is een gewasgezondheidsbeslissing, niet alleen een hydraulische: vorenbevloeiing en druppelirrigatie verminderen bladziekten omdat ze het blad niet nat maken, maar tegen de tomatenmineermot is beregening juist een voordeel, omdat die eieren, larven en poppen van de plant slaat. De beslissing hangt af van het probleem dat in jouw gebied domineert."
+        ],
+        "checklist": [
+          "Hanteer bij druppelirrigatie een andere grenswaarde dan bij beregening of vorenbevloeiing.",
+          "Plaats de sensor op 50% van de effectieve worteldiepte en tien tot twintig centimeter van de plant.",
+          "Laat het water niet tekortschieten tijdens bloei en vruchtdracht.",
+          "Verwelking aan het eind van de ochtend wijst op achterstallige beregening.",
+          "Kies het irrigatiesysteem op basis van het probleem dat in jouw gebied domineert."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "Een overschot aan een voedingsstof heeft eigen symptomen en brengt de andere uit balans. Bij ui geeft te veel stikstof planten met een dikke hals, verhoogt het de vatbaarheid voor bladziekten en verkort het de houdbaarheid na de oogst; te veel kalium veroorzaakt een tekort aan magnesium en calcium; te veel fosfor veroorzaakt een tekort aan zink en koper. Daarom levert het corrigeren van één voedingsstof zonder naar de andere te kijken meestal meteen het volgende probleem op.",
+          "De mobiliteit vertelt je welk blad je moet inspecteren: stikstof, kalium, fosfor en magnesium verschijnen eerst op de oude bladeren, terwijl calcium en zwavel op de nieuwe verschijnen — een nieuw uienblad dat omvalt zonder te breken is de handtekening van calcium. Twee texturen zijn het onthouden waard: necrose die abrupt verschijnt, zonder voorafgaande chlorose, wijst op zink, koper of mangaan; necrose met een fluweelachtige textuur is het kenmerkende teken van ijzer, anders dan alle andere. In Braziliaanse bodems onder normale omstandigheden schieten voor ui doorgaans alleen boor en zink en in sommige gevallen koper tekort. En let op de vals-positieve uitslag: lage temperaturen, te veel water of langdurige droogte kunnen symptomen geven die sterk lijken op stikstofgebrek."
+        ],
+        "checklist": [
+          "Corrigeer geen voedingsstof zonder te kijken naar de stoffen die je daarmee uit balans brengt.",
+          "Eerst de oude bladeren: stikstof, kalium, fosfor, magnesium. Nieuwe bladeren: calcium, zwavel.",
+          "Abrupte necrose zonder voorafgaande chlorose wijst op zink, koper of mangaan.",
+          "Necrose met een fluweelachtige textuur is het teken van ijzer.",
+          "Kou, wateroverlast en droogte bootsen alle drie stikstofgebrek na."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Het beheer is hier eerst teelttechnisch en collectief, en pas daarna chemisch. Op perceelniveau: pas vruchtwisseling toe, vernietig gewasresten meteen na de oogst, houd het perceel vrij van onkruid en andere waardplanten voor insecten en mijten, en gebruik rassen die aan de streek zijn aangepast. Op collectief niveau — en dat is wat deze groep anders maakt — moeten telers samen optreden: concentreer het planten binnen elke microregio in het kortst mogelijke venster, gebruik middelen op elkaar afgestemd zodat gemeenschappelijke problemen door iedereen tegelijk worden aangepakt, en ontsmet kisten en transport systematisch om de verspreiding van plagen tussen streken te beperken. Inspecteer regelmatig, met bijzondere aandacht voor de randen van het perceel en de plekken met het meeste onkruid, want daar concentreert de aantasting zich.",
+          "De grootste plaagschade in deze groep is meestal indirect, via virus. Witte vlieg is in Brazilië bekend sinds 1923 en werd in 1993 op tomaat en kool aangetroffen, in verband met geminivirussymptomen, met zware uitbraken en verliezen tot 50% van de productie: volwassen dieren en nimfen brengen een suikerrijke stof en een toxine in die de binnenwanden van de vrucht witachtig en sponsachtig maken en roetdauw in de hand werken. Ook de timing is bepalend: tegen de kleine vruchtboorder moet het spuiten vanaf de bloei beginnen, met de straal gericht op de bloemknoppen en de vruchten, want tegen de tijd dat je een gaatje in de vrucht ziet zit de larve er al in. En één redactionele veiligheidsregel: kopieer nooit een werkzame stof of een dosering uit welke bron dan ook, want de toelatingen van gewasbeschermingsmiddelen veranderen elk seizoen — raadpleeg het actuele register van MAPA."
+        ],
+        "checklist": [
+          "Vernietig gewasresten meteen na de oogst.",
+          "Concentreer het planten in de microregio in het kleinst mogelijke venster.",
+          "Ontsmet kisten en voertuigen tussen percelen door.",
+          "Inspecteer de randen van het perceel, niet alleen het midden.",
+          "Begin te spuiten bij de bloei, niet als je een gaatje in de vrucht ziet."
+        ]
+      }
+    }
+  }
+}

@@ -3,6 +3,7 @@
     "overview": "Přehled",
     "details": "Podrobnosti",
     "readMore": "Přečíst více",
+    "readLess": "Číst méně",
     "confidence": "Spolehlivost",
     "nativeOrigin": "Přirozený výskyt",
     "save": "Uložit do mé sbírky",
@@ -263,7 +264,18 @@
     "fundamentals": "Základní rady",
     "checklistLabel": "Než začnete",
     "problemsLabel": "Známky potíží",
-    "solutionsLabel": "Řešení"
+    "solutionsLabel": "Řešení",
+    "lightFullSun": "Plné slunce",
+    "lightPartial": "Polostín",
+    "lightShade": "Stín",
+    "soilWellDrained": "Dobře odvodněná",
+    "soilSandy": "Píščitá",
+    "soilLoam": "Hlinitá",
+    "soilAcidic": "Kyselá",
+    "toxicShort": "Jedovatá",
+    "rangeIdeal": "Ideální",
+    "rangeOk": "Přijatelné",
+    "rangeBad": "Nevhodné"
   },
   "disease": {
     "overviewSection": "Přehled",

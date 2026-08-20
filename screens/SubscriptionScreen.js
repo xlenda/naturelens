@@ -13,7 +13,7 @@ import PaywallModal from '../components/PaywallModal';
 import AlertModal from '../components/AlertModal';
 import { useAppAlert } from '../components/useAppAlert';
 import { usePageShowReset } from '../components/usePageShowReset';
-import { colors, shadow } from '../components/theme';
+import { colors, shadow, type } from '../components/theme';
 import {
   getSubscriptionStatus,
   startCheckout,
@@ -300,14 +300,9 @@ const styles = StyleSheet.create({
   // Composição centrada, with the criterion: the SECTION title centres and
   // carries weight (22/800); manageBody below it is reading text and stays left
   // aligned, and the plan rows keep their name-left / price-right ledger.
-  sectionTitle: {
-    color: colors.text,
-    fontSize: 22,
-    fontWeight: '800',
-    textAlign: 'center',
-    marginTop: 34,
-    marginBottom: 14,
-  },
+  // Auditoria de diagramacao 20/08 (correcao 10): mesma copia literal do
+  // 22/800/center/34 que estava no Discover. Passa a consumir o token.
+  sectionTitle: { ...type.sectionTitle },
   planRow: {
     flexDirection: 'row',
     justifyContent: 'space-between',

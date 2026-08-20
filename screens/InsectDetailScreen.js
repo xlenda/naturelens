@@ -33,6 +33,8 @@ import TopBar, { TopBarIcon } from '../components/TopBar';
 import Pronounce from '../components/Pronounce';
 import HelpfulRow from '../components/HelpfulRow';
 import ResultActionBar from '../components/ResultActionBar';
+import QuickFactGrid from '../components/QuickFactGrid';
+import shortFact from '../components/shortFact';
 
 function Tag({ label, color }) {
   return (
@@ -127,15 +129,19 @@ export default function InsectDetailScreen({ route }) {
       initialKey,
     });
 
-  // Fatos rapidos (hub do resultado): valor curto HONESTO tirado do proprio
-  // campo, truncado - cada card e uma porta para o topico correspondente.
+  // Fatos rapidos (auditoria de diagramacao 20/08): valor CURTO de verdade.
+  // As tags de `danger` ja sao rotulos curtos do vendor; `dangerDescription`
+  // e prosa, entao passa pelo shortFact - e se nao casar palavra-chave o card
+  // some em vez de mostrar meia frase (a prosa fica na aba do manual).
   const quickFacts = [
     topics.some((tp) => tp.key === 'safety') && {
       key: 'safety',
       icon: 'warning-outline',
       color: dangerColor,
       label: t('detail.safetySection'),
-      value: plant.danger?.length ? plant.danger.join(', ') : plant.dangerDescription,
+      value: plant.danger?.length
+        ? plant.danger.join(', ')
+        : shortFact('toxicity', plant.dangerDescription, t),
     },
     topics.some((tp) => tp.key === 'role') && {
       key: 'role',
@@ -144,7 +150,7 @@ export default function InsectDetailScreen({ route }) {
       label: t('detail.ecologicalRoleSection'),
       value: plant.role.join(', '),
     },
-  ].filter(Boolean);
+  ];
 
   return (
     <SafeAreaView style={styles.container} edges={['top']}>
@@ -247,47 +253,13 @@ export default function InsectDetailScreen({ route }) {
           </SectionCard>
         </ZoneBand>
 
-        {/* Fatos rapidos - hub do resultado (video do concorrente): grade 2
-            colunas de cards compactos; cada card navega pro manual da especie
-            ja aberto no topico certo. */}
-        {quickFacts.length > 0 && (
-          <View style={styles.factsWrap}>
-            <Text style={styles.factsTitle} accessibilityRole="header">
-              {t('detail.quickFacts')}
-            </Text>
-            <View style={styles.factsGrid}>
-              {quickFacts.map((f) => (
-                <TouchableOpacity
-                  key={f.key}
-                  style={styles.factCard}
-                  activeOpacity={0.8}
-                  onPress={() => openTopic(f.key)}
-                  accessibilityRole="button"
-                  accessibilityLabel={f.label}
-                >
-                  <Ionicons
-                    name={f.icon}
-                    size={18}
-                    color={f.color}
-                    accessibilityElementsHidden={true}
-                    importantForAccessibility="no-hide-descendants"
-                  />
-                  <View style={{ flex: 1 }}>
-                    <Text style={styles.factLabel}>{f.label}</Text>
-                    <Text style={styles.factValue} numberOfLines={2}>{f.value}</Text>
-                  </View>
-                  <Ionicons
-                    name="chevron-forward"
-                    size={14}
-                    color={colors.textMuted}
-                    accessibilityElementsHidden={true}
-                    importantForAccessibility="no-hide-descendants"
-                  />
-                </TouchableOpacity>
-              ))}
-            </View>
-          </View>
-        )}
+        {/* Fatos rapidos (auditoria de diagramacao 20/08): o bloco copiado nas
+            6 telas virou um componente so. Ele proprio descarta card sem valor
+            e nao renderiza nada quando a grade fica vazia. */}
+        <QuickFactGrid
+          accent={meta.accent}
+          facts={quickFacts.map((f) => f && { ...f, onPress: () => openTopic(f.key) })}
+        />
 
         {/* Ecology - hub do resultado (video do concorrente): a prosa deixa a
             pilha de SectionCards e vira card-porta para o manual. Guarded: an
@@ -488,25 +460,9 @@ const styles = StyleSheet.create({
   },
   infoLabel: { color: colors.textMuted, fontSize: 13.5 },
   infoValue: { color: colors.text, fontSize: 13.5, fontWeight: '600', flexShrink: 1, textAlign: 'right', marginLeft: 12 },
-  // Hub do resultado (video do concorrente): grade de fatos rapidos,
-  // cards-porta e o gancho da especialista.
-  factsWrap: { marginBottom: 4 },
-  factsTitle: { fontSize: 16, fontWeight: '800', color: colors.text, marginBottom: 10 },
-  factsGrid: { flexDirection: 'row', flexWrap: 'wrap', gap: 10 },
-  factCard: {
-    flexBasis: '46%',
-    flexGrow: 1,
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 8,
-    backgroundColor: colors.surface,
-    borderRadius: 14,
-    borderWidth: 1,
-    borderColor: colors.border,
-    padding: 12,
-  },
-  factLabel: { fontSize: 11, fontWeight: '700', color: colors.textMuted, marginBottom: 2 },
-  factValue: { fontSize: 13, fontWeight: '600', color: colors.text, lineHeight: 17 },
+  // Hub do resultado (video do concorrente): cards-porta e o gancho da
+  // especialista. Os estilos dos fatos rapidos sairam daqui na auditoria de
+  // diagramacao 20/08 - moram so em components/QuickFactGrid.js.
   doorCard: {
     flexDirection: 'row',
     alignItems: 'center',

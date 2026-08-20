@@ -1,0 +1,857 @@
+{
+  "succulent": {
+    "label": "Sukkulenter og kaktusser",
+    "topics": {
+      "watering": {
+        "advice": [
+          "Reglen for denne gruppe er gennemblød-og-tør, ikke kalenderen. Vand, indtil hele rodklumpen er gennemvædet, og det løber ud af drænhullet, tøm underskålen, og lad så substratet tørre helt ud, før du vander igen — typisk hver anden til tredje uge i vækstsæsonen, selvom potte, lys og temperatur rykker meget ved det. Årsagen er fysiologisk: det er CAM-planter, der åbner spalteåbningerne om natten og holder dem lukket om dagen. Mellem det ene vandingsstød og det næste er det, de har brug for, en iltet rod — ikke en konstant forsyning.",
+          "Vinteren er en ægte hvileperiode. Væksten sker et sted omkring 18 til 29 °C, dvalen mellem 7 og 13 °C, og vandingen skæres ned til et minimum med et par ugers mellemrum — lige nok til at planten ikke skrumper. Og når planten hænger, så læs teksturen, før du griber ud efter vandkanden: et rynket, men fast blad er tørst; et gult, blødt, gennemskinneligt blad er druknet, og mere vand gør det kun værre, fordi de rådne rødder allerede er holdt op med at optage. Epifytiske skovkaktusser som julekaktus er gruppens undtagelse: de tager væsentligt mere vand og må aldrig tørre helt ud om foråret og sommeren."
+        ],
+        "checklist": [
+          "Gennemblød hele rodklumpen, indtil vandet løber ud af drænhullet, og tøm så underskålen.",
+          "Vent, til substratet er helt tørt, før du vander igen.",
+          "Lad aldrig potten stå i vand.",
+          "I vinterhvilen vandes minimalt med et par ugers mellemrum — lige nok til at undgå skrumpning.",
+          "Rynket og fast blad = for lidt vand. Gult, blødt, gennemskinneligt blad = for meget."
+        ]
+      },
+      "light": {
+        "advice": [
+          "Det er den eneste indendørs gruppe, der både tåler og direkte beder om sol. Sukkulenter vil have ti timer eller mere med lyst indirekte lys, minimum seks til otte; under det bliver de lange og blege — klassisk etiolering. Ørkenkaktusser trives bedst i et vindue med flere timers direkte sol om dagen, hvilket på vores breddegrader vil sige et sydvendt vindue (på den sydlige halvkugle gælder det omvendte, altså et nordvendt). Tynd, bleg vækst er et lysproblem, og ingen mængde gødning retter op på det.",
+          "To forbehold betyder noget. Når du flytter planten udenfor om sommeren, så tilvæn den langsomt: begynd i halvskygge, for stærk sol brænder væv, der er dannet indendørs. Og epifytiske kaktusser vil have lyst, men filtreret lys — et øst- eller vestvendt vindue, et tyndt gardin — fordi de svides i direkte sol."
+        ],
+        "checklist": [
+          "Giv seks til otte timers lys om dagen, og sigt efter ti eller mere.",
+          "Ørkenkaktus: et vindue med flere timers direkte sol.",
+          "Lang, bleg vækst er for lidt lys, ikke for lidt gødning.",
+          "Når planten flyttes ud om sommeren, så start i halvskygge et par dage.",
+          "Epifytisk kaktus: lyst lys, altid filtreret."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "Substratet er overvejende mineralsk, og kilderne er kun uenige om opskriften for til gengæld at være enige om princippet. Én universitetsvejledning anbefaler en tredjedel organisk materiale til to tredjedele mineralsk; en anden beder om lige dele af en spagnumbaseret blanding og meget grov sand; RHS arbejder med to dele basiskompost til én del gartnergrus, toppet med grus. Spændet går fra cirka 30% til 67% mineralsk andel, og det findes af én eneste grund: at gøre den vandmættede fase så kort som muligt. Jo mere fugtigt dit miljø er, og jo tungere din hånd på vandkanden, jo mere mineral vil du have.",
+          "En tætsiddende potte er en regel, ikke forsømmelse: ekstra substratvolumen holder på fugten, og så følger rådden. Plant om om foråret i en potte, der kun er en anelse større, og vent flere dage med den første vanding. Gødningen er lav i kvælstof og i nedsat dosis — en halv til en fjerdedel af det, etiketten angiver, hver tredje eller fjerde vanding i den aktive sæson og intet om vinteren. Overskud af kvælstof giver blødt væv, og blødt væv rådner. Hos epifytiske kaktusser vendes opskriften om, og det organiske materiale tager over."
+        ],
+        "checklist": [
+          "Bland mindst en tredjedel mineralsk materiale i: perlit, grov sand, pimpsten eller grus.",
+          "Brug en potte, der kun er en anelse større end den nuværende — slæk bliver til rådden.",
+          "Plant om om foråret, og vent et par dage med den første vanding.",
+          "Gød med en halv eller en fjerdedel af dosis, og stop helt om vinteren.",
+          "Epifytisk kaktus vender opskriften om: mere organisk materiale, mindre mineral."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "Risikoen her er mekanisk og nem at komme udenom: håndtér tornede arter pakket ind i avispapir eller med tykke handsker. Kaktustorne og de fine glochider hos visse arter går let ind i huden og kommer kun svært ud igen, og øjeblikket med størst udsathed er omplantningen."
+        ],
+        "checklist": [
+          "Håndtér tornede arter med sammenrullet avispapir eller tykke handsker.",
+          "Gør den nye potte klar, før du løfter planten, så du forkorter tiden, den er i dine hænder.",
+          "Hold tornede eksemplarer væk fra gangarealer og små børn."
+        ]
+      }
+    }
+  },
+  "tropicalFoliage": {
+    "label": "Tropiske bladplanter",
+    "topics": {
+      "watering": {
+        "advice": [
+          "Målet for denne gruppe er et substrat, der er jævnt fugtigt og aldrig sjaskvådt — hverken sukkulenternes fuldstændige tørrecyklus eller bregnernes konstante fugt. For at bedømme det skal du stikke en finger ned i substratet til første knoge: tørt i spidsen betyder, at det er tid til at vande. Pottens vægt og den hule lyd af en knoge mod en terrakottapotte fungerer lige så godt. Når du så vander, skal du gøre det, indtil vandet løber ud i bunden: det skyller ophobede salte ud og garanterer, at de nederste to tredjedele af potten får vand. Tøm derefter underskålen — lad aldrig planten stå i vand.",
+          "Detaljer, der gør en forskel her: hvis substratet er tørret helt ud, så vand to gange — vand, vent omkring tredive minutter, og vand igen; vandet bør holde mellem 17 og 22 °C, aldrig varmt og aldrig iskoldt, og aldrig blødgjort vand på grund af natrium og klorid. Marantaslægten vil have destilleret vand eller regnvand, fordi fluoriden i postevand giver brune bladkanter. Og gruppen har sine egne erklærede undtagelser: dracaena vil have overfladen tør at røre ved, før den vandes, ZZ-planten vandes en eller to gange om måneden og først, når den er tørret helt ud, og birkefigen holdes fugtig i aktiv vækst og tørrer let ud om vinteren."
+        ],
+        "checklist": [
+          "Hold substratet jævnt fugtigt, aldrig vandmættet.",
+          "Vand, indtil det løber ud i bunden, og tøm så underskålen.",
+          "Brug vand mellem 17 og 22 °C; aldrig blødgjort vand.",
+          "Maranta og dracaena: foretræk destilleret vand eller regnvand.",
+          "Meget tørt substrat: vand, vent tredive minutter, og vand igen."
+        ]
+      },
+      "light": {
+        "advice": [
+          "Gruppens lystolerance er meget bred, og det er præcis dér, den deler sig op. Philodendron foretrækker indirekte eller gardinfiltreret sol og tåler lidt lys — hjertephilodendron klarer sig i meget lidt — mens de trætypede vil have middel til stærkt lys tæt på et vindue. Dracaena vokser bedst i lyst indirekte lys, men flere af dem tåler lidt lys godt nok til at være blevet kontorstandarden. I referencetal: lidt lys ligger omkring 800 lux, middel 1600, lyst 3000 og direkte 16.000.",
+          "Marantaslægten er den mest begrænsede undergruppe: halvskygge, højst to til seks timers direkte sol om dagen, med en udtrykkelig advarsel om, at direkte sol svider bladet. Værd at huske, at en monsteras fenestrering — de karakteristiske huller — afhænger af tilstrækkeligt lys, og at en ægte philodendron laver dybt indskårne blade, men uden huller. Verdenshjørnerne her gælder den nordlige halvkugle, altså også Danmark; på den sydlige halvkugle skal nord og syd byttes om."
+        ],
+        "checklist": [
+          "Lyst indirekte lys er det rigtige for næsten hele gruppen.",
+          "Maranta: halvskygge, højst to til seks timers direkte sol.",
+          "Tørre runde pletter på bladet peger på for meget sol.",
+          "Gulnende nederste blade med et dødt vækstpunkt: for lidt lys eller for meget vand.",
+          "Vil du have fenestrering på en monstera, så hæv lyset, før du ændrer noget andet."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "En almindelig organisk pottemuld er nok her — gruppen har hverken sukkulenternes mineralkrav eller bregnernes spagnumkrav. Det, der ændrer teknikken, er evnen til at holde på vandet: spagnumrige blandinger holder længere på fugten, blandinger med bark, sand eller perlit dræner hurtigere. Vælg efter din vandingsvane og husets klima. En vigtig korrektion: et lag sten i bunden af potten forbedrer ikke drænet — det har snarere tendens til at holde på fugten inde i potten.",
+          "Der findes en reel modstrid mellem kilderne, og det er den forsigtige læsning, man skal følge. For dracaena siger én vejledning, at man skal undgå substrater med en høj andel perlit, holde pH mellem 6.0 og 6.5 og ikke bruge gødning, der indeholder superfosfat, fordi dracaena er meget følsom over for fluorid; for marantaslægten anbefaler en anden vejledning at blande perlit eller vermiculit i, og maranta er også fluoridfølsom. Der findes ingen udtrykkelig forsoning: for netop de to skal du foretrække vermiculit eller fin bark frem for perlit og bruge destilleret vand eller regnvand. Gød moderat — brune, krøllede bladspidser er tegn på for meget gødning, og den meget langsomtvoksende ZZ-plante har kun brug for én eller to gødninger på en hel sæson."
+        ],
+        "checklist": [
+          "En almindelig pottemuld fungerer; justér fugtholdet med bark eller perlit.",
+          "Læg ikke et lag sten i bunden af potten — det dræner ikke.",
+          "Dracaena og maranta: foretræk vermiculit eller fin bark frem for perlit.",
+          "Hold dracaenas pH mellem 6.0 og 6.5, og undgå superfosfat.",
+          "Brune, krøllede spidser: skru ned for gødningen, før du ændrer noget andet."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "Det er den stueplantegruppe med den mest koncentrerede giftrisiko, og årsagen er calciumoxalat. Alle dele af en philodendron er giftige, hvis de spises: krystallerne giver svie og irritation i mund, læber og tunge, kraftig savlen, opkast og synkebesvær. ZZ-planten er klassificeret som ikke sikker for kæledyr. Saften fra maranta kan give hudirritation. Ingen af planterne er farlige, blot fordi du ejer dem — risikoen er indtagelse og længerevarende kontakt med saften, så behandl beskæring og omplantning som opgaver med handsker på og håndvask bagefter.",
+          "Der er en mindre, men reel fysisk risiko: selvbærende philodendron har skøre bladstilke, der let knækker, så det kan betale sig at holde dem væk fra gangarealer. Og en enkelt iagttagelse, der sparer dig for en forskrækkelse: sorte mærker på en ZZ-plantes stængel er normale og tegn på sund vækst, ikke på sygdom."
+        ],
+        "checklist": [
+          "Hold planterne uden for rækkevidde af små børn og kæledyr.",
+          "Brug handsker, når du beskærer eller planter om, og vask hænder bagefter.",
+          "Lad ikke nedfaldne blade ligge, hvor plantetyggende dyr kan nå dem.",
+          "Hold selvbærende typer væk fra gangarealer: bladstilkene knækker let.",
+          "Sorte mærker på en ZZ-plantes stængel er normale, ikke sygdom."
+        ]
+      }
+    }
+  },
+  "fern": {
+    "label": "Bregner og skyggeplanter",
+    "topics": {
+      "watering": {
+        "advice": [
+          "Målet er en jord, der hele tiden er netop fugtig, aldrig tørrer helt ud og aldrig står i vand i underskålen. Den dyreste tankefejl i denne gruppe er at forveksle konstant fugt med en permanent sjaskvåd potte: kilderne siger i samme sætning, at substratet skal holde på fugten og dræne hurtigt, fordi roden stadig har brug for ilt. Rodråd optræder i en bregne præcis som i en kaktus, bare med langt mindre vand. Og fejlsignalet er tvetydigt i begge retninger — småbladene falder af både ved for meget og ved for lidt vand.",
+          "Luftfugtigheden er gruppens begrænsende faktor, ikke en luksus: det praktiske mål ligger mellem 30% og 50%, og omkring 50% for de finbladede arter som venushår. Brune spidser på en bregne er først og fremmest en diagnose på tør luft — ikke på tørt substrat — og mere vand fører til rådden uden at løse symptomet. Metoderne, i rækkefølge efter robusthed: dobbeltpotning med fugtig sphagnum, en bakke med småsten og cirka seks millimeter vand, hvor potten ikke rører vandet, en luftfugter, et terrarium eller badeværelset til de sarteste arter — og først derefter lidt lejlighedsvis forstøvning. Skift eller vask stenene i bakken hver tredje måned."
+        ],
+        "checklist": [
+          "Hold substratet netop fugtigt, og lad det aldrig tørre helt ud.",
+          "Lad ikke vand stå i underskålen: det er den direkte vej til rodråd.",
+          "Brune spidser betyder lav luftfugtighed — behandl luften, vand ikke mere.",
+          "Foretræk dobbeltpotning med sphagnum eller en stenbakke frem for forstøvning.",
+          "Vask eller udskift stenene i bakken hver tredje måned."
+        ]
+      },
+      "light": {
+        "advice": [
+          "Moderat indirekte lys er det ideelle, med planten i nærheden af et køligt vindue — hos os på den nordlige halvkugle vil sige et nordvendt (på den sydlige er det sydvendt) — eller et østvendt vindue. Et direkte, varmt vindue skader bladene; er det din eneste mulighed, så brug et tyndt gardin til at dæmpe styrken. I tal er målbåndet lidt til middel lys, mellem 800 og 1600 lux.",
+          "Der er reel variation inden for gruppen: nogle arter tåler lidt lys, og andre vil have lyst indirekte eller filtreret sol, så hold øje med netop din plante frem for at bruge ét enkelt tal. Solskadede blade har næsten altid en åbenlys årsag — et direkte, varmt vindue — og løsningen er ganske enkelt at flytte planten eller filtrere lyset."
+        ],
+        "checklist": [
+          "Foretræk husets kølige vindue, eller et østvendt.",
+          "Undgå direkte sol fra et varmt vindue; brug et tyndt gardin, hvis der ikke er alternativer.",
+          "Sigt efter båndet lidt til middel, mellem 800 og 1600 lux.",
+          "Svedne blade er tegn på direkte sol, ikke på tørst."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "Substratet skal her to ting på én gang: holde på fugten og dræne hurtigt. En efterprøvet opskrift er lige dele almindelig pottemuld til stueplanter og spagnum eller bladmuld, med det udtrykkelige krav, at det dræner hurtigt for at forebygge rodråd. En anden kombinerer spagnum eller sphagnum til fugtholdet, sand eller grus til drænet og steriliseret lerjord, tilsat dolomitkalk og benmel. Det er det stik modsatte af sukkulenterne: her dominerer den organiske andel, og drænet kommer fra det grove materiale frem for fra en mineralandel. Og igen: et lag sten i bunden af potten dræner ikke.",
+          "Gødskningen er den mest tilbageholdende af alle stueplantegrupper: én gang om måneden i vækstsæsonen, i cirka halv dosis, intet om vinteren — og intet i seks måneder efter deling eller omplantning. Ingen anden indendørs gruppe har så lang en pause, og grunden er ligetil: bregner får svedne blade, når de overgødes. En kemisk advarsel er specifik for gruppen: sprøjtemidler skader mange bregner, så læs etiketten grundigt, og afprøv midlet på et lille område først. Mod skadedyr skal du foretrække mekaniske metoder som en kraftig vandstråle."
+        ],
+        "checklist": [
+          "Brug et substrat, der holder på fugten og alligevel dræner hurtigt.",
+          "Gød i halv styrke, én gang om måneden i vækstsæsonen.",
+          "Gød ikke om vinteren og heller ikke i seks måneder efter deling eller omplantning.",
+          "Afprøv ethvert sprøjtemiddel på et enkelt blad, før du behandler hele planten.",
+          "Plant om og del i det tidlige forår, og hold luftfugtigheden høj i ugerne efter."
+        ]
+      }
+    }
+  },
+  "fruitVeg": {
+    "label": "Frugttræer og grøntsager",
+    "topics": {
+      "watering": {
+        "advice": [
+          "Her måles vandingen som en ugentlig dybde og har fastlagte fenologiske vinduer. De fleste grøntsager vil have 2,5 til 5 cm om ugen — svarende til 25 til 50 millimeter — med tydelige toppe: sukkermajs vil have 4 til 6 cm under top-, silke- og kolbefyldning; bønner vil have 2,5 til 4 cm under blomstring og bælgfyldning. Spændet er et interval, ikke et fast tal — et tørt klima trækker det op, et fugtigt ned. På lerblandet jord trænger 2,5 cm vand cirka 15 cm ned i profilen, og det lader dig regne: at væde tredive centimeter kræver omtrent 5 cm tilført vand.",
+          "Overfladisk vanding er her ikke bare mindre effektiv: den afbryder calciumtransporten. Calcium følger med fordampningsstrømmen og flyttes ikke fra gammelt væv over i nye frugter, så cyklusser med tør-og-gennemblød giver griffelråd, selv når der er rigeligt calcium i jorden. Tomater er meget følsomme over for uregelmæssig vanding og svarer igen med griffelråd og revner; peberfrugt svarer med blomsterfald; en agurk, der stresses i den reproduktive fase, giver bitre, misdannede frugter. Sandjord vil have kortere og hyppigere vandinger; lerjord vil have sjældnere og dybere."
+        ],
+        "checklist": [
+          "Arbejd med et bånd på 25 til 50 millimeter om ugen, hvor regn og vanding tælles sammen.",
+          "Spring ikke blomstring og frugtfyldning over: det er vinduet, der koster høsten.",
+          "Foretræk dyb vanding med mellemrum frem for korte daglige.",
+          "Griffelråd løses ved at regulere vandingen, ikke ved at sprøjte med calcium.",
+          "Tilpas dig jorden: sandjord vil have hyppighed, lerjord vil have dybde."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "Det er den eneste gruppe, hvis høst fjerner næringsstoffer fra systemet hvert eneste år, og næsten hele forskellen i pasning udspringer af det. Gødskningen er tilbagevendende og delt op i overgødskninger, hvor forholdet ændrer sig gennem cyklussen — i frilandstomat begynder overgødskningen for eksempel rigere på fosfor og hæver kaliummet, efterhånden som planten kommer i produktion. Overskud af kvælstof har en reel pris: figner, der ikke modner, og for kraftig skudvækst under den tidlige blomstring og frugtsætning, hvilket er en af de største bidragydere til griffelråd i tomat og peberfrugt.",
+          "pH er afgørende og varierer meget inden for gruppen. Æble klarer sig godt mellem 5.8 og 6.5, testet igen cirka hvert tredje år; de fleste bladgrøntsager ligger mellem 6.0 og 6.5; og blåbær er den radikale undtagelse med sit optimum mellem 4.8 og 5.2, hvilket kræver elementært svovl tilført mindst et år før plantning. To regler gælder for det hele: hold gødningen mindst 15 cm fra stammen, og tilfør den altid på fugtig jord, så den ikke svider rødderne. Og det er den eneste gruppe med sædskifte efter botanisk familie — afgrøder i samme familie er modtagelige for de samme sygdomme og insekter, så gentag ikke en familie i samme bed i tre til fire år, gerne længere."
+        ],
+        "checklist": [
+          "Gød i delte overgødskninger, ikke i én enkelt dosis.",
+          "Tag jordprøve, og korrigér pH efter afgrøden, ikke efter bedet som helhed.",
+          "Hold gødningen mindst 15 cm fra stammen, altid på fugtig jord.",
+          "Gentag ikke den samme botaniske familie i et bed i tre til fire år.",
+          "Overskud af kvælstof forsinker modningen og fodrer griffelråd."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Frugtudtynding er en obligatorisk handling, som ingen anden gruppe har. En for tung frugtsætning giver små frugter, knækkede grene og vekselbæring, fordi næsten al energien går i frugterne, når et træ bærer fuld sætning, og der er lidt tilbage til at anlægge næste års blomster. Udtynd æbler med hånden inden for seks uger efter fuld blomstring, og lad frugterne sidde cirka 20 til 25 cm fra hinanden på grenen; pærer, blommer og abrikoser skal sidde 15 til 20 cm fra hinanden. Det naturlige juninedfald, hvor frugterne er omkring 1 til 2,5 cm store, erstatter ikke håndudtynding — behold altid den største frugt i klasen, medmindre den er beskadiget.",
+          "To handlinger fuldender billedet. Beskæringen af et æbletræ begynder den dag, det plantes; udskyder du den, får du dårlig vækst og forsinket frugtsætning. Og på blåbær er det netop at fjerne hver eneste blomst i første og andet år, der lader planten etablere sig — du giver afkald på to høster og køber alle de følgende. På frugttræer skal du holde fast i stoppet for gødskning sidst på sommeren, fordi frugtproduktion og modning af veddet konkurrerer om det samme fotosyntat."
+        ],
+        "checklist": [
+          "Udtynd frugterne inden for seks uger efter fuld blomstring.",
+          "Behold den største frugt i hver klase, medmindre den er beskadiget.",
+          "Stol ikke på det naturlige nedfald: det erstatter ikke håndudtynding.",
+          "Begynd at forme kronen i plantningsåret, ikke senere.",
+          "Stop gødskningen af frugttræer sidst på sommeren."
+        ]
+      }
+    }
+  },
+  "flowering": {
+    "label": "Blomstrende planter og prydplanter",
+    "topics": {
+      "watering": {
+        "advice": [
+          "Vandingen er her en ugentlig dybde, ikke en gennemblød-og-tør-cyklus: sommerblomster og stauder vil have mindst 2,5 til 4 cm vand om ugen, hvor regn og vanding tælles sammen, og det bedste tidspunkt er tidligt, så bladene tørrer hurtigt. Hos roser siges det samme princip anderledes — dyb vanding fremmer et dybt rodnet, mens hyppig, let vanding får rødderne til at danne sig for tæt på jordoverfladen.",
+          "Plantens sundhed afhænger mere af det, end man skulle tro. En rose med tilbagevendende stråleplet har næsten altid våde blade ved dagens slutning og stillestående luft omkring sig: morgensol, en drypslange i stedet for en sprinkler og god luftcirkulation løser mere end noget sprøjtemiddel."
+        ],
+        "checklist": [
+          "Giv mindst 25 til 40 millimeter vand om ugen, regn medregnet.",
+          "Vand tidligt, så bladene når at tørre inden natten.",
+          "Foretræk dyb vanding med mellemrum frem for let og hyppig.",
+          "På roser: væd jorden og ikke bladet."
+        ]
+      },
+      "light": {
+        "advice": [
+          "De fleste sommerblomster har brug for fuld sol i mindst fire til seks timer om dagen for at blomstre godt. Roser beder om mere: seks til otte timers direkte sol, og morgensolen betyder særligt meget, fordi den tørrer bladene og er med til at forebygge sygdom.",
+          "Én diagnose narrer rigtig mange: en staude, der falder sammen uden struktur, betyder som regel for lidt lys — ikke mangel på gødning. Mere gødning retter ikke op på det; at flytte planten gør."
+        ],
+        "checklist": [
+          "Sommerblomster: fire til seks timers fuld sol om dagen, som minimum.",
+          "Roser: seks til otte timer, med morgensolen som førsteprioritet.",
+          "En staude, der falder sammen og breder sig ud, skal flyttes, ikke gødes mere.",
+          "Hold øje med, hvor solen falder hen over året, før du binder dig til et bed."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "Forberedelsen af bedet går dybere her end i en potte: 15 til 25 cm til sommerblomster og 20 til 25 cm til stauder. I lerjord skal du blande mindst 5 cm kompostbark, kompost eller bladmuld i; i sandjord 5 til 8 cm fugtholdende organisk materiale. pH-målet for stauder er 6.0 til 6.5. Dækmaterialet er tyndere her end på vedplanter: 5 til 8 cm til sommerblomster og kun 3 til 5 cm til stauder, med en udtrykkelig advarsel mod at dække for tungt, fordi staudens hjerte rådner nedenunder.",
+          "Næringsbehovet er middel og har et udtrykkeligt loft: en fuldgødning tilført ved forberedelsen og gentaget med cirka seks ugers mellemrum dækker det. Langt over den udvoksede vedplante, der næsten intet har brug for, og et godt stykke under det voksne frugttræ. Og en vigtig korrektion af en udbredt vane: brug ikke en fosforrig blanding som fast regel for at få blomster. Høje fosfordoser øger ikke antallet af blomster, og et kronisk overskud binder mikronæringsstoffer som jern og zink, hvilket giver hæmmede planter og gulnende blade — og overskuddet af fosfor falder kun meget langsomt igen, hvilket kan tage år. En balanceret gødning plus en jordprøve er den sikre vej. Tegn på overskud i en potte: en hvid skorpe på kanten, brune bladspidser og mørkfarvede rødder."
+        ],
+        "checklist": [
+          "Forbered jorden dybt: 15 til 25 cm, med organisk materiale blandet i.",
+          "Brug kun 3 til 5 cm dækmateriale på stauder, holdt væk fra hjertet.",
+          "Gød med en balanceret blanding, gentaget hver sjette uge.",
+          "Brug ikke en fosforrig blanding for at fremtvinge blomstring.",
+          "Hvid skorpe på pottekanten: skyl igennem med rigeligt vand, eller skift substratet."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Den handling, der definerer denne gruppe, er at fjerne afblomstrede blomster. Når de visne blomster tages af, opmuntrer det planten til at sætte flere blomster i stedet for at lukke ned for blomstringen resten af sæsonen; det er den eneste kategori, hvor det at fjerne forplantningsorganet øger netop det produkt, du vil have. Knib dem af med fingrene, eller brug en skarp saks, og det er helt i orden at tage et stykke af stænglen med, ikke kun blomsten. Ud over effekten på blomstringen mindsker det forekomsten af sygdomme, der udvikler sig på henfaldende plantedele. Når du planter sommerblomster, så knib knopper og blomster af for at fremme en bedre forgrening; på stauder skæres der ned til jordhøjde efter blomstring for at fremme nye blade fra bunden.",
+          "Løg er spejlbilledet: efter blomsten er arbejdet at lade op. Fjern den afblomstrede blomst, så der ikke dannes frøkapsler, men aldrig bladet — lad løvet sidde, til det af sig selv begynder at gulne og visne ned, og bind eller flet det ikke, for det mindsker det lys, bladene kan opfange, og dermed den fotosyntese, der fylder næste års løg op. Del løgene, når løvet er visnet ned, og de er i dvale, og skil yngleløgene fra ved forsigtigt at dreje og trække; små delinger kan være et år eller to om at blomstre igen. Og om efteråret kan du overveje at lade frøstandene stå: de er en nærende fødekilde for dyrelivet hen over vinteren."
+        ],
+        "checklist": [
+          "Fjern afblomstrede blomster, før de sætter frø.",
+          "Knib knopperne af, når du planter sommerblomster, så planten forgrener sig.",
+          "På løg: skær blomsten af, men aldrig bladet.",
+          "Bind eller flet aldrig løvet på løgplanter.",
+          "Lad om efteråret nogle frøstande stå til dyrelivet."
+        ]
+      }
+    }
+  },
+  "woody": {
+    "label": "Træer og vedagtige buske",
+    "topics": {
+      "watering": {
+        "advice": [
+          "Det er den eneste gruppe, hvis etableringsperiode måles i år: cirka et år pr. 2,5 cm stammediameter. Et nyplantet træ vil have vand dagligt de første to uger, hver anden eller tredje dag fra tredje til tolvte uge, ugentligt indtil den første frost og igen ugentligt i det andet år. Mængden har en formel: 4 til 6 liter pr. 2,5 cm stammediameter ved hver vanding, fordelt over hele rodzonen frem for ved stammen, så 15 til 20 cm jord bliver vædet.",
+          "Dyb vanding fremmer stærke rødder og gør planten mere robust over for varme og tørke; hyppig, overfladisk vanding opbygger et overfladisk, afhængigt rodnet — som hos en vedplante også er det, der river sig løs i en storm. Derfor er et nyplantet træ, der hænger, selvom det vandes hver dag, som regel vandet det forkerte sted og i for lille mængde. Surbundsbuske som azalea vil have dyb vanding, hvor mindst 15 til 20 cm bliver vædet, og på sandjord kan de have brug for vand to gange om ugen det første år."
+        ],
+        "checklist": [
+          "Vand hele rodzonen, aldrig stammen.",
+          "Giv 4 til 6 liter pr. 2,5 cm stammediameter hver gang.",
+          "Væd 15 til 20 cm af jordprofilen.",
+          "Regn med cirka et års etablering pr. 2,5 cm stammediameter.",
+          "Foretræk dyb vanding med mellemrum frem for daglig, overfladisk vanding."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "En udvokset vedplante i god jord har simpelthen ikke brug for gødning: ikke alle planter i haven skal gødes, og udvoksede træer og buske i gunstige jordforhold kræver lidt eller ingen gødning. Træer i en gødet græsplæne hjælper allerede sig selv, fordi rødderne opfanger den næring, der gives til græsset. Når du endelig gøder, er loftet normativt: langsomtvirkende kvælstof i 1 til 2 kg pr. 100 m² om året, aldrig over 3; hurtigtvirkende i 0,5 til 1 kg, med et loft på 2. Gødningen fordeles over hele kronens projektion, fra rodhalsen ud til grenspidserne, og altid på fugtig jord.",
+          "Surbundsbuskene er den undergruppe, der ændrer alt. Azalea og rhododendron vil have en pH mellem 4.5 og 6.0, de er fladrodede og tager let skade af for meget fugt i jorden; de tåler en surtvirkende gødning tæt på forholdet 2-1-1, tilført let om foråret og først på sommeren, og aldrig en kvælstofrig gødning sent på efteråret, fordi det udsætter dvalen. Gule nye blade med grønne ribber peger på en høj pH, der binder jernet — men i sur lerjord er jern let tilgængeligt, så undersøg vandmætningen, før du giver pH-værdien skylden. Dækmateriale er både et redskab og et våben: 5 til 10 cm tykt, holdt 8 til 12 cm fra stammen på et ungt træ og 20 til 25 cm på et udvokset, og lagt ud til kronens drypkant. Går du videre end det, opstår muldvulkanen, som dræber langsomt: luften kan ikke trænge ned, jorden nedenunder tømmes for ilt, den konstante fugt slår floemet ihjel, og rødderne udsultes for kulhydrater."
+        ],
+        "checklist": [
+          "Gød ikke en udvokset vedplante i god jord — den har næsten aldrig brug for det.",
+          "Gøder du alligevel, så dæk hele kronens projektion, og gør det altid på fugtig jord.",
+          "Surbundsplanter: pH mellem 4.5 og 6.0 og en let surtvirkende gødning om foråret.",
+          "Hold dækmaterialet væk fra stammen, i en flad ring.",
+          "5 til 10 cm dækmateriale er nok; mere end det er en vulkan."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Beskæring er uigenkaldelig og har anatomiske regler. Snittet lægges lige uden for grenkraven — den fortykkede zone ved grenens basis, der virker som en naturlig barriere mod rådforårsagende organismer. Grene over 4 cm i diameter kræver tresnitsmetoden, så barken ikke flænses ned ad stammen. Og ingen sårbehandling: forskningen har vist, at sårmidler og andre beskæringsmidler ikke forhindrer råd.",
+          "Tidspunktet afgøres af, hvilket ved der blomstrer, ikke af kalenderen: planter, der blomstrer på sidste års ved — forsythia, azalea, syren — beskæres lige efter blomstringen, og de, der blomstrer på årets ved, beskæres, før væksten går i gang. En busk, der aldrig blomstrer, er næsten altid beskåret på det forkerte tidspunkt. Foretræk udtynding frem for afkortning, for udtynding fremmer væksten inde i planten og giver den dens naturlige form tilbage, mens afkortning fortætter yderkanten og formørker det indre, med genvækst samlet inden for 15 til 20 cm fra snittet. Vil du forny en gammel busk uden at chokere den, så brug en-tredjedelsreglen over tre år. Hold dig til det forsigtige årlige loft på cirka 25% af den levende krone, og topkap aldrig et træ: topkapning fjerner halvdelen eller mere af den bladbærende krone, efterlader sår, der ikke kan lukke sig af, og udsætter barken for solskoldning. Undgå også at beskære i de ti uger op til den første hårde frost i dit område."
+        ],
+        "checklist": [
+          "Skær lige uden for grenkraven, aldrig helt inde ved stammen.",
+          "Brug tresnitsmetoden på grene over 4 cm.",
+          "Brug ikke sårbehandling: den forhindrer ikke råd.",
+          "Planter, der blomstrer på gammelt ved, beskæres lige efter blomstringen.",
+          "Fjern højst cirka 25% af den levende krone om året, og topkap aldrig et træ."
+        ]
+      }
+    }
+  },
+  "orchid": {
+    "label": "Orkidéer og epifytter",
+    "topics": {
+      "watering": {
+        "advice": [
+          "Her findes ingen vandingskalender, kun et tørhedskriterium: vand, så snart planten er tørret ud, og der findes ingen trylleformel som at vande en 15 cm potte hver syvende dag. Når du vander, så gør det ordentligt — vandet skal løbe frit ud af drænhullerne i nogle minutter, indtil mediet er helt mættet. Begrebet dyb vanding vendes om i denne gruppe: der er ingen jordprofil, der skal vædes, kun total mætning efterfulgt af hurtig udtørring. Let daglig forstøvning svarer til overfladisk vanding i et bed: det væder overfladen, holder på fugten de forkerte steder og mætter aldrig mediet.",
+          "Vandkvaliteten betyder mere her end i nogen anden gruppe, for uden jord er der intet kationbytningskompleks til at buffe saltet: brug lunkent vand, helst regnvand, og aldrig blødgjort vand, som indeholder meget natrium. Lad aldrig potten stå i en underskål. Hver undergruppe har sin metode: tankbromelier optager hovedsageligt gennem bladene og gennem tragten i midten, som skal holdes fyldt og skylles hver uge, så mineralerne ikke koncentrerer sig og slår bladspidserne ihjel; luftplanter vil have et bad på tyve til tredive minutter en gang om ugen — en til to gange alt efter, om rummet er varmt og tørt eller køligt og fugtigt — og derefter et ryst og en vending på hovedet, så de dræner; og julekaktus skal, når knopperne er sat, have jævnt fugtigt substrat, så den ikke smider dem."
+        ],
+        "checklist": [
+          "Vand, når den er tørret ud, ikke efter kalenderen.",
+          "Mæt mediet, indtil vandet løber frit igennem i nogle minutter.",
+          "Brug lunkent vand, gerne regnvand, og aldrig blødgjort vand.",
+          "Lad aldrig potten stå i en underskål med vand.",
+          "Tankbromelie: hold tragten fyldt, og skyl den hver uge."
+        ]
+      },
+      "light": {
+        "advice": [
+          "De fleste indendørs orkidéer vil have en til fire timers direkte sol. Sommerfugleorkidéen klarer sig godt mellem 19 og 30 °C om dagen og 16 til 19 °C om natten, i et øst- eller vestvendt vindue, uden for sommersolen og væk fra radiatorer og træk. Bromelier beder om tolv til seksten timers forholdsvis lyst lys om dagen, og bladene melder tilbage: lange, tynde og grønnere blade betyder for lidt lys; kortere, tykkere og blegere blade betyder rigeligt. Luftplanter vil have lyst, filtreret lys, aldrig direkte sol.",
+          "Der findes ét tilfælde, hvor daglængden vejer tungere end lysstyrken. Julekaktus og dens slægtninge kræver fjorten timers sammenhængende mørke eller mere i døgnet, fra omkring midten af september på den nordlige halvkugle, i mindst seks uger — og den praktiske advarsel er kontant: bare to timers afbrydende belysning hæmmer sætningen af blomsterknopper. En lampe, der får lov at stå tændt i rummet, er nok til at aflyse årets blomstring."
+        ],
+        "checklist": [
+          "Indendørs orkidéer: en til fire timers direkte sol.",
+          "Sommerfugleorkidé: øst- eller vestvendt vindue, væk fra radiatorer og træk.",
+          "En bromelie med lange, tynde, mørke blade beder om mere lys.",
+          "Luftplante: lyst, filtreret lys, aldrig direkte sol.",
+          "Julekaktus: sammenhængende mørke om natten i seks uger for at sætte knopper."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "Der findes ingen jord i denne gruppe, og almindelig pottemuld slår ihjel: brug aldrig lerholdig eller almindelig universalmuld, for den kvæler den velamendækkede rod. Mere end det: substratet har en udløbsdato, og omplantning er obligatorisk, ikke valgfri — barken skal skiftes cirka hvert andet år, og forinden er tegnet fysisk: plant om, når små fragmenter af mediet begynder at skylle ud af potten, når du vander. Nedbrudt bark bliver mindre luftig og mere kompakt, holder længere på vandet og får rødderne til at rådne. Det er den eneste gruppe, hvor substratet i sig selv er årsag til en programmeret død.",
+          "Valget mellem bark og sphagnum er en beslutning om miljø, ikke om smag: grov bark i et fugtigt rum eller et drivhus; en blanding med mere sphagnum og fibre i et tørt, solrigt hjem, med mere spredt vanding og omplantning lige efter blomstringen. En blanding af bark, trækul og perlit er den afbalancerede standard i handlen. Potten skal være akkurat stor nok til at rumme rodsystemet — en for stor beholder holder på fugten og skader orkidérødderne. Gødningen fortyndes af princip: halv styrke i forhold til etiketten, med lidt eller intet urea, ugentligt om sommeren og hver anden uge om efteråret og vinteren, hvor gødningen springes over hver fjerde vanding for at skylle saltene ud. Bromelier går endnu svagere til værks, med en fjerdedel til en ottendedel af styrken. Og husk, at flere medlemmer af gruppen er monokarpe: en bromelie, der langsomt går til efter blomstringen, fuldfører sit normale kredsløb og er ikke syg — behold sideskuddene."
+        ],
+        "checklist": [
+          "Plant aldrig i almindelig jord eller universalmuld.",
+          "Skift barken hvert andet år, eller når fragmenter skyller ud under vanding.",
+          "Brug en potte i præcis rodsystemets størrelse.",
+          "Gød i halv styrke, og spring gødningen over hver fjerde vanding.",
+          "En bromelie, der dør efter blomstringen, følger sit normale kredsløb: behold sideskuddene."
+        ]
+      }
+    }
+  },
+  "herb": {
+    "label": "Køkken- og krydderurter",
+    "topics": {
+      "watering": {
+        "advice": [
+          "Gruppen deler sig i to, og at behandle begge halvdele efter samme kalender er den grundlæggende fejl. De vedagtige middelhavsurter — rosmarin, timian, oregano, salvie, lavendel — vil have vanding med mellemrum og reel udtørring imellem: deres risiko er en vandmættet rod om vinteren, ikke tørke om sommeren. Rosmarin hader våde rødder, især om vinteren, og når den først er etableret på friland, har den næsten ikke brug for vanding overhovedet; i potte vandes den i tørre perioder, men mulden må aldrig blive vandmættet.",
+          "Bladurterne — basilikum, persille, mynte, citronmelisse — vil have det modsatte: en forholdsvis konstant forsyning af jordfugt, for vandstress fremskynder stokløbning og gør bladet sejt. Vand om morgenen, så bladene tørrer inden natten, og undgå at væde bladene på basilikum: brug drypvanding eller en drypslange frem for en sprinkler, for et vådt blad i stillestående luft er en invitation til falsk meldug."
+        ],
+        "checklist": [
+          "Adskil middelhavsurterne fra bladurterne, før du lægger nogen vandingsrutine.",
+          "Middelhavsurter: vand med mellemrum, og lad jorden tørre ordentligt imellem.",
+          "Bladurter: hold fugten konstant, så de ikke skyder i stok.",
+          "Vand om morgenen, aldrig sidst på dagen.",
+          "På basilikum: væd jorden og ikke bladet."
+        ]
+      },
+      "light": {
+        "advice": [
+          "Næsten alle urter vokser bedst et sted, der er solrigt i mindst seks timer om dagen — og det er solen, der laver den æteriske olie, hvilket vil sige, at det er solen, der laver aromaen. Basilikum foretrækker fuld sol, men vokser rimeligt godt i seks timers halvsol.",
+          "Undtagelserne er velkendte og værd at respektere: persille og mynte foretrækker halvskygge og sygner hen i stærk fuld sol. Hvis din persille eller mynte kæmper i det mest solrige bed, kan det være præcis dét, der er problemet."
+        ],
+        "checklist": [
+          "Sigt efter mindst seks timers sol om dagen til de fleste urter.",
+          "Persille og mynte accepterer, og foretrækker somme tider, halvskygge.",
+          "Mindre sol betyder mindre æterisk olie og mindre aroma.",
+          "Hold et par potter nær køkkenet, så du kan plukke tit."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "Dræn er mere værd end frugtbarhed her, og det er den eneste gruppe, hvor høj frugtbarhed er et tab: meget frugtbar jord har det med at give frodige blade uden smag. Det generelle pH-mål er 6 til 7, med moderat indhold af organisk materiale. I lerjord skal du blande 5 til 8 cm fin fyrrebark, ærtegrus eller grov kompost i, ned til 20 til 30 cm dybde; i sandjord den samme dybde med fugtholdende materiale. Et højbed med grus som dæklag er standardpraksis i denne gruppe, ikke en luksus.",
+          "Rosmarin i tung jord bliver ikke korrigeret — den bliver flyttet, til et højbed eller en potte med op til 25% gartnergrus efter rumfang. Rosmarin på friland skal slet ikke gødes; den i potte får et drys almindelig granulatgødning sidst på foråret. Basilikum er undtagelsen, der opfører sig som en grøntsag og tager en afmålt dosis ved plantning, suppleret kun hvis væksten går i stå. På koriander holder lette kvælstofgivninger planterne frodige, men kilden er udtrykkelig om at undgå tendensen til at overgøde. Og pas på med mynten: plant den i en beholder uden bund, sænket ned i bedet, for den løber med rodskud og tager hele pladsen."
+        ],
+        "checklist": [
+          "Sæt drænet først: højbed, grus eller fin bark blandet i.",
+          "Hold pH mellem 6 og 7 og frugtbarheden moderat.",
+          "En frodig urt uden smag er tegn på for meget gødning.",
+          "Rosmarin på friland skal ikke gødes.",
+          "Plant mynte i en beholder uden bund, sænket ned i bedet."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Høsten har et fysiologisk vindue: urter bør høstes lige før blomstringen, hvor de æteriske olier er på deres højeste. Og den har et tidspunkt på dagen — tidligt om morgenen, efter duggen er tørret, men før varmen tager til. Ingen anden gruppe har tidspunktet på dagen som kvalitetsvariabel, og en urt plukket om eftermiddagen har mærkbart svagere aroma. Aromatiske blomster plukkes, før de folder sig helt ud.",
+          "Beskæringen holder her både form og smag, og hver slægt har sin egen regel. På basilikum knibes vækstspidserne af med jævne mellemrum, og blomsterknopperne fjernes, så snart de viser sig, ellers bliver bladet bittert, og planten holder op med at vokse; høst skudspidser med et eller to sæt blade, og lad blade nok sidde tilbage til gendannelse. Rosmarin får en let klipning hvert år, efter blomsterne er visnet, og du må aldrig skære ind i det gamle ved — uden den behandling bliver den lang, forveddet og bar forneden. Salvie tåler en hård beskæring i det tidlige forår, timian klippes let efter blomstring, og laurbær klippes om sommeren. Mynte kan efter blomstringen skæres helt ned til cirka 5 cm fra bunden, så bladene fornys."
+        ],
+        "checklist": [
+          "Høst lige før blomstringen, hvor olien er på sit højeste.",
+          "Høst tidligt om morgenen, når duggen er tørret.",
+          "På basilikum: fjern blomsterknopperne, så snart de viser sig.",
+          "På rosmarin: klip let efter blomstring, og skær aldrig ind i gammelt ved.",
+          "Forny mynten ved at skære tuen helt ned, efter den har blomstret."
+        ]
+      }
+    }
+  },
+  "pollinator": {
+    "label": "Bestøvende insekter",
+    "topics": {
+      "role": {
+        "advice": [
+          "Omkring en tredjedel af den mad, vi spiser, afhænger af bestøvernes arbejde, og det meste af det arbejde udføres ikke af den bi, du har i tankerne. Alene i Storbritannien findes der mere end 270 biarter: omkring 26 humlebier, over 250 solitære bier og en enkelt honningbiart. Næsten alle er solitære — hver hun bygger og forsyner sit rede alene og dør, før næste generation kommer frem — og reden er næsten aldrig en bistade: mange bygger i bar jord, andre i hulrum i træ, og humlebier overtager ofte gange, som gnavere har lavet.",
+          "I Brasilien er nøglegruppen de brodløse bier, Meliponini, hjemmehørende i tropiske og subtropiske egne; alene i Pará anslås 109 arter at være knyttet til afgrøder som açaí, melon og vandmelon. Gruppen rækker langt ud over bierne: biller menes at være blandt de første insekter, der besøgte blomster, svirrefluer bestøver som voksne, mens deres larver æder bladlus, og sommerfugle og natsværmere lægger til tjenesten, selv uden den vibrationsbestøvning, der gør bier så effektive pr. besøg."
+        ],
+        "checklist": [
+          "De fleste bier er solitære og danner aldrig en bifamilie.",
+          "En kegleformet jordbunke i græsplænen er munden på en aktiv redegang.",
+          "Rene, cirkelrunde udklip i et blad er bladskærerbier, der samler redemateriale.",
+          "En svirreflue har to vinger; bier og hvepse har fire.",
+          "Ingen bladlus betyder ingen svirreflue-larver: byttet er også en ressource."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "Den reelle risiko er lav. Det er usandsynligt at blive stukket i sin egen have, så længe bierne behandles med respekt, og solitære bier bruger kun brodden i selvforsvar, når de bliver håndteret hårdt. Brodløse bier stikker, som navnet siger, ikke — hvilket gør dem til den sikreste gruppe at iagttage på tæt hold og holde derhjemme. Stikrisikoen i dette nabolag er koncentreret hos de sociale hvepse, som faktisk har forsvarsstik ved reden.",
+          "To forbehold lukker billedet. Larverne hos flere natsværmere er brændehår-larver, og det er en helt anden historie — tjek gruppen med skadedyrsinsekter, før du rører ved nogen behåret larve. Og hold af brodløse bier er en reguleret aktivitet, ikke en fri: i Pará blev holdere med op til 99 stader for eksempel fritaget for miljøgodkendelse, men skal stadig registrere sig hos landbrugstilsynet. At tage en vild rede følger sine egne regler."
+        ],
+        "checklist": [
+          "Iagttag uden at røre: en solitær bi stikker kun, hvis den klemmes.",
+          "Brodløse bier stikker ikke — den sikreste gruppe at studere på nært hold.",
+          "Hold afstand til sociale hvepses reder.",
+          "Rør aldrig ved en behåret larve: risikoen ligger dér, ikke hos bierne.",
+          "Hold af vilde bier kræver registrering hos den kompetente myndighed."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Mangfoldighed før mængde: begynd med otte til ti hjemmehørende plantearter, der dækker forår, sommer og efterår, plantet i pletter på mindst en meter på tværs. Foretræk enkle, åbne blomster med ét lag kronblade — fyldte blomster skjuler eller fjerner pollen og nektar. Lad ukrudtet i plænen blomstre ved at slå sjældnere, og sørg for vand, for bier og andre bestøvere har også brug for at drikke. Én feltmetode er værd at kopiere: hold øje med, hvilke planter der er populære blandt bestøverne i dit nabolag, og dyrk flere af dem.",
+          "Redesteder er en ressource. Lad områder med veldrænet, bar jord i fuld sol ligge uden dæklag til de jordboende bier, og lad de små jordbunker i græsplænen være i stedet for at jævne dem ud. Et bihotel virker med huller på cirka 2 til 10 mm i diameter, med cirka 2 cm mellemrum, 8 til 10 cm dybe til de mindste huller og 13 til 15 cm til de største, i ubehandlet træ og monteret en til to meter oppe på et beskyttet sted. Og reglen, der vejer tungere end alle de andre: sprøjt aldrig på åbne blomster. Undgå bredspektrede insektmidler; er du nødt til at behandle, så gør det om aftenen, hvor bestøverne er mindre aktive."
+        ],
+        "checklist": [
+          "Plant otte til ti hjemmehørende arter, der dækker alle tre årstider.",
+          "Vælg enkle blomster med ét lag kronblade, ikke fyldte.",
+          "Lad pletter med bar, solrig jord ligge til de jordboende bier.",
+          "Sørg for lavt, sikkert vand hele året.",
+          "Sprøjt aldrig på åbne blomster; er du nødt til at behandle, så gør det om aftenen."
+        ]
+      }
+    }
+  },
+  "beneficialInsect": {
+    "label": "Rovinsekter og nyttedyr",
+    "topics": {
+      "role": {
+        "advice": [
+          "Det er havens naturlige fjender: rovdyr, som dræber og æder mange byttedyr i løbet af et liv, og parasitoider, hvis larve udvikler sig i eller på en enkelt vært og slår den ihjel. Tallene er slående — en mariehøne kan sluge helt op til 5.000 bladlus i sit liv, løbebiller kan æde op til deres egen kropsvægt hver dag, og en guldøjelarve tager mellem 100 og 150 bladlus. Integreret plantebeskyttelse bygget på naturlige fjender er blevet rapporteret at skære sprøjtefrekvensen ned med 30% til 40% på tværs af forskellige afgrøder.",
+          "Livsstadiet ændrer alt, og det er dér, den mest almindelige fejl bor. Hos guldøjer og svirrefluer er det kun larven, der er rovdyr: den voksne lever af nektar, pollen og honningdug. Med andre ord er det underlige lille væsen på bladet som regel den allierede, ikke skadedyret. Tre felttegn er værd at lære: en mariehønelarve er rødlig og formet som en krokodille; guldøjeæg sidder på hårtynde stilke; og en larve, der bærer et par dusin små hvide kokoner på ryggen, er allerede dødsdømt og vil frigive dusinvis af snyltehvepse — lad den blive præcis, hvor den er."
+        ],
+        "checklist": [
+          "Bestem, før du handler: mange underlige larver på blade er rovdyr.",
+          "En mariehønelarve er rødlig og formet som en krokodille.",
+          "Æg på hårtynde stilke er guldøjeæg, ikke et skadedyr.",
+          "En larve med hvide kokoner på ryggen er allerede parasiteret — smid den ikke væk.",
+          "En knæler er et vilkårligt rovdyr: den æder også bestøvere."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "Næsten intet her stikker. Blandt rovdyrene har kun de sociale hvepse forsvarsstik; blandt parasitoiderne kun grave- og murerhvepsene, der bygger reder i jord eller mudder. Slæbehvepse og brakhvepse bruger udelukkende den lange brod som læggebrod, og den er ikke defensiv.",
+          "Men to familier bider, hvis man håndterer dem: rovtæger stikker deres snabel i og sprøjter fordøjelsesenzymer ind, og rovfluer sprøjter neurotoksisk spyt ind. Saml dem ikke op. En knæler griber med sine fangeben i en lynhurtig bevægelse og bider, hvis den holdes. Og der findes ét bestemt tilfælde: den invasive harlekinmariehøne bider mennesker, især når den fanges mellem hud og tøj — den bryder ikke huden og overfører ikke sygdom, men når den forstyrres, afgiver den hæmolymfe, der kan give varige pletter på vægge, gardiner og gulvtæpper, og der findes registrerede allergiske reaktioner som astma og nældefeber, hvor følsomheden er uafhængig af personens alder eller disposition for allergi. For netop den bille lyder anbefalingen på at tætne sprækker og dørtrin, ikke at sprøjte i haven. En aktiv rede af sociale hvepse iagttages på afstand."
+        ],
+        "checklist": [
+          "Kun sociale hvepse og grave- og murerhvepse stikker i denne gruppe.",
+          "Saml ikke en rovtæge eller en rovflue op.",
+          "En knæler bider, hvis du holder den.",
+          "Invasive mariehøns indendørs løses ved at tætne sprækker, ikke ved at sprøjte.",
+          "Iagttag hvepsereder på afstand."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "At bevare slår at købe. Standardanbefalingen er levesteder og tolerance, ikke udsætning: beskyt disse rovdyr ved at undgå sprøjtemidler, der slår dem ihjel, ved at vælge planter, der giver dem pollen, nektar og skjul, og ved at holde myrer væk fra angrebne planter — myrer forsvarer bladlus og skjoldlus mod rovdyr til gengæld for honningdug. Blandt de planter, rådgivningstjenesterne nævner som føde for de voksne, er dild, fennikel, echinacea, rudbeckia, silkeplante og lantana.",
+          "Hver gruppe har sit miljøkrav. Guldsmede har brug for vand: hunnen lægger sine æg ved at berøre overfladen, og larven udvikler sig under vand — intet vand, ingen guldsmed. Løbebillelarver lever i jorden med en begrænset aktionsradius, så at vende eller komprimere jorden fjerner den næste generation. Og at udrydde havens bladlus fuldstændigt fjerner fødegrundlaget for både mariehøns, guldøjer, svirrefluer og snyltehvepse: byttet er en ressource, ikke en nødsituation. Når behandling er uundgåelig, så foretræk sæbe, olie eller spinosad frem for pyrethroider, carbamater og organofosfater, netop for at skåne snyltehvepse, snyltefluer og løbebiller."
+        ],
+        "checklist": [
+          "Sørg for nektar- og pollenblomster: de voksne lever af dem.",
+          "Hold myrer væk fra angrebne planter.",
+          "Lad rent, stillestående vand stå, hvis du vil have guldsmede.",
+          "Vend eller komprimér ikke jord, hvor billelarver lever.",
+          "Tolerér nogle få bladlus: uden bytte bliver rovdyrene ikke."
+        ]
+      }
+    }
+  },
+  "pestInsect": {
+    "label": "Almindelige skadedyrsinsekter",
+    "topics": {
+      "role": {
+        "advice": [
+          "Skadedyr er en betegnelse for en sammenhæng, ikke for en art: den beskriver økonomisk skade eller en sundhedsrisiko ét sted på ét tidspunkt. Munddelene fortæller, hvilken slags skade der er tale om — gnavere efterlader tydelige huller i blade, ved eller frugt; sugere bruger et sugerør og giver stiplede pletter, plettet farve, hæmmet vækst, gulning, forvredet vækst og honningdug. Og honningdug er ikke en sygdom: det er sukkerholdig udskillelse, og den sorte belægning er sodskimmel, der vokser oven på den, sværter alting til og nedsætter fotosyntesen. Løs sugeren, og pletten forsvinder med den.",
+          "To nøgler hjælper i felten. Forvandlingen afgør, hvad du rent faktisk finder: ved ufuldstændig forvandling er det æg, nymfe og voksen, hvor nymfen ligner en voksen uden vinger; ved fuldstændig forvandling er det æg, larve, puppe og voksen, og larven kan være helt ulig den voksne. Og levevisen fortæller, hvor du skal lede: sugerne samler sig på nyt væv i vækst, hvilket er grunden til, at det unge blad krøller først, og bladlus, mellus og mider lever på bladets underside. Et kuriøst tilfælde: bladskærermyrer æder ikke bladet — de skærer det for at dyrke den svamp, de lever af, hvilket gør dem til skadedyr i plantager og til en nøgleorganisme i naturlige økosystemer."
+        ],
+        "checklist": [
+          "Huller og flænger = gnaver. Stiplede pletter, forvridning og klistrethed = suger.",
+          "Sodskimmel vokser på honningdug: behandl insektet, ikke belægningen.",
+          "Tjek altid bladets underside.",
+          "Et krøllet ungt blad peger på en suger, ikke på tørst.",
+          "Ikke alle mariehøns er allierede: én slægtslinje lever af planter og æder blade."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "Det er her, næsten hele den fysiske risiko i appens dyreliv bor — og den kommer ikke fra afgrødernes skadedyr. Brændehårslarver har hule, fjerpenslignende hår forbundet til giftblærer, som borer sig ind i huden og frigiver giften; symptomerne spænder fra let kløe til smerte, hævelse, blæredannelse, eksem og endda mavetarmforstyrrelser. Førstehjælp: sæt tape på og træk den af igen, gentagne gange, så de knækkede hår trækkes ud, vask med varmt vand og sæbe, læg straks en ispose på for at forebygge hævelse og dæmpe smerten, og søg læge ved en kraftig reaktion. I Brasilien giver Lonomia-larven et blødningsbillede og truer både land- og bybefolkning; overvågningen i Paraná registrerede 199 tilfælde og fem dødsfald mellem 1989 og 2000, med modgiften decentraliseret til strategiske punkter. De fleste uheld sker ved at strejfe blade under havearbejde snarere end ved et angribende dyr: beundr den farvestrålende, lodne larve på afstand.",
+          "Kyssetægen, som overfører Chagas' sygdom, har sin egen officielle procedure, når den findes: mas, klem eller beskadig ikke insektet; beskyt hånden med en handske eller en plastikpose; læg insektet, helst levende, i en plastikbeholder med skruelåg; og aflevér det på et indsamlingssted for triatomer. Smitten via vektoren sker ved, at insektets afføring når ind i stiksåret, og der findes også smitte ved indtagelse af forurenet mad eller drikke. Forebyggelse i hjemmet betyder insektnet for døre og vinduer, brug af myggemiddel og lange ærmer om natten."
+        ],
+        "checklist": [
+          "Rør aldrig ved og børst aldrig en behåret eller tornet larve væk.",
+          "Stik fra larve: tape, varmt vand og sæbe og en ispose — og læge, hvis det forværres.",
+          "Finder du en kyssetæge, så mas ikke insektet.",
+          "Saml den op med en handske, i en beholder med skruelåg, og aflevér den til sundhedsmyndighederne.",
+          "Sæt insektnet for døre og vinduer, og brug lange ærmer om natten i risikoområder."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Det er den eneste gruppe, hvor det rigtige svar kan være at gøre ingenting: grundinstruksen er at overvåge og optælle for at fastslå insekttype og bestandsniveau, før du beslutter dig for nogen behandling. Derefter klatrer du op ad stigen med mindst mulig påvirkning. Rent vand fra en slange skyller bladlus og mider af. Håndplukning og en hjemmelavet fælde virker — læg et lille stykke gammelt tagspån eller kraftigt pap under en græskarplante, hvor tægerne samler sig nedenunder for at søge ly, og så løfter du bare fælden og gør det af med dem. Fænologisk flugt, hvor du sår tidligt for at komme uden om skadedyrets fremkomst, er også bekæmpelse.",
+          "Først derefter kommer midlerne ind: insektsæbe og olie, som skader færre insekter uden for målgruppen, reflekterende dæklag mod mellus, Bacillus thuringiensis mod unge larver, og kemien allersidst, altid sprøjtet om aftenen for at mindske påvirkningen af bestøvende insekter. Rådgivningstjenesterne foretrækker spinosad frem for pyrethroider og neonikotinoider, netop for at skåne snyltehvepse, snyltefluer og løbebiller. Fysiske barrierer er den mest undervurderede bekæmpelse af alle, med én betingelse: fiberdugen skal tages af ved blomstring, ellers holder den bestøveren ude sammen med skadedyret. Og notér ordentligt, hvad du så — et foto med en målestok ved siden af insektet, med dato og med angivelse af, hvilken plante og hvilken del af den insektet åd på, gør enhver bestemmelse langt mere pålidelig."
+        ],
+        "checklist": [
+          "Overvåg og tæl, før du behandler.",
+          "Start med en vandstråle, håndplukning og en hjemmelavet fælde.",
+          "Foretræk sæbe, olie eller spinosad frem for bredspektrede insektmidler.",
+          "Tag fiberdugen af ved blomstring.",
+          "Sprøjt altid om aftenen, hvor bestøverne er inaktive."
+        ]
+      }
+    }
+  },
+  "decomposerFungus": {
+    "label": "Nedbrydende svampe",
+    "topics": {
+      "role": {
+        "advice": [
+          "Det er saprotrofe svampe: de lever af dødt organisk materiale. De svampe, der danner disse frugtlegemer, er gavnlige, fordi de nedbryder organisk materiale i jorden og gør næringsstofferne tilgængelige for andre planter. En svamp i græsplænen er næsten aldrig en sygdom — det er naturligt forekommende svampeorganismer, der gør præcis det, naturen har tiltænkt dem, og nedbryder engang levende materiale, så energien kommer tilbage i jorden. En heksering er et tegn på frugtbarhed, ikke på skadedyr: nedbrydningen frigiver kvælstof, græsset optager det og bliver mørkere, og det er dét, der tegner den mørkegrønne cirkel. At plukke svampen slår heller ikke svampen ihjel: frugtlegemet er kortlivet, og organismen er myceliet i substratet.",
+          "På et levende træ er tegnet derimod alvorligt. Svampe eller konsolsvampe på stammen eller ved stammefoden er advarsler, og mange gamle træer, der vælter i en storm, har allerede fået deres styrke kraftigt nedsat eller helt fjernet af rådsvampe. Tabet af styrke er svært at opdage for amatører og svært at vurdere selv for fagfolk — hvilket betyder, at du skal tilkalde en, der er uddannet i at opdage og vurdere råd. I dæklag er kanonsvamp, fugleredesvampe og støvbolde harmløse nedbrydere, og de klart gule eller orange slimede masser er slimsvampe, som ikke engang er ægte svampe og ikke skader planter."
+        ],
+        "checklist": [
+          "En svamp i græsplænen er organisk materiale, der genbruges, ikke en sygdom.",
+          "En mørkegrøn heksering viser frigivet kvælstof, ikke et skadedyr.",
+          "En svamp eller konsolsvamp på stammen eller ved stammefoden er en advarsel om strukturen.",
+          "At plukke svampene fjerner ikke svampen, kun frugtlegemet.",
+          "En gul, slimet masse i dæklaget er en slimsvamp og angriber ikke planter."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "Spis aldrig en vild svamp uden bestemmelse på stedet af en ekspert. Mange arter er giftige, og kun en ekspert kan skelne spiselige fra giftige arter. Tilberedning løser det ikke: amanitinerne er varmestabile og bliver ikke uskadeliggjort af madlavning, og der findes registrerede forgiftninger fra at indånde dampene under tilberedningen. En feltguide fra en anden egn kan ikke overføres — at lære at bestemme svampe i én del af landet eller i et andet land er ikke pålideligt, når svampene skal bestemmes et andet sted. Det sene symptom er det farlige: i dokumenterede tilfælde begyndte kvalme, opkast og diarré cirka ni timer efter indtagelsen, og opkast, der først sætter ind efter mere end seks timer, er et tegn på alvor, ikke på dårlig mave.",
+          "Berøring forgifter dig ikke — den dokumenterede risiko er indtagelse og sekundært indånding af dampe under tilberedning. Vask alligevel hænder, og hold dem væk fra munden. Fjern svampe fra græsplæner, hvor der er børn eller kæledyr, for små børn har det med at putte hvad som helst i munden, også svampe: i en amerikansk gennemgang af 2016 til 2018 var 25.9% af patienterne fem år eller yngre. Har nogen spist en, så ring straks til giftlinjen — i USA 1-800-222-1222; i Brasilien CIATox / Disque-Intoxicação 0800 722 6001. Og én sætning vejer tungere end nogen anden i denne manual: en bestemmelses-app erstatter ikke en ekspert."
+        ],
+        "checklist": [
+          "Spis ikke en vild svamp uden bestemmelse på stedet af en ekspert.",
+          "Tilberedning, tørring og hjemmetest gør ikke en giftig svamp sikker.",
+          "Opkast, der først sætter ind efter mere end seks timer, er et tegn på alvor.",
+          "Fjern svampe fra græsplæner, hvor børn eller løse kæledyr leger.",
+          "Har nogen spist en, så ring til giftlinjen med det samme."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Det er den eneste svampegruppe, der kan dyrkes i stor skala, netop fordi den kun har brug for dødt substrat: shiitake, østershat, champignon og enoki er alle saprotrofer, og at dyrke dem er at efterligne rådnende ved eller halm. I haven er håndteringen fysisk snarere end kemisk — svampemiddel er ikke svaret. Pluk svampene af hensyn til sikkerheden, grav det begravede organiske materiale op, som får dem til at vokse frem, det være sig stubbe, døde rødder, byggeaffald og ophobet filtlag, og luft jorden, så vandet trænger bedre ned. Når en græsplæne anlægges, fjernes træstubbe og rødder først.",
+          "Når en heksering virkelig er i vejen, kommer skaden fra det tætte mycelium, som kan hæmme vandets bevægelse ned i jorden — vejen er beluftning, der bryder svampemåtten, plus vanding og gødskning inden for de anbefalede mængder. I dæklag undertrykker iblanding af cirka 40% brugt champignonkompost kanonsvampen, fordi den bringer konkurrerende mikrober med sig; fugleredesvampe og slimsvampe kræver ingen indsats ud over en rive. For et træ er forebyggelse det eneste reelle forsvar, for du kan ikke redde et træ, der har råd: vand godt i tørke, luft jorden, hold 5 til 15 cm organisk dæklag, gød med langsomtvirkende gødning, undgå at såre eller kvæle rødderne under byggearbejde, og beskær med korrekt teknik på det rigtige tidspunkt. Og når du fotograferer, så få hatten, lamellerne eller porerne nedenunder, stokkens basis, substratet og værten med — netop basis og substrat er det, der skiller de dødelige arter fra de spiselige."
+        ],
+        "checklist": [
+          "Brug ikke svampemiddel på en græsplæne på grund af svampe.",
+          "Grav det begravede ved og de døde rødder op, som fodrer svampen.",
+          "Luft jorden for at bryde hekseringens myceliemåtte.",
+          "Et træ med råd behandles ikke: det forebygges og vurderes af en fagperson.",
+          "Få stokkens basis og substratet med, når du fotograferer."
+        ]
+      }
+    }
+  },
+  "mycorrhizalFungus": {
+    "label": "Mykorrhizasvampe",
+    "topics": {
+      "role": {
+        "advice": [
+          "Svampen er her kun den synlige spids af et underjordisk partnerskab med planternes rødder. Anslået 80% til 90% af alt planteliv menes at indgå i mindst én af de syv typer mykorrhiza — hvilket gør det til planteverdenens mønster, ikke undtagelsen. Svampen kan ikke fotosyntetisere og kan ikke binde sit eget kulstof, så den får alle de kulhydrater, den har brug for, fra værtsplanten og giver til gengæld vand og mineralske næringsstoffer: bedre optag af fosfor, ammonium og zink, beskyttelse mod jordbårne sygdomme og større tolerance over for tørke og temperatur. Fordelen er geometrisk snarere end kemisk — rødderne fylder kun omkring 0.5% af overjordens volumen, og en hyfe, der er langt finere, kommer i kontakt med langt mere jord pr. rumfangsenhed.",
+          "Der findes to praktiske typer. Ektomykorrhiza danner en kappe om roden og er dem, der giver synlige svampe; arbuskulær mykorrhiza vokser inde i roden og danner slet ingen svamp, kun sporer i jorden. Orkidéer er afhængige af mykorrhizasvampe bare for at spire, og mykotrofe planter — dem, der ikke fotosyntetiserer nok — henter deres kulstof fra et værtstræ gennem en mellemliggende svamp. Én skelnen i felten er værd at holde fast i: en mykorrhizasvamp skyder op af jorden nær et levende træ og fortæller, at træet er levende og forbundet, mens en rådkonsol skyder ud af stammen eller stammefoden og er en advarsel om strukturel risiko."
+        ],
+        "checklist": [
+          "Mykorrhizasvampe skyder op af jorden nær et levende træ; rådkonsoller skyder ud af stammen.",
+          "Svampen æder ikke træet: den bytter kulhydrat for vand og mineraler.",
+          "En mykorrhizasvamp fortæller om etableret, uforstyrret jord.",
+          "Arbuskulær mykorrhiza findes i næsten enhver have og er usynlig.",
+          "Hjemmehørende orkidéer er afhængige af svampen i deres oprindelige jord for at spire."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "Den samme hårde regel gælder, og den vejer endnu tungere her: spis aldrig en vild svamp uden bestemmelse på stedet af en ekspert. Denne gruppe rummer både gastronomiens mest eftertragtede svampe og planetens mest dødelige — de dræbende fluesvampe hører til en af de dominerende ektomykorrhiza-familier, altså præcis det samme økologiske nabolag som de fine spisesvampe. Tilberedning uskadeliggør dem ikke: amanitinerne er varmestabile.",
+          "Den typiske forveksling er netop med en almindelig spisesvamp, og kendskab til arter fra en anden egn øger risikoen i stedet for at mindske den. Ventetiden bedrager: kvalme og opkast mere end seks timer efter indtagelsen er et tegn på alvor, ikke på almindeligt ubehag. Tommelfingerreglen, som en universitets sundhedstjeneste citerer, siger det hele: er du ikke sikker, så lad være med at spise den. Berøring forgifter dig ikke — den dokumenterede risiko er indtagelse; vask hænder, og hold dem væk fra munden. Har nogen spist en, så ring straks til giftlinjen: i Brasilien CIATox / Disque-Intoxicação 0800 722 6001; i USA 1-800-222-1222."
+        ],
+        "checklist": [
+          "Spis ikke en vild svamp uden bestemmelse på stedet af en ekspert.",
+          "Denne gruppe rummer de mest dødelige arter, vi kender.",
+          "Tilberedning uskadeliggør ikke fluesvampenes giftstoffer.",
+          "Et symptom, der først dukker op efter seks timer, er et tegn på alvor.",
+          "Er du i tvivl, så lad være med at spise den — og ring til giftlinjen, hvis nogen allerede har."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Denne gruppe kan ikke dyrkes, som saprotroferne kan, fordi den kræver den levende værtsplante — det er den økonomiske grund til, at Karl Johan, kantarel og matsutake samles frem for at dyrkes, og til at forsøg på at dyrke dem på et substrat slår fejl. Og der er en stærk praktisk følge: for meget gødning skiller partnerskabet ad. Tilførsel af kvælstof, fosfor eller fuldgødning nedsætter mykorrhizasvampenes tilstedeværelse og aktivitet, så den, der vil have mykorrhiza, gøder sparsomt. Små ændringer i jordens pH, temperatur, indhold af organisk materiale, generelle frugtbarhed og fugtighed kan ændre koloniseringen betydeligt.",
+          "Det, der bevarer den, er etableret, uforstyrret jord, et intakt organisk lag og den rigtige vært. Ektomykorrhiza-samfund bygger sig op over tid: yngre træer har et mindre samfund af svampesymbionter end modne bevoksninger. I praksis er et modent træs mykorrhizanetværk et årtier gammelt aktiv, som byggeri, afrømning af jord og gasning ødelægger på én dag, og som ingen pose produkt kan købe tilbage. Og vær skeptisk over for posen: der findes meget begrænset uafhængig videnskabelig dokumentation for, at podning med mykorrhiza gør etableringen af planter mere vellykket, og de er ikke det mirakelmiddel, der præsenteres i reklamerne. Grav ikke for at se myceliet, og flyt ikke en hjemmehørende jordboende orkidé eller en klorofylfri plante: uden svampepartneren fra deres oprindelige jord dør de."
+        ],
+        "checklist": [
+          "Gød sparsomt, hvis du vil bevare mykorrhizaen.",
+          "Undgå jorddesinfektion og afrømning af det øverste jordlag.",
+          "Vær skeptisk over for podemidler, der sælges som mirakelkur.",
+          "Grav ikke for at se myceliet: netværket er organismen.",
+          "Flyt ikke hjemmehørende orkidéer eller mykotrofe planter."
+        ]
+      }
+    }
+  },
+  "freshwaterFish": {
+    "label": "Ferskvandsfisk",
+    "topics": {
+      "role": {
+        "advice": [
+          "Temperatur og opløst ilt er det filter, der afgør alt: før nogen beslutning om et vandområde måles temperatur, pH og opløst ilt, og fiskedød på grund af for høj varme eller iltmangel er den klassiske ulykke i gårdsøer. Den taksonomiske sammensætning skifter fra kontinent til kontinent — Neotropis domineres af karpelaks og maller, mens Holarktis kører på karper og småfisk, solaborrer, aborrer og laksefisk. Den neotropiske ferskvandsfiskefauna er den rigeste på planeten med omkring 71 familier og cirka seks tusind arter, hvoraf 4.475 er formelt beskrevet.",
+          "Mange arter er afhængige af en obligatorisk gydevandring, piracema: reofile fisk svømmer op ad floden mod strømmen for at gyde, og selve den fysiske anstrengelse er en del af den fysiologiske udløser for formeringen. Og flodsletternes laguner er ikke vandpytter, de er yngelkamre — ved oversvømmelse går floden over sine bredder og forbinder dem, drivende æg og larver slår sig ned der, og når floden falder, vokser ungfiskene op i beskyttelse indtil næste oversvømmelse. Nogle familier fungerer som et termometer for vandkvaliteten og andre for forfaldet: fisk, der ikke tåler varmt, uklart vand, viser vand af høj kvalitet, mens maller, der tåler høj temperatur, mudret vand og lav ilt, trives netop dér, hvor de kræsne arter allerede er væk."
+        ],
+        "checklist": [
+          "Mistænk først den opløste ilt ved pludselig fiskedød om sommeren.",
+          "Stærk strøm over stenbund peger på reofile og vandrende arter.",
+          "En laguna på flodsletten, der forbindes ved oversvømmelse, er et yngelkammer, ikke en vandpyt.",
+          "Kun tolerante arter til stede tyder på et forfaldent eller allerede invaderet system.",
+          "En stime, der samler sig ved regntidens begyndelse, kan være starten på en gydevandring."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "Her handler sikkerheden mest om dyret og om loven. Sæt aldrig en akvarie-, put and take- eller opdrætsfisk ud i et naturligt vandområde: Brasilien har allerede registreret omkring halvfems invasive eksotiske fiskearter i indre farvande, akvakulturen er den største kilde til introduktioner — gennem undslip via spildevand, brud på bassiner og fisk, der smutter gennem netburenes masker — og det er forbudt at indføre nogen dyreart uden en faglig vurdering og tilladelse fra den kompetente myndighed. Flyt aldrig fisk mellem vandløbsoplande: en fanget fisk må kun sættes ud i et andet vandområde, hvis den er hjemmehørende i det samme opland.",
+          "Respektér fredningstiden. I Minas Gerais løber fredningen af gydevandringen fra 1. november til 28. februar, men datoerne varierer fra delstat til delstat og fra opland til opland, så tjek den lokale miljømyndighed, før du tager afsted. Fodr ikke vilde fisk — fodring ændrer den naturlige fødesøgning og samler dyrene kunstigt. Fisk ikke efter og forstyr ikke fisk, der ligger på deres reder om foråret. Og håndtér så lidt som muligt: læg sten og grene præcis tilbage, hvor de lå."
+        ],
+        "checklist": [
+          "Sæt aldrig en akvarie- eller opdrætsfisk ud i en flod, sø eller dam.",
+          "Flyt ikke fisk mellem forskellige vandløbsoplande.",
+          "Tjek din delstats fredningskalender, før du fisker.",
+          "Fodr ikke vilde fisk.",
+          "Forstyr ikke fisk, der vogter reder om foråret."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Den naturlige føde skifter med årstiden og fortæller historien om omgivelserne. Tambaqui æder frugt og frø, når floden går over sine bredder, og skifter til dyreplankton, når det slipper op i tørtiden — og ved at sprede frø tager den del i at genskabe Amazonas' skov. Detritusædere og afskrabere omsætter organisk materiale og biofilm på bunden og danner energigrundlaget i mange neotropiske floder. Fiskeædere på lur indtager den lokale top af fødekæden og er i en dam det, der forhindrer byttefiskene i at blive for mange.",
+          "I en dam eller et fiskeopdræt skal foderet doseres, så det ikke forringer vandkvaliteten: overskydende foder bliver til organisk materiale, bruger ilt og åbner døren for sygdom og massedød. At udsætte lidt af hvert for mangfoldighedens skyld giver skuffende resultater med skæve bestande og forkrøblede fisk; at udsætte meget frugtbare arter fylder dammen med forkrøblede fisk. Undgå at udsætte fisk i højsommeren, hvor høj temperatur og lav ilt svækker fiskene under transporten. Og husk, at koldtvandsarter ikke overlever sommeren i de fleste damme og kun fungerer som en udsæt-og-høst-ordning, inden varmen kommer."
+        ],
+        "checklist": [
+          "Dosér foderet: overskuddet bliver til organisk materiale og sænker ilten.",
+          "Udsæt ikke lidt af hver art i håb om mangfoldighed.",
+          "Undgå at udsætte fisk i højsommeren.",
+          "Læs omgivelserne gennem vandet, før du beslutter dig for nogen indsats.",
+          "Fotografér og notér frem for at samle ind."
+        ]
+      }
+    }
+  },
+  "marineFish": {
+    "label": "Hav- og revfisk",
+    "topics": {
+      "role": {
+        "advice": [
+          "En revfisk er en diagnose af revet, ikke bare en beboer. Planteæderne — papegøjefisk og kirurgfisk — æder de alger, der konkurrerer med koraller og nedsætter deres evne til at overleve, vokse og formere sig. Og den funktionelle gruppe betyder mere end arten: papegøjefisk har kraftige næb, der skraber substratet, når de bider algerne af, og åbner plads, hvor nye koraller kan slå sig ned, mens kirurgfisk kun græsser den øverste del af algetæppet. Algernes største negative virkning ligger på korallernes bundfældning og tidlige overlevelse, så et rev, der allerede har mange store, voksne koraller, får måske ikke umiddelbart gavn af flere planteædere, mens et rev, hvis genopretning afhænger af ny tilgang, får meget stor gavn.",
+          "At beskytte planteæderne er ikke en universel løsning: indsatsen virker dér, hvor der reelt er et algeproblem på stedet, og hvor den faktisk øger bestanden af planteædere. Det, du fotograferer, læser stedet. Mange sommerfuglefisk tyder på levende, strukturrig koral i nærheden. Fuldstændigt fravær af store havaborrer og snappere på et strukturrigt rev er en stærk indikation på fiskeripres. Et tykt makroalgetæppe hen over død koral, med få papegøjefisk og kirurgfisk i syne, viser utilstrækkelig græsning. Og selv beskyttet er planteæderne flere år om at komme sig — forvaltningen skal være foregribende snarere end reagerende."
+        ],
+        "checklist": [
+          "Mange sommerfuglefisk tyder på levende koral i nærheden.",
+          "Fravær af store rovfisk peger på fiskeripres.",
+          "Tykke makroalger med få planteædere viser utilstrækkelig græsning.",
+          "Sandrender og -pletter mellem korallerne er også levested.",
+          "Notér dato og sted: de er lige så meget værd som billedet."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "Hovedreglen er ikke at røre. Koraller er skrøbelige dyr og tager skade af en berøring, et prik, et spark eller en hånd sat for at holde balancen, og mange af dem er fredede. Rør heller ikke ved andre dyr: det slimlag, der beskytter fisk og mange havhvirvelløse dyr mod infektion, går let af med en hånd, en handske eller en fod. Fysisk kontakt med mantarokker og hvalhajer er forbudt ved forskrift i et havreservat, også selvom dyret ser ud til at nyde det. Og opdriftskontrol er etik, ikke teknik: sving frit over revet, og hold fast i fortøjningslinen, hvis strømmen er stærk, aldrig i revet.",
+          "Fodr ikke, og saml ikke ind. Fodring af fisk afbryder revfiskenes naturlige fødesøgning, tiltrækker arter, der ikke hører til på stedet, og lærer fiskene at bide svømmere i forventning om mad — i nogle jurisdiktioner er det ulovligt. Intet forlader reservatet, hverken en musling eller et stykke koral: skaller, der ser tomme ud, har ofte et forskræmt dyr indeni, og de virkelig tomme bliver skjul for eremitkrebs, rurer, unge koraller og havsvampe. For havets store dyr er de vejledende lovbestemte afstande i USA cirka 90 meter til hvaler generelt, 45 meter til havskildpadder og 45 meter til sæler og søløver, med cirka 180 meter til spækhuggere i Washingtons indre farvande og 450 meter til nordkaperen, og 30 minutter som længste betragtningstid. Brasilianske farvande følger deres egne regler fra ICMBio og IBAMA: behandl tallene som god praksis, ikke som lokal lov."
+        ],
+        "checklist": [
+          "Rør ikke ved koral, og støt dig ikke til den for at holde balancen.",
+          "Rør ikke ved fisk, rokker eller skildpadder: det beskyttende slimlag går af.",
+          "Fodr under ingen omstændigheder revfisk.",
+          "Saml ikke skaller, koralstumper eller nogen som helst souvenir.",
+          "Hold afstand til de store havdyr, og begræns tiden, du betragter dem."
+        ]
+      }
+    }
+  },
+  "gardenBird": {
+    "label": "Have- og byfugle",
+    "topics": {
+      "role": {
+        "advice": [
+          "Det er fugle, der lever, æder eller yngler i haver, på pladser, i byparker, på tage og langs veje — både hjemmehørende arter, der tåler menneskeskabte landskaber, og helt synantrope, indførte arter. Alt vildt har brug for fire ting: føde, vand, dækning og plads til at yngle og få unger på vingerne. I en gennemsnitlig have er det, der slipper op først, som regel en pålidelig vandkilde året rundt — ikke føden.",
+          "En god del af de mest synlige byfugle er indførte: klippeduen nåede Brasilien i 1500-tallet med den portugisiske kolonisering og behandles i dag som synantrop fauna med sine egne sundhedsregler. Den officielle strategi for bykontrol angriber de fire elementer vand, føde, skjul og adgang — hvilket er det stik modsatte af det, du gør for at tiltrække hjemmehørende fugle. Ét designprincip er værd at føje til: fordelingen betyder noget. For arter, der ikke bevæger sig langt, virker mange små pletter med føde, vand og skjul bedre end få store, for jo længere et dyr skal bevæge sig, jo mere udsat bliver det for rovdyr."
+        ],
+        "checklist": [
+          "Vandet er som regel den begrænsende ressource, ikke føden.",
+          "Fordel føde, vand og skjul på flere små pletter.",
+          "Ryd ikke haven for meget op: et døende træ og en kvasbunke er skjul.",
+          "En overvægt af duer og spurve peger på et tæt bebygget miljø.",
+          "Når hjemmehørende frugtædere dukker op, viser det, at dine planter bærer."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "Det bevidste indgreb i denne gruppe er foderbrættet, og det har en hygiejnisk pris. Blandt de sygdomme, der cirkulerer ved foderbrætter, er mykoplasma-øjenbetændelse, salmonellose, aspergillose, fuglekopper og fugleinfluenza. Hygiejnen er ikke valgfri: rens frøautomater hver anden uge, og fordobl frekvensen ved den mindste mistanke om sygdom, med ni dele vand til én del klorin. Skrub synlige klatter af, før du sætter dem i blød, skyl godt efter, og lad dem tørre, før du fylder op igen. Riv klatter og frøskaller sammen på jorden, især de mugne eller våde, hvilket samtidig holder gnaverne væk. Og fordel flere foderbrætter i stedet for at samle det hele ét sted, for sygdom spreder sig lettere på et lille område med tætte flokke. Den samme rengøringsregel gælder fuglebadet.",
+          "Når du ser en syg fugl — røde, hævede eller løbende øjne, vortelignende vækster på de nøgne partier, en mager fugl med pjusket fjerdragt — så tag foderbrætterne ned i cirka to uger, og rengør det hele, også omgivelserne. Saml ikke dyret op: kun dyrlæger eller godkendte plejere af vildt må lovligt behandle en vild fugl. Dukker der en sygdom op med fækal-oral smitte, så overvej at pensionere foderbakkerne, som koncentrerer forureningen mest. I felten skal du være særligt varsom nær aktive reder, ynglekolonier, overnatningspladser og vigtige fødesøgningssteder, begrænse brugen af afspillede fuglestemmer og udvise omtanke og tilbageholdenhed, når du fotograferer. Og princippet, der afgør enhver tvivl: i en interessekonflikt mellem fuglene og iagttageren kommer fuglenes velfærd først."
+        ],
+        "checklist": [
+          "Rens foderbrætterne hver anden uge, med én del klorin til ni dele vand.",
+          "Riv skaller og klatter sammen på jorden under foderbrættet.",
+          "Fordel flere foderbrætter i stedet for at samle det hele ét sted.",
+          "Syg fugl: tag foderbrætterne ned i to uger, og rør ikke ved dyret.",
+          "Begræns afspilningen af fuglestemmer, og hold afstand til aktive reder."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Hjemmehørende planter er mere værd end et foderbræt. Den ideelle fremgangsmåde leverer så meget hjemmehørende føde som muligt året rundt — agern, nødder, bær, knopper, frugt, nektar og frø — og frø som tilskud kommer først ind, når den naturlige forsyning slipper op, først og fremmest om vinteren. At læne sig op ad foderbrættet alene er en skrøbelig løsning: det går i stykker, du rejser væk, og fuglen, der har lært at regne med det, står tilbage med ingenting.",
+          "I praksis: sørg for vand i et fuglebad, et lavt bassin, en planteunderskål, et cirkulerende vandfald eller bare en dryppende slange, skift vandet jævnligt i varmen, og hold det tilgængeligt i kulden. Sørg for dækning, der varierer i størrelse og tæthed — tætte buske, hule stammer, sten- og kvasbunker, stedsegrønne, højt græs — så hver art kan vælge den rette dækning til at æde, gemme sig, undslippe dårligt vejr, kurtisere og yngle. Sørg for plads med gamle træer, tætte buskadser og redekasser. Bruger du et foderbræt, er solsikkefrø, nigerfrø, prosohirse og knækket majs de tilskud, rådgivningstjenesterne nævner, og om sommeren besøger kolibrier gerne nektarautomater. Og indret dig med katte i tankerne: et hævet fuglebad med de lave grene beskåret i nærheden fjerner skjulestedet, der bruges til baghold."
+        ],
+        "checklist": [
+          "Plant hjemmehørende arter, der bærer frugt hele året.",
+          "Brug kun frø som tilskud i knaphed, først og fremmest om vinteren.",
+          "Hold en pålidelig vandkilde tilgængelig hele året.",
+          "Variér dækningen: tætte buske, kvasbunker, sten, stedsegrønne.",
+          "Hold fuglebadet hævet og fri for tætte buske omkring, på grund af kattene."
+        ]
+      }
+    }
+  },
+  "forestBird": {
+    "label": "Skov- og trækfugle",
+    "topics": {
+      "role": {
+        "advice": [
+          "Det er to delvist overlappende bestande: skovafhængige fugle og trækfugle. Af de 1.971 fuglearter, der er registreret på brasiliansk område, foretager 216 — 10.9% — en eller anden form for træk: 141 trækkende og 75 delvist trækkende, en kategori, hvor kun en del af bestanden flytter sig; yderligere 91 er strejfgæster. Omkring en tredjedel af de brasilianske fuglefamilier har mindst én trækkende art, men fem familier står for mere end halvdelen af dem med 112 arter: tyranner med 36, sneppefugle med 23, stormfugle og skråper med 22, tangarer med 16 og måger og terner med 15.",
+          "Store frugtædende skovfugle er skovens infrastruktur, ikke dens pynt: tukaner og hokkofugle spreder store frø, og jagt og fragmentering fjerner præcis de fugle, hvis næb kan sluge dem. Juçara-palmen, som dominerer i Atlanterhavsskoven, får sine frugter ædt af mere end 58 fuglearter. Og skov bevaret i pletter er ikke det samme som bevaret skov: mangfoldigheden falder, når fragmenterne ligger usammenhængende og langt fra hinanden, eller når ingen af dem er tæt nok til overlevelse og formering."
+        ],
+        "checklist": [
+          "Et tæt samfund i underskoven peger på sammenhængende, strukturrig skov.",
+          "Når tukaner og hokkofugle forsvinder, peger det på jagt eller fremskreden fragmentering.",
+          "Vadefugle, der samler sig på en vadeflade i trækperioden, peger på en rasteplads.",
+          "Træk er ikke et ja eller nej: der findes delvise trækfugle og strejfgæster.",
+          "Højdetræk findes i Brasilien og er undervurderet."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "Afspilning af fuglestemmer er gruppens centrale fejl. Etikken for fuglekiggeri siger, at man skal begrænse brugen af optagelser og andre lydmetoder til at lokke med, særligt i områder med mange fuglekiggere, for lokalt sjældne arter og for truede eller udryddelsestruede arter — og skoven, hvor fuglene er sværest at få øje på, er netop dér, hvor fristelsen er størst.",
+          "Omkring reder styrer tre risici alt: utilsigtet skade på reden, at forældrene forlader den, og at rovdyr tiltrækkes. Brug aldrig mere end ét minut nær en rede. Kom højst forbi hver tredje eller fjerde dag. Undgå den tidlige morgen, hvor de fleste arter lægger æg, og hvor æg og unger hurtigt bliver kolde, hvis hunnen går fra reden; undgå skumringen og tiden derefter, hvor hun vender tilbage for at overnatte; undgå de første dage af rugningen og de dage, hvor ungerne er lige ved at forlade reden, for de kan springe for tidligt, og overlevelsen uden for reden er lav på det stadie; og undgå koldt, fugtigt eller regnfuldt vejr. Efterlad ikke spor, der leder rovdyr på vej, og tramp ikke den vegetation ned, som kan blotlægge reder. Tving aldrig en hun væk fra en rede — vent nogle minutter og se, om hun selv går, og kom tilbage senere, hvis hun ikke gør. Skriv først dine noter, når du er godt væk fra reden, og bank på en redekasse, før du åbner den, og igen, mens du åbner den."
+        ],
+        "checklist": [
+          "Begræns afspilningen af fuglestemmer, frem for alt ved sjældne eller truede arter.",
+          "Brug aldrig mere end ét minut nær en rede.",
+          "Undgå at tjekke reder tidligt om morgenen, i skumringen eller i dårligt vejr.",
+          "Tving aldrig en hun væk fra hendes rede.",
+          "Skriv dine noter væk fra reden, og efterlad ingen spor hen til den."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Levestedet fortæller meget. En skygget underskov i sammenhængende skov peger på lidt mobile grupper, der er meget følsomme over for kanteffekter; en gammel kronetag peger på fugle, der er afhængige af store frugtbærende træer og af hulheder at yngle i; skovbunden peger på grupper, der er meget følsomme over for jagt; og kyst, vadeflade og saltpande i trækperioden peger på en rasteplads for vadefugle, et yderst forstyrrelsesfølsomt sted. Trækfugle er afhængige af levesteder i adskilte områder tusinder af kilometer fra hinanden, og nogle er kritisk afhængige af steder, de kun bruger i få dage, til at hvile, fælde fjer, æde og bygge energireserver op.",
+          "Derfor betyder datoen lige så meget som stedet. Fordi udturen som regel går ad en anden rute end hjemturen, og fordi fuglene justerer deres bane efter forholdene, går daterede registreringer direkte ind i viden om ruterne — og en registrering uden for sæsonen kan være mere oplysende end en almindelig. At registrere en trækfugl uden præcis dato og lokalitet mister netop den mest værdifulde oplysning. I felten skal du blive på stierne, forstyrre levestedet mindst muligt og bevare de døde træer, der stadig står, for de er redehuller for mange arter."
+        ],
+        "checklist": [
+          "Notér altid præcis dato og lokalitet, især ved trækkende arter.",
+          "Én registrering uden for sæsonen kan være mere værd end ti almindelige.",
+          "Bliv på stierne, og forstyr levestedet mindst muligt.",
+          "Bevar døde træer, der stadig står: de er redepladser for mange arter.",
+          "Fodr ikke vilde fugle i skoven eller på en rasteplads for trækfugle."
+        ]
+      }
+    }
+  },
+  "grainCrop": {
+    "label": "Korn- og kerneafgrøder",
+    "topics": {
+      "soil": {
+        "advice": [
+          "Det centrale begreb i ernæringen her er skjult sult: de fleste afgrøder begynder at tabe udbytte, længe før mangel- eller giftighedssymptomer er synlige, og det symptomfrie tab er stort. Når et symptom endelig viser sig, betyder det altid alvorlig sult — aldrig en let eller moderat mangel. Næringsstoffets mobilitet afgør, hvilket blad du skal kigge på: mobile næringsstoffer som kvælstof, kalium, fosfor og magnesium viser symptomer på de gamle blade først, fordi planten flytter dem over i de nye; immobile næringsstoffer som calcium og bor viser symptomer på de nye blade og i vækstpunktet.",
+          "Nogle visuelle mønstre i ris fungerer som reference: nekrose i form af et omvendt V, der løber fra spidsen og ned langs kanterne af et gammelt blad, peger på kalium; meget smalle, opret stående nye blade med et bronzefarvet eller lilla skær i spidserne peger på fosfor; en hel mark, der gulner ved buskning og anlæg af toppen, peger på kvælstof; og en mangel, der viser sig i pletter frem for over hele arealet, er et typisk kaliummønster. Herbicidskade efterligner mangel, men den dukker op umiddelbart efter sprøjtningen — netop den tidsmæssige nærhed er det, der skiller de to tilfælde. Endelig er kerne og ensilage ikke den samme afgrøde set fra jordens side: fosfor flyttes næsten fuldstændigt over i kernen, efterfulgt af kvælstof, mens kalium og calcium hovedsageligt bliver i halmen, så i ensilage, hvor også den vegetative del fjernes, dukker problemer med frugtbarheden op tidligere."
+        ],
+        "checklist": [
+          "Vent ikke på et symptom: når det viser sig, er tabet allerede sket.",
+          "Mobile næringsstoffer viser sig på gamle blade; immobile på nye blade.",
+          "Diagnosticér ud fra jordprøve og markens historik, aldrig ud fra et bladfoto alene.",
+          "Skade, der dukker op lige efter sprøjtning, er herbicid, ikke mangel.",
+          "Brug ikke en anbefaling for kerne på en afgrøde, der skal bruges til ensilage."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Beslutningen træffes her ved at tælle, ikke efter kalenderen, og denne gruppe har den billigste standardiserede prøvetagning af alle. Logikken hviler på tre tærskler: ligevægtsniveauet, niveauet for økonomisk skade og bekæmpelsesniveauet, som ligger lige under det. Til jordskadedyr i majs bruger du en jordprøve på tredive gange tredive centimeter og femten dybe, sigtet — for smælderlarver kræver to eller flere insekter pr. prøve allerede bekæmpelse, og et gennemsnit på ét pr. prøve giver allerede betydelig skade. For hærormen tælles antallet af angrebne planter fem tilfældige steder inden for én hektar: på marker med et potentiale på mindst hundrede sække viser 10% af planterne med tidlige symptomer allerede behov for bekæmpelse, og det mest følsomme stadie er otte til ti blade. Det første tegn er larver, der skraber bladene og efterlader gennemsigtige vinduer.",
+          "I sojabønner er bankedugen metoden: en helst hvid dug på en meter, spændt ud mellem to rækker; ryst den ene række kraftigt hen over den, og tæl voksne og unge, ugentligt i den kritiske periode. Minimum er seks prøver op til ti hektar, otte op til tredive og ti op til hundrede, hvor større arealer deles i blokke på hundrede hektar. Tag prøver for jordskadedyr før såning, for tiltag efter at afgrøden er etableret, er ineffektive. Tæl nymferne sammen med de voksne: skjoldtæger i tredje til femte stadie gør tilsvarende skade og udgør størstedelen af bestanden i den reproduktive periode, med en handlingstærskel på to skjoldtæger pr. meter række til kerne og én til såsæd. Tag prøver i døgnets køligere timer, for skjoldtæger er hurtige og flygter i varmen. Det har et målt afkast: på tværs af 196 referenceenheder i Paraná i sæsonen 2017/2018 skar integreret plantebeskyttelse antallet af insektmiddel-behandlinger ned med mere end 43% og holdt udbyttet på samme niveau. Vælg midlet efter selektivitet over for naturlige fjender lige så vel som efter pris og giftighed, følg altid de gældende MAPA-godkendelser, og bejds kun såsæden, hvor der er en historik med problemet, aldrig som blind rutine."
+        ],
+        "checklist": [
+          "Tæl, før du sprøjter: beslutningen træffes efter tærskel, ikke efter kalender.",
+          "Majs: 10% af planterne med skrabede blade kræver allerede bekæmpelse.",
+          "Sojabønner: mindst ti bankedugsprøver op til hundrede hektar.",
+          "Tag prøver for jordskadedyr før såning.",
+          "Tæl nymfer sammen med voksne, og tag prøver i døgnets køligere timer."
+        ]
+      }
+    }
+  },
+  "vegCrop": {
+    "label": "Grøntsags- og frugtafgrøder",
+    "topics": {
+      "watering": {
+        "advice": [
+          "Her er vand en finjusteret styring, ikke vanding, når man kommer i tanke om det: der findes en grænse for jordens sugespænding målt i kPa, og den er forskellig fra vandingssystem til vandingssystem. I aubergine vander du, når tensiometeret viser 30 til 50 kPa ved sprinkler- eller furevanding, eller 10 til 15 kPa ved drypvanding, hvor du bruger den lave ende af intervallet på de mest kritiske stadier, i sandjord og ved høj fordampning. Føleren sættes i 50% af den effektive roddybde og ti til tyve centimeter fra planten, hvor den effektive dybde er dér, hvor omkring 80% af rødderne er samlet.",
+          "For meget vand skader lige så meget som for lidt: det driver overdreven plantevækst, hæmmer blomstring og frugtsætning, fremmer jordbårne sygdomme gennem utilstrækkelig luftskifte og udvasker næringsstoffer. Mangel vejer tungest ved blomstring og frugtsætning, hvor blomster og frugter kastes, frugtvæksten hæmmes, og der opstår kvalitetsfejl — misdannede og uens frugter, griffelråd og bitter smag. Blade, der hænger sidst på formiddagen, er et groft, men brugbart tegn på, at vandingen er forsinket. Og valget af system er en plantesundhedsbeslutning, ikke bare en hydraulisk: fure- og drypvanding mindsker bladsygdomme, fordi de ikke væder bladene, men mod tomatmøllet er sprinkler en fordel, fordi den slår æg, larver og pupper ned. Beslutningen afhænger af det problem, der dominerer hos dig."
+        ],
+        "checklist": [
+          "Brug en anden spændingsgrænse ved drypvanding end ved sprinkler eller fure.",
+          "Sæt føleren i 50% af den effektive roddybde og ti til tyve centimeter fra planten.",
+          "Lad ikke vandet slippe op under blomstring og frugtsætning.",
+          "Blade, der hænger sidst på formiddagen, viser, at vandingen er forsinket.",
+          "Vælg vandingssystem efter det problem, der dominerer hos dig."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "Overskud af næring har sine egne symptomer og bringer de andre ud af balance. I løg giver for meget kvælstof planter med tyk hals, øger modtageligheden for bladsygdomme og forkorter holdbarheden efter høst; for meget kalium fremkalder mangel på magnesium og calcium; for meget fosfor fremkalder mangel på zink og kobber. Derfor skaber det som regel det næste problem at rette op på ét næringsstof uden at se på de andre.",
+          "Mobiliteten fortæller, hvilket blad du skal se på: kvælstof, kalium, fosfor og magnesium viser sig først på de gamle blade, mens calcium og svovl viser sig på de nye — et nyt løgblad, der falder om uden at knække, er calciummets signatur. To teksturer er værd at lære udenad: nekrose, der dukker brat op uden forudgående klorose, peger på zink, kobber eller mangan; nekrose med en fløjlsagtig tekstur er jernets kendemærke, tydeligt forskelligt fra alle de andre. I brasilianske jorder under normale forhold er det kun bor og zink og i nogle tilfælde kobber, der plejer at mangle til løg. Og hold øje med det falske positive: lave temperaturer, for meget vand eller langvarig tørke kan give symptomer, der ligner kvælstofmangel til forveksling."
+        ],
+        "checklist": [
+          "Ret ikke op på ét næringsstof uden at se på dem, det bringer ud af balance.",
+          "Gamle blade først: kvælstof, kalium, fosfor, magnesium. Nye blade: calcium, svovl.",
+          "Brat nekrose uden forudgående klorose tyder på zink, kobber eller mangan.",
+          "Nekrose med fløjlsagtig tekstur er jernets kendemærke.",
+          "Kulde, vandmætning og tørke efterligner alle sammen kvælstofmangel."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Indsatsen er her dyrkningsmæssig og fælles, før den bliver kemisk. På markniveau: brug sædskifte, destruér planterester umiddelbart efter høst, hold arealet frit for ukrudt og andre værtsplanter for insekter og mider, og brug sorter, der er tilpasset egnen. På det kollektive niveau — og det er dét, der gør gruppen anderledes — skal dyrkerne handle sammen: saml plantningen inden for hver mikroregion i det kortest mulige vindue, brug hjælpestoffer koordineret, så fælles problemer mødes af alle på samme tid, og desinficér systematisk kasser og transport for at bremse spredningen af skadedyr mellem egnene. Kontrollér jævnligt, med særlig opmærksomhed på markkanterne og de mest ukrudtsfyldte pletter, for det er dér, angrebet samler sig.",
+          "Den største skade fra skadedyr i denne gruppe er som regel indirekte, gennem virus. Mellus har været kendt i Brasilien siden 1923 og blev fundet på tomat og kål i 1993, forbundet med symptomer på geminivirus, med alvorlige udbrud og tab på op til 50% af produktionen: voksne og nymfer sprøjter et sukkerholdigt stof og et giftstof ind, som gør frugtens indre vægge hvidlige og svampede og fremmer sodskimmel. Timingen styrer også: mod den lille frugtborer skal sprøjtningen begynde fra blomstringen, med strålen rettet mod blomsterknopper og frugter, for når du kan se et hul i frugten, sidder larven allerede indeni. Og en redaktionel sikkerhedsregel: kopiér aldrig et aktivstof eller en dosis fra nogen kilde, for godkendelserne af plantebeskyttelsesmidler ændrer sig hver sæson — slå op i det gældende MAPA-register."
+        ],
+        "checklist": [
+          "Destruér planteresterne umiddelbart efter høst.",
+          "Saml mikroregionens plantning i det mindst mulige vindue.",
+          "Desinficér kasser og køretøjer mellem arealer.",
+          "Kontrollér markkanterne, ikke kun midten.",
+          "Begynd sprøjtningen ved blomstring, ikke når du ser et hul i frugten."
+        ]
+      }
+    }
+  }
+}

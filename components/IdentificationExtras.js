@@ -3,6 +3,7 @@ import { View, Text, StyleSheet, Image, ScrollView, TouchableOpacity, Linking } 
 import { Ionicons } from '@expo/vector-icons';
 import { useTranslation } from 'react-i18next';
 import SectionCard from './SectionCard';
+import { heroRefs, heroRefCount } from './PlantHero';
 import { colors } from './theme';
 
 // Three things every detail screen should show and none of them used to.
@@ -21,7 +22,17 @@ import { colors } from './theme';
 // trusted than to state a wrong species confidently on a mushroom.
 const LOW_CONFIDENCE = 65;
 
-export default function IdentificationExtras({ entity, accent = colors.accent, onPickAlternative }) {
+// `skipImages`: how many leading reference photos to leave out of the gallery
+// because something above already showed them. Defaults to what this entity's
+// PlantHero mosaic consumed - every screen that renders this component renders
+// the hero from the SAME entity, so nothing has to be threaded through six call
+// sites. Pass it explicitly only for a screen with a different hero.
+export default function IdentificationExtras({
+  entity,
+  accent = colors.accent,
+  onPickAlternative,
+  skipImages,
+}) {
   const { t } = useTranslation();
   if (!entity) return null;
 
@@ -30,10 +41,20 @@ export default function IdentificationExtras({ entity, accent = colors.accent, o
   const hasAlternatives = Boolean(alternatives?.length);
   const hasPhotos = Boolean(similarImages?.length);
 
+  // Only the references the hero did NOT already use (auditoria de diagramacao
+  // 20/08: the first two were on screen twice, in every single result). When
+  // that leaves nothing, the whole card is gone rather than empty - same
+  // fallback rule as every other block here.
+  const gallery = heroRefs(similarImages).slice(
+    typeof skipImages === 'number' ? skipImages : heroRefCount(entity)
+  );
+
   // The warning copy must only reference material that is actually on screen.
   // Bird results carry neither reference photos nor (usually) alternatives -
   // telling someone to "compare with the reference photos" under a result that
   // has none reads as a broken app (Fable review finding, 2026-07-29).
+  // Deliberately `similarImages` and not `gallery`: when the gallery is empty
+  // only because the hero mosaic took those photos, they ARE still on screen.
   const warnKey = hasAlternatives
     ? 'identify.lowConfidenceWithAlternatives'
     : hasPhotos
@@ -49,7 +70,7 @@ export default function IdentificationExtras({ entity, accent = colors.accent, o
         </View>
       )}
 
-      {Array.isArray(similarImages) && similarImages.length > 0 && (
+      {gallery.length > 0 && (
         <SectionCard
           icon="images-outline"
           title={t('identify.referenceImagesTitle')}
@@ -57,7 +78,7 @@ export default function IdentificationExtras({ entity, accent = colors.accent, o
         >
           <Text style={styles.hint}>{t('identify.referenceImagesHint')}</Text>
           <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.imageRow}>
-            {similarImages.map((img, i) => (
+            {gallery.map((img, i) => (
               <TouchableOpacity
                 key={img.url + i}
                 activeOpacity={0.85}

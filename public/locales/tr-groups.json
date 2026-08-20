@@ -1,0 +1,857 @@
+{
+  "succulent": {
+    "label": "Sukulentler ve kaktüsler",
+    "topics": {
+      "watering": {
+        "advice": [
+          "Bu grubun kuralı takvim değil, ıslat-ve-kurut döngüsüdür. Kök topağının tamamı iyice ıslanana ve su drenaj deliğinden akana kadar sulayın, tabağı boşaltın, sonra bir sonraki sulamaya kadar harcın tümüyle kurumasına izin verin — büyüme mevsiminde tipik olarak iki ila üç haftada bir, ancak saksı, ışık ve sıcaklık bu aralığı hatırı sayılır ölçüde kaydırır. Nedeni fizyolojiktir: bunlar stomalarını gece açan ve gündüz kapalı tutan CAM bitkileridir. Bir su darbesiyle bir sonraki arasında ihtiyaç duydukları şey kesintisiz bir su akışı değil, oksijenlenmiş bir köktür.",
+          "Kış gerçek bir dinlenme dönemidir. Büyüme aşağı yukarı 18 ila 29 °C arasında gerçekleşir, dormansi 7 ila 13 °C arasında yaşanır ve sulama birkaç haftada bire, yalnızca bitkinin büzüşmesini önleyecek kadarına indirilir. Solma belirtisi ortaya çıktığında ise sulama kabına uzanmadan önce dokuyu okuyun: buruşmuş ama diri bir yaprak susuzluktur; sarı, yumuşak, yarı saydam bir yaprak ise boğulmadır ve yeniden sulamak durumu yalnızca kötüleştirir, çünkü çürümüş kökler çoktan emmeyi bırakmıştır. Noel kaktüsü gibi epifit orman kaktüsleri bu grubun istisnasıdır: belirgin biçimde daha fazla su alırlar ve ilkbaharla yazın asla tümüyle kurumamalıdırlar."
+        ],
+        "checklist": [
+          "Kök topağının tamamını, su drenaj deliğinden akana dek iyice ıslatın, sonra tabağı boşaltın.",
+          "Yeniden sulamadan önce harcın tümüyle kurumasını bekleyin.",
+          "Saksıyı asla su içinde bekletmeyin.",
+          "Kış dinlenmesinde birkaç haftada bir, yalnızca büzüşmeyi önleyecek kadar az sulayın.",
+          "Buruşmuş ve diri yaprak = çok az su. Sarı, yumuşak, yarı saydam yaprak = çok fazla su."
+        ]
+      },
+      "light": {
+        "advice": [
+          "Doğrudan güneşi hem kabul eden hem de talep eden tek iç mekân grubu budur. Sukulentler günde on saat veya daha fazla parlak dolaylı ışık ister; alt sınır altı ila sekiz saattir. Bunun altında sürgünler uzayıp incelir ve renk solar — klasik etiolasyon. Çöl kaktüsleri günde birkaç saat doğrudan güneş alan bir pencerede en iyi sonucu verir; bu, kuzey yarım kürede güneye, güney yarım kürede kuzeye bakan bir pencere demektir. İnce, solgun büyüme bir ışık sorunudur ve hiçbir gübre miktarı bunu düzeltmez.",
+          "İki uyarı önemli. Bitkiyi yazın dışarı çıkardığınızda onu kademeli olarak alıştırın: yarı gölgede başlayın, çünkü güçlü güneş iç mekânda oluşmuş dokuyu yakar. Epifit kaktüsler ise parlak ama süzülmüş ışık ister — bir doğu ya da batı penceresi, bir tül perde — çünkü doğrudan güneşte kavrulurlar."
+        ],
+        "checklist": [
+          "Günde altı ila sekiz saat ışık verin, hedefiniz on saat ve üzeri olsun.",
+          "Çöl kaktüsü: günde birkaç saat doğrudan güneş alan bir pencere.",
+          "Uzamış, solgun büyüme az ışıktır, az gübre değil.",
+          "Yazın dışarı taşırken birkaç gün yarı gölgede başlayın.",
+          "Epifit kaktüs: parlak ışık, ama her zaman süzülmüş."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "Harç ağırlıklı olarak minerallidir ve kaynaklar reçetede ayrışsalar da ilkede birleşirler. Bir üniversite extension servisi üçte bir organik malzemeye karşılık üçte iki mineral önerir; bir diğeri torf esaslı bir karışım ile çok iri kumun eşit hacimlerini ister; RHS ise bir ölçü bahçe mıcırına iki ölçü temel kompost kullanır ve üstünü mıcırla kapatır. Aralık kabaca %30 ile %67 mineral oranı arasında uzanır ve tek bir nedenle vardır: doygunluk evresini olabildiğince kısa tutmak. Ortamınız ne kadar nemliyse ve sulama kabına eliniz ne kadar cömertse, o kadar çok mineral istersiniz.",
+          "Dar bir saksı ihmal değil, kuraldır: fazla harç hacmi nemi tutar ve arkasından çürüme gelir. İlkbaharda yalnızca biraz daha büyük bir saksıya alın ve ilk sulamadan önce birkaç gün bekleyin. Gübreleme düşük azotlu ve azaltılmış dozdadır — etiket dozunun yarısı ya da dörtte biri, aktif mevsimde her üçüncü veya dördüncü sulamada, kışın ise hiç. Fazla azot yumuşak doku üretir ve yumuşak doku çürür. Epifit kaktüslerde reçete tersine döner ve organik madde başrolü alır."
+        ],
+        "checklist": [
+          "Karışıma en az üçte bir oranında mineral malzeme katın: perlit, iri kum, ponza veya mıcır.",
+          "Mevcut saksıdan yalnızca biraz büyük bir saksı kullanın — boşluk çürümeye dönüşür.",
+          "İlkbaharda saksı değiştirin ve ilk sulamadan önce birkaç gün bekleyin.",
+          "Dozun yarısı veya dörtte biriyle gübreleyin, kışın tamamen kesin.",
+          "Epifit kaktüs reçeteyi tersine çevirir: daha çok organik madde, daha az mineral."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "Buradaki risk mekaniktir ve kolayca yönetilir: dikenli türleri gazete kâğıdına sararak ya da kalın eldivenle tutun. Kaktüs dikenleri ve bazı türlerin ince glokitleri deriye kolayca girer, çıkması ise zordur; en yüksek maruziyet anı saksı değiştirmedir."
+        ],
+        "checklist": [
+          "Dikenli türleri rulo yapılmış gazete kâğıdı veya kalın eldivenle tutun.",
+          "Bitkiyi kaldırmadan önce yeni saksıyı hazırlayın; böylece elinizde geçirdiği süre kısalır.",
+          "Dikenli örnekleri geçiş yollarından ve küçük çocuklardan uzak tutun."
+        ]
+      }
+    }
+  },
+  "tropicalFoliage": {
+    "label": "Tropikal yapraklı ev bitkileri",
+    "topics": {
+      "watering": {
+        "advice": [
+          "Bu grubun hedefi eşit biçimde nemli ama asla su tutmuş olmayan bir harçtır — ne sukulentlerin tam kuruma döngüsü ne de eğreltilerin kesintisiz nemi. Bunu ölçmek için parmağınızı harca ilk boğuma kadar bastırın: parmak ucu kuru geliyorsa sulama zamanıdır. Saksının ağırlığı ve parmak eklemiyle vurulduğunda pişmiş toprak saksının çıkardığı boş ses de aynı işi görür. Suladığınızda ise su alttan akana kadar verin: bu, fazla tuzları yıkayıp götürür ve saksının alt üçte ikisinin de su aldığını garanti eder. Ardından tabağı boşaltın — bitkiyi asla su içinde bırakmayın.",
+          "Burada fark yaratan ayrıntılar şunlar: harç iyice kuruduysa iki kez sulayın — sulayın, yaklaşık otuz dakika bekleyin, sonra tekrar sulayın; su 17 ila 22 °C arasında olmalı, ne sıcak ne buz gibi, ve sodyum ile klorür nedeniyle asla yumuşatılmış su kullanmayın. Dua bitkileri damıtılmış su veya yağmur suyu ister, çünkü musluk suyundaki florür yaprak kenarlarını kahverengileştirir. Grubun kendi ilan edilmiş istisnaları da var: dracaena'lar sulamadan önce yüzeyin elle kuru hissedilmesini ister, ZZ bitkisi ayda bir ya da iki kez ve yalnızca tümüyle kuruduktan sonra sulanır, Benjamin ağacı ise aktif büyümede nemli kalır ve kışın hafifçe kurur."
+        ],
+        "checklist": [
+          "Harcı eşit biçimde nemli tutun, asla su içinde bırakmayın.",
+          "Su alttan akana kadar sulayın, sonra tabağı boşaltın.",
+          "17 ila 22 °C arasında su kullanın; asla yumuşatılmış su kullanmayın.",
+          "Dua bitkileri ve dracaena'lar: damıtılmış suyu veya yağmur suyunu tercih edin.",
+          "Çok kuru harç: sulayın, otuz dakika bekleyin, sonra tekrar sulayın."
+        ]
+      },
+      "light": {
+        "advice": [
+          "Bu grubun ışık toleransı çok geniştir ve tam da bu yüzden kendi içinde alt gruplara ayrılır. Filodendronlar dolaylı ya da perdeyle süzülmüş güneşi tercih eder ve az ışığa dayanır — kalp yapraklı tür çok düşük ışığı bile kaldırır — ağaç formundakiler ise pencereye yakın orta ila güçlü ışık ister. Dracaena'lar parlak dolaylı ışıkta en iyi büyür, ama birkaçı düşük ışığa ofis standardı hâline gelecek kadar iyi dayanır. Referans rakamlarla: düşük ışık yaklaşık 800 lüks, orta 1600 lüks, parlak 3000 lüks ve doğrudan ışık 16000 lüks civarındadır.",
+          "Dua bitkileri en kısıtlı alt gruptur: yarı gölge, günde en fazla iki ila altı saat doğrudan güneş ve doğrudan güneşin yaprağı yaktığına dair açık bir uyarı. Bir monstera'nın fenestrasyonunun — o karakteristik deliklerin — yeterli ışığa bağlı olduğunu ve gerçek bir filodendronun derin yarıklı ama deliksiz yaprak yaptığını hatırlamakta fayda var. Odanızın yönlerini pusula noktalarıyla tarif ediyorsanız, güney yarım kürede kuzey ile güneyin yer değiştirdiğini unutmayın."
+        ],
+        "checklist": [
+          "Parlak dolaylı ışık neredeyse tüm grup için ideal noktadır.",
+          "Dua bitkileri: yarı gölge, günde en fazla iki ila altı saat doğrudan güneş.",
+          "Yaprakta kuru yuvarlak lekeler fazla güneşe işaret eder.",
+          "Alt yaprakların sararması ve büyüme ucunun ölmesi: az ışık ya da fazla su.",
+          "Monstera'da fenestrasyon istiyorsanız, başka bir şeyi değiştirmeden önce ışığı artırın."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "Burada genel amaçlı organik bir saksı harcı yeterlidir — bu grupta ne sukulentlerin mineral ihtiyacı ne de eğreltilerin torf ihtiyacı vardır. Tekniği değiştiren şey su tutmadır: torf açısından zengin karışımlar nemi daha uzun tutar, kabuk, kum veya perlit içeren karışımlar daha hızlı drene olur. Sulama alışkanlığınıza ve evin iklimine göre seçin. Önemli bir düzeltme: saksının dibine konan taş katmanı drenajı iyileştirmez — nemi saksının içinde tutma eğilimindedir.",
+          "Kaynaklar arasında kayda geçmiş gerçek bir çelişki var ve izlenmesi gereken, temkinli okuma. Dracaena için bir extension servisi yüksek perlit oranlı harçlardan kaçınmayı, pH'ı 6.0 ile 6.5 arasında tutmayı ve dracaena florüre çok duyarlı olduğu için süperfosfat içeren gübre kullanmamayı söyler; dua bitkileri için bir başka extension servisi perlit veya vermikulit katmayı önerir, üstelik dua bitkileri de florüre duyarlıdır. Açık bir uzlaşma yok: bu ikisinde perliti değil vermikuliti ya da ince kabuğu tercih edin ve damıtılmış su veya yağmur suyu kullanın. Ölçülü gübreleyin — kahverengi, kıvrılmış uçlar fazla gübrenin işaretidir ve çok yavaş büyüyen ZZ bitkisi bütün bir mevsim boyunca yalnızca bir ya da iki uygulamaya ihtiyaç duyar."
+        ],
+        "checklist": [
+          "Genel amaçlı bir karışım işinizi görür; su tutmayı kabuk veya perlitle ayarlayın.",
+          "Saksının dibine taş katmanı koymayın — drenaj sağlamaz.",
+          "Dracaena'lar ve dua bitkileri: perlit yerine vermikulit veya ince kabuk tercih edin.",
+          "Dracaena'da pH'ı 6.0 ile 6.5 arasında tutun ve süperfosfattan kaçının.",
+          "Kahverengi kıvrık uçlar: başka bir şeyi değiştirmeden önce gübreyi kesin."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "Bu, zehirlilik riski en yoğun ev bitkisi grubudur ve nedeni kalsiyum oksalattır. Bir filodendronun bütün parçaları yenildiğinde zehirlidir: kristaller ağız, dudak ve dilde yanma ve tahrişe, aşırı salya akmasına, kusmaya ve yutma güçlüğüne yol açar. ZZ bitkisi evcil hayvanlar için güvenli değil olarak sınıflandırılır. Dua bitkisinin özsuyu deri tahrişine neden olabilir. Bu bitkilerin hiçbiri yalnızca evde bulundurmakla tehlikeli değildir — risk, yutmak ve özsuyla uzun süreli temastır; bu yüzden budamayı ve saksı değiştirmeyi eldivenle yapılan, sonrasında ellerin yıkandığı işler olarak görün.",
+          "Daha küçük ama gerçek bir fiziksel risk daha var: kendi gövdesini kuran filodendronların yaprak sapları kırılgandır ve kolayca kopar; bu yüzden onları geçiş yollarından uzak tutmakta fayda var. Ve insanı boşuna korkmaktan kurtaran bir gözlem: ZZ bitkisinin gövdesindeki siyah lekeler normaldir ve hastalığı değil, sağlıklı büyümeyi gösterir."
+        ],
+        "checklist": [
+          "Bu bitkileri küçük çocukların ve evcil hayvanların ulaşamayacağı yerde tutun.",
+          "Budarken veya saksı değiştirirken eldiven takın, sonrasında ellerinizi yıkayın.",
+          "Dökülen yaprakları bitki kemiren hayvanların ulaşabileceği yerde bırakmayın.",
+          "Kendi gövdesini kuran türleri geçiş yollarından uzak tutun: yaprak sapları kolay kırılır.",
+          "ZZ bitkisinin gövdesindeki siyah lekeler normaldir, hastalık değildir."
+        ]
+      }
+    }
+  },
+  "fern": {
+    "label": "Eğreltiler ve gölge bitkileri",
+    "topics": {
+      "watering": {
+        "advice": [
+          "Hedef, her zaman hafifçe nemli olan, asla tümüyle kurumayan ve tabakta su içinde bırakılmayan bir topraktır. Bu grupta en pahalıya patlayan kavram hatası, kesintisiz nemi sürekli su tutmuş bir saksıyla karıştırmaktır: kaynaklar aynı cümlenin içinde harcın hem nemi tutması hem de hızlı drene olması gerektiğini söyler, çünkü kökün hâlâ oksijene ihtiyacı vardır. Kök çürüklüğü bir eğreltide tıpkı bir kaktüste göründüğü gibi görünür, yalnızca çok daha az suyla. Üstelik hata sinyali her iki yönde de belirsizdir — yaprakçık dökülmesi hem fazla sudan hem de az sudan olur.",
+          "Bu grup için sınırlayıcı etken hava nemidir, bir konfor ayrıntısı değil: pratik hedef %30 ile %50 arasındadır ve venüs saçı gibi ince yapraklı türlerde %50 civarındadır. Bir eğreltide kahverengi uçlar her şeyden önce kuru hava teşhisidir — kuru harç değil — ve daha fazla sulamak, semptomu düzeltmeden çürümeye götürür. Yöntemler, sağlamlık sırasıyla: nemli sfagnumla çift saksılama, yaklaşık altı milimetre su bulunan ve saksının suya değmediği bir çakıl tepsisi, nemlendirici, en hassas türler için teraryum ya da banyo ve ancak ondan sonra ara sıra hafif püskürtme. Tepsideki çakılı üç ayda bir değiştirin veya yıkayın."
+        ],
+        "checklist": [
+          "Harcı hafifçe nemli tutun ve asla tümüyle kurumasına izin vermeyin.",
+          "Tabakta su bırakmayın: kök çürüklüğüne giden en kısa yoldur.",
+          "Kahverengi uçlar düşük hava nemi demektir — havayı düzeltin, daha fazla sulamayın.",
+          "Püskürtme yerine sfagnumla çift saksılamayı ya da çakıl tepsisini tercih edin.",
+          "Tepsideki çakılı üç ayda bir yıkayın veya değiştirin."
+        ]
+      },
+      "light": {
+        "advice": [
+          "Orta düzeyde dolaylı ışık idealdir; bitki evin serin penceresine yakın dursun — kuzey yarım kürede kuzeye, güney yarım kürede güneye bakan pencere — ya da bir doğu penceresi. Doğrudan güneş alan sıcak bir pencere yaprakları zedeler; tek seçeneğiniz buysa şiddeti kırmak için tül perde kullanın. Rakamlarla, hedef bant düşük ila orta ışıktır: 800 ile 1600 lüks arası.",
+          "Grubun içinde gerçek bir çeşitlilik var: bazı türler düşük ışığa dayanır, bazıları parlak dolaylı ya da süzülmüş güneş ister; bu yüzden tek bir rakamı uygulamak yerine kendi bitkinizi izleyin. Güneşten zarar görmüş yaprakların nedeni neredeyse her zaman ortadadır — doğrudan güneş alan sıcak bir pencere — ve çözüm basitçe bitkiyi taşımak ya da ışığı süzmektir."
+        ],
+        "checklist": [
+          "Evin serin penceresini ya da doğuya bakan bir pencereyi tercih edin.",
+          "Sıcak bir pencereden gelen doğrudan güneşten kaçının; başka seçenek yoksa tül perde kullanın.",
+          "Düşük–orta bandı hedefleyin: 800 ile 1600 lüks arası.",
+          "Kavrulmuş yapraklar susuzluğun değil, doğrudan güneşin işaretidir."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "Buradaki harcın aynı anda iki işi yapması gerekir: nemi tutmak ve hızlı drene olmak. Doğrulanmış bir reçete, ticari bir iç mekân saksı harcı ile torf ya da yaprak çürüntüsünün eşit oranda karıştırılmasıdır; kök çürüklüğünü önlemek için hızlı drene olması açık bir koşul olarak konur. Bir başkası, su tutma için torf veya sfagnum, drenaj için kum ya da çakıl ve sterilize edilmiş tınlı toprağı birleştirir; üzerine dolomitik kireç ve kemik unu eklenir. Bu, sukulentlerin tam tersidir: burada organik oran baskındır ve drenaj bir mineral yüzdesinden değil, iri malzemeden gelir. Ve yine: saksının dibindeki taş katmanı drenaj sağlamaz.",
+          "Gübreleme bütün ev bitkisi grupları arasında en ölçülü olanıdır: büyüme mevsiminde ayda bir, önerilen dozun yaklaşık yarısı kadar, kışın hiç — ve bölme ya da saksı değiştirmeden sonra altı ay boyunca hiç. Başka hiçbir iç mekân grubunda bu kadar uzun bir bekleme süresi yoktur ve nedeni doğrudandır: eğreltiler aşırı gübrelendiğinde yaprak yanığı yaşar. Bu gruba özgü bir kimyasal uyarı da var: pestisit spreyleri birçok eğreltiye zarar verir; bu yüzden etiketi dikkatle okuyun ve ürünü önce küçük bir alanda deneyin. Zararlılara karşı güçlü su jeti gibi mekanik yöntemleri tercih edin."
+        ],
+        "checklist": [
+          "Nemi tutan ama yine de hızlı drene olan bir harç kullanın.",
+          "Büyüme mevsiminde ayda bir, yarım dozla gübreleyin.",
+          "Kışın gübre vermeyin; bölme ya da saksı değiştirmeden sonra da altı ay boyunca vermeyin.",
+          "Herhangi bir spreyi tüm bitkiye uygulamadan önce tek bir yaprakta deneyin.",
+          "İlkbahar başında saksı değiştirin ve bölme yapın; sonraki haftalarda nemi yüksek tutun."
+        ]
+      }
+    }
+  },
+  "fruitVeg": {
+    "label": "Meyve ağaçları ve sebzeler",
+    "topics": {
+      "watering": {
+        "advice": [
+          "Burada sulama haftalık bir su derinliği olarak ölçülür ve tanımlı fenolojik pencereleri vardır. Sebzelerin çoğu haftada 25 ila 50 milimetre ister — yani yaklaşık iki buçuk ila beş santimetrelik bir su tabakası — ve belirgin zirveleri vardır: tatlı mısır püskül çıkarma, ipek verme ve koçan doldurma dönemlerinde 40 ila 60 milimetre ister; fasulye çiçeklenme ve bakla doldurma sırasında 25 ila 40 milimetre ister. Bu aralık bir bant, sabit bir sayı değil — kuru iklim yukarı, nemli iklim aşağı çeker. Tınlı toprakta 25 milimetre su profilin yaklaşık 15 santimetresine işler; bu da hesap yapmanızı sağlar: otuz santimetreyi ıslatmak kabaca 50 milimetre uygulanan su ister.",
+          "Burada yüzeysel sulama yalnızca daha az verimli değildir: kalsiyum taşınımını keser. Kalsiyum terleme akımıyla hareket eder ve eski dokudan yeni meyveye yeniden taşınmaz; bu yüzden kurut-ve-boğ döngüleri toprakta bol kalsiyum olsa bile çiçek burnu çürüklüğü üretir. Domates düzensiz sulamaya son derece duyarlıdır ve buna çiçek burnu çürüklüğü ve çatlamayla yanıt verir; biber çiçek dökerek yanıt verir; üretken evrede strese giren bir hıyar acı ve şekilsiz meyve verir. Kumlu toprak daha kısa ve daha sık sulama ister; killi toprak daha seyrek ve daha derin sulama."
+        ],
+        "checklist": [
+          "Yağmuru ve sulamayı birlikte sayarak haftada 25 ila 50 milimetrelik bir bantla çalışın.",
+          "Çiçeklenmeyi ve meyve doldurmayı kaçırmayın: hasadı kaybettiren pencere odur.",
+          "Kısa günlük sulamalar yerine derin ve aralıklı sulamayı tercih edin.",
+          "Çiçek burnu çürüklüğü kalsiyum püskürterek değil, sulamayı düzenleyerek çözülür.",
+          "Toprağa göre ayarlayın: kumlu daha çok sıklık, killi daha çok derinlik ister."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "Hasadı her yıl sistemden besin çıkaran tek grup budur ve yönetimdeki neredeyse her fark buradan doğar. Gübreleme yinelenir ve üstten gübrelemelere bölünür; oran döngü boyunca değişir — örneğin tarla domatesinde üstten gübreleme fosfor açısından daha zengin başlar ve bitki üretime geçtikçe potasyum yükseltilir. Fazla azotun gerçek bir bedeli vardır: olgunlaşmayan incirler ve erken çiçeklenme ile meyve tutma döneminde aşırı sürgün büyümesi — ki bu, domates ve biberde çiçek burnu çürüklüğüne en çok katkı yapan etkenlerden biridir.",
+          "pH belirleyicidir ve grubun içinde çok değişir. Elma 5.8 ile 6.5 arasında iyi sonuç verir ve yaklaşık üç yılda bir yeniden ölçülür; yapraklı sebzelerin çoğu 6.0 ile 6.5 arasında durur; yaban mersini ise radikal istisnadır: en iyi 4.8 ile 5.2 arasında olur ve dikimden en az bir yıl önce uygulanmış elementel kükürt ister. İki kural her şey için geçerlidir: gübreyi gövdeden en az 15 santimetre uzakta tutun ve kökleri yakmaması için her zaman nemli toprağa uygulayın. Ayrıca botanik familyaya göre münavebe yapılan tek grup budur — aynı familyadaki bitkiler aynı hastalık ve böceklere karşı duyarlıdır; bu yüzden bir yastıkta aynı familyayı üç ila dört yıl, mümkünse daha uzun süre tekrarlamayın."
+        ],
+        "checklist": [
+          "Tek seferde değil, bölünmüş üstten gübrelemelerle besleyin.",
+          "Toprak analizi yaptırın ve pH'ı yastığın tümü için değil, ekilen bitki için düzeltin.",
+          "Gübreyi gövdeden en az 15 santimetre uzakta ve her zaman nemli toprağa uygulayın.",
+          "Aynı botanik familyayı bir yastıkta üç ila dört yıl tekrarlamayın.",
+          "Fazla azot olgunlaşmayı geciktirir ve çiçek burnu çürüklüğünü besler."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Meyve seyreltme, başka hiçbir grupta bulunmayan zorunlu bir işlemdir. Aşırı yük küçük meyve, kırılan dallar ve periyodisite getirir; çünkü bir ağaç tam yük taşırken enerjisinin neredeyse tamamı meyveye gider ve gelecek yılın çiçeklerini başlatmaya çok az şey kalır. Elmaları tam çiçeklenmeden sonraki altı hafta içinde elle seyreltin ve dalda meyveler arasında yaklaşık 20 ila 25 santimetre bırakın; armut, erik ve kayısıda bu aralık 15 ila 20 santimetredir. Meyvelerin yaklaşık bir ila iki buçuk santimetre çapında olduğu doğal haziran dökümü elle seyreltmenin yerini tutmaz — zarar görmediği sürece her zaman salkımın en iri meyvesini bırakın.",
+          "İki işlem tabloyu tamamlar. Bir elma ağacının budaması dikildiği gün başlar; ertelemek zayıf büyümeye ve gecikmiş meyveye yol açar. Yaban mersininde ise birinci ve ikinci yıl bütün çiçekleri koparmak, bitkinin tutunmasını sağlayan şeydir — iki hasattan vazgeçmek, ardından gelenleri satın alır. Meyve ağaçlarında yaz sonu gübre kesme kuralına uyun, çünkü meyve üretimi ile odunun olgunlaşması aynı fotosentez ürünü için yarışır."
+        ],
+        "checklist": [
+          "Meyveyi tam çiçeklenmeden sonraki altı hafta içinde seyreltin.",
+          "Zarar görmediği sürece her salkımda en iri meyveyi bırakın.",
+          "Doğal döküme güvenmeyin: elle seyreltmenin yerini tutmaz.",
+          "Tacı şekillendirmeye daha sonra değil, dikim yılında başlayın.",
+          "Meyve ağaçlarında gübrelemeyi yaz sonunda kesin."
+        ]
+      }
+    }
+  },
+  "flowering": {
+    "label": "Çiçekli ve süs bitkileri",
+    "topics": {
+      "watering": {
+        "advice": [
+          "Burada sulama bir ıslat-ve-kurut döngüsü değil, haftalık bir su derinliğidir: tek yıllıklar ve çok yıllıklar, yağmuru ve sulamayı birlikte sayarak haftada en az 25 ila 40 milimetre su ister ve en iyi zaman sabahın erken saatleridir, böylece yapraklar hızla kurur. Güllerde aynı ilke farklı söylenir — derin sulama derin bir kök sistemini teşvik ederken sık ve hafif sulama köklerin toprak yüzeyine fazla yakın oluşmasına yol açar.",
+          "Bitki sağlığı buna göründüğünden çok daha fazla bağlıdır. Tekrarlayan kara leke gösteren bir gülün yaprakları neredeyse her zaman gün sonunda ıslaktır ve çevresindeki hava durgundur: sabah güneşi, fıskiye yerine damlama hortumu ve iyi hava sirkülasyonu, herhangi bir spreyden daha fazlasını çözer."
+        ],
+        "checklist": [
+          "Yağışı da sayarak haftada en az 25 ila 40 milimetre su verin.",
+          "Erken saatte sulayın ki yapraklar akşam olmadan kurusun.",
+          "Hafif ve sık sulama yerine derin ve aralıklı sulamayı tercih edin.",
+          "Güllerde yaprağı değil, toprağı ıslatın."
+        ]
+      },
+      "light": {
+        "advice": [
+          "Tek yıllıkların çoğu iyi çiçek açmak için günde en az dört ila altı saat tam güneşe ihtiyaç duyar. Güller daha fazlasını ister: altı ila sekiz saat doğrudan güneş; özellikle sabah güneşi önemlidir, çünkü yaprakları kurutur ve hastalığın önlenmesine yardım eder.",
+          "Bir teşhis pek çok kişiyi yanıltır: yapısı dağılmış, yatan bir çok yıllık genellikle yetersiz ışık demektir — gübre eksikliği değil. Daha fazla gübre bunu düzeltmez; bitkiyi taşımak düzeltir."
+        ],
+        "checklist": [
+          "Tek yıllıklar: günde en az dört ila altı saat tam güneş.",
+          "Güller: altı ila sekiz saat, öncelik sabah güneşinde.",
+          "Yatan, dağılmış bir çok yıllığın ihtiyacı yer değiştirmektir, daha fazla gübre değil.",
+          "Bir yastığa karar vermeden önce güneşin yıl boyunca nereye düştüğünü izleyin."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "Yastık hazırlığı burada saksıdakinden daha derindir: tek yıllıklar için 15 ila 25 santimetre, çok yıllıklar için 20 ila 25 santimetre. Killi toprağa en az beş santimetre kompostlanmış çam kabuğu, kompost veya yaprak çürüntüsü karıştırın; kumlu toprağa beş ila yedi santimetre nem tutan organik malzeme. Çok yıllıklarda pH hedefi 6.0 ile 6.5 arasıdır. Malç burada odunsu bitkilerdekinden incedir: tek yıllıklarda beş ila yedi santimetre, çok yıllıklarda yalnızca iki ila beş santimetre; aşırı ağır malçlamadan kaçınmak için açık bir uyarı da vardır, çünkü çok yıllığın kök boğazı bunun altında çürür.",
+          "Besin ihtiyacı ortadadır ve açıkça bir tavanla sınırlıdır: hazırlıkta uygulanan ve kabaca altı haftada bir tekrarlanan tam bir gübre bu ihtiyacı karşılar. Neredeyse hiçbir şeye ihtiyaç duymayan olgun odunsu bitkinin çok üstünde, yetişkin meyve ağacının ise epey altında. Yaygın bir alışkanlığa da önemli bir düzeltme: çiçek için kural olarak yüksek fosforlu formül kullanmayın. Yüksek fosfor dozları çiçek sayısını artırmaz ve kronik fazlalık demir ile çinko gibi mikro besinleri bağlar; sonuç bodur bitkiler ve sararan yapraklardır — üstelik fazla fosfor çok yavaş düşer, bu yıllar alabilir. Güvenli yol dengeli bir gübre artı toprak analizidir. Saksıda fazlalığın işareti: kenarda beyaz kabuk, kahverengi yaprak uçları ve kararmış kökler."
+        ],
+        "checklist": [
+          "Toprağı derin hazırlayın: 15 ila 25 santimetre, organik madde karıştırarak.",
+          "Çok yıllıklarda yalnızca iki ila beş santimetre malç kullanın ve kök boğazından uzak tutun.",
+          "Dengeli bir formülle, altı haftada bir tekrarlayarak gübreleyin.",
+          "Çiçeği zorlamak için yüksek fosforlu formül kullanmayın.",
+          "Saksı kenarında beyaz kabuk: bol suyla yıkayın ya da harcı değiştirin."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Bu grubu tanımlayan işlem, solmuş çiçeklerin alınmasıdır — yani deadheading. Solan çiçekleri koparmak, bitkiyi mevsim boyunca çiçeklenme döngüsünü kapatmak yerine daha fazla çiçek üretmeye yöneltir; istediğiniz ürünü artırmak için üreme organını aldığınız tek kategoridir. Parmaklarınızla koparın ya da keskin bir makas kullanın; yalnızca çiçeği değil, sapın bir bölümünü de almak sorun değildir. Çiçeklenmeye etkisinin ötesinde bu, çürüyen bitki artıkları üzerinde gelişen hastalıkların görülme sıklığını da azaltır. Tek yıllıkları dikerken daha iyi dallanma için tomurcukları ve çiçekleri koparın; çok yıllıklarda ise çiçeklenmeden sonra toprak hizasına kadar geri kesin ki dipten yeni yapraklar sürsün.",
+          "Soğanlı bitkiler bunun aynadaki görüntüsüdür: çiçekten sonra iş, yeniden şarj olmaktır. Tohum kapsülü oluşmasın diye solmuş çiçeği alın, ama yaprağı asla almayın — yapraklar kendiliğinden sararıp kuruyana kadar bekleyin ve onları bağlamayın ya da örmeyin, çünkü bu, yaprakların yakalayabildiği ışığı ve onunla birlikte gelecek yılın soğanını dolduran fotosentezi azaltır. Soğanları yapraklar kuruyup bitki dormansiye girdikten sonra bölün; yavruları nazikçe çevirip çekerek ayırın; küçük parçalar yeniden çiçek açmak için bir ya da iki yıl isteyebilir. Sonbaharda ise tohum başlarını yerinde bırakmayı düşünün: kış boyunca yaban hayatı için besleyici bir gıda kaynağıdırlar."
+        ],
+        "checklist": [
+          "Solmuş çiçekleri tohum bağlamadan önce alın.",
+          "Tek yıllıkları dikerken tomurcukları koparın ki bitki dallansın.",
+          "Soğanlı bitkilerde çiçeği kesin, ama yaprağı asla.",
+          "Soğanlı bitkilerin yapraklarını asla bağlamayın veya örmeyin.",
+          "Sonbaharda bazı tohum başlarını yaban hayatı için bırakın."
+        ]
+      }
+    }
+  },
+  "woody": {
+    "label": "Ağaçlar ve odunsu çalılar",
+    "topics": {
+      "watering": {
+        "advice": [
+          "Yerleşme süresi yıllarla ölçülen tek grup budur: gövde çapındaki her 2,5 santimetre için kabaca bir yıl. Yeni dikilmiş bir ağaç ilk iki hafta boyunca her gün, üçüncü haftadan on ikinci haftaya kadar iki üç günde bir, ilk dona kadar haftada bir ve ikinci yılda yine haftada bir sulanmak ister. Hacmin bir formülü vardır: her sulamada gövde çapındaki her 2,5 santimetre için dört ila altı litre, gövdenin dibine değil kök bölgesinin tamamına yayılarak ve toprağın 15 ila 20 santimetresi ıslanacak biçimde.",
+          "Derin sulama güçlü kökleri teşvik eder, sıcağa ve kuraklığa dayanıklılığı artırır; sık ve yüzeysel sulama ise yüzeye yakın, bağımlı bir kök sistemi kurar — ki odunsu bir bitkide bu, fırtınada kökünden sökülen sistemdir. Bu yüzden her gün sulanmasına rağmen solan yeni dikilmiş bir ağaç, genellikle yanlış yerden ve yetersiz hacimde sulanıyordur. Açalya gibi asit seven çalılar derin sulama ister; en az 15 ila 20 santimetre derinlik ıslanmalıdır ve kumlu toprakta ilk yıllarında haftada iki kez sulama gerekebilir."
+        ],
+        "checklist": [
+          "Kök bölgesinin tamamını sulayın, asla gövdenin dibini değil.",
+          "Her seferinde gövde çapındaki her 2,5 santimetre için dört ila altı litre su verin.",
+          "Toprak profilinin 15 ila 20 santimetresini ıslatın.",
+          "Gövde çapındaki her 2,5 santimetre için kabaca bir yıllık yerleşme süresi sayın.",
+          "Günlük yüzeysel sulama yerine derin ve aralıklı sulamayı tercih edin."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "İyi toprakta olgun bir odunsu bitkinin gübreye ihtiyacı yoktur: peyzaj bitkilerinin hepsinin gübrelenmesi gerekmez ve elverişli toprak koşullarında büyüyen olgun ağaçlarla çalılar çok az gübre ister ya da hiç istemez. Gübrelenen bir çimin içindeki ağaçlar zaten kendi başlarının çaresine bakar, çünkü kökleri çime verilen besinleri yakalar. Gübrelediğinizde ise tavan normatiftir: yavaş salınımlı azot yılda 100 metrekareye bir ila iki kilo, asla üç kilonun üzerinde; hızlı salınımlı azot ise yarım ila bir kilo, tavanı iki kilo. Uygulama, kök boğazından dal uçlarına kadar taç izdüşümünün bütün alanını kapsar ve her zaman nemli toprağa yapılır.",
+          "Her şeyi değiştiren alt grup, asit seven çalılardır. Açalyalar ve ormangülleri 4.5 ile 6.0 arasında bir pH ister, yüzeysel köklüdür ve aşırı toprak neminden kolayca zarar görür; 2-1-1 oranına yakın, asit oluşturan bir gübreyi ilkbaharda ve yaz başında hafifçe uygulanmış hâlde kabul ederler ve sonbahar sonunda asla yüksek azotlu gübre almazlar, çünkü bu dormansiyi geciktirir. Damarları yeşil kalan sarı yeni yapraklar, yüksek pH'ın demiri bağladığına işaret eder — ama asitli killi topraklarda demir zaten kolayca alınabilir durumdadır; bu yüzden pH'ı suçlamadan önce su birikmesini araştırın. Malç hem bir araç hem bir silahtır: beş ila on santimetre kalınlığında olmalı, genç bir ağaçta gövdeden sekiz ila on iki santimetre, olgun bir ağaçta yirmi ila yirmi beş santimetre uzakta durmalı ve damlama hattına kadar uzatılmalıdır. Bunun ötesine geçmek malç yanardağını yaratır ve o, yavaş yavaş öldürür: hava giremez, altındaki toprak oksijensiz kalır, kesintisiz nem floemi öldürür ve kökler karbonhidrattan yoksun kalır."
+        ],
+        "checklist": [
+          "İyi toprakta olgun bir odunsu bitkiyi gübrelemeyin — neredeyse hiç ihtiyacı olmaz.",
+          "Gübreliyorsanız taç izdüşümünün tamamını kapsayın ve her zaman nemli toprağa uygulayın.",
+          "Asit sevenler: 4.5 ile 6.0 arasında pH ve ilkbaharda hafif, asit oluşturan bir gübre.",
+          "Malcı gövdeden uzak tutun, düz bir halka hâlinde serin.",
+          "Beş ila on santimetre malç yeterlidir; fazlası yanardağ olur."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Budama geri alınamaz ve anatomik kuralları vardır. Kesim, dal yakasının hemen dışından yapılır — dalın dibindeki o şişkin bölge, çürütücü organizmalara karşı doğal bir bariyer görevi görür. Çapı dört santimetreyi aşan dallar, kabuğun gövde boyunca yırtılmaması için üç kesim yöntemini gerektirir. Ve yara macunu yok: araştırmalar, yara örtücülerin ve diğer budama ajanlarının çürümeyi önlemediğini göstermiştir.",
+          "Zamanlamayı takvim değil, çiçeğin açtığı odun belirler: geçen yılın odununda çiçek açan bitkiler — forsitya, açalya, leylak — çiçeklenmenin hemen ardından budanır; bu yılın odununda çiçek açanlar ise büyüme başlamadan önce budanır. Hiç çiçek açmayan bir çalı neredeyse her zaman yanlış zamanda budanmıştır. Tepe kesme yerine seyreltmeyi tercih edin, çünkü seyreltme bitkinin içindeki büyümeyi teşvik eder ve doğal formu geri getirir; tepe kesme ise çevreyi kalınlaştırır, içerisini karartır ve yeni sürgünleri kesim yerinin 15 ila 20 santimetresi içinde toplar. Yaşlı bir çalıyı şoka sokmadan yenilemek için üç yıla yayılan üçte bir kuralını uygulayın. Yıllık temkinli tavan olarak canlı tacın yaklaşık %25'ini benimseyin ve bir ağacın tepesini asla kesmeyin: tepe kesimi yapraklı tacın yarısını ya da fazlasını alır, kompartımanlaşamayan yaralar bırakır ve kabuğu güneş yanığına açar. Ayrıca bölgenizdeki ilk sert dondan önceki on hafta içinde budamaktan kaçının."
+        ],
+        "checklist": [
+          "Dal yakasının hemen dışından kesin, asla gövdeyle aynı hizadan değil.",
+          "Çapı dört santimetreyi aşan dallarda üç kesim yöntemini kullanın.",
+          "Yara macunu sürmeyin: çürümeyi önlemez.",
+          "Eski odunda çiçek açan bitkiler çiçeklenmenin hemen ardından budanır.",
+          "Yılda canlı tacın en fazla %25'ini alın ve bir ağacın tepesini asla kesmeyin."
+        ]
+      }
+    }
+  },
+  "orchid": {
+    "label": "Orkideler ve epifitler",
+    "topics": {
+      "watering": {
+        "advice": [
+          "Burada sulama takvimi yoktur, yalnızca bir kuruma ölçütü vardır: bitki kuruduğu anda sulayın; on beş santimetrelik bir saksıyı yedi günde bir sulamak gibi sihirli bir formül yoktur. Suladığınızda ise doğru dürüst sulayın — karışım tümüyle doyana kadar, birkaç dakika boyunca drenaj deliklerinden serbestçe su aksın. Derin sulama kavramı bu grupta tersine döner: ıslatılacak bir toprak profili yoktur, yalnızca tam doygunluk ve ardından hızlı kuruma vardır. Günlük hafif püskürtme, bir yastıktaki yüzeysel sulamanın karşılığıdır: yüzeyi ıslatır, nemi yanlış yerlerde bekletir ve ortamı asla doyurmaz.",
+          "Su kalitesi burada başka her gruptakinden daha çok önem taşır, çünkü toprak olmadığı için tuzu tamponlayacak bir katyon değişim kompleksi de yoktur: ılık su kullanın, tercihen yağmur suyu, ve bol sodyum taşıdığı için asla yumuşatılmış su kullanmayın. Saksıyı asla tabakta bırakmayın. Her alt grubun kendi yöntemi vardır: tank bromelyalar suyu esas olarak yapraklarından ve dipteki hazneden emer; bu hazne dolu kalmalı ve mineraller yoğunlaşıp yaprak uçlarını öldürmesin diye her hafta yıkanmalıdır. Hava bitkileri haftada bir yirmi ila otuz dakikalık bir daldırma ister — oda sıcak ve kuruysa ya da serin ve nemliyse bir ila iki kez — ardından silkelenir ve suyun akması için baş aşağı çevrilir. Noel kaktüsü ise tomurcuklar bağladıktan sonra onları dökmemek için eşit biçimde nemli bir harç ister."
+        ],
+        "checklist": [
+          "Takvime göre değil, kuruduğunda sulayın.",
+          "Birkaç dakika boyunca su serbestçe akana kadar ortamı doyurun.",
+          "Ilık su, mümkün oldukça yağmur suyu kullanın; asla yumuşatılmış su kullanmayın.",
+          "Saksıyı asla su dolu bir tabakta bekletmeyin.",
+          "Tank bromelya: hazneyi dolu tutun ve her hafta yıkayın."
+        ]
+      },
+      "light": {
+        "advice": [
+          "İç mekân orkidelerinin çoğu günde bir ila dört saat doğrudan güneş ister. Kelebek orkideleri gündüz 19 ila 30 °C, gece 16 ila 19 °C arasında, doğu ya da batı penceresinde, yaz güneşinden korunarak ve kaloriferle cereyandan uzakta iyi sonuç verir. Bromelyalar günde on iki ila on altı saat nispeten parlak ışık ister ve yapraklar durumu size bildirir: uzun, ince ve daha yeşil yapraklar az ışık demektir; daha kısa, daha kalın ve daha soluk yapraklar ışığın bol olduğunu gösterir. Hava bitkileri parlak ama süzülmüş ışık ister, asla doğrudan güneş değil.",
+          "Fotoperiyodun şiddetin önüne geçtiği tek bir durum var. Noel kaktüsleri ve akrabaları günde on dört saat veya daha fazla kesintisiz karanlık ister; kuzey yarım kürede eylül ortası civarında başlayarak en az altı hafta boyunca. Operasyonel uyarı da açık sözlüdür: iki saatlik bir aydınlatma kesintisi bile çiçek tomurcuğu oluşumunu engeller. Odada açık bırakılmış bir lamba, yılın çiçeklenmesini iptal etmeye yeter."
+        ],
+        "checklist": [
+          "İç mekân orkideleri: günde bir ila dört saat doğrudan güneş.",
+          "Kelebek orkidesi: doğu ya da batı penceresi, kalorifer ve cereyandan uzakta.",
+          "Uzun, ince ve koyu yapraklı bir bromelya daha fazla ışık istiyordur.",
+          "Hava bitkisi: parlak süzülmüş ışık, asla doğrudan güneş değil.",
+          "Noel kaktüsü: tomurcuk bağlaması için altı hafta boyunca geceleri kesintisiz karanlık."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "Bu grupta toprak yoktur ve sıradan harç öldürür: asla killi tınlı ya da çok amaçlı harç kullanmayın, çünkü velamenle kaplı kökü boğar. Dahası, harcın bir son kullanma tarihi vardır ve saksı değiştirmek isteğe bağlı değil, zorunludur — kabuk kabaca iki yılda bir yenilenmelidir ve öncesinde işaret fizikseldir: sulama sırasında ortamın küçük parçacıkları saksıdan dışarı akmaya başladığında değiştirin. Ayrışmış kabuk daha az havadar ve daha yoğun hâle gelir, suyu daha uzun tutar ve kökleri çürütür. Harcın kendisinin programlanmış ölümün nedeni olduğu tek grup budur.",
+          "Kabuk ile sfagnum arasındaki seçim zevk değil, ortam kararıdır: nemli bir odada ya da serada iri kabuk; kuru ve güneşli bir iç mekânda sfagnum ve lif oranı daha yüksek bir karışım, daha aralıklı sulama ve çiçeklenmenin hemen ardından saksı değişimi. Kabuk, mangal kömürü ve perlit karışımı dengeli ticari standarttır. Saksı, kök sistemini alacak kadar büyük olmalı, fazlası değil — çok büyük bir kap nemi tutar ve orkide köklerine zarar verir. Gübreleme ilke olarak seyreltiktir: etiket dozunun yarısı, üre içermeyen ya da çok az içeren bir formülle, yazın haftada bir, sonbahar ve kışın iki haftada bir; tuzları yıkamak için her dördüncü sulamada gübre atlanır. Bromelyalar daha da zayıf beslenir: dozun dörtte biri ya da sekizde biri. Bu grubun birkaç üyesinin monokarpik olduğunu da unutmayın: çiçeklendikten sonra yavaş yavaş gerileyen bir bromelya hastalanmıyor, normal döngüsünü tamamlıyordur — yavruları saklayın."
+        ],
+        "checklist": [
+          "Asla sıradan toprağa ya da çok amaçlı harca dikmeyin.",
+          "Kabuğu iki yılda bir ya da sulama sırasında parçacıklar dışarı akmaya başladığında değiştirin.",
+          "Kök sistemine tam ölçülü bir saksı kullanın.",
+          "Yarım dozla gübreleyin ve her dördüncü sulamada gübreyi atlayın.",
+          "Çiçeklendikten sonra ölen bir bromelya normal döngüsündedir: yavruları saklayın."
+        ]
+      }
+    }
+  },
+  "herb": {
+    "label": "Mutfak ve aromatik otlar",
+    "topics": {
+      "watering": {
+        "advice": [
+          "Bu grup ikiye ayrılır ve ikisine aynı takvimi uygulamak yapısal hatadır. Odunsu Akdenizliler — biberiye, kekik, mercanköşk, adaçayı, lavanta — aralarında gerçek bir kuruma olan aralıklı sulama ister: onların riski yazın kuraklık değil, kışın su içinde kalan köktür. Biberiye köklerinin ıslak kalmasından, özellikle de kışın, nefret eder; toprağa dikilip tutunduktan sonra neredeyse hiç sulama istemez; saksıda ise kurak dönemlerde sulayın ama harcın asla su tutmasına izin vermeyin.",
+          "Yapraklı otlar — fesleğen, maydanoz, nane, oğulotu — tam tersini ister: nispeten sabit bir toprak nemi, çünkü su stresi tohuma kaçmayı hızlandırır ve yaprağı sertleştirir. Sabah sulayın ki yapraklar gece olmadan kurusun; fesleğende yaprakları ıslatmaktan kaçının: fıskiye yerine damlama ya da sızdıran hortum kullanın, çünkü durgun havada ıslak bir yaprak mildiyöye açık davetiyedir."
+        ],
+        "checklist": [
+          "Herhangi bir sulama düzeni kurmadan önce Akdenizlileri yapraklı otlardan ayırın.",
+          "Akdenizliler: aralıklı sulayın ve sulamalar arasında toprağın gerçekten kurumasına izin verin.",
+          "Yapraklı otlar: tohuma kaçmayı önlemek için nemi sabit tutun.",
+          "Sabah sulayın, asla günün sonunda değil.",
+          "Fesleğende yaprağı değil, toprağı ıslatın."
+        ]
+      },
+      "light": {
+        "advice": [
+          "Neredeyse bütün otlar günde en az altı saat güneş alan bir alanda en iyi büyür — ve uçucu yağı yapan güneştir, yani aromayı yapan da güneştir. Fesleğen tam güneşi tercih eder ama altı saatlik yarı güneşte de makul ölçüde iyi büyür.",
+          "İstisnalar iyi bilinir ve saygıyı hak eder: maydanoz ile nane yarı gölgeyi tercih eder ve güçlü tam güneşte bitkin düşer. Maydanozunuz ya da naneniz en güneşli yastıkta zorlanıyorsa, sorun tam da bu olabilir."
+        ],
+        "checklist": [
+          "Otların çoğu için günde en az altı saat güneş hedefleyin.",
+          "Maydanoz ve nane yarı gölgeyi kabul eder, hatta bazen tercih eder.",
+          "Daha az güneş, daha az uçucu yağ ve daha az aroma demektir.",
+          "Sık toplamak için mutfağın yakınında birkaç saksı bulundurun."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "Burada drenaj bereketten daha değerlidir ve yüksek verimliliğin bir kayıp olduğu tek grup budur: çok bereketli topraklar, tadı olmayan gür yapraklar üretme eğilimindedir. Genel pH hedefi 6 ila 7'dir, organik madde ise ölçülü olmalıdır. Killi toprağa beş ila yedi santimetre ince çam kabuğu, bezelye çakılı ya da iri kompost karıştırın ve bunu yirmi ila otuz santimetre derinliğe kadar yapın; kumlu toprakta aynı derinlikte nem tutan malzeme kullanın. Bu grupta çakıl malçlı yüksek yastık bir lüks değil, standart uygulamadır.",
+          "Ağır toprakta biberiye düzeltilmez — yeri değiştirilir: yüksek bir yastığa ya da hacimce %25'e kadar bahçe mıcırı içeren bir saksıya. Toprakta yetişen biberiyenin hiç gübreye ihtiyacı yoktur; saksıdaki ise ilkbahar sonunda bir tutam genel amaçlı granül gübre alır. Fesleğen, sebze gibi davranan istisnadır: dikimde ölçülü bir doz alır ve yalnızca büyüme durursa takviye edilir. Kişnişte hafif azot uygulamaları bitkileri gür tutar, ama kaynak aşırı gübreleme eğiliminden kaçınmak gerektiği konusunda açıktır. Naneye de dikkat edin: rizomla yayılıp bütün alanı ele geçireceği için onu yastığa gömülmüş, dipsiz bir kabın içine dikin."
+        ],
+        "checklist": [
+          "Drenajı öne alın: yüksek yastık, karıştırılmış mıcır ya da ince kabuk.",
+          "pH'ı 6 ile 7 arasında, bereketi ölçülü tutun.",
+          "Tadı olmayan gür bir ot, fazla gübrenin işaretidir.",
+          "Toprakta yetişen biberiyenin gübreye ihtiyacı yoktur.",
+          "Naneyi yastığa gömülmüş dipsiz bir kabın içine dikin."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Hasadın fizyolojik bir penceresi vardır: otlar çiçeklenmenin hemen öncesinde, uçucu yağların zirvede olduğu anda hasat edilmelidir. Bir de günün saati vardır — sabahın erken saatleri, çiy kuruduktan ama sıcak bastırmadan önce. Başka hiçbir grupta günün saati bir kalite değişkeni değildir ve öğleden sonra toplanan bir otun aroması gözle görülür biçimde zayıftır. Aromatik çiçekler ise tam açmadan önce toplanır.",
+          "Budama burada formu ve tadı korur ve her cinsin kendi kuralı vardır. Fesleğende büyüme uçlarını düzenli olarak koparın ve çiçek tomurcuklarını göründükleri anda alın; yoksa yaprak acılaşır ve bitki büyümeyi durdurur; sürgün uçlarını bir ya da iki çift yaprakla hasat edin ve yeniden sürmesi için yeterli yaprağı bırakın. Biberiye her yıl çiçekler solduktan sonra hafif bir kırpma alır ve asla eski oduna kadar geri kesilmez — bu yapılmazsa uzayıp odunlaşır ve dibi çıplak kalır. Adaçayı ilkbahar başında sert budanır, kekik çiçeklenmeden sonra hafifçe kırpılır, defne ise yazın budanır. Nane, çiçeklendikten sonra yaprakları yenilemek için dipten yaklaşık beş santimetre kalacak şekilde tamamen geri kesilebilir."
+        ],
+        "checklist": [
+          "Yağın zirvede olduğu an olan çiçeklenmenin hemen öncesinde hasat edin.",
+          "Sabah erkenden, çiy kuruduktan sonra hasat edin.",
+          "Fesleğende çiçek tomurcuklarını göründükleri anda alın.",
+          "Biberiyede çiçeklenmeden sonra hafifçe kırpın ve asla eski oduna kesmeyin.",
+          "Naneyi çiçeklendikten sonra kümeyi dibe kadar keserek yenileyin."
+        ]
+      }
+    }
+  },
+  "pollinator": {
+    "label": "Tozlaştırıcı böcekler",
+    "topics": {
+      "role": {
+        "advice": [
+          "Yediğimiz gıdanın yaklaşık üçte biri tozlaştırıcıların faaliyetine bağlıdır ve bu işin çoğunu gözünüzde canlandırdığınız arı yapmaz. Yalnızca Britanya'da 270'ten fazla arı türü vardır: yaklaşık 26 bombus, 250'den fazla yalnız arı ve tek bir bal arısı türü. Neredeyse hepsi yalnızdır — her dişi yuvasını tek başına kurup erzağını doldurur ve bir sonraki nesil çıkmadan ölür — ve yuva neredeyse hiçbir zaman bir kovan değildir: birçoğu çıplak toprakta, bazıları ahşap boşluklarında yuvalanır, bombuslar ise sıklıkla kemirgenlerin açtığı tünelleri kullanır.",
+          "Brezilya'da kilit grup, tropik ve subtropik bölgelere özgü iğnesiz arılar, yani Meliponini'dir; yalnızca Pará'da açaí, kavun ve karpuz gibi ürünlerle bağlantılı olduğu tahmin edilen 109 tür bulunur. Grup arıların çok ötesine geçer: kın kanatlıların çiçekleri ziyaret eden ilk böcekler arasında olduğu düşünülür, çiçek sinekleri erişkin hâlde tozlaştırırken larvaları yaprak bitlerini yer, kelebekler ve güveler de arıları ziyaret başına bu kadar verimli kılan titreşimli tozlaşma olmasa bile bu hizmete katkı yapar."
+        ],
+        "checklist": [
+          "Arıların çoğu yalnızdır ve asla kovan kurmaz.",
+          "Çimdeki koni biçimli bir toprak yığını, etkin bir yuva tünelinin ağzıdır.",
+          "Bir yapraktaki temiz, dairesel kesikler yuva malzemesi toplayan yaprakkesen arılardır.",
+          "Çiçek sineğinin iki kanadı vardır; arıların ve eşekarılarının dört.",
+          "Yaprak biti yoksa çiçek sineği larvası da yoktur: av da bir kaynaktır."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "Gerçek risk düşüktür. Arılara saygıyla davranıldığı sürece bahçenizde sokulmanız pek olası değildir ve yalnız arılar iğnelerini yalnızca kaba biçimde tutulduklarında, savunma amacıyla kullanır. İğnesiz arılar ise adının söylediği gibi sokmaz — bu da onları yakından izlemek ve evde tutmak için en güvenli grup yapar. Bu mahalledeki sokma riski, yuvada gerçek bir savunma sokma kapasitesine sahip olan sosyal eşekarılarında toplanmıştır.",
+          "İki uyarı tabloyu kapatır. Birkaç güve türünün larvaları yakıcı tırtıllardır ve bu tümüyle başka bir hikâyedir — tüylü herhangi bir tırtıla dokunmadan önce zararlı böcek grubuna bakın. Bir de iğnesiz arı yetiştiriciliği serbest değil, düzenlenmiş bir faaliyettir: örneğin Pará'da 99'a kadar kovanı olan yetiştiriciler çevresel lisanstan muaf tutulmuş, ama yine de tarımsal denetim kurumuna kayıt yaptırmak zorundadır. Doğadan yuva almanın ise kendi kuralları vardır."
+        ],
+        "checklist": [
+          "Elleşmeden izleyin: yalnız bir arı yalnızca sıkıştırılırsa sokar.",
+          "İğnesiz arılar sokmaz — yakından gözlem için en güvenli grup.",
+          "Sosyal eşekarısı yuvalarından uzak durun.",
+          "Tüylü bir tırtıla asla dokunmayın: risk arılarda değil, orada.",
+          "Yerli arı yetiştirmek yetkili kuruma kayıt gerektirir."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Miktardan önce çeşitlilik: ilkbahar, yaz ve sonbaharı kapsayan sekiz ila on yerli bitki türüyle başlayın ve bunları en az bir metre genişliğinde kümeler hâlinde dikin. Tek sıra taç yapraklı, sade ve açık çiçekleri tercih edin — katmerli çiçekler poleni ve nektarı gizler ya da tümüyle ortadan kaldırır. Çimi daha seyrek biçerek yabani otların çiçek açmasına izin verin ve su sağlayın, çünkü arılar ve diğer tozlaştırıcılar zaman zaman su içmek zorundadır. Kopyalamaya değer bir saha yöntemi: mahallenizde hangi bitkilerin tozlaştırıcılar arasında popüler olduğunu gözleyin ve onlardan daha çok yetiştirin.",
+          "Yuvalanma yerleri bir kaynaktır. Toprakta yuvalanan arılar için tam güneş alan, iyi drene olan çıplak toprak alanlarını malçsız bırakın ve çimdeki küçük toprak yığınlarını düzlemek yerine onlara katlanın. Bir arı oteli yaklaşık 2 ila 10 milimetre çapında, aralarında yaklaşık iki santimetre bulunan deliklerle çalışır; küçük delikler için sekiz ila on santimetre, büyükler için on üç ila on beş santimetre derinlik, işlem görmemiş ahşap ve korunaklı bir yerde bir ila iki metre yüksekliğe montaj. Ve hepsinden ağır basan kural: açık çiçeklere asla ilaç püskürtmeyin. Geniş spektrumlu insektisitlerden kaçının; ilaçlamak zorundaysanız tozlaştırıcıların daha az etkin olduğu akşam saatlerinde uygulayın."
+        ],
+        "checklist": [
+          "Üç mevsimi de kapsayan sekiz ila on yerli tür dikin.",
+          "Katmerli değil, tek sıra taç yapraklı sade çiçekler seçin.",
+          "Toprakta yuvalanan arılar için güneşli, çıplak toprak parçaları bırakın.",
+          "Yıl boyunca sığ ve güvenli su sağlayın.",
+          "Açık çiçeklere asla ilaç püskürtmeyin; ilaçlamanız gerekiyorsa akşam ilaçlayın."
+        ]
+      }
+    }
+  },
+  "beneficialInsect": {
+    "label": "Avcı ve yararlı böcekler",
+    "topics": {
+      "role": {
+        "advice": [
+          "Bunlar bahçenin doğal düşmanlarıdır: bir ömür boyunca çok sayıda avı öldürüp yiyen avcılar ve larvası tek bir konakçının içinde ya da üzerinde gelişip onu öldüren parazitoitler. Rakamlar çarpıcıdır — bir uğur böceği ömrü boyunca 5.000 kadar yaprak biti mideye indirebilir, yer böcekleri her gün kendi ağırlıkları kadarını tüketebilir ve bir dantel kanatlı larvası 100 ila 150 yaprak biti alır. Doğal düşmanlar üzerine kurulu entegre zararlı yönetiminin, farklı ürünlerde ilaçlama sıklığını %30 ila %40 azalttığı bildirilmiştir.",
+          "Yaşam evresi her şeyi değiştirir ve en yaygın hata tam da burada yaşar. Dantel kanatlılarda ve çiçek sineklerinde yalnızca larva avcıdır: erişkin nektar, polen ve balözüyle yaşar. Başka bir deyişle, yaprağın üzerindeki o tuhaf küçük yaratık genellikle zararlı değil, müttefiktir. Sahada öğrenmeye değer üç işaret var: uğur böceği larvası kızıla çalan renkte ve timsah biçimlidir; dantel kanatlı yumurtaları kıl gibi ince saplar üzerinde durur; ve sırtında birkaç düzine küçük beyaz koza taşıyan bir tırtılın işi çoktan bitmiştir ve düzinelerce parazit arı salacaktır — onu tam durduğu yerde bırakın."
+        ],
+        "checklist": [
+          "Harekete geçmeden önce tanımlayın: yapraktaki tuhaf larvaların çoğu avcıdır.",
+          "Uğur böceği larvası kızıla çalan renkte ve timsah biçimlidir.",
+          "Kıl inceliğinde saplar üzerindeki yumurtalar dantel kanatlı yumurtalarıdır, zararlı değil.",
+          "Sırtında beyaz kozalar taşıyan bir tırtıl çoktan parazitlenmiştir — onu atmayın.",
+          "Peygamberdevesi ayrım gözetmeyen bir avcıdır: tozlaştırıcıları da yer."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "Burada neredeyse hiçbir şey sokmaz. Avcılar arasında yalnızca sosyal eşekarılarının savunma amaçlı sokma kapasitesi vardır; parazitoitler arasında ise yalnızca toprakta ya da çamurda yuva yapan avcı eşekarılarının. Ichneumonidae ve Braconidae arıları o uzun iğneyi tümüyle yumurta koymak için kullanır; bu bir savunma organı değildir.",
+          "Ama iki familya elle tutulursa ısırır: hortumunu batırıp sindirim enzimleri enjekte eden yırtıcı tahtakuruları ve nörotoksik salya enjekte eden hırsız sinekler. Onları elinize almayın. Peygamberdevesi yakalayıcı bacaklarıyla şimşek hızında avlanır ve tutulursa ısırır. Bir de özel bir durum var: istilacı Asya uğur böceği insanları ısırır, özellikle de deriyle giysi arasında sıkıştığında — deriyi delmez ve hastalık bulaştırmaz, ama rahatsız edildiğinde duvarları, perdeleri ve halıları kalıcı olarak lekeleyebilen hemolenf salgılar; astım ve kurdeşen gibi alerjik tepki kayıtları da vardır ve duyarlılığın kişinin yaşı ya da alerjiye yatkınlığıyla ilgisi yoktur. Bu böcek için öneri bahçeyi ilaçlamak değil, çatlakları ve eşikleri kapatmaktır. Etkin bir sosyal eşekarısı yuvası ise uzaktan izlenir."
+        ],
+        "checklist": [
+          "Bu grupta yalnızca sosyal eşekarıları ve avcı eşekarıları sokar.",
+          "Yırtıcı tahtakurusunu ya da hırsız sineği elinize almayın.",
+          "Peygamberdevesi tutarsanız ısırır.",
+          "Ev içindeki istilacı uğur böcekleri ilaçlamayla değil, boşlukları kapatarak çözülür.",
+          "Eşekarısı yuvalarını uzaktan izleyin."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Korumak, satın almaktan iyidir. Standart öneri salım değil, habitat ve hoşgörüdür: bu avcıları öldüren pestisitlerden kaçınarak, onlara polen, nektar ve barınak sunan bitkiler seçerek ve karıncaları zararlı basmış bitkilerden uzak tutarak koruyun — karıncalar balözü karşılığında yaprak bitlerini ve koşnilleri avcılara karşı savunur. Extension servislerinin erişkin besini olarak saydığı bitkiler arasında dereotu, rezene, ekinezya, rudbeckia, ipek otu ve lantana bulunur.",
+          "Her grubun bir çevre koşulu vardır. Yusufçuklar bir su kütlesine ihtiyaç duyar: dişi yumurtalarını su yüzeyine dokunarak bırakır ve larva su altında gelişir — su yoksa yusufçuk da yoktur. Yer böceği larvaları toprakta ve sınırlı bir alanda yaşar; bu yüzden toprağı devirmek ya da sıkıştırmak bir sonraki nesli ortadan kaldırır. Bahçedeki yaprak bitlerini sıfırlamak da uğur böceklerinin, dantel kanatlıların, çiçek sineklerinin ve parazit arıların besin tabanını birden yok eder: av bir acil durum değil, bir kaynaktır. İlaçlama kaçınılmaz olduğunda, tam da parazit arıları, tahinid sineklerini ve yer böceklerini korumak için piretroitler, karbamatlar ve organik fosforlular yerine sabun, yağ ya da spinosad tercih edin."
+        ],
+        "checklist": [
+          "Nektar ve polen çiçekleri sunun: erişkinler onlarla yaşar.",
+          "Karıncaları zararlı basmış bitkilerden uzak tutun.",
+          "Yusufçuk istiyorsanız temiz, durgun su bırakın.",
+          "Böcek larvalarının yaşadığı toprağı devirmeyin ve sıkıştırmayın.",
+          "Birkaç yaprak bitine katlanın: av olmadan avcılar kalmaz."
+        ]
+      }
+    }
+  },
+  "pestInsect": {
+    "label": "Yaygın zararlı böcekler",
+    "topics": {
+      "role": {
+        "advice": [
+          "Zararlı, türün değil bağlamın etiketidir: belirli bir yerde ve belirli bir anda ekonomik zararı ya da bir sağlık riskini tarif eder. Ağız parçaları zararın tipini söyler — çiğneyiciler yaprakta, odunda ya da meyvede gözle görülür delikler bırakır; emiciler pipet benzeri bir boru kullanır ve noktalanma, lekelenme, bodurlaşma, sararma, deforme büyüme ve balözü üretir. Balözü bir hastalık değildir: şekerli bir salgıdır ve o siyah leke, onun üzerinde gelişen, ortalığı karartan ve fotosentezi azaltan fumajin mantarıdır. Emiciyi çözün, leke de onunla birlikte gider.",
+          "Sahada iki anahtar işe yarar. Başkalaşım, gerçekte neyle karşılaşacağınızı belirler: yarı başkalaşımda yumurta, nimf ve erişkin vardır ve nimf kanatsız bir erişkine benzer; tam başkalaşımda yumurta, larva, pupa ve erişkin vardır ve larva erişkine hiç benzemeyebilir. Yaşam alışkanlığı ise nereye bakacağınızı söyler: emiciler yeni, açılmakta olan dokuda toplanır — genç yaprağın önce kıvrılmasının nedeni budur — ve yaprak bitleri, beyazsinekler ile akarlar yaprağın alt yüzünde yaşar. Meraklı bir örnek: yaprakkesen karıncalar yaprağı yemez — beslendikleri mantarı yetiştirmek için keserler; bu da onları plantasyonlarda zararlı, yerli ekosistemlerde ise kilit taşı canlı yapar."
+        ],
+        "checklist": [
+          "Delikler ve yırtıklar = çiğneyici. Noktalanma, deformasyon ve yapışkanlık = emici.",
+          "Fumajin balözünün üzerinde büyür: lekeyi değil, böceği tedavi edin.",
+          "Her zaman yaprağın alt yüzünü kontrol edin.",
+          "Kıvrılmış genç bir yaprak susuzluğu değil, bir emiciyi işaret eder.",
+          "Her uğur böceği müttefik değildir: bir soy bitkiyle beslenir ve yaprak yer."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "Uygulamadaki faunanın neredeyse bütün fiziksel riski burada yaşar — ve bu risk ürün zararlılarından gelmez. Yakıcı tırtılların, zehir keselerine bağlı içi boş, tüy kalemi gibi kılları vardır; bu kıllar deriyi deler ve zehri bırakır; belirtiler hafif kaşıntıdan ağrıya, şişliğe, kabarcıklara, dermatite ve hatta bağırsak rahatsızlıklarına kadar uzanır. İlk yardım: kırılan dikenleri çıkarmak için yapışkan bandı üst üste yapıştırıp çekin, ılık sabunlu suyla yıkayın, şişliği önlemek ve ağrıyı azaltmak için hemen buz uygulayın ve şiddetli bir tepkide tıbbi yardım alın. Brezilya'da Lonomia tırtılı kanamalı bir tabloya yol açar ve hem kırsal hem kentsel nüfusu tehdit eder; Paraná'daki izleme 1989 ile 2000 arasında 199 vaka ve beş ölüm kaydetmiş, antivenom ise stratejik noktalara dağıtılmıştır. Kazaların çoğu saldırgan bir hayvandan değil, bahçe işleri sırasında yapraklara sürtünmekten kaynaklanır: renkli, tüylü tırtıla uzaktan hayran olun.",
+          "Chagas hastalığını bulaştıran öpücük böceği bulunduğunda kendine ait resmî bir protokolü vardır: böceği ezmeyin, sıkmayın ya da ona zarar vermeyin; elinizi bir eldiven ya da plastik torbayla koruyun; böceği, tercihen canlı olarak, vidalı kapaklı bir plastik kaba koyun; ve bir triatom bilgi noktasına götürün. Vektörle bulaşma, böceğin dışkısının ısırık yarasına ulaşmasıyla olur; ayrıca bulaşmış yiyecek ya da içeceğin tüketilmesiyle de bulaşma görülür. Evde korunma, kapı ve pencerelere sineklik takmak, kovucu kullanmak ve geceleri uzun kollu giyinmek demektir."
+        ],
+        "checklist": [
+          "Tüylü ya da dikenli bir tırtıla asla dokunmayın, elinizle de silkelemeyin.",
+          "Tırtıl yakması: yapışkan bant, ılık sabunlu su ve buz — kötüleşirse tıbbi yardım.",
+          "Bir öpücük böceği bulursanız böceği ezmeyin.",
+          "Onu eldivenle, vidalı kapaklı bir kaba toplayın ve sağlık gözetim birimine götürün.",
+          "Riskli bölgelerde kapı ve pencerelere sineklik takın, geceleri uzun kollu giyinin."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Doğru yanıtın hiçbir şey yapmamak olabildiği tek grup budur: temel talimat, herhangi bir tedaviye karar vermeden önce böcek tipini ve popülasyon düzeylerini belirlemek için izlemek ve saha taraması yapmaktır. Ardından en az etkili basamaktan yukarı doğru çıkın. Hortumdan gelen düz su yaprak bitlerini ve akarları yıkayıp götürür. Elle toplama ve ev yapımı tuzak işe yarar — bir kabak bitkisinin altına eski bir çatı kiremidinden ya da kalın mukavvadan küçük bir kare koyun, böcekler barınmak için altında toplanır ve siz yalnızca tuzağı kaldırıp onları yok edersiniz. Zararlının çıkışını atlatmak için erken ekim yapmak, yani fenolojik kaçış da bir mücadeledir.",
+          "Ürünler ancak ondan sonra devreye girer: hedef dışı böceklere daha az zarar veren insektisit sabunu ve yağı, beyazsineğe karşı yansıtıcı malç, genç tırtıllar için Bacillus thuringiensis ve en sonda kimya — tozlaştırıcı böceklere etkiyi azaltmak için her zaman akşam püskürtülerek. Extension servisleri, tam da parazit arıları, tahinid sineklerini ve yer böceklerini korumak için piretroitler ve neonikotinoitler yerine spinosadı tercih eder. Fiziksel bariyerler hepsi arasında en çok hafife alınan mücadele yöntemidir, tek bir koşulla: sıra örtüsü çiçeklenmede kaldırılmalıdır, yoksa zararlıyla birlikte tozlaştırıcıyı da engeller. Ve gördüğünüzü doğru dürüst kaydedin — böceğin yanına ölçek verecek bir nesne koyarak fotoğraflamak, tarihi ve böceğin hangi bitkinin hangi kısmında beslendiğini not etmek her teşhisi çok daha güvenilir kılar."
+        ],
+        "checklist": [
+          "Tedaviden önce izleyin ve sayın.",
+          "Su jeti, elle toplama ve ev yapımı tuzakla başlayın.",
+          "Geniş spektrumlu insektisitler yerine sabun, yağ ya da spinosad tercih edin.",
+          "Sıra örtüsünü çiçeklenmede kaldırın.",
+          "Her zaman akşam, tozlaştırıcılar hareketsizken ilaçlayın."
+        ]
+      }
+    }
+  },
+  "decomposerFungus": {
+    "label": "Ayrıştırıcı mantarlar",
+    "topics": {
+      "role": {
+        "advice": [
+          "Bunlar saprotrof mantarlardır: ölü organik maddeyle yaşarlar. Bu mantarları üreten funguslar yararlıdır, çünkü topraktaki organik maddeyi ayrıştırır ve besinleri başka bitkilerin kullanımına açar. Çimdeki bir mantar neredeyse hiçbir zaman hastalık değildir — bunlar doğanın istediğini yapan, bir zamanlar canlı olan malzemeyi parçalayıp enerjiyi toprağa geri döndüren doğal fungal organizmalardır. Peri halkası zararlının değil, bereketin işaretidir: ayrışma azot açığa çıkarır, çim onu alır ve koyulaşır; o koyu yeşil daireyi çizen de budur. Mantarı koparmak fungusu da öldürmez: meyve gövdesi geçicidir, organizma ise harcın içindeki miselyumdur.",
+          "Yaşayan bir ağaçta ise işaret ciddidir. Gövdede ya da kök boğazında çıkan mantarlar veya kav mantarları birer uyarıdır ve fırtınada devrilen yaşlı ağaçların çoğunun gücü, çürükçül funguslar tarafından çoktan ciddi biçimde azaltılmış, hatta tümüyle ortadan kaldırılmıştır. Güç kaybını amatörlerin fark etmesi zordur, profesyonellerin bile değerlendirmesi güçtür — yani çürüklük tespiti ve değerlendirmesi konusunda eğitimli birini çağırmak gerekir. Malçta top mantarı, kuş yuvası mantarları ve puf mantarları zararsız ayrıştırıcılardır; parlak sarı ya da turuncu yapışkan kütleler ise cıvık mantarlardır, gerçek fungus bile değildirler ve bitkilere zarar vermezler."
+        ],
+        "checklist": [
+          "Çimdeki bir mantar geri dönüştürülen organik maddedir, hastalık değil.",
+          "Koyu yeşil bir peri halkası zararlıyı değil, açığa çıkan azotu gösterir.",
+          "Gövdede ya da kök boğazında çıkan bir mantar veya kav, yapısal bir uyarıdır.",
+          "Mantarları koparmak fungusu değil, yalnızca meyve gövdesini ortadan kaldırır.",
+          "Malçtaki sarı yapışkan kütle bir cıvık mantardır ve bitkilere saldırmaz."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "Bir uzman tarafından yerinde tanımlanmadan asla yabani mantar yemeyin. Pek çok tür zehirlidir ve yenebilir türlerle zehirlileri yalnızca bir uzman ayırt edebilir. Pişirmek bunu çözmez: amanitinler ısıya dayanıklıdır ve pişirmeyle etkisiz hâle gelmez; pişirme buharını solumaktan kaynaklanan zehirlenme kayıtları bile vardır. Başka bir bölgeye ait bir saha rehberi de aktarılamaz — ülkenin bir yerinde ya da başka bir ülkede mantar tanımayı öğrenmiş olmak, başka bir bölgede mantar tanımak için güvenilir değildir. Tehlikeli olan, geç gelen belirtidir: belgelenmiş vakalarda bulantı, kusma ve ishal yutmadan yaklaşık dokuz saat sonra başlamıştır ve altı saatten geç başlayan kusma, hazımsızlığın değil, ağırlığın işaretidir.",
+          "Dokunmak zehirlemez — belgelenmiş risk yutmak ve ikincil olarak pişirme buharını solumaktır. Yine de ellerinizi yıkayın ve ağzınızdan uzak tutun. Çocukların ya da evcil hayvanların bulunduğu çimlerden mantarları toplayıp uzaklaştırın, çünkü küçük çocuklar mantar dahil her şeyi ağzına götürme eğilimindedir: Amerika Birleşik Devletleri'nde 2016-2018 dönemine ilişkin bir derlemede hastaların %25,9'u beş yaşında ya da daha küçüktü. Biri mantar yediyse hemen zehir danışma merkezini arayın — ABD'de 1-800-222-1222; Brezilya'da CIATox / Disque-Intoxicação 0800 722 6001. Ve bu el kitabında başka her şeyden çok önem taşıyan tek bir cümle var: bir tanımlama uygulaması uzmanın yerini tutmaz."
+        ],
+        "checklist": [
+          "Uzman tarafından yerinde tanımlanmadan yabani mantar yemeyin.",
+          "Pişirmek, kurutmak ve ev testleri zehirli bir mantarı güvenli hâle getirmez.",
+          "Altı saatten geç başlayan kusma, ağırlığın işaretidir.",
+          "Çocukların ya da başıboş evcil hayvanların oynadığı çimlerden mantarları toplayın.",
+          "Biri mantar yediyse hemen zehir danışma merkezini arayın."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Ölçekli olarak yetiştirilebilen tek mantar grubu budur ve nedeni tam da yalnızca ölü harca ihtiyaç duymalarıdır: shiitake, istiridye, kültür ve enoki mantarlarının hepsi saprotroftur ve onları yetiştirmek, çürüyen odunu ya da samanı taklit etmek demektir. Bahçede yönetim kimyasal değil, fizikseldir — fungisit yanıt değildir. Güvenlik için mantarları toplayın, büyümeye neden olan gömülü organik maddeyi — kütükler, ölü kökler, inşaat molozu ve birikmiş çim keçesi — kazıp çıkarın ve suyun sızmasını iyileştirmek için toprağı havalandırın. Yeni bir çim kurarken önce ağaç kütüklerini ve köklerini uzaklaştırın.",
+          "Bir peri halkası gerçekten sorun çıkardığında zarar, suyun toprağa geçişini engelleyebilen yoğun miselyumdan gelir — izlenecek yol, fungal keçeyi kırmak için havalandırma, buna ek olarak önerilen dozlarda sulama ve gübrelemedir. Malçta yaklaşık %40 oranında kullanılmış mantar kompostu karıştırmak top mantarını baskılar, çünkü rekabet eden mikropları içeri sokar; kuş yuvası mantarları ve cıvık mantarlar ise bir tırmıktan öte yönetim istemez. Ağaç için tek gerçek savunma önlemdir, çünkü çürüklük kapmış bir ağacı kurtaramazsınız: kuraklıkta iyi sulayın, toprağı havalandırın, beş ila on beş santimetre organik malç tutun, yavaş salınımlı gübreyle besleyin, inşaat sırasında kökleri yaralamaktan ya da boğmaktan kaçının ve doğru zamanda, doğru teknikle budayın. Fotoğraflarken de şapkayı, altındaki lamelleri ya da gözenekleri, sap dibini, üzerinde yetiştiği maddeyi ve konakçıyı kaydedin — ölümcül türleri yenilebilir olanlardan ayıran tam da sap dibi ile o zemindir."
+        ],
+        "checklist": [
+          "Mantar çıktı diye çime fungisit uygulamayın.",
+          "Fungusu besleyen gömülü odunu ve kökleri kazıp çıkarın.",
+          "Bir peri halkasının miselyum keçesini kırmak için toprağı havalandırın.",
+          "Çürüklük kapmış bir ağaç tedavi edilmez: önlenir ve bir profesyonel tarafından değerlendirilir.",
+          "Fotoğraflarken sap dibini ve üzerinde yetiştiği maddeyi de çerçeveye alın."
+        ]
+      }
+    }
+  },
+  "mycorrhizalFungus": {
+    "label": "Mikorizal mantarlar",
+    "topics": {
+      "role": {
+        "advice": [
+          "Buradaki mantar, bitki kökleriyle kurulan yeraltı ortaklığının yalnızca görünen ucudur. Bütün bitki yaşamının tahminen %80 ila %90'ının yedi mikoriza tipinden en az birine katıldığına inanılır — bu da onu istisna değil, bitkiler âleminin kuralı yapar. Fungus fotosentez yapamaz ve kendi karbonunu bağlayamaz; bu yüzden ihtiyaç duyduğu bütün karbonhidratı konakçı bitkiden alır ve karşılığında su ile mineral besin verir: daha çok fosfor, amonyum ve çinko alımı, toprak kaynaklı hastalıklara karşı koruma, kuraklığa ve sıcaklığa daha yüksek tolerans. Avantaj kimyasal değil, geometriktir — kökler üst toprağın hacminin yalnızca yaklaşık %0,5'ini kaplar; çok daha ince olan bir hif ise birim hacim başına çok daha fazla toprakla temas eder.",
+          "Pratikte iki tip vardır. Ektomikorizalar kökün üzerinde bir kılıf oluşturur ve görünür mantarları üretenler onlardır; arbüsküler mikorizalar kökün içinde büyür ve hiç mantar üretmez, yalnızca toprakta spor bırakır. Orkideler çimlenmek için bile mikorizal funguslara bağımlıdır; yeterince fotosentez yapmayan mikotrofik bitkiler ise karbonlarını aracı bir fungus üzerinden bir konakçı ağaçtan alır. Sahada akılda tutulmaya değer bir ayrım var: mikorizal bir mantar yaşayan bir ağacın yakınındaki topraktan çıkar ve ağacın canlı ve bağlantılı olduğunu gösterir; çürükçül bir kav ise gövdeden ya da kök boğazından çıkar ve yapısal risk uyarısıdır."
+        ],
+        "checklist": [
+          "Mikorizal funguslar yaşayan bir ağacın yakınındaki topraktan çıkar; çürükçül kavlar gövdeden.",
+          "Fungus ağacı yemiyor: karbonhidratı su ve minerallerle takas ediyor.",
+          "Mikorizal bir mantar yerleşmiş, el değmemiş toprağa işaret eder.",
+          "Arbüsküler mikorizalar neredeyse her bahçede vardır ve görünmezdir.",
+          "Yerli orkideler çimlenmek için kendi asıl toprağındaki fungusa bağımlıdır."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "Aynı katı kural geçerlidir ve burada daha da çok önem taşır: bir uzman tarafından yerinde tanımlanmadan asla yabani mantar yemeyin. Bu grup hem gastronominin en değerli mantarlarını hem de gezegenin en ölümcüllerini barındırır — ölümcül amanitalar, baskın ektomikorizal familyalardan birine, yani seçkin yenilebilirlerle tam olarak aynı ekolojik mahalleye aittir. Pişirmek onları etkisiz kılmaz: amanitinler ısıya dayanıklıdır.",
+          "Tipik karışıklık tam da yaygın bir yenilebilir türle yaşanır ve başka bir bölgenin türlerine aşinalık riski azaltmaz, artırır. Gecikme de aldatıcıdır: yutmadan altı saatten uzun süre sonra gelen bulantı ve kusma, sıradan bir rahatsızlığın değil, ağırlığın işaretidir. Bir üniversite sağlık biriminin aktardığı pratik kural her şeyi özetler: emin değilseniz yemeyin. Dokunmak zehirlemez — belgelenmiş risk yutmaktır; ellerinizi yıkayın ve ağzınızdan uzak tutun. Biri mantar yediyse hemen zehir danışma merkezini arayın: Brezilya'da CIATox / Disque-Intoxicação 0800 722 6001; ABD'de 1-800-222-1222."
+        ],
+        "checklist": [
+          "Uzman tarafından yerinde tanımlanmadan yabani mantar yemeyin.",
+          "Bu grup bilinen en ölümcül türleri barındırır.",
+          "Pişirmek amanita toksinlerini etkisiz kılmaz.",
+          "Altı saatten sonra ortaya çıkan bir belirti, ağırlığın işaretidir.",
+          "Şüphedeyseniz yemeyin — biri çoktan yediyse zehir danışma merkezini arayın."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Bu grup saprotroflar gibi yetiştirilemez, çünkü yaşayan konakçı bitkiye ihtiyaç duyar — porcini, kantarel ve matsutake mantarlarının yetiştirilmek yerine toplanmasının ekonomik nedeni budur; onları bir harç üzerinde büyütme denemelerinin başarısız olmasının nedeni de. Bunun güçlü bir pratik sonucu var: aşırı gübreleme ortaklığı dağıtır. Azot, fosfor ya da tam gübre eklemeleri mikorizal fungusların varlığını ve etkinliğini azaltır; bu yüzden mikoriza isteyen kişi ölçülü gübreler. Toprak pH'ında, sıcaklıkta, organik madde içeriğinde, genel bereket düzeyinde ve nemde küçük değişiklikler bile kolonizasyonu belirgin biçimde değiştirebilir.",
+          "Onu koruyan şey yerleşmiş, el değmemiş toprak, bozulmamış bir organik katman ve doğru konakçıdır. Ektomikorizal topluluklar zamanla birikir: genç ağaçlar, olgun meşcerelere kıyasla daha dar bir fungal simbiyont topluluğuna sahiptir. Pratikte, olgun bir ağacın mikoriza ağı onlarca yıllık bir varlıktır; inşaat, üst toprağın sıyrılması ve fümigasyon bunu bir günde yok eder ve hiçbir torba ürün onu geri satın alamaz. Torbaya da kuşkuyla yaklaşın: mikoriza aşılamalarının bitkinin tutunmasını daha başarılı kıldığını gösteren tarafsız bilimsel kanıt çok sınırlıdır ve bunlar ticari reklamlarda sunulan mucizevi devalar değildir. Miselyumu görmek için kazmayın ve yerli bir karasal orkideyi ya da klorofilsiz bir bitkiyi başka yere taşımayın: kendi asıl toprağındaki fungal ortağı olmadan ölürler."
+        ],
+        "checklist": [
+          "Mikorizayı korumak istiyorsanız ölçülü gübreleyin.",
+          "Toprak fümigasyonundan ve üst toprak katmanının sıyrılmasından kaçının.",
+          "Mucize çözüm diye satılan aşılara kuşkuyla yaklaşın.",
+          "Miselyumu görmek için kazmayın: organizma o ağın kendisidir.",
+          "Yerli orkideleri ya da mikotrofik bitkileri başka yere taşımayın."
+        ]
+      }
+    }
+  },
+  "freshwaterFish": {
+    "label": "Tatlı su balıkları",
+    "topics": {
+      "role": {
+        "advice": [
+          "Her şeyi belirleyen filtre sıcaklık ve çözünmüş oksijendir: bir su kütlesi hakkında herhangi bir karar vermeden önce sıcaklık, pH ve çözünmüş oksijen ölçülür; aşırı sıcaktan ya da oksijen yokluğundan kaynaklanan balık ölümleri de çiftlik göletlerinin klasik kazasıdır. Taksonomik bileşim kıtadan kıtaya değişir — Neotropikler karakinlerin ve kedibalıklarının egemenliğindedir, Holarktik ise sazanlar ve tatlısu kefalleri, güneşbalıkları, levrekler ve somonlar üzerine kuruludur. Neotropik tatlı su balığı faunası gezegenin en zenginidir: yaklaşık 71 familya ve kabaca altı bin tür barındırır, bunların 4.475'i resmî olarak tanımlanmıştır.",
+          "Pek çok tür zorunlu bir üreme göçüne, piracema'ya bağımlıdır: reofil balıklar yumurtlamak için akıntıya karşı nehir yukarı yüzer ve bu fiziksel çabanın kendisi üremenin fizyolojik tetikleyicisinin bir parçasıdır. Taşkın ovası lagünleri de birer su birikintisi değil, kuluçkahanedir — taşkında nehir taşar ve onları birbirine bağlar, sürüklenen yumurtalarla larvalar oraya yerleşir, nehir çekildiğinde ise o yavrular bir sonraki taşkına kadar korunaklı biçimde büyür. Bazı familyalar su kalitesinin, bazıları ise bozulmanın termometresi gibi çalışır: sıcak ve bulanık suya dayanamayan balıklar yüksek su kalitesini gösterirken, yüksek sıcaklığa, çamurlu suya ve düşük oksijene dayanıklı kedibalıkları tam da zorlu türlerin çoktan terk ettiği yerlerde çoğalır."
+        ],
+        "checklist": [
+          "Yazın ani bir balık ölümünde önce çözünmüş oksijenden şüphelenin.",
+          "Taşlı bir yatak üzerindeki güçlü akıntı reofil ve göçmen türlere işaret eder.",
+          "Taşkında bağlanan bir taşkın ovası lagünü su birikintisi değil, kuluçkahanedir.",
+          "Yalnızca dayanıklı türlerin bulunması, bozulmuş ya da çoktan istila edilmiş bir sistemi düşündürür.",
+          "Yağmur mevsiminin başında oluşan bir sürü, bir üreme göçünün başlangıcı olabilir."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "Burada güvenlik daha çok hayvanın ve yasanın güvenliğidir. Bir akvaryum, ücretli avlanma göleti ya da çiftlik balığını asla doğal bir su kütlesine bırakmayın: Brezilya'nın iç sularında halihazırda yaklaşık doksan istilacı egzotik balık türü kaydı vardır, su ürünleri yetiştiriciliği en büyük giriş kaynağıdır — atıksuyla kaçışlar, tank arızaları ve kafes ağından sıyrılan balıklar yoluyla — ve teknik görüş ile yetkili kurumun izni olmadan herhangi bir hayvan türünü doğaya sokmak yasaktır. Balıkları asla havzalar arasında taşımayın: yakalanan bir balık, ancak aynı drenaj havzasına özgüyse başka bir su kütlesine gidebilir.",
+          "Av yasağına saygı gösterin. Minas Gerais'te üreme göçü yasağı 1 Kasım ile 28 Şubat arasında sürer, ama tarihler eyalete ve havzaya göre değişir; bu yüzden yola çıkmadan önce yerel çevre kurumuna bakın. Yabani balıkları beslemeyin — besleme doğal yem arama davranışını değiştirir ve hayvanları yapay biçimde bir araya toplar. İlkbaharda yuvalarının üzerinde duran balıkları avlamayın ve rahatsız etmeyin. Elleşmeyi de en aza indirin: taşları ve kütükleri tam olduğu yere geri koyun."
+        ],
+        "checklist": [
+          "Bir akvaryum ya da çiftlik balığını asla nehre, göle veya gölete bırakmayın.",
+          "Balıkları farklı drenaj havzaları arasında taşımayın.",
+          "Balık avlamadan önce eyaletinizin av yasağı takvimine bakın.",
+          "Yabani balıkları beslemeyin.",
+          "İlkbaharda yuva bekleyen balıkları rahatsız etmeyin."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Doğal beslenme mevsimle değişir ve ortamın hikâyesini anlatır. Tambaki, nehrin taştığı dönemde meyve ve tohum yer; bunlar kurak mevsimde tükendiğinde zooplanktona geçer — ve tohumları yayarak Amazon ormanının yenilenmesine katılır. Detritivorlar ve kazıyıcılar dip organik maddesini ve biyofilmi işler; pek çok Neotropik nehrin enerji tabanını onlar oluşturur. Pusuya yatan balıkçıl türler yerel besin zincirinin tepesini tutar ve bir gölette yem balıklarının aşırı çoğalmasını durduran şey onlardır.",
+          "Bir gölette ya da balık çiftliğinde yem, su kalitesini bozmayacak biçimde dozlanmalıdır: artan yem organik maddeye dönüşür, oksijeni tüketir ve hastalıkla toplu ölümlere kapı açar. Çeşitlilik olsun diye her türden biraz stoklamak hayal kırıklığı yaratır; sonuç dengesiz popülasyonlar ve bodur balıklardır. Çok üretken türleri stoklamak ise göleti bodur balıkla doldurur. Yüksek sıcaklığın ve düşük oksijenin balıkları taşıma sırasında zayıflattığı yaz ortasında stoklamaktan kaçının. Ve soğuk su türlerinin göletlerin çoğunda yazdan sağ çıkamadığını unutmayın; onlar ancak sıcaklar gelmeden önce stokla-ve-hasat et düzeninde işe yarar."
+        ],
+        "checklist": [
+          "Yemi dozlayın: artan yem organik maddeye dönüşür ve oksijeni düşürür.",
+          "Çeşitlilik umuduyla her türden biraz stoklamayın.",
+          "Yaz ortasında balık stoklamaktan kaçının.",
+          "Herhangi bir yönetim kararı vermeden önce ortamı suyun üzerinden okuyun.",
+          "Toplamak yerine fotoğraflayın ve kaydedin."
+        ]
+      }
+    }
+  },
+  "marineFish": {
+    "label": "Deniz ve resif balıkları",
+    "topics": {
+      "role": {
+        "advice": [
+          "Bir resif balığı yalnızca bir sakin değil, resifin teşhisidir. Otçullar — papağan balıkları ve cerrah balıkları — mercanla rekabet eden ve onun hayatta kalma, büyüme ve üreme kapasitesini düşüren algleri yer. Üstelik işlevsel grup türden daha çok önem taşır: papağan balıklarının, algi ısırırken zemini kazıyan güçlü gagaları vardır ve bu, yeni mercanların yerleşmesine yer açar; cerrah balıkları ise yalnızca alg örtüsünün üst kısmını otlar. Alglerin en büyük olumsuz etkisi mercanların yerleşmesi ve erken hayatta kalması üzerindedir; bu yüzden halihazırda çok sayıda büyük erişkin mercanı olan bir resif daha fazla otçuldan hemen fayda görmeyebilirken, iyileşmesi yeni yerleşime bağlı olan bir resif çok büyük fayda görür.",
+          "Otçulları korumak evrensel bir çözüm değildir: önlem, o bölgede gerçekten bir alg sorunu varsa ve otçul stokunu gerçekten artırıyorsa işe yarar. Fotoğrafladığınız şey o yeri okur. Çok sayıda kelebek balığı, yakınlarda canlı ve yapılı mercan olduğunu düşündürür. Yapılı bir resifte büyük orfoz ve mercan balıklarının tümüyle bulunmaması, balıkçılık baskısının güçlü bir göstergesidir. Ölü mercanı kaplayan kalın makroalg örtüsü ve ortalıkta az sayıda papağan ile cerrah balığı, otlamanın yetersiz olduğunu gösterir. Korunsalar bile otçulların toparlanması birkaç yıl alır — bu yüzden yönetim tepkisel değil, öngörülü olmalıdır."
+        ],
+        "checklist": [
+          "Çok sayıda kelebek balığı yakınlarda canlı mercan olduğunu düşündürür.",
+          "Büyük avcıların yokluğu balıkçılık baskısına işaret eder.",
+          "Az otçulla birlikte kalın makroalg, otlamanın yetersiz olduğunu gösterir.",
+          "Mercanlar arasındaki kum kanalları ve kum düzlükleri de birer yaşam alanıdır.",
+          "Tarihi ve konumu kaydedin: fotoğraf kadar değerlidirler."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "Temel kural dokunmamaktır. Mercanlar kırılgan hayvanlardır; bir dokunuş, bir dürtme, bir palet vuruşu ya da denge için konan bir el onlara zarar verir ve birçoğu yasayla korunur. Diğer hayvanlara da dokunmayın: balıkları ve pek çok deniz omurgasızını enfeksiyondan koruyan mukus tabakası bir elle, bir eldivenle ya da bir ayakla kolayca kalkar. Deniz koruma alanlarında manta vatozları ve balina köpekbalıklarıyla fiziksel etkileşim, hayvan bundan hoşlanıyor gibi görünse bile yönetmelikle yasaklanmıştır. Yüzerlik kontrolü de teknik değil, etik meselesidir: resifin üzerinde süzülün ve akıntı güçlüyse şamandıra halatına tutunun, asla resife değil.",
+          "Beslemeyin ve toplamayın. Balıkları beslemek resif balıklarının doğal beslenme davranışını keser, o noktaya ait olmayan türleri çeker ve balıklara yem bekleyip yüzücüleri ısırmayı öğretir — bazı yargı bölgelerinde bu yasa dışıdır. Koruma alanından hiçbir şey çıkmaz, ne bir deniz kabuğu ne de bir mercan parçası: boş görünen kabukların içinde çoğu zaman korkmuş bir hayvan vardır; gerçekten boş olanlar ise keşiş yengeçlerine, kaya midyelerine, genç mercanlara ve süngerlere barınak olur. Megafauna için Amerika Birleşik Devletleri'ndeki referans yasal mesafeler şöyledir: balinalarda genel olarak 90 metre, deniz kaplumbağalarında 45 metre, foklar ile deniz aslanlarında 45 metre; Washington'ın iç sularındaki orkalar için 180 metre ve Kuzey Atlantik sağ balinası için 450 metre, azami izleme süresi ise 30 dakika. Brezilya suları ICMBio ve IBAMA'nın kendi kurallarına tabidir: bu rakamları yerel yasa olarak değil, iyi uygulama olarak görün."
+        ],
+        "checklist": [
+          "Mercana dokunmayın ve dengenizi sağlamak için ona yaslanmayın.",
+          "Balıklara, vatozlara ya da kaplumbağalara dokunmayın: koruyucu mukus kalkar.",
+          "Resif balıklarını hiçbir koşulda beslemeyin.",
+          "Deniz kabuğu, mercan parçası ya da herhangi bir hatıra toplamayın.",
+          "Megafaunadan mesafenizi koruyun ve izleme süresini sınırlayın."
+        ]
+      }
+    }
+  },
+  "gardenBird": {
+    "label": "Bahçe ve şehir kuşları",
+    "topics": {
+      "role": {
+        "advice": [
+          "Bunlar bahçelerde, meydanlarda, kent parklarında, çatılarda ve yol kenarlarında yaşayan, beslenen ya da yuvalanan kuşlardır — hem insan peyzajına dayanıklı yerliler hem de tümüyle sinantropik egzotikler. Bütün yaban hayatının dört şeye ihtiyacı vardır: besin, su, örtü ve üreyip yavru büyütecek alan. Ortalama bir bahçede ilk tükenen genellikle besin değil, yıl boyu güvenilir bir su kaynağıdır.",
+          "En görünür kent kuşlarının önemli bir bölümü egzotiktir: kaya güvercini Brezilya'ya on altıncı yüzyılda Portekiz sömürgeciliğiyle ulaşmıştır ve bugün kendi sağlık mevzuatı olan sinantropik fauna olarak ele alınır. Resmî kentsel mücadele stratejisi su, besin, barınak ve erişim olmak üzere dört öğeye saldırır — bu da yerli kuşları çekmek için yaptığınızın tam tersidir. Eklenmeye değer bir tasarım ilkesi var: iç içe geçme önemlidir. Daha az hareketli türler için besinin, suyun ve barınağın çok sayıda küçük parça hâlinde dağılması, birkaç büyük parçadan daha iyi çalışır; çünkü bir hayvan ne kadar uzağa gitmek zorunda kalırsa avcılara o kadar açık hâle gelir."
+        ],
+        "checklist": [
+          "Sınırlayıcı kaynak genellikle besin değil, sudur.",
+          "Besini, suyu ve barınağı birkaç küçük parçaya yayın.",
+          "Bahçeyi fazla derleyip toplamayın: kuruyan bir ağaç ve bir çalı yığını birer barınaktır.",
+          "Güvercinlerin ve serçelerin baskınlığı yoğun yapılaşmış bir çevreye işaret eder.",
+          "Yerli meyvelerle beslenen kuşların gelişi, bitkilerinizin ürün verdiğini gösterir."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "Bu gruptaki bilinçli müdahale yemliktir ve onun bir sağlık bedeli vardır. Yemliklerde dolaşan hastalıklar arasında mikoplazmal konjonktivit, salmonelloz, aspergilloz, kuş çiçeği ve kuş gribi bulunur. Hijyen isteğe bağlı değildir: tohum yemliklerini iki haftada bir, hastalık şüphesi olan her durumda ise bu sıklığın iki katıyla, dokuz ölçü suya bir ölçü çamaşır suyu kullanarak temizleyin. Islatmadan önce görünür dışkıyı fırçayla temizleyin, iyice durulayın ve yeniden doldurmadan önce kurutun. Yerdeki dışkıları ve tohum kabuklarını, özellikle küflü ya da ıslak olanları tırmıkla toplayın; bu aynı zamanda kemirgen çekmenizi de önler. Ve her şeyi tek bir noktada toplamak yerine birkaç yemliği etrafa dağıtın, çünkü hastalık, yoğun grupların bulunduğu dar bir alanda daha kolay yayılır. Aynı temizlik kuralı kuş banyosu için de geçerlidir.",
+          "Hasta bir kuş gördüğünüzde — kızarmış, şişmiş ya da akıntılı gözler, tüysüz bölgelerde siğilimsi çıkıntılar, tüyleri kabarmış zayıf bir kuş — yemlikleri yaklaşık iki hafta boyunca kaldırın ve çevresi dahil her şeyi temizleyin. Hayvanı elinize almayın: yabani bir kuşu yasal olarak yalnızca veteriner hekimler ya da lisanslı yaban hayatı rehabilitasyon uzmanları tedavi edebilir. Ağız-dışkı yoluyla bulaşan bir hastalık ortaya çıkarsa, bulaşmayı en çok yoğunlaştıran tepsi tipi yemlikleri emekliye ayırmayı düşünün. Sahada, etkin yuvaların, yuvalama kolonilerinin, tüneklerin ve önemli beslenme alanlarının yakınında özellikle dikkatli olun, ses kaydı çalmayı sınırlayın ve fotoğraf çekerken dikkatli ve ölçülü davranın. Ve her şüpheyi çözen ilke: kuşlarla gözlemci arasında bir çıkar çatışması olduğunda önce kuşların iyiliği gelir."
+        ],
+        "checklist": [
+          "Yemlikleri iki haftada bir, dokuz ölçü suya bir ölçü çamaşır suyuyla temizleyin.",
+          "Yemliğin altındaki kabukları ve dışkıları tırmıkla toplayın.",
+          "Her şeyi tek bir yerde toplamak yerine birkaç yemliği etrafa dağıtın.",
+          "Hasta kuş: yemlikleri iki hafta kaldırın ve hayvana dokunmayın.",
+          "Ses kaydı çalmayı sınırlayın ve etkin yuvalardan uzak durun."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Yerli bitkiler bir yemlikten daha değerlidir. İdeal yaklaşım, yıl boyunca olabildiğince çok yerli besin sunmaktır — palamut, sert kabuklu meyveler, üzümsü meyveler, tomurcuklar, meyve, nektar ve tohum — ve tohum takviyesi ancak yerli kaynak azaldığında, her şeyden önce kışın devreye girer. Yalnızca yemliğe bel bağlamak kırılgan bir çözümdür: bozulur, siz seyahate çıkarsınız ve ona güvenmeyi öğrenmiş kuş ortada kalır.",
+          "Pratikte: bir kuş banyosu, sığ bir havuz, bir saksı tabağı, devirdaimli bir şelale ya da damlayan bir hortumla su sağlayın; sıcakta suyu düzenli değiştirin, soğukta ise erişilebilir tutun. Boyutu ve yoğunluğu değişen örtüler sunun — sık çalılar, içi boş kütükler, taş ve çalı yığınları, herdem yeşiller, uzun otlar — ki her tür beslenmek, saklanmak, kötü havadan kaçmak, kur yapmak ve yuvalanmak için doğru örtüyü seçebilsin. Olgun ağaçlar, sık çalılıklar ve yuva kutularıyla alan sağlayın. Yemlik kullanıyorsanız, extension servislerinin saydığı takviyeler ayçiçeği tohumu, nijer tohumu, proso darısı ve kırılmış mısırdır; yazın ise sinekkuşları nektar yemliklerine seve seve gelir. Tasarımı kedileri de hesaba katarak yapın: yükseltilmiş bir banyo ve yakınındaki alçak dalların budanması, pusu kuracakları saklanma yerini ortadan kaldırır."
+        ],
+        "checklist": [
+          "Yıl boyunca meyve veren yerli türler dikin.",
+          "Tohumu yalnızca kıtlık takviyesi olarak, her şeyden önce kışın kullanın.",
+          "Yıl boyunca güvenilir bir su kaynağını erişilebilir tutun.",
+          "Örtüyü çeşitlendirin: sık çalılar, çalı yığınları, taşlar, herdem yeşiller.",
+          "Kediler yüzünden banyoyu yüksekte ve çevresi sık çalılardan arınmış tutun."
+        ]
+      }
+    }
+  },
+  "forestBird": {
+    "label": "Orman ve göçmen kuşlar",
+    "topics": {
+      "role": {
+        "advice": [
+          "Bunlar kısmen örtüşen iki popülasyondur: ormana bağımlı kuşlar ve göçmen kuşlar. Brezilya topraklarında kaydedilen 1.971 kuş türünün 216'sı — yani %10,9'u — bir tür göç yapar: 141'i göçmen, 75'i ise popülasyonun yalnızca bir bölümünün hareket ettiği kısmi göçmen kategorisindedir; bir 91 tür de avaredir. Brezilya kuş familyalarının yaklaşık üçte birinde en az bir göçmen tür bulunur, ama beş familya bunların yarısından fazlasını, yani 112 türü barındırır: 36 türle tiran sinekkapanları, 23 türle kumkuşları, 22 türle fırtına kuşları ve yelkovanlar, 16 türle tangaralar ve 15 türle martılar ile sumrular.",
+          "Büyük meyveyle beslenen orman kuşları ormanın süsü değil, altyapısıdır: tukanlar ve kraksitler büyük tohumları yayar; avlanma ve parçalanma ise tam da gagası bu tohumları yutabilen kuşları ortadan kaldırır. Atlantik Ormanı'nda baskın olan juçara palmiyesinin meyvesi 58'den fazla kuş türü tarafından yenir. Ve parçalar hâlinde korunan orman, korunmuş orman ile aynı şey değildir: parçalar kesintili ve birbirinden uzaksa ya da hiçbiri hayatta kalma ve üreme için yeterince yoğun değilse çeşitlilik düşer."
+        ],
+        "checklist": [
+          "Yoğun bir alt kat topluluğu, kesintisiz ve yapılı bir ormana işaret eder.",
+          "Tukanların ve kraksitlerin yok olması avlanmaya ya da ileri parçalanmaya işaret eder.",
+          "Geçiş mevsiminde bir çamur düzlüğünde toplanan kıyı kuşları bir mola alanını gösterir.",
+          "Göç evet ya da hayır meselesi değildir: kısmi göçmenler ve avareler de vardır.",
+          "Yükselti göçü Brezilya'da vardır ve hafife alınmaktadır."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "Bu grubun merkezî hatası ses kaydı çalmaktır. Kuş gözlem etiği kuralları, kayıtların ve diğer sesli çekme yöntemlerinin kullanımının özellikle çok gözlem yapılan alanlarda, yerel olarak nadir türlerde ve tehdit altındaki ya da nesli tehlikedeki türlerde sınırlandırılmasını söyler — ve kuşları görmenin en zor olduğu yer olan orman, tam da bu isteğin zirve yaptığı yerdir.",
+          "Yuvaların çevresinde her şeyi üç risk yönetir: yuvaya kazara zarar vermek, ebeveynin yuvayı terk etmesi ve avcıları çekmek. Bir yuvanın yakınında asla bir dakikadan fazla kalmayın. En fazla üç dört günde bir uğrayın. Türlerin çoğunun yumurtladığı ve dişi ayrılırsa yumurtalarla yavruların hızla soğuduğu sabahın erken saatlerinden kaçının; dişinin geceyi geçirmek için döndüğü akşamüstünden ve sonrasından kaçının; kuluçkanın ilk günlerinden ve yavruların tüylenmek üzere olduğu günlerden kaçının, çünkü erkenden atlayabilirler ve o aşamada yuva dışında hayatta kalma şansı düşüktür; ve soğuk, nemli ya da yağmurlu havadan kaçının. Avcıları yönlendirecek izler bırakmayın ve yuvaları açığa çıkarabilecek bitki örtüsünü çiğnemeyin. Bir dişiyi asla yuvasından kalkmaya zorlamayın — kendiliğinden ayrılıp ayrılmayacağını görmek için birkaç dakika bekleyin, ayrılmazsa daha sonra geri gelin. Notlarınızı ancak yuvadan iyice uzaklaştıktan sonra yazın; bir yuva kutusunu açmadan önce ve açarken bir kez daha kapağına vurun."
+        ],
+        "checklist": [
+          "Ses kaydı çalmayı, her şeyden önce nadir ya da tehdit altındaki türlerde sınırlayın.",
+          "Bir yuvanın yakınında asla bir dakikadan fazla kalmayın.",
+          "Yuvaları sabahın erken saatlerinde, akşamüstü ya da kötü havada kontrol etmeyin.",
+          "Bir dişiyi asla yuvasından kalkmaya zorlamayın.",
+          "Notlarınızı yuvadan uzakta yazın ve oraya giden bir iz bırakmayın."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Yaşam alanı çok şey anlatır. Kesintisiz ormandaki gölgeli bir alt kat, kenar etkisine son derece duyarlı, az hareketli gruplara işaret eder; olgun bir taç katı, büyük meyve veren ağaçlara ve yuvalanmak için kovuklara bağımlı kuşlara işaret eder; orman tabanı, avlanmaya çok duyarlı gruplara işaret eder; geçiş mevsiminde kıyı, çamur düzlüğü ve tuzla ise rahatsızlığa son derece duyarlı bir alan olan kıyı kuşu molasına işaret eder. Göçmen kuşlar birbirinden binlerce kilometre uzaktaki kopuk alanlarda bulunan yaşam alanlarına bağımlıdır ve bazıları, yalnızca birkaç gün kullandıkları, dinlendikleri, tüy döktükleri, beslendikleri ve enerji rezervi biriktirdikleri yerlere kritik ölçüde bağımlıdır.",
+          "Bu yüzden tarih, yer kadar önemlidir. Gidiş rotası genellikle dönüş rotasından farklı olduğu ve kuşlar rotalarını koşullara göre ayarladığı için tarihli kayıtlar rota bilgisini doğrudan besler — ve mevsim dışı bir kayıt, sıradan bir kayıttan daha bilgilendirici olabilir. Göçmen bir kuşu kesin tarih ve konum olmadan kaydetmek, tam da en değerli veriyi kaybetmek demektir. Sahada patikalarda kalın, yaşam alanına verilen rahatsızlığı en aza indirin ve ayakta duran ölü ağaçları koruyun; onlar pek çok tür için birer yuva kovuğudur."
+        ],
+        "checklist": [
+          "Özellikle göçmen türlerde her zaman kesin tarih ve konum kaydedin.",
+          "Mevsim dışı tek bir kayıt, sıradan on kayıttan daha değerli olabilir.",
+          "Patikalarda kalın ve yaşam alanına verilen rahatsızlığı en aza indirin.",
+          "Ayakta duran ölü ağaçları koruyun: pek çok tür için yuva yeridir.",
+          "Ormanda ya da bir göç molası alanında yabani kuşları beslemeyin."
+        ]
+      }
+    }
+  },
+  "grainCrop": {
+    "label": "Tahıl ve hububat ürünleri",
+    "topics": {
+      "soil": {
+        "advice": [
+          "Burada beslenmenin merkezî kavramı gizli açlıktır: ürünlerin çoğu, eksiklik ya da toksisite belirtileri görünür hâle gelmeden çok önce verim kaybetmeye başlar ve belirtisiz seyreden bu kayıp yüksektir. Bir belirti ortaya çıktığında ise her zaman şiddetli açlığı gösterir — asla hafif ya da orta düzey bir eksikliği değil. Besin elementinin hareketliliği hangi yaprağa bakacağınızı belirler: azot, potasyum, fosfor ve magnezyum gibi hareketli elementler belirtileri önce yaşlı yapraklarda gösterir, çünkü bitki onları yenilere aktarır; kalsiyum ve bor gibi hareketsiz elementler ise belirtileri yeni yapraklarda ve büyüme noktasında gösterir.",
+          "Çeltikteki bazı görsel desenler referans olarak kullanılabilir: yaşlı bir yaprağın ucundan başlayıp kenarları boyunca inen ters V biçimli nekroz potasyumu işaret eder; uçları bronzlaşmış ya da mora çalan, çok dar ve dik yeni yapraklar fosforu işaret eder; kardeşlenme ve salkım başlangıcında bütün bir tarlanın sararması azotu işaret eder; ve bütün alana yayılmak yerine lekeler hâlinde çıkan bir eksiklik tipik bir potasyum desenidir. Herbisit toksisitesi eksikliği taklit eder, ama ilaçlamadan hemen sonra ortaya çıkar — iki durumu ayıran şey işte bu zamansal yakınlıktır. Son olarak, tane ile silaj toprak açısından aynı ürün değildir: fosfor neredeyse tümüyle taneye taşınır, onu azot izler; potasyum ve kalsiyum ise çoğunlukla sapta kalır. Bu yüzden vejetatif kısmı da kaldıran silajda bereket sorunları daha erken ortaya çıkar."
+        ],
+        "checklist": [
+          "Belirti beklemeyin: o göründüğünde kayıp çoktan gerçekleşmiştir.",
+          "Hareketli elementler yaşlı yaprakta, hareketsizler yeni yaprakta belirir.",
+          "Teşhisi toprak analizi ve tarla geçmişiyle koyun, asla tek bir yaprak fotoğrafıyla değil.",
+          "İlaçlamadan hemen sonra çıkan zarar eksiklik değil, herbisittir.",
+          "Silaja gidecek bir ürün için tane önerisini kullanmayın."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Buradaki karar takvimle değil, sayımla verilir ve standartlaştırılmış örneklemesi en ucuz olan grup budur. Mantık üç eşiğe dayanır: denge düzeyi, ekonomik zarar düzeyi ve onun hemen altında duran mücadele düzeyi. Mısırın toprak zararlıları için otuza otuz santimetre ve on beş santimetre derinliğinde, elenmiş bir toprak örneği kullanın — tel kurdunda örnek başına iki ya da daha fazla böcek çoktan mücadeleyi gerektirir ve örnek başına ortalama bir birey bile önemli zarar yapar. Güz orduğu kurdunda ise bir hektar içinde rastgele beş noktada saldırıya uğramış bitki sayısını örnekleyin: en az yüz çuval potansiyeli olan tarlalarda, erken belirti gösteren bitkilerin %10'u çoktan mücadele gerektiğini gösterir ve en duyarlı dönem sekiz ila on yaprak evresidir. İlk işaret, larvaların yaprakları kazıyıp saydam pencereler bırakmasıdır.",
+          "Soyada yöntem darbe bezidir: tercihen beyaz, bir metre uzunluğunda bir bez iki sıra arasına gerilir; bir sıra bezin üzerine kuvvetlice silkelenir ve erişkinlerle gençler sayılır — kritik dönem boyunca haftada bir. Asgari örnek sayısı on hektara kadar altı, otuz hektara kadar sekiz ve yüz hektara kadar ondur; daha büyük alanlar yüzer hektarlık bloklara bölünür. Toprak zararlılarını ekimden önce örnekleyin, çünkü ürün yerleştikten sonra alınan önlemler verimsizdir. Nimfleri de erişkinlerle birlikte sayın: üçüncü ila beşinci dönem kokarca böcekleri benzer zarar yapar ve üreme döneminde popülasyonun büyük bölümünü oluşturur; eylem eşiği tane için sıra metresinde iki, tohumluk için bir kokarca böceğidir. Örneklemeyi günün serin saatlerinde yapın, çünkü kokarca böcekleri hızlıdır ve sıcakta kaçar. Bunun ölçülmüş bir getirisi var: Paraná'da 2017/2018 sezonunda 196 referans biriminde entegre zararlı yönetimi, verimi eşdeğer tutarken insektisit uygulamalarını %43'ten fazla azaltmıştır. Ürünü maliyet ve toksisitenin yanı sıra doğal düşmanlara seçiciliğine göre de seçin, her zaman güncel MAPA kayıtlarına uyun ve tohum ilaçlamasını yalnızca sorunun geçmişi olan yerlerde yapın, asla körü körüne rutin olarak değil."
+        ],
+        "checklist": [
+          "İlaçlamadan önce sayın: karar takvimle değil, eşikle verilir.",
+          "Mısır: yaprakları kazınmış bitkilerin %10'u çoktan mücadele gerektirir.",
+          "Soya: yüz hektara kadar en az on darbe bezi örneği.",
+          "Toprak zararlılarını ekimden önce örnekleyin.",
+          "Nimfleri erişkinlerle birlikte sayın ve örneklemeyi günün serin saatlerinde yapın."
+        ]
+      }
+    }
+  },
+  "vegCrop": {
+    "label": "Sebze ve meyve ürünleri",
+    "topics": {
+      "watering": {
+        "advice": [
+          "Burada su, aklınıza geldiğinde sulamak değil, ince bir yönetimdir: kPa cinsinden ölçülen bir toprak gerilimi sınırı vardır ve bu sınır sulama sistemine göre değişir. Patlıcanda, tansiyometre yağmurlama ya da karık sulamada 30 ila 50 kPa, damlamada ise 10 ila 15 kPa gösterdiğinde sulama yapılır; en kritik evrelerde, kumlu topraklarda ve yüksek buharlaşma talebi altında aralığın alt ucu kullanılır. Sensör, etkili kök derinliğinin %50'sine ve bitkiden on ila yirmi santimetre uzağa yerleştirilir; etkili derinlik ise köklerin yaklaşık %80'inin toplandığı derinliktir.",
+          "Fazla su, eksiklik kadar zararlıdır: aşırı bitki büyümesini tetikler, çiçeklenmeyi ve meyve tutumunu engeller, yetersiz havalanma yoluyla toprak hastalıklarını destekler ve besinleri yıkayıp götürür. Eksiklik ise en çok çiçeklenme ve meyve döneminde ağır basar; çiçeklerin ve meyvelerin dökülmesine, meyve büyümesinin azalmasına ve kalite kusurlarına yol açar — şekilsiz ve dengesiz meyve, çiçek burnu çürüklüğü ve acı tat. Sabahın sonunda yaprakların solması, sulamanın geciktiğine dair kaba ama işe yarar bir işarettir. Sistem seçimi de yalnızca hidrolik değil, bir bitki sağlığı kararıdır: karık ve damlama, yaprakları ıslatmadıkları için yaprak hastalıklarını azaltır; ama domates yaprak galeri güvesine karşı yağmurlama avantajlıdır, çünkü yumurtaları, larvaları ve pupaları yere düşürür. Karar, bölgenizde hangi sorunun baskın olduğuna bağlıdır."
+        ],
+        "checklist": [
+          "Damlamada, yağmurlama ya da karık sulamadan farklı bir gerilim sınırı kullanın.",
+          "Sensörü etkili kök derinliğinin %50'sine ve bitkiden on ila yirmi santimetre uzağa yerleştirin.",
+          "Çiçeklenme ve meyve döneminde suyun azalmasına izin vermeyin.",
+          "Sabahın sonunda solma, sulamanın geciktiğini gösterir.",
+          "Sulama sistemini bölgenizde baskın olan soruna göre seçin."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "Fazla besin elementinin kendine ait belirtileri vardır ve diğerlerinin dengesini bozar. Soğanda fazla azot kalın boyunlu bitkiler üretir, yaprak hastalıklarına yatkınlığı artırır ve hasat sonrası depolama ömrünü kısaltır; fazla potasyum magnezyum ve kalsiyum eksikliğine yol açar; fazla fosfor ise çinko ve bakır eksikliğine yol açar. Bu yüzden diğerlerine bakmadan tek bir elementi düzeltmek genellikle bir sonraki sorunu yaratır.",
+          "Hareketlilik hangi yaprağı inceleyeceğinizi söyler: azot, potasyum, fosfor ve magnezyum önce yaşlı yapraklarda belirir; kalsiyum ile kükürt ise yenilerde — kırılmadan yana devrilen yeni bir soğan yaprağı kalsiyumun imzasıdır. Ezberlenmeye değer iki doku var: öncesinde klorozis olmadan birdenbire ortaya çıkan nekroz çinkoya, bakıra ya da manganeze işaret eder; kadifemsi dokudaki nekroz ise demirin karakteristik izidir ve diğerlerinin hepsinden ayrılır. Normal koşullarda Brezilya topraklarında soğan için yalnızca bor ve çinko, bazı durumlarda da bakır yetersiz kalma eğilimindedir. Yanlış pozitife de dikkat edin: düşük sıcaklıklar, fazla su ya da uzun süreli kuraklık, azot eksikliğine çok benzeyen belirtiler üretebilir."
+        ],
+        "checklist": [
+          "Bir elementi, dengesini bozduğu diğerlerine bakmadan düzeltmeyin.",
+          "Önce yaşlı yapraklar: azot, potasyum, fosfor, magnezyum. Yeni yapraklar: kalsiyum, kükürt.",
+          "Öncesinde klorozis olmadan birdenbire çıkan nekroz çinko, bakır ya da manganezi düşündürür.",
+          "Kadifemsi dokudaki nekroz demirin izidir.",
+          "Soğuk, su birikmesi ve kuraklık — üçü de azot eksikliğini taklit eder."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Buradaki yönetim, kimyasal olmadan önce kültürel ve kolektiftir. Tarla düzeyinde: münavebe uygulayın, hasattan hemen sonra bitki artıklarını yok edin, alanı yabancı otlardan ve böceklerle akarlara konakçılık eden diğer bitkilerden arındırın ve bölgeye uyarlanmış çeşitler kullanın. Kolektif düzeyde — ve bu grubu farklı kılan da budur — üreticilerin birlikte hareket etmesi gerekir: her mikro bölgedeki ekimi olabilecek en kısa pencerede toplayın, ortak sorunlarla herkesin aynı anda yüzleşmesi için girdileri eşgüdümlü kullanın ve zararlıların bölgeler arasında yayılmasını azaltmak için kasaları ve nakliyeyi sistematik olarak dezenfekte edin. Düzenli olarak, özellikle tarla kenarlarına ve en çok yabancı ot bulunan noktalara dikkat ederek kontrol edin, çünkü bulaşma orada yoğunlaşır.",
+          "Bu grupta en büyük zararlı zararı genellikle dolaylıdır ve virüs üzerinden gelir. Beyazsinek Brezilya'da 1923'ten beri bilinir ve 1993'te domates ile lahanada, geminivirüs belirtileriyle ilişkili olarak bulunmuştur; şiddetli salgınlar ve üretimin %50'sine varan kayıplar görülmüştür: erişkinler ve nimfler, meyvenin iç duvarlarını beyazımsı ve süngerimsi bırakan ve fumajini teşvik eden şekerli bir madde ile bir toksin enjekte eder. Zamanlama da belirleyicidir: küçük meyve delici kurda karşı ilaçlamaya çiçeklenmeden itibaren başlanmalı ve jet, çiçek tomurcuklarına ve meyvelere yöneltilmelidir; çünkü siz meyvede deliği gördüğünüzde larva çoktan içeridedir. Ve editoryal nitelikte bir güvenlik kuralı: hiçbir kaynaktan etkin madde ya da doz kopyalamayın, çünkü pestisit kayıtları her sezon değişir — güncel MAPA kaydına bakın."
+        ],
+        "checklist": [
+          "Hasattan hemen sonra bitki artıklarını yok edin.",
+          "Mikro bölgenin ekimini olabilecek en dar pencerede toplayın.",
+          "Alanlar arasında kasaları ve araçları dezenfekte edin.",
+          "Yalnızca ortayı değil, tarla kenarlarını da kontrol edin.",
+          "İlaçlamaya çiçeklenmede başlayın, meyvede deliği gördüğünüzde değil."
+        ]
+      }
+    }
+  }
+}

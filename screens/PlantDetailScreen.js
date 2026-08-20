@@ -25,7 +25,6 @@ import { getWateringStatus, WATER_INTERVAL_DAYS } from '../components/watering';
 import { identify } from '../components/identify';
 import { shareEntity } from '../components/share';
 import InstallNudgeCard from '../components/InstallNudgeCard';
-import CategoryIcon from '../components/CategoryIcon';
 import PaywallModal from '../components/PaywallModal';
 import AlertModal from '../components/AlertModal';
 import { useAppAlert } from '../components/useAppAlert';
@@ -39,6 +38,8 @@ import TopBar, { TopBarIcon } from '../components/TopBar';
 import Pronounce from '../components/Pronounce';
 import HelpfulRow from '../components/HelpfulRow';
 import ResultActionBar from '../components/ResultActionBar';
+import QuickFactGrid from '../components/QuickFactGrid';
+import shortFact from '../components/shortFact';
 
 function InfoRow({ label, value, color }) {
   return (
@@ -46,40 +47,6 @@ function InfoRow({ label, value, color }) {
       <Text style={styles.infoLabel}>{label}</Text>
       <Text style={[styles.infoValue, color && { color }]}>{value}</Text>
     </View>
-  );
-}
-
-// Fato rapido do hub do resultado (video do concorrente): card compacto de
-// grade 2 colunas - icone colorido, valor curto honesto do proprio campo,
-// chevron - que deep-linka na aba certa do manual CareTopics.
-function QuickFact({ icon, color, label, value, onPress }) {
-  return (
-    <TouchableOpacity
-      style={styles.factCard}
-      onPress={onPress}
-      activeOpacity={0.8}
-      accessibilityRole="button"
-      accessibilityLabel={label}
-    >
-      <View style={styles.factTop}>
-        <Ionicons
-          name={icon}
-          size={15}
-          color={color}
-          accessibilityElementsHidden={true}
-          importantForAccessibility="no-hide-descendants"
-        />
-        <Text style={styles.factLabel} numberOfLines={1}>{label}</Text>
-        <Ionicons
-          name="chevron-forward"
-          size={13}
-          color={colors.textMuted}
-          accessibilityElementsHidden={true}
-          importantForAccessibility="no-hide-descendants"
-        />
-      </View>
-      <Text style={styles.factValue} numberOfLines={2}>{value}</Text>
-    </TouchableOpacity>
   );
 }
 
@@ -178,6 +145,12 @@ export default function PlantDetailScreen({ route }) {
     { label: t('common.nativeOrigin'), value: plant.origin },
     { label: t('detail.wateringNeeds'), value: plant.waterLabel || plant.water },
   ].filter((r) => r.value);
+
+  // Auditoria de diagramacao 20/08: quando o vendor nao tem nome comum ele
+  // devolve name === scientific, e a primeira dobra imprimia o mesmo latim
+  // duas vezes. Nesse caso a linha do cientifico some (o speaker nao se
+  // perde - ele encosta no proprio nome logo abaixo).
+  const showScientific = !!plant.scientific && plant.scientific !== plant.name;
 
   // Hub do resultado (video do concorrente): long prose moves to the
   // CareTopicsScreen manual; each quick fact / door card deep-links into one
@@ -303,19 +276,30 @@ export default function PlantDetailScreen({ route }) {
       />
 
       <ScrollView contentContainerStyle={styles.scroll} showsVerticalScrollIndicator={false}>
+        {/* Hero compacto (auditoria de diagramacao 20/08): 220 -> 150, pra
+            primeira dobra caber FATO e nao so foto. `height` ja era prop
+            opcional do PlantHero - passar 150 daqui mantem o default de 220
+            intacto pras outras 6 telas de resultado. */}
         <PlantHero
           photoUri={plant.photoUri}
           similarImages={plant.similarImages}
           scientific={plant.scientific}
           accent={meta.accent}
           icon={meta.tabIcon}
+          height={150}
         />
 
         <View style={styles.nameRow}>
           <View style={{ flex: 1 }}>
-            <Text style={styles.name}>{plant.name}</Text>
-            {/* Speaker do concorrente (hub do resultado): ouvir o latim. */}
-            {!!plant.scientific && (
+            {/* Speaker do concorrente (hub do resultado): ouvir o latim.
+                Sem nome comum (name === scientific) a linha de baixo nao
+                repete o latim - o speaker vem junto do nome (auditoria de
+                diagramacao 20/08). */}
+            <View style={styles.scientificRow}>
+              <Text style={styles.name}>{plant.name}</Text>
+              {!!plant.scientific && !showScientific && <Pronounce text={plant.scientific} />}
+            </View>
+            {showScientific && (
               <View style={styles.scientificRow}>
                 <Text style={styles.scientific}>{plant.scientific}</Text>
                 <Pronounce text={plant.scientific} />
@@ -335,93 +319,88 @@ export default function PlantDetailScreen({ route }) {
           </View>
         </View>
 
-        <View style={[styles.typePill, { backgroundColor: meta.accent + '22' }]}>
-          <CategoryIcon
-            name={meta.tabIcon}
-            size={13}
-            color={meta.accent}
-            accessibilityElementsHidden={true}
-            importantForAccessibility="no-hide-descendants"
+        {/* ORDEM DO SCROLL - auditoria de diagramacao 20/08 ("fato antes de
+            prosa"): a primeira dobra entregava zero fato sobre a especie. O
+            chip de categoria saiu daqui - o header ja diz "Perfil de Planta" e
+            o dock repete; era ruido puro. Agora vem seguranca -> grade de
+            fatos, e extras/mapa/visao geral descem pra depois deles.
+            "Quente primeiro": havendo toxicidade, ela abre ANTES da grade -
+            responde o medo que trouxe o usuario aqui. Sem toxicidade a banda
+            inteira nao renderiza (nunca um card vazio). */}
+        {!!plant.toxicity && (
+          <ZoneBand gutter={20}>
+            <SectionCard icon="warning-outline" title={t('detail.safetySection')} color={colors.error}>
+              <Text style={styles.body}>{plant.toxicity}</Text>
+            </SectionCard>
+          </ZoneBand>
+        )}
+
+        {/* Quick facts (auditoria de diagramacao 20/08): um componente so
+            (QuickFactGrid) no lugar do bloco copiado, e VALOR curto no lugar
+            da prosa truncada. Luz/solo/toxicidade passam pelo shortFact - se
+            a prosa do vendor nao casar palavra-chave nenhuma o card some em
+            vez de mostrar meia frase; a prosa inteira continua na aba do
+            manual. Rega ja vinha curta (rotulo do proprio vendor). */}
+        {topics.length > 0 && (
+          <QuickFactGrid
+            accent={meta.accent}
+            facts={[
+              {
+                key: 'watering',
+                icon: 'water-outline',
+                color: colors.info,
+                label: t('detail.wateringGuideSection'),
+                value: plant.waterLabel || plant.water,
+                onPress: () => openTopic('watering'),
+              },
+              {
+                key: 'light',
+                icon: 'sunny-outline',
+                color: colors.warning,
+                label: t('detail.lightSection'),
+                value: shortFact('light', plant.bestLightCondition, t),
+                onPress: () => openTopic('light'),
+              },
+              {
+                key: 'soil',
+                icon: 'layers-outline',
+                color: colors.purple,
+                label: t('detail.soilSection'),
+                value: shortFact('soil', plant.bestSoilType, t),
+                onPress: () => openTopic('soil'),
+              },
+              {
+                key: 'safety',
+                icon: 'warning-outline',
+                color: colors.error,
+                label: t('detail.safetySection'),
+                value: shortFact('toxicity', plant.toxicity, t),
+                onPress: () => openTopic('safety'),
+              },
+            ]}
           />
-          <Text style={[styles.typePillText, { color: meta.accent }]}>{t('categories.plant.label')}</Text>
-        </View>
+        )}
 
         {/* Reference photos, runner-up species and a low-confidence warning -
-            all built from data the API already returned. */}
+            all built from data the API already returned. Desceu pra depois da
+            grade de fatos (auditoria de diagramacao 20/08). */}
         <IdentificationExtras entity={plant} accent={meta.accent} />
 
         {/* Mapa de distribuicao REAL (GBIF) - o concorrente desenha o dele;
             este e ciencia com credito. Some sozinho sem match/offline. */}
         <DistributionMap scientific={plant.scientific} accent={meta.accent} />
 
-        {/* Section order is deliberate ("quente primeiro, ficha depois"):
-            safety answers the fear that brought many users here, so it leads;
-            story and care advice follow; the technical info rows close the
-            screen as a receipt rather than opening it as a wall of data. */}
         {/* Zona de cor (diagramacao-premium): each thematic run of sections
             lives in a full-bleed band one shade above the background; the gap
             between bands is the scene showing through. ZoneBand is a pure
-            wrapper - the quente-primeiro order above stays byte for byte. */}
+            wrapper. A visao geral e PROSA, entao vem depois do fato
+            (auditoria de diagramacao 20/08); a seguranca continua sendo a
+            unica prosa que abre a tela. */}
         <ZoneBand gutter={20}>
-          {!!plant.toxicity && (
-            <SectionCard icon="warning-outline" title={t('detail.safetySection')} color={colors.error}>
-              <Text style={styles.body}>{plant.toxicity}</Text>
-            </SectionCard>
-          )}
-
           <SectionCard icon="leaf-outline" title={t('common.overview')} color={meta.accent}>
             <Text style={styles.body}>{plant.overview || t('sound.noContentBody')}</Text>
           </SectionCard>
         </ZoneBand>
-
-        {/* Quick facts (hub do resultado, video do concorrente): grade 2
-            colunas de fatos curtos e honestos - cada card e uma porta pro
-            manual CareTopics na aba certa. Only renders with a manual to
-            open and at least one short fact to show. */}
-        {topics.length > 0 &&
-          !!(plant.waterLabel || plant.water || plant.bestLightCondition || plant.bestSoilType || plant.toxicity) && (
-          <View style={styles.factsBlock}>
-            <Text style={styles.factsTitle}>{t('detail.quickFacts')}</Text>
-            <View style={styles.factsGrid}>
-              {!!(plant.waterLabel || plant.water) && (
-                <QuickFact
-                  icon="water-outline"
-                  color={colors.info}
-                  label={t('detail.wateringGuideSection')}
-                  value={plant.waterLabel || plant.water}
-                  onPress={() => openTopic('watering')}
-                />
-              )}
-              {!!plant.bestLightCondition && (
-                <QuickFact
-                  icon="sunny-outline"
-                  color={colors.warning}
-                  label={t('detail.lightSection')}
-                  value={plant.bestLightCondition}
-                  onPress={() => openTopic('light')}
-                />
-              )}
-              {!!plant.bestSoilType && (
-                <QuickFact
-                  icon="layers-outline"
-                  color={colors.purple}
-                  label={t('detail.soilSection')}
-                  value={plant.bestSoilType}
-                  onPress={() => openTopic('soil')}
-                />
-              )}
-              {!!plant.toxicity && (
-                <QuickFact
-                  icon="warning-outline"
-                  color={colors.error}
-                  label={t('detail.safetySection')}
-                  value={plant.toxicity}
-                  onPress={() => openTopic('safety')}
-                />
-              )}
-            </View>
-          </View>
-        )}
 
         {/* Care band. Guarded: every child is conditional, and an empty band
             would render as a floating pill of nothing. photoBase64 covers the
@@ -653,8 +632,12 @@ const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: colors.background },
   // paddingBottom >= 120: room for the fixed ResultActionBar (viewport law).
   scroll: { padding: 20, paddingBottom: 120 },
-  nameRow: { flexDirection: 'row', alignItems: 'flex-start', marginTop: 18 },
-  name: { fontSize: 24, fontWeight: '800', color: colors.text },
+  // marginBottom repoe o respiro que o chip de categoria removido dava
+  // (auditoria de diagramacao 20/08).
+  nameRow: { flexDirection: 'row', alignItems: 'flex-start', marginTop: 18, marginBottom: 8 },
+  // flexShrink: o nome agora divide a linha com o speaker quando o vendor nao
+  // manda nome comum.
+  name: { fontSize: 24, fontWeight: '800', color: colors.text, flexShrink: 1 },
   scientificRow: { flexDirection: 'row', alignItems: 'center', gap: 8 },
   scientific: { fontSize: 15, fontStyle: 'italic', color: colors.textSecondary, marginTop: 3 },
   commonNamesLine: { fontSize: 12.5, color: colors.textMuted, marginTop: 4 },
@@ -667,34 +650,10 @@ const styles = StyleSheet.create({
   },
   confidenceLabel: { fontSize: 10, color: colors.textMuted, fontWeight: '600' },
   confidenceValue: { fontSize: 18, color: colors.accentLight, fontWeight: '800' },
-  typePill: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    alignSelf: 'flex-start',
-    paddingHorizontal: 12,
-    paddingVertical: 6,
-    borderRadius: 20,
-    marginTop: 12,
-    marginBottom: 20,
-  },
-  typePillText: { fontSize: 12.5, fontWeight: '700', marginLeft: 6 },
   body: { color: colors.textSecondary, fontSize: 14, lineHeight: 21 },
-  // Hub do resultado (video do concorrente): quick facts + cards-porta.
-  factsBlock: { marginTop: 20 },
-  factsTitle: { fontSize: 16, fontWeight: '800', color: colors.text, marginBottom: 10 },
-  factsGrid: { flexDirection: 'row', flexWrap: 'wrap', gap: 10 },
-  factCard: {
-    flexBasis: '46%',
-    flexGrow: 1,
-    backgroundColor: colors.card,
-    borderRadius: 14,
-    borderWidth: 1,
-    borderColor: colors.border,
-    padding: 12,
-  },
-  factTop: { flexDirection: 'row', alignItems: 'center', gap: 6, marginBottom: 6 },
-  factLabel: { flex: 1, fontSize: 11.5, fontWeight: '700', color: colors.textMuted },
-  factValue: { fontSize: 13, fontWeight: '600', color: colors.text, lineHeight: 18 },
+  // Hub do resultado (video do concorrente): cards-porta. Os estilos dos
+  // fatos rapidos sairam daqui na auditoria de diagramacao 20/08 - moraram
+  // copiados em 6 telas e agora vivem so em components/QuickFactGrid.js.
   doorCard: {
     flexDirection: 'row',
     alignItems: 'center',

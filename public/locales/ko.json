@@ -3,6 +3,7 @@
     "overview": "개요",
     "details": "상세 정보",
     "readMore": "더 알아보기",
+    "readLess": "간략히 보기",
     "confidence": "신뢰도",
     "nativeOrigin": "원산지",
     "save": "내 컬렉션에 저장",
@@ -263,7 +264,18 @@
     "fundamentals": "핵심 조언",
     "checklistLabel": "시작하기 전에",
     "problemsLabel": "문제 신호",
-    "solutionsLabel": "해결 방법"
+    "solutionsLabel": "해결 방법",
+    "lightFullSun": "양지",
+    "lightPartial": "반음지",
+    "lightShade": "음지",
+    "soilWellDrained": "배수 잘됨",
+    "soilSandy": "사질토",
+    "soilLoam": "양토",
+    "soilAcidic": "산성",
+    "toxicShort": "독성",
+    "rangeIdeal": "이상적",
+    "rangeOk": "허용 가능",
+    "rangeBad": "부적합"
   },
   "disease": {
     "overviewSection": "개요",

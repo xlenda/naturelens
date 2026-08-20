@@ -3,6 +3,7 @@
     "overview": "Przegląd",
     "details": "Szczegóły",
     "readMore": "Czytaj więcej",
+    "readLess": "Czytaj mniej",
     "confidence": "Pewność",
     "nativeOrigin": "Pochodzenie",
     "save": "Zapisz w mojej kolekcji",
@@ -263,7 +264,18 @@
     "fundamentals": "Podstawowe zasady",
     "checklistLabel": "Zanim zaczniesz",
     "problemsLabel": "Oznaki problemów",
-    "solutionsLabel": "Rozwiązania"
+    "solutionsLabel": "Rozwiązania",
+    "lightFullSun": "Pełne słońce",
+    "lightPartial": "Półcień",
+    "lightShade": "Cień",
+    "soilWellDrained": "Dobrze zdrenowana",
+    "soilSandy": "Piaszczysta",
+    "soilLoam": "Gliniasta",
+    "soilAcidic": "Kwaśna",
+    "toxicShort": "Trująca",
+    "rangeIdeal": "Idealne",
+    "rangeOk": "Akceptowalne",
+    "rangeBad": "Nieodpowiednie"
   },
   "disease": {
     "overviewSection": "Przegląd",

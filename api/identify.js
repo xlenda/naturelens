@@ -318,7 +318,16 @@ const CATEGORIES = {
       if (!data) return null;
 
       const topCrop = data?.result?.crop?.suggestions?.[0];
-      const topDisease = data?.result?.disease?.suggestions?.[0];
+      // A healthy plant comes back as a "disease" literally named healthy, and
+      // the client then drew a report about nothing - the word repeated as
+      // title and italic scientific name, next to a raw "Abiotic" pill
+      // (auditoria de diagramacao 20/08). Dropped HERE because this is the last
+      // point where the name is still the vendor's English (translateEntity
+      // runs after) - and dropping it means the screen falls into the healthy
+      // card it already has for `disease: null`.
+      const topDisease = data?.result?.disease?.suggestions?.find(
+        (s) => !/^healthy\b/i.test((s?.name || '').trim())
+      );
       if (!topCrop && !topDisease) return { notFound: true };
 
       const diseaseDetails = topDisease?.details || {};

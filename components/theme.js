@@ -1,5 +1,25 @@
 export const colors = {
-  background: '#0E1512',
+  // CORRECAO 11, auditoria de diagramacao 20/08: "o card quase some no fundo".
+  // Era literalmente verdade - #1A241F sobre #0E1512 dava contraste WCAG 1.16
+  // e uma diferenca de luminancia perceptual de so 7 pontos de L* (o minimo
+  // confortavel num tema escuro fica na casa dos 10-14).
+  //
+  // Foi o FUNDO que escureceu (#0E1512 -> #070B09), nao o card que clareou, e
+  // por tres motivos:
+  //  1. e UM valor: a base da escada e que estava comprimida, entao surface,
+  //     card, surfaceElevated, border, sky, skyMid e zone ganham separacao
+  //     todos de uma vez, sem cascata de tokens;
+  //  2. clarear o card e bloqueado por cima: ele ja fica a menos de 1 ponto de
+  //     L* de surfaceElevated (#1F2A25), entao qualquer clareada que se veja
+  //     colide com o token de cima e obriga a remexer em mais tres;
+  //  3. contraste de TEXTO: escurecer o fundo melhora todo mundo - textMuted
+  //     sobre o fundo sai de 4.37 (reprovado) para 4.68, cruzando o AA -
+  //     enquanto clarear o card pioraria justamente o unico papel que ja
+  //     estava abaixo do AA (textMuted sobre card, 3.77 -> 3.59).
+  //
+  // Resultado: card vs fundo vai de 1.16 para 1.24 em WCAG e de 7.0 para 10.4
+  // em delta L* (+47%), com text 18.0:1 e textSecondary 10.7:1 sobre o fundo.
+  background: '#070B09',
   surface: '#161F1B',
   surfaceElevated: '#1F2A25',
   card: '#1A241F',
@@ -43,13 +63,21 @@ export const categoryColors = {
 // override spacing, never size/weight/alignment.
 export const type = {
   screenTitle: { fontSize: 24, fontWeight: '800', color: colors.text },
+  // CORRECAO 10, auditoria de diagramacao 20/08: era 22/800/center/34. O
+  // diretor de arte pegou o problema no centralizado - num feed de rolagem o
+  // titulo centrado quebra a margem de leitura, porque cada secao recomeca o
+  // olho num ponto horizontal diferente do corpo, que e todo alinhado a
+  // esquerda. Vira 17/700/left/18: cabeca de secao, nao capa.
+  // marginBottom cai de 14 para 10 junto: com 18 em cima, manter 14 embaixo
+  // deixaria o titulo quase equidistante dos dois lados - um titulo tem que
+  // abracar o conteudo dele, e nao flutuar entre as duas secoes.
   sectionTitle: {
-    fontSize: 22,
-    fontWeight: '800',
+    fontSize: 17,
+    fontWeight: '700',
     color: colors.text,
-    textAlign: 'center',
-    marginTop: 34,
-    marginBottom: 14,
+    textAlign: 'left',
+    marginTop: 18,
+    marginBottom: 10,
   },
   cardTitle: { fontSize: 15, fontWeight: '700', color: colors.text },
   body: { fontSize: 14, lineHeight: 21, color: colors.textSecondary },

@@ -3,6 +3,7 @@
     "overview": "अवलोकन",
     "details": "विवरण",
     "readMore": "और पढ़ें",
+    "readLess": "कम पढ़ें",
     "confidence": "विश्वास स्तर",
     "nativeOrigin": "मूल स्थान",
     "save": "मेरे संग्रह में सहेजें",
@@ -263,7 +264,18 @@
     "fundamentals": "बुनियादी सलाह",
     "checklistLabel": "शुरू करने से पहले",
     "problemsLabel": "समस्या के संकेत",
-    "solutionsLabel": "समाधान"
+    "solutionsLabel": "समाधान",
+    "lightFullSun": "पूर्ण धूप",
+    "lightPartial": "आंशिक छाया",
+    "lightShade": "छाया",
+    "soilWellDrained": "अच्छी जल निकासी",
+    "soilSandy": "रेतीली",
+    "soilLoam": "दोमट",
+    "soilAcidic": "अम्लीय",
+    "toxicShort": "विषैला",
+    "rangeIdeal": "आदर्श",
+    "rangeOk": "स्वीकार्य",
+    "rangeBad": "अनुपयुक्त"
   },
   "disease": {
     "overviewSection": "अवलोकन",

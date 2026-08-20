@@ -12,7 +12,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
 import * as Haptics from 'expo-haptics';
 import { useTranslation } from 'react-i18next';
-import { colors, shadow } from '../components/theme';
+import { colors, shadow, type } from '../components/theme';
 import DailyMissionsCard from '../components/DailyMissionsCard';
 import FindThumb from '../components/FindThumb';
 import NatureScene from '../components/NatureScene';
@@ -443,14 +443,11 @@ const styles = StyleSheet.create({
   // Composição centrada, com critério: a SECTION title centres and carries
   // weight; card titles and body text below stay left-aligned, because centred
   // reading text is the illegible half of this device.
-  sectionTitle: {
-    fontSize: 22,
-    fontWeight: '800',
-    color: colors.text,
-    textAlign: 'center',
-    marginTop: 34,
-    marginBottom: 16,
-  },
+  // Auditoria de diagramacao 20/08 (correcao 10): era uma COPIA literal do
+  // 22/800/center/34 - o token type.sectionTitle existia e ninguem consumia,
+  // entao corrigir o theme sozinho nao mudaria um pixel desta tela. Passa a
+  // consumir o token; o marginBottom local sai junto (o token ja traz 10).
+  sectionTitle: { ...type.sectionTitle },
   // Capa de livro: photo tile 110x150 with the title as an overlaid caption
   // and the status badge stamped on top. justifyContent pushes the caption to
   // the base; overflow clips the photo to the cover's corners.

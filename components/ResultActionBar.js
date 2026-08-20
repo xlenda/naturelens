@@ -2,6 +2,7 @@ import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { useTranslation } from 'react-i18next';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { colors } from './theme';
 
 // The competitor's fixed bottom action bar on the result: New (retake) |
@@ -12,9 +13,18 @@ import { colors } from './theme';
 // dock), and the host screen adds bottom padding to its scroll content.
 export default function ResultActionBar({ onNew, onShare, onSave, saved, accent = colors.accent }) {
   const { t } = useTranslation();
+  const insets = useSafeAreaInsets();
 
+  // Auditoria de diagramacao 20/08: com o dock escondido nas telas de detalhe,
+  // esta barra passou a ser o ultimo elemento antes da borda fisica da tela - e
+  // era o dock que carregava o respiro da area segura. Todas as telas usam
+  // SafeAreaView com edges={['top']} apenas, entao o inset de baixo tem que
+  // entrar aqui, senao o botao Salvar fica embaixo da barra de gestos do
+  // iPhone. Uma guarda no componente compartilhado cobre as 8 telas de detalhe
+  // de uma vez. Na web e no Android sem barra de gestos insets.bottom = 0 e o
+  // valor antigo (12) continua valendo, entao nada muda visualmente ali.
   return (
-    <View style={styles.wrap}>
+    <View style={[styles.wrap, { paddingBottom: Math.max(insets.bottom, 12) }]}>
       {!!onNew && (
         <TouchableOpacity
           style={styles.secondary}

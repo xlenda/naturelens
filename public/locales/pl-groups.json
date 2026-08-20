@@ -1,0 +1,857 @@
+{
+  "succulent": {
+    "label": "Sukulenty i kaktusy",
+    "topics": {
+      "watering": {
+        "advice": [
+          "Zasadą dla tej grupy jest cykl przemoczenia i przeschnięcia, a nie kalendarz. Podlewaj, aż cała bryła korzeniowa nasiąknie i woda wypłynie przez otwór drenażowy, opróżnij podstawkę, a potem pozwól podłożu wyschnąć do końca przed kolejnym podlaniem — zwykle co dwa do trzech tygodni w sezonie wzrostu, choć doniczka, światło i temperatura mocno to przesuwają. Powód jest fizjologiczny: to rośliny typu CAM, które otwierają aparaty szparkowe nocą, a w dzień trzymają je zamknięte. Między jednym impulsem wody a następnym potrzebują natlenionego korzenia, a nie stałego dopływu wilgoci.",
+          "Zima to prawdziwy odpoczynek. Wzrost dzieje się mniej więcej w przedziale 18 do 29 °C, spoczynek między 7 a 13 °C, a podlewanie schodzi do minimum — raz na kilka tygodni, tyle, by roślina się nie pomarszczyła. A kiedy pojawi się więdnięcie, odczytaj najpierw teksturę, zanim sięgniesz po konewkę: pomarszczony, ale jędrny liść to pragnienie; żółty, miękki, prześwitujący liść to zalanie, a kolejne podlanie tylko pogarsza sprawę, bo zgniłe korzenie już przestały wchłaniać. Epifityczne kaktusy leśne, takie jak grudnik, są w tej grupie wyjątkiem: biorą znacznie więcej wody i wiosną ani latem nigdy nie powinny przesychać do końca."
+        ],
+        "checklist": [
+          "Przemocz całą bryłę korzeniową, aż woda wypłynie przez otwór drenażowy, potem opróżnij podstawkę.",
+          "Poczekaj, aż podłoże wyschnie całkowicie, zanim podlejesz ponownie.",
+          "Nigdy nie zostawiaj doniczki stojącej w wodzie.",
+          "W zimowym spoczynku podlewaj minimalnie, raz na kilka tygodni — tyle, by roślina się nie pomarszczyła.",
+          "Pomarszczony, ale jędrny liść = za mało wody. Żółty, miękki, prześwitujący liść = za dużo."
+        ]
+      },
+      "light": {
+        "advice": [
+          "To jedyna grupa roślin domowych, która nie tylko znosi bezpośrednie słońce, ale się o nie dopomina. Sukulenty chcą dziesięciu lub więcej godzin jasnego światła rozproszonego, przy minimum sześciu do ośmiu; poniżej tego wyciągają się i bledną — to klasyczna etiolacja. Kaktusom pustynnym najlepiej służy okno z kilkoma godzinami bezpośredniego słońca dziennie, co na naszej półkuli oznacza okno południowe (na półkuli południowej byłoby to okno północne). Cienki, blady przyrost to problem ze światłem i żadna dawka nawozu tego nie naprawi.",
+          "Liczą się dwa zastrzeżenia. Kiedy wystawiasz roślinę latem na zewnątrz, aklimatyzuj ją: zacznij od półcienia, bo mocne słońce parzy tkankę, która uformowała się w mieszkaniu. A kaktusy epifityczne chcą światła jasnego, ale przefiltrowanego — okno wschodnie lub zachodnie, cienka firanka — bo w pełnym słońcu się przypalają."
+        ],
+        "checklist": [
+          "Zapewnij sześć do ośmiu godzin światła dziennie, celując w dziesięć lub więcej.",
+          "Kaktus pustynny: okno z kilkoma godzinami bezpośredniego słońca.",
+          "Wyciągnięty, blady przyrost to za mało światła, nie za mało nawozu.",
+          "Wystawiając roślinę latem na zewnątrz, zacznij od kilku dni w półcieniu.",
+          "Kaktus epifityczny: światło jasne, ale zawsze przefiltrowane."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "Podłoże jest w przeważającej części mineralne, a źródła różnią się co do przepisu tylko po to, by zgodzić się co do zasady. Jedna uczelniana służba doradcza zaleca jedną trzecią materiału organicznego na dwie trzecie mineralnego; inna prosi o równe objętości podłoża torfowego i bardzo gruboziarnistego piasku; RHS pracuje na dwóch częściach podłoża bazowego i jednej części grysu ogrodniczego, z wierzchnią warstwą grysu. Rozpiętość biegnie mniej więcej od 30% do 67% frakcji mineralnej i istnieje wyłącznie po to, by faza pełnego nasycenia wodą trwała jak najkrócej. Im wilgotniejsze masz otoczenie i im hojniejszą rękę przy konewce, tym więcej mineralnego składnika.",
+          "Ciasna doniczka to reguła, nie zaniedbanie: nadmiar podłoża trzyma wilgoć, a za nią przychodzi zgnilizna. Przesadzaj wiosną do doniczki tylko odrobinę większej i odczekaj kilka dni przed pierwszym podlaniem. Nawożenie jest ubogie w azot i w obniżonej dawce — połowa albo ćwierć dawki z etykiety, co trzecie lub czwarte podlanie w sezonie aktywnym, a zimą nic. Nadmiar azotu daje miękką tkankę, a miękka tkanka gnije. U kaktusów epifitycznych przepis się odwraca i przewagę bierze materia organiczna."
+        ],
+        "checklist": [
+          "Dodaj co najmniej jedną trzecią materiału mineralnego: perlit, gruby piasek, pumeks lub grys.",
+          "Używaj doniczki tylko odrobinę większej od obecnej — luz zamienia się w zgniliznę.",
+          "Przesadzaj wiosną i odczekaj kilka dni przed pierwszym podlaniem.",
+          "Nawoź połową albo ćwiercią dawki, a zimą przerwij całkowicie.",
+          "Kaktus epifityczny odwraca przepis: więcej materii organicznej, mniej mineralnej."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "Ryzyko jest tu mechaniczne i łatwo je obejść: gatunki kolczaste chwytaj owinięte w gazetę albo w grubych rękawicach. Ciernie kaktusów i drobne glochidia niektórych gatunków łatwo wchodzą w skórę i trudno z niej wychodzą, a momentem największego narażenia jest przesadzanie."
+        ],
+        "checklist": [
+          "Gatunki kolczaste chwytaj przez zwiniętą gazetę albo w grubych rękawicach.",
+          "Przygotuj nową doniczkę, zanim podniesiesz roślinę, żeby skrócić czas, który spędza w Twoich dłoniach.",
+          "Trzymaj kolczaste okazy z dala od przejść i małych dzieci."
+        ]
+      }
+    }
+  },
+  "tropicalFoliage": {
+    "label": "Tropikalne rośliny liściaste do domu",
+    "topics": {
+      "watering": {
+        "advice": [
+          "Celem dla tej grupy jest podłoże równomiernie wilgotne i nigdy rozmokłe — ani pełny cykl przesychania sukulentów, ani stała wilgoć paproci. Żeby to ocenić, wciśnij palec w podłoże po pierwszy staw: sucho na koniuszku znaczy, że pora podlać. Ciężar doniczki i głuchy dźwięk knykcia o terakotową ścianę działają równie dobrze. Kiedy już podlewasz, lej, aż woda wypłynie spodem: to wypłukuje nadmiar soli i gwarantuje, że dolne dwie trzecie doniczki dostały wodę. Potem opróżnij podstawkę — nigdy nie zostawiaj rośliny stojącej w wodzie.",
+          "Szczegóły, które tu robią różnicę: jeśli podłoże mocno przeschło, podlej dwa razy — podlej, odczekaj około trzydziestu minut i podlej ponownie; woda powinna mieć od 17 do 22 °C, nigdy gorąca i nigdy lodowata, i nigdy woda zmiękczana, ze względu na sód i chlorki. Maranty chcą wody destylowanej lub deszczówki, bo fluor z kranu brązowi brzegi liści. A sama grupa niesie własne, deklarowane wyjątki: dracena chce, by powierzchnia była sucha w dotyku przed podlaniem, zamiokulkas podlewa się raz lub dwa razy w miesiącu i dopiero po całkowitym przeschnięciu, a fikus benjamina pozostaje wilgotny w aktywnym wzroście i lekko przesycha zimą."
+        ],
+        "checklist": [
+          "Utrzymuj podłoże równomiernie wilgotne, nigdy przelane.",
+          "Podlewaj, aż woda wypłynie spodem, potem opróżnij podstawkę.",
+          "Używaj wody o temperaturze od 17 do 22 °C; nigdy zmiękczanej.",
+          "Maranty i draceny: najlepiej woda destylowana lub deszczówka.",
+          "Bardzo suche podłoże: podlej, odczekaj trzydzieści minut, podlej ponownie."
+        ]
+      },
+      "light": {
+        "advice": [
+          "Tolerancja świetlna tej grupy jest bardzo szeroka i właśnie tam przebiegają jej wewnętrzne podziały. Filodendrony wolą światło rozproszone albo przefiltrowane firanką i znoszą półcień — odmiana pnąca o sercowatych liściach wytrzymuje nawet bardzo mało światła — podczas gdy formy drzewiaste chcą światła średniego lub silnego blisko okna. Dracenom najlepiej idzie w jasnym świetle rozproszonym, ale kilka z nich znosi półcień na tyle dobrze, że stały się biurowym standardem. W liczbach odniesienia: słabe światło to około 800 luksów, średnie 1600, jasne 3200, a bezpośrednie 16 000.",
+          "Maranty to podgrupa najbardziej wymagająca: półcień, najwyżej dwie do sześciu godzin bezpośredniego słońca dziennie, z wyraźnym ostrzeżeniem, że bezpośrednie słońce przypala liść. Warto pamiętać, że fenestracja monstery — te charakterystyczne dziury — zależy od odpowiedniej ilości światła, a prawdziwy filodendron tworzy liście głęboko wcinane, ale bez dziur. Jeśli opisujesz wystawę pokoju stronami świata, pamiętaj, że u nas, na półkuli północnej, najsilniejsze światło daje okno południowe — na półkuli południowej północ i południe zamieniają się rolami."
+        ],
+        "checklist": [
+          "Jasne światło rozproszone to punkt idealny dla niemal całej grupy.",
+          "Maranty: półcień, najwyżej dwie do sześciu godzin bezpośredniego słońca.",
+          "Suche, okrągłe plamy na liściu wskazują na zbyt dużo słońca.",
+          "Żółknące dolne liście przy obumarłym wierzchołku wzrostu: za mało światła albo za dużo wody.",
+          "Jeśli chcesz fenestracji u monstery, najpierw dołóż światła, zanim zmienisz cokolwiek innego."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "Wystarczy tu uniwersalne organiczne podłoże doniczkowe — ta grupa nie ma ani mineralnych wymagań sukulentów, ani torfowych wymagań paproci. Technikę zmienia retencja: podłoża bogate w torf trzymają wilgoć dłużej, mieszanki z korą, piaskiem czy perlitem odprowadzają wodę szybciej. Wybieraj według swojego nawyku podlewania i klimatu w domu. Jedna ważna korekta: warstwa kamieni na dnie doniczki nie poprawia drenażu — raczej zatrzymuje wilgoć wewnątrz doniczki.",
+          "W źródłach jest udokumentowana realna sprzeczność i warto trzymać się odczytu ostrożniejszego. Dla dracen jedna służba doradcza mówi, żeby unikać podłoży z wysokim udziałem perlitu, trzymać pH między 6,0 a 6,5 i nie stosować nawozów zawierających superfosfat, bo dracena jest bardzo wrażliwa na fluor; dla marant inna służba doradcza zaleca dodanie perlitu lub wermikulitu, a maranty również są wrażliwe na fluor. Nie ma wyraźnego rozstrzygnięcia: dla tych dwóch wybieraj wermikulit albo drobną korę zamiast perlitu i podlewaj wodą destylowaną lub deszczówką. Nawoź umiarkowanie — brązowe, podwinięte końcówki to znak nadmiaru nawozu, a bardzo wolno rosnący zamiokulkas potrzebuje zaledwie jednej lub dwóch dawek przez cały sezon."
+        ],
+        "checklist": [
+          "Uniwersalne podłoże się sprawdza; retencję reguluj korą albo perlitem.",
+          "Nie sypaj warstwy kamieni na dno doniczki — to nie drenuje.",
+          "Draceny i maranty: wybieraj wermikulit albo drobną korę zamiast perlitu.",
+          "Trzymaj pH dla dracen między 6,0 a 6,5 i unikaj superfosfatu.",
+          "Brązowe, podwinięte końcówki: najpierw ogranicz nawożenie, zanim zmienisz cokolwiek innego."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "To grupa roślin domowych o najbardziej skoncentrowanym ryzyku toksyczności, a przyczyną jest szczawian wapnia. Wszystkie części filodendrona są trujące po zjedzeniu: kryształki wywołują pieczenie i podrażnienie jamy ustnej, warg i języka, nadmierne ślinienie, wymioty i trudności z przełykaniem. Zamiokulkas jest klasyfikowany jako niebezpieczny dla zwierząt domowych. Sok marant może podrażniać skórę. Żadna z tych roślin nie jest groźna przez sam fakt posiadania — ryzykiem jest zjedzenie i długi kontakt z sokiem, więc traktuj cięcie i przesadzanie jako zajęcia w rękawicach, po których myje się ręce.",
+          "Jest też mniejsze, ale realne ryzyko fizyczne: filodendrony krzewiaste mają kruche ogonki liściowe, które łatwo się łamią, więc warto trzymać je z dala od przejść. I jedna obserwacja, która oszczędza niepotrzebnego strachu: czarne znaki na łodydze zamiokulkasa są normalne i świadczą o zdrowym wzroście, a nie o chorobie."
+        ],
+        "checklist": [
+          "Trzymaj te rośliny poza zasięgiem małych dzieci i zwierząt.",
+          "Zakładaj rękawice do cięcia i przesadzania, a potem myj ręce.",
+          "Nie zostawiaj opadłych liści tam, gdzie sięgną po nie zwierzęta lubiące gryźć rośliny.",
+          "Trzymaj formy krzewiaste z dala od przejść: ogonki liściowe łatwo się łamią.",
+          "Czarne znaki na łodydze zamiokulkasa są normalne, to nie choroba."
+        ]
+      }
+    }
+  },
+  "fern": {
+    "label": "Paprocie i rośliny cieniolubne",
+    "topics": {
+      "watering": {
+        "advice": [
+          "Celem jest gleba stale ledwo wilgotna, nigdy przesychająca do końca i nigdy stojąca w wodzie w podstawce. Najdroższy błąd myślowy w tej grupie to pomylenie stałej wilgoci z doniczką trwale rozmokłą: źródła mówią w jednym zdaniu, że podłoże ma zatrzymywać wilgoć i szybko odprowadzać wodę, bo korzeń nadal potrzebuje tlenu. Zgnilizna korzeni pojawia się u paproci dokładnie tak samo jak u kaktusa, tylko przy znacznie mniejszej ilości wody. A sygnał błędu jest tu dwuznaczny w obie strony — listki opadają i od nadmiaru wody, i od jej niedoboru.",
+          "Wilgotność powietrza jest dla tej grupy czynnikiem ograniczającym, a nie kwestią komfortu: praktyczny cel mieści się między 30% a 50%, a około 50% dla gatunków o drobnych, delikatnych liściach, takich jak adiantum. Brązowe końcówki u paproci to przede wszystkim diagnoza suchego powietrza — nie suchego podłoża — a podlewanie mocniej prowadzi do zgnilizny, nie usuwając objawu. Metody, w kolejności skuteczności: podwójne doniczkowanie z wilgotnym torfowcem, podstawka z kamykami i około sześcioma milimetrami wody, przy czym doniczka nie dotyka wody, nawilżacz, terrarium albo łazienka dla gatunków najdelikatniejszych, i dopiero na końcu okazjonalne lekkie zraszanie. Żwir z podstawki wymieniaj lub myj co trzy miesiące."
+        ],
+        "checklist": [
+          "Utrzymuj podłoże ledwo wilgotne i nigdy nie pozwól mu wyschnąć do końca.",
+          "Nie zostawiaj wody w podstawce: to prosta droga do zgnilizny korzeni.",
+          "Brązowe końcówki oznaczają niską wilgotność powietrza — lecz powietrze, nie podlewaj więcej.",
+          "Wybieraj podwójne doniczkowanie z torfowcem albo podstawkę z kamykami zamiast zraszania.",
+          "Myj lub wymieniaj żwir z podstawki co trzy miesiące."
+        ]
+      },
+      "light": {
+        "advice": [
+          "Idealne jest umiarkowane światło rozproszone, przy chłodnym oknie — w naszych warunkach, na półkuli północnej, oknie północnym (na półkuli południowej byłoby to okno południowe) — albo przy oknie wschodnim. Bezpośrednie, gorące okno uszkadza ulistnienie; jeśli to Twoja jedyna opcja, przytnij natężenie cienką firanką. W liczbach docelowe pasmo to światło słabe do średniego, między 800 a 1600 luksów.",
+          "Wewnątrz grupy jest realna rozpiętość: część gatunków znosi półcień, a inne chcą jasnego światła rozproszonego lub przefiltrowanego słońca, więc obserwuj własną roślinę, zamiast stosować jedną liczbę do wszystkiego. Ulistnienie uszkodzone przez słońce prawie zawsze ma oczywistą przyczynę — bezpośrednie, gorące okno — a naprawa polega po prostu na przesunięciu rośliny albo przefiltrowaniu światła."
+        ],
+        "checklist": [
+          "Wybierz chłodne okno w domu albo takie od wschodu.",
+          "Unikaj bezpośredniego słońca z gorącego okna; jeśli nie ma alternatywy, użyj cienkiej firanki.",
+          "Celuj w pasmo od słabego do średniego, między 800 a 1600 luksów.",
+          "Przypalone ulistnienie to znak bezpośredniego słońca, a nie pragnienia."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "Podłoże musi tu robić dwie rzeczy naraz: zatrzymywać wilgoć i szybko odprowadzać wodę. Jeden sprawdzony przepis to równe części gotowego podłoża do roślin domowych i torfu albo ziemi liściowej, z wyraźnym wymogiem szybkiego odprowadzania wody, żeby zapobiec zgniliźnie korzeni. Inny łączy torf lub torfowiec dla retencji, piasek lub żwir dla drenażu oraz sterylizowaną ziemię gliniastą, z dodatkiem wapna dolomitowego i mączki kostnej. To dokładne przeciwieństwo sukulentów: tutaj dominuje frakcja organiczna, a drenaż bierze się z materiału gruboziarnistego, a nie z udziału mineralnego. I znowu — warstwa kamieni na dnie doniczki nie drenuje.",
+          "Nawożenie jest najbardziej powściągliwe ze wszystkich grup roślin domowych: raz w miesiącu w sezonie wzrostu, mniej więcej połową zalecanej dawki, zimą nic — i nic przez sześć miesięcy po podziale albo przesadzeniu. Żadna inna grupa domowa nie ma tak długiej przerwy, a powód jest wprost: paprocie przy przenawożeniu przypalają liście. Jedno ostrzeżenie chemiczne dotyczy wyłącznie tej grupy: opryski pestycydami uszkadzają wiele paproci, więc czytaj etykietę uważnie i najpierw przetestuj preparat na małym fragmencie. Ze szkodnikami walcz raczej metodami mechanicznymi, na przykład mocnym strumieniem wody."
+        ],
+        "checklist": [
+          "Używaj podłoża, które trzyma wilgoć, a mimo to szybko odprowadza wodę.",
+          "Nawoź połową dawki, raz w miesiącu w sezonie wzrostu.",
+          "Nie nawoź zimą ani przez sześć miesięcy po podziale lub przesadzeniu.",
+          "Każdy oprysk przetestuj na jednym liściu, zanim potraktujesz całą roślinę.",
+          "Przesadzaj i dziel wczesną wiosną, utrzymując przez kolejne tygodnie wysoką wilgotność."
+        ]
+      }
+    }
+  },
+  "fruitVeg": {
+    "label": "Drzewa owocowe i warzywa",
+    "topics": {
+      "watering": {
+        "advice": [
+          "Tutaj podlewanie mierzy się tygodniową warstwą wody i ma wyznaczone okna fenologiczne. Większość warzyw chce od 25 do 50 milimetrów tygodniowo — czyli warstwy od dwóch i pół do pięciu centymetrów — z wyraźnymi szczytami: kukurydza cukrowa chce czterech do sześciu centymetrów w czasie wiechowania, wyrzucania znamion i nalewania kolby; fasola chce dwóch i pół do czterech centymetrów w czasie kwitnienia i nalewania strąków. Ten zakres to przedział, a nie stała liczba — suchy klimat podbija go w górę, wilgotny w dół. Na glebie gliniasto-próchnicznej dwa i pół centymetra wody wnika na około piętnaście centymetrów profilu, co pozwala policzyć: zwilżenie trzydziestu centymetrów wymaga mniej więcej pięciu centymetrów podanej wody.",
+          "Płytkie podlewanie nie jest tu jedynie mniej wydajne: ono przerywa transport wapnia. Wapń wędruje wraz ze strumieniem transpiracyjnym i nie jest przemieszczany ze starej tkanki do nowych owoców, więc cykle „na przemian sucho i mokro” dają suchą zgniliznę wierzchołkową nawet przy dużej ilości wapnia w glebie. Pomidory są bardzo wrażliwe na nieregularne podlewanie i odpowiadają suchą zgnilizną wierzchołkową oraz pękaniem owoców; papryka odpowiada opadaniem kwiatów; ogórek zestresowany w fazie generatywnej daje gorzkie, zniekształcone owoce. Gleba piaszczysta chce podlewania krótszego i częstszego; gleba ilasta — rzadszego i głębszego."
+        ],
+        "checklist": [
+          "Pracuj w paśmie 25 do 50 milimetrów tygodniowo, licząc deszcz i nawadnianie razem.",
+          "Nie przegap kwitnienia i nalewania owoców: to okno, które decyduje o plonie.",
+          "Wybieraj podlewanie głębokie i rzadsze zamiast krótkich, codziennych dawek.",
+          "Suchą zgniliznę wierzchołkową naprawia się regulacją podlewania, a nie opryskiem wapniowym.",
+          "Dopasuj się do gleby: piaszczysta chce większej częstotliwości, ilasta — większej głębokości."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "To jedyna grupa, której zbiór co roku wyprowadza składniki pokarmowe z systemu, i niemal każda różnica w prowadzeniu bierze się właśnie stąd. Nawożenie jest powtarzalne i rozbite na dawki pogłówne, a proporcje zmieniają się wraz z cyklem — w pomidorze gruntowym dawka pogłówna zaczyna się bogatsza w fosfor i podnosi potas, w miarę jak roślina wchodzi w owocowanie. Nadmiar azotu ma realny koszt: figi, które nie dojrzewają, i nadmierny wzrost pędów we wczesnym kwitnieniu i owocowaniu, co jest jedną z głównych przyczyn suchej zgnilizny wierzchołkowej u pomidora i papryki.",
+          "pH jest tu rozstrzygające i mocno się różni wewnątrz grupy. Jabłoni dobrze służy przedział 5,8 do 6,5, sprawdzany ponownie mniej więcej co trzy lata; większość warzyw liściowych mieści się między 6,0 a 6,5; a borówka jest wyjątkiem radykalnym — najlepiej czuje się między 4,8 a 5,2 i wymaga siarki elementarnej wniesionej co najmniej rok przed sadzeniem. Dwie reguły dotyczą wszystkiego: trzymaj nawóz co najmniej piętnaście centymetrów od pnia i zawsze podawaj go na wilgotną glebę, żeby nie poparzył korzeni. I to jedyna grupa z płodozmianem według rodzin botanicznych — uprawy z tej samej rodziny są podatne na te same choroby i owady, więc nie powtarzaj rodziny na tej samej grządce przez trzy do czterech lat, a jeśli możesz, dłużej."
+        ],
+        "checklist": [
+          "Nawoź pogłównie, w kilku dawkach, a nie w jednej.",
+          "Zbadaj glebę i koryguj pH pod konkretną uprawę, a nie pod całą grządkę.",
+          "Trzymaj nawóz co najmniej piętnaście centymetrów od pnia i zawsze na wilgotnej glebie.",
+          "Nie powtarzaj tej samej rodziny botanicznej na grządce przez trzy do czterech lat.",
+          "Nadmiar azotu opóźnia dojrzewanie i napędza suchą zgniliznę wierzchołkową."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Przerzedzanie owoców to zabieg obowiązkowy, który nie występuje w żadnej innej grupie. Zbyt obfity zawiązek daje drobne owoce, łamiące się gałęzie i przemienne owocowanie, bo drzewo obciążone pełnym plonem oddaje owocom niemal całą energię i niewiele zostaje na zawiązanie kwiatów na przyszły rok. Jabłka przerzedzaj ręcznie w ciągu sześciu tygodni od pełni kwitnienia, zostawiając owoce w odstępach około dwudziestu do dwudziestu pięciu centymetrów na gałęzi; grusze, śliwy i morele idą w odstępach piętnastu do dwudziestu centymetrów. Naturalny opad czerwcowy, przy owocach wielkości mniej więcej centymetra do dwóch i pół, nie zastępuje przerzedzania ręcznego — zawsze zostawiaj największy owoc z gronka, chyba że jest uszkodzony.",
+          "Obraz dopełniają dwa zabiegi. Cięcie jabłoni zaczyna się w dniu jej posadzenia; odkładanie go daje słaby wzrost i opóźnione owocowanie. A u borówki usunięcie wszystkich kwiatów w pierwszym i drugim roku jest tym, co pozwala roślinie się ukorzenić i rozbudować — rezygnacja z dwóch zbiorów kupuje wszystkie następne. W drzewach owocowych trzymaj się zasady odstawienia nawożenia późnym latem, bo owocowanie i drewnienie pędów konkurują o ten sam produkt fotosyntezy."
+        ],
+        "checklist": [
+          "Przerzedzaj owoce w ciągu sześciu tygodni od pełni kwitnienia.",
+          "Zostawiaj największy owoc w każdym gronku, chyba że jest uszkodzony.",
+          "Nie licz na naturalny opad: on nie zastępuje przerzedzania ręcznego.",
+          "Zacznij formować koronę w roku sadzenia, a nie później.",
+          "Przestań nawozić drzewa owocowe pod koniec lata."
+        ]
+      }
+    }
+  },
+  "flowering": {
+    "label": "Rośliny kwitnące i ozdobne",
+    "topics": {
+      "watering": {
+        "advice": [
+          "Podlewanie liczy się tu tygodniową warstwą wody, a nie cyklem przemoczenia i przeschnięcia: jednoroczne i byliny chcą co najmniej 25 do 40 milimetrów wody tygodniowo, licząc deszcz i nawadnianie razem, a najlepszą porą jest wczesny ranek, żeby ulistnienie szybko obeschło. U róż tę samą zasadę mówi się inaczej — głębokie podlewanie sprzyja głębokiemu systemowi korzeniowemu, a częste i lekkie sprawia, że korzenie tworzą się zbyt blisko powierzchni gleby.",
+          "Zdrowie rośliny zależy od tego bardziej, niż się wydaje. Róża z nawracającą czarną plamistością prawie zawsze ma mokre liście pod koniec dnia i stojące wokół siebie powietrze: poranne słońce, wąż nawadniający zamiast zraszacza i dobra cyrkulacja powietrza rozwiązują więcej niż jakikolwiek oprysk."
+        ],
+        "checklist": [
+          "Zapewnij co najmniej 25 do 40 milimetrów wody tygodniowo, licząc opady.",
+          "Podlewaj wcześnie, żeby ulistnienie obeschło przed nocą.",
+          "Wybieraj podlewanie głębokie i rzadsze zamiast lekkiego i częstego.",
+          "U róż zwilżaj glebę, a nie liść."
+        ]
+      },
+      "light": {
+        "advice": [
+          "Większość roślin jednorocznych potrzebuje pełnego słońca przez co najmniej cztery do sześciu godzin dziennie, żeby dobrze kwitnąć. Róże proszą o więcej: sześć do ośmiu godzin bezpośredniego słońca, przy czym szczególnie liczy się słońce poranne, bo osusza liście i pomaga zapobiegać chorobom.",
+          "Jedna diagnoza zwodzi wielu ogrodników: rozkładająca się bylina bez struktury zwykle oznacza niedobór światła — a nie brak nawozu. Więcej nawożenia tego nie naprawi; przesadzenie rośliny tak."
+        ],
+        "checklist": [
+          "Jednoroczne: minimum cztery do sześciu godzin pełnego słońca dziennie.",
+          "Róże: sześć do ośmiu godzin, z priorytetem dla porannego słońca.",
+          "Rozkładająca się, płożąca bylina potrzebuje przesadzenia, a nie więcej nawozu.",
+          "Zanim zdecydujesz się na miejsce pod rabatę, obserwuj przez cały rok, gdzie pada słońce."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "Przygotowanie rabaty sięga głębiej niż w doniczce: piętnaście do dwudziestu pięciu centymetrów dla roślin jednorocznych i dwadzieścia do dwudziestu pięciu dla bylin. W glebie ilastej wmieszaj co najmniej pięć centymetrów kompostowanej kory sosnowej, kompostu albo ziemi liściowej; w glebie piaszczystej pięć do siedmiu centymetrów materii organicznej zatrzymującej wilgoć. Docelowe pH dla bylin to 6,0 do 6,5. Ściółka jest tu cieńsza niż przy roślinach drzewiastych: pięć do siedmiu centymetrów dla jednorocznych i tylko dwa do pięciu dla bylin, z wyraźnym ostrzeżeniem, by unikać zbyt ciężkiego ściółkowania, bo pod nim gnije szyjka korzeniowa byliny.",
+          "Zapotrzebowanie pokarmowe jest pośrednie i wprost ograniczone: pokrywa je nawóz pełnoskładnikowy podany przy przygotowaniu rabaty i powtarzany mniej więcej co sześć tygodni. Znacznie powyżej dojrzałej rośliny drzewiastej, która nie potrzebuje prawie niczego, i wyraźnie poniżej dorosłego drzewa owocowego. I jedna ważna korekta rozpowszechnionego nawyku: nie stosuj z zasady formuły wysokofosforowej na kwitnienie. Wysokie dawki fosforu nie zwiększają liczby kwiatów, a przewlekły nadmiar blokuje mikroskładniki, takie jak żelazo i cynk, dając rośliny skarłowaciałe i żółknące liście — a nadmiar fosforu schodzi bardzo powoli, co może zająć lata. Bezpieczną wskazówką jest nawóz zrównoważony plus badanie gleby. Znak nadmiaru w doniczce: biały nalot na krawędzi, brązowe końcówki liści i ciemniejące korzenie."
+        ],
+        "checklist": [
+          "Przygotuj glebę głęboko: piętnaście do dwudziestu pięciu centymetrów, wmieszując materię organiczną.",
+          "Na bylinach dawaj tylko dwa do pięciu centymetrów ściółki, z dala od szyjki korzeniowej.",
+          "Nawoź formułą zrównoważoną, powtarzając co sześć tygodni.",
+          "Nie stosuj formuły wysokofosforowej do wymuszania kwitnienia.",
+          "Biały nalot na krawędzi doniczki: przepłucz obficie wodą albo wymień podłoże."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Zabiegiem, który definiuje tę grupę, jest deadheading — usuwanie przekwitłych kwiatów. Zdejmowanie zwiędłych kwiatów zachęca roślinę do wypuszczania kolejnych, zamiast zamykać cykl kwitnienia na cały sezon; to jedyna kategoria, w której usunięcie organu rozrodczego zwiększa produkt, o który Ci chodzi. Wyszczypuj je palcami albo używaj ostrego sekatora, i spokojnie możesz zabrać kawałek pędu, nie tylko sam kwiat. Poza wpływem na kwitnienie zmniejsza to nasilenie chorób, które rozwijają się na rozkładającej się materii roślinnej. Sadząc jednoroczne, wyszczypuj pąki i kwiaty, żeby lepiej się rozkrzewiły; u bylin po kwitnieniu tnij przy samej ziemi, żeby pobudzić nowe liście od podstawy.",
+          "Cebulowe są tego lustrzanym odbiciem: po kwiecie pracą jest doładowanie cebuli. Usuń przekwitły kwiat, żeby nie zawiązały się torebki nasienne, ale nigdy liść — zostaw ulistnienie, dopóki samo nie zacznie żółknąć i zasychać, i nie wiąż go ani nie zaplataj, bo to ogranicza ilość światła przechwytywanego przez liście, a wraz z nią fotosyntezę, która ładuje cebulę na przyszły rok. Cebule dziel, gdy ulistnienie już zaschło i rośliny są w spoczynku, oddzielając cebulki potomne delikatnym skręceniem i pociągnięciem; drobne odrosty mogą potrzebować roku lub dwóch, żeby znowu zakwitnąć. A jesienią rozważ zostawienie główek nasiennych: to pożywny pokarm dla dzikich zwierząt przez całą zimę."
+        ],
+        "checklist": [
+          "Usuwaj przekwitłe kwiaty, zanim zawiążą nasiona.",
+          "Przy sadzeniu roślin jednorocznych wyszczypuj pąki, żeby roślina się rozkrzewiła.",
+          "U cebulowych tnij kwiat, ale nigdy liść.",
+          "Nigdy nie wiąż ani nie zaplataj liści roślin cebulowych.",
+          "Jesienią zostaw część główek nasiennych dla dzikich zwierząt."
+        ]
+      }
+    }
+  },
+  "woody": {
+    "label": "Drzewa i krzewy",
+    "topics": {
+      "watering": {
+        "advice": [
+          "To jedyna grupa, której okres ukorzeniania mierzy się w latach: mniej więcej rok na każde dwa i pół centymetra średnicy pnia. Świeżo posadzone drzewo chce codziennego podlewania przez pierwsze dwa tygodnie, co dwa lub trzy dni od trzeciego do dwunastego tygodnia, raz w tygodniu aż do pierwszych przymrozków i znowu raz w tygodniu w drugim roku. Objętość ma swój wzór: od czterech do sześciu litrów na każde dwa i pół centymetra średnicy pnia przy każdym podlaniu, rozprowadzone po całej strefie korzeniowej, a nie przy samym pniu, tak by zwilżyć od piętnastu do dwudziestu centymetrów gleby.",
+          "Głębokie podlewanie buduje mocne korzenie i poprawia odporność na upał i suszę; częste, płytkie podlewanie tworzy powierzchowny, uzależniony system korzeniowy — a u rośliny drzewiastej to również ten system, który wyrywa się przy wichurze. Dlatego świeżo posadzone drzewo, które więdnie mimo codziennego podlewania, zwykle jest podlewane w złym miejscu i w niewystarczającej ilości. Krzewy kwasolubne, takie jak azalie, chcą podlewania głębokiego, zwilżającego co najmniej piętnaście do dwudziestu centymetrów, a na glebie piaszczystej w pierwszym roku mogą potrzebować wody dwa razy w tygodniu."
+        ],
+        "checklist": [
+          "Podlewaj całą strefę korzeniową, nigdy pnia.",
+          "Podawaj od czterech do sześciu litrów na każde dwa i pół centymetra średnicy pnia.",
+          "Zwilżaj od piętnastu do dwudziestu centymetrów profilu glebowego.",
+          "Licz mniej więcej rok ukorzeniania na każde dwa i pół centymetra średnicy pnia.",
+          "Wybieraj podlewanie głębokie i rzadsze zamiast codziennego i płytkiego."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "Dojrzała roślina drzewiasta na dobrej glebie po prostu nie potrzebuje nawozu: nie wszystkie rośliny w ogrodzie trzeba nawozić, a dojrzałe drzewa i krzewy rosnące w sprzyjających warunkach glebowych wymagają nawożenia w niewielkim stopniu albo wcale. Drzewa rosnące w nawożonym trawniku już same sobie pomagają, bo ich korzenie przechwytują składniki podane trawie. A kiedy już nawozisz, pułap jest wyznaczony: azot o spowolnionym uwalnianiu w dawce od jednego do dwóch kilogramów na sto metrów kwadratowych rocznie, nigdy powyżej trzech; azot szybko działający od pół do jednego kilograma, z pułapem dwóch. Nawóz rozprowadza się po całej powierzchni rzutu korony, od nasady pnia po końce gałęzi, i zawsze na wilgotną glebę.",
+          "Krzewy kwasolubne to podgrupa, która zmienia wszystko. Azalie i rododendrony chcą pH między 4,5 a 6,0, mają płytki system korzeniowy i łatwo cierpią od nadmiaru wilgoci w glebie; przyjmują nawóz zakwaszający o proporcji zbliżonej do 2-1-1, podawany lekką ręką wiosną i wczesnym latem, i nigdy nawozu wysokoazotowego późną jesienią, bo to opóźnia wejście w spoczynek. Żółte młode liście z zielonymi nerwami sugerują wysokie pH blokujące żelazo — ale w kwaśnych glebach ilastych żelazo jest łatwo dostępne, więc zanim obwinisz pH, sprawdź, czy nie ma zastoiska wody. Ściółka jest narzędziem i bronią jednocześnie: warstwa od pięciu do dziesięciu centymetrów, odsunięta od pnia o osiem do trzynastu centymetrów przy młodym drzewie i o dwadzieścia do dwudziestu pięciu przy dojrzałym, rozciągnięta aż po obrys korony. Przekroczenie tego tworzy wulkan ze ściółki, który zabija powoli: powietrze nie może wniknąć, gleba pod spodem traci tlen, stała wilgoć niszczy łyko, a korzenie głodują bez węglowodanów."
+        ],
+        "checklist": [
+          "Nie nawoź dojrzałej rośliny drzewiastej na dobrej glebie — prawie nigdy tego nie potrzebuje.",
+          "Jeśli już nawozisz, pokryj cały rzut korony i zawsze rób to na wilgotnej glebie.",
+          "Kwasolubne: pH między 4,5 a 6,0 i lekkie nawożenie zakwaszające wiosną.",
+          "Trzymaj ściółkę z dala od pnia, w płaskim pierścieniu.",
+          "Pięć do dziesięciu centymetrów ściółki wystarczy; więcej to już wulkan."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Cięcie jest nieodwracalne i rządzi się regułami anatomii. Cięcie prowadzi się tuż za obrączką gałęzi — tym zgrubieniem u nasady konara, które działa jak naturalna bariera dla organizmów powodujących rozkład drewna. Gałęzie o średnicy powyżej czterech centymetrów wymagają metody trzech cięć, żeby kora nie zdarła się w dół po pniu. I żadnych maści na rany: badania wykazały, że preparaty do zabezpieczania ran ani inne środki po cięciu nie zapobiegają rozkładowi drewna.",
+          "O terminie decyduje drewno, na którym zawiązują się kwiaty, a nie kalendarz: rośliny kwitnące na pędach z poprzedniego roku — forsycja, azalia, lilak — tnie się zaraz po przekwitnięciu, a te kwitnące na pędach tegorocznych przed ruszeniem wegetacji. Krzew, który nigdy nie kwitnie, prawie zawsze był cięty w złym momencie. Wybieraj prześwietlanie zamiast skracania pędów, bo prześwietlanie pobudza wzrost wewnątrz rośliny i przywraca naturalny pokrój, podczas gdy skracanie zagęszcza obrzeże i zaciemnia środek, a odrost koncentruje się w promieniu piętnastu do dwudziestu centymetrów od cięcia. Żeby odmłodzić stary krzew bez szoku, zastosuj regułę jednej trzeciej rozłożoną na trzy lata. Przyjmij ostrożny roczny pułap około 25% żywej korony i nigdy nie ogławiaj drzewa: ogławianie usuwa połowę lub więcej ulistnionej korony, zostawia rany, których roślina nie potrafi odgrodzić, i wystawia korę na oparzenia słoneczne. Unikaj też cięcia w ciągu dziesięciu tygodni poprzedzających pierwsze silne przymrozki w Twojej okolicy."
+        ],
+        "checklist": [
+          "Tnij tuż za obrączką gałęzi, nigdy równo z pniem.",
+          "Na gałęziach grubszych niż cztery centymetry stosuj metodę trzech cięć.",
+          "Nie stosuj maści na rany: nie zapobiega rozkładowi drewna.",
+          "Rośliny kwitnące na starym drewnie tnie się zaraz po przekwitnięciu.",
+          "Usuwaj rocznie najwyżej około 25% żywej korony i nigdy nie ogławiaj drzewa."
+        ]
+      }
+    }
+  },
+  "orchid": {
+    "label": "Storczyki i epifity",
+    "topics": {
+      "watering": {
+        "advice": [
+          "Nie ma tu kalendarza podlewania, jest tylko kryterium przeschnięcia: podlewaj, gdy tylko roślina przeschnie, i nie ma żadnej magicznej formuły w rodzaju „doniczkę piętnastocentymetrową podlewamy co siedem dni”. A kiedy podlewasz, rób to porządnie — woda ma swobodnie wypływać z otworów drenażowych przez kilka minut, aż podłoże nasyci się do końca. Pojęcie głębokiego podlewania odwraca się w tej grupie: nie ma profilu glebowego do zwilżenia, jest tylko pełne nasycenie, po którym następuje szybkie przeschnięcie. Lekkie codzienne zraszanie jest odpowiednikiem płytkiego podlewania rabaty: zwilża powierzchnię, trzyma wilgoć w niewłaściwych miejscach i nigdy nie nasyca podłoża.",
+          "Jakość wody liczy się tu bardziej niż w jakiejkolwiek innej grupie, bo bez gleby nie ma kompleksu sorpcyjnego, który buforowałby sole: używaj wody letniej, najlepiej deszczówki, i nigdy zmiękczanej, bo niesie dużo sodu. Nigdy nie zostawiaj doniczki w podstawce. Każda podgrupa ma swoją metodę: bromelie zbiornikowe wchłaniają wodę głównie liśćmi i przez rozetę u podstawy, która powinna pozostawać pełna i być przepłukiwana co tydzień, żeby minerały nie zagęszczały się i nie zabijały końcówek liści; tillandsje chcą dwudziesto- lub trzydziestominutowej kąpieli raz w tygodniu — raz albo dwa razy, zależnie od tego, czy pokój jest gorący i suchy, czy chłodny i wilgotny — a potem strząśnięcia i odwrócenia do góry nogami, żeby obciekły; grudnik zaś, gdy już zawiąże pąki, potrzebuje równomiernie wilgotnego podłoża, żeby ich nie zrzucił."
+        ],
+        "checklist": [
+          "Podlewaj, gdy podłoże przeschnie, a nie według kalendarza.",
+          "Nasycaj podłoże, aż woda swobodnie wypływa przez kilka minut.",
+          "Używaj wody letniej, w miarę możliwości deszczówki, i nigdy zmiękczanej.",
+          "Nigdy nie zostawiaj doniczki stojącej w podstawce z wodą.",
+          "Bromelia zbiornikowa: utrzymuj rozetę pełną i przepłukuj ją co tydzień."
+        ]
+      },
+      "light": {
+        "advice": [
+          "Większość storczyków uprawianych w domu chce od jednej do czterech godzin bezpośredniego słońca. Falenopsis dobrze się czuje w 19 do 30 °C w dzień i 16 do 19 °C nocą, w oknie wschodnim lub zachodnim, z dala od letniego słońca, grzejników i przeciągów. Bromelie proszą o dwanaście do szesnastu godzin względnie jasnego światła dziennie, a liście same o tym meldują: długie, cienkie i bardziej zielone oznaczają za mało światła; krótsze, grubsze i bledsze — że światła jest pod dostatkiem. Tillandsje chcą jasnego, przefiltrowanego światła, nigdy bezpośredniego słońca.",
+          "Jest jeden przypadek, w którym fotoperiod przebija natężenie. Grudniki i ich krewni wymagają czternastu lub więcej godzin nieprzerwanej ciemności na dobę, licząc mniej więcej od połowy września na naszej półkuli, przez co najmniej sześć tygodni — a ostrzeżenie praktyczne jest bezlitosne: nawet dwie godziny przerwania ciemności światłem zahamują zawiązywanie pąków kwiatowych. Zapalona w pokoju lampa wystarczy, by skasować kwitnienie w danym roku."
+        ],
+        "checklist": [
+          "Storczyki domowe: od jednej do czterech godzin bezpośredniego słońca.",
+          "Falenopsis: okno wschodnie lub zachodnie, z dala od grzejników i przeciągów.",
+          "Bromelia o długich, cienkich, ciemnych liściach prosi o więcej światła.",
+          "Tillandsja: jasne światło przefiltrowane, nigdy bezpośrednie słońce.",
+          "Grudnik: nieprzerwana ciemność nocą przez sześć tygodni, żeby zawiązał pąki."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "W tej grupie nie ma gleby, a zwykła ziemia doniczkowa zabija: nigdy nie używaj podłoża gliniastego ani uniwersalnego, bo dusi korzeń pokryty welamenem. Co więcej, podłoże ma tu datę ważności, a przesadzanie jest obowiązkowe, nie opcjonalne — korę trzeba wymieniać mniej więcej co dwa lata, a wcześniej sygnał jest fizyczny: przesadzaj, kiedy przy podlewaniu z doniczki zaczynają wypływać drobne okruchy podłoża. Rozłożona kora traci przewiewność i staje się zbita, dłużej trzyma wodę i zagniwa korzenie. To jedyna grupa, w której samo podłoże jest przyczyną zaprogramowanej śmierci rośliny.",
+          "Wybór między korą a torfowcem to decyzja o środowisku, nie o guście: gruba kora w wilgotnym pokoju lub szklarni; mieszanka z większym udziałem torfowca i włókna w suchym, słonecznym wnętrzu, przy rzadszym podlewaniu i przesadzaniu tuż po kwitnieniu. Mieszanka kory, węgla drzewnego i perlitu to zrównoważony standard handlowy. Doniczka powinna być tylko na tyle duża, by pomieścić system korzeniowy — zbyt duże naczynie trzyma wilgoć i uszkadza korzenie storczyka. Nawożenie jest z zasady rozcieńczone: połowa dawki z etykiety, z małą ilością mocznika albo bez niego, co tydzień latem i co dwa tygodnie jesienią i zimą, z pominięciem nawozu co czwarte podlanie, żeby wypłukać sole. Bromelie idą jeszcze słabiej, na ćwierć albo ósmą część dawki. I pamiętaj, że kilku przedstawicieli tej grupy jest monokarpicznych: bromelia powoli zamierająca po kwitnieniu kończy swój normalny cykl, a nie choruje — zachowaj odrosty."
+        ],
+        "checklist": [
+          "Nigdy nie sadź w zwykłej ziemi ani w podłożu uniwersalnym.",
+          "Wymieniaj korę co dwa lata albo gdy przy podlewaniu wypływają jej okruchy.",
+          "Dobieraj doniczkę dokładnie do wielkości systemu korzeniowego.",
+          "Nawoź połową dawki i pomijaj nawóz co czwarte podlanie.",
+          "Bromelia zamierająca po kwitnieniu to normalny cykl: zachowaj odrosty."
+        ]
+      }
+    }
+  },
+  "herb": {
+    "label": "Zioła kuchenne i aromatyczne",
+    "topics": {
+      "watering": {
+        "advice": [
+          "Ta grupa dzieli się na dwie części, a traktowanie obu tym samym kalendarzem to błąd strukturalny. Zdrewniałe rośliny śródziemnomorskie — rozmaryn, tymianek, oregano, szałwia, lawenda — chcą podlewania rozłożonego w czasie, z prawdziwym przeschnięciem pomiędzy: ich ryzykiem jest zalany korzeń zimą, a nie susza latem. Rozmaryn nie znosi mokrych korzeni, zwłaszcza zimą, a przyjęty w gruncie praktycznie nie potrzebuje podlewania; w doniczce podlewaj go w okresach suszy, ale nigdy nie pozwól, by podłoże się zalało.",
+          "Zioła liściaste — bazylia, pietruszka, mięta, melisa — chcą czegoś przeciwnego: względnie stałego dostępu do wilgoci w glebie, bo stres wodny przyspiesza wybijanie w kwiat i twardnienie liścia. Podlewaj rano, żeby ulistnienie obeschło przed nocą, a przy bazylii unikaj moczenia liści: używaj kroplowania albo węża nawadniającego zamiast zraszacza, bo mokry liść w stojącym powietrzu to zaproszenie dla mączniaka rzekomego."
+        ],
+        "checklist": [
+          "Rozdziel rośliny śródziemnomorskie od ziół liściastych, zanim ustalisz jakikolwiek rytm podlewania.",
+          "Śródziemnomorskie: podlewaj rzadziej i pozwól glebie naprawdę przeschnąć między podlaniami.",
+          "Zioła liściaste: utrzymuj stałą wilgoć, żeby nie wybiły w kwiat.",
+          "Podlewaj rano, nigdy pod koniec dnia.",
+          "Przy bazylii zwilżaj glebę, a nie liść."
+        ]
+      },
+      "light": {
+        "advice": [
+          "Niemal wszystkim ziołom najlepiej rośnie się w miejscu nasłonecznionym przez co najmniej sześć godzin dziennie — a to słońce tworzy olejek eteryczny, czyli to słońce tworzy aromat. Bazylia woli pełne słońce, ale radzi sobie przyzwoicie także przy sześciu godzinach światła częściowego.",
+          "Wyjątki są dobrze znane i warto je uszanować: pietruszka i mięta wolą półcień i marnieją w mocnym, pełnym słońcu. Jeśli Twoja pietruszka albo mięta męczy się na najbardziej słonecznej grządce, to może być dokładnie ten problem."
+        ],
+        "checklist": [
+          "Dla większości ziół celuj w co najmniej sześć godzin słońca dziennie.",
+          "Pietruszka i mięta akceptują, a czasem wręcz wolą półcień.",
+          "Mniej słońca to mniej olejku eterycznego i mniej aromatu.",
+          "Trzymaj kilka doniczek blisko kuchni, do częstego zrywania."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "Drenaż jest tu wart więcej niż żyzność i to jedyna grupa, w której wysoka żyzność jest stratą: bardzo żyzne gleby dają zwykle bujne liście pozbawione smaku. Ogólny cel pH to 6 do 7, przy umiarkowanej zawartości materii organicznej. W glebie ilastej wmieszaj pięć do siedmiu centymetrów drobnej kory sosnowej, drobnego żwiru albo gruboziarnistego kompostu na głębokość dwudziestu do trzydziestu centymetrów; w glebie piaszczystej tyle samo materiału zatrzymującego wilgoć, na tę samą głębokość. Podniesiona grządka ze ściółką żwirową to w tej grupie standardowa praktyka, a nie luksus.",
+          "Rozmarynu w ciężkiej glebie się nie poprawia — jego się przenosi, do podniesionej grządki albo do doniczki z udziałem grysu ogrodniczego sięgającym 25% objętości. Rozmaryn rosnący w gruncie nie potrzebuje nawożenia w ogóle; ten w doniczce dostaje szczyptę uniwersalnego nawozu granulowanego późną wiosną. Bazylia jest wyjątkiem, który zachowuje się jak warzywo i przyjmuje odmierzoną dawkę przy sadzeniu, uzupełnianą tylko wtedy, gdy wzrost się zatrzyma. U kolendry lekkie dawki azotu utrzymują bujność roślin, ale źródło wyraźnie ostrzega przed skłonnością do przenawożenia. I uważaj z miętą: sadź ją w pojemniku bez dna wkopanym w grządkę, bo rozrasta się kłączami i zajmie całą przestrzeń."
+        ],
+        "checklist": [
+          "Postaw drenaż na pierwszym miejscu: podniesiona grządka, grys albo wmieszana drobna kora.",
+          "Utrzymuj pH między 6 a 7, a żyzność na umiarkowanym poziomie.",
+          "Bujne zioło bez smaku to znak nadmiaru nawozu.",
+          "Rozmaryn w gruncie nie potrzebuje nawożenia.",
+          "Sadź miętę w pojemniku bez dna wkopanym w grządkę."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Zbiór ma swoje okno fizjologiczne: zioła należy zbierać tuż przed kwitnieniem, kiedy zawartość olejków eterycznych osiąga szczyt. Ma też swoją porę dnia — wczesny ranek, po obeschnięciu rosy, ale zanim uderzy upał. Żadna inna grupa nie ma pory dnia jako zmiennej jakościowej, a zioło zerwane po południu ma wyraźnie słabszy aromat. Kwiaty aromatyczne zbiera się, zanim rozwiną się w pełni.",
+          "Cięcie utrzymuje tu pokrój i smak, a każdy rodzaj ma własną regułę. U bazylii regularnie wyszczypuj wierzchołki wzrostu i usuwaj pąki kwiatowe, gdy tylko się pojawią, bo inaczej liść gorzknieje, a roślina przestaje rosnąć; zbieraj wierzchołki pędów z jedną lub dwiema parami liści, zostawiając dość ulistnienia do odrostu. Rozmaryn dostaje lekkie przycięcie co roku po przekwitnięciu, nigdy w stare drewno — bez tego wyciąga się, drewnieje i łysieje u podstawy. Szałwię tnie się mocno wczesną wiosną, tymianek lekko po kwitnieniu, a wawrzyn latem. Miętę po kwitnieniu można ściąć niemal do ziemi, na około pięć centymetrów od podstawy, żeby odnowić liście."
+        ],
+        "checklist": [
+          "Zbieraj tuż przed kwitnieniem, gdy zawartość olejku jest najwyższa.",
+          "Zbieraj wcześnie rano, gdy rosa już obeschła.",
+          "U bazylii usuwaj pąki kwiatowe, gdy tylko się pojawią.",
+          "U rozmarynu przycinaj lekko po kwitnieniu i nigdy nie tnij w stare drewno.",
+          "Odnawiaj miętę, ścinając kępę niemal do ziemi po przekwitnięciu."
+        ]
+      }
+    }
+  },
+  "pollinator": {
+    "label": "Owady zapylające",
+    "topics": {
+      "role": {
+        "advice": [
+          "Około jednej trzeciej jedzenia, które spożywamy, zależy od pracy zapylaczy, a większości tej roboty nie wykonuje pszczoła, którą sobie właśnie wyobrażasz. W samej Wielkiej Brytanii żyje ponad 270 gatunków pszczół: około 26 trzmieli, ponad 250 pszczół samotnic i jeden jedyny gatunek pszczoły miodnej. Niemal wszystkie są samotnicami — każda samica sama buduje i zaopatruje gniazdo, a ginie, zanim wyjdzie następne pokolenie — a gniazdo prawie nigdy nie jest ulem: wiele gatunków gniazduje w gołej ziemi, inne w szczelinach drewna, a trzmiele często zajmują korytarze wygryzione przez gryzonie.",
+          "W Brazylii kluczową grupą są pszczoły bezżądłe, Meliponini, rodzime dla regionów tropikalnych i subtropikalnych; w samym stanie Pará szacuje się 109 gatunków powiązanych z uprawami takimi jak açaí, melon i arbuz. Grupa wykracza daleko poza pszczoły: uważa się, że chrząszcze były jednymi z pierwszych owadów odwiedzających kwiaty, bzygi zapylają jako osobniki dorosłe, podczas gdy ich larwy zjadają mszyce, a motyle dzienne i nocne dokładają się do tej usługi, nawet bez zapylania wibracyjnego, które czyni pszczoły tak wydajnymi w przeliczeniu na jedną wizytę."
+        ],
+        "checklist": [
+          "Większość pszczół to samotnice i nigdy nie utworzą ula.",
+          "Stożkowaty kopczyk ziemi w trawniku to wylot czynnego korytarza gniazdowego.",
+          "Równe, okrągłe wycięcia w liściu to miesierki zbierające materiał na gniazdo.",
+          "Bzyg ma dwa skrzydła; pszczoły i osy mają cztery.",
+          "Brak mszyc to brak larw bzygów: zdobycz też jest zasobem."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "Realne ryzyko jest niskie. Użądlenie we własnym ogrodzie jest mało prawdopodobne, dopóki traktujesz pszczoły z szacunkiem, a pszczoły samotnice używają żądła wyłącznie w obronie własnej, gdy zostaną szorstko potraktowane. Pszczoły bezżądłe, jak sama nazwa mówi, nie żądlą — co czyni tę grupę najbezpieczniejszą do obserwowania z bliska i do trzymania w domu. Ryzyko użądlenia w tym sąsiedztwie skupia się na osach społecznych, które przy gnieździe rzeczywiście dysponują zdolnością obronnego żądlenia.",
+          "Obraz domykają dwa zastrzeżenia. Larwy kilku gatunków motyli nocnych to gąsienice parzące, a to zupełnie inna historia — zanim dotkniesz jakiejkolwiek włochatej gąsienicy, zajrzyj do grupy owadów szkodliwych. I hodowla pszczół bezżądłych to działalność regulowana, a nie dowolna: w stanie Pará na przykład hodowcy posiadający do 99 uli zostali zwolnieni z obowiązku uzyskania zezwolenia środowiskowego, ale nadal muszą zarejestrować się w organie inspekcji rolnej. Pozyskanie dzikiego gniazda rządzi się własnymi zasadami."
+        ],
+        "checklist": [
+          "Obserwuj, ale nie chwytaj: pszczoła samotnica użądli tylko wtedy, gdy ją ściśniesz.",
+          "Pszczoły bezżądłe nie żądlą — to najbezpieczniejsza grupa do obserwacji z bliska.",
+          "Trzymaj dystans od gniazd os społecznych.",
+          "Nigdy nie dotykaj włochatej gąsienicy: ryzyko leży tam, a nie po stronie pszczół.",
+          "Hodowla pszczół rodzimych wymaga rejestracji we właściwym urzędzie."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Różnorodność przed ilością: zacznij od ośmiu do dziesięciu rodzimych gatunków roślin pokrywających wiosnę, lato i jesień, sadzonych w kępach o średnicy co najmniej metra. Wybieraj kwiaty proste i otwarte, o pojedynczej warstwie płatków — kwiaty pełne ukrywają albo wręcz eliminują pyłek i nektar. Pozwól chwastom w trawniku zakwitnąć, kosząc rzadziej, i zapewnij wodę, bo pszczoły i inne zapylacze czasem muszą się napić. Jedna metoda terenowa warta skopiowania: obserwuj, które rośliny cieszą się w Twojej okolicy powodzeniem u zapylaczy, i sadź ich więcej.",
+          "Miejsca gniazdowania są zasobem. Zostaw fragmenty gołej, dobrze przepuszczalnej ziemi w pełnym słońcu, bez ściółki, dla pszczół gniazdujących w gruncie, i toleruj małe kopczyki ziemi w trawniku, zamiast je rozgarniać. Hotel dla pszczół działa z otworami o średnicy od dwóch i pół do dziesięciu milimetrów, rozstawionymi co około dwa centymetry, o głębokości od ośmiu do dziesięciu centymetrów dla otworów mniejszych i od trzynastu do piętnastu dla większych, wykonany z niemalowanego drewna i zamocowany na wysokości od jednego do dwóch metrów w osłoniętym miejscu. I reguła, która przeważa nad wszystkimi pozostałymi: nigdy nie opryskuj otwartych kwiatów. Unikaj insektycydów o szerokim spektrum działania; jeśli musisz zabieg wykonać, rób to wieczorem, gdy zapylacze są mniej aktywne."
+        ],
+        "checklist": [
+          "Posadź osiem do dziesięciu rodzimych gatunków pokrywających wszystkie trzy sezony.",
+          "Wybieraj kwiaty proste, o pojedynczej warstwie płatków, a nie pełne.",
+          "Zostaw fragmenty gołej, nasłonecznionej ziemi dla pszczół gniazdujących w gruncie.",
+          "Zapewnij płytką, bezpieczną wodę przez cały rok.",
+          "Nigdy nie opryskuj otwartych kwiatów; jeśli musisz, rób zabieg wieczorem."
+        ]
+      }
+    }
+  },
+  "beneficialInsect": {
+    "label": "Owady drapieżne i pożyteczne",
+    "topics": {
+      "role": {
+        "advice": [
+          "To naturalni wrogowie obecni w ogrodzie: drapieżniki, które w ciągu życia zabijają i zjadają wiele ofiar, oraz parazytoidy, których larwa rozwija się wewnątrz jednego żywiciela albo na nim i go uśmierca. Liczby robią wrażenie — biedronka potrafi pochłonąć w ciągu życia nawet 5000 mszyc, biegaczowate mogą zjadać dziennie tyle, ile same ważą, a larwa złotooka zjada od 100 do 150 mszyc. Odnotowano, że integrowana ochrona roślin oparta na naturalnych wrogach zmniejsza częstotliwość oprysków o 30% do 40% w różnych uprawach.",
+          "Stadium rozwojowe zmienia wszystko i właśnie tam mieszka najczęstszy błąd. U złotooków i bzygów drapieżna jest wyłącznie larwa: dorosły żyje z nektaru, pyłku i spadzi. Innymi słowy, to dziwne stworzenie na liściu to zwykle sprzymierzeniec, a nie szkodnik. Warto nauczyć się trzech znaków terenowych: larwa biedronki jest czerwonawa i przypomina małego aligatora; jaja złotooka siedzą na cienkich jak włos szypułkach; a gąsienica niosąca na grzbiecie kilkadziesiąt małych, białych kokonów jest już stracona i wypuści dziesiątki błonkówek pasożytniczych — zostaw ją dokładnie tam, gdzie jest."
+        ],
+        "checklist": [
+          "Rozpoznaj, zanim zadziałasz: wiele dziwnych larw na liściach to drapieżniki.",
+          "Larwa biedronki jest czerwonawa i ma sylwetkę małego aligatora.",
+          "Jaja na szypułkach cienkich jak włos to jaja złotooka, a nie szkodnik.",
+          "Gąsienica z białymi kokonami na grzbiecie jest już spasożytowana — nie wyrzucaj jej.",
+          "Modliszka to drapieżnik bez wyboru: zjada też zapylacze."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "Prawie nic tutaj nie żądli. Wśród drapieżników zdolność obronnego żądlenia mają tylko osy społeczne; wśród parazytoidów wyłącznie osy łowne budujące gniazda w ziemi lub z błota. Gąsieniczniki i męczelkowate używają tego długiego kolca wyłącznie jako pokładełka i nie służy on do obrony.",
+          "Ale dwie rodziny gryzą, gdy się je chwyci: zajadki wbijają kłujkę i wstrzykują enzymy trawienne, a łowiki wstrzykują neurotoksyczną ślinę. Nie bierz ich do ręki. Modliszka chwyta ofiarę odnóżami chwytnymi błyskawicznym ruchem i ugryzie, jeśli ją przytrzymasz. Jest też jeden szczególny przypadek: inwazyjna biedronka azjatycka gryzie ludzi, zwłaszcza gdy zostanie uwięziona między skórą a ubraniem — nie przerywa skóry ani nie przenosi chorób, ale zaniepokojona wypuszcza hemolimfę, która potrafi trwale poplamić ściany, zasłony i wykładziny, a odnotowano też reakcje alergiczne, takie jak astma i pokrzywka, przy czym wrażliwość nie zależy od wieku ani od skłonności do alergii. Przy tej biedronce zaleca się uszczelnianie szczelin i progów, a nie opryskiwanie ogrodu. Czynne gniazdo os społecznych obserwuje się z dystansu."
+        ],
+        "checklist": [
+          "W tej grupie żądlą tylko osy społeczne i osy łowne.",
+          "Nie bierz do ręki zajadka ani łowika.",
+          "Modliszka ugryzie, jeśli ją przytrzymasz.",
+          "Inwazyjne biedronki w domu rozwiązuje się uszczelnianiem szczelin, a nie opryskiem.",
+          "Gniazda os obserwuj z dystansu."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Ochrona bije kupowanie. Standardowe zalecenie to siedlisko i tolerancja, a nie wypuszczanie owadów: chroń te drapieżniki, unikając pestycydów, które je zabijają, wybierając rośliny dające im pyłek, nektar i schronienie, i trzymając mrówki z dala od roślin opanowanych przez szkodniki — mrówki bronią mszyc i czerwców przed drapieżnikami w zamian za spadź. Rośliny wskazywane przez służby doradcze jako pokarm dla osobników dorosłych to koper, koper włoski, jeżówka, rudbekia, trojeść i lantana.",
+          "Każda grupa ma swój wymóg środowiskowy. Ważki potrzebują zbiornika wodnego: samica składa jaja, dotykając powierzchni, a larwa rozwija się pod wodą — bez wody nie ma ważek. Larwy biegaczowatych żyją w glebie i mają ograniczony zasięg, więc przekopywanie albo ubijanie ziemi usuwa następne pokolenie. A wyzerowanie mszyc w ogrodzie zabiera bazę pokarmową biedronkom, złotookom, bzygom i błonkówkom pasożytniczym naraz: zdobycz jest zasobem, a nie sytuacją awaryjną. Kiedy zabieg jest nieunikniony, wybieraj mydło, olej albo spinosad zamiast pyretroidów, karbaminianów i związków fosforoorganicznych, właśnie po to, żeby oszczędzić błonkówki pasożytnicze, rączyce i biegaczowate."
+        ],
+        "checklist": [
+          "Zapewnij kwiaty nektarodajne i pyłkodajne: dorosłe osobniki nimi żyją.",
+          "Trzymaj mrówki z dala od roślin opanowanych przez szkodniki.",
+          "Zostaw czystą, stojącą wodę, jeśli chcesz mieć ważki.",
+          "Nie przekopuj ani nie ubijaj gleby tam, gdzie żyją larwy biegaczy.",
+          "Toleruj trochę mszyc: bez zdobyczy drapieżniki nie zostaną."
+        ]
+      }
+    }
+  },
+  "pestInsect": {
+    "label": "Owady szkodliwe",
+    "topics": {
+      "role": {
+        "advice": [
+          "Szkodnik to etykieta kontekstu, a nie gatunku: opisuje szkodę gospodarczą albo zagrożenie zdrowotne w jednym miejscu i w jednym momencie. Aparat gębowy mówi Ci, jaki to typ uszkodzenia — owady gryzące zostawiają wyraźne dziury w liściach, drewnie albo owocach; owady ssące używają rurki przypominającej słomkę i powodują drobne nakrapianie, plamki, zahamowanie wzrostu, żółknięcie, zniekształcone przyrosty i spadź. A spadź nie jest chorobą: to słodka wydzielina, a czarny nalot to czerń sadzakowa, która rozwija się na niej, poczernia wszystko i ogranicza fotosyntezę. Rozwiąż problem owada ssącego, a plama zniknie razem z nim.",
+          "W terenie pomagają dwa klucze. Typ przeobrażenia decyduje o tym, co faktycznie znajdziesz: przy przeobrażeniu niezupełnym są jajo, nimfa i osobnik dorosły, przy czym nimfa wygląda jak bezskrzydły dorosły; przy przeobrażeniu zupełnym są jajo, larwa, poczwarka i dorosły, a larwa może nie przypominać dorosłego w ogóle. Obyczaje mówią z kolei, gdzie szukać: owady ssące skupiają się na młodej, rosnącej tkance, dlatego młody liść zwija się jako pierwszy, a mszyce, mączliki i roztocza żyją na spodniej stronie liścia. Jeden ciekawy przypadek: mrówki grzybiarki nie zjadają liścia — tną go, by hodować grzyb, którym się żywią, co czyni je szkodnikiem na plantacjach i organizmem kluczowym w rodzimych ekosystemach."
+        ],
+        "checklist": [
+          "Dziury i wyszarpania = owad gryzący. Nakrapianie, zniekształcenia i lepkość = owad ssący.",
+          "Czerń sadzakowa rośnie na spadzi: lecz owada, a nie plamę.",
+          "Zawsze sprawdzaj spodnią stronę liścia.",
+          "Zwinięty młody liść wskazuje na owada ssącego, a nie na pragnienie.",
+          "Nie każda biedronka jest sprzymierzeńcem: jedna linia żywi się roślinami i zjada liście."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "Tutaj mieszka niemal całe fizyczne ryzyko związane z fauną w tej aplikacji — i nie pochodzi ono od szkodników upraw. Gąsienice parzące mają puste w środku włoski przypominające igiełki, połączone z woreczkami jadowymi, które przebijają skórę i uwalniają truciznę; objawy sięgają od lekkiego swędzenia po ból, obrzęk, pęcherze, zapalenie skóry, a nawet dolegliwości jelitowe. Pierwsza pomoc: przyklejaj i odklejaj taśmę samoprzylepną wielokrotnie, żeby wyciągnąć ułamane kolce, umyj miejsce ciepłą wodą z mydłem, jak najszybciej przyłóż okład z lodu, by zapobiec obrzękowi i zmniejszyć ból, a przy silnej reakcji zgłoś się po pomoc lekarską. W Brazylii gąsienica z rodzaju Lonomia wywołuje obraz krwotoczny i zagraża zarówno ludności wiejskiej, jak i miejskiej; nadzór w stanie Paraná odnotował 199 przypadków i pięć zgonów w latach 1989–2000, a surowicę zdecentralizowano do punktów strategicznych. Większość wypadków bierze się z otarcia o listowie podczas prac w ogrodzie, a nie od agresywnego zwierzęcia: kolorową, futrzastą gąsienicę podziwiaj z daleka.",
+          "Pluskwiak triatomowy, przenoszący chorobę Chagasa, ma po znalezieniu własny, oficjalny protokół: nie rozgniataj, nie ściskaj i nie uszkadzaj owada; zabezpiecz dłoń rękawicą albo plastikową torebką; włóż owada, najlepiej żywego, do plastikowego pojemnika z zakręcanym wieczkiem; i zanieś go do punktu informacyjnego zajmującego się triatominami. Przeniesienie przez wektora następuje, gdy odchody owada trafią do rany po ukłuciu, a istnieje też droga zakażenia przez spożycie skażonego jedzenia lub napoju. Profilaktyka domowa to siatki w drzwiach i oknach, repelent i długie rękawy po zmroku."
+        ],
+        "checklist": [
+          "Nigdy nie dotykaj ani nie strząsaj włochatej lub kolczastej gąsienicy.",
+          "Poparzenie od gąsienicy: taśma samoprzylepna, ciepła woda z mydłem i okład z lodu — a przy pogorszeniu pomoc lekarska.",
+          "Jeśli znajdziesz pluskwiaka triatomowego, nie rozgniataj owada.",
+          "Zbierz go w rękawicy, do pojemnika z zakręcanym wieczkiem, i zanieś do służb sanitarnych.",
+          "W rejonach ryzyka zakładaj siatki w drzwiach i oknach oraz długie rękawy po zmroku."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "To jedyna grupa, w której właściwą odpowiedzią bywa nic nie robić: podstawowa instrukcja mówi, by monitorować i lustrować uprawę, ustalając typ owada i liczebność populacji, zanim zdecydujesz się na jakikolwiek zabieg. Potem wchodź po drabinie najmniejszego wpływu. Zwykła woda z węża zmywa mszyce i roztocza. Zbieranie ręczne i domowa pułapka działają — podłóż pod roślinę dyniowatą mały kawałek starego gontu albo grubej tektury, owady zbiorą się pod spodem w poszukiwaniu schronienia, a Ty po prostu podnosisz pułapkę i je usuwasz. Ucieczka fenologiczna, czyli wczesny siew, żeby ominąć moment wylęgu szkodnika, to również metoda zwalczania.",
+          "Dopiero potem wchodzą preparaty: mydło i olej owadobójczy, które szkodzą mniejszej liczbie owadów niedocelowych, ściółka odblaskowa przeciwko mączlikom, Bacillus thuringiensis na młode gąsienice, a chemia na samym końcu — zawsze opryskiwana wieczorem, żeby ograniczyć wpływ na owady zapylające. Służby doradcze wolą spinosad od pyretroidów i neonikotynoidów właśnie po to, by oszczędzić błonkówki pasożytnicze, rączyce i biegaczowate. Bariery fizyczne są najbardziej niedocenianą metodą ze wszystkich, z jednym warunkiem: agrowłókninę trzeba zdjąć na czas kwitnienia, bo inaczej zablokuje zapylacza razem ze szkodnikiem. I porządnie zapisuj to, co widziałeś — zdjęcie z jakimś przedmiotem obok owada, który da skalę, wraz z datą oraz notatką, na jakiej roślinie i na jakiej jej części owad żerował, czyni każdą diagnozę znacznie pewniejszą."
+        ],
+        "checklist": [
+          "Monitoruj i licz, zanim wykonasz zabieg.",
+          "Zacznij od strumienia wody, zbierania ręcznego i domowej pułapki.",
+          "Wybieraj mydło, olej albo spinosad zamiast insektycydów o szerokim spektrum.",
+          "Zdejmij agrowłókninę na czas kwitnienia.",
+          "Opryskuj zawsze wieczorem, gdy zapylacze są nieaktywne."
+        ]
+      }
+    }
+  },
+  "decomposerFungus": {
+    "label": "Grzyby rozkładające",
+    "topics": {
+      "role": {
+        "advice": [
+          "To grzyby saprotroficzne: żyją z martwej materii organicznej. Grzyby wytwarzające te owocniki są pożyteczne, bo rozkładają materię organiczną w glebie, udostępniając składniki pokarmowe innym roślinom. Grzyb w trawniku prawie nigdy nie jest chorobą — to naturalnie występujące organizmy grzybowe robiące dokładnie to, co przewidziała natura, czyli rozkładające dawniej żywy materiał, żeby zawrócić energię do gleby. Czarcie koło jest znakiem żyzności, a nie szkodnika: rozkład uwalnia azot, trawa go pobiera i ciemnieje, i to właśnie rysuje ten ciemnozielony okrąg. Zerwanie owocnika też nie zabija grzyba: owocnik jest efemeryczny, a organizmem jest grzybnia w podłożu.",
+          "Na żywym drzewie ten znak jest jednak poważny. Owocniki albo huby na pniu czy odziomku to ostrzeżenia, a wiele starych drzew, które przewracają się w czasie burzy, miało już wytrzymałość mocno obniżoną albo wręcz zniesioną przez grzyby rozkładające drewno. Utratę wytrzymałości trudno wykryć amatorowi, a i profesjonaliście trudno ją ocenić — co oznacza wezwanie kogoś przeszkolonego w wykrywaniu i ocenie rozkładu drewna. W ściółce grzyb strzelający, gniazdnice i purchawki to nieszkodliwe organizmy rozkładające, a jaskrawe, żółte lub pomarańczowe śluzowate masy to śluzowce, które nie są nawet prawdziwymi grzybami i nie szkodzą roślinom."
+        ],
+        "checklist": [
+          "Grzyb w trawniku to materia organiczna wracająca do obiegu, a nie choroba.",
+          "Ciemnozielone czarcie koło pokazuje uwolniony azot, a nie szkodnika.",
+          "Owocnik albo huba na pniu czy odziomku to ostrzeżenie o stanie konstrukcji drzewa.",
+          "Zrywanie grzybów nie usuwa grzyba, tylko owocnik.",
+          "Żółta, śluzowata masa w ściółce to śluzowiec i nie atakuje roślin."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "Nigdy nie jedz dziko rosnącego grzyba bez identyfikacji dokonanej na miejscu przez specjalistę. Wiele gatunków jest trujących, a tylko specjalista potrafi odróżnić gatunki jadalne od trujących. Gotowanie tego nie naprawia: amanityny są termostabilne i obróbka cieplna ich nie unieczynnia, a odnotowano zatrucia po wdychaniu oparów znad gotowania. Atlas grzybów z innego regionu się nie przekłada — umiejętność rozpoznawania grzybów w jednej części kraju albo w innym kraju nie jest wiarygodna przy rozpoznawaniu grzybów gdzie indziej. Groźny jest objaw późny: w udokumentowanych przypadkach nudności, wymioty i biegunka zaczęły się mniej więcej dziewięć godzin po spożyciu, a wymioty pojawiające się po ponad sześciu godzinach to znak ciężkiego zatrucia, a nie niestrawności.",
+          "Dotknięcie nie zatruwa — udokumentowanym ryzykiem jest spożycie, a wtórnie wdychanie oparów znad gotowania. Mimo to umyj ręce i trzymaj je z dala od ust. Usuwaj grzyby z trawników, po których biegają dzieci albo zwierzęta domowe, bo małe dzieci wkładają do ust wszystko, także grzyby: w amerykańskim przeglądzie z lat 2016–2018 25,9% pacjentów miało pięć lat lub mniej. Jeśli ktoś zjadł grzyba, natychmiast dzwoń do ośrodka toksykologicznego — w USA pod numer 1-800-222-1222, w Brazylii CIATox / Disque-Intoxicação 0800 722 6001. I jedno zdanie waży w tym poradniku więcej niż wszystkie inne: aplikacja do rozpoznawania nie zastępuje specjalisty."
+        ],
+        "checklist": [
+          "Nie jedz dziko rosnącego grzyba bez identyfikacji przez specjalistę na miejscu.",
+          "Gotowanie, suszenie ani domowe testy nie uczynią trującego grzyba bezpiecznym.",
+          "Wymioty pojawiające się po ponad sześciu godzinach to znak ciężkiego zatrucia.",
+          "Usuwaj grzyby z trawników, na których bawią się dzieci albo biegają zwierzęta.",
+          "Jeśli ktoś zjadł grzyba, natychmiast dzwoń do ośrodka toksykologicznego."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "To jedyna grupa grzybów, którą da się uprawiać na dużą skalę, właśnie dlatego, że potrzebuje wyłącznie martwego podłoża: shiitake, boczniak, pieczarka i płomiennica zimowa to saprotrofy, a ich hodowla polega na naśladowaniu rozkładającego się drewna albo słomy. W ogrodzie zarządzanie jest fizyczne, a nie chemiczne — fungicyd nie jest odpowiedzią. Zbierz owocniki dla bezpieczeństwa, wykop zakopaną materię organiczną, która je karmi, czyli pniaki, martwe korzenie, gruz budowlany i nagromadzony filc darniowy, i napowietrz glebę, żeby poprawić wsiąkanie wody. Zakładając trawnik, najpierw usuń pniaki i korzenie drzew.",
+          "Kiedy czarcie koło naprawdę przeszkadza, szkoda bierze się z gęstej grzybni, która potrafi hamować przenikanie wody w głąb gleby — drogą wyjścia jest napowietrzenie przerywające grzybniową matę oraz podlewanie i nawożenie w zalecanych dawkach. W ściółce domieszanie około 40% zużytego podłoża po pieczarkach hamuje grzyba strzelającego, bo wprowadza konkurencyjne drobnoustroje; gniazdnice i śluzowce nie wymagają niczego poza przejechaniem grabiami. W przypadku drzewa jedyną realną obroną jest zapobieganie, bo drzewa z rozkładem drewna nie da się uratować: podlewaj porządnie w suszy, napowietrzaj glebę, utrzymuj pięć do piętnastu centymetrów ściółki organicznej, nawoź preparatami o spowolnionym uwalnianiu, unikaj ranienia i przysypywania korzeni podczas budowy i tnij poprawną techniką w odpowiednim terminie. A fotografując, uwieczniaj kapelusz, blaszki albo rurki od spodu, podstawę trzonu, podłoże i żywiciela — to właśnie podstawa i podłoże oddzielają gatunki śmiertelne od jadalnych."
+        ],
+        "checklist": [
+          "Nie stosuj fungicydu na trawnik z powodu grzybów.",
+          "Wykop zakopane drewno i korzenie, które karmią grzyba.",
+          "Napowietrz glebę, żeby przerwać grzybniową matę czarciego koła.",
+          "Drzewa z rozkładem drewna się nie leczy: mu się zapobiega, a ocenę zostawia się profesjonaliście.",
+          "Fotografując, uwzględnij podstawę trzonu i podłoże."
+        ]
+      }
+    }
+  },
+  "mycorrhizalFungus": {
+    "label": "Grzyby mikoryzowe",
+    "topics": {
+      "role": {
+        "advice": [
+          "Owocnik jest tu jedynie widocznym czubkiem podziemnego partnerstwa z korzeniami roślin. Szacuje się, że od 80% do 90% wszystkich roślin wchodzi w co najmniej jeden z siedmiu typów mikoryzy — co czyni z tego regułę świata roślin, a nie wyjątek. Grzyb nie prowadzi fotosyntezy i nie potrafi związać własnego węgla, więc wszystkie potrzebne mu cukry otrzymuje od rośliny żywicielskiej, a w zamian oddaje wodę i składniki mineralne: lepsze pobieranie fosforu, amonu i cynku, ochronę przed chorobami odglebowymi oraz większą tolerancję na suszę i temperaturę. Przewaga jest geometryczna, a nie chemiczna — korzenie zajmują tylko około 0,5% objętości warstwy ornej, a strzępka, będąc znacznie cieńsza, styka się ze znacznie większą ilością gleby na jednostkę objętości.",
+          "W praktyce istnieją dwa typy. Ektomikoryzy tworzą mufkę na korzeniu i to one wydają widoczne owocniki; mikoryzy arbuskularne rosną wewnątrz korzenia i nie tworzą owocnika w ogóle, tylko zarodniki w glebie. Storczyki zależą od grzybów mikoryzowych nawet przy kiełkowaniu, a rośliny mikotroficzne — te, które nie prowadzą fotosyntezy w wystarczającym stopniu — pobierają węgiel od drzewa żywicielskiego za pośrednictwem grzyba. Jedno rozróżnienie terenowe warto zapamiętać: grzyb mikoryzowy wyrasta z gleby w pobliżu żywego drzewa i świadczy o tym, że drzewo żyje i jest połączone z siecią, natomiast huba rozkładająca drewno wyrasta z pnia albo odziomka i jest ostrzeżeniem o ryzyku konstrukcyjnym."
+        ],
+        "checklist": [
+          "Grzyby mikoryzowe wyrastają z gleby przy żywym drzewie; huby rozkładu wyrastają z pnia.",
+          "Grzyb nie zjada drzewa: wymienia cukry na wodę i minerały.",
+          "Grzyb mikoryzowy wskazuje na glebę ustabilizowaną i nienaruszoną.",
+          "Mikoryzy arbuskularne są w niemal każdym ogrodzie i są niewidoczne.",
+          "Rodzime storczyki potrzebują do kiełkowania grzyba ze swojej pierwotnej gleby."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "Obowiązuje ta sama twarda reguła i tutaj waży jeszcze więcej: nigdy nie jedz dziko rosnącego grzyba bez identyfikacji dokonanej na miejscu przez specjalistę. Ta grupa mieści w sobie zarówno najbardziej cenione grzyby gastronomii, jak i najbardziej śmiercionośne na planecie — zabójcze muchomory należą do jednej z dominujących rodzin ektomikoryzowych, czyli do dokładnie tego samego sąsiedztwa ekologicznego co szlachetne gatunki jadalne. Gotowanie ich nie neutralizuje: amanityny są termostabilne.",
+          "Typowa pomyłka dotyczy właśnie pospolitego gatunku jadalnego, a znajomość gatunków z innego regionu podnosi ryzyko, zamiast je obniżać. Zwodzi utajenie: nudności i wymioty pojawiające się po ponad sześciu godzinach od spożycia to znak ciężkiego zatrucia, a nie zwykłej niedyspozycji. Zasada przytaczana przez uniwersytecką służbę zdrowia ujmuje to najkrócej: jeśli nie masz pewności, nie jedz. Dotknięcie nie zatruwa — udokumentowanym ryzykiem jest spożycie; umyj ręce i trzymaj je z dala od ust. Jeśli ktoś zjadł grzyba, natychmiast dzwoń do ośrodka toksykologicznego: w Brazylii CIATox / Disque-Intoxicação 0800 722 6001, w USA 1-800-222-1222."
+        ],
+        "checklist": [
+          "Nie jedz dziko rosnącego grzyba bez identyfikacji przez specjalistę na miejscu.",
+          "W tej grupie znajdują się najbardziej śmiercionośne znane gatunki.",
+          "Gotowanie nie unieczynnia toksyn muchomorów.",
+          "Objaw, który pojawia się po sześciu godzinach, to znak ciężkiego zatrucia.",
+          "W razie wątpliwości nie jedz — a jeśli ktoś już zjadł, dzwoń do ośrodka toksykologicznego."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Tej grupy nie da się uprawiać tak jak saprotrofów, bo wymaga żywej rośliny żywicielskiej — to ekonomiczny powód, dla którego borowiki, kurki i matsutake się zbiera, a nie hoduje, i dlaczego próby prowadzenia ich na podłożu kończą się porażką. Ma to też mocną konsekwencję praktyczną: przenawożenie rozmontowuje to partnerstwo. Dawki azotu, fosforu albo nawozów pełnoskładnikowych zmniejszają obecność i aktywność grzybów mikoryzowych, więc kto chce mieć mikoryzę, nawozi oszczędnie. Nawet niewielkie zmiany pH gleby, temperatury, zawartości materii organicznej, ogólnej żyzności i wilgotności mogą istotnie zmienić poziom kolonizacji.",
+          "To, co ją chroni, to gleba ustabilizowana i nienaruszona, nietknięta warstwa organiczna i właściwy żywiciel. Zbiorowiska ektomikoryzowe budują się latami: młodsze drzewa mają uboższą społeczność symbiontów grzybowych niż drzewostany dojrzałe. W praktyce sieć mikoryzowa dojrzałego drzewa to majątek gromadzony przez dekady, który budowa, zdarcie wierzchniej warstwy gleby i fumigacja niszczą w jeden dzień i którego żaden worek preparatu nie odkupi. I podchodź sceptycznie do tego worka: istnieje bardzo ograniczona bezstronna dokumentacja naukowa wykazująca, że szczepienie mikoryzą poprawia przyjmowanie się roślin, a preparaty te nie są cudownym panaceum przedstawianym w reklamach. Nie kop, żeby zobaczyć grzybnię, i nie przesadzaj rodzimego storczyka naziemnego ani rośliny pozbawionej chlorofilu: bez partnera grzybowego ze swojej pierwotnej gleby po prostu zginą."
+        ],
+        "checklist": [
+          "Nawoź oszczędnie, jeśli chcesz zachować mikoryzę.",
+          "Unikaj fumigacji gleby i zdzierania warstwy wierzchniej.",
+          "Podchodź sceptycznie do szczepionek sprzedawanych jako cudowny środek.",
+          "Nie kop, żeby zobaczyć grzybnię: to sieć jest organizmem.",
+          "Nie przesadzaj rodzimych storczyków ani roślin mikotroficznych."
+        ]
+      }
+    }
+  },
+  "freshwaterFish": {
+    "label": "Ryby słodkowodne",
+    "topics": {
+      "role": {
+        "advice": [
+          "Temperatura i tlen rozpuszczony to filtr, który rozstrzyga wszystko: przed jakąkolwiek decyzją dotyczącą zbiornika mierzy się temperaturę, pH i tlen rozpuszczony, a przyducha spowodowana nadmiernym upałem albo brakiem tlenu to klasyczny wypadek w stawach gospodarskich. Skład taksonomiczny zmienia się z kontynentu na kontynent — w Neotropikach dominują kąsaczowate i sumokształtne, podczas gdy w Holarktyce rządzą karpiowate, bassowate, okoniowate i łososiowate. Neotropikalna fauna ryb słodkowodnych jest najbogatsza na planecie: około 71 rodzin i mniej więcej sześć tysięcy gatunków, z czego 4475 opisano formalnie.",
+          "Wiele gatunków zależy od obowiązkowej wędrówki tarłowej, zwanej piracema: ryby reofilne płyną w górę rzeki pod prąd, żeby odbyć tarło, a sam wysiłek fizyczny jest częścią fizjologicznego bodźca do rozrodu. A laguny zalewowe nie są kałużami, tylko żłobkami — podczas wezbrania rzeka wylewa i je łączy, znoszone prądem jaja i larwy osiadają w nich, a gdy woda opada, młode dorastają tam pod ochroną aż do następnego wezbrania. Niektóre rodziny działają jak termometr jakości wody, a inne jak wskaźnik degradacji: ryby nietolerujące ciepłej, mętnej wody wskazują na wodę wysokiej jakości, natomiast sumokształtne znoszące wysoką temperaturę, mętną wodę i niski poziom tlenu świetnie się mają dokładnie tam, skąd gatunki wymagające już zniknęły."
+        ],
+        "checklist": [
+          "Przy nagłej letniej przyduchy podejrzewaj najpierw tlen rozpuszczony.",
+          "Silny prąd nad kamienistym dnem wskazuje na gatunki reofilne i wędrowne.",
+          "Laguna zalewowa łącząca się z rzeką podczas wezbrania to żłobek, a nie kałuża.",
+          "Obecność wyłącznie gatunków tolerancyjnych sugeruje układ zdegradowany albo już opanowany przez obce gatunki.",
+          "Ława ryb tworząca się na początku pory deszczowej może być początkiem wędrówki tarłowej."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "Tutaj bezpieczeństwo dotyczy głównie zwierzęcia i prawa. Nigdy nie wypuszczaj ryby z akwarium, z łowiska komercyjnego ani z hodowli do naturalnego zbiornika: w Brazylii odnotowano już około dziewięćdziesięciu inwazyjnych, obcych gatunków ryb w wodach śródlądowych, akwakultura jest największym źródłem introdukcji — przez ucieczki wraz ze ściekami, awarie zbiorników i ryby przechodzące przez oczka sadzów — a wprowadzanie jakiegokolwiek gatunku zwierzęcia bez opinii technicznej i zezwolenia właściwego organu jest zabronione. Nigdy nie przenoś ryb między dorzeczami: złowiona ryba może trafić do innego zbiornika tylko wtedy, gdy jest rodzima dla tego samego dorzecza.",
+          "Szanuj okres ochronny. W stanie Minas Gerais okres ochronny na czas wędrówki tarłowej trwa od 1 listopada do 28 lutego, ale terminy różnią się w zależności od stanu i dorzecza, więc przed wyjazdem sprawdź je w miejscowym urzędzie ochrony środowiska. Nie dokarmiaj dzikich ryb — dokarmianie zmienia naturalne zachowania żerowe i sztucznie skupia zwierzęta. Wiosną nie łów ani nie niepokój ryb pilnujących gniazd. I dotykaj jak najmniej: kamienie i kłody odkładaj dokładnie tam, gdzie leżały."
+        ],
+        "checklist": [
+          "Nigdy nie wypuszczaj ryby akwariowej ani hodowlanej do rzeki, jeziora czy stawu.",
+          "Nie przenoś ryb między różnymi dorzeczami.",
+          "Przed wędkowaniem sprawdź kalendarz okresów ochronnych obowiązujący w Twoim regionie.",
+          "Nie dokarmiaj dzikich ryb.",
+          "Wiosną nie niepokój ryb pilnujących gniazd."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Naturalna dieta zmienia się z porą roku i opowiada historię środowiska. Tambaqui zjada owoce i nasiona podczas wezbrania rzeki, a gdy w porze suchej ich zabraknie, przestawia się na zooplankton — i roznosząc nasiona, bierze udział w odnawianiu lasu amazońskiego. Detrytusożercy i gatunki zeskrobujące przerabiają materię organiczną z dna oraz biofilm, tworząc bazę energetyczną wielu rzek neotropikalnych. Ryby drapieżne polujące z zasadzki zajmują lokalny szczyt łańcucha pokarmowego i to one w stawie powstrzymują przegęszczenie ryb paszowych.",
+          "W stawie albo w gospodarstwie rybackim dawkę paszy trzeba odmierzać tak, by nie pogarszała jakości wody: nadmiar paszy staje się materią organiczną, zużywa tlen i otwiera drzwi chorobom oraz masowym śnięciom. Zarybianie po trochu wszystkim dla samej różnorodności daje rozczarowujące wyniki, z niezrównoważonymi populacjami i karłowatymi rybami; zarybianie gatunkami bardzo płodnymi zapełnia staw rybami karłowatymi. Unikaj zarybiania w pełni lata, gdy wysoka temperatura i niski poziom tlenu osłabiają ryby w transporcie. I pamiętaj, że gatunki zimnolubne nie przeżywają lata w większości stawów i sprawdzają się wyłącznie w schemacie „zarybić i odłowić” przed nadejściem upałów."
+        ],
+        "checklist": [
+          "Odmierzaj paszę: nadmiar staje się materią organiczną i obniża poziom tlenu.",
+          "Nie zarybiaj po trochu każdym gatunkiem w nadziei na różnorodność.",
+          "Unikaj zarybiania w pełni lata.",
+          "Odczytaj środowisko z wody, zanim zdecydujesz o jakimkolwiek zabiegu.",
+          "Fotografuj i notuj, zamiast zbierać okazy."
+        ]
+      }
+    }
+  },
+  "marineFish": {
+    "label": "Ryby morskie i rafowe",
+    "topics": {
+      "role": {
+        "advice": [
+          "Ryba rafowa to diagnoza rafy, a nie tylko jej mieszkaniec. Roślinożercy — papugoryby i chirurgi — zjadają glony, które konkurują z koralowcem i obniżają jego zdolność przetrwania, wzrostu i rozmnażania. A grupa funkcjonalna liczy się bardziej niż gatunek: papugoryby mają potężne dzioby, które zeskrobują podłoże przy każdym kęsie glonów, otwierając przestrzeń do osiedlania się nowym koralowcom, podczas gdy chirurgi wyjadają tylko górną warstwę murawy glonowej. Największy negatywny wpływ glonów dotyczy osiedlania się i wczesnego przeżycia koralowców, więc rafa, która ma już wiele dużych, dorosłych kolonii, może nie odnieść natychmiastowej korzyści z większej liczby roślinożerców, podczas gdy ta, której odbudowa zależy od nowego zasiedlenia, korzysta ogromnie.",
+          "Ochrona roślinożerców nie jest rozwiązaniem uniwersalnym: działa tam, gdzie w danym miejscu naprawdę istnieje problem z glonami i gdzie faktycznie zwiększa zasób roślinożerców. To, co fotografujesz, odczytuje miejsce. Liczne chetoniki sugerują żywy, przestrzennie zbudowany koralowiec w pobliżu. Całkowity brak dużych graników i lucjanów na dobrze zbudowanej rafie to mocna wskazówka presji połowowej. Gęsta murawa makroglonów pokrywająca martwy koralowiec, przy nielicznych papugorybach i chirurgach w polu widzenia, wskazuje na niedostateczne wyjadanie. A nawet objęci ochroną roślinożercy potrzebują kilku lat, by się odbudować — zarządzanie musi więc wyprzedzać problem, a nie na niego reagować."
+        ],
+        "checklist": [
+          "Liczne chetoniki sugerują żywy koralowiec w pobliżu.",
+          "Brak dużych drapieżników wskazuje na presję połowową.",
+          "Gęste makroglony przy nielicznych roślinożercach wskazują na niedostateczne wyjadanie.",
+          "Piaszczyste kanały i płaty między koralowcami też są siedliskiem.",
+          "Zapisz datę i lokalizację: są warte tyle samo co zdjęcie."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "Podstawową zasadą jest nie dotykać. Koralowce to kruche zwierzęta, które uszkadza dotknięcie, szturchnięcie, kopnięcie płetwą albo dłoń oparta dla utrzymania równowagi, a wiele z nich jest prawnie chronionych. Nie dotykaj też innych zwierząt: warstwa śluzu chroniąca ryby i wiele bezkręgowców morskich przed zakażeniem łatwo schodzi od dłoni, rękawicy albo stopy. Fizyczny kontakt z mantami i rekinami wielorybimi jest w rezerwatach morskich zabroniony przepisami, nawet jeśli zwierzę sprawia wrażenie zadowolonego. A kontrola pływalności to etyka, nie technika: unoś się nad rafą, a przy silnym prądzie trzymaj się liny cumowniczej, nigdy rafy.",
+          "Nie dokarmiaj i nie zbieraj. Dokarmianie ryb przerywa naturalne zachowania żerowe ryb rafowych, przyciąga gatunki, które w danym miejscu nie występują, i uczy ryby podgryzania pływaków w oczekiwaniu na jedzenie — w części jurysdykcji jest nielegalne. Z rezerwatu nie wynosi się niczego, ani muszli, ani fragmentu koralowca: muszle, które wyglądają na puste, często kryją w środku przestraszone zwierzę, a te naprawdę puste stają się schronieniem dla krabów pustelników, pąkli, młodych koralowców i gąbek. Dla megafauny referencyjne odległości prawne w Stanach Zjednoczonych to 90 metrów od wielorybów w ogóle, 45 od żółwi morskich i 45 od fok oraz uchatek, przy 180 metrach dla orek na wodach wewnętrznych stanu Waszyngton i 450 metrach dla wala biskajskiego, oraz 30 minut jako maksymalny czas obserwacji. Wody brazylijskie mają własne przepisy ICMBio i IBAMA: traktuj te liczby jako dobrą praktykę, a nie jako prawo miejscowe."
+        ],
+        "checklist": [
+          "Nie dotykaj koralowca i nie opieraj się o niego, żeby złapać równowagę.",
+          "Nie dotykaj ryb, płaszczek ani żółwi: schodzi z nich ochronny śluz.",
+          "Pod żadnym pozorem nie dokarmiaj ryb rafowych.",
+          "Nie zbieraj muszli, fragmentów koralowca ani żadnych pamiątek.",
+          "Trzymaj dystans od megafauny i ograniczaj czas obserwacji."
+        ]
+      }
+    }
+  },
+  "gardenBird": {
+    "label": "Ptaki ogrodowe i miejskie",
+    "topics": {
+      "role": {
+        "advice": [
+          "To ptaki, które żyją, żerują albo gniazdują w ogrodach, na skwerach, w parkach miejskich, na dachach i przy drogach — zarówno gatunki rodzime tolerujące krajobraz przekształcony przez człowieka, jak i w pełni synantropijne gatunki obce. Każde dzikie zwierzę potrzebuje czterech elementów: pokarmu, wody, osłony i przestrzeni do rozrodu i wychowania młodych. W przeciętnym ogrodzie pierwszym, którego zaczyna brakować, jest zwykle pewne, całoroczne źródło wody — a nie pokarm.",
+          "Spora część najbardziej widocznych ptaków miejskich to gatunki obce: gołąb miejski dotarł do Brazylii w XVI wieku wraz z kolonizacją portugalską i jest dziś traktowany jako fauna synantropijna, objęta własnymi przepisami sanitarnymi. Oficjalna strategia kontroli w miastach uderza w te same cztery elementy — wodę, pokarm, schronienie i dostęp — czyli robi dokładnie odwrotność tego, co robisz, żeby przyciągnąć ptaki rodzime. Warto dorzucić jedną zasadę projektową: liczy się mozaikowość. Dla gatunków mniej ruchliwych wiele drobnych płatów pokarmu, wody i osłony działa lepiej niż kilka dużych, bo im dalej zwierzę musi się przemieszczać, tym bardziej wystawia się na drapieżniki."
+        ],
+        "checklist": [
+          "Zasobem ograniczającym jest zwykle woda, a nie pokarm.",
+          "Rozłóż pokarm, wodę i osłonę na kilka drobnych płatów.",
+          "Nie sprzątaj ogrodu zbyt starannie: zamierające drzewo i stos gałęzi to schronienie.",
+          "Przewaga gołębi i wróbli wskazuje na środowisko silnie zabudowane.",
+          "Pojawienie się rodzimych owocożerców pokazuje, że Twoje rośliny owocują."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "Świadomą ingerencją w tej grupie jest karmnik i niesie on koszt sanitarny. Choroby krążące przy karmnikach to między innymi mykoplazmowe zapalenie spojówek, salmonelloza, aspergiloza, ospa ptasia i ptasia grypa. Higiena nie jest opcjonalna: karmniki na nasiona myj co dwa tygodnie, a przy jakimkolwiek podejrzeniu choroby dwa razy częściej, używając dziewięciu części wody na jedną część wybielacza. Zeskrob widoczne odchody przed namoczeniem, dobrze wypłucz i wysusz przed ponownym napełnieniem. Wygrabuj z ziemi odchody i łuski nasion, zwłaszcza spleśniałe albo mokre, co przy okazji powstrzymuje przyciąganie gryzoni. I rozstaw kilka karmników zamiast skupiać wszystko w jednym, bo w ciasnej przestrzeni ze skupionymi grupami ptaków choroba rozprzestrzenia się łatwiej. Ta sama zasada mycia dotyczy ptasiego kąpieliska.",
+          "Kiedy zobaczysz chorego ptaka — czerwone, opuchnięte lub cieknące oczy, brodawkowate narośla na nieopierzonych partiach ciała, chudy ptak z nastroszonym upierzeniem — zdejmij karmniki na jakieś dwa tygodnie i wyczyść wszystko, łącznie z otoczeniem. Nie bierz zwierzęcia do ręki: dzikiego ptaka mogą legalnie leczyć wyłącznie lekarze weterynarii albo licencjonowani opiekunowie dzikich zwierząt. Jeśli pojawi się choroba przenoszona drogą pokarmową, rozważ wycofanie karmników tacowych, które najbardziej koncentrują skażenie. W terenie zachowuj szczególną ostrożność w pobliżu czynnych gniazd, kolonii lęgowych, noclegowisk i ważnych żerowisk, ograniczaj używanie playbacku i fotografuj z rozwagą i powściągliwością. A zasada, która rozstrzyga każdą wątpliwość: w konflikcie interesów między ptakami a obserwatorem dobro ptaków jest ważniejsze."
+        ],
+        "checklist": [
+          "Myj karmniki co dwa tygodnie, jedna część wybielacza na dziewięć części wody.",
+          "Wygrabuj łuski i odchody z ziemi pod karmnikiem.",
+          "Rozstaw kilka karmników zamiast skupiać wszystko w jednym.",
+          "Chory ptak: zdejmij karmniki na dwa tygodnie i nie dotykaj zwierzęcia.",
+          "Ograniczaj playback i trzymaj dystans od czynnych gniazd."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Rodzime rośliny są warte więcej niż karmnik. Idealne podejście dostarcza przez cały rok jak najwięcej pokarmu rodzimego — żołędzi, orzechów, jagód, pąków, owoców, nektaru i nasion — a dokarmianie nasionami wchodzi tylko wtedy, gdy naturalnej podaży brakuje, przede wszystkim zimą. Oparcie się na samym karmniku to rozwiązanie kruche: karmnik się psuje, Ty wyjeżdżasz, a ptak, który nauczył się na niego liczyć, zostaje z niczym.",
+          "W praktyce: zapewnij wodę w ptasim kąpielisku, płytkim oczku, podstawce po doniczce, obiegowej kaskadzie albo choćby w kapiącym wężu, wymieniając ją regularnie w upał i utrzymując dostępną w mróz. Zapewnij osłonę zróżnicowaną pod względem wielkości i gęstości — gęste krzewy, dziuplaste kłody, sterty kamieni i gałęzi, rośliny zimozielone, wysoka trawa — żeby każdy gatunek mógł wybrać osłonę właściwą do żerowania, ukrycia się, przeczekania złej pogody, zalotów i gniazdowania. Zapewnij przestrzeń z dojrzałymi drzewami, gęstymi zaroślami i budkami lęgowymi. Jeśli używasz karmnika, to nasiona słonecznika, nasiona nyger, proso i śruta kukurydziana to dokarmiacze wskazywane przez służby doradcze, a latem kolibry chętnie odwiedzają karmniki z nektarem. I projektuj z myślą o kotach: podniesione kąpielisko z przyciętymi niskimi gałęziami w pobliżu odbiera kryjówkę do zasadzki."
+        ],
+        "checklist": [
+          "Sadź rodzime rośliny owocujące przez cały rok.",
+          "Nasiona stosuj tylko jako uzupełnienie w okresie niedoboru, przede wszystkim zimą.",
+          "Utrzymuj pewne źródło wody dostępne przez cały rok.",
+          "Różnicuj osłonę: gęste krzewy, sterty gałęzi, kamienie, rośliny zimozielone.",
+          "Trzymaj kąpielisko podniesione i bez gęstych krzewów wokół, ze względu na koty."
+        ]
+      }
+    }
+  },
+  "forestBird": {
+    "label": "Ptaki leśne i wędrowne",
+    "topics": {
+      "role": {
+        "advice": [
+          "To dwie częściowo nakładające się populacje: ptaki zależne od lasu i ptaki wędrowne. Spośród 1971 gatunków ptaków odnotowanych na terytorium Brazylii 216 — 10,9% — odbywa jakąś formę wędrówki: 141 gatunków wędrownych i 75 częściowo wędrownych, czyli takich, w których przemieszcza się tylko część populacji; kolejne 91 to gatunki zalatujące. Mniej więcej jedna trzecia brazylijskich rodzin ptaków ma co najmniej jeden gatunek wędrowny, ale pięć rodzin odpowiada za ponad połowę z nich, obejmując 112 gatunków: tyrankowate z 36, bekasowate z 23, burzykowate z 22, tanagrowate z 16 oraz mewowate i rybitwy z 15.",
+          "Duże leśne ptaki owocożerne są infrastrukturą lasu, a nie jego ozdobą: tukany i czubaczowate roznoszą duże nasiona, a polowania i fragmentacja usuwają dokładnie te ptaki, których dzioby potrafią je połknąć. Owoce palmy juçara, dominującej w Lesie Atlantyckim, zjada ponad 58 gatunków ptaków. A las zachowany w płatach to nie to samo co las zachowany: różnorodność spada, gdy fragmenty są nieciągłe i odległe od siebie albo gdy żaden z nich nie jest dość zwarty, by umożliwić przetrwanie i rozród."
+        ],
+        "checklist": [
+          "Bogate zgrupowanie ptaków podszytu wskazuje na las ciągły i dobrze zbudowany piętrowo.",
+          "Zniknięcie tukanów i czubaczowatych wskazuje na polowania albo zaawansowaną fragmentację.",
+          "Ptaki siewkowe skupione na mulistej płyciźnie w sezonie przelotów wskazują na miejsce postoju.",
+          "Wędrowność to nie jest tak albo nie: są gatunki częściowo wędrowne i zalatujące.",
+          "Migracja wysokościowa występuje w Brazylii i jest niedoceniana."
+        ]
+      },
+      "safety": {
+        "advice": [
+          "Playback to główny błąd tej grupy. Kodeks etyki obserwatorów ptaków nakazuje ograniczać używanie nagrań i innych dźwiękowych metod wabienia, zwłaszcza w miejscach intensywnie odwiedzanych przez obserwatorów, w przypadku gatunków lokalnie rzadkich oraz zagrożonych i ginących — a las, w którym ptaki najtrudniej zobaczyć, to dokładnie miejsce, gdzie ta pokusa jest największa.",
+          "W pobliżu gniazd wszystkim rządzą trzy zagrożenia: przypadkowe uszkodzenie gniazda, porzucenie lęgu przez rodziców i przywabienie drapieżników. Nigdy nie spędzaj przy gnieździe więcej niż minutę. Zaglądaj najwyżej co trzy lub cztery dni. Unikaj wczesnego ranka, gdy większość gatunków składa jaja i gdy jaja i pisklęta szybko się wychładzają po odejściu samicy; unikaj zmierzchu i pory po nim, gdy samica wraca na noc; unikaj pierwszych dni wysiadywania oraz dni tuż przed wylotem piskląt, bo mogą wyskoczyć przedwcześnie, a przeżywalność poza gniazdem na tym etapie jest niska; i unikaj pogody zimnej, wilgotnej albo deszczowej. Nie zostawiaj ścieżek, które poprowadzą drapieżniki, i nie depcz roślinności, która mogłaby odsłonić gniazda. Nigdy nie płosz samicy z gniazda — odczekaj kilka minut, czy zejdzie sama, a jeśli nie, wróć później. Notatki zapisuj dopiero wtedy, gdy odejdziesz daleko od gniazda, a w budkę lęgową zapukaj przed otwarciem i jeszcze raz w trakcie otwierania."
+        ],
+        "checklist": [
+          "Ograniczaj playback, przede wszystkim przy gatunkach rzadkich i zagrożonych.",
+          "Nigdy nie spędzaj przy gnieździe więcej niż minutę.",
+          "Unikaj kontroli gniazd wczesnym rankiem, o zmierzchu i przy złej pogodzie.",
+          "Nigdy nie płosz samicy z gniazda.",
+          "Notatki zapisuj z dala od gniazda i nie zostawiaj do niego wydeptanej ścieżki."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Siedlisko mówi bardzo wiele. Zacieniony podszyt w lesie ciągłym wskazuje na grupy mało ruchliwe i bardzo wrażliwe na efekt brzegowy; dojrzały okap drzewostanu wskazuje na ptaki zależne od dużych drzew owocujących i od dziupli do gniazdowania; dno lasu wskazuje na grupy bardzo wrażliwe na polowania; a wybrzeże, muliste płycizny i saliny w sezonie przelotów wskazują na miejsce postoju ptaków siewkowych, czyli teren skrajnie wrażliwy na niepokojenie. Ptaki wędrowne zależą od siedlisk w rozproszonych obszarach oddalonych o tysiące kilometrów, a niektóre krytycznie zależą od miejsc, z których korzystają zaledwie przez kilka dni, żeby odpocząć, wypierzyć się, najeść i odbudować rezerwy energii.",
+          "Dlatego data waży tyle samo co miejsce. Ponieważ trasa w jedną stronę zwykle różni się od powrotnej, a ptaki korygują tor lotu zależnie od warunków, datowane obserwacje bezpośrednio zasilają wiedzę o szlakach — a stwierdzenie poza sezonem bywa bardziej pouczające niż zwyczajne. Zanotowanie ptaka wędrownego bez dokładnej daty i lokalizacji gubi dokładnie tę najcenniejszą daną. W praktyce terenowej trzymaj się szlaków, minimalizuj niepokojenie siedliska i zachowuj stojące martwe drzewa, które są dziuplami lęgowymi dla wielu gatunków."
+        ],
+        "checklist": [
+          "Zawsze zapisuj dokładną datę i lokalizację, szczególnie przy gatunkach wędrownych.",
+          "Jedno stwierdzenie poza sezonem może być warte więcej niż dziesięć zwyczajnych.",
+          "Trzymaj się szlaków i minimalizuj niepokojenie siedliska.",
+          "Zachowuj stojące martwe drzewa: to miejsca lęgowe wielu gatunków.",
+          "Nie dokarmiaj dzikich ptaków w lesie ani na migracyjnym miejscu postoju."
+        ]
+      }
+    }
+  },
+  "grainCrop": {
+    "label": "Zboża i uprawy ziarnowe",
+    "topics": {
+      "soil": {
+        "advice": [
+          "Centralnym pojęciem żywienia roślin jest tu głód utajony: większość upraw zaczyna tracić plon na długo przed pojawieniem się widocznych objawów niedoboru lub toksyczności, a ta bezobjawowa strata jest wysoka. Kiedy objaw już się pojawi, zawsze oznacza głód ciężki — nigdy niedobór lekki czy umiarkowany. Ruchliwość składnika decyduje o tym, na który liść patrzeć: składniki ruchliwe, takie jak azot, potas, fosfor i magnez, dają objawy najpierw na starych liściach, bo roślina przenosi je do nowych; składniki nieruchliwe, takie jak wapń i bor, dają objawy na liściach młodych i w stożku wzrostu.",
+          "Kilka wzorców wizualnych z ryżu służy za punkt odniesienia: nekroza w kształcie odwróconej litery V, biegnąca od wierzchołka w dół po brzegach starego liścia, wskazuje na potas; bardzo wąskie, sztywno wzniesione młode liście z brązowawym lub fioletowym odcieniem na końcach wskazują na fosfor; żółknięcie całego łanu w fazie krzewienia i inicjacji wiechy wskazuje na azot; a niedobór pojawiający się placami, a nie na całej powierzchni, to typowy wzorzec potasowy. Toksyczność herbicydu naśladuje niedobór, ale występuje bezpośrednio po oprysku — i to właśnie ta bliskość w czasie oddziela oba przypadki. Wreszcie ziarno i kiszonka to z punktu widzenia gleby nie ta sama uprawa: fosfor jest niemal w całości przemieszczany do ziarna, zaraz za nim azot, podczas gdy potas i wapń zostają głównie w słomie, więc przy kiszonce, która zabiera też część wegetatywną, problemy z żyznością pojawiają się wcześniej."
+        ],
+        "checklist": [
+          "Nie czekaj na objaw: kiedy się pokaże, strata już się wydarzyła.",
+          "Składniki ruchliwe ujawniają się na starych liściach, nieruchliwe na młodych.",
+          "Diagnozuj na podstawie badania gleby i historii pola, nigdy z samego zdjęcia liścia.",
+          "Uszkodzenie pojawiające się tuż po oprysku to herbicyd, a nie niedobór.",
+          "Nie stosuj zaleceń dla ziarna w uprawie przeznaczonej na kiszonkę."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Decyzję podejmuje się tu licząc, a nie według kalendarza, i to ta grupa ma najtańsze ujednolicone metody prób ze wszystkich. Logika opiera się na trzech progach: poziomie równowagi, poziomie szkodliwości gospodarczej oraz progu zwalczania, który leży tuż poniżej niego. Przy szkodnikach glebowych kukurydzy pobierz próbę gleby o wymiarach trzydzieści na trzydzieści centymetrów i piętnaście centymetrów głębokości, przesianą — przy drutowcach dwa lub więcej osobników w próbie już wymagają zwalczania, a średnio jeden na próbę już powoduje istotne szkody. Przy Spodoptera frugiperda policz liczbę zaatakowanych roślin w pięciu losowych punktach na hektarze: na polach o potencjale co najmniej stu worków 10% roślin z wczesnymi objawami już wskazuje na potrzebę zwalczania, a najbardziej wrażliwa faza to osiem do dziesięciu liści. Pierwszym znakiem są gąsienice zeskrobujące liście i zostawiające przezroczyste okienka.",
+          "W soi metodą jest płachta entomologiczna: najlepiej biała, o długości jednego metra, rozciągnięta między dwoma rzędami; energicznie potrząśnij nad nią jednym rzędem i policz osobniki dorosłe oraz młodociane, co tydzień w okresie krytycznym. Minimum to sześć prób do dziesięciu hektarów, osiem do trzydziestu i dziesięć do stu, przy czym większe areały dzieli się na bloki stuhektarowe. Szkodniki glebowe badaj przed siewem, bo działania podejmowane po założeniu uprawy są nieskuteczne. Licz nimfy razem z osobnikami dorosłymi: tarczówki w trzecim do piątego stadium powodują podobne szkody i stanowią większość populacji w okresie generatywnym, a próg działania to dwie tarczówki na metr rzędu przy uprawie na ziarno i jedna przy uprawie na materiał siewny. Próby pobieraj w chłodniejszych porach dnia, bo tarczówki są szybkie i w upale uciekają. Ma to wymierny zwrot: na 196 jednostkach referencyjnych w stanie Paraná w sezonie 2017/2018 integrowana ochrona roślin ograniczyła liczbę zabiegów insektycydowych o ponad 43%, utrzymując porównywalny plon. Preparat dobieraj nie tylko według kosztu i toksyczności, ale i selektywności wobec naturalnych wrogów, zawsze trzymaj się aktualnych rejestracji MAPA, a zaprawiaj nasiona tylko tam, gdzie problem ma swoją historię, nigdy jako ślepą rutynę."
+        ],
+        "checklist": [
+          "Policz, zanim wykonasz oprysk: decyduje próg, a nie kalendarz.",
+          "Kukurydza: 10% roślin z wyskrobanymi liśćmi już wymaga zwalczania.",
+          "Soja: minimum dziesięć prób płachtą entomologiczną przy areale do stu hektarów.",
+          "Szkodniki glebowe badaj przed siewem.",
+          "Licz nimfy razem z dorosłymi i pobieraj próby w chłodniejszych godzinach dnia."
+        ]
+      }
+    }
+  },
+  "vegCrop": {
+    "label": "Warzywa i uprawy owocowe",
+    "topics": {
+      "watering": {
+        "advice": [
+          "Tutaj woda to precyzyjne zarządzanie, a nie podlewanie, kiedy się przypomni: istnieje granica potencjału wodnego gleby mierzona w kPa i różni się ona w zależności od systemu nawadniania. W bakłażanie nawadnia się, gdy tensjometr pokazuje 30 do 50 kPa przy deszczowaniu lub nawadnianiu bruzdowym albo 10 do 15 kPa przy nawadnianiu kroplowym, przy czym w fazach najbardziej krytycznych, na glebach piaszczystych i przy wysokim zapotrzebowaniu na parowanie stosuje się dolną granicę zakresu. Czujnik umieszcza się na 50% efektywnej głębokości korzenienia i dziesięć do dwudziestu centymetrów od rośliny, przy czym głębokość efektywna to ta, na której skupia się około 80% korzeni.",
+          "Nadmiar wody szkodzi tak samo jak jej brak: napędza nadmierny wzrost rośliny, utrudnia kwitnienie i zawiązywanie owoców, sprzyja chorobom odglebowym przez niedostateczne napowietrzenie i wypłukuje składniki pokarmowe. Niedobór waży najmocniej w czasie kwitnienia i owocowania: powoduje opadanie kwiatów i zawiązków, ogranicza wzrost owoców i daje wady jakościowe — owoce zniekształcone i nierówne, suchą zgniliznę wierzchołkową i gorzki smak. Więdnięcie liści pod koniec przedpołudnia to zgrubny, ale użyteczny znak, że nawodnienie jest spóźnione. A wybór systemu to decyzja fitosanitarna, nie tylko hydrauliczna: nawadnianie bruzdowe i kroplowe ograniczają choroby liści, bo nie moczą ulistnienia, ale przeciwko miniarce pomidorowej przewagę ma deszczowanie, bo strąca jaja, larwy i poczwarki. Decyzja zależy od tego, który problem dominuje w Twojej okolicy."
+        ],
+        "checklist": [
+          "Stosuj inną granicę potencjału wodnego przy nawadnianiu kroplowym niż przy deszczowaniu czy bruzdowym.",
+          "Zainstaluj czujnik na 50% efektywnej głębokości korzenienia i dziesięć do dwudziestu centymetrów od rośliny.",
+          "Nie dopuszczaj do niedoboru wody w czasie kwitnienia i owocowania.",
+          "Więdnięcie pod koniec przedpołudnia wskazuje na spóźnione nawodnienie.",
+          "System nawadniania dobierz według problemu, który dominuje w Twojej okolicy."
+        ]
+      },
+      "soil": {
+        "advice": [
+          "Nadmiar składnika ma własne objawy i rozstraja pozostałe. U cebuli nadmiar azotu daje rośliny o grubych szyjkach, podnosi podatność na choroby liści i skraca trwałość przechowalniczą po zbiorze; nadmiar potasu wywołuje niedobór magnezu i wapnia; nadmiar fosforu wywołuje niedobór cynku i miedzi. Dlatego korygowanie jednego składnika bez spojrzenia na pozostałe zwykle tworzy kolejny problem.",
+          "Ruchliwość mówi, który liść oglądać: azot, potas, fosfor i magnez ujawniają się najpierw na starych liściach, a wapń i siarka na młodych — młody liść cebuli przewracający się bez złamania to podpis wapnia. Warto zapamiętać dwie faktury: nekroza, która pojawia się gwałtownie, bez poprzedzającej chlorozy, wskazuje na cynk, miedź albo mangan; nekroza o aksamitnej fakturze to charakterystyczny znak żelaza, odmienny od wszystkich pozostałych. W glebach brazylijskich w normalnych warunkach cebuli zwykle brakuje jedynie boru i cynku, a w niektórych przypadkach także miedzi. I uważaj na fałszywy trop: niskie temperatury, nadmiar wody albo przedłużona susza potrafią dawać objawy bardzo podobne do niedoboru azotu."
+        ],
+        "checklist": [
+          "Nie koryguj jednego składnika bez spojrzenia na te, które przez to rozstroisz.",
+          "Najpierw stare liście: azot, potas, fosfor, magnez. Młode liście: wapń, siarka.",
+          "Gwałtowna nekroza bez poprzedzającej chlorozy sugeruje cynk, miedź albo mangan.",
+          "Nekroza o aksamitnej fakturze to znak żelaza.",
+          "Chłód, zalanie i susza — wszystkie trzy naśladują niedobór azotu."
+        ]
+      },
+      "uses": {
+        "advice": [
+          "Zarządzanie jest tu najpierw agrotechniczne i zbiorowe, a dopiero potem chemiczne. Na poziomie pola: stosuj płodozmian, niszcz resztki pożniwne zaraz po zbiorze, utrzymuj powierzchnię wolną od chwastów i innych roślin żywicielskich dla owadów i roztoczy oraz używaj odmian przystosowanych do regionu. Na poziomie zbiorowym — i to właśnie odróżnia tę grupę — producenci muszą działać razem: skupić siewy w obrębie każdego mikroregionu w możliwie najkrótszym oknie czasowym, stosować środki produkcji w sposób skoordynowany, tak by wspólne problemy wszyscy zwalczali w tym samym czasie, i systematycznie odkażać skrzynki oraz środki transportu, żeby ograniczyć przenoszenie szkodników między regionami. Lustruj regularnie, ze szczególną uwagą na brzegi pola i miejsca najbardziej zachwaszczone, bo to tam koncentruje się porażenie.",
+          "Największe szkody powodowane przez szkodniki są w tej grupie zwykle pośrednie, przez wirusy. Mączlik jest znany w Brazylii od 1923 roku, a w 1993 stwierdzono go na pomidorze i kapuście w powiązaniu z objawami geminiwirusa, z ciężkimi wybuchami i stratami sięgającymi 50% produkcji: osobniki dorosłe i nimfy wstrzykują słodką substancję oraz toksynę, przez które wewnętrzne ściany owocu stają się białawe i gąbczaste, a do tego sprzyjają czerni sadzakowej. Rządzi też termin: przeciwko małemu drążaczowi owoców opryski trzeba zacząć od kwitnienia, kierując strumień na pąki kwiatowe i owoce, bo w momencie, w którym zobaczysz dziurę w owocu, larwa jest już w środku. I jedna redakcyjna zasada bezpieczeństwa: nie przepisuj substancji czynnej ani dawki z żadnego źródła, bo rejestracje środków ochrony roślin zmieniają się co sezon — sprawdzaj aktualny rejestr MAPA."
+        ],
+        "checklist": [
+          "Niszcz resztki pożniwne zaraz po zbiorze.",
+          "Skup siewy w mikroregionie w możliwie najwęższym oknie czasowym.",
+          "Odkażaj skrzynki i pojazdy przy przejściu między obszarami.",
+          "Lustruj brzegi pola, a nie tylko jego środek.",
+          "Zacznij opryski w czasie kwitnienia, a nie wtedy, gdy zobaczysz dziurę w owocu."
+        ]
+      }
+    }
+  }
+}
