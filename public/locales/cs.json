@@ -249,6 +249,8 @@
     "distribution": "Rozšíření",
     "everyNDays": "Každé {{count}} dny",
     "gbifCredit": "Data: GBIF.org",
+    "seasonChart": "Záznamy podle měsíců",
+    "seasonChartNote": "Záznamy pozorování z celého světa, měsíc po měsíci. Odrážejí úsilí pozorovatelů, nikoli záruku kvetení nebo aktivity.",
     "tipWatering": "Než zalijete, sáhněte do půdy: pokud jsou vrchní centimetry suché, je čas.",
     "tipLight": "Sledujte, jak se světlo v prostoru během dne mění - proměňuje se víc, než se zdá.",
     "tipSoil": "Dobrá drenáž je stejně důležitá jako dobré hnojivo: promáčené kořeny jsou trpící kořeny.",
@@ -278,7 +280,49 @@
     "rangeBad": "Nevhodné",
     "waterLow": "Málo",
     "waterMedium": "Středně",
-    "waterHigh": "Hodně"
+    "waterHigh": "Hodně",
+    "careConditionSection": "Podmínky péče",
+    "thisMonth": "Tento měsíc",
+    "waterInMonth": "Zálivka v {{month}}",
+    "propagateInMonth": "Množení v {{month}}",
+    "faq": {
+      "title": "Časté dotazy",
+      "plant": {
+        "q1": "Jak zalévat {{name}} v zimě?",
+        "q2": "Kolik světla potřebuje {{name}}?",
+        "q3": "Je {{name}} bezpečná pro domácí mazlíčky?"
+      },
+      "tree": {
+        "q1": "Kdy je nejlepší čas na řez {{name}}?",
+        "q2": "Kolik místa potřebují kořeny {{name}}?",
+        "q3": "Jak rychle roste {{name}}?"
+      },
+      "insect": {
+        "q1": "Je {{name}} nebezpečný?",
+        "q2": "Co láká {{name}} na zahradu?",
+        "q3": "Jak {{name}} odradit bez chemie?"
+      },
+      "mushroom": {
+        "q1": "Jak {{name}} bezpečně poznám?",
+        "q2": "Které druhy se podobají {{name}}?",
+        "q3": "Kde a kdy se {{name}} obvykle objevuje?"
+      },
+      "fish": {
+        "q1": "Kde {{name}} žije?",
+        "q2": "Čím se {{name}} živí?",
+        "q3": "Je bezpečné {{name}} brát do ruky?"
+      },
+      "bird": {
+        "q1": "Čím se {{name}} živí?",
+        "q2": "Jak {{name}} přilákat na zahradu?",
+        "q3": "Jak zní hlas {{name}}?"
+      },
+      "crop": {
+        "q1": "Kdy je {{name}} připravená ke sklizni?",
+        "q2": "Jací škůdci nejčastěji napadají {{name}}?",
+        "q3": "Kolik vody potřebuje {{name}}?"
+      }
+    }
   },
   "disease": {
     "overviewSection": "Přehled",

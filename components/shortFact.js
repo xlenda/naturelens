@@ -48,6 +48,19 @@ const RULES = {
   ],
 };
 
+// Paridade 120% (video do concorrente, 20/08): o chip "Seguro para pets" do
+// CareProfile precisa da MESMA regra de negacao, e nao de uma copia dela - uma
+// segunda regex de toxicidade que saia de sincronia com esta marcaria de segura
+// uma planta que este arquivo ja sabe ser toxica.
+//
+// Repare que `shortFact('toxicity', ...)` devolve null em DOIS casos
+// diferentes - "o vendor disse que e atoxica" e "o vendor falou algo que nao
+// casou palavra nenhuma" - entao ele nao serve para decidir o chip. Aqui o
+// true e afirmativo: o texto DIZ que nao e toxica.
+export function isNonToxic(text) {
+  return typeof text === 'string' && NOT_TOXIC.test(text);
+}
+
 // kind: 'light' | 'soil' | 'toxicity' | 'water'. Devolve a string curta ja traduzida, ou
 // null quando nao da pra ser curto sem inventar.
 export default function shortFact(kind, text, t) {

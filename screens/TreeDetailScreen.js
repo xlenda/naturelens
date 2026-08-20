@@ -33,8 +33,12 @@ import PressScale from '../components/PressScale';
 import TopBar, { TopBarIcon } from '../components/TopBar';
 import Pronounce from '../components/Pronounce';
 import HelpfulRow from '../components/HelpfulRow';
+import SpeciesFaq from '../components/SpeciesFaq';
+import ShareSpeciesCard from '../components/ShareSpeciesCard';
 import ResultActionBar from '../components/ResultActionBar';
 import QuickFactGrid from '../components/QuickFactGrid';
+import CareConditions from '../components/CareConditions';
+import MonthInstructions from '../components/MonthInstructions';
 import shortFact from '../components/shortFact';
 import ExpandableText from '../components/ExpandableText';
 
@@ -99,9 +103,8 @@ export default function TreeDetailScreen({ route }) {
     }
   };
 
-  // edibleParts/propagation left the receipt for the hub's door cards below -
-  // same i18n labels, same text, new address (hub do resultado, video do
-  // concorrente).
+  // edibleParts/propagation nao voltam pra ficha: eles tem card proprio na
+  // banda de baixo (tela principal rica - video do concorrente, 20/08).
   const infoRows = [
     { label: t('common.nativeOrigin'), value: plant.origin },
     { label: t('detail.wateringNeeds'), value: plant.waterLabel || plant.water },
@@ -113,9 +116,11 @@ export default function TreeDetailScreen({ route }) {
   // perde - ele encosta no proprio nome logo abaixo).
   const showScientific = !!plant.scientific && plant.scientific !== plant.name;
 
-  // Hub do resultado (video do concorrente): long prose moves to the
-  // CareTopicsScreen manual; each quick fact / door card deep-links into one
-  // tab. Only topics with real text ship - the manual filters again anyway.
+  // Abas do manual CareTopics: APROFUNDAMENTO, nao o unico endereco do texto
+  // (tela principal rica - video do concorrente, 20/08). Cada card da grade de
+  // fatos abre a aba do seu topico; uses/cultural/edible/propagation continuam
+  // na lista porque tambem sao abas la, mas agora vivem inline no resultado.
+  // Only topics with real text ship - the manual filters again anyway.
   const listText = (v) => (Array.isArray(v) ? v.map((x) => '• ' + x).join('\n') : v);
   const topics = [
     {
@@ -320,6 +325,14 @@ export default function TreeDetailScreen({ route }) {
           />
         )}
 
+        {/* Condicao de Cuidado + Instrucoes do mes - tela principal rica
+            (video do concorrente, 20/08). Mesmos dois blocos do
+            PlantDetailScreen: o cuidado empilhado AQUI (as abas viram
+            aprofundamento, nao o unico endereco do conteudo), so com dado que
+            a entidade ja tem e sumindo inteiro quando nao ha nada. */}
+        <CareConditions plant={plant} onOpenTopic={openTopic} />
+        <MonthInstructions plant={plant} />
+
         {/* Reference photos, runner-up species and a low-confidence warning -
             all built from data the API already returned. Desceu pra depois da
             grade de fatos (auditoria de diagramacao 20/08). */}
@@ -486,6 +499,26 @@ export default function TreeDetailScreen({ route }) {
             Touchable stays byte for byte - a11y, labels and handlers intact. */}
 
         <InstallNudgeCard show={!!fromIdentify} accent={meta.accent} />
+
+        {/* Compartilhe sua planta - tela principal rica (video do concorrente,
+            20/08): o motor de share ja existia, mas so atras do icone de 20px
+            da TopBar. Aqui ele vira convite, no fim da leitura. */}
+        <ShareSpeciesCard
+          entity={plant}
+          categoryLabel={t('categories.tree.label')}
+          accent={meta.accent}
+        />
+
+        {/* "Duvidas frequentes" - paridade 120% (video do concorrente,
+            20/08): o FAQ fixo dele vira pergunta SUGERIDA que abre a
+            especialista ja com a duvida escrita e a especie como contexto. */}
+        <SpeciesFaq
+          category="tree"
+          name={plant.name}
+          scientific={plant.scientific}
+          accent={meta.accent}
+          navigation={navigation}
+        />
 
         {/* Feedback no fim do scroll (hub do resultado, video do concorrente). */}
         <HelpfulRow category="tree" context="result" />

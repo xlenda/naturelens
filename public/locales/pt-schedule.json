@@ -1,0 +1,282 @@
+{
+  "succulent": {
+    "rows": [
+      {
+        "activity": "Rega",
+        "spring": "A cada 2-3 semanas",
+        "summer": "A cada 2-3 semanas",
+        "autumn": "Espaçar",
+        "winter": "Mínima",
+        "note": "Cacto de deserto descansa frio e quase seco; regar nessa fase só produz crescimento fraco (Clemson, RHS)."
+      },
+      {
+        "activity": "Adubação",
+        "spring": "Mensal, meia dose",
+        "summer": "Mensal, meia dose",
+        "autumn": "Parar",
+        "winter": "Não adubar",
+        "note": "Pouco nitrogênio, de metade a um quarto da dose do rótulo. Excesso de N gera tecido mole que apodrece (Clemson, Iowa State)."
+      },
+      {
+        "activity": "Replantio",
+        "spring": "Melhor época",
+        "summer": "",
+        "autumn": "",
+        "winter": "",
+        "note": "Só um número de vaso acima, e esperar vários dias antes da primeira rega (Clemson)."
+      },
+      {
+        "activity": "Luz",
+        "spring": "10+ h de luz",
+        "summer": "Meia-sombra fora",
+        "autumn": "10+ h de luz",
+        "winter": "10+ h de luz",
+        "note": "Mínimo de 6-8 h. Ao levar para fora, aclimatar em meia-sombra ou a folha queima (Iowa State)."
+      }
+    ]
+  },
+  "tropicalFoliage": {
+    "rows": [
+      {
+        "activity": "Rega",
+        "spring": "Sempre úmido",
+        "summer": "Sempre úmido",
+        "autumn": "Sempre úmido",
+        "winter": "Secar um pouco",
+        "note": "Água entre 17-22 C, nunca amaciada, e esvaziar o pratinho (Clemson)."
+      },
+      {
+        "activity": "Adubação",
+        "spring": "Mensal, diluído",
+        "summer": "Mensal, diluído",
+        "autumn": "Reduzir",
+        "winter": "Não adubar",
+        "note": "Planta de interior só é adubada na estação de crescimento; nada nos meses de repouso (UConn)."
+      },
+      {
+        "activity": "Estacas",
+        "spring": "Qualquer época",
+        "summer": "Qualquer época",
+        "autumn": "Qualquer época",
+        "winter": "Qualquer época",
+        "note": "Filodendro e parentes enraízam por estaca de caule em qualquer estação (Clemson)."
+      }
+    ]
+  },
+  "fern": {
+    "rows": [
+      {
+        "activity": "Rega",
+        "spring": "Levemente úmido",
+        "summer": "Levemente úmido",
+        "autumn": "Levemente úmido",
+        "winter": "Levemente úmido",
+        "note": "Nunca deixar secar por completo, e nunca deixar água parada no vaso (Clemson)."
+      },
+      {
+        "activity": "Adubação",
+        "spring": "Mensal, meia dose",
+        "summer": "Mensal, meia dose",
+        "autumn": "Parar",
+        "winter": "Não adubar",
+        "note": "Nada por 6 meses depois de dividir ou replantar; adubo demais queima a folhagem (Clemson, UConn)."
+      },
+      {
+        "activity": "Dividir e replantar",
+        "spring": "Início da primavera",
+        "summer": "",
+        "autumn": "",
+        "winter": "",
+        "note": "Dividir a massa radicular em 2-3 seções e manter substrato e ar úmidos por semanas (UConn)."
+      },
+      {
+        "activity": "Umidade do ar",
+        "spring": "30-50%",
+        "summer": "30-50%",
+        "autumn": "30-50%",
+        "winter": "Bandeja ou borrifo",
+        "note": "O ar seco de interior nos meses frios é o risco real; bandeja de pedras rende mais que borrifar (Clemson, UConn)."
+      }
+    ]
+  },
+  "fruitVeg": {
+    "rows": [
+      {
+        "activity": "Rega",
+        "spring": "25-50 mm/semana",
+        "summer": "25-50 mm/semana",
+        "autumn": "25-50 mm/semana",
+        "winter": "",
+        "note": "Profunda e regular. Rega rasa e irregular interrompe o transporte de cálcio e causa podridão apical (USU, UGA)."
+      },
+      {
+        "activity": "Adubação",
+        "spring": "Na floração",
+        "summer": "Após a colheita",
+        "autumn": "Parar",
+        "winter": "Não adubar",
+        "note": "Fruta de caroço leva três parcelas e nada nas últimas semanas do verão, para o ramo amadurecer (Clemson)."
+      },
+      {
+        "activity": "Poda",
+        "spring": "",
+        "summer": "",
+        "autumn": "Do fim do outono",
+        "winter": "Dormência: ideal",
+        "note": "A dormência é a janela padrão: a estrutura fica visível e a ferida fecha na estação de crescimento seguinte (USDA)."
+      },
+      {
+        "activity": "Raleio",
+        "spring": "",
+        "summer": "Ralear à mão",
+        "autumn": "",
+        "winter": "",
+        "note": "A queda natural com 1-2 cm não substitui o raleio manual; deixar sempre o maior fruto do cacho (Iowa State)."
+      }
+    ]
+  },
+  "flowering": {
+    "rows": [
+      {
+        "activity": "Adubação",
+        "spring": "Na brotação",
+        "summer": "A cada 6 semanas",
+        "autumn": "Parar antes da geada",
+        "winter": "Não adubar",
+        "note": "Roseira cai para meia dose no auge do calor e para 6 semanas antes da primeira geada esperada (Clemson)."
+      },
+      {
+        "activity": "Flores gastas",
+        "spring": "Remover",
+        "summer": "Remover",
+        "autumn": "Deixar as sementes",
+        "winter": "",
+        "note": "As cabeças de semente deixadas em pé alimentam a fauna durante os meses frios (Clemson)."
+      },
+      {
+        "activity": "Bulbos",
+        "spring": "Adubar na emergência",
+        "summer": "Dividir dormentes",
+        "autumn": "",
+        "winter": "",
+        "note": "Adubar na emergência OU depois da flor, nunca os dois. Tirar a flor gasta, nunca a folha (Illinois)."
+      }
+    ]
+  },
+  "woody": {
+    "rows": [
+      {
+        "activity": "Rega da muda",
+        "spring": "Semanal, profunda",
+        "summer": "Semanal, profunda",
+        "autumn": "Até a geada",
+        "winter": "",
+        "note": "1 a 1,5 galão por polegada de diâmetro do tronco, na zona radicular e nunca encostado no tronco (Penn State)."
+      },
+      {
+        "activity": "Adubação",
+        "spring": "Na brotação",
+        "summer": "Parcelado",
+        "autumn": "Parar",
+        "winter": "Não adubar",
+        "note": "Planta madura precisa de pouca ou nenhuma. Adubo nitrogenado tardio atrasa a dormência (Clemson)."
+      },
+      {
+        "activity": "Poda",
+        "spring": "Depois da flor",
+        "summer": "",
+        "autumn": "Evitar",
+        "winter": "Dormência: ideal",
+        "note": "Arbusto que floresce na primavera se poda logo depois da flor; podar mais tarde corta as gemas do ano seguinte (Clemson)."
+      },
+      {
+        "activity": "Cobertura morta",
+        "spring": "2-4 pol, sem tocar",
+        "summer": "2-4 pol, sem tocar",
+        "autumn": "2-4 pol, sem tocar",
+        "winter": "2-4 pol, sem tocar",
+        "note": "Manter 3-5 pol de folga no tronco jovem e 8-10 pol no maduro (Penn State)."
+      }
+    ]
+  },
+  "orchid": {
+    "rows": [
+      {
+        "activity": "Rega",
+        "spring": "Semanal",
+        "summer": "Semanal",
+        "autumn": "Reduzir",
+        "winter": "Reduzir",
+        "note": "Saturar até escorrer pelos furos e então drenar. Nunca deixar no pratinho (AOS, RHS)."
+      },
+      {
+        "activity": "Adubação",
+        "spring": "Semanal, meia dose",
+        "summer": "Semanal, meia dose",
+        "autumn": "Quinzenal",
+        "winter": "Quinzenal",
+        "note": "Metade da dose do rótulo, pouca ou nenhuma ureia, e pular a cada 4ª rega para lixiviar sais (AOS, RHS)."
+      },
+      {
+        "activity": "Replantio",
+        "spring": "Início da primavera",
+        "summer": "",
+        "autumn": "",
+        "winter": "Fim do inverno",
+        "note": "Só quando aparecer raiz nova. Em esfagno, replantar depois que terminar a floração (Clemson)."
+      },
+      {
+        "activity": "Indução floral",
+        "spring": "",
+        "summer": "",
+        "autumn": "14 h de escuro",
+        "winter": "Manter úmido",
+        "note": "Só para cacto de Natal/Ação de Graças: 14 h ou mais de escuro contínuo por 6 semanas, e 2 h de lâmpada cancelam os botões (Clemson)."
+      }
+    ]
+  },
+  "herb": {
+    "rows": [
+      {
+        "activity": "Rega",
+        "spring": "Secar entre regas",
+        "summer": "Regar de manhã",
+        "autumn": "Secar entre regas",
+        "winter": "Não encharcar",
+        "note": "Grupo dividido: as mediterrâneas querem secagem real, as folhosas (manjericão, salsa, hortelã) querem umidade constante (Clemson, RHS)."
+      },
+      {
+        "activity": "Adubação",
+        "spring": "Leve, no plantio",
+        "summer": "Só se enfraquecer",
+        "autumn": "Não adubar",
+        "winter": "Não adubar",
+        "note": "Alecrim no solo não recebe nenhuma, e solo muito fértil prejudica o sabor (RHS, Clemson)."
+      },
+      {
+        "activity": "Poda",
+        "spring": "Forte (sálvia)",
+        "summer": "Aparar (louro)",
+        "autumn": "Depois da flor",
+        "winter": "",
+        "note": "Alecrim leva poda leve após a flor, nunca na madeira velha. Hortelã se corta a 5 cm para renovar (RHS)."
+      },
+      {
+        "activity": "Colheita",
+        "spring": "Antes da flor",
+        "summer": "Antes da flor",
+        "autumn": "",
+        "winter": "",
+        "note": "No início da manhã, pouco antes da floração, é quando a folha carrega mais óleo (Clemson)."
+      },
+      {
+        "activity": "Frio",
+        "spring": "",
+        "summer": "",
+        "autumn": "",
+        "winter": "Proteger da geada",
+        "note": "Alecrim estabelecido sobrevive a -8 C, mas a geada ainda queima os brotos novos (RHS)."
+      }
+    ]
+  }
+}

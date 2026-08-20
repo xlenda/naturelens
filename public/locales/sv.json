@@ -249,6 +249,8 @@
     "distribution": "Utbredning",
     "everyNDays": "Var {{count}}:e dag",
     "gbifCredit": "Data: GBIF.org",
+    "seasonChart": "Fynd per månad",
+    "seasonChartNote": "Observationer från hela världen, månad för månad. De speglar observationsinsatsen, inte en garanti för blomning eller aktivitet.",
     "tipWatering": "Känn på jorden innan du vattnar: är de översta centimetrarna torra är det dags.",
     "tipLight": "Se hur ljuset vandrar genom rummet under dagen - det skiftar mer än man tror.",
     "tipSoil": "Bra dränering betyder lika mycket som bra näring: blöta rötter är rötter som lider.",
@@ -281,8 +283,46 @@
     "waterHigh": "Mycket",
     "careConditionSection": "Skötselvillkor",
     "thisMonth": "Den här månaden",
-    "waterInMonth": "Vattna i {{month}}",
-    "propagateInMonth": "Föröka i {{month}}"
+    "waterInMonth": "Vattning i {{month}}",
+    "propagateInMonth": "Förökning i {{month}}",
+    "faq": {
+      "title": "Vanliga frågor",
+      "plant": {
+        "q1": "Hur vattnar jag {{name}} på vintern?",
+        "q2": "Hur mycket ljus behöver {{name}}?",
+        "q3": "Är {{name}} ofarlig för husdjur?"
+      },
+      "tree": {
+        "q1": "När är det bäst att beskära {{name}}?",
+        "q2": "Hur mycket plats behöver rötterna på {{name}}?",
+        "q3": "Hur snabbt växer {{name}}?"
+      },
+      "insect": {
+        "q1": "Är {{name}} farlig?",
+        "q2": "Vad lockar {{name}} till trädgården?",
+        "q3": "Hur håller jag {{name}} borta utan gift?"
+      },
+      "mushroom": {
+        "q1": "Hur känner jag igen {{name}} på ett säkert sätt?",
+        "q2": "Vilka arter liknar {{name}}?",
+        "q3": "Var och när brukar {{name}} dyka upp?"
+      },
+      "fish": {
+        "q1": "Var lever {{name}}?",
+        "q2": "Vad äter {{name}}?",
+        "q3": "Är det säkert att hantera {{name}}?"
+      },
+      "bird": {
+        "q1": "Vad äter {{name}}?",
+        "q2": "Hur lockar jag {{name}} till min trädgård?",
+        "q3": "Hur låter {{name}}?"
+      },
+      "crop": {
+        "q1": "När är {{name}} redo att skördas?",
+        "q2": "Vilka skadedjur angriper {{name}} mest?",
+        "q3": "Hur mycket vatten behöver {{name}}?"
+      }
+    }
   },
   "disease": {
     "overviewSection": "Översikt",

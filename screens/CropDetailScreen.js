@@ -29,6 +29,7 @@ import ZoneBand from '../components/ZoneBand';
 import PressScale from '../components/PressScale';
 import ResultActionBar from '../components/ResultActionBar';
 import HelpfulRow from '../components/HelpfulRow';
+import SpeciesFaq from '../components/SpeciesFaq';
 import Pronounce from '../components/Pronounce';
 import TopBar, { TopBarIcon } from '../components/TopBar';
 
@@ -259,6 +260,17 @@ export default function CropDetailScreen({ route }) {
         </PressScale>
 
         <InstallNudgeCard show={!!fromIdentify} accent={meta.accent} />
+
+        {/* "Duvidas frequentes" - paridade 120% (video do concorrente,
+            20/08): o FAQ fixo dele vira pergunta SUGERIDA que abre a
+            especialista ja com a duvida escrita e a especie como contexto. */}
+        <SpeciesFaq
+          category="crop"
+          name={plant.name}
+          scientific={plant.scientific}
+          accent={meta.accent}
+          navigation={navigation}
+        />
 
         {/* Hub do resultado (video do concorrente): feedback de utilidade no
             fim do scroll. */}

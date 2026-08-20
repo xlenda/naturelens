@@ -32,10 +32,13 @@ import PressScale from '../components/PressScale';
 import TopBar, { TopBarIcon } from '../components/TopBar';
 import Pronounce from '../components/Pronounce';
 import HelpfulRow from '../components/HelpfulRow';
+import SpeciesFaq from '../components/SpeciesFaq';
 import ShareSpeciesCard from '../components/ShareSpeciesCard';
 import ResultActionBar from '../components/ResultActionBar';
 import QuickFactGrid from '../components/QuickFactGrid';
 import shortFact from '../components/shortFact';
+import ExpandableText from '../components/ExpandableText';
+import DistributionMap from '../components/DistributionMap';
 
 function Tag({ label, color }) {
   return (
@@ -230,6 +233,12 @@ export default function InsectDetailScreen({ route }) {
             all built from data the API already returned. */}
         <IdentificationExtras entity={plant} accent={meta.accent} />
 
+        {/* Mapa de distribuicao REAL (GBIF) - tela principal rica (video do
+            concorrente, 20/08): o mesmo componente da tela de planta, e o GBIF
+            cobre fauna tambem. Some sozinho quando a especie nao tem match ou
+            o aparelho esta offline. */}
+        <DistributionMap scientific={plant.scientific} accent={meta.accent} />
+
         {/* Safety leads ("quente primeiro"): for insects, "did the thing that
             just stung me matter?" is the question that opened the camera - it
             cannot sit below the encyclopedia paragraph. */}
@@ -238,14 +247,30 @@ export default function InsectDetailScreen({ route }) {
             bands is the scene showing through. ZoneBand is a pure wrapper -
             the quente-primeiro order stays byte for byte. */}
         <ZoneBand gutter={20}>
-          {hasDanger && (
+          {/* Tela principal rica (video do concorrente, 20/08): a descricao de
+              perigo agora abre a secao mesmo SEM tags - antes so existia
+              acompanhando `danger`, entao um inseto com prosa de risco e
+              nenhuma tag nao mostrava nada aqui. Prosa longa vem colapsada
+              (ExpandableText corta por frase) para nao comer a primeira dobra.
+              Sem os dois campos, a secao inteira nao renderiza. */}
+          {(hasDanger || !!plant.dangerDescription) && (
             <SectionCard icon="warning-outline" title={t('detail.safetySection')} color={dangerColor}>
-              <View style={styles.tagRow}>
-                {plant.danger.map((d) => (
-                  <Tag key={d} label={d} color={dangerColor} />
-                ))}
-              </View>
-              {!!plant.dangerDescription && <Text style={[styles.body, { marginTop: 10 }]}>{plant.dangerDescription}</Text>}
+              {hasDanger && (
+                <View style={styles.tagRow}>
+                  {plant.danger.map((d) => (
+                    <Tag key={d} label={d} color={dangerColor} />
+                  ))}
+                </View>
+              )}
+              {!!plant.dangerDescription && (
+                <View style={hasDanger ? { marginTop: 10 } : null}>
+                  <ExpandableText
+                    text={plant.dangerDescription}
+                    textStyle={styles.body}
+                    accent={meta.accent}
+                  />
+                </View>
+              )}
             </SectionCard>
           )}
 
@@ -262,37 +287,23 @@ export default function InsectDetailScreen({ route }) {
           facts={quickFacts.map((f) => f && { ...f, onPress: () => openTopic(f.key) })}
         />
 
-        {/* Ecology - hub do resultado (video do concorrente): a prosa deixa a
-            pilha de SectionCards e vira card-porta para o manual. Guarded: an
-            empty band would render as a floating pill of nothing. */}
+        {/* Ecology - tela principal rica (video do concorrente, 20/08): o papel
+            ecologico era so um card-porta com uma linha truncada; agora a lista
+            REAL do vendor fica inline, um bullet por papel, como na tela de
+            resultado do concorrente. A porta pro manual nao se perdeu - o mesmo
+            topico continua a um toque pelo fato rapido "Papel ecologico" acima.
+            Guarded: campo ausente = banda inteira nao renderiza. */}
         {plant.role?.length > 0 && (
           <ZoneBand gutter={20}>
-            <TouchableOpacity
-              style={styles.doorCard}
-              activeOpacity={0.8}
-              onPress={() => openTopic('role')}
-              accessibilityRole="button"
-              accessibilityLabel={t('detail.ecologicalRoleSection')}
+            <SectionCard
+              icon="leaf-outline"
+              title={t('detail.ecologicalRoleSection')}
+              color={colors.accent}
             >
-              <Ionicons
-                name="leaf-outline"
-                size={18}
-                color={colors.accent}
-                accessibilityElementsHidden={true}
-                importantForAccessibility="no-hide-descendants"
-              />
-              <View style={{ flex: 1 }}>
-                <Text style={styles.doorLabel}>{t('detail.ecologicalRoleSection')}</Text>
-                <Text style={styles.doorPreview} numberOfLines={1}>{plant.role.join(', ')}</Text>
-              </View>
-              <Ionicons
-                name="chevron-forward"
-                size={16}
-                color={colors.textMuted}
-                accessibilityElementsHidden={true}
-                importantForAccessibility="no-hide-descendants"
-              />
-            </TouchableOpacity>
+              {plant.role.map((r) => (
+                <Text key={r} style={styles.bullet}>{'• ' + r}</Text>
+              ))}
+            </SectionCard>
           </ZoneBand>
         )}
 
@@ -386,16 +397,28 @@ export default function InsectDetailScreen({ route }) {
 
         <InstallNudgeCard show={!!fromIdentify} accent={meta.accent} />
 
-        {/* Foi util? - hub do resultado (video do concorrente): fecha o
-            scroll medindo a identificacao. */}
         {/* Compartilhe sua planta - tela principal rica (video do concorrente,
-            20/08): o motor de share estava so atras do icone da TopBar. */}
+            20/08): o motor de share ja existia, mas so atras do icone de 20px
+            da TopBar. Aqui ele vira convite, no fim da leitura. */}
         <ShareSpeciesCard
           entity={plant}
           categoryLabel={t('categories.insect.label')}
           accent={meta.accent}
         />
 
+        {/* "Duvidas frequentes" - paridade 120% (video do concorrente,
+            20/08): o FAQ fixo dele vira pergunta SUGERIDA que abre a
+            especialista ja com a duvida escrita e a especie como contexto. */}
+        <SpeciesFaq
+          category="insect"
+          name={plant.name}
+          scientific={plant.scientific}
+          accent={meta.accent}
+          navigation={navigation}
+        />
+
+        {/* Foi util? - hub do resultado (video do concorrente): fecha o
+            scroll medindo a identificacao. */}
         <HelpfulRow category="insect" context="result" />
       </ScrollView>
 
@@ -469,22 +492,10 @@ const styles = StyleSheet.create({
   },
   infoLabel: { color: colors.textMuted, fontSize: 13.5 },
   infoValue: { color: colors.text, fontSize: 13.5, fontWeight: '600', flexShrink: 1, textAlign: 'right', marginLeft: 12 },
-  // Hub do resultado (video do concorrente): cards-porta e o gancho da
-  // especialista. Os estilos dos fatos rapidos sairam daqui na auditoria de
-  // diagramacao 20/08 - moram so em components/QuickFactGrid.js.
-  doorCard: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 10,
-    backgroundColor: colors.surface,
-    borderRadius: 16,
-    borderWidth: 1,
-    borderColor: colors.border,
-    padding: 14,
-    marginTop: 12,
-  },
-  doorLabel: { fontSize: 14.5, fontWeight: '700', color: colors.text },
-  doorPreview: { fontSize: 12.5, color: colors.textSecondary, marginTop: 2 },
+  // Bullet da lista de papel ecologico - tela principal rica (video do
+  // concorrente, 20/08). Os estilos do card-porta sairam daqui junto com ele:
+  // a lista agora e inline. Os dos fatos rapidos moram em QuickFactGrid.js.
+  bullet: { color: colors.textSecondary, fontSize: 14, lineHeight: 22 },
   specialistCta: {
     flexDirection: 'row',
     alignItems: 'center',

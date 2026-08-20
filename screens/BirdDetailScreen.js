@@ -28,6 +28,7 @@ import ZoneBand from '../components/ZoneBand';
 import PressScale from '../components/PressScale';
 import ResultActionBar from '../components/ResultActionBar';
 import HelpfulRow from '../components/HelpfulRow';
+import SpeciesFaq from '../components/SpeciesFaq';
 import ShareSpeciesCard from '../components/ShareSpeciesCard';
 import Pronounce from '../components/Pronounce';
 import TopBar, { TopBarIcon } from '../components/TopBar';
@@ -439,15 +440,27 @@ export default function BirdDetailScreen({ route }) {
 
         <InstallNudgeCard show={!!fromIdentify} accent={meta.accent} />
 
-        {/* Feedback fecha o scroll (hub do resultado, video do concorrente). */}
         {/* Compartilhe sua planta - tela principal rica (video do concorrente,
-            20/08): o motor de share estava so atras do icone da TopBar. */}
+            20/08): o motor de share ja existia, mas so atras do icone de 20px
+            da TopBar. Aqui ele vira convite, no fim da leitura. */}
         <ShareSpeciesCard
           entity={plant}
           categoryLabel={t('categories.bird.label')}
           accent={meta.accent}
         />
 
+        {/* "Duvidas frequentes" - paridade 120% (video do concorrente,
+            20/08): o FAQ fixo dele vira pergunta SUGERIDA que abre a
+            especialista ja com a duvida escrita e a especie como contexto. */}
+        <SpeciesFaq
+          category="bird"
+          name={plant.name}
+          scientific={plant.scientific}
+          accent={meta.accent}
+          navigation={navigation}
+        />
+
+        {/* Feedback fecha o scroll (hub do resultado, video do concorrente). */}
         <HelpfulRow category="bird" context="result" />
       </ScrollView>
 

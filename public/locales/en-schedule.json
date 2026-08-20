@@ -1,0 +1,282 @@
+{
+  "succulent": {
+    "rows": [
+      {
+        "activity": "Watering",
+        "spring": "Every 2-3 weeks",
+        "summer": "Every 2-3 weeks",
+        "autumn": "Space it out",
+        "winter": "Bare minimum",
+        "note": "Desert cacti rest cold and almost dry; watering then only makes weak growth (Clemson, RHS)."
+      },
+      {
+        "activity": "Feeding",
+        "spring": "Monthly, half dose",
+        "summer": "Monthly, half dose",
+        "autumn": "Stop",
+        "winter": "None",
+        "note": "Low nitrogen, half to a quarter of the label dose. Excess N makes soft tissue that rots (Clemson, Iowa State)."
+      },
+      {
+        "activity": "Repotting",
+        "spring": "Best time",
+        "summer": "",
+        "autumn": "",
+        "winter": "",
+        "note": "One size up only, and wait several days before the first watering (Clemson)."
+      },
+      {
+        "activity": "Light",
+        "spring": "10+ h bright",
+        "summer": "Half shade outside",
+        "autumn": "10+ h bright",
+        "winter": "10+ h bright",
+        "note": "Minimum 6-8 h. Moving a plant outdoors needs half shade first, or the leaves scorch (Iowa State)."
+      }
+    ]
+  },
+  "tropicalFoliage": {
+    "rows": [
+      {
+        "activity": "Watering",
+        "spring": "Evenly moist",
+        "summer": "Evenly moist",
+        "autumn": "Evenly moist",
+        "winter": "Let it dry more",
+        "note": "Water at 17-22 C, never softened water, and empty the saucer (Clemson)."
+      },
+      {
+        "activity": "Feeding",
+        "spring": "Monthly, diluted",
+        "summer": "Monthly, diluted",
+        "autumn": "Taper off",
+        "winter": "None",
+        "note": "Indoor plants are fed only through the growing season, nothing during the resting months (UConn)."
+      },
+      {
+        "activity": "Cuttings",
+        "spring": "Any season",
+        "summer": "Any season",
+        "autumn": "Any season",
+        "winter": "Any season",
+        "note": "Philodendron and relatives root from stem cuttings at any time of year (Clemson)."
+      }
+    ]
+  },
+  "fern": {
+    "rows": [
+      {
+        "activity": "Watering",
+        "spring": "Barely moist",
+        "summer": "Barely moist",
+        "autumn": "Barely moist",
+        "winter": "Barely moist",
+        "note": "Never let it dry out completely, and never leave standing water in the pot (Clemson)."
+      },
+      {
+        "activity": "Feeding",
+        "spring": "Monthly, half dose",
+        "summer": "Monthly, half dose",
+        "autumn": "Stop",
+        "winter": "None",
+        "note": "Nothing at all for 6 months after dividing or repotting; too much fertiliser burns the fronds (Clemson, UConn)."
+      },
+      {
+        "activity": "Divide & repot",
+        "spring": "Early spring",
+        "summer": "",
+        "autumn": "",
+        "winter": "",
+        "note": "Split the root mass into 2-3 sections and keep soil and air humid for weeks afterwards (UConn)."
+      },
+      {
+        "activity": "Air humidity",
+        "spring": "30-50%",
+        "summer": "30-50%",
+        "autumn": "30-50%",
+        "winter": "Tray or misting",
+        "note": "Dry indoor air in the cold months is the real risk; a pebble tray beats misting (Clemson, UConn)."
+      }
+    ]
+  },
+  "fruitVeg": {
+    "rows": [
+      {
+        "activity": "Watering",
+        "spring": "25-50 mm/week",
+        "summer": "25-50 mm/week",
+        "autumn": "25-50 mm/week",
+        "winter": "",
+        "note": "Deep and even. Shallow, patchy watering cuts calcium transport and causes blossom-end rot (USU, UGA)."
+      },
+      {
+        "activity": "Feeding",
+        "spring": "At bloom",
+        "summer": "After harvest",
+        "autumn": "Stop",
+        "winter": "None",
+        "note": "Stone fruit takes three split doses and none in the last weeks of summer, so growth hardens off (Clemson)."
+      },
+      {
+        "activity": "Pruning",
+        "spring": "",
+        "summer": "",
+        "autumn": "Late autumn on",
+        "winter": "Dormant: best",
+        "note": "Dormancy is the standard window: structure is visible and the wound closes in the next growing season (USDA)."
+      },
+      {
+        "activity": "Thinning fruit",
+        "spring": "",
+        "summer": "By hand",
+        "autumn": "",
+        "winter": "",
+        "note": "The natural drop at 1-2 cm does not replace hand thinning; keep the largest fruit of each cluster (Iowa State)."
+      }
+    ]
+  },
+  "flowering": {
+    "rows": [
+      {
+        "activity": "Feeding",
+        "spring": "At bud break",
+        "summer": "Every 6 weeks",
+        "autumn": "Stop before frost",
+        "winter": "None",
+        "note": "Roses drop to half dose in the peak heat and stop 6 weeks before the first expected frost (Clemson)."
+      },
+      {
+        "activity": "Deadheading",
+        "spring": "Remove old blooms",
+        "summer": "Remove old blooms",
+        "autumn": "Leave seed heads",
+        "winter": "",
+        "note": "Seed heads left standing feed wildlife through the cold months (Clemson)."
+      },
+      {
+        "activity": "Bulbs",
+        "spring": "Feed at emergence",
+        "summer": "Split when dormant",
+        "autumn": "",
+        "winter": "",
+        "note": "Feed at emergence OR after flowering, never both. Remove the spent flower but never the leaves (Illinois)."
+      }
+    ]
+  },
+  "woody": {
+    "rows": [
+      {
+        "activity": "New tree water",
+        "spring": "Weekly, deep",
+        "summer": "Weekly, deep",
+        "autumn": "Until frost",
+        "winter": "",
+        "note": "1-1.5 gallons per inch of trunk diameter, over the root zone and not against the trunk (Penn State)."
+      },
+      {
+        "activity": "Feeding",
+        "spring": "At bud break",
+        "summer": "Split doses",
+        "autumn": "Stop",
+        "winter": "None",
+        "note": "A mature tree needs little or none. Late feeding with high nitrogen delays dormancy (Clemson)."
+      },
+      {
+        "activity": "Pruning",
+        "spring": "After flowering",
+        "summer": "",
+        "autumn": "Avoid",
+        "winter": "Dormant: best",
+        "note": "Spring-flowering shrubs are pruned right after the flowers; prune later and you cut off next year's buds (Clemson)."
+      },
+      {
+        "activity": "Mulch",
+        "spring": "2-4 in, off trunk",
+        "summer": "2-4 in, off trunk",
+        "autumn": "2-4 in, off trunk",
+        "winter": "2-4 in, off trunk",
+        "note": "Keep it 3-5 in clear of a young trunk and 8-10 in clear of a mature one (Penn State)."
+      }
+    ]
+  },
+  "orchid": {
+    "rows": [
+      {
+        "activity": "Watering",
+        "spring": "Weekly",
+        "summer": "Weekly",
+        "autumn": "Ease off",
+        "winter": "Ease off",
+        "note": "Soak until it runs out of the holes, then drain. Never leave it standing in the saucer (AOS, RHS)."
+      },
+      {
+        "activity": "Feeding",
+        "spring": "Weekly, half dose",
+        "summer": "Weekly, half dose",
+        "autumn": "Fortnightly",
+        "winter": "Fortnightly",
+        "note": "Half the label dose, little or no urea, and skip every 4th feed to flush salts (AOS, RHS)."
+      },
+      {
+        "activity": "Repotting",
+        "spring": "Early spring",
+        "summer": "",
+        "autumn": "",
+        "winter": "Late winter",
+        "note": "Only once new root growth is visible. In sphagnum, repot after it finishes flowering (Clemson)."
+      },
+      {
+        "activity": "Bud set",
+        "spring": "",
+        "summer": "",
+        "autumn": "14 h of darkness",
+        "winter": "Keep evenly moist",
+        "note": "Holiday cacti only: 14+ h of unbroken dark for at least 6 weeks, and 2 h of lamp light cancels the buds (Clemson)."
+      }
+    ]
+  },
+  "herb": {
+    "rows": [
+      {
+        "activity": "Watering",
+        "spring": "Dry out between",
+        "summer": "Water early",
+        "autumn": "Dry out between",
+        "winter": "Never waterlogged",
+        "note": "Split group: Mediterranean herbs want real drying, leafy ones (basil, parsley, mint) want steady moisture (Clemson, RHS)."
+      },
+      {
+        "activity": "Feeding",
+        "spring": "Light, at planting",
+        "summer": "Only if it stalls",
+        "autumn": "None",
+        "winter": "None",
+        "note": "Rosemary in the ground gets none at all, and very rich soil dulls the flavour (RHS, Clemson)."
+      },
+      {
+        "activity": "Pruning",
+        "spring": "Hard cut (sage)",
+        "summer": "Trim (bay)",
+        "autumn": "After flowering",
+        "winter": "",
+        "note": "Rosemary takes a light trim after the flowers, never into old wood. Mint is cut to 5 cm to renew it (RHS)."
+      },
+      {
+        "activity": "Harvest",
+        "spring": "Just before bloom",
+        "summer": "Just before bloom",
+        "autumn": "",
+        "winter": "",
+        "note": "Early morning, just before flowering, is when the leaf carries the most oil (Clemson)."
+      },
+      {
+        "activity": "Cold",
+        "spring": "",
+        "summer": "",
+        "autumn": "",
+        "winter": "Shield from frost",
+        "note": "Rosemary survives -8 C once established, but frost still burns the new shoots (RHS)."
+      }
+    ]
+  }
+}

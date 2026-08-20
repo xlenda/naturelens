@@ -249,6 +249,8 @@
     "distribution": "Verspreiding",
     "everyNDays": "Elke {{count}} dagen",
     "gbifCredit": "Gegevens: GBIF.org",
+    "seasonChart": "Waarnemingen per maand",
+    "seasonChartNote": "Waarnemingen wereldwijd, maand voor maand. Ze weerspiegelen de waarnemingsinspanning, geen garantie voor bloei of activiteit.",
     "tipWatering": "Voel vóór het gieten aan de grond: zijn de bovenste centimeters droog, dan is het tijd.",
     "tipLight": "Kijk hoe het licht in de ruimte verandert gedurende de dag - het verschuift meer dan je denkt.",
     "tipSoil": "Goede drainage is net zo belangrijk als goede voeding: natte wortels zijn lijdende wortels.",
@@ -279,10 +281,48 @@
     "waterLow": "Weinig",
     "waterMedium": "Matig",
     "waterHigh": "Veel",
-    "careConditionSection": "Verzorgingsomstandigheden",
+    "careConditionSection": "Verzorgingscondities",
     "thisMonth": "Deze maand",
     "waterInMonth": "Water geven in {{month}}",
-    "propagateInMonth": "Vermeerderen in {{month}}"
+    "propagateInMonth": "Vermeerderen in {{month}}",
+    "faq": {
+      "title": "Veelgestelde vragen",
+      "plant": {
+        "q1": "Hoe geef ik {{name}} water in de winter?",
+        "q2": "Hoeveel licht heeft {{name}} nodig?",
+        "q3": "Is {{name}} veilig voor huisdieren?"
+      },
+      "tree": {
+        "q1": "Wanneer kan ik {{name}} het beste snoeien?",
+        "q2": "Hoeveel ruimte hebben de wortels van {{name}} nodig?",
+        "q3": "Hoe snel groeit {{name}}?"
+      },
+      "insect": {
+        "q1": "Is {{name}} gevaarlijk?",
+        "q2": "Wat trekt {{name}} naar de tuin?",
+        "q3": "Hoe houd ik {{name}} weg zonder gif?"
+      },
+      "mushroom": {
+        "q1": "Hoe herken ik {{name}} veilig?",
+        "q2": "Welke soorten lijken op {{name}}?",
+        "q3": "Waar en wanneer verschijnt {{name}} meestal?"
+      },
+      "fish": {
+        "q1": "Waar leeft {{name}}?",
+        "q2": "Wat eet {{name}}?",
+        "q3": "Is het veilig om {{name}} vast te pakken?"
+      },
+      "bird": {
+        "q1": "Wat eet {{name}}?",
+        "q2": "Hoe lok ik {{name}} naar mijn tuin?",
+        "q3": "Hoe klinkt de roep van {{name}}?"
+      },
+      "crop": {
+        "q1": "Wanneer is {{name}} klaar om te oogsten?",
+        "q2": "Welke plagen treffen {{name}} het vaakst?",
+        "q3": "Hoeveel water heeft {{name}} nodig?"
+      }
+    }
   },
   "disease": {
     "overviewSection": "Overzicht",

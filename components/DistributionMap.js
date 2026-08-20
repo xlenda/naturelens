@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { View, Text, StyleSheet, Image } from 'react-native';
-import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useTranslation } from 'react-i18next';
 import { colors } from './theme';
+import { getTaxonKey } from './gbifTaxonKey';
 
 // Real distribution map - the competitor DRAWS its map; ours is science.
 // GBIF's public map API renders every recorded occurrence of the species on
@@ -10,7 +10,9 @@ import { colors } from './theme';
 // (api.gbif.org/v2/map) stacked on top, both free, keyless, verified live.
 // The species is resolved to a taxonKey through /v1/species/match by its
 // scientific name, and that lookup is cached forever in AsyncStorage - a
-// species' key never changes.
+// species' key never changes. Esse resolve mora em gbifTaxonKey.js desde a
+// paridade 120% (video do concorrente, 20/08), porque o SeasonChart precisa do
+// MESMO taxonKey: chave de cache identica, uma unica chamada por especie.
 //
 // Honesty: renders NOTHING when the name doesn't match a GBIF taxon or the
 // network fails - a map is either real or absent. The GBIF.org credit is
@@ -21,28 +23,11 @@ export default function DistributionMap({ scientific, accent = colors.accent }) 
 
   useEffect(() => {
     let alive = true;
-    if (!scientific) return undefined;
-    (async () => {
-      const cacheKey = '@naturelens_gbif_' + scientific.toLowerCase();
-      try {
-        const cached = await AsyncStorage.getItem(cacheKey);
-        if (cached !== null) {
-          if (alive && cached !== 'none') setTaxonKey(cached);
-          return;
-        }
-        const r = await fetch(
-          'https://api.gbif.org/v1/species/match?name=' + encodeURIComponent(scientific),
-          { headers: { 'User-Agent': 'NatureLens (naturelensapp.cloud)' } }
-        );
-        if (!r.ok) return;
-        const d = await r.json();
-        const key = d?.usageKey ? String(d.usageKey) : null;
-        await AsyncStorage.setItem(cacheKey, key || 'none').catch(() => {});
-        if (alive && key) setTaxonKey(key);
-      } catch (e) {
-        // offline / GBIF down: section simply doesn't render
-      }
-    })();
+    // offline / GBIF down / sem match: getTaxonKey devolve null e a secao
+    // simplesmente nao renderiza.
+    getTaxonKey(scientific).then((key) => {
+      if (alive && key) setTaxonKey(key);
+    });
     return () => {
       alive = false;
     };

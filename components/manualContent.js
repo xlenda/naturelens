@@ -44,6 +44,19 @@ export async function getManual(lang) {
   return data;
 }
 
+// Duas abas da tela de manual nao tem verbete proprio e emprestam o de outra:
+// 'confusas' (especies parecidas) le o de seguranca e 'overview' le o de papel
+// ecologico. Isso vivia como um ternario solto dentro do CareTopicsScreen; virou
+// funcao quando o carrossel de Problemas Comuns passou a precisar do MESMO
+// mapeamento para navegar de volta pra aba certa - paridade 120% (video do
+// concorrente, 20/08). Duas copias desse ternario sairiam de sincronia na
+// primeira aba nova.
+export function manualKeyFor(topicKey) {
+  if (topicKey === 'confusas') return 'safety';
+  if (topicKey === 'overview') return 'role';
+  return topicKey;
+}
+
 /** Manual entry for one topic key ('watering', 'light', ...) or null. */
 export async function getTopicManual(topicKey, lang) {
   const manual = await getManual(lang);

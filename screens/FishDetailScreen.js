@@ -25,9 +25,12 @@ import ZoneBand from '../components/ZoneBand';
 import PressScale from '../components/PressScale';
 import ResultActionBar from '../components/ResultActionBar';
 import HelpfulRow from '../components/HelpfulRow';
+import SpeciesFaq from '../components/SpeciesFaq';
 import ShareSpeciesCard from '../components/ShareSpeciesCard';
 import Pronounce from '../components/Pronounce';
 import TopBar, { TopBarIcon } from '../components/TopBar';
+import ExpandableText from '../components/ExpandableText';
+import DistributionMap from '../components/DistributionMap';
 
 // Modelled on TreeDetailScreen, minus everything that only makes sense for a
 // plant: no watering tracker, no light/soil guide, no "mark as watered". Fish
@@ -275,6 +278,12 @@ export default function FishDetailScreen({ route }) {
             all built from data the API already returned. */}
         <IdentificationExtras entity={plant} accent={meta.accent} />
 
+        {/* Mapa de distribuicao REAL (GBIF) - tela principal rica (video do
+            concorrente, 20/08): "onde esse peixe vive" era a pergunta que esta
+            tela nao respondia, e o GBIF cobre fauna marinha como cobre planta.
+            Some sozinho sem match de taxon ou offline. */}
+        <DistributionMap scientific={plant.scientific} accent={meta.accent} />
+
         {/* Overview in the reader's language, when one exists.
             Fishial.AI has no localised content whatsoever, so a user in Brazil
             was shown a paragraph of English written in ichthyology register -
@@ -315,10 +324,21 @@ export default function FishDetailScreen({ route }) {
                 title={t('common.technicalDescription')}
                 color={colors.info}
               >
-                <TranslatableText text={secondary} style={styles.body} showWhenEnglish={stillEnglish(secondary)} />
-                {secondary === plant.overviewOriginal && (
-                  <Text style={styles.sourceNote}>{t('common.vendorEnglishNote')}</Text>
-                )}
+                {/* Tela principal rica (video do concorrente, 20/08): a chave
+                    diagnostica do vendor ("Dorsal spines (total): 9-10; ...")
+                    e o bloco mais longo e menos lido da tela, e empurrava a
+                    ficha inteira pra fora da dobra. Fica colapsada atras do
+                    "Ver mais" - o titulo da secao continua visivel, entao
+                    nada some, so espera um toque.
+                    initial={0}: nenhum filho aberto. O TranslatableText nao
+                    pode ser cortado por frase (perderia o botao Traduzir e o
+                    aviso de origem), entao o corte e do bloco inteiro. */}
+                <ExpandableText initial={0} accent={meta.accent}>
+                  <TranslatableText text={secondary} style={styles.body} showWhenEnglish={stillEnglish(secondary)} />
+                  {secondary === plant.overviewOriginal && (
+                    <Text style={styles.sourceNote}>{t('common.vendorEnglishNote')}</Text>
+                  )}
+                </ExpandableText>
               </SectionCard>
             )}
           </ZoneBand>
@@ -396,15 +416,27 @@ export default function FishDetailScreen({ route }) {
 
         <InstallNudgeCard show={!!fromIdentify} accent={meta.accent} />
 
-        {/* Feedback fecha o scroll (hub do resultado, video do concorrente). */}
         {/* Compartilhe sua planta - tela principal rica (video do concorrente,
-            20/08): o motor de share estava so atras do icone da TopBar. */}
+            20/08): o motor de share ja existia, mas so atras do icone de 20px
+            da TopBar. Aqui ele vira convite, no fim da leitura. */}
         <ShareSpeciesCard
           entity={plant}
           categoryLabel={t('categories.fish.label')}
           accent={meta.accent}
         />
 
+        {/* "Duvidas frequentes" - paridade 120% (video do concorrente,
+            20/08): o FAQ fixo dele vira pergunta SUGERIDA que abre a
+            especialista ja com a duvida escrita e a especie como contexto. */}
+        <SpeciesFaq
+          category="fish"
+          name={plant.name}
+          scientific={plant.scientific}
+          accent={meta.accent}
+          navigation={navigation}
+        />
+
+        {/* Feedback fecha o scroll (hub do resultado, video do concorrente). */}
         <HelpfulRow category="fish" context="result" />
       </ScrollView>
 

@@ -249,6 +249,8 @@
     "distribution": "Yayılım",
     "everyNDays": "Her {{count}} günde bir",
     "gbifCredit": "Veri: GBIF.org",
+    "seasonChart": "Aylara göre kayıtlar",
+    "seasonChartNote": "Dünya genelindeki gözlem kayıtları, ay ay. Gözlem çabasını yansıtır; çiçeklenme veya etkinlik garantisi değildir.",
     "tipWatering": "Sulamadan önce toprağa dokunun: üstteki birkaç santim kuruysa vakti gelmiş demektir.",
     "tipLight": "Gün boyunca ışığın mekânda nasıl hareket ettiğini izleyin - göründüğünden daha çok değişir.",
     "tipSoil": "İyi drenaj, iyi gübre kadar önemlidir: suya doymuş kökler acı çeken köklerdir.",
@@ -278,7 +280,49 @@
     "rangeBad": "Uygun değil",
     "waterLow": "Az",
     "waterMedium": "Orta",
-    "waterHigh": "Çok"
+    "waterHigh": "Çok",
+    "careConditionSection": "Bakım koşulları",
+    "thisMonth": "Bu ay",
+    "waterInMonth": "{{month}} ayında sulama",
+    "propagateInMonth": "{{month}} ayında çoğaltma",
+    "faq": {
+      "title": "Sık sorulan sorular",
+      "plant": {
+        "q1": "Kışın {{name}} nasıl sulanır?",
+        "q2": "{{name}} ne kadar ışığa ihtiyaç duyar?",
+        "q3": "{{name}} evcil hayvanlar için güvenli mi?"
+      },
+      "tree": {
+        "q1": "{{name}} budamak için en iyi zaman ne zaman?",
+        "q2": "{{name}} kökleri ne kadar yer ister?",
+        "q3": "{{name}} ne kadar hızlı büyür?"
+      },
+      "insect": {
+        "q1": "{{name}} tehlikeli mi?",
+        "q2": "{{name}} bahçeye ne çeker?",
+        "q3": "İlaç kullanmadan {{name}} nasıl uzak tutulur?"
+      },
+      "mushroom": {
+        "q1": "{{name}} güvenli şekilde nasıl tanınır?",
+        "q2": "Hangi türler {{name}} ile karıştırılır?",
+        "q3": "{{name}} genellikle nerede ve ne zaman çıkar?"
+      },
+      "fish": {
+        "q1": "{{name}} nerede yaşar?",
+        "q2": "{{name}} ne yer?",
+        "q3": "{{name}} elle tutmak güvenli mi?"
+      },
+      "bird": {
+        "q1": "{{name}} ne yer?",
+        "q2": "{{name}} bahçeme nasıl çekerim?",
+        "q3": "{{name}} sesi nasıldır?"
+      },
+      "crop": {
+        "q1": "{{name}} ne zaman hasada hazır olur?",
+        "q2": "{{name}} en çok hangi zararlılar saldırır?",
+        "q3": "{{name}} ne kadar suya ihtiyaç duyar?"
+      }
+    }
   },
   "disease": {
     "overviewSection": "Genel Bakış",

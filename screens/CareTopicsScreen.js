@@ -11,7 +11,7 @@ import NatureScene from '../components/NatureScene';
 import HelpfulRow from '../components/HelpfulRow';
 import RangeBar from '../components/RangeBar';
 import ExpandableText from '../components/ExpandableText';
-import { getTopicManual } from '../components/manualContent';
+import { getTopicManual, manualKeyFor } from '../components/manualContent';
 import { getGroupTopic } from '../components/groupContent';
 
 // The species MANUAL, diagrammed like the competitor's (studied frame by
@@ -60,7 +60,10 @@ export default function CareTopicsScreen() {
   const route = useRoute();
   const { t, i18n } = useTranslation();
   const i18nLang = i18n.language;
-  const { title, accent = colors.accent, category = 'plant', topics = [], initialKey, groupKey } = route.params || {};
+  // initialProblem: indice do acordeao de problemas que deve abrir ja aberto,
+  // usado pelo carrossel "Problemas Comuns" da tela de resultado - paridade
+  // 120% (video do concorrente, 20/08). Ausente = comportamento de sempre.
+  const { title, accent = colors.accent, category = 'plant', topics = [], initialKey, initialProblem, groupKey } = route.params || {};
 
   const valid = topics.filter((tp) => tp && tp.key && tp.text);
   const [activeKey, setActiveKey] = useState(
@@ -105,7 +108,10 @@ export default function CareTopicsScreen() {
   // Primeiro acordeao ABERTO: um acordeao fechado que ninguem toca e
   // conteudo invisivel - foi assim que o manual inteiro passou
   // despercebido.
-  const [openProblem, setOpenProblem] = useState(0);
+  // Chegando pelo carrossel de Problemas Comuns, o acordeao aberto e AQUELE
+  // (paridade 120%, video do concorrente, 20/08) - abrir o primeiro faria o
+  // toque no card "Excesso de rega" cair em "Falta de rega".
+  const [openProblem, setOpenProblem] = useState(initialProblem || 0);
   // Camada POR TIPO: o que muda de grupo para grupo (suculenta rega diferente
   // de frutifera; polinizador se observa diferente de praga). Vem do
   // {lang}-groups.json quando a taxonomia da especie cai num grupo conhecido;
@@ -114,8 +120,10 @@ export default function CareTopicsScreen() {
   useEffect(() => {
     let alive = true;
     setManual(null);
-    setOpenProblem(0);
-    const manualKey = activeKey === 'confusas' ? 'safety' : activeKey === 'overview' ? 'role' : activeKey;
+    // Trocou de aba, o acordeao volta ao primeiro; na aba que veio pelo deep
+    // link ele mantem o problema pedido.
+    setOpenProblem(activeKey === initialKey ? initialProblem || 0 : 0);
+    const manualKey = manualKeyFor(activeKey);
     setGroupManual(null);
     getTopicManual(manualKey, i18nLang).then((m) => {
       if (alive) setManual(m);
@@ -124,7 +132,7 @@ export default function CareTopicsScreen() {
       if (alive) setGroupManual(g);
     });
     return () => { alive = false; };
-  }, [activeKey, i18nLang, groupKey]);
+  }, [activeKey, i18nLang, groupKey, initialKey, initialProblem]);
 
   // Chips do indice - so o que a aba REALMENTE tem.
   //
@@ -160,15 +168,26 @@ export default function CareTopicsScreen() {
   // mandar.
   const sectionY = useRef({});
   const sectionNodes = useRef({});
+  const scrollToY = (y) => bodyRef.current?.scrollTo({ y: Math.max(0, y - 8), animated: true });
+  // Deep link do carrossel de Problemas Comuns (paridade 120%, video do
+  // concorrente, 20/08): abrir o acordeao certo nao basta se ele nasce fora da
+  // dobra - o toque pareceria nao ter feito nada, a mesma armadilha dos chips
+  // decorativos da correcao 13. O onLayout da secao e o unico momento em que
+  // ela ja existe e ja foi medida; rolar antes disso mede um no que nao
+  // renderizou. Uma vez so, senao o usuario perde o controle do scroll.
+  const pendingProblemScroll = useRef(typeof initialProblem === 'number');
   const sectionProps = (key) => ({
     ref: (node) => {
       sectionNodes.current[key] = node;
     },
     onLayout: (e) => {
       sectionY.current[key] = e.nativeEvent.layout.y;
+      if (key === 'prob' && pendingProblemScroll.current) {
+        pendingProblemScroll.current = false;
+        scrollToY(e.nativeEvent.layout.y);
+      }
     },
   });
-  const scrollToY = (y) => bodyRef.current?.scrollTo({ y: Math.max(0, y - 8), animated: true });
   const goToSection = (key) => {
     const node = sectionNodes.current[key];
     const inner = bodyRef.current?.getInnerViewNode?.();

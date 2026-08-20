@@ -249,6 +249,8 @@
     "distribution": "Distribuzione",
     "everyNDays": "Ogni {{count}} giorni",
     "gbifCredit": "Dati: GBIF.org",
+    "seasonChart": "Osservazioni per mese",
+    "seasonChartNote": "Osservazioni registrate in tutto il mondo, mese per mese. Riflettono l’impegno di chi osserva, non una garanzia di fioritura o attività.",
     "tipWatering": "Prima di annaffiare, tocca il terreno: se i primi centimetri sono asciutti, è il momento.",
     "tipLight": "Osserva come la luce si sposta nell'ambiente durante il giorno - cambia più di quanto sembri.",
     "tipSoil": "Un buon drenaggio conta quanto un buon concime: radici fradice sono radici che soffrono.",
@@ -281,8 +283,46 @@
     "waterHigh": "Alta",
     "careConditionSection": "Condizioni di cura",
     "thisMonth": "Questo mese",
-    "waterInMonth": "Annaffiare a {{month}}",
-    "propagateInMonth": "Propagare a {{month}}"
+    "waterInMonth": "Irrigazione a {{month}}",
+    "propagateInMonth": "Propagazione a {{month}}",
+    "faq": {
+      "title": "Domande frequenti",
+      "plant": {
+        "q1": "Come annaffio {{name}} in inverno?",
+        "q2": "Quanta luce serve a {{name}}?",
+        "q3": "{{name}} è sicura per gli animali domestici?"
+      },
+      "tree": {
+        "q1": "Qual è il periodo migliore per potare {{name}}?",
+        "q2": "Quanto spazio richiedono le radici di {{name}}?",
+        "q3": "Quanto cresce in fretta {{name}}?"
+      },
+      "insect": {
+        "q1": "{{name}} è pericoloso?",
+        "q2": "Che cosa attira {{name}} in giardino?",
+        "q3": "Come allontano {{name}} senza pesticidi?"
+      },
+      "mushroom": {
+        "q1": "Come riconosco {{name}} in sicurezza?",
+        "q2": "Quali specie somigliano a {{name}}?",
+        "q3": "Dove e quando compare di solito {{name}}?"
+      },
+      "fish": {
+        "q1": "Dove vive {{name}}?",
+        "q2": "Che cosa mangia {{name}}?",
+        "q3": "È sicuro maneggiare {{name}}?"
+      },
+      "bird": {
+        "q1": "Che cosa mangia {{name}}?",
+        "q2": "Come attiro {{name}} nel mio giardino?",
+        "q3": "Com'è il canto di {{name}}?"
+      },
+      "crop": {
+        "q1": "Quando {{name}} è pronto per il raccolto?",
+        "q2": "Quali parassiti attaccano di più {{name}}?",
+        "q3": "Quanta acqua serve a {{name}}?"
+      }
+    }
   },
   "disease": {
     "overviewSection": "Panoramica",

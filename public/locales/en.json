@@ -299,6 +299,8 @@
     "distribution": "Distribution",
     "everyNDays": "Every {{count}} days",
     "gbifCredit": "Data: GBIF.org",
+    "seasonChart": "Records by month",
+    "seasonChartNote": "Observation records worldwide, month by month. They reflect observer effort, not a guarantee of flowering or activity.",
     "tipWatering": "Before watering, touch the soil: if the top inch is dry, it's time.",
     "tipLight": "Watch how the light moves through the space during the day - it changes more than it seems.",
     "tipSoil": "Good drainage matters as much as good fertilizer: soggy roots are suffering roots.",
@@ -329,10 +331,48 @@
     "waterLow": "Low",
     "waterMedium": "Medium",
     "waterHigh": "High",
-    "careConditionSection": "Care Condition",
+    "careConditionSection": "Care conditions",
     "thisMonth": "This month",
     "waterInMonth": "Water in {{month}}",
-    "propagateInMonth": "Propagate in {{month}}"
+    "propagateInMonth": "Propagate in {{month}}",
+    "faq": {
+      "title": "Common questions",
+      "plant": {
+        "q1": "How do I water {{name}} in winter?",
+        "q2": "How much light does {{name}} need?",
+        "q3": "Is {{name}} safe around pets?"
+      },
+      "tree": {
+        "q1": "When is the best time to prune {{name}}?",
+        "q2": "How much space do the roots of {{name}} need?",
+        "q3": "How fast does {{name}} grow?"
+      },
+      "insect": {
+        "q1": "Is {{name}} dangerous?",
+        "q2": "What attracts {{name}} to a garden?",
+        "q3": "How do I keep {{name}} away without pesticides?"
+      },
+      "mushroom": {
+        "q1": "How do I identify {{name}} safely?",
+        "q2": "Which species look like {{name}}?",
+        "q3": "Where and when does {{name}} usually appear?"
+      },
+      "fish": {
+        "q1": "Where does {{name}} live?",
+        "q2": "What does {{name}} eat?",
+        "q3": "Is {{name}} safe to handle?"
+      },
+      "bird": {
+        "q1": "What does {{name}} eat?",
+        "q2": "How do I attract {{name}} to my garden?",
+        "q3": "What does the call of {{name}} sound like?"
+      },
+      "crop": {
+        "q1": "When is {{name}} ready to harvest?",
+        "q2": "Which pests attack {{name}} most?",
+        "q3": "How much water does {{name}} need?"
+      }
+    }
   },
   "disease": {
     "overviewSection": "Overview",

@@ -249,6 +249,8 @@
     "distribution": "分布",
     "everyNDays": "每 {{count}} 天",
     "gbifCredit": "資料：GBIF.org",
+    "seasonChart": "各月觀察紀錄",
+    "seasonChartNote": "全球觀察紀錄，按月統計。它反映的是觀察投入，並非開花或活動的保證。",
     "tipWatering": "澆水前先摸摸土：表層幾公分乾了，就該澆了。",
     "tipLight": "留意一天之中光線在空間裡的變化——它比你想像的變化更大。",
     "tipSoil": "良好的排水和好的肥料同樣重要：積水的根是在受苦的根。",
@@ -278,7 +280,49 @@
     "rangeBad": "不適宜",
     "waterLow": "少量",
     "waterMedium": "適中",
-    "waterHigh": "大量"
+    "waterHigh": "大量",
+    "careConditionSection": "養護條件",
+    "thisMonth": "本月",
+    "waterInMonth": "{{month}}澆水",
+    "propagateInMonth": "{{month}}繁殖",
+    "faq": {
+      "title": "常見問題",
+      "plant": {
+        "q1": "冬天該怎麼給{{name}}澆水？",
+        "q2": "{{name}}需要多少光照？",
+        "q3": "{{name}}對寵物安全嗎？"
+      },
+      "tree": {
+        "q1": "什麼時候修剪{{name}}最好？",
+        "q2": "{{name}}的根系需要多大空間？",
+        "q3": "{{name}}長得有多快？"
+      },
+      "insect": {
+        "q1": "{{name}}危險嗎？",
+        "q2": "什麼會把{{name}}引到花園裡？",
+        "q3": "不用藥怎麼驅趕{{name}}？"
+      },
+      "mushroom": {
+        "q1": "怎樣安全地辨認{{name}}？",
+        "q2": "哪些物種和{{name}}相似？",
+        "q3": "{{name}}通常在哪裡、什麼時候出現？"
+      },
+      "fish": {
+        "q1": "{{name}}生活在哪裡？",
+        "q2": "{{name}}吃什麼？",
+        "q3": "徒手接觸{{name}}安全嗎？"
+      },
+      "bird": {
+        "q1": "{{name}}吃什麼？",
+        "q2": "怎樣把{{name}}吸引到我的花園？",
+        "q3": "{{name}}的叫聲是什麼樣的？"
+      },
+      "crop": {
+        "q1": "{{name}}什麼時候可以收穫？",
+        "q2": "哪些害蟲最常侵襲{{name}}？",
+        "q3": "{{name}}需要多少水？"
+      }
+    }
   },
   "disease": {
     "overviewSection": "概觀",

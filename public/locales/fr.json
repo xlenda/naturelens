@@ -249,6 +249,8 @@
     "distribution": "Répartition",
     "everyNDays": "Tous les {{count}} jours",
     "gbifCredit": "Données : GBIF.org",
+    "seasonChart": "Observations par mois",
+    "seasonChartNote": "Observations enregistrées dans le monde entier, mois par mois. Elles reflètent l’effort d’observation, pas une garantie de floraison ou d’activité.",
     "tipWatering": "Avant d'arroser, touchez la terre : si les premiers centimètres sont secs, c'est le moment.",
     "tipLight": "Observez comment la lumière évolue dans la pièce au fil de la journée - elle varie plus qu'on ne le croit.",
     "tipSoil": "Un bon drainage compte autant qu'un bon engrais : des racines détrempées sont des racines qui souffrent.",
@@ -281,8 +283,46 @@
     "waterHigh": "Élevé",
     "careConditionSection": "Conditions d'entretien",
     "thisMonth": "Ce mois-ci",
-    "waterInMonth": "Arroser en {{month}}",
-    "propagateInMonth": "Multiplier en {{month}}"
+    "waterInMonth": "Arrosage en {{month}}",
+    "propagateInMonth": "Bouturage en {{month}}",
+    "faq": {
+      "title": "Questions fréquentes",
+      "plant": {
+        "q1": "Comment arroser {{name}} en hiver ?",
+        "q2": "De combien de lumière {{name}} a-t-elle besoin ?",
+        "q3": "{{name}} est-elle sans danger pour les animaux ?"
+      },
+      "tree": {
+        "q1": "Quelle est la meilleure période pour tailler {{name}} ?",
+        "q2": "De quel espace les racines de {{name}} ont-elles besoin ?",
+        "q3": "À quelle vitesse {{name}} pousse-t-il ?"
+      },
+      "insect": {
+        "q1": "{{name}} est-il dangereux ?",
+        "q2": "Qu'est-ce qui attire {{name}} au jardin ?",
+        "q3": "Comment éloigner {{name}} sans pesticide ?"
+      },
+      "mushroom": {
+        "q1": "Comment reconnaître {{name}} en toute sécurité ?",
+        "q2": "Quelles espèces ressemblent à {{name}} ?",
+        "q3": "Où et quand {{name}} apparaît-il d'habitude ?"
+      },
+      "fish": {
+        "q1": "Où vit {{name}} ?",
+        "q2": "Que mange {{name}} ?",
+        "q3": "Peut-on manipuler {{name}} sans risque ?"
+      },
+      "bird": {
+        "q1": "Que mange {{name}} ?",
+        "q2": "Comment attirer {{name}} dans mon jardin ?",
+        "q3": "À quoi ressemble le chant de {{name}} ?"
+      },
+      "crop": {
+        "q1": "Quand {{name}} est-il prêt à récolter ?",
+        "q2": "Quels ravageurs attaquent le plus {{name}} ?",
+        "q3": "De combien d'eau {{name}} a-t-il besoin ?"
+      }
+    }
   },
   "disease": {
     "overviewSection": "Aperçu",

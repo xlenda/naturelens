@@ -249,6 +249,8 @@
     "distribution": "Udbredelse",
     "everyNDays": "Hver {{count}}. dag",
     "gbifCredit": "Data: GBIF.org",
+    "seasonChart": "Registreringer pr. måned",
+    "seasonChartNote": "Observationer fra hele verden, måned for måned. De afspejler observationsindsatsen, ikke en garanti for blomstring eller aktivitet.",
     "tipWatering": "Mærk på jorden, før du vander: er de øverste centimeter tørre, er det tid.",
     "tipLight": "Læg mærke til, hvordan lyset flytter sig i rummet i løbet af dagen - det skifter mere, end man tror.",
     "tipSoil": "God dræning betyder lige så meget som god gødning: våde rødder er rødder, der lider.",
@@ -278,7 +280,49 @@
     "rangeBad": "Uegnet",
     "waterLow": "Lidt",
     "waterMedium": "Middel",
-    "waterHigh": "Meget"
+    "waterHigh": "Meget",
+    "careConditionSection": "Plejeforhold",
+    "thisMonth": "Denne måned",
+    "waterInMonth": "Vanding i {{month}}",
+    "propagateInMonth": "Formering i {{month}}",
+    "faq": {
+      "title": "Ofte stillede spørgsmål",
+      "plant": {
+        "q1": "Hvordan vander jeg {{name}} om vinteren?",
+        "q2": "Hvor meget lys har {{name}} brug for?",
+        "q3": "Er {{name}} ufarlig for kæledyr?"
+      },
+      "tree": {
+        "q1": "Hvornår er det bedst at beskære {{name}}?",
+        "q2": "Hvor meget plads kræver rødderne på {{name}}?",
+        "q3": "Hvor hurtigt vokser {{name}}?"
+      },
+      "insect": {
+        "q1": "Er {{name}} farlig?",
+        "q2": "Hvad tiltrækker {{name}} til haven?",
+        "q3": "Hvordan holder jeg {{name}} væk uden gift?"
+      },
+      "mushroom": {
+        "q1": "Hvordan genkender jeg {{name}} sikkert?",
+        "q2": "Hvilke arter ligner {{name}}?",
+        "q3": "Hvor og hvornår dukker {{name}} normalt op?"
+      },
+      "fish": {
+        "q1": "Hvor lever {{name}}?",
+        "q2": "Hvad spiser {{name}}?",
+        "q3": "Er det sikkert at håndtere {{name}}?"
+      },
+      "bird": {
+        "q1": "Hvad spiser {{name}}?",
+        "q2": "Hvordan lokker jeg {{name}} til min have?",
+        "q3": "Hvordan lyder {{name}}?"
+      },
+      "crop": {
+        "q1": "Hvornår er {{name}} klar til høst?",
+        "q2": "Hvilke skadedyr angriber {{name}} mest?",
+        "q3": "Hvor meget vand har {{name}} brug for?"
+      }
+    }
   },
   "disease": {
     "overviewSection": "Oversigt",

@@ -249,6 +249,8 @@
     "distribution": "Verbreitung",
     "everyNDays": "Alle {{count}} Tage",
     "gbifCredit": "Daten: GBIF.org",
+    "seasonChart": "Nachweise pro Monat",
+    "seasonChartNote": "Weltweite Beobachtungsnachweise, Monat für Monat. Sie spiegeln den Beobachtungsaufwand wider, keine Garantie für Blüte oder Aktivität.",
     "tipWatering": "Vor dem Gießen die Erde fühlen: Sind die obersten Zentimeter trocken, ist es so weit.",
     "tipLight": "Beobachte, wie das Licht im Laufe des Tages durch den Raum wandert - es ändert sich mehr, als man denkt.",
     "tipSoil": "Gute Drainage ist so wichtig wie guter Dünger: Staunässe lässt Wurzeln leiden.",
@@ -282,7 +284,45 @@
     "careConditionSection": "Pflegebedingungen",
     "thisMonth": "Diesen Monat",
     "waterInMonth": "Gießen im {{month}}",
-    "propagateInMonth": "Vermehren im {{month}}"
+    "propagateInMonth": "Vermehren im {{month}}",
+    "faq": {
+      "title": "Häufige Fragen",
+      "plant": {
+        "q1": "Wie gieße ich {{name}} im Winter?",
+        "q2": "Wie viel Licht braucht {{name}}?",
+        "q3": "Ist {{name}} für Haustiere ungefährlich?"
+      },
+      "tree": {
+        "q1": "Wann ist die beste Zeit, {{name}} zu schneiden?",
+        "q2": "Wie viel Platz brauchen die Wurzeln von {{name}}?",
+        "q3": "Wie schnell wächst {{name}}?"
+      },
+      "insect": {
+        "q1": "Ist {{name}} gefährlich?",
+        "q2": "Was lockt {{name}} in den Garten?",
+        "q3": "Wie halte ich {{name}} ohne Gift fern?"
+      },
+      "mushroom": {
+        "q1": "Wie erkenne ich {{name}} sicher?",
+        "q2": "Welche Arten sehen aus wie {{name}}?",
+        "q3": "Wo und wann taucht {{name}} normalerweise auf?"
+      },
+      "fish": {
+        "q1": "Wo lebt {{name}}?",
+        "q2": "Was frisst {{name}}?",
+        "q3": "Kann man {{name}} gefahrlos anfassen?"
+      },
+      "bird": {
+        "q1": "Was frisst {{name}}?",
+        "q2": "Wie locke ich {{name}} in meinen Garten?",
+        "q3": "Wie klingt der Ruf von {{name}}?"
+      },
+      "crop": {
+        "q1": "Wann ist {{name}} erntereif?",
+        "q2": "Welche Schädlinge befallen {{name}} am häufigsten?",
+        "q3": "Wie viel Wasser braucht {{name}}?"
+      }
+    }
   },
   "disease": {
     "overviewSection": "Übersicht",

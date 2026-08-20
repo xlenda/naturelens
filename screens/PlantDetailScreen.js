@@ -37,9 +37,12 @@ import PressScale from '../components/PressScale';
 import TopBar, { TopBarIcon } from '../components/TopBar';
 import Pronounce from '../components/Pronounce';
 import HelpfulRow from '../components/HelpfulRow';
+import SpeciesFaq from '../components/SpeciesFaq';
 import ShareSpeciesCard from '../components/ShareSpeciesCard';
 import ResultActionBar from '../components/ResultActionBar';
 import QuickFactGrid from '../components/QuickFactGrid';
+import CareConditions from '../components/CareConditions';
+import MonthInstructions from '../components/MonthInstructions';
 import shortFact from '../components/shortFact';
 import ExpandableText from '../components/ExpandableText';
 
@@ -363,6 +366,16 @@ export default function PlantDetailScreen({ route }) {
           />
         )}
 
+        {/* Condicao de Cuidado + Instrucoes do mes - tela principal rica
+            (video do concorrente, 20/08). A tela deles empilha o cuidado AQUI
+            e usa as abas so como aprofundamento; a nossa tinha empurrado tudo
+            pro manual e ficado magra. Os dois blocos so mostram dado que a
+            entidade ja tem (shortFact + WATER_INTERVAL_DAYS + propagacao do
+            vendor) e somem inteiros quando nao ha nada - nada de placeholder.
+            Cada linha do cuidado abre a mesma aba do CareTopics. */}
+        <CareConditions plant={plant} onOpenTopic={openTopic} />
+        <MonthInstructions plant={plant} />
+
         {/* Reference photos, runner-up species and a low-confidence warning -
             all built from data the API already returned. Desceu pra depois da
             grade de fatos (auditoria de diagramacao 20/08). */}
@@ -566,15 +579,27 @@ export default function PlantDetailScreen({ route }) {
 
         <InstallNudgeCard show={!!fromIdentify} accent={meta.accent} />
 
-        {/* Feedback no fim do scroll (hub do resultado, video do concorrente). */}
         {/* Compartilhe sua planta - tela principal rica (video do concorrente,
-            20/08): o motor de share estava so atras do icone da TopBar. */}
+            20/08): o motor de share ja existia, mas so atras do icone de 20px
+            da TopBar. Aqui ele vira convite, no fim da leitura. */}
         <ShareSpeciesCard
           entity={plant}
           categoryLabel={t('categories.plant.label')}
           accent={meta.accent}
         />
 
+        {/* "Duvidas frequentes" - paridade 120% (video do concorrente,
+            20/08): o FAQ fixo dele vira pergunta SUGERIDA que abre a
+            especialista ja com a duvida escrita e a especie como contexto. */}
+        <SpeciesFaq
+          category="plant"
+          name={plant.name}
+          scientific={plant.scientific}
+          accent={meta.accent}
+          navigation={navigation}
+        />
+
+        {/* Feedback no fim do scroll (hub do resultado, video do concorrente). */}
         <HelpfulRow category="plant" context="result" />
       </ScrollView>
 

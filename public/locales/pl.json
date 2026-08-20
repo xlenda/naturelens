@@ -249,6 +249,8 @@
     "distribution": "Występowanie",
     "everyNDays": "Co {{count}} dni",
     "gbifCredit": "Dane: GBIF.org",
+    "seasonChart": "Obserwacje według miesięcy",
+    "seasonChartNote": "Zapisy obserwacji z całego świata, miesiąc po miesiącu. Odzwierciedlają wysiłek obserwatorów, a nie gwarancję kwitnienia lub aktywności.",
     "tipWatering": "Zanim podlejesz, dotknij ziemi: jeśli wierzchnie centymetry są suche, to już pora.",
     "tipLight": "Obserwuj, jak światło wędruje po wnętrzu w ciągu dnia - zmienia się bardziej, niż się wydaje.",
     "tipSoil": "Dobry drenaż znaczy tyle co dobry nawóz: przemoczone korzenie to cierpiące korzenie.",
@@ -282,7 +284,45 @@
     "careConditionSection": "Warunki pielęgnacji",
     "thisMonth": "W tym miesiącu",
     "waterInMonth": "Podlewanie w {{month}}",
-    "propagateInMonth": "Rozmnażanie w {{month}}"
+    "propagateInMonth": "Rozmnażanie w {{month}}",
+    "faq": {
+      "title": "Częste pytania",
+      "plant": {
+        "q1": "Jak podlewać {{name}} zimą?",
+        "q2": "Ile światła potrzebuje {{name}}?",
+        "q3": "Czy {{name}} jest bezpieczna dla zwierząt domowych?"
+      },
+      "tree": {
+        "q1": "Kiedy najlepiej przycinać {{name}}?",
+        "q2": "Ile miejsca potrzebują korzenie {{name}}?",
+        "q3": "Jak szybko rośnie {{name}}?"
+      },
+      "insect": {
+        "q1": "Czy {{name}} jest niebezpieczny?",
+        "q2": "Co przyciąga {{name}} do ogrodu?",
+        "q3": "Jak odstraszyć {{name}} bez chemii?"
+      },
+      "mushroom": {
+        "q1": "Jak bezpiecznie rozpoznać {{name}}?",
+        "q2": "Jakie gatunki przypominają {{name}}?",
+        "q3": "Gdzie i kiedy zwykle pojawia się {{name}}?"
+      },
+      "fish": {
+        "q1": "Gdzie żyje {{name}}?",
+        "q2": "Czym żywi się {{name}}?",
+        "q3": "Czy można bezpiecznie dotykać {{name}}?"
+      },
+      "bird": {
+        "q1": "Czym żywi się {{name}}?",
+        "q2": "Jak zwabić {{name}} do ogrodu?",
+        "q3": "Jak brzmi głos {{name}}?"
+      },
+      "crop": {
+        "q1": "Kiedy {{name}} nadaje się do zbioru?",
+        "q2": "Jakie szkodniki najczęściej atakują {{name}}?",
+        "q3": "Ile wody potrzebuje {{name}}?"
+      }
+    }
   },
   "disease": {
     "overviewSection": "Przegląd",

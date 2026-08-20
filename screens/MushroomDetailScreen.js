@@ -32,9 +32,11 @@ import PressScale from '../components/PressScale';
 import TopBar, { TopBarIcon } from '../components/TopBar';
 import Pronounce from '../components/Pronounce';
 import HelpfulRow from '../components/HelpfulRow';
+import SpeciesFaq from '../components/SpeciesFaq';
 import ShareSpeciesCard from '../components/ShareSpeciesCard';
 import ResultActionBar from '../components/ResultActionBar';
 import QuickFactGrid from '../components/QuickFactGrid';
+import DistributionMap from '../components/DistributionMap';
 
 const EDIBILITY_COLORS = {
   choice: colors.accent,
@@ -286,6 +288,12 @@ export default function MushroomDetailScreen({ route }) {
         </SectionCard>
         </ZoneBand>
 
+        {/* Mapa de distribuicao REAL (GBIF) - tela principal rica (video do
+            concorrente, 20/08): o GBIF indexa fungos como indexa plantas, e o
+            componente e o mesmo da tela de planta. Some sozinho quando o nome
+            cientifico nao casa com nenhum taxon ou o aparelho esta offline. */}
+        <DistributionMap scientific={plant.scientific} accent={meta.accent} />
+
         {/* Fatos rapidos (auditoria de diagramacao 20/08): o bloco copiado nas
             6 telas virou um componente so. Os dois valores daqui - a
             comestibilidade e o primeiro sosia - ja sao curtos de origem
@@ -296,37 +304,23 @@ export default function MushroomDetailScreen({ route }) {
           facts={quickFacts.map((f) => ({ ...f, onPress: () => openTopic(f.key) }))}
         />
 
-        {/* Look-alike - hub do resultado (video do concorrente): a lista deixa
-            a pilha de SectionCards e vira card-porta para o manual. Guarded:
-            an empty band would render as a floating pill of nothing. */}
+        {/* Look-alike - tela principal rica (video do concorrente, 20/08): num
+            cogumelo a lista de confusoes E a informacao de seguranca, e ela
+            cabia numa linha truncada de card-porta ("Amanita muscaria, Amanit...").
+            Agora a lista REAL do vendor fica inline, uma especie por bullet.
+            A porta pro manual continua no fato rapido "Confundido com" acima.
+            Guarded: campo ausente = banda inteira nao renderiza. */}
         {plant.lookAlike?.length > 0 && (
           <ZoneBand gutter={20}>
-            <TouchableOpacity
-              style={styles.doorCard}
-              activeOpacity={0.8}
-              onPress={() => openTopic('confusas')}
-              accessibilityRole="button"
-              accessibilityLabel={t('detail.frequentlyConfusedWith')}
+            <SectionCard
+              icon="eye-outline"
+              title={t('detail.frequentlyConfusedWith')}
+              color={colors.warning}
             >
-              <Ionicons
-                name="eye-outline"
-                size={18}
-                color={colors.warning}
-                accessibilityElementsHidden={true}
-                importantForAccessibility="no-hide-descendants"
-              />
-              <View style={{ flex: 1 }}>
-                <Text style={styles.doorLabel}>{t('detail.frequentlyConfusedWith')}</Text>
-                <Text style={styles.doorPreview} numberOfLines={1}>{plant.lookAlike.join(', ')}</Text>
-              </View>
-              <Ionicons
-                name="chevron-forward"
-                size={16}
-                color={colors.textMuted}
-                accessibilityElementsHidden={true}
-                importantForAccessibility="no-hide-descendants"
-              />
-            </TouchableOpacity>
+              {plant.lookAlike.map((s) => (
+                <Text key={s} style={styles.bullet}>{'• ' + s}</Text>
+              ))}
+            </SectionCard>
           </ZoneBand>
         )}
 
@@ -420,16 +414,29 @@ export default function MushroomDetailScreen({ route }) {
 
         <InstallNudgeCard show={!!fromIdentify} accent={meta.accent} />
 
-        {/* Foi util? - hub do resultado (video do concorrente): fecha o
-            scroll medindo a identificacao. */}
         {/* Compartilhe sua planta - tela principal rica (video do concorrente,
-            20/08): o motor de share estava so atras do icone da TopBar. */}
+            20/08): o motor de share ja existia, mas so atras do icone de 20px
+            da TopBar. Aqui ele vira convite, no fim da leitura. */}
         <ShareSpeciesCard
           entity={plant}
           categoryLabel={t('categories.mushroom.label')}
           accent={meta.accent}
         />
 
+        {/* "Duvidas frequentes" - paridade 120% (video do concorrente,
+            20/08). Aqui as perguntas NUNCA induzem consumo: reconhecimento
+            seguro, especies parecidas e onde/quando aparece - nada de
+            "posso comer?". Quem responde e a especialista, com contexto. */}
+        <SpeciesFaq
+          category="mushroom"
+          name={plant.name}
+          scientific={plant.scientific}
+          accent={meta.accent}
+          navigation={navigation}
+        />
+
+        {/* Foi util? - hub do resultado (video do concorrente): fecha o
+            scroll medindo a identificacao. */}
         <HelpfulRow category="mushroom" context="result" />
       </ScrollView>
 
@@ -507,22 +514,10 @@ const styles = StyleSheet.create({
   },
   edibilityNoteText: { flex: 1, color: colors.textSecondary, fontSize: 12.5, marginLeft: 10, lineHeight: 18 },
   body: { color: colors.textSecondary, fontSize: 14, lineHeight: 21 },
-  // Hub do resultado (video do concorrente): cards-porta e o gancho da
-  // especialista. Os estilos dos fatos rapidos sairam daqui na auditoria de
-  // diagramacao 20/08 - moram so em components/QuickFactGrid.js.
-  doorCard: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 10,
-    backgroundColor: colors.surface,
-    borderRadius: 16,
-    borderWidth: 1,
-    borderColor: colors.border,
-    padding: 14,
-    marginTop: 12,
-  },
-  doorLabel: { fontSize: 14.5, fontWeight: '700', color: colors.text },
-  doorPreview: { fontSize: 12.5, color: colors.textSecondary, marginTop: 2 },
+  // Bullet da lista de confusoes - tela principal rica (video do concorrente,
+  // 20/08). Os estilos do card-porta sairam daqui junto com ele: a lista agora
+  // e inline. Os dos fatos rapidos moram em components/QuickFactGrid.js.
+  bullet: { color: colors.textSecondary, fontSize: 14, lineHeight: 22 },
   specialistCta: {
     flexDirection: 'row',
     alignItems: 'center',

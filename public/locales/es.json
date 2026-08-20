@@ -249,6 +249,8 @@
     "distribution": "Distribución",
     "everyNDays": "Cada {{count}} días",
     "gbifCredit": "Datos: GBIF.org",
+    "seasonChart": "Registros por mes",
+    "seasonChartNote": "Registros de observación en todo el mundo, mes a mes. Reflejan el esfuerzo de quien observa, no una garantía de floración o actividad.",
     "tipWatering": "Antes de regar, toca la tierra: si los primeros centímetros están secos, es el momento.",
     "tipLight": "Observa cómo cambia la luz en el espacio a lo largo del día - varía más de lo que parece.",
     "tipSoil": "Un buen drenaje importa tanto como un buen abono: raíces encharcadas son raíces que sufren.",
@@ -281,8 +283,46 @@
     "waterHigh": "Alta",
     "careConditionSection": "Condiciones de cuidado",
     "thisMonth": "Este mes",
-    "waterInMonth": "Regar en {{month}}",
-    "propagateInMonth": "Propagar en {{month}}"
+    "waterInMonth": "Riego en {{month}}",
+    "propagateInMonth": "Propagar en {{month}}",
+    "faq": {
+      "title": "Preguntas frecuentes",
+      "plant": {
+        "q1": "¿Cómo riego {{name}} en invierno?",
+        "q2": "¿Cuánta luz necesita {{name}}?",
+        "q3": "¿Es {{name}} segura para las mascotas?"
+      },
+      "tree": {
+        "q1": "¿Cuál es la mejor época para podar {{name}}?",
+        "q2": "¿Cuánto espacio necesitan las raíces de {{name}}?",
+        "q3": "¿Con qué rapidez crece {{name}}?"
+      },
+      "insect": {
+        "q1": "¿Es {{name}} peligroso?",
+        "q2": "¿Qué atrae a {{name}} al jardín?",
+        "q3": "¿Cómo alejo a {{name}} sin pesticidas?"
+      },
+      "mushroom": {
+        "q1": "¿Cómo identifico {{name}} con seguridad?",
+        "q2": "¿Qué especies se parecen a {{name}}?",
+        "q3": "¿Dónde y cuándo suele aparecer {{name}}?"
+      },
+      "fish": {
+        "q1": "¿Dónde vive {{name}}?",
+        "q2": "¿Qué come {{name}}?",
+        "q3": "¿Es seguro manipular {{name}}?"
+      },
+      "bird": {
+        "q1": "¿Qué come {{name}}?",
+        "q2": "¿Cómo atraigo a {{name}} a mi jardín?",
+        "q3": "¿Cómo es el canto de {{name}}?"
+      },
+      "crop": {
+        "q1": "¿Cuándo está {{name}} lista para la cosecha?",
+        "q2": "¿Qué plagas atacan más a {{name}}?",
+        "q3": "¿Cuánta agua necesita {{name}}?"
+      }
+    }
   },
   "disease": {
     "overviewSection": "Resumen",
