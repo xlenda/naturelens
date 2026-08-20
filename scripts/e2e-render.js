@@ -107,6 +107,20 @@ async function main() {
     const pageExceptions = [];
 
     Runtime.exceptionThrown(({ exceptionDetails }) => {
+      // Attribute before counting: an exception whose script URL (or every
+      // stack frame) belongs to a third-party tag says nothing about whether
+      // OUR app works - same reasoning as the console filter below. This bit
+      // for real on 2026-08-10: Utmify shipped a new pixel.js on THEIR CDN
+      // (no deploy of ours) that rejects a promise reading `_id`, and the
+      // gate started failing every run. The gate exists to catch our bundle
+      // breaking, and a tag vendor's internal bug must not block our deploys.
+      const thirdParty = /googletagmanager|utmify/i;
+      const urls = [
+        exceptionDetails?.url,
+        ...(exceptionDetails?.stackTrace?.callFrames || []).map((f) => f.url),
+      ].filter(Boolean);
+      if (urls.length && urls.every((u) => thirdParty.test(u))) return;
+
       pageExceptions.push(
         exceptionDetails?.exception?.description || exceptionDetails?.text || 'unknown exception'
       );
