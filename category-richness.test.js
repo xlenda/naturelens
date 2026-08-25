@@ -425,8 +425,10 @@ test('fish keeps evidence, ecology and the complete taxonomy without plant care'
     'exact curated ecology must lead over occurrence science');
   assert.match(screen, /<GroupGuideCard[\s\S]{0,120}groupKey=\{guideGroupKey\}/,
     'fish group guidance must use the fail-closed guide key');
-  assert.match(screen, /<TopicNavigatorCard topics=\{topics\}/,
-    'fish must expose its exact manual without disguising links as quick facts');
+  assert.match(screen, /<TopicNavigatorCard topics=\{dossierLoading \? \[\] : topics\}/,
+    'fish must expose its exact manual only after the asynchronous dossier settles');
+  assert.match(screen, /loading=\{dossierLoading\}/,
+    'fish must show loading instead of a misleading one-tab manual');
 
   const sync = read('api/collection.js');
   for (const field of ["'family'", "'ord'", "'commonNames'", "'synonyms'"]) {
@@ -534,8 +536,10 @@ test('every identification category exposes its truthful manual at fixed Expert 
       const definition = usesConditionalBuilder ? `topic\\('${key}'` : `key: '${key}'`;
       assert.match(topicDefinitions, new RegExp(definition), `${file}: missing ${key}`);
     }
-    assert.match(source, /<TopicNavigatorCard\s+topics=\{(?:topics|TOPICS)\}/,
-      `${file}: manual tabs need a visible entry point`);
+    const manualTopics = file.includes('Fish')
+      ? /<TopicNavigatorCard\s+topics=\{dossierLoading \? \[\] : topics\}/
+      : /<TopicNavigatorCard\s+topics=\{(?:topics|TOPICS)\}/;
+    assert.match(source, manualTopics, `${file}: manual tabs need a visible entry point`);
     const manualDoor = source.indexOf('<TopicNavigatorCard');
     const expertLayer = source.indexOf('depth={RESULT_DEPTHS.EXPERT}', manualDoor);
     assert.match(source, /const resultDepth = RESULT_DEPTHS\.EXPERT;/,

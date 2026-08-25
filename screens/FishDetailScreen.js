@@ -471,6 +471,8 @@ export default function FishDetailScreen({ route }) {
     mergeSourceGroundedTopics(speciesTopics, sourceTopics),
     buildFishGroupTopics(groupGuide, t)
   );
+  const dossierLoading = (Boolean(enrichmentScientific) && speciesDossier === undefined)
+    || (Boolean(guideGroupKey) && groupGuide === undefined);
   const topicResourceKey = createSpeciesTopicResourceKey({
     category: 'fish',
     language: i18n.language,
@@ -610,12 +612,11 @@ export default function FishDetailScreen({ route }) {
             critical={safetyRiskLevel === 'danger'}
           />
         )}
-        <TopicNavigatorCard topics={topics}
+        <TopicNavigatorCard topics={dossierLoading ? [] : topics}
           accent={meta.accent}
           onOpen={openTopic}
           title={t('speciesDossier.title')}
-          loading={(Boolean(enrichmentScientific) && speciesDossier === undefined)
-            || (Boolean(guideGroupKey) && groupGuide === undefined)}
+          loading={dossierLoading}
         />
         <NextBestCaptureCard
           category="fish"

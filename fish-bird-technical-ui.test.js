@@ -45,7 +45,7 @@ test('fish and bird always expose the complete truthful depth without a switcher
     assert.match(source, /const resultDepth = RESULT_DEPTHS\.EXPERT;/, category);
     assert.doesNotMatch(source, /<ResultDepthSwitcher|useResultDepthPreference/, category);
     assert.match(source, /<ResultDepthLayer activeDepth=\{resultDepth\} depth=\{RESULT_DEPTHS\.EXPERT\}>/, category);
-    assert.match(source, /<TopicNavigatorCard[\s\S]*?loading=\{\(/, category);
+    assert.match(source, /<TopicNavigatorCard[\s\S]*?loading=\{(?:\(|dossierLoading)/, category);
   }
 });
 

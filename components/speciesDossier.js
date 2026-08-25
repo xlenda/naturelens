@@ -350,6 +350,31 @@ function nowFrom(nowImpl) {
   return Number.isFinite(value) && value >= 0 ? value : Date.now();
 }
 
+function dossierEvidenceScore(dossier) {
+  if (!dossier) return -1;
+  const listFields = [
+    'diet', 'habitat', 'reproduction', 'lifeCycle', 'feeding',
+    'plantAssociations', 'ecologicalRelations', 'documentedLifeStages', 'wikiSections',
+  ];
+  const listEvidence = listFields.reduce(
+    (total, field) => total + (Array.isArray(dossier[field]) ? dossier[field].length : 0),
+    0
+  );
+  const environmentEvidence = isPlainObject(dossier.environment)
+    ? Object.values(dossier.environment).filter((value) => value === true).length
+    : 0;
+  const conservationEvidence = isPlainObject(dossier.conservation) ? 1 : 0;
+  const taxonomyEvidence = isPlainObject(dossier.taxonomy) ? 1 : 0;
+  return listEvidence + environmentEvidence + conservationEvidence + taxonomyEvidence;
+}
+
+function richerDossier(first, second) {
+  if (!first) return second;
+  if (!second) return first;
+  if (first.partial !== second.partial) return first.partial ? second : first;
+  return dossierEvidenceScore(second) > dossierEvidenceScore(first) ? second : first;
+}
+
 async function getSpeciesDossier({
   apiBase = '',
   category,
@@ -383,12 +408,21 @@ async function getSpeciesDossier({
 
   const pending = (async () => {
     try {
-      const response = await request(dossierUrl(apiBase, {
-        category: cleanCategory,
-        scientific: cleanName,
-        language: cleanLocale,
-        refreshToken,
-      }), { headers: { Accept: 'application/json' } });
+      const load = async (token) => {
+        const response = await request(dossierUrl(apiBase, {
+          category: cleanCategory,
+          scientific: cleanName,
+          language: cleanLocale,
+          refreshToken: token,
+        }), { headers: { Accept: 'application/json' } });
+        if (!response?.ok) return { response, dossier: null };
+        return {
+          response,
+          dossier: normaliseSpeciesDossier(await response.json(), cleanName),
+        };
+      };
+      const first = await load(refreshToken);
+      const response = first.response;
       if (response?.status === 404) {
         // O 404 curto evita repeticao em uma mesma montagem, mas expira. O
         // refresh por janela tambem contorna um 404 antigo preso na CDN.
@@ -400,7 +434,16 @@ async function getSpeciesDossier({
         return null;
       }
       if (!response?.ok) return null;
-      const dossier = normaliseSpeciesDossier(await response.json(), cleanName);
+      let dossier = first.dossier;
+      if (dossier?.partial) {
+        // Fontes de fauna falham de forma independente. Mostrar apenas o resumo
+        // na primeira visita fazia a pessoa concluir que as abas nao existiam;
+        // uma unica segunda consulta, com URL nova para contornar a CDN parcial,
+        // recupera o que voltou a tempo sem transformar ausencia em conteudo.
+        const retryToken = Math.floor(nowFrom(nowImpl) / NOT_FOUND_TTL_MS);
+        const second = await load(retryToken);
+        dossier = richerDossier(dossier, second.dossier);
+      }
       if (dossier && !dossier.partial) {
         memoryCache.set(key, dossier);
         retryAfterNotFound.delete(key);
@@ -432,7 +475,9 @@ module.exports = {
   cleanScientific,
   clearSpeciesDossierCache,
   dossierUrl,
+  dossierEvidenceScore,
   getSpeciesDossier,
   NOT_FOUND_TTL_MS,
   normaliseSpeciesDossier,
+  richerDossier,
 };

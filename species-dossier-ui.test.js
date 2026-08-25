@@ -278,7 +278,7 @@ test('dossier requests share an in-flight promise and cache verified results', a
   assert.deepEqual(second, third);
 });
 
-test('partial dossiers are rendered but retried instead of cached for the session', async () => {
+test('partial dossiers retry once immediately and remain uncached when both attempts are partial', async () => {
   clearSpeciesDossierCache();
   let calls = 0;
   const payload = {
@@ -296,7 +296,53 @@ test('partial dossiers are rendered but retried instead of cached for the sessio
   const args = { category: 'fish', scientific, language: 'pt', fetchImpl };
   assert.equal((await getSpeciesDossier(args)).partial, true);
   assert.equal((await getSpeciesDossier(args)).partial, true);
+  assert.equal(calls, 4);
+});
+
+test('a richer retry completes the same fish visit and is cached', async () => {
+  clearSpeciesDossierCache();
+  let calls = 0;
+  const urls = [];
+  const partial = {
+    scientific,
+    taxonomy: { sourceId: 'worms', species: scientific, family: 'Salmonidae' },
+    environment: { marine: true, brackish: false, freshwater: true },
+    diet: [],
+    habitat: [],
+    sources: [sources[0]],
+    partial: true,
+  };
+  const complete = {
+    ...partial,
+    partial: false,
+    sources,
+    diet: [{ id: 'Q1', label: 'Crustaceos' }],
+  };
+  const fetchImpl = async (url) => {
+    calls += 1;
+    urls.push(url);
+    return {
+      ok: true,
+      status: 200,
+      json: async () => (calls === 1 ? partial : complete),
+    };
+  };
+  const args = {
+    apiBase: 'https://naturelensapp.cloud',
+    category: 'fish',
+    scientific,
+    language: 'pt',
+    fetchImpl,
+    nowImpl: () => 45000,
+  };
+
+  const first = await getSpeciesDossier(args);
+  const cached = await getSpeciesDossier(args);
+  assert.equal(first.partial, false);
+  assert.equal(first.diet[0].label, 'Crustaceos');
+  assert.equal(cached, first);
   assert.equal(calls, 2);
+  assert.equal(new URL(urls[1]).searchParams.get('refresh'), '3');
 });
 
 test('a 404 expires, retries once per key and bypasses an old CDN miss', async () => {
