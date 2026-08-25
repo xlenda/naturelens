@@ -90,7 +90,10 @@ async function nyckelIdentify({ res, image, images, functionId }) {
   const dataUri = image.startsWith('data:') ? image : `data:image/jpeg;base64,${image}`;
 
   try {
-    const resp = await fetch(`${API_BASE}/functions/${functionId}/invoke`, withTimeout({
+    // O padrao do Nyckel e capturar cada invoke como amostra revisavel. Este
+    // fluxo so precisa da resposta imediata, entao a foto nao deve alimentar
+    // a fila de captura ou treino do fornecedor.
+    const resp = await fetch(`${API_BASE}/functions/${functionId}/invoke?capture=false`, withTimeout({
       method: 'POST',
       headers: {
         Authorization: `Bearer ${token}`,

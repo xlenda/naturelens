@@ -1,5 +1,7 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { API_BASE } from './apiBase';
+import { canonicalTopicKey } from './topicKey';
+import { normaliseAppLanguage } from './appLanguage';
 
 // Loader for the per-topic editorial manual ({lang}-manual.json) - the deep
 // "conselhos fundamentais / sinais de problemas / solucoes" content that fills
@@ -8,9 +10,9 @@ import { API_BASE } from './apiBase';
 // per user, which is the honest answer to "e com milhares de clientes?").
 //
 // Same resilience contract as the locale loader: network first, AsyncStorage
-// copy as offline fallback, English as language fallback, and a null return
-// when nothing is available - the tab then simply shows the species text
-// alone, never an error.
+// copy of the SAME language as offline fallback, and null when neither exists.
+// Fetching English here would mix two languages on one screen; the absent
+// editorial layer is safer and follows the app's missing-data contract.
 const memory = {};
 
 async function fetchManual(lang) {
@@ -20,7 +22,7 @@ async function fetchManual(lang) {
 }
 
 export async function getManual(lang) {
-  const code = lang || 'en';
+  const code = normaliseAppLanguage(lang);
   if (memory[code]) return memory[code];
 
   const cacheKey = '@naturelens_manual_' + code;
@@ -36,7 +38,6 @@ export async function getManual(lang) {
     }
   }
 
-  if (!data && code !== 'en') return getManual('en');
   if (!data) return null;
 
   memory[code] = data;
@@ -44,17 +45,11 @@ export async function getManual(lang) {
   return data;
 }
 
-// Duas abas da tela de manual nao tem verbete proprio e emprestam o de outra:
-// 'confusas' (especies parecidas) le o de seguranca e 'overview' le o de papel
-// ecologico. Isso vivia como um ternario solto dentro do CareTopicsScreen; virou
-// funcao quando o carrossel de Problemas Comuns passou a precisar do MESMO
-// mapeamento para navegar de volta pra aba certa - paridade 120% (video do
-// concorrente, 20/08). Duas copias desse ternario sairiam de sincronia na
-// primeira aba nova.
+// A chave visivel varia entre fornecedores, mas o manual e o dossie precisam
+// abrir o mesmo assunto. A canonicalizacao compartilhada impede que o card
+// prometa `uses` e a tela aberta procure `edible`, como acontecia com lavoura.
 export function manualKeyFor(topicKey) {
-  if (topicKey === 'confusas') return 'safety';
-  if (topicKey === 'overview') return 'role';
-  return topicKey;
+  return canonicalTopicKey(topicKey);
 }
 
 /** Manual entry for one topic key ('watering', 'light', ...) or null. */

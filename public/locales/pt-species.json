@@ -27,6 +27,8 @@
     },
     "blueTang": {
       "overview": "Um peixe de recife azul-royal intenso, com uma marca preta em forma de paleta e cauda amarela. Como todo peixe-cirurgião, carrega perto da base da cauda um espinho afiado feito bisturi.",
+      "riskKey": "sharp_tail_spine",
+      "safety": "Um peixe de recife azul-royal intenso, com uma marca preta em forma de paleta e cauda amarela. Como todo peixe-cirurgião, carrega perto da base da cauda um espinho afiado feito bisturi.",
       "habitat": "Recifes de coral do Indo-Pacífico, em geral em pequenos grupos perto de corais ramificados onde possa se esconder.",
       "curiosity": "Os juvenis são amarelo-vivos e ficam azuis ao amadurecer — e o espinho da cauda, normalmente dobrado, salta para o lado quando o peixe se sente ameaçado."
     },
@@ -47,6 +49,8 @@
     },
     "redLionfish": {
       "overview": "Um peixe marcante, listrado em vermelho, branco e marrom, com nadadeiras longas feito leque escondendo espinhos venenosos. Bonito, lento e melhor não encostar.",
+      "riskKey": "venomous_spines",
+      "safety": "Um peixe marcante, listrado em vermelho, branco e marrom, com nadadeiras longas feito leque escondendo espinhos venenosos. Bonito, lento e melhor não encostar.",
       "habitat": "Nativo dos recifes do Indo-Pacífico; hoje é uma espécie invasora grave em todo o Caribe e no Atlântico ocidental.",
       "curiosity": "Na região que invadiu quase não tem predadores e come praticamente tudo que couber na boca — por isso alguns países incentivam abertamente arpoá-lo e comê-lo."
     }

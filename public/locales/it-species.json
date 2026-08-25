@@ -27,6 +27,8 @@
     },
     "blueTang": {
       "overview": "Pesce di barriera di un intenso blu reale, con un segno nero a forma di «tavolozza» e la coda gialla. Come tutti i pesci chirurgo porta vicino alla base della coda una spina affilata come un bisturi.",
+      "riskKey": "sharp_tail_spine",
+      "safety": "Pesce di barriera di un intenso blu reale, con un segno nero a forma di «tavolozza» e la coda gialla. Come tutti i pesci chirurgo porta vicino alla base della coda una spina affilata come un bisturi.",
       "habitat": "Barriere coralline dell'Indo-Pacifico, di solito in piccoli gruppi vicino a coralli ramificati in cui rifugiarsi.",
       "curiosity": "I giovani sono giallo brillante e diventano blu con la maturità; la spina caudale, normalmente ripiegata, scatta di lato quando il pesce si sente minacciato."
     },
@@ -47,6 +49,8 @@
     },
     "redLionfish": {
       "overview": "Pesce vistoso, fasciato di rosso, bianco e marrone, con lunghe pinne a ventaglio che nascondono spine velenose. Bellissimo, lento e meglio non toccarlo.",
+      "riskKey": "venomous_spines",
+      "safety": "Pesce vistoso, fasciato di rosso, bianco e marrone, con lunghe pinne a ventaglio che nascondono spine velenose. Bellissimo, lento e meglio non toccarlo.",
       "habitat": "Originario delle barriere dell'Indo-Pacifico; oggi specie invasiva gravissima in tutti i Caraibi e nell'Atlantico occidentale.",
       "curiosity": "Nelle aree che ha invaso non ha quasi predatori e mangia praticamente qualsiasi cosa gli entri in bocca: per questo alcuni paesi incoraggiano attivamente a pescarlo in apnea e a portarlo in tavola."
     }

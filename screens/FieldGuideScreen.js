@@ -81,12 +81,15 @@ export default function FieldGuideScreen({ route }) {
         {photo ? (
           <TouchableOpacity
             activeOpacity={0.9}
-            onPress={() => photo.sourceUrl && Linking.openURL(photo.sourceUrl)}
+            onPress={() => (photo.imageSourceUrl || photo.sourceUrl) && Linking.openURL(photo.imageSourceUrl || photo.sourceUrl)}
             accessibilityRole="imagebutton"
             accessibilityLabel={name}
           >
             <Image source={{ uri: photo.url }} style={styles.heroPhoto} resizeMode="cover" />
-            <Text style={styles.photoCredit}>{t('fieldGuide.photoCredit')}</Text>
+            <Text style={styles.photoCredit}>
+              {[photo.imageCreator, photo.imageLicense].filter(Boolean).join(' · ') ||
+                t('fieldGuide.photoCredit')}
+            </Text>
           </TouchableOpacity>
         ) : (
           <View style={[styles.heroIcon, { backgroundColor: color + '22' }]}>

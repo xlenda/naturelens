@@ -33,7 +33,122 @@
     "translating": "翻译中…",
     "translateFailed": "目前无法翻译。",
     "yes": "是",
-    "no": "否"
+    "no": "否",
+    "loading": "正在加载…"
+  },
+  "discoveryReceipt": {
+    "title": "识别完成",
+    "ready": "结果已准备好，请核对。",
+    "tokens": "获得 +{{count}} 个代币",
+    "streak": "当前连续记录天数：{{count}}",
+    "achievement": "解锁成就：{{title}}",
+    "factTitle": "关于这个候选结果",
+    "saveHint": "保存这次发现，以便日后查看并添加自己的观察记录。"
+  },
+  "acquisition": {
+    "title": "您是通过什么渠道了解到 NatureLens 的？",
+    "subtitle": "一个简短回答就能帮助我们改进。此项为选填。",
+    "thanks": "谢谢——这有助于我们让 NatureLens 变得更好。",
+    "skip": "暂时不填",
+    "options": {
+      "tiktok": "TikTok",
+      "instagram": "Instagram",
+      "youtube": "YouTube",
+      "search": "Google 或 Play 商店",
+      "friend": "朋友",
+      "other": "其他"
+    }
+  },
+  "specimen": {
+    "title": "我的记录",
+    "notFoundTitle": "未找到记录",
+    "notFoundBody": "此已保存的发现已不在你的收藏中。",
+    "returnToCollection": "返回收藏",
+    "openRecord": "打开我的记录",
+    "savedOn": "保存于 {{date}}",
+    "todayTitle": "今天",
+    "wateredAnnouncement": "已记录浇水。",
+    "personalizeTitle": "个性化",
+    "observationTitle": "我的观察",
+    "observationEmpty": "还没有观察记录。记下你注意到的情况、发现地点或发生的变化。",
+    "observationPlaceholder": "写一条简短的观察…",
+    "addObservation": "添加观察",
+    "editObservation": "编辑观察",
+    "saveObservation": "保存观察",
+    "removeObservation": "删除观察",
+    "characterCount": "{{count}}/{{max}} 个字符",
+    "timelineTitle": "时间线",
+    "timelineAdded": "已添加到收藏",
+    "timelineWatered": "已记录浇水",
+    "timelineObservationUpdated": "最近一次编辑观察",
+    "guideTitle": "物种指南",
+    "guideBody": "物种识别及所有可用详情。",
+    "openGuide": "打开指南",
+    "noteSavedAnnouncement": "观察已保存。",
+    "removeTitle": "删除记录？",
+    "removeBody": "从收藏中删除 {{name}}？此操作无法撤销。",
+    "removeAction": "删除"
+  },
+  "localReminders": {
+    "title": "手机提醒",
+    "body": "准确选择提醒内容和时间。根据 Android 权限与系统设置，即使正在使用其他应用，也可以收到通知。",
+    "loading": "正在加载提醒…",
+    "loadError": "目前无法加载提醒。",
+    "nextTitle": "即将到来的提醒",
+    "addAction": "添加提醒",
+    "empty": "此记录没有即将到来的提醒。",
+    "unavailableTitle": "提醒不可用",
+    "unavailableBody": "此 Android 版本无法安排通知。请安装兼容的应用版本以使用提醒。",
+    "modalTitle": "创建提醒",
+    "reminderFor": "用于 {{name}}",
+    "taskLabel": "手机应该提醒你记录什么？",
+    "startLabel": "首次提醒",
+    "timeLabel": "时间",
+    "repeatLabel": "重复",
+    "weekdayLabel": "星期",
+    "firstAt": "首次通知：{{date}}",
+    "saveAction": "安排提醒",
+    "saving": "正在安排…",
+    "permissionDeniedTitle": "通知已关闭",
+    "permissionDeniedBody": "Android 未授予通知权限。请在系统设置中允许 NatureLens 通知，然后重试。",
+    "saveError": "提醒未保存或安排。请检查所选内容后重试。",
+    "removeError": "无法删除此提醒，请重试。",
+    "removeAction": "删除 {{action}} 提醒",
+    "removing": "正在删除…",
+    "removedAnnouncement": "提醒已删除。",
+    "scheduledSuccess": "提醒已安排在 {{date}}。",
+    "actionAnnouncement": "{{action}} 提醒已安排在 {{date}}。",
+    "recordFallback": "此记录",
+    "notificationTitle": "NatureLens 提醒 · {{name}}",
+    "notificationBody": "请记录：{{action}} · {{name}}",
+    "nextAt": "下次：{{date}}",
+    "intervals": {
+      "day1": "1 天后",
+      "day3": "3 天后",
+      "day7": "7 天后",
+      "day14": "14 天后",
+      "day30": "30 天后"
+    },
+    "times": {
+      "at08": "08:00",
+      "at12": "12:00",
+      "at18": "18:00",
+      "at20": "20:00"
+    },
+    "weekdays": {
+      "sun": "星期日",
+      "mon": "星期一",
+      "tue": "星期二",
+      "wed": "星期三",
+      "thu": "星期四",
+      "fri": "星期五",
+      "sat": "星期六"
+    },
+    "repetitions": {
+      "once": "一次",
+      "daily": "每天",
+      "weekly": "每周"
+    }
   },
   "auth": {
     "title": "登录以开始识别",
@@ -153,17 +268,23 @@
       "label": "声音",
       "tabLabel": "声音",
       "title": "通过声音识别",
-      "subtitle": "录下鸟、蛙或昆虫的鸣叫，看看它是什么。"
+      "subtitle": "录下鸟、蛙或昆虫的鸣叫，看看它是什么。",
+      "scanHint": "比较录音的清晰度、节奏、音高和重复。多个相互匹配的声音模式比一个孤立音符更有证明力。"
     }
   },
   "identify": {
     "identifierTitle": "{{category}}识别器",
     "subtitle": "AI 秒速识别{{category}}",
+    "freePromise": "决定前先试用：每个类别可免费识别 1 次，无需账户或银行卡。",
     "readyToScan": "准备扫描",
     "didYouKnowTitle": "你知道吗？",
     "continueLabel": "继续",
     "analyzing": "正在分析{{category}}…",
     "tapToIdentify": "点击识别",
+    "lensPulseEyebrow": "生命脉动",
+    "holdToReveal": "长按揭晓",
+    "keepHolding": "请继续按住…",
+    "holdToRevealHint": "按住直到脉动完成。松开即可取消。",
     "identifying": "识别中…",
     "uploadPhoto": "上传照片",
     "myCollection": "我的收藏",
@@ -186,6 +307,14 @@
     "referenceImagesTitle": "参考照片",
     "referenceImagesHint": "与你自己的照片比对以确认。",
     "referenceImageLabel": "参考照片 {{index}}",
+    "evidenceSimilar": "与您的照片相似",
+    "evidenceRepresentative": "物种参考",
+    "evidenceObservation": "野外记录 · GBIF",
+    "comparePhotos": "对比照片",
+    "comparePhotosHint": "并排查看您的照片和参考照片。",
+    "sideBySide": "并排",
+    "previousReference": "上一张参考照片",
+    "nextReference": "下一张参考照片",
     "alternativesTitle": "其他可能结果",
     "alternativesHint": "如果上面的结果看起来不对，你的物种可能是其中之一。",
     "lowConfidenceBare": "置信度仅 {{confidence}}%——请把它当作起点，而不是最终答案。",
@@ -199,10 +328,54 @@
     "serviceDownBody": "该识别服务暂时出现问题，请几分钟后再试——不是你的照片的问题。",
     "poseWhole": "整体",
     "poseClose": "特写",
-    "poseOther": "另一角度"
+    "poseOther": "另一角度",
+    "photoConsentTitle": "发送照片前",
+    "photoConsentKindwiseBody": "您选择的照片将发送给 Kindwise 进行识别。照片和识别结果将在 6 个月内继续可通过 Kindwise 访问。根据 Kindwise 的条款，照片受一项不可撤销的许可约束，该许可允许将其重新用于训练和商业用途、提供给其他客户以及依据 CC BY-SA 共享。请仅在您同意的情况下发送。",
+    "photoConsentFishialBody": "您选择的照片将发送给 Fishial 进行识别。Fishial 可能会按照其数据保留惯例保留这些照片，且未公布通过 API 发送的照片的具体保留期限。请仅在您同意的情况下发送。",
+    "photoConsentNyckelBody": "您选择的照片将发送给 Nyckel，并由其处理以提供识别结果。请仅在您同意的情况下发送。",
+    "photoConsentBirdBody": "当由 NatureLens 私有管理、经过校准并覆盖全球的 BioCLIP 服务启用后，鸟类照片可优先在那里处理。在 BioCLIP 中，照片只在请求期间保留在内存中，不会被存储。当该服务未启用，或处理失败、无法证实确切物种时，同一批照片可能会在关闭样本采集的情况下发送给 Nyckel；Nyckel 不保证仅进行临时保留。只有在你同意时才发送。",
+    "photoConsentSend": "发送照片",
+    "centralCapture": "识别",
+    "photoReady": "照片已准备好",
+    "addOptionalAngles": "添加另一个角度",
+    "hideOptionalAngles": "隐藏额外角度",
+    "captureDemo": {
+      "title": "看看它如何工作",
+      "body": "将镜头对准{{category}}，点击大的相机区域，再用图片确认结果。",
+      "accessibility": "动画示例，展示如何用相机识别{{category}}。",
+      "result": "带照片和下一步的结果",
+      "steps": {
+        "aim": "框住一个目标",
+        "tap": "点击相机区域",
+        "confirm": "对比参考图片"
+      },
+      "subject": {
+        "plant": "叶片或花",
+        "tree": "叶片、树皮或树冠",
+        "insect": "清晰对焦的昆虫",
+        "mushroom": "菌盖和底面",
+        "crop": "受影响的作物叶片",
+        "fish": "侧面的完整鱼",
+        "bird": "画面中的完整鸟",
+        "sound": "录制清晰声音"
+      }
+    },
+    "expeditionTitle": "选择你的探索方向",
+    "expeditionBody": "每条路径都会改变拍照后应用优先展示的内容。",
+    "categoryPromise": {
+      "plant": "养护、安全与视觉线索",
+      "insect": "身体特征、风险与野外记录",
+      "mushroom": "相似种与安全优先",
+      "crop": "农学、病虫害与土壤状况",
+      "fish": "水体、栖息地与鉴定证据",
+      "bird": "识别特征、栖息地与观察提示",
+      "sound": "聆听、比较并识别叫声"
+    }
   },
   "detail": {
     "profileTitle": "{{category}}档案",
+    "invertebrateLabel": "无脊椎动物",
+    "fungusLabel": "真菌",
     "readMoreLabel": "在网上阅读更多关于此{{category}}的信息",
     "markAsWatered": "标记为已浇水",
     "markAsWateredLabel": "标记为已浇水",
@@ -212,10 +385,24 @@
     "checkForDiseasesLabel": "检查病害",
     "checkingForDiseasesLabel": "正在检查病害",
     "healthCheckSection": "健康检查",
+    "healthSpeciesMismatch": "健康分析未识别出同一物种。请为这株植物拍摄更清晰的照片；本次未采用任何诊断。",
     "edibleParts": "可食用部位",
     "propagation": "繁殖方式",
     "wateringNeeds": "浇水需求",
     "conservationStatus": "保护现状",
+    "iucn": {
+      "extinct": "灭绝",
+      "extinctInTheWild": "野外灭绝",
+      "regionallyExtinct": "区域灭绝",
+      "criticallyEndangered": "极危",
+      "endangered": "濒危",
+      "vulnerable": "易危",
+      "nearThreatened": "近危",
+      "leastConcern": "无危",
+      "dataDeficient": "数据缺乏",
+      "notApplicable": "不适用",
+      "notEvaluated": "未评估"
+    },
     "safetySection": "安全性",
     "ecologicalRoleSection": "生态作用",
     "frequentlyConfusedWith": "易混淆物种",
@@ -232,6 +419,10 @@
     "installNudgeBody": "将它添加到主屏幕，下次识别更快。",
     "commonNames": "常用名称",
     "synonyms": "学名异名",
+    "family": "科",
+    "order": "目",
+    "taxonomyTitle": "分类",
+    "species": "物种",
     "referencePhoto": "参考照片",
     "referencePhotoAlt": "{{name}} 的参考照片",
     "coverageNoteTitle": "关于此结果",
@@ -242,6 +433,7 @@
     "quickFacts": "速览",
     "actionNew": "重新拍照",
     "wasHelpful": "这有帮助吗？",
+    "feedbackThanks": "感谢您的反馈。",
     "pronounceLabel": "听发音",
     "askSpecialistCta": "对这个物种有疑问？问问专家",
     "tipLabel": "小贴士",
@@ -250,7 +442,7 @@
     "everyNDays": "每 {{count}} 天",
     "gbifCredit": "数据：GBIF.org",
     "seasonChart": "各月观察记录",
-    "seasonChartNote": "全球观察记录，按月统计。它反映的是观察投入，并非开花或活动的保证。",
+    "seasonChartNote": "全球逐月观测记录。这些记录反映的是观测者的投入，不能据此确定该物种何时出现或为何出现。",
     "tipWatering": "浇水前先摸摸土：表层几厘米干了，就该浇了。",
     "tipLight": "留意一天中光线在空间里的变化——它比你想象的变化更大。",
     "tipSoil": "好的排水和好的肥料同样重要：积水的根是在受苦的根。",
@@ -334,6 +526,12 @@
     "scheduleNow": "当前",
     "scheduleGroupNote": "本日历针对 {{group}} 这一类群，而非这一具体物种。",
     "scheduleGroupNoteShort": "本日历针对该物种所属的类群，而非这一具体物种。",
+    "groupGuideNote": "这是针对 {{group}} 类群的一般指南，并非关于这一特定物种的事实。",
+    "generalGuideNote": "这是一般性指南，并非关于这一特定物种的事实。",
+    "agronomySection": "田间农艺",
+    "agronomyDecisionNote": "从观察和测量开始。在决定田间需要改变什么之前，请先打开每项规程。",
+    "integratedManagementSection": "综合管理",
+    "openFullProtocol": "打开完整规程",
     "scheduleNoLocation": "没有你的位置信息，我们无法判断当前季节，因此没有高亮任何一列。",
     "careProfileTitle": "养护概况",
     "careLevelLabel": "养护难度",
@@ -348,9 +546,13 @@
     "speciesCareSection": "该物种的养护",
     "speciesCareNote": "这些数值针对 {{species}} 本身，而非它所属的类群。",
     "speciesCareSource": "来源：{{citation}}",
+    "wikipediaExcerptNotice": "此摘录已为本节选取并缩短。",
+    "wikipediaArticleLink": "维基百科条目",
+    "wikipediaAuthorsLink": "条目作者与编辑历史",
+    "wikipediaLicenseLink": "CC BY-SA 4.0 许可协议",
     "usdaMoisture": "需水量",
     "usdaDrought": "耐旱性",
-    "usdaFertility": "需肥量",
+    "usdaFertility": "土壤肥力需求",
     "usdaShade": "耐阴性",
     "usdaPh": "土壤 pH",
     "usdaTempMin": "可耐最低温度",
@@ -364,6 +566,171 @@
     "bloomMid": "{{season}}中",
     "bloomLate": "{{season}}末"
   },
+  "learning": {
+    "title": "学会观察",
+    "basic": "基础",
+    "learn": "学习",
+    "technical": "技术资料",
+    "generalDiagram": "通用示意图",
+    "generalNote": "使用这张示意图了解要观察哪些地方。这是一份通用指南，不是已识别物种的图片。",
+    "illustrationAlt": "{{category}} 的通用观察示意图",
+    "observeTitle": "一次观察一个部位",
+    "observeHint": "比较形状、颜色、大小和位置。多项特征吻合，比单个细节更有力。",
+    "evidenceTitle": "识别依据",
+    "technicalNote": "这些数据来自识别结果。缺少依据的项目会保持隐藏，不会靠猜测补上任何字段。",
+    "categoryMatch": "类别匹配度",
+    "provider": "识别来源",
+    "parts": {
+      "leaf": "叶片形状与叶脉",
+      "stemNode": "茎与节",
+      "flower": "花的结构",
+      "roots": "根",
+      "canopy": "树冠形状",
+      "branches": "枝条",
+      "trunkBark": "树干与树皮",
+      "youngOldLeaves": "嫩叶与老叶",
+      "affectedArea": "受影响区域",
+      "stem": "茎",
+      "antennae": "触角",
+      "head": "头部",
+      "bodySections": "身体分段",
+      "wingsLegs": "翅膀与足",
+      "cap": "菌盖",
+      "underside": "菌褶、菌孔或底面",
+      "baseSubstrate": "基部与基质",
+      "beak": "鸟喙",
+      "wing": "翅膀",
+      "tail": "尾巴",
+      "feet": "足",
+      "headProfile": "头部轮廓",
+      "bodyMarks": "身体斑纹",
+      "fins": "鱼鳍",
+      "recording": "录音质量",
+      "rhythm": "节奏",
+      "pitch": "高音或低音",
+      "repetition": "重复",
+      "cephalothorax": "头胸部",
+      "abdomen": "腹部",
+      "eyes": "眼睛",
+      "eightLegs": "八条腿",
+      "tentacles": "触角",
+      "shell": "外壳",
+      "muscularFoot": "肌肉足",
+      "anterior": "前端",
+      "segments": "体节",
+      "clitellum": "环带",
+      "posterior": "后端"
+    }
+  },
+  "speciesDossier": {
+    "title": "科学档案",
+    "exactEvidence": "已有 {{species}} 的记录",
+    "evidenceNote": "仅显示有来源支持的事实，缺失信息保持隐藏。",
+    "environment": "已记录的水域类型",
+    "diet": "有记录的食性",
+    "habitat": "有记录的栖息地",
+    "brackish": "半咸水",
+    "reproduction": "有记录的繁殖信息",
+    "lifeCycle": "有记录的生命周期",
+    "lifeStagesTitle": "有记录的生命阶段",
+    "larvalInstars": "{{count}} 个幼虫龄期",
+    "bodyLength": "体长",
+    "leafConsumption": "叶片取食量",
+    "leafAreaPerLarva": "每只幼虫取食叶面积",
+    "lifeStages": { "egg": "卵", "larva": "幼虫", "nymph": "若虫", "pupa": "蛹", "adult": "成虫" },
+    "measurements": {
+      "clutchSize": "每窝产卵数",
+      "incubationPeriod": "孵卵期",
+      "lifeExpectancy": "预期寿命",
+      "longestLifespan": "已观察到的最长寿命",
+      "gestationPeriod": "妊娠期"
+    }
+  },
+  "fertilizer": {
+    "title": "施肥决策",
+    "planningNote": "负责任的建议始于田间实测数据。此表说明每项数据用于判断什么，并不是直接的施用配方。",
+    "input": "输入数据",
+    "decisionUse": "用于判断",
+    "soilAnalysis": "土壤检测",
+    "soilAnalysisUse": "有效养分、酸度、盐分及石灰改良需求。",
+    "plantAnalysis": "植株或组织分析",
+    "plantAnalysisUse": "当前营养状况，包括可见症状出现前的隐性缺素。",
+    "targetDestination": "目标产量与收获用途",
+    "targetDestinationUse": "预计养分带走量；收获籽粒与收获全株并不相同。",
+    "fieldHistory": "田块历史与作物残体",
+    "fieldHistoryUse": "哪些物质曾施入、带走或归还土壤。",
+    "textureWater": "土壤质地与水分",
+    "textureWaterUse": "养分淋失风险，以及是否需要分次施用。",
+    "diagnosisCaution": "可见症状只是线索，不是确诊。水分胁迫、病害、虫害或其他养分问题都可能掩盖症状。",
+    "maizeTitle": "玉米养分带走量",
+    "maizeIntro": "不同产量和收获用途下，作物平均带走的养分量。",
+    "destination": "收获用途",
+    "productivity": "产量（吨/公顷）",
+    "grain": "籽粒",
+    "silage": "青贮（干物质）",
+    "tonnesPerHectare": "吨/公顷",
+    "kgPerHectare": "千克/公顷",
+    "extractedUnit": "产量单位为吨/公顷；养分带走量单位为千克/公顷。",
+    "notDoseWarning": "养分带走量不等于施肥量。制定建议需要土壤和组织分析、目标产量、区域校准以及当地农艺师。",
+    "onionTitle": "洋葱：养分过量的相互作用",
+    "onionIntro": "这些影响仅有洋葱资料支持，不可推广到其他作物。",
+    "excess": "过量养分",
+    "possibleEffect": "可能影响",
+    "nitrogenEffect": "生育期延长、颈部粗大、叶片过旺、叶部病害增多且采后耐贮性下降。",
+    "potassiumEffect": "可能诱发镁和钙缺乏。",
+    "phosphorusEffect": "可能诱发锌和铜缺乏。",
+    "scrollHint": "横向滑动表格以查看全部养分。",
+    "botanicalTitle": "施肥与营养",
+    "botanicalIntro": "有可靠来源时，本指南会分别呈现物种数据、已验证植物组的指导和季节时机。照片本身绝不能确定用量。",
+    "unknownGroupNote": "目前还没有适用于该植物组的已验证施肥指南。决策清单仍可使用，但不会推断该组的规则或用量。",
+    "growthStress": "生长阶段与胁迫",
+    "growthStressUse": "区分定植、旺盛生长、开花或结果和休眠。施肥前先处理干旱、积水、根系受损或近期移栽。",
+    "labelHistory": "产品标签与施用记录",
+    "labelHistoryUse": "确认 N-P-K、释放类型、标签说明、上次施用时间，以及基质是否已含肥料。",
+    "plantNoDoseWarning": "仅凭照片无法确定安全用量。请遵循产品标签和当地分析；切勿套用其他物种、气候、花盆或田块的用量。"
+  },
+  "pestManagement": {
+    "title": "害虫监测",
+    "decisionNote": "照片可以提示害虫或虫害，但不能测出田间种群密度。采取措施前必须进行有代表性的取样。",
+    "whatToCheck": "检查内容",
+    "fieldDecision": "田间决策",
+    "identifyDamage": "目标害虫与危害",
+    "identifyDamageUse": "确认害虫、发育阶段、相符的危害症状以及在田间的分布。",
+    "samplingPlan": "取样计划",
+    "samplingPlanUse": "根据作物及其生育期确定取样单位、方法、点位和频率。",
+    "countStage": "数量与虫态",
+    "countStageUse": "记录每个点位、害虫大小或虫态、作物生育期和天敌，然后与防治阈值比较。",
+    "noCountWarning": "没有代表性的计数和适用的防治阈值时，应继续监测，绝不能按日历定期喷药。",
+    "chemicalSafetyTitle": "如果确需化学防治",
+    "maizeTitle": "玉米：田间防治参考",
+    "target": "目标",
+    "fieldProtocol": "取样与防治参考",
+    "fallArmyworm": "草地贪夜蛾",
+    "fallArmywormProtocol": "仅适用于产量潜力至少 100 袋/公顷的田块：在 {{sampleAreaHa}} 公顷内检查 {{samplePoints}} 个随机点。公开参考值为出现初期危害症状的植株达到 {{actionPercent}}%。",
+    "wireworm": "金针虫",
+    "wirewormProtocol": "播种前筛查 {{sampleWidthCm}} × {{sampleLengthCm}} × {{sampleDepthCm}} 厘米的土样。参考值：每份土样至少 {{actionCount}} 头害虫。",
+    "maizeThresholdNote": "玉米 10% 的参考值适用于潜在产量至少为 100 袋的田块。地区、杂交种、生育期和生产体系会改变当地阈值。",
+    "soyTitle": "大豆：取样与防治水平",
+    "soySamplingTitle": "最低取样点数",
+    "fieldArea": "田块面积",
+    "minimumSamples": "最低数量",
+    "upToHectares": "不超过 {{count}} 公顷",
+    "overHectares": "超过 {{count}} 公顷",
+    "samplePoints": "{{count}} 个点",
+    "dividePlots": "划分为不超过 {{count}} 公顷的地块",
+    "soyThresholdTitle": "防治参考",
+    "situation": "情形",
+    "actionLevel": "参考水平",
+    "defoliation": "叶片损失",
+    "defoliationLevel": "营养生长期超过 {{vegetativePercent}}%，或开花后超过 {{reproductivePercent}}%。",
+    "largeCaterpillars": "大型食叶毛虫",
+    "largeCaterpillarsLevel": "采用拍虫布调查，每米垄行有 {{countPerMeter}} 头体长超过 {{minimumLengthCm}} 厘米的毛虫。",
+    "grainStinkbugs": "椿象 — 商品粮生产",
+    "grainStinkbugsLevel": "从 {{stageStart}} 到 {{stageEnd}}，每米垄行有 {{countPerMeter}} 头三龄以上若虫或成虫。",
+    "seedStinkbugs": "椿象 — 种子生产",
+    "seedStinkbugsLevel": "从 {{stageStart}} 到 {{stageEnd}}，每米垄行有 {{countPerMeter}} 头三龄以上若虫或成虫。",
+    "soyThresholdNote": "以上为巴西 Embrapa 的参考值。关键期每周取样，在较凉爽时段调查椿象，并向当地技术人员确认区域性调整。"
+  },
   "disease": {
     "overviewSection": "概览",
     "symptomsSection": "症状",
@@ -375,7 +742,9 @@
     "healthStatusSection": "健康状态",
     "noDiseaseDetected": "此照片中未能可靠检测出病害或虫害。",
     "match": "匹配度",
-    "severitySuffix": "严重程度：{{severity}}"
+    "severitySuffix": "严重程度：{{severity}}",
+    "diagnosisCaution": "照片只能用于初步筛查，不能替代田间诊断。采取措施前，请检查多株作物，并排除水分、养分和施药损伤。",
+    "chemicalCaution": "仅使用所在国家已登记用于该作物和防治对象的产品。遵循标签说明，并请当地农艺师确认决策。"
   },
   "collection": {
     "title": "我的收藏",
@@ -413,6 +782,11 @@
     "byCategory": "按类别",
     "privacyPolicy": "隐私政策",
     "language": "语言",
+    "careRegionRow": "养护季节",
+    "careRegionHint": "设置季节性养护计划和花期所使用的半球。仅保存在此设备上。",
+    "careRegionAuto": "自动",
+    "careRegionSouth": "南半球",
+    "careRegionNorth": "北半球",
     "installApp": "安装应用",
     "installAppIOSTitle": "安装 NatureLens",
     "installAppIOSBody": "轻点“共享”按钮，然后轻点“添加到主屏幕”，即可将 NatureLens 安装到你的手机上。",
@@ -453,7 +827,7 @@
     "acceptanceTitle": "条款接受",
     "acceptanceBody": "使用 NatureLens 即表示您同意本使用条款。如果您不同意，请不要使用本应用。",
     "serviceTitle": "本应用的功能",
-    "serviceBody": "NatureLens 让你拍摄植物、昆虫、蘑菇、农作物和树木——视设备而定，还包括鱼类、鸟类甚至声音——并使用第三方 AI 服务进行识别（Kindwise 的 Plant.id、Insect.id、Mushroom.id 和 Crop.health，鱼类使用 Fishial，鸟类使用 Nyckel，声音使用我们自己的模型）。结果由系统自动生成，未经人类专家审核。",
+    "serviceBody": "NatureLens 让你拍摄植物、昆虫、蘑菇、农作物和树木——视设备而定，还包括鱼类、鸟类甚至声音——并使用第三方 AI 服务进行识别（Kindwise 的 Plant.id、Insect.id、Mushroom.id 和 Crop.health，鱼类使用 Fishial，鸟类使用 Nyckel，声音使用我们自己的模型）。结果由系统自动生成，未经人类专家审核。 当经过校准、覆盖全球的 BioCLIP 服务启用后，NatureLens 可优先使用这项由自己私有管理的服务识别鸟类；在它未启用，或处理失败、无法证实确切物种时，Nyckel 将作为备用方案。",
     "accuracyTitle": "识别准确性 — 请仔细阅读",
     "accuracyBody": "AI 识别可能出错，包括判断植物或蘑菇是否可食用、有毒或可安全触摸。切勿仅凭本应用的结果食用、采摘或使用任何野生植物、蘑菇或真菌。在食用或使用在野外发现的任何东西之前，请务必咨询合格的专家（真菌学家、植物学家或中毒控制中心）。我们不对因依赖本应用所做识别而造成的伤害负责。",
     "billingTitle": "订阅与计费",
@@ -470,7 +844,7 @@
   "privacy": {
     "title": "隐私政策",
     "collectTitle": "我们收集哪些信息",
-    "collectBody": "本应用可让你拍摄植物、树木、昆虫、蘑菇、作物、鱼类或鸟类进行识别，也可录制动物叫声按声音识别。识别由 AI 服务完成：Kindwise（植物、树木、昆虫、蘑菇、作物）、Fishial.AI（鱼类）和 Nyckel（鸟类）。声音在我们自己的服务器上识别，因此录音不会到达第三方。",
+    "collectBody": "本应用可让你拍摄植物、树木、昆虫、蘑菇、作物、鱼类或鸟类进行识别，也可录制动物叫声按声音识别。识别由 AI 服务完成：Kindwise（植物、树木、昆虫、蘑菇、作物）、Fishial.AI（鱼类）和 Nyckel（鸟类）。声音在我们自己的服务器上识别，因此录音不会到达第三方。 当由 NatureLens 私有管理、经过校准并覆盖全球的 BioCLIP 服务启用后，鸟类照片可优先在那里处理：照片只在请求期间保留在内存中，不会被存储。当该服务未启用，或处理失败、无法证实确切物种时，同一批照片可能会在关闭样本采集的情况下发送给 Nyckel，但无法保证仅进行临时保留。",
     "thirdPartyTitle": "第三方 AI 服务",
     "thirdPartyBody": "当你拍摄或上传照片时，照片会发送到对应的识别服务以生成结果。我们不会在任何自有服务器上保存你的照片。为了展示参考图和物种描述，应用会用学名查询维基百科——维基百科因此知道你查过哪个物种，但不知道你是谁。部分供应商只提供英文；翻译该文本，以及向应用内的专家提问，会把该文本发送给 Anthropic。",
     "localStorageTitle": "仅本地存储",
@@ -2162,7 +2536,15 @@
     },
     "herbSubscribeCtaTitle": "喜欢这份指南吗?",
     "herbSubscribeCtaBody": "订阅解锁无限次植物、昆虫、蘑菇和农作物识别。",
-    "herbAlreadySubscribedCheck": "已经订阅了？点击重新检查"
+    "herbAlreadySubscribedCheck": "已经订阅了？点击重新检查",
+    "mascot": {
+      "kicker": "Your living guide",
+      "title": "Lino explores nature with you.",
+      "body": "Take a photo, record a sound or save a find. I start with the clearest next step.",
+      "photo": "Photo",
+      "sound": "Sound",
+      "journal": "Journal"
+    }
   },
   "botanist": {
     "headerTitle": "海伦娜·马克斯博士",
@@ -2296,6 +2678,9 @@
     "title": "今日任务",
     "rewardEach": "每项 +{{tokens}}",
     "allDone": "今天全部完成——明天再来！",
+    "completedAnnouncement": "任务已完成：{{mission}}",
+    "completedStatus": "已完成",
+    "progressStatus": "已完成 {{done}} 项，共 {{target}} 项",
     "pool": {
       "scanAny2": "今天识别 2 个物种",
       "scanAny3": "今天识别 3 个物种",
@@ -2310,14 +2695,117 @@
       "openDiscover": "访问“发现”标签页"
     }
   },
+  "fishSafety": {
+    "unverifiedTitle": "安全性尚未确认",
+    "unverifiedBody": "我们未找到该物种专属的安全记录。请勿仅凭这次识别结果触摸、处理、食用或放生这条鱼。"
+  },
+  "lensReveal": {
+    "title": "发现结果已就绪",
+    "safetyFirst": "安全第一"
+  },
+  "resultDepth": {
+    "label": "选择要查看的信息量",
+    "essential": "基础",
+    "visual": "图解",
+    "expert": "专家"
+  },
+  "nextBestCapture": {
+    "title": "提高本次识别的准确度",
+    "reasonLowConfidence": "当前置信度为 {{confidence}}%。再拍一个角度可能会有帮助。",
+    "reasonAlternatives": "仍有 {{count}} 个可能的候选项。",
+    "reasonIdentityUnresolved": "识别结果止于 {{name}}，尚未确认具体物种，因此物种专属内容仍会隐藏。",
+    "action": "拍摄另一个角度",
+    "categories": {
+      "plant": "拍摄整株植物，然后清晰对焦拍摄一片叶子或一朵花。",
+      "tree": "清晰拍摄整棵树、树皮以及一片叶子或一个果实。",
+      "crop": "拍摄整株作物、症状特写以及周围田地。",
+      "mushroom": "在避免不必要接触的情况下，拍摄菌盖、菌褶或菌孔、菌柄基部和生长基质。",
+      "insect": "从上方和侧面拍摄昆虫全身，并拍下寄主植物或受损情况。",
+      "fish": "清晰拍摄鱼的侧面、鱼鳍以及周围栖息环境或水族箱。",
+      "bird": "拍摄整只鸟、鸟喙和翅膀斑纹，或录制一段更长、更清晰的叫声。",
+      "sound": "在减少风声、说话声和背景噪声的情况下，至少再录制 10 秒。"
+    }
+  },
   "share": {
     "message": "我用 NatureLens 识别了一种{{category}}：{{name}}{{scientific}}{{confidence}}\n\n拍张照就能识别植物、昆虫、蘑菇、鱼类和鸟类：\n{{url}}",
     "confidenceLine": "置信度 {{confidence}}%"
   },
   "onboarding": {
+    "media": { "play": "播放视频", "pause": "暂停视频", "enableSound": "开启声音", "disableSound": "关闭声音" },
     "skip": "跳过",
     "next": "下一步",
     "start": "开始识别",
+    "progress": "{{current}} / {{total}}",
+    "preparing": "正在准备你的 NatureLens…",
+    "promiseKicker": "看看它如何工作",
+    "personalizeKicker": "按你的需求设置",
+    "readyKicker": "准备好探索",
+    "promise": {
+      "body": "一次拍摄即可获得身份、安全信息和清晰的下一步。",
+      "demoNext": "下一步：拍摄叶片背面"
+    },
+    "goal": {
+      "title": "你希望 NatureLens 如何帮助你？",
+      "body": "你的回答会改变每次识别后首先显示的内容。",
+      "options": {
+        "identify": {
+          "title": "发现它是什么"
+        },
+        "safety": {
+          "title": "查看安全与风险"
+        },
+        "care": {
+          "title": "养护并持续观察"
+        },
+        "field": {
+          "title": "田间与生产"
+        },
+        "learn": {
+          "title": "学习自然知识"
+        }
+      }
+    },
+    "context": {
+      "title": "你最常在哪里探索？",
+      "body": "这仅用于排列类别和指导，你可以随时修改。",
+      "options": {
+        "home": {
+          "title": "家中或花园"
+        },
+        "field": {
+          "title": "田地或作物"
+        },
+        "nature": {
+          "title": "步道或自然环境"
+        },
+        "water": {
+          "title": "水域或水族箱"
+        },
+        "study": {
+          "title": "学习或技术工作"
+        }
+      }
+    },
+    "depth": {
+      "title": "你想先看到多少细节？",
+      "body": "所有内容仍然可用，此选择只决定第一层内容。",
+      "options": {
+        "essential": {
+          "title": "核心"
+        },
+        "visual": {
+          "title": "可视化"
+        },
+        "technical": {
+          "title": "专业"
+        }
+      }
+    },
+    "ready": {
+      "title": "你的 NatureLens 已准备好",
+      "body": "首个结果会按照你的选择显示，同时保留所有安全警告。",
+      "promise": "缺少的证据仍会标记为缺少。NatureLens 会请求更好的照片或录音，而不会编造确定性。"
+    },
     "what": {
       "title": "对准。拍照。知道答案。",
       "body": "拍下任何有生命的东西，NatureLens 几秒内就告诉你它是什么——还附上参考照片，方便你自己确认。"
@@ -2329,6 +2817,20 @@
     "free": {
       "title": "第一次识别免费",
       "body": "每个类别都可免费试用一次识别。想要无限次扫描时再订阅。"
+    },
+    "reviewKicker": "一个小请求",
+    "review": {
+      "title": "如果你已经觉得它有用，请帮助 NatureLens 有一个有力的开始。",
+      "body": "在拍第一张照片前，快速确认一下：这款识别工具值得五星体验吗？",
+      "quote": "简单易用、细节精美，并在证据不足时保持诚实。",
+      "yes": "是的，看起来值得五星",
+      "later": "我想先试用",
+      "starsLabel": "五星评价",
+      "proofs": {
+        "simple": "简单",
+        "safe": "安全",
+        "useful": "实用"
+      }
     }
   },
   "recap": {
@@ -2400,7 +2902,8 @@
     "recording": "录音中…还剩 {{seconds}} 秒",
     "analysing": "正在聆听…",
     "startLabel": "开始录音",
-    "stopLabel": "停止并识别",
+    "stopLabel": "停止录音",
+    "uploadDisclosure": "只有完成“生命脉动”后，音频才会发送到 NatureLens 服务器。原始录音不会保存在你的收藏中。",
     "tipsTitle": "想要更好的结果",
     "tip1": "能靠近就靠近——距离影响最大。",
     "tip2": "把手机对准声音方向并保持不动。",
@@ -2411,8 +2914,13 @@
     "groupMammal": "哺乳动物",
     "permissionTitle": "麦克风被阻止",
     "permissionBody": "请在浏览器设置中允许本站使用麦克风，然后重试。",
+    "permissionAndroidBody": "请在 Android 设置中允许 NatureLens 使用麦克风。其他功能仍可继续使用。",
+    "permissionWebBody": "请在浏览器设置中允许此网站访问麦克风，然后重试。",
     "unsupportedTitle": "无法录音",
     "unsupportedBody": "此浏览器不支持录音。请在安卓上试用 Chrome，或在 iPhone 上把应用添加到主屏幕。",
+    "unsupportedAndroidBody": "原生录音器未能启动。请更新或重新安装 NatureLens，然后重试。其他功能仍可继续使用。",
+    "unsupportedWebBody": "此浏览器无法录制音频。请使用当前版本的兼容浏览器，并允许访问麦克风。",
+    "unsupportedIosBody": "声音识别可在 Android 和网站上使用，但无法在此 iOS 应用中使用。其他所有识别功能仍可继续使用。",
     "tooShortTitle": "录音太短",
     "tooShortBody": "请在动物鸣叫时录制至少两秒。",
     "failedTitle": "无法识别",
@@ -2420,7 +2928,11 @@
     "decodeFailedBody": "无法读取这段录音，请重试。",
     "notFoundBody": "这段录音中没有可识别的内容。试着靠近一些，或在它鸣叫时录音。",
     "noContentBody": "该物种暂无描述。",
-    "notWildlifeBody": "这听起来像车辆、机器或人声，不像动物。请到更安静的地方重新录音。"
+    "notWildlifeBody": "这听起来像车辆、机器或人声，不像动物。请到更安静的地方重新录音。",
+    "audioEvidenceTitle": "你的录音",
+    "audioEvidenceBody": "用于本次识别的音频振幅峰值。",
+    "audioEvidenceDuration": "{{seconds}} 秒",
+    "audioEvidenceAlt": "你的录音振幅峰值，时长 {{seconds}} 秒。"
   },
   "login": {
     "signInRow": "登录",
@@ -2454,6 +2966,16 @@
     "tellFriends": "推荐给朋友",
     "linkCopied": "链接已复制",
     "validUntil": "有效期至 {{date}}",
+    "replayOnboarding": "再次查看介绍",
+    "replayOnboardingHint": "回顾您的目标、使用场景和阅读层级",
+    "sensoryTitle": "触感与动态效果",
+    "haptics": "振动反馈",
+    "hapticsSubtitle": "在选择、拍摄、确认和警告时感受振动反馈",
+    "motion": "动态效果",
+    "motionSubtitle": "跟随设备设置或选择自定义模式",
+    "motionSystem": "设备设置",
+    "motionReduced": "减少动态效果",
+    "motionFull": "完整动态效果",
     "sectionAbout": "关于应用"
   },
   "books": {
@@ -2470,7 +2992,674 @@
     "visitSite": "访问网站",
     "fullDocLabel": "完整法律文件",
     "whatBody": "NatureLens 可通过照片或录音识别植物、昆虫、蘑菇、农作物、鱼类、鸟类甚至声音，并把你的发现变成一份专属的自然收藏。",
-    "creditsBody": "识别由 Kindwise（植物、昆虫、蘑菇、农作物）、Fishial（鱼类）、Nyckel（鸟类）以及我们自己的声音模型提供。参考照片来自 Wikipedia / Wikimedia Commons，并在出现处注明来源。专家聊天由 AI（Anthropic）回答。",
+    "creditsBody": "识别由 Kindwise（植物、昆虫、蘑菇、农作物）、Fishial（鱼类）、Nyckel（鸟类）以及我们自己的声音模型提供。参考照片来自 Wikipedia / Wikimedia Commons，并在出现处注明来源。专家聊天由 AI（Anthropic）回答。 当经过校准、覆盖全球的 BioCLIP 服务启用后，NatureLens 可优先使用这项由自己私有管理的服务识别鸟类；在它未启用，或处理失败、无法证实确切物种时，Nyckel 将作为备用方案。",
     "creditsGbif": "分布地图和季节图表来自 GBIF.org，仅以物种的学名查询，不会发送任何关于你的数据。"
+  },
+  "agronomyProfile": {
+    "eyebrow": "地块档案",
+    "title": "创建地块档案",
+    "subtitle": "在进行任何技术解读前，请先确认田间条件。",
+    "stepCounter": "第 {{current}} 步，共 {{total}} 步",
+    "steps": {
+      "purpose": {
+        "title": "用途与系统",
+        "body": "说明作物用途以及地块的管理方式。"
+      },
+      "location": {
+        "title": "手动位置",
+        "body": "无需分享设备位置，输入国家、一级行政区和地点。"
+      },
+      "planting": {
+        "title": "种植与生育期",
+        "body": "记录种植日期和在田间观察到的生育阶段。"
+      },
+      "soil": {
+        "title": "土壤与分析",
+        "body": "描述土壤并说明是否有实验室报告。"
+      },
+      "summary": {
+        "title": "检查档案",
+        "body": "保存这些背景信息前，请检查每一项。"
+      }
+    },
+    "purposeLabel": "生产用途",
+    "systemLabel": "生产系统",
+    "purposes": {
+      "grain": "粮食",
+      "fresh": "鲜销",
+      "processing": "加工",
+      "forage": "饲料",
+      "seed": "种子生产",
+      "other": "其他"
+    },
+    "systems": {
+      "rainfed": "雨养",
+      "irrigated": "灌溉",
+      "protected": "设施栽培",
+      "hydroponic": "水培",
+      "other": "其他"
+    },
+    "manualLocationTitle": "由你输入的位置",
+    "manualLocationBody": "此助手不会请求 GPS。请选择国家；如适用，请输入省、州或地区代码，并填写地点。",
+    "countryCodeLabel": "国家",
+    "countryCodePlaceholder": "选择国家",
+    "countryCodeHint": "选择该地块所在的国家。",
+    "countryPickerTitle": "选择国家",
+    "countrySearchPlaceholder": "按国家名称或代码搜索",
+    "countryNotFound": "未找到国家。",
+    "closeCountryPicker": "关闭国家选择器",
+    "localityLabel": "地点",
+    "localityPlaceholder": "示例：北京",
+    "admin1CodeLabel": "省、州或地区代码",
+    "admin1CodePlaceholder": "示例：CN-11",
+    "admin1CodeHint": "如适用，请使用所选国家的一级行政区代码。",
+    "municipalityLabel": "地点",
+    "municipalityPlaceholder": "示例：北京",
+    "stateLabel": "国家行政区",
+    "stateHint": "如适用，请输入省、州或地区代码。",
+    "plantingDateLabel": "种植日期",
+    "plantingDatePlaceholder": "YYYY-MM-DD",
+    "plantingDateHint": "请使用 YYYY-MM-DD 格式。",
+    "stageLabel": "观察到的作物阶段",
+    "stagePlaceholder": "示例：V6、开花、果实膨大",
+    "stageConfirmedLabel": "我已在田间核对此阶段",
+    "soilDescriptionLabel": "土壤描述",
+    "soilDescriptionPlaceholder": "示例：黏土、缓坡、排水良好",
+    "hasReportLabel": "你有土壤分析报告吗？",
+    "reportNoticeTitle": "请将报告放在手边",
+    "reportNoticeBody": "此档案只记录报告是否存在，不读取结果，也不计算建议。",
+    "summary": {
+      "purpose": "用途",
+      "system": "系统",
+      "location": "国家 / 行政区 / 地点",
+      "planting": "种植日期",
+      "stage": "已确认阶段",
+      "soil": "土壤",
+      "report": "土壤分析报告"
+    },
+    "noCalculationTitle": "仅作背景信息",
+    "noCalculationBody": "保存此档案不会计算用量，也不会给出施肥、灌溉、农药或其他农艺建议。",
+    "save": "保存档案",
+    "errors": {
+      "selectPurposeAndSystem": "请选择生产用途和生产系统。",
+      "completeLocation": "请选择国家并输入地点；如填写了行政区代码，请检查是否正确。",
+      "completePlanting": "请输入有效日期和观察到的作物阶段。",
+      "confirmStage": "请确认你已在田间核对该阶段。",
+      "completeSoil": "继续前请描述土壤。",
+      "chooseReport": "请说明你是否有土壤分析报告。",
+      "formIncomplete": "部分必填信息缺失或无效，请检查之前的步骤。",
+      "saveUnavailable": "此表单没有可用的保存操作。"
+    }
+  },
+  "agronomyWorkspace": {
+    "title": "地块工作区",
+    "openTitle": "高级地块管理",
+    "openBody": "建立地块档案、记录观察，并且只打开已针对该作物验证的技术模块。",
+    "openAction": "打开地块工作区",
+    "tabs": {
+      "essential": "基础",
+      "learn": "学习",
+      "agronomist": "农艺师"
+    },
+    "unknownCrop": "身份尚未确认的作物",
+    "catalogBadge": "经审核的目录条目 · 不是照片诊断",
+    "loadingProfile": "正在加载地块档案…",
+    "contextTitle": "地块背景",
+    "contextBody": "这是你为该地块确认的背景信息。",
+    "globalEvidence": {
+      "topicCount": "章节数：{{count}}",
+      "kicker": "全球资料层",
+      "title": "全球资料记载的内容",
+      "body": "找到与准确物种及原始来源相对应的 {{scientific}} 内容。",
+      "exactSpecies": "准确物种",
+      "traceableSource": "可追溯来源",
+      "worldScope": "全球范围",
+      "warningTitle": "这不是本地建议",
+      "warningBody": "这些证据用于描述物种，不提供施用量、施肥方案或地区性表格。",
+      "openSource": "在维基百科中打开全球来源",
+      "topicsTitle": "全球物种档案"
+    },
+    "missingProfileTitle": "建立地块背景",
+    "missingProfileBody": "记录田间观察前，请确认位置、种植、生育阶段和土壤。",
+    "profileUnavailableBody": "此项目没有可用于地块档案的安全本地键。",
+    "createProfile": "建立档案",
+    "editProfile": "编辑档案",
+    "savingProfile": "正在保存档案…",
+    "profileSaved": "地块档案已保存。",
+    "observationTitle": "田间观察",
+    "observationBody": "只记录你实际观察到的内容。本日志不会生成诊断或建议。",
+    "addObservation": "记录观察",
+    "eventTypeLabel": "记录类型",
+    "eventTypes": {
+      "observation": "观察",
+      "stage": "作物生育阶段",
+      "rain": "降雨",
+      "irrigation": "灌溉",
+      "fertilization": "施肥",
+      "pestSample": "害虫取样",
+      "diseaseCheck": "病害检查",
+      "harvest": "收获"
+    },
+    "noteLabel": "备注",
+    "notePlaceholder": "描述你看到或完成的事项",
+    "valueLabel": "数值",
+    "valuePlaceholder": "示例：12.5",
+    "unitLabel": "单位",
+    "unitPlaceholder": "示例：毫米、千克、株",
+    "optionalFieldsHint": "备注和数值均可选，但至少填写一项。每个数值都必须有单位。",
+    "saveObservation": "保存观察",
+    "savingObservation": "正在保存观察…",
+    "observationSaved": "观察已保存。",
+    "timelineTitle": "地块时间线",
+    "eventStage": "当时的生育阶段：{{stage}}",
+    "learning": {
+      "title": "学习观察地块",
+      "body": "用一个简单循环，把田间访问转化为可靠的背景信息。",
+      "accessibilityLabel": "观察、记录、比较，并寻求合格的专业支持。",
+      "steps": {
+        "observe": {
+          "title": "观察",
+          "body": "查看多个位置，并把所见事实与推测分开。"
+        },
+        "record": {
+          "title": "记录",
+          "body": "趁观察还清晰时记下状态、位置和变化。"
+        },
+        "compare": {
+          "title": "比较",
+          "body": "在得出结论前，比较相似条件下的多次访问。"
+        },
+        "support": {
+          "title": "寻求支持",
+          "body": "需要决策时，把历史记录和实验室报告交给当地农艺师。"
+        }
+      },
+      "genericTitle": "通用学习图",
+      "genericBody": "此插图用于说明观察位置，并非该作物的照片或描述。",
+      "visuals": {
+        "phenology": {
+          "title": "已确认的作物阶段",
+          "body": "只使用在田间观察并确认的阶段，不要根据日期推断。"
+        },
+        "soil": {
+          "title": "土壤剖面与取样",
+          "body": "描述可指导观察，但决策需要有代表性的取样和有效报告。"
+        },
+        "water": {
+          "title": "降雨 → 土壤 → 根系 → 决策",
+          "body": "记录降雨或灌溉，检查土壤和根系，然后再评估下一步。"
+        },
+        "nutrition": {
+          "title": "不猜测用量的 N、P、K",
+          "body": "养分符号有助于阅读证据；用量需要分析、目标和区域校准。"
+        },
+        "mip": {
+          "title": "取样、计数、比较、决策",
+          "body": "确认对象和阶段，进行有代表性的取样，并在防治前与适用阈值比较。"
+        }
+      }
+    },
+    "technicalStatusTitle": "技术覆盖范围",
+    "technicalVerifiedTitle": "可用的精确技术模块",
+    "technicalVerifiedBody": "身份和当前目录已精确匹配以下模块。它们是参考资料，不是自动处方。",
+    "technicalCatalogBody": "这是经编辑审核的目录条目，不是照片诊断。只显示明确为该作物整理的模块。",
+    "noExactModulesTitle": "没有可用的精确模块",
+    "noExactModulesBody": "该作物有田间指南，但尚未发布数值表或精确监测模块。",
+    "technicalUnavailableTitle": "技术路由不可用",
+    "technicalUnavailableBody": "身份、目录覆盖或路由条件不足，因此不显示技术表。",
+    "modules": {
+      "pest": "综合害虫监测",
+      "fertilizer": "土壤与肥料表"
+    },
+    "ruleCatalogTitle": "规则目录状态",
+    "ruleCatalogGuideBody": "引擎只匹配到指南规则。此目录不含数值计算规则。",
+    "ruleCatalogCatalogBody": "编辑目录可以打开经审核的模块，但不会把条目变成照片诊断或计算规则。",
+    "ruleCatalogUnavailableBody": "未匹配到精确指南规则。应用不会根据俗名、科或旧字段进行推断。",
+    "sourcesTitle": "官方来源",
+    "sourcesBody": "仅列出与当前已发布模块关联的来源。",
+    "officialSource": "官方来源 · {{institution}}",
+    "openSource": "打开官方来源：{{source}}",
+    "errors": {
+      "typeInvalid": "请选择有效的记录类型。",
+      "amountInvalid": "请输入支持范围内有效的非负数。",
+      "unitNeedsValue": "添加单位前请先输入数值。",
+      "unitRequired": "每个数值都必须包含单位。",
+      "emptyEvent": "保存前请添加备注或数值。",
+      "saveFailed": "无法保存。没有任何内容被确认，请重试。"
+    },
+    "planningSourcesTitle": "规划参考来源",
+    "planningSourcesBody": "与该作物对应的官方阅读资料。这不表示技术模块或建议已经发布。"
+  },
+  "observationWorkspace": {
+    "title": "高级观察",
+    "loading": "正在加载观察记录…",
+    "unavailableTitle": "观察空间不可用",
+    "unavailableBody": "此类别没有经过验证的观察配置，因此不会显示表单。",
+    "openTitle": "高级观察空间",
+    "openBody": "清楚记录您实际看到的内容，从简单笔记逐步形成可比较的野外证据。",
+    "openAction": "打开观察空间",
+    "tabs": {
+      "essential": "基础",
+      "learn": "学习",
+      "field": "野外"
+    },
+    "setupTitle": "设置观察背景",
+    "setupBody": "选择大致环境，并写下这条记录开始的地点和情形。不要添加未经观察的结论。",
+    "setupAction": "创建背景",
+    "editProfile": "编辑背景",
+    "saveProfile": "保存背景",
+    "contextLabel": "观察背景",
+    "placeLabel": "地点",
+    "placePlaceholder": "例如：北侧花园、溪岸或阳台",
+    "baselineLabel": "初始状态",
+    "baselinePlaceholder": "描述首次观察时可见的状态",
+    "profileSaved": "背景已保存。",
+    "localOnly": "仅存储在此设备上。这不是诊断，也不是云端备份。",
+    "addEvent": "添加野外笔记",
+    "closeEvent": "关闭表单",
+    "eventTypeLabel": "观察类型",
+    "noteLabel": "笔记",
+    "notePlaceholder": "只描述您看到或听到的内容",
+    "countLabel": "观察到的数量",
+    "measureLabel": "观察到的测量值",
+    "unitLabel": "单位",
+    "optionalLabel": "可选",
+    "saveEvent": "保存记录",
+    "eventSaved": "记录已保存。",
+    "emptyEvent": "保存前请添加笔记、数量或测量值。",
+    "invalidCount": "请输入不小于零的整数数量。",
+    "invalidMeasure": "请输入不小于零的有效测量值。",
+    "unitRequired": "请选择测量单位。",
+    "saveFailed": "无法保存此记录，请重试。",
+    "timelineTitle": "观察时间线",
+    "timelineEmpty": "尚未记录任何观察。",
+    "fieldTitle": "野外视图",
+    "fieldBody": "比较相似条件下的记录；需要作出决定时，请把完整记录交给合格的专业人员。",
+    "progressLabel": "已记录 {{done}} 个观察点，共 {{total}} 个",
+    "recordedLabel": "记录于 {{date}}",
+    "missingLabel": "未记录",
+    "evidenceNote": "记录仅描述您的观察，不确认身份、诊断、风险或管理决定。",
+    "learningTitle": "学习观察什么",
+    "learningBody": "打开每个图示，了解一份有用的记录应包含什么。",
+    "generalDiagram": "通用观察图示；它不能证明照片中生物的身份。",
+    "mushroomSafety": "切勿仅凭照片、应用识别结果或这份观察记录食用蘑菇。",
+    "units": {
+      "millimetre": "毫米 (mm)",
+      "centimetre": "厘米 (cm)",
+      "metre": "米 (m)",
+      "second": "秒 (s)",
+      "minute": "分钟 (min)",
+      "millilitre": "毫升 (ml)",
+      "litre": "升 (l)",
+      "celsius": "摄氏度 (°C)",
+      "percent": "百分比 (%)",
+      "gram": "克 (g)",
+      "kilogram": "千克 (kg)",
+      "ph": "pH",
+      "ppt": "千分比 (ppt)",
+      "ppm": "百万分比 (ppm)",
+      "milligramPerLitre": "毫克每升 (mg/L)",
+      "microsiemensPerCentimetre": "微西门子每厘米 (µS/cm)",
+      "hour": "小时 (h)",
+      "hertz": "赫兹 (Hz)",
+      "kilohertz": "千赫兹 (kHz)",
+      "decibel": "分贝 (dB)",
+      "kilometre": "千米 (km)"
+    },
+    "contexts": {
+      "plant": {
+        "indoor": "室内",
+        "outdoor": "室外",
+        "container": "容器中",
+        "ground": "地栽"
+      },
+      "tree": {
+        "urban": "城市区域",
+        "garden": "花园",
+        "woodland": "林地",
+        "orchard": "果园"
+      },
+      "insect": {
+        "onPlant": "植物上",
+        "onSoil": "土壤上",
+        "onStructure": "建筑物上",
+        "nearWater": "水边"
+      },
+      "mushroom": {
+        "soil": "土壤上",
+        "wood": "木材上",
+        "leafLitter": "落叶层中",
+        "otherSubstrate": "其他基质"
+      },
+      "fish": {
+        "freshwater": "淡水",
+        "marine": "海水",
+        "estuary": "河口",
+        "aquarium": "水族箱"
+      },
+      "bird": {
+        "urban": "城市区域",
+        "forest": "森林",
+        "wetland": "湿地",
+        "openArea": "开阔区域"
+      },
+      "sound": {
+        "dawn": "黎明",
+        "day": "白天",
+        "dusk": "黄昏",
+        "night": "夜间"
+      }
+    },
+    "eventTypes": {
+      "plant": {
+        "observation": "植物环境",
+        "growth": "植物生长",
+        "leafChange": "植物叶片变化",
+        "flowering": "观察到开花",
+        "fruiting": "观察到结果",
+        "symptom": "植物可见症状",
+        "care": "植物养护记录"
+      },
+      "tree": {
+        "observation": "树木环境",
+        "growth": "树木生长",
+        "leafChange": "树木叶片变化",
+        "flowering": "观察到树木开花",
+        "fruiting": "观察到树木结果",
+        "symptom": "树木可见症状",
+        "habitat": "树木生境"
+      },
+      "insect": {
+        "observation": "观察背景",
+        "count": "观察到的数量",
+        "lifeStage": "观察到的生活阶段",
+        "behavior": "观察到的行为",
+        "interaction": "观察到的互动",
+        "habitat": "昆虫生境"
+      },
+      "mushroom": {
+        "observation": "蘑菇观察",
+        "emergence": "观察到出菇",
+        "morphology": "可见形态",
+        "substrate": "基质",
+        "colorChange": "颜色变化",
+        "sporePrint": "孢子印记录"
+      },
+      "fish": {
+        "observation": "观察背景",
+        "count": "观察到的数量",
+        "behavior": "观察到的行为",
+        "habitat": "栖息环境",
+        "waterReading": "观察到的水体读数",
+        "feeding": "观察到摄食"
+      },
+      "bird": {
+        "observation": "鸟类观察",
+        "count": "观察到的数量",
+        "behavior": "观察到的行为",
+        "vocalization": "观察到的鸣声",
+        "nesting": "观察到筑巢",
+        "flight": "观察到飞行"
+      },
+      "sound": {
+        "observation": "声音观察",
+        "recording": "录音",
+        "comparison": "录音比较",
+        "context": "声音环境",
+        "frequency": "观察到的频率",
+        "amplitude": "观察到的振幅"
+      }
+    },
+    "visuals": {
+      "plant": {
+        "environment": {
+          "title": "植物环境",
+          "body": "记录生物周围的环境以及任何可见变化。"
+        },
+        "light": {
+          "title": "可见光线",
+          "body": "比较不同观察时的可见光线条件，不据此推断需求。"
+        },
+        "soil": {
+          "title": "土壤观察",
+          "body": "描述可见的土壤或基质表面及其变化。"
+        },
+        "growth": {
+          "title": "植物生长",
+          "body": "把可比较的生长观察放在时间线上。"
+        }
+      },
+      "tree": {
+        "environment": {
+          "title": "树木环境",
+          "body": "记录生物周围的环境以及任何可见变化。"
+        },
+        "light": {
+          "title": "可见光线",
+          "body": "比较不同观察时的可见光线条件，不据此推断需求。"
+        },
+        "soil": {
+          "title": "土壤观察",
+          "body": "描述可见的土壤或基质表面及其变化。"
+        },
+        "growth": {
+          "title": "树木生长",
+          "body": "把可比较的生长观察放在时间线上。"
+        }
+      },
+      "insect": {
+        "anatomy": {
+          "title": "可见身体特征",
+          "body": "在提出生活阶段或身份前，先分别记录可见的身体特征。"
+        },
+        "stage": {
+          "title": "观察到的生活阶段",
+          "body": "只记录能够观察到的生活阶段；不确定时请留空。"
+        },
+        "count": {
+          "title": "观察到的数量",
+          "body": "在明确描述的地点计数，以便与之后的观察比较。"
+        },
+        "behaviour": {
+          "title": "观察到的行为",
+          "body": "如实描述观察到的运动和互动，不把该动物直接归为害虫。"
+        }
+      },
+      "mushroom": {
+        "substrate": {
+          "title": "基质",
+          "body": "记录蘑菇正下方的材料及周围生境。"
+        },
+        "anatomy": {
+          "title": "蘑菇的可见部分",
+          "body": "分别观察菌盖、下表面、菌柄和基部；照片可能遮住关键特征。"
+        },
+        "underside": {
+          "title": "可见下表面",
+          "body": "描述可见的菌褶、菌孔或其他下表面，不要猜测。"
+        },
+        "colourChange": {
+          "title": "颜色变化",
+          "body": "记录是否确实看到颜色变化，以及变化发生的位置。"
+        }
+      },
+      "fish": {
+        "habitat": {
+          "title": "栖息环境",
+          "body": "描述可见水体以及看到鱼的位置。"
+        },
+        "anatomy": {
+          "title": "鱼类的可见特征",
+          "body": "只有各项特征都清晰可见时，才比较体形、鱼鳍、斑纹和尾部。"
+        },
+        "group": {
+          "title": "同时看到的鱼",
+          "body": "记录观察到的数量和视野范围，不据此推断种群规模。"
+        },
+        "behaviour": {
+          "title": "观察到的行为",
+          "body": "从远处观察并记录运动，避免接触。"
+        }
+      },
+      "bird": {
+        "habitat": {
+          "title": "栖息环境",
+          "body": "描述可见生境以及鸟所处的位置。"
+        },
+        "anatomy": {
+          "title": "鸟类的可见特征",
+          "body": "只根据可见特征比较喙、身体、翅膀和尾部。"
+        },
+        "group": {
+          "title": "同时看到的鸟",
+          "body": "只记录实际看到的群体，不估计视野外的鸟。"
+        },
+        "vocalisation": {
+          "title": "观察到的鸣声",
+          "body": "描述音高、节奏和重复，不假定声音来自哪个物种。"
+        }
+      },
+      "sound": {
+        "waveform": {
+          "title": "可见声音图形",
+          "body": "图示代表录音模式，并非物种证据。"
+        },
+        "rhythm": {
+          "title": "节奏与重复",
+          "body": "按听到的内容标记重复片段和停顿，不臆测叫声含义。"
+        },
+        "environment": {
+          "title": "声音环境",
+          "body": "记录可能影响比较的时段、地点和背景声音。"
+        },
+        "comparison": {
+          "title": "比较录音",
+          "body": "先比较相似条件下的录音，再记录差异。"
+        }
+      }
+    }
+  },
+  "community": {
+    "title": "社区",
+    "headline": "把这次发现变成有用的提示。",
+    "body": "邀请朋友、同学或野外小组也用 NatureLens 识别自然。",
+    "steps": {
+      "identify": "识别一个生命体",
+      "save": "保存重要内容",
+      "share": "把结果发给能用得上的人"
+    },
+    "inviteAction": "邀请朋友",
+    "inviteMessage": "我正在用 NatureLens 识别自然，也分享植物养护经验：浇水、虫害、恢复和发现。这里试试：{{url}}",
+    "screenTitle": "社区",
+    "entryTitle": "社区联赛",
+    "entrySubtitle": "查看你的排名、任务和每周进度。",
+    "localBadge": "本地联赛",
+    "heroTitle": "你的 NatureLens 排名",
+    "rankPosition": "当前名次",
+    "scoreLabel": "积分",
+    "leagues": {
+      "seed": "种子联赛 — 今天从一次发现开始。",
+      "sprout": "新芽联赛 — 你正在养成真正的习惯。",
+      "guardian": "守护者联赛 — 你的野外记录越来越扎实。",
+      "master": "大师联赛 — 进阶探索者的节奏。"
+    },
+    "photoRail": "你最近的发现会成为联赛封面。",
+    "discoveriesLabel": "发现",
+    "weeklyLabel": "本周",
+    "categoriesLabel": "类别",
+    "streakLabel": "连续天数",
+    "rankingTitle": "每周排名",
+    "rankingBody": "根据你已确认的应用活动生成本地联赛。没有虚假的全球用户：连接社区服务器后，这里会成为真实的公开排名。",
+    "leaderboard": {
+      "you": {
+        "name": "你",
+        "meta": "你已确认的活动"
+      },
+      "next": {
+        "name": "下一个里程碑",
+        "meta": "本周可以达到的目标"
+      },
+      "elite": {
+        "name": "精英标杆",
+        "meta": "进阶用户的目标"
+      }
+    },
+    "milestonesTitle": "如何提升排名",
+    "milestones": {
+      "first": "识别并保存真实发现。",
+      "week": "完成每日任务并保持连续记录。",
+      "allCategories": "探索更多类别：植物、昆虫、鱼类、鸟类和真菌。"
+    },
+    "inviteTitle": "邀请伙伴加入你的探索",
+    "inviteBody": "分享应用并完成邀请任务，让探索体验延伸到手机之外。",
+    "scanAction": "立即扫描",
+    "reviewTitle": "NatureLens 对你有帮助吗？",
+    "reviewBody": "如果应用让你的发现更清晰，你的评价能帮助更多探索者找到它。",
+    "reviewAction": "我喜欢",
+    "reviewLater": "暂时不要",
+    "reviewThanks": "谢谢 — 这能帮助我们不断改进 NatureLens。",
+    "careExchangeTitle": "养护交流",
+    "careExchangeBody": "分享真正有效的方法：浇水、光照、虫害、恢复过程，以及植物的前后对比。",
+    "careShareAction": "分享养护经验",
+    "careTopics": {
+      "watering": "浇水节奏",
+      "pests": "虫害和症状",
+      "recovery": "前后对比",
+      "questions": "向小组提问"
+    }
+  },
+  "ipm": {
+    "title": "有害生物综合治理",
+    "chooseCrop": "请选择观察到该昆虫的作物。仅在昆虫与作物组合有明确资料时显示方案。",
+    "exactPair": "精确组合：{{crop}}上的{{insect}}",
+    "prevention": "预防",
+    "monitoring": "监测",
+    "threshold": "有资料支持的行动阈值",
+    "cultural": "农业防治",
+    "mechanical": "机械防治",
+    "biological": "生物防治",
+    "chemical": "化学防治：仅核对登记",
+    "chemicalReferral": "此处不推荐产品或剂量。请查询所在国家针对该作物和靶标的最新登记标签，并与当地农艺师确认。",
+    "citationOnly": "事实引用；不转载原文",
+    "crops": {
+      "maize": "玉米",
+      "tomato": "番茄",
+      "soybean": "大豆",
+      "uplandCotton": "陆地棉",
+      "commonBean": "菜豆",
+      "arabicaCoffee": "阿拉比卡咖啡"
+    },
+    "actions": {
+      "avoidCalendarSprays": "不要按日历定期施药，应根据有代表性的监测结果决定。",
+      "checkRegisteredBiocontrol": "查询当地针对该作物和靶标准确登记的生物防治措施。",
+      "confirmDamageAndStage": "确认相符的危害症状并记录昆虫发育阶段。",
+      "inspectFruitDamage": "检查果实是否有蛀孔和内部损伤。",
+      "inspectLeafMines": "检查嫩叶是否有活动虫道和幼虫。",
+      "inspectTransplants": "幼苗进入生产区前进行检查。",
+      "inspectWhorl": "打开并检查玉米心叶是否有新鲜刮食痕迹和幼虫。",
+      "manageCropResidue": "收获后清除或妥善处理受害作物残体。",
+      "preserveNaturalEnemies": "保护寄生性天敌、捕食者及其他自然天敌。",
+      "protectNursery": "保持苗圃防护并清除受害幼苗。",
+      "recordCropStage": "每次取样都记录作物生育期。",
+      "removeEggMassesSmallPlots": "小面积种植时清除可触及的卵块和幼虫。",
+      "removeInfestedTissue": "安全清除并处置受害叶片和果实。",
+      "removeVolunteerHosts": "清除可在两茬间维持害虫的自生植株。",
+      "rotateOutsideHostFamily": "条件允许时轮作非寄主科作物。",
+      "sampleCoolHours": "在较凉时段取样，此时蝽类更易发现。",
+      "sampleRepresentativePoints": "在田间均匀设置取样点，不要只检查边缘。",
+      "useBeatCloth": "在有代表性的点位统一使用振落布。",
+      "useInsectScreens": "生产系统允许时使用防虫网。",
+      "usePheromoneTraps": "用性诱捕器跟踪成虫飞行；捕获量本身不能代表作物损失。",
+      "avoidStaggeredPlanting": "避免分期错开播种；官方指导要求时，应在区域内协调播种期。",
+      "avoidOlderMaizeNearby": "不要在出现矮化症状的老玉米田旁播种新玉米。",
+      "removeAlternateHosts": "清除替代寄主植物及出现病毒症状的菜豆植株。",
+      "inspectFieldEdges": "先检查田块周边，因为迁入和危害往往集中在边缘。",
+      "inspectFlowerBuds": "检查棉花花蕾是否有取食孔和产卵孔。",
+      "completeSanitaryHarvest": "彻底采收，并清除留在植株和地面的咖啡果实。",
+      "inspectLowerCanopy": "检查大豆冠层中下部，豆夜蛾幼虫常藏在这里。"
+    },
+    "thresholds": {
+      "initialSymptomsHighYieldThreshold": "仅适用于产量潜力至少 {{minimumYieldBagsPerHa}} 袋/公顷的田块：在 {{sampleAreaHa}} 公顷内检查 {{samplePoints}} 个随机点。公开参考值为出现初期危害症状的植株达到 {{actionPercent}}%。"
+    }
   }
 }

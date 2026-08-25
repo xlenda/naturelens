@@ -63,6 +63,7 @@ const CHECKOUT_LINKS = {
 };
 
 export function getCheckoutLink(plan) {
+  if (Platform.OS !== 'web') return '';
   return CHECKOUT_LINKS[plan] || '';
 }
 

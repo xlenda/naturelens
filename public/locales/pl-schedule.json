@@ -15,7 +15,8 @@
         "summer": "Miesięcznie, 1/2",
         "autumn": "Przerwać",
         "winter": "Nie nawozić",
-        "note": "Mało azotu, od połowy do jednej czwartej dawki z etykiety. Nadmiar azotu tworzy miękkie tkanki, które gniją (Clemson, Iowa State)."
+        "note": "Mało azotu, od połowy do jednej czwartej dawki z etykiety. Nadmiar azotu tworzy miękkie tkanki, które gniją (Clemson, Iowa State).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "Przesadzanie",
@@ -51,7 +52,8 @@
         "summer": "Miesięcznie, słabo",
         "autumn": "Zmniejszać",
         "winter": "Nie nawozić",
-        "note": "Rośliny doniczkowe nawozi się tylko w sezonie wzrostu, nic w okresie spoczynku (UConn)."
+        "note": "Rośliny doniczkowe nawozi się tylko w sezonie wzrostu, nic w okresie spoczynku (UConn).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "Sadzonki",
@@ -79,7 +81,8 @@
         "summer": "Miesięcznie, 1/2",
         "autumn": "Przerwać",
         "winter": "Nie nawozić",
-        "note": "Nic przez 6 miesięcy po podziale lub przesadzeniu; nadmiar nawozu przypala liście (Clemson, UConn)."
+        "note": "Nic przez 6 miesięcy po podziale lub przesadzeniu; nadmiar nawozu przypala liście (Clemson, UConn).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "Podział i przesadzenie",
@@ -115,7 +118,8 @@
         "summer": "Po zbiorze",
         "autumn": "Przerwać",
         "winter": "Nie nawozić",
-        "note": "Pestkowe dostają trzy dawki dzielone i nic w ostatnich tygodniach lata, żeby drewno zdrewniało (Clemson)."
+        "note": "Pestkowe dostają trzy dawki dzielone i nic w ostatnich tygodniach lata, żeby drewno zdrewniało (Clemson).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "Cięcie",
@@ -143,7 +147,8 @@
         "summer": "Co 6 tygodni",
         "autumn": "Stop przed mrozem",
         "winter": "Nie nawozić",
-        "note": "Róże schodzą do połowy dawki w szczycie upału i kończą 6 tygodni przed pierwszym spodziewanym mrozem (Clemson)."
+        "note": "Róże schodzą do połowy dawki w szczycie upału i kończą 6 tygodni przed pierwszym spodziewanym mrozem (Clemson).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "Przekwitłe kwiaty",
@@ -179,7 +184,8 @@
         "summer": "Dawki dzielone",
         "autumn": "Przerwać",
         "winter": "Nie nawozić",
-        "note": "Dojrzałe drzewo potrzebuje mało albo wcale. Późne nawożenie azotem opóźnia spoczynek (Clemson)."
+        "note": "Dojrzałe drzewo potrzebuje mało albo wcale. Późne nawożenie azotem opóźnia spoczynek (Clemson).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "Cięcie",
@@ -215,7 +221,8 @@
         "summer": "Co tydzień, 1/2",
         "autumn": "Co 2 tygodnie",
         "winter": "Co 2 tygodnie",
-        "note": "Połowa dawki z etykiety, mało mocznika albo wcale, i pomijaj co 4. nawożenie, by wypłukać sole (AOS, RHS)."
+        "note": "Połowa dawki z etykiety, mało mocznika albo wcale, i pomijaj co 4. nawożenie, by wypłukać sole (AOS, RHS).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "Przesadzanie",
@@ -251,7 +258,8 @@
         "summer": "Tylko gdy stoi",
         "autumn": "Nie nawozić",
         "winter": "Nie nawozić",
-        "note": "Rozmaryn w gruncie nie dostaje nic, a bardzo żyzna gleba psuje aromat (RHS, Clemson)."
+        "note": "Rozmaryn w gruncie nie dostaje nic, a bardzo żyzna gleba psuje aromat (RHS, Clemson).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "Cięcie",

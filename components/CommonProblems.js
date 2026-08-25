@@ -22,7 +22,7 @@ import { getManual, manualKeyFor } from './manualContent';
 // alimenta as abas do manual), na mesma ordem. Manual indisponivel, offline sem
 // cache ou nenhum topico com problems[] -> null, o bloco some inteiro.
 
-export default function CommonProblems({ topics, accent, onOpen }) {
+export default function CommonProblems({ topics, entityName, accent, onOpen }) {
   const { t, i18n } = useTranslation();
   const i18nLang = i18n.language;
   const [manual, setManual] = useState(null);
@@ -65,6 +65,10 @@ export default function CommonProblems({ topics, accent, onOpen }) {
       <Text style={styles.title} accessibilityRole="header">
         {t('detail.problemsLabel')}
       </Text>
+      {!!entityName && (
+        <Text style={styles.entityScope}>{t('common.identified')}: {entityName}</Text>
+      )}
+      <Text style={styles.scopeNote}>{t('detail.generalGuideNote')}</Text>
       <ScrollView
         horizontal
         showsHorizontalScrollIndicator={false}
@@ -111,7 +115,9 @@ export default function CommonProblems({ topics, accent, onOpen }) {
 
 const styles = StyleSheet.create({
   block: { marginBottom: 16 },
-  title: { fontSize: 15, fontWeight: '700', color: colors.text, marginBottom: 10 },
+  title: { fontSize: 15, fontWeight: '700', color: colors.text, marginBottom: 6 },
+  entityScope: { color: colors.text, fontSize: 12.5, lineHeight: 18, fontWeight: '800' },
+  scopeNote: { color: colors.textMuted, fontSize: 12, lineHeight: 17, marginTop: 3, marginBottom: 10 },
   // paddingRight fecha o carrossel com respiro no ultimo card, senao ele
   // encosta na borda e parece cortado.
   strip: { gap: 10, paddingRight: 4 },

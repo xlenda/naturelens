@@ -3,6 +3,7 @@ import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { useTranslation } from 'react-i18next';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { useNavigation } from '@react-navigation/native';
 import { colors } from './theme';
 
 // The competitor's fixed bottom action bar on the result: New (retake) |
@@ -11,9 +12,32 @@ import { colors } from './theme';
 //
 // Same layout law as the FABs: absolute WITHIN the screen (never over the
 // dock), and the host screen adds bottom padding to its scroll content.
-export default function ResultActionBar({ onNew, onShare, onSave, saved, accent = colors.accent }) {
+export default function ResultActionBar({
+  onNew,
+  onShare,
+  onSave,
+  saved,
+  savedId,
+  accent = colors.accent,
+}) {
   const { t } = useTranslation();
   const insets = useSafeAreaInsets();
+  const navigation = useNavigation();
+
+  const openSpecimen = () => {
+    // savedId identifica O EXEMPLAR salvo. Resolver pelo id do provedor abriria
+    // o registro errado quando a mesma especie fosse salva mais de uma vez.
+    if (!savedId) return;
+    const parent = navigation.getParent?.();
+    if (parent) {
+      parent.navigate('Collection', {
+        screen: 'Specimen',
+        params: { savedId },
+      });
+    } else {
+      navigation.navigate('Specimen', { savedId });
+    }
+  };
 
   // Auditoria de diagramacao 20/08: com o dock escondido nas telas de detalhe,
   // esta barra passou a ser o ultimo elemento antes da borda fisica da tela - e
@@ -47,25 +71,28 @@ export default function ResultActionBar({ onNew, onShare, onSave, saved, accent 
       )}
       {!!onShare && (
         <TouchableOpacity
-          style={styles.secondary}
+          style={styles.shareAction}
           onPress={onShare}
           activeOpacity={0.8}
           accessibilityRole="button"
           accessibilityLabel={t('common.shareThisResult')}
         >
           <Ionicons name="share-social-outline" size={19} color={colors.text} />
+          <Text style={styles.secondaryText} numberOfLines={1}>{t('common.shareThisResult')}</Text>
         </TouchableOpacity>
       )}
+      {/* Salvar cria continuidade: a CTA abre o registro pessoal em vez de
+          virar uma confirmacao morta ou uma exclusao gigante no mesmo lugar. */}
       <TouchableOpacity
         style={[styles.primary, { backgroundColor: accent }, saved && styles.primarySaved]}
-        onPress={onSave}
+        onPress={saved ? openSpecimen : onSave}
         activeOpacity={0.85}
         accessibilityRole="button"
-        accessibilityLabel={saved ? t('common.removeFromCollection') : t('common.saveToCollection')}
+        accessibilityLabel={saved ? t('specimen.openRecord') : t('common.saveToCollection')}
       >
-        <Ionicons name={saved ? 'checkmark' : 'bookmark'} size={17} color={colors.white} />
+        <Ionicons name={saved ? 'reader-outline' : 'bookmark'} size={17} color={colors.white} />
         <Text style={styles.primaryText} numberOfLines={1}>
-          {saved ? t('common.removeFromCollection') : t('common.saveToCollection')}
+          {saved ? t('specimen.openRecord') : t('common.saveToCollection')}
         </Text>
       </TouchableOpacity>
     </View>
@@ -97,6 +124,18 @@ const styles = StyleSheet.create({
     borderColor: colors.border,
     borderRadius: 14,
     paddingHorizontal: 13,
+    height: 46,
+  },
+  shareAction: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 6,
+    maxWidth: 118,
+    backgroundColor: colors.surface,
+    borderWidth: 1,
+    borderColor: colors.border,
+    borderRadius: 14,
+    paddingHorizontal: 11,
     height: 46,
   },
   secondaryText: { color: colors.text, fontWeight: '700', fontSize: 13 },

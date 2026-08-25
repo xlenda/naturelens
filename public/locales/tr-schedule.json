@@ -15,7 +15,8 @@
         "summer": "Ayda bir, yarım doz",
         "autumn": "Durdurun",
         "winter": "Yok",
-        "note": "Az azot, etiket dozunun yarısı ile dörtte biri arası. Fazla azot çürüyen yumuşak doku yapar (Clemson, Iowa State)."
+        "note": "Az azot, etiket dozunun yarısı ile dörtte biri arası. Fazla azot çürüyen yumuşak doku yapar (Clemson, Iowa State).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "Saksı değişimi",
@@ -51,7 +52,8 @@
         "summer": "Ayda bir, seyreltik",
         "autumn": "Azaltın",
         "winter": "Yok",
-        "note": "İç mekân bitkileri yalnızca büyüme mevsiminde gübrelenir, dinlenme döneminde hiç (UConn)."
+        "note": "İç mekân bitkileri yalnızca büyüme mevsiminde gübrelenir, dinlenme döneminde hiç (UConn).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "Çelikleme",
@@ -79,7 +81,8 @@
         "summer": "Ayda bir, yarım doz",
         "autumn": "Durdurun",
         "winter": "Yok",
-        "note": "Bölme ya da saksı değişiminden sonra 6 ay boyunca hiçbir şey; fazla gübre yaprakları yakar (Clemson, UConn)."
+        "note": "Bölme ya da saksı değişiminden sonra 6 ay boyunca hiçbir şey; fazla gübre yaprakları yakar (Clemson, UConn).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "Bölme ve saksılama",
@@ -115,7 +118,8 @@
         "summer": "Hasattan sonra",
         "autumn": "Durdurun",
         "winter": "Yok",
-        "note": "Sert çekirdekli meyve üç bölünmüş doz alır, yazın son haftalarında hiç almaz ki odun olgunlaşsın (Clemson)."
+        "note": "Sert çekirdekli meyve üç bölünmüş doz alır, yazın son haftalarında hiç almaz ki odun olgunlaşsın (Clemson).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "Budama",
@@ -143,7 +147,8 @@
         "summer": "6 haftada bir",
         "autumn": "Dondan önce kesin",
         "winter": "Yok",
-        "note": "Güller sıcağın zirvesinde yarım doza iner ve beklenen ilk dondan 6 hafta önce durur (Clemson)."
+        "note": "Güller sıcağın zirvesinde yarım doza iner ve beklenen ilk dondan 6 hafta önce durur (Clemson).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "Solan çiçekler",
@@ -179,7 +184,8 @@
         "summer": "Bölünmüş dozlar",
         "autumn": "Durdurun",
         "winter": "Yok",
-        "note": "Olgun bir ağacın çok azına ya da hiçbirine ihtiyacı yoktur. Geç ve azotlu gübreleme dinlenmeyi geciktirir (Clemson)."
+        "note": "Olgun bir ağacın çok azına ya da hiçbirine ihtiyacı yoktur. Geç ve azotlu gübreleme dinlenmeyi geciktirir (Clemson).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "Budama",
@@ -215,7 +221,8 @@
         "summer": "Haftada bir, yarım",
         "autumn": "2 haftada bir",
         "winter": "2 haftada bir",
-        "note": "Etiket dozunun yarısı, az üre ya da hiç, ve tuzları yıkamak için her 4. gübrelemeyi atlayın (AOS, RHS)."
+        "note": "Etiket dozunun yarısı, az üre ya da hiç, ve tuzları yıkamak için her 4. gübrelemeyi atlayın (AOS, RHS).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "Saksı değişimi",
@@ -251,7 +258,8 @@
         "summer": "Sadece durursa",
         "autumn": "Yok",
         "winter": "Yok",
-        "note": "Toprağa dikili biberiye hiç gübre almaz, çok besleyici toprak da aromayı köreltir (RHS, Clemson)."
+        "note": "Toprağa dikili biberiye hiç gübre almaz, çok besleyici toprak da aromayı köreltir (RHS, Clemson).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "Budama",

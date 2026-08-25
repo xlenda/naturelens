@@ -33,7 +33,122 @@
     "translating": "Översätter…",
     "translateFailed": "Kunde inte översätta just nu.",
     "yes": "Ja",
-    "no": "Nej"
+    "no": "Nej",
+    "loading": "Läser in…"
+  },
+  "discoveryReceipt": {
+    "title": "Identifieringen är klar",
+    "ready": "Ditt resultat är redo att granskas.",
+    "tokens": "+{{count}} intjänade polletter",
+    "streak": "Dagar i din nuvarande svit: {{count}}",
+    "achievement": "Prestation upplåst: {{title}}",
+    "factTitle": "Om den här kandidaten",
+    "saveHint": "Spara fyndet för att hitta det igen och lägga till egna observationer."
+  },
+  "acquisition": {
+    "title": "Hur hörde du talas om NatureLens?",
+    "subtitle": "Ett snabbt svar hjälper oss att bli bättre. Valfritt.",
+    "thanks": "Tack — det hjälper oss att göra NatureLens bättre.",
+    "skip": "Inte nu",
+    "options": {
+      "tiktok": "TikTok",
+      "instagram": "Instagram",
+      "youtube": "YouTube",
+      "search": "Google eller Play Store",
+      "friend": "En vän",
+      "other": "Annat"
+    }
+  },
+  "specimen": {
+    "title": "Min journal",
+    "notFoundTitle": "Journalen hittades inte",
+    "notFoundBody": "Det här sparade fyndet finns inte längre i din samling.",
+    "returnToCollection": "Tillbaka till samlingen",
+    "openRecord": "Öppna min journal",
+    "savedOn": "Sparad den {{date}}",
+    "todayTitle": "I dag",
+    "wateredAnnouncement": "Vattning registrerad.",
+    "personalizeTitle": "Gör den personlig",
+    "observationTitle": "Min observation",
+    "observationEmpty": "Ingen observation ännu. Skriv ned vad du lade märke till, var du hittade den eller vad som förändrades.",
+    "observationPlaceholder": "Skriv en kort observation…",
+    "addObservation": "Lägg till observation",
+    "editObservation": "Redigera observation",
+    "saveObservation": "Spara observation",
+    "removeObservation": "Ta bort observation",
+    "characterCount": "{{count}}/{{max}} tecken",
+    "timelineTitle": "Tidslinje",
+    "timelineAdded": "Tillagd i samlingen",
+    "timelineWatered": "Vattning registrerad",
+    "timelineObservationUpdated": "Senaste redigering av observationen",
+    "guideTitle": "Artguide",
+    "guideBody": "Identifiering och all tillgänglig information om arten.",
+    "openGuide": "Öppna guiden",
+    "noteSavedAnnouncement": "Observationen har sparats.",
+    "removeTitle": "Ta bort journalen?",
+    "removeBody": "Ta bort {{name}} från din samling? Detta går inte att ångra.",
+    "removeAction": "Ta bort"
+  },
+  "localReminders": {
+    "title": "Påminnelser i telefonen",
+    "body": "Välj exakt vad och när du vill bli påmind. Android kan meddela dig även när du använder en annan app, beroende på behörighet och systeminställningar.",
+    "loading": "Läser in påminnelser…",
+    "loadError": "Det gick inte att läsa in påminnelserna just nu.",
+    "nextTitle": "Kommande påminnelser",
+    "addAction": "Lägg till påminnelse",
+    "empty": "Ingen kommande påminnelse för den här posten.",
+    "unavailableTitle": "Påminnelser är inte tillgängliga",
+    "unavailableBody": "Den här Android-versionen kan inte schemalägga aviseringar. Installera en kompatibel appversion för att använda påminnelser.",
+    "modalTitle": "Skapa en påminnelse",
+    "reminderFor": "För {{name}}",
+    "taskLabel": "Vad ska telefonen påminna dig om att registrera?",
+    "startLabel": "Första påminnelsen",
+    "timeLabel": "Tid",
+    "repeatLabel": "Upprepning",
+    "weekdayLabel": "Veckodag",
+    "firstAt": "Första aviseringen: {{date}}",
+    "saveAction": "Schemalägg påminnelse",
+    "saving": "Schemalägger…",
+    "permissionDeniedTitle": "Aviseringar är avstängda",
+    "permissionDeniedBody": "Android gav inte tillstånd för aviseringar. Tillåt NatureLens-aviseringar i systeminställningarna och försök igen.",
+    "saveError": "Påminnelsen sparades eller schemalades inte. Kontrollera dina val och försök igen.",
+    "removeError": "Det gick inte att ta bort påminnelsen. Försök igen.",
+    "removeAction": "Ta bort påminnelse om {{action}}",
+    "removing": "Tar bort…",
+    "removedAnnouncement": "Påminnelsen togs bort.",
+    "scheduledSuccess": "Påminnelsen har schemalagts till {{date}}.",
+    "actionAnnouncement": "Påminnelse om {{action}} har schemalagts till {{date}}.",
+    "recordFallback": "den här posten",
+    "notificationTitle": "NatureLens-påminnelse · {{name}}",
+    "notificationBody": "Registrera: {{action}} · {{name}}",
+    "nextAt": "Nästa: {{date}}",
+    "intervals": {
+      "day1": "Om 1 dag",
+      "day3": "Om 3 dagar",
+      "day7": "Om 7 dagar",
+      "day14": "Om 14 dagar",
+      "day30": "Om 30 dagar"
+    },
+    "times": {
+      "at08": "08:00",
+      "at12": "12:00",
+      "at18": "18:00",
+      "at20": "20:00"
+    },
+    "weekdays": {
+      "sun": "Söndag",
+      "mon": "Måndag",
+      "tue": "Tisdag",
+      "wed": "Onsdag",
+      "thu": "Torsdag",
+      "fri": "Fredag",
+      "sat": "Lördag"
+    },
+    "repetitions": {
+      "once": "En gång",
+      "daily": "Varje dag",
+      "weekly": "Varje vecka"
+    }
   },
   "auth": {
     "title": "Logga in för att identifiera",
@@ -153,17 +268,23 @@
       "label": "Ljud",
       "tabLabel": "Ljud",
       "title": "Identifiera via ljud",
-      "subtitle": "Spela in en fågel, groda eller insekt och ta reda på vad det är."
+      "subtitle": "Spela in en fågel, groda eller insekt och ta reda på vad det är.",
+      "scanHint": "Jämför inspelningens tydlighet, rytm, tonhöjd och upprepning. Flera matchande ljudmönster är starkare bevis än en enstaka ton."
     }
   },
   "identify": {
     "identifierTitle": "{{category}}-identifierare",
     "subtitle": "Identifiera {{category}} direkt med AI",
+    "freePromise": "Prova innan du bestämmer dig: 1 gratis identifiering per kategori, utan konto eller betalkort.",
     "readyToScan": "Redo att skanna",
     "didYouKnowTitle": "Visste du det?",
     "continueLabel": "Fortsätt",
     "analyzing": "Analyserar {{category}}…",
     "tapToIdentify": "Tryck för att identifiera",
+    "lensPulseEyebrow": "LEVANDE PULS",
+    "holdToReveal": "Håll för att avslöja",
+    "keepHolding": "Fortsätt hålla…",
+    "holdToRevealHint": "Håll tills pulsen är klar. Släpp för att avbryta.",
     "identifying": "Identifierar…",
     "uploadPhoto": "Ladda upp foto",
     "myCollection": "Min samling",
@@ -186,6 +307,14 @@
     "referenceImagesTitle": "Referensfoton",
     "referenceImagesHint": "Jämför dem med ditt eget foto för att bekräfta.",
     "referenceImageLabel": "Referensfoto {{index}}",
+    "evidenceSimilar": "Liknar ditt foto",
+    "evidenceRepresentative": "Artreferens",
+    "evidenceObservation": "Fältobservation · GBIF",
+    "comparePhotos": "Jämför foton",
+    "comparePhotosHint": "Se ditt foto och referensen sida vid sida.",
+    "sideBySide": "Sida vid sida",
+    "previousReference": "Föregående referens",
+    "nextReference": "Nästa referens",
     "alternativesTitle": "Andra möjliga träffar",
     "alternativesHint": "Om resultatet ovan inte ser rätt ut kan din art vara någon av dessa.",
     "lowConfidenceBare": "Bara {{confidence}}% säkerhet — se det som en utgångspunkt, inte ett slutgiltigt svar.",
@@ -199,10 +328,54 @@
     "serviceDownBody": "Den här identifieringstjänsten krånglar just nu. Försök igen om några minuter - det är inte ditt foto.",
     "poseWhole": "Helhet",
     "poseClose": "Närbild",
-    "poseOther": "Annan vinkel"
+    "poseOther": "Annan vinkel",
+    "photoConsentTitle": "Innan du skickar fotona",
+    "photoConsentKindwiseBody": "Dina valda foton skickas till Kindwise för identifiering. Fotona och resultaten förblir tillgängliga via Kindwise i 6 månader. Enligt Kindwises villkor omfattas fotona av en oåterkallelig licens som tillåter återanvändning för träning och kommersiella ändamål, tillhandahållande till andra kunder och delning under CC BY-SA. Skicka dem bara om du samtycker.",
+    "photoConsentFishialBody": "Dina valda foton skickas till Fishial för identifiering. Fishial kan spara dem enligt sina rutiner för datalagring och publicerar ingen specifik lagringstid för foton som skickas via API:t. Skicka dem bara om du samtycker.",
+    "photoConsentNyckelBody": "Dina valda foton skickas till Nyckel och behandlas för att tillhandahålla identifieringen. Skicka dem bara om du samtycker.",
+    "photoConsentBirdBody": "När den kalibrerade, globala BioCLIP-tjänsten är aktiv kan fågelfoton först behandlas i denna privata tjänst som hanteras av NatureLens. I BioCLIP finns de endast i minnet under begäran och sparas inte. Medan BioCLIP är avstängd, eller om tjänsten misslyckas eller inte kan styrka en exakt art, kan samma foton skickas till Nyckel med insamling av exempel avstängd; Nyckel garanterar inte att lagringen endast är tillfällig. Skicka dem bara om du samtycker.",
+    "photoConsentSend": "Skicka foton",
+    "centralCapture": "Identifiera",
+    "photoReady": "Fotot är klart",
+    "addOptionalAngles": "Lägg till en annan vy",
+    "hideOptionalAngles": "Dölj extra vyer",
+    "captureDemo": {
+      "title": "Se hur det fungerar",
+      "body": "Rikta mot {{category}}, tryck på den stora kameraytan och bekräfta resultatet med bilderna.",
+      "accessibility": "Animerat exempel som visar hur du identifierar {{category}} med kameran.",
+      "result": "Resultat med foton och nästa steg",
+      "steps": {
+        "aim": "Rama in ett motiv",
+        "tap": "Tryck på kameraytan",
+        "confirm": "Jämför referenserna"
+      },
+      "subject": {
+        "plant": "Blad eller blomma",
+        "tree": "Blad, bark eller krona",
+        "insect": "Insekt i fokus",
+        "mushroom": "Hatt och undersida",
+        "crop": "Angripet grödblad",
+        "fish": "Hel fisk från sidan",
+        "bird": "Hel fågel i bild",
+        "sound": "Spela in ett tydligt ljud"
+      }
+    },
+    "expeditionTitle": "Välj din expedition",
+    "expeditionBody": "Varje väg ändrar vad appen lyfter fram efter bilden.",
+    "categoryPromise": {
+      "plant": "Skötsel, säkerhet och visuella ledtrådar",
+      "insect": "Kroppsdrag, risk och fältanteckningar",
+      "mushroom": "Förväxlingsarter och säkerhet först",
+      "crop": "Agronomi, skadedjur och markförhållanden",
+      "fish": "Vatten, livsmiljö och belägg för identifiering",
+      "bird": "Kännetecken, livsmiljö och observationstips",
+      "sound": "Lyssna, jämför och identifiera läten"
+    }
   },
   "detail": {
     "profileTitle": "{{category}}-profil",
+    "invertebrateLabel": "Ryggradslöst djur",
+    "fungusLabel": "Svamp",
     "readMoreLabel": "Läs mer online om den här {{category}}",
     "markAsWatered": "Markera som vattnad",
     "markAsWateredLabel": "Markera som vattnad",
@@ -212,10 +385,24 @@
     "checkForDiseasesLabel": "Kontrollera sjukdomar",
     "checkingForDiseasesLabel": "Kontrollerar sjukdomar",
     "healthCheckSection": "Hälsokontroll",
+    "healthSpeciesMismatch": "Hälsokontrollen kände inte igen samma art. Ta en tydligare bild av den här växten; ingen diagnos användes.",
     "edibleParts": "Ätliga delar",
     "propagation": "Förökning",
     "wateringNeeds": "Vattenbehov",
     "conservationStatus": "Bevarandestatus",
+    "iucn": {
+      "extinct": "Utdöd",
+      "extinctInTheWild": "Utdöd i vilt tillstånd",
+      "regionallyExtinct": "Regionalt utdöd",
+      "criticallyEndangered": "Akut hotad",
+      "endangered": "Starkt hotad",
+      "vulnerable": "Sårbar",
+      "nearThreatened": "Nära hotad",
+      "leastConcern": "Livskraftig",
+      "dataDeficient": "Kunskapsbrist",
+      "notApplicable": "Ej tillämplig",
+      "notEvaluated": "Ej bedömd"
+    },
     "safetySection": "Säkerhet",
     "ecologicalRoleSection": "Ekologisk roll",
     "frequentlyConfusedWith": "Förväxlas ofta med",
@@ -232,6 +419,10 @@
     "installNudgeBody": "Lägg till den på hemskärmen för att identifiera snabbare nästa gång.",
     "commonNames": "Vanliga namn",
     "synonyms": "Vetenskapliga synonymer",
+    "family": "Familj",
+    "order": "Ordning",
+    "taxonomyTitle": "Klassificering",
+    "species": "Art",
     "referencePhoto": "Referensfoto",
     "referencePhotoAlt": "Referensfoto av {{name}}",
     "coverageNoteTitle": "Om detta resultat",
@@ -250,7 +441,7 @@
     "everyNDays": "Var {{count}}:e dag",
     "gbifCredit": "Data: GBIF.org",
     "seasonChart": "Fynd per månad",
-    "seasonChartNote": "Observationer från hela världen, månad för månad. De speglar observationsinsatsen, inte en garanti för blomning eller aktivitet.",
+    "seasonChartNote": "Observationsdata från hela världen, månad för månad. De speglar observationsinsatsen och är ingen garanti för när eller varför arten förekommer.",
     "tipWatering": "Känn på jorden innan du vattnar: är de översta centimetrarna torra är det dags.",
     "tipLight": "Se hur ljuset vandrar genom rummet under dagen - det skiftar mer än man tror.",
     "tipSoil": "Bra dränering betyder lika mycket som bra näring: blöta rötter är rötter som lider.",
@@ -334,6 +525,12 @@
     "scheduleNow": "nu",
     "scheduleGroupNote": "Den här kalendern gäller gruppen {{group}}, inte just den här arten.",
     "scheduleGroupNoteShort": "Den här kalendern gäller artens grupp, inte just den här arten.",
+    "groupGuideNote": "Allmän vägledning för gruppen {{group}}, inte ett faktum om just den här arten.",
+    "generalGuideNote": "Allmän vägledning, inte ett faktum om just den här arten.",
+    "agronomySection": "Fältagronomi",
+    "agronomyDecisionNote": "Börja med observation och mätning. Öppna varje protokoll innan du bestämmer vad som ska ändras i fältet.",
+    "integratedManagementSection": "Integrerad hantering",
+    "openFullProtocol": "Öppna fullständigt protokoll",
     "scheduleNoLocation": "Utan din plats vet vi inte vilken årstid du har, så ingen kolumn är markerad.",
     "careProfileTitle": "Skötselprofil",
     "careLevelLabel": "Skötselnivå",
@@ -348,9 +545,13 @@
     "speciesCareSection": "Skötsel av denna art",
     "speciesCareNote": "Dessa värden gäller {{species}} själv, inte dess grupp.",
     "speciesCareSource": "Källa: {{citation}}",
+    "wikipediaExcerptNotice": "Det här utdraget har valts ut och kortats för det här avsnittet.",
+    "wikipediaArticleLink": "Wikipedia-artikel",
+    "wikipediaAuthorsLink": "Artikelns författare och historik",
+    "wikipediaLicenseLink": "Licensen CC BY-SA 4.0",
     "usdaMoisture": "Vattenbehov",
     "usdaDrought": "Torktålighet",
-    "usdaFertility": "Gödselbehov",
+    "usdaFertility": "Krav på jordens bördighet",
     "usdaShade": "Skuggtålighet",
     "usdaPh": "Jordens pH",
     "usdaTempMin": "Tål ned till",
@@ -362,7 +563,173 @@
     "levelNone": "Ingen",
     "bloomEarly": "{{season}} (tidig)",
     "bloomMid": "{{season}} (mitten)",
-    "bloomLate": "{{season}} (sen)"
+    "bloomLate": "{{season}} (sen)",
+    "feedbackThanks": "Tack för din feedback."
+  },
+  "learning": {
+    "title": "Lär dig att observera",
+    "basic": "Grundläggande",
+    "learn": "Lär dig",
+    "technical": "Tekniskt",
+    "generalDiagram": "Allmänt diagram",
+    "generalNote": "Använd den här illustrationen för att veta vad du ska titta efter. Det är en allmän guide, inte en bild av den identifierade arten.",
+    "illustrationAlt": "Allmän observationsbild för {{category}}",
+    "observeTitle": "Titta på en del i taget",
+    "observeHint": "Jämför form, färg, storlek och placering. Flera egenskaper som stämmer är starkare bevis än en enda detalj.",
+    "evidenceTitle": "Underlag för identifiering",
+    "technicalNote": "Dessa värden kommer från identifieringsresultatet. Underlag som saknas förblir dolt och inget fält fylls i genom gissningar.",
+    "categoryMatch": "Kategoriträff",
+    "provider": "Identifieringskälla",
+    "parts": {
+      "leaf": "Bladets form och nerver",
+      "stemNode": "Stjälk och nod",
+      "flower": "Blommans uppbyggnad",
+      "roots": "Rötter",
+      "canopy": "Kronans form",
+      "branches": "Grenar",
+      "trunkBark": "Stam och bark",
+      "youngOldLeaves": "Unga och gamla blad",
+      "affectedArea": "Påverkat område",
+      "stem": "Stjälk",
+      "antennae": "Antenner",
+      "head": "Huvud",
+      "bodySections": "Kroppsdelar",
+      "wingsLegs": "Vingar och ben",
+      "cap": "Hatt",
+      "underside": "Skivor, porer eller undersida",
+      "baseSubstrate": "Bas och underlag",
+      "beak": "Näbb",
+      "wing": "Vinge",
+      "tail": "Stjärt",
+      "feet": "Fötter",
+      "headProfile": "Huvudprofil",
+      "bodyMarks": "Kroppsteckning",
+      "fins": "Fenor",
+      "recording": "Inspelningskvalitet",
+      "rhythm": "Rytm",
+      "pitch": "Hög eller låg ton",
+      "repetition": "Upprepning",
+      "cephalothorax": "Framkropp",
+      "abdomen": "Bakkropp",
+      "eyes": "Ögon",
+      "eightLegs": "Åtta ben",
+      "tentacles": "Tentakler",
+      "shell": "Skal",
+      "muscularFoot": "Muskelfot",
+      "anterior": "Främre ände",
+      "segments": "Kroppssegment",
+      "clitellum": "Gördel (clitellum)",
+      "posterior": "Bakre ände"
+    }
+  },
+  "speciesDossier": {
+    "title": "Vetenskaplig dossier",
+    "exactEvidence": "Dokumenterat för {{species}}",
+    "evidenceNote": "Endast källbelagda fakta visas. Saknad information förblir dold.",
+    "environment": "Registrerade vattentyper",
+    "diet": "Dokumenterad föda",
+    "habitat": "Dokumenterad livsmiljö",
+    "brackish": "Bräckt vatten",
+    "reproduction": "Dokumenterad fortplantning",
+    "lifeCycle": "Dokumenterad livscykel",
+    "lifeStagesTitle": "Dokumenterade livsstadier",
+    "larvalInstars": "Antal larvstadier: {{count}}",
+    "bodyLength": "Kroppslängd",
+    "leafConsumption": "Bladkonsumtion",
+    "leafAreaPerLarva": "Bladyta som äts per larv",
+    "lifeStages": { "egg": "Ägg", "larva": "Larv", "nymph": "Nymf", "pupa": "Puppa", "adult": "Vuxen" },
+    "measurements": {
+      "clutchSize": "Kullstorlek",
+      "incubationPeriod": "Ruvningstid",
+      "lifeExpectancy": "Förväntad livslängd",
+      "longestLifespan": "Längsta observerade livslängd",
+      "gestationPeriod": "Dräktighetstid"
+    }
+  },
+  "fertilizer": {
+    "title": "Gödningsbeslut",
+    "planningNote": "En ansvarsfull rekommendation börjar med uppmätta fältdata. Tabellen visar vad varje underlag används till; den är inget spridningsrecept.",
+    "input": "Underlag",
+    "decisionUse": "Vad det visar",
+    "soilAnalysis": "Jordanalys",
+    "soilAnalysisUse": "Tillgängliga näringsämnen, surhet, salthalt och behov av kalkning.",
+    "plantAnalysis": "Växt- eller vävnadsanalys",
+    "plantAnalysisUse": "Aktuell näringsstatus, inklusive dold brist före synliga symtom.",
+    "targetDestination": "Skördemål och användning",
+    "targetDestinationUse": "Förväntad näringsbortförsel; skörd av kärna och hela plantan skiljer sig.",
+    "fieldHistory": "Fälthistorik och skörderester",
+    "fieldHistoryUse": "Vad som har tillförts, förts bort eller återförts till jorden.",
+    "textureWater": "Jordart och vatten",
+    "textureWaterUse": "Risk för urlakning och om givorna kan behöva delas.",
+    "diagnosisCaution": "Synliga symtom är ledtrådar, inte en bekräftelse. Vattenstress, sjukdom, insekter eller ett annat näringsämne kan dölja dem.",
+    "maizeTitle": "Majsens näringsbortförsel",
+    "maizeIntro": "Genomsnittliga mängder som grödan för bort vid olika skördenivåer och användningar.",
+    "destination": "Användning",
+    "productivity": "Skörd (t/ha)",
+    "grain": "Kärna",
+    "silage": "Ensilage (torrsubstans)",
+    "tonnesPerHectare": "ton per hektar",
+    "kgPerHectare": "kilogram per hektar",
+    "extractedUnit": "Skörd i t/ha; bortförda näringsämnen i kg/ha.",
+    "notDoseWarning": "Bortförsel är inte en gödselgiva. En rekommendation kräver jord- och vävnadsanalyser, ett skördemål, regional kalibrering och en lokal agronom.",
+    "onionTitle": "Lök: samspel vid näringsöverskott",
+    "onionIntro": "Effekter dokumenterade endast för lök; generalisera dem inte till andra grödor.",
+    "excess": "Näringsämne i överskott",
+    "possibleEffect": "Möjlig effekt",
+    "nitrogenEffect": "Längre cykel, tjock hals, alltför mycket blast, fler bladsjukdomar och sämre lagring efter skörd.",
+    "potassiumEffect": "Kan framkalla magnesium- och kalciumbrist.",
+    "phosphorusEffect": "Kan framkalla zink- och kopparbrist.",
+    "scrollHint": "Svep tabellen i sidled för att se alla näringsämnen.",
+    "botanicalTitle": "Gödsling och näring",
+    "botanicalIntro": "När en källa finns skiljer guiden på artdata, råd för den validerade växtgruppen och säsongens tidpunkt. Ett foto fastställer aldrig en dos.",
+    "unknownGroupNote": "Det finns ännu ingen validerad gödslingsguide för denna växtgrupp. Beslutslistan är kvar, men ingen gruppregel eller dos härleds.",
+    "growthStress": "Tillväxtfas och stress",
+    "growthStressUse": "Skilj på etablering, aktiv tillväxt, blomning eller fruktsättning och vila. Åtgärda torka, vattenmättnad, rotskador eller nylig omplantering före gödsling.",
+    "labelHistory": "Produktetikett och användningshistorik",
+    "labelHistoryUse": "Kontrollera N-P-K, frisättningstyp, etikettens anvisningar, senaste tillförseln och om substratet redan innehåller gödsel.",
+    "plantNoDoseWarning": "Ett foto ensamt kan inte fastställa en säker dos. Följ etiketten och lokal analys; kopiera aldrig en dos från en annan art, ett annat klimat, en kruka eller åker."
+  },
+  "pestManagement": {
+    "title": "Insektsövervakning",
+    "decisionNote": "Ett foto kan tyda på en insekt eller dess skada, men mäter inte populationen i fältet. Ett beslut om åtgärd kräver representativ provtagning.",
+    "whatToCheck": "Att kontrollera",
+    "fieldDecision": "Fältbeslut",
+    "identifyDamage": "Målart och skada",
+    "identifyDamageUse": "Bekräfta insekt, livsstadium, förenlig skadebild och spridning i fältet.",
+    "samplingPlan": "Provtagningsplan",
+    "samplingPlanUse": "Bestäm enhet, metod, punkter och frekvens efter gröda och utvecklingsstadium.",
+    "countStage": "Antal och stadium",
+    "countStageUse": "Registrera varje punkt, skadegörarens storlek eller stadium, grödans stadium och nyttodjur; jämför sedan med åtgärdströskeln.",
+    "noCountWarning": "Utan representativ räkning och tillämplig åtgärdströskel fortsätter övervakningen — spruta aldrig efter kalendern.",
+    "chemicalSafetyTitle": "Om kemisk bekämpning behövs",
+    "maizeTitle": "Majs: referenser för fältbeslut",
+    "target": "Målart",
+    "fieldProtocol": "Provtagning och åtgärdsreferens",
+    "fallArmyworm": "Höstarmélarv",
+    "fallArmywormProtocol": "Endast för fält med en avkastningspotential på minst 100 säckar/ha: på {{sampleAreaHa}} ha kontrolleras {{samplePoints}} slumpmässiga punkter. Den publicerade referensen är {{actionPercent}}% plantor med tidiga angreppssymtom.",
+    "wireworm": "Knäpparlarv",
+    "wirewormProtocol": "Före sådd siktas ett jordprov på {{sampleWidthCm}} × {{sampleLengthCm}} × {{sampleDepthCm}} cm. Referens: minst {{actionCount}} insekter per prov.",
+    "maizeThresholdNote": "Referensen 10% för majs gäller enligt källan fält med en potential på minst 100 säckar. Region, hybrid, stadium och produktionssystem kan ändra den lokala tröskeln.",
+    "soyTitle": "Soja: provtagning och åtgärdströsklar",
+    "soySamplingTitle": "Minsta antal punkter",
+    "fieldArea": "Fältareal",
+    "minimumSamples": "Minimum",
+    "upToHectares": "Upp till {{count}} ha",
+    "overHectares": "Över {{count}} ha",
+    "samplePoints": "{{count}} punkter",
+    "dividePlots": "Dela i skiften på högst {{count}} ha",
+    "soyThresholdTitle": "Åtgärdsreferenser",
+    "situation": "Situation",
+    "actionLevel": "Referenströskel",
+    "defoliation": "Avlövning",
+    "defoliationLevel": "Mer än {{vegetativePercent}}% i vegetativt stadium eller {{reproductivePercent}}% från blomning.",
+    "largeCaterpillars": "Stora bladätande larver",
+    "largeCaterpillarsLevel": "{{countPerMeter}} larver över {{minimumLengthCm}} cm per radmeter med skakduk.",
+    "grainStinkbugs": "Bärfisar — bönproduktion",
+    "grainStinkbugsLevel": "{{countPerMeter}} vuxna eller nymfer från 3:e stadiet per meter, från {{stageStart}} till {{stageEnd}}.",
+    "seedStinkbugs": "Bärfisar — utsädesproduktion",
+    "seedStinkbugsLevel": "{{countPerMeter}} vuxen eller nymf från 3:e stadiet per meter, från {{stageStart}} till {{stageEnd}}.",
+    "soyThresholdNote": "Detta är brasilianska referenser från Embrapa. Provta varje vecka under den kritiska perioden, räkna bärfisar under svalare timmar och bekräfta regionala justeringar med lokal rådgivning."
   },
   "disease": {
     "overviewSection": "Översikt",
@@ -375,7 +742,9 @@
     "healthStatusSection": "Hälsostatus",
     "noDiseaseDetected": "Ingen sjukdom eller skadedjur kunde med säkerhet identifieras på det här fotot.",
     "match": "Matchning",
-    "severitySuffix": "{{severity}} allvarlighetsgrad"
+    "severitySuffix": "{{severity}} allvarlighetsgrad",
+    "diagnosisCaution": "Ett foto är en första screening, inte en fältdiagnos. Kontrollera flera plantor och uteslut problem med vatten, näring och sprutskador innan du agerar.",
+    "chemicalCaution": "Använd endast produkter som är godkända i ditt land för grödan och målorganismen. Följ etiketten och stäm av beslutet med en lokal agronom."
   },
   "collection": {
     "title": "Min samling",
@@ -413,6 +782,11 @@
     "byCategory": "Efter kategori",
     "privacyPolicy": "Integritetspolicy",
     "language": "Språk",
+    "careRegionRow": "Skötselsäsonger",
+    "careRegionHint": "Anger halvklotet för säsongsscheman och blomning. Sparas bara på den här enheten.",
+    "careRegionAuto": "Automatiskt",
+    "careRegionSouth": "Södra halvklotet",
+    "careRegionNorth": "Norra halvklotet",
     "installApp": "Installera app",
     "installAppIOSTitle": "Installera NatureLens",
     "installAppIOSBody": "Tryck på knappen Dela och sedan på \"Lägg till på hemskärmen\" för att installera NatureLens på din telefon.",
@@ -453,7 +827,7 @@
     "acceptanceTitle": "Godkännande av villkoren",
     "acceptanceBody": "Genom att använda NatureLens godkänner du dessa användarvillkor. Om du inte håller med, vänligen använd inte appen.",
     "serviceTitle": "Vad den här appen gör",
-    "serviceBody": "Med NatureLens kan du fotografera växter, insekter, svampar, grödor och träd - och beroende på din enhet även fiskar, fåglar och till och med ljud - för att identifiera dem med hjälp av AI-tjänster från tredje part (Kindwises Plant.id, Insect.id, Mushroom.id och Crop.health, Fishial för fiskar, Nyckel för fåglar och vår egen ljudmodell). Resultaten genereras automatiskt och granskas inte av någon mänsklig expert.",
+    "serviceBody": "Med NatureLens kan du fotografera växter, insekter, svampar, grödor och träd - och beroende på din enhet även fiskar, fåglar och till och med ljud - för att identifiera dem med hjälp av AI-tjänster från tredje part (Kindwises Plant.id, Insect.id, Mushroom.id och Crop.health, Fishial för fiskar, Nyckel för fåglar och vår egen ljudmodell). Resultaten genereras automatiskt och granskas inte av någon mänsklig expert. När den kalibrerade, globala BioCLIP-tjänsten är aktiv kan NatureLens först använda denna privata, egenhanterade tjänst för fåglar; medan den är avstängd, eller om den misslyckas eller inte kan styrka en exakt art, används Nyckel som reserv.",
     "accuracyTitle": "Identifieringens noggrannhet — läs detta",
     "accuracyBody": "AI-identifiering kan ha fel, även om huruvida en växt eller svamp är ätbar, giftig eller säker att röra vid. Ät, plocka eller använd aldrig en vild växt, svamp eller organism enbart baserat på resultatet från den här appen. Bekräfta alltid med en kvalificerad expert (mykolog, botaniker eller giftinformationscentral) innan du äter eller använder något du hittat i naturen. Vi ansvarar inte för skador orsakade av att man litar på en identifiering som gjorts av den här appen.",
     "billingTitle": "Prenumerationer och fakturering",
@@ -470,7 +844,7 @@
   "privacy": {
     "title": "Integritetspolicy",
     "collectTitle": "Vad vi samlar in",
-    "collectBody": "Med den här appen kan du fotografera en växt, ett träd, en insekt, en svamp, en gröda, en fisk eller en fågel för att artbestämma den, och spela in ett djurläte för att känna igen det på ljudet. Bestämningen görs av AI-tjänster: Kindwise (växter, träd, insekter, svampar, grödor), Fishial.AI (fisk) och Nyckel (fåglar). Ljud bestäms på vår egen server, så inspelningar når aldrig tredje part.",
+    "collectBody": "Med den här appen kan du fotografera en växt, ett träd, en insekt, en svamp, en gröda, en fisk eller en fågel för att artbestämma den, och spela in ett djurläte för att känna igen det på ljudet. Bestämningen görs av AI-tjänster: Kindwise (växter, träd, insekter, svampar, grödor), Fishial.AI (fisk) och Nyckel (fåglar). Ljud bestäms på vår egen server, så inspelningar når aldrig tredje part. När den kalibrerade, globala, privata BioCLIP-tjänsten från NatureLens är aktiv kan fågelfoton först behandlas där: de finns endast i minnet under begäran och sparas inte. Medan den är avstängd, eller om den misslyckas eller inte kan styrka en exakt art, kan samma foton skickas till Nyckel med insamling av exempel avstängd, utan garanti för att lagringen endast är tillfällig.",
     "thirdPartyTitle": "AI-tjänster från tredje part",
     "thirdPartyBody": "När du tar eller laddar upp ett foto skickas det till motsvarande bestämningstjänst. Vi lagrar inte dina foton på någon server vi kontrollerar. För att visa en referensbild och en beskrivning frågar appen Wikipedia om det vetenskapliga namnet — Wikipedia ser alltså vilken art du slog upp, men inte vem du är. Vissa leverantörer skriver bara på engelska; att översätta den texten, och att ställa en fråga till specialisten i appen, skickar texten till Anthropic.",
     "localStorageTitle": "Endast lokal lagring",
@@ -2162,7 +2536,15 @@
     },
     "herbSubscribeCtaTitle": "Gillar du den här guiden?",
     "herbSubscribeCtaBody": "Prenumerera för att låsa upp obegränsad identifiering av växter, insekter, svampar och grödor.",
-    "herbAlreadySubscribedCheck": "Redan prenumerant? Tryck för att kontrollera igen"
+    "herbAlreadySubscribedCheck": "Redan prenumerant? Tryck för att kontrollera igen",
+    "mascot": {
+      "kicker": "Din levande guide",
+      "title": "Lino utforskar naturen med dig.",
+      "body": "Ta en bild, spela in ett ljud eller spara ett fynd. Jag borjar med det tydligaste nasta steget.",
+      "photo": "Foto",
+      "sound": "Ljud",
+      "journal": "Journal"
+    }
   },
   "botanist": {
     "headerTitle": "Dr. Helena Marques",
@@ -2296,6 +2678,9 @@
     "title": "Dagens uppdrag",
     "rewardEach": "+{{tokens}} vardera",
     "allDone": "Allt klart — kom tillbaka imorgon!",
+    "completedAnnouncement": "Uppdrag slutfört: {{mission}}",
+    "completedStatus": "Slutfört",
+    "progressStatus": "{{done}} av {{target}} slutförda",
     "pool": {
       "scanAny2": "Identifiera 2 arter idag",
       "scanAny3": "Identifiera 3 arter idag",
@@ -2310,14 +2695,117 @@
       "openDiscover": "Besök fliken Upptäck"
     }
   },
+  "fishSafety": {
+    "unverifiedTitle": "Säkerheten är inte verifierad ännu",
+    "unverifiedBody": "Vi hittade ingen säkerhetsinformation för just denna art. Rör, hantera, ät eller släpp inte ut fisken enbart utifrån denna identifiering."
+  },
+  "lensReveal": {
+    "title": "Upptäckten är klar",
+    "safetyFirst": "Säkerheten först"
+  },
+  "resultDepth": {
+    "label": "Välj hur mycket du vill se",
+    "essential": "Viktigast",
+    "visual": "Visuellt",
+    "expert": "Expert"
+  },
+  "nextBestCapture": {
+    "title": "Förbättra identifieringen",
+    "reasonLowConfidence": "Säkerheten är {{confidence}} %. En bildvinkel till kan hjälpa.",
+    "reasonAlternatives": "{{count}} alternativ är fortfarande möjliga.",
+    "reasonIdentityUnresolved": "Resultatet stannade vid {{name}} och har ännu inte bekräftat någon art. Därför förblir artspecifika avsnitt dolda.",
+    "action": "Ta en bild till",
+    "categories": {
+      "plant": "Fotografera hela växten och sedan ett blad eller en blomma i skarpt fokus.",
+      "tree": "Visa hela trädet, barken och ett blad eller en frukt i skarpt fokus.",
+      "crop": "Visa hela växten, symtomet på nära håll och den omgivande delen av fältet.",
+      "mushroom": "Fotografera hatten, skivorna eller porerna, fotens bas och underlaget utan att röra den i onödan.",
+      "insect": "Fotografera hela kroppen uppifrån och från sidan samt värdväxten eller skadan.",
+      "fish": "Visa en tydlig sidoprofil, fenorna och den omgivande livsmiljön eller akvariet.",
+      "bird": "Visa hela fågeln, näbben och vingmarkeringarna, eller spela in ett längre, rent läte.",
+      "sound": "Spela in minst 10 sekunder till med mindre vind, tal och bakgrundsljud."
+    }
+  },
   "share": {
     "message": "Jag identifierade en {{category}} med NatureLens: {{name}}{{scientific}}{{confidence}}\n\nIdentifiera växter, insekter, svampar, fiskar och fåglar från ett foto:\n{{url}}",
     "confidenceLine": "{{confidence}}% säkerhet"
   },
   "onboarding": {
+    "media": { "play": "Spela upp video", "pause": "Pausa video", "enableSound": "Slå på ljud", "disableSound": "Stäng av ljud" },
     "skip": "Hoppa över",
     "next": "Nästa",
     "start": "Börja identifiera",
+    "progress": "{{current}} av {{total}}",
+    "preparing": "Förbereder ditt NatureLens…",
+    "promiseKicker": "Se hur det fungerar",
+    "personalizeKicker": "Gör det personligt",
+    "readyKicker": "Redo att utforska",
+    "promise": {
+      "body": "En bild blir en identitet, säkerhetskontroll och ett tydligt nästa steg.",
+      "demoNext": "Nästa steg: fotografera bladets undersida"
+    },
+    "goal": {
+      "title": "Vad ska NatureLens hjälpa dig med?",
+      "body": "Ditt svar ändrar vad som visas först efter varje identifiering.",
+      "options": {
+        "identify": {
+          "title": "Ta reda på vad det är"
+        },
+        "safety": {
+          "title": "Kontrollera säkerhet och risker"
+        },
+        "care": {
+          "title": "Sköta och följa"
+        },
+        "field": {
+          "title": "Fält och produktion"
+        },
+        "learn": {
+          "title": "Lära om naturen"
+        }
+      }
+    },
+    "context": {
+      "title": "Var utforskar du mest?",
+      "body": "Vi använder det bara för att ordna kategorier och vägledning. Du kan ändra det senare.",
+      "options": {
+        "home": {
+          "title": "Hem eller trädgård"
+        },
+        "field": {
+          "title": "Fält eller odling"
+        },
+        "nature": {
+          "title": "Led eller natur"
+        },
+        "water": {
+          "title": "Vatten eller akvarium"
+        },
+        "study": {
+          "title": "Studier eller tekniskt arbete"
+        }
+      }
+    },
+    "depth": {
+      "title": "Hur mycket detaljer vill du se först?",
+      "body": "Allt förblir tillgängligt. Valet styr bara det första lagret.",
+      "options": {
+        "essential": {
+          "title": "Viktigast"
+        },
+        "visual": {
+          "title": "Visuellt"
+        },
+        "technical": {
+          "title": "Tekniskt"
+        }
+      }
+    },
+    "ready": {
+      "title": "Ditt NatureLens är redo",
+      "body": "Det första resultatet följer dina val utan att dölja säkerhetsvarningar.",
+      "promise": "Bevis som saknas förblir saknade. NatureLens ber om en bättre bild eller inspelning i stället för att hitta på säkerhet."
+    },
     "what": {
       "title": "Sikta. Fota. Vet.",
       "body": "Fotografera något levande så säger NatureLens vad det är på några sekunder — med referensfoton så att du kan bekräfta det själv."
@@ -2329,6 +2817,20 @@
     "free": {
       "title": "Din första identifiering är gratis",
       "body": "Testa en identifiering i varje kategori utan kostnad. Prenumerera först när du vill skanna obegränsat."
+    },
+    "reviewKicker": "En liten tjänst",
+    "review": {
+      "title": "Om det här redan känns användbart, hjälp NatureLens att få en stark start.",
+      "body": "Före din första bild, en snabb fråga: känns den här linsen som en femstjärnig upplevelse?",
+      "quote": "En lins som är enkel att använda, vacker i detaljerna och ärlig när bevis saknas.",
+      "yes": "Ja, det känns femstjärnigt",
+      "later": "Jag vill prova först",
+      "starsLabel": "Femstjärnigt omdöme",
+      "proofs": {
+        "simple": "Enkelt",
+        "safe": "Säkert",
+        "useful": "Användbart"
+      }
     }
   },
   "recap": {
@@ -2400,7 +2902,8 @@
     "recording": "Spelar in… {{seconds}}s kvar",
     "analysing": "Lyssnar…",
     "startLabel": "Börja spela in",
-    "stopLabel": "Stoppa och identifiera",
+    "stopLabel": "Stoppa inspelningen",
+    "uploadDisclosure": "Ljudet skickas till NatureLens-servern först när du har slutfört Den levande pulsen. Råinspelningen sparas inte i din samling.",
     "tipsTitle": "För bättre resultat",
     "tip1": "Kom närmare om du kan — avståndet betyder mest.",
     "tip2": "Rikta telefonen mot ljudet och stå still.",
@@ -2411,8 +2914,13 @@
     "groupMammal": "Däggdjur",
     "permissionTitle": "Mikrofonen blockerad",
     "permissionBody": "Tillåt mikrofonåtkomst för den här sidan i webbläsarens inställningar och försök igen.",
+    "permissionAndroidBody": "Tillåt NatureLens att använda mikrofonen i Android-inställningarna. Övriga funktioner är fortfarande tillgängliga.",
+    "permissionWebBody": "Tillåt mikrofonåtkomst för den här webbplatsen i webbläsarens inställningar och försök igen.",
     "unsupportedTitle": "Inspelning inte tillgänglig",
     "unsupportedBody": "Den här webbläsaren kan inte spela in ljud. Prova Chrome på Android, eller lägg till appen på hemskärmen på iPhone.",
+    "unsupportedAndroidBody": "Den inbyggda inspelaren startade inte. Uppdatera eller installera om NatureLens och försök igen. Övriga funktioner är fortfarande tillgängliga.",
+    "unsupportedWebBody": "Den här webbläsaren kunde inte spela in ljud. Använd en aktuell version av en kompatibel webbläsare och tillåt mikrofonåtkomst.",
+    "unsupportedIosBody": "Ljudidentifiering är tillgänglig på Android och på webbplatsen, men inte i den här iOS-appen. Alla andra identifieringsfunktioner är fortfarande tillgängliga.",
     "tooShortTitle": "Inspelningen är för kort",
     "tooShortBody": "Spela in minst två sekunder, medan djuret låter.",
     "failedTitle": "Kunde inte identifiera",
@@ -2420,7 +2928,11 @@
     "decodeFailedBody": "Den inspelningen kunde inte läsas. Försök igen.",
     "notFoundBody": "Inget igenkännbart i inspelningen. Kom närmare eller spela in när den låter.",
     "noContentBody": "Ingen beskrivning för den här arten än.",
-    "notWildlifeBody": "Det låter som ett fordon, en maskin eller en röst, inte ett djur. Prova att spela in igen på en tystare plats."
+    "notWildlifeBody": "Det låter som ett fordon, en maskin eller en röst, inte ett djur. Prova att spela in igen på en tystare plats.",
+    "audioEvidenceTitle": "Din inspelning",
+    "audioEvidenceBody": "Amplitudtoppar från ljudet som användes för denna identifiering.",
+    "audioEvidenceDuration": "{{seconds}} s",
+    "audioEvidenceAlt": "Amplitudtoppar från din inspelning, som är {{seconds}} sekunder lång."
   },
   "login": {
     "signInRow": "Logga in",
@@ -2454,7 +2966,17 @@
     "tellFriends": "Tipsa vänner",
     "linkCopied": "Länk kopierad",
     "validUntil": "Giltig till {{date}}",
-    "sectionAbout": "Om appen"
+    "sectionAbout": "Om appen",
+    "replayOnboarding": "Visa introduktionen igen",
+    "replayOnboardingHint": "Gå igenom ditt mål, sammanhang och din läsnivå igen",
+    "sensoryTitle": "Beröring och rörelse",
+    "haptics": "Vibrationsfeedback",
+    "hapticsSubtitle": "Känn återkoppling vid val, bildtagning, bekräftelser och varningar",
+    "motion": "Rörelse",
+    "motionSubtitle": "Följ enhetens inställning eller välj ett eget alternativ",
+    "motionSystem": "Enhetens inställning",
+    "motionReduced": "Minskad",
+    "motionFull": "Full"
   },
   "books": {
     "shelfTitle": "Böcker",
@@ -2470,7 +2992,674 @@
     "visitSite": "Besök webbplatsen",
     "fullDocLabel": "Fullständigt juridiskt dokument",
     "whatBody": "NatureLens identifierar växter, insekter, svampar, grödor, fiskar, fåglar och till och med ljud utifrån ett foto eller en inspelning, och gör dina fynd till en personlig natursamling.",
-    "creditsBody": "Identifiering av Kindwise (växter, insekter, svampar, grödor), Fishial (fiskar), Nyckel (fåglar) och vår egen ljudmodell. Referensfoton från Wikipedia / Wikimedia Commons, med erkännande där de visas. Specialistchatten besvaras av AI (Anthropic).",
+    "creditsBody": "Identifiering av Kindwise (växter, insekter, svampar, grödor), Fishial (fiskar), Nyckel (fåglar) och vår egen ljudmodell. Referensfoton från Wikipedia / Wikimedia Commons, med erkännande där de visas. Specialistchatten besvaras av AI (Anthropic). När den kalibrerade, globala BioCLIP-tjänsten är aktiv kan NatureLens först använda denna privata, egenhanterade tjänst för fåglar; medan den är avstängd, eller om den misslyckas eller inte kan styrka en exakt art, används Nyckel som reserv.",
     "creditsGbif": "Utbredningskartor och säsongsdiagram från GBIF.org, hämtade med artens vetenskapliga namn – inga uppgifter om dig skickas."
+  },
+  "agronomyProfile": {
+    "eyebrow": "Fältprofil",
+    "title": "Skapa fältprofilen",
+    "subtitle": "Bekräfta förhållandena på fältet före all teknisk tolkning.",
+    "stepCounter": "Steg {{current}} av {{total}}",
+    "steps": {
+      "purpose": {
+        "title": "Syfte och system",
+        "body": "Ange vad grödan ska användas till och hur fältet sköts."
+      },
+      "location": {
+        "title": "Manuell plats",
+        "body": "Ange land, administrativ region och ort utan att dela enhetens position."
+      },
+      "planting": {
+        "title": "Plantering och stadium",
+        "body": "Registrera planteringsdatumet och stadiet som observerats på fältet."
+      },
+      "soil": {
+        "title": "Jord och analys",
+        "body": "Beskriv jorden och ange om en laboratorierapport finns."
+      },
+      "summary": {
+        "title": "Granska profilen",
+        "body": "Kontrollera varje fält innan du sparar detta sammanhang."
+      }
+    },
+    "purposeLabel": "Produktionssyfte",
+    "systemLabel": "Produktionssystem",
+    "purposes": {
+      "grain": "Spannmål",
+      "fresh": "Färskmarknad",
+      "processing": "Bearbetning",
+      "forage": "Foder",
+      "seed": "Utsädesproduktion",
+      "other": "Annat"
+    },
+    "systems": {
+      "rainfed": "Regnberoende",
+      "irrigated": "Bevattnat",
+      "protected": "Skyddad odling",
+      "hydroponic": "Hydroponiskt",
+      "other": "Annat"
+    },
+    "manualLocationTitle": "Plats som du angett",
+    "manualLocationBody": "Assistenten begär inte GPS. Välj land, ange vid behov koden för delstat, provins eller region och lägg till orten.",
+    "countryCodeLabel": "Land",
+    "countryCodePlaceholder": "Välj ett land",
+    "countryCodeHint": "Välj landet där fältet ligger.",
+    "countryPickerTitle": "Välj ett land",
+    "countrySearchPlaceholder": "Sök efter landets namn eller kod",
+    "countryNotFound": "Inget land hittades.",
+    "closeCountryPicker": "Stäng landsväljaren",
+    "localityLabel": "Ort",
+    "localityPlaceholder": "Exempel: Uppsala",
+    "admin1CodeLabel": "Kod för delstat, provins eller region",
+    "admin1CodePlaceholder": "Exempel: SE-AB",
+    "admin1CodeHint": "Använd vid behov koden för den första administrativa nivån i det valda landet.",
+    "municipalityLabel": "Ort",
+    "municipalityPlaceholder": "Exempel: Uppsala",
+    "stateLabel": "Administrativ region",
+    "stateHint": "Ange vid behov koden för delstat, provins eller region.",
+    "plantingDateLabel": "Planteringsdatum",
+    "plantingDatePlaceholder": "ÅÅÅÅ-MM-DD",
+    "plantingDateHint": "Använd formatet ÅÅÅÅ-MM-DD.",
+    "stageLabel": "Observerat grödstadium",
+    "stagePlaceholder": "Exempel: V6, blomning, fruktfyllnad",
+    "stageConfirmedLabel": "Jag kontrollerade detta stadium på fältet",
+    "soilDescriptionLabel": "Jordbeskrivning",
+    "soilDescriptionPlaceholder": "Exempel: lerjord, svag lutning, god dränering",
+    "hasReportLabel": "Har du en jordanalysrapport?",
+    "reportNoticeTitle": "Ha rapporten nära till hands",
+    "reportNoticeBody": "Profilen registrerar bara om en rapport finns. Den läser inte resultat och beräknar ingen rekommendation.",
+    "summary": {
+      "purpose": "Syfte",
+      "system": "System",
+      "location": "Land / administrativ region / ort",
+      "planting": "Planteringsdatum",
+      "stage": "Bekräftat stadium",
+      "soil": "Jord",
+      "report": "Jordanalysrapport"
+    },
+    "noCalculationTitle": "Endast sammanhang",
+    "noCalculationBody": "Att spara profilen beräknar inga doser och ger inga rekommendationer om gödsling, bevattning, bekämpningsmedel eller annan agronomi.",
+    "save": "Spara profil",
+    "errors": {
+      "selectPurposeAndSystem": "Välj ett produktionssyfte och ett produktionssystem.",
+      "completeLocation": "Välj ett land, ange en ort och kontrollera regionkoden om den har fyllts i.",
+      "completePlanting": "Ange ett giltigt datum och det observerade grödstadiet.",
+      "confirmStage": "Bekräfta att du kontrollerade stadiet på fältet.",
+      "completeSoil": "Beskriv jorden innan du fortsätter.",
+      "chooseReport": "Ange om du har en jordanalysrapport.",
+      "formIncomplete": "Obligatorisk information saknas eller är ogiltig. Granska föregående steg.",
+      "saveUnavailable": "Ingen sparåtgärd är tillgänglig för formuläret."
+    }
+  },
+  "agronomyWorkspace": {
+    "title": "Arbetsyta för fält",
+    "openTitle": "Avancerad fälthantering",
+    "openBody": "Skapa fältprofilen, spara observationer och öppna endast tekniska moduler som verifierats för grödan.",
+    "openAction": "Öppna fältarbetsytan",
+    "tabs": {
+      "essential": "Viktigt",
+      "learn": "Lär dig",
+      "agronomist": "Agronom"
+    },
+    "unknownCrop": "Gröda utan bekräftad identitet",
+    "catalogBadge": "Kurerad katalogpost · ingen fotodiagnos",
+    "loadingProfile": "Läser in fältprofil…",
+    "contextTitle": "Fältkontext",
+    "contextBody": "Det här är kontexten du bekräftade för fältet.",
+    "globalEvidence": {
+      "topicCount": "Avsnitt: {{count}}",
+      "kicker": "GLOBALT LAGER",
+      "title": "Vad globala källor dokumenterar",
+      "body": "Innehåll som hittats för {{scientific}}, kopplat till den exakta arten och originalkällan.",
+      "exactSpecies": "Exakt art",
+      "traceableSource": "Spårbar källa",
+      "worldScope": "Global räckvidd",
+      "warningTitle": "Ingen lokal rekommendation",
+      "warningBody": "Underlaget beskriver arten. Det godkänner inte doser, gödslingsrecept eller regionala tabeller.",
+      "openSource": "Öppna den globala källan på Wikipedia",
+      "topicsTitle": "Global artöversikt"
+    },
+    "missingProfileTitle": "Skapa fältkontext",
+    "missingProfileBody": "Bekräfta plats, plantering, stadium och jord innan fältobservationer sparas.",
+    "profileUnavailableBody": "Objektet saknar en säker lokal nyckel för en fältprofil.",
+    "createProfile": "Skapa profil",
+    "editProfile": "Redigera profil",
+    "savingProfile": "Sparar profil…",
+    "profileSaved": "Fältprofil sparad.",
+    "observationTitle": "Fältobservation",
+    "observationBody": "Registrera det du faktiskt observerade. Loggen skapar ingen diagnos eller rekommendation.",
+    "addObservation": "Registrera observation",
+    "eventTypeLabel": "Posttyp",
+    "eventTypes": {
+      "observation": "Observation",
+      "stage": "Grödstadium",
+      "rain": "Regn",
+      "irrigation": "Bevattning",
+      "fertilization": "Gödsling",
+      "pestSample": "Skadedjursprov",
+      "diseaseCheck": "Sjukdomskontroll",
+      "harvest": "Skörd"
+    },
+    "noteLabel": "Anteckning",
+    "notePlaceholder": "Beskriv vad du såg eller gjorde",
+    "valueLabel": "Värde",
+    "valuePlaceholder": "Exempel: 12,5",
+    "unitLabel": "Enhet",
+    "unitPlaceholder": "Exempel: mm, kg, plantor",
+    "optionalFieldsHint": "Anteckning och värde är valfria, men ange minst ett. Varje värde behöver en enhet.",
+    "saveObservation": "Spara observation",
+    "savingObservation": "Sparar observation…",
+    "observationSaved": "Observation sparad.",
+    "timelineTitle": "Fältets tidslinje",
+    "eventStage": "Stadium vid tillfället: {{stage}}",
+    "learning": {
+      "title": "Lär dig observera fältet",
+      "body": "Använd en enkel cykel för att göra ett fältbesök till tillförlitlig kontext.",
+      "accessibilityLabel": "Observera, registrera, jämför och sök kvalificerat stöd.",
+      "steps": {
+        "observe": {
+          "title": "Observera",
+          "body": "Titta på mer än en punkt och skilj det du såg från det du antar."
+        },
+        "record": {
+          "title": "Registrera",
+          "body": "Skriv ner tillstånd, plats och förändring medan observationen är färsk."
+        },
+        "compare": {
+          "title": "Jämför",
+          "body": "Jämför besök under liknande förhållanden innan du drar en slutsats."
+        },
+        "support": {
+          "title": "Sök stöd",
+          "body": "Ta med historik och laboratorierapporter till en lokal agronom när ett beslut behövs."
+        }
+      },
+      "genericTitle": "Allmän lärande bild",
+      "genericBody": "Illustrationen visar var du ska titta. Den är inte ett foto eller en beskrivning av grödan.",
+      "visuals": {
+        "phenology": {
+          "title": "Bekräftat grödstadium",
+          "body": "Använd endast stadiet som observerats och bekräftats på fältet; härled det inte från datumet."
+        },
+        "soil": {
+          "title": "Jordprofil och provtagning",
+          "body": "Beskrivningen vägleder observationen, men beslut kräver representativa prover och en giltig rapport."
+        },
+        "water": {
+          "title": "Regn → jord → rot → beslut",
+          "body": "Registrera regn eller bevattning, kontrollera jord och rötter och bedöm först därefter nästa steg."
+        },
+        "nutrition": {
+          "title": "N, P och K utan gissad dos",
+          "body": "Näringssymboler hjälper att läsa underlag; dos kräver analys, mål och regional kalibrering."
+        },
+        "mip": {
+          "title": "Prova, räkna, jämför, besluta",
+          "body": "Bekräfta mål och stadium, prova representativt och jämför med en tillämplig tröskel före bekämpning."
+        }
+      }
+    },
+    "technicalStatusTitle": "Teknisk täckning",
+    "technicalVerifiedTitle": "Exakta tekniska moduler tillgängliga",
+    "technicalVerifiedBody": "Identiteten och den aktuella katalogen löser modulerna nedan. De är referenser, inte en automatisk ordination.",
+    "technicalCatalogBody": "Det här är en redaktionell katalogpost, inte en fotodiagnos. Endast moduler som uttryckligen kurerats för grödan visas.",
+    "noExactModulesTitle": "Ingen exakt modul tillgänglig",
+    "noExactModulesBody": "Grödan har en fältguide men ingen publicerad numerisk tabell eller exakt övervakningsmodul.",
+    "technicalUnavailableTitle": "Teknisk dirigering saknas",
+    "technicalUnavailableBody": "Identitet, katalogtäckning eller dirigering räcker inte. Ingen teknisk tabell visas.",
+    "modules": {
+      "pest": "Integrerad skadedjursövervakning",
+      "fertilizer": "Jord- och gödseltabeller"
+    },
+    "ruleCatalogTitle": "Regelkatalogens status",
+    "ruleCatalogGuideBody": "Motorn löste endast en guideregel. Katalogen innehåller ingen numerisk beräkningsregel.",
+    "ruleCatalogCatalogBody": "Den redaktionella katalogen kan öppna kurerade moduler men gör inte posten till en fotodiagnos eller beräkningsregel.",
+    "ruleCatalogUnavailableBody": "Ingen exakt guideregel löstes. Appen härleder ingen från vanligt namn, familj eller äldre fält.",
+    "sourcesTitle": "Officiella källor",
+    "sourcesBody": "Endast källor kopplade till nu publicerade moduler listas.",
+    "officialSource": "Officiell källa · {{institution}}",
+    "openSource": "Öppna officiell källa: {{source}}",
+    "errors": {
+      "typeInvalid": "Välj en giltig posttyp.",
+      "amountInvalid": "Ange ett giltigt icke-negativt tal inom den tillåtna gränsen.",
+      "unitNeedsValue": "Ange ett värde innan du lägger till en enhet.",
+      "unitRequired": "Varje värde måste ha en enhet.",
+      "emptyEvent": "Lägg till en anteckning eller ett värde innan du sparar.",
+      "saveFailed": "Kunde inte spara. Inget bekräftades; försök igen."
+    },
+    "planningSourcesTitle": "Källor för planering",
+    "planningSourcesBody": "Officiell läsning kopplad till grödan. Det betyder inte att en teknisk modul eller rekommendation har publicerats."
+  },
+  "observationWorkspace": {
+    "title": "Avancerad observation",
+    "loading": "Läser in observationer…",
+    "unavailableTitle": "Observationsytan är inte tillgänglig",
+    "unavailableBody": "Den här kategorin saknar en verifierad observationskonfiguration, så inget formulär visas.",
+    "openTitle": "Yta för avancerad observation",
+    "openBody": "Skapa en tydlig dokumentation av det du faktiskt såg, från enkla anteckningar till jämförbara fältbelägg.",
+    "openAction": "Öppna observationsytan",
+    "tabs": {
+      "essential": "Grundläggande",
+      "learn": "Lär dig",
+      "field": "Fält"
+    },
+    "setupTitle": "Ange observationskontext",
+    "setupBody": "Välj den allmänna miljön och skriv var och hur registreringen började. Lägg inte till slutsatser som du inte observerade.",
+    "setupAction": "Skapa kontext",
+    "editProfile": "Redigera kontext",
+    "saveProfile": "Spara kontext",
+    "contextLabel": "Observationskontext",
+    "placeLabel": "Plats",
+    "placePlaceholder": "Exempel: norra trädgården, bäckkanten eller balkongen",
+    "baselineLabel": "Utgångsläge",
+    "baselinePlaceholder": "Beskriv det synliga tillståndet vid den första observationen",
+    "profileSaved": "Kontexten sparades.",
+    "localOnly": "Sparas endast på den här enheten. Det är varken en diagnos eller en molnsäkerhetskopia.",
+    "addEvent": "Lägg till fältanteckning",
+    "closeEvent": "Stäng formuläret",
+    "eventTypeLabel": "Observationstyp",
+    "noteLabel": "Anteckning",
+    "notePlaceholder": "Beskriv endast det du såg eller hörde",
+    "countLabel": "Observerat antal",
+    "measureLabel": "Observerat mått",
+    "unitLabel": "Enhet",
+    "optionalLabel": "Valfritt",
+    "saveEvent": "Spara registrering",
+    "eventSaved": "Registreringen sparades.",
+    "emptyEvent": "Lägg till en anteckning, ett antal eller ett mått innan du sparar.",
+    "invalidCount": "Ange ett helt antal som är noll eller större.",
+    "invalidMeasure": "Ange ett giltigt mått som är noll eller större.",
+    "unitRequired": "Välj en enhet för måttet.",
+    "saveFailed": "Registreringen kunde inte sparas. Försök igen.",
+    "timelineTitle": "Observationstidslinje",
+    "timelineEmpty": "Inga observationer har registrerats än.",
+    "fieldTitle": "Fältvy",
+    "fieldBody": "Jämför registreringar gjorda under liknande förhållanden och ta med historiken till en kvalificerad specialist när ett beslut behövs.",
+    "progressLabel": "{{done}} av {{total}} observationspunkter registrerade",
+    "recordedLabel": "Registrerad {{date}}",
+    "missingLabel": "Inte registrerad",
+    "evidenceNote": "Registreringarna beskriver det du observerade. De bekräftar inte identitet, diagnos, risk eller ett skötselbeslut.",
+    "learningTitle": "Lär dig vad du ska observera",
+    "learningBody": "Öppna varje bild för att förstå vad som hör till en användbar registrering.",
+    "generalDiagram": "Allmänt observationsdiagram; det bevisar inte identiteten hos den fotograferade organismen.",
+    "mushroomSafety": "Konsumera aldrig en svamp utifrån ett foto, en appidentifiering eller denna observationsregistrering.",
+    "units": {
+      "millimetre": "millimeter (mm)",
+      "centimetre": "centimeter (cm)",
+      "metre": "meter (m)",
+      "second": "sekunder (s)",
+      "minute": "minuter (min)",
+      "millilitre": "milliliter (ml)",
+      "litre": "liter (l)",
+      "celsius": "grader Celsius (°C)",
+      "percent": "procent (%)",
+      "gram": "gram (g)",
+      "kilogram": "kilogram (kg)",
+      "ph": "pH",
+      "ppt": "delar per tusen (ppt)",
+      "ppm": "delar per miljon (ppm)",
+      "milligramPerLitre": "milligram per liter (mg/L)",
+      "microsiemensPerCentimetre": "mikrosiemens per centimeter (µS/cm)",
+      "hour": "timmar (h)",
+      "hertz": "hertz (Hz)",
+      "kilohertz": "kilohertz (kHz)",
+      "decibel": "decibel (dB)",
+      "kilometre": "kilometer (km)"
+    },
+    "contexts": {
+      "plant": {
+        "indoor": "Inomhus",
+        "outdoor": "Utomhus",
+        "container": "Behållare",
+        "ground": "I marken"
+      },
+      "tree": {
+        "urban": "Stadsområde",
+        "garden": "Trädgård",
+        "woodland": "Skogsområde",
+        "orchard": "Fruktodling"
+      },
+      "insect": {
+        "onPlant": "På en växt",
+        "onSoil": "På marken",
+        "onStructure": "På en konstruktion",
+        "nearWater": "Nära vatten"
+      },
+      "mushroom": {
+        "soil": "På marken",
+        "wood": "På trä",
+        "leafLitter": "I lövförna",
+        "otherSubstrate": "Annat substrat"
+      },
+      "fish": {
+        "freshwater": "Sötvatten",
+        "marine": "Havsmiljö",
+        "estuary": "Flodmynning",
+        "aquarium": "Akvarium"
+      },
+      "bird": {
+        "urban": "Stadsområde",
+        "forest": "Skog",
+        "wetland": "Våtmark",
+        "openArea": "Öppet område"
+      },
+      "sound": {
+        "dawn": "Gryning",
+        "day": "Dagtid",
+        "dusk": "Skymning",
+        "night": "Natt"
+      }
+    },
+    "eventTypes": {
+      "plant": {
+        "observation": "Växtens miljö",
+        "growth": "Växtens tillväxt",
+        "leafChange": "Förändring i växtens blad",
+        "flowering": "Observerad blomning",
+        "fruiting": "Observerad fruktsättning",
+        "symptom": "Synligt symtom på växten",
+        "care": "Registrerad växtskötsel"
+      },
+      "tree": {
+        "observation": "Trädets miljö",
+        "growth": "Trädets tillväxt",
+        "leafChange": "Förändring i trädets blad",
+        "flowering": "Observerad blomning på trädet",
+        "fruiting": "Observerad fruktsättning på trädet",
+        "symptom": "Synligt symtom på trädet",
+        "habitat": "Trädets livsmiljö"
+      },
+      "insect": {
+        "observation": "Observationskontext",
+        "count": "Observerat antal",
+        "lifeStage": "Observerat livsstadium",
+        "behavior": "Observerat beteende",
+        "interaction": "Observerat samspel",
+        "habitat": "Insektens livsmiljö"
+      },
+      "mushroom": {
+        "observation": "Svampobservation",
+        "emergence": "Observerad framväxt",
+        "morphology": "Synlig morfologi",
+        "substrate": "Substrat",
+        "colorChange": "Färgförändring",
+        "sporePrint": "Registrerat sporavtryck"
+      },
+      "fish": {
+        "observation": "Observationskontext",
+        "count": "Observerat antal",
+        "behavior": "Observerat beteende",
+        "habitat": "Livsmiljö",
+        "waterReading": "Observerat vattenvärde",
+        "feeding": "Observerat födointag"
+      },
+      "bird": {
+        "observation": "Fågelobservation",
+        "count": "Observerat antal",
+        "behavior": "Observerat beteende",
+        "vocalization": "Observerat läte",
+        "nesting": "Observerad häckning",
+        "flight": "Observerad flykt"
+      },
+      "sound": {
+        "observation": "Ljudobservation",
+        "recording": "Inspelning",
+        "comparison": "Jämförelse av inspelningar",
+        "context": "Ljudmiljö",
+        "frequency": "Observerad frekvens",
+        "amplitude": "Observerad amplitud"
+      }
+    },
+    "visuals": {
+      "plant": {
+        "environment": {
+          "title": "Växtens miljö",
+          "body": "Registrera vad som omger organismen och varje synlig förändring."
+        },
+        "light": {
+          "title": "Synligt ljus",
+          "body": "Jämför synliga ljusförhållanden mellan besök utan att dra slutsatser om behov."
+        },
+        "soil": {
+          "title": "Markobservation",
+          "body": "Beskriv den synliga mark- eller substratytan och hur den förändrats."
+        },
+        "growth": {
+          "title": "Växtens tillväxt",
+          "body": "Placera jämförbara tillväxtobservationer på en tidslinje."
+        }
+      },
+      "tree": {
+        "environment": {
+          "title": "Trädets miljö",
+          "body": "Registrera vad som omger organismen och varje synlig förändring."
+        },
+        "light": {
+          "title": "Synligt ljus",
+          "body": "Jämför synliga ljusförhållanden mellan besök utan att dra slutsatser om behov."
+        },
+        "soil": {
+          "title": "Markobservation",
+          "body": "Beskriv den synliga mark- eller substratytan och hur den förändrats."
+        },
+        "growth": {
+          "title": "Trädets tillväxt",
+          "body": "Placera jämförbara tillväxtobservationer på en tidslinje."
+        }
+      },
+      "insect": {
+        "anatomy": {
+          "title": "Synliga kroppsdrag",
+          "body": "Skilj på synliga kroppsdrag innan du föreslår ett livsstadium eller en identitet."
+        },
+        "stage": {
+          "title": "Observerat livsstadium",
+          "body": "Registrera endast det livsstadium du kan observera; lämna tomt vid osäkerhet."
+        },
+        "count": {
+          "title": "Observerat antal",
+          "body": "Räkna på en tydligt beskriven plats så att ett senare besök kan jämföras."
+        },
+        "behaviour": {
+          "title": "Observerat beteende",
+          "body": "Beskriv rörelse och samspel som de observerades, utan att klassa djuret som skadedjur."
+        }
+      },
+      "mushroom": {
+        "substrate": {
+          "title": "Substrat",
+          "body": "Registrera materialet direkt under svampen och den omgivande livsmiljön."
+        },
+        "anatomy": {
+          "title": "Synliga svampdelar",
+          "body": "Skilj på hatt, undersida, fot och bas; ett foto kan dölja avgörande drag."
+        },
+        "underside": {
+          "title": "Synlig undersida",
+          "body": "Beskriv synliga skivor, porer eller annan undersida utan att gissa."
+        },
+        "colourChange": {
+          "title": "Färgförändring",
+          "body": "Registrera om en färgförändring faktiskt sågs och var den inträffade."
+        }
+      },
+      "fish": {
+        "habitat": {
+          "title": "Livsmiljö",
+          "body": "Beskriv det synliga vattnet och var fisken sågs."
+        },
+        "anatomy": {
+          "title": "Synliga fiskdrag",
+          "body": "Jämför kroppsprofil, fenor, teckning och stjärt endast när varje drag är synligt."
+        },
+        "group": {
+          "title": "Fiskar sedda tillsammans",
+          "body": "Registrera det observerade antalet och synfältet; dra ingen slutsats om populationens storlek."
+        },
+        "behaviour": {
+          "title": "Observerat beteende",
+          "body": "Observera på avstånd och registrera rörelse utan kontakt."
+        }
+      },
+      "bird": {
+        "habitat": {
+          "title": "Livsmiljö",
+          "body": "Beskriv den synliga livsmiljön och var fågeln befann sig."
+        },
+        "anatomy": {
+          "title": "Synliga fågeldrag",
+          "body": "Jämför näbb, kropp, vingar och stjärt endast utifrån synliga drag."
+        },
+        "group": {
+          "title": "Fåglar sedda tillsammans",
+          "body": "Registrera gruppen du faktiskt såg utan att uppskatta fåglar utanför synfältet."
+        },
+        "vocalisation": {
+          "title": "Observerat läte",
+          "body": "Beskriv tonhöjd, rytm och upprepning utan att anta vilken art som skapade ljudet."
+        }
+      },
+      "sound": {
+        "waveform": {
+          "title": "Synligt ljudmönster",
+          "body": "Diagrammet visar inspelningsmönstret, inte ett bevis på en art."
+        },
+        "rhythm": {
+          "title": "Rytm och upprepning",
+          "body": "Markera upprepade avsnitt och pauser så som de hördes, utan att hitta på lätets betydelse."
+        },
+        "environment": {
+          "title": "Ljudmiljö",
+          "body": "Registrera tid, plats och bakgrundsljud som kan påverka jämförelsen."
+        },
+        "comparison": {
+          "title": "Jämför inspelningar",
+          "body": "Jämför inspelningar gjorda under liknande förhållanden innan du noterar en skillnad."
+        }
+      }
+    }
+  },
+  "community": {
+    "title": "Gemenskap",
+    "headline": "Gör fyndet till ett användbart tips.",
+    "body": "Bjud in en vän, studiekamrat eller fältgrupp att identifiera med NatureLens också.",
+    "steps": {
+      "identify": "Identifiera en levande art",
+      "save": "Spara det viktiga",
+      "share": "Skicka resultatet till någon som kan använda det"
+    },
+    "inviteAction": "Bjud in en vän",
+    "inviteMessage": "Jag använder NatureLens för att identifiera natur och dela växtskötsel: vattning, skadedjur, återhämtning och upptäckter. Testa här: {{url}}",
+    "screenTitle": "Gemenskap",
+    "entryTitle": "Gemenskapsliga",
+    "entrySubtitle": "Se din rankning, uppdrag och veckoframsteg.",
+    "localBadge": "Lokal liga",
+    "heroTitle": "Din NatureLens-rankning",
+    "rankPosition": "aktuell position",
+    "scoreLabel": "poäng",
+    "leagues": {
+      "seed": "Fröligan — Börja med ett fynd i dag.",
+      "sprout": "Groddligan — Du bygger en riktig vana.",
+      "guardian": "Väktarligan — Din fältlogg blir starkare.",
+      "master": "Mästarligan — En avancerad upptäckares rytm."
+    },
+    "photoRail": "Dina senaste fynd blir omslaget till din liga.",
+    "discoveriesLabel": "fynd",
+    "weeklyLabel": "denna vecka",
+    "categoriesLabel": "kategorier",
+    "streakLabel": "dagars svit",
+    "rankingTitle": "Veckorankning",
+    "rankingBody": "En lokal liga baserad på din bekräftade aktivitet i appen. Inga påhittade globala användare: den blir en riktig offentlig rankning när gemenskapsservern är ansluten.",
+    "leaderboard": {
+      "you": {
+        "name": "Du",
+        "meta": "Din bekräftade aktivitet"
+      },
+      "next": {
+        "name": "Nästa milstolpe",
+        "meta": "Ett nåbart mål för den här veckan"
+      },
+      "elite": {
+        "name": "Elitnivå",
+        "meta": "Mål för avancerade användare"
+      }
+    },
+    "milestonesTitle": "Det som höjer din rankning",
+    "milestones": {
+      "first": "Identifiera och spara verkliga fynd.",
+      "week": "Slutför dagliga uppdrag och håll sviten vid liv.",
+      "allCategories": "Utforska fler kategorier: växter, insekter, fiskar, fåglar och svampar."
+    },
+    "inviteTitle": "Ta med någon på expeditionen",
+    "inviteBody": "Dela appen, slutför inbjudningsuppdraget och låt upplevelsen leva vidare utanför telefonen.",
+    "scanAction": "Skanna nu",
+    "reviewTitle": "Hjälper NatureLens dig?",
+    "reviewBody": "Om appen gjorde ditt fynd tydligare hjälper ditt omdöme fler upptäckare att hitta den.",
+    "reviewAction": "Jag gillar den",
+    "reviewLater": "Inte nu",
+    "reviewThanks": "Tack — det hjälper oss att fortsätta förbättra NatureLens.",
+    "careExchangeTitle": "Dela skötsel",
+    "careExchangeBody": "Dela vad som fungerade: vattning, ljus, skadedjur, återhämtning och före/efter för dina växter.",
+    "careShareAction": "Dela erfarenhet",
+    "careTopics": {
+      "watering": "Vattningsrutin",
+      "pests": "Skadedjur och symtom",
+      "recovery": "Före och efter",
+      "questions": "Fråga gruppen"
+    }
+  },
+  "ipm": {
+    "title": "Integrerat växtskydd",
+    "chooseCrop": "Välj grödan där insekten observerades. Protokollet öppnas bara för ett exakt dokumenterat par.",
+    "exactPair": "Exakt par: {{insect}} på {{crop}}",
+    "prevention": "Förebyggande",
+    "monitoring": "Övervakning",
+    "threshold": "Dokumenterad åtgärdströskel",
+    "cultural": "Odlingsåtgärder",
+    "mechanical": "Mekanisk bekämpning",
+    "biological": "Biologisk bekämpning",
+    "chemical": "Kemisk bekämpning: endast registreringskontroll",
+    "chemicalReferral": "Ingen produkt eller dos anges här. Kontrollera den aktuella etiketten för exakt denna gröda och skadegörare i ditt land och bekräfta med lokal agronom.",
+    "citationOnly": "faktahänvisning; källtext återges inte",
+    "crops": {
+      "maize": "Majs",
+      "tomato": "Tomat",
+      "soybean": "Sojaböna",
+      "uplandCotton": "Uplandbomull",
+      "commonBean": "Trädgårdsböna",
+      "arabicaCoffee": "Arabicakaffe"
+    },
+    "actions": {
+      "avoidCalendarSprays": "Spruta inte enligt kalender; låt representativ övervakning styra beslutet.",
+      "checkRegisteredBiocontrol": "Kontrollera lokalt godkända biologiska alternativ för exakt denna gröda och skadegörare.",
+      "confirmDamageAndStage": "Bekräfta förenlig skada och registrera insektens utvecklingsstadium.",
+      "inspectFruitDamage": "Kontrollera frukter efter ingångshål och inre skador.",
+      "inspectLeafMines": "Kontrollera unga blad efter aktiva minor och larver.",
+      "inspectTransplants": "Kontrollera plantor innan de förs in i odlingen.",
+      "inspectWhorl": "Öppna och kontrollera majsens bladslida efter färska skrapskador och larver.",
+      "manageCropResidue": "Ta bort eller hantera angripna skörderester korrekt efter skörd.",
+      "preserveNaturalEnemies": "Skydda parasitoider, rovdjur och andra naturliga fiender.",
+      "protectNursery": "Håll plantskolan skyddad och fri från angripna plantor.",
+      "recordCropStage": "Registrera grödans utvecklingsstadium vid varje provtagning.",
+      "removeEggMassesSmallPlots": "Ta bort åtkomliga äggsamlingar och larver på små ytor.",
+      "removeInfestedTissue": "Ta bort och kassera angripna blad och frukter på ett säkert sätt.",
+      "removeVolunteerHosts": "Bekämpa spillsäd och friväxande värdväxter mellan grödor.",
+      "rotateOutsideHostFamily": "Växla om möjligt med en gröda utanför värdväxtfamiljen.",
+      "sampleCoolHours": "Provta under svalare timmar när stinkflyn är lättare att upptäcka.",
+      "sampleRepresentativePoints": "Fördela provpunkter över fältet och kontrollera inte bara kanten.",
+      "useBeatCloth": "Använd slaghåvningsduk konsekvent på representativa punkter.",
+      "useInsectScreens": "Använd insektsnät där odlingssystemet tillåter det.",
+      "usePheromoneTraps": "Använd feromonfällor för att följa flygningen; fångsttal ensamt mäter inte grödskada.",
+      "avoidStaggeredPlanting": "Undvik förskjuten sådd och samordna såfönstret regionalt när den officiella vägledningen kräver det.",
+      "avoidOlderMaizeNearby": "Så inte ny majs intill äldre majsfält med dvärgväxtsymtom.",
+      "removeAlternateHosts": "Ta bort alternativa värdväxter och bönplantor med virussymtom.",
+      "inspectFieldEdges": "Kontrollera fältets ytterkant först, eftersom inflygning och skador ofta koncentreras där.",
+      "inspectFlowerBuds": "Kontrollera bomullens blomknoppar efter närings- och äggläggningsstick.",
+      "completeSanitaryHarvest": "Skörda noggrant och ta bort kaffebär som lämnats på plantorna och marken.",
+      "inspectLowerCanopy": "Kontrollera sojans mellersta och nedre bladverk där larverna gömmer sig."
+    },
+    "thresholds": {
+      "initialSymptomsHighYieldThreshold": "Endast för fält med en avkastningspotential på minst {{minimumYieldBagsPerHa}} säckar/ha: på {{sampleAreaHa}} ha kontrolleras {{samplePoints}} slumpmässiga punkter. Den publicerade referensen är {{actionPercent}}% plantor med tidiga angreppssymtom."
+    }
   }
 }

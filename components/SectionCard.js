@@ -1,14 +1,25 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import { colors, shadow } from './theme';
+import { colors, radius, shadow, space, type } from './theme';
 
 export default function SectionCard({ icon, title, color, children }) {
   return (
     <View style={styles.card}>
       <View style={styles.header}>
-        <Ionicons name={icon} size={18} color={color || colors.accent} />
-        <Text style={[styles.title, { color: color || colors.accent }]}>{title}</Text>
+        <Ionicons
+          name={icon}
+          size={18}
+          color={color || colors.accent}
+          accessibilityElementsHidden={true}
+          importantForAccessibility="no-hide-descendants"
+        />
+        <Text
+          style={[styles.title, { color: color || colors.accent }]}
+          accessibilityRole="header"
+        >
+          {title}
+        </Text>
       </View>
       {children}
     </View>
@@ -18,9 +29,9 @@ export default function SectionCard({ icon, title, color, children }) {
 const styles = StyleSheet.create({
   card: {
     backgroundColor: colors.card,
-    borderRadius: 16,
-    padding: 16,
-    marginBottom: 16,
+    borderRadius: radius.md,
+    padding: space.md,
+    marginBottom: space.md,
     borderWidth: 1,
     borderColor: colors.border,
     ...shadow,
@@ -28,11 +39,10 @@ const styles = StyleSheet.create({
   header: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginBottom: 12,
+    marginBottom: space.sm,
   },
   title: {
-    fontSize: 15,
-    fontWeight: '700',
-    marginLeft: 8,
+    ...type.cardTitle,
+    marginLeft: space.xs,
   },
 });

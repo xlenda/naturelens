@@ -27,6 +27,8 @@
     },
     "blueTang": {
       "overview": "A brilliant royal-blue reef fish with a black 'palette' marking and a yellow tail. Like all surgeonfish it carries a scalpel-sharp spine near the base of the tail.",
+      "riskKey": "sharp_tail_spine",
+      "safety": "A brilliant royal-blue reef fish with a black 'palette' marking and a yellow tail. Like all surgeonfish it carries a scalpel-sharp spine near the base of the tail.",
       "habitat": "Coral reefs of the Indo-Pacific, usually in small groups near branching coral it can hide in.",
       "curiosity": "Juveniles are bright yellow and turn blue as they mature — and the tail spine, normally folded flat, flicks out sideways when the fish is threatened."
     },
@@ -47,6 +49,8 @@
     },
     "redLionfish": {
       "overview": "A striking fish banded in red, white and brown, with long fan-like fins hiding venomous spines. Beautiful, slow-moving and best not touched.",
+      "riskKey": "venomous_spines",
+      "safety": "A striking fish banded in red, white and brown, with long fan-like fins hiding venomous spines. Beautiful, slow-moving and best not touched.",
       "habitat": "Native to Indo-Pacific reefs; now a severe invasive species throughout the Caribbean and western Atlantic.",
       "curiosity": "In its invaded range it has almost no predators and eats nearly anything that fits in its mouth, which is why some countries actively encourage spearing and eating it."
     }

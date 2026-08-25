@@ -1,12 +1,11 @@
 import 'react-native-gesture-handler';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { View, Platform } from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { NavigationContainer, useNavigationContainerRef } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator, TransitionPresets } from '@react-navigation/stack';
-import { Ionicons } from '@expo/vector-icons';
 import CategoryIcon from './components/CategoryIcon';
 import { StatusBar } from 'expo-status-bar';
 import { useTranslation } from 'react-i18next';
@@ -17,12 +16,15 @@ import PlantDetailScreen from './screens/PlantDetailScreen';
 import InsectDetailScreen from './screens/InsectDetailScreen';
 import MushroomDetailScreen from './screens/MushroomDetailScreen';
 import CropDetailScreen from './screens/CropDetailScreen';
+import AgronomyWorkspaceScreen from './screens/AgronomyWorkspaceScreen';
+import ObservationWorkspaceScreen from './screens/ObservationWorkspaceScreen';
 import TreeDetailScreen from './screens/TreeDetailScreen';
 import FishDetailScreen from './screens/FishDetailScreen';
 import BirdDetailScreen from './screens/BirdDetailScreen';
 import SoundScreen from './screens/SoundScreen';
 import SoundDetailScreen from './screens/SoundDetailScreen';
 import CollectionScreen from './screens/CollectionScreen';
+import SpecimenScreen from './screens/SpecimenScreen';
 import DiscoverScreen from './screens/DiscoverScreen';
 import TopicDetailScreen from './screens/TopicDetailScreen';
 import SpeciesDetailScreen from './screens/SpeciesDetailScreen';
@@ -32,6 +34,7 @@ import BookScreen from './screens/BookScreen';
 import BotanistScreen from './screens/BotanistScreen';
 import ProfileScreen from './screens/ProfileScreen';
 import AchievementsScreen from './screens/AchievementsScreen';
+import CommunityScreen from './screens/CommunityScreen';
 import StoreScreen from './screens/StoreScreen';
 import MonthlyRecapScreen from './screens/MonthlyRecapScreen';
 import SubscriptionScreen from './screens/SubscriptionScreen';
@@ -49,10 +52,20 @@ import { pollSubscriptionStatus, PLAN_PRICES } from './components/subscription';
 import { completeGoogleSignIn } from './components/restore';
 import AlertModal from './components/AlertModal';
 import ErrorBoundary from './components/ErrorBoundary';
-import TwoRowTabBar from './components/TwoRowTabBar';
+import TwoRowTabBar, { focusedLeafNameFromState } from './components/TwoRowTabBar';
 import OnboardingScreen from './screens/OnboardingScreen';
-import { hasSeenOnboarding } from './components/onboarding';
+import { hasSeenOnboarding, subscribeOnboardingReplay } from './components/onboarding';
+import {
+  getDiscoveryPreferences,
+  updateDiscoveryPreferences,
+} from './components/discoveryPreferences';
 import { trackAppOpen } from './components/tracking';
+import { getCollectionEntry } from './components/storage';
+import {
+  getInitialReminderResponse,
+  reconcileLocalReminders,
+  subscribeReminderResponses,
+} from './components/localReminders';
 
 const Tab = createBottomTabNavigator();
 const ScanStack = createStackNavigator();
@@ -104,6 +117,12 @@ function makeScanStackNav(categoryKey) {
         <ScanStack.Screen name="ScanHome" component={IdentifyScreen} initialParams={{ category: categoryKey }} />
         <ScanStack.Screen name={meta.detailRoute} component={DetailScreen} />
         <ScanStack.Screen name="CareTopics" component={CareTopicsScreen} />
+        {categoryKey === 'crop' ? (
+          <ScanStack.Screen name="AgronomyWorkspace" component={AgronomyWorkspaceScreen} />
+        ) : null}
+        {categoryKey !== 'crop' ? (
+          <ScanStack.Screen name="ObservationWorkspace" component={ObservationWorkspaceScreen} />
+        ) : null}
       </ScanStack.Navigator>
     );
   };
@@ -128,6 +147,7 @@ function SoundStackNav() {
       <ScanStack.Screen name="SoundHome" component={SoundScreen} />
       <ScanStack.Screen name="SoundDetail" component={SoundDetailScreen} />
       <ScanStack.Screen name="CareTopics" component={CareTopicsScreen} />
+      <ScanStack.Screen name="ObservationWorkspace" component={ObservationWorkspaceScreen} />
     </ScanStack.Navigator>
   );
 }
@@ -136,10 +156,13 @@ function CollectionStackNav() {
   return (
     <CollectionStack.Navigator screenOptions={STACK_OPTIONS}>
       <CollectionStack.Screen name="CollectionHome" component={CollectionScreen} />
+      <CollectionStack.Screen name="Specimen" component={SpecimenScreen} />
       <CollectionStack.Screen name="PlantDetail" component={PlantDetailScreen} />
       <CollectionStack.Screen name="InsectDetail" component={InsectDetailScreen} />
       <CollectionStack.Screen name="MushroomDetail" component={MushroomDetailScreen} />
       <CollectionStack.Screen name="CropDetail" component={CropDetailScreen} />
+      <CollectionStack.Screen name="AgronomyWorkspace" component={AgronomyWorkspaceScreen} />
+      <CollectionStack.Screen name="ObservationWorkspace" component={ObservationWorkspaceScreen} />
       <CollectionStack.Screen name="TreeDetail" component={TreeDetailScreen} />
       {/* Every category that can be SAVED needs its detail route registered
           here too, not just inside its own scan stack - otherwise tapping that
@@ -163,6 +186,7 @@ function ProfileStackNav() {
     <ProfileStack.Navigator screenOptions={STACK_OPTIONS}>
       <ProfileStack.Screen name="ProfileHome" component={ProfileScreen} />
       <ProfileStack.Screen name="Achievements" component={AchievementsScreen} />
+      <ProfileStack.Screen name="Community" component={CommunityScreen} />
       <ProfileStack.Screen name="Store" component={StoreScreen} />
       <ProfileStack.Screen name="MonthlyRecap" component={MonthlyRecapScreen} />
       <ProfileStack.Screen name="Subscription" component={SubscriptionScreen} />
@@ -185,6 +209,10 @@ function DiscoverStackNav() {
       <DiscoverStack.Screen name="SpeciesDetail" component={SpeciesDetailScreen} />
       <DiscoverStack.Screen name="HerbDetail" component={HerbDetailScreen} />
       <DiscoverStack.Screen name="FieldGuide" component={FieldGuideScreen} />
+      <DiscoverStack.Screen name="CropDetail" component={CropDetailScreen} />
+      <DiscoverStack.Screen name="AgronomyWorkspace" component={AgronomyWorkspaceScreen} />
+      <DiscoverStack.Screen name="ObservationWorkspace" component={ObservationWorkspaceScreen} />
+      <DiscoverStack.Screen name="CareTopics" component={CareTopicsScreen} />
       <DiscoverStack.Screen name="Book" component={BookScreen} />
     </DiscoverStack.Navigator>
   );
@@ -219,10 +247,30 @@ function AppContent() {
   // null = still checking. Rendering the app before this resolves would flash
   // the camera screen at a first-time user for a frame before the intro.
   const [showOnboarding, setShowOnboarding] = useState(null);
+  // The navigator mounts only after this resolves. React Navigation reads
+  // initialRouteName once, so mounting early would always flash/open Plants
+  // even when the person last identified a bird, fish or mushroom.
+  const [initialCategoryKey, setInitialCategoryKey] = useState(null);
 
   useEffect(() => {
-    hasSeenOnboarding().then((seen) => setShowOnboarding(!seen));
+    let active = true;
+    Promise.all([hasSeenOnboarding(), getDiscoveryPreferences()]).then(([seen, preferences]) => {
+      if (!active) return;
+      const preferred = CATEGORIES[preferences.preferredCategory];
+      setInitialCategoryKey(
+        preferred && preferred.enabled !== false ? preferred.key : CATEGORIES.plant.key
+      );
+      setShowOnboarding(!seen);
+    });
+    return () => {
+      active = false;
+    };
   }, []);
+
+  useEffect(
+    () => subscribeOnboardingReplay(() => setShowOnboarding(true)),
+    []
+  );
 
   useEffect(() => {
     // The .catch is not defensive padding - it closes a real black-screen bug.
@@ -251,7 +299,7 @@ function AppContent() {
       .finally(() => setI18nReady(true));
   }, []);
 
-  if (!i18nReady || showOnboarding === null) {
+  if (!i18nReady || showOnboarding === null || initialCategoryKey === null) {
     return <View style={{ flex: 1, backgroundColor: colors.background }} />;
   }
 
@@ -268,15 +316,30 @@ function AppContent() {
     return (
       <SafeAreaProvider>
         <StatusBar style="light" />
-        <OnboardingScreen onDone={() => setShowOnboarding(false)} />
+        <OnboardingScreen
+          onDone={(preferences) => {
+            if (
+              preferences?.preferredCategory
+              && CATEGORIES[preferences.preferredCategory]?.enabled !== false
+            ) {
+              setInitialCategoryKey(preferences.preferredCategory);
+            }
+            setShowOnboarding(false);
+          }}
+        />
       </SafeAreaProvider>
     );
   }
 
-  return <AppNavigator />;
+  return (
+    <AppNavigator
+      initialCategoryKey={initialCategoryKey}
+      onPreferredCategoryChange={setInitialCategoryKey}
+    />
+  );
 }
 
-function AppNavigator() {
+function AppNavigator({ initialCategoryKey, onPreferredCategoryChange }) {
   const { t } = useTranslation();
   // 'confirmed' | 'pending' | null - drives the post-checkout AlertModal.
   // Entitlement depends on Stripe's webhook landing before the user's next
@@ -291,6 +354,16 @@ function AppNavigator() {
   // exchanges it server-side using the code_verifier stashed earlier in
   // sessionStorage (see components/restore.js).
   const [googleSignInResult, setGoogleSignInResult] = useState(null);
+  // A tabBar recebe um estado recortado que pode omitir o Stack filho. A folha
+  // vem do estado raiz do container para o dock nunca reaparecer num detalhe.
+  const [focusedLeafRouteName, setFocusedLeafRouteName] = useState(null);
+
+  const rememberPreferredCategory = (categoryKey) => {
+    const category = CATEGORIES[categoryKey];
+    if (!category || category.enabled === false) return;
+    onPreferredCategoryChange?.(categoryKey);
+    updateDiscoveryPreferences({ preferredCategory: categoryKey }).catch(() => undefined);
+  };
 
   // Botao VOLTAR do Android no PWA.
   //
@@ -309,11 +382,56 @@ function AppNavigator() {
   // sobrar pilha. Voltar pelo chevron da tela deixa a entrada sem uso - custa
   // no maximo UM toque de voltar sem efeito, nunca sair do app sem querer.
   const navigationRef = useNavigationContainerRef();
+  const pendingReminderTarget = useRef(null);
+  const recentReminderTarget = useRef({ key: '', at: 0 });
+
+  const openReminderTarget = async (target) => {
+    if (Platform.OS !== 'android'
+      || target?.type !== 'specimen-reminder'
+      || typeof target.savedId !== 'string'
+      || typeof target.reminderId !== 'string') return;
+    if (!navigationRef.isReady()) {
+      pendingReminderTarget.current = target;
+      return;
+    }
+
+    const key = `${target.savedId}:${target.reminderId}`;
+    const now = Date.now();
+    if (recentReminderTarget.current.key === key
+      && now - recentReminderTarget.current.at < 2000) return;
+    recentReminderTarget.current = { key, at: now };
+
+    const entry = await getCollectionEntry(target.savedId);
+    if (!navigationRef.isReady()) {
+      pendingReminderTarget.current = target;
+      return;
+    }
+    navigationRef.navigate('Collection', entry
+      ? { screen: 'Specimen', params: { savedId: target.savedId } }
+      : { screen: 'CollectionHome' });
+  };
+
+  const handleNavigatorReady = () => {
+    syncFocusedLeaf();
+    const target = pendingReminderTarget.current;
+    pendingReminderTarget.current = null;
+    if (target) openReminderTarget(target);
+  };
   const syncHistory = () => {
     if (Platform.OS !== 'web') return;
     if (navigationRef.canGoBack() && !window.history.state?.nlBack) {
       window.history.pushState({ nlBack: true }, '');
     }
+  };
+
+  const syncFocusedLeaf = (state) => {
+    const fullState = state || navigationRef.getRootState();
+    setFocusedLeafRouteName(focusedLeafNameFromState(fullState));
+  };
+
+  const handleNavigationStateChange = (state) => {
+    syncHistory();
+    syncFocusedLeaf(state);
   };
 
   useEffect(() => {
@@ -323,6 +441,25 @@ function AppNavigator() {
     };
     window.addEventListener('popstate', onPop);
     return () => window.removeEventListener('popstate', onPop);
+  }, []);
+
+  useEffect(() => {
+    if (Platform.OS !== 'android') return undefined;
+    let active = true;
+    const subscription = subscribeReminderResponses((target) => {
+      if (active) openReminderTarget(target);
+    });
+    getInitialReminderResponse()
+      .then((target) => {
+        if (active && target) openReminderTarget(target);
+      })
+      .finally(() => {
+        if (active) reconcileLocalReminders().catch(() => undefined);
+      });
+    return () => {
+      active = false;
+      subscription?.remove?.();
+    };
   }, []);
 
   useEffect(() => {
@@ -397,14 +534,26 @@ function AppNavigator() {
     <GestureHandlerRootView style={{ flex: 1 }}>
       <SafeAreaProvider>
         <StatusBar style="light" />
-        <NavigationContainer ref={navigationRef} onStateChange={syncHistory}>
+        <NavigationContainer
+          ref={navigationRef}
+          onReady={handleNavigatorReady}
+          onStateChange={handleNavigationStateChange}
+        >
           <Tab.Navigator
+            initialRouteName={CATEGORIES[initialCategoryKey]?.tabLabel || CATEGORIES.plant.tabLabel}
             // Custom two-row bar: with 8-10 tabs the default single-row layout
             // squeezed each label into ~36px and they visibly overlapped.
             // See components/TwoRowTabBar.js.
-            tabBar={(props) => <TwoRowTabBar {...props} />}
+            tabBar={(props) => (
+              <TwoRowTabBar {...props} focusedLeafRouteName={focusedLeafRouteName} />
+            )}
             screenOptions={({ route }) => ({
               headerShown: false,
+              // Custom dock metadata. Keeping it in screen options lets the
+              // tab bar share one preference source without another storage
+              // subscription or changing the navigation/scroll contract.
+              natureLensInitialCategory: initialCategoryKey,
+              natureLensRememberCategory: rememberPreferredCategory,
               tabBarActiveTintColor: colors.accent,
               tabBarInactiveTintColor: colors.textMuted,
               tabBarIcon: ({ color, size, focused }) => {

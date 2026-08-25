@@ -67,19 +67,18 @@ export function looksLikeProse(text) {
  * @param {object} args
  * @param {string=} args.scientific  binomial - the reliable key, identical in
  *                                   every language
- * @param {string=} args.commonName  English common name, used when the vendor
- *                                   gives no binomial (Nyckel returns only a
- *                                   label like "Peregrine Falcon")
  * @param {string}  args.language
  * @returns {Promise<{text: string, source: 'wikipedia', localised: boolean,
  *                    title: string|null, url: string|null} | null>}
  *          null when nothing was found - the caller then keeps whatever it had.
  */
-export async function getLocalisedOverview({ scientific, commonName, language }) {
-  const lookup = scientific || commonName;
-  if (!lookup) return null;
+export async function getLocalisedOverview({ scientific, language }) {
+  // Nome popular pode apontar para homonimo, desambiguacao ou outro taxon em
+  // outro idioma. Wikipedia so complementa quando existe binomio confirmado;
+  // sem ele o bloco some, como qualquer dado ausente do projeto.
+  if (!scientific) return null;
 
-  const info = await getSpeciesInfo(lookup, language);
+  const info = await getSpeciesInfo(scientific, language);
   if (!info?.extract) return null;
 
   return {

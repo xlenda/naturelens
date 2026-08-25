@@ -15,7 +15,8 @@
         "summer": "Měsíčně, půl dávky",
         "autumn": "Ukončit",
         "winter": "Nehnojit",
-        "note": "Málo dusíku, polovina až čtvrtina dávky z etikety. Přebytek dusíku tvoří měkká pletiva, která hnijí (Clemson, Iowa State)."
+        "note": "Málo dusíku, polovina až čtvrtina dávky z etikety. Přebytek dusíku tvoří měkká pletiva, která hnijí (Clemson, Iowa State).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "Přesazování",
@@ -51,7 +52,8 @@
         "summer": "Měsíčně, zředěné",
         "autumn": "Omezit",
         "winter": "Nehnojit",
-        "note": "Pokojové rostliny se hnojí jen v době růstu, v období klidu vůbec (UConn)."
+        "note": "Pokojové rostliny se hnojí jen v době růstu, v období klidu vůbec (UConn).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "Řízkování",
@@ -79,7 +81,8 @@
         "summer": "Měsíčně, půl dávky",
         "autumn": "Ukončit",
         "winter": "Nehnojit",
-        "note": "Po dělení nebo přesazení 6 měsíců vůbec nic; příliš hnojiva spálí listy (Clemson, UConn)."
+        "note": "Po dělení nebo přesazení 6 měsíců vůbec nic; příliš hnojiva spálí listy (Clemson, UConn).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "Dělení a přesazení",
@@ -115,7 +118,8 @@
         "summer": "Po sklizni",
         "autumn": "Ukončit",
         "winter": "Nehnojit",
-        "note": "Peckoviny berou tři dělené dávky a nic v posledních týdnech léta, aby dřevo vyzrálo (Clemson)."
+        "note": "Peckoviny berou tři dělené dávky a nic v posledních týdnech léta, aby dřevo vyzrálo (Clemson).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "Řez",
@@ -143,7 +147,8 @@
         "summer": "Každých 6 týdnů",
         "autumn": "Před mrazem stop",
         "winter": "Nehnojit",
-        "note": "Růže jdou na půl dávky v největším horku a končí 6 týdnů před prvním očekávaným mrazem (Clemson)."
+        "note": "Růže jdou na půl dávky v největším horku a končí 6 týdnů před prvním očekávaným mrazem (Clemson).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "Odkvetlé květy",
@@ -179,7 +184,8 @@
         "summer": "Dělené dávky",
         "autumn": "Ukončit",
         "winter": "Nehnojit",
-        "note": "Vzrostlý strom potřebuje málo nebo vůbec nic. Pozdní dusíkaté hnojení oddaluje vegetační klid (Clemson)."
+        "note": "Vzrostlý strom potřebuje málo nebo vůbec nic. Pozdní dusíkaté hnojení oddaluje vegetační klid (Clemson).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "Řez",
@@ -215,7 +221,8 @@
         "summer": "Týdně, půl dávky",
         "autumn": "Každé 2 týdny",
         "winter": "Každé 2 týdny",
-        "note": "Poloviční dávka z etikety, málo nebo žádná močovina, a každou 4. dávku vynechat kvůli vyplavení solí (AOS, RHS)."
+        "note": "Poloviční dávka z etikety, málo nebo žádná močovina, a každou 4. dávku vynechat kvůli vyplavení solí (AOS, RHS).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "Přesazování",
@@ -251,7 +258,8 @@
         "summer": "Jen když stagnuje",
         "autumn": "Nehnojit",
         "winter": "Nehnojit",
-        "note": "Rozmarýn v záhonu nedostává nic a velmi živná půda otupí chuť (RHS, Clemson)."
+        "note": "Rozmarýn v záhonu nedostává nic a velmi živná půda otupí chuť (RHS, Clemson).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "Řez",

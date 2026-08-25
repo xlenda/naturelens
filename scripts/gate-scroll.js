@@ -119,6 +119,44 @@ async function tocarEm(Runtime, Input, regex) {
   return true;
 }
 
+async function contarAbas(Runtime) {
+  return avaliar(
+    Runtime,
+    `(() => {
+      const t = document.body.innerText || '';
+      const hits = ['Plants','Plantas','Insects','Insetos','Collection','Colecao','Coleção','Discover','Descobrir'];
+      return hits.filter((h) => t.includes(h)).length;
+    })()`
+  );
+}
+
+async function escolherPrimeiraOpcaoSePreciso(Runtime) {
+  await avaliar(
+    Runtime,
+    `(() => {
+      const radios = [...document.querySelectorAll('[role="radio"]')];
+      if (!radios.length) return false;
+      if (radios.some((e) => e.getAttribute('aria-checked') === 'true')) return false;
+      radios[0].click();
+      return true;
+    })()`
+  );
+}
+
+async function atravessarOnboarding(Runtime, Input) {
+  for (let i = 0; i < 12; i++) {
+    if ((await contarAbas(Runtime)) >= 2) return true;
+    await escolherPrimeiraOpcaoSePreciso(Runtime);
+    await tocarEm(
+      Runtime,
+      Input,
+      /^(Avan|Next|Siguiente|Weiter|Comecar|Começar|Start identifying|Empezar|Get started|Start|Continuar|Continue|Pular|Skip)/i
+    );
+    await sleep(900);
+  }
+  return (await contarAbas(Runtime)) >= 2;
+}
+
 async function main() {
   const chromePath = findChrome();
   if (!chromePath) {
@@ -188,6 +226,9 @@ async function main() {
 
     // Onboarding da primeira visita fica na frente de tudo (perfil vazio).
     await tocarEm(Runtime, Input, /^(Comecar|Começar|Get started|Start|Continuar|Continue|Pular|Skip)$/i);
+    // O clique acima cobre o onboarding antigo. O fluxo novo tem video de
+    // abertura e perguntas, entao precisa atravessar todos os estados.
+    await atravessarOnboarding(Runtime, Input);
     await sleep(1500);
 
     resultados.push(await medirRota(Runtime, Input, 'HOME'));

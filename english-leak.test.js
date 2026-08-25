@@ -49,20 +49,35 @@ test('no English placeholder is ever stored as a species description', () => {
   );
 });
 
-test('every screen has a translated fallback for a missing description', () => {
-  // Now that the API sends null, a screen rendering plant.overview raw would
-  // show an empty card.
+test('plant and tree hide a missing description instead of inventing a fallback', () => {
+  // Dado ausente nao vira frase generica: o card inteiro some, como nas
+  // categorias de fauna e fungo.
   for (const screen of [
     'screens/PlantDetailScreen.js',
     'screens/TreeDetailScreen.js',
-    'screens/InsectDetailScreen.js',
-    'screens/MushroomDetailScreen.js',
   ]) {
     const src = read(screen);
     assert.match(
       src,
-      /\{plant\.overview \|\| t\(/,
-      `${screen} renders plant.overview with no translated fallback`
+      /!!plant\.overview\s*&&\s*\(/,
+      `${screen} must guard the overview card`
+    );
+    assert.doesNotMatch(src, /plant\.overview\s*\|\|\s*t\(/,
+      `${screen} must not present generic copy as a species description`);
+  }
+});
+
+test('a missing wildlife or fungus overview hides the card instead of padding it', () => {
+  for (const screen of [
+    'screens/InsectDetailScreen.js',
+    'screens/MushroomDetailScreen.js',
+  ]) {
+    const src = read(screen);
+    assert.match(src, /!!plant\.overview\s*&&\s*\(/, `${screen} must guard its overview card`);
+    assert.doesNotMatch(
+      src,
+      /plant\.overview\s*\|\|\s*t\('sound\.noContentBody'/,
+      `${screen} must not render a generic placeholder as species content`
     );
   }
 });

@@ -14,6 +14,7 @@ export const LANGUAGE_STORAGE_KEY = '@textmarker_language';
 // AsyncStorage, because a store build has no service worker to fall back on.
 import { API_BASE } from './components/apiBase';
 import bundledEn from './components/bundledEn';
+import { normaliseAppLanguage } from './components/appLanguage';
 
 export const SUPPORTED_LANGUAGES = [
   { code: 'en', label: 'English' },
@@ -100,7 +101,7 @@ async function loadLanguage(code) {
 
 function detectDeviceLanguage() {
   const locales = Localization.getLocales?.() || [];
-  const code = locales[0]?.languageCode;
+  const code = normaliseAppLanguage(locales[0]?.languageTag || locales[0]?.languageCode);
   return SUPPORTED_CODES.includes(code) ? code : 'en';
 }
 

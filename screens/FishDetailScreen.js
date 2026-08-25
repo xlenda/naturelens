@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, StyleSheet, ScrollView, TouchableOpacity, Image, Linking } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, TouchableOpacity, Linking } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useNavigation } from '@react-navigation/native';
 import { Ionicons } from '@expo/vector-icons';
@@ -8,8 +8,16 @@ import { useTranslation } from 'react-i18next';
 import PlantHero from '../components/PlantHero';
 import SectionCard from '../components/SectionCard';
 import IdentificationExtras from '../components/IdentificationExtras';
+import DidacticFieldGuide from '../components/DidacticFieldGuide';
+import DiscoveryReceiptCard from '../components/DiscoveryReceiptCard';
+import { enrichmentTaxon } from '../components/taxonIdentity';
 import { colors } from '../components/theme';
-import { getCollection, saveToCollection, removeFromCollection } from '../components/storage';
+import {
+  getCollection,
+  saveToCollection,
+  removeFromCollection,
+  updateCollectionEntry,
+} from '../components/storage';
 import { CATEGORIES } from '../components/categories';
 import { shareEntity } from '../components/share';
 import InstallNudgeCard from '../components/InstallNudgeCard';
@@ -18,6 +26,7 @@ import AlertModal from '../components/AlertModal';
 import { useAppAlert } from '../components/useAppAlert';
 import { addTokens } from '../components/achievements';
 import { recordMissionEvent, TOKENS_PER_MISSION } from '../components/missions';
+import { trackResultSaved } from '../components/tracking';
 import { getLocalisedOverview, looksLikeProse } from '../components/localisedOverview';
 import TranslatableText from '../components/TranslatableText';
 import NatureScene from '../components/NatureScene';
@@ -25,12 +34,45 @@ import ZoneBand from '../components/ZoneBand';
 import PressScale from '../components/PressScale';
 import ResultActionBar from '../components/ResultActionBar';
 import HelpfulRow from '../components/HelpfulRow';
-import SpeciesFaq from '../components/SpeciesFaq';
 import ShareSpeciesCard from '../components/ShareSpeciesCard';
+import CommunityInviteCard from '../components/CommunityInviteCard';
 import Pronounce from '../components/Pronounce';
 import TopBar, { TopBarIcon } from '../components/TopBar';
 import ExpandableText from '../components/ExpandableText';
 import DistributionMap from '../components/DistributionMap';
+import SeasonChart from '../components/SeasonChart';
+import ExactSpeciesGuide from '../components/ExactSpeciesGuide';
+import DynamicSpeciesDossier from '../components/DynamicSpeciesDossier';
+import { API_BASE } from '../components/apiBase';
+import { getSpeciesDossier } from '../components/speciesDossier';
+import { buildFishDossierTopics } from '../components/fishDossierTopics';
+import {
+  buildSourceGroundedTopics,
+  mergeSourceGroundedTopics,
+} from '../components/sourceGroundedTopics';
+import ExactSpeciesSafety from '../components/ExactSpeciesSafety';
+import QuickFactGrid from '../components/QuickFactGrid';
+import TopicNavigatorCard from '../components/TopicNavigatorCard';
+import { createSpeciesTopicResourceKey, usePublishSpeciesTopics } from '../components/speciesTopicResource';
+import GroupGuideCard from '../components/GroupGuideCard';
+import { getGroups } from '../components/groupContent';
+import { getSpeciesGroup } from '../components/speciesGroup';
+import {
+  canonicalBinomial,
+  curatedDetailId,
+  curatedDisplayName,
+  getCuratedDetail,
+  getCuratedSafety,
+} from '../components/curatedDetails';
+import TaxonomyTrail from '../components/TaxonomyTrail';
+import LensRevealCard from '../components/LensRevealCard';
+import NextBestCaptureCard from '../components/NextBestCaptureCard';
+import { retakeResult } from '../components/resultRetake';
+import { RESULT_DEPTHS, ResultDepthLayer } from '../components/ResultDepthSwitcher';
+import {
+  observationSubjectKey,
+  moveObservationSubject,
+} from '../components/observationStorage';
 
 // Modelled on TreeDetailScreen, minus everything that only makes sense for a
 // plant: no watering tracker, no light/soil guide, no "mark as watered". Fish
@@ -47,24 +89,102 @@ function InfoRow({ label, value }) {
   );
 }
 
+function technicalText(value) {
+  const values = Array.isArray(value) ? value : [value];
+  const clean = values
+    .filter((item) => typeof item === 'string')
+    .map((item) => item.trim())
+    .filter(Boolean);
+  return clean.length ? clean.join(', ') : null;
+}
+
+// O dossie marinho atual e recifal. So especies de recife confirmadas podem
+// abri-lo; atuns e outros pelagicos continuam sem esse bloco.
+const REEF_GUIDE_SPECIES = new Set([
+  'amphiprion ocellaris',
+  'paracanthurus hepatus',
+  'pterois volitans',
+]);
+
+const GROUP_TOPIC_META = Object.freeze([
+  Object.freeze({ key: 'safety', labelKey: 'detail.safetySection', icon: 'shield-checkmark-outline' }),
+  Object.freeze({ key: 'role', labelKey: 'detail.ecologicalRoleSection', icon: 'leaf-outline' }),
+  Object.freeze({ key: 'uses', labelKey: 'detail.fundamentals', icon: 'compass-outline' }),
+]);
+
+export function buildFishGroupTopics(group, translate) {
+  if (!group?.topics || typeof translate !== 'function') return [];
+  return GROUP_TOPIC_META.flatMap((meta) => {
+    const value = group.topics[meta.key];
+    const advice = Array.isArray(value?.advice) ? value.advice : [];
+    const checklist = Array.isArray(value?.checklist) ? value.checklist : [];
+    const hasContent = advice.some((line) => typeof line === 'string' && line.trim())
+      || checklist.some((line) => typeof line === 'string' && line.trim());
+    if (!hasContent) return [];
+    return [{
+      key: meta.key,
+      label: translate(meta.labelKey),
+      icon: meta.icon,
+      text: null,
+      groupOnly: true,
+    }];
+  });
+}
+
+export function mergeFishTopics(primary = [], groupTopics = []) {
+  const merged = primary.slice();
+  const keys = new Set(merged.map((topic) => topic?.key).filter(Boolean));
+  for (const topic of groupTopics) {
+    if (!topic?.key || keys.has(topic.key)) continue;
+    merged.push(topic);
+    keys.add(topic.key);
+  }
+  return merged;
+}
+
 export default function FishDetailScreen({ route }) {
   const navigation = useNavigation();
   // The param is named `plant` across every detail screen in this app - it is
   // the generic "identified entity", not a plant specifically. Renaming it would
   // mean touching every navigate() call site for no user-visible gain.
-  const { plant, fromIdentify } = route.params;
+  const { plant, fromIdentify, scanOutcome, scanOutcomeRequest } = route.params;
   const meta = CATEGORIES.fish;
   const { t, i18n } = useTranslation();
-  const [saved, setSaved] = useState(false);
+  const enrichment = enrichmentTaxon(plant.identityV1, {
+    scientificName: plant.scientific,
+    gbifKey: plant.gbifId,
+  });
+  const enrichmentScientific = enrichment?.canonicalName || null;
+  const fishId = curatedDetailId('fish', enrichmentScientific);
+  const fishNames = t('discover.topics.oceanAndRiverFish.species', { returnObjects: true });
+  const curatedName = curatedDisplayName(fishNames, fishId);
+  const [saved, setSaved] = useState(Boolean(plant.savedId));
   const [savedEntryId, setSavedEntryId] = useState(plant.savedId || null);
+  // Peixe usa uma ficha unica: Tecnico inclui as camadas essencial e visual.
+  // A divulgacao progressiva continua nos blocos expansivos dentro da ficha.
+  const resultDepth = RESULT_DEPTHS.EXPERT;
+  const unsavedObservationKey = observationSubjectKey({ ...plant, savedId: null }, null);
+  const observationKey = savedEntryId
+    ? observationSubjectKey(plant, savedEntryId)
+    : unsavedObservationKey;
+  const detachedObservationKey = React.useRef(null);
   const [localised, setLocalised] = useState(null);
+  const localisedDisplayName = localised?.localised && localised.title
+    ? localised.title
+    : null;
+  const displayName = curatedName || localisedDisplayName || plant.displayName || plant.name;
+  const [curated, setCurated] = useState(null);
+  // undefined = carregando; null = consulta concluida sem dossie.
+  const [speciesDossier, setSpeciesDossier] = useState(undefined);
+  const [groupGuide, setGroupGuide] = useState(undefined);
+  const [safetyRiskLevel, setSafetyRiskLevel] = useState(null);
+  const [safetyLookupDone, setSafetyLookupDone] = useState(false);
   const { alertConfig, showAlert, hideAlert } = useAppAlert();
 
   useEffect(() => {
     let alive = true;
     getLocalisedOverview({
-      scientific: plant.scientific,
-      commonName: plant.name,
+      scientific: enrichmentScientific,
       language: i18n.language,
     }).then((r) => {
       if (alive) setLocalised(r);
@@ -72,32 +192,104 @@ export default function FishDetailScreen({ route }) {
     return () => {
       alive = false;
     };
-  }, [plant.scientific, plant.name, i18n.language]);
+  }, [enrichmentScientific, i18n.language]);
+
+  useEffect(() => {
+    let alive = true;
+    setCurated(null);
+    getCuratedDetail(i18n.language, 'fish', enrichmentScientific).then((detail) => {
+      if (alive) setCurated(detail);
+    });
+    return () => {
+      alive = false;
+    };
+  }, [enrichmentScientific, i18n.language]);
+
+  useEffect(() => {
+    let alive = true;
+    setSpeciesDossier(enrichmentScientific ? undefined : null);
+    if (!enrichmentScientific) return () => { alive = false; };
+    getSpeciesDossier({
+      apiBase: API_BASE,
+      category: 'fish',
+      scientific: enrichmentScientific,
+      language: i18n.language,
+    }).then((value) => {
+      if (alive) setSpeciesDossier(value);
+    });
+    return () => { alive = false; };
+  }, [enrichmentScientific, i18n.language]);
+
+  useEffect(() => {
+    let alive = true;
+    setSafetyRiskLevel(null);
+    setSafetyLookupDone(false);
+    // O nivel cru precisa chegar antes do reveal. Assim um peixe com espinhos
+    // venenosos nunca recebe primeiro a apresentacao neutra da descoberta.
+    getCuratedSafety(i18n.language, 'fish', enrichmentScientific)
+      .then((safety) => {
+        if (alive) setSafetyRiskLevel(safety?.riskLevel || null);
+      })
+      .catch(() => {
+        if (alive) setSafetyRiskLevel(null);
+      })
+      .finally(() => {
+        if (alive) setSafetyLookupDone(true);
+      });
+    return () => {
+      alive = false;
+    };
+  }, [enrichmentScientific, i18n.language]);
 
   useEffect(() => {
     (async () => {
+      if (!plant.savedId) return;
       const list = await getCollection();
-      const found = list.find((p) => p.savedId === plant.savedId || p.id === plant.id);
+      const found = list.find((p) => p.savedId === plant.savedId);
       if (found) {
         setSaved(true);
         setSavedEntryId(found.savedId);
+      } else {
+        setSaved(false);
+        setSavedEntryId(null);
       }
     })();
   }, []);
 
+  useEffect(() => {
+    if (!savedEntryId || !displayName || displayName === plant.displayName) return;
+    updateCollectionEntry(savedEntryId, { displayName }).catch(() => undefined);
+  }, [displayName, plant.displayName, savedEntryId]);
+
   const toggleSave = async () => {
     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
     if (saved && savedEntryId) {
+      const previousObservationKey = observationKey;
       const result = await removeFromCollection(savedEntryId);
       if (result) {
+        if (previousObservationKey && unsavedObservationKey) {
+          await moveObservationSubject(previousObservationKey, unsavedObservationKey);
+          detachedObservationKey.current = null;
+        } else if (previousObservationKey) {
+          detachedObservationKey.current = previousObservationKey;
+        }
         setSaved(false);
         setSavedEntryId(null);
       } else {
         showAlert(t('common.saveErrorTitle'), t('common.saveErrorBody'));
       }
     } else {
-      const entry = await saveToCollection(plant);
+      const previousObservationKey = observationKey || detachedObservationKey.current;
+      // O nome do fornecedor continua em `name`; a traducao exata e somente
+      // apresentacao e viaja separada para diario e compartilhamento.
+      const entry = await saveToCollection({ ...plant, displayName });
       if (entry) {
+        const savedObservationKey = observationSubjectKey(entry, entry.savedId);
+        if (previousObservationKey && savedObservationKey) {
+          await moveObservationSubject(previousObservationKey, savedObservationKey);
+          detachedObservationKey.current = null;
+        }
+        trackResultSaved({ category: 'fish' });
         // Save-mission credit (idempotent - see components/missions.js).
         recordMissionEvent('save').then((done) => {
           if (done.length) addTokens(done.length * TOKENS_PER_MISSION);
@@ -108,6 +300,14 @@ export default function FishDetailScreen({ route }) {
         showAlert(t('common.saveErrorTitle'), t('common.saveErrorBody'));
       }
     }
+  };
+
+  const openObservationWorkspace = () => {
+    if (!observationKey) return;
+    navigation.navigate('ObservationWorkspace', {
+      entity: plant,
+      savedId: savedEntryId || null,
+    });
   };
 
   // Which text leads, and which becomes the technical card. Vendor prose beats
@@ -168,32 +368,140 @@ export default function FishDetailScreen({ route }) {
 
   // commonNames left this list for the identity block under the scientific
   // name - a fish's everyday names are who it IS, not a receipt row ("quente
-  // primeiro, ficha depois"). Synonyms and origin stay here: they are the ficha.
+  // primeiro, ficha depois"). Familia, ordem e sinonimos ficam na ficha:
+  // Fishial ja devolve os tres e o sync ja os preserva. Esconde-los fazia o
+  // resultado restaurado parecer mais pobre sem economizar nenhuma coleta.
   const infoRows = [
-    { label: t('common.nativeOrigin'), value: plant.origin },
-    { label: t('detail.synonyms'), value: plant.synonyms },
+    { label: t('detail.synonyms'), value: technicalText(plant.synonyms) },
   ].filter((r) => r.value);
+  const detailsTopicRows = [
+    { label: t('detail.family'), value: technicalText(plant.family) },
+    { label: t('detail.order'), value: technicalText(plant.ord) },
+    ...infoRows,
+  ].filter((row) => row.value);
+  const detailsTopicText = detailsTopicRows.length
+    ? detailsTopicRows.map((row) => `${row.label}: ${row.value}`).join('\n')
+    : null;
+  const groupKey = getSpeciesGroup({ ...plant, scientific: enrichmentScientific });
+  const binomial = canonicalBinomial(enrichmentScientific);
+  const guideGroupKey = groupKey === 'freshwaterFish'
+    || (groupKey === 'marineFish' && REEF_GUIDE_SPECIES.has(binomial))
+    ? groupKey
+    : null;
 
+  useEffect(() => {
+    let alive = true;
+    setGroupGuide(undefined);
+    if (!guideGroupKey) {
+      setGroupGuide(null);
+      return () => { alive = false; };
+    }
+    getGroups(i18n.language).then((groups) => {
+      if (alive) setGroupGuide(groups?.[guideGroupKey] || null);
+    });
+    return () => { alive = false; };
+  }, [guideGroupKey, i18n.language]);
+
+  const dynamicTopics = buildFishDossierTopics({
+    dossier: speciesDossier,
+    scientific: enrichmentScientific,
+    language: i18n.language,
+    translate: t,
+  });
+  const dynamicByKey = new Map(dynamicTopics.map((topic) => [topic.key, topic]));
+  const dynamicEnvironment = dynamicByKey.get('environment');
+  const dynamicDiet = dynamicByKey.get('diet');
+  const dynamicHabitat = dynamicByKey.get('habitat');
+  const dynamicReproduction = dynamicByKey.get('reproduction');
+  const dynamicLifeCycle = dynamicByKey.get('lifeCycle');
+  const dynamicConservation = dynamicByKey.get('conservation');
+  const habitatTopicText = [curated?.habitat, dynamicHabitat?.text]
+    .filter(Boolean)
+    .join('\n\n');
+  const speciesTopics = [
+    curated?.safety && {
+      key: 'safety',
+      label: t('detail.safetySection'),
+      text: curated.safety,
+    },
+    lead && {
+      key: 'overview',
+      label: t('common.overview'),
+      text: lead,
+    },
+    dynamicEnvironment,
+    dynamicDiet,
+    dynamicReproduction,
+    dynamicLifeCycle,
+    habitatTopicText && {
+      key: 'habitat',
+      label: dynamicHabitat?.label || t('fieldGuide.habitat'),
+      text: habitatTopicText,
+      icon: dynamicHabitat?.icon,
+      scientific: dynamicHabitat?.scientific,
+      sourceIds: dynamicHabitat?.sourceIds,
+    },
+    dynamicConservation,
+    curated?.curiosity && {
+      key: 'curiosity',
+      label: t('fieldGuide.curiosity'),
+      text: curated.curiosity,
+    },
+    detailsTopicText && {
+      key: 'details',
+      label: t('common.details'),
+      text: detailsTopicText,
+    },
+  ].filter(Boolean);
+  const sourceTopics = buildSourceGroundedTopics({
+    dossier: speciesDossier,
+    labels: {
+      feeding: t('speciesDossier.diet'),
+      reproduction: t('speciesDossier.reproduction'),
+      lifeCycle: t('speciesDossier.lifeCycle'),
+      habitat: t('fieldGuide.habitat'),
+      behavior: t('observationWorkspace.eventTypes.fish.behavior'),
+      ecology: t('detail.ecologicalRoleSection'),
+      conservation: t('detail.conservationStatus'),
+    },
+  });
+  // O fallback do grupo e apenas uma porta para um manual declarado como
+  // geral. Nunca recebe scientific nem texto especifico da especie.
+  const topics = mergeFishTopics(
+    mergeSourceGroundedTopics(speciesTopics, sourceTopics),
+    buildFishGroupTopics(groupGuide, t)
+  );
+  const topicResourceKey = createSpeciesTopicResourceKey({
+    category: 'fish',
+    language: i18n.language,
+    routeKey: route.key,
+    identity: plant.savedId || enrichmentScientific || plant.scientific || plant.name,
+  });
+  usePublishSpeciesTopics(topicResourceKey, topics);
+
+  const openTopic = (initialKey, routeTopics = topics) =>
+    navigation.navigate('CareTopics', {
+      groupKey: guideGroupKey,
+      title: displayName,
+      accent: meta.accent,
+      category: 'fish',
+      topics: routeTopics,
+      topicResourceKey,
+      initialKey,
+    });
+
+  const quickFacts = [
+    detailsTopicText && {
+      key: 'details',
+      icon: 'finger-print-outline',
+      color: colors.purple,
+      label: t('common.details'),
+      value: technicalText(plant.family) || technicalText(plant.ord),
+    },
+  ].filter(Boolean);
   const handleShare = () => {
     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
-    shareEntity(plant, t('categories.fish.label'));
-  };
-
-  // Gancho da especialista (hub do resultado, video do concorrente): leva a
-  // especie junto como contexto pro chat do Botanico (tab irmao no App.js).
-  //
-  // Note what this screen does NOT get from the hub reform: no CareTopics
-  // manual and no quick-facts grid. The two long texts (lead/secondary) carry
-  // the Translate button and the Wikipedia/vendor credits, which the manual
-  // cannot host - and english-leak.test.js pins both TranslatableText renders
-  // to this file - so the prose stays inline; and the only short fields
-  // (origin, synonyms) are already shown IN FULL in the Details receipt,
-  // where a truncated fact tile with no door to open would only hide data.
-  const openSpecialist = () => {
-    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
-    navigation.navigate('Botanist', {
-      context: plant.name + ' (' + (plant.scientific || '') + ')',
-    });
+    shareEntity({ ...plant, name: displayName }, t('categories.fish.label'));
   };
 
   return (
@@ -232,13 +540,14 @@ export default function FishDetailScreen({ route }) {
           photoUri={plant.photoUri}
           similarImages={plant.similarImages}
           scientific={plant.scientific}
+          identityV1={plant.identityV1}
           accent={meta.accent}
           icon={meta.tabIcon}
         />
 
         <View style={styles.nameRow}>
           <View style={{ flex: 1 }}>
-            <Text style={styles.name}>{plant.name}</Text>
+            <Text style={styles.name}>{displayName}</Text>
             {/* Speaker do concorrente (hub do resultado): ouvir o latim. */}
             {!!plant.scientific && (
               <View style={styles.scientificRow}>
@@ -255,10 +564,12 @@ export default function FishDetailScreen({ route }) {
               </Text>
             )}
           </View>
-          <View style={styles.confidenceBadge}>
-            <Text style={styles.confidenceLabel}>{t('common.confidence')}</Text>
-            <Text style={styles.confidenceValue}>{plant.confidence}%</Text>
-          </View>
+          {Number.isFinite(plant.confidence) && (
+            <View style={styles.confidenceBadge}>
+              <Text style={styles.confidenceLabel}>{t('common.confidence')}</Text>
+              <Text style={styles.confidenceValue}>{plant.confidence}%</Text>
+            </View>
+          )}
         </View>
 
         <View style={[styles.typePill, { backgroundColor: meta.accent + '22' }]}>
@@ -274,15 +585,99 @@ export default function FishDetailScreen({ route }) {
           </Text>
         </View>
 
+        {/* Risco curado por binomio e chave crua. Fica inteiro antes da
+            galeria; sem os tres dados exatos o bloco nao aparece. */}
+        <ExactSpeciesSafety category="fish" scientific={enrichmentScientific} />
+
+        {/* A ausencia de um registro curado nao transforma o peixe em seguro.
+            O aviso e deliberadamente neutro: informa o limite da evidencia
+            sem deduzir risco a partir de nome popular, foto ou prosa. */}
+        {safetyLookupDone && !safetyRiskLevel && (
+          <SectionCard
+            icon="shield-outline"
+            title={t('fishSafety.unverifiedTitle')}
+            color={colors.warning}
+          >
+            <Text style={styles.body}>{t('fishSafety.unverifiedBody')}</Text>
+          </SectionCard>
+        )}
+
+        {safetyLookupDone && (
+          <LensRevealCard
+            confidence={plant.confidence}
+            summary={lead}
+            accent={meta.accent}
+            critical={safetyRiskLevel === 'danger'}
+          />
+        )}
+        <TopicNavigatorCard topics={topics}
+          accent={meta.accent}
+          onOpen={openTopic}
+          title={t('speciesDossier.title')}
+          loading={(Boolean(enrichmentScientific) && speciesDossier === undefined)
+            || (Boolean(guideGroupKey) && groupGuide === undefined)}
+        />
+        <NextBestCaptureCard
+          category="fish"
+          confidence={plant.confidence}
+          alternatives={plant.alternatives}
+          identityStatus={plant.identityV1?.status}
+          resultName={plant.name || plant.scientific}
+          fromIdentify={fromIdentify}
+          accent={meta.accent}
+          onRetake={() => retakeResult({ navigation, category: 'fish', fromIdentify })}
+        />
+
         {/* Reference photos, runner-up species and a low-confidence warning -
             all built from data the API already returned. */}
-        <IdentificationExtras entity={plant} accent={meta.accent} />
+        <ResultDepthLayer activeDepth={resultDepth} depth={RESULT_DEPTHS.VISUAL}>
+          <IdentificationExtras entity={plant} identityV1={plant.identityV1} accent={meta.accent} />
+        </ResultDepthLayer>
 
-        {/* Mapa de distribuicao REAL (GBIF) - tela principal rica (video do
-            concorrente, 20/08): "onde esse peixe vive" era a pergunta que esta
-            tela nao respondia, e o GBIF cobre fauna marinha como cobre planta.
-            Some sozinho sem match de taxon ou offline. */}
-        <DistributionMap scientific={plant.scientific} accent={meta.accent} />
+        <ResultDepthLayer activeDepth={resultDepth} depth={RESULT_DEPTHS.ESSENTIAL}>
+          <DiscoveryReceiptCard
+            outcome={scanOutcome}
+            request={scanOutcomeRequest}
+            accent={meta.accent}
+            automaticSaveConfirmed={fromIdentify === true && !!plant.savedId}
+            celebrationAllowed={safetyLookupDone && safetyRiskLevel === 'safe'}
+            naturePrintAllowed={safetyLookupDone}
+            riskLevel={safetyRiskLevel}
+            safetyPending={!safetyLookupDone}
+          />
+        </ResultDepthLayer>
+
+        <ResultDepthLayer activeDepth={resultDepth} depth={RESULT_DEPTHS.VISUAL}>
+          <DidacticFieldGuide category="fish" entity={plant} accent={meta.accent} />
+        </ResultDepthLayer>
+
+        <ResultDepthLayer activeDepth={resultDepth} depth={RESULT_DEPTHS.ESSENTIAL}>
+          {observationKey ? (
+          <TouchableOpacity
+            style={[styles.observationCard, { borderColor: meta.accent + '66' }]}
+            onPress={openObservationWorkspace}
+            activeOpacity={0.8}
+            accessibilityRole="button"
+            accessibilityLabel={t('observationWorkspace.openAction')}
+          >
+            <View style={[styles.observationIcon, { backgroundColor: meta.accent + '20' }]}>
+              <Ionicons name="journal-outline" size={24} color={meta.accent} />
+            </View>
+            <View style={styles.observationCopy}>
+              <Text style={styles.observationTitle}>{t('observationWorkspace.openTitle')}</Text>
+              <Text style={styles.observationBody}>{t('observationWorkspace.openBody')}</Text>
+            </View>
+            <Ionicons name="chevron-forward" size={20} color={meta.accent} />
+          </TouchableOpacity>
+          ) : null}
+        </ResultDepthLayer>
+
+        <ResultDepthLayer activeDepth={resultDepth} depth={RESULT_DEPTHS.EXPERT}>
+
+        <QuickFactGrid
+          accent={meta.accent}
+          facts={quickFacts.map((fact) => ({ ...fact, onPress: () => openTopic(fact.key) }))}
+        />
 
         {/* Overview in the reader's language, when one exists.
             Fishial.AI has no localised content whatsoever, so a user in Brazil
@@ -344,44 +739,49 @@ export default function FishDetailScreen({ route }) {
           </ZoneBand>
         )}
 
+        <ExactSpeciesGuide
+          category="fish"
+          scientific={enrichmentScientific}
+          accent={meta.accent}
+          includeOverview={!lead}
+        />
+
+        <DynamicSpeciesDossier
+          category="fish"
+          scientific={plant.scientific}
+          identityV1={plant.identityV1}
+          dossier={speciesDossier}
+          accent={meta.accent}
+        />
+
+        <GroupGuideCard
+          groupKey={guideGroupKey}
+          entityName={enrichmentScientific ? displayName : null}
+          topics={topics}
+          accent={meta.accent}
+          onOpen={(guideTopics, key) => openTopic(key, guideTopics)}
+        />
+
+        {/* Ciencia observacional entra depois da descricao legivel. Mapa e
+            grafico somem sem dado. O antigo guia marinho/recifal saiu porque
+            familia nao distingue peixe de recife, pelagico ou de agua doce. */}
+        <DistributionMap scientific={plant.scientific} identityV1={plant.identityV1} accent={meta.accent} />
+        <SeasonChart scientific={plant.scientific} identityV1={plant.identityV1} accent={meta.accent} />
+
         {/* Zona de cor #2: the receipt. The ficha closes the screen in its own
             band, and the gap between the bands is the scene showing through. */}
-        {infoRows.length > 0 && (
+        {(!!plant.family || !!plant.ord || infoRows.length > 0) && (
           <ZoneBand gutter={20}>
-            <SectionCard icon="finger-print-outline" title={t('common.details')} color={colors.purple}>
-              {infoRows.map((row) => (
-                <InfoRow key={row.label} label={row.label} value={row.value} />
-              ))}
-            </SectionCard>
+            <TaxonomyTrail order={plant.ord} family={plant.family} scientific={plant.scientific} accent={meta.accent} />
+            {infoRows.length > 0 && (
+              <SectionCard icon="finger-print-outline" title={t('common.details')} color={colors.purple}>
+                {infoRows.map((row) => (
+                  <InfoRow key={row.label} label={row.label} value={row.value} />
+                ))}
+              </SectionCard>
+            )}
           </ZoneBand>
         )}
-
-        {/* Gancho da especialista (hub do resultado, video do concorrente):
-            linha discreta que abre o chat do Botanist com a especie como
-            contexto. */}
-        <TouchableOpacity
-          style={styles.specialistRow}
-          onPress={openSpecialist}
-          activeOpacity={0.8}
-          accessibilityRole="button"
-          accessibilityLabel={t('detail.askSpecialistCta')}
-        >
-          <Ionicons
-            name="sparkles"
-            size={16}
-            color={meta.accent}
-            accessibilityElementsHidden={true}
-            importantForAccessibility="no-hide-descendants"
-          />
-          <Text style={styles.specialistText}>{t('detail.askSpecialistCta')}</Text>
-          <Ionicons
-            name="chevron-forward"
-            size={16}
-            color={colors.textMuted}
-            accessibilityElementsHidden={true}
-            importantForAccessibility="no-hide-descendants"
-          />
-        </TouchableOpacity>
 
         {/* The species reference photo used to be rendered here as its own card.
             It now comes through IdentificationExtras above, which builds
@@ -420,24 +820,16 @@ export default function FishDetailScreen({ route }) {
             20/08): o motor de share ja existia, mas so atras do icone de 20px
             da TopBar. Aqui ele vira convite, no fim da leitura. */}
         <ShareSpeciesCard
-          entity={plant}
+          entity={{ ...plant, name: displayName }}
           categoryLabel={t('categories.fish.label')}
           accent={meta.accent}
         />
 
-        {/* "Duvidas frequentes" - paridade 120% (video do concorrente,
-            20/08): o FAQ fixo dele vira pergunta SUGERIDA que abre a
-            especialista ja com a duvida escrita e a especie como contexto. */}
-        <SpeciesFaq
-          category="fish"
-          name={plant.name}
-          scientific={plant.scientific}
-          accent={meta.accent}
-          navigation={navigation}
-        />
+        <CommunityInviteCard accent={meta.accent} />
 
         {/* Feedback fecha o scroll (hub do resultado, video do concorrente). */}
         <HelpfulRow category="fish" context="result" />
+        </ResultDepthLayer>
       </ScrollView>
 
       {/* Barra de acao fixa do hub do resultado (video do concorrente),
@@ -450,6 +842,7 @@ export default function FishDetailScreen({ route }) {
         onShare={handleShare}
         onSave={toggleSave}
         saved={saved}
+        savedId={savedEntryId}
         accent={meta.accent}
       />
 
@@ -475,14 +868,6 @@ const styles = StyleSheet.create({
   scientificRow: { flexDirection: 'row', alignItems: 'center', gap: 8 },
   scientific: { fontSize: 15, fontStyle: 'italic', color: colors.textSecondary, marginTop: 3 },
   commonNamesLine: { fontSize: 12.5, color: colors.textMuted, marginTop: 4 },
-  specialistRow: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 8,
-    paddingVertical: 14,
-    paddingHorizontal: 4,
-  },
-  specialistText: { flex: 1, color: colors.text, fontSize: 13.5, fontWeight: '700' },
   confidenceBadge: {
     backgroundColor: colors.accentDark + '33',
     borderRadius: 12,
@@ -503,6 +888,27 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   typePillText: { fontSize: 12.5, fontWeight: '700', marginLeft: 6 },
+  observationCard: {
+    minHeight: 82,
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 12,
+    borderWidth: 1,
+    borderRadius: 18,
+    backgroundColor: colors.surfaceElevated,
+    padding: 14,
+    marginBottom: 16,
+  },
+  observationIcon: {
+    width: 48,
+    height: 48,
+    borderRadius: 15,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  observationCopy: { flex: 1 },
+  observationTitle: { color: colors.text, fontSize: 16, lineHeight: 21, fontWeight: '900' },
+  observationBody: { color: colors.textSecondary, fontSize: 12.5, lineHeight: 18, marginTop: 3 },
   sourceLink: {
     color: colors.textMuted,
     fontSize: 11.5,

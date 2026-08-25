@@ -15,9 +15,9 @@ import { useNavigation, useRoute, useFocusEffect } from '@react-navigation/nativ
 import { useTranslation } from 'react-i18next';
 import { Ionicons } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
-import * as Haptics from 'expo-haptics';
 import * as ImagePicker from 'expo-image-picker';
 import * as ImageManipulator from 'expo-image-manipulator';
+import * as FileSystem from 'expo-file-system/legacy';
 import { colors } from '../components/theme';
 import { identify } from '../components/identify';
 import {
@@ -26,38 +26,43 @@ import {
   trackScanFailed,
   trackPaywallShown,
   trackPaywallDismissed,
-  trackAchievementUnlocked,
 } from '../components/tracking';
-import { CATEGORIES, CATEGORY_LIST } from '../components/categories';
+import { CATEGORIES } from '../components/categories';
 import { startCheckout } from '../components/subscription';
 import PaywallModal from '../components/PaywallModal';
 import AlertModal from '../components/AlertModal';
-import RevealFactModal from '../components/RevealFactModal';
-import AchievementUnlockedModal from '../components/AchievementUnlockedModal';
-import { recordIdentification, evaluateAchievements, addTokens } from '../components/achievements';
-import { recordMissionEvent, TOKENS_PER_MISSION } from '../components/missions';
+import {
+  candidateFact,
+  candidateIdentityKey,
+  createScanOutcomeRequest,
+} from '../components/scanOutcome';
 import { useAppAlert } from '../components/useAppAlert';
 import { usePageShowReset } from '../components/usePageShowReset';
 import CategoryIcon from '../components/CategoryIcon';
-import { getSpeciesPhoto } from '../components/speciesPhoto';
 import NatureScene from '../components/NatureScene';
 import PressScale from '../components/PressScale';
 import FindThumb from '../components/FindThumb';
+import MainScreenHeader from '../components/MainScreenHeader';
+import { TopBarIcon } from '../components/TopBar';
 import { getCollection } from '../components/storage';
+import { getGroups } from '../components/groupContent';
+import { updateDiscoveryPreferences } from '../components/discoveryPreferences';
+import { saveIdentificationAutomatically } from '../components/automaticCollection';
+import LensPulseButton from '../components/LensPulseButton';
+import { sensoryFeedback } from '../components/sensoryFeedback';
+import useReducedMotion from '../components/useReducedMotion';
 
-// Foto-exemplo do palco (pedido do dono: "cada parte onde ele clica pra tirar
-// foto tem que ter alguma foto ali" - no video do concorrente cada ponto de
-// captura mostra uma imagem de exemplo). Um exemplar REAL e fotogenico por
-// categoria, buscado pela mesma cadeia Wikipedia do FindThumb (cache embutido,
-// zero chave nova). Categoria fora desta lista = sem foto = palco atual.
-const EXEMPLAR_SCI = {
-  plant: 'Plumeria rubra',
-  insect: 'Coccinella septempunctata',
-  mushroom: 'Amanita muscaria',
-  crop: 'Zea mays',
-  fish: 'Betta splendens',
-  bird: 'Cyanistes caeruleus',
-  sound: 'Turdus merula',
+// A divulgacao precisa nomear o fornecedor real antes de cada envio. A lista
+// explicita tambem falha fechada se uma nova categoria fotografica for criada
+// sem que suas praticas de dados tenham sido traduzidas e revisadas.
+const PHOTO_CONSENT_BODY_KEY = {
+  plant: 'photoConsentKindwiseBody',
+  tree: 'photoConsentKindwiseBody',
+  insect: 'photoConsentKindwiseBody',
+  mushroom: 'photoConsentKindwiseBody',
+  crop: 'photoConsentKindwiseBody',
+  fish: 'photoConsentFishialBody',
+  bird: 'photoConsentBirdBody',
 };
 
 export default function IdentifyScreen() {
@@ -70,44 +75,29 @@ export default function IdentifyScreen() {
   const [scanning, setScanning] = useState(false);
   const [paywallVisible, setPaywallVisible] = useState(false);
   const [subscribing, setSubscribing] = useState(false);
-  const [revealFact, setRevealFact] = useState(null);
-  const [pendingNav, setPendingNav] = useState(null);
-  const [unlockedIds, setUnlockedIds] = useState(null);
   // Foto no palco: the uri of the photo being analysed RIGHT NOW, staged inside
   // the viewfinder under the scan overlay - "analysing YOUR photo", not a
   // generic animation. Null (no uri available) falls back to the previous
   // gradient-only scanning view, byte for byte.
   const [stagePhotoUri, setStagePhotoUri] = useState(null);
-  // Foto-exemplo: fundo do palco PARADO (sem scan em andamento). null = offline
-  // ou especie sem foto -> o palco fica byte a byte identico ao atual.
-  const [exemplarPhoto, setExemplarPhoto] = useState(null);
-  useEffect(() => {
-    let alive = true;
-    // Trocar de categoria zera na hora: o exemplar da categoria anterior nunca
-    // pode aparecer atras do icone da nova enquanto a busca (cacheada) resolve.
-    setExemplarPhoto(null);
-    // getSpeciesPhoto nunca lanca (contrato do speciesPhoto.js) e resolve null
-    // para categorias fora do EXEMPLAR_SCI - o then basta.
-    getSpeciesPhoto(EXEMPLAR_SCI[category], i18n.language).then((photo) => {
-      if (alive) setExemplarPhoto(photo);
-    });
-    return () => {
-      alive = false;
-    };
-  }, [category, i18n.language]);
+  // O state muda apenas no proximo render. Esta trava sincrona impede que dois
+  // toques no mesmo frame disparem dois provedores e criem dois achados.
+  const scanInFlightRef = useRef(false);
   const scanAnim = useRef(new Animated.Value(0)).current;
+  const scanLoopRef = useRef(null);
+  const reduceMotion = useReducedMotion();
   const { alertConfig, showAlert, hideAlert } = useAppAlert();
   // Un-freezes the subscribe button when the page is restored from bfcache
   // after coming back from Hotmart's checkout (see usePageShowReset).
   usePageShowReset(useCallback(() => setSubscribing(false), []));
 
-  // Achados recentes DESTA categoria, for the strip above the footer tip.
+  // Achados recentes DESTA categoria, for the compact grid above the footer tip.
   // Loaded on focus, not on mount: a scan saved moments ago on the detail
   // screen has to appear the instant the user comes back. Newest first and
-  // capped at 8, so this never fans out into "98 fetches on mount":
+  // capped at 4, so this never fans out into "98 fetches on mount":
   // every locally-made find renders its own photoUri (a local file - zero
   // network), and only cloud-restored finds without one fall back to
-  // FindThumb's cached Wikipedia chain - at most 8 requests, once, absorbed
+  // FindThumb's cached Wikipedia chain - at most 4 requests, once, absorbed
   // by the speciesPhoto cache afterwards.
   const [recentFinds, setRecentFinds] = useState([]);
   useFocusEffect(
@@ -121,7 +111,7 @@ export default function IdentifyScreen() {
             // savedAt is an ISO string, which sorts correctly as text - no
             // Date parsing (and no NaN comparator) needed.
             .sort((a, b) => (b.savedAt || '').localeCompare(a.savedAt || ''))
-            .slice(0, 8)
+            .slice(0, 4)
         );
       });
       return () => {
@@ -131,14 +121,24 @@ export default function IdentifyScreen() {
   );
 
   const runScanAnimation = () => {
-    scanAnim.setValue(0);
-    Animated.loop(
+    scanLoopRef.current?.stop();
+    scanLoopRef.current = null;
+    scanAnim.setValue(reduceMotion ? 0.5 : 0);
+    if (reduceMotion) return;
+    const loop = Animated.loop(
       Animated.sequence([
         Animated.timing(scanAnim, { toValue: 1, duration: 900, useNativeDriver: true }),
         Animated.timing(scanAnim, { toValue: 0, duration: 900, useNativeDriver: true }),
       ])
-    ).start();
+    );
+    scanLoopRef.current = loop;
+    loop.start();
   };
+
+  useEffect(() => () => {
+    scanLoopRef.current?.stop();
+    scanLoopRef.current = null;
+  }, []);
 
   // Real phone photos (12MP+) easily exceed Vercel's 4.5MB serverless request
   // body limit once base64-encoded, even with launchCameraAsync's `quality`
@@ -153,62 +153,105 @@ export default function IdentifyScreen() {
     return manipulated;
   };
 
-  // Extra angles of the SAME specimen, queued before running the scan. Kindwise
-  // uses every photo it is given for one identification and gets measurably
-  // better at it - a leaf close-up plus the whole plant beats either alone.
-  // Capped at 3 total (see MAX_IMAGES server-side; also keeps the request body
-  // under Vercel's 4.5MB limit).
+  // Evidence tray. Slots keep their meaning (whole / close / another angle),
+  // can be filled from camera OR gallery and are reviewed before anything is
+  // sent. This fixes the old inverted flow, which photographed the two extras
+  // first and submitted the main image immediately afterwards.
+  //
+  // Kindwise uses up to three photos of the same specimen in one request.
+  // Fishial and Nyckel currently analyse one image, so those categories expose
+  // one honest slot instead of decorative controls that the provider ignores.
   const MAX_PHOTOS = 3;
-  const [extraPhotos, setExtraPhotos] = useState([]);
+  const supportsMultiplePhotos = category !== 'fish' && category !== 'bird';
+  const visiblePhotoSlots = supportsMultiplePhotos ? MAX_PHOTOS : 1;
+  const [photoSlots, setPhotoSlots] = useState([null, null, null]);
+  const [showExtraAngles, setShowExtraAngles] = useState(false);
+  const photoSlotsRef = useRef(photoSlots);
+  const handledCaptureRequest = useRef(null);
 
-  const runIdentification = async (photo) => {
-    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
-    setStagePhotoUri(photo.uri || null);
+  const discardPreparedPhoto = (photo) => {
+    if (Platform.OS === 'web' || !photo?.uri || !FileSystem.cacheDirectory) return;
+    // Only remove the resized copy created in Expo's cache. Never touch the
+    // person's original camera/gallery asset, even if a provider changes URI
+    // behaviour in a future SDK.
+    if (!photo.uri.startsWith(FileSystem.cacheDirectory)) return;
+    FileSystem.deleteAsync(photo.uri, { idempotent: true }).catch(() => {});
+  };
+
+  useEffect(() => {
+    photoSlotsRef.current = photoSlots;
+  }, [photoSlots]);
+
+  useEffect(() => {
+    // Never carry evidence from one classifier into another when the category
+    // changes through the picker or the bottom navigation.
+    photoSlotsRef.current.forEach(discardPreparedPhoto);
+    setPhotoSlots([null, null, null]);
+    setShowExtraAngles(false);
+    setStagePhotoUri(null);
+    updateDiscoveryPreferences({ preferredCategory: category }).catch(() => undefined);
+  }, [category]);
+
+  // O manual tecnico de insetos e um arquivo localizado relativamente grande.
+  // Comecar a busca quando a categoria abre esconde esse custo durante a
+  // escolha/captura da foto; assim a ficha da abelha nao pisca apenas as tres
+  // portas basicas antes de receber o guia de polinizadores.
+  useEffect(() => {
+    if (category !== 'insect') return;
+    getGroups(i18n.language).catch(() => undefined);
+  }, [category, i18n.language]);
+
+  const selectedPhotos = photoSlots.slice(0, visiblePhotoSlots).filter(Boolean);
+  const primaryPhoto = photoSlots[0];
+
+  const runIdentification = async () => {
+    if (!primaryPhoto || scanning || scanInFlightRef.current) return;
+    scanInFlightRef.current = true;
+    const photos = photoSlots.slice(0, visiblePhotoSlots).filter(Boolean);
+    setStagePhotoUri(primaryPhoto.uri || null);
     setScanning(true);
     runScanAnimation();
     trackScanStarted({
       category,
-      source: photo.fromLibrary ? 'library' : 'camera',
-      photoCount: extraPhotos.length + 1,
+      source: photos.every((photo) => photo.fromLibrary)
+        ? 'library'
+        : photos.some((photo) => photo.fromLibrary)
+          ? 'mixed'
+          : 'camera',
+      photoCount: photos.length,
     });
+    let completed = false;
     try {
-      // The queued extras go FIRST-added-first; the freshly taken photo is the
-      // primary one, so it leads the list.
-      const entity = await identify(category, [photo.base64, ...extraPhotos.map((p) => p.base64)]);
-      Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
+      const entity = await identify(category, photos.map((photo) => photo.base64));
       trackScanCompleted({
         category,
         confidence: entity.confidence,
         hasAlternatives: Boolean(entity.alternatives?.length),
       });
-      await recordIdentification();
-      // Missions completed by this scan pay out immediately - the mission map
-      // is idempotent, so a double invocation can never pay twice.
-      const completedMissions = await recordMissionEvent('scan', { category });
-      if (completedMissions.length) await addTokens(completedMissions.length * TOKENS_PER_MISSION);
-      const { newlyUnlocked } = await evaluateAchievements();
-      const navParams = {
-        plant: { ...entity, photoUri: photo.uri },
-        photoBase64: photo.base64,
+      // Uma frase curta pode vir de campos documentados diferentes por
+      // categoria. candidateFact escolhe apenas o campo da propria entidade,
+      // corta em limite de frase e falha fechado para identidade nao resolvida.
+      const fact = candidateFact({ category, entity });
+      const outcomeRequest = createScanOutcomeRequest({
+        category,
+        fact,
+        identityKey: candidateIdentityKey(entity),
+      });
+      const identifiedEntity = { ...entity, photoUri: primaryPhoto.uri };
+      const savedEntry = await saveIdentificationAutomatically(identifiedEntity, category);
+
+      // A escrita local termina antes da navegacao. Assim a foto nao depende de
+      // a pessoa encontrar um icone de salvar nem se perde ao fechar a ficha.
+      // Recompensas continuam assincronas dentro do helper e nao atrasam a tela.
+      navigation.navigate(meta.detailRoute, {
+        plant: savedEntry || identifiedEntity,
+        photoBase64: primaryPhoto.base64,
         fromIdentify: true,
-      };
-      // Plant.id is the only Kindwise API that returns cultural-significance/
-      // common-uses text (confirmed live, see project memory) - insect.id and
-      // mushroom.id have no equivalent field. Trees hit the exact same Plant.id
-      // model (see the `tree` entry in api/identify.js), so they carry the same
-      // fields.
-      const fact = category === 'plant' || category === 'tree' ? entity.culturalSignificance || entity.commonUses : null;
-      const hasAchievements = newlyUnlocked.length > 0;
-      newlyUnlocked.forEach((id) => trackAchievementUnlocked({ achievementId: id }));
-      if (fact || hasAchievements) {
-        setPendingNav(navParams);
-        if (fact) setRevealFact(fact);
-        if (hasAchievements) setUnlockedIds(newlyUnlocked);
-      } else {
-        navigation.navigate(meta.detailRoute, navParams);
-      }
+        scanOutcomeRequest: outcomeRequest,
+      });
+      completed = true;
     } catch (err) {
-      Haptics.notificationAsync(Haptics.NotificationFeedbackType.Error);
+      sensoryFeedback.error();
       if (err.paymentRequired) {
         // The paywall firing is the business model working, not a failure -
         // tracked as its own funnel step so conversion has a denominator.
@@ -227,17 +270,55 @@ export default function IdentifyScreen() {
       trackScanFailed({ category, reason: 'api_error' });
       showAlert(t('identify.identificationFailedTitle'), err.message || t('identify.identificationFailedDefault'));
     } finally {
+      scanInFlightRef.current = false;
+      scanLoopRef.current?.stop();
+      scanLoopRef.current = null;
       setScanning(false);
       setStagePhotoUri(null);
-      // Always clear, success or failure: keeping stale angles would silently
-      // attach them to the NEXT, unrelated specimen the user photographs.
-      setExtraPhotos([]);
+      // A failed request keeps the reviewed tray so an offline user can retry
+      // instead of photographing the specimen all over again. A completed
+      // result clears it before the next identification.
+      if (completed) {
+        // The primary photo continues into the result/collection. Extra
+        // evidence is no longer needed once the provider has answered.
+        photos.slice(1).forEach(discardPreparedPhoto);
+        setPhotoSlots([null, null, null]);
+        setShowExtraAngles(false);
+      }
     }
   };
 
-  // Adds one more angle to the queue without running an identification.
-  const handleAddAngle = async () => {
-    if (extraPhotos.length >= MAX_PHOTOS - 1) return;
+  const requestPhotoConsent = () => {
+    const bodyKey = PHOTO_CONSENT_BODY_KEY[category];
+    if (!primaryPhoto || !bodyKey) return;
+
+    // O consentimento vale somente para este envio. Cancelar nao chama a
+    // identificacao e confirmar e o unico caminho que entrega a foto a rede.
+    showAlert(t('identify.photoConsentTitle'), t(`identify.${bodyKey}`), [
+      { text: t('common.cancel'), style: 'cancel' },
+      {
+        text: t('identify.photoConsentSend'),
+        onPress: runIdentification,
+      },
+    ]);
+  };
+
+  const storePhotoInSlot = (slot, prepared, fromLibrary) => {
+    sensoryFeedback.selection();
+    discardPreparedPhoto(photoSlotsRef.current[slot]);
+    setPhotoSlots((current) => {
+      const next = [...current];
+      next[slot] = {
+        uri: prepared.uri,
+        base64: prepared.base64,
+        fromLibrary,
+      };
+      return next;
+    });
+  };
+
+  const capturePhotoForSlot = async (slot) => {
+    if (slot < 0 || slot >= visiblePhotoSlots) return;
     try {
       if (Platform.OS !== 'web') {
         const { status } = await ImagePicker.requestCameraPermissionsAsync();
@@ -252,72 +333,14 @@ export default function IdentifyScreen() {
       const result = await ImagePicker.launchCameraAsync({ quality: 0.7, base64: true });
       if (result.canceled || !result.assets?.[0]) return;
       const prepared = await prepareForUpload(result.assets[0]);
-      Haptics.selectionAsync();
-      setExtraPhotos((prev) => [...prev, { uri: prepared.uri, base64: prepared.base64 }]);
+      storePhotoInSlot(slot, prepared, false);
     } catch (err) {
       showAlert(t('identify.identificationFailedTitle'), t('identify.photoProcessingFailed'));
     }
   };
 
-  const removeAngle = (index) => {
-    Haptics.selectionAsync();
-    setExtraPhotos((prev) => prev.filter((_, i) => i !== index));
-  };
-
-  const handleRevealContinue = () => {
-    setRevealFact(null);
-    if (!unlockedIds || unlockedIds.length === 0) {
-      const navParams = pendingNav;
-      setPendingNav(null);
-      if (navParams) navigation.navigate(meta.detailRoute, navParams);
-    }
-    // else: dismissing the fact card reveals the achievement modal
-    // (rendered whenever revealFact is empty and unlockedIds is set) -
-    // navigation happens once that's dismissed too, see handleAchievementDone.
-  };
-
-  const handleAchievementDone = () => {
-    setUnlockedIds(null);
-    const navParams = pendingNav;
-    setPendingNav(null);
-    if (navParams) navigation.navigate(meta.detailRoute, navParams);
-  };
-
-  const handleSubscribe = async (plan) => {
-    setSubscribing(true);
-    try {
-      await startCheckout(plan);
-    } catch (e) {
-      setSubscribing(false);
-      showAlert(t('identify.identificationFailedTitle'), e.message);
-    }
-  };
-
-  const handleScan = async () => {
-    try {
-      if (Platform.OS !== 'web') {
-        const { status } = await ImagePicker.requestCameraPermissionsAsync();
-        if (status !== 'granted') {
-          showAlert(
-            t('identify.cameraPermissionTitle'),
-            t('identify.cameraPermissionMessage', { category: t(`categories.${category}.label`).toLowerCase() })
-          );
-          return;
-        }
-      }
-      const result = await ImagePicker.launchCameraAsync({
-        quality: 0.7,
-        base64: true,
-      });
-      if (result.canceled || !result.assets?.[0]) return;
-      const prepared = await prepareForUpload(result.assets[0]);
-      runIdentification(prepared);
-    } catch (err) {
-      showAlert(t('identify.identificationFailedTitle'), t('identify.photoProcessingFailed'));
-    }
-  };
-
-  const handleUpload = async () => {
+  const choosePhotoForSlot = async (slot) => {
+    if (slot < 0 || slot >= visiblePhotoSlots) return;
     try {
       if (Platform.OS !== 'web') {
         const { status } = await ImagePicker.requestMediaLibraryPermissionsAsync();
@@ -333,34 +356,57 @@ export default function IdentifyScreen() {
       });
       if (result.canceled || !result.assets?.[0]) return;
       const prepared = await prepareForUpload(result.assets[0]);
-      // prepareForUpload returns a fresh object, so the source flag is
-      // attached here - camera scans and library uploads can have very
-      // different funnel success rates and are tracked apart.
-      runIdentification({ ...prepared, fromLibrary: true });
+      storePhotoInSlot(slot, prepared, true);
     } catch (err) {
       showAlert(t('identify.identificationFailedTitle'), t('identify.photoProcessingFailed'));
     }
   };
 
-  const handleSwitchCategory = () => {
-    const others = CATEGORY_LIST.filter((c) => c.key !== category);
-    showAlert(
-      t('identify.switchCategoryTitle'),
-      t('identify.switchCategoryMessage'),
-      [
-        ...others.map((c) => ({
-          text: c.tabLabel,
-          onPress: () => navigation.getParent()?.navigate(c.tabLabel),
-        })),
-        { text: t('common.cancel'), style: 'cancel' },
-      ]
-    );
+  // The raised dock action reaches the same camera path as a direct stage tap.
+  // It never starts a network upload: provider consent remains an explicit,
+  // per-upload decision after the person reviews the shot.
+  useEffect(() => {
+    const requestId = route.params?.captureRequestId;
+    if (!requestId || handledCaptureRequest.current === requestId || scanning) return undefined;
+    const timer = setTimeout(() => {
+      if (handledCaptureRequest.current === requestId) return;
+      handledCaptureRequest.current = requestId;
+      capturePhotoForSlot(0);
+      navigation.setParams({ captureRequestId: undefined });
+    }, 0);
+    return () => clearTimeout(timer);
+  }, [route.params?.captureRequestId, category, scanning]);
+
+  const removePhotoFromSlot = (index) => {
+    sensoryFeedback.selection();
+    if (index === 0) {
+      photoSlotsRef.current.forEach(discardPreparedPhoto);
+      setPhotoSlots([null, null, null]);
+      setShowExtraAngles(false);
+      return;
+    }
+    discardPreparedPhoto(photoSlotsRef.current[index]);
+    setPhotoSlots((current) => current.map((photo, i) => (i === index ? null : photo)));
+  };
+
+  const handleSubscribe = async (plan) => {
+    setSubscribing(true);
+    try {
+      await startCheckout(plan);
+    } catch (e) {
+      setSubscribing(false);
+      showAlert(t('identify.identificationFailedTitle'), e.message);
+    }
   };
 
   const scanTranslate = scanAnim.interpolate({
     inputRange: [0, 1],
     outputRange: [0, 240],
   });
+  // Depois da captura, o palco contem o controle Pulso Vivo e portanto deixa
+  // de ser um botao. Isso evita HTML interativo aninhado no web e foco morto
+  // no teclado/TalkBack, sem duplicar o conteudo visual do viewfinder.
+  const ViewfinderContainer = primaryPhoto ? View : TouchableOpacity;
 
   return (
     <SafeAreaView style={styles.container} edges={['top']}>
@@ -369,38 +415,33 @@ export default function IdentifyScreen() {
           (see NatureScene.js / diagramacao-premium doctrine). */}
       <NatureScene accent={meta.accent} />
       <ScrollView contentContainerStyle={styles.scroll} showsVerticalScrollIndicator={false}>
-        <View style={styles.headerRow}>
-          <View style={styles.headerTitleWrap}>
-            <Text style={styles.hello} accessibilityRole="header">
-              {t('identify.identifierTitle', { category: t(`categories.${category}.label`) })}
-            </Text>
-            <Text style={styles.subtitle}>
-              {t('identify.subtitle', { category: t(`categories.${category}.label`).toLowerCase() })}
-            </Text>
-          </View>
-          <View style={styles.headerBtns}>
+        <MainScreenHeader
+          title={t('identify.identifierTitle', { category: t(`categories.${category}.label`) })}
+          subtitle={t('identify.subtitle', {
+            category: t(`categories.${category}.label`).toLowerCase(),
+          })}
+          right={
+            <>
             {/* Settings pinned to every main screen's header, like the
                 competitor's ever-present gear. Nested navigate bubbles to the
                 tab navigator (same proven pattern as SubscribeFab). */}
-            <TouchableOpacity
-              style={styles.gearBtn}
-              activeOpacity={0.8}
+            <TopBarIcon
               onPress={() => navigation.navigate('Profile', { screen: 'Settings' })}
-              accessibilityRole="button"
-              accessibilityLabel={t('settings.title')}
+              label={t('settings.title')}
             >
               <Ionicons name="settings-outline" size={20} color={colors.text} />
-            </TouchableOpacity>
-            <TouchableOpacity
-              style={[styles.logoBadge, { backgroundColor: meta.accentDark }]}
-              activeOpacity={0.8}
-              onPress={handleSwitchCategory}
-              accessibilityRole="button"
-              accessibilityLabel={t('identify.switchCategoryLabel')}
-            >
-              <CategoryIcon name={meta.tabIcon} size={22} color={colors.white} />
-            </TouchableOpacity>
-          </View>
+            </TopBarIcon>
+            </>
+          }
+        />
+
+        {/* A maior dor dos concorrentes e surpresa comercial antes do primeiro
+            resultado. Esta promessa fica antes da camera porque e verificavel:
+            uma identificacao por categoria, sem conta e sem cartao. Nao e CTA
+            de compra e permanece igual no Android. */}
+        <View style={[styles.freePromise, { borderColor: meta.accent + '55' }]}>
+          <Ionicons name="shield-checkmark-outline" size={17} color={meta.accent} />
+          <Text style={styles.freePromiseText}>{t('identify.freePromise')}</Text>
         </View>
 
         {/* The big gradient hero used to sit here, and it said the same thing
@@ -415,18 +456,25 @@ export default function IdentifyScreen() {
 
         {/* Micro-animações da doutrina: press-scale by OUTER wrapper only -
             the Touchable below stays byte for byte (a11y, handlers, styles). */}
-        <PressScale>
-        <TouchableOpacity
+        <ViewfinderContainer
           style={styles.viewfinder}
-          activeOpacity={0.85}
-          onPress={handleScan}
-          disabled={scanning}
-          accessibilityRole="button"
+          onPress={primaryPhoto ? undefined : () => capturePhotoForSlot(0)}
+          disabled={primaryPhoto ? undefined : scanning}
+          activeOpacity={primaryPhoto ? undefined : 0.86}
+          accessible={!primaryPhoto || scanning}
+          accessibilityRole={scanning ? 'progressbar' : primaryPhoto ? undefined : 'button'}
+          accessibilityLiveRegion={scanning ? 'polite' : 'none'}
           accessibilityLabel={
             scanning
               ? t('identify.identifying')
-              : t('identify.takePhotoLabel', { category: t(`categories.${category}.label`).toLowerCase() })
+              : primaryPhoto
+                ? undefined
+              : `${t('identify.poseWhole')}: ${t('identify.takePhotoLabel', {
+                category: t(`categories.${category}.label`).toLowerCase(),
+              })}`
           }
+          accessibilityHint={scanning || primaryPhoto ? undefined : t(`categories.${category}.scanHint`)}
+          accessibilityState={primaryPhoto && !scanning ? undefined : { disabled: scanning, busy: scanning }}
         >
           <LinearGradient
             colors={['#2c3a30', '#1b241e']}
@@ -457,204 +505,356 @@ export default function IdentifyScreen() {
                   ]}
                 />
                 <View style={styles.scanCenter}>
-                  <ActivityIndicator size="large" color={meta.accent} />
+                  {reduceMotion ? (
+                    <Ionicons name="scan-circle-outline" size={38} color={meta.accent} />
+                  ) : (
+                    <ActivityIndicator size="large" color={meta.accent} />
+                  )}
                   <Text style={[styles.scanText, { color: meta.accent }]}>
                     {t('identify.analyzing', { category: t(`categories.${category}.label`).toLowerCase() })}
                   </Text>
                 </View>
               </>
+            ) : primaryPhoto ? (
+              <>
+                <Image
+                  source={{ uri: primaryPhoto.uri }}
+                  style={styles.stagePhoto}
+                  resizeMode="cover"
+                />
+                <View style={styles.previewScrim} />
+                <View style={styles.stagePulse}>
+                  <LensPulseButton
+                    key={primaryPhoto.uri}
+                    accent={meta.accent}
+                    disabled={scanning}
+                    eyebrow={t('identify.lensPulseEyebrow')}
+                    label={t('identify.holdToReveal')}
+                    holdingLabel={t('identify.keepHolding')}
+                    accessibilityHint={t('identify.holdToRevealHint')}
+                    onComplete={requestPhotoConsent}
+                  />
+                </View>
+              </>
             ) : (
               <>
-                {/* Foto-exemplo (pedido do dono): o ponto de captura mostra um
-                    exemplar real da categoria, como no video do concorrente.
-                    REGRA DURA: o scrim (fundo a ~70%) fica ENTRE a foto e o
-                    titulo/subtitulo, entao a foto nunca atrapalha a leitura -
-                    e sem foto nada disto renderiza (palco atual intacto). */}
-                {exemplarPhoto ? (
-                  <>
-                    <Image
-                      source={{ uri: exemplarPhoto.url }}
-                      style={styles.stagePhoto}
-                      resizeMode="cover"
-                    />
-                    <View style={styles.exemplarScrim} />
-                  </>
-                ) : null}
                 <View style={styles.scanCenter}>
-                  <CategoryIcon name={meta.icon} size={56} color={meta.accent} />
+                  <LinearGradient
+                    colors={[meta.accent + '33', colors.surfaceElevated]}
+                    style={[styles.viewfinderMark, { borderColor: meta.accent + '66' }]}
+                  >
+                    <View style={[styles.viewfinderMarkGlow, { backgroundColor: meta.accent }]} />
+                    <CategoryIcon name={meta.icon} size={44} color={meta.accent} />
+                  </LinearGradient>
                   <Text style={styles.viewfinderText}>{t('identify.readyToScan')}</Text>
                   {/* The instruction the removed hero card used to carry. Here it
                       is where someone is actually looking before they tap. */}
-                  <Text style={styles.viewfinderHint}>{t(`categories.${category}.subtitle`)}</Text>
-                </View>
-                {/* Credito minusculo SO quando a foto esta visivel - nunca
-                    apresentar foto de terceiro como nossa (doutrina do
-                    speciesPhoto.js). Chave existente, nenhuma nova. */}
-                {exemplarPhoto ? (
-                  <Text style={styles.exemplarCredit} numberOfLines={1}>
-                    {t('fieldGuide.photoCredit')}
+                  <Text style={styles.viewfinderHint} numberOfLines={2}>
+                    {t(`categories.${category}.subtitle`)}
                   </Text>
-                ) : null}
+                  <View style={[styles.cameraPrompt, { borderColor: meta.accent + '88' }]}>
+                    <Ionicons name="camera-outline" size={18} color={meta.accent} />
+                    <Text style={[styles.cameraPromptText, { color: meta.accent }]} numberOfLines={2}>
+                      {t('identify.takePhotoLabel', {
+                        category: t(`categories.${category}.label`).toLowerCase(),
+                      })}
+                    </Text>
+                  </View>
+                </View>
               </>
             )}
             {[styles.cTL, styles.cTR, styles.cBL, styles.cBR].map((c, i) => (
               <View key={i} style={[styles.corner, c, { borderColor: meta.accent }]} />
             ))}
           </LinearGradient>
-        </TouchableOpacity>
-        </PressScale>
+        </ViewfinderContainer>
 
-        {/* Press-scale por wrapper EXTERNO (doutrina) - shutter unchanged inside. */}
-        <PressScale scaleTo={0.93}>
-        <TouchableOpacity
-          activeOpacity={0.85}
-          style={styles.shutterWrap}
-          onPress={handleScan}
-          disabled={scanning}
-          accessibilityRole="button"
-          accessibilityLabel={
-            scanning
-              ? t('identify.identifying')
-              : t('identify.takePhotoLabel', { category: t(`categories.${category}.label`).toLowerCase() })
-          }
-        >
-          <View style={[styles.shutterOuter, { borderColor: meta.accent }, scanning && { opacity: 0.5 }]}>
-            <View style={[styles.shutterInner, { backgroundColor: meta.accent }]}>
-              <Ionicons name="camera" size={30} color={colors.white} />
-            </View>
+        {/* Before the first shot, the stage is the single obvious camera CTA.
+            Gallery is available as a quiet alternative; the review tray and
+            optional evidence do not compete for attention yet. */}
+        {!primaryPhoto ? (
+          <View style={styles.homeActions}>
+            <PressScale style={styles.homeActionWrap}>
+              <TouchableOpacity
+                style={styles.homeAction}
+                activeOpacity={0.82}
+                onPress={() => choosePhotoForSlot(0)}
+                disabled={scanning}
+                accessibilityRole="button"
+                accessibilityLabel={t('identify.uploadPhotoLabel')}
+              >
+                <LinearGradient
+                  colors={[colors.info + '38', colors.surfaceElevated]}
+                  style={[styles.homeActionIcon, { borderColor: colors.info + '55' }]}
+                >
+                  <View style={[styles.homeActionShine, { backgroundColor: colors.info }]} />
+                  <Ionicons name="images-outline" size={21} color={colors.info} />
+                </LinearGradient>
+                <Text style={styles.homeActionText}>{t('identify.uploadPhoto')}</Text>
+              </TouchableOpacity>
+            </PressScale>
+            <PressScale style={styles.homeActionWrap}>
+              <TouchableOpacity
+                style={styles.homeAction}
+                activeOpacity={0.82}
+                onPress={() => navigation.getParent()?.navigate('Collection')}
+                accessibilityRole="button"
+                accessibilityLabel={t('identify.goToCollectionLabel')}
+              >
+                <LinearGradient
+                  colors={[colors.warning + '38', colors.surfaceElevated]}
+                  style={[styles.homeActionIcon, { borderColor: colors.warning + '55' }]}
+                >
+                  <View style={[styles.homeActionShine, { backgroundColor: colors.warning }]} />
+                  <Ionicons name="file-tray-full-outline" size={21} color={colors.warning} />
+                </LinearGradient>
+                <Text style={styles.homeActionText}>{t('identify.myCollection')}</Text>
+              </TouchableOpacity>
+            </PressScale>
+            <PressScale style={styles.homeActionWrap}>
+              <TouchableOpacity
+                style={styles.homeAction}
+                activeOpacity={0.82}
+                onPress={() => navigation.getParent()?.navigate('Discover')}
+                accessibilityRole="button"
+                accessibilityLabel={t('common.tabDiscover')}
+              >
+                <LinearGradient
+                  colors={[colors.purple + '38', colors.surfaceElevated]}
+                  style={[styles.homeActionIcon, { borderColor: colors.purple + '55' }]}
+                >
+                  <View style={[styles.homeActionShine, { backgroundColor: colors.purple }]} />
+                  <Ionicons name="book-outline" size={21} color={colors.purple} />
+                </LinearGradient>
+                <Text style={styles.homeActionText}>{t('common.tabDiscover')}</Text>
+              </TouchableOpacity>
+            </PressScale>
+            <PressScale style={styles.homeActionWrap}>
+              <TouchableOpacity
+                style={styles.homeAction}
+                activeOpacity={0.82}
+                onPress={() => navigation.getParent()?.navigate('Profile', { screen: 'Community' })}
+                accessibilityRole="button"
+                accessibilityLabel={t('community.title')}
+              >
+                <LinearGradient
+                  colors={[meta.accent + '38', colors.surfaceElevated]}
+                  style={[styles.homeActionIcon, { borderColor: meta.accent + '55' }]}
+                >
+                  <View style={[styles.homeActionShine, { backgroundColor: meta.accent }]} />
+                  <Ionicons name="podium-outline" size={21} color={meta.accent} />
+                </LinearGradient>
+                <Text style={styles.homeActionText}>{t('community.title')}</Text>
+              </TouchableOpacity>
+            </PressScale>
           </View>
-        </TouchableOpacity>
-        </PressScale>
-        <Text style={styles.shutterLabel}>
-          {scanning ? t('identify.identifying') : t('identify.tapToIdentify')}
-        </Text>
-
-        {/* Modo 3 fotos GUIADO (o "360" do concorrente, visto no video: tres
-            slots de miniatura visiveis na camera com a pose de cada um). O
-            obturador grande tira a foto principal (Inteiro); os dois slots
-            seguintes abrem a camera para De perto e Outro angulo - so o
-            PROXIMO slot vazio fica ativo, entao a sequencia se ensina sozinha.
-            Kindwise: as 3 fotos viajam num request so = 1 credito. So onde o
-            vendor realmente usa varias fotos (fish/bird ficam de fora). */}
-        {category !== 'fish' && category !== 'bird' && (
-          <View style={styles.anglesBlock}>
-            <View style={styles.poseRow}>
-              <View style={styles.poseSlot}>
-                <View style={[styles.poseThumb, styles.poseMain, { borderColor: meta.accent + '88' }]}>
-                  <Ionicons name="camera" size={18} color={meta.accent} />
+        ) : (
+          /* After a shot, review and consent become the dominant next step.
+             Extra angles remain progressive disclosure, never an up-front
+             three-row form. */
+          <View style={styles.photoPlan}>
+            <Text style={styles.photoReadyTitle}>{t('identify.photoReady')}</Text>
+            <View style={styles.photoSlotRow}>
+              <TouchableOpacity
+                style={styles.photoSlotThumbButton}
+                onPress={() => removePhotoFromSlot(0)}
+                disabled={scanning}
+                accessibilityRole="button"
+                accessibilityLabel={t('identify.removeAngleLabel', { index: 1 })}
+              >
+                <Image source={{ uri: primaryPhoto.uri }} style={styles.photoSlotThumb} />
+                <View style={styles.photoSlotRemoveBadge}>
+                  <Ionicons name="close" size={11} color={colors.white} />
                 </View>
-                <Text style={styles.poseLabel}>{t('identify.poseWhole')}</Text>
-              </View>
-              {[0, 1].map((i) => {
-                const p = extraPhotos[i];
-                const label = i === 0 ? t('identify.poseClose') : t('identify.poseOther');
-                const isNext = extraPhotos.length === i;
-                return (
-                  <View key={i} style={styles.poseSlot}>
-                    {p ? (
-                      <TouchableOpacity
-                        style={styles.poseThumbWrap}
-                        onPress={() => removeAngle(i)}
-                        disabled={scanning}
-                        accessibilityRole="button"
-                        accessibilityLabel={t('identify.removeAngleLabel', { index: i + 1 })}
-                      >
-                        <Image source={{ uri: p.uri }} style={styles.poseThumbImg} />
-                        <View style={styles.angleRemove}>
-                          <Ionicons name="close" size={12} color={colors.white} />
-                        </View>
-                      </TouchableOpacity>
-                    ) : (
-                      <TouchableOpacity
-                        style={[styles.poseThumb, isNext && { borderColor: meta.accent + '88' }]}
-                        onPress={handleAddAngle}
-                        disabled={scanning || !isNext}
-                        accessibilityRole="button"
-                        accessibilityLabel={t('identify.addAngle')}
-                      >
-                        <Ionicons name="add" size={20} color={isNext ? meta.accent : colors.textMuted} />
-                      </TouchableOpacity>
-                    )}
-                    <Text style={styles.poseLabel}>{label}</Text>
-                  </View>
-                );
-              })}
+              </TouchableOpacity>
+              <Text style={styles.photoSlotLabel}>{t('identify.poseWhole')}</Text>
+              <TouchableOpacity
+                style={styles.slotAction}
+                onPress={() => capturePhotoForSlot(0)}
+                disabled={scanning}
+                accessibilityRole="button"
+                accessibilityState={{ disabled: scanning }}
+                accessibilityLabel={`${t('identify.poseWhole')}: ${t('identify.takePhotoLabel', {
+                  category: t(`categories.${category}.label`).toLowerCase(),
+                })}`}
+              >
+                <Ionicons name="camera-outline" size={20} color={scanning ? colors.textMuted : meta.accent} />
+              </TouchableOpacity>
+              <TouchableOpacity
+                style={styles.slotAction}
+                onPress={() => choosePhotoForSlot(0)}
+                disabled={scanning}
+                accessibilityRole="button"
+                accessibilityState={{ disabled: scanning }}
+                accessibilityLabel={`${t('identify.poseWhole')}: ${t('identify.uploadPhotoLabel')}`}
+              >
+                <Ionicons name="images-outline" size={20} color={scanning ? colors.textMuted : colors.info} />
+              </TouchableOpacity>
             </View>
 
-            {extraPhotos.length > 0 && (
+            {supportsMultiplePhotos ? (
+              <>
+                <TouchableOpacity
+                  style={styles.anglesToggle}
+                  activeOpacity={0.8}
+                  onPress={() => setShowExtraAngles((visible) => !visible)}
+                  disabled={scanning}
+                  accessibilityRole="button"
+                  accessibilityState={{ disabled: scanning, expanded: showExtraAngles }}
+                >
+                  <Ionicons name="layers-outline" size={19} color={meta.accent} />
+                  <Text style={styles.anglesToggleLabel}>
+                    {t(showExtraAngles
+                      ? 'identify.hideOptionalAngles'
+                      : 'identify.addOptionalAngles')}
+                  </Text>
+                  <Ionicons
+                    name={showExtraAngles ? 'chevron-up' : 'chevron-down'}
+                    size={18}
+                    color={colors.textMuted}
+                  />
+                </TouchableOpacity>
+
+                {showExtraAngles
+                  ? Array.from({ length: visiblePhotoSlots - 1 }, (_, offset) => offset + 1).map((index) => {
+                    const photo = photoSlots[index];
+                    const label = index === 1 ? t('identify.poseClose') : t('identify.poseOther');
+                    return (
+                      <View style={styles.photoSlotRow} key={index}>
+                        {photo ? (
+                          <TouchableOpacity
+                            style={styles.photoSlotThumbButton}
+                            onPress={() => removePhotoFromSlot(index)}
+                            disabled={scanning}
+                            accessibilityRole="button"
+                            accessibilityLabel={t('identify.removeAngleLabel', { index: index + 1 })}
+                          >
+                            <Image source={{ uri: photo.uri }} style={styles.photoSlotThumb} />
+                            <View style={styles.photoSlotRemoveBadge}>
+                              <Ionicons name="close" size={11} color={colors.white} />
+                            </View>
+                          </TouchableOpacity>
+                        ) : (
+                          <View style={[styles.photoSlotEmpty, { borderColor: meta.accent + '66' }]}>
+                            <Text style={[styles.photoSlotNumber, { color: meta.accent }]}>{index + 1}</Text>
+                          </View>
+                        )}
+                        <Text style={styles.photoSlotLabel}>{label}</Text>
+                        <TouchableOpacity
+                          style={styles.slotAction}
+                          onPress={() => capturePhotoForSlot(index)}
+                          disabled={scanning}
+                          accessibilityRole="button"
+                          accessibilityState={{ disabled: scanning }}
+                          accessibilityLabel={`${label}: ${t('identify.takePhotoLabel', {
+                            category: t(`categories.${category}.label`).toLowerCase(),
+                          })}`}
+                        >
+                          <Ionicons name="camera-outline" size={20} color={scanning ? colors.textMuted : meta.accent} />
+                        </TouchableOpacity>
+                        <TouchableOpacity
+                          style={styles.slotAction}
+                          onPress={() => choosePhotoForSlot(index)}
+                          disabled={scanning}
+                          accessibilityRole="button"
+                          accessibilityState={{ disabled: scanning }}
+                          accessibilityLabel={`${label}: ${t('identify.uploadPhotoLabel')}`}
+                        >
+                          <Ionicons name="images-outline" size={20} color={scanning ? colors.textMuted : colors.info} />
+                        </TouchableOpacity>
+                      </View>
+                    );
+                  })
+                  : null}
+              </>
+            ) : null}
+
+            {showExtraAngles && selectedPhotos.length > 1 ? (
               <Text style={styles.anglesHint}>
-                {t('identify.anglesHint', { count: extraPhotos.length + 1 })}
+                {t('identify.anglesHint', { count: selectedPhotos.length })}
               </Text>
-            )}
+            ) : null}
           </View>
         )}
 
-        <View style={styles.actionsRow}>
-          {/* Press-scale by outer wrapper. The `flex: 1` has to move onto the
-              wrapper as well: the Animated.View is now the flex child of this
-              row, so without it both cards would collapse to their content
-              (same device as ProfileScreen's streakCardWrap). */}
-          <PressScale style={styles.actionBtnWrap}>
-          <TouchableOpacity
-            style={styles.actionBtn}
-            activeOpacity={0.8}
-            onPress={handleUpload}
-            disabled={scanning}
-            accessibilityRole="button"
-            accessibilityLabel={t('identify.uploadPhotoLabel')}
-          >
-            <Ionicons
-              name="images-outline"
-              size={20}
-              color={colors.info}
-              accessibilityElementsHidden={true}
-              importantForAccessibility="no-hide-descendants"
-            />
-            <Text style={styles.actionText}>{t('identify.uploadPhoto')}</Text>
-          </TouchableOpacity>
-          </PressScale>
-          <PressScale style={styles.actionBtnWrap}>
-          <TouchableOpacity
-            style={styles.actionBtn}
-            activeOpacity={0.8}
-            onPress={() => navigation.getParent()?.navigate('Collection')}
-            accessibilityRole="button"
-            accessibilityLabel={t('identify.goToCollectionLabel')}
-          >
-            <Ionicons
-              name="file-tray-full-outline"
-              size={20}
-              color={colors.warning}
-              accessibilityElementsHidden={true}
-              importantForAccessibility="no-hide-descendants"
-            />
-            <Text style={styles.actionText}>{t('identify.myCollection')}</Text>
-          </TouchableOpacity>
-          </PressScale>
-        </View>
+        {!primaryPhoto ? (
+          <View style={styles.homeCompactStack}>
+            <View style={styles.homeSignal}>
+              <View style={[styles.homeSignalIcon, { backgroundColor: meta.accent + '22' }]}>
+                <CategoryIcon name={meta.tabIcon} size={18} color={meta.accent} />
+              </View>
+              <View style={styles.homeSignalCopy}>
+                <Text style={styles.homeSignalTitle} numberOfLines={1}>
+                  {t(`categories.${category}.label`)}
+                </Text>
+                <Text style={styles.homeSignalBody} numberOfLines={2}>
+                  {t(`categories.${category}.subtitle`)}
+                </Text>
+              </View>
+            </View>
+            <TouchableOpacity
+              style={styles.homeSignal}
+              activeOpacity={0.84}
+              onPress={() => navigation.getParent()?.navigate('Profile', { screen: 'Community' })}
+              accessibilityRole="button"
+              accessibilityLabel={t('community.entryTitle')}
+            >
+              <View style={[styles.homeSignalIcon, { backgroundColor: colors.info + '22' }]}>
+                <Ionicons name="people-outline" size={18} color={colors.info} />
+              </View>
+              <View style={styles.homeSignalCopy}>
+                <Text style={styles.homeSignalTitle} numberOfLines={1}>
+                  {t('community.entryTitle')}
+                </Text>
+                <Text style={styles.homeSignalBody} numberOfLines={2}>
+                  {t('community.entrySubtitle')}
+                </Text>
+              </View>
+              <Ionicons name="arrow-forward" size={17} color={meta.accent} />
+            </TouchableOpacity>
+            <View style={styles.homeTipInline}>
+              <Ionicons
+                name="bulb"
+                size={17}
+                color={colors.warning}
+                accessibilityElementsHidden={true}
+                importantForAccessibility="no-hide-descendants"
+              />
+              <Text style={styles.homeTipInlineText} numberOfLines={3}>
+                {t(`categories.${category}.scanHint`)}
+              </Text>
+            </View>
+          </View>
+        ) : null}
 
         {/* Achados recentes: the user's latest finds of THIS category as a
-            horizontal strip of photo tiles - foto como tile com o nome como
-            legenda embaixo, never a small badge lost in a text card
-            (diagramacao-premium doctrine). Renders only when there is at least
-            one find, so a new user never sees empty chrome. Reuses FindThumb:
+            compact two-column grid, never another hidden horizontal rail.
+            Renders only when there is at least one find. Reuses FindThumb:
             the same photo-priority chain (own photo -> Wikipedia by scientific
             name -> category icon) as the Collection, with its icon fallback,
             so this strip can never render broken offline. */}
         {recentFinds.length > 0 && (
-          <ScrollView
-            horizontal
-            showsHorizontalScrollIndicator={false}
-            style={styles.recentStrip}
-            contentContainerStyle={styles.recentStripContent}
-          >
-            {recentFinds.map((item) => (
+          <View style={styles.recentSection}>
+            <TouchableOpacity
+              style={styles.recentHeader}
+              onPress={() => navigation.getParent()?.navigate('Collection')}
+              accessibilityRole="button"
+              accessibilityLabel={t('identify.goToCollectionLabel')}
+            >
+              <Text style={styles.recentTitle}>{t('identify.myCollection')}</Text>
+              <Ionicons name="arrow-forward" size={18} color={meta.accent} />
+            </TouchableOpacity>
+            <View style={styles.recentGrid}>
+            {recentFinds.slice(0, 4).map((item) => (
               <TouchableOpacity
                 key={item.savedId}
                 style={styles.recentItem}
                 activeOpacity={0.8}
                 onPress={() =>
-                  navigation.navigate(meta.detailRoute, { plant: item, fromIdentify: false })
+                  navigation.getParent()?.navigate('Collection', {
+                    screen: 'Specimen',
+                    params: { savedId: item.savedId },
+                  })
                 }
                 accessibilityRole="button"
                 accessibilityLabel={t('collection.viewDetailsLabel', {
@@ -663,6 +863,8 @@ export default function IdentifyScreen() {
               >
                 <FindThumb
                   photoUri={item.photoUri}
+                  referencePhoto={item.referencePhoto}
+                  similarImages={item.similarImages}
                   scientific={item.scientific}
                   icon={meta.tabIcon}
                   accent={meta.accent}
@@ -674,19 +876,22 @@ export default function IdentifyScreen() {
                 </Text>
               </TouchableOpacity>
             ))}
-          </ScrollView>
+            </View>
+          </View>
         )}
 
-        <View style={styles.tipCard}>
-          <Ionicons
-            name="bulb"
-            size={18}
-            color={colors.warning}
-            accessibilityElementsHidden={true}
-            importantForAccessibility="no-hide-descendants"
-          />
-          <Text style={styles.tipText}>{t(`categories.${category}.scanHint`)}</Text>
-        </View>
+        {primaryPhoto ? (
+          <View style={styles.tipCard}>
+            <Ionicons
+              name="bulb"
+              size={18}
+              color={colors.warning}
+              accessibilityElementsHidden={true}
+              importantForAccessibility="no-hide-descendants"
+            />
+            <Text style={styles.tipText}>{t(`categories.${category}.scanHint`)}</Text>
+          </View>
+        ) : null}
       </ScrollView>
       <PaywallModal
         visible={paywallVisible}
@@ -708,59 +913,61 @@ export default function IdentifyScreen() {
         onRequestClose={hideAlert}
       />
 
-      <RevealFactModal
-        visible={!!revealFact}
-        fact={revealFact}
-        onContinue={handleRevealContinue}
-      />
-
-      <AchievementUnlockedModal
-        ids={!revealFact ? unlockedIds : null}
-        onDone={handleAchievementDone}
-      />
     </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: colors.background },
-  scroll: { padding: 20, paddingBottom: 40 },
-  headerRow: {
+  scroll: { paddingHorizontal: 16, paddingTop: 10, paddingBottom: 28 },
+  freePromise: {
+    minHeight: 44,
     flexDirection: 'row',
-    justifyContent: 'space-between',
     alignItems: 'center',
-    marginBottom: 20,
-  },
-  headerTitleWrap: { flex: 1, paddingRight: 10 },
-  headerBtns: { flexDirection: 'row', alignItems: 'center', gap: 8 },
-  gearBtn: {
-    width: 40,
-    height: 40,
+    gap: 9,
+    borderWidth: 1,
     borderRadius: 12,
     backgroundColor: colors.surface,
-    alignItems: 'center',
-    justifyContent: 'center',
+    paddingHorizontal: 12,
+    paddingVertical: 9,
+    marginTop: 12,
   },
-  hello: { fontSize: 24, fontWeight: '800', color: colors.text },
-  subtitle: { fontSize: 13, color: colors.textMuted, marginTop: 2 },
-  logoBadge: {
-    width: 46,
-    height: 46,
-    borderRadius: 14,
-    alignItems: 'center',
-    justifyContent: 'center',
+  freePromiseText: {
+    flex: 1,
+    color: colors.textSecondary,
+    fontSize: 12.5,
+    lineHeight: 18,
+    fontWeight: '600',
   },
-  viewfinder: { alignItems: 'center', marginBottom: 8, marginTop: 18 },
+  viewfinder: { alignItems: 'center', marginBottom: 6, marginTop: 6 },
   viewfinderInner: {
     width: '100%',
-    height: 300,
+    height: 188,
     borderRadius: 22,
     alignItems: 'center',
     justifyContent: 'center',
     overflow: 'hidden',
   },
   scanCenter: { alignItems: 'center', paddingHorizontal: 28 },
-  viewfinderText: { color: colors.text, marginTop: 12, fontWeight: '700', fontSize: 15.5 },
+  viewfinderMark: {
+    width: 76,
+    height: 76,
+    borderRadius: 26,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderWidth: 1,
+    overflow: 'hidden',
+  },
+  viewfinderMarkGlow: {
+    position: 'absolute',
+    top: 10,
+    right: 12,
+    width: 12,
+    height: 12,
+    borderRadius: 6,
+    opacity: 0.9,
+  },
+  viewfinderText: { color: colors.text, marginTop: 10, fontWeight: '800', fontSize: 15.5 },
   viewfinderHint: {
     color: colors.textMuted,
     marginTop: 6,
@@ -773,17 +980,33 @@ const styles = StyleSheet.create({
   // the background tone at ~60% so the scanline/spinner/label stay readable.
   stagePhoto: { ...StyleSheet.absoluteFillObject },
   stageScrim: { ...StyleSheet.absoluteFillObject, backgroundColor: colors.background + '99' },
-  // Foto-exemplo: scrim mais fechado ('B3' ~70%) que o do scan - regra dura do
-  // dono: a foto de fundo NAO pode atrapalhar a leitura do titulo/subtitulo.
-  exemplarScrim: { ...StyleSheet.absoluteFillObject, backgroundColor: colors.background + 'B3' },
-  // Credito no canto inferior do palco, dentro das cantoneiras (que estao a
-  // 14px com 26px de braco) - por isso o recuo de 46px na direita.
-  exemplarCredit: {
+  previewScrim: { ...StyleSheet.absoluteFillObject, backgroundColor: colors.background + '33' },
+  stagePulse: {
     position: 'absolute',
-    bottom: 6,
-    right: 46,
-    fontSize: 9,
-    color: colors.textMuted,
+    left: 12,
+    right: 12,
+    bottom: 12,
+    zIndex: 4,
+  },
+  cameraPrompt: {
+    minHeight: 44,
+    marginTop: 10,
+    paddingHorizontal: 12,
+    paddingVertical: 8,
+    borderRadius: 14,
+    borderWidth: 1,
+    backgroundColor: colors.background + 'CC',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 7,
+  },
+  cameraPromptText: {
+    flexShrink: 1,
+    fontSize: 12,
+    lineHeight: 16,
+    fontWeight: '800',
+    textAlign: 'center',
   },
   scanLine: {
     position: 'absolute',
@@ -802,84 +1025,225 @@ const styles = StyleSheet.create({
   cTR: { top: 14, right: 14, borderTopWidth: 3, borderRightWidth: 3, borderTopRightRadius: 8 },
   cBL: { bottom: 14, left: 14, borderBottomWidth: 3, borderLeftWidth: 3, borderBottomLeftRadius: 8 },
   cBR: { bottom: 14, right: 14, borderBottomWidth: 3, borderRightWidth: 3, borderBottomRightRadius: 8 },
-  shutterWrap: { alignItems: 'center', marginTop: 20 },
-  shutterOuter: {
-    width: 82,
-    height: 82,
-    borderRadius: 41,
-    borderWidth: 4,
-    alignItems: 'center',
-    justifyContent: 'center',
+  homeActions: {
+    marginTop: 6,
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    gap: 10,
   },
-  shutterInner: {
-    width: 64,
-    height: 64,
-    borderRadius: 32,
-    alignItems: 'center',
-    justifyContent: 'center',
+  homeActionWrap: {
+    flexBasis: '47%',
+    flexGrow: 1,
   },
-  shutterLabel: {
-    textAlign: 'center',
-    color: colors.textSecondary,
-    marginTop: 10,
-    fontWeight: '600',
-  },
-  poseRow: { flexDirection: 'row', justifyContent: 'center', gap: 16 },
-  poseSlot: { alignItems: 'center', gap: 5 },
-  poseThumb: {
-    width: 56,
-    height: 56,
-    borderRadius: 14,
-    borderWidth: 1.5,
-    borderStyle: 'dashed',
+  homeAction: {
+    minHeight: 56,
+    borderRadius: 16,
+    borderWidth: 1,
     borderColor: colors.border,
     backgroundColor: colors.surface,
+    paddingHorizontal: 12,
+    paddingVertical: 8,
+    flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'center',
+    gap: 10,
   },
-  poseMain: { borderStyle: 'solid' },
-  poseThumbWrap: { width: 56, height: 56 },
-  poseThumbImg: { width: 56, height: 56, borderRadius: 14 },
-  poseLabel: { fontSize: 10.5, color: colors.textMuted, maxWidth: 72, textAlign: 'center' },
-  anglesBlock: { alignItems: 'center', marginTop: 14, gap: 10 },
-  angleRemove: {
-    position: 'absolute',
-    top: -5,
-    right: -5,
-    width: 20,
-    height: 20,
-    borderRadius: 10,
-    backgroundColor: colors.error,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  anglesHint: { color: colors.textMuted, fontSize: 11.5, textAlign: 'center' },
-  actionsRow: { flexDirection: 'row', gap: 12, marginTop: 24 },
-  // The flex the PressScale wrapper needs so the two cards still share the row
-  // evenly once the Animated.View sits between them and actionsRow.
-  actionBtnWrap: { flex: 1 },
-  actionBtn: {
-    flex: 1,
-    backgroundColor: colors.card,
+  homeActionIcon: {
+    width: 36,
+    height: 36,
     borderRadius: 14,
-    paddingVertical: 16,
     alignItems: 'center',
+    justifyContent: 'center',
+    borderWidth: 1,
+    overflow: 'hidden',
+  },
+  homeActionShine: {
+    position: 'absolute',
+    top: 5,
+    right: 6,
+    width: 7,
+    height: 7,
+    borderRadius: 4,
+    opacity: 0.9,
+  },
+  homeActionText: {
+    flex: 1,
+    color: colors.text,
+    fontSize: 13,
+    lineHeight: 17,
+    fontWeight: '800',
+  },
+  homeCompactStack: {
+    marginTop: 10,
+    gap: 8,
+  },
+  homeSignal: {
+    minHeight: 54,
+    borderRadius: 18,
+    borderWidth: 1,
+    borderColor: colors.border,
+    backgroundColor: colors.card,
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 10,
+    paddingHorizontal: 12,
+    paddingVertical: 9,
+  },
+  homeSignalIcon: {
+    width: 36,
+    height: 36,
+    borderRadius: 14,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  homeSignalCopy: { flex: 1 },
+  homeSignalTitle: {
+    color: colors.text,
+    fontSize: 13.5,
+    lineHeight: 18,
+    fontWeight: '900',
+  },
+  homeSignalBody: {
+    color: colors.textSecondary,
+    fontSize: 12,
+    lineHeight: 17,
+    marginTop: 3,
+    fontWeight: '600',
+  },
+  homeTipInline: {
+    minHeight: 52,
+    flexDirection: 'row',
+    alignItems: 'flex-start',
+    gap: 9,
+    borderRadius: 16,
+    borderWidth: 1,
+    borderColor: colors.border,
+    backgroundColor: colors.surface,
+    paddingHorizontal: 12,
+    paddingVertical: 10,
+  },
+  homeTipInlineText: {
+    flex: 1,
+    color: colors.textSecondary,
+    fontSize: 12,
+    lineHeight: 17,
+    fontWeight: '600',
+  },
+  photoPlan: {
+    marginTop: 10,
+    borderRadius: 18,
+    borderWidth: 1,
+    borderColor: colors.border,
+    backgroundColor: colors.card,
+    paddingHorizontal: 10,
+  },
+  photoReadyTitle: {
+    color: colors.text,
+    fontSize: 14,
+    lineHeight: 20,
+    fontWeight: '800',
+    paddingTop: 11,
+  },
+  photoSlotRow: {
+    minHeight: 66,
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 8,
+    borderBottomWidth: 1,
+    borderBottomColor: colors.border,
+  },
+  photoSlotThumbButton: { width: 46, height: 46 },
+  photoSlotThumb: { width: 46, height: 46, borderRadius: 12 },
+  photoSlotRemoveBadge: {
+    position: 'absolute',
+    top: -4,
+    right: -4,
+    width: 19,
+    height: 19,
+    borderRadius: 10,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: colors.error,
+    borderWidth: 1,
+    borderColor: colors.card,
+  },
+  photoSlotEmpty: {
+    width: 46,
+    height: 46,
+    borderRadius: 12,
+    borderWidth: 1.5,
+    borderStyle: 'dashed',
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: colors.surface,
+  },
+  photoSlotNumber: { fontSize: 14, fontWeight: '900' },
+  photoSlotLabel: { flex: 1, color: colors.text, fontSize: 13, lineHeight: 18, fontWeight: '700' },
+  slotAction: {
+    width: 44,
+    height: 44,
+    borderRadius: 13,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: colors.surface,
     borderWidth: 1,
     borderColor: colors.border,
   },
-  actionText: { color: colors.text, fontWeight: '600', marginTop: 8, fontSize: 13 },
-  // Achados recentes: 64px rounded photo tile, one-line 10.5px caption below
-  // (diagramacao-premium: a foto E o tile, o nome e a legenda).
-  recentStrip: { marginTop: 16 },
-  recentStripContent: { gap: 12, paddingRight: 4 },
-  recentItem: { width: 64, alignItems: 'center' },
-  recentThumb: { width: 64, height: 64, borderRadius: 14 },
+  anglesHint: { color: colors.textMuted, fontSize: 11.5, lineHeight: 17, textAlign: 'center', paddingVertical: 8 },
+  identifyButtonWrap: { marginBottom: 10 },
+  identifyButton: {
+    minHeight: 50,
+    marginTop: 12,
+    borderRadius: 16,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 9,
+  },
+  identifyButtonDisabled: { opacity: 0.4 },
+  identifyButtonText: { color: colors.white, fontSize: 14.5, lineHeight: 20, fontWeight: '800' },
+  anglesToggle: {
+    minHeight: 48,
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 8,
+    borderTopWidth: 1,
+    borderTopColor: colors.border,
+  },
+  anglesToggleLabel: {
+    flex: 1,
+    color: colors.textSecondary,
+    fontSize: 12.5,
+    lineHeight: 18,
+    fontWeight: '700',
+  },
+  recentSection: {
+    marginTop: 18,
+    borderRadius: 18,
+    borderWidth: 1,
+    borderColor: colors.border,
+    backgroundColor: colors.card,
+    padding: 12,
+  },
+  recentHeader: { minHeight: 44, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' },
+  recentTitle: { color: colors.text, fontSize: 15, lineHeight: 20, fontWeight: '800' },
+  recentGrid: { flexDirection: 'row', flexWrap: 'wrap', gap: 10 },
+  recentItem: {
+    width: '48%',
+    flexGrow: 1,
+    minWidth: 132,
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 9,
+    borderRadius: 14,
+    backgroundColor: colors.surface,
+    padding: 8,
+  },
+  recentThumb: { width: 48, height: 48, borderRadius: 12 },
   recentName: {
-    marginTop: 4,
-    fontSize: 10.5,
+    flex: 1,
+    fontSize: 11.5,
     fontWeight: '600',
     color: colors.textSecondary,
-    maxWidth: 64,
   },
   tipCard: {
     flexDirection: 'row',

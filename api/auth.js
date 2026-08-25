@@ -233,11 +233,11 @@ async function handleGoogle(req, res, deviceId) {
   await linkDeviceToEmail(res, deviceId, normalizedEmail);
 }
 
-// Deletes everything this app itself controls for this device/account: the
-// matching Supabase Auth user if a password was ever created, and this
-// device's subscriptions/category_usage rows. Local data (collection, profile
-// photo, the device id) is cleared client-side afterward - this endpoint only
-// ever touches server-side state.
+// Deletes everything this app itself controls for this account: the matching
+// Supabase Auth user, synced collection, and every device linked to the same
+// email. A free device without email still deletes everything keyed to its own
+// id. Local data is cleared client-side afterward; this endpoint only touches
+// server-side state.
 //
 // Under Stripe this also cancelled billing automatically. Hotmart offers no
 // equivalent call from here, so instead it returns `billingStillActive` and the
@@ -246,11 +246,19 @@ async function handleGoogle(req, res, deviceId) {
 // telling the person, is the dark pattern the old auto-cancel prevented.
 async function handleDelete(req, res, deviceId) {
   const admin = getSupabaseAdmin();
-  const { data: sub } = await admin
+  const { data: sub, error: subError } = await admin
     .from('subscriptions')
     .select('email, provider, provider_subscription_id')
     .eq('device_id', deviceId)
     .maybeSingle();
+
+  // Sem saber se a leitura falhou, tratar a conta como gratuita apagaria so o
+  // aparelho atual e responderia sucesso deixando os outros dados para tras.
+  if (subError) {
+    console.error('handleDelete: subscription lookup failed', subError.message);
+    res.status(503).json({ error: 'Could not delete all account data.', reason: 'deleteFailed' });
+    return;
+  }
 
   // IMPORTANT BEHAVIOUR CHANGE vs the Stripe version, which cancelled billing
   // automatically before deleting the data.
@@ -268,37 +276,80 @@ async function handleDelete(req, res, deviceId) {
     sub?.provider === 'hotmart' && sub?.provider_subscription_id
   );
 
-  if (sub?.email) {
+  const normalizedEmail = sub?.email ? sub.email.trim().toLowerCase() : null;
+  let deviceIds = [deviceId];
+
+  if (normalizedEmail) {
+    // A conta e o email, nao o telefone que apertou o botao. Cada restauracao
+    // cria uma linha para outro device_id; descobrir todos antes de apagar evita
+    // deixar acesso, push, contador ou denuncia vinculados em outro aparelho.
+    const { data: linkedDevices, error: linkedError } = await admin
+      .from('subscriptions')
+      .select('device_id')
+      .eq('email', normalizedEmail);
+    if (linkedError) {
+      console.error('handleDelete: linked-device lookup failed', linkedError.message);
+      res.status(503).json({ error: 'Could not delete all account data.', reason: 'deleteFailed' });
+      return;
+    }
+    deviceIds = [...new Set([
+      deviceId,
+      ...(linkedDevices || []).map((row) => row?.device_id).filter(Boolean),
+    ])];
+  }
+
+  const deleteFailed = (stage, error) => {
+    console.error(`handleDelete: ${stage} failed`, error?.message || 'unknown error');
+    res.status(503).json({ error: 'Could not delete all account data.', reason: 'deleteFailed' });
+  };
+
+  if (normalizedEmail) {
+    const { error } = await admin.from('collection_entries').delete().eq('email', normalizedEmail);
+    if (error) {
+      deleteFailed('collection deletion', error);
+      return;
+    }
+  }
+
+  // Estes quatro conjuntos sao idempotentes. subscriptions fica por ultimo:
+  // se qualquer etapa falhar, uma nova tentativa ainda consegue reencontrar o
+  // email e todos os aparelhos em vez de perder a unica chave da conta.
+  for (const table of ['push_subscriptions', 'category_usage', 'ai_reports']) {
+    const { error } = await admin.from(table).delete().in('device_id', deviceIds);
+    if (error) {
+      deleteFailed(`${table} deletion`, error);
+      return;
+    }
+  }
+
+  if (normalizedEmail) {
     try {
-      const normalizedEmail = sub.email.trim().toLowerCase();
       for (let page = 1; page <= 10; page += 1) {
         const { data, error } = await admin.auth.admin.listUsers({ page, perPage: 200 });
-        if (error || !data?.users?.length) break;
+        if (error) throw error;
+        if (!data?.users?.length) break;
         const match = data.users.find((u) => u.email?.toLowerCase() === normalizedEmail);
         if (match) {
-          await admin.auth.admin.deleteUser(match.id);
+          const { error: authDeleteError } = await admin.auth.admin.deleteUser(match.id);
+          if (authDeleteError) throw authDeleteError;
           break;
         }
         if (data.users.length < 200) break;
       }
     } catch (err) {
-      // No password account existed, or lookup failed - not fatal, continue.
+      deleteFailed('auth user deletion', err);
+      return;
     }
   }
 
-  // Everything keyed to this account must go, not just the two original
-  // tables: the synced collection is keyed by EMAIL (api/collection.js) and
-  // push subscriptions by device_id. Leaving either behind contradicts the
-  // "removes your saved data from our servers" promise in the UI - and
-  // Google Play's account-deletion policy requires associated data to be
-  // actually removed.
-  if (sub?.email) {
-    const normalizedEmail = sub.email.trim().toLowerCase();
-    await admin.from('collection_entries').delete().eq('email', normalizedEmail);
+  const subscriptionDelete = admin.from('subscriptions').delete();
+  const { error: subscriptionDeleteError } = normalizedEmail
+    ? await subscriptionDelete.eq('email', normalizedEmail)
+    : await subscriptionDelete.eq('device_id', deviceId);
+  if (subscriptionDeleteError) {
+    deleteFailed('subscription deletion', subscriptionDeleteError);
+    return;
   }
-  await admin.from('push_subscriptions').delete().eq('device_id', deviceId);
-  await admin.from('subscriptions').delete().eq('device_id', deviceId);
-  await admin.from('category_usage').delete().eq('device_id', deviceId);
 
   // billingStillActive tells the client to warn that the Hotmart charge keeps
   // running and must be cancelled there. See the comment above the lookup.

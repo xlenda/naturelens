@@ -5,7 +5,6 @@ import { useTranslation } from 'react-i18next';
 import { colors } from './theme';
 import SectionCard from './SectionCard';
 import shortFact from './shortFact';
-import { WATER_INTERVAL_DAYS } from './watering';
 import { firstSentence } from './sentences';
 
 // "Condicao de Cuidado" - tela principal rica (video do concorrente, 20/08).
@@ -18,16 +17,15 @@ import { firstSentence } from './sentences';
 // (CareTopics), o mesmo openTopic que a tela ja usa nos Fatos Rapidos.
 //
 // Nada aqui inventa campo: os valores curtos saem do shortFact (que devolve
-// null quando a prosa do vendor nao casa palavra-chave) e do mapa real de
-// intervalos de rega. Linha sem dado nao renderiza; sem nenhuma linha o card
-// inteiro some (ausencia honesta).
+// null quando a prosa do vendor nao casa palavra-chave). Rega e intensidade
+// qualitativa do fornecedor, nunca um calendario deduzido. Linha sem dado nao
+// renderiza; sem nenhuma linha o card inteiro some (ausencia honesta).
 
 // A primeira frase da prosa de luz sai do helper compartilhado (sentences.js);
 // a truncagem visual fica no numberOfLines={1}.
 
 export default function CareConditions({ plant, onOpenTopic }) {
   const { t } = useTranslation();
-  const days = WATER_INTERVAL_DAYS[plant.water];
 
   const rows = [
     {
@@ -52,10 +50,7 @@ export default function CareConditions({ plant, onOpenTopic }) {
       color: colors.info,
       label: t('detail.wateringGuideSection'),
       value: shortFact('water', plant.waterLabel || plant.water, t),
-      // Intervalo REAL (WATER_INTERVAL_DAYS), nunca um numero estimado: o
-      // rotulo composto do vendor ('Low (prefers dry soil) to Medium') nao tem
-      // entrada no mapa e a linha sai so com o nivel, honestamente.
-      sub: days ? t('detail.everyNDays', { count: days }) : null,
+      sub: null,
     },
   ]
     // Quando so a frase existe (idioma que o shortFact nao cobre), ela vira o

@@ -40,8 +40,30 @@ export function trackAppOpen({ language, standalone }) {
   push('app_open', { language, standalone: Boolean(standalone) });
 }
 
-export function trackOnboardingCompleted({ steps }) {
-  push('onboarding_completed', { steps });
+export function trackOnboardingStepViewed({ step, position }) {
+  push('onboarding_step_viewed', { step, position });
+}
+
+export function trackOnboardingChoice({ step, value }) {
+  push('onboarding_choice', { step, value });
+}
+
+export function trackOnboardingSkipped({ step, position }) {
+  push('onboarding_skipped', { step, position });
+}
+
+export function trackOnboardingCompleted({ steps, goal, context, depth, preferredCategory }) {
+  push('onboarding_completed', {
+    steps,
+    goal,
+    context,
+    depth,
+    preferred_category: preferredCategory,
+  });
+}
+
+export function trackAcquisitionSourceAnswered({ source }) {
+  push('acquisition_source_answered', { source });
 }
 
 // ---------------------------------------------------------------------------
@@ -81,7 +103,7 @@ export function trackResultSaved({ category }) {
 // specific care tab); no species name travels (house rule: nothing personal
 // or content-identifying in the dataLayer).
 export function trackResultFeedback({ category, context, useful }) {
-  push({ event: 'result_feedback', category, context, useful: !!useful });
+  push('result_feedback', { category, context, useful: !!useful });
 }
 
 export function trackResultShared({ category, method }) {

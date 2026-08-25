@@ -43,12 +43,46 @@ const stubs = {
   'react-i18next': { useTranslation: () => ({ t: (k) => k, i18n: { language: 'en' } }) },
   './theme': { colors: {} },
   './gbifTaxonKey': { getTaxonKey: async () => null, GBIF_UA: 'test' },
+  './taxonIdentity': {
+    enrichmentTaxon: (_identity, legacy) => ({
+      canonicalName: legacy?.scientificName || null,
+      gbifKey: legacy?.gbifKey || null,
+    }),
+  },
 };
 const fakeRequire = (name) => (name in stubs ? stubs[name] : require(name));
 
 const mod = { exports: {} };
 new Function('module', 'exports', 'require', code)(mod, mod.exports, fakeRequire);
 const { monthCounts, barHeight, MIN_RECORDS } = mod.exports;
+
+function loadGbifTaxonKey({ cached = null, fetchImpl } = {}) {
+  const gbifFile = path.join(__dirname, 'components', 'gbifTaxonKey.js');
+  const transformed = babel.transformFileSync(gbifFile, { presets: ['babel-preset-expo'] }).code;
+  let storageReads = 0;
+  let storageWrites = 0;
+  let fetches = 0;
+  let stored = cached;
+  const gbifStubs = {
+    '@react-native-async-storage/async-storage': {
+      getItem: async () => { storageReads += 1; return stored; },
+      setItem: async (_key, value) => { storageWrites += 1; stored = value; },
+    },
+  };
+  const previousFetch = global.fetch;
+  global.fetch = async (...args) => {
+    fetches += 1;
+    return fetchImpl ? fetchImpl(...args) : { ok: false };
+  };
+  const gbifModule = { exports: {} };
+  const gbifRequire = (name) => (name in gbifStubs ? gbifStubs[name] : require(name));
+  new Function('module', 'exports', 'require', transformed)(gbifModule, gbifModule.exports, gbifRequire);
+  return {
+    ...gbifModule.exports,
+    counters: () => ({ storageReads, storageWrites, fetches, stored }),
+    restore: () => { global.fetch = previousFetch; },
+  };
+}
 
 // Resposta real de /occurrence/search?taxonKey=3169674&facet=month&facetLimit=12&limit=0
 const PLUMERIA = {
@@ -126,4 +160,151 @@ test('barra: zero nao desenha nada, o pico enche, o minusculo continua visivel',
   assert.equal(barHeight(0, 33), 0);
   assert.ok(barHeight(33, 33) > barHeight(18, 33));
   assert.ok(barHeight(1, 10000) >= 3, 'um registro isolado nao pode sumir de vez');
+});
+
+test('identificador GBIF do fornecedor so entra depois de confirmar nome e rank', async () => {
+  const gbif = loadGbifTaxonKey({
+    fetchImpl: async (url) => {
+      assert.match(String(url), /\/species\/5394163$/);
+      return {
+        ok: true,
+        json: async () => ({
+          key: 5394163,
+          canonicalName: 'Taraxacum officinale',
+          scientificName: 'Taraxacum officinale F.H.Wigg.',
+          rank: 'SPECIES',
+        }),
+      };
+    },
+  });
+  try {
+    assert.equal(await gbif.getTaxonKey('Taraxacum officinale', '5394163'), '5394163');
+    assert.deepEqual(gbif.counters(), {
+      storageReads: 1,
+      storageWrites: 1,
+      fetches: 1,
+      stored: JSON.stringify({
+        key: '5394163',
+        canonicalName: 'Taraxacum officinale',
+        rank: 'SPECIES',
+        resolverVersion: 2,
+      }),
+    });
+  } finally {
+    gbif.restore();
+  }
+});
+
+test('identificador GBIF malformado nunca entra numa URL e cai para o lookup seguro', async () => {
+  const gbif = loadGbifTaxonKey({
+    cached: JSON.stringify({
+      key: '3169674',
+      canonicalName: 'Plumeria rubra',
+      rank: 'SPECIES',
+      resolverVersion: 2,
+    }),
+  });
+  try {
+    assert.equal(await gbif.getTaxonKey('Plumeria rubra', 'not-an-id'), '3169674');
+    assert.deepEqual(gbif.counters(), {
+      storageReads: 1,
+      storageWrites: 0,
+      fetches: 0,
+      stored: JSON.stringify({
+        key: '3169674',
+        canonicalName: 'Plumeria rubra',
+        rank: 'SPECIES',
+        resolverVersion: 2,
+      }),
+    });
+    assert.equal(await gbif.getTaxonKey(null, '-8'), null);
+  } finally {
+    gbif.restore();
+  }
+});
+
+test('GBIF fuzzy, genero e chave de outra especie falham fechados', async () => {
+  const cases = [
+    {
+      scientific: 'Plumeria rubra',
+      provided: null,
+      response: {
+        usageKey: 1,
+        canonicalName: 'Plumeria alba',
+        rank: 'SPECIES',
+        matchType: 'FUZZY',
+        confidence: 100,
+      },
+    },
+    {
+      scientific: 'Plumeria rubra',
+      provided: null,
+      response: {
+        usageKey: 2,
+        canonicalName: 'Plumeria',
+        rank: 'GENUS',
+        matchType: 'EXACT',
+        confidence: 100,
+      },
+    },
+    {
+      scientific: 'Plumeria rubra',
+      provided: '3169674',
+      response: {
+        key: 3169674,
+        canonicalName: 'Plumeria alba',
+        rank: 'SPECIES',
+      },
+    },
+  ];
+
+  for (const item of cases) {
+    const gbif = loadGbifTaxonKey({
+      fetchImpl: async () => ({ ok: true, json: async () => item.response }),
+    });
+    try {
+      assert.equal(await gbif.getTaxonKey(item.scientific, item.provided), null);
+    } finally {
+      gbif.restore();
+    }
+  }
+});
+
+test('uma resposta GBIF sem correspondencia exata nunca vira cache negativo permanente', async () => {
+  let attempt = 0;
+  const gbif = loadGbifTaxonKey({
+    fetchImpl: async () => {
+      attempt += 1;
+      return attempt === 1
+        ? {
+            ok: true,
+            json: async () => ({
+              usageKey: 10,
+              canonicalName: 'Plumeria alba',
+              rank: 'SPECIES',
+              matchType: 'FUZZY',
+              confidence: 100,
+            }),
+          }
+        : {
+            ok: true,
+            json: async () => ({
+              usageKey: 3169674,
+              canonicalName: 'Plumeria rubra',
+              rank: 'SPECIES',
+              matchType: 'EXACT',
+              confidence: 100,
+            }),
+          };
+    },
+  });
+
+  try {
+    assert.equal(await gbif.getTaxonKey('Plumeria rubra'), null);
+    assert.equal(await gbif.getTaxonKey('Plumeria rubra'), '3169674');
+    assert.equal(gbif.counters().fetches, 2, 'the next opening must retry the resolver');
+    assert.equal(gbif.counters().storageWrites, 1, 'only the exact result may be persisted');
+  } finally {
+    gbif.restore();
+  }
 });

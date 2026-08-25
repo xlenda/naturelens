@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import * as Haptics from 'expo-haptics';
 import { useTranslation } from 'react-i18next';
 import { colors } from './theme';
 import { trackResultFeedback } from './tracking';
+import PressScale from './PressScale';
+import { sensoryFeedback } from './sensoryFeedback';
+import { recordPositiveReviewSignal } from './storeReview';
 
 // "Was this helpful? Yes/No" - the competitor asks it at the end of every
 // content surface; it is the denominator of wrong identifications the app
@@ -16,15 +18,23 @@ export default function HelpfulRow({ category, context }) {
 
   const answer = (useful) => {
     if (answered) return;
-    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+    sensoryFeedback.selection();
     setAnswered(true);
     trackResultFeedback({ category, context, useful });
+    if (useful) recordPositiveReviewSignal().catch(() => undefined);
   };
 
   if (answered) {
     return (
-      <View style={styles.row}>
-        <Ionicons name="checkmark-circle" size={18} color={colors.accent} />
+      <View
+        style={styles.row}
+        accessible
+        accessibilityRole="text"
+        accessibilityLiveRegion="polite"
+        accessibilityLabel={t('detail.feedbackThanks')}
+      >
+        <Ionicons name="checkmark-circle" size={18} color={colors.accent} accessible={false} />
+        <Text style={styles.thanks}>{t('detail.feedbackThanks')}</Text>
       </View>
     );
   }
@@ -32,26 +42,30 @@ export default function HelpfulRow({ category, context }) {
   return (
     <View style={styles.row}>
       <Text style={styles.label}>{t('detail.wasHelpful')}</Text>
-      <TouchableOpacity
-        style={styles.btn}
-        onPress={() => answer(true)}
-        activeOpacity={0.7}
-        accessibilityRole="button"
-        accessibilityLabel={t('common.yes')}
-      >
-        <Ionicons name="thumbs-up-outline" size={14} color={colors.textSecondary} />
-        <Text style={styles.btnText}>{t('common.yes')}</Text>
-      </TouchableOpacity>
-      <TouchableOpacity
-        style={styles.btn}
-        onPress={() => answer(false)}
-        activeOpacity={0.7}
-        accessibilityRole="button"
-        accessibilityLabel={t('common.no')}
-      >
-        <Ionicons name="thumbs-down-outline" size={14} color={colors.textSecondary} />
-        <Text style={styles.btnText}>{t('common.no')}</Text>
-      </TouchableOpacity>
+      <PressScale>
+        <TouchableOpacity
+          style={styles.btn}
+          onPress={() => answer(true)}
+          activeOpacity={0.7}
+          accessibilityRole="button"
+          accessibilityLabel={t('common.yes')}
+        >
+          <Ionicons name="thumbs-up-outline" size={14} color={colors.textSecondary} accessible={false} />
+          <Text style={styles.btnText}>{t('common.yes')}</Text>
+        </TouchableOpacity>
+      </PressScale>
+      <PressScale>
+        <TouchableOpacity
+          style={styles.btn}
+          onPress={() => answer(false)}
+          activeOpacity={0.7}
+          accessibilityRole="button"
+          accessibilityLabel={t('common.no')}
+        >
+          <Ionicons name="thumbs-down-outline" size={14} color={colors.textSecondary} accessible={false} />
+          <Text style={styles.btnText}>{t('common.no')}</Text>
+        </TouchableOpacity>
+      </PressScale>
     </View>
   );
 }
@@ -59,6 +73,7 @@ export default function HelpfulRow({ category, context }) {
 const styles = StyleSheet.create({
   row: {
     flexDirection: 'row',
+    flexWrap: 'wrap',
     alignItems: 'center',
     justifyContent: 'center',
     gap: 10,
@@ -66,7 +81,9 @@ const styles = StyleSheet.create({
     minHeight: 56,
   },
   label: { color: colors.textMuted, fontSize: 13, fontWeight: '600', marginRight: 4 },
+  thanks: { color: colors.textSecondary, fontSize: 13, fontWeight: '700' },
   btn: {
+    minHeight: 44,
     flexDirection: 'row',
     alignItems: 'center',
     gap: 6,

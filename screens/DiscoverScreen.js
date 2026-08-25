@@ -8,11 +8,11 @@ import {
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useNavigation, useFocusEffect } from '@react-navigation/native';
-import { Ionicons } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
 import * as Haptics from 'expo-haptics';
 import { useTranslation } from 'react-i18next';
-import { colors, shadow, type } from '../components/theme';
+import CategoryIcon from '../components/CategoryIcon';
+import { colors, shadow } from '../components/theme';
 import DailyMissionsCard from '../components/DailyMissionsCard';
 import FindThumb from '../components/FindThumb';
 import NatureScene from '../components/NatureScene';
@@ -23,6 +23,10 @@ import { addTokens } from '../components/achievements';
 import { recordMissionEvent, TOKENS_PER_MISSION } from '../components/missions';
 import { BOOKS } from '../components/books';
 import { getOwnedRewards } from '../components/rewardOwnership';
+import MainScreenHeader from '../components/MainScreenHeader';
+import SectionHeading from '../components/SectionHeading';
+import { TopBarIcon } from '../components/TopBar';
+import MascotWelcomeCard from '../components/MascotWelcomeCard';
 
 // This list is what actually renders - a collection that exists only in the
 // locale files but not here is invisible. (Learned the hard way: the fish and
@@ -131,23 +135,24 @@ export default function DiscoverScreen() {
       <NatureScene />
 
       <ScrollView contentContainerStyle={styles.scroll} showsVerticalScrollIndicator={false}>
-        <View style={styles.titleRowTop}>
-          <View style={{ flex: 1 }}>
-            <Text style={styles.title} accessibilityRole="header">{t('discover.title')}</Text>
-            <Text style={styles.subtitle}>{t('discover.subtitle')}</Text>
-          </View>
+        <MainScreenHeader
+          title={t('discover.title')}
+          subtitle={t('discover.subtitle')}
+          right={
+          <>
           {/* Settings pinned to every main screen's header (competitor's
               ever-present gear); nested navigate bubbles to the tab navigator. */}
-          <TouchableOpacity
-            style={styles.gearBtn}
-            activeOpacity={0.8}
+          <TopBarIcon
             onPress={() => navigation.navigate('Profile', { screen: 'Settings' })}
-            accessibilityRole="button"
-            accessibilityLabel={t('settings.title')}
+            label={t('settings.title')}
           >
-            <Ionicons name="settings-outline" size={20} color={colors.text} />
-          </TouchableOpacity>
-        </View>
+            <CategoryIcon name="settings-outline" size={20} color={colors.text} />
+          </TopBarIcon>
+          </>
+          }
+        />
+
+        <MascotWelcomeCard />
 
         <DailyMissionsCard refreshKey={missionsTick} />
 
@@ -167,7 +172,7 @@ export default function DiscoverScreen() {
               style={styles.factCard}
             >
               <View style={styles.factHeader}>
-                <Ionicons
+                <CategoryIcon
                   name="bulb"
                   size={18}
                   color={colors.warning}
@@ -178,7 +183,7 @@ export default function DiscoverScreen() {
               </View>
               <Text style={styles.factText}>{facts[factIndex]}</Text>
               <View style={styles.factFooter}>
-                <Ionicons
+                <CategoryIcon
                   name="refresh"
                   size={14}
                   color="rgba(255,255,255,0.8)"
@@ -197,7 +202,7 @@ export default function DiscoverScreen() {
             the book's cover species via FindThumb, icon fallback when it fails.
             Locked books wear a lock+cost badge; the free one wears a gift badge
             until claimed, so the "one is free" present is visible from here. */}
-        <Text style={styles.sectionTitle}>{t('books.shelfTitle')}</Text>
+        <SectionHeading>{t('books.shelfTitle')}</SectionHeading>
         <ScrollView
           horizontal
           showsHorizontalScrollIndicator={false}
@@ -234,12 +239,12 @@ export default function DiscoverScreen() {
                   {!owned &&
                     (b.cost === 0 ? (
                       <View style={[styles.bookBadge, { backgroundColor: b.color }]}>
-                        <Ionicons name="gift" size={11} color={colors.white} />
+                        <CategoryIcon name="gift" size={11} color={colors.white} />
                         <Text style={styles.bookBadgeText}>{t('books.free')}</Text>
                       </View>
                     ) : (
                       <View style={[styles.bookBadge, styles.bookLockBadge]}>
-                        <Ionicons name="lock-closed" size={11} color={colors.white} />
+                        <CategoryIcon name="lock-closed" size={11} color={colors.white} />
                         <Text style={styles.bookBadgeText}>{b.cost}</Text>
                       </View>
                     ))}
@@ -254,7 +259,7 @@ export default function DiscoverScreen() {
             scene showing through, and banding every section flattens the
             dark→lighter→dark rhythm back into a single background. */}
         <ZoneBand gutter={20}>
-          <Text style={styles.sectionTitle}>{t('discover.exploreCollections')}</Text>
+          <SectionHeading>{t('discover.exploreCollections')}</SectionHeading>
           {TOPICS.map((topic) => {
             const speciesList = t(`discover.topics.${topic.topicKey}.species`, { returnObjects: true });
             const speciesCount = Array.isArray(speciesList) ? speciesList.length : 0;
@@ -309,7 +314,7 @@ export default function DiscoverScreen() {
                     </View>
                     <View style={styles.topicCount}>
                       <Text style={[styles.topicCountText, { color: topic.color }]}>{speciesCount}</Text>
-                      <Ionicons
+                      <CategoryIcon
                         name="chevron-forward"
                         size={16}
                         color={colors.textMuted}
@@ -325,7 +330,7 @@ export default function DiscoverScreen() {
         </ZoneBand>
 
         <ZoneBand gutter={20}>
-          <Text style={styles.sectionTitle}>{t('discover.trendingSpecies')}</Text>
+          <SectionHeading>{t('discover.trendingSpecies')}</SectionHeading>
           <ScrollView horizontal showsHorizontalScrollIndicator={false} style={{ marginHorizontal: -20 }} contentContainerStyle={{ paddingHorizontal: 20 }}>
             {SPECIES_META.map((s) => {
               const name = t(`discover.species.${s.speciesKey}.name`);
@@ -419,21 +424,9 @@ export default function DiscoverScreen() {
 }
 
 const styles = StyleSheet.create({
-  titleRowTop: { flexDirection: 'row', alignItems: 'flex-start', gap: 10 },
-  gearBtn: {
-    width: 40,
-    height: 40,
-    borderRadius: 12,
-    backgroundColor: colors.surface,
-    alignItems: 'center',
-    justifyContent: 'center',
-    marginTop: 4,
-  },
   container: { flex: 1, backgroundColor: colors.background },
   // Bottom padding clears the floating subscribe pill (see CollectionScreen).
   scroll: { padding: 20, paddingBottom: 84 },
-  title: { fontSize: 26, fontWeight: '800', color: colors.text },
-  subtitle: { fontSize: 13, color: colors.textMuted, marginTop: 2, marginBottom: 20 },
   factCard: { borderRadius: 20, padding: 20, ...shadow },
   factHeader: { flexDirection: 'row', alignItems: 'center', marginBottom: 12 },
   factLabel: { color: colors.white, fontWeight: '700', fontSize: 14, marginLeft: 8 },
@@ -447,7 +440,6 @@ const styles = StyleSheet.create({
   // 22/800/center/34 - o token type.sectionTitle existia e ninguem consumia,
   // entao corrigir o theme sozinho nao mudaria um pixel desta tela. Passa a
   // consumir o token; o marginBottom local sai junto (o token ja traz 10).
-  sectionTitle: { ...type.sectionTitle },
   // Capa de livro: photo tile 110x150 with the title as an overlaid caption
   // and the status badge stamped on top. justifyContent pushes the caption to
   // the base; overflow clips the photo to the cover's corners.

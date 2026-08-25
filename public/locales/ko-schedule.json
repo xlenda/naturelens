@@ -15,7 +15,8 @@
         "summer": "월 1회, 절반 농도",
         "autumn": "중단",
         "winter": "주지 않음",
-        "note": "질소는 적게, 제품 표시 농도의 1/2에서 1/4로. 질소가 많으면 무른 조직이 생겨 썩습니다 (Clemson, Iowa State)."
+        "note": "질소는 적게, 제품 표시 농도의 1/2에서 1/4로. 질소가 많으면 무른 조직이 생겨 썩습니다 (Clemson, Iowa State).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "분갈이",
@@ -51,7 +52,8 @@
         "summer": "월 1회, 묽게",
         "autumn": "점차 중단",
         "winter": "주지 않음",
-        "note": "실내 식물은 생육기에만 비료를 주고, 휴면기에는 전혀 주지 않습니다 (UConn)."
+        "note": "실내 식물은 생육기에만 비료를 주고, 휴면기에는 전혀 주지 않습니다 (UConn).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "삽목",
@@ -79,7 +81,8 @@
         "summer": "월 1회, 절반 농도",
         "autumn": "중단",
         "winter": "주지 않음",
-        "note": "포기나누기나 분갈이 뒤 6개월 동안은 전혀 주지 않습니다. 비료가 과하면 잎이 탑니다 (Clemson, UConn)."
+        "note": "포기나누기나 분갈이 뒤 6개월 동안은 전혀 주지 않습니다. 비료가 과하면 잎이 탑니다 (Clemson, UConn).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "포기나누기와 분갈이",
@@ -115,7 +118,8 @@
         "summer": "수확 후",
         "autumn": "중단",
         "winter": "주지 않음",
-        "note": "핵과류는 세 번에 나누어 주고, 여름 마지막 몇 주에는 주지 않아야 가지가 여뭅니다 (Clemson)."
+        "note": "핵과류는 세 번에 나누어 주고, 여름 마지막 몇 주에는 주지 않아야 가지가 여뭅니다 (Clemson).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "가지치기",
@@ -143,7 +147,8 @@
         "summer": "6주마다",
         "autumn": "서리 전 중단",
         "winter": "주지 않음",
-        "note": "장미는 한여름 더위에 절반 농도로 낮추고, 첫서리 예상 6주 전에 멈춥니다 (Clemson)."
+        "note": "장미는 한여름 더위에 절반 농도로 낮추고, 첫서리 예상 6주 전에 멈춥니다 (Clemson).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "시든 꽃 제거",
@@ -179,7 +184,8 @@
         "summer": "나누어 시비",
         "autumn": "중단",
         "winter": "주지 않음",
-        "note": "다 자란 나무는 거의 또는 전혀 필요 없습니다. 늦은 질소 시비는 휴면을 늦춥니다 (Clemson)."
+        "note": "다 자란 나무는 거의 또는 전혀 필요 없습니다. 늦은 질소 시비는 휴면을 늦춥니다 (Clemson).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "가지치기",
@@ -215,7 +221,8 @@
         "summer": "주 1회, 절반 농도",
         "autumn": "2주마다",
         "winter": "2주마다",
-        "note": "표시 농도의 절반, 요소는 적거나 없게, 그리고 염류를 씻어내려면 네 번에 한 번은 거릅니다 (AOS, RHS)."
+        "note": "표시 농도의 절반, 요소는 적거나 없게, 그리고 염류를 씻어내려면 네 번에 한 번은 거릅니다 (AOS, RHS).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "분갈이",
@@ -251,7 +258,8 @@
         "summer": "생육 멈출 때만",
         "autumn": "주지 않음",
         "winter": "주지 않음",
-        "note": "노지에 심은 로즈메리에는 전혀 주지 않으며, 너무 비옥한 흙은 향을 무디게 합니다 (RHS, Clemson)."
+        "note": "노지에 심은 로즈메리에는 전혀 주지 않으며, 너무 비옥한 흙은 향을 무디게 합니다 (RHS, Clemson).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "가지치기",

@@ -15,7 +15,8 @@
         "summer": "每月一次,半量",
         "autumn": "停止",
         "winter": "不施肥",
-        "note": "氮要少,用標籤劑量的二分之一到四分之一。氮過量會長出容易腐爛的軟組織(Clemson、Iowa State)。"
+        "note": "氮要少,用標籤劑量的二分之一到四分之一。氮過量會長出容易腐爛的軟組織(Clemson、Iowa State)。",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "換盆",
@@ -51,7 +52,8 @@
         "summer": "每月一次,稀釋",
         "autumn": "逐漸減少",
         "winter": "不施肥",
-        "note": "室內植物只在生長期施肥,休眠期完全不施(UConn)。"
+        "note": "室內植物只在生長期施肥,休眠期完全不施(UConn)。",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "扦插",
@@ -79,7 +81,8 @@
         "summer": "每月一次,半量",
         "autumn": "停止",
         "winter": "不施肥",
-        "note": "分株或換盆後 6 個月內完全不施肥;肥過量會灼傷葉片(Clemson、UConn)。"
+        "note": "分株或換盆後 6 個月內完全不施肥;肥過量會灼傷葉片(Clemson、UConn)。",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "分株換盆",
@@ -115,7 +118,8 @@
         "summer": "採收後",
         "autumn": "停止",
         "winter": "不施肥",
-        "note": "核果類分三次施用,夏末數週完全不施,好讓枝條老熟(Clemson)。"
+        "note": "核果類分三次施用,夏末數週完全不施,好讓枝條老熟(Clemson)。",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "修剪",
@@ -143,7 +147,8 @@
         "summer": "每 6 週一次",
         "autumn": "霜前停止",
         "winter": "不施肥",
-        "note": "玫瑰在最熱時降到半量,並在預計初霜前 6 週停止(Clemson)。"
+        "note": "玫瑰在最熱時降到半量,並在預計初霜前 6 週停止(Clemson)。",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "摘除殘花",
@@ -179,7 +184,8 @@
         "summer": "分次施用",
         "autumn": "停止",
         "winter": "不施肥",
-        "note": "成年樹幾乎不需要或完全不需要。晚期高氮施肥會推遲休眠(Clemson)。"
+        "note": "成年樹幾乎不需要或完全不需要。晚期高氮施肥會推遲休眠(Clemson)。",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "修剪",
@@ -215,7 +221,8 @@
         "summer": "每週一次,半量",
         "autumn": "每 2 週一次",
         "winter": "每 2 週一次",
-        "note": "用標籤劑量的一半,少用或不用尿素,並每第 4 次施肥跳過一次以淋洗鹽分(AOS、RHS)。"
+        "note": "用標籤劑量的一半,少用或不用尿素,並每第 4 次施肥跳過一次以淋洗鹽分(AOS、RHS)。",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "換盆",
@@ -251,7 +258,8 @@
         "summer": "停長才補",
         "autumn": "不施肥",
         "winter": "不施肥",
-        "note": "地栽迷迭香完全不施肥,土壤太肥會讓香味變淡(RHS、Clemson)。"
+        "note": "地栽迷迭香完全不施肥,土壤太肥會讓香味變淡(RHS、Clemson)。",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "修剪",

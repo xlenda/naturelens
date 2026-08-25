@@ -33,7 +33,122 @@
     "translating": "Tłumaczenie…",
     "translateFailed": "Nie udało się teraz przetłumaczyć.",
     "yes": "Tak",
-    "no": "Nie"
+    "no": "Nie",
+    "loading": "Wczytywanie…"
+  },
+  "discoveryReceipt": {
+    "title": "Identyfikacja zakończona",
+    "ready": "Wynik jest gotowy do sprawdzenia.",
+    "tokens": "+{{count}} zdobytych tokenów",
+    "streak": "Dni w aktualnej serii: {{count}}",
+    "achievement": "Odblokowane osiągnięcie: {{title}}",
+    "factTitle": "O tym kandydacie",
+    "saveHint": "Zapisz to znalezisko, aby do niego wrócić i dodać własne obserwacje."
+  },
+  "acquisition": {
+    "title": "Skąd dowiedziałeś się o NatureLens?",
+    "subtitle": "Jedna krótka odpowiedź pomoże nam ulepszać aplikację. To opcjonalne.",
+    "thanks": "Dziękujemy — dzięki temu możemy ulepszać NatureLens.",
+    "skip": "Nie teraz",
+    "options": {
+      "tiktok": "TikTok",
+      "instagram": "Instagram",
+      "youtube": "YouTube",
+      "search": "Google lub Sklep Play",
+      "friend": "Od znajomej lub znajomego",
+      "other": "Inne"
+    }
+  },
+  "specimen": {
+    "title": "Mój zapis",
+    "notFoundTitle": "Nie znaleziono zapisu",
+    "notFoundBody": "Tego zapisanego znaleziska nie ma już w Twojej kolekcji.",
+    "returnToCollection": "Wróć do kolekcji",
+    "openRecord": "Otwórz mój zapis",
+    "savedOn": "Zapisano: {{date}}",
+    "todayTitle": "Dzisiaj",
+    "wateredAnnouncement": "Podlewanie zapisane.",
+    "personalizeTitle": "Spersonalizuj",
+    "observationTitle": "Moja obserwacja",
+    "observationEmpty": "Brak obserwacji. Zapisz, co zauważono, gdzie znaleziono okaz lub co się zmieniło.",
+    "observationPlaceholder": "Zapisz krótką obserwację…",
+    "addObservation": "Dodaj obserwację",
+    "editObservation": "Edytuj obserwację",
+    "saveObservation": "Zapisz obserwację",
+    "removeObservation": "Usuń obserwację",
+    "characterCount": "{{count}}/{{max}} znaków",
+    "timelineTitle": "Oś czasu",
+    "timelineAdded": "Dodano do kolekcji",
+    "timelineWatered": "Podlewanie zapisane",
+    "timelineObservationUpdated": "Ostatnia edycja obserwacji",
+    "guideTitle": "Przewodnik po gatunku",
+    "guideBody": "Identyfikacja i wszystkie dostępne informacje o gatunku.",
+    "openGuide": "Otwórz przewodnik",
+    "noteSavedAnnouncement": "Obserwacja zapisana.",
+    "removeTitle": "Usunąć zapis?",
+    "removeBody": "Usunąć {{name}} z kolekcji? Tej operacji nie można cofnąć.",
+    "removeAction": "Usuń"
+  },
+  "localReminders": {
+    "title": "Przypomnienia w telefonie",
+    "body": "Wybierz dokładnie, co i kiedy przypomnieć. Android może powiadomić Cię także podczas używania innej aplikacji, zależnie od uprawnień i ustawień systemu.",
+    "loading": "Wczytywanie przypomnień…",
+    "loadError": "Nie udało się teraz wczytać przypomnień.",
+    "nextTitle": "Nadchodzące przypomnienia",
+    "addAction": "Dodaj przypomnienie",
+    "empty": "Brak nadchodzących przypomnień dla tego zapisu.",
+    "unavailableTitle": "Przypomnienia są niedostępne",
+    "unavailableBody": "Ta wersja aplikacji na Androida nie może planować powiadomień. Zainstaluj zgodną wersję, aby korzystać z przypomnień.",
+    "modalTitle": "Utwórz przypomnienie",
+    "reminderFor": "Dla: {{name}}",
+    "taskLabel": "O zapisaniu czego ma przypomnieć telefon?",
+    "startLabel": "Pierwsze przypomnienie",
+    "timeLabel": "Godzina",
+    "repeatLabel": "Powtarzanie",
+    "weekdayLabel": "Dzień tygodnia",
+    "firstAt": "Pierwsze powiadomienie: {{date}}",
+    "saveAction": "Zaplanuj przypomnienie",
+    "saving": "Planowanie…",
+    "permissionDeniedTitle": "Powiadomienia są wyłączone",
+    "permissionDeniedBody": "Android nie przyznał uprawnienia do powiadomień. Zezwól na powiadomienia NatureLens w ustawieniach systemu i spróbuj ponownie.",
+    "saveError": "Przypomnienie nie zostało zapisane ani zaplanowane. Sprawdź wybór i spróbuj ponownie.",
+    "removeError": "Nie udało się usunąć tego przypomnienia. Spróbuj ponownie.",
+    "removeAction": "Usuń przypomnienie: {{action}}",
+    "removing": "Usuwanie…",
+    "removedAnnouncement": "Przypomnienie usunięte.",
+    "scheduledSuccess": "Przypomnienie zaplanowano na {{date}}.",
+    "actionAnnouncement": "Przypomnienie {{action}} zaplanowano na {{date}}.",
+    "recordFallback": "ten zapis",
+    "notificationTitle": "Przypomnienie NatureLens · {{name}}",
+    "notificationBody": "Zapisz: {{action}} · {{name}}",
+    "nextAt": "Następne: {{date}}",
+    "intervals": {
+      "day1": "Za 1 dzień",
+      "day3": "Za 3 dni",
+      "day7": "Za 7 dni",
+      "day14": "Za 14 dni",
+      "day30": "Za 30 dni"
+    },
+    "times": {
+      "at08": "08:00",
+      "at12": "12:00",
+      "at18": "18:00",
+      "at20": "20:00"
+    },
+    "weekdays": {
+      "sun": "Niedziela",
+      "mon": "Poniedziałek",
+      "tue": "Wtorek",
+      "wed": "Środa",
+      "thu": "Czwartek",
+      "fri": "Piątek",
+      "sat": "Sobota"
+    },
+    "repetitions": {
+      "once": "Jeden raz",
+      "daily": "Codziennie",
+      "weekly": "Co tydzień"
+    }
   },
   "auth": {
     "title": "Zaloguj się, aby rozpocząć identyfikację",
@@ -153,17 +268,23 @@
       "label": "Dźwięk",
       "tabLabel": "Dźwięki",
       "title": "Rozpoznaj po dźwięku",
-      "subtitle": "Nagraj ptaka, żabę lub owada i sprawdź, co to jest."
+      "subtitle": "Nagraj ptaka, żabę lub owada i sprawdź, co to jest.",
+      "scanHint": "Porównaj czystość nagrania, rytm, wysokość dźwięku i powtarzalność. Kilka zgodnych wzorców dźwiękowych jest lepszym dowodem niż pojedynczy ton."
     }
   },
   "identify": {
     "identifierTitle": "Identyfikator: {{category}}",
     "subtitle": "Błyskawiczna identyfikacja w kategorii {{category}} dzięki AI",
+    "freePromise": "Wypróbuj przed podjęciem decyzji: 1 bezpłatne rozpoznanie w każdej kategorii, bez konta i karty.",
     "readyToScan": "Gotowe do skanowania",
     "didYouKnowTitle": "Czy wiesz, że...?",
     "continueLabel": "Kontynuuj",
     "analyzing": "Analizowanie: {{category}}…",
     "tapToIdentify": "Dotknij, aby zidentyfikować",
+    "lensPulseEyebrow": "ŻYWY PULS",
+    "holdToReveal": "Przytrzymaj, aby odkryć",
+    "keepHolding": "Trzymaj dalej…",
+    "holdToRevealHint": "Przytrzymaj do końca pulsu. Puść, aby anulować.",
     "identifying": "Identyfikowanie…",
     "uploadPhoto": "Prześlij zdjęcie",
     "myCollection": "Moja kolekcja",
@@ -186,6 +307,14 @@
     "referenceImagesTitle": "Zdjęcia referencyjne",
     "referenceImagesHint": "Porównaj je z własnym zdjęciem, aby potwierdzić.",
     "referenceImageLabel": "Zdjęcie referencyjne {{index}}",
+    "evidenceSimilar": "Podobne do Twojego zdjęcia",
+    "evidenceRepresentative": "Wzorzec gatunku",
+    "evidenceObservation": "Obserwacja terenowa · GBIF",
+    "comparePhotos": "Porównaj zdjęcia",
+    "comparePhotosHint": "Zobacz swoje zdjęcie i wzorzec obok siebie.",
+    "sideBySide": "Obok siebie",
+    "previousReference": "Poprzedni wzorzec",
+    "nextReference": "Następny wzorzec",
     "alternativesTitle": "Inne możliwe dopasowania",
     "alternativesHint": "Jeśli wynik powyżej nie wygląda dobrze, twoim gatunkiem może być jeden z tych.",
     "lowConfidenceBare": "Tylko {{confidence}}% pewności — potraktuj to jako punkt wyjścia, nie ostateczną odpowiedź.",
@@ -199,10 +328,54 @@
     "serviceDownBody": "Ta usługa rozpoznawania ma chwilowy problem. Spróbuj ponownie za kilka minut - to nie wina Twojego zdjęcia.",
     "poseWhole": "Całość",
     "poseClose": "Zbliżenie",
-    "poseOther": "Inny kąt"
+    "poseOther": "Inny kąt",
+    "photoConsentTitle": "Zanim wyślesz zdjęcia",
+    "photoConsentKindwiseBody": "Wybrane zdjęcia zostaną wysłane do Kindwise w celu identyfikacji. Zdjęcia i wyniki pozostaną dostępne za pośrednictwem Kindwise przez 6 miesięcy. Zgodnie z warunkami Kindwise zdjęcia są objęte nieodwołalną licencją zezwalającą na ponowne wykorzystanie do trenowania i celów komercyjnych, udostępnianie innym klientom oraz rozpowszechnianie na licencji CC BY-SA. Wyślij je tylko, jeśli wyrażasz na to zgodę.",
+    "photoConsentFishialBody": "Wybrane zdjęcia zostaną wysłane do Fishial w celu identyfikacji. Fishial może je przechowywać zgodnie ze swoimi zasadami retencji danych i nie publikuje konkretnego okresu przechowywania zdjęć przesyłanych przez API. Wyślij je tylko, jeśli wyrażasz na to zgodę.",
+    "photoConsentNyckelBody": "Wybrane zdjęcia zostaną wysłane do Nyckel i przetworzone w celu dostarczenia identyfikacji. Wyślij je tylko, jeśli wyrażasz na to zgodę.",
+    "photoConsentBirdBody": "Gdy skalibrowana, globalna usługa BioCLIP będzie aktywna, zdjęcia ptaków będą mogły być najpierw przetwarzane w tej prywatnej usłudze zarządzanej przez NatureLens. W BioCLIP pozostają wyłącznie w pamięci na czas żądania i nie są przechowywane. Dopóki BioCLIP jest wyłączony, albo jeśli zawiedzie lub nie potwierdzi dokładnego gatunku, te same zdjęcia mogą zostać wysłane do Nyckel przy wyłączonym przechwytywaniu próbek; Nyckel nie gwarantuje wyłącznie efemerycznego przechowywania. Wyślij je tylko, jeśli wyrażasz zgodę.",
+    "photoConsentSend": "Wyślij zdjęcia",
+    "centralCapture": "Rozpoznaj",
+    "photoReady": "Zdjęcie gotowe",
+    "addOptionalAngles": "Dodaj kolejne ujęcie",
+    "hideOptionalAngles": "Ukryj dodatkowe ujęcia",
+    "captureDemo": {
+      "title": "Zobacz, jak to działa",
+      "body": "Skieruj aparat na {{category}}, dotknij dużego obszaru aparatu i potwierdź wynik na zdjęciach.",
+      "accessibility": "Animowany przykład pokazujący, jak rozpoznać {{category}} aparatem.",
+      "result": "Wynik ze zdjęciami i kolejnym krokiem",
+      "steps": {
+        "aim": "Skadruj jeden obiekt",
+        "tap": "Dotknij obszaru aparatu",
+        "confirm": "Porównaj zdjęcia referencyjne"
+      },
+      "subject": {
+        "plant": "Liść lub kwiat",
+        "tree": "Liść, kora lub korona",
+        "insect": "Owad w ostrości",
+        "mushroom": "Kapelusz i spód",
+        "crop": "Uszkodzony liść uprawy",
+        "fish": "Cała ryba z boku",
+        "bird": "Cały ptak w kadrze",
+        "sound": "Nagraj czysty dźwięk"
+      }
+    },
+    "expeditionTitle": "Wybierz swoją wyprawę",
+    "expeditionBody": "Każda ścieżka zmienia to, co aplikacja wyróżnia po zrobieniu zdjęcia.",
+    "categoryPromise": {
+      "plant": "Pielęgnacja, bezpieczeństwo i wskazówki wizualne",
+      "insect": "Cechy budowy, ryzyko i notatki terenowe",
+      "mushroom": "Podobne gatunki i bezpieczeństwo przede wszystkim",
+      "crop": "Agronomia, szkodniki i warunki glebowe",
+      "fish": "Woda, siedlisko i dowody identyfikacji",
+      "bird": "Cechy rozpoznawcze, siedlisko i wskazówki obserwacyjne",
+      "sound": "Słuchaj, porównuj i rozpoznawaj odgłosy"
+    }
   },
   "detail": {
     "profileTitle": "Profil: {{category}}",
+    "invertebrateLabel": "Bezkręgowiec",
+    "fungusLabel": "Grzyb",
     "readMoreLabel": "Przeczytaj w internecie więcej na temat kategorii {{category}}",
     "markAsWatered": "Oznacz jako podlane",
     "markAsWateredLabel": "Oznacz jako podlane",
@@ -212,10 +385,24 @@
     "checkForDiseasesLabel": "Sprawdź choroby",
     "checkingForDiseasesLabel": "Sprawdzanie chorób",
     "healthCheckSection": "Kontrola zdrowia",
+    "healthSpeciesMismatch": "Kontrola zdrowia nie rozpoznała tego samego gatunku. Zrób wyraźniejsze zdjęcie tej rośliny; diagnoza nie została zastosowana.",
     "edibleParts": "Części jadalne",
     "propagation": "Rozmnażanie",
     "wateringNeeds": "Potrzeby wodne",
     "conservationStatus": "Status ochrony",
+    "iucn": {
+      "extinct": "Wymarły",
+      "extinctInTheWild": "Wymarły na wolności",
+      "regionallyExtinct": "Wymarły regionalnie",
+      "criticallyEndangered": "Krytycznie zagrożony",
+      "endangered": "Zagrożony",
+      "vulnerable": "Narażony",
+      "nearThreatened": "Bliski zagrożenia",
+      "leastConcern": "Najmniejszej troski",
+      "dataDeficient": "Niedostateczne dane",
+      "notApplicable": "Nie dotyczy",
+      "notEvaluated": "Nieoceniony"
+    },
     "safetySection": "Bezpieczeństwo",
     "ecologicalRoleSection": "Rola ekologiczna",
     "frequentlyConfusedWith": "Często mylone z",
@@ -232,6 +419,10 @@
     "installNudgeBody": "Dodaj ją do ekranu głównego, aby następnym razem rozpoznawać szybciej.",
     "commonNames": "Nazwy zwyczajowe",
     "synonyms": "Synonimy naukowe",
+    "family": "Rodzina",
+    "order": "Rząd",
+    "taxonomyTitle": "Klasyfikacja",
+    "species": "Gatunek",
     "referencePhoto": "Zdjęcie referencyjne",
     "referencePhotoAlt": "Zdjęcie referencyjne: {{name}}",
     "coverageNoteTitle": "O tym wyniku",
@@ -250,7 +441,7 @@
     "everyNDays": "Co {{count}} dni",
     "gbifCredit": "Dane: GBIF.org",
     "seasonChart": "Obserwacje według miesięcy",
-    "seasonChartNote": "Zapisy obserwacji z całego świata, miesiąc po miesiącu. Odzwierciedlają wysiłek obserwatorów, a nie gwarancję kwitnienia lub aktywności.",
+    "seasonChartNote": "Dane obserwacyjne z całego świata, miesiąc po miesiącu. Odzwierciedlają wysiłek obserwacyjny i nie dają pewności co do tego, kiedy i dlaczego gatunek występuje.",
     "tipWatering": "Zanim podlejesz, dotknij ziemi: jeśli wierzchnie centymetry są suche, to już pora.",
     "tipLight": "Obserwuj, jak światło wędruje po wnętrzu w ciągu dnia - zmienia się bardziej, niż się wydaje.",
     "tipSoil": "Dobry drenaż znaczy tyle co dobry nawóz: przemoczone korzenie to cierpiące korzenie.",
@@ -334,6 +525,12 @@
     "scheduleNow": "teraz",
     "scheduleGroupNote": "Ten kalendarz dotyczy grupy {{group}}, a nie dokładnie tego gatunku.",
     "scheduleGroupNoteShort": "Ten kalendarz dotyczy grupy gatunku, a nie dokładnie tego gatunku.",
+    "groupGuideNote": "Ogólne wskazówki dla grupy {{group}}, a nie informacja dotycząca konkretnie tego gatunku.",
+    "generalGuideNote": "Ogólne wskazówki, a nie informacja dotycząca konkretnie tego gatunku.",
+    "agronomySection": "Agronomia polowa",
+    "agronomyDecisionNote": "Zacznij od obserwacji i pomiaru. Otwórz każdy protokół, zanim zdecydujesz, co zmienić na polu.",
+    "integratedManagementSection": "Zintegrowane zarządzanie",
+    "openFullProtocol": "Otwórz pełny protokół",
     "scheduleNoLocation": "Bez Twojej lokalizacji nie wiemy, jaka jest u Ciebie pora roku, więc żadna kolumna nie jest wyróżniona.",
     "careProfileTitle": "Profil pielęgnacji",
     "careLevelLabel": "Poziom pielęgnacji",
@@ -348,9 +545,13 @@
     "speciesCareSection": "Pielęgnacja tego gatunku",
     "speciesCareNote": "Te wartości dotyczą samego gatunku {{species}}, a nie jego grupy.",
     "speciesCareSource": "Źródło: {{citation}}",
+    "wikipediaExcerptNotice": "Ten fragment został wybrany i skrócony na potrzeby tej sekcji.",
+    "wikipediaArticleLink": "Artykuł w Wikipedii",
+    "wikipediaAuthorsLink": "Autorzy i historia artykułu",
+    "wikipediaLicenseLink": "Licencja CC BY-SA 4.0",
     "usdaMoisture": "Potrzeba wody",
     "usdaDrought": "Odporność na suszę",
-    "usdaFertility": "Potrzeba nawozu",
+    "usdaFertility": "Wymagania dotyczące żyzności gleby",
     "usdaShade": "Tolerancja cienia",
     "usdaPh": "pH gleby",
     "usdaTempMin": "Wytrzymuje do",
@@ -362,7 +563,173 @@
     "levelNone": "Brak",
     "bloomEarly": "{{season}} (początek)",
     "bloomMid": "{{season}} (środek)",
-    "bloomLate": "{{season}} (koniec)"
+    "bloomLate": "{{season}} (koniec)",
+    "feedbackThanks": "Dziękujemy za opinię."
+  },
+  "learning": {
+    "title": "Naucz się obserwować",
+    "basic": "Podstawy",
+    "learn": "Ucz się",
+    "technical": "Techniczne",
+    "generalDiagram": "Schemat ogólny",
+    "generalNote": "Skorzystaj z tej ilustracji, aby wiedzieć, na co patrzeć. To ogólny przewodnik, a nie obraz zidentyfikowanego gatunku.",
+    "illustrationAlt": "Ogólna ilustracja obserwacyjna dla kategorii {{category}}",
+    "observeTitle": "Oglądaj jedną część na raz",
+    "observeHint": "Porównaj kształt, kolor, wielkość i położenie. Kilka zgodnych cech jest mocniejszym dowodem niż pojedynczy szczegół.",
+    "evidenceTitle": "Dowody identyfikacji",
+    "technicalNote": "Te wartości pochodzą z wyniku identyfikacji. Brakujące dowody pozostają ukryte, a żadne pole nie jest uzupełniane na podstawie domysłów.",
+    "categoryMatch": "Zgodność kategorii",
+    "provider": "Źródło identyfikacji",
+    "parts": {
+      "leaf": "Kształt i unerwienie liścia",
+      "stemNode": "Łodyga i węzeł",
+      "flower": "Budowa kwiatu",
+      "roots": "Korzenie",
+      "canopy": "Kształt korony",
+      "branches": "Gałęzie",
+      "trunkBark": "Pień i kora",
+      "youngOldLeaves": "Młode i stare liście",
+      "affectedArea": "Obszar dotknięty zmianami",
+      "stem": "Łodyga",
+      "antennae": "Czułki",
+      "head": "Głowa",
+      "bodySections": "Części ciała",
+      "wingsLegs": "Skrzydła i nogi",
+      "cap": "Kapelusz",
+      "underside": "Blaszki, pory lub spód",
+      "baseSubstrate": "Podstawa i podłoże",
+      "beak": "Dziób",
+      "wing": "Skrzydło",
+      "tail": "Ogon",
+      "feet": "Stopy",
+      "headProfile": "Profil głowy",
+      "bodyMarks": "Wzory na ciele",
+      "fins": "Płetwy",
+      "recording": "Jakość nagrania",
+      "rhythm": "Rytm",
+      "pitch": "Wysoki lub niski ton",
+      "repetition": "Powtarzanie",
+      "cephalothorax": "Głowotułów",
+      "abdomen": "Odwłok",
+      "eyes": "Oczy",
+      "eightLegs": "Osiem odnóży",
+      "tentacles": "Czułki",
+      "shell": "Muszla",
+      "muscularFoot": "Umięśniona noga",
+      "anterior": "Przedni koniec",
+      "segments": "Segmenty ciała",
+      "clitellum": "Siodełko",
+      "posterior": "Tylny koniec"
+    }
+  },
+  "speciesDossier": {
+    "title": "Dossier naukowe",
+    "exactEvidence": "Udokumentowano dla {{species}}",
+    "evidenceNote": "Wyświetlane są tylko fakty poparte źródłami. Brakujące informacje pozostają ukryte.",
+    "environment": "Zarejestrowane typy wód",
+    "diet": "Udokumentowana dieta",
+    "habitat": "Udokumentowane siedlisko",
+    "brackish": "Woda słonawa",
+    "reproduction": "Udokumentowane rozmnażanie",
+    "lifeCycle": "Udokumentowany cykl życia",
+    "lifeStagesTitle": "Udokumentowane stadia rozwoju",
+    "larvalInstars": "Liczba stadiów larwalnych: {{count}}",
+    "bodyLength": "Długość ciała",
+    "leafConsumption": "Zużycie liści",
+    "leafAreaPerLarva": "Powierzchnia liści zjedzona przez jedną larwę",
+    "lifeStages": { "egg": "Jajo", "larva": "Larwa", "nymph": "Nimfa", "pupa": "Poczwarka", "adult": "Postać dorosła" },
+    "measurements": {
+      "clutchSize": "Wielkość lęgu",
+      "incubationPeriod": "Okres inkubacji jaj",
+      "lifeExpectancy": "Oczekiwana długość życia",
+      "longestLifespan": "Najdłuższa zaobserwowana długość życia",
+      "gestationPeriod": "Okres ciąży"
+    }
+  },
+  "fertilizer": {
+    "title": "Decyzja nawozowa",
+    "planningNote": "Rzetelne zalecenie zaczyna się od danych zmierzonych na polu. Tabela pokazuje, do czego służy każdy parametr; nie jest receptą na zastosowanie nawozu.",
+    "input": "Parametr",
+    "decisionUse": "Co pozwala ustalić",
+    "soilAnalysis": "Analiza gleby",
+    "soilAnalysisUse": "Dostępne składniki, kwasowość, zasolenie i potrzeba wapnowania.",
+    "plantAnalysis": "Analiza rośliny lub tkanki",
+    "plantAnalysisUse": "Aktualny stan odżywienia, w tym ukryty niedobór przed widocznymi objawami.",
+    "targetDestination": "Docelowy plon i przeznaczenie",
+    "targetDestinationUse": "Przewidywane wynoszenie składników; zbiór ziarna i całej rośliny różnią się.",
+    "fieldHistory": "Historia pola i resztki pożniwne",
+    "fieldHistoryUse": "Co zastosowano, wywieziono lub zwrócono do gleby.",
+    "textureWater": "Uziarnienie gleby i woda",
+    "textureWaterUse": "Ryzyko wymywania i potrzeba dzielenia dawek.",
+    "diagnosisCaution": "Widoczny objaw jest wskazówką, nie potwierdzeniem. Może go maskować stres wodny, choroba, owady albo inny składnik.",
+    "maizeTitle": "Wynoszenie składników przez kukurydzę",
+    "maizeIntro": "Średnie ilości pobrane przez uprawę przy różnych plonach i przeznaczeniu zbioru.",
+    "destination": "Przeznaczenie",
+    "productivity": "Plon (t/ha)",
+    "grain": "Ziarno",
+    "silage": "Kiszonka (sucha masa)",
+    "tonnesPerHectare": "ton na hektar",
+    "kgPerHectare": "kilogramów na hektar",
+    "extractedUnit": "Plon w t/ha; wyniesione składniki w kg/ha.",
+    "notDoseWarning": "Wynoszenie nie jest dawką nawozu. Zalecenie wymaga analiz gleby i tkanek, celu plonowania, kalibracji regionalnej oraz lokalnego agronoma.",
+    "onionTitle": "Cebula: interakcje przy nadmiarze składników",
+    "onionIntro": "Skutki udokumentowane wyłącznie dla cebuli; nie należy uogólniać ich na inne uprawy.",
+    "excess": "Składnik w nadmiarze",
+    "possibleEffect": "Możliwy skutek",
+    "nitrogenEffect": "Dłuższy cykl, gruba szyjka, nadmierne ulistnienie, więcej chorób liści i gorsza trwałość po zbiorze.",
+    "potassiumEffect": "Może wywołać niedobór magnezu i wapnia.",
+    "phosphorusEffect": "Może wywołać niedobór cynku i miedzi.",
+    "scrollHint": "Przesuń tabelę w bok, aby zobaczyć wszystkie składniki.",
+    "botanicalTitle": "Nawożenie i odżywianie",
+    "botanicalIntro": "Gdy źródło jest dostępne, ten przewodnik oddziela dane gatunku, wskazówki dla zweryfikowanej grupy roślin i terminy sezonowe. Zdjęcie nigdy nie określa dawki.",
+    "unknownGroupNote": "Dla tej grupy roślin nie ma jeszcze zweryfikowanego poradnika nawożenia. Lista decyzji pozostaje dostępna, ale nie wyprowadza się reguły ani dawki dla grupy.",
+    "growthStress": "Faza wzrostu i stres",
+    "growthStressUse": "Rozróżnij przyjmowanie się, aktywny wzrost, kwitnienie lub owocowanie i spoczynek. Przed nawożeniem usuń skutki suszy, zalania, uszkodzenia korzeni lub niedawnego przesadzenia.",
+    "labelHistory": "Etykieta produktu i historia zastosowań",
+    "labelHistoryUse": "Sprawdź N-P-K, rodzaj uwalniania, zalecenia etykiety, ostatnie zastosowanie i czy podłoże zawiera już nawóz.",
+    "plantNoDoseWarning": "Samo zdjęcie nie wyznacza bezpiecznej dawki. Stosuj etykietę i lokalne analizy; nie kopiuj dawki z innego gatunku, klimatu, doniczki ani pola."
+  },
+  "pestManagement": {
+    "title": "Monitoring szkodników",
+    "decisionNote": "Zdjęcie może wskazać owada lub jego uszkodzenia, ale nie mierzy liczebności w polu. Decyzja o działaniu wymaga reprezentatywnego pobierania prób.",
+    "whatToCheck": "Co sprawdzić",
+    "fieldDecision": "Decyzja polowa",
+    "identifyDamage": "Szkodnik i uszkodzenia",
+    "identifyDamageUse": "Potwierdź owada, jego stadium, zgodne uszkodzenia oraz rozmieszczenie w polu.",
+    "samplingPlan": "Plan pobierania prób",
+    "samplingPlanUse": "Określ jednostkę, metodę, punkty i częstotliwość odpowiednio do uprawy i jej fazy rozwoju.",
+    "countStage": "Liczebność i stadium",
+    "countStageUse": "Zapisz wynik z każdego punktu, rozmiar lub stadium szkodnika, fazę uprawy i wrogów naturalnych, a następnie porównaj z progiem działania.",
+    "noCountWarning": "Bez reprezentatywnego wyniku i właściwego progu działania należy kontynuować monitoring — nigdy nie opryskiwać według kalendarza.",
+    "chemicalSafetyTitle": "Jeśli konieczne jest zwalczanie chemiczne",
+    "maizeTitle": "Kukurydza: polowe poziomy odniesienia",
+    "target": "Cel",
+    "fieldProtocol": "Pobieranie prób i poziom odniesienia",
+    "fallArmyworm": "Spodoptera frugiperda",
+    "fallArmywormProtocol": "Tylko dla pól o potencjale plonowania co najmniej 100 worków/ha: na {{sampleAreaHa}} ha sprawdź {{samplePoints}} losowych punktów. Opublikowana wartość to {{actionPercent}}% roślin z początkowymi objawami żerowania.",
+    "wireworm": "Drutowiec",
+    "wirewormProtocol": "Przed siewem przesiej próbkę gleby o wymiarach {{sampleWidthCm}} × {{sampleLengthCm}} × {{sampleDepthCm}} cm. Poziom odniesienia: co najmniej {{actionCount}} owady w próbce.",
+    "maizeThresholdNote": "Poziom 10% dla kukurydzy podano dla pól o potencjale co najmniej 100 worków plonu. Region, mieszaniec, faza uprawy i system produkcji mogą zmieniać próg lokalny.",
+    "soyTitle": "Soja: pobieranie prób i progi działania",
+    "soySamplingTitle": "Minimalna liczba punktów",
+    "fieldArea": "Powierzchnia pola",
+    "minimumSamples": "Minimum",
+    "upToHectares": "Do {{count}} ha",
+    "overHectares": "Powyżej {{count}} ha",
+    "samplePoints": "{{count}} punktów",
+    "dividePlots": "Podziel na działki do {{count}} ha",
+    "soyThresholdTitle": "Poziomy odniesienia",
+    "situation": "Sytuacja",
+    "actionLevel": "Poziom odniesienia",
+    "defoliation": "Ubytek liści",
+    "defoliationLevel": "Ponad {{vegetativePercent}}% w fazie wegetatywnej lub {{reproductivePercent}}% od kwitnienia.",
+    "largeCaterpillars": "Duże gąsienice liściożerne",
+    "largeCaterpillarsLevel": "{{countPerMeter}} gąsienic dłuższych niż {{minimumLengthCm}} cm na metr rzędu, przy użyciu płachty entomologicznej.",
+    "grainStinkbugs": "Pluskwiaki — produkcja ziarna",
+    "grainStinkbugsLevel": "{{countPerMeter}} osobniki dorosłe lub nimfy od trzeciego stadium na metr, od {{stageStart}} do {{stageEnd}}.",
+    "seedStinkbugs": "Pluskwiaki — produkcja nasienna",
+    "seedStinkbugsLevel": "{{countPerMeter}} osobnik dorosły lub nimfa od trzeciego stadium na metr, od {{stageStart}} do {{stageEnd}}.",
+    "soyThresholdNote": "Są to brazylijskie poziomy odniesienia Embrapa. W okresie krytycznym pobieraj próby co tydzień, oceniaj pluskwiaki w chłodniejszych godzinach i potwierdź regionalne korekty z lokalnym doradcą."
   },
   "disease": {
     "overviewSection": "Przegląd",
@@ -375,7 +742,9 @@
     "healthStatusSection": "Stan zdrowia",
     "noDiseaseDetected": "Na tym zdjęciu nie wykryto z pewnością żadnej choroby ani szkodnika.",
     "match": "Dopasowanie",
-    "severitySuffix": "Nasilenie: {{severity}}"
+    "severitySuffix": "Nasilenie: {{severity}}",
+    "diagnosisCaution": "Zdjęcie służy do wstępnej oceny, a nie do diagnozy polowej. Przed działaniem sprawdź kilka roślin i wyklucz problemy z wodą, odżywianiem oraz uszkodzenia po zabiegach.",
+    "chemicalCaution": "Stosuj wyłącznie środki zarejestrowane w Twoim kraju dla tej uprawy i organizmu docelowego. Przestrzegaj etykiety i potwierdź decyzję z lokalnym agronomem."
   },
   "collection": {
     "title": "Moja kolekcja",
@@ -413,6 +782,11 @@
     "byCategory": "Według kategorii",
     "privacyPolicy": "Polityka prywatności",
     "language": "Język",
+    "careRegionRow": "Sezony pielęgnacji",
+    "careRegionHint": "Ustawia półkulę używaną w harmonogramach sezonowych i okresie kwitnienia. Zapisywane tylko na tym urządzeniu.",
+    "careRegionAuto": "Automatycznie",
+    "careRegionSouth": "Półkula południowa",
+    "careRegionNorth": "Półkula północna",
     "installApp": "Zainstaluj aplikację",
     "installAppIOSTitle": "Zainstaluj NatureLens",
     "installAppIOSBody": "Stuknij przycisk Udostępnij, a następnie „Dodaj do ekranu początkowego“, aby zainstalować NatureLens na telefonie.",
@@ -453,7 +827,7 @@
     "acceptanceTitle": "Akceptacja warunków",
     "acceptanceBody": "Korzystając z NatureLens, akceptujesz niniejsze Warunki korzystania. Jeśli się nie zgadzasz, prosimy nie korzystać z aplikacji.",
     "serviceTitle": "Co robi ta aplikacja",
-    "serviceBody": "NatureLens pozwala fotografować rośliny, owady, grzyby, uprawy i drzewa - a w zależności od urządzenia także ryby, ptaki, a nawet dźwięki - aby identyfikować je za pomocą usług AI firm trzecich (Plant.id, Insect.id, Mushroom.id i Crop.health od Kindwise, Fishial dla ryb, Nyckel dla ptaków oraz nasz własny model dźwięku). Wyniki są generowane automatycznie i nie są sprawdzane przez ludzkiego eksperta.",
+    "serviceBody": "NatureLens pozwala fotografować rośliny, owady, grzyby, uprawy i drzewa - a w zależności od urządzenia także ryby, ptaki, a nawet dźwięki - aby identyfikować je za pomocą usług AI firm trzecich (Plant.id, Insect.id, Mushroom.id i Crop.health od Kindwise, Fishial dla ryb, Nyckel dla ptaków oraz nasz własny model dźwięku). Wyniki są generowane automatycznie i nie są sprawdzane przez ludzkiego eksperta. Gdy skalibrowana, globalna usługa BioCLIP będzie aktywna, NatureLens będzie mógł najpierw używać tej prywatnej, samodzielnie zarządzanej usługi dla ptaków; dopóki jest wyłączona, albo jeśli zawiedzie lub nie potwierdzi dokładnego gatunku, awaryjnie używany jest Nyckel.",
     "accuracyTitle": "Dokładność identyfikacji — proszę przeczytać",
     "accuracyBody": "Identyfikacja AI może się mylić, także co do tego, czy roślina lub grzyb są jadalne, trujące lub bezpieczne w dotyku. Nigdy nie jedz, nie zbieraj ani nie używaj żadnej dzikiej rośliny, grzyba czy grzybni wyłącznie na podstawie wyniku tej aplikacji. Zawsze potwierdź to u wykwalifikowanego eksperta (mykologa, botanika lub centrum kontroli zatruć), zanim spożyjesz lub użyjesz czegoś znalezionego w naturze. Nie ponosimy odpowiedzialności za szkody wynikające z polegania na identyfikacji wykonanej przez tę aplikację.",
     "billingTitle": "Subskrypcje i płatności",
@@ -470,7 +844,7 @@
   "privacy": {
     "title": "Polityka prywatności",
     "collectTitle": "Co zbieramy",
-    "collectBody": "Ta aplikacja pozwala sfotografować roślinę, drzewo, owada, grzyba, uprawę, rybę lub ptaka, aby je rozpoznać, oraz nagrać głos zwierzęcia, by rozpoznać je po dźwięku. Rozpoznawanie wykonują usługi AI: Kindwise (rośliny, drzewa, owady, grzyby, uprawy), Fishial.AI (ryby) i Nyckel (ptaki). Dźwięk rozpoznajemy na własnym serwerze, więc nagrania nie trafiają do stron trzecich.",
+    "collectBody": "Ta aplikacja pozwala sfotografować roślinę, drzewo, owada, grzyba, uprawę, rybę lub ptaka, aby je rozpoznać, oraz nagrać głos zwierzęcia, by rozpoznać je po dźwięku. Rozpoznawanie wykonują usługi AI: Kindwise (rośliny, drzewa, owady, grzyby, uprawy), Fishial.AI (ryby) i Nyckel (ptaki). Dźwięk rozpoznajemy na własnym serwerze, więc nagrania nie trafiają do stron trzecich. Gdy skalibrowana, globalna, prywatna usługa BioCLIP zarządzana przez NatureLens będzie aktywna, zdjęcia ptaków będą mogły być tam przetwarzane najpierw: pozostają wyłącznie w pamięci na czas żądania i nie są przechowywane. Dopóki jest wyłączona, albo jeśli zawiedzie lub nie potwierdzi dokładnego gatunku, te same zdjęcia mogą zostać wysłane do Nyckel przy wyłączonym przechwytywaniu próbek, bez gwarancji wyłącznie efemerycznego przechowywania.",
     "thirdPartyTitle": "Usługi AI innych firm",
     "thirdPartyBody": "Gdy robisz lub wysyłasz zdjęcie, trafia ono do odpowiedniej usługi rozpoznawania. Nie przechowujemy Twoich zdjęć na żadnym naszym serwerze. Aby pokazać zdjęcie wzorcowe i opis, aplikacja pyta Wikipedię o nazwę naukową — Wikipedia widzi więc, jaki gatunek sprawdzałeś, ale nie kim jesteś. Część dostawców pisze wyłącznie po angielsku; przetłumaczenie tego tekstu oraz zadanie pytania specjalistce w aplikacji wysyła ten tekst do Anthropic.",
     "localStorageTitle": "Tylko przechowywanie lokalne",
@@ -2162,7 +2536,15 @@
     },
     "herbSubscribeCtaTitle": "Podoba Ci się ten przewodnik?",
     "herbSubscribeCtaBody": "Subskrybuj, aby odblokować nieograniczoną liczbę identyfikacji roślin, owadów, grzybów i upraw.",
-    "herbAlreadySubscribedCheck": "Masz już subskrypcję? Dotknij, aby sprawdzić ponownie"
+    "herbAlreadySubscribedCheck": "Masz już subskrypcję? Dotknij, aby sprawdzić ponownie",
+    "mascot": {
+      "kicker": "Twoj zywy przewodnik",
+      "title": "Lino obserwuje nature razem z toba.",
+      "body": "Zrob zdjecie, nagraj dzwiek albo zapisz znalezisko. Zaczne od najjasniejszego kolejnego kroku.",
+      "photo": "Zdjecie",
+      "sound": "Dzwiek",
+      "journal": "Dziennik"
+    }
   },
   "botanist": {
     "headerTitle": "Dr Helena Marques",
@@ -2296,6 +2678,9 @@
     "title": "Dzisiejsze misje",
     "rewardEach": "+{{tokens}} za każdą",
     "allDone": "Wszystko zrobione — wróć jutro!",
+    "completedAnnouncement": "Misja ukończona: {{mission}}",
+    "completedStatus": "Ukończono",
+    "progressStatus": "Ukończono {{done}} z {{target}}",
     "pool": {
       "scanAny2": "Rozpoznaj dziś 2 gatunki",
       "scanAny3": "Rozpoznaj dziś 3 gatunki",
@@ -2310,14 +2695,117 @@
       "openDiscover": "Odwiedź kartę Odkrywaj"
     }
   },
+  "fishSafety": {
+    "unverifiedTitle": "Bezpieczeństwo nie zostało jeszcze potwierdzone",
+    "unverifiedBody": "Nie znaleźliśmy informacji o bezpieczeństwie właściwych dla tego gatunku. Nie dotykaj, nie chwytaj, nie jedz ani nie wypuszczaj tej ryby wyłącznie na podstawie tej identyfikacji."
+  },
+  "lensReveal": {
+    "title": "Odkrycie gotowe",
+    "safetyFirst": "Bezpieczeństwo przede wszystkim"
+  },
+  "resultDepth": {
+    "label": "Wybierz poziom szczegółowości",
+    "essential": "Najważniejsze",
+    "visual": "Wizualne",
+    "expert": "Eksperckie"
+  },
+  "nextBestCapture": {
+    "title": "Popraw tę identyfikację",
+    "reasonLowConfidence": "Pewność wynosi {{confidence}}%. Dodatkowe ujęcie może pomóc.",
+    "reasonAlternatives": "Liczba nadal możliwych alternatyw: {{count}}.",
+    "reasonIdentityUnresolved": "Wynik zatrzymał się na {{name}} i nie potwierdził jeszcze gatunku. Dlatego sekcje dotyczące konkretnego gatunku pozostają ukryte.",
+    "action": "Zrób kolejne ujęcie",
+    "categories": {
+      "plant": "Sfotografuj całą roślinę, a potem liść lub kwiat w ostrym zbliżeniu.",
+      "tree": "Pokaż całe drzewo, korę oraz wyraźny liść lub owoc.",
+      "crop": "Pokaż całą roślinę, objaw z bliska i otaczającą część pola.",
+      "mushroom": "Sfotografuj kapelusz, blaszki lub pory, podstawę trzonu i podłoże, nie dotykając go bez potrzeby.",
+      "insect": "Sfotografuj całe ciało z góry i z boku oraz roślinę żywicielską lub uszkodzenia.",
+      "fish": "Pokaż wyraźny profil z boku, płetwy oraz otaczające środowisko lub akwarium.",
+      "bird": "Pokaż całego ptaka, dziób i oznaczenia na skrzydłach albo nagraj dłuższy, czysty głos.",
+      "sound": "Nagraj co najmniej 10 dodatkowych sekund przy mniejszym szumie wiatru, bez mowy i hałasu w tle."
+    }
+  },
   "share": {
     "message": "Rozpoznałem/am {{category}} za pomocą NatureLens: {{name}}{{scientific}}{{confidence}}\n\nRozpoznawaj rośliny, owady, grzyby, ryby i ptaki ze zdjęcia:\n{{url}}",
     "confidenceLine": "{{confidence}}% pewności"
   },
   "onboarding": {
+    "media": { "play": "Odtwórz film", "pause": "Wstrzymaj film", "enableSound": "Włącz dźwięk", "disableSound": "Wyłącz dźwięk" },
     "skip": "Pomiń",
     "next": "Dalej",
     "start": "Zacznij rozpoznawać",
+    "progress": "{{current}} z {{total}}",
+    "preparing": "Przygotowujemy NatureLens…",
+    "promiseKicker": "Zobacz, jak to działa",
+    "personalizeKicker": "Dopasuj do siebie",
+    "readyKicker": "Gotowe do odkrywania",
+    "promise": {
+      "body": "Jedno ujęcie zmienia się w identyfikację, ocenę bezpieczeństwa i jasny następny krok.",
+      "demoNext": "Następny krok: sfotografuj spód liścia"
+    },
+    "goal": {
+      "title": "W czym NatureLens ma Ci pomagać?",
+      "body": "Odpowiedź zmienia to, co pojawia się jako pierwsze po każdej identyfikacji.",
+      "options": {
+        "identify": {
+          "title": "Dowiedzieć się, co to jest"
+        },
+        "safety": {
+          "title": "Sprawdzić bezpieczeństwo i ryzyko"
+        },
+        "care": {
+          "title": "Dbać i obserwować"
+        },
+        "field": {
+          "title": "Pole i produkcja"
+        },
+        "learn": {
+          "title": "Poznawać przyrodę"
+        }
+      }
+    },
+    "context": {
+      "title": "Gdzie najczęściej odkrywasz?",
+      "body": "Używamy tego tylko do uporządkowania kategorii i wskazówek. Możesz to później zmienić.",
+      "options": {
+        "home": {
+          "title": "Dom lub ogród"
+        },
+        "field": {
+          "title": "Pole lub uprawa"
+        },
+        "nature": {
+          "title": "Szlak lub natura"
+        },
+        "water": {
+          "title": "Woda lub akwarium"
+        },
+        "study": {
+          "title": "Nauka lub praca techniczna"
+        }
+      }
+    },
+    "depth": {
+      "title": "Ile szczegółów chcesz zobaczyć najpierw?",
+      "body": "Wszystko pozostanie dostępne. Ten wybór określa tylko pierwszą warstwę.",
+      "options": {
+        "essential": {
+          "title": "Najważniejsze"
+        },
+        "visual": {
+          "title": "Wizualne"
+        },
+        "technical": {
+          "title": "Techniczne"
+        }
+      }
+    },
+    "ready": {
+      "title": "NatureLens jest gotowy",
+      "body": "Pierwszy wynik uwzględni Twoje wybory, nie ukrywając ostrzeżeń bezpieczeństwa.",
+      "promise": "Brakujące dowody pozostają brakujące. NatureLens poprosi o lepsze zdjęcie lub nagranie zamiast udawać pewność."
+    },
     "what": {
       "title": "Wyceluj. Zrób zdjęcie. Poznaj.",
       "body": "Sfotografuj cokolwiek żywego, a NatureLens powie ci w kilka sekund, co to jest — ze zdjęciami referencyjnymi, byś sam potwierdził."
@@ -2329,6 +2817,20 @@
     "free": {
       "title": "Pierwsze rozpoznanie jest darmowe",
       "body": "Wypróbuj jedno rozpoznanie w każdej kategorii za darmo. Wykup subskrypcję dopiero, gdy zechcesz skanować bez limitu."
+    },
+    "reviewKicker": "Mała prośba",
+    "review": {
+      "title": "Jeśli już wydaje się przydatny, pomóż NatureLens dobrze wystartować.",
+      "body": "Przed pierwszym zdjęciem szybkie pytanie: czy ta soczewka zapewnia pięciogwiazdkowe doświadczenie?",
+      "quote": "Soczewka prosta w użyciu, dopracowana w szczegółach i uczciwa, gdy brakuje dowodów.",
+      "yes": "Tak, wygląda na pięć gwiazdek",
+      "later": "Najpierw chcę spróbować",
+      "starsLabel": "Ocena pięciogwiazdkowa",
+      "proofs": {
+        "simple": "Proste",
+        "safe": "Bezpieczne",
+        "useful": "Przydatne"
+      }
     }
   },
   "recap": {
@@ -2400,7 +2902,8 @@
     "recording": "Nagrywanie… zostało {{seconds}}s",
     "analysing": "Słucham…",
     "startLabel": "Rozpocznij nagrywanie",
-    "stopLabel": "Zatrzymaj i rozpoznaj",
+    "stopLabel": "Zatrzymaj nagrywanie",
+    "uploadDisclosure": "Dźwięk jest wysyłany na serwer NatureLens dopiero po ukończeniu Żywego Pulsu. Surowe nagranie nie jest zapisywane w kolekcji.",
     "tipsTitle": "Aby uzyskać lepszy wynik",
     "tip1": "Podejdź bliżej, jeśli możesz — odległość ma największe znaczenie.",
     "tip2": "Skieruj telefon w stronę dźwięku i nie ruszaj się.",
@@ -2411,8 +2914,13 @@
     "groupMammal": "Ssak",
     "permissionTitle": "Mikrofon zablokowany",
     "permissionBody": "Zezwól na dostęp do mikrofonu dla tej strony w ustawieniach przeglądarki i spróbuj ponownie.",
+    "permissionAndroidBody": "Zezwól NatureLens na używanie mikrofonu w Ustawieniach Androida. Pozostałe funkcje nadal są dostępne.",
+    "permissionWebBody": "Zezwól tej witrynie na dostęp do mikrofonu w ustawieniach przeglądarki i spróbuj ponownie.",
     "unsupportedTitle": "Nagrywanie niedostępne",
     "unsupportedBody": "Ta przeglądarka nie nagrywa dźwięku. Wypróbuj Chrome na Androidzie lub zainstaluj aplikację na ekranie głównym iPhone’a.",
+    "unsupportedAndroidBody": "Natywny rejestrator nie uruchomił się. Zaktualizuj lub ponownie zainstaluj NatureLens i spróbuj jeszcze raz. Pozostałe funkcje nadal są dostępne.",
+    "unsupportedWebBody": "Ta przeglądarka nie mogła nagrać dźwięku. Użyj aktualnej wersji zgodnej przeglądarki i zezwól na dostęp do mikrofonu.",
+    "unsupportedIosBody": "Rozpoznawanie dźwięku jest dostępne w Androidzie i w witrynie, ale nie w tej aplikacji na iOS. Wszystkie pozostałe funkcje rozpoznawania nadal są dostępne.",
     "tooShortTitle": "Nagranie za krótkie",
     "tooShortBody": "Nagraj co najmniej dwie sekundy, gdy zwierzę śpiewa.",
     "failedTitle": "Nie udało się rozpoznać",
@@ -2420,7 +2928,11 @@
     "decodeFailedBody": "Nie udało się odczytać tego nagrania. Spróbuj ponownie.",
     "notFoundBody": "Nic rozpoznawalnego w tym nagraniu. Podejdź bliżej lub nagrywaj, gdy śpiewa.",
     "noContentBody": "Brak jeszcze opisu tego gatunku.",
-    "notWildlifeBody": "To brzmi jak pojazd, maszyna albo głos, a nie zwierzę. Spróbuj nagrać ponownie w cichszym miejscu."
+    "notWildlifeBody": "To brzmi jak pojazd, maszyna albo głos, a nie zwierzę. Spróbuj nagrać ponownie w cichszym miejscu.",
+    "audioEvidenceTitle": "Twoje nagranie",
+    "audioEvidenceBody": "Szczyty amplitudy dźwięku użytego do tej identyfikacji.",
+    "audioEvidenceDuration": "{{seconds}} s",
+    "audioEvidenceAlt": "Szczyty amplitudy Twojego nagrania; czas trwania: {{seconds}} s."
   },
   "login": {
     "signInRow": "Zaloguj się",
@@ -2454,7 +2966,17 @@
     "tellFriends": "Poleć znajomym",
     "linkCopied": "Link skopiowany",
     "validUntil": "Ważne do {{date}}",
-    "sectionAbout": "O aplikacji"
+    "sectionAbout": "O aplikacji",
+    "replayOnboarding": "Ponownie wyświetl wprowadzenie",
+    "replayOnboardingHint": "Przejrzyj ponownie swój cel, kontekst i poziom szczegółowości",
+    "sensoryTitle": "Dotyk i ruch",
+    "haptics": "Wibracje",
+    "hapticsSubtitle": "Wibracje sygnalizują wybory, zdjęcia, potwierdzenia i alerty",
+    "motion": "Animacje",
+    "motionSubtitle": "Użyj ustawienia urządzenia lub wybierz własne",
+    "motionSystem": "Ustawienie urządzenia",
+    "motionReduced": "Ograniczone",
+    "motionFull": "Pełne"
   },
   "books": {
     "shelfTitle": "Książki",
@@ -2470,7 +2992,674 @@
     "visitSite": "Odwiedź stronę",
     "fullDocLabel": "Pełny dokument prawny",
     "whatBody": "NatureLens rozpoznaje rośliny, owady, grzyby, uprawy, ryby, ptaki, a nawet dźwięki na podstawie zdjęcia lub nagrania i zamienia Twoje znaleziska w osobistą kolekcję przyrodniczą.",
-    "creditsBody": "Identyfikacja: Kindwise (rośliny, owady, grzyby, uprawy), Fishial (ryby), Nyckel (ptaki) oraz nasz własny model dźwięku. Zdjęcia referencyjne z Wikipedia / Wikimedia Commons, z podaniem autorstwa tam, gdzie się pojawiają. Czat ze specjalistką obsługiwany przez AI (Anthropic).",
+    "creditsBody": "Identyfikacja: Kindwise (rośliny, owady, grzyby, uprawy), Fishial (ryby), Nyckel (ptaki) oraz nasz własny model dźwięku. Zdjęcia referencyjne z Wikipedia / Wikimedia Commons, z podaniem autorstwa tam, gdzie się pojawiają. Czat ze specjalistką obsługiwany przez AI (Anthropic). Gdy skalibrowana, globalna usługa BioCLIP będzie aktywna, NatureLens będzie mógł najpierw używać tej prywatnej, samodzielnie zarządzanej usługi dla ptaków; dopóki jest wyłączona, albo jeśli zawiedzie lub nie potwierdzi dokładnego gatunku, awaryjnie używany jest Nyckel.",
     "creditsGbif": "Mapy występowania i wykresy sezonowe z GBIF.org, pobierane na podstawie naukowej nazwy gatunku — żadne Twoje dane nie są wysyłane."
+  },
+  "agronomyProfile": {
+    "eyebrow": "Profil pola",
+    "title": "Utwórz profil pola",
+    "subtitle": "Potwierdź warunki na polu przed jakąkolwiek interpretacją techniczną.",
+    "stepCounter": "Krok {{current}} z {{total}}",
+    "steps": {
+      "purpose": {
+        "title": "Cel i system",
+        "body": "Wskaż przeznaczenie uprawy i sposób prowadzenia pola."
+      },
+      "location": {
+        "title": "Lokalizacja ręczna",
+        "body": "Wprowadź kraj, jednostkę administracyjną pierwszego szczebla i miejscowość bez udostępniania lokalizacji urządzenia."
+      },
+      "planting": {
+        "title": "Sadzenie i faza",
+        "body": "Zapisz datę sadzenia i fazę zaobserwowaną na polu."
+      },
+      "soil": {
+        "title": "Gleba i analiza",
+        "body": "Opisz glebę i wskaż, czy masz raport laboratoryjny."
+      },
+      "summary": {
+        "title": "Sprawdź profil",
+        "body": "Sprawdź każde pole przed zapisaniem tego kontekstu."
+      }
+    },
+    "purposeLabel": "Cel produkcji",
+    "systemLabel": "System produkcji",
+    "purposes": {
+      "grain": "Ziarno",
+      "fresh": "Rynek świeży",
+      "processing": "Przetwórstwo",
+      "forage": "Pasza",
+      "seed": "Produkcja nasion",
+      "other": "Inne"
+    },
+    "systems": {
+      "rainfed": "Deszczowy",
+      "irrigated": "Nawadniany",
+      "protected": "Uprawa pod osłonami",
+      "hydroponic": "Hydroponiczny",
+      "other": "Inne"
+    },
+    "manualLocationTitle": "Lokalizacja wpisana przez Ciebie",
+    "manualLocationBody": "Ten asystent nie prosi o dostęp do GPS. Wybierz kraj, wprowadź kod województwa, stanu, prowincji lub regionu, jeśli ma zastosowanie, oraz miejscowość.",
+    "countryCodeLabel": "Kraj",
+    "countryCodePlaceholder": "Wybierz kraj",
+    "countryCodeHint": "Wybierz kraj, w którym znajduje się to pole.",
+    "countryPickerTitle": "Wybierz kraj",
+    "countrySearchPlaceholder": "Szukaj według nazwy lub kodu kraju",
+    "countryNotFound": "Nie znaleziono kraju.",
+    "closeCountryPicker": "Zamknij wybór kraju",
+    "localityLabel": "Miejscowość",
+    "localityPlaceholder": "Przykład: Warszawa",
+    "admin1CodeLabel": "Kod województwa, stanu, prowincji lub regionu",
+    "admin1CodePlaceholder": "Przykład: PL-MZ",
+    "admin1CodeHint": "Jeśli ma zastosowanie, użyj kodu jednostki administracyjnej pierwszego szczebla wybranego kraju.",
+    "municipalityLabel": "Miejscowość",
+    "municipalityPlaceholder": "Przykład: Warszawa",
+    "stateLabel": "Jednostka administracyjna kraju",
+    "stateHint": "Wprowadź kod województwa, stanu, prowincji lub regionu, jeśli ma zastosowanie.",
+    "plantingDateLabel": "Data sadzenia",
+    "plantingDatePlaceholder": "RRRR-MM-DD",
+    "plantingDateHint": "Użyj formatu RRRR-MM-DD.",
+    "stageLabel": "Zaobserwowana faza uprawy",
+    "stagePlaceholder": "Przykład: V6, kwitnienie, wypełnianie owoców",
+    "stageConfirmedLabel": "Sprawdzono tę fazę na polu",
+    "soilDescriptionLabel": "Opis gleby",
+    "soilDescriptionPlaceholder": "Przykład: gleba gliniasta, łagodny spadek, dobry drenaż",
+    "hasReportLabel": "Czy masz raport z analizy gleby?",
+    "reportNoticeTitle": "Miej raport pod ręką",
+    "reportNoticeBody": "Ten profil zapisuje wyłącznie informację o istnieniu raportu. Nie odczytuje wyników ani nie oblicza zaleceń.",
+    "summary": {
+      "purpose": "Cel",
+      "system": "System",
+      "location": "Kraj / jednostka administracyjna / miejscowość",
+      "planting": "Data sadzenia",
+      "stage": "Potwierdzona faza",
+      "soil": "Gleba",
+      "report": "Raport z analizy gleby"
+    },
+    "noCalculationTitle": "Tylko kontekst",
+    "noCalculationBody": "Zapisanie tego profilu nie oblicza dawek ani nie wydaje zaleceń dotyczących nawożenia, nawadniania, pestycydów czy innych działań agronomicznych.",
+    "save": "Zapisz profil",
+    "errors": {
+      "selectPurposeAndSystem": "Wybierz cel i system produkcji.",
+      "completeLocation": "Wybierz kraj, wprowadź miejscowość i sprawdź kod jednostki administracyjnej, jeśli został podany.",
+      "completePlanting": "Wprowadź prawidłową datę i zaobserwowaną fazę uprawy.",
+      "confirmStage": "Potwierdź sprawdzenie fazy na polu.",
+      "completeSoil": "Opisz glebę przed kontynuowaniem.",
+      "chooseReport": "Wskaż, czy masz raport z analizy gleby.",
+      "formIncomplete": "Brakuje wymaganych informacji lub są one nieprawidłowe. Sprawdź poprzednie kroki.",
+      "saveUnavailable": "Dla tego formularza nie jest dostępna akcja zapisu."
+    }
+  },
+  "agronomyWorkspace": {
+    "title": "Obszar roboczy pola",
+    "openTitle": "Zaawansowane zarządzanie polem",
+    "openBody": "Utwórz profil pola, zapisuj obserwacje i otwieraj tylko moduły techniczne zweryfikowane dla tej uprawy.",
+    "openAction": "Otwórz obszar pola",
+    "tabs": {
+      "essential": "Podstawy",
+      "learn": "Nauka",
+      "agronomist": "Agronom"
+    },
+    "unknownCrop": "Uprawa bez potwierdzonej tożsamości",
+    "catalogBadge": "Zweryfikowany wpis katalogowy · nie diagnoza ze zdjęcia",
+    "loadingProfile": "Wczytywanie profilu pola…",
+    "contextTitle": "Kontekst pola",
+    "contextBody": "To kontekst potwierdzony przez Ciebie dla tego pola.",
+    "globalEvidence": {
+      "topicCount": "Sekcje: {{count}}",
+      "kicker": "WARSTWA GLOBALNA",
+      "title": "Co dokumentują źródła światowe",
+      "body": "Treści znalezione dla {{scientific}}, powiązane z dokładnie oznaczonym gatunkiem i źródłem pierwotnym.",
+      "exactSpecies": "Dokładnie oznaczony gatunek",
+      "traceableSource": "Źródło możliwe do prześledzenia",
+      "worldScope": "Zasięg światowy",
+      "warningTitle": "To nie jest lokalne zalecenie",
+      "warningBody": "Te informacje opisują gatunek. Nie uprawniają do ustalania dawek, zaleceń nawozowych ani tabel regionalnych.",
+      "openSource": "Otwórz źródło światowe w Wikipedii",
+      "topicsTitle": "Światowa karta gatunku"
+    },
+    "missingProfileTitle": "Utwórz kontekst pola",
+    "missingProfileBody": "Potwierdź lokalizację, sadzenie, fazę i glebę przed zapisem obserwacji.",
+    "profileUnavailableBody": "Ten element nie ma bezpiecznego lokalnego klucza profilu pola.",
+    "createProfile": "Utwórz profil",
+    "editProfile": "Edytuj profil",
+    "savingProfile": "Zapisywanie profilu…",
+    "profileSaved": "Profil pola zapisany.",
+    "observationTitle": "Obserwacja polowa",
+    "observationBody": "Zapisz to, co rzeczywiście zaobserwowano. Ten dziennik nie tworzy diagnozy ani zalecenia.",
+    "addObservation": "Zapisz obserwację",
+    "eventTypeLabel": "Typ wpisu",
+    "eventTypes": {
+      "observation": "Obserwacja",
+      "stage": "Faza uprawy",
+      "rain": "Deszcz",
+      "irrigation": "Nawadnianie",
+      "fertilization": "Nawożenie",
+      "pestSample": "Próba szkodników",
+      "diseaseCheck": "Kontrola chorób",
+      "harvest": "Zbiór"
+    },
+    "noteLabel": "Notatka",
+    "notePlaceholder": "Opisz, co zaobserwowano lub zrobiono",
+    "valueLabel": "Wartość",
+    "valuePlaceholder": "Przykład: 12,5",
+    "unitLabel": "Jednostka",
+    "unitPlaceholder": "Przykład: mm, kg, rośliny",
+    "optionalFieldsHint": "Notatka i wartość są opcjonalne, ale podaj co najmniej jedną. Każda wartość wymaga jednostki.",
+    "saveObservation": "Zapisz obserwację",
+    "savingObservation": "Zapisywanie obserwacji…",
+    "observationSaved": "Obserwacja zapisana.",
+    "timelineTitle": "Oś czasu pola",
+    "eventStage": "Faza w tym momencie: {{stage}}",
+    "learning": {
+      "title": "Naucz się obserwować pole",
+      "body": "Użyj prostego cyklu, aby zmienić wizytę na polu w wiarygodny kontekst.",
+      "accessibilityLabel": "Obserwuj, zapisuj, porównuj i szukaj fachowej pomocy.",
+      "steps": {
+        "observe": {
+          "title": "Obserwuj",
+          "body": "Sprawdź więcej niż jeden punkt i oddziel fakty od przypuszczeń."
+        },
+        "record": {
+          "title": "Zapisuj",
+          "body": "Zanotuj stan, miejsce i zmianę, gdy obserwacja jest jeszcze świeża."
+        },
+        "compare": {
+          "title": "Porównuj",
+          "body": "Porównaj wizyty w podobnych warunkach przed wyciągnięciem wniosku."
+        },
+        "support": {
+          "title": "Szukaj pomocy",
+          "body": "Przekaż historię i raporty laboratoryjne lokalnemu agronomowi, gdy potrzebna jest decyzja."
+        }
+      },
+      "genericTitle": "Ogólna grafika edukacyjna",
+      "genericBody": "Ilustracja uczy, gdzie patrzeć. Nie jest zdjęciem ani opisem tej uprawy.",
+      "visuals": {
+        "phenology": {
+          "title": "Potwierdzona faza uprawy",
+          "body": "Używaj wyłącznie fazy zaobserwowanej i potwierdzonej na polu; nie wnioskuj z daty."
+        },
+        "soil": {
+          "title": "Profil gleby i pobieranie prób",
+          "body": "Opis kieruje obserwacją, ale decyzje wymagają reprezentatywnej próby i ważnego raportu."
+        },
+        "water": {
+          "title": "Deszcz → gleba → korzeń → decyzja",
+          "body": "Zapisz deszcz lub nawadnianie, sprawdź glebę i korzenie, a dopiero potem oceń kolejny krok."
+        },
+        "nutrition": {
+          "title": "N, P i K bez zgadywania dawki",
+          "body": "Symbole składników pomagają czytać dane; dawka wymaga analizy, celu i regionalnej kalibracji."
+        },
+        "mip": {
+          "title": "Pobierz próbę, policz, porównaj, zdecyduj",
+          "body": "Potwierdź cel i fazę, pobierz reprezentatywną próbę i porównaj z właściwym progiem przed zwalczaniem."
+        }
+      }
+    },
+    "technicalStatusTitle": "Zakres techniczny",
+    "technicalVerifiedTitle": "Dostępne dokładne moduły techniczne",
+    "technicalVerifiedBody": "Tożsamość i bieżący katalog wskazują poniższe moduły. Są odniesieniem, a nie automatyczną receptą.",
+    "technicalCatalogBody": "To redakcyjny wpis katalogowy, a nie diagnoza ze zdjęcia. Pokazywane są tylko moduły wyraźnie opracowane dla tej uprawy.",
+    "noExactModulesTitle": "Brak dokładnego modułu",
+    "noExactModulesBody": "Uprawa ma przewodnik polowy, ale nie opublikowano tabeli liczbowej ani dokładnego modułu monitoringu.",
+    "technicalUnavailableTitle": "Brak routingu technicznego",
+    "technicalUnavailableBody": "Tożsamość, zakres katalogu lub routing są niewystarczające. Tabela techniczna nie jest wyświetlana.",
+    "modules": {
+      "pest": "Zintegrowany monitoring szkodników",
+      "fertilizer": "Tabele gleby i nawozów"
+    },
+    "ruleCatalogTitle": "Stan katalogu reguł",
+    "ruleCatalogGuideBody": "Silnik rozwiązał tylko regułę przewodnika. Katalog nie zawiera liczbowej reguły obliczeniowej.",
+    "ruleCatalogCatalogBody": "Katalog redakcyjny może otwierać opracowane moduły, ale nie zmienia wpisu w diagnozę ze zdjęcia ani regułę obliczeniową.",
+    "ruleCatalogUnavailableBody": "Nie rozwiązano dokładnej reguły przewodnika. Aplikacja nie wywnioskuje jej z nazwy zwyczajowej, rodziny ani starego pola.",
+    "sourcesTitle": "Źródła oficjalne",
+    "sourcesBody": "Wyświetlane są tylko źródła powiązane z obecnie opublikowanymi modułami.",
+    "officialSource": "Źródło oficjalne · {{institution}}",
+    "openSource": "Otwórz źródło oficjalne: {{source}}",
+    "errors": {
+      "typeInvalid": "Wybierz prawidłowy typ wpisu.",
+      "amountInvalid": "Wprowadź prawidłową nieujemną liczbę w obsługiwanym zakresie.",
+      "unitNeedsValue": "Wprowadź wartość przed dodaniem jednostki.",
+      "unitRequired": "Każda wartość musi mieć jednostkę.",
+      "emptyEvent": "Przed zapisaniem dodaj notatkę lub wartość.",
+      "saveFailed": "Nie udało się zapisać. Niczego nie potwierdzono; spróbuj ponownie."
+    },
+    "planningSourcesTitle": "Źródła do planowania",
+    "planningSourcesBody": "Oficjalna lektura przypisana do tej uprawy. Nie oznacza to wydania modułu technicznego ani zalecenia."
+  },
+  "observationWorkspace": {
+    "title": "Zaawansowana obserwacja",
+    "loading": "Wczytywanie obserwacji…",
+    "unavailableTitle": "Przestrzeń obserwacji jest niedostępna",
+    "unavailableBody": "Ta kategoria nie ma zweryfikowanej konfiguracji obserwacji, dlatego formularz nie jest wyświetlany.",
+    "openTitle": "Przestrzeń zaawansowanej obserwacji",
+    "openBody": "Utwórz jasny zapis tego, co rzeczywiście udało się zobaczyć — od prostych notatek po porównywalne dane terenowe.",
+    "openAction": "Otwórz przestrzeń obserwacji",
+    "tabs": {
+      "essential": "Podstawy",
+      "learn": "Nauka",
+      "field": "Teren"
+    },
+    "setupTitle": "Ustaw kontekst obserwacji",
+    "setupBody": "Wybierz ogólne środowisko i opisz, gdzie oraz jak rozpoczął się ten zapis. Nie dodawaj wniosków, których nie zaobserwowano.",
+    "setupAction": "Utwórz kontekst",
+    "editProfile": "Edytuj kontekst",
+    "saveProfile": "Zapisz kontekst",
+    "contextLabel": "Kontekst obserwacji",
+    "placeLabel": "Miejsce",
+    "placePlaceholder": "Przykład: północna część ogrodu, brzeg strumienia lub balkon",
+    "baselineLabel": "Punkt wyjścia",
+    "baselinePlaceholder": "Opisz widoczny stan podczas pierwszej obserwacji",
+    "profileSaved": "Kontekst zapisany.",
+    "localOnly": "Zapisane tylko na tym urządzeniu. To nie jest diagnoza ani kopia w chmurze.",
+    "addEvent": "Dodaj notatkę terenową",
+    "closeEvent": "Zamknij formularz",
+    "eventTypeLabel": "Typ obserwacji",
+    "noteLabel": "Notatka",
+    "notePlaceholder": "Opisz tylko to, co było widać lub słychać",
+    "countLabel": "Zaobserwowana liczba",
+    "measureLabel": "Zaobserwowany pomiar",
+    "unitLabel": "Jednostka",
+    "optionalLabel": "Opcjonalne",
+    "saveEvent": "Zapisz wpis",
+    "eventSaved": "Wpis zapisany.",
+    "emptyEvent": "Przed zapisaniem dodaj notatkę, liczbę lub pomiar.",
+    "invalidCount": "Wpisz liczbę całkowitą równą zero lub większą.",
+    "invalidMeasure": "Wpisz prawidłowy pomiar równy zero lub większy.",
+    "unitRequired": "Wybierz jednostkę pomiaru.",
+    "saveFailed": "Nie udało się zapisać tego wpisu. Spróbuj ponownie.",
+    "timelineTitle": "Oś czasu obserwacji",
+    "timelineEmpty": "Nie zarejestrowano jeszcze żadnych obserwacji.",
+    "fieldTitle": "Widok terenowy",
+    "fieldBody": "Porównuj zapisy wykonane w podobnych warunkach, a gdy potrzebna jest decyzja, pokaż historię wykwalifikowanemu specjaliście.",
+    "progressLabel": "Zapisano {{done}} z {{total}} punktów obserwacji",
+    "recordedLabel": "Zarejestrowano {{date}}",
+    "missingLabel": "Brak zapisu",
+    "evidenceNote": "Wpisy opisują obserwacje. Nie potwierdzają tożsamości, diagnozy, ryzyka ani decyzji dotyczącej postępowania.",
+    "learningTitle": "Dowiedz się, co obserwować",
+    "learningBody": "Otwórz każdą ilustrację, aby zrozumieć, co składa się na użyteczny zapis.",
+    "generalDiagram": "Ogólny schemat obserwacji; nie potwierdza tożsamości sfotografowanego organizmu.",
+    "mushroomSafety": "Nigdy nie spożywaj grzyba na podstawie zdjęcia, identyfikacji w aplikacji ani tego zapisu obserwacji.",
+    "units": {
+      "millimetre": "milimetry (mm)",
+      "centimetre": "centymetry (cm)",
+      "metre": "metry (m)",
+      "second": "sekundy (s)",
+      "minute": "minuty (min)",
+      "millilitre": "mililitry (ml)",
+      "litre": "litry (l)",
+      "celsius": "stopnie Celsjusza (°C)",
+      "percent": "procent (%)",
+      "gram": "gramy (g)",
+      "kilogram": "kilogramy (kg)",
+      "ph": "pH",
+      "ppt": "części na tysiąc (ppt)",
+      "ppm": "części na milion (ppm)",
+      "milligramPerLitre": "miligramy na litr (mg/L)",
+      "microsiemensPerCentimetre": "mikrosiemensy na centymetr (µS/cm)",
+      "hour": "godziny (h)",
+      "hertz": "herce (Hz)",
+      "kilohertz": "kiloherce (kHz)",
+      "decibel": "decybele (dB)",
+      "kilometre": "kilometry (km)"
+    },
+    "contexts": {
+      "plant": {
+        "indoor": "W pomieszczeniu",
+        "outdoor": "Na zewnątrz",
+        "container": "Pojemnik",
+        "ground": "W gruncie"
+      },
+      "tree": {
+        "urban": "Obszar miejski",
+        "garden": "Ogród",
+        "woodland": "Teren leśny",
+        "orchard": "Sad"
+      },
+      "insect": {
+        "onPlant": "Na roślinie",
+        "onSoil": "Na glebie",
+        "onStructure": "Na konstrukcji",
+        "nearWater": "W pobliżu wody"
+      },
+      "mushroom": {
+        "soil": "Na glebie",
+        "wood": "Na drewnie",
+        "leafLitter": "W ściółce liściowej",
+        "otherSubstrate": "Inne podłoże"
+      },
+      "fish": {
+        "freshwater": "Woda słodka",
+        "marine": "Środowisko morskie",
+        "estuary": "Estuarium",
+        "aquarium": "Akwarium"
+      },
+      "bird": {
+        "urban": "Obszar miejski",
+        "forest": "Las",
+        "wetland": "Mokradło",
+        "openArea": "Teren otwarty"
+      },
+      "sound": {
+        "dawn": "Świt",
+        "day": "Dzień",
+        "dusk": "Zmierzch",
+        "night": "Noc"
+      }
+    },
+    "eventTypes": {
+      "plant": {
+        "observation": "Otoczenie rośliny",
+        "growth": "Wzrost rośliny",
+        "leafChange": "Zmiana liści rośliny",
+        "flowering": "Zaobserwowane kwitnienie",
+        "fruiting": "Zaobserwowane owocowanie",
+        "symptom": "Widoczny objaw rośliny",
+        "care": "Zapis pielęgnacji rośliny"
+      },
+      "tree": {
+        "observation": "Otoczenie drzewa",
+        "growth": "Wzrost drzewa",
+        "leafChange": "Zmiana liści drzewa",
+        "flowering": "Zaobserwowane kwitnienie drzewa",
+        "fruiting": "Zaobserwowane owocowanie drzewa",
+        "symptom": "Widoczny objaw drzewa",
+        "habitat": "Siedlisko drzewa"
+      },
+      "insect": {
+        "observation": "Kontekst obserwacji",
+        "count": "Zaobserwowana liczba",
+        "lifeStage": "Zaobserwowane stadium życia",
+        "behavior": "Zaobserwowane zachowanie",
+        "interaction": "Zaobserwowana interakcja",
+        "habitat": "Siedlisko owada"
+      },
+      "mushroom": {
+        "observation": "Obserwacja grzyba",
+        "emergence": "Zaobserwowane pojawienie się",
+        "morphology": "Widoczna morfologia",
+        "substrate": "Podłoże",
+        "colorChange": "Zmiana koloru",
+        "sporePrint": "Zapis wysypu zarodników"
+      },
+      "fish": {
+        "observation": "Kontekst obserwacji",
+        "count": "Zaobserwowany liczba",
+        "behavior": "Zaobserwowane zachowanie",
+        "habitat": "Siedlisko",
+        "waterReading": "Zaobserwowany odczyt wody",
+        "feeding": "Zaobserwowane żerowanie"
+      },
+      "bird": {
+        "observation": "Obserwacja ptaka",
+        "count": "Zaobserwowana liczba",
+        "behavior": "Zaobserwowane zachowanie",
+        "vocalization": "Zaobserwowany głos",
+        "nesting": "Zaobserwowane gniazdowanie",
+        "flight": "Zaobserwowany lot"
+      },
+      "sound": {
+        "observation": "Obserwacja dźwięku",
+        "recording": "Nagranie",
+        "comparison": "Porównanie nagrań",
+        "context": "Otoczenie dźwiękowe",
+        "frequency": "Zaobserwowana częstotliwość",
+        "amplitude": "Zaobserwowana amplituda"
+      }
+    },
+    "visuals": {
+      "plant": {
+        "environment": {
+          "title": "Otoczenie rośliny",
+          "body": "Zapisz otoczenie organizmu i każdą widoczną zmianę."
+        },
+        "light": {
+          "title": "Widoczne światło",
+          "body": "Porównaj widoczne warunki świetlne między wizytami bez wnioskowania o potrzebach."
+        },
+        "soil": {
+          "title": "Obserwacja gleby",
+          "body": "Opisz widoczną powierzchnię gleby lub podłoża i jej zmianę."
+        },
+        "growth": {
+          "title": "Wzrost rośliny",
+          "body": "Umieść porównywalne obserwacje wzrostu na osi czasu."
+        }
+      },
+      "tree": {
+        "environment": {
+          "title": "Otoczenie drzewa",
+          "body": "Zapisz otoczenie organizmu i każdą widoczną zmianę."
+        },
+        "light": {
+          "title": "Widoczne światło",
+          "body": "Porównaj widoczne warunki świetlne między wizytami bez wnioskowania o potrzebach."
+        },
+        "soil": {
+          "title": "Obserwacja gleby",
+          "body": "Opisz widoczną powierzchnię gleby lub podłoża i jej zmianę."
+        },
+        "growth": {
+          "title": "Wzrost drzewa",
+          "body": "Umieść porównywalne obserwacje wzrostu na osi czasu."
+        }
+      },
+      "insect": {
+        "anatomy": {
+          "title": "Widoczne cechy ciała",
+          "body": "Rozdziel widoczne cechy ciała, zanim wskażesz stadium życia lub tożsamość."
+        },
+        "stage": {
+          "title": "Zaobserwowane stadium życia",
+          "body": "Zapisz tylko stadium, które można zaobserwować; w razie niepewności pozostaw je puste."
+        },
+        "count": {
+          "title": "Zaobserwowana liczba",
+          "body": "Licz w jasno opisanym miejscu, aby można było porównać późniejszą wizytę."
+        },
+        "behaviour": {
+          "title": "Zaobserwowane zachowanie",
+          "body": "Opisz ruch i interakcję tak, jak je zaobserwowano, bez uznawania zwierzęcia za szkodnika."
+        }
+      },
+      "mushroom": {
+        "substrate": {
+          "title": "Podłoże",
+          "body": "Zapisz materiał bezpośrednio pod grzybem oraz otaczające siedlisko."
+        },
+        "anatomy": {
+          "title": "Widoczne części grzyba",
+          "body": "Rozdziel kapelusz, spód, trzon i podstawę; zdjęcie może ukrywać cechy rozstrzygające."
+        },
+        "underside": {
+          "title": "Widoczny spód",
+          "body": "Opisz widoczne blaszki, pory lub inną powierzchnię spodnią bez zgadywania."
+        },
+        "colourChange": {
+          "title": "Zmiana koloru",
+          "body": "Zapisz, czy zmiana koloru była rzeczywiście widoczna i gdzie wystąpiła."
+        }
+      },
+      "fish": {
+        "habitat": {
+          "title": "Siedlisko",
+          "body": "Opisz widoczny zbiornik wodny i miejsce, w którym zauważono rybę."
+        },
+        "anatomy": {
+          "title": "Widoczne cechy ryby",
+          "body": "Porównuj profil ciała, płetwy, oznaczenia i ogon tylko wtedy, gdy każda cecha jest widoczna."
+        },
+        "group": {
+          "title": "Ryby widziane razem",
+          "body": "Zapisz zaobserwowaną liczbę i pole widzenia; nie wnioskuj o wielkości populacji."
+        },
+        "behaviour": {
+          "title": "Zaobserwowane zachowanie",
+          "body": "Obserwuj z dystansu i zapisuj ruch bez kontaktu."
+        }
+      },
+      "bird": {
+        "habitat": {
+          "title": "Siedlisko",
+          "body": "Opisz widoczne siedlisko i położenie ptaka."
+        },
+        "anatomy": {
+          "title": "Widoczne cechy ptaka",
+          "body": "Porównuj dziób, ciało, skrzydła i ogon wyłącznie na podstawie widocznych cech."
+        },
+        "group": {
+          "title": "Ptaki widziane razem",
+          "body": "Zapisz grupę, którą rzeczywiście było widać, bez szacowania ptaków poza polem widzenia."
+        },
+        "vocalisation": {
+          "title": "Zaobserwowany głos",
+          "body": "Opisz wysokość, rytm i powtarzalność bez zakładania, który gatunek wydał dźwięk."
+        }
+      },
+      "sound": {
+        "waveform": {
+          "title": "Widoczny wzorzec dźwięku",
+          "body": "Schemat przedstawia wzorzec nagrania, a nie dowód występowania gatunku."
+        },
+        "rhythm": {
+          "title": "Rytm i powtarzalność",
+          "body": "Zaznacz usłyszane powtarzające się fragmenty i przerwy, bez wymyślania znaczenia głosu."
+        },
+        "environment": {
+          "title": "Otoczenie dźwiękowe",
+          "body": "Zapisz porę, miejsce i dźwięki tła, które mogą wpływać na porównanie."
+        },
+        "comparison": {
+          "title": "Porównaj nagrania",
+          "body": "Porównaj nagrania wykonane w podobnych warunkach, zanim zanotujesz różnicę."
+        }
+      }
+    }
+  },
+  "community": {
+    "title": "Społeczność",
+    "headline": "Zamień to odkrycie w przydatną wskazówkę.",
+    "body": "Zaproś znajomego, osobę z nauki lub grupę terenową do identyfikowania z NatureLens.",
+    "steps": {
+      "identify": "Rozpoznaj żywy organizm",
+      "save": "Zapisz to, co ważne",
+      "share": "Wyślij wynik komuś, komu może się przydać"
+    },
+    "inviteAction": "Zaproś znajomego",
+    "inviteMessage": "Używam NatureLens do rozpoznawania natury i dzielenia się opieką nad roślinami: podlewanie, szkodniki, regeneracja i odkrycia. Sprawdź: {{url}}",
+    "screenTitle": "Społeczność",
+    "entryTitle": "Liga społeczności",
+    "entrySubtitle": "Zobacz ranking, misje i postęp tygodnia.",
+    "localBadge": "Liga lokalna",
+    "heroTitle": "Twój ranking NatureLens",
+    "rankPosition": "aktualna pozycja",
+    "scoreLabel": "punkty",
+    "leagues": {
+      "seed": "Liga Nasion — Zacznij dziś od jednego odkrycia.",
+      "sprout": "Liga Kiełka — Budujesz prawdziwy nawyk.",
+      "guardian": "Liga Strażnika — Twój dziennik terenowy nabiera siły.",
+      "master": "Liga Mistrza — Rytm zaawansowanego odkrywcy."
+    },
+    "photoRail": "Twoje najnowsze znaleziska stają się okładką ligi.",
+    "discoveriesLabel": "odkrycia",
+    "weeklyLabel": "w tym tygodniu",
+    "categoriesLabel": "kategorie",
+    "streakLabel": "dni z rzędu",
+    "rankingTitle": "Ranking tygodnia",
+    "rankingBody": "Lokalna liga oparta na potwierdzonej aktywności w aplikacji. Bez fikcyjnych użytkowników z całego świata: po połączeniu serwera społeczności stanie się prawdziwym publicznym rankingiem.",
+    "leaderboard": {
+      "you": {
+        "name": "Ty",
+        "meta": "Twoja potwierdzona aktywność"
+      },
+      "next": {
+        "name": "Następny etap",
+        "meta": "Osiągalny cel na ten tydzień"
+      },
+      "elite": {
+        "name": "Poziom elitarny",
+        "meta": "Cel dla zaawansowanych użytkowników"
+      }
+    },
+    "milestonesTitle": "Co podnosi Twój ranking",
+    "milestones": {
+      "first": "Rozpoznawaj i zapisuj prawdziwe znaleziska.",
+      "week": "Wykonuj codzienne misje i utrzymuj serię.",
+      "allCategories": "Odkrywaj więcej kategorii: rośliny, owady, ryby, ptaki i grzyby."
+    },
+    "inviteTitle": "Zaproś kogoś na wyprawę",
+    "inviteBody": "Udostępnij aplikację, ukończ misję zaproszenia i przenieś doświadczenie poza telefon.",
+    "scanAction": "Skanuj teraz",
+    "reviewTitle": "Czy NatureLens Ci pomaga?",
+    "reviewBody": "Jeśli aplikacja wyjaśniła Twoje znalezisko, Twoja opinia pomoże kolejnym odkrywcom ją znaleźć.",
+    "reviewAction": "Podoba mi się",
+    "reviewLater": "Nie teraz",
+    "reviewThanks": "Dziękujemy — to pomaga nam stale ulepszać NatureLens.",
+    "careExchangeTitle": "Wymiana porad",
+    "careExchangeBody": "Podziel się tym, co działa: podlewanie, światło, szkodniki, regeneracja i zdjęcia przed/po roślin.",
+    "careShareAction": "Udostępnij doświadczenie",
+    "careTopics": {
+      "watering": "Rytm podlewania",
+      "pests": "Szkodniki i objawy",
+      "recovery": "Przed i po",
+      "questions": "Zapytaj grupę"
+    }
+  },
+  "ipm": {
+    "title": "Integrowana ochrona przed szkodnikami",
+    "chooseCrop": "Wybierz uprawę, na której zaobserwowano tego owada. Protokół otwiera się tylko dla dokładnie udokumentowanej pary.",
+    "exactPair": "Dokładna para: {{insect}} na {{crop}}",
+    "prevention": "Zapobieganie",
+    "monitoring": "Monitoring",
+    "threshold": "Udokumentowany próg działania",
+    "cultural": "Metody agrotechniczne",
+    "mechanical": "Metody mechaniczne",
+    "biological": "Metody biologiczne",
+    "chemical": "Metody chemiczne: tylko sprawdzenie rejestracji",
+    "chemicalReferral": "Nie podajemy tu produktu ani dawki. Sprawdź aktualną etykietę dla tej uprawy i tego organizmu w swoim kraju oraz potwierdź decyzję z lokalnym agronomem.",
+    "citationOnly": "cytowanie faktów; tekst źródłowy niepublikowany ponownie",
+    "crops": {
+      "maize": "Kukurydza",
+      "tomato": "Pomidor",
+      "soybean": "Soja",
+      "uplandCotton": "Bawełna kosmata",
+      "commonBean": "Fasola zwykła",
+      "arabicaCoffee": "Kawa arabika"
+    },
+    "actions": {
+      "avoidCalendarSprays": "Nie opryskuj według kalendarza; decyzję oprzyj na reprezentatywnym monitoringu.",
+      "checkRegisteredBiocontrol": "Sprawdź lokalnie zarejestrowane metody biologiczne dla dokładnie tej uprawy i szkodnika.",
+      "confirmDamageAndStage": "Potwierdź zgodne uszkodzenia i zapisz stadium rozwojowe owada.",
+      "inspectFruitDamage": "Sprawdź owoce pod kątem otworów wejściowych i uszkodzeń wewnętrznych.",
+      "inspectLeafMines": "Sprawdź młode liście pod kątem aktywnych min i larw.",
+      "inspectTransplants": "Sprawdź sadzonki przed wprowadzeniem ich na pole.",
+      "inspectWhorl": "Otwórz i sprawdź lejek kukurydzy pod kątem świeżych zeskrobań i larw.",
+      "manageCropResidue": "Po zbiorze usuń lub prawidłowo zagospodaruj porażone resztki.",
+      "preserveNaturalEnemies": "Chroń parazytoidy, drapieżniki i innych naturalnych wrogów.",
+      "protectNursery": "Utrzymuj szkółkę zabezpieczoną i wolną od porażonych sadzonek.",
+      "recordCropStage": "Zapisuj fazę rozwojową uprawy przy każdym pobieraniu prób.",
+      "removeEggMassesSmallPlots": "Na małych działkach usuwaj dostępne złoża jaj i larwy.",
+      "removeInfestedTissue": "Bezpiecznie usuń i zutylizuj porażone liście i owoce.",
+      "removeVolunteerHosts": "Zwalczaj samosiewy podtrzymujące szkodnika między uprawami.",
+      "rotateOutsideHostFamily": "Jeśli to możliwe, stosuj zmianowanie z rośliną spoza rodziny żywicieli.",
+      "sampleCoolHours": "Pobieraj próby w chłodniejszych godzinach, gdy pluskwiaki łatwiej wykryć.",
+      "sampleRepresentativePoints": "Rozmieść punkty prób na całym polu, a nie tylko na obrzeżu.",
+      "useBeatCloth": "Stosuj płachtę entomologiczną jednakowo w reprezentatywnych punktach.",
+      "useInsectScreens": "Stosuj siatki przeciw owadom, jeśli pozwala na to system uprawy.",
+      "usePheromoneTraps": "Używaj pułapek feromonowych do śledzenia lotu; sama liczba odłowów nie mierzy szkód.",
+      "avoidStaggeredPlanting": "Unikaj rozłożonych w czasie siewów i koordynuj regionalnie termin siewu, jeśli zalecają to oficjalne wytyczne.",
+      "avoidOlderMaizeNearby": "Nie siej nowej kukurydzy obok starszych pól z objawami karłowatości.",
+      "removeAlternateHosts": "Usuń alternatywne rośliny żywicielskie i fasolę z objawami wirusowymi.",
+      "inspectFieldEdges": "Najpierw sprawdź obrzeże pola, ponieważ nalot i uszkodzenia często skupiają się przy krawędziach.",
+      "inspectFlowerBuds": "Sprawdzaj pąki kwiatowe bawełny pod kątem nakłuć żerowych i miejsc składania jaj.",
+      "completeSanitaryHarvest": "Zbierz dokładnie plon i usuń owoce kawy pozostawione na roślinach i ziemi.",
+      "inspectLowerCanopy": "Sprawdź środkową i dolną część łanu soi, gdzie ukrywają się gąsienice błyszczki."
+    },
+    "thresholds": {
+      "initialSymptomsHighYieldThreshold": "Tylko dla pól o potencjale plonowania co najmniej {{minimumYieldBagsPerHa}} worków/ha: na {{sampleAreaHa}} ha sprawdź {{samplePoints}} losowych punktów. Opublikowana wartość to {{actionPercent}}% roślin z początkowymi objawami żerowania."
+    }
   }
 }

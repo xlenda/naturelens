@@ -1,5 +1,6 @@
 {
   "common": {
+    "loading": "Laden…",
     "overview": "Overzicht",
     "details": "Details",
     "readMore": "Meer lezen",
@@ -34,6 +35,106 @@
     "translateFailed": "Vertalen lukt nu niet.",
     "yes": "Ja",
     "no": "Nee"
+  },
+  "discoveryReceipt": {
+    "title": "Identificatie voltooid",
+    "ready": "Je resultaat is klaar om te controleren.",
+    "tokens": "+{{count}} tokens verdiend",
+    "streak": "Dagen in je huidige reeks: {{count}}",
+    "achievement": "Prestatie ontgrendeld: {{title}}",
+    "factTitle": "Over deze kandidaat",
+    "saveHint": "Bewaar deze vondst om hem later terug te zien en je eigen waarnemingen toe te voegen."
+  },
+  "specimen": {
+    "title": "Mijn logboek",
+    "notFoundTitle": "Logboek niet gevonden",
+    "notFoundBody": "Deze opgeslagen vondst staat niet meer in je verzameling.",
+    "returnToCollection": "Terug naar verzameling",
+    "openRecord": "Mijn logboek openen",
+    "savedOn": "Opgeslagen op {{date}}",
+    "todayTitle": "Vandaag",
+    "wateredAnnouncement": "Waterbeurt vastgelegd.",
+    "personalizeTitle": "Maak het persoonlijk",
+    "observationTitle": "Mijn observatie",
+    "observationEmpty": "Nog geen observatie. Noteer wat je opviel, waar je de vondst deed of wat er veranderde.",
+    "observationPlaceholder": "Schrijf een korte observatie…",
+    "addObservation": "Observatie toevoegen",
+    "editObservation": "Observatie bewerken",
+    "saveObservation": "Observatie opslaan",
+    "removeObservation": "Observatie verwijderen",
+    "characterCount": "{{count}}/{{max}} tekens",
+    "timelineTitle": "Tijdlijn",
+    "timelineAdded": "Toegevoegd aan verzameling",
+    "timelineWatered": "Waterbeurt vastgelegd",
+    "timelineObservationUpdated": "Laatste bewerking van de observatie",
+    "guideTitle": "Soortgids",
+    "guideBody": "Identificatie en alle beschikbare details over de soort.",
+    "openGuide": "Gids openen",
+    "noteSavedAnnouncement": "Observatie opgeslagen.",
+    "removeTitle": "Logboek verwijderen?",
+    "removeBody": "{{name}} uit je verzameling verwijderen? Dit kan niet ongedaan worden gemaakt.",
+    "removeAction": "Verwijderen"
+  },
+  "localReminders": {
+    "title": "Herinneringen op je telefoon",
+    "body": "Kies precies wat en wanneer je wilt onthouden. Android kan je ook waarschuwen terwijl je een andere app gebruikt, afhankelijk van toestemming en systeeminstellingen.",
+    "loading": "Herinneringen laden…",
+    "loadError": "De herinneringen konden nu niet worden geladen.",
+    "nextTitle": "Komende herinneringen",
+    "addAction": "Herinnering toevoegen",
+    "empty": "Geen komende herinnering voor dit dossier.",
+    "unavailableTitle": "Herinneringen niet beschikbaar",
+    "unavailableBody": "Deze Android-versie kan geen meldingen plannen. Installeer een compatibele appversie om herinneringen te gebruiken.",
+    "modalTitle": "Een herinnering maken",
+    "reminderFor": "Voor {{name}}",
+    "taskLabel": "Wat moet de telefoon je eraan herinneren vast te leggen?",
+    "startLabel": "Eerste herinnering",
+    "timeLabel": "Tijd",
+    "repeatLabel": "Herhaling",
+    "weekdayLabel": "Dag van de week",
+    "firstAt": "Eerste melding: {{date}}",
+    "saveAction": "Herinnering plannen",
+    "saving": "Wordt gepland…",
+    "permissionDeniedTitle": "Meldingen staan uit",
+    "permissionDeniedBody": "Android heeft geen toestemming voor meldingen gegeven. Sta NatureLens-meldingen toe in de systeeminstellingen en probeer het opnieuw.",
+    "saveError": "De herinnering is niet opgeslagen of gepland. Controleer je keuzes en probeer het opnieuw.",
+    "removeError": "Deze herinnering kon niet worden verwijderd. Probeer het opnieuw.",
+    "removeAction": "Herinnering voor {{action}} verwijderen",
+    "removing": "Verwijderen…",
+    "removedAnnouncement": "Herinnering verwijderd.",
+    "scheduledSuccess": "Herinnering gepland voor {{date}}.",
+    "actionAnnouncement": "Herinnering voor {{action}} gepland voor {{date}}.",
+    "recordFallback": "dit dossier",
+    "notificationTitle": "NatureLens-herinnering · {{name}}",
+    "notificationBody": "Vastleggen: {{action}} · {{name}}",
+    "nextAt": "Volgende: {{date}}",
+    "intervals": {
+      "day1": "Over 1 dag",
+      "day3": "Over 3 dagen",
+      "day7": "Over 7 dagen",
+      "day14": "Over 14 dagen",
+      "day30": "Over 30 dagen"
+    },
+    "times": {
+      "at08": "08:00",
+      "at12": "12:00",
+      "at18": "18:00",
+      "at20": "20:00"
+    },
+    "weekdays": {
+      "sun": "Zondag",
+      "mon": "Maandag",
+      "tue": "Dinsdag",
+      "wed": "Woensdag",
+      "thu": "Donderdag",
+      "fri": "Vrijdag",
+      "sat": "Zaterdag"
+    },
+    "repetitions": {
+      "once": "Eenmalig",
+      "daily": "Elke dag",
+      "weekly": "Elke week"
+    }
   },
   "auth": {
     "title": "Log in om te identificeren",
@@ -153,17 +254,27 @@
       "label": "Geluid",
       "tabLabel": "Geluiden",
       "title": "Herken op geluid",
-      "subtitle": "Neem een vogel, kikker of insect op en ontdek wat het is."
+      "subtitle": "Neem een vogel, kikker of insect op en ontdek wat het is.",
+      "scanHint": "Vergelijk de helderheid van de opname, het ritme, de toonhoogte en de herhaling. Meerdere overeenkomende geluidspatronen zijn sterker bewijs dan één losse toon."
     }
   },
   "identify": {
+    "centralCapture": "Herkennen",
+    "photoReady": "Foto gereed",
+    "addOptionalAngles": "Nog een beeld toevoegen",
+    "hideOptionalAngles": "Extra beelden verbergen",
     "identifierTitle": "{{category}}-identificatie",
     "subtitle": "Identificeer {{category}}s direct met AI",
+    "freePromise": "Probeer het voordat je beslist: 1 gratis identificatie per categorie, zonder account of betaalkaart.",
     "readyToScan": "Klaar om te scannen",
     "didYouKnowTitle": "Wist je dat...?",
     "continueLabel": "Doorgaan",
     "analyzing": "{{category}} analyseren…",
     "tapToIdentify": "Tik om te identificeren",
+    "lensPulseEyebrow": "LEVENDE PULS",
+    "holdToReveal": "Houd vast om te onthullen",
+    "keepHolding": "Blijf vasthouden…",
+    "holdToRevealHint": "Houd vast tot de puls voltooid is. Laat los om te annuleren.",
     "identifying": "Identificeren…",
     "uploadPhoto": "Foto Uploaden",
     "myCollection": "Mijn Collectie",
@@ -186,6 +297,14 @@
     "referenceImagesTitle": "Referentiefoto’s",
     "referenceImagesHint": "Vergelijk ze met je eigen foto om te bevestigen.",
     "referenceImageLabel": "Referentiefoto {{index}}",
+    "evidenceSimilar": "Lijkt op jouw foto",
+    "evidenceRepresentative": "Soortreferentie",
+    "evidenceObservation": "Veldwaarneming · GBIF",
+    "comparePhotos": "Foto's vergelijken",
+    "comparePhotosHint": "Bekijk je foto en de referentie naast elkaar.",
+    "sideBySide": "Naast elkaar",
+    "previousReference": "Vorige referentie",
+    "nextReference": "Volgende referentie",
     "alternativesTitle": "Andere mogelijke treffers",
     "alternativesHint": "Als het resultaat hierboven niet klopt, is jouw soort misschien een van deze.",
     "lowConfidenceBare": "Slechts {{confidence}}% zeker — zie dit als een startpunt, niet als een definitief antwoord.",
@@ -199,10 +318,51 @@
     "serviceDownBody": "Deze herkenningsdienst heeft even een probleem. Probeer het over een paar minuten opnieuw - het ligt niet aan je foto.",
     "poseWhole": "Geheel",
     "poseClose": "Close-up",
-    "poseOther": "Andere hoek"
+    "poseOther": "Andere hoek",
+    "photoConsentTitle": "Voordat je je foto's verstuurt",
+    "photoConsentKindwiseBody": "Je geselecteerde foto's worden voor identificatie naar Kindwise gestuurd. De foto's en resultaten blijven 6 maanden toegankelijk via Kindwise. Volgens de voorwaarden van Kindwise vallen de foto's onder een onherroepelijke licentie die hergebruik voor training en commerciële doeleinden, verstrekking aan andere klanten en delen onder CC BY-SA toestaat. Verstuur ze alleen als je hiermee instemt.",
+    "photoConsentFishialBody": "Je geselecteerde foto's worden voor identificatie naar Fishial gestuurd. Fishial kan ze bewaren volgens zijn beleid voor gegevensbewaring en publiceert geen specifieke bewaartermijn voor foto's die via de API worden verzonden. Verstuur ze alleen als je hiermee instemt.",
+    "photoConsentNyckelBody": "Je geselecteerde foto's worden naar Nyckel gestuurd en verwerkt om de identificatie te leveren. Verstuur ze alleen als je hiermee instemt.",
+    "photoConsentBirdBody": "Wanneer de gekalibreerde, wereldwijde BioCLIP-service actief is, kunnen vogelfoto’s eerst worden verwerkt door deze besloten dienst die NatureLens beheert. In BioCLIP blijven ze alleen tijdens het verzoek in het geheugen en worden ze niet bewaard. Zolang BioCLIP is uitgeschakeld, of als het mislukt of geen exacte soort kan onderbouwen, kunnen dezelfde foto’s naar Nyckel worden verzonden met het vastleggen van voorbeelden uitgeschakeld; Nyckel garandeert niet dat de foto’s uitsluitend gedurende het verzoek worden bewaard. Verzend ze alleen als je akkoord gaat.",
+    "photoConsentSend": "Foto's versturen",
+    "captureDemo": {
+      "title": "Zo werkt het",
+      "body": "Richt op de {{category}}, tik op het grote cameravlak en bevestig het resultaat met de beelden.",
+      "accessibility": "Geanimeerd voorbeeld dat laat zien hoe je een {{category}} met de camera identificeert.",
+      "result": "Resultaat met foto’s en volgende stap",
+      "steps": {
+        "aim": "Kader één onderwerp",
+        "tap": "Tik op het cameravlak",
+        "confirm": "Vergelijk de referenties"
+      },
+      "subject": {
+        "plant": "Blad of bloem",
+        "tree": "Blad, schors of kroon",
+        "insect": "Insect scherp in beeld",
+        "mushroom": "Hoed en onderzijde",
+        "crop": "Aangetast gewasblad",
+        "fish": "Hele vis van opzij",
+        "bird": "Hele vogel in beeld",
+        "sound": "Neem helder geluid op"
+      }
+    },
+    "expeditionTitle": "Kies je expeditie",
+    "expeditionBody": "Elk pad bepaalt wat de app na de foto als eerste uitlicht.",
+    "categoryPromise": {
+      "plant": "Verzorging, veiligheid en visuele aanwijzingen",
+      "insect": "Lichaamskenmerken, risico en veldnotities",
+      "mushroom": "Dubbelgangers en veiligheid voorop",
+      "crop": "Agronomie, plagen en bodemcontext",
+      "fish": "Water, leefgebied en bewijs voor identificatie",
+      "bird": "Kenmerken, leefgebied en observatietips",
+      "sound": "Luister, vergelijk en herken geluiden"
+    }
   },
   "detail": {
+    "feedbackThanks": "Bedankt voor je feedback.",
     "profileTitle": "{{category}}-profiel",
+    "invertebrateLabel": "Ongewervelde",
+    "fungusLabel": "Schimmel",
     "readMoreLabel": "Lees meer online over deze {{category}}",
     "markAsWatered": "Markeren als Water Gegeven",
     "markAsWateredLabel": "Markeren als water gegeven",
@@ -212,10 +372,24 @@
     "checkForDiseasesLabel": "Controleren op ziektes",
     "checkingForDiseasesLabel": "Bezig met controleren op ziektes",
     "healthCheckSection": "Gezondheidscontrole",
+    "healthSpeciesMismatch": "De gezondheidscontrole herkende niet dezelfde soort. Maak een duidelijkere foto van deze plant; er is geen diagnose toegepast.",
     "edibleParts": "Eetbare Delen",
     "propagation": "Vermeerdering",
     "wateringNeeds": "Waterbehoefte",
     "conservationStatus": "Beschermingsstatus",
+    "iucn": {
+      "extinct": "Uitgestorven",
+      "extinctInTheWild": "Uitgestorven in het wild",
+      "regionallyExtinct": "Regionaal uitgestorven",
+      "criticallyEndangered": "Ernstig bedreigd",
+      "endangered": "Bedreigd",
+      "vulnerable": "Kwetsbaar",
+      "nearThreatened": "Gevoelig",
+      "leastConcern": "Niet bedreigd",
+      "dataDeficient": "Onvoldoende gegevens",
+      "notApplicable": "Niet van toepassing",
+      "notEvaluated": "Niet geëvalueerd"
+    },
     "safetySection": "Veiligheid",
     "ecologicalRoleSection": "Ecologische Rol",
     "frequentlyConfusedWith": "Vaak Verward Met",
@@ -232,6 +406,10 @@
     "installNudgeBody": "Zet het op je beginscherm om de volgende keer sneller te herkennen.",
     "commonNames": "Gangbare namen",
     "synonyms": "Wetenschappelijke synoniemen",
+    "family": "Familie",
+    "order": "Orde",
+    "taxonomyTitle": "Classificatie",
+    "species": "Soort",
     "referencePhoto": "Referentiefoto",
     "referencePhotoAlt": "Referentiefoto van {{name}}",
     "coverageNoteTitle": "Over dit resultaat",
@@ -250,7 +428,7 @@
     "everyNDays": "Elke {{count}} dagen",
     "gbifCredit": "Gegevens: GBIF.org",
     "seasonChart": "Waarnemingen per maand",
-    "seasonChartNote": "Waarnemingen wereldwijd, maand voor maand. Ze weerspiegelen de waarnemingsinspanning, geen garantie voor bloei of activiteit.",
+    "seasonChartNote": "Waarnemingen van over de hele wereld, maand voor maand. Ze weerspiegelen de waarnemingsinspanning en garanderen niet wanneer of waarom de soort voorkomt.",
     "tipWatering": "Voel vóór het gieten aan de grond: zijn de bovenste centimeters droog, dan is het tijd.",
     "tipLight": "Kijk hoe het licht in de ruimte verandert gedurende de dag - het verschuift meer dan je denkt.",
     "tipSoil": "Goede drainage is net zo belangrijk als goede voeding: natte wortels zijn lijdende wortels.",
@@ -334,6 +512,12 @@
     "scheduleNow": "nu",
     "scheduleGroupNote": "Deze kalender geldt voor de groep {{group}}, niet voor precies deze soort.",
     "scheduleGroupNoteShort": "Deze kalender geldt voor de groep van de soort, niet voor precies deze soort.",
+    "groupGuideNote": "Algemene richtlijnen voor de groep {{group}}, geen feit over deze specifieke soort.",
+    "generalGuideNote": "Algemene richtlijnen, geen feit over deze specifieke soort.",
+    "agronomySection": "Agronomie in het veld",
+    "agronomyDecisionNote": "Begin met observeren en meten. Open elk protocol voordat je beslist wat er in het veld moet veranderen.",
+    "integratedManagementSection": "Geïntegreerd beheer",
+    "openFullProtocol": "Volledig protocol openen",
     "scheduleNoLocation": "Zonder je locatie weten we niet in welk seizoen je zit, dus er is geen kolom gemarkeerd.",
     "careProfileTitle": "Verzorgingsprofiel",
     "careLevelLabel": "Verzorgingsniveau",
@@ -348,9 +532,13 @@
     "speciesCareSection": "Verzorging van deze soort",
     "speciesCareNote": "Deze cijfers gelden voor {{species}} zelf, niet voor de groep.",
     "speciesCareSource": "Bron: {{citation}}",
+    "wikipediaExcerptNotice": "Dit fragment is voor dit onderdeel geselecteerd en ingekort.",
+    "wikipediaArticleLink": "Wikipedia-artikel",
+    "wikipediaAuthorsLink": "Auteurs en paginageschiedenis",
+    "wikipediaLicenseLink": "CC BY-SA 4.0-licentie",
     "usdaMoisture": "Waterbehoefte",
     "usdaDrought": "Droogtetolerantie",
-    "usdaFertility": "Mestbehoefte",
+    "usdaFertility": "Vereiste bodemvruchtbaarheid",
     "usdaShade": "Schaduwtolerantie",
     "usdaPh": "pH van de grond",
     "usdaTempMin": "Verdraagt tot",
@@ -364,6 +552,171 @@
     "bloomMid": "{{season}} (midden)",
     "bloomLate": "{{season}} (eind)"
   },
+  "learning": {
+    "title": "Leer observeren",
+    "basic": "Basis",
+    "learn": "Leren",
+    "technical": "Technisch",
+    "generalDiagram": "Algemeen diagram",
+    "generalNote": "Gebruik deze illustratie om te weten waar je op moet letten. Het is een algemene gids, geen afbeelding van de geïdentificeerde soort.",
+    "illustrationAlt": "Algemene observatie-illustratie voor {{category}}",
+    "observeTitle": "Bekijk één onderdeel tegelijk",
+    "observeHint": "Vergelijk vorm, kleur, grootte en positie. Meerdere overeenkomende kenmerken zijn sterker bewijs dan één enkel detail.",
+    "evidenceTitle": "Bewijs voor identificatie",
+    "technicalNote": "Deze waarden komen uit het identificatieresultaat. Ontbrekend bewijs blijft verborgen en geen enkel veld wordt op basis van een gok ingevuld.",
+    "categoryMatch": "Overeenkomst met categorie",
+    "provider": "Bron van identificatie",
+    "parts": {
+      "leaf": "Bladvorm en nerven",
+      "stemNode": "Stengel en knoop",
+      "flower": "Bloemstructuur",
+      "roots": "Wortels",
+      "canopy": "Kroonvorm",
+      "branches": "Takken",
+      "trunkBark": "Stam en schors",
+      "youngOldLeaves": "Jonge en oude bladeren",
+      "affectedArea": "Aangetast gebied",
+      "stem": "Stengel",
+      "antennae": "Voelsprieten",
+      "head": "Kop",
+      "bodySections": "Lichaamsdelen",
+      "wingsLegs": "Vleugels en poten",
+      "cap": "Hoed",
+      "underside": "Lamellen, poriën of onderkant",
+      "baseSubstrate": "Basis en substraat",
+      "beak": "Snavel",
+      "wing": "Vleugel",
+      "tail": "Staart",
+      "feet": "Poten",
+      "headProfile": "Kopprofiel",
+      "bodyMarks": "Lichaamstekening",
+      "fins": "Vinnen",
+      "recording": "Opnamekwaliteit",
+      "rhythm": "Ritme",
+      "pitch": "Hoge of lage toon",
+      "repetition": "Herhaling",
+      "cephalothorax": "Kopborststuk",
+      "abdomen": "Achterlijf",
+      "eyes": "Ogen",
+      "eightLegs": "Acht poten",
+      "tentacles": "Tentakels",
+      "shell": "Schelp",
+      "muscularFoot": "Gespierde voet",
+      "anterior": "Voorste uiteinde",
+      "segments": "Lichaamssegmenten",
+      "clitellum": "Clitellum",
+      "posterior": "Achterste uiteinde"
+    }
+  },
+  "speciesDossier": {
+    "title": "Wetenschappelijk dossier",
+    "exactEvidence": "Gedocumenteerd voor {{species}}",
+    "evidenceNote": "Alleen feiten met een bron worden getoond. Ontbrekende informatie blijft verborgen.",
+    "environment": "Vastgelegde watertypen",
+    "diet": "Gedocumenteerd dieet",
+    "habitat": "Gedocumenteerd leefgebied",
+    "brackish": "Brak water",
+    "reproduction": "Gedocumenteerde voortplanting",
+    "lifeCycle": "Gedocumenteerde levenscyclus",
+    "lifeStagesTitle": "Gedocumenteerde levensstadia",
+    "larvalInstars": "Aantal larvale stadia: {{count}}",
+    "bodyLength": "Lichaamslengte",
+    "leafConsumption": "Bladconsumptie",
+    "leafAreaPerLarva": "Gegeten bladoppervlak per larve",
+    "lifeStages": { "egg": "Ei", "larva": "Larve", "nymph": "Nimf", "pupa": "Pop", "adult": "Volwassen" },
+    "measurements": {
+      "clutchSize": "Legselgrootte",
+      "incubationPeriod": "Broedduur",
+      "lifeExpectancy": "Levensverwachting",
+      "longestLifespan": "Langste waargenomen levensduur",
+      "gestationPeriod": "Draagtijd"
+    }
+  },
+  "fertilizer": {
+    "title": "Bemestingsbesluit",
+    "planningNote": "Een verantwoorde aanbeveling begint met gemeten veldgegevens. De tabel toont wat elke invoer bepaalt; het is geen toepassingsrecept.",
+    "input": "Invoer",
+    "decisionUse": "Wat dit bepaalt",
+    "soilAnalysis": "Bodemanalyse",
+    "soilAnalysisUse": "Beschikbare nutriënten, zuurgraad, zoutgehalte en behoefte aan bekalking.",
+    "plantAnalysis": "Plant- of weefselanalyse",
+    "plantAnalysisUse": "Actuele voedingstoestand, inclusief verborgen gebrek vóór zichtbare symptomen.",
+    "targetDestination": "Opbrengstdoel en bestemming",
+    "targetDestinationUse": "Verwachte nutriëntenafvoer; korrel- en volledige-plantoogst verschillen.",
+    "fieldHistory": "Perceelgeschiedenis en gewasresten",
+    "fieldHistoryUse": "Wat is toegediend, afgevoerd of aan de bodem teruggegeven.",
+    "textureWater": "Bodemtextuur en water",
+    "textureWaterUse": "Uitspoelingsrisico en of giften moeten worden gesplitst.",
+    "diagnosisCaution": "Zichtbare symptomen zijn aanwijzingen, geen bevestiging. Waterstress, ziekte, insecten of een andere nutriënt kunnen ze verhullen.",
+    "maizeTitle": "Nutriëntenonttrekking door maïs",
+    "maizeIntro": "Gemiddeld onttrokken hoeveelheden bij verschillende opbrengsten en oogstbestemmingen.",
+    "destination": "Bestemming",
+    "productivity": "Opbrengst (t/ha)",
+    "grain": "Korrel",
+    "silage": "Kuilvoer (droge stof)",
+    "tonnesPerHectare": "ton per hectare",
+    "kgPerHectare": "kilogram per hectare",
+    "extractedUnit": "Opbrengst in t/ha; onttrokken nutriënten in kg/ha.",
+    "notDoseWarning": "Onttrekking is geen meststofgift. Een aanbeveling vereist bodem- en weefselanalyses, een opbrengstdoel, regionale ijking en een lokale agronoom.",
+    "onionTitle": "Ui: wisselwerkingen bij nutriëntenoverschot",
+    "onionIntro": "Alleen voor ui gedocumenteerde effecten; niet veralgemenen naar andere gewassen.",
+    "excess": "Nutriënt in overmaat",
+    "possibleEffect": "Mogelijk effect",
+    "nitrogenEffect": "Langere cyclus, dikke hals, overmatig loof, meer bladziekten en slechtere bewaring na de oogst.",
+    "potassiumEffect": "Kan magnesium- en calciumgebrek veroorzaken.",
+    "phosphorusEffect": "Kan zink- en kopergebrek veroorzaken.",
+    "scrollHint": "Veeg de tabel zijwaarts om alle nutriënten te zien.",
+    "botanicalTitle": "Bemesting en voeding",
+    "botanicalIntro": "Wanneer een bron beschikbaar is, scheidt deze gids soortgegevens, advies voor de gevalideerde plantgroep en seizoensplanning. Een foto bepaalt nooit een dosis.",
+    "unknownGroupNote": "Voor deze plantgroep is nog geen gevalideerde bemestingsgids beschikbaar. De beslischecklist blijft zichtbaar, maar er wordt geen groepsregel of dosis afgeleid.",
+    "growthStress": "Groeifase en stress",
+    "growthStressUse": "Onderscheid vestiging, actieve groei, bloei of vruchtzetting en rust. Verhelp droogte, wateroverlast, wortelschade of recente verpotting vóór het bemesten.",
+    "labelHistory": "Productetiket en gebruiksgeschiedenis",
+    "labelHistoryUse": "Controleer N-P-K, afgiftetype, etiketaanwijzingen, laatste toepassing en of het substraat al meststof bevat.",
+    "plantNoDoseWarning": "Een foto alleen bepaalt geen veilige dosis. Volg het etiket en lokale analyse; neem nooit een dosis over van een andere soort, klimaat, pot of akker."
+  },
+  "pestManagement": {
+    "title": "Insectenmonitoring",
+    "decisionNote": "Een foto kan een insect of schadebeeld suggereren, maar meet de populatie in het veld niet. Een besluit om in te grijpen vereist representatieve bemonstering.",
+    "whatToCheck": "Te controleren",
+    "fieldDecision": "Veldbesluit",
+    "identifyDamage": "Doelsoort en schade",
+    "identifyDamageUse": "Bevestig insect, levensstadium, passend schadebeeld en verspreiding over het perceel.",
+    "samplingPlan": "Bemonsteringsplan",
+    "samplingPlanUse": "Bepaal eenheid, methode, punten en frequentie voor het gewas en groeistadium.",
+    "countStage": "Aantal en stadium",
+    "countStageUse": "Noteer elk punt, grootte of stadium van de plaag, gewasstadium en natuurlijke vijanden; vergelijk daarna met de actiedrempel.",
+    "noCountWarning": "Zonder representatieve telling en toepasbare actiedrempel blijft u monitoren — spuit nooit volgens een kalender.",
+    "chemicalSafetyTitle": "Als chemische bestrijding nodig is",
+    "maizeTitle": "Maïs: referenties voor veldbesluiten",
+    "target": "Doelsoort",
+    "fieldProtocol": "Bemonstering en actiereferentie",
+    "fallArmyworm": "Herfstlegerworm",
+    "fallArmywormProtocol": "Alleen voor percelen met een opbrengstpotentieel van minstens 100 zakken/ha: controleer op {{sampleAreaHa}} ha {{samplePoints}} willekeurige punten. De gepubliceerde referentie is {{actionPercent}}% planten met eerste aantastingssymptomen.",
+    "wireworm": "Draadworm",
+    "wirewormProtocol": "Zeef vóór het zaaien een bodemmonster van {{sampleWidthCm}} × {{sampleLengthCm}} × {{sampleDepthCm}} cm. Referentie: ten minste {{actionCount}} insecten per monster.",
+    "maizeThresholdNote": "De referentie van 10% voor maïs geldt volgens de bron voor percelen met een potentieel van minstens 100 zakken. Regio, hybride, stadium en productiesysteem kunnen de lokale drempel wijzigen.",
+    "soyTitle": "Soja: bemonstering en actiedrempels",
+    "soySamplingTitle": "Minimumaantal punten",
+    "fieldArea": "Perceeloppervlak",
+    "minimumSamples": "Minimum",
+    "upToHectares": "Tot {{count}} ha",
+    "overHectares": "Meer dan {{count}} ha",
+    "samplePoints": "{{count}} punten",
+    "dividePlots": "Verdelen in vakken van maximaal {{count}} ha",
+    "soyThresholdTitle": "Actiereferenties",
+    "situation": "Situatie",
+    "actionLevel": "Referentiedrempel",
+    "defoliation": "Ontbladering",
+    "defoliationLevel": "Meer dan {{vegetativePercent}}% in de vegetatieve fase of {{reproductivePercent}}% vanaf de bloei.",
+    "largeCaterpillars": "Grote bladetende rupsen",
+    "largeCaterpillarsLevel": "{{countPerMeter}} rupsen groter dan {{minimumLengthCm}} cm per rijmeter, met een klopdoek.",
+    "grainStinkbugs": "Wantsen — graanproductie",
+    "grainStinkbugsLevel": "{{countPerMeter}} adulten of nimfen vanaf het 3e stadium per meter, van {{stageStart}} tot {{stageEnd}}.",
+    "seedStinkbugs": "Wantsen — zaadproductie",
+    "seedStinkbugsLevel": "{{countPerMeter}} adult of nimf vanaf het 3e stadium per meter, van {{stageStart}} tot {{stageEnd}}.",
+    "soyThresholdNote": "Dit zijn Braziliaanse referenties van Embrapa. Bemonster in de kritieke periode wekelijks, tel wantsen op koelere uren en bevestig regionale aanpassingen met lokale teeltbegeleiding."
+  },
   "disease": {
     "overviewSection": "Overzicht",
     "symptomsSection": "Symptomen",
@@ -375,7 +728,9 @@
     "healthStatusSection": "Gezondheidsstatus",
     "noDiseaseDetected": "Er is geen ziekte of plaag met zekerheid gedetecteerd op deze foto.",
     "match": "Overeenkomst",
-    "severitySuffix": "{{severity}} ernst"
+    "severitySuffix": "{{severity}} ernst",
+    "diagnosisCaution": "Een foto is een eerste screening, geen diagnose in het veld. Controleer meerdere planten en sluit problemen met water, voeding en toepassingsschade uit voordat je ingrijpt.",
+    "chemicalCaution": "Gebruik alleen middelen die in jouw land zijn toegelaten voor dit gewas en doelorganisme. Volg het etiket en bevestig de beslissing met een lokale agronoom."
   },
   "collection": {
     "title": "Mijn Collectie",
@@ -413,6 +768,11 @@
     "byCategory": "Per Categorie",
     "privacyPolicy": "Privacybeleid",
     "language": "Taal",
+    "careRegionRow": "Verzorgingsseizoenen",
+    "careRegionHint": "Stelt het halfrond in voor seizoensschema's en bloei. Alleen op dit apparaat opgeslagen.",
+    "careRegionAuto": "Automatisch",
+    "careRegionSouth": "Zuidelijk halfrond",
+    "careRegionNorth": "Noordelijk halfrond",
     "installApp": "App installeren",
     "installAppIOSTitle": "NatureLens installeren",
     "installAppIOSBody": "Tik op de knop Deel en vervolgens op \"Zet op beginscherm\" om NatureLens op je telefoon te installeren.",
@@ -453,7 +813,7 @@
     "acceptanceTitle": "Aanvaarding van de voorwaarden",
     "acceptanceBody": "Door NatureLens te gebruiken, ga je akkoord met deze Gebruiksvoorwaarden. Als je het er niet mee eens bent, gebruik de app dan niet.",
     "serviceTitle": "Wat deze app doet",
-    "serviceBody": "Met NatureLens fotografeer je planten, insecten, paddenstoelen, gewassen en bomen - en, afhankelijk van je apparaat, vissen, vogels en zelfs geluiden - om ze te identificeren met AI-diensten van derden (Plant.id, Insect.id, Mushroom.id en Crop.health van Kindwise, Fishial voor vissen, Nyckel voor vogels en ons eigen geluidsmodel). De resultaten worden automatisch gegenereerd en niet gecontroleerd door een menselijke expert.",
+    "serviceBody": "Met NatureLens fotografeer je planten, insecten, paddenstoelen, gewassen en bomen - en, afhankelijk van je apparaat, vissen, vogels en zelfs geluiden - om ze te identificeren met AI-diensten van derden (Plant.id, Insect.id, Mushroom.id en Crop.health van Kindwise, Fishial voor vissen, Nyckel voor vogels en ons eigen geluidsmodel). De resultaten worden automatisch gegenereerd en niet gecontroleerd door een menselijke expert. Wanneer zijn gekalibreerde, wereldwijde BioCLIP-service actief is, kan NatureLens deze besloten, zelf beheerde dienst eerst voor vogels gebruiken; zolang deze is uitgeschakeld, of als deze mislukt of geen exacte soort kan onderbouwen, wordt Nyckel als terugvaloptie gebruikt.",
     "accuracyTitle": "Nauwkeurigheid van identificatie — lees dit aandachtig",
     "accuracyBody": "AI-identificatie kan fout zijn, ook over de vraag of een plant of paddenstoel eetbaar, giftig of veilig om aan te raken is. Eet, verzamel of gebruik nooit een wilde plant, paddenstoel of schimmel alleen op basis van het resultaat van deze app. Raadpleeg altijd een gekwalificeerde expert (mycoloog, botanicus of vergiftigingsinformatiecentrum) voordat je iets consumeert of gebruikt dat je in de natuur hebt gevonden. Wij zijn niet aansprakelijk voor schade veroorzaakt door het vertrouwen op een identificatie van deze app.",
     "billingTitle": "Abonnementen en facturering",
@@ -470,7 +830,7 @@
   "privacy": {
     "title": "Privacybeleid",
     "collectTitle": "Wat we verzamelen",
-    "collectBody": "Met deze app kun je een plant, boom, insect, paddenstoel, gewas, vis of vogel fotograferen om die te herkennen, en een dierengeluid opnemen om het op geluid te herkennen. De herkenning gebeurt door AI-diensten: Kindwise (planten, bomen, insecten, paddenstoelen, gewassen), Fishial.AI (vissen) en Nyckel (vogels). Geluid wordt op onze eigen server herkend, dus opnames bereiken geen derden.",
+    "collectBody": "Met deze app kun je een plant, boom, insect, paddenstoel, gewas, vis of vogel fotograferen om die te herkennen, en een dierengeluid opnemen om het op geluid te herkennen. De herkenning gebeurt door AI-diensten: Kindwise (planten, bomen, insecten, paddenstoelen, gewassen), Fishial.AI (vissen) en Nyckel (vogels). Geluid wordt op onze eigen server herkend, dus opnames bereiken geen derden. Wanneer de gekalibreerde, wereldwijde, besloten BioCLIP-service van NatureLens actief is, kunnen vogelfoto’s daar eerst worden verwerkt: de foto’s blijven alleen tijdens het verzoek in het geheugen en worden niet bewaard. Zolang deze is uitgeschakeld, of als deze mislukt of geen exacte soort kan onderbouwen, kunnen dezelfde foto’s naar Nyckel worden verzonden met het vastleggen van voorbeelden uitgeschakeld, zonder garantie dat de foto’s uitsluitend gedurende het verzoek worden bewaard.",
     "thirdPartyTitle": "AI-diensten van derden",
     "thirdPartyBody": "Wanneer je een foto maakt of uploadt, wordt die naar de bijbehorende herkenningsdienst gestuurd. We bewaren je foto’s op geen enkele server die wij beheren. Om een referentiefoto en een beschrijving te tonen, vraagt de app Wikipedia naar de wetenschappelijke naam — Wikipedia ziet dus welke soort je opzocht, maar niet wie je bent. Sommige leveranciers schrijven alleen in het Engels; die tekst vertalen, en de specialist in de app een vraag stellen, stuurt die tekst naar Anthropic.",
     "localStorageTitle": "Alleen lokale opslag",
@@ -2162,7 +2522,15 @@
     },
     "herbSubscribeCtaTitle": "Vind je deze gids handig?",
     "herbSubscribeCtaBody": "Neem een abonnement voor onbeperkte identificatie van planten, insecten, paddenstoelen en gewassen.",
-    "herbAlreadySubscribedCheck": "Al geabonneerd? Tik om opnieuw te controleren"
+    "herbAlreadySubscribedCheck": "Al geabonneerd? Tik om opnieuw te controleren",
+    "mascot": {
+      "kicker": "Je levende gids",
+      "title": "Lino kijkt met je mee naar de natuur.",
+      "body": "Maak een foto, neem geluid op of bewaar een vondst. Ik begin met de duidelijkste volgende stap.",
+      "photo": "Foto",
+      "sound": "Geluid",
+      "journal": "Dagboek"
+    }
   },
   "botanist": {
     "headerTitle": "Dr. Helena Marques",
@@ -2293,6 +2661,9 @@
     }
   },
   "missions": {
+    "completedAnnouncement": "Missie voltooid: {{mission}}",
+    "completedStatus": "Voltooid",
+    "progressStatus": "{{done}} van {{target}} voltooid",
     "title": "Missies van vandaag",
     "rewardEach": "+{{tokens}} per missie",
     "allDone": "Alles gedaan — kom morgen terug!",
@@ -2315,9 +2686,81 @@
     "confidenceLine": "{{confidence}}% zeker"
   },
   "onboarding": {
+    "media": { "play": "Video afspelen", "pause": "Video pauzeren", "enableSound": "Geluid aanzetten", "disableSound": "Geluid uitzetten" },
     "skip": "Overslaan",
     "next": "Volgende",
     "start": "Beginnen",
+    "progress": "{{current}} van {{total}}",
+    "preparing": "Je NatureLens wordt voorbereid…",
+    "promiseKicker": "Bekijk hoe het werkt",
+    "personalizeKicker": "Maak het persoonlijk",
+    "readyKicker": "Klaar om te ontdekken",
+    "promise": {
+      "body": "Eén opname wordt een identiteit, veiligheidscontrole en duidelijke volgende stap.",
+      "demoNext": "Volgende stap: fotografeer de onderkant van het blad"
+    },
+    "goal": {
+      "title": "Waarmee moet NatureLens je helpen?",
+      "body": "Je antwoord bepaalt wat na elke identificatie als eerste verschijnt.",
+      "options": {
+        "identify": {
+          "title": "Ontdekken wat het is"
+        },
+        "safety": {
+          "title": "Veiligheid en risico's controleren"
+        },
+        "care": {
+          "title": "Verzorgen en volgen"
+        },
+        "field": {
+          "title": "Veld en productie"
+        },
+        "learn": {
+          "title": "Leren over de natuur"
+        }
+      }
+    },
+    "context": {
+      "title": "Waar ontdek je het vaakst?",
+      "body": "We gebruiken dit alleen om categorieën en aanwijzingen te ordenen. Je kunt het later wijzigen.",
+      "options": {
+        "home": {
+          "title": "Huis of tuin"
+        },
+        "field": {
+          "title": "Veld of teelt"
+        },
+        "nature": {
+          "title": "Pad of natuur"
+        },
+        "water": {
+          "title": "Water of aquarium"
+        },
+        "study": {
+          "title": "Studie of technisch werk"
+        }
+      }
+    },
+    "depth": {
+      "title": "Hoeveel detail wil je eerst zien?",
+      "body": "Alles blijft beschikbaar. Deze keuze bepaalt alleen de eerste laag.",
+      "options": {
+        "essential": {
+          "title": "Essentieel"
+        },
+        "visual": {
+          "title": "Visueel"
+        },
+        "technical": {
+          "title": "Technisch"
+        }
+      }
+    },
+    "ready": {
+      "title": "Je NatureLens is klaar",
+      "body": "Het eerste resultaat volgt je keuzes zonder veiligheidswaarschuwingen te verbergen.",
+      "promise": "Ontbrekend bewijs blijft ontbreken. NatureLens vraagt om een betere foto of opname in plaats van zekerheid te verzinnen."
+    },
     "what": {
       "title": "Richten. Klikken. Weten.",
       "body": "Fotografeer iets levends en NatureLens vertelt je binnen seconden wat het is — met referentiefoto’s zodat je het zelf kunt bevestigen."
@@ -2329,6 +2772,20 @@
     "free": {
       "title": "Je eerste determinatie is gratis",
       "body": "Probeer één determinatie per categorie gratis. Abonneer je pas als je onbeperkt wilt scannen."
+    },
+    "reviewKicker": "Een kleine vraag",
+    "review": {
+      "title": "Als dit nu al nuttig voelt, help NatureLens dan sterk te starten.",
+      "body": "Voor je eerste foto één snelle controle: voelt deze lens als een vijfsterrenervaring?",
+      "quote": "Een lens die eenvoudig blijft, mooi aanvoelt in de details en eerlijk is als bewijs ontbreekt.",
+      "yes": "Ja, dit voelt vijfsterren",
+      "later": "Ik probeer het eerst",
+      "starsLabel": "Vijfsterrenvoorbeeld",
+      "proofs": {
+        "simple": "Eenvoudig",
+        "safe": "Veilig",
+        "useful": "Nuttig"
+      }
     }
   },
   "recap": {
@@ -2400,7 +2857,8 @@
     "recording": "Opnemen… {{seconds}}s over",
     "analysing": "Luistert…",
     "startLabel": "Opname starten",
-    "stopLabel": "Stoppen en herkennen",
+    "stopLabel": "Opname stoppen",
+    "uploadDisclosure": "Audio wordt pas naar de NatureLens-server gestuurd nadat je de Levende Puls voltooit. De ruwe opname wordt niet in je collectie opgeslagen.",
     "tipsTitle": "Voor een beter resultaat",
     "tip1": "Kom dichterbij als het kan — afstand is de grootste factor.",
     "tip2": "Richt de telefoon naar het geluid en blijf stilstaan.",
@@ -2411,8 +2869,13 @@
     "groupMammal": "Zoogdier",
     "permissionTitle": "Microfoon geblokkeerd",
     "permissionBody": "Sta microfoontoegang voor deze site toe in je browserinstellingen en probeer het opnieuw.",
+    "permissionAndroidBody": "Sta NatureLens toe de microfoon te gebruiken in de Android-instellingen. De overige functies blijven beschikbaar.",
+    "permissionWebBody": "Sta microfoontoegang voor deze site toe in de browserinstellingen en probeer het opnieuw.",
     "unsupportedTitle": "Opnemen niet beschikbaar",
     "unsupportedBody": "Deze browser kan geen audio opnemen. Probeer Chrome op Android, of installeer de app op je beginscherm op iPhone.",
+    "unsupportedAndroidBody": "De ingebouwde recorder is niet gestart. Werk NatureLens bij of installeer de app opnieuw en probeer het nogmaals. De overige functies blijven beschikbaar.",
+    "unsupportedWebBody": "Deze browser kon geen audio opnemen. Gebruik een actuele versie van een compatibele browser en sta microfoontoegang toe.",
+    "unsupportedIosBody": "Geluidsherkenning is beschikbaar op Android en op de website, maar niet in deze iOS-app. Alle andere herkenningsfuncties blijven beschikbaar.",
     "tooShortTitle": "Opname te kort",
     "tooShortBody": "Neem minstens twee seconden op, terwijl het dier roept.",
     "failedTitle": "Kon niet herkennen",
@@ -2420,7 +2883,11 @@
     "decodeFailedBody": "Die opname kon niet gelezen worden. Probeer het opnieuw.",
     "notFoundBody": "Niets herkenbaars in die opname. Kom dichterbij of neem op terwijl het roept.",
     "noContentBody": "Nog geen beschrijving voor deze soort.",
-    "notWildlifeBody": "Dat klinkt als een voertuig, een machine of een stem, niet als een dier. Probeer het opnieuw op een stillere plek."
+    "notWildlifeBody": "Dat klinkt als een voertuig, een machine of een stem, niet als een dier. Probeer het opnieuw op een stillere plek.",
+    "audioEvidenceTitle": "Uw opname",
+    "audioEvidenceBody": "Amplitudepieken uit de audio die voor deze identificatie is gebruikt.",
+    "audioEvidenceDuration": "{{seconds}} s",
+    "audioEvidenceAlt": "Amplitudepieken van uw opname, met een duur van {{seconds}} seconden."
   },
   "login": {
     "signInRow": "Inloggen",
@@ -2444,7 +2911,62 @@
     "badEmail": "Dat lijkt geen geldig e-mailadres.",
     "codeSendFailed": "De code kon niet worden verstuurd. Probeer het zo meteen opnieuw."
   },
+  "acquisition": {
+    "title": "Hoe heb je NatureLens ontdekt?",
+    "subtitle": "Met één kort antwoord help je ons verbeteren. Optioneel.",
+    "thanks": "Bedankt — dit helpt ons NatureLens te verbeteren.",
+    "skip": "Niet nu",
+    "options": {
+      "tiktok": "TikTok",
+      "instagram": "Instagram",
+      "youtube": "YouTube",
+      "search": "Google of Play Store",
+      "friend": "Via vrienden",
+      "other": "Overig"
+    }
+  },
+  "fishSafety": {
+    "unverifiedTitle": "Veiligheid nog niet geverifieerd",
+    "unverifiedBody": "We vonden geen veiligheidsinformatie specifiek voor deze soort. Raak deze vis niet aan, hanteer of eet hem niet en laat hem niet vrij op basis van alleen deze identificatie."
+  },
+  "lensReveal": {
+    "title": "Ontdekking gereed",
+    "safetyFirst": "Veiligheid voorop"
+  },
+  "resultDepth": {
+    "label": "Kies hoeveel je wilt zien",
+    "essential": "Essentieel",
+    "visual": "Visueel",
+    "expert": "Expert"
+  },
+  "nextBestCapture": {
+    "title": "Verbeter deze determinatie",
+    "reasonLowConfidence": "De zekerheid is {{confidence}}%. Een extra beeld kan helpen.",
+    "reasonAlternatives": "Er zijn nog {{count}} alternatieven mogelijk.",
+    "reasonIdentityUnresolved": "Het resultaat is blijven steken op {{name}} en heeft nog geen soort bevestigd. Daarom blijven soortspecifieke onderdelen verborgen.",
+    "action": "Nog een beeld vastleggen",
+    "categories": {
+      "plant": "Fotografeer de hele plant en daarna een blad of bloem scherp in beeld.",
+      "tree": "Breng de hele boom, de schors en een blad of vrucht scherp in beeld.",
+      "crop": "Breng de hele plant, het symptoom van dichtbij en het omliggende veld in beeld.",
+      "mushroom": "Fotografeer de hoed, lamellen of poriën, de steelbasis en de ondergrond zonder de paddenstoel onnodig aan te raken.",
+      "insect": "Fotografeer het hele lichaam van boven en van opzij, plus de waardplant of schade.",
+      "fish": "Breng een duidelijk zijaanzicht, de vinnen en de omliggende leefomgeving of het aquarium in beeld.",
+      "bird": "Breng de hele vogel, snavel en vleugeltekeningen in beeld, of neem een langere, heldere roep op.",
+      "sound": "Neem minstens 10 seconden langer op met minder wind, spraak en achtergrondgeluid."
+    }
+  },
   "settings": {
+    "replayOnboarding": "Introductie opnieuw bekijken",
+    "replayOnboardingHint": "Bekijk je doel, context en leesniveau opnieuw",
+    "sensoryTitle": "Aanraking en beweging",
+    "haptics": "Trillingsfeedback",
+    "hapticsSubtitle": "Voel selecties, opnamen, bevestigingen en waarschuwingen",
+    "motion": "Beweging",
+    "motionSubtitle": "Volg de apparaatinstelling of kies een eigen optie",
+    "motionSystem": "Apparaatinstelling",
+    "motionReduced": "Verminderd",
+    "motionFull": "Volledig",
     "title": "Instellingen",
     "sectionMembership": "Abonnement",
     "sectionGeneral": "Algemeen",
@@ -2470,7 +2992,674 @@
     "visitSite": "Website bezoeken",
     "fullDocLabel": "Volledig juridisch document",
     "whatBody": "NatureLens herkent planten, insecten, paddenstoelen, gewassen, vissen, vogels en zelfs geluiden op basis van een foto of opname, en maakt van je vondsten een persoonlijke natuurcollectie.",
-    "creditsBody": "Identificatie door Kindwise (planten, insecten, paddenstoelen, gewassen), Fishial (vissen), Nyckel (vogels) en ons eigen geluidsmodel. Referentiefoto's van Wikipedia / Wikimedia Commons, met bronvermelding waar ze verschijnen. Specialistenchat beantwoord door AI (Anthropic).",
+    "creditsBody": "Identificatie door Kindwise (planten, insecten, paddenstoelen, gewassen), Fishial (vissen), Nyckel (vogels) en ons eigen geluidsmodel. Referentiefoto's van Wikipedia / Wikimedia Commons, met bronvermelding waar ze verschijnen. Specialistenchat beantwoord door AI (Anthropic). Wanneer zijn gekalibreerde, wereldwijde BioCLIP-service actief is, kan NatureLens deze besloten, zelf beheerde dienst eerst voor vogels gebruiken; zolang deze is uitgeschakeld, of als deze mislukt of geen exacte soort kan onderbouwen, wordt Nyckel als terugvaloptie gebruikt.",
     "creditsGbif": "Verspreidingskaarten en seizoensgrafieken van GBIF.org, opgevraagd met de wetenschappelijke naam van de soort — er worden geen gegevens over jou verstuurd."
+  },
+  "agronomyProfile": {
+    "eyebrow": "Perceelprofiel",
+    "title": "Perceelprofiel opstellen",
+    "subtitle": "Bevestig de veldomstandigheden vóór een technische interpretatie.",
+    "stepCounter": "Stap {{current}} van {{total}}",
+    "steps": {
+      "purpose": {
+        "title": "Doel en systeem",
+        "body": "Geef aan waarvoor het gewas dient en hoe het perceel wordt beheerd."
+      },
+      "location": {
+        "title": "Handmatige locatie",
+        "body": "Voer land, bestuurlijke onderverdeling en plaats in zonder de apparaatlocatie te delen."
+      },
+      "planting": {
+        "title": "Aanplant en stadium",
+        "body": "Leg de plantdatum en het in het veld waargenomen stadium vast."
+      },
+      "soil": {
+        "title": "Bodem en analyse",
+        "body": "Beschrijf de bodem en geef aan of een laboratoriumrapport beschikbaar is."
+      },
+      "summary": {
+        "title": "Profiel controleren",
+        "body": "Controleer elk veld voordat je deze context opslaat."
+      }
+    },
+    "purposeLabel": "Productiedoel",
+    "systemLabel": "Productiesysteem",
+    "purposes": {
+      "grain": "Graan",
+      "fresh": "Versmarkt",
+      "processing": "Verwerking",
+      "forage": "Voeder",
+      "seed": "Zaadproductie",
+      "other": "Overig"
+    },
+    "systems": {
+      "rainfed": "Regenafhankelijk",
+      "irrigated": "Geïrrigeerd",
+      "protected": "Beschermde teelt",
+      "hydroponic": "Hydroponisch",
+      "other": "Overig"
+    },
+    "manualLocationTitle": "Door jou ingevoerde locatie",
+    "manualLocationBody": "Deze assistent vraagt niet om GPS. Kies het land, voer waar van toepassing de code van de provincie, deelstaat of regio in en voeg de plaats toe.",
+    "countryCodeLabel": "Land",
+    "countryCodePlaceholder": "Kies een land",
+    "countryCodeHint": "Kies het land waarin dit perceel ligt.",
+    "countryPickerTitle": "Kies een land",
+    "countrySearchPlaceholder": "Zoek op landnaam of landcode",
+    "countryNotFound": "Geen land gevonden.",
+    "closeCountryPicker": "Landkiezer sluiten",
+    "localityLabel": "Plaats",
+    "localityPlaceholder": "Voorbeeld: Haarlem",
+    "admin1CodeLabel": "Code van provincie, deelstaat of regio",
+    "admin1CodePlaceholder": "Voorbeeld: NL-NH",
+    "admin1CodeHint": "Gebruik waar van toepassing de code van de eerste bestuurlijke laag van het gekozen land.",
+    "municipalityLabel": "Plaats",
+    "municipalityPlaceholder": "Voorbeeld: Haarlem",
+    "stateLabel": "Bestuurlijke onderverdeling",
+    "stateHint": "Voer waar van toepassing de code van de provincie, deelstaat of regio in.",
+    "plantingDateLabel": "Plantdatum",
+    "plantingDatePlaceholder": "JJJJ-MM-DD",
+    "plantingDateHint": "Gebruik de notatie JJJJ-MM-DD.",
+    "stageLabel": "Waargenomen gewasstadium",
+    "stagePlaceholder": "Voorbeeld: V6, bloei, vruchtvulling",
+    "stageConfirmedLabel": "Ik heb dit stadium in het veld gecontroleerd",
+    "soilDescriptionLabel": "Bodembeschrijving",
+    "soilDescriptionPlaceholder": "Voorbeeld: kleigrond, lichte helling, goede afwatering",
+    "hasReportLabel": "Heb je een bodemonderzoeksrapport?",
+    "reportNoticeTitle": "Houd het rapport bij de hand",
+    "reportNoticeBody": "Dit profiel legt alleen vast of er een rapport is. Het leest geen resultaten en berekent geen advies.",
+    "summary": {
+      "purpose": "Doel",
+      "system": "Systeem",
+      "location": "Land / onderverdeling / plaats",
+      "planting": "Plantdatum",
+      "stage": "Bevestigd stadium",
+      "soil": "Bodem",
+      "report": "Bodemonderzoeksrapport"
+    },
+    "noCalculationTitle": "Alleen context",
+    "noCalculationBody": "Het opslaan van dit profiel berekent geen doseringen en geeft geen bemestings-, irrigatie-, gewasbeschermings- of ander agronomisch advies.",
+    "save": "Profiel opslaan",
+    "errors": {
+      "selectPurposeAndSystem": "Kies een productiedoel en een productiesysteem.",
+      "completeLocation": "Kies een land, voer een plaats in en controleer de onderverdelingscode als die is ingevuld.",
+      "completePlanting": "Voer een geldige datum en het waargenomen gewasstadium in.",
+      "confirmStage": "Bevestig dat je het stadium in het veld hebt gecontroleerd.",
+      "completeSoil": "Beschrijf de bodem voordat je doorgaat.",
+      "chooseReport": "Geef aan of je een bodemonderzoeksrapport hebt.",
+      "formIncomplete": "Verplichte informatie ontbreekt of is ongeldig. Controleer de vorige stappen.",
+      "saveUnavailable": "Voor dit formulier is geen opslagactie beschikbaar."
+    }
+  },
+  "agronomyWorkspace": {
+    "title": "Werkruimte perceel",
+    "openTitle": "Geavanceerd perceelbeheer",
+    "openBody": "Maak het perceelprofiel, leg waarnemingen vast en open alleen technische modules die voor dit gewas zijn geverifieerd.",
+    "openAction": "Werkruimte openen",
+    "tabs": {
+      "essential": "Essentieel",
+      "learn": "Leren",
+      "agronomist": "Agronoom"
+    },
+    "unknownCrop": "Gewas zonder bevestigde identiteit",
+    "catalogBadge": "Gecureerd catalogusitem · geen fotodiagnose",
+    "loadingProfile": "Perceelprofiel laden…",
+    "contextTitle": "Perceelcontext",
+    "contextBody": "Dit is de context die je voor dit perceel hebt bevestigd.",
+    "globalEvidence": {
+      "topicCount": "Secties: {{count}}",
+      "kicker": "WERELDWIJDE LAAG",
+      "title": "Wat wereldwijde bronnen documenteren",
+      "body": "Inhoud gevonden voor {{scientific}}, gekoppeld aan de exacte soort en de oorspronkelijke bron.",
+      "exactSpecies": "Exacte soort",
+      "traceableSource": "Traceerbare bron",
+      "worldScope": "Wereldwijd bereik",
+      "warningTitle": "Geen lokaal advies",
+      "warningBody": "Dit bewijs beschrijft de soort. Het geeft geen toestemming voor doseringen, bemestingsadviezen of regionale tabellen.",
+      "openSource": "Wereldwijde bron openen op Wikipedia",
+      "topicsTitle": "Wereldwijd soortdossier"
+    },
+    "missingProfileTitle": "Perceelcontext maken",
+    "missingProfileBody": "Bevestig locatie, aanplant, stadium en bodem voordat je veldwaarnemingen opslaat.",
+    "profileUnavailableBody": "Dit item heeft geen veilige lokale sleutel voor een perceelprofiel.",
+    "createProfile": "Profiel maken",
+    "editProfile": "Profiel bewerken",
+    "savingProfile": "Profiel opslaan…",
+    "profileSaved": "Perceelprofiel opgeslagen.",
+    "observationTitle": "Veldwaarneming",
+    "observationBody": "Leg vast wat je werkelijk hebt waargenomen. Dit logboek stelt geen diagnose of advies op.",
+    "addObservation": "Waarneming vastleggen",
+    "eventTypeLabel": "Type registratie",
+    "eventTypes": {
+      "observation": "Waarneming",
+      "stage": "Gewasstadium",
+      "rain": "Regen",
+      "irrigation": "Irrigatie",
+      "fertilization": "Bemesting",
+      "pestSample": "Plaagsampling",
+      "diseaseCheck": "Ziektecontrole",
+      "harvest": "Oogst"
+    },
+    "noteLabel": "Notitie",
+    "notePlaceholder": "Beschrijf wat je zag of deed",
+    "valueLabel": "Waarde",
+    "valuePlaceholder": "Voorbeeld: 12,5",
+    "unitLabel": "Eenheid",
+    "unitPlaceholder": "Voorbeeld: mm, kg, planten",
+    "optionalFieldsHint": "Notitie en waarde zijn optioneel, maar vul er minstens één in. Elke waarde heeft een eenheid nodig.",
+    "saveObservation": "Waarneming opslaan",
+    "savingObservation": "Waarneming opslaan…",
+    "observationSaved": "Waarneming opgeslagen.",
+    "timelineTitle": "Perceeltijdlijn",
+    "eventStage": "Stadium op dat moment: {{stage}}",
+    "learning": {
+      "title": "Leer het perceel observeren",
+      "body": "Gebruik een eenvoudige cyclus om een veldbezoek om te zetten in betrouwbare context.",
+      "accessibilityLabel": "Observeren, vastleggen, vergelijken en deskundige hulp zoeken.",
+      "steps": {
+        "observe": {
+          "title": "Observeren",
+          "body": "Bekijk meer dan één punt en scheid wat je zag van wat je aanneemt."
+        },
+        "record": {
+          "title": "Vastleggen",
+          "body": "Noteer toestand, plaats en verandering terwijl de waarneming nog vers is."
+        },
+        "compare": {
+          "title": "Vergelijken",
+          "body": "Vergelijk bezoeken onder vergelijkbare omstandigheden voordat je conclusies trekt."
+        },
+        "support": {
+          "title": "Hulp zoeken",
+          "body": "Neem de geschiedenis en laboratoriumrapporten mee naar een lokale agronoom wanneer een besluit nodig is."
+        }
+      },
+      "genericTitle": "Algemene leervisual",
+      "genericBody": "De illustratie leert waar je moet kijken. Het is geen foto of beschrijving van dit gewas.",
+      "visuals": {
+        "phenology": {
+          "title": "Bevestigd gewasstadium",
+          "body": "Gebruik alleen het in het veld waargenomen en bevestigde stadium; leid het niet af uit de datum."
+        },
+        "soil": {
+          "title": "Bodemprofiel en bemonstering",
+          "body": "De beschrijving stuurt de observatie, maar beslissingen vereisen representatieve bemonstering en een geldig rapport."
+        },
+        "water": {
+          "title": "Regen → bodem → wortel → besluit",
+          "body": "Registreer regen of irrigatie, controleer bodem en wortels en beoordeel dan pas de volgende stap."
+        },
+        "nutrition": {
+          "title": "N, P en K zonder gegokte dosering",
+          "body": "Nutriëntsymbolen helpen gegevens lezen; een dosering vereist analyse, doel en regionale kalibratie."
+        },
+        "mip": {
+          "title": "Bemonsteren, tellen, vergelijken, beslissen",
+          "body": "Bevestig doel en stadium, bemonster representatief en vergelijk vóór bestrijding met een toepasselijke drempel."
+        }
+      }
+    },
+    "technicalStatusTitle": "Technische dekking",
+    "technicalVerifiedTitle": "Exacte technische modules beschikbaar",
+    "technicalVerifiedBody": "De identiteit en huidige catalogus vinden de onderstaande modules. Het zijn referenties, geen automatisch voorschrift.",
+    "technicalCatalogBody": "Dit is een redactioneel catalogusitem, geen fotodiagnose. Alleen expliciet voor dit gewas gecureerde modules worden getoond.",
+    "noExactModulesTitle": "Geen exacte module beschikbaar",
+    "noExactModulesBody": "Het gewas heeft een veldgids, maar er is geen numerieke tabel of exacte monitoringmodule gepubliceerd.",
+    "technicalUnavailableTitle": "Technische routering niet beschikbaar",
+    "technicalUnavailableBody": "Identiteit, catalogusdekking of routering is onvoldoende. Er wordt geen technische tabel getoond.",
+    "modules": {
+      "pest": "Geïntegreerde plaagmonitoring",
+      "fertilizer": "Bodem- en meststoftabellen"
+    },
+    "ruleCatalogTitle": "Status van regelcatalogus",
+    "ruleCatalogGuideBody": "De engine vond alleen een gidsregel. Deze catalogus bevat geen numerieke rekenregel.",
+    "ruleCatalogCatalogBody": "De redactionele catalogus kan gecureerde modules openen, maar maakt er geen fotodiagnose of rekenregel van.",
+    "ruleCatalogUnavailableBody": "Er is geen exacte gidsregel gevonden. De app leidt die niet af uit een gewone naam, familie of oud veld.",
+    "sourcesTitle": "Officiële bronnen",
+    "sourcesBody": "Alleen bronnen die aan momenteel gepubliceerde modules zijn gekoppeld, worden vermeld.",
+    "officialSource": "Officiële bron · {{institution}}",
+    "openSource": "Officiële bron openen: {{source}}",
+    "errors": {
+      "typeInvalid": "Kies een geldig registratietype.",
+      "amountInvalid": "Voer een geldig niet-negatief getal binnen de ondersteunde grens in.",
+      "unitNeedsValue": "Voer een waarde in voordat je een eenheid toevoegt.",
+      "unitRequired": "Elke waarde moet een eenheid bevatten.",
+      "emptyEvent": "Voeg vóór het opslaan een notitie of waarde toe.",
+      "saveFailed": "Opslaan mislukt. Niets is bevestigd; probeer het opnieuw."
+    },
+    "planningSourcesTitle": "Bronnen voor planning",
+    "planningSourcesBody": "Officiële informatie die aan dit gewas is gekoppeld. Dit betekent niet dat een technische module of advies is vrijgegeven."
+  },
+  "observationWorkspace": {
+    "title": "Geavanceerde observatie",
+    "loading": "Observaties laden…",
+    "unavailableTitle": "Observatieruimte niet beschikbaar",
+    "unavailableBody": "Voor deze categorie is geen gecontroleerde observatieconfiguratie beschikbaar. Daarom wordt geen formulier getoond.",
+    "openTitle": "Ruimte voor geavanceerde observatie",
+    "openBody": "Maak een duidelijk verslag van wat je werkelijk zag, van eenvoudige notities tot vergelijkbaar veldbewijs.",
+    "openAction": "Observatieruimte openen",
+    "tabs": {
+      "essential": "Essentieel",
+      "learn": "Leren",
+      "field": "Veld"
+    },
+    "setupTitle": "Stel de observatiecontext in",
+    "setupBody": "Kies de algemene omgeving en noteer waar en hoe deze registratie begon. Voeg geen conclusies toe die je niet hebt waargenomen.",
+    "setupAction": "Context maken",
+    "editProfile": "Context bewerken",
+    "saveProfile": "Context opslaan",
+    "contextLabel": "Observatiecontext",
+    "placeLabel": "Plaats",
+    "placePlaceholder": "Voorbeeld: noordelijke tuin, beekrand of balkon",
+    "baselineLabel": "Beginpunt",
+    "baselinePlaceholder": "Beschrijf de zichtbare toestand bij de eerste observatie",
+    "profileSaved": "Context opgeslagen.",
+    "localOnly": "Alleen op dit apparaat opgeslagen. Dit is geen diagnose of cloudback-up.",
+    "addEvent": "Veldnotitie toevoegen",
+    "closeEvent": "Formulier sluiten",
+    "eventTypeLabel": "Observatietype",
+    "noteLabel": "Notitie",
+    "notePlaceholder": "Beschrijf alleen wat je zag of hoorde",
+    "countLabel": "Waargenomen aantal",
+    "measureLabel": "Waargenomen meting",
+    "unitLabel": "Eenheid",
+    "optionalLabel": "Optioneel",
+    "saveEvent": "Registratie opslaan",
+    "eventSaved": "Registratie opgeslagen.",
+    "emptyEvent": "Voeg vóór het opslaan een notitie, aantal of meting toe.",
+    "invalidCount": "Voer een geheel aantal van nul of meer in.",
+    "invalidMeasure": "Voer een geldige meting van nul of meer in.",
+    "unitRequired": "Kies een eenheid voor de meting.",
+    "saveFailed": "Deze registratie kon niet worden opgeslagen. Probeer opnieuw.",
+    "timelineTitle": "Observatietijdlijn",
+    "timelineEmpty": "Nog geen observaties geregistreerd.",
+    "fieldTitle": "Veldweergave",
+    "fieldBody": "Vergelijk registraties onder soortgelijke omstandigheden en neem de geschiedenis mee naar een gekwalificeerde specialist wanneer een beslissing nodig is.",
+    "progressLabel": "{{done}} van {{total}} observatiepunten geregistreerd",
+    "recordedLabel": "Geregistreerd op {{date}}",
+    "missingLabel": "Niet geregistreerd",
+    "evidenceNote": "Registraties beschrijven wat je hebt waargenomen. Ze bevestigen geen identiteit, diagnose, risico of beheerbesluit.",
+    "learningTitle": "Leer wat je kunt observeren",
+    "learningBody": "Open elke visual om te begrijpen wat in een bruikbare registratie hoort.",
+    "generalDiagram": "Algemeen observatiediagram; het bewijst niet de identiteit van het gefotografeerde organisme.",
+    "mushroomSafety": "Consumeer nooit een paddenstoel op basis van een foto, app-identificatie of deze observatieregistratie.",
+    "units": {
+      "millimetre": "millimeter (mm)",
+      "centimetre": "centimeter (cm)",
+      "metre": "meter (m)",
+      "second": "seconden (s)",
+      "minute": "minuten (min)",
+      "millilitre": "milliliter (ml)",
+      "litre": "liter (l)",
+      "celsius": "graden Celsius (°C)",
+      "percent": "procent (%)",
+      "gram": "gram (g)",
+      "kilogram": "kilogram (kg)",
+      "ph": "pH",
+      "ppt": "delen per duizend (ppt)",
+      "ppm": "delen per miljoen (ppm)",
+      "milligramPerLitre": "milligram per liter (mg/L)",
+      "microsiemensPerCentimetre": "microsiemens per centimeter (µS/cm)",
+      "hour": "uren (h)",
+      "hertz": "hertz (Hz)",
+      "kilohertz": "kilohertz (kHz)",
+      "decibel": "decibel (dB)",
+      "kilometre": "kilometer (km)"
+    },
+    "contexts": {
+      "plant": {
+        "indoor": "Binnen",
+        "outdoor": "Buiten",
+        "container": "Pot of bak",
+        "ground": "In de grond"
+      },
+      "tree": {
+        "urban": "Stedelijk gebied",
+        "garden": "Tuin",
+        "woodland": "Bosgebied",
+        "orchard": "Boomgaard"
+      },
+      "insect": {
+        "onPlant": "Op een plant",
+        "onSoil": "Op de bodem",
+        "onStructure": "Op een constructie",
+        "nearWater": "Dicht bij water"
+      },
+      "mushroom": {
+        "soil": "Op de bodem",
+        "wood": "Op hout",
+        "leafLitter": "In bladafval",
+        "otherSubstrate": "Ander substraat"
+      },
+      "fish": {
+        "freshwater": "Zoet water",
+        "marine": "Zeewater",
+        "estuary": "Estuarium",
+        "aquarium": "Aquarium"
+      },
+      "bird": {
+        "urban": "Stedelijk gebied",
+        "forest": "Bos",
+        "wetland": "Wetland",
+        "openArea": "Open gebied"
+      },
+      "sound": {
+        "dawn": "Dageraad",
+        "day": "Overdag",
+        "dusk": "Schemering",
+        "night": "Nacht"
+      }
+    },
+    "eventTypes": {
+      "plant": {
+        "observation": "Omgeving van de plant",
+        "growth": "Plantengroei",
+        "leafChange": "Bladverandering van de plant",
+        "flowering": "Waargenomen bloei",
+        "fruiting": "Waargenomen vruchtvorming",
+        "symptom": "Zichtbaar plantsymptoom",
+        "care": "Registratie van plantenverzorging"
+      },
+      "tree": {
+        "observation": "Omgeving van de boom",
+        "growth": "Boomgroei",
+        "leafChange": "Bladverandering van de boom",
+        "flowering": "Waargenomen bloei van de boom",
+        "fruiting": "Waargenomen vruchtvorming van de boom",
+        "symptom": "Zichtbaar boomsymptoom",
+        "habitat": "Leefgebied van de boom"
+      },
+      "insect": {
+        "observation": "Observatiecontext",
+        "count": "Waargenomen aantal",
+        "lifeStage": "Waargenomen levensstadium",
+        "behavior": "Waargenomen gedrag",
+        "interaction": "Waargenomen interactie",
+        "habitat": "Leefgebied van het insect"
+      },
+      "mushroom": {
+        "observation": "Paddenstoelobservatie",
+        "emergence": "Waargenomen verschijnen",
+        "morphology": "Zichtbare vormkenmerken",
+        "substrate": "Substraat",
+        "colorChange": "Kleurverandering",
+        "sporePrint": "Registratie van sporenafdruk"
+      },
+      "fish": {
+        "observation": "Observatiecontext",
+        "count": "Waargenomen aantal",
+        "behavior": "Waargenomen gedrag",
+        "habitat": "Leefgebied",
+        "waterReading": "Waargenomen watermeting",
+        "feeding": "Waargenomen voedselopname"
+      },
+      "bird": {
+        "observation": "Vogelobservatie",
+        "count": "Waargenomen aantal",
+        "behavior": "Waargenomen gedrag",
+        "vocalization": "Waargenomen roep",
+        "nesting": "Waargenomen nestelen",
+        "flight": "Waargenomen vlucht"
+      },
+      "sound": {
+        "observation": "Geluidsobservatie",
+        "recording": "Opname",
+        "comparison": "Opnamen vergelijken",
+        "context": "Geluidsomgeving",
+        "frequency": "Waargenomen frequentie",
+        "amplitude": "Waargenomen amplitude"
+      }
+    },
+    "visuals": {
+      "plant": {
+        "environment": {
+          "title": "Omgeving van de plant",
+          "body": "Noteer wat het organisme omringt en elke zichtbare verandering."
+        },
+        "light": {
+          "title": "Zichtbaar licht",
+          "body": "Vergelijk zichtbare lichtomstandigheden tussen bezoeken zonder een behoefte af te leiden."
+        },
+        "soil": {
+          "title": "Bodemobservatie",
+          "body": "Beschrijf het zichtbare bodem- of substraatoppervlak en hoe het veranderde."
+        },
+        "growth": {
+          "title": "Plantengroei",
+          "body": "Plaats vergelijkbare groeiobservaties op een tijdlijn."
+        }
+      },
+      "tree": {
+        "environment": {
+          "title": "Omgeving van de boom",
+          "body": "Noteer wat het organisme omringt en elke zichtbare verandering."
+        },
+        "light": {
+          "title": "Zichtbaar licht",
+          "body": "Vergelijk zichtbare lichtomstandigheden tussen bezoeken zonder een behoefte af te leiden."
+        },
+        "soil": {
+          "title": "Bodemobservatie",
+          "body": "Beschrijf het zichtbare bodem- of substraatoppervlak en hoe het veranderde."
+        },
+        "growth": {
+          "title": "Boomgroei",
+          "body": "Plaats vergelijkbare groeiobservaties op een tijdlijn."
+        }
+      },
+      "insect": {
+        "anatomy": {
+          "title": "Zichtbare lichaamskenmerken",
+          "body": "Scheid zichtbare lichaamskenmerken voordat je een levensstadium of identiteit voorstelt."
+        },
+        "stage": {
+          "title": "Waargenomen levensstadium",
+          "body": "Noteer alleen het levensstadium dat je kunt waarnemen; laat het leeg bij twijfel."
+        },
+        "count": {
+          "title": "Waargenomen aantal",
+          "body": "Tel op een duidelijk beschreven plaats zodat een later bezoek kan worden vergeleken."
+        },
+        "behaviour": {
+          "title": "Waargenomen gedrag",
+          "body": "Beschrijf beweging en interactie zoals waargenomen, zonder het dier als plaag te classificeren."
+        }
+      },
+      "mushroom": {
+        "substrate": {
+          "title": "Substraat",
+          "body": "Noteer het materiaal direct onder de paddenstoel en het omringende leefgebied."
+        },
+        "anatomy": {
+          "title": "Zichtbare delen van de paddenstoel",
+          "body": "Scheid hoed, onderzijde, steel en basis; een foto kan beslissende kenmerken verbergen."
+        },
+        "underside": {
+          "title": "Zichtbare onderzijde",
+          "body": "Beschrijf zichtbare lamellen, poriën of een ander onderoppervlak zonder te raden."
+        },
+        "colourChange": {
+          "title": "Kleurverandering",
+          "body": "Noteer of een kleurverandering werkelijk is gezien en waar die optrad."
+        }
+      },
+      "fish": {
+        "habitat": {
+          "title": "Leefgebied",
+          "body": "Beschrijf het zichtbare water en waar de vis werd gezien."
+        },
+        "anatomy": {
+          "title": "Zichtbare viskenmerken",
+          "body": "Vergelijk lichaamsprofiel, vinnen, markeringen en staart alleen wanneer elk kenmerk zichtbaar is."
+        },
+        "group": {
+          "title": "Samen waargenomen vissen",
+          "body": "Noteer het waargenomen aantal en het zichtgebied; leid de populatiegrootte niet af."
+        },
+        "behaviour": {
+          "title": "Waargenomen gedrag",
+          "body": "Observeer op afstand en noteer beweging zonder contact."
+        }
+      },
+      "bird": {
+        "habitat": {
+          "title": "Leefgebied",
+          "body": "Beschrijf het zichtbare leefgebied en waar de vogel zich bevond."
+        },
+        "anatomy": {
+          "title": "Zichtbare vogelkenmerken",
+          "body": "Vergelijk snavel, lichaam, vleugels en staart alleen aan de hand van zichtbare kenmerken."
+        },
+        "group": {
+          "title": "Samen waargenomen vogels",
+          "body": "Noteer de werkelijk geziene groep zonder vogels buiten beeld te schatten."
+        },
+        "vocalisation": {
+          "title": "Waargenomen roep",
+          "body": "Beschrijf toonhoogte, ritme en herhaling zonder aan te nemen welke soort het geluid maakte."
+        }
+      },
+      "sound": {
+        "waveform": {
+          "title": "Zichtbaar geluidspatroon",
+          "body": "Het diagram geeft het opnamepatroon weer, niet het bewijs van een soort."
+        },
+        "rhythm": {
+          "title": "Ritme en herhaling",
+          "body": "Markeer herhaalde delen en pauzes zoals gehoord, zonder betekenis aan de roep toe te voegen."
+        },
+        "environment": {
+          "title": "Geluidsomgeving",
+          "body": "Noteer periode, plaats en achtergrondgeluiden die de vergelijking kunnen beïnvloeden."
+        },
+        "comparison": {
+          "title": "Opnamen vergelijken",
+          "body": "Vergelijk opnamen onder soortgelijke omstandigheden voordat je een verschil noteert."
+        }
+      }
+    }
+  },
+  "community": {
+    "title": "Gemeenschap",
+    "headline": "Maak van deze vondst een nuttige tip.",
+    "body": "Nodig een vriend, studiegenoot of veldgroep uit om ook met NatureLens te identificeren.",
+    "steps": {
+      "identify": "Identificeer een levend wezen",
+      "save": "Bewaar wat belangrijk is",
+      "share": "Stuur het resultaat naar iemand die er iets aan heeft"
+    },
+    "inviteAction": "Vriend uitnodigen",
+    "inviteMessage": "Ik gebruik NatureLens om natuur te herkennen en plantenervaringen te delen: water, plagen, herstel en ontdekkingen. Probeer het hier: {{url}}",
+    "screenTitle": "Gemeenschap",
+    "entryTitle": "Communityliga",
+    "entrySubtitle": "Bekijk je rang, missies en weekvoortgang.",
+    "localBadge": "Lokale liga",
+    "heroTitle": "Je NatureLens-rang",
+    "rankPosition": "huidige positie",
+    "scoreLabel": "punten",
+    "leagues": {
+      "seed": "Zaadliga — Begin vandaag met één ontdekking.",
+      "sprout": "Kiemliga — Je bouwt aan een echte gewoonte.",
+      "guardian": "Beschermersliga — Je veldlogboek wordt sterker.",
+      "master": "Meesterliga — Ritme voor gevorderde ontdekkers."
+    },
+    "photoRail": "Je nieuwste vondsten worden de omslag van je liga.",
+    "discoveriesLabel": "ontdekkingen",
+    "weeklyLabel": "deze week",
+    "categoriesLabel": "categorieën",
+    "streakLabel": "dagenreeks",
+    "rankingTitle": "Weekranglijst",
+    "rankingBody": "Een lokale liga op basis van je bevestigde activiteit in de app. Geen verzonnen wereldwijde gebruikers: dit wordt een echte openbare ranglijst zodra de gemeenschapsserver is aangesloten.",
+    "leaderboard": {
+      "you": {
+        "name": "Jij",
+        "meta": "Je bevestigde activiteit"
+      },
+      "next": {
+        "name": "Volgende mijlpaal",
+        "meta": "Een haalbaar doel voor deze week"
+      },
+      "elite": {
+        "name": "Elitemaatstaf",
+        "meta": "Doel voor gevorderde gebruikers"
+      }
+    },
+    "milestonesTitle": "Zo verhoog je je rang",
+    "milestones": {
+      "first": "Identificeer en bewaar echte vondsten.",
+      "week": "Voltooi dagelijkse missies en houd je reeks vol.",
+      "allCategories": "Verken meer categorieën: planten, insecten, vissen, vogels en schimmels."
+    },
+    "inviteTitle": "Neem iemand mee op expeditie",
+    "inviteBody": "Deel de app, voltooi de uitnodigingsmissie en laat de ervaring ook buiten de telefoon leven.",
+    "scanAction": "Nu scannen",
+    "reviewTitle": "Helpt NatureLens je?",
+    "reviewBody": "Als de app je vondst duidelijker maakte, helpt je beoordeling meer ontdekkers om NatureLens te vinden.",
+    "reviewAction": "Vind ik leuk",
+    "reviewLater": "Niet nu",
+    "reviewThanks": "Bedankt — zo help je ons NatureLens steeds beter te maken.",
+    "careExchangeTitle": "Zorgervaringen",
+    "careExchangeBody": "Deel wat werkte: water geven, licht, plagen, herstel en voor/na van je planten.",
+    "careShareAction": "Ervaring delen",
+    "careTopics": {
+      "watering": "Waterroutine",
+      "pests": "Plagen en symptomen",
+      "recovery": "Voor en na",
+      "questions": "Vraag de groep"
+    }
+  },
+  "ipm": {
+    "title": "Geïntegreerde plaagbestrijding",
+    "chooseCrop": "Kies het gewas waarop dit insect is waargenomen. Het protocol opent alleen voor een exact gedocumenteerd paar.",
+    "exactPair": "Exact paar: {{insect}} op {{crop}}",
+    "prevention": "Preventie",
+    "monitoring": "Monitoring",
+    "threshold": "Gedocumenteerde actiedrempel",
+    "cultural": "Teeltmaatregelen",
+    "mechanical": "Mechanische bestrijding",
+    "biological": "Biologische bestrijding",
+    "chemical": "Chemische bestrijding: alleen registratiecontrole",
+    "chemicalReferral": "Hier wordt geen middel of dosis voorgeschreven. Controleer het actuele etiket voor precies dit gewas en doelorganisme in uw land en bevestig de keuze met een lokale agronoom.",
+    "citationOnly": "feitelijke bronvermelding; brontekst niet overgenomen",
+    "crops": {
+      "maize": "Maïs",
+      "tomato": "Tomaat",
+      "soybean": "Soja",
+      "uplandCotton": "Uplandkatoen",
+      "commonBean": "Gewone boon",
+      "arabicaCoffee": "Arabica-koffie"
+    },
+    "actions": {
+      "avoidCalendarSprays": "Spuit niet volgens een kalender; baseer de beslissing op representatieve monitoring.",
+      "checkRegisteredBiocontrol": "Controleer lokaal toegelaten biologische bestrijding voor precies dit gewas en doelorganisme.",
+      "confirmDamageAndStage": "Bevestig passende schade en noteer het ontwikkelingsstadium van het insect.",
+      "inspectFruitDamage": "Controleer vruchten op toegangsgaten en inwendige schade.",
+      "inspectLeafMines": "Controleer jonge bladeren op actieve mijnen en larven.",
+      "inspectTransplants": "Controleer plantgoed voordat het het productiegebied ingaat.",
+      "inspectWhorl": "Open en controleer de maïskolf op verse vraatsporen en larven.",
+      "manageCropResidue": "Verwijder of beheer aangetaste gewasresten na de oogst op de juiste manier.",
+      "preserveNaturalEnemies": "Bescherm sluipwespen, roofdieren en andere natuurlijke vijanden.",
+      "protectNursery": "Houd de kwekerij beschermd en vrij van aangetaste planten.",
+      "recordCropStage": "Noteer het gewasstadium bij elke bemonstering.",
+      "removeEggMassesSmallPlots": "Verwijder in kleine percelen bereikbare eipakketten en larven.",
+      "removeInfestedTissue": "Verwijder en vernietig aangetaste bladeren en vruchten veilig.",
+      "removeVolunteerHosts": "Bestrijd opslagplanten die de plaag tussen teelten in stand houden.",
+      "rotateOutsideHostFamily": "Wissel waar mogelijk af met een gewas buiten de waardplantenfamilie.",
+      "sampleCoolHours": "Bemonster tijdens koelere uren, wanneer wantsen beter zichtbaar zijn.",
+      "sampleRepresentativePoints": "Verdeel monsterpunten over het veld en controleer niet alleen de rand.",
+      "useBeatCloth": "Gebruik het klopdoek op dezelfde wijze op representatieve punten.",
+      "useInsectScreens": "Gebruik insectengaas wanneer het teeltsysteem dit toelaat.",
+      "usePheromoneTraps": "Gebruik feromoonvallen om de vlucht te volgen; vangsten alleen meten geen gewasschade.",
+      "avoidStaggeredPlanting": "Vermijd gespreid zaaien en stem het zaaivenster regionaal af wanneer de officiële richtlijn dat voorschrijft.",
+      "avoidOlderMaizeNearby": "Zaai geen nieuwe maïs naast oudere percelen met dwerggroeisymptomen.",
+      "removeAlternateHosts": "Verwijder alternatieve waardplanten en bonenplanten met virussymptomen.",
+      "inspectFieldEdges": "Controleer eerst de perceelsrand, omdat kolonisatie en schade zich daar vaak concentreren.",
+      "inspectFlowerBuds": "Controleer bloemknoppen van katoen op vraat- en eilegprikken.",
+      "completeSanitaryHarvest": "Oogst grondig en verwijder koffiebessen die aan de planten en op de grond achterblijven.",
+      "inspectLowerCanopy": "Controleer het midden en de onderkant van het sojagewas, waar de rupsen schuilen."
+    },
+    "thresholds": {
+      "initialSymptomsHighYieldThreshold": "Alleen voor percelen met een opbrengstpotentieel van minstens {{minimumYieldBagsPerHa}} zakken/ha: controleer op {{sampleAreaHa}} ha {{samplePoints}} willekeurige punten. De gepubliceerde referentie is {{actionPercent}}% planten met eerste aantastingssymptomen."
+    }
   }
 }

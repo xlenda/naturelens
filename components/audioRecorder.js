@@ -1,5 +1,7 @@
 import { Platform } from 'react-native';
 
+const { buildWaveformPeaks } = require('./audioWaveform');
+
 // Records a short clip and turns it into exactly what Perch expects:
 // mono float32 PCM at 32 kHz, base64-encoded.
 //
@@ -231,6 +233,7 @@ export async function decodeAndResample(blob) {
     base64: float32ToBase64(samples),
     sampleRate: TARGET_SAMPLE_RATE,
     durationSeconds,
+    waveform: buildWaveformPeaks(samples),
   };
 }
 

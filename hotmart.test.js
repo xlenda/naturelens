@@ -221,3 +221,57 @@ test('a failed usage write is logged, never swallowed', () => {
   const src = fs.readFileSync(path.join(__dirname, 'api/_lib/entitlement.js'), 'utf8');
   assert.match(src, /console\.error\('recordUsage: increment failed'/);
 });
+
+test('native screens expose restore access but no external-purchase CTA', () => {
+  const fs = require('node:fs');
+  const read = (file) => fs.readFileSync(file, 'utf8');
+
+  const herb = read('screens/HerbDetailScreen.js');
+  assert.match(
+    herb,
+    /Platform\.OS === 'web'\s*&&\s*!!details\s*&&\s*!subLoading\s*&&\s*subStatus !== 'active'/,
+    'the medicinal-herb Subscribe card must not render in a Play build'
+  );
+
+  const subscription = read('screens/SubscriptionScreen.js');
+  assert.match(
+    subscription,
+    /Platform\.OS === 'web'\s*&&\s*!isActive\s*&&\s*!isUnknown/,
+    'native must not render the plans/purchase-steering section'
+  );
+  assert.match(
+    subscription,
+    /isActive \|\| isUnknown \|\| Platform\.OS === 'web'/,
+    'the free-plan Subscribe copy must also stay out of native status'
+  );
+  assert.match(subscription, /navigation\.navigate\('RestoreAccess'\)/, 'existing subscribers must still sign in');
+
+  const profile = read('screens/ProfileScreen.js');
+  assert.match(profile, /navigation\.navigate\('RestoreAccess'\)/, 'Profile must keep account restoration');
+  assert.match(profile, /subStatus === null\s*&&\s*Platform\.OS === 'web'/, 'Profile purchase CTA must stay web-only');
+});
+
+test('native paywall and legal surfaces contain no purchase steering link', () => {
+  const fs = require('node:fs');
+  const paywall = fs.readFileSync('components/PaywallModal.js', 'utf8');
+  const nativeStart = paywall.indexOf("if (Platform.OS !== 'web')");
+  const nativeEnd = paywall.indexOf('\n  }\n\n  return (', nativeStart);
+  const nativeBranch = paywall.slice(nativeStart, nativeEnd);
+  assert.doesNotMatch(nativeBranch, /\{title|\{body\}|webOnlyBody|PLAN_PRICES|onSubscribe|paywall\.subscribe/);
+  assert.match(nativeBranch, /paywall\.title/);
+  assert.match(nativeBranch, /common\.close/);
+
+  const terms = fs.readFileSync('screens/TermsScreen.js', 'utf8');
+  assert.match(
+    terms,
+    /Platform\.OS === 'web'\s*&&[\s\S]{0,300}Linking\.openURL\(FULL_DOC_URL\)/,
+    'the website terms link can indirectly reach checkout and must be web-only'
+  );
+
+  const subscription = fs.readFileSync('components/subscription.js', 'utf8');
+  assert.match(
+    subscription,
+    /function getCheckoutLink\(plan\) \{\s*if \(Platform\.OS !== 'web'\) return '';/,
+    'native code must not expose a usable external checkout URL'
+  );
+});

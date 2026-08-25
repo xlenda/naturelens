@@ -33,7 +33,122 @@
     "translating": "Oversætter…",
     "translateFailed": "Kunne ikke oversætte lige nu.",
     "yes": "Ja",
-    "no": "Nej"
+    "no": "Nej",
+    "loading": "Indlæser…"
+  },
+  "discoveryReceipt": {
+    "title": "Identifikationen er færdig",
+    "ready": "Dit resultat er klar til at blive gennemgået.",
+    "tokens": "+{{count}} optjente poletter",
+    "streak": "Dage i din nuværende serie: {{count}}",
+    "achievement": "Præstation låst op: {{title}}",
+    "factTitle": "Om denne kandidat",
+    "saveHint": "Gem fundet, så du kan finde det igen og tilføje dine egne observationer."
+  },
+  "acquisition": {
+    "title": "Hvordan hørte du om NatureLens?",
+    "subtitle": "Et hurtigt svar hjælper os med at blive bedre. Valgfrit.",
+    "thanks": "Tak — det hjælper os med at gøre NatureLens bedre.",
+    "skip": "Ikke nu",
+    "options": {
+      "tiktok": "TikTok",
+      "instagram": "Instagram",
+      "youtube": "YouTube",
+      "search": "Google eller Play Butik",
+      "friend": "En ven",
+      "other": "Andet"
+    }
+  },
+  "specimen": {
+    "title": "Min journal",
+    "notFoundTitle": "Journalen blev ikke fundet",
+    "notFoundBody": "Dette gemte fund findes ikke længere i din samling.",
+    "returnToCollection": "Tilbage til samlingen",
+    "openRecord": "Åbn min journal",
+    "savedOn": "Gemt den {{date}}",
+    "todayTitle": "I dag",
+    "wateredAnnouncement": "Vanding registreret.",
+    "personalizeTitle": "Gør den personlig",
+    "observationTitle": "Min observation",
+    "observationEmpty": "Ingen observation endnu. Notér, hvad du lagde mærke til, hvor du fandt den, eller hvad der ændrede sig.",
+    "observationPlaceholder": "Skriv en kort observation…",
+    "addObservation": "Tilføj observation",
+    "editObservation": "Rediger observation",
+    "saveObservation": "Gem observation",
+    "removeObservation": "Fjern observation",
+    "characterCount": "{{count}}/{{max}} tegn",
+    "timelineTitle": "Tidslinje",
+    "timelineAdded": "Føjet til samlingen",
+    "timelineWatered": "Vanding registreret",
+    "timelineObservationUpdated": "Seneste redigering af observationen",
+    "guideTitle": "Artsguide",
+    "guideBody": "Identifikation og alle tilgængelige oplysninger om arten.",
+    "openGuide": "Åbn guide",
+    "noteSavedAnnouncement": "Observation gemt.",
+    "removeTitle": "Fjern journal?",
+    "removeBody": "Fjern {{name}} fra din samling? Dette kan ikke fortrydes.",
+    "removeAction": "Fjern"
+  },
+  "localReminders": {
+    "title": "Påmindelser på telefonen",
+    "body": "Vælg præcist hvad og hvornår du vil mindes om det. Android kan give besked, selv mens du bruger en anden app, afhængigt af tilladelse og systemindstillinger.",
+    "loading": "Indlæser påmindelser…",
+    "loadError": "Påmindelserne kunne ikke indlæses lige nu.",
+    "nextTitle": "Kommende påmindelser",
+    "addAction": "Tilføj påmindelse",
+    "empty": "Ingen kommende påmindelse for denne registrering.",
+    "unavailableTitle": "Påmindelser er ikke tilgængelige",
+    "unavailableBody": "Denne Android-version kan ikke planlægge notifikationer. Installer en kompatibel appversion for at bruge påmindelser.",
+    "modalTitle": "Opret en påmindelse",
+    "reminderFor": "For {{name}}",
+    "taskLabel": "Hvad skal telefonen minde dig om at registrere?",
+    "startLabel": "Første påmindelse",
+    "timeLabel": "Tidspunkt",
+    "repeatLabel": "Gentagelse",
+    "weekdayLabel": "Ugedag",
+    "firstAt": "Første notifikation: {{date}}",
+    "saveAction": "Planlæg påmindelse",
+    "saving": "Planlægger…",
+    "permissionDeniedTitle": "Notifikationer er slået fra",
+    "permissionDeniedBody": "Android gav ikke tilladelse til notifikationer. Tillad NatureLens-notifikationer i systemindstillingerne, og prøv igen.",
+    "saveError": "Påmindelsen blev hverken gemt eller planlagt. Kontrollér dine valg, og prøv igen.",
+    "removeError": "Denne påmindelse kunne ikke fjernes. Prøv igen.",
+    "removeAction": "Fjern påmindelse om {{action}}",
+    "removing": "Fjerner…",
+    "removedAnnouncement": "Påmindelse fjernet.",
+    "scheduledSuccess": "Påmindelse planlagt til {{date}}.",
+    "actionAnnouncement": "Påmindelse om {{action}} planlagt til {{date}}.",
+    "recordFallback": "denne registrering",
+    "notificationTitle": "NatureLens-påmindelse · {{name}}",
+    "notificationBody": "Registrér: {{action}} · {{name}}",
+    "nextAt": "Næste: {{date}}",
+    "intervals": {
+      "day1": "Om 1 dag",
+      "day3": "Om 3 dage",
+      "day7": "Om 7 dage",
+      "day14": "Om 14 dage",
+      "day30": "Om 30 dage"
+    },
+    "times": {
+      "at08": "08:00",
+      "at12": "12:00",
+      "at18": "18:00",
+      "at20": "20:00"
+    },
+    "weekdays": {
+      "sun": "Søndag",
+      "mon": "Mandag",
+      "tue": "Tirsdag",
+      "wed": "Onsdag",
+      "thu": "Torsdag",
+      "fri": "Fredag",
+      "sat": "Lørdag"
+    },
+    "repetitions": {
+      "once": "Én gang",
+      "daily": "Hver dag",
+      "weekly": "Hver uge"
+    }
   },
   "auth": {
     "title": "Log ind for at identificere",
@@ -153,17 +268,23 @@
       "label": "Lyd",
       "tabLabel": "Lyde",
       "title": "Identificér via lyd",
-      "subtitle": "Optag en fugl, frø eller insekt, og find ud af hvad det er."
+      "subtitle": "Optag en fugl, frø eller insekt, og find ud af hvad det er.",
+      "scanHint": "Sammenlign optagelsens klarhed, rytme, tonehøjde og gentagelse. Flere matchende lydmønstre er stærkere evidens end en enkelt tone."
     }
   },
   "identify": {
     "identifierTitle": "{{category}}-identifikator",
     "subtitle": "Identificer {{category}} på et øjeblik med AI",
+    "freePromise": "Prøv før du beslutter dig: 1 gratis identifikation pr. kategori, uden konto eller betalingskort.",
     "readyToScan": "Klar til at scanne",
     "didYouKnowTitle": "Vidste du det?",
     "continueLabel": "Fortsæt",
     "analyzing": "Analyserer {{category}}…",
     "tapToIdentify": "Tryk for at identificere",
+    "lensPulseEyebrow": "LEVENDE PULS",
+    "holdToReveal": "Hold for at afsløre",
+    "keepHolding": "Bliv ved med at holde…",
+    "holdToRevealHint": "Hold, indtil pulsen er fuldført. Slip for at annullere.",
     "identifying": "Identificerer…",
     "uploadPhoto": "Upload foto",
     "myCollection": "Min samling",
@@ -186,6 +307,14 @@
     "referenceImagesTitle": "Referencefotos",
     "referenceImagesHint": "Sammenlign dem med dit eget foto for at bekræfte.",
     "referenceImageLabel": "Referencefoto {{index}}",
+    "evidenceSimilar": "Ligner dit foto",
+    "evidenceRepresentative": "Artsreference",
+    "evidenceObservation": "Feltobservation · GBIF",
+    "comparePhotos": "Sammenlign fotos",
+    "comparePhotosHint": "Se dit foto og referencen side om side.",
+    "sideBySide": "Side om side",
+    "previousReference": "Forrige reference",
+    "nextReference": "Næste reference",
     "alternativesTitle": "Andre mulige match",
     "alternativesHint": "Hvis resultatet ovenfor ikke ser rigtigt ud, kan din art være en af disse.",
     "lowConfidenceBare": "Kun {{confidence}}% sikkerhed — betragt det som et udgangspunkt, ikke et endeligt svar.",
@@ -199,10 +328,54 @@
     "serviceDownBody": "Denne bestemmelsestjeneste har et problem lige nu. Prøv igen om et par minutter - det er ikke dit foto.",
     "poseWhole": "Helhed",
     "poseClose": "Nærbillede",
-    "poseOther": "Anden vinkel"
+    "poseOther": "Anden vinkel",
+    "photoConsentTitle": "Før du sender dine fotos",
+    "photoConsentKindwiseBody": "Dine valgte fotos sendes til Kindwise med henblik på identifikation. Billederne og resultaterne forbliver tilgængelige via Kindwise i 6 måneder. I henhold til Kindwises vilkår er billederne omfattet af en uigenkaldelig licens, der tillader genbrug til træning og kommercielle formål, levering til andre kunder og deling under CC BY-SA. Send dem kun, hvis du accepterer.",
+    "photoConsentFishialBody": "Dine valgte fotos sendes til Fishial med henblik på identifikation. Fishial kan opbevare dem i overensstemmelse med sine procedurer for dataopbevaring og offentliggør ikke en bestemt opbevaringsperiode for fotos, der sendes via API'et. Send dem kun, hvis du accepterer.",
+    "photoConsentNyckelBody": "Dine valgte fotos sendes til Nyckel og behandles for at levere identifikationen. Send dem kun, hvis du accepterer.",
+    "photoConsentBirdBody": "Når den kalibrerede, globale BioCLIP-tjeneste er aktiv, kan fuglefotos først behandles i denne private tjeneste, som administreres af NatureLens. I BioCLIP findes de kun i hukommelsen under anmodningen og gemmes ikke. Mens BioCLIP er deaktiveret, eller hvis tjenesten fejler eller ikke kan dokumentere en præcis art, kan de samme fotos sendes til Nyckel med indsamling af eksempler slået fra; Nyckel garanterer ikke, at lagringen kun er midlertidig. Send dem kun, hvis du accepterer.",
+    "photoConsentSend": "Send fotos",
+    "centralCapture": "Identificér",
+    "photoReady": "Fotoet er klar",
+    "addOptionalAngles": "Tilføj en anden vinkel",
+    "hideOptionalAngles": "Skjul ekstra vinkler",
+    "captureDemo": {
+      "title": "Se hvordan det virker",
+      "body": "Ret mod {{category}}, tryk på det store kameraområde og bekræft resultatet med billederne.",
+      "accessibility": "Animeret eksempel, der viser hvordan {{category}} identificeres med kameraet.",
+      "result": "Resultat med fotos og næste trin",
+      "steps": {
+        "aim": "Indram ét motiv",
+        "tap": "Tryk på kameraområdet",
+        "confirm": "Sammenlign referencerne"
+      },
+      "subject": {
+        "plant": "Blad eller blomst",
+        "tree": "Blad, bark eller krone",
+        "insect": "Insekt i fokus",
+        "mushroom": "Hat og underside",
+        "crop": "Angrebet afgrødeblad",
+        "fish": "Hel fisk fra siden",
+        "bird": "Hel fugl i billedet",
+        "sound": "Optag en klar lyd"
+      }
+    },
+    "expeditionTitle": "Vælg din ekspedition",
+    "expeditionBody": "Hver rute ændrer, hvad appen fremhæver efter billedet.",
+    "categoryPromise": {
+      "plant": "Pleje, sikkerhed og visuelle spor",
+      "insect": "Kendetegn, risiko og feltnoter",
+      "mushroom": "Forvekslingsarter og sikkerhed først",
+      "crop": "Agronomi, skadedyr og jordbund",
+      "fish": "Vand, levested og belæg for identifikation",
+      "bird": "Kendetegn, levested og observationstips",
+      "sound": "Lyt, sammenlign og identificer kald"
+    }
   },
   "detail": {
     "profileTitle": "{{category}}-profil",
+    "invertebrateLabel": "Hvirvelløst dyr",
+    "fungusLabel": "Svamp",
     "readMoreLabel": "Læs mere online om denne {{category}}",
     "markAsWatered": "Marker som vandet",
     "markAsWateredLabel": "Marker som vandet",
@@ -212,10 +385,24 @@
     "checkForDiseasesLabel": "Tjek for sygdomme",
     "checkingForDiseasesLabel": "Tjekker for sygdomme",
     "healthCheckSection": "Sundhedstjek",
+    "healthSpeciesMismatch": "Sundhedstjekket genkendte ikke den samme art. Tag et tydeligere billede af denne plante; ingen diagnose blev anvendt.",
     "edibleParts": "Spiselige dele",
     "propagation": "Formering",
     "wateringNeeds": "Vandbehov",
     "conservationStatus": "Bevaringsstatus",
+    "iucn": {
+      "extinct": "Uddød",
+      "extinctInTheWild": "Uddød i naturen",
+      "regionallyExtinct": "Regionalt uddød",
+      "criticallyEndangered": "Kritisk truet",
+      "endangered": "Truet",
+      "vulnerable": "Sårbar",
+      "nearThreatened": "Næsten truet",
+      "leastConcern": "Livskraftig",
+      "dataDeficient": "Utilstrækkelige data",
+      "notApplicable": "Ikke relevant",
+      "notEvaluated": "Ikke vurderet"
+    },
     "safetySection": "Sikkerhed",
     "ecologicalRoleSection": "Økologisk rolle",
     "frequentlyConfusedWith": "Forveksles ofte med",
@@ -232,6 +419,10 @@
     "installNudgeBody": "Føj den til din startskærm, så du kan identificere hurtigere næste gang.",
     "commonNames": "Almindelige navne",
     "synonyms": "Videnskabelige synonymer",
+    "family": "Familie",
+    "order": "Orden",
+    "taxonomyTitle": "Klassifikation",
+    "species": "Art",
     "referencePhoto": "Referencefoto",
     "referencePhotoAlt": "Referencefoto af {{name}}",
     "coverageNoteTitle": "Om dette resultat",
@@ -250,7 +441,7 @@
     "everyNDays": "Hver {{count}}. dag",
     "gbifCredit": "Data: GBIF.org",
     "seasonChart": "Registreringer pr. måned",
-    "seasonChartNote": "Observationer fra hele verden, måned for måned. De afspejler observationsindsatsen, ikke en garanti for blomstring eller aktivitet.",
+    "seasonChartNote": "Observationsdata fra hele verden, måned for måned. De afspejler observationsindsatsen og er ingen garanti for, hvornår eller hvorfor arten forekommer.",
     "tipWatering": "Mærk på jorden, før du vander: er de øverste centimeter tørre, er det tid.",
     "tipLight": "Læg mærke til, hvordan lyset flytter sig i rummet i løbet af dagen - det skifter mere, end man tror.",
     "tipSoil": "God dræning betyder lige så meget som god gødning: våde rødder er rødder, der lider.",
@@ -334,6 +525,12 @@
     "scheduleNow": "nu",
     "scheduleGroupNote": "Denne kalender gælder gruppen {{group}}, ikke lige netop denne art.",
     "scheduleGroupNoteShort": "Denne kalender gælder artens gruppe, ikke lige netop denne art.",
+    "groupGuideNote": "Generel vejledning for gruppen {{group}}, ikke en oplysning om netop denne art.",
+    "generalGuideNote": "Generel vejledning, ikke en oplysning om netop denne art.",
+    "agronomySection": "Markagronomi",
+    "agronomyDecisionNote": "Start med observation og måling. Åbn hver protokol, før du beslutter, hvad der skal ændres i marken.",
+    "integratedManagementSection": "Integreret forvaltning",
+    "openFullProtocol": "Åbn hele protokollen",
     "scheduleNoLocation": "Uden din placering ved vi ikke, hvilken årstid du er i, så ingen kolonne er fremhævet.",
     "careProfileTitle": "Plejeprofil",
     "careLevelLabel": "Plejeniveau",
@@ -348,9 +545,13 @@
     "speciesCareSection": "Pleje af denne art",
     "speciesCareNote": "Disse tal gælder {{species}} selv, ikke dens gruppe.",
     "speciesCareSource": "Kilde: {{citation}}",
+    "wikipediaExcerptNotice": "Dette uddrag er udvalgt og forkortet til dette afsnit.",
+    "wikipediaArticleLink": "Wikipedia-artikel",
+    "wikipediaAuthorsLink": "Artiklens forfattere og historik",
+    "wikipediaLicenseLink": "CC BY-SA 4.0-licens",
     "usdaMoisture": "Vandbehov",
     "usdaDrought": "Tørketolerance",
-    "usdaFertility": "Gødningsbehov",
+    "usdaFertility": "Krav til jordens frugtbarhed",
     "usdaShade": "Skyggetolerance",
     "usdaPh": "Jordens pH",
     "usdaTempMin": "Tåler ned til",
@@ -362,7 +563,173 @@
     "levelNone": "Ingen",
     "bloomEarly": "{{season}} (tidlig)",
     "bloomMid": "{{season}} (midt)",
-    "bloomLate": "{{season}} (sen)"
+    "bloomLate": "{{season}} (sen)",
+    "feedbackThanks": "Tak for din feedback."
+  },
+  "learning": {
+    "title": "Lær at observere",
+    "basic": "Grundlæggende",
+    "learn": "Lær",
+    "technical": "Teknisk",
+    "generalDiagram": "Generelt diagram",
+    "generalNote": "Brug denne illustration til at se, hvad du skal kigge efter. Det er en generel guide, ikke et billede af den identificerede art.",
+    "illustrationAlt": "Generel observationsillustration for {{category}}",
+    "observeTitle": "Se på én del ad gangen",
+    "observeHint": "Sammenlign form, farve, størrelse og placering. Flere egenskaber, der passer, er stærkere bevis end én enkelt detalje.",
+    "evidenceTitle": "Grundlag for identifikation",
+    "technicalNote": "Disse værdier kommer fra identifikationsresultatet. Manglende grundlag forbliver skjult, og ingen felter udfyldes ved at gætte.",
+    "categoryMatch": "Kategorimatch",
+    "provider": "Identifikationskilde",
+    "parts": {
+      "leaf": "Bladets form og årer",
+      "stemNode": "Stængel og knude",
+      "flower": "Blomstens opbygning",
+      "roots": "Rødder",
+      "canopy": "Kronens form",
+      "branches": "Grene",
+      "trunkBark": "Stamme og bark",
+      "youngOldLeaves": "Unge og gamle blade",
+      "affectedArea": "Berørt område",
+      "stem": "Stængel",
+      "antennae": "Følehorn",
+      "head": "Hoved",
+      "bodySections": "Kropsdele",
+      "wingsLegs": "Vinger og ben",
+      "cap": "Hat",
+      "underside": "Lameller, porer eller underside",
+      "baseSubstrate": "Basis og underlag",
+      "beak": "Næb",
+      "wing": "Vinge",
+      "tail": "Hale",
+      "feet": "Fødder",
+      "headProfile": "Hovedprofil",
+      "bodyMarks": "Kropsaftegninger",
+      "fins": "Finner",
+      "recording": "Optagelseskvalitet",
+      "rhythm": "Rytme",
+      "pitch": "Høj eller lav tone",
+      "repetition": "Gentagelse",
+      "cephalothorax": "Forkrop",
+      "abdomen": "Bagkrop",
+      "eyes": "Øjne",
+      "eightLegs": "Otte ben",
+      "tentacles": "Tentakler",
+      "shell": "Skal",
+      "muscularFoot": "Muskelfod",
+      "anterior": "Forende",
+      "segments": "Kropssegmenter",
+      "clitellum": "Bælte (clitellum)",
+      "posterior": "Bagende"
+    }
+  },
+  "speciesDossier": {
+    "title": "Videnskabeligt dossier",
+    "exactEvidence": "Dokumenteret for {{species}}",
+    "evidenceNote": "Kun kildebelagte fakta vises. Manglende oplysninger forbliver skjult.",
+    "environment": "Registrerede vandtyper",
+    "diet": "Dokumenteret føde",
+    "habitat": "Dokumenteret levested",
+    "brackish": "Brakvand",
+    "reproduction": "Dokumenteret formering",
+    "lifeCycle": "Dokumenteret livscyklus",
+    "lifeStagesTitle": "Dokumenterede livsstadier",
+    "larvalInstars": "Antal larvestadier: {{count}}",
+    "bodyLength": "Kropslængde",
+    "leafConsumption": "Bladforbrug",
+    "leafAreaPerLarva": "Bladareal ædt pr. larve",
+    "lifeStages": { "egg": "Æg", "larva": "Larve", "nymph": "Nymfe", "pupa": "Puppe", "adult": "Voksen" },
+    "measurements": {
+      "clutchSize": "Kuldstørrelse",
+      "incubationPeriod": "Rugetid",
+      "lifeExpectancy": "Forventet levetid",
+      "longestLifespan": "Længste observerede levetid",
+      "gestationPeriod": "Drægtighedsperiode"
+    }
+  },
+  "fertilizer": {
+    "title": "Gødskningsbeslutning",
+    "planningNote": "En ansvarlig anbefaling begynder med målte markdata. Tabellen viser, hvad hvert input bruges til; den er ikke en opskrift på udbringning.",
+    "input": "Input",
+    "decisionUse": "Hvad det belyser",
+    "soilAnalysis": "Jordbundsanalyse",
+    "soilAnalysisUse": "Tilgængelige næringsstoffer, surhedsgrad, saltindhold og behov for kalkning.",
+    "plantAnalysis": "Plante- eller vævsanalyse",
+    "plantAnalysisUse": "Aktuel ernæringstilstand, inklusive skjult mangel før synlige symptomer.",
+    "targetDestination": "Udbyttemål og anvendelse",
+    "targetDestinationUse": "Forventet næringsstoffjernelse; høst af kerne og hele planten er forskellig.",
+    "fieldHistory": "Markhistorik og planterester",
+    "fieldHistoryUse": "Hvad der er tilført, fjernet eller ført tilbage til jorden.",
+    "textureWater": "Jordtype og vand",
+    "textureWaterUse": "Risiko for udvaskning og om tilførsler bør deles.",
+    "diagnosisCaution": "Synlige symptomer er spor, ikke en bekræftelse. Vandstress, sygdom, insekter eller et andet næringsstof kan skjule dem.",
+    "maizeTitle": "Majsens næringsstofoptag",
+    "maizeIntro": "Gennemsnitlige mængder fjernet af afgrøden ved forskellige udbytter og høstformål.",
+    "destination": "Anvendelse",
+    "productivity": "Udbytte (t/ha)",
+    "grain": "Kerne",
+    "silage": "Ensilage (tørstof)",
+    "tonnesPerHectare": "ton pr. hektar",
+    "kgPerHectare": "kilogram pr. hektar",
+    "extractedUnit": "Udbytte i t/ha; fjernede næringsstoffer i kg/ha.",
+    "notDoseWarning": "Fjernelse er ikke en gødningsmængde. En anbefaling kræver jord- og vævsanalyser, et udbyttemål, regional kalibrering og en lokal agronom.",
+    "onionTitle": "Løg: samspil ved overskud af næringsstoffer",
+    "onionIntro": "Effekter dokumenteret kun for løg; de må ikke generaliseres til andre afgrøder.",
+    "excess": "Næringsstof i overskud",
+    "possibleEffect": "Mulig effekt",
+    "nitrogenEffect": "Længere vækstcyklus, tyk hals, for meget løv, flere bladsygdomme og dårligere holdbarhed efter høst.",
+    "potassiumEffect": "Kan fremkalde mangel på magnesium og calcium.",
+    "phosphorusEffect": "Kan fremkalde mangel på zink og kobber.",
+    "scrollHint": "Stryg tabellen sidelæns for at se alle næringsstoffer.",
+    "botanicalTitle": "Gødskning og næring",
+    "botanicalIntro": "Når en kilde er tilgængelig, adskiller guiden artsdata, råd til den validerede plantegruppe og årstidens timing. Et foto fastsætter aldrig en dosis.",
+    "unknownGroupNote": "Der findes endnu ingen valideret gødningsvejledning til denne plantegruppe. Tjeklisten er stadig tilgængelig, men der udledes ingen grupperegel eller dosis.",
+    "growthStress": "Vækstfase og stress",
+    "growthStressUse": "Skeln mellem etablering, aktiv vækst, blomstring eller frugtsætning og hvile. Ret tørke, vandmætning, rodskade eller nylig omplantning før gødskning.",
+    "labelHistory": "Produktetiket og brugshistorik",
+    "labelHistoryUse": "Bekræft N-P-K, frigivelsestype, etikettens anvisninger, seneste tilførsel og om mediet allerede indeholder gødning.",
+    "plantNoDoseWarning": "Et foto alene kan ikke fastlægge en sikker dosis. Følg produktetiketten og lokale analyser; kopier aldrig en dosis fra en anden art, et andet klima, en anden potte eller mark."
+  },
+  "pestManagement": {
+    "title": "Insektmonitorering",
+    "decisionNote": "Et foto kan pege på et insekt eller dets skade, men måler ikke bestanden i marken. En beslutning om indgreb kræver repræsentativ prøvetagning.",
+    "whatToCheck": "Hvad skal kontrolleres",
+    "fieldDecision": "Beslutning i marken",
+    "identifyDamage": "Målart og skade",
+    "identifyDamageUse": "Bekræft insekt, livsstadie, passende skadebillede og fordeling i marken.",
+    "samplingPlan": "Prøvetagningsplan",
+    "samplingPlanUse": "Fastlæg enhed, metode, punkter og hyppighed efter afgrøde og vækststadie.",
+    "countStage": "Antal og stadie",
+    "countStageUse": "Registrer hvert punkt, skadedyrets størrelse eller stadie, afgrødens stadie og nyttedyr; sammenlign derefter med handlingstærsklen.",
+    "noCountWarning": "Uden en repræsentativ optælling og en anvendelig handlingstærskel fortsætter overvågningen — sprøjt aldrig efter kalenderen.",
+    "chemicalSafetyTitle": "Hvis kemisk bekæmpelse er nødvendig",
+    "maizeTitle": "Majs: referencer til markbeslutninger",
+    "target": "Målart",
+    "fieldProtocol": "Prøvetagning og handlingsreference",
+    "fallArmyworm": "Efterårshærorm",
+    "fallArmywormProtocol": "Kun for marker med et udbyttepotentiale på mindst 100 sække/ha: På {{sampleAreaHa}} ha undersøges {{samplePoints}} tilfældige punkter. Den offentliggjorte reference er {{actionPercent}} % planter med tidlige angrebssymptomer.",
+    "wireworm": "Smælderlarve",
+    "wirewormProtocol": "Før såning sigtes en jordprøve på {{sampleWidthCm}} × {{sampleLengthCm}} × {{sampleDepthCm}} cm. Reference: mindst {{actionCount}} insekter pr. prøve.",
+    "maizeThresholdNote": "Referencen på 10% for majs gælder ifølge kilden marker med et potentiale på mindst 100 sække. Region, hybrid, stadie og produktionssystem kan ændre den lokale tærskel.",
+    "soyTitle": "Soja: prøvetagning og handlingstærskler",
+    "soySamplingTitle": "Mindste antal punkter",
+    "fieldArea": "Markareal",
+    "minimumSamples": "Minimum",
+    "upToHectares": "Op til {{count}} ha",
+    "overHectares": "Over {{count}} ha",
+    "samplePoints": "{{count}} punkter",
+    "dividePlots": "Opdel i delmarker på højst {{count}} ha",
+    "soyThresholdTitle": "Handlingsreferencer",
+    "situation": "Situation",
+    "actionLevel": "Referencetærskel",
+    "defoliation": "Afbladning",
+    "defoliationLevel": "Mere end {{vegetativePercent}}% i det vegetative stadie eller {{reproductivePercent}}% fra blomstring.",
+    "largeCaterpillars": "Store bladædende larver",
+    "largeCaterpillarsLevel": "{{countPerMeter}} larver over {{minimumLengthCm}} cm pr. rækkemeter med bankelagen.",
+    "grainStinkbugs": "Tæger — produktion af bønner",
+    "grainStinkbugsLevel": "{{countPerMeter}} voksne eller nymfer fra 3. stadie pr. meter, fra {{stageStart}} til {{stageEnd}}.",
+    "seedStinkbugs": "Tæger — frøproduktion",
+    "seedStinkbugsLevel": "{{countPerMeter}} voksen eller nymfe fra 3. stadie pr. meter, fra {{stageStart}} til {{stageEnd}}.",
+    "soyThresholdNote": "Dette er brasilianske referencer fra Embrapa. Tag prøver ugentligt i den kritiske periode, optæl tæger i de køligere timer, og bekræft regionale justeringer med lokal faglig rådgivning."
   },
   "disease": {
     "overviewSection": "Oversigt",
@@ -375,7 +742,9 @@
     "healthStatusSection": "Sundhedsstatus",
     "noDiseaseDetected": "Der blev ikke sikkert registreret nogen sygdom eller skadedyr på dette foto.",
     "match": "Match",
-    "severitySuffix": "{{severity}} sværhedsgrad"
+    "severitySuffix": "{{severity}} sværhedsgrad",
+    "diagnosisCaution": "Et foto er en screening, ikke en markdiagnose. Undersøg flere planter, og udeluk problemer med vand, næring og sprøjteskader, før du handler.",
+    "chemicalCaution": "Brug kun produkter, der er godkendt i dit land til denne afgrøde og målorganisme. Følg etiketten, og bekræft beslutningen med en lokal agronom."
   },
   "collection": {
     "title": "Min samling",
@@ -413,6 +782,11 @@
     "byCategory": "Efter kategori",
     "privacyPolicy": "Privatlivspolitik",
     "language": "Sprog",
+    "careRegionRow": "Plejesæsoner",
+    "careRegionHint": "Vælger den halvkugle, der bruges til sæsonplaner og blomstring. Gemmes kun på denne enhed.",
+    "careRegionAuto": "Automatisk",
+    "careRegionSouth": "Sydlige halvkugle",
+    "careRegionNorth": "Nordlige halvkugle",
     "installApp": "Installer app",
     "installAppIOSTitle": "Installer NatureLens",
     "installAppIOSBody": "Tryk på knappen Del, og tryk derefter på \"Føj til hjemmeskærm\" for at installere NatureLens på din telefon.",
@@ -453,7 +827,7 @@
     "acceptanceTitle": "Accept af vilkårene",
     "acceptanceBody": "Ved at bruge NatureLens accepterer du disse Brugsvilkår. Hvis du ikke er enig, bedes du ikke bruge appen.",
     "serviceTitle": "Hvad denne app gør",
-    "serviceBody": "NatureLens lader dig fotografere planter, insekter, svampe, afgrøder og træer - og afhængigt af din enhed også fisk, fugle og endda lyde - for at identificere dem ved hjælp af tredjeparts AI-tjenester (Kindwises Plant.id, Insect.id, Mushroom.id og Crop.health, Fishial til fisk, Nyckel til fugle og vores egen lydmodel). Resultaterne genereres automatisk og gennemgås ikke af en menneskelig ekspert.",
+    "serviceBody": "NatureLens lader dig fotografere planter, insekter, svampe, afgrøder og træer - og afhængigt af din enhed også fisk, fugle og endda lyde - for at identificere dem ved hjælp af tredjeparts AI-tjenester (Kindwises Plant.id, Insect.id, Mushroom.id og Crop.health, Fishial til fisk, Nyckel til fugle og vores egen lydmodel). Resultaterne genereres automatisk og gennemgås ikke af en menneskelig ekspert. Når den kalibrerede, globale BioCLIP-tjeneste er aktiv, kan NatureLens først bruge denne private, selvadministrerede tjeneste til fugle; mens den er deaktiveret, eller hvis den fejler eller ikke kan dokumentere en præcis art, bruges Nyckel som reserve.",
     "accuracyTitle": "Identifikationens nøjagtighed — læs venligst",
     "accuracyBody": "AI-identifikation kan tage fejl, også om hvorvidt en plante eller svamp er spiselig, giftig eller sikker at røre ved. Spis, saml eller brug aldrig en vild plante, svamp eller organisme udelukkende baseret på resultatet fra denne app. Bekræft altid med en kvalificeret ekspert (mykolog, botaniker eller giftlinje), før du indtager eller bruger noget, du har fundet i naturen. Vi er ikke ansvarlige for skader forårsaget af at stole på en identifikation lavet af denne app.",
     "billingTitle": "Abonnementer og fakturering",
@@ -470,7 +844,7 @@
   "privacy": {
     "title": "Privatlivspolitik",
     "collectTitle": "Hvad vi indsamler",
-    "collectBody": "Med denne app kan du fotografere en plante, et træ, et insekt, en svamp, en afgrøde, en fisk eller en fugl for at bestemme den, og optage et dyrekald for at genkende det på lyden. Bestemmelsen laves af AI-tjenester: Kindwise (planter, træer, insekter, svampe, afgrøder), Fishial.AI (fisk) og Nyckel (fugle). Lyd bestemmes på vores egen server, så optagelser når aldrig tredjepart.",
+    "collectBody": "Med denne app kan du fotografere en plante, et træ, et insekt, en svamp, en afgrøde, en fisk eller en fugl for at bestemme den, og optage et dyrekald for at genkende det på lyden. Bestemmelsen laves af AI-tjenester: Kindwise (planter, træer, insekter, svampe, afgrøder), Fishial.AI (fisk) og Nyckel (fugle). Lyd bestemmes på vores egen server, så optagelser når aldrig tredjepart. Når den kalibrerede, globale, private BioCLIP-tjeneste fra NatureLens er aktiv, kan fuglefotos først behandles der: de findes kun i hukommelsen under anmodningen og gemmes ikke. Mens den er deaktiveret, eller hvis den fejler eller ikke kan dokumentere en præcis art, kan de samme fotos sendes til Nyckel med indsamling af eksempler slået fra, uden garanti for at lagringen kun er midlertidig.",
     "thirdPartyTitle": "AI-tjenester fra tredjepart",
     "thirdPartyBody": "Når du tager eller uploader et foto, sendes det til den tilsvarende bestemmelsestjeneste. Vi gemmer ikke dine fotos på nogen server, vi kontrollerer. For at vise et referencefoto og en beskrivelse spørger appen Wikipedia om det videnskabelige navn — Wikipedia ser altså hvilken art du slog op, men ikke hvem du er. Nogle leverandører skriver kun på engelsk; at oversætte den tekst, og at stille specialisten i appen et spørgsmål, sender teksten til Anthropic.",
     "localStorageTitle": "Kun lokal lagring",
@@ -2162,7 +2536,15 @@
     },
     "herbSubscribeCtaTitle": "Nyder du denne guide?",
     "herbSubscribeCtaBody": "Abonner for at låse op for ubegrænset identifikation af planter, insekter, svampe og afgrøder.",
-    "herbAlreadySubscribedCheck": "Allerede abonnent? Tryk for at tjekke igen"
+    "herbAlreadySubscribedCheck": "Allerede abonnent? Tryk for at tjekke igen",
+    "mascot": {
+      "kicker": "Din levende guide",
+      "title": "Lino kigger pa naturen sammen med dig.",
+      "body": "Tag et foto, lyt eller gem et fund. Jeg starter med det klareste naeste skridt.",
+      "photo": "Foto",
+      "sound": "Lyd",
+      "journal": "Journal"
+    }
   },
   "botanist": {
     "headerTitle": "Dr. Helena Marques",
@@ -2296,6 +2678,9 @@
     "title": "Dagens missioner",
     "rewardEach": "+{{tokens}} pr. stk.",
     "allDone": "Alt klaret — kom tilbage i morgen!",
+    "completedAnnouncement": "Mission fuldført: {{mission}}",
+    "completedStatus": "Fuldført",
+    "progressStatus": "Fuldført: {{done}} af {{target}}",
     "pool": {
       "scanAny2": "Identificér 2 arter i dag",
       "scanAny3": "Identificér 3 arter i dag",
@@ -2310,14 +2695,117 @@
       "openDiscover": "Besøg fanen Opdag"
     }
   },
+  "fishSafety": {
+    "unverifiedTitle": "Sikkerheden er ikke bekræftet endnu",
+    "unverifiedBody": "Vi fandt ingen sikkerhedsoplysninger for netop denne art. Undlad at røre, håndtere, spise eller udsætte fisken alene på baggrund af denne identifikation."
+  },
+  "lensReveal": {
+    "title": "Fundet er klar",
+    "safetyFirst": "Sikkerhed først"
+  },
+  "resultDepth": {
+    "label": "Vælg, hvor meget du vil se",
+    "essential": "Det vigtigste",
+    "visual": "Visuelt",
+    "expert": "Ekspert"
+  },
+  "nextBestCapture": {
+    "title": "Forbedr identifikationen",
+    "reasonLowConfidence": "Sikkerheden er {{confidence}} %. En ekstra vinkel kan hjælpe.",
+    "reasonAlternatives": "Der er stadig {{count}} mulige alternativer.",
+    "reasonIdentityUnresolved": "Resultatet stoppede ved {{name}} og har endnu ikke bekræftet en art. Derfor forbliver artsspecifikke afsnit skjult.",
+    "action": "Tag et billede fra en ny vinkel",
+    "categories": {
+      "plant": "Fotografér hele planten og derefter et blad eller en blomst i skarpt fokus.",
+      "tree": "Vis hele træet, barken og et blad eller en frugt i skarpt fokus.",
+      "crop": "Vis hele planten, symptomet tæt på og den omgivende del af marken.",
+      "mushroom": "Fotografér hatten, lamellerne eller porerne, stokkens basis og underlaget uden at røre den unødigt.",
+      "insect": "Fotografér hele kroppen oppefra og fra siden samt værtsplanten eller skaden.",
+      "fish": "Vis en tydelig sideprofil, finnerne og det omgivende levested eller akvariet.",
+      "bird": "Vis hele fuglen, næbbet og vingetegningerne, eller optag et længere, rent kald.",
+      "sound": "Optag mindst 10 sekunder mere med mindre vind, tale og baggrundsstøj."
+    }
+  },
   "share": {
     "message": "Jeg identificerede en {{category}} med NatureLens: {{name}}{{scientific}}{{confidence}}\n\nIdentificér planter, insekter, svampe, fisk og fugle ud fra et foto:\n{{url}}",
     "confidenceLine": "{{confidence}}% sikkerhed"
   },
   "onboarding": {
+    "media": { "play": "Afspil video", "pause": "Sæt video på pause", "enableSound": "Slå lyd til", "disableSound": "Slå lyd fra" },
     "skip": "Spring over",
     "next": "Næste",
     "start": "Kom i gang",
+    "progress": "{{current}} af {{total}}",
+    "preparing": "Forbereder dit NatureLens…",
+    "promiseKicker": "Se hvordan det virker",
+    "personalizeKicker": "Gør det personligt",
+    "readyKicker": "Klar til at udforske",
+    "promise": {
+      "body": "Ét billede bliver til identitet, sikkerhed og et klart næste skridt.",
+      "demoNext": "Næste skridt: fotografér bladets underside"
+    },
+    "goal": {
+      "title": "Hvad skal NatureLens hjælpe dig med?",
+      "body": "Dit svar ændrer, hvad der vises først efter hver identifikation.",
+      "options": {
+        "identify": {
+          "title": "Find ud af hvad det er"
+        },
+        "safety": {
+          "title": "Tjek sikkerhed og risici"
+        },
+        "care": {
+          "title": "Pleje og følge"
+        },
+        "field": {
+          "title": "Mark og produktion"
+        },
+        "learn": {
+          "title": "Lære om naturen"
+        }
+      }
+    },
+    "context": {
+      "title": "Hvor udforsker du mest?",
+      "body": "Vi bruger det kun til at ordne kategorier og vejledning. Du kan ændre det senere.",
+      "options": {
+        "home": {
+          "title": "Hjem eller have"
+        },
+        "field": {
+          "title": "Mark eller dyrkning"
+        },
+        "nature": {
+          "title": "Sti eller natur"
+        },
+        "water": {
+          "title": "Vand eller akvarium"
+        },
+        "study": {
+          "title": "Studie eller teknisk arbejde"
+        }
+      }
+    },
+    "depth": {
+      "title": "Hvor mange detaljer vil du se først?",
+      "body": "Alt er stadig tilgængeligt. Valget bestemmer kun det første lag.",
+      "options": {
+        "essential": {
+          "title": "Væsentligt"
+        },
+        "visual": {
+          "title": "Visuelt"
+        },
+        "technical": {
+          "title": "Teknisk"
+        }
+      }
+    },
+    "ready": {
+      "title": "Dit NatureLens er klar",
+      "body": "Det første resultat følger dine valg uden at skjule sikkerhedsadvarsler.",
+      "promise": "Manglende beviser forbliver manglende. NatureLens beder om et bedre billede eller en bedre optagelse i stedet for at opfinde sikkerhed."
+    },
     "what": {
       "title": "Sigt. Tag billedet. Få svaret.",
       "body": "Fotografér noget levende, og NatureLens fortæller dig på få sekunder, hvad det er — med referencefotos så du selv kan bekræfte det."
@@ -2329,6 +2817,20 @@
     "free": {
       "title": "Din første identifikation er gratis",
       "body": "Prøv én identifikation i hver kategori gratis. Abonnér først, når du vil scanne ubegrænset."
+    },
+    "reviewKicker": "Et lille øjeblik",
+    "review": {
+      "title": "Hvis det virker nyttigt, så hjælp NatureLens med at få en stærk start.",
+      "body": "Før det første foto tjekker vi én ting: føles denne linse som en femstjernet oplevelse?",
+      "quote": "En linse, der er enkel at bruge, smuk i detaljerne og ærlig, når beviset mangler.",
+      "yes": "Ja, det føles femstjernet",
+      "later": "Jeg vil prøve først",
+      "starsLabel": "Femstjernet vurdering",
+      "proofs": {
+        "simple": "Enkelt",
+        "safe": "Sikkert",
+        "useful": "Nyttigt"
+      }
     }
   },
   "recap": {
@@ -2400,7 +2902,8 @@
     "recording": "Optager… {{seconds}}s tilbage",
     "analysing": "Lytter…",
     "startLabel": "Start optagelse",
-    "stopLabel": "Stop og identificér",
+    "stopLabel": "Stop optagelsen",
+    "uploadDisclosure": "Lyden sendes først til NatureLens-serveren, når du har gennemført Den levende puls. Råoptagelsen gemmes ikke i din samling.",
     "tipsTitle": "For et bedre resultat",
     "tip1": "Kom tættere på hvis du kan — afstanden betyder mest.",
     "tip2": "Ret telefonen mod lyden, og stå stille.",
@@ -2411,8 +2914,13 @@
     "groupMammal": "Pattedyr",
     "permissionTitle": "Mikrofon blokeret",
     "permissionBody": "Tillad mikrofonadgang for dette websted i browserindstillingerne, og prøv igen.",
+    "permissionAndroidBody": "Tillad NatureLens at bruge mikrofonen i Android-indstillinger. Resten af funktionerne er stadig tilgængelige.",
+    "permissionWebBody": "Tillad mikrofonadgang for dette websted i browserindstillingerne, og prøv igen.",
     "unsupportedTitle": "Optagelse ikke mulig",
     "unsupportedBody": "Denne browser kan ikke optage lyd. Prøv Chrome på Android, eller føj appen til hjemmeskærmen på iPhone.",
+    "unsupportedAndroidBody": "Den indbyggede optager startede ikke. Opdater eller geninstaller NatureLens, og prøv igen. Resten af funktionerne er stadig tilgængelige.",
+    "unsupportedWebBody": "Denne browser kunne ikke optage lyd. Brug en opdateret version af en kompatibel browser, og tillad mikrofonadgang.",
+    "unsupportedIosBody": "Lydidentifikation er tilgængelig på Android og på webstedet, men ikke i denne iOS-app. Alle andre identifikationsfunktioner er stadig tilgængelige.",
     "tooShortTitle": "Optagelsen er for kort",
     "tooShortBody": "Optag i mindst to sekunder, mens dyret kalder.",
     "failedTitle": "Kunne ikke identificere",
@@ -2420,7 +2928,11 @@
     "decodeFailedBody": "Optagelsen kunne ikke læses. Prøv igen.",
     "notFoundBody": "Intet genkendeligt i optagelsen. Kom tættere på, eller optag mens den kalder.",
     "noContentBody": "Der er endnu ingen beskrivelse af denne art.",
-    "notWildlifeBody": "Det lyder som et køretøj, en maskine eller en stemme, ikke et dyr. Prøv at optage igen et mere stille sted."
+    "notWildlifeBody": "Det lyder som et køretøj, en maskine eller en stemme, ikke et dyr. Prøv at optage igen et mere stille sted.",
+    "audioEvidenceTitle": "Din optagelse",
+    "audioEvidenceBody": "Amplitudetoppe fra lyden, der blev brugt til denne identifikation.",
+    "audioEvidenceDuration": "{{seconds}} sek.",
+    "audioEvidenceAlt": "Amplitudetoppe fra din optagelse, som varer {{seconds}} sekunder."
   },
   "login": {
     "signInRow": "Log ind",
@@ -2454,7 +2966,17 @@
     "tellFriends": "Fortæl dine venner",
     "linkCopied": "Link kopieret",
     "validUntil": "Gyldig til {{date}}",
-    "sectionAbout": "Om appen"
+    "sectionAbout": "Om appen",
+    "replayOnboarding": "Se introduktionen igen",
+    "replayOnboardingHint": "Gennemgå dit mål, din kontekst og dit læseniveau",
+    "sensoryTitle": "Berøring og bevægelse",
+    "haptics": "Vibrationsfeedback",
+    "hapticsSubtitle": "Mærk valg, optagelser, bekræftelser og advarsler",
+    "motion": "Bevægelse",
+    "motionSubtitle": "Følg enhedens indstilling, eller vælg en anden",
+    "motionSystem": "Enhedens indstilling",
+    "motionReduced": "Reduceret",
+    "motionFull": "Fuld"
   },
   "books": {
     "shelfTitle": "Bøger",
@@ -2470,7 +2992,674 @@
     "visitSite": "Besøg webstedet",
     "fullDocLabel": "Fuldt juridisk dokument",
     "whatBody": "NatureLens identificerer planter, insekter, svampe, afgrøder, fisk, fugle og endda lyde ud fra et foto eller en optagelse og forvandler dine fund til en personlig natursamling.",
-    "creditsBody": "Identifikation af Kindwise (planter, insekter, svampe, afgrøder), Fishial (fisk), Nyckel (fugle) og vores egen lydmodel. Referencefotos fra Wikipedia / Wikimedia Commons, krediteret hvor de vises. Specialistchat besvares af AI (Anthropic).",
+    "creditsBody": "Identifikation af Kindwise (planter, insekter, svampe, afgrøder), Fishial (fisk), Nyckel (fugle) og vores egen lydmodel. Referencefotos fra Wikipedia / Wikimedia Commons, krediteret hvor de vises. Specialistchat besvares af AI (Anthropic). Når den kalibrerede, globale BioCLIP-tjeneste er aktiv, kan NatureLens først bruge denne private, selvadministrerede tjeneste til fugle; mens den er deaktiveret, eller hvis den fejler eller ikke kan dokumentere en præcis art, bruges Nyckel som reserve.",
     "creditsGbif": "Udbredelseskort og sæsondiagrammer fra GBIF.org, hentet ud fra artens videnskabelige navn – der sendes ingen oplysninger om dig."
+  },
+  "agronomyProfile": {
+    "eyebrow": "Markprofil",
+    "title": "Opret markprofilen",
+    "subtitle": "Bekræft forholdene i marken før enhver teknisk fortolkning.",
+    "stepCounter": "Trin {{current}} af {{total}}",
+    "steps": {
+      "purpose": {
+        "title": "Formål og system",
+        "body": "Angiv hvad afgrøden skal bruges til, og hvordan marken drives."
+      },
+      "location": {
+        "title": "Manuel placering",
+        "body": "Indtast land, administrativ underinddeling og lokalitet uden at dele enhedens placering."
+      },
+      "planting": {
+        "title": "Plantning og stadium",
+        "body": "Registrer plantedatoen og det stadium, der blev observeret i marken."
+      },
+      "soil": {
+        "title": "Jord og analyse",
+        "body": "Beskriv jorden, og angiv om der findes en laboratorierapport."
+      },
+      "summary": {
+        "title": "Gennemgå profilen",
+        "body": "Kontrollér hvert felt, før denne kontekst gemmes."
+      }
+    },
+    "purposeLabel": "Produktionsformål",
+    "systemLabel": "Produktionssystem",
+    "purposes": {
+      "grain": "Korn",
+      "fresh": "Friskmarked",
+      "processing": "Forarbejdning",
+      "forage": "Foder",
+      "seed": "Frøproduktion",
+      "other": "Andet"
+    },
+    "systems": {
+      "rainfed": "Regnafgrøde",
+      "irrigated": "Vandet",
+      "protected": "Beskyttet dyrkning",
+      "hydroponic": "Hydroponisk",
+      "other": "Andet"
+    },
+    "manualLocationTitle": "Placering indtastet af dig",
+    "manualLocationBody": "Assistenten anmoder ikke om GPS. Vælg landet, indtast om relevant koden for delstat, provins eller region, og tilføj lokaliteten.",
+    "countryCodeLabel": "Land",
+    "countryCodePlaceholder": "Vælg et land",
+    "countryCodeHint": "Vælg det land, hvor marken ligger.",
+    "countryPickerTitle": "Vælg et land",
+    "countrySearchPlaceholder": "Søg efter landenavn eller landekode",
+    "countryNotFound": "Intet land fundet.",
+    "closeCountryPicker": "Luk landevælger",
+    "localityLabel": "Lokalitet",
+    "localityPlaceholder": "Eksempel: Aalborg",
+    "admin1CodeLabel": "Kode for delstat, provins eller region",
+    "admin1CodePlaceholder": "Eksempel: DK-84",
+    "admin1CodeHint": "Brug om relevant koden for den første administrative underinddeling i det valgte land.",
+    "municipalityLabel": "Lokalitet",
+    "municipalityPlaceholder": "Eksempel: Aalborg",
+    "stateLabel": "Administrativ underinddeling",
+    "stateHint": "Indtast om relevant koden for delstat, provins eller region.",
+    "plantingDateLabel": "Plantedato",
+    "plantingDatePlaceholder": "ÅÅÅÅ-MM-DD",
+    "plantingDateHint": "Brug formatet ÅÅÅÅ-MM-DD.",
+    "stageLabel": "Observeret afgrødestadium",
+    "stagePlaceholder": "Eksempel: V6, blomstring, frugtfyldning",
+    "stageConfirmedLabel": "Jeg kontrollerede dette stadium i marken",
+    "soilDescriptionLabel": "Jordbeskrivelse",
+    "soilDescriptionPlaceholder": "Eksempel: lerjord, let hældning, god dræning",
+    "hasReportLabel": "Har du en jordbundsanalyserapport?",
+    "reportNoticeTitle": "Hav rapporten ved hånden",
+    "reportNoticeBody": "Profilen registrerer kun, om der findes en rapport. Den læser ikke resultater og beregner ingen anbefaling.",
+    "summary": {
+      "purpose": "Formål",
+      "system": "System",
+      "location": "Land / underinddeling / lokalitet",
+      "planting": "Plantedato",
+      "stage": "Bekræftet stadium",
+      "soil": "Jord",
+      "report": "Jordbundsanalyserapport"
+    },
+    "noCalculationTitle": "Kun kontekst",
+    "noCalculationBody": "Når profilen gemmes, beregnes ingen doser, og der gives ingen anbefalinger om gødning, vanding, pesticider eller anden agronomi.",
+    "save": "Gem profil",
+    "errors": {
+      "selectPurposeAndSystem": "Vælg et produktionsformål og et produktionssystem.",
+      "completeLocation": "Vælg et land, indtast en lokalitet, og kontrollér underinddelingskoden, hvis den er udfyldt.",
+      "completePlanting": "Indtast en gyldig dato og det observerede afgrødestadium.",
+      "confirmStage": "Bekræft, at du kontrollerede stadiet i marken.",
+      "completeSoil": "Beskriv jorden, før du fortsætter.",
+      "chooseReport": "Angiv, om du har en jordbundsanalyserapport.",
+      "formIncomplete": "Nødvendige oplysninger mangler eller er ugyldige. Gennemgå de foregående trin.",
+      "saveUnavailable": "Der er ingen gemmehandling tilgængelig for formularen."
+    }
+  },
+  "agronomyWorkspace": {
+    "title": "Arbejdsområde for mark",
+    "openTitle": "Avanceret markstyring",
+    "openBody": "Opret markprofilen, gem observationer og åbn kun tekniske moduler, der er verificeret for afgrøden.",
+    "openAction": "Åbn markområdet",
+    "tabs": {
+      "essential": "Vigtigt",
+      "learn": "Lær",
+      "agronomist": "Agronom"
+    },
+    "unknownCrop": "Afgrøde uden bekræftet identitet",
+    "catalogBadge": "Kurateret katalogpost · ikke en fotodiagnose",
+    "loadingProfile": "Indlæser markprofil…",
+    "contextTitle": "Markkontekst",
+    "contextBody": "Dette er den kontekst, du har bekræftet for marken.",
+    "globalEvidence": {
+      "topicCount": "Afsnit: {{count}}",
+      "kicker": "GLOBALT LAG",
+      "title": "Hvad globale kilder dokumenterer",
+      "body": "Indhold fundet for {{scientific}}, knyttet til den præcise art og den oprindelige kilde.",
+      "exactSpecies": "Præcis art",
+      "traceableSource": "Sporbar kilde",
+      "worldScope": "Globalt omfang",
+      "warningTitle": "Ikke en lokal anbefaling",
+      "warningBody": "Denne dokumentation beskriver arten. Den godkender ikke doser, gødningsplaner eller regionale tabeller.",
+      "openSource": "Åbn den globale kilde på Wikipedia",
+      "topicsTitle": "Global artsoversigt"
+    },
+    "missingProfileTitle": "Opret markkontekst",
+    "missingProfileBody": "Bekræft placering, plantning, stadium og jord, før feltobservationer gemmes.",
+    "profileUnavailableBody": "Elementet har ingen sikker lokal nøgle til en markprofil.",
+    "createProfile": "Opret profil",
+    "editProfile": "Rediger profil",
+    "savingProfile": "Gemmer profil…",
+    "profileSaved": "Markprofil gemt.",
+    "observationTitle": "Feltobservation",
+    "observationBody": "Registrer det, du faktisk observerede. Loggen opretter ingen diagnose eller anbefaling.",
+    "addObservation": "Registrer observation",
+    "eventTypeLabel": "Posttype",
+    "eventTypes": {
+      "observation": "Observation",
+      "stage": "Afgrødestadium",
+      "rain": "Regn",
+      "irrigation": "Vanding",
+      "fertilization": "Gødskning",
+      "pestSample": "Skadedyrsprøve",
+      "diseaseCheck": "Sygdomskontrol",
+      "harvest": "Høst"
+    },
+    "noteLabel": "Note",
+    "notePlaceholder": "Beskriv hvad du så eller gjorde",
+    "valueLabel": "Værdi",
+    "valuePlaceholder": "Eksempel: 12,5",
+    "unitLabel": "Enhed",
+    "unitPlaceholder": "Eksempel: mm, kg, planter",
+    "optionalFieldsHint": "Note og værdi er valgfrie, men angiv mindst én. Hver værdi kræver en enhed.",
+    "saveObservation": "Gem observation",
+    "savingObservation": "Gemmer observation…",
+    "observationSaved": "Observation gemt.",
+    "timelineTitle": "Markens tidslinje",
+    "eventStage": "Stadium på tidspunktet: {{stage}}",
+    "learning": {
+      "title": "Lær at observere marken",
+      "body": "Brug en enkel cyklus til at gøre et markbesøg til pålidelig kontekst.",
+      "accessibilityLabel": "Observer, registrer, sammenlign og søg kvalificeret støtte.",
+      "steps": {
+        "observe": {
+          "title": "Observer",
+          "body": "Se på mere end ét punkt, og adskil det sete fra det antagede."
+        },
+        "record": {
+          "title": "Registrer",
+          "body": "Notér tilstand, sted og ændring, mens observationen er frisk."
+        },
+        "compare": {
+          "title": "Sammenlign",
+          "body": "Sammenlign besøg under lignende forhold, før du konkluderer."
+        },
+        "support": {
+          "title": "Søg støtte",
+          "body": "Tag historik og laboratorierapporter med til en lokal agronom, når en beslutning er nødvendig."
+        }
+      },
+      "genericTitle": "Generel læringsgrafik",
+      "genericBody": "Illustrationen viser, hvor du skal kigge. Den er ikke et foto eller en beskrivelse af afgrøden.",
+      "visuals": {
+        "phenology": {
+          "title": "Bekræftet afgrødestadium",
+          "body": "Brug kun det stadium, der er observeret og bekræftet i marken; udled det ikke fra datoen."
+        },
+        "soil": {
+          "title": "Jordprofil og prøvetagning",
+          "body": "Beskrivelsen vejleder observationen, men beslutninger kræver en repræsentativ prøve og en gyldig rapport."
+        },
+        "water": {
+          "title": "Regn → jord → rod → beslutning",
+          "body": "Registrer regn eller vanding, kontrollér jord og rødder, og vurder først derefter næste skridt."
+        },
+        "nutrition": {
+          "title": "N, P og K uden gættet dosis",
+          "body": "Næringssymboler hjælper med at læse data; en dosis kræver analyse, mål og regional kalibrering."
+        },
+        "mip": {
+          "title": "Tag prøve, tæl, sammenlign, beslut",
+          "body": "Bekræft mål og stadium, tag repræsentative prøver og sammenlign med en relevant tærskel før bekæmpelse."
+        }
+      }
+    },
+    "technicalStatusTitle": "Teknisk dækning",
+    "technicalVerifiedTitle": "Præcise tekniske moduler tilgængelige",
+    "technicalVerifiedBody": "Identiteten og det aktuelle katalog finder modulerne nedenfor. De er referencer, ikke en automatisk forskrift.",
+    "technicalCatalogBody": "Dette er en redaktionel katalogpost, ikke en fotodiagnose. Kun moduler, der udtrykkeligt er kurateret for afgrøden, vises.",
+    "noExactModulesTitle": "Intet præcist modul tilgængeligt",
+    "noExactModulesBody": "Afgrøden har en markguide, men ingen offentliggjort numerisk tabel eller præcis overvågningsmodul.",
+    "technicalUnavailableTitle": "Teknisk routing ikke tilgængelig",
+    "technicalUnavailableBody": "Identitet, katalogdækning eller routing er utilstrækkelig. Ingen teknisk tabel vises.",
+    "modules": {
+      "pest": "Integreret skadedyrsovervågning",
+      "fertilizer": "Jord- og gødningstabeller"
+    },
+    "ruleCatalogTitle": "Regelkatalogets status",
+    "ruleCatalogGuideBody": "Motoren fandt kun en guideregel. Kataloget indeholder ingen numerisk beregningsregel.",
+    "ruleCatalogCatalogBody": "Det redaktionelle katalog kan åbne kuraterede moduler, men gør ikke posten til en fotodiagnose eller beregningsregel.",
+    "ruleCatalogUnavailableBody": "Ingen præcis guideregel blev fundet. Appen udleder ikke en fra almindeligt navn, familie eller ældre felt.",
+    "sourcesTitle": "Officielle kilder",
+    "sourcesBody": "Kun kilder knyttet til aktuelt udgivne moduler vises.",
+    "officialSource": "Officiel kilde · {{institution}}",
+    "openSource": "Åbn officiel kilde: {{source}}",
+    "errors": {
+      "typeInvalid": "Vælg en gyldig posttype.",
+      "amountInvalid": "Indtast et gyldigt ikke-negativt tal inden for den understøttede grænse.",
+      "unitNeedsValue": "Indtast en værdi, før du tilføjer en enhed.",
+      "unitRequired": "Hver værdi skal have en enhed.",
+      "emptyEvent": "Tilføj en note eller værdi, før du gemmer.",
+      "saveFailed": "Kunne ikke gemme. Intet blev bekræftet; prøv igen."
+    },
+    "planningSourcesTitle": "Kilder til planlægning",
+    "planningSourcesBody": "Officiel læsning knyttet til afgrøden. Det betyder ikke, at et teknisk modul eller en anbefaling er udgivet."
+  },
+  "observationWorkspace": {
+    "title": "Avanceret observation",
+    "loading": "Indlæser observationer…",
+    "unavailableTitle": "Observationsområdet er ikke tilgængeligt",
+    "unavailableBody": "Denne kategori har ingen verificeret observationskonfiguration, så der vises ingen formular.",
+    "openTitle": "Område til avanceret observation",
+    "openBody": "Lav en tydelig registrering af det, du faktisk så, fra enkle noter til sammenlignelige feltoplysninger.",
+    "openAction": "Åbn observationsområdet",
+    "tabs": {
+      "essential": "Grundlæggende",
+      "learn": "Lær",
+      "field": "Felt"
+    },
+    "setupTitle": "Angiv observationskonteksten",
+    "setupBody": "Vælg det overordnede miljø, og skriv hvor og hvordan registreringen begyndte. Tilføj ikke konklusioner, du ikke har observeret.",
+    "setupAction": "Opret kontekst",
+    "editProfile": "Rediger kontekst",
+    "saveProfile": "Gem kontekst",
+    "contextLabel": "Observationskontekst",
+    "placeLabel": "Sted",
+    "placePlaceholder": "Eksempel: den nordlige have, vandløbets bred eller altanen",
+    "baselineLabel": "Udgangspunkt",
+    "baselinePlaceholder": "Beskriv den synlige tilstand ved den første observation",
+    "profileSaved": "Konteksten blev gemt.",
+    "localOnly": "Gemmes kun på denne enhed. Det er hverken en diagnose eller en sikkerhedskopi i skyen.",
+    "addEvent": "Tilføj feltnote",
+    "closeEvent": "Luk formularen",
+    "eventTypeLabel": "Observationstype",
+    "noteLabel": "Note",
+    "notePlaceholder": "Beskriv kun det, du så eller hørte",
+    "countLabel": "Observeret antal",
+    "measureLabel": "Observeret mål",
+    "unitLabel": "Enhed",
+    "optionalLabel": "Valgfrit",
+    "saveEvent": "Gem registrering",
+    "eventSaved": "Registreringen blev gemt.",
+    "emptyEvent": "Tilføj en note, et antal eller et mål, før du gemmer.",
+    "invalidCount": "Indtast et helt antal på nul eller derover.",
+    "invalidMeasure": "Indtast et gyldigt mål på nul eller derover.",
+    "unitRequired": "Vælg en enhed til målet.",
+    "saveFailed": "Registreringen kunne ikke gemmes. Prøv igen.",
+    "timelineTitle": "Observationstidslinje",
+    "timelineEmpty": "Der er endnu ingen registrerede observationer.",
+    "fieldTitle": "Feltvisning",
+    "fieldBody": "Sammenlign registreringer fra lignende forhold, og tag historikken med til en kvalificeret specialist, når der skal træffes en beslutning.",
+    "progressLabel": "{{done}} af {{total}} observationspunkter registreret",
+    "recordedLabel": "Registreret {{date}}",
+    "missingLabel": "Ikke registreret",
+    "evidenceNote": "Registreringerne beskriver det, du observerede. De bekræfter ikke identitet, diagnose, risiko eller en beslutning om håndtering.",
+    "learningTitle": "Lær, hvad du skal observere",
+    "learningBody": "Åbn hver illustration for at forstå, hvad en brugbar registrering indeholder.",
+    "generalDiagram": "Generelt observationsdiagram; det beviser ikke identiteten af den fotograferede organisme.",
+    "mushroomSafety": "Spis aldrig en svamp på baggrund af et foto, en app-identifikation eller denne observationsregistrering.",
+    "units": {
+      "millimetre": "millimeter (mm)",
+      "centimetre": "centimeter (cm)",
+      "metre": "meter (m)",
+      "second": "sekunder (s)",
+      "minute": "minutter (min)",
+      "millilitre": "milliliter (ml)",
+      "litre": "liter (l)",
+      "celsius": "grader Celsius (°C)",
+      "percent": "procent (%)",
+      "gram": "gram (g)",
+      "kilogram": "kilogram (kg)",
+      "ph": "pH",
+      "ppt": "dele pr. tusind (ppt)",
+      "ppm": "dele pr. million (ppm)",
+      "milligramPerLitre": "milligram pr. liter (mg/L)",
+      "microsiemensPerCentimetre": "mikrosiemens pr. centimeter (µS/cm)",
+      "hour": "timer (h)",
+      "hertz": "hertz (Hz)",
+      "kilohertz": "kilohertz (kHz)",
+      "decibel": "decibel (dB)",
+      "kilometre": "kilometer (km)"
+    },
+    "contexts": {
+      "plant": {
+        "indoor": "Indendørs",
+        "outdoor": "Udendørs",
+        "container": "Beholder",
+        "ground": "I jorden"
+      },
+      "tree": {
+        "urban": "Byområde",
+        "garden": "Have",
+        "woodland": "Skovområde",
+        "orchard": "Frugthave"
+      },
+      "insect": {
+        "onPlant": "På en plante",
+        "onSoil": "På jorden",
+        "onStructure": "På en konstruktion",
+        "nearWater": "Nær vand"
+      },
+      "mushroom": {
+        "soil": "På jorden",
+        "wood": "På træ",
+        "leafLitter": "I løvlaget",
+        "otherSubstrate": "Andet substrat"
+      },
+      "fish": {
+        "freshwater": "Ferskvand",
+        "marine": "Havmiljø",
+        "estuary": "Flodmunding",
+        "aquarium": "Akvarium"
+      },
+      "bird": {
+        "urban": "Byområde",
+        "forest": "Skov",
+        "wetland": "Vådområde",
+        "openArea": "Åbent område"
+      },
+      "sound": {
+        "dawn": "Daggry",
+        "day": "Dag",
+        "dusk": "Skumring",
+        "night": "Nat"
+      }
+    },
+    "eventTypes": {
+      "plant": {
+        "observation": "Plantens miljø",
+        "growth": "Plantens vækst",
+        "leafChange": "Ændring i plantens blade",
+        "flowering": "Observeret blomstring",
+        "fruiting": "Observeret frugtsætning",
+        "symptom": "Synligt symptom på planten",
+        "care": "Registrering af plantepleje"
+      },
+      "tree": {
+        "observation": "Træets miljø",
+        "growth": "Træets vækst",
+        "leafChange": "Ændring i træets blade",
+        "flowering": "Observeret blomstring på træet",
+        "fruiting": "Observeret frugtsætning på træet",
+        "symptom": "Synligt symptom på træet",
+        "habitat": "Træets levested"
+      },
+      "insect": {
+        "observation": "Observationskontekst",
+        "count": "Observeret antal",
+        "lifeStage": "Observeret livsstadie",
+        "behavior": "Observeret adfærd",
+        "interaction": "Observeret samspil",
+        "habitat": "Insektets levested"
+      },
+      "mushroom": {
+        "observation": "Svampeobservation",
+        "emergence": "Observeret fremkomst",
+        "morphology": "Synlig morfologi",
+        "substrate": "Substrat",
+        "colorChange": "Farveændring",
+        "sporePrint": "Registrering af sporeaftryk"
+      },
+      "fish": {
+        "observation": "Observationskontekst",
+        "count": "Observeret antal",
+        "behavior": "Observeret adfærd",
+        "habitat": "Levested",
+        "waterReading": "Observeret vandmåling",
+        "feeding": "Observeret fødeindtag"
+      },
+      "bird": {
+        "observation": "Fugleobservation",
+        "count": "Observeret antal",
+        "behavior": "Observeret adfærd",
+        "vocalization": "Observeret kald",
+        "nesting": "Observeret redebygning",
+        "flight": "Observeret flyvning"
+      },
+      "sound": {
+        "observation": "Lydobservation",
+        "recording": "Optagelse",
+        "comparison": "Sammenligning af optagelser",
+        "context": "Lydmiljø",
+        "frequency": "Observeret frekvens",
+        "amplitude": "Observeret amplitude"
+      }
+    },
+    "visuals": {
+      "plant": {
+        "environment": {
+          "title": "Plantens miljø",
+          "body": "Registrer, hvad der omgiver organismen, og enhver synlig ændring."
+        },
+        "light": {
+          "title": "Synligt lys",
+          "body": "Sammenlign synlige lysforhold mellem besøg uden at udlede et behov."
+        },
+        "soil": {
+          "title": "Jordobservation",
+          "body": "Beskriv den synlige jord- eller substratoverflade, og hvordan den ændrede sig."
+        },
+        "growth": {
+          "title": "Plantens vækst",
+          "body": "Placer sammenlignelige vækstobservationer på en tidslinje."
+        }
+      },
+      "tree": {
+        "environment": {
+          "title": "Træets miljø",
+          "body": "Registrer, hvad der omgiver organismen, og enhver synlig ændring."
+        },
+        "light": {
+          "title": "Synligt lys",
+          "body": "Sammenlign synlige lysforhold mellem besøg uden at udlede et behov."
+        },
+        "soil": {
+          "title": "Jordobservation",
+          "body": "Beskriv den synlige jord- eller substratoverflade, og hvordan den ændrede sig."
+        },
+        "growth": {
+          "title": "Træets vækst",
+          "body": "Placer sammenlignelige vækstobservationer på en tidslinje."
+        }
+      },
+      "insect": {
+        "anatomy": {
+          "title": "Synlige kendetegn på kroppen",
+          "body": "Adskil synlige kendetegn på kroppen, før du foreslår livsstadie eller identitet."
+        },
+        "stage": {
+          "title": "Observeret livsstadie",
+          "body": "Registrer kun det livsstadie, du kan observere; lad feltet stå tomt ved tvivl."
+        },
+        "count": {
+          "title": "Observeret antal",
+          "body": "Tæl på et tydeligt beskrevet sted, så et senere besøg kan sammenlignes."
+        },
+        "behaviour": {
+          "title": "Observeret adfærd",
+          "body": "Beskriv bevægelse og samspil som observeret uden at klassificere dyret som et skadedyr."
+        }
+      },
+      "mushroom": {
+        "substrate": {
+          "title": "Substrat",
+          "body": "Registrer materialet direkte under svampen og det omgivende levested."
+        },
+        "anatomy": {
+          "title": "Synlige dele af svampen",
+          "body": "Adskil hat, underside, stok og basis; et foto kan skjule afgørende kendetegn."
+        },
+        "underside": {
+          "title": "Synlig underside",
+          "body": "Beskriv synlige lameller, porer eller en anden underside uden at gætte."
+        },
+        "colourChange": {
+          "title": "Farveændring",
+          "body": "Registrer, om en farveændring faktisk blev set, og hvor den skete."
+        }
+      },
+      "fish": {
+        "habitat": {
+          "title": "Levested",
+          "body": "Beskriv det synlige vand og stedet, hvor fisken blev set."
+        },
+        "anatomy": {
+          "title": "Synlige kendetegn på fisken",
+          "body": "Sammenlign kropsprofil, finner, aftegninger og hale, når hvert kendetegn er synligt."
+        },
+        "group": {
+          "title": "Fisk set sammen",
+          "body": "Registrer det observerede antal og synsfeltet; udled ikke bestandens størrelse."
+        },
+        "behaviour": {
+          "title": "Observeret adfærd",
+          "body": "Observer på afstand, og registrer bevægelse uden kontakt."
+        }
+      },
+      "bird": {
+        "habitat": {
+          "title": "Levested",
+          "body": "Beskriv det synlige levested, og hvor fuglen befandt sig."
+        },
+        "anatomy": {
+          "title": "Synlige kendetegn på fuglen",
+          "body": "Sammenlign næb, krop, vinger og hale kun ud fra synlige kendetegn."
+        },
+        "group": {
+          "title": "Fugle set sammen",
+          "body": "Registrer den gruppe, du faktisk så, uden at anslå fugle uden for synsfeltet."
+        },
+        "vocalisation": {
+          "title": "Observeret kald",
+          "body": "Beskriv tonehøjde, rytme og gentagelse uden at antage, hvilken art der frembragte lyden."
+        }
+      },
+      "sound": {
+        "waveform": {
+          "title": "Synligt lydmønster",
+          "body": "Diagrammet viser optagelsesmønstret, ikke et bevis på en art."
+        },
+        "rhythm": {
+          "title": "Rytme og gentagelse",
+          "body": "Marker gentagne afsnit og pauser, som de blev hørt, uden at opfinde kaldets betydning."
+        },
+        "environment": {
+          "title": "Lydmiljø",
+          "body": "Registrer tidspunkt, sted og baggrundslyde, der kan påvirke sammenligningen."
+        },
+        "comparison": {
+          "title": "Sammenlign optagelser",
+          "body": "Sammenlign optagelser fra lignende forhold, før du noterer en forskel."
+        }
+      }
+    }
+  },
+  "community": {
+    "title": "Fællesskab",
+    "headline": "Gør fundet til et nyttigt tip.",
+    "body": "Inviter en ven, studiekammerat eller feltgruppe til også at identificere med NatureLens.",
+    "steps": {
+      "identify": "Identificer et levende væsen",
+      "save": "Gem det vigtige",
+      "share": "Send resultatet til en, der kan bruge det"
+    },
+    "inviteAction": "Inviter en ven",
+    "inviteMessage": "Jeg bruger NatureLens til at identificere natur og dele plantepleje: vanding, skadedyr, bedring og fund. Prøv her: {{url}}",
+    "screenTitle": "Fællesskab",
+    "entryTitle": "Fællesskabsliga",
+    "entrySubtitle": "Se din rang, missioner og ugens fremskridt.",
+    "localBadge": "Lokal liga",
+    "heroTitle": "Din NatureLens-rang",
+    "rankPosition": "nuværende placering",
+    "scoreLabel": "point",
+    "leagues": {
+      "seed": "Frøliga — Start med ét fund i dag.",
+      "sprout": "Spireliga — Du er ved at opbygge en ægte vane.",
+      "guardian": "Vogterliga — Din feltlog bliver stærkere.",
+      "master": "Mesterliga — En avanceret opdagers rytme."
+    },
+    "photoRail": "Dine nyeste fund bliver forsiden på din liga.",
+    "discoveriesLabel": "fund",
+    "weeklyLabel": "denne uge",
+    "categoriesLabel": "kategorier",
+    "streakLabel": "dage i træk",
+    "rankingTitle": "Ugens rangliste",
+    "rankingBody": "En lokal liga baseret på din bekræftede aktivitet i appen. Ingen falske globale brugere: den bliver en ægte offentlig rangliste, når fællesskabsserveren er tilsluttet.",
+    "leaderboard": {
+      "you": {
+        "name": "Dig",
+        "meta": "Din bekræftede aktivitet"
+      },
+      "next": {
+        "name": "Næste milepæl",
+        "meta": "Et opnåeligt mål for denne uge"
+      },
+      "elite": {
+        "name": "Elitemål",
+        "meta": "Mål for avancerede brugere"
+      }
+    },
+    "milestonesTitle": "Det, der løfter din placering",
+    "milestones": {
+      "first": "Identificer og gem virkelige fund.",
+      "week": "Gennemfør daglige missioner, og hold serien i live.",
+      "allCategories": "Udforsk flere kategorier: planter, insekter, fisk, fugle og svampe."
+    },
+    "inviteTitle": "Tag nogen med på ekspeditionen",
+    "inviteBody": "Del appen, gennemfør invitationsmissionen, og lad oplevelsen leve videre uden for telefonen.",
+    "scanAction": "Scan nu",
+    "reviewTitle": "Hjælper NatureLens dig?",
+    "reviewBody": "Hvis appen gjorde dit fund tydeligere, hjælper din anmeldelse flere opdagere med at finde den.",
+    "reviewAction": "Jeg kan lide den",
+    "reviewLater": "Ikke nu",
+    "reviewThanks": "Tak — det hjælper os med at forbedre NatureLens.",
+    "careExchangeTitle": "Del plantepleje",
+    "careExchangeBody": "Del det, der virkede: vanding, lys, skadedyr, bedring og før/efter af dine planter.",
+    "careShareAction": "Del erfaring",
+    "careTopics": {
+      "watering": "Vandingsrutine",
+      "pests": "Skadedyr og symptomer",
+      "recovery": "Før og efter",
+      "questions": "Spørg gruppen"
+    }
+  },
+  "ipm": {
+    "title": "Integreret skadedyrsbekæmpelse",
+    "chooseCrop": "Vælg den afgrøde, hvor insektet blev observeret. Protokollen åbnes kun for et præcist dokumenteret par.",
+    "exactPair": "Præcist par: {{insect}} på {{crop}}",
+    "prevention": "Forebyggelse",
+    "monitoring": "Overvågning",
+    "threshold": "Dokumenteret indgrebstærskel",
+    "cultural": "Dyrkningsmæssig bekæmpelse",
+    "mechanical": "Mekanisk bekæmpelse",
+    "biological": "Biologisk bekæmpelse",
+    "chemical": "Kemisk bekæmpelse: kun kontrol af godkendelse",
+    "chemicalReferral": "Her anbefales intet produkt eller dosis. Kontrollér den gældende etikette for netop denne afgrøde og skadevolder i dit land, og bekræft med en lokal agronom.",
+    "citationOnly": "faktuel kildehenvisning; kildetekst ikke gengivet",
+    "crops": {
+      "maize": "Majs",
+      "tomato": "Tomat",
+      "soybean": "Sojabønne",
+      "uplandCotton": "Upland-bomuld",
+      "commonBean": "Havebønne",
+      "arabicaCoffee": "Arabica-kaffe"
+    },
+    "actions": {
+      "avoidCalendarSprays": "Sprøjt ikke efter kalenderen; lad repræsentativ overvågning styre beslutningen.",
+      "checkRegisteredBiocontrol": "Kontrollér lokalt godkendt biologisk bekæmpelse for netop denne afgrøde og skadevolder.",
+      "confirmDamageAndStage": "Bekræft passende skade og registrér insektets udviklingsstadium.",
+      "inspectFruitDamage": "Undersøg frugter for indgangshuller og indvendige skader.",
+      "inspectLeafMines": "Undersøg unge blade for aktive miner og larver.",
+      "inspectTransplants": "Undersøg småplanter før de kommer ind i produktionsområdet.",
+      "inspectWhorl": "Åbn og undersøg majsens bladtragt for friske skrab og larver.",
+      "manageCropResidue": "Fjern eller håndtér angrebne planterester korrekt efter høst.",
+      "preserveNaturalEnemies": "Beskyt snyltehvepse, rovdyr og andre naturlige fjender.",
+      "protectNursery": "Hold planteskolen beskyttet og fri for angrebne planter.",
+      "recordCropStage": "Registrér afgrødens udviklingsstadium ved hver prøve.",
+      "removeEggMassesSmallPlots": "Fjern tilgængelige ægmasser og larver på små arealer.",
+      "removeInfestedTissue": "Fjern og bortskaf angrebne blade og frugter sikkert.",
+      "removeVolunteerHosts": "Bekæmp spildplanter, der kan bære skadedyret mellem afgrøder.",
+      "rotateOutsideHostFamily": "Skift om muligt med en afgrøde uden for værtsfamilien.",
+      "sampleCoolHours": "Tag prøver i kølige timer, hvor tæger er lettere at finde.",
+      "sampleRepresentativePoints": "Fordel prøvepunkter over marken og undersøg ikke kun kanten.",
+      "useBeatCloth": "Brug bankedug ensartet på repræsentative punkter.",
+      "useInsectScreens": "Brug insektnet, hvor produktionssystemet tillader det.",
+      "usePheromoneTraps": "Brug feromonfælder til at følge flyvningen; fangst alene måler ikke afgrødeskade.",
+      "avoidStaggeredPlanting": "Undgå forskudt såning, og koordinér såvinduet regionalt, hvor myndighederne anbefaler det.",
+      "avoidOlderMaizeNearby": "Så ikke ny majs ved siden af ældre majsmarker med symptomer på dværgvækst.",
+      "removeAlternateHosts": "Fjern alternative værtsplanter og bønneplanter med virussymptomer.",
+      "inspectFieldEdges": "Undersøg markens omkreds først, da indvandring og skade ofte koncentreres langs kanten.",
+      "inspectFlowerBuds": "Undersøg bomuldens blomsterknopper for føde- og æglægningshuller.",
+      "completeSanitaryHarvest": "Gennemfør en grundig høst, og fjern kaffebær, der er tilbage på planterne og jorden.",
+      "inspectLowerCanopy": "Undersøg sojaens midterste og nederste bladdække, hvor målerlarverne skjuler sig."
+    },
+    "thresholds": {
+      "initialSymptomsHighYieldThreshold": "Kun for marker med et udbyttepotentiale på mindst {{minimumYieldBagsPerHa}} sække/ha: På {{sampleAreaHa}} ha undersøges {{samplePoints}} tilfældige punkter. Den offentliggjorte reference er {{actionPercent}} % planter med tidlige angrebssymptomer."
+    }
   }
 }

@@ -15,7 +15,8 @@
         "summer": "Månadsvis, halv dos",
         "autumn": "Sluta",
         "winter": "Ingen",
-        "note": "Lite kväve, halva till en fjärdedel av dosen på förpackningen. För mycket kväve ger mjuk vävnad som ruttnar (Clemson, Iowa State)."
+        "note": "Lite kväve, halva till en fjärdedel av dosen på förpackningen. För mycket kväve ger mjuk vävnad som ruttnar (Clemson, Iowa State).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "Omplantering",
@@ -51,7 +52,8 @@
         "summer": "Månadsvis, utspätt",
         "autumn": "Trappa ner",
         "winter": "Ingen",
-        "note": "Krukväxter göds bara under växtsäsongen, ingenting under viloperioden (UConn)."
+        "note": "Krukväxter göds bara under växtsäsongen, ingenting under viloperioden (UConn).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "Sticklingar",
@@ -79,7 +81,8 @@
         "summer": "Månadsvis, halv dos",
         "autumn": "Sluta",
         "winter": "Ingen",
-        "note": "Ingenting alls på 6 månader efter delning eller omplantering; för mycket gödsel bränner bladen (Clemson, UConn)."
+        "note": "Ingenting alls på 6 månader efter delning eller omplantering; för mycket gödsel bränner bladen (Clemson, UConn).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "Dela & omplantera",
@@ -115,7 +118,8 @@
         "summer": "Efter skörd",
         "autumn": "Sluta",
         "winter": "Ingen",
-        "note": "Stenfrukt tar tre delade givor och ingen alls de sista sommarveckorna, så att veden mognar (Clemson)."
+        "note": "Stenfrukt tar tre delade givor och ingen alls de sista sommarveckorna, så att veden mognar (Clemson).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "Beskärning",
@@ -143,7 +147,8 @@
         "summer": "Var 6:e vecka",
         "autumn": "Sluta före frost",
         "winter": "Ingen",
-        "note": "Rosor går ner till halv dos i värsta hettan och slutar 6 veckor före den första väntade frosten (Clemson)."
+        "note": "Rosor går ner till halv dos i värsta hettan och slutar 6 veckor före den första väntade frosten (Clemson).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "Putsning",
@@ -179,7 +184,8 @@
         "summer": "Delade givor",
         "autumn": "Sluta",
         "winter": "Ingen",
-        "note": "Ett fullvuxet träd behöver lite eller inget. Sen gödsling med mycket kväve fördröjer vilan (Clemson)."
+        "note": "Ett fullvuxet träd behöver lite eller inget. Sen gödsling med mycket kväve fördröjer vilan (Clemson).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "Beskärning",
@@ -215,7 +221,8 @@
         "summer": "Veckovis, halv dos",
         "autumn": "Varannan vecka",
         "winter": "Varannan vecka",
-        "note": "Halva dosen på förpackningen, lite eller ingen urea, och hoppa över var 4:e giva för att skölja ut salter (AOS, RHS)."
+        "note": "Halva dosen på förpackningen, lite eller ingen urea, och hoppa över var 4:e giva för att skölja ut salter (AOS, RHS).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "Omplantering",
@@ -251,7 +258,8 @@
         "summer": "Bara om det stannar",
         "autumn": "Ingen",
         "winter": "Ingen",
-        "note": "Rosmarin på friland får ingenting alls, och väldigt näringsrik jord dämpar smaken (RHS, Clemson)."
+        "note": "Rosmarin på friland får ingenting alls, och väldigt näringsrik jord dämpar smaken (RHS, Clemson).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "Beskärning",

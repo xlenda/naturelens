@@ -296,23 +296,14 @@ test('every herb in the list has a matching entry in that language detail file',
   }
 });
 
-// --- "Duvidas frequentes" (SpeciesFaq) - paridade 120% (video do concorrente,
-// 20/08). O concorrente entrega FAQ fixo com resposta enlatada; aqui cada linha
-// abre a especialista com a pergunta ja escrita. Duas coisas podem quebrar isso
-// sem ninguem ver, e sao exatamente estas duas:
-//   1. uma tela de resultado deixar de renderizar o bloco (ou renderizar com
-//      uma categoria que nao existe no locale) - o FAQ some calado;
-//   2. alguem escrever, um dia, uma pergunta de cogumelo que convide a comer.
-// A segunda e a que machuca gente.
-test('every result screen renders SpeciesFaq with a category that exists in en.json', () => {
+// A especialista atual e agronoma/botanica. So planta, arvore e lavoura podem
+// abrir essa persona; fauna, fungo e som falham fechados ate existir uma
+// especialista propria com limites conservadores para veneno e manuseio.
+test('only botanical result screens render the botany specialist and SpeciesFaq', () => {
   const en = load(path.join(LOCALES_DIR, 'en.json'));
   const screens = {
     plant: 'PlantDetailScreen',
     tree: 'TreeDetailScreen',
-    insect: 'InsectDetailScreen',
-    mushroom: 'MushroomDetailScreen',
-    fish: 'FishDetailScreen',
-    bird: 'BirdDetailScreen',
     crop: 'CropDetailScreen',
   };
   for (const [category, screen] of Object.entries(screens)) {
@@ -323,6 +314,21 @@ test('every result screen renders SpeciesFaq with a category that exists in en.j
       `screens/${screen}.js nao renderiza <SpeciesFaq category="${category}">`
     );
     assert.ok(en.detail.faq[category], `en.json nao tem detail.faq.${category}`);
+  }
+
+  for (const screen of [
+    'FishDetailScreen',
+    'BirdDetailScreen',
+    'InsectDetailScreen',
+    'MushroomDetailScreen',
+    'SoundDetailScreen',
+  ]) {
+    const src = fs.readFileSync(path.join(__dirname, 'screens', `${screen}.js`), 'utf8');
+    assert.doesNotMatch(
+      src,
+      /<SpeciesFaq|askSpecialistCta|navigate\('Botanist'/,
+      `screens/${screen}.js must not route fauna, fungus or sound questions to a botanist`
+    );
   }
 });
 

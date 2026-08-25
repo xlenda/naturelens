@@ -5,7 +5,6 @@ import { useTranslation } from 'react-i18next';
 import { colors } from './theme';
 import SectionCard from './SectionCard';
 import { getCareProfile } from './careDifficulty';
-import { WATER_INTERVAL_DAYS } from './watering';
 import shortFact, { isNonToxic } from './shortFact';
 
 // Paridade 120% (video do concorrente, 20/08): o card "Facil / Resistencia Alta
@@ -16,10 +15,8 @@ import shortFact, { isNonToxic } from './shortFact';
 // DE ONDE VEM CADA NUMERO:
 //   centro   -> GRUPO (components/careDifficulty.js, tabela com a frase do
 //               dossie que justifica cada linha).
-//   esquerda -> ESPECIE, dado real: o intervalo de WATER_INTERVAL_DAYS quando o
-//               campo `watering` da Kindwise e um dos tres valores limpos, e o
-//               rotulo curto do shortFact quando o vendor manda faixa composta
-//               ("Low ... to Medium").
+//   esquerda -> ESPECIE, nivel qualitativo de rega devolvido pela Kindwise e
+//               resumido pelo shortFact. Intensidade nao vira intervalo.
 //   direita  -> GRUPO, a escala de manutencao (recorrencia do manejo), que e
 //               separada da de dificuldade porque o dossie de lenhosas prova
 //               que as duas divergem.
@@ -70,12 +67,9 @@ export default function CareProfile({ groupKey, plant, accent }) {
   const profile = getCareProfile(groupKey);
   if (!profile || !plant) return null;
 
-  // Rega: numero real primeiro, rotulo curto como segunda opcao. Faixa composta
-  // do vendor nao tem intervalo - mostra o nivel, nunca uma media inventada.
+  // Rega: mostra somente o nivel qualitativo recebido do fornecedor.
   const rawWater = plant.waterLabel || plant.water;
-  const wateringValue = WATER_INTERVAL_DAYS[plant.water]
-    ? t('detail.everyNDays', { count: WATER_INTERVAL_DAYS[plant.water] })
-    : shortFact('water', rawWater, t);
+  const wateringValue = shortFact('water', rawWater, t);
 
   const chips = [
     // Afirmativo: o texto de toxicidade DIZ que nao e toxica.
@@ -104,6 +98,10 @@ export default function CareProfile({ groupKey, plant, accent }) {
       title={t('detail.careProfileTitle')}
       color={accent || colors.accent}
     >
+      {!!plant.name && (
+        <Text style={styles.entityScope}>{t('common.identified')}: {plant.name}</Text>
+      )}
+      <Text style={styles.scopeNote}>{t('detail.generalGuideNote')}</Text>
       <View style={styles.row}>
         {!!wateringValue && (
           <Metric
@@ -146,6 +144,8 @@ export default function CareProfile({ groupKey, plant, accent }) {
 }
 
 const styles = StyleSheet.create({
+  entityScope: { color: colors.text, fontSize: 12.5, lineHeight: 18, fontWeight: '800' },
+  scopeNote: { color: colors.textMuted, fontSize: 12, lineHeight: 17, marginTop: 3, marginBottom: 12 },
   row: { flexDirection: 'row', alignItems: 'center' },
   // O centro pesa mais que as laterais - e ele que o olho tem que pegar
   // primeiro, como no card do concorrente.

@@ -118,13 +118,10 @@ export const CATEGORIES = {
     // the build runs locally, so a env-gated tab would silently vanish for
     // everyone the first time someone deployed without the .env file present.
     //
-    // Web-only until a native recorder exists: audioRecorder.js is built on
-    // MediaRecorder/getUserMedia and there is no native audio dependency in
-    // package.json, so on a store build this tab would render but never be able
-    // to record - a dead tab wearing a feature's name. Honest absence instead.
-    // CATEGORIES itself keeps the entry either way, so sound finds restored
-    // from the cloud still open their detail screen on native.
-    enabled: Platform.OS === 'web',
+    // Android has a platform adapter that records real mono PCM and resamples it
+    // to Perch's 32 kHz contract. iOS stays hidden until that binary path is
+    // exercised on hardware instead of advertising an unverified scanner.
+    enabled: Platform.OS === 'web' || Platform.OS === 'android',
   },
 };
 

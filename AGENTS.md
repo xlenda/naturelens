@@ -9,7 +9,7 @@ https://naturelensapp.cloud e vai para a Play Store como `app.naturelens`.
 
     npm run deploy
 
-Isso roda, nesta ordem: 133 testes -> `expo export -p web` -> `patch-pwa.js` ->
+Isso roda, nesta ordem: 708 testes + 5 checagens de cuidado por especie -> `expo export -p web` -> `patch-pwa.js` ->
 `vercel deploy --prod` -> 5 portoes contra a producao ja publicada.
 
 NUNCA rode `vercel deploy` direto. O app vive num sub-caminho e o deploy cru
@@ -62,10 +62,56 @@ que nascia quebrado e passava verde a toa.
 - **`@textmarker_device_id` e `@textmarker_language` NUNCA mudam de nome** —
   quebra o vinculo de assinatura paga.
 - **Quente primeiro, ficha depois.** Aplicacao abre a tela, dado tecnico fecha.
+- **"Abas completas" significa dossie completo, nao apenas navegacao visivel.**
+  Cada identificacao precisa preencher, com dados especificos da especie, todas
+  as secoes verdadeiras que a categoria permite. Em insetos, por exemplo:
+  identificacao/evidencia, ciclo de vida e estagios, alimentacao, habitat,
+  reproducao, sazonalidade, distribuicao, papel ecologico, risco, relacao com
+  plantas/culturas, problemas e MIP quando realmente aplicavel. A mesma regra
+  vale para plantas, arvores, lavouras, cogumelos, aves, peixes e sons, cada uma
+  com seu proprio modelo editorial. Uma aba vazia nao conta como completa;
+  enriqueca pelo nome cientifico e fontes confiaveis quando possivel, e se o
+  dado continuar ausente, nao renderize o bloco. Nunca copie rega/adubacao para
+  animais, fungos ou sons.
 - Comentario explica POR QUE, nunca o que. Em portugues, sem acentos.
 - Diff mais curto que resolve a CAUSA RAIZ. Sem abstracao especulativa.
 
-## O que esta pendente (decisao do dono, nao bug)
+## Estado do 3S e da profundidade por categoria
+
+- **PULSO VIVO IMPLEMENTADO.** Foto revisada exige segurar por 820 ms antes do
+  consentimento do fornecedor; audio gravado fica apenas em memoria e exige o
+  mesmo gesto antes do envio ao servidor NatureLens. Timer, cancelamento ao
+  perder foco, movimento reduzido, teclado/leitor de tela e haptica opcional
+  possuem testes proprios. O resultado recebe NaturePrint deterministica e e
+  salvo automaticamente antes de abrir a ficha. Risco conhecido suprime
+  celebracao; peixe sem registro especifico mostra seguranca nao verificada.
+  A versao cinematografica dentro da camera continua futura: exige expo-camera,
+  permissao e novo build Android.
+
+- **MATRIZ DAS OITO CATEGORIAS IMPLEMENTADA, COBERTURA AINDA PARCIAL.** Todas as
+  oito categorias enriquecem dinamicamente pelo binomio confirmado e exibem a
+  ficha verdadeira inteira por padrao. GBIF prova a identidade; secoes do artigo
+  Wikipedia no idioma do leitor so entram quando pertencem a mesma especie e
+  carregam artigo, historico de autores e licenca CC BY-SA 4.0. Inseto tambem
+  inclui relacoes GloBI e estagios documentados; MIP continua apenas nos pares
+  praga-cultura auditados. Cogumelo e som nunca sintetizam substrato, esporos,
+  frequencia ou comportamento ausente. `category-depth-contract.test.js` impede
+  que chave estatica, placeholder ou chrome conte como profundidade. Plantas,
+  arvores e lavouras preservam o motor agronomico existente, mas tropical,
+  adubacao numerica e MIP ainda tem os limites descritos abaixo. Nunca chamar o
+  conjunto de cobertura mundial total.
+
+- **PERFIL AGRONOMICO V2 E MUNDIAL.** O perfil local aceita os 249 codigos
+  territoriais ISO, subdivisao opcional e localidade, com seletor pesquisavel
+  traduzido; perfis V1 de municipio/UF migram para BR/BR-UF sem perder diario.
+  A area de manejo mostra um dossie mundial apenas quando GBIF confirma a mesma
+  especie exata de Plantae e a secao local da Wikipedia traz fonte/licenca. Essa
+  camada e descritiva e nunca libera dose ou tabela regional. Regras brasileiras
+  continuam presas a BR-UF. O registro comercial permite GBIF, SoilGrids,
+  AgERA5 e NASA POWER apenas nos usos auditados; WorldClim, EcoCrop e GAEZ v4
+  ficam bloqueados, e fontes FAO ambiguas ficam em quarentena. Clima e solo
+  mundiais por coordenada ainda nao estao ativos: exigem ETL/cache e decisao de
+  privacidade, portanto nao adicione GPS nativo para simular essa cobertura.
 
 - **Cuidado por especie cobre 2% das tropicais.** O USDA PLANTS (dominio
   publico, uso comercial livre) traz 2.135 especies, mas e banco de conservacao

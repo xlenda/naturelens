@@ -27,6 +27,8 @@
     },
     "blueTang": {
       "overview": "Ein leuchtend königsblauer Riffbewohner mit schwarzer Palettenzeichnung und gelber Schwanzflosse. Wie alle Doktorfische trägt er nahe der Schwanzwurzel einen skalpellscharfen Stachel.",
+      "riskKey": "sharp_tail_spine",
+      "safety": "Ein leuchtend königsblauer Riffbewohner mit schwarzer Palettenzeichnung und gelber Schwanzflosse. Wie alle Doktorfische trägt er nahe der Schwanzwurzel einen skalpellscharfen Stachel.",
       "habitat": "Korallenriffe des Indopazifiks, meist in kleinen Gruppen nahe verzweigten Korallen, in denen er Deckung findet.",
       "curiosity": "Jungtiere sind leuchtend gelb und färben sich mit der Reife blau – und der sonst flach angelegte Schwanzstachel klappt bei Gefahr seitlich heraus."
     },
@@ -47,6 +49,8 @@
     },
     "redLionfish": {
       "overview": "Ein auffälliger Fisch mit roten, weißen und braunen Binden und langen, fächerartigen Flossen, die Giftstacheln verbergen. Schön, langsam – und besser nicht anfassen.",
+      "riskKey": "venomous_spines",
+      "safety": "Ein auffälliger Fisch mit roten, weißen und braunen Binden und langen, fächerartigen Flossen, die Giftstacheln verbergen. Schön, langsam – und besser nicht anfassen.",
       "habitat": "Ursprünglich Riffe des Indopazifiks; heute eine massiv invasive Art in der gesamten Karibik und im westlichen Atlantik.",
       "curiosity": "In seinem neuen Verbreitungsgebiet hat er kaum Fressfeinde und frisst fast alles, was ins Maul passt. Deshalb rufen manche Länder aktiv dazu auf, ihn zu harpunieren und zu essen."
     }

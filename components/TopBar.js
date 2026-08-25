@@ -2,7 +2,9 @@ import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import { useTranslation } from 'react-i18next';
 import BackChevron from './BackChevron';
-import { colors, type } from './theme';
+import { colors, control, radius, space, type } from './theme';
+
+const TWO_ACTION_SIDE_RESERVE = control.minTouch * 2 + space.xs + space.md;
 
 // Shared screen header. 19 screens hand-copied this exact bar (16/700 title +
 // 40x40 r12 icon buttons) and drift had already started: one screen grew an
@@ -22,6 +24,7 @@ export function TopBarIcon({ onPress, label, children, style }) {
       onPress={onPress}
       accessibilityRole="button"
       accessibilityLabel={label}
+      activeOpacity={0.8}
     >
       {children}
     </TouchableOpacity>
@@ -54,26 +57,26 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    paddingHorizontal: 16,
-    paddingBottom: 10,
-    minHeight: 50,
+    paddingHorizontal: space.md,
+    paddingBottom: space.xs,
+    minHeight: control.minTouch + space.xs,
   },
   titleLayer: {
     ...StyleSheet.absoluteFillObject,
     alignItems: 'center',
     justifyContent: 'center',
-    paddingHorizontal: 96,
-    paddingBottom: 10,
+    paddingHorizontal: TWO_ACTION_SIDE_RESERVE,
+    paddingBottom: space.xs,
   },
   topTitle: { ...type.topTitle },
-  actions: { flexDirection: 'row', gap: 8 },
+  actions: { flexDirection: 'row', gap: space.xs },
   iconBtn: {
-    width: 40,
-    height: 40,
-    borderRadius: 12,
+    width: control.minTouch,
+    height: control.minTouch,
+    borderRadius: radius.sm,
     backgroundColor: colors.surface,
     alignItems: 'center',
     justifyContent: 'center',
   },
-  iconGhost: { width: 40, height: 40 },
+  iconGhost: { width: control.minTouch, height: control.minTouch },
 });

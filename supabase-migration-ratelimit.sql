@@ -30,6 +30,9 @@
 -- linha, então dois pedidos simultâneos nunca leem o mesmo valor. Devolve o
 -- contador DEPOIS de incrementar, que é o número em que a decisão tem de se
 -- basear: incrementar e só então comparar elimina a janela entre ler e gravar.
+create index if not exists rate_limits_window_start_idx
+  on public.rate_limits (window_start);
+
 create or replace function public.increment_rate_limit(
   p_bucket_key text,
   p_window_start timestamptz
@@ -39,6 +42,11 @@ as $$
 declare
   v_count integer;
 begin
+  -- Poda oportunista: ao fim de cada operacao, nenhuma janela operacional
+  -- anterior ao limite maximo de 24 horas continua no banco.
+  delete from public.rate_limits
+  where window_start < now() - interval '24 hours';
+
   insert into public.rate_limits (bucket_key, window_start, count)
   values (p_bucket_key, p_window_start, 1)
   on conflict (bucket_key, window_start)
@@ -57,8 +65,8 @@ $$;
 -- em volume pequeno, mas cresce para sempre — e o plano gratuito do Supabase
 -- tem teto de disco.
 --
--- Janela mais longa em uso hoje é de 1 hora (restore/request-code), então
--- qualquer coisa com mais de 24 horas é seguramente lixo.
+-- A janela mais longa em uso hoje e de 24 horas (translate-device). Apagar
+-- somente o que ficou para tras desse limite preserva o bucket ativo inteiro.
 create or replace function public.prune_rate_limits() returns integer
 language plpgsql
 as $$
@@ -73,6 +81,29 @@ end;
 $$;
 
 -- Limpa o que já está acumulado agora.
+-- Versoes antigas gravavam scope + IP/email em claro. Nao ha como converter
+-- isso para HMAC sem o segredo do servidor, portanto a migracao apaga somente
+-- chaves legadas. Rodar novamente nao zera buckets opacos ainda ativos.
+delete from public.rate_limits
+where bucket_key !~ '^h1:[0-9a-f]{64}$';
+
+-- O banco vira a ultima barreira: mesmo um rollback acidental para codigo que
+-- tente mandar valor cru nao consegue persisti-lo.
+do $$
+begin
+  if not exists (
+    select 1
+    from pg_constraint
+    where conname = 'rate_limits_bucket_key_opaque'
+      and conrelid = 'public.rate_limits'::regclass
+  ) then
+    alter table public.rate_limits
+      add constraint rate_limits_bucket_key_opaque
+      check (bucket_key ~ '^h1:[0-9a-f]{64}$');
+  end if;
+end;
+$$;
+
 select public.prune_rate_limits();
 
 

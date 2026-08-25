@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "NatureLens",
-    "slug": "naturelens",
+    "slug": "natarllenz",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -19,17 +19,46 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#F3F5EE"
       },
-      "package": "app.naturelens"
+      "package": "app.naturelens",
+      "allowBackup": false,
+      "blockedPermissions": [
+        "android.permission.SYSTEM_ALERT_WINDOW",
+        "android.permission.SCHEDULE_EXACT_ALARM",
+        "android.permission.USE_EXACT_ALARM"
+      ]
     },
     "plugins": [
       [
         "expo-image-picker",
         {
-          "cameraPermission": "Allow this app to use the camera to scan plants.",
-          "photosPermission": "Allow this app to access your photos to identify plants."
+          "cameraPermission": "Allow NatureLens to use your camera to identify nature.",
+          "photosPermission": "Allow NatureLens to access photos you choose for nature identification.",
+          "microphonePermission": "Allow NatureLens to record nature sounds for identification."
         }
       ],
-      "expo-localization"
-    ]
+      "expo-localization",
+      [
+        "expo-notifications",
+        {
+          "color": "#4F9B63",
+          "defaultChannel": "naturelens-reminders-v1"
+        }
+      ],
+      [
+        "@siteed/audio-studio",
+        {
+          "enablePhoneStateHandling": false,
+          "enableNotifications": false,
+          "enableBackgroundAudio": false,
+          "enableDeviceDetection": false
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "9bfa1577-5b55-4843-8f94-4d33bd9591b0"
+      }
+    },
+    "owner": "natarullens"
   }
 }

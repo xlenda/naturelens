@@ -3,6 +3,13 @@ import { getDeviceId } from './deviceId';
 import { getApproximateLocation } from './deviceLocation';
 import i18n from '../i18n';
 import { API_BASE } from './apiBase';
+import { normaliseAppLanguage } from './appLanguage';
+
+// Somente os modelos Kindwise usam localizacao como contexto taxonomico. Os
+// fornecedores de peixe e ave nao recebem esse campo, exatamente como a
+// politica publicada promete; assim eles tambem nao esperam por uma permissao
+// que nao melhora a resposta deles.
+const LOCATION_CATEGORIES = new Set(['plant', 'tree', 'insect', 'mushroom', 'crop']);
 
 
 /**
@@ -31,7 +38,7 @@ export async function identify(category, photos) {
   // Awaited, but it can never stall a scan: getApproximateLocation resolves null
   // within 6 seconds whatever happens, and returns null immediately when the
   // feature is off or was refused.
-  const place = await getApproximateLocation();
+  const place = LOCATION_CATEGORIES.has(meta.key) ? await getApproximateLocation() : null;
 
   // Every category goes through one merged serverless handler (api/identify.js)
   // rather than one endpoint per category - see that file for why (Vercel Hobby
@@ -47,7 +54,7 @@ export async function identify(category, photos) {
       // rollback) still receives something usable.
       image: list[0],
       images: list,
-      language: i18n.language,
+      language: normaliseAppLanguage(i18n.language),
       deviceId,
       ...(place || {}),
     }),
@@ -124,7 +131,7 @@ export async function identifySound(audioBase64, sampleRate) {
       category: 'sound',
       audio: audioBase64,
       sampleRate,
-      language: i18n.language,
+      language: normaliseAppLanguage(i18n.language),
       deviceId,
     }),
   });

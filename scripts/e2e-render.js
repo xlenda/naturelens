@@ -24,7 +24,7 @@
 // Usage:  node scripts/e2e-render.js  [url]
 // Exit 1 on any failure so npm run deploy can abort.
 
-const { spawn } = require('child_process');
+const { spawn, spawnSync } = require('child_process');
 const os = require('os');
 const path = require('path');
 const fs = require('fs');
@@ -256,12 +256,17 @@ async function main() {
       `);
 
       if (clicked) {
-        // Three screens: click through the rest.
-        for (let i = 0; i < 3; i++) {
+        // O onboarding e adaptativo: perguntas curtas podem exigir uma escolha
+        // antes do CTA. O portao percorre estados, nao uma contagem congelada
+        // de slides, para provar o mesmo caminho que uma pessoa nova usa.
+        for (let i = 0; i < 12; i++) {
           await sleep(700);
           await evaluate(`
             (function () {
               var els = Array.prototype.slice.call(document.querySelectorAll('div[role="button"], button, [tabindex]'));
+              var radios = Array.prototype.slice.call(document.querySelectorAll('[role="radio"]'));
+              var checked = radios.some(function (e) { return e.getAttribute('aria-checked') === 'true'; });
+              if (radios.length && !checked) radios[0].click();
               var cta = els.filter(function (e) {
                 var t = (e.innerText || '').trim();
                 return /^(Next|Avan|Siguiente|Weiter|Start identifying|Come\\u00e7ar|Empezar)/i.test(t);
@@ -332,6 +337,28 @@ async function main() {
     try {
       fs.rmSync(userDataDir, { recursive: true, force: true });
     } catch (e) {}
+  }
+
+  // Regressao real de 24/08: segurar o Pulso Vivo selecionava o texto; o
+  // PressResponder web encerrava o gesto antes do consentimento. A prova foi
+  // executada contra a producao anterior (falhou com user-select:auto) e contra
+  // o build corrigido (passou com none e consentimento em 950 ms).
+  const pulseProof = spawnSync(
+    process.execPath,
+    [path.join(__dirname, 'proof-lens-pulse.js'), URL_UNDER_TEST],
+    { encoding: 'utf8', timeout: 60 * 1000 }
+  );
+  if (pulseProof.status === 0) {
+    const proofLine = String(pulseProof.stdout || '')
+      .split(/\r?\n/)
+      .find((line) => line.startsWith('PASS Pulso Vivo'));
+    ok('Pulso Vivo sustenta o gesto sem selecionar texto', proofLine || 'Chrome real');
+  } else {
+    const detail = String(pulseProof.stderr || pulseProof.stdout || pulseProof.error?.message || 'falhou')
+      .trim()
+      .split(/\r?\n/)
+      .slice(-1)[0];
+    fail('Pulso Vivo sustenta o gesto sem selecionar texto', detail);
   }
 
   console.log(`\ne2e-render against ${URL_UNDER_TEST}\n`);

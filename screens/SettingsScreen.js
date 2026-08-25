@@ -4,7 +4,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { useNavigation, useFocusEffect } from '@react-navigation/native';
 import { useTranslation } from 'react-i18next';
 import { Ionicons } from '@expo/vector-icons';
-import * as Haptics from 'expo-haptics';
+import Constants from 'expo-constants';
 import { colors } from '../components/theme';
 import TopBar from '../components/TopBar';
 import NatureScene from '../components/NatureScene';
@@ -17,12 +17,31 @@ import { getSubscriptionStatus, getLinkedEmail, getPeriodEnd } from '../componen
 import { deleteAccount, signOut } from '../components/restore';
 import { resetDeviceId } from '../components/deviceId';
 import { getCollection, clearCollection, clearProfilePhoto } from '../components/storage';
+import { clearLocalReminders, isNativeReminderAvailable } from '../components/localReminders';
 import { clearAchievements } from '../components/achievements';
 import { clearRewards } from '../components/rewardOwnership';
 import { clearShields } from '../components/streakShield';
 import { clearMissions } from '../components/missions';
+import { requestOnboardingReplay } from '../components/onboarding';
+import {
+  DEFAULT_DISCOVERY_PREFERENCES,
+  getDiscoveryPreferences,
+  updateDiscoveryPreferences,
+} from '../components/discoveryPreferences';
+import {
+  DEFAULT_SENSORY_PREFERENCES,
+  getSensoryPreferences,
+  MOTION_MODES,
+  setSensoryPreference,
+} from '../components/sensoryPreferences';
+import { sensoryFeedback } from '../components/sensoryFeedback';
 import { exportCollection, pickAndImport } from '../components/collectionBackup';
 import { canUseLocation, isLocationEnabled, setLocationEnabled } from '../components/deviceLocation';
+import {
+  CARE_REGION,
+  getCareRegionPreference,
+  setCareRegionPreference,
+} from '../components/careRegion';
 import {
   canUsePush,
   enablePush,
@@ -37,7 +56,7 @@ import {
   promptInstall,
 } from '../components/pwaInstall';
 
-const APP_VERSION = '1.0.0';
+const APP_VERSION = Constants.expoConfig?.version || '1.0.0';
 const APP_URL = 'https://naturelensapp.cloud';
 
 // Settings, extracted out of the Profile screen. The Profile used to be a
@@ -103,6 +122,13 @@ export default function SettingsScreen() {
   const [pushOn, setPushOn] = useState(false);
   const [pushBusy, setPushBusy] = useState(false);
   const [locationOn, setLocationOn] = useState(true);
+  const [careRegion, setCareRegion] = useState(CARE_REGION.AUTO);
+  const [discoveryPreferences, setDiscoveryPreferences] = useState(
+    DEFAULT_DISCOVERY_PREFERENCES
+  );
+  const [sensoryPreferences, setSensoryPreferences] = useState(
+    DEFAULT_SENSORY_PREFERENCES
+  );
   const [backupBusy, setBackupBusy] = useState(false);
   const [signingOut, setSigningOut] = useState(false);
   const [deletingAccount, setDeletingAccount] = useState(false);
@@ -116,6 +142,9 @@ export default function SettingsScreen() {
     setAccountEmail(getLinkedEmail());
     setPushOn(await isPushEnabled());
     setLocationOn(await isLocationEnabled());
+    setCareRegion(await getCareRegionPreference());
+    setDiscoveryPreferences(await getDiscoveryPreferences());
+    setSensoryPreferences(await getSensoryPreferences());
   }, []);
 
   useFocusEffect(
@@ -135,6 +164,9 @@ export default function SettingsScreen() {
   // endonym) - the competitor's "state without opening the screen" device.
   const currentLanguage =
     SUPPORTED_LANGUAGES.find((l) => l.code === i18n.language)?.label || i18n.language;
+  const careRegionLabel = t(`profile.careRegion${
+    careRegion === CARE_REGION.SOUTH ? 'South' : careRegion === CARE_REGION.NORTH ? 'North' : 'Auto'
+  }`);
 
   const handleTogglePush = async () => {
     if (pushBusy) return;
@@ -165,6 +197,97 @@ export default function SettingsScreen() {
     const saved = await setLocationEnabled(next);
     if (!saved) setLocationOn(!next);
   };
+
+  const applyCareRegion = async (value) => {
+    const previous = careRegion;
+    setCareRegion(value);
+    const saved = await setCareRegionPreference(value);
+    if (!saved) {
+      setCareRegion(previous);
+      showAlert(t('common.saveErrorTitle'), t('common.saveErrorBody'));
+    }
+  };
+
+  const chooseCareRegion = () => {
+    showAlert(t('profile.careRegionRow'), t('profile.careRegionHint'), [
+      { text: t('profile.careRegionAuto'), onPress: () => applyCareRegion(CARE_REGION.AUTO) },
+      { text: t('profile.careRegionSouth'), onPress: () => applyCareRegion(CARE_REGION.SOUTH) },
+      { text: t('profile.careRegionNorth'), onPress: () => applyCareRegion(CARE_REGION.NORTH) },
+      { text: t('common.cancel'), style: 'cancel' },
+    ]);
+  };
+
+  const applyDiscoveryPreference = async (key, value) => {
+    const previous = discoveryPreferences;
+    const optimistic = { ...previous, [key]: value };
+    setDiscoveryPreferences(optimistic);
+    try {
+      const saved = await updateDiscoveryPreferences({ [key]: value });
+      setDiscoveryPreferences(saved);
+    } catch {
+      setDiscoveryPreferences(previous);
+      showAlert(t('common.saveErrorTitle'), t('common.saveErrorBody'));
+    }
+  };
+
+  const chooseDiscoveryPreference = (group, values, titleKey, bodyKey) => {
+    showAlert(t(titleKey), t(bodyKey), [
+      ...values.map((value) => ({
+        text: t(`onboarding.${group}.options.${value}.title`),
+        onPress: () => applyDiscoveryPreference(group, value),
+      })),
+      { text: t('common.cancel'), style: 'cancel' },
+    ]);
+  };
+
+  const toggleHaptics = async () => {
+    const previous = sensoryPreferences;
+    const next = !previous.hapticsEnabled;
+    setSensoryPreferences({ ...previous, hapticsEnabled: next });
+    try {
+      setSensoryPreferences(await setSensoryPreference('hapticsEnabled', next));
+    } catch {
+      setSensoryPreferences(previous);
+      showAlert(t('common.saveErrorTitle'), t('common.saveErrorBody'));
+    }
+  };
+
+  const applyMotion = async (motionMode) => {
+    const previous = sensoryPreferences;
+    setSensoryPreferences({ ...previous, motionMode });
+    try {
+      setSensoryPreferences(await setSensoryPreference('motionMode', motionMode));
+    } catch {
+      setSensoryPreferences(previous);
+      showAlert(t('common.saveErrorTitle'), t('common.saveErrorBody'));
+    }
+  };
+
+  const chooseMotion = () => {
+    showAlert(t('settings.motion'), t('settings.motionSubtitle'), [
+      {
+        text: t('settings.motionSystem'),
+        onPress: () => applyMotion(MOTION_MODES.SYSTEM),
+      },
+      {
+        text: t('settings.motionReduced'),
+        onPress: () => applyMotion(MOTION_MODES.REDUCED),
+      },
+      {
+        text: t('settings.motionFull'),
+        onPress: () => applyMotion(MOTION_MODES.FULL),
+      },
+      { text: t('common.cancel'), style: 'cancel' },
+    ]);
+  };
+
+  const motionLabel = t(
+    sensoryPreferences.motionMode === MOTION_MODES.REDUCED
+      ? 'settings.motionReduced'
+      : sensoryPreferences.motionMode === MOTION_MODES.FULL
+      ? 'settings.motionFull'
+      : 'settings.motionSystem'
+  );
 
   const handleExport = async () => {
     if (backupBusy) return;
@@ -218,7 +341,7 @@ export default function SettingsScreen() {
   // desktop browsers without navigator.share. A user cancelling the sheet is
   // not an error.
   const handleTellFriends = async () => {
-    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+    sensoryFeedback.open();
     try {
       if (Platform.OS !== 'web') {
         await Share.share({ message: APP_URL });
@@ -250,8 +373,14 @@ export default function SettingsScreen() {
   const handleDeleteAccount = async () => {
     setDeletingAccount(true);
     try {
+      // Cancela primeiro: depois que a conta some do servidor nao ha como
+      // desfazer a exclusao se o Android ainda mantiver um alarme local.
+      if (isNativeReminderAvailable()) {
+        const remindersCleared = await clearLocalReminders();
+        if (!remindersCleared?.ok) throw new Error(t('common.saveErrorBody'));
+      }
       const { billingStillActive } = await deleteAccount();
-      await clearCollection();
+      if (!await clearCollection()) throw new Error(t('common.saveErrorBody'));
       await clearProfilePhoto();
       await clearAchievements();
       await clearRewards();
@@ -311,6 +440,73 @@ export default function SettingsScreen() {
           </View>
         )}
 
+        <Text style={styles.eyebrow}>{t('onboarding.personalizeKicker')}</Text>
+        <View style={styles.card}>
+          <Row
+            icon="compass-outline"
+            label={t('onboarding.goal.title')}
+            hint={t('onboarding.goal.body')}
+            value={t(`onboarding.goal.options.${discoveryPreferences.goal}.title`)}
+            onPress={() => chooseDiscoveryPreference(
+              'goal',
+              ['identify', 'safety', 'care', 'field', 'learn'],
+              'onboarding.goal.title',
+              'onboarding.goal.body'
+            )}
+          />
+          <Row
+            icon="map-outline"
+            label={t('onboarding.context.title')}
+            hint={t('onboarding.context.body')}
+            value={t(`onboarding.context.options.${discoveryPreferences.context}.title`)}
+            onPress={() => chooseDiscoveryPreference(
+              'context',
+              ['home', 'field', 'nature', 'water', 'study'],
+              'onboarding.context.title',
+              'onboarding.context.body'
+            )}
+          />
+          <Row
+            icon="layers-outline"
+            label={t('onboarding.depth.title')}
+            hint={t('onboarding.depth.body')}
+            value={t(`onboarding.depth.options.${discoveryPreferences.depth}.title`)}
+            onPress={() => chooseDiscoveryPreference(
+              'depth',
+              ['essential', 'visual', 'technical'],
+              'onboarding.depth.title',
+              'onboarding.depth.body'
+            )}
+          />
+          <Row
+            icon="play-circle-outline"
+            label={t('settings.replayOnboarding')}
+            hint={t('settings.replayOnboardingHint')}
+            onPress={requestOnboardingReplay}
+            last
+          />
+        </View>
+
+        <Text style={styles.eyebrow}>{t('settings.sensoryTitle')}</Text>
+        <View style={styles.card}>
+          <Row
+            icon={sensoryPreferences.hapticsEnabled ? 'phone-portrait' : 'phone-portrait-outline'}
+            label={t('settings.haptics')}
+            hint={t('settings.hapticsSubtitle')}
+            onPress={toggleHaptics}
+            toggle
+            checked={sensoryPreferences.hapticsEnabled}
+          />
+          <Row
+            icon="accessibility-outline"
+            label={t('settings.motion')}
+            hint={t('settings.motionSubtitle')}
+            value={motionLabel}
+            onPress={chooseMotion}
+            last
+          />
+        </View>
+
         <Text style={styles.eyebrow}>{t('settings.sectionGeneral')}</Text>
         <View style={styles.card}>
           <Row
@@ -318,6 +514,13 @@ export default function SettingsScreen() {
             label={t('profile.language')}
             value={currentLanguage}
             onPress={() => navigation.navigate('Language')}
+          />
+          <Row
+            icon="partly-sunny-outline"
+            label={t('profile.careRegionRow')}
+            hint={t('profile.careRegionHint')}
+            value={careRegionLabel}
+            onPress={chooseCareRegion}
           />
           {canUsePush() && (
             <Row

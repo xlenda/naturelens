@@ -126,7 +126,9 @@ function binomialKey(scientific) {
     .toLowerCase()
     .replace(/[^a-z\s]/g, ' ')
     .split(/\s+/)
-    .filter(Boolean);
+    .filter(Boolean)
+    // Mantem a mesma chave quando outra fonte escreve o hibrido com "x".
+    .filter((word, index) => index === 0 || word !== 'x');
   if (words.length < 2) return null;
   return words[0] + ' ' + words[1];
 }

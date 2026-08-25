@@ -6,6 +6,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 // partial progress ("you stopped on slide 2") invites re-showing it, and a
 // second showing of an intro is worse than never showing one.
 const KEY = '@naturelens_onboarding_seen';
+const replayListeners = new Set();
 
 export async function hasSeenOnboarding() {
   try {
@@ -27,4 +28,18 @@ export async function clearOnboarding() {
   try {
     await AsyncStorage.removeItem(KEY);
   } catch {}
+}
+
+export async function requestOnboardingReplay() {
+  await clearOnboarding();
+  replayListeners.forEach((listener) => {
+    try {
+      listener();
+    } catch {}
+  });
+}
+
+export function subscribeOnboardingReplay(listener) {
+  replayListeners.add(listener);
+  return () => replayListeners.delete(listener);
 }

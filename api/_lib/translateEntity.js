@@ -21,6 +21,16 @@ const LANGUAGE_NAMES = {
   zh: 'Simplified Chinese', 'zh-hant': 'Traditional Chinese',
 };
 
+function languageKey(language) {
+  const raw = String(language || '').trim().toLowerCase().replace('_', '-');
+  if (!raw) return '';
+  if (raw === 'zh-hant' || raw.startsWith('zh-hant-') || raw === 'zh-tw' || raw === 'zh-hk') {
+    return 'zh-hant';
+  }
+  const base = raw.split('-')[0];
+  return base === 'zh' ? 'zh' : base;
+}
+
 // Only these top-level keys are eligible - identity fields (name, scientific,
 // id, url, confidence, alternatives, similarImages) must never reach the
 // model. Nested arrays/objects under an eligible key are walked recursively.
@@ -35,6 +45,10 @@ const ELIGIBLE_KEYS = [
   'edibleParts',
   'propagationMethods',
   'disease',
+  // Prosa do fornecedor para fauna/fungos. O walker abaixo preserva nomes,
+  // ids e URLs dentro dos objetos; so descricao e caracteristicas viajam.
+  'role',
+  'lookAlikeDetails',
   // As palavras de risco do cogumelo e do inseto ficavam de fora, entao quem
   // lia em portugues via o cartao inteiro traduzido e o rotulo de perigo em
   // ingles: 'deadly', 'poisonous', 'highly venomous'. Uma palavra de perigo
@@ -74,7 +88,17 @@ const ROTULOS = [
 // SEPARADAMENTE no rotulo, entao SEVERITY_COLORS perdia a chave inglesa e uma
 // doenca grave saia laranja em vez de vermelha. O rotulo traduzido continua
 // vindo pela tabela ROTULOS, que nao passa por aqui.
-const NEVER_TRANSLATE = ['url', 'name', 'scientific', 'id', 'severity'];
+const NEVER_TRANSLATE = [
+  'url',
+  'name',
+  'scientific',
+  'id',
+  'entity_id',
+  'entityId',
+  'gbif_id',
+  'gbifId',
+  'severity',
+];
 
 // Collects every translatable string under the eligible keys as {text, set}
 // pairs, so the reply can be written back exactly where each string came from.
@@ -135,7 +159,7 @@ function collect(entity) {
 }
 
 async function translateEntity(entity, language) {
-  const langName = LANGUAGE_NAMES[language];
+  const langName = LANGUAGE_NAMES[languageKey(language)];
   if (!entity || !langName) return entity; // 'en' or unknown code: nothing to do
 
   const apiKey = process.env.ANTHROPIC_API_KEY?.trim();

@@ -1,30 +1,25 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, StyleSheet, ScrollView } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { useTranslation } from 'react-i18next';
 import CategoryIcon from './CategoryIcon';
-import { colors } from './theme';
+import CategoryPickerModal from './CategoryPickerModal';
+import { CATEGORIES } from './categories';
+import { colors, control } from './theme';
 
-// Multi-row bottom tab bar.
-//
-// Why this exists: the app grew past 10 tabs (scan categories + Collection,
-// Profile, Discover, Botanist). React Navigation's default bar lays every tab
-// out in a single row with flex: 1, so on a normal phone each tab got ~36px and
-// the labels physically overlapped each other - reported by Lenda as "uma
-// palavra em cima da outra".
-//
-// The split is by ROLE, not by count: the top row(s) are what you can scan, the
-// last row is where you go afterwards. That keeps the grouping meaningful as
-// categories are added, and means the bottom row stays roomy no matter how many
-// categories exist.
-//
-// Labels are given the space to survive: scan rows use a smaller font and
-// `numberOfLines={1}` with `adjustsFontSizeToFit`, so a long label ("Cogumelos",
-// "Pássaros") shrinks to fit its own cell instead of spilling into the next one.
+// Dock por papel: um seletor abre todas as categorias de identificacao, e a
+// fileira fixa leva ao que vem depois. A antiga faixa lateral escondia peixe,
+// passaro e som fora da tela sem nenhum sinal de que era possivel arrastar.
 
 // Route names that belong on the bottom row. Everything else is a scan
 // category and goes above. Kept as an explicit list because these are fixed app
 // sections, unlike categories which come from CATEGORIES.
 const BOTTOM_ROW = new Set(['Collection', 'Profile', 'Discover', 'Botanist']);
+
+const CATEGORY_BY_ROUTE = Object.values(CATEGORIES).reduce((byRoute, category) => {
+  byRoute[category.tabLabel] = category;
+  return byRoute;
+}, {});
 
 // Auditoria de diagramacao 20/08: nestas rotas o dock some INTEIRO - as duas
 // fileiras, nao so os chips de categoria. Sao ~120px de dock + o respiro do
@@ -37,18 +32,18 @@ const BOTTOM_ROW = new Set(['Collection', 'Profile', 'Discover', 'Botanist']);
 // pessoa achou que tinha fechado. O padrao nativo (hidesBottomBarWhenPushed)
 // faz exatamente isto.
 //
-// Conferido rota a rota antes de esconder: TODAS as 24 tem chevron de voltar no
-// topo - as 9 de detalhe + CareTopics/Settings/Language/About via TopBar com
-// onBack, as outras 10 com TouchableOpacity + BackChevron proprio. Ninguem fica
+// Conferido rota a rota antes de esconder: todas tem chevron de voltar no topo,
+// via TopBar com onBack ou TouchableOpacity + BackChevron proprio. Ninguem fica
 // preso. Nenhuma tela do app le useBottomTabBarHeight e todas ja carregam o
-// proprio paddingBottom no scroll (40-120px), entao sumir com o dock nao corta
-// conteudo nem deixa buraco.
+// proprio paddingBottom no scroll, entao sumir com o dock nao corta conteudo nem
+// deixa buraco.
 const HIDE_DOCK_ON = new Set([
-  'PlantDetail', 'TreeDetail', 'InsectDetail', 'MushroomDetail', 'CropDetail',
-  'FishDetail', 'BirdDetail', 'SoundDetail', 'CareTopics', 'HerbDetail',
+  'Specimen', 'PlantDetail', 'TreeDetail', 'InsectDetail', 'MushroomDetail', 'CropDetail',
+  'FishDetail', 'BirdDetail', 'SoundDetail', 'CareTopics', 'AgronomyWorkspace',
+  'ObservationWorkspace', 'HerbDetail',
   'SpeciesDetail', 'TopicDetail', 'FieldGuide', 'Book', 'Settings', 'Language', 'About',
   'Privacy', 'Terms', 'Help', 'Subscription', 'RestoreAccess', 'Store',
-  'Achievements', 'MonthlyRecap',
+  'Achievements', 'Community', 'MonthlyRecap',
 ]);
 
 // state.routes[state.index] e o TAB, nao a tela: a tela real vive na pilha
@@ -73,30 +68,23 @@ function focusedLeafName(route) {
   return current?.name;
 }
 
-// Above this many scan tabs, one row stops being readable and gets split in
-// two. 6 is the measured limit: on a 360px screen that is 60px per cell, which
-// fits the longest translated label at the compact font size. A 7th cell drops
-// every cell to ~51px, and `adjustsFontSizeToFit` is a no-op on react-native-web
-// (this ships as a PWA), so the label would truncate instead of shrinking.
-const MAX_PER_SCAN_ROW = 6;
-
-// Split into balanced rows rather than filling the first to MAX and leaving a
-// remainder - 4+3 looks intentional, 6+1 looks broken.
-function chunkBalanced(items, maxPerRow) {
-  if (items.length <= maxPerRow) return [items];
-  const rows = Math.ceil(items.length / maxPerRow);
-  const perRow = Math.ceil(items.length / rows);
-  const out = [];
-  for (let i = 0; i < items.length; i += perRow) out.push(items.slice(i, i + perRow));
-  return out;
+// O NavigationContainer entrega a arvore completa; a tabBar recebe apenas seu
+// recorte e, em alguns renders do Stack, a rota do tab vem sem `route.state`.
+// Esta funcao aceita os dois formatos para que App.js possa passar a folha real
+// e a barra ainda tenha um fallback seguro enquanto o container inicializa.
+export function focusedLeafNameFromState(state) {
+  if (!state?.routes?.length) return undefined;
+  const route = state.routes[state.index ?? state.routes.length - 1];
+  return focusedLeafName(route);
 }
 
-function TabButton({ route, descriptor, navigation, isFocused, compact, tight }) {
+function TabButton({ route, descriptor, navigation, isFocused, onBeforePress }) {
   const { options } = descriptor;
   const label = options.tabBarLabel ?? route.name;
   const color = isFocused ? colors.accent : colors.textMuted;
 
   const onPress = () => {
+    onBeforePress?.();
     const event = navigation.emit({
       type: 'tabPress',
       target: route.key,
@@ -111,16 +99,14 @@ function TabButton({ route, descriptor, navigation, isFocused, compact, tight })
     navigation.emit({ type: 'tabLongPress', target: route.key });
   };
 
-  // `tight` shaves a few pixels off every scan row when there are two of them,
-  // so a third row does not swallow a fifth of the screen.
-  const iconSize = compact ? (tight ? 19 : 21) : 24;
+  const iconSize = 24;
   const icon = options.tabBarIcon
     ? options.tabBarIcon({ color, size: iconSize, focused: isFocused })
     : <CategoryIcon name="ellipse" size={iconSize - 2} color={color} />;
 
   return (
     <TouchableOpacity
-      style={[styles.tab, tight && styles.tabTight]}
+      style={styles.tab}
       onPress={onPress}
       onLongPress={onLongPress}
       activeOpacity={0.7}
@@ -151,7 +137,7 @@ function TabButton({ route, descriptor, navigation, isFocused, compact, tight })
         {icon}
       </View>
       <Text
-        style={[compact ? styles.labelCompact : styles.label, { color }]}
+        style={[styles.label, { color }]}
         numberOfLines={1}
         adjustsFontSizeToFit
         minimumFontScale={0.75}
@@ -162,9 +148,10 @@ function TabButton({ route, descriptor, navigation, isFocused, compact, tight })
   );
 }
 
-export default function TwoRowTabBar({ state, descriptors, navigation }) {
+export default function TwoRowTabBar({ state, descriptors, navigation, focusedLeafRouteName }) {
   const insets = useSafeAreaInsets();
-  const scrollRef = React.useRef(null);
+  const { t } = useTranslation();
+  const [pickerVisible, setPickerVisible] = React.useState(false);
 
   const scan = [];
   const bottom = [];
@@ -172,19 +159,19 @@ export default function TwoRowTabBar({ state, descriptors, navigation }) {
     (BOTTOM_ROW.has(route.name) ? bottom : scan).push({ route, index });
   });
 
-  // Dock compacto (pedido do dono: "ta ocupando muito espaco embaixo").
-  // As categorias de scan deixaram de ser 2 fileiras empilhadas e viraram UMA
-  // fileira de chips horizontais rolaveis (icone + nome lado a lado), no mesmo
-  // padrao das abas do manual - ~50px devolvidos pra tela. O chip ativo entra
-  // em cena sozinho: scrollTo aproximado por indice, suficiente para 7 chips.
-  const activeScanPos = scan.findIndex(({ index }) => index === state.index);
-  React.useEffect(() => {
-    if (activeScanPos >= 0 && scrollRef.current) {
-      scrollRef.current.scrollTo({ x: Math.max(0, activeScanPos * 92 - 92), animated: true });
-    }
-  }, [activeScanPos]);
+  // App.js loads the saved category before mounting the navigator and shares
+  // the value/updater through custom screen options. A second storage listener
+  // in the dock would create two competing sources of truth for the same tap.
+  const dockOptions = descriptors[scan[0]?.route.key]?.options || {};
+  const initialCategoryRouteName = CATEGORIES[dockOptions.natureLensInitialCategory]?.tabLabel;
+  const initiallyActiveCategory = scan.find(({ index }) => state.index === index);
+  const initialPreferredRouteName = initiallyActiveCategory?.route.name
+    || (scan.some(({ route }) => route.name === initialCategoryRouteName)
+      ? initialCategoryRouteName
+      : scan[0]?.route.name);
+  const [preferredRouteName, setPreferredRouteName] = React.useState(initialPreferredRouteName);
 
-  // DEPOIS dos hooks de proposito: sair antes de useRef/useEffect quebraria a
+  // DEPOIS dos hooks de proposito: sair antes de useState quebraria a
   // ordem dos hooks entre um render com dock e outro sem (auditoria de
   // diagramacao 20/08).
   // Barra de ALTURA ZERO, nunca `null`. Medido com toque real (CDP, 390x844)
@@ -193,43 +180,93 @@ export default function TwoRowTabBar({ state, descriptors, navigation }) {
   // de 844 com overflow:hidden. O ScrollView nunca vira area rolavel e o dedo
   // nao rola nada. Como irmao flex de altura 0 ela nao ocupa espaco e a cena
   // volta a ter altura definida. Foi assim nas 3 rotas medidas.
-  if (HIDE_DOCK_ON.has(focusedLeafName(state.routes[state.index]))) {
+  const leafRouteName = focusedLeafRouteName || focusedLeafNameFromState(state);
+  if (HIDE_DOCK_ON.has(leafRouteName)) {
     return <View style={styles.hiddenDock} />;
   }
 
-  const renderChip = ({ route, index }) => {
+  const hasActiveScan = scan.some(({ index }) => state.index === index);
+  const resolvedPreferredRouteName = scan.some(({ route }) => route.name === preferredRouteName)
+    ? preferredRouteName
+    : initialPreferredRouteName;
+  const pickerOptions = scan.map(({ route, index }) => {
     const descriptor = descriptors[route.key];
     const { options } = descriptor;
-    const isFocused = state.index === index;
+    const active = state.index === index;
+    const selected = active || (!hasActiveScan && route.name === resolvedPreferredRouteName);
     const label = options.tabBarLabel ?? route.name;
-    const color = isFocused ? colors.accent : colors.textMuted;
+    const category = CATEGORY_BY_ROUTE[route.name];
+    const accent = category?.accent || colors.accent;
     const icon = options.tabBarIcon
-      ? options.tabBarIcon({ color, size: 16, focused: isFocused })
-      : <CategoryIcon name="ellipse" size={14} color={color} />;
-    const onPress = () => {
-      const event = navigation.emit({ type: 'tabPress', target: route.key, canPreventDefault: true });
-      if (!isFocused && !event.defaultPrevented) navigation.navigate(route.name);
+      ? options.tabBarIcon({ color: accent, size: 20, focused: selected })
+      : <CategoryIcon name="ellipse" size={18} color={accent} />;
+    return {
+      key: route.key,
+      route,
+      index,
+      label: String(label),
+      accessibilityLabel: options.tabBarAccessibilityLabel ?? String(label),
+      accent,
+      icon,
+      category,
+      active,
+      selected,
+      onLongPress: () => navigation.emit({ type: 'tabLongPress', target: route.key }),
     };
-    return (
-      <TouchableOpacity
-        key={route.key}
-        style={[styles.chip, isFocused && styles.chipActive]}
-        onPress={onPress}
-        onLongPress={() => navigation.emit({ type: 'tabLongPress', target: route.key })}
-        activeOpacity={0.7}
-        accessibilityRole="button"
-        accessibilityState={isFocused ? { selected: true } : {}}
-        accessibilityLabel={options.tabBarAccessibilityLabel ?? String(label)}
-      >
-        {icon}
-        <Text style={[styles.chipLabel, { color }]} numberOfLines={1}>
-          {label}
-        </Text>
-      </TouchableOpacity>
-    );
+  });
+
+  const activeCategory = pickerOptions.find((option) => option.active);
+  const rememberedCategory = pickerOptions.find(
+    (option) => option.route.name === resolvedPreferredRouteName
+  );
+  const currentCategory = activeCategory || rememberedCategory || pickerOptions[0];
+
+  const rememberCategory = (option) => {
+    if (!option?.route?.name) return;
+    setPreferredRouteName(option.route.name);
+    dockOptions.natureLensRememberCategory?.(option.category?.key);
   };
 
-  const render = (entries, compact) =>
+  const rememberActiveCategory = () => {
+    if (activeCategory) rememberCategory(activeCategory);
+  };
+
+  const selectCategory = (option) => {
+    setPickerVisible(false);
+    rememberCategory(option);
+    const event = navigation.emit({
+      type: 'tabPress',
+      target: option.route.key,
+      canPreventDefault: true,
+    });
+    if (!option.active && !event.defaultPrevented) navigation.navigate(option.route.name);
+  };
+
+  const openCurrentCapture = () => {
+    if (!currentCategory?.category) return;
+    rememberCategory(currentCategory);
+    const event = navigation.emit({
+      type: 'tabPress',
+      target: currentCategory.route.key,
+      canPreventDefault: true,
+    });
+    if (event.defaultPrevented) return;
+
+    const categoryKey = currentCategory.category.key;
+    if (categoryKey === 'sound') {
+      navigation.navigate(currentCategory.route.name, { screen: 'SoundHome' });
+      return;
+    }
+    navigation.navigate(currentCategory.route.name, {
+      screen: 'ScanHome',
+      params: {
+        category: categoryKey,
+        captureRequestId: `${Date.now()}`,
+      },
+    });
+  };
+
+  const render = (entries) =>
     entries.map(({ route, index }) => (
       <TabButton
         key={route.key}
@@ -237,8 +274,7 @@ export default function TwoRowTabBar({ state, descriptors, navigation }) {
         descriptor={descriptors[route.key]}
         navigation={navigation}
         isFocused={state.index === index}
-        compact={compact}
-        tight={false}
+        onBeforePress={rememberActiveCategory}
       />
     ));
 
@@ -246,34 +282,95 @@ export default function TwoRowTabBar({ state, descriptors, navigation }) {
   return (
     <View style={[styles.dock, { paddingBottom: Math.max(insets.bottom, 10) }]}>
       <View style={styles.bar}>
-        <ScrollView
-          ref={scrollRef}
-          horizontal
-          showsHorizontalScrollIndicator={false}
-          contentContainerStyle={styles.chipRow}
+        <TouchableOpacity
+          style={styles.categoryTrigger}
+          onPress={() => setPickerVisible(true)}
+          activeOpacity={0.8}
+          accessibilityRole="button"
+          accessibilityLabel={t('identify.switchCategoryLabel')}
+          accessibilityState={{ expanded: pickerVisible }}
         >
-          {scan.map(renderChip)}
-        </ScrollView>
+          <View
+            style={[
+              styles.categoryTriggerIcon,
+              { backgroundColor: (currentCategory?.accent || colors.accent) + '22' },
+            ]}
+          >
+            {currentCategory?.icon || (
+              <CategoryIcon name="scan-outline" size={20} color={colors.accent} />
+            )}
+          </View>
+          <Text style={styles.categoryTriggerLabel} numberOfLines={1}>
+            {currentCategory?.label || t('identify.switchCategoryTitle')}
+          </Text>
+          <CategoryIcon name="chevron-down" size={18} color={colors.textMuted} />
+        </TouchableOpacity>
         {bottom.length > 0 && (
-          <View style={[styles.row, styles.rowBottom]}>{render(bottom, false)}</View>
+          <View style={[styles.row, styles.rowBottom]}>
+            {render(bottom.slice(0, 2))}
+            <View style={styles.captureSlot}>
+              <TouchableOpacity
+                style={styles.captureButton}
+                activeOpacity={0.82}
+                onPress={openCurrentCapture}
+                accessibilityRole="button"
+                accessibilityLabel={t('identify.centralCapture')}
+                accessibilityHint={currentCategory?.category
+                  ? t(`categories.${currentCategory.category.key}.scanHint`)
+                  : undefined}
+              >
+                <View
+                  style={[
+                    styles.captureCircle,
+                    { backgroundColor: currentCategory?.accent || colors.accent },
+                  ]}
+                >
+                  <CategoryIcon
+                    name={currentCategory?.category?.key === 'sound' ? 'mic' : 'camera'}
+                    size={27}
+                    color={colors.white}
+                  />
+                </View>
+                <Text style={styles.captureLabel} numberOfLines={1} adjustsFontSizeToFit>
+                  {t('identify.centralCapture')}
+                </Text>
+              </TouchableOpacity>
+            </View>
+            {render(bottom.slice(2))}
+          </View>
         )}
       </View>
+      <CategoryPickerModal
+        visible={pickerVisible}
+        options={pickerOptions}
+        onSelect={selectCategory}
+        onClose={() => setPickerVisible(false)}
+      />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  chipRow: { paddingHorizontal: 8, gap: 6, alignItems: 'center' },
-  chip: {
+  categoryTrigger: {
+    minHeight: control.minTouch,
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 6,
-    paddingHorizontal: 11,
-    paddingVertical: 7,
+    gap: 8,
+    marginHorizontal: 8,
+    paddingHorizontal: 10,
     borderRadius: 16,
+    backgroundColor: colors.card,
+    borderWidth: 1,
+    borderColor: colors.border,
   },
-  chipActive: { backgroundColor: colors.accent + '22' },
-  chipLabel: { fontSize: 11, fontWeight: '700' },
+  categoryTriggerIcon: {
+    width: 30,
+    height: 30,
+    borderRadius: 10,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  categoryTriggerLabel: { flex: 1, color: colors.text, fontSize: 13, fontWeight: '700' },
   // No FLUXO de proposito. A versao absoluta desta barra foi medida em
   // producao (toque real, CDP 390x844) e travou o scroll em TODAS as rotas,
   // inclusive nas que rolavam antes: sem um irmao flex ocupando espaco, a
@@ -283,7 +380,7 @@ const styles = StyleSheet.create({
   dock: {
     backgroundColor: colors.background,
     paddingHorizontal: 10,
-    paddingTop: 6,
+    paddingTop: 4,
   },
   hiddenDock: { height: 0 },
   bar: {
@@ -291,9 +388,9 @@ const styles = StyleSheet.create({
     borderColor: colors.border,
     borderWidth: 1,
     borderRadius: 26,
-    paddingTop: 6,
-    paddingBottom: 4,
-    overflow: 'hidden',
+    paddingTop: 4,
+    paddingBottom: 3,
+    overflow: 'visible',
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 4 },
     shadowOpacity: 0.3,
@@ -308,7 +405,8 @@ const styles = StyleSheet.create({
     borderTopWidth: 1,
     borderTopColor: colors.border,
     paddingTop: 6,
-    marginTop: 4,
+    marginTop: 2,
+    minHeight: 64,
   },
   tab: {
     flex: 1,
@@ -320,7 +418,6 @@ const styles = StyleSheet.create({
     paddingHorizontal: 2,
     paddingVertical: 4,
   },
-  tabTight: { paddingVertical: 2 },
   iconSlot: { alignItems: 'center', justifyContent: 'center' },
   iconSlotActive: {
     backgroundColor: colors.accent + '22',
@@ -328,5 +425,41 @@ const styles = StyleSheet.create({
     paddingHorizontal: 12,
   },
   label: { fontSize: 10.5, fontWeight: '600', marginTop: 3 },
-  labelCompact: { fontSize: 9, fontWeight: '600', marginTop: 2 },
+  // The circle rises above its neighbours, but its 76px slot remains a normal
+  // flex child. Do not make this absolute: the dock's measured height is what
+  // keeps every nested ScrollView touch-scrollable on mobile.
+  captureSlot: {
+    flex: 1,
+    minHeight: 64,
+    alignItems: 'center',
+  },
+  captureButton: {
+    width: '100%',
+    minHeight: 64,
+    alignItems: 'center',
+    justifyContent: 'flex-start',
+    transform: [{ translateY: -5 }],
+  },
+  captureCircle: {
+    width: 50,
+    height: 50,
+    borderRadius: 25,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderWidth: 4,
+    borderColor: colors.surface,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 5 },
+    shadowOpacity: 0.34,
+    shadowRadius: 8,
+    elevation: 10,
+  },
+  captureLabel: {
+    color: colors.text,
+    fontSize: 10.5,
+    lineHeight: 14,
+    fontWeight: '800',
+    marginTop: 2,
+    maxWidth: '100%',
+  },
 });

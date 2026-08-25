@@ -48,14 +48,14 @@ test('cada tela le o rotulo para o texto e o valor cru para a cor', () => {
   const casos = [
     {
       arquivo: 'screens/MushroomDetailScreen.js',
-      rotulo: /plant\.edibilityLabel\s*\|\|\s*plant\.edibility/,
+      rotulo: /readerEdibilityLabel\([\s\S]*plant\.edibility,[\s\S]*plant\.edibilityLabel[\s\S]*value: displayedEdibilityLabel/,
       cor: /edibilityColor\(plant\.edibility\)/,
       campo: 'edibility',
     },
     {
       arquivo: 'screens/InsectDetailScreen.js',
-      rotulo: /plant\.dangerLabel\?\.\[i\]\s*\|\|\s*d/,
-      cor: /HIGH_RISK_TAGS\.includes\(d\)/,
+      rotulo: /const candidateDangerLabels = normaliseInsectTextList\(plant\.dangerLabel\)[\s\S]*const dangerLabelsByIndex = rawDanger\.map/,
+      cor: /rawDanger\.some\(\(d\) => HIGH_RISK_TAGS\.includes\(d\.toLowerCase\(\)\)\)/,
       campo: 'danger',
     },
     {
@@ -71,6 +71,54 @@ test('cada tela le o rotulo para o texto e o valor cru para a cor', () => {
     assert.match(fonte, rotulo, `${arquivo}: o TEXTO de ${campo} tem que sair do rotulo traduzido`);
     assert.match(fonte, cor, `${arquivo}: a COR de ${campo} tem que vir do valor cru, nao do rotulo`);
   }
+
+  const cogumelo = ler('screens/MushroomDetailScreen.js');
+  assert.doesNotMatch(
+    cogumelo,
+    /plant\.edibilityLabel\s*\|\|\s*plant\.edibility/,
+    'MushroomDetailScreen: falha de traducao nunca pode expor a chave inglesa de risco'
+  );
+});
+
+test('a ficha rapida do inseto nunca exibe a chave crua de perigo', () => {
+  const fonte = ler('screens/InsectDetailScreen.js');
+  const inicio = fonte.indexOf('const quickFacts');
+  const fim = fonte.indexOf('return (', inicio);
+  const quickFacts = fonte.slice(inicio, fim);
+
+  assert.match(
+    quickFacts,
+    /visibleDangerLabels\.length[\s\S]*visibleDangerLabels\.join\(', '\)/,
+    'InsectDetailScreen: o valor visivel da ficha precisa usar apenas rotulos traduzidos validados'
+  );
+  assert.doesNotMatch(quickFacts, /rawDanger\.join|plant\.danger\.join/,
+    'InsectDetailScreen: a chave inglesa crua nunca pode voltar como fallback visual');
+});
+
+test('avisos de toxicidade e perigo aparecem inteiros', () => {
+  const arvore = ler('screens/TreeDetailScreen.js');
+  const inicioArvore = arvore.indexOf('!!plant.toxicity');
+  const fimArvore = arvore.indexOf('Quick facts', inicioArvore);
+  const avisoArvore = arvore.slice(inicioArvore, fimArvore);
+
+  assert.match(avisoArvore, /<Text[^>]*>\{plant\.toxicity\}<\/Text>/);
+  assert.doesNotMatch(
+    avisoArvore,
+    /ExpandableText/,
+    'TreeDetailScreen: colapsar pode esconder a parte fatal do aviso'
+  );
+
+  const inseto = ler('screens/InsectDetailScreen.js');
+  const inicioInseto = inseto.indexOf('!!visibleDangerDescription');
+  const fimInseto = inseto.indexOf('</SectionCard>', inicioInseto);
+  const avisoInseto = inseto.slice(inicioInseto, fimInseto);
+
+  assert.match(avisoInseto, /<Text[^>]*>\{visibleDangerDescription\}<\/Text>/);
+  assert.doesNotMatch(
+    avisoInseto,
+    /ExpandableText/,
+    'InsectDetailScreen: colapsar pode esconder a parte grave do aviso'
+  );
 });
 
 test('a tabela de cor do cogumelo cobre o pior caso em ingles', () => {

@@ -12,6 +12,7 @@ const test = require('node:test');
 const assert = require('node:assert');
 const fs = require('fs');
 const path = require('path');
+const babel = require('@babel/core');
 const { uiLocaleFiles } = require('./test-locales');
 
 const read = (p) => fs.readFileSync(path.join(__dirname, p), 'utf8');
@@ -89,6 +90,68 @@ test('location can never block or break an identification', () => {
   // A refusal must be remembered so the app does not prompt on every scan.
   assert.match(locationSrc, /error\.code === 1/);
   assert.match(locationSrc, /DENIED_KEY/);
+});
+
+test('fish and bird never request or transmit location', async () => {
+  const { code } = babel.transformFileSync(path.join(__dirname, 'components/identify.js'), {
+    presets: ['babel-preset-expo'],
+  });
+  let locationCalls = 0;
+  const bodies = [];
+  const stubs = {
+    './categories': {
+      CATEGORIES: Object.fromEntries(
+        ['plant', 'tree', 'insect', 'mushroom', 'crop', 'fish', 'bird'].map((key) => [key, { key }])
+      ),
+    },
+    './deviceId': { getDeviceId: async () => 'device-test' },
+    './deviceLocation': {
+      getApproximateLocation: async () => {
+        locationCalls += 1;
+        return { latitude: -23.55, longitude: -46.63, datetime: '2026-08-20T12:00:00' };
+      },
+    },
+    '../i18n': { language: 'pt', t: (key) => key },
+    './apiBase': { API_BASE: 'https://example.test' },
+    './appLanguage': { normaliseAppLanguage: (value) => value || 'en' },
+  };
+  const mod = { exports: {} };
+  const fakeRequire = (name) => (name in stubs ? stubs[name] : require(name));
+  new Function('module', 'exports', 'require', code)(mod, mod.exports, fakeRequire);
+
+  const originalFetch = global.fetch;
+  global.fetch = async (_url, init) => {
+    bodies.push(JSON.parse(init.body));
+    return { ok: true, status: 200, json: async () => ({ entity: { id: 'result' } }) };
+  };
+  try {
+    await mod.exports.identify('fish', 'photo');
+    await mod.exports.identify('bird', 'photo');
+    assert.equal(locationCalls, 0, 'fauna vendors must not trigger geolocation');
+    for (const body of bodies) {
+      assert.equal(body.latitude, undefined);
+      assert.equal(body.longitude, undefined);
+      assert.equal(body.datetime, undefined);
+    }
+
+    await mod.exports.identify('plant', 'photo');
+    assert.equal(locationCalls, 1, 'Kindwise categories keep the optional context');
+    assert.equal(bodies[2].latitude, -23.55);
+  } finally {
+    global.fetch = originalFetch;
+  }
+});
+
+test('every Fishial failure has a translated client reason', () => {
+  const fishial = read('api/_lib/fishial.js');
+  const responses = [...fishial.matchAll(/res\.status\([^)]*\)\.json\((\{[\s\S]*?\})\);/g)]
+    .map((match) => match[1]);
+  assert.ok(responses.length >= 6, 'all Fishial failure paths must be inspected');
+  for (const response of responses) {
+    assert.match(response, /reason:\s*'(identifyFailed|serviceUnavailable|vendorError)'/);
+  }
+  assert.match(clientSrc, /reason === 'serviceUnavailable' \|\| data\?\.reason === 'vendorError'/);
+  assert.match(clientSrc, /data\?\.reason === 'identifyFailed'/);
 });
 
 test('the datetime format is the one the vendor actually accepts', () => {

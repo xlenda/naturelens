@@ -1,5 +1,6 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { API_BASE } from './apiBase';
+import { normaliseAppLanguage } from './appLanguage';
 
 // Loader for the per-GROUP care calendar ({lang}-schedule.json) - paridade 120%
 // (video do concorrente, 20/08). The competitor shows a month-by-month
@@ -9,13 +10,12 @@ import { API_BASE } from './apiBase';
 // table, which the competitor never says about its own.
 //
 // Exactly the same contract as groupContent/manualContent: network first,
-// AsyncStorage fallback, English as language fallback, null when nothing is
-// available - the card simply does not render, never an error and never an
-// invented row.
+// AsyncStorage e o unico fallback. Cronograma e prosa: cair para ingles
+// quebraria o contrato de uma lingua por tela, entao ausencia e mais segura.
 const memory = {};
 
 export async function getSchedules(lang) {
-  const code = lang || 'en';
+  const code = normaliseAppLanguage(lang);
   if (memory[code]) return memory[code];
 
   const cacheKey = '@naturelens_schedule_' + code;
@@ -35,7 +35,6 @@ export async function getSchedules(lang) {
     }
   }
 
-  if (!data && code !== 'en') return getSchedules('en');
   if (!data) return null;
 
   memory[code] = data;
@@ -59,4 +58,15 @@ export async function getGroupSchedule(groupKey, lang) {
   const all = await getSchedules(lang);
   const rows = all?.[groupKey]?.rows;
   return Array.isArray(rows) && rows.length ? rows : null;
+}
+
+/**
+ * Linha de adubacao de um grupo botanico. A chave estavel vive no JSON porque
+ * casar palavra traduzida ou posicao escolheria outra tarefa quando um editor
+ * reorganizasse o cronograma.
+ */
+export async function getGroupFertilizerSchedule(groupKey, lang) {
+  const rows = await getGroupSchedule(groupKey, lang);
+  if (!rows) return null;
+  return rows.find((row) => row?.activityKey === 'fertilizing') || null;
 }

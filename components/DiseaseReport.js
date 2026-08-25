@@ -3,6 +3,8 @@ import { View, Text, StyleSheet, TouchableOpacity, Linking } from 'react-native'
 import { Ionicons } from '@expo/vector-icons';
 import { useTranslation } from 'react-i18next';
 import SectionCard from './SectionCard';
+import IdentificationExtras from './IdentificationExtras';
+import VendorSourceCredit from './VendorSourceCredit';
 import { colors } from './theme';
 
 const SEVERITY_COLORS = {
@@ -34,7 +36,21 @@ function TreatmentList({ title, items, color }) {
   );
 }
 
-export default function DiseaseReport({ disease }) {
+function technicalText(value) {
+  const values = Array.isArray(value) ? value : [value];
+  const clean = values
+    .filter((item) => typeof item === 'string')
+    .map((item) => item.trim())
+    .filter(Boolean);
+  return clean.length ? clean.join(', ') : null;
+}
+
+function technicalId(value) {
+  if (typeof value === 'string' && value.trim()) return value.trim();
+  return Number.isFinite(value) ? String(value) : null;
+}
+
+export default function DiseaseReport({ disease, provider }) {
   const { t } = useTranslation();
 
   // The vendor answers a healthy plant with a pseudo-disease called "healthy",
@@ -68,6 +84,11 @@ export default function DiseaseReport({ disease }) {
   }
 
   const sevColor = severityColor(disease.severity);
+  const technicalRows = [
+    { label: t('detail.commonNames'), value: technicalText(disease.commonNames) },
+    { label: 'EPPO', value: technicalText(disease.eppoCode) },
+    { label: 'GBIF', value: technicalId(disease.gbifId) },
+  ].filter((row) => row.value);
 
   return (
     <View>
@@ -80,10 +101,12 @@ export default function DiseaseReport({ disease }) {
             <Text style={styles.diseaseSci}>{disease.scientific}</Text>
           )}
         </View>
-        <View style={styles.diseaseConfidence}>
-          <Text style={styles.confidenceLabel}>{t('disease.match')}</Text>
-          <Text style={[styles.confidenceValue, { color: sevColor }]}>{disease.confidence}%</Text>
-        </View>
+        {Number.isFinite(disease.confidence) && (
+          <View style={styles.diseaseConfidence}>
+            <Text style={styles.confidenceLabel}>{t('disease.match')}</Text>
+            <Text style={[styles.confidenceValue, { color: sevColor }]}>{disease.confidence}%</Text>
+          </View>
+        )}
       </View>
 
       <View style={styles.pillRow}>
@@ -106,13 +129,30 @@ export default function DiseaseReport({ disease }) {
         )}
       </View>
 
+      <View style={styles.diagnosisCaution}>
+        <Ionicons name="search-outline" size={17} color={colors.warning} />
+        <Text style={styles.diagnosisCautionText}>{t('disease.diagnosisCaution')}</Text>
+      </View>
+
       {/* Guarded like every sibling: a healthy result has no overview text,
           and an empty titled card reads as a dead button (owner hit it). */}
       {!!disease.overview && (
         <SectionCard icon="document-text-outline" title={t('disease.overviewSection')} color={colors.info}>
           <Text style={styles.body}>{disease.overview}</Text>
+          <VendorSourceCredit
+            provider={provider}
+            citation={disease.overviewCitation}
+            licenseName={disease.overviewLicense}
+            licenseUrl={disease.overviewLicenseUrl}
+          />
         </SectionCard>
       )}
+
+      <IdentificationExtras
+        entity={{ similarImages: disease.similarImages }}
+        accent={colors.warning}
+        skipImages={0}
+      />
 
       {disease.symptoms?.length > 0 && (
         <SectionCard icon="eye-outline" title={t('disease.symptomsSection')} color={colors.warning}>
@@ -130,12 +170,29 @@ export default function DiseaseReport({ disease }) {
           <TreatmentList title={t('disease.biological')} items={disease.treatment.biological} color={colors.accent} />
           <TreatmentList title={t('disease.chemical')} items={disease.treatment.chemical} color={colors.error} />
           <TreatmentList title={t('disease.prevention')} items={disease.treatment.prevention} color={colors.info} />
+          {disease.treatment.chemical?.length > 0 && (
+            <View style={styles.chemicalCaution}>
+              <Ionicons name="shield-checkmark-outline" size={17} color={colors.warning} />
+              <Text style={styles.chemicalCautionText}>{t('disease.chemicalCaution')}</Text>
+            </View>
+          )}
         </SectionCard>
       )}
 
       {!!disease.spreading && (
         <SectionCard icon="git-network-outline" title={t('disease.spreadingSection')} color={colors.purple}>
           <Text style={styles.body}>{disease.spreading}</Text>
+        </SectionCard>
+      )}
+
+      {technicalRows.length > 0 && (
+        <SectionCard icon="finger-print-outline" title={t('common.details')} color={colors.purple}>
+          {technicalRows.map((row) => (
+            <View key={row.label} style={styles.infoRow}>
+              <Text style={styles.infoLabel}>{row.label}</Text>
+              <Text style={styles.infoValue}>{row.value}</Text>
+            </View>
+          ))}
         </SectionCard>
       )}
 
@@ -170,6 +227,18 @@ const styles = StyleSheet.create({
   diseaseConfidence: { alignItems: 'center' },
   confidenceLabel: { fontSize: 10, color: colors.textMuted, fontWeight: '600' },
   confidenceValue: { fontSize: 18, fontWeight: '800' },
+  diagnosisCaution: {
+    flexDirection: 'row',
+    alignItems: 'flex-start',
+    gap: 9,
+    backgroundColor: colors.warning + '14',
+    borderWidth: 1,
+    borderColor: colors.warning + '44',
+    borderRadius: 12,
+    padding: 12,
+    marginBottom: 14,
+  },
+  diagnosisCautionText: { flex: 1, color: colors.textSecondary, fontSize: 12.5, lineHeight: 18 },
   pillRow: { flexDirection: 'row', flexWrap: 'wrap', gap: 8, marginBottom: 16 },
   typePill: {
     flexDirection: 'row',
@@ -185,6 +254,26 @@ const styles = StyleSheet.create({
   bulletText: { flex: 1, color: colors.textSecondary, fontSize: 13.5, lineHeight: 19 },
   treatmentGroup: { marginBottom: 12 },
   treatmentTitle: { fontSize: 13, fontWeight: '700', marginBottom: 4, textTransform: 'uppercase' },
+  chemicalCaution: {
+    flexDirection: 'row',
+    alignItems: 'flex-start',
+    gap: 9,
+    borderTopWidth: 1,
+    borderTopColor: colors.border,
+    paddingTop: 12,
+    marginTop: 2,
+  },
+  chemicalCautionText: { flex: 1, color: colors.textSecondary, fontSize: 12.5, lineHeight: 18 },
+  infoRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    gap: 12,
+    paddingVertical: 8,
+    borderBottomWidth: 1,
+    borderBottomColor: colors.border,
+  },
+  infoLabel: { color: colors.textMuted, fontSize: 12.5, fontWeight: '600' },
+  infoValue: { flex: 1, color: colors.text, fontSize: 12.5, textAlign: 'right' },
   linkBtn: {
     flexDirection: 'row',
     alignItems: 'center',

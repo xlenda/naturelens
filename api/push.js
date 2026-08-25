@@ -49,8 +49,8 @@ function reminderFor(language) {
   return REMINDERS[short] || REMINDERS.en;
 }
 
-// Fired by Vercel Cron (see vercel.json). Sends the daily streak reminder and
-// prunes endpoints the push service reports as dead.
+// Fired by Vercel Cron (see vercel.json). Por enquanto executa somente a
+// limpeza antiabuso; o envio fica pausado ate existir elegibilidade contextual.
 async function handleCron(req, res) {
   // Vercel signs cron invocations with this header. Without the check, anyone
   // who found the URL could blast a notification to every subscriber.
@@ -62,56 +62,35 @@ async function handleCron(req, res) {
   }
 
   const admin = getSupabaseAdmin();
-  const { data: subs, error } = await admin
-    .from('push_subscriptions')
-    .select('*')
-    .limit(500);
-
-  if (error) {
-    console.error('push cron: read failed', error.message);
-    res.status(500).json({ error: 'Could not read subscriptions.' });
-    return;
-  }
-
-  let sent = 0;
-  let pruned = 0;
-
-  for (const sub of subs || []) {
-    const copy = reminderFor(sub.language);
-    const result = await sendPush(sub, { ...copy, tag: 'streak', url: '/' });
-
-    if (result.gone) {
-      // 404/410 means this endpoint is permanently dead. Deleting is not
-      // optional housekeeping - retrying it forever burns push-service quota
-      // and can get the whole origin throttled.
-      await admin.from('push_subscriptions').delete().eq('endpoint', sub.endpoint);
-      pruned += 1;
-      continue;
-    }
-
-    if (result.ok) {
-      sent += 1;
-      await admin
-        .from('push_subscriptions')
-        .update({ last_sent_at: new Date().toISOString(), failure_count: 0 })
-        .eq('endpoint', sub.endpoint);
+  let rateLimits = { pruned: 0, error: null };
+  try {
+    // A poda tambem roda dentro do contador, mas isso nao limita a retencao
+    // quando o app fica sem trafego. O cron diario da o limite operacional sem
+    // criar outra funcao serverless; RPC ausente significa migracao pendente e
+    // nunca pode impedir os lembretes que ja funcionavam antes dela.
+    const { data, error: pruneError } = await admin.rpc('prune_rate_limits');
+    if (pruneError) {
+      console.error('push cron: rate-limit prune unavailable', pruneError.message);
+      rateLimits = { pruned: 0, error: 'unavailable' };
     } else {
-      // Transient failure: count it. A row that fails repeatedly gets pruned
-      // by the threshold below rather than being retried indefinitely.
-      const next = (sub.failure_count || 0) + 1;
-      if (next >= 5) {
-        await admin.from('push_subscriptions').delete().eq('endpoint', sub.endpoint);
-        pruned += 1;
-      } else {
-        await admin
-          .from('push_subscriptions')
-          .update({ failure_count: next })
-          .eq('endpoint', sub.endpoint);
-      }
+      rateLimits.pruned = Number.isInteger(data) && data >= 0 ? data : 0;
     }
+  } catch (pruneError) {
+    console.error('push cron: rate-limit prune unavailable', pruneError.message);
+    rateLimits = { pruned: 0, error: 'unavailable' };
   }
 
-  res.status(200).json({ sent, pruned, total: subs?.length || 0 });
+  // Nao existe hoje estado server-side que prove sequencia ativa, atividade do
+  // dia, categoria ou horario local elegivel. Enviar a mesma cobranca para
+  // todos seria um gatilho de culpa, nao um lembrete util. O cron continua
+  // ativo apenas para a limpeza antiabuso ate existir elegibilidade explicita.
+  res.status(200).json({
+    sent: 0,
+    pruned: 0,
+    total: 0,
+    rateLimits,
+    paused: 'eligibility-unavailable',
+  });
 }
 
 module.exports = async (req, res) => {

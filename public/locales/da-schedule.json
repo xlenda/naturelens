@@ -15,7 +15,8 @@
         "summer": "Månedligt, halv dos",
         "autumn": "Stop gødning",
         "winter": "Ingen",
-        "note": "Lidt kvælstof, halvdelen til en fjerdedel af dosis på etiketten. For meget kvælstof giver blødt væv, der rådner (Clemson, Iowa State)."
+        "note": "Lidt kvælstof, halvdelen til en fjerdedel af dosis på etiketten. For meget kvælstof giver blødt væv, der rådner (Clemson, Iowa State).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "Omplantning",
@@ -51,7 +52,8 @@
         "summer": "Månedligt, fortyndet",
         "autumn": "Trap ned",
         "winter": "Ingen",
-        "note": "Potteplanter gødes kun i vækstsæsonen, intet i hvileperioden (UConn)."
+        "note": "Potteplanter gødes kun i vækstsæsonen, intet i hvileperioden (UConn).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "Stiklinger",
@@ -79,7 +81,8 @@
         "summer": "Månedligt, halv dos",
         "autumn": "Stop gødning",
         "winter": "Ingen",
-        "note": "Slet intet i 6 måneder efter deling eller omplantning; for meget gødning svider bladene (Clemson, UConn)."
+        "note": "Slet intet i 6 måneder efter deling eller omplantning; for meget gødning svider bladene (Clemson, UConn).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "Deling & omplantning",
@@ -115,7 +118,8 @@
         "summer": "Efter høst",
         "autumn": "Stop gødning",
         "winter": "Ingen",
-        "note": "Stenfrugt tager tre delte doser og ingen i sommerens sidste uger, så veddet modner (Clemson)."
+        "note": "Stenfrugt tager tre delte doser og ingen i sommerens sidste uger, så veddet modner (Clemson).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "Beskæring",
@@ -143,7 +147,8 @@
         "summer": "Hver 6. uge",
         "autumn": "Stop før frost",
         "winter": "Ingen",
-        "note": "Roser går ned på halv dosis i den værste varme og stopper 6 uger før den første ventede frost (Clemson)."
+        "note": "Roser går ned på halv dosis i den værste varme og stopper 6 uger før den første ventede frost (Clemson).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "Afpudsning",
@@ -179,7 +184,8 @@
         "summer": "Delte doser",
         "autumn": "Stop gødning",
         "winter": "Ingen",
-        "note": "Et udvokset træ har brug for lidt eller intet. Sen gødning med meget kvælstof udskyder hvileperioden (Clemson)."
+        "note": "Et udvokset træ har brug for lidt eller intet. Sen gødning med meget kvælstof udskyder hvileperioden (Clemson).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "Beskæring",
@@ -215,7 +221,8 @@
         "summer": "Ugentligt, halv dos",
         "autumn": "Hver 2. uge",
         "winter": "Hver 2. uge",
-        "note": "Halv dosis af etiketten, lidt eller ingen urea, og spring hver 4. gødskning over for at skylle salte ud (AOS, RHS)."
+        "note": "Halv dosis af etiketten, lidt eller ingen urea, og spring hver 4. gødskning over for at skylle salte ud (AOS, RHS).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "Omplantning",
@@ -251,7 +258,8 @@
         "summer": "Kun hvis den står",
         "autumn": "Ingen",
         "winter": "Ingen",
-        "note": "Rosmarin i jorden får slet ingenting, og meget næringsrig jord sløver smagen (RHS, Clemson)."
+        "note": "Rosmarin i jorden får slet ingenting, og meget næringsrig jord sløver smagen (RHS, Clemson).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "Beskæring",

@@ -15,7 +15,8 @@
         "summer": "Mensuel, demi-dose",
         "autumn": "Arrêter",
         "winter": "Aucun",
-        "note": "Peu d'azote, de la moitié au quart de la dose indiquée. L'excès d'azote fait des tissus mous qui pourrissent (Clemson, Iowa State)."
+        "note": "Peu d'azote, de la moitié au quart de la dose indiquée. L'excès d'azote fait des tissus mous qui pourrissent (Clemson, Iowa State).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "Rempotage",
@@ -51,7 +52,8 @@
         "summer": "Mensuel, dilué",
         "autumn": "Réduire",
         "winter": "Aucun",
-        "note": "Les plantes d'intérieur ne sont nourries que pendant la saison de croissance, rien pendant le repos (UConn)."
+        "note": "Les plantes d'intérieur ne sont nourries que pendant la saison de croissance, rien pendant le repos (UConn).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "Bouturage",
@@ -79,7 +81,8 @@
         "summer": "Mensuel, demi-dose",
         "autumn": "Arrêter",
         "winter": "Aucun",
-        "note": "Rien du tout pendant 6 mois après une division ou un rempotage; trop d'engrais brûle les frondes (Clemson, UConn)."
+        "note": "Rien du tout pendant 6 mois après une division ou un rempotage; trop d'engrais brûle les frondes (Clemson, UConn).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "Diviser et rempoter",
@@ -115,7 +118,8 @@
         "summer": "Après la récolte",
         "autumn": "Arrêter",
         "winter": "Aucun",
-        "note": "Les fruits à noyau prennent trois apports fractionnés et rien dans les dernières semaines de l'été, pour que le bois mûrisse (Clemson)."
+        "note": "Les fruits à noyau prennent trois apports fractionnés et rien dans les dernières semaines de l'été, pour que le bois mûrisse (Clemson).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "Taille",
@@ -143,7 +147,8 @@
         "summer": "Toutes les 6 sem.",
         "autumn": "Stop avant le gel",
         "winter": "Aucun",
-        "note": "Les rosiers passent à demi-dose au plus fort de la chaleur et s'arrêtent 6 semaines avant la première gelée attendue (Clemson)."
+        "note": "Les rosiers passent à demi-dose au plus fort de la chaleur et s'arrêtent 6 semaines avant la première gelée attendue (Clemson).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "Fleurs fanées",
@@ -179,7 +184,8 @@
         "summer": "Doses fractionnées",
         "autumn": "Arrêter",
         "winter": "Aucun",
-        "note": "Un arbre adulte n'a besoin que de peu ou de rien. Un apport tardif riche en azote retarde le repos (Clemson)."
+        "note": "Un arbre adulte n'a besoin que de peu ou de rien. Un apport tardif riche en azote retarde le repos (Clemson).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "Taille",
@@ -215,7 +221,8 @@
         "summer": "Hebdo, demi-dose",
         "autumn": "Toutes les 2 sem.",
         "winter": "Toutes les 2 sem.",
-        "note": "Demi-dose de l'étiquette, peu ou pas d'urée, et sauter un apport sur 4 pour rincer les sels (AOS, RHS)."
+        "note": "Demi-dose de l'étiquette, peu ou pas d'urée, et sauter un apport sur 4 pour rincer les sels (AOS, RHS).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "Rempotage",
@@ -251,7 +258,8 @@
         "summer": "Si la pousse cale",
         "autumn": "Aucun",
         "winter": "Aucun",
-        "note": "Le romarin en pleine terre ne reçoit rien du tout, et un sol trop riche affadit le parfum (RHS, Clemson)."
+        "note": "Le romarin en pleine terre ne reçoit rien du tout, et un sol trop riche affadit le parfum (RHS, Clemson).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "Taille",

@@ -27,6 +27,8 @@
     },
     "blueTang": {
       "overview": "En lysande kungsblå revfisk med en svart palettliknande teckning och gul stjärt. Som alla kirurgfiskar bär den en rakbladsvass tagg vid stjärtroten.",
+      "riskKey": "sharp_tail_spine",
+      "safety": "En lysande kungsblå revfisk med en svart palettliknande teckning och gul stjärt. Som alla kirurgfiskar bär den en rakbladsvass tagg vid stjärtroten.",
       "habitat": "Korallrev i Indo-Stillahavsområdet, oftast i små grupper nära grenkoraller som den kan gömma sig i.",
       "curiosity": "Ungfiskarna är klargula och blir blå när de växer till – och stjärttaggen, som normalt ligger nedfälld, fälls ut åt sidan när fisken känner sig hotad."
     },
@@ -47,6 +49,8 @@
     },
     "redLionfish": {
       "overview": "En slående fisk i band av rött, vitt och brunt, med långa solfjäderslika fenor som döljer giftiga taggar. Vacker, långsam och bäst att inte röra.",
+      "riskKey": "venomous_spines",
+      "safety": "En slående fisk i band av rött, vitt och brunt, med långa solfjäderslika fenor som döljer giftiga taggar. Vacker, långsam och bäst att inte röra.",
       "habitat": "Hemma på rev i Indo-Stillahavsområdet; i dag en allvarlig invasiv art i hela Karibien och västra Atlanten.",
       "curiosity": "I sitt nya utbredningsområde har den nästan inga fiender och äter i stort sett allt som får plats i munnen – därför uppmuntrar flera länder aktivt till att harpunera och äta den."
     }

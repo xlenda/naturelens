@@ -1,5 +1,6 @@
-import React, { useRef } from 'react';
+import React, { useCallback, useEffect, useRef } from 'react';
 import { Animated } from 'react-native';
+import useReducedMotion from './useReducedMotion';
 
 // Press-scale as an OUTER WRAPPER around an existing Touchable.
 //
@@ -17,14 +18,31 @@ import { Animated } from 'react-native';
 // which fire alongside, not before, the press handler.
 export default function PressScale({ children, scaleTo = 0.97, style }) {
   const scale = useRef(new Animated.Value(1)).current;
+  const animation = useRef(null);
+  const reduceMotion = useReducedMotion();
 
-  const spring = (toValue) =>
-    Animated.spring(scale, {
+  const spring = useCallback((toValue) => {
+    animation.current?.stop();
+    if (reduceMotion) {
+      scale.setValue(1);
+      return;
+    }
+    animation.current = Animated.spring(scale, {
       toValue,
       useNativeDriver: true,
       friction: 7,
       tension: 180,
-    }).start();
+    });
+    animation.current.start();
+  }, [reduceMotion, scale]);
+
+  useEffect(() => {
+    if (reduceMotion) {
+      animation.current?.stop();
+      scale.setValue(1);
+    }
+    return () => animation.current?.stop();
+  }, [reduceMotion, scale]);
 
   const child = React.Children.only(children);
 

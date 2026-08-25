@@ -1,4 +1,7 @@
 const { getSupabaseAdmin } = require('./supabaseAdmin');
+const { createHmac } = require('node:crypto');
+
+const RETENTION_MS = 24 * 60 * 60 * 1000;
 
 // Coarse, IP-scoped rate limiting for endpoints that cost real money per call
 // (Kindwise credits) or that can be used to spam a third party (OTP emails,
@@ -33,6 +36,24 @@ function getClientIp(req) {
   return req.headers['x-real-ip'] || 'unknown';
 }
 
+// O bucket precisa ser estavel entre instancias serverless, mas nao pode
+// carregar o proprio IP, email ou deviceId para o banco. Um HMAC (e nao um hash
+// simples) impede tambem que alguem com acesso de leitura reverta um email ou
+// IPv4 por dicionario. A service-role ja e obrigatoria neste modulo e e secreta;
+// RATE_LIMIT_HMAC_SECRET permite rotacionar esta finalidade separadamente.
+function opaqueBucketKey(scope, subject) {
+  const secret = (
+    process.env.RATE_LIMIT_HMAC_SECRET || process.env.SUPABASE_SERVICE_ROLE_KEY || ''
+  ).trim();
+  if (!secret) throw new Error('Missing rate-limit HMAC secret');
+
+  return `h1:${createHmac('sha256', secret)
+    .update(String(scope))
+    .update('\0')
+    .update(String(subject))
+    .digest('hex')}`;
+}
+
 function windowStartIso(windowSeconds) {
   const ms = windowSeconds * 1000;
   return new Date(Math.floor(Date.now() / ms) * ms).toISOString();
@@ -44,10 +65,11 @@ async function checkRateLimit(req, res, { scope, limit, windowSeconds, ignoreIp 
   // `ignoreIp` gives a bucket that counts a TARGET rather than a caller - used
   // for per-account sign-in attempts, where the whole point is that rotating IPs
   // must not reset the counter.
-  const bucketKey = ignoreIp ? scope : `${scope}:${getClientIp(req)}`;
-  const windowStart = windowStartIso(windowSeconds);
-
   try {
+    // Mesmo o bucket por alvo passa pelo HMAC: nesses chamadores o proprio
+    // scope contem email ou deviceId. Nunca ha caminho que persista esse valor.
+    const bucketKey = opaqueBucketKey(scope, ignoreIp ? 'target' : getClientIp(req));
+    const windowStart = windowStartIso(windowSeconds);
     const admin = getSupabaseAdmin();
 
     // Increment FIRST, then decide on the value that came back.
@@ -90,6 +112,18 @@ async function checkRateLimit(req, res, { scope, limit, windowSeconds, ignoreIp 
       rpcError?.message || 'no count returned'
     );
 
+    // O RPC novo poda na mesma transacao. Bancos ainda na migracao antiga caem
+    // aqui, entao repetimos a poda antes do fallback para que nenhum bucket
+    // operacional sobreviva mais que a janela maxima de 24 horas.
+    const cutoff = new Date(Date.now() - RETENTION_MS).toISOString();
+    const { error: pruneError } = await admin
+      .from('rate_limits')
+      .delete()
+      .lt('window_start', cutoff);
+    if (pruneError) {
+      console.error('checkRateLimit: fallback prune failed', pruneError.message);
+    }
+
     const { data: existing, error: readError } = await admin
       .from('rate_limits')
       .select('count')
@@ -98,7 +132,8 @@ async function checkRateLimit(req, res, { scope, limit, windowSeconds, ignoreIp 
       .maybeSingle();
 
     if (readError) {
-      console.error('checkRateLimit: read failed (table missing?)', scope, readError.message);
+      // Nao logar scope: buckets por alvo carregam email/deviceId antes do HMAC.
+      console.error('checkRateLimit: read failed (table missing?)', readError.message);
       return true;
     }
 
@@ -121,4 +156,4 @@ async function checkRateLimit(req, res, { scope, limit, windowSeconds, ignoreIp 
   }
 }
 
-module.exports = { checkRateLimit };
+module.exports = { checkRateLimit, opaqueBucketKey };

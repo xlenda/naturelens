@@ -136,13 +136,15 @@ export default function SubscriptionScreen() {
               ? t('subscription.unknownTitle')
               : t('subscription.freeTitle')}
           </Text>
-          <Text style={styles.statusBody}>
-            {isActive
-              ? t('subscription.activeBody')
-              : isUnknown
-              ? t('subscription.unknownBody')
-              : t('subscription.freeBody')}
-          </Text>
+          {(isActive || isUnknown || Platform.OS === 'web') && (
+            <Text style={styles.statusBody}>
+              {isActive
+                ? t('subscription.activeBody')
+                : isUnknown
+                ? t('subscription.unknownBody')
+                : t('subscription.freeBody')}
+            </Text>
+          )}
         </View>
 
         {/* Zona de cor: the plan block sits in a full-bleed band a shade lighter
@@ -150,36 +152,27 @@ export default function SubscriptionScreen() {
             ZoneBand replaces the fragment ONLY - the gate in front of it is
             byte-for-byte the same three-state condition, so `undefined` (a check
             that failed) still shows neither the plans nor the manage block. */}
-        {!isActive && !isUnknown && (
+        {Platform.OS === 'web' && !isActive && !isUnknown && (
           <ZoneBand gutter={20} style={styles.zoneGap}>
             <Text style={styles.sectionTitle}>{t('subscription.plansTitle')}</Text>
-            {Platform.OS === 'web' ? (
-              <>
-                {PLAN_ORDER.map((plan) => (
-                  <View key={plan} style={styles.planRow}>
-                    <Text style={styles.planName}>{t(`paywall.${plan}Plan`)}</Text>
-                    <Text style={styles.planPrice}>${PLAN_PRICES[plan]}</Text>
-                  </View>
-                ))}
+            {PLAN_ORDER.map((plan) => (
+              <View key={plan} style={styles.planRow}>
+                <Text style={styles.planName}>{t(`paywall.${plan}Plan`)}</Text>
+                <Text style={styles.planPrice}>${PLAN_PRICES[plan]}</Text>
+              </View>
+            ))}
 
-                <PressScale>
-                  <TouchableOpacity
-                    style={styles.primaryBtn}
-                    onPress={openPaywall}
-                    activeOpacity={0.85}
-                    accessibilityRole="button"
-                    accessibilityLabel={t('paywall.subscribe')}
-                  >
-                    <Text style={styles.primaryBtnText}>{t('paywall.subscribe')}</Text>
-                  </TouchableOpacity>
-                </PressScale>
-              </>
-            ) : (
-              // Store builds show no price table and no purchase CTA (Play
-              // Billing policy). Plain text naming the website - without a
-              // link - is the consumption-only wording Google's FAQ allows.
-              <Text style={styles.manageBody}>{t('paywall.webOnlyBody')}</Text>
-            )}
+            <PressScale>
+              <TouchableOpacity
+                style={styles.primaryBtn}
+                onPress={openPaywall}
+                activeOpacity={0.85}
+                accessibilityRole="button"
+                accessibilityLabel={t('paywall.subscribe')}
+              >
+                <Text style={styles.primaryBtnText}>{t('paywall.subscribe')}</Text>
+              </TouchableOpacity>
+            </PressScale>
           </ZoneBand>
         )}
 

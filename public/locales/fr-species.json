@@ -27,6 +27,8 @@
     },
     "blueTang": {
       "overview": "Éclatant poisson de récif bleu roi, marqué d'une tache noire en forme de palette et doté d'une queue jaune. Comme tous les chirurgiens, il porte une épine tranchante comme un scalpel à la base de la queue.",
+      "riskKey": "sharp_tail_spine",
+      "safety": "Éclatant poisson de récif bleu roi, marqué d'une tache noire en forme de palette et doté d'une queue jaune. Comme tous les chirurgiens, il porte une épine tranchante comme un scalpel à la base de la queue.",
       "habitat": "Récifs coralliens de l'Indo-Pacifique, généralement en petits groupes près des coraux branchus où il peut se réfugier.",
       "curiosity": "Les juvéniles sont jaune vif et virent au bleu en grandissant. L'épine caudale, normalement repliée à plat, se déploie latéralement dès que le poisson se sent menacé."
     },
@@ -47,6 +49,8 @@
     },
     "redLionfish": {
       "overview": "Poisson spectaculaire zébré de rouge, de blanc et de brun, aux longues nageoires en éventail qui dissimulent des épines venimeuses. Magnifique, lent, et à ne surtout pas toucher.",
+      "riskKey": "venomous_spines",
+      "safety": "Poisson spectaculaire zébré de rouge, de blanc et de brun, aux longues nageoires en éventail qui dissimulent des épines venimeuses. Magnifique, lent, et à ne surtout pas toucher.",
       "habitat": "Originaire des récifs de l'Indo-Pacifique ; aujourd'hui espèce invasive très problématique dans toutes les Caraïbes et l'Atlantique Ouest.",
       "curiosity": "Dans les zones qu'il a envahies, il n'a presque aucun prédateur et avale à peu près tout ce qui tient dans sa bouche : certains pays encouragent activement à le harponner et à le manger."
     }

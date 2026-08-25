@@ -1,4 +1,5 @@
 import { API_BASE } from './apiBase';
+import { normaliseAppLanguage } from './appLanguage';
 
 
 const cache = new Map();
@@ -9,10 +10,11 @@ const cache = new Map();
 // locale bundle every boot, while this heavier prose is fetched only when
 // someone actually opens a species.
 //
-// Falls back to English rather than failing: a Turkish user who opens a fish
-// should read an English description, not an error.
+// Falha no arquivo do idioma devolve null. Um bloco ausente e honesto; buscar
+// ingles aqui misturaria dois idiomas na mesma tela.
 export async function getSpeciesDetails(languageCode) {
-  if (cache.has(languageCode)) return cache.get(languageCode);
+  const code = normaliseAppLanguage(languageCode);
+  if (cache.has(code)) return cache.get(code);
 
   const fetchOne = async (code) => {
     const response = await fetch(`${API_BASE}/locales/${code}-species.json`);
@@ -20,8 +22,12 @@ export async function getSpeciesDetails(languageCode) {
     return response.json();
   };
 
-  const promise = fetchOne(languageCode).catch(() => fetchOne('en'));
-  cache.set(languageCode, promise);
+  const promise = fetchOne(code).catch(() => {
+    // Nao prenda uma falha transitoria no cache para o resto da sessao.
+    cache.delete(code);
+    return null;
+  });
+  cache.set(code, promise);
   return promise;
 }
 

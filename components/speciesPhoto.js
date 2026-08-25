@@ -104,6 +104,54 @@ async function localTitleFor(scientificName, language) {
   return page?.langlinks?.[0]?.['*'] || null;
 }
 
+function plainMetadata(value) {
+  return String(value || '')
+    .replace(/<[^>]*>/g, ' ')
+    .replace(/&nbsp;/gi, ' ')
+    .replace(/&amp;/gi, '&')
+    .replace(/&quot;/gi, '"')
+    .replace(/&#39;|&apos;/gi, "'")
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function absoluteUrl(value) {
+  if (typeof value !== 'string') return null;
+  if (value.startsWith('//')) return 'https:' + value;
+  return /^https?:\/\//i.test(value) ? value : null;
+}
+
+async function imageAttribution(summaryEndpoint, imageUrl) {
+  const host = String(summaryEndpoint).match(/^https:\/\/([^/]+)/i)?.[1];
+  const encodedName = String(imageUrl || '').split('?')[0].split('/').pop();
+  if (!host || !encodedName) return null;
+  let fileName;
+  try {
+    fileName = decodeURIComponent(encodedName);
+  } catch (e) {
+    return null;
+  }
+  const endpoint =
+    `https://${host}/w/api.php?action=query&format=json&origin=*` +
+    `&titles=${encodeURIComponent('File:' + fileName)}` +
+    '&prop=imageinfo&iiprop=url%7Cextmetadata';
+  const response = await fetch(endpoint, {
+    headers: WIKI_HEADERS,
+    signal: timeoutSignal(8000),
+  });
+  if (!response.ok) return null;
+  const data = await response.json();
+  const info = Object.values(data?.query?.pages || {})[0]?.imageinfo?.[0];
+  if (!info) return null;
+  const metadata = info.extmetadata || {};
+  return {
+    imageSourceUrl: absoluteUrl(info.descriptionurl || info.descriptionshorturl),
+    imageCreator: plainMetadata(metadata.Artist?.value || metadata.Credit?.value) || null,
+    imageLicense: plainMetadata(metadata.LicenseShortName?.value) || null,
+    imageLicenseUrl: absoluteUrl(metadata.LicenseUrl?.value),
+  };
+}
+
 async function fetchOne(url) {
   const response = await fetch(url, {
     headers: WIKI_HEADERS,
@@ -112,10 +160,15 @@ async function fetchOne(url) {
   if (!response.ok) throw new Error(String(response.status));
   const data = await response.json();
   const thumb = data?.thumbnail?.source || null;
+  const full = data.originalimage?.source || thumb;
+  // O resumo aponta para o ARTIGO, nao para a pagina do arquivo. Buscar o
+  // imageinfo do proprio MediaWiki mantem autor, licenca e fonte presos ao
+  // ativo correto, inclusive quando a foto vem do Commons compartilhado.
+  const attribution = full ? await imageAttribution(url, full).catch(() => null) : null;
   return {
     // `originalimage` is full resolution; the thumbnail is what we display.
     url: thumb,
-    full: data.originalimage?.source || thumb,
+    full,
     width: data.thumbnail?.width || null,
     height: data.thumbnail?.height || null,
     // The page title IS the common name in whichever Wikipedia answered - so
@@ -126,8 +179,13 @@ async function fetchOne(url) {
     // article. Both already in the user's language.
     description: data.description || null,
     extract: data.extract || null,
-    // Where the picture came from, so the UI can credit it.
+    // `sourceUrl` continua sendo a fonte do TEXTO para os leitores existentes;
+    // a imagem tem sua propria pagina/licenca nos campos abaixo.
     sourceUrl: data.content_urls?.desktop?.page || null,
+    imageSourceUrl: attribution?.imageSourceUrl || null,
+    imageCreator: attribution?.imageCreator || null,
+    imageLicense: attribution?.imageLicense || null,
+    imageLicenseUrl: attribution?.imageLicenseUrl || null,
   };
 }
 
@@ -135,7 +193,8 @@ async function fetchOne(url) {
  * Everything Wikipedia knows about a species: common name, one-line description,
  * opening paragraph and photo - all in the user's language when available.
  *
- * @returns { url, full, title, description, extract, sourceUrl } or null.
+ * @returns { url, full, title, description, extract, sourceUrl,
+ *            imageSourceUrl, imageCreator, imageLicense, imageLicenseUrl } or null.
  *          Any individual field may be null. Never throws.
  */
 export async function getSpeciesInfo(scientificName, language = 'en') {
@@ -166,7 +225,19 @@ export async function getSpeciesInfo(scientificName, language = 'en') {
     // page with no picture and a page in the wrong language.
     if (local && !local.url && primary !== fallback) {
       const en = await fetchOne(fallback).catch(() => null);
-      if (en?.url) return { ...local, url: en.url, full: en.full, width: en.width, height: en.height };
+      if (en?.url) {
+        return {
+          ...local,
+          url: en.url,
+          full: en.full,
+          width: en.width,
+          height: en.height,
+          imageSourceUrl: en.imageSourceUrl,
+          imageCreator: en.imageCreator,
+          imageLicense: en.imageLicense,
+          imageLicenseUrl: en.imageLicenseUrl,
+        };
+      }
       return local;
     }
     if (local) return local;
@@ -188,7 +259,8 @@ export async function getSpeciesInfo(scientificName, language = 'en') {
  * `<Image source={{ uri: photo.url }} />` behind a plain `photo &&` check - an
  * object with a null url would show a broken image instead of hiding the block.
  *
- * @returns { url, full, sourceUrl, title } or null. Never throws.
+ * @returns { url, full, sourceUrl, imageSourceUrl, imageCreator,
+ *            imageLicense, imageLicenseUrl, title } or null. Never throws.
  */
 export async function getSpeciesPhoto(scientificName, language = 'en') {
   const info = await getSpeciesInfo(scientificName, language);

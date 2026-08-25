@@ -3,6 +3,7 @@ import { View, Text, StyleSheet } from 'react-native';
 import { useTranslation } from 'react-i18next';
 import { colors } from './theme';
 import { getTaxonKey, GBIF_UA } from './gbifTaxonKey';
+import { enrichmentTaxon } from './taxonIdentity';
 
 // DESTAQUE DA ESTACAO - paridade 120% (video do concorrente, 20/08).
 // O concorrente desenha um grafico de estacao GENERICO, igual para toda
@@ -60,14 +61,24 @@ export function monthCounts(json) {
   return arr;
 }
 
-export default function SeasonChart({ scientific, accent = colors.accent }) {
+export default function SeasonChart({ scientific, gbifId, identityV1, accent = colors.accent }) {
   const { t, i18n } = useTranslation();
   const [months, setMonths] = useState(null);
+  const enrichment = enrichmentTaxon(identityV1, {
+    scientificName: scientific,
+    gbifKey: gbifId,
+  });
+  const resolvedScientific = enrichment?.canonicalName || null;
+  const resolvedGbifId = enrichment?.gbifKey || null;
 
   useEffect(() => {
     let alive = true;
+    // A tela de detalhe pode ser reutilizada para outra especie. Sem limpar
+    // aqui, uma falha/offline no segundo lookup deixava o grafico da especie
+    // anterior visivel para sempre.
+    setMonths(null);
     (async () => {
-      const key = await getTaxonKey(scientific);
+      const key = await getTaxonKey(resolvedScientific, resolvedGbifId);
       if (!key || !alive) return;
       try {
         const r = await fetch(
@@ -86,7 +97,7 @@ export default function SeasonChart({ scientific, accent = colors.accent }) {
     return () => {
       alive = false;
     };
-  }, [scientific]);
+  }, [resolvedScientific, resolvedGbifId]);
 
   if (!months) return null;
 

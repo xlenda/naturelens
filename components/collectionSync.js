@@ -2,6 +2,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { getCollection, replaceCollection } from './storage';
 import { getDeviceId } from './deviceId';
 import { API_BASE } from './apiBase';
+const { mergeCollections } = require('./collectionMerge');
 
 // Keeps the collection in step across a subscriber's devices.
 //
@@ -42,6 +43,27 @@ async function readPendingDeletes() {
   }
 }
 
+// Remove apenas tombstones que a resposta do servidor devolveu como gravados.
+// A lista e relida DEPOIS da rede: uma exclusao feita enquanto o sync estava em
+// voo ainda nao foi enviada e precisa continuar pendente para a proxima rodada.
+async function clearConfirmedDeletions(confirmedIds) {
+  const confirmed = confirmedIds instanceof Set ? confirmedIds : new Set(confirmedIds || []);
+  if (confirmed.size === 0) return;
+  try {
+    const current = await readPendingDeletes();
+    const remaining = current.filter((savedId) => !confirmed.has(savedId));
+    if (remaining.length === current.length) return;
+    if (remaining.length > 0) {
+      await AsyncStorage.setItem(PENDING_DELETES_KEY, JSON.stringify(remaining));
+    } else {
+      await AsyncStorage.removeItem(PENDING_DELETES_KEY);
+    }
+  } catch (e) {
+    // Confirmacao perdida so repete um tombstone idempotente no proximo sync.
+    // E mais seguro do que apagar uma exclusao que o servidor nao confirmou.
+  }
+}
+
 /** Called by removeFromCollection so a deletion here reaches the other devices. */
 export async function rememberDeletion(savedId) {
   if (!savedId) return;
@@ -61,18 +83,20 @@ export async function rememberDeletion(savedId) {
 /**
  * Push local finds, pull remote ones, and merge.
  *
- * @returns { synced: boolean, added: number } - added is how many finds this
- *          device did not have. Never throws.
+ * @returns { synced: boolean, added: number, updated: number, removed: number,
+ *            changed: boolean } Never throws.
  */
 export async function syncCollection({ force = false } = {}) {
   try {
     if (!force) {
       const last = Number(await AsyncStorage.getItem(LAST_SYNC_KEY)) || 0;
-      if (Date.now() - last < MIN_INTERVAL_MS) return { synced: false, added: 0 };
+      if (Date.now() - last < MIN_INTERVAL_MS) {
+        return { synced: false, added: 0, updated: 0, removed: 0, changed: false };
+      }
     }
 
     if (typeof navigator !== 'undefined' && navigator.onLine === false) {
-      return { synced: false, added: 0 };
+      return { synced: false, added: 0, updated: 0, removed: 0, changed: false };
     }
 
     const [local, pendingDeletes, deviceId] = await Promise.all([
@@ -87,53 +111,51 @@ export async function syncCollection({ force = false } = {}) {
       body: JSON.stringify({ deviceId, entries: local, deletedIds: pendingDeletes }),
     });
 
-    if (!response.ok) return { synced: false, added: 0 };
+    if (!response.ok) return { synced: false, added: 0, updated: 0, removed: 0, changed: false };
 
     const data = await response.json().catch(() => null);
     // Not signed in is the normal free-tier answer, not a failure.
-    if (!data?.synced) return { synced: false, added: 0 };
+    if (!data?.synced) return { synced: false, added: 0, updated: 0, removed: 0, changed: false };
 
     const remote = Array.isArray(data.entries) ? data.entries : [];
     const remoteDeleted = new Set(Array.isArray(data.deletedIds) ? data.deletedIds : []);
 
-    // Merge, keyed by savedId. Local wins on conflict: it is the copy that has
-    // the user's own photograph attached, which the server never receives.
-    const bySavedId = new Map();
-    for (const entry of remote) {
-      if (entry?.savedId && !remoteDeleted.has(entry.savedId)) bySavedId.set(entry.savedId, entry);
-    }
-    let added = 0;
-    for (const entry of local) {
-      if (!entry?.savedId) continue;
-      if (remoteDeleted.has(entry.savedId)) continue; // deleted elsewhere
-      bySavedId.set(entry.savedId, entry);
-    }
-    for (const entry of remote) {
-      if (entry?.savedId && !local.some((l) => l.savedId === entry.savedId)) added += 1;
+    // A rede abriu uma janela para a pessoa editar ou excluir um exemplar. Usar
+    // a fotografia local enviada no request apagava essa mudanca ao persistir
+    // qualquer adicao remota. A segunda leitura fica colada ao merge/write; as
+    // lapides novas entram so no merge e continuam pendentes para o proximo push.
+    const [latestLocal, latestPendingDeletes] = await Promise.all([
+      getCollection(),
+      readPendingDeletes(),
+    ]);
+    const mergeDeleted = new Set([...remoteDeleted, ...latestPendingDeletes]);
+    const merge = mergeCollections(latestLocal, remote, mergeDeleted);
+    // Escrever so quando o remoto mudou alguma coisa preserva quota no web. O
+    // contador separado permite que a UI reaja a edicao sem fingir que e item novo.
+    if (merge.changed) {
+      const stored = await replaceCollection(merge.entries);
+      if (!stored) {
+        return { synced: false, added: 0, updated: 0, removed: 0, changed: false };
+      }
     }
 
-    const merged = Array.from(bySavedId.values()).sort((a, b) =>
-      String(b.savedAt || '').localeCompare(String(a.savedAt || ''))
-    );
-
-    // Only write when something actually changed - rewriting an identical list
-    // burns a storage quota that is already tight on web.
-    const changed =
-      merged.length !== local.length ||
-      merged.some((m, i) => m.savedId !== local[i]?.savedId);
-    if (changed) await replaceCollection(merged);
-
-    // The server has the tombstones now, so stop resending them.
-    if (pendingDeletes.length) {
-      await AsyncStorage.removeItem(PENDING_DELETES_KEY).catch(() => {});
-    }
+    // A resposta traz todos os tombstones visiveis ao servidor. Intersectar com
+    // o lote enviado confirma cada ID sem apagar exclusoes novas ou rejeitadas.
+    const confirmedDeletes = new Set(pendingDeletes.filter((savedId) => remoteDeleted.has(savedId)));
+    await clearConfirmedDeletions(confirmedDeletes);
     await AsyncStorage.setItem(LAST_SYNC_KEY, String(Date.now())).catch(() => {});
 
-    return { synced: true, added };
+    return {
+      synced: true,
+      added: merge.added,
+      updated: merge.updated,
+      removed: merge.removed,
+      changed: merge.changed,
+    };
   } catch (e) {
     // Sync is a convenience layered on top of a collection that already works.
     // It must never surface an error, and never leave the local list worse than
     // it found it.
-    return { synced: false, added: 0 };
+    return { synced: false, added: 0, updated: 0, removed: 0, changed: false };
   }
 }

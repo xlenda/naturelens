@@ -15,7 +15,8 @@
         "summer": "Monthly, half dose",
         "autumn": "Stop",
         "winter": "None",
-        "note": "Low nitrogen, half to a quarter of the label dose. Excess N makes soft tissue that rots (Clemson, Iowa State)."
+        "note": "Low nitrogen, half to a quarter of the label dose. Excess N makes soft tissue that rots (Clemson, Iowa State).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "Repotting",
@@ -51,7 +52,8 @@
         "summer": "Monthly, diluted",
         "autumn": "Taper off",
         "winter": "None",
-        "note": "Indoor plants are fed only through the growing season, nothing during the resting months (UConn)."
+        "note": "Indoor plants are fed only through the growing season, nothing during the resting months (UConn).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "Cuttings",
@@ -79,7 +81,8 @@
         "summer": "Monthly, half dose",
         "autumn": "Stop",
         "winter": "None",
-        "note": "Nothing at all for 6 months after dividing or repotting; too much fertiliser burns the fronds (Clemson, UConn)."
+        "note": "Nothing at all for 6 months after dividing or repotting; too much fertiliser burns the fronds (Clemson, UConn).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "Divide & repot",
@@ -115,7 +118,8 @@
         "summer": "After harvest",
         "autumn": "Stop",
         "winter": "None",
-        "note": "Stone fruit takes three split doses and none in the last weeks of summer, so growth hardens off (Clemson)."
+        "note": "Stone fruit takes three split doses and none in the last weeks of summer, so growth hardens off (Clemson).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "Pruning",
@@ -143,7 +147,8 @@
         "summer": "Every 6 weeks",
         "autumn": "Stop before frost",
         "winter": "None",
-        "note": "Roses drop to half dose in the peak heat and stop 6 weeks before the first expected frost (Clemson)."
+        "note": "Roses drop to half dose in the peak heat and stop 6 weeks before the first expected frost (Clemson).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "Deadheading",
@@ -179,7 +184,8 @@
         "summer": "Split doses",
         "autumn": "Stop",
         "winter": "None",
-        "note": "A mature tree needs little or none. Late feeding with high nitrogen delays dormancy (Clemson)."
+        "note": "A mature tree needs little or none. Late feeding with high nitrogen delays dormancy (Clemson).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "Pruning",
@@ -215,7 +221,8 @@
         "summer": "Weekly, half dose",
         "autumn": "Fortnightly",
         "winter": "Fortnightly",
-        "note": "Half the label dose, little or no urea, and skip every 4th feed to flush salts (AOS, RHS)."
+        "note": "Half the label dose, little or no urea, and skip every 4th feed to flush salts (AOS, RHS).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "Repotting",
@@ -251,7 +258,8 @@
         "summer": "Only if it stalls",
         "autumn": "None",
         "winter": "None",
-        "note": "Rosemary in the ground gets none at all, and very rich soil dulls the flavour (RHS, Clemson)."
+        "note": "Rosemary in the ground gets none at all, and very rich soil dulls the flavour (RHS, Clemson).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "Pruning",

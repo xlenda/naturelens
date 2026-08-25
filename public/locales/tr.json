@@ -33,7 +33,122 @@
     "translating": "Çevriliyor…",
     "translateFailed": "Şu anda çevrilemedi.",
     "yes": "Evet",
-    "no": "Hayır"
+    "no": "Hayır",
+    "loading": "Yükleniyor…"
+  },
+  "discoveryReceipt": {
+    "title": "Tanımlama tamamlandı",
+    "ready": "Sonucunuz incelemeye hazır.",
+    "tokens": "+{{count}} jeton kazanıldı",
+    "streak": "Mevcut serinizdeki gün sayısı: {{count}}",
+    "achievement": "Başarım açıldı: {{title}}",
+    "factTitle": "Bu aday hakkında",
+    "saveHint": "Bu bulguyu daha sonra görmek ve kendi gözlemlerinizi eklemek için kaydedin."
+  },
+  "acquisition": {
+    "title": "NatureLens'i nasıl duydun?",
+    "subtitle": "Kısa bir yanıt, uygulamayı geliştirmemize yardımcı olur. İsteğe bağlıdır.",
+    "thanks": "Teşekkürler — bu, NatureLens'i daha iyi hâle getirmemize yardımcı oluyor.",
+    "skip": "Şimdi değil",
+    "options": {
+      "tiktok": "TikTok",
+      "instagram": "Instagram",
+      "youtube": "YouTube",
+      "search": "Google veya Play Store",
+      "friend": "Arkadaş",
+      "other": "Diğer"
+    }
+  },
+  "specimen": {
+    "title": "Kaydım",
+    "notFoundTitle": "Kayıt bulunamadı",
+    "notFoundBody": "Kaydedilen bu bulgu artık koleksiyonunuzda değil.",
+    "returnToCollection": "Koleksiyona dön",
+    "openRecord": "Kaydımı aç",
+    "savedOn": "{{date}} tarihinde kaydedildi",
+    "todayTitle": "Bugün",
+    "wateredAnnouncement": "Sulama kaydedildi.",
+    "personalizeTitle": "Kişiselleştirin",
+    "observationTitle": "Gözlemim",
+    "observationEmpty": "Henüz gözlem yok. Neyi fark ettiğinizi, onu nerede bulduğunuzu veya nelerin değiştiğini yazın.",
+    "observationPlaceholder": "Kısa bir gözlem yazın…",
+    "addObservation": "Gözlem ekle",
+    "editObservation": "Gözlemi düzenle",
+    "saveObservation": "Gözlemi kaydet",
+    "removeObservation": "Gözlemi kaldır",
+    "characterCount": "{{count}}/{{max}} karakter",
+    "timelineTitle": "Zaman çizelgesi",
+    "timelineAdded": "Koleksiyona eklendi",
+    "timelineWatered": "Sulama kaydedildi",
+    "timelineObservationUpdated": "Gözlemin son düzenlemesi",
+    "guideTitle": "Tür rehberi",
+    "guideBody": "Tanımlama ve türle ilgili mevcut tüm ayrıntılar.",
+    "openGuide": "Rehberi aç",
+    "noteSavedAnnouncement": "Gözlem kaydedildi.",
+    "removeTitle": "Kayıt kaldırılsın mı?",
+    "removeBody": "{{name}} koleksiyonunuzdan kaldırılsın mı? Bu işlem geri alınamaz.",
+    "removeAction": "Kaldır"
+  },
+  "localReminders": {
+    "title": "Telefondaki hatırlatıcılar",
+    "body": "Neyin ne zaman hatırlatılacağını tam olarak seçin. İzin ve sistem ayarlarına bağlı olarak Android, başka bir uygulamayı kullanırken bile bildirim gönderebilir.",
+    "loading": "Hatırlatıcılar yükleniyor…",
+    "loadError": "Hatırlatıcılar şu anda yüklenemedi.",
+    "nextTitle": "Yaklaşan hatırlatıcılar",
+    "addAction": "Hatırlatıcı ekle",
+    "empty": "Bu kayıt için yaklaşan hatırlatıcı yok.",
+    "unavailableTitle": "Hatırlatıcılar kullanılamıyor",
+    "unavailableBody": "Bu Android sürümü bildirim planlayamıyor. Hatırlatıcıları kullanmak için uyumlu bir uygulama sürümü yükleyin.",
+    "modalTitle": "Hatırlatıcı oluştur",
+    "reminderFor": "{{name}} için",
+    "taskLabel": "Telefon size neyi kaydetmenizi hatırlatsın?",
+    "startLabel": "İlk hatırlatıcı",
+    "timeLabel": "Saat",
+    "repeatLabel": "Tekrar",
+    "weekdayLabel": "Haftanın günü",
+    "firstAt": "İlk bildirim: {{date}}",
+    "saveAction": "Hatırlatıcıyı planla",
+    "saving": "Planlanıyor…",
+    "permissionDeniedTitle": "Bildirimler kapalı",
+    "permissionDeniedBody": "Android bildirim izni vermedi. Sistem ayarlarında NatureLens bildirimlerine izin verip tekrar deneyin.",
+    "saveError": "Hatırlatıcı kaydedilmedi veya planlanmadı. Seçimlerinizi kontrol edip tekrar deneyin.",
+    "removeError": "Bu hatırlatıcı kaldırılamadı. Tekrar deneyin.",
+    "removeAction": "{{action}} hatırlatıcısını kaldır",
+    "removing": "Kaldırılıyor…",
+    "removedAnnouncement": "Hatırlatıcı kaldırıldı.",
+    "scheduledSuccess": "Hatırlatıcı {{date}} için planlandı.",
+    "actionAnnouncement": "{{action}} hatırlatıcısı {{date}} için planlandı.",
+    "recordFallback": "bu kayıt",
+    "notificationTitle": "NatureLens hatırlatıcısı · {{name}}",
+    "notificationBody": "Kaydet: {{action}} · {{name}}",
+    "nextAt": "Sonraki: {{date}}",
+    "intervals": {
+      "day1": "1 gün sonra",
+      "day3": "3 gün sonra",
+      "day7": "7 gün sonra",
+      "day14": "14 gün sonra",
+      "day30": "30 gün sonra"
+    },
+    "times": {
+      "at08": "08:00",
+      "at12": "12:00",
+      "at18": "18:00",
+      "at20": "20:00"
+    },
+    "weekdays": {
+      "sun": "Pazar",
+      "mon": "Pazartesi",
+      "tue": "Salı",
+      "wed": "Çarşamba",
+      "thu": "Perşembe",
+      "fri": "Cuma",
+      "sat": "Cumartesi"
+    },
+    "repetitions": {
+      "once": "Bir kez",
+      "daily": "Her gün",
+      "weekly": "Her hafta"
+    }
   },
   "auth": {
     "title": "Tanımlamak için giriş yap",
@@ -153,17 +268,23 @@
       "label": "Ses",
       "tabLabel": "Sesler",
       "title": "Sesten tanımla",
-      "subtitle": "Şarkı söyleyen bir kuşu, kurbağayı veya böceği kaydet ve ne olduğunu öğren."
+      "subtitle": "Şarkı söyleyen bir kuşu, kurbağayı veya böceği kaydet ve ne olduğunu öğren.",
+      "scanHint": "Kayıt netliğini, ritmi, ses perdesini ve tekrarı karşılaştırın. Birbiriyle eşleşen birden fazla ses deseni, tek bir notadan daha güçlü kanıttır."
     }
   },
   "identify": {
     "identifierTitle": "{{category}} Tanımlayıcı",
     "subtitle": "Yapay zeka ile {{category}} türlerini anında tanımla",
+    "freePromise": "Karar vermeden önce deneyin: Kategori başına 1 ücretsiz tanımlama; hesap ve kart gerekmez.",
     "readyToScan": "Taramaya hazır",
     "didYouKnowTitle": "Biliyor muydunuz?",
     "continueLabel": "Devam et",
     "analyzing": "{{category}} analiz ediliyor…",
     "tapToIdentify": "Tanımlamak için dokun",
+    "lensPulseEyebrow": "CANLI NABIZ",
+    "holdToReveal": "Ortaya çıkarmak için basılı tut",
+    "keepHolding": "Basılı tutmaya devam et…",
+    "holdToRevealHint": "Nabız tamamlanana kadar basılı tut. İptal etmek için bırak.",
     "identifying": "Tanımlanıyor…",
     "uploadPhoto": "Fotoğraf Yükle",
     "myCollection": "Koleksiyonum",
@@ -186,6 +307,14 @@
     "referenceImagesTitle": "Referans fotoğrafları",
     "referenceImagesHint": "Eşleşmeyi doğrulamak için kendi fotoğrafınızla karşılaştırın.",
     "referenceImageLabel": "Referans fotoğrafı {{index}}",
+    "evidenceSimilar": "Fotoğrafınıza benziyor",
+    "evidenceRepresentative": "Tür referansı",
+    "evidenceObservation": "Saha kaydı · GBIF",
+    "comparePhotos": "Fotoğrafları karşılaştır",
+    "comparePhotosHint": "Fotoğrafınızı ve referansı yan yana görün.",
+    "sideBySide": "Yan yana",
+    "previousReference": "Önceki referans",
+    "nextReference": "Sonraki referans",
     "alternativesTitle": "Diğer olası eşleşmeler",
     "alternativesHint": "Yukarıdaki sonuç doğru görünmüyorsa türünüz bunlardan biri olabilir.",
     "lowConfidenceBare": "Yalnızca %{{confidence}} güven — bunu kesin bir yanıt değil, bir başlangıç noktası olarak değerlendirin.",
@@ -199,10 +328,54 @@
     "serviceDownBody": "Bu tanımlama hizmetinde geçici bir sorun var. Birkaç dakika sonra tekrar dene - sorun fotoğrafında değil.",
     "poseWhole": "Tamamı",
     "poseClose": "Yakın çekim",
-    "poseOther": "Başka açı"
+    "poseOther": "Başka açı",
+    "photoConsentTitle": "Fotoğraflarınızı göndermeden önce",
+    "photoConsentKindwiseBody": "Seçtiğiniz fotoğraflar tanımlama için Kindwise'a gönderilecektir. Fotoğraflar ve sonuçlar 6 ay boyunca Kindwise üzerinden erişilebilir kalacaktır. Kindwise'ın koşullarına göre fotoğraflar; eğitim ve ticari amaçlarla yeniden kullanıma, diğer müşterilere sunulmaya ve CC BY-SA kapsamında paylaşılmaya izin veren geri alınamaz bir lisansa tabidir. Yalnızca kabul ediyorsanız gönderin.",
+    "photoConsentFishialBody": "Seçtiğiniz fotoğraflar tanımlama için Fishial'a gönderilecektir. Fishial, fotoğrafları kendi veri saklama uygulamalarına göre saklayabilir ve API üzerinden gönderilen fotoğraflar için belirli bir saklama süresi yayımlamaz. Yalnızca kabul ediyorsanız gönderin.",
+    "photoConsentNyckelBody": "Seçtiğiniz fotoğraflar Nyckel'a gönderilecek ve tanımlama sağlamak amacıyla işlenecektir. Yalnızca kabul ediyorsanız gönderin.",
+    "photoConsentBirdBody": "Kalibre edilmiş dünya çapındaki BioCLIP hizmeti etkin olduğunda kuş fotoğrafları önce NatureLens tarafından yönetilen bu özel hizmette işlenebilir. BioCLIP’te yalnızca istek süresince bellekte kalır ve saklanmaz. BioCLIP devre dışıyken ya da başarısız olur veya kesin bir türü kanıtlayamazsa aynı fotoğraflar örnek yakalama kapalı olarak Nyckel’e gönderilebilir; Nyckel geçici saklama garantisi vermez. Yalnızca kabul ediyorsanız gönderin.",
+    "photoConsentSend": "Fotoğrafları gönder",
+    "centralCapture": "Tanımla",
+    "photoReady": "Fotoğraf hazır",
+    "addOptionalAngles": "Başka bir açı ekle",
+    "hideOptionalAngles": "Ek açıları gizle",
+    "captureDemo": {
+      "title": "Nasıl çalıştığını gör",
+      "body": "{{category}} öğesine nişan al, büyük kamera alanına dokun ve sonucu görsellerle doğrula.",
+      "accessibility": "{{category}} öğesinin kamerayla nasıl tanımlandığını gösteren animasyonlu örnek.",
+      "result": "Fotoğraflar ve sonraki adımla sonuç",
+      "steps": {
+        "aim": "Tek bir hedefi kadraja al",
+        "tap": "Kamera alanına dokun",
+        "confirm": "Referansları karşılaştır"
+      },
+      "subject": {
+        "plant": "Yaprak veya çiçek",
+        "tree": "Yaprak, kabuk veya taç",
+        "insect": "Odakta böcek",
+        "mushroom": "Şapka ve alt yüzey",
+        "crop": "Etkilenmiş ürün yaprağı",
+        "fish": "Yandan tüm balık",
+        "bird": "Kadroda tüm kuş",
+        "sound": "Net bir ses kaydet"
+      }
+    },
+    "expeditionTitle": "Keşif rotanı seç",
+    "expeditionBody": "Her rota, fotoğraftan sonra uygulamanın öne çıkardığı bilgileri değiştirir.",
+    "categoryPromise": {
+      "plant": "Bakım, güvenlik ve görsel ipuçları",
+      "insect": "Vücut özellikleri, risk ve saha notları",
+      "mushroom": "Benzer türler ve önce güvenlik",
+      "crop": "Agronomi, zararlılar ve toprak koşulları",
+      "fish": "Su, yaşam alanı ve tanımlama kanıtı",
+      "bird": "Ayırt edici özellikler, yaşam alanı ve gözlem ipuçları",
+      "sound": "Dinle, karşılaştır ve sesleri tanımla"
+    }
   },
   "detail": {
     "profileTitle": "{{category}} Profili",
+    "invertebrateLabel": "Omurgasız",
+    "fungusLabel": "Mantar",
     "readMoreLabel": "Bu {{category}} hakkında çevrimiçi daha fazla bilgi oku",
     "markAsWatered": "Sulandı Olarak İşaretle",
     "markAsWateredLabel": "Sulandı olarak işaretle",
@@ -212,10 +385,24 @@
     "checkForDiseasesLabel": "Hastalık kontrolü yap",
     "checkingForDiseasesLabel": "Hastalık kontrolü yapılıyor",
     "healthCheckSection": "Sağlık Kontrolü",
+    "healthSpeciesMismatch": "Sağlık taraması aynı türü tanımadı. Bu bitkinin daha net bir fotoğrafını çekin; herhangi bir teşhis uygulanmadı.",
     "edibleParts": "Yenilebilir Kısımlar",
     "propagation": "Çoğaltma",
     "wateringNeeds": "Sulama İhtiyaçları",
     "conservationStatus": "Koruma Durumu",
+    "iucn": {
+      "extinct": "Tükenmiş",
+      "extinctInTheWild": "Doğada tükenmiş",
+      "regionallyExtinct": "Bölgesel olarak tükenmiş",
+      "criticallyEndangered": "Kritik tehlikede",
+      "endangered": "Tehlikede",
+      "vulnerable": "Hassas",
+      "nearThreatened": "Tehdide yakın",
+      "leastConcern": "Asgari endişe",
+      "dataDeficient": "Yetersiz veri",
+      "notApplicable": "Uygulanamaz",
+      "notEvaluated": "Değerlendirilmemiş"
+    },
     "safetySection": "Güvenlik",
     "ecologicalRoleSection": "Ekolojik Rolü",
     "frequentlyConfusedWith": "Sıkça Karıştırıldığı Türler",
@@ -232,6 +419,10 @@
     "installNudgeBody": "Bir dahaki sefere daha hızlı tanımlamak için ana ekranına ekle.",
     "commonNames": "Yaygın adlar",
     "synonyms": "Bilimsel eş adlar",
+    "family": "Familya",
+    "order": "Takım",
+    "taxonomyTitle": "Sınıflandırma",
+    "species": "Tür",
     "referencePhoto": "Referans fotoğrafı",
     "referencePhotoAlt": "{{name}} referans fotoğrafı",
     "coverageNoteTitle": "Bu sonuç hakkında",
@@ -250,7 +441,7 @@
     "everyNDays": "Her {{count}} günde bir",
     "gbifCredit": "Veri: GBIF.org",
     "seasonChart": "Aylara göre kayıtlar",
-    "seasonChartNote": "Dünya genelindeki gözlem kayıtları, ay ay. Gözlem çabasını yansıtır; çiçeklenme veya etkinlik garantisi değildir.",
+    "seasonChartNote": "Dünya genelindeki gözlem kayıtları, ay ay. Gözlem çabasını yansıtır; türün ne zaman ya da neden bulunduğunu kesin olarak göstermez.",
     "tipWatering": "Sulamadan önce toprağa dokunun: üstteki birkaç santim kuruysa vakti gelmiş demektir.",
     "tipLight": "Gün boyunca ışığın mekânda nasıl hareket ettiğini izleyin - göründüğünden daha çok değişir.",
     "tipSoil": "İyi drenaj, iyi gübre kadar önemlidir: suya doymuş kökler acı çeken köklerdir.",
@@ -334,6 +525,12 @@
     "scheduleNow": "şimdi",
     "scheduleGroupNote": "Bu takvim {{group}} grubu içindir, tam olarak bu tür için değil.",
     "scheduleGroupNoteShort": "Bu takvim türün ait olduğu grup içindir, tam olarak bu tür için değil.",
+    "groupGuideNote": "{{group}} grubu için genel bir yönlendirmedir; bu türün kendisine özgü bir bilgi değildir.",
+    "generalGuideNote": "Genel bir yönlendirmedir; bu türün kendisine özgü bir bilgi değildir.",
+    "agronomySection": "Tarla agronomisi",
+    "agronomyDecisionNote": "Gözlem ve ölçümle başlayın. Tarlada neyi değiştireceğinize karar vermeden önce her protokolü açın.",
+    "integratedManagementSection": "Entegre yönetim",
+    "openFullProtocol": "Tam protokolü aç",
     "scheduleNoLocation": "Konumunuz olmadan hangi mevsimde olduğunuzu bilemeyiz, bu yüzden hiçbir sütun vurgulanmadı.",
     "careProfileTitle": "Bakım profili",
     "careLevelLabel": "Bakım seviyesi",
@@ -348,9 +545,13 @@
     "speciesCareSection": "Bu türün bakımı",
     "speciesCareNote": "Bu değerler {{species}} türünün kendisine aittir, grubuna değil.",
     "speciesCareSource": "Kaynak: {{citation}}",
+    "wikipediaExcerptNotice": "Bu alıntı bu bölüm için seçilmiş ve kısaltılmıştır.",
+    "wikipediaArticleLink": "Wikipedia makalesi",
+    "wikipediaAuthorsLink": "Makalenin yazarları ve geçmişi",
+    "wikipediaLicenseLink": "CC BY-SA 4.0 lisansı",
     "usdaMoisture": "Su ihtiyacı",
     "usdaDrought": "Kuraklık toleransı",
-    "usdaFertility": "Gübre ihtiyacı",
+    "usdaFertility": "Toprak verimliliği gereksinimi",
     "usdaShade": "Gölge toleransı",
     "usdaPh": "Toprak pH'ı",
     "usdaTempMin": "Dayandığı en düşük sıcaklık",
@@ -362,7 +563,173 @@
     "levelNone": "Yok",
     "bloomEarly": "{{season}} başı",
     "bloomMid": "{{season}} ortası",
-    "bloomLate": "{{season}} sonu"
+    "bloomLate": "{{season}} sonu",
+    "feedbackThanks": "Geri bildiriminiz için teşekkürler."
+  },
+  "learning": {
+    "title": "Gözlemlemeyi öğren",
+    "basic": "Temel",
+    "learn": "Öğren",
+    "technical": "Teknik",
+    "generalDiagram": "Genel şema",
+    "generalNote": "Neye bakmanız gerektiğini anlamak için bu çizimi kullanın. Bu genel bir rehberdir, tanımlanan türün resmi değildir.",
+    "illustrationAlt": "{{category}} için genel gözlem çizimi",
+    "observeTitle": "Her seferinde bir bölüme bakın",
+    "observeHint": "Şekli, rengi, boyutu ve konumu karşılaştırın. Birden fazla özelliğin eşleşmesi, tek bir ayrıntıdan daha güçlü bir kanıttır.",
+    "evidenceTitle": "Tanımlama kanıtları",
+    "technicalNote": "Bu değerler tanımlama sonucundan geldi. Eksik kanıtlar gizli kalır ve hiçbir alan tahminle doldurulmaz.",
+    "categoryMatch": "Kategori eşleşmesi",
+    "provider": "Tanımlama kaynağı",
+    "parts": {
+      "leaf": "Yaprak şekli ve damarları",
+      "stemNode": "Gövde ve boğum",
+      "flower": "Çiçek yapısı",
+      "roots": "Kökler",
+      "canopy": "Taç şekli",
+      "branches": "Dallar",
+      "trunkBark": "Gövde ve kabuk",
+      "youngOldLeaves": "Genç ve yaşlı yapraklar",
+      "affectedArea": "Etkilenen alan",
+      "stem": "Gövde",
+      "antennae": "Antenler",
+      "head": "Baş",
+      "bodySections": "Vücut bölümleri",
+      "wingsLegs": "Kanatlar ve bacaklar",
+      "cap": "Şapka",
+      "underside": "Lameller, gözenekler veya alt yüzey",
+      "baseSubstrate": "Taban ve yetiştiği yüzey",
+      "beak": "Gaga",
+      "wing": "Kanat",
+      "tail": "Kuyruk",
+      "feet": "Ayaklar",
+      "headProfile": "Baş profili",
+      "bodyMarks": "Vücut işaretleri",
+      "fins": "Yüzgeçler",
+      "recording": "Kayıt kalitesi",
+      "rhythm": "Ritim",
+      "pitch": "Yüksek veya düşük perde",
+      "repetition": "Tekrarlama",
+      "cephalothorax": "Başlıgöğüs",
+      "abdomen": "Karın",
+      "eyes": "Gözler",
+      "eightLegs": "Sekiz bacak",
+      "tentacles": "Dokunaçlar",
+      "shell": "Kabuk",
+      "muscularFoot": "Kaslı ayak",
+      "anterior": "Ön uç",
+      "segments": "Vücut segmentleri",
+      "clitellum": "Klitellum",
+      "posterior": "Arka uç"
+    }
+  },
+  "speciesDossier": {
+    "title": "Bilimsel dosya",
+    "exactEvidence": "{{species}} için belgelendi",
+    "evidenceNote": "Yalnızca kaynakla desteklenen bilgiler gösterilir. Eksik bilgiler gizli kalır.",
+    "environment": "Kaydedilen su türleri",
+    "diet": "Belgelenmiş beslenme",
+    "habitat": "Belgelenmiş yaşam alanı",
+    "brackish": "Acı su",
+    "reproduction": "Belgelenmiş üreme",
+    "lifeCycle": "Belgelenmiş yaşam döngüsü",
+    "lifeStagesTitle": "Belgelenmiş yaşam evreleri",
+    "larvalInstars": "{{count}} larva evresi",
+    "bodyLength": "Vücut uzunluğu",
+    "leafConsumption": "Yaprak tüketimi",
+    "leafAreaPerLarva": "Larva başına tüketilen yaprak alanı",
+    "lifeStages": { "egg": "Yumurta", "larva": "Larva", "nymph": "Nimf", "pupa": "Pupa", "adult": "Ergin" },
+    "measurements": {
+      "clutchSize": "Yumurta sayısı",
+      "incubationPeriod": "Kuluçka süresi",
+      "lifeExpectancy": "Beklenen yaşam süresi",
+      "longestLifespan": "Gözlenen en uzun yaşam süresi",
+      "gestationPeriod": "Gebelik süresi"
+    }
+  },
+  "fertilizer": {
+    "title": "Gübreleme kararı",
+    "planningNote": "Sorumlu bir öneri, tarlada ölçülen verilerle başlar. Tablo her girdinin neyi belirlediğini gösterir; bir uygulama reçetesi değildir.",
+    "input": "Girdi",
+    "decisionUse": "Neyi belirler",
+    "soilAnalysis": "Toprak analizi",
+    "soilAnalysisUse": "Kullanılabilir besinler, asitlik, tuzluluk ve kireçleme gereksinimi.",
+    "plantAnalysis": "Bitki veya doku analizi",
+    "plantAnalysisUse": "Görünür belirtilerden önceki gizli açlık dâhil güncel beslenme durumu.",
+    "targetDestination": "Verim hedefi ve kullanım amacı",
+    "targetDestinationUse": "Beklenen besin kaldırımı; dane ve tüm bitki hasadı aynı değildir.",
+    "fieldHistory": "Tarla geçmişi ve bitki artıkları",
+    "fieldHistoryUse": "Toprağa ne verildiği, neyin kaldırıldığı veya geri döndüğü.",
+    "textureWater": "Toprak bünyesi ve su",
+    "textureWaterUse": "Yıkanma riski ve uygulamaların bölünmesi gerekip gerekmediği.",
+    "diagnosisCaution": "Görsel belirti bir ipucudur, doğrulama değildir. Su stresi, hastalık, böcekler veya başka bir besin bunu maskeleyebilir.",
+    "maizeTitle": "Mısırın besin maddesi kaldırımı",
+    "maizeIntro": "Farklı verim ve hasat amaçlarında ürünün kaldırdığı ortalama miktarlar.",
+    "destination": "Kullanım",
+    "productivity": "Verim (t/ha)",
+    "grain": "Dane",
+    "silage": "Silaj (kuru madde)",
+    "tonnesPerHectare": "hektar başına ton",
+    "kgPerHectare": "hektar başına kilogram",
+    "extractedUnit": "Verim t/ha; kaldırılan besinler kg/ha cinsindedir.",
+    "notDoseWarning": "Besin kaldırımı gübre dozu değildir. Öneri için toprak ve doku analizleri, verim hedefi, bölgesel kalibrasyon ve yerel bir ziraat mühendisi gerekir.",
+    "onionTitle": "Soğan: besin fazlalığı etkileşimleri",
+    "onionIntro": "Yalnızca soğan için belgelenen etkiler; diğer ürünlere genellenmemelidir.",
+    "excess": "Fazla besin",
+    "possibleEffect": "Olası etki",
+    "nitrogenEffect": "Daha uzun dönem, kalın boyun, aşırı yapraklanma, daha fazla yaprak hastalığı ve hasat sonrası daha düşük dayanım.",
+    "potassiumEffect": "Magnezyum ve kalsiyum noksanlığına yol açabilir.",
+    "phosphorusEffect": "Çinko ve bakır noksanlığına yol açabilir.",
+    "scrollHint": "Tüm besinleri görmek için tabloyu yana kaydırın.",
+    "botanicalTitle": "Gübreleme ve besleme",
+    "botanicalIntro": "Bir kaynak bulunduğunda bu rehber tür verisini, doğrulanmış bitki grubu rehberliğini ve mevsimsel zamanlamayı ayrı gösterir. Bir fotoğraf asla doz belirlemez.",
+    "unknownGroupNote": "Bu bitki grubu için henüz doğrulanmış bir gübreleme rehberi yok. Karar kontrol listesi kullanılabilir, ancak gruba özgü bir kural veya doz çıkarılmaz.",
+    "growthStress": "Büyüme evresi ve stres",
+    "growthStressUse": "Yerleşme, aktif büyüme, çiçeklenme veya meyve verme ve dinlenme dönemlerini ayırın. Gübrelemeden önce kuraklık, su baskını, kök hasarı veya yeni dikim sorununu düzeltin.",
+    "labelHistory": "Ürün etiketi ve uygulama geçmişi",
+    "labelHistoryUse": "N-P-K değerini, salım tipini, etiket talimatlarını, son uygulamayı ve ortamda önceden gübre bulunup bulunmadığını doğrulayın.",
+    "plantNoDoseWarning": "Tek bir fotoğraf güvenli dozu belirleyemez. Ürün etiketini ve yerel analizi izleyin; başka bir türden, iklimden, saksıdan veya tarladan doz kopyalamayın."
+  },
+  "pestManagement": {
+    "title": "Zararlı böcek izleme",
+    "decisionNote": "Bir fotoğraf böceği veya zararını düşündürebilir, ancak tarladaki yoğunluğunu ölçmez. Müdahale kararı için temsili örnekleme gerekir.",
+    "whatToCheck": "Kontrol edilecekler",
+    "fieldDecision": "Tarla kararı",
+    "identifyDamage": "Hedef zararlı ve hasar",
+    "identifyDamageUse": "Böceği, gelişim evresini, uyumlu hasarı ve tarladaki dağılımını doğrulayın.",
+    "samplingPlan": "Örnekleme planı",
+    "samplingPlanUse": "Ürüne ve gelişim dönemine göre birimi, yöntemi, noktaları ve sıklığı belirleyin.",
+    "countStage": "Sayı ve evre",
+    "countStageUse": "Her noktayı, zararlının boyunu veya evresini, ürün evresini ve doğal düşmanları kaydedin; ardından müdahale eşiğiyle karşılaştırın.",
+    "noCountWarning": "Temsili bir sayım ve uygulanabilir müdahale eşiği olmadan izlemeye devam edin; takvime göre asla ilaçlama yapmayın.",
+    "chemicalSafetyTitle": "Kimyasal mücadele gerekirse",
+    "maizeTitle": "Mısır: tarla müdahale referansları",
+    "target": "Hedef",
+    "fieldProtocol": "Örnekleme ve müdahale referansı",
+    "fallArmyworm": "Güz tırtılı",
+    "fallArmywormProtocol": "Yalnızca verim potansiyeli en az 100 çuval/ha olan tarlalarda: {{sampleAreaHa}} ha içinde {{samplePoints}} rastgele noktayı inceleyin. Yayımlanmış referans, ilk zarar belirtileri görülen bitkilerin %{{actionPercent}} oranıdır.",
+    "wireworm": "Telkurdu",
+    "wirewormProtocol": "Ekimden önce {{sampleWidthCm}} × {{sampleLengthCm}} × {{sampleDepthCm}} cm boyutundaki toprak örneğini eleyin. Referans: örnek başına en az {{actionCount}} böcek.",
+    "maizeThresholdNote": "Mısır için %10 referansı, en az 100 çuval potansiyel verime sahip tarlalar için verilmiştir. Bölge, hibrit, ürün evresi ve üretim sistemi yerel eşiği değiştirebilir.",
+    "soyTitle": "Soya: örnekleme ve müdahale düzeyleri",
+    "soySamplingTitle": "Asgari örnekleme noktaları",
+    "fieldArea": "Tarla alanı",
+    "minimumSamples": "Asgari",
+    "upToHectares": "{{count}} hektara kadar",
+    "overHectares": "{{count}} hektardan fazla",
+    "samplePoints": "{{count}} nokta",
+    "dividePlots": "En fazla {{count}} hektarlık parsellere bölün",
+    "soyThresholdTitle": "Müdahale referansları",
+    "situation": "Durum",
+    "actionLevel": "Referans düzeyi",
+    "defoliation": "Yaprak kaybı",
+    "defoliationLevel": "Vejetatif dönemde %{{vegetativePercent}} veya çiçeklenmeden itibaren %{{reproductivePercent}} üzerinde.",
+    "largeCaterpillars": "Büyük yaprak yiyen tırtıllar",
+    "largeCaterpillarsLevel": "Darbe beziyle sıra metresi başına {{minimumLengthCm}} cm'den büyük {{countPerMeter}} tırtıl.",
+    "grainStinkbugs": "Kokarca böcekleri — dane üretimi",
+    "grainStinkbugsLevel": "{{stageStart}} ile {{stageEnd}} arasında sıra metresi başına üçüncü dönemden itibaren {{countPerMeter}} ergin veya nimf.",
+    "seedStinkbugs": "Kokarca böcekleri — tohum üretimi",
+    "seedStinkbugsLevel": "{{stageStart}} ile {{stageEnd}} arasında sıra metresi başına üçüncü dönemden itibaren {{countPerMeter}} ergin veya nimf.",
+    "soyThresholdNote": "Bunlar Brezilya Embrapa referanslarıdır. Kritik dönemde haftalık örnekleme yapın, kokarca böceklerini serin saatlerde değerlendirin ve bölgesel uyarlamaları yerel teknik danışmanlıkla doğrulayın."
   },
   "disease": {
     "overviewSection": "Genel Bakış",
@@ -375,7 +742,9 @@
     "healthStatusSection": "Sağlık Durumu",
     "noDiseaseDetected": "Bu fotoğrafta güvenle tespit edilebilecek bir hastalık veya zararlı bulunamadı.",
     "match": "Eşleşme",
-    "severitySuffix": "{{severity}} şiddet"
+    "severitySuffix": "{{severity}} şiddet",
+    "diagnosisCaution": "Fotoğraf bir ön taramadır, tarla teşhisi değildir. Müdahale etmeden önce birden fazla bitkiyi kontrol edin; su, besin ve uygulama zararını eleyin.",
+    "chemicalCaution": "Yalnızca ülkenizde bu ürün ve hedef için ruhsatlı ürünleri kullanın. Etikete uyun ve kararı yerel bir ziraat mühendisiyle doğrulayın."
   },
   "collection": {
     "title": "Koleksiyonum",
@@ -413,6 +782,11 @@
     "byCategory": "Kategoriye Göre",
     "privacyPolicy": "Gizlilik Politikası",
     "language": "Dil",
+    "careRegionRow": "Bakım mevsimleri",
+    "careRegionHint": "Mevsimsel programlar ve çiçeklenme için kullanılacak yarımküreyi belirler. Yalnızca bu cihazda saklanır.",
+    "careRegionAuto": "Otomatik",
+    "careRegionSouth": "Güney yarımküre",
+    "careRegionNorth": "Kuzey yarımküre",
     "installApp": "Uygulamayı yükle",
     "installAppIOSTitle": "NatureLens'i Yükle",
     "installAppIOSBody": "NatureLens'i telefonunuza yüklemek için Paylaş düğmesine, ardından \"Ana Ekrana Ekle\" seçeneğine dokunun.",
@@ -453,7 +827,7 @@
     "acceptanceTitle": "Şartların kabulü",
     "acceptanceBody": "NatureLens'i kullanarak bu Kullanım Şartları'nı kabul etmiş olursunuz. Kabul etmiyorsanız lütfen uygulamayı kullanmayın.",
     "serviceTitle": "Bu uygulama ne yapar",
-    "serviceBody": "NatureLens; bitkileri, böcekleri, mantarları, ekinleri ve ağaçları - ve cihazınıza bağlı olarak balıkları, kuşları ve hatta sesleri - fotoğraflayıp üçüncü taraf yapay zeka servisleriyle tanımlamanızı sağlar (Kindwise'ın Plant.id, Insect.id, Mushroom.id ve Crop.health servisleri, balıklar için Fishial, kuşlar için Nyckel ve kendi ses modelimiz). Sonuçlar otomatik olarak üretilir ve bir insan uzman tarafından incelenmez.",
+    "serviceBody": "NatureLens; bitkileri, böcekleri, mantarları, ekinleri ve ağaçları - ve cihazınıza bağlı olarak balıkları, kuşları ve hatta sesleri - fotoğraflayıp üçüncü taraf yapay zeka servisleriyle tanımlamanızı sağlar (Kindwise'ın Plant.id, Insect.id, Mushroom.id ve Crop.health servisleri, balıklar için Fishial, kuşlar için Nyckel ve kendi ses modelimiz). Sonuçlar otomatik olarak üretilir ve bir insan uzman tarafından incelenmez. Kalibre edilmiş dünya çapındaki BioCLIP hizmeti etkin olduğunda NatureLens kuşlar için önce kendi yönettiği bu özel hizmeti kullanabilir; hizmet devre dışıyken ya da başarısız olur veya kesin bir türü kanıtlayamazsa Nyckel yedek olarak kullanılır.",
     "accuracyTitle": "Tanımlama doğruluğu — lütfen okuyun",
     "accuracyBody": "Yapay zeka tanımlaması, bir bitkinin veya mantarın yenilebilir, zehirli veya dokunması güvenli olup olmadığı konusunda da dahil olmak üzere yanlış olabilir. Sadece bu uygulamanın sonucuna dayanarak asla yabani bir bitki, mantar veya fungus yemeyin, toplamayın veya kullanmayın. Doğada bulduğunuz bir şeyi tüketmeden veya kullanmadan önce her zaman nitelikli bir uzmana (mikolog, botanikçi veya zehir kontrol merkezi) danışın. Bu uygulama tarafından yapılan bir tanımlamaya güvenmenin neden olduğu zararlardan sorumlu değiliz.",
     "billingTitle": "Abonelikler ve faturalandırma",
@@ -470,7 +844,7 @@
   "privacy": {
     "title": "Gizlilik Politikası",
     "collectTitle": "Neleri topluyoruz",
-    "collectBody": "Bu uygulama bir bitkiyi, ağacı, böceği, mantarı, ekini, balığı veya kuşu fotoğraflayıp tanımlamanı, ve bir hayvan sesini kaydedip sesinden tanımlamanı sağlar. Tanımlamayı yapay zekâ servisleri yapar: Kindwise (bitki, ağaç, böcek, mantar, ekin), Fishial.AI (balık) ve Nyckel (kuş). Ses kendi sunucumuzda tanımlanır, yani kayıtlar üçüncü taraflara ulaşmaz.",
+    "collectBody": "Bu uygulama bir bitkiyi, ağacı, böceği, mantarı, ekini, balığı veya kuşu fotoğraflayıp tanımlamanı, ve bir hayvan sesini kaydedip sesinden tanımlamanı sağlar. Tanımlamayı yapay zekâ servisleri yapar: Kindwise (bitki, ağaç, böcek, mantar, ekin), Fishial.AI (balık) ve Nyckel (kuş). Ses kendi sunucumuzda tanımlanır, yani kayıtlar üçüncü taraflara ulaşmaz. NatureLens tarafından yönetilen özel, kalibre edilmiş dünya çapındaki BioCLIP hizmeti etkin olduğunda kuş fotoğrafları önce burada işlenebilir: yalnızca istek sırasında bellekte kalır ve saklanmaz. Hizmet devre dışıyken ya da başarısız olur veya kesin bir türü kanıtlayamazsa aynı fotoğraflar örnek yakalama kapalı olarak Nyckel’e gönderilebilir; burada geçici saklama garantisi yoktur.",
     "thirdPartyTitle": "Üçüncü taraf yapay zeka servisleri",
     "thirdPartyBody": "Bir fotoğraf çektiğinde veya yüklediğinde, ilgili tanımlama servisine gönderilir. Fotoğraflarını kontrol ettiğimiz hiçbir sunucuda saklamıyoruz. Referans fotoğrafı ve açıklama göstermek için uygulama bilimsel adı Vikipedi’ye sorar — yani Vikipedi hangi türe baktığını görür, kim olduğunu değil. Bazı sağlayıcılar yalnızca İngilizce yazar; bu metni çevirmek ve uygulamadaki uzmana soru sormak, o metni Anthropic’e gönderir.",
     "localStorageTitle": "Sadece yerel depolama",
@@ -2162,7 +2536,15 @@
     },
     "herbSubscribeCtaTitle": "Bu rehberi beğendiniz mi?",
     "herbSubscribeCtaBody": "Sınırsız bitki, böcek, mantar ve tarımsal ürün tanımlamalarının kilidini açmak için abone olun.",
-    "herbAlreadySubscribedCheck": "Zaten abone misiniz? Tekrar kontrol etmek için dokunun"
+    "herbAlreadySubscribedCheck": "Zaten abone misiniz? Tekrar kontrol etmek için dokunun",
+    "mascot": {
+      "kicker": "Canli rehberin",
+      "title": "Lino dogayi seninle inceler.",
+      "body": "Fotograf cek, ses kaydet veya bir bulguyu sakla. En net sonraki adimla baslarim.",
+      "photo": "Fotograf",
+      "sound": "Ses",
+      "journal": "Gunluk"
+    }
   },
   "botanist": {
     "headerTitle": "Dr. Helena Marques",
@@ -2296,6 +2678,9 @@
     "title": "Bugünün görevleri",
     "rewardEach": "Her biri +{{tokens}}",
     "allDone": "Bugünlük bitti — yarın tekrar gel!",
+    "completedAnnouncement": "Görev tamamlandı: {{mission}}",
+    "completedStatus": "Tamamlandı",
+    "progressStatus": "{{target}} görevin {{done}} tanesi tamamlandı",
     "pool": {
       "scanAny2": "Bugün 2 tür tanımla",
       "scanAny3": "Bugün 3 tür tanımla",
@@ -2310,14 +2695,117 @@
       "openDiscover": "Keşfet sekmesini ziyaret et"
     }
   },
+  "fishSafety": {
+    "unverifiedTitle": "Güvenlik henüz doğrulanmadı",
+    "unverifiedBody": "Bu türe özel bir güvenlik kaydı bulamadık. Yalnızca bu tanımlamaya dayanarak balığa dokunmayın, balığı tutmayın, yemeyin veya doğaya bırakmayın."
+  },
+  "lensReveal": {
+    "title": "Keşif hazır",
+    "safetyFirst": "Önce güvenlik"
+  },
+  "resultDepth": {
+    "label": "Ne kadarını görmek istediğinizi seçin",
+    "essential": "Temel",
+    "visual": "Görsel",
+    "expert": "Uzman"
+  },
+  "nextBestCapture": {
+    "title": "Bu tanımlamayı iyileştirin",
+    "reasonLowConfidence": "Güven oranı %{{confidence}}. Bir açı daha yardımcı olabilir.",
+    "reasonAlternatives": "{{count}} alternatif hâlâ mümkün.",
+    "reasonIdentityUnresolved": "Sonuç {{name}} düzeyinde kaldı ve henüz bir türü doğrulamadı. Bu nedenle türe özgü bölümler gizli kalır.",
+    "action": "Başka bir açıdan çek",
+    "categories": {
+      "plant": "Bitkinin tamamını, ardından net odaklanmış bir yaprak veya çiçeği fotoğraflayın.",
+      "tree": "Ağacın tamamını, kabuğunu ve net odaklanmış bir yaprak veya meyveyi gösterin.",
+      "crop": "Bitkinin tamamını, belirtinin yakın çekimini ve çevredeki tarla alanını gösterin.",
+      "mushroom": "Gereksiz yere dokunmadan şapkayı, lamelleri veya gözenekleri, sapın tabanını ve zemini fotoğraflayın.",
+      "insect": "Tüm gövdeyi üstten ve yandan, ayrıca konak bitkiyi veya hasarı fotoğraflayın.",
+      "fish": "Balığın yandan net profilini, yüzgeçlerini ve çevresindeki yaşam alanını veya akvaryumu gösterin.",
+      "bird": "Kuşun tamamını, gagasını ve kanat işaretlerini gösterin ya da daha uzun ve temiz bir ses kaydı alın.",
+      "sound": "Rüzgâr, konuşma ve arka plan gürültüsünün daha az olduğu en az 10 saniyelik ek bir kayıt yapın."
+    }
+  },
   "share": {
     "message": "NatureLens ile bir {{category}} tanımladım: {{name}}{{scientific}}{{confidence}}\n\nBitkileri, böcekleri, mantarları, balıkları ve kuşları fotoğraftan tanımla:\n{{url}}",
     "confidenceLine": "%{{confidence}} güven"
   },
   "onboarding": {
+    "media": { "play": "Videoyu oynat", "pause": "Videoyu duraklat", "enableSound": "Sesi aç", "disableSound": "Sesi kapat" },
     "skip": "Atla",
     "next": "İleri",
     "start": "Tanımlamaya başla",
+    "progress": "{{current}} / {{total}}",
+    "preparing": "NatureLens'in hazırlanıyor…",
+    "promiseKicker": "Nasıl çalıştığını gör",
+    "personalizeKicker": "Kendine göre ayarla",
+    "readyKicker": "Keşfetmeye hazır",
+    "promise": {
+      "body": "Tek bir çekim kimlik, güvenlik ve net bir sonraki adıma dönüşür.",
+      "demoNext": "Sonraki adım: yaprağın alt yüzünü fotoğrafla"
+    },
+    "goal": {
+      "title": "NatureLens sana nasıl yardımcı olsun?",
+      "body": "Yanıtın, her tanımlamadan sonra önce neyin gösterileceğini değiştirir.",
+      "options": {
+        "identify": {
+          "title": "Ne olduğunu keşfet"
+        },
+        "safety": {
+          "title": "Güvenliği ve riskleri kontrol et"
+        },
+        "care": {
+          "title": "Bakım yap ve takip et"
+        },
+        "field": {
+          "title": "Tarla ve üretim"
+        },
+        "learn": {
+          "title": "Doğa hakkında öğren"
+        }
+      }
+    },
+    "context": {
+      "title": "En çok nerede keşif yapıyorsun?",
+      "body": "Bunu yalnızca kategorileri ve yönlendirmeleri sıralamak için kullanırız. Daha sonra değiştirebilirsin.",
+      "options": {
+        "home": {
+          "title": "Ev veya bahçe"
+        },
+        "field": {
+          "title": "Tarla veya ekim alanı"
+        },
+        "nature": {
+          "title": "Patika veya doğa"
+        },
+        "water": {
+          "title": "Su veya akvaryum"
+        },
+        "study": {
+          "title": "Eğitim veya teknik çalışma"
+        }
+      }
+    },
+    "depth": {
+      "title": "Önce ne kadar ayrıntı görmek istersin?",
+      "body": "Her şey erişilebilir kalır. Bu seçim yalnızca ilk katmanı belirler.",
+      "options": {
+        "essential": {
+          "title": "Temel"
+        },
+        "visual": {
+          "title": "Görsel"
+        },
+        "technical": {
+          "title": "Teknik"
+        }
+      }
+    },
+    "ready": {
+      "title": "NatureLens'in hazır",
+      "body": "İlk sonuç, hiçbir güvenlik uyarısını gizlemeden seçimlerine uyacak.",
+      "promise": "Eksik kanıt eksik kalır. NatureLens kesinlik uydurmak yerine daha iyi bir fotoğraf veya kayıt ister."
+    },
     "what": {
       "title": "Doğrult. Çek. Öğren.",
       "body": "Canlı olan her şeyi fotoğrafla; NatureLens saniyeler içinde ne olduğunu söylesin — kendin doğrulayabilmen için referans fotoğraflarla birlikte."
@@ -2329,6 +2817,20 @@
     "free": {
       "title": "İlk tanımlaman ücretsiz",
       "body": "Her kategoride bir tanımlamayı ücretsiz dene. Sınırsız tarama istediğinde abone ol."
+    },
+    "reviewKicker": "Küçük bir rica",
+    "review": {
+      "title": "Bu şimdiden faydalı görünüyorsa NatureLens’in güçlü başlamasına yardım edin.",
+      "body": "İlk fotoğraftan önce kısa bir kontrol: bu lens beş yıldızlık bir deneyim gibi hissettiriyor mu?",
+      "quote": "Kullanımı basit, detayları güzel ve kanıt eksikken dürüst kalan bir lens.",
+      "yes": "Evet, beş yıldız gibi",
+      "later": "Önce denemek istiyorum",
+      "starsLabel": "Beş yıldız önizlemesi",
+      "proofs": {
+        "simple": "Basit",
+        "safe": "Güvenli",
+        "useful": "Faydalı"
+      }
     }
   },
   "recap": {
@@ -2400,7 +2902,8 @@
     "recording": "Kaydediliyor… {{seconds}}s kaldı",
     "analysing": "Dinliyor…",
     "startLabel": "Kaydı başlat",
-    "stopLabel": "Durdur ve tanımla",
+    "stopLabel": "Kaydı durdur",
+    "uploadDisclosure": "Ses, Canlı Nabız tamamlandıktan sonra NatureLens sunucusuna gönderilir. Ham kayıt koleksiyonunuza kaydedilmez.",
     "tipsTitle": "Daha iyi sonuç için",
     "tip1": "Mümkünse yaklaş — mesafe en büyük etken.",
     "tip2": "Telefonu sese doğru tut ve hareket etme.",
@@ -2411,8 +2914,13 @@
     "groupMammal": "Memeli",
     "permissionTitle": "Mikrofon engellendi",
     "permissionBody": "Tarayıcı ayarlarından bu site için mikrofon erişimine izin ver ve tekrar dene.",
+    "permissionAndroidBody": "Android Ayarları’nda NatureLens’in mikrofonu kullanmasına izin verin. Diğer özellikler kullanılmaya devam eder.",
+    "permissionWebBody": "Tarayıcı ayarlarında bu site için mikrofon erişimine izin verin ve yeniden deneyin.",
     "unsupportedTitle": "Kayıt yapılamıyor",
     "unsupportedBody": "Bu tarayıcı ses kaydedemiyor. Android’de Chrome’u dene veya iPhone’da uygulamayı ana ekrana ekle.",
+    "unsupportedAndroidBody": "Yerel kaydedici başlatılamadı. NatureLens’i güncelleyin veya yeniden yükleyin ve tekrar deneyin. Diğer özellikler kullanılmaya devam eder.",
+    "unsupportedWebBody": "Bu tarayıcı ses kaydedemedi. Uyumlu bir tarayıcının güncel sürümünü kullanın ve mikrofon erişimine izin verin.",
+    "unsupportedIosBody": "Sesle tanımlama Android’de ve web sitesinde kullanılabilir, ancak bu iOS uygulamasında kullanılamaz. Diğer tüm tanımlama özellikleri kullanılmaya devam eder.",
     "tooShortTitle": "Kayıt çok kısa",
     "tooShortBody": "Hayvan ses çıkarırken en az iki saniye kaydet.",
     "failedTitle": "Tanımlanamadı",
@@ -2420,7 +2928,11 @@
     "decodeFailedBody": "Bu kayıt okunamadı. Tekrar dene.",
     "notFoundBody": "Bu kayıtta tanınabilir bir şey yok. Daha yaklaş veya ses çıkarırken kaydet.",
     "noContentBody": "Bu tür için henüz açıklama yok.",
-    "notWildlifeBody": "Bu bir araç, makine veya insan sesi gibi geliyor, hayvan değil. Daha sessiz bir yerde tekrar kaydetmeyi dene."
+    "notWildlifeBody": "Bu bir araç, makine veya insan sesi gibi geliyor, hayvan değil. Daha sessiz bir yerde tekrar kaydetmeyi dene.",
+    "audioEvidenceTitle": "Kaydınız",
+    "audioEvidenceBody": "Bu tanımlamada kullanılan sesin genlik tepe noktaları.",
+    "audioEvidenceDuration": "{{seconds}} sn",
+    "audioEvidenceAlt": "{{seconds}} saniye süren kaydınızın genlik tepe noktaları."
   },
   "login": {
     "signInRow": "Giriş yap",
@@ -2454,7 +2966,17 @@
     "tellFriends": "Arkadaşlarına öner",
     "linkCopied": "Bağlantı kopyalandı",
     "validUntil": "{{date}} tarihine kadar geçerli",
-    "sectionAbout": "Uygulama hakkında"
+    "sectionAbout": "Uygulama hakkında",
+    "replayOnboarding": "Tanıtımı yeniden görüntüle",
+    "replayOnboardingHint": "Hedefini, bağlamını ve okuma düzeyini yeniden gözden geçir",
+    "sensoryTitle": "Dokunma ve hareket",
+    "haptics": "Titreşimli geri bildirim",
+    "hapticsSubtitle": "Seçimlerde, çekimlerde, onaylarda ve uyarılarda titreşimi hisset",
+    "motion": "Hareket",
+    "motionSubtitle": "Cihaz ayarını kullan veya farklı bir seçenek belirle",
+    "motionSystem": "Cihaz ayarı",
+    "motionReduced": "Azaltılmış",
+    "motionFull": "Tam"
   },
   "books": {
     "shelfTitle": "Kitaplar",
@@ -2470,7 +2992,674 @@
     "visitSite": "Web sitesini ziyaret et",
     "fullDocLabel": "Tam yasal belge",
     "whatBody": "NatureLens bir fotoğraf veya kayıttan bitkileri, böcekleri, mantarları, ekinleri, balıkları, kuşları ve hatta sesleri tanımlar ve bulduklarınızı kişisel bir doğa koleksiyonuna dönüştürür.",
-    "creditsBody": "Tanımlama: Kindwise (bitkiler, böcekler, mantarlar, ekinler), Fishial (balıklar), Nyckel (kuşlar) ve kendi ses modelimiz. Referans fotoğraflar Wikipedia / Wikimedia Commons kaynaklıdır ve göründükleri yerde kaynak belirtilmiştir. Uzman sohbeti yapay zekâ (Anthropic) tarafından yanıtlanır.",
+    "creditsBody": "Tanımlama: Kindwise (bitkiler, böcekler, mantarlar, ekinler), Fishial (balıklar), Nyckel (kuşlar) ve kendi ses modelimiz. Referans fotoğraflar Wikipedia / Wikimedia Commons kaynaklıdır ve göründükleri yerde kaynak belirtilmiştir. Uzman sohbeti yapay zekâ (Anthropic) tarafından yanıtlanır. Kalibre edilmiş dünya çapındaki BioCLIP hizmeti etkin olduğunda NatureLens kuşlar için önce kendi yönettiği bu özel hizmeti kullanabilir; hizmet devre dışıyken ya da başarısız olur veya kesin bir türü kanıtlayamazsa Nyckel yedek olarak kullanılır.",
     "creditsGbif": "Yayılış haritaları ve mevsim grafikleri GBIF.org'dan, türün bilimsel adıyla sorgulanarak alınır — sizinle ilgili hiçbir veri gönderilmez."
+  },
+  "agronomyProfile": {
+    "eyebrow": "Tarla profili",
+    "title": "Tarla profilini oluşturun",
+    "subtitle": "Herhangi bir teknik yorumdan önce tarla koşullarını doğrulayın.",
+    "stepCounter": "Adım {{current}} / {{total}}",
+    "steps": {
+      "purpose": {
+        "title": "Amaç ve sistem",
+        "body": "Ürünün ne amaçla yetiştirildiğini ve tarlanın nasıl yönetildiğini belirtin."
+      },
+      "location": {
+        "title": "Elle konum",
+        "body": "Ülke, birinci düzey idari bölüm ve yerleşim bilgisini cihaz konumunu paylaşmadan girin."
+      },
+      "planting": {
+        "title": "Ekim ve dönem",
+        "body": "Ekim tarihini ve tarlada gözlemlediğiniz dönemi kaydedin."
+      },
+      "soil": {
+        "title": "Toprak ve analiz",
+        "body": "Toprağı tanımlayın ve laboratuvar raporu olup olmadığını belirtin."
+      },
+      "summary": {
+        "title": "Profili gözden geçirin",
+        "body": "Bu bağlamı kaydetmeden önce her alanı kontrol edin."
+      }
+    },
+    "purposeLabel": "Üretim amacı",
+    "systemLabel": "Üretim sistemi",
+    "purposes": {
+      "grain": "Tahıl",
+      "fresh": "Taze pazar",
+      "processing": "İşleme",
+      "forage": "Yem",
+      "seed": "Tohum üretimi",
+      "other": "Diğer"
+    },
+    "systems": {
+      "rainfed": "Kuru tarım",
+      "irrigated": "Sulamalı",
+      "protected": "Örtü altı yetiştiricilik",
+      "hydroponic": "Hidroponik",
+      "other": "Diğer"
+    },
+    "manualLocationTitle": "Sizin girdiğiniz konum",
+    "manualLocationBody": "Bu yardımcı GPS istemez. Ülkeyi seçin, varsa il, eyalet veya bölge kodunu girin ve yerleşim bilgisini ekleyin.",
+    "countryCodeLabel": "Ülke",
+    "countryCodePlaceholder": "Bir ülke seçin",
+    "countryCodeHint": "Bu tarlanın bulunduğu ülkeyi seçin.",
+    "countryPickerTitle": "Bir ülke seçin",
+    "countrySearchPlaceholder": "Ülke adı veya koduyla arayın",
+    "countryNotFound": "Ülke bulunamadı.",
+    "closeCountryPicker": "Ülke seçiciyi kapat",
+    "localityLabel": "Yerleşim",
+    "localityPlaceholder": "Örnek: İstanbul",
+    "admin1CodeLabel": "İl, eyalet veya bölge kodu",
+    "admin1CodePlaceholder": "Örnek: TR-34",
+    "admin1CodeHint": "Varsa seçilen ülkenin birinci düzey idari bölüm kodunu kullanın.",
+    "municipalityLabel": "Yerleşim",
+    "municipalityPlaceholder": "Örnek: İstanbul",
+    "stateLabel": "Ülke alt bölümü",
+    "stateHint": "Varsa il, eyalet veya bölge kodunu girin.",
+    "plantingDateLabel": "Ekim tarihi",
+    "plantingDatePlaceholder": "YYYY-AA-GG",
+    "plantingDateHint": "YYYY-AA-GG biçimini kullanın.",
+    "stageLabel": "Gözlemlenen ürün dönemi",
+    "stagePlaceholder": "Örnek: V6, çiçeklenme, meyve dolumu",
+    "stageConfirmedLabel": "Bu dönemi tarlada kontrol ettim",
+    "soilDescriptionLabel": "Toprak açıklaması",
+    "soilDescriptionPlaceholder": "Örnek: killi toprak, hafif eğim, iyi drenaj",
+    "hasReportLabel": "Toprak analiz raporunuz var mı?",
+    "reportNoticeTitle": "Raporu yakınınızda tutun",
+    "reportNoticeBody": "Bu profil yalnızca raporun bulunup bulunmadığını kaydeder. Sonuçları okumaz veya öneri hesaplamaz.",
+    "summary": {
+      "purpose": "Amaç",
+      "system": "Sistem",
+      "location": "Ülke / idari bölüm / yerleşim",
+      "planting": "Ekim tarihi",
+      "stage": "Doğrulanan dönem",
+      "soil": "Toprak",
+      "report": "Toprak analiz raporu"
+    },
+    "noCalculationTitle": "Yalnızca bağlam",
+    "noCalculationBody": "Bu profili kaydetmek doz hesaplamaz; gübreleme, sulama, pestisit veya başka agronomik öneriler sunmaz.",
+    "save": "Profili kaydet",
+    "errors": {
+      "selectPurposeAndSystem": "Bir üretim amacı ve sistemi seçin.",
+      "completeLocation": "Bir ülke seçin, yerleşim girin ve yazıldıysa idari bölüm kodunu kontrol edin.",
+      "completePlanting": "Geçerli bir tarih ve gözlemlenen ürün dönemini girin.",
+      "confirmStage": "Dönemi tarlada kontrol ettiğinizi doğrulayın.",
+      "completeSoil": "Devam etmeden önce toprağı tanımlayın.",
+      "chooseReport": "Toprak analiz raporunuz olup olmadığını belirtin.",
+      "formIncomplete": "Bazı zorunlu bilgiler eksik veya geçersiz. Önceki adımları gözden geçirin.",
+      "saveUnavailable": "Bu form için kullanılabilir bir kaydetme işlemi yok."
+    }
+  },
+  "agronomyWorkspace": {
+    "title": "Tarla çalışma alanı",
+    "openTitle": "Gelişmiş tarla yönetimi",
+    "openBody": "Tarla profilini oluşturun, gözlemleri kaydedin ve yalnızca bu ürün için doğrulanmış teknik modülleri açın.",
+    "openAction": "Tarla alanını aç",
+    "tabs": {
+      "essential": "Temel",
+      "learn": "Öğren",
+      "agronomist": "Ziraat uzmanı"
+    },
+    "unknownCrop": "Kimliği doğrulanmamış ürün",
+    "catalogBadge": "Küratörlü katalog kaydı · fotoğraf teşhisi değildir",
+    "loadingProfile": "Tarla profili yükleniyor…",
+    "contextTitle": "Tarla bağlamı",
+    "contextBody": "Bu tarla için doğruladığınız bağlam budur.",
+    "globalEvidence": {
+      "topicCount": "Bölümler: {{count}}",
+      "kicker": "DÜNYA ÇAPINDA KATMAN",
+      "title": "Küresel kaynakların belgeledikleri",
+      "body": "{{scientific}} için bulunan, kesin tür ve özgün kaynakla bağlantılı içerik.",
+      "exactSpecies": "Kesin tür",
+      "traceableSource": "İzlenebilir kaynak",
+      "worldScope": "Dünya çapında kapsam",
+      "warningTitle": "Yerel bir öneri değildir",
+      "warningBody": "Bu kanıt türü tanımlar. Doz, gübreleme reçetesi veya bölgesel tablo yetkisi vermez.",
+      "openSource": "Dünya çapındaki kaynağı Vikipedi’de aç",
+      "topicsTitle": "Türün dünya çapındaki bilgi dosyası"
+    },
+    "missingProfileTitle": "Tarla bağlamını oluşturun",
+    "missingProfileBody": "Tarla gözlemlerini kaydetmeden önce konum, ekim, dönem ve toprağı doğrulayın.",
+    "profileUnavailableBody": "Bu öğenin tarla profili için güvenli bir yerel anahtarı yok.",
+    "createProfile": "Profil oluştur",
+    "editProfile": "Profili düzenle",
+    "savingProfile": "Profil kaydediliyor…",
+    "profileSaved": "Tarla profili kaydedildi.",
+    "observationTitle": "Tarla gözlemi",
+    "observationBody": "Gerçekte gözlemlediğinizi kaydedin. Bu günlük teşhis veya öneri oluşturmaz.",
+    "addObservation": "Gözlem kaydet",
+    "eventTypeLabel": "Kayıt türü",
+    "eventTypes": {
+      "observation": "Gözlem",
+      "stage": "Ürün dönemi",
+      "rain": "Yağmur",
+      "irrigation": "Sulama",
+      "fertilization": "Gübreleme",
+      "pestSample": "Zararlı örneği",
+      "diseaseCheck": "Hastalık kontrolü",
+      "harvest": "Hasat"
+    },
+    "noteLabel": "Not",
+    "notePlaceholder": "Gördüğünüzü veya yaptığınızı açıklayın",
+    "valueLabel": "Değer",
+    "valuePlaceholder": "Örnek: 12,5",
+    "unitLabel": "Birim",
+    "unitPlaceholder": "Örnek: mm, kg, bitki",
+    "optionalFieldsHint": "Not ve değer isteğe bağlıdır, ancak en az birini girin. Her değerin birimi olmalıdır.",
+    "saveObservation": "Gözlemi kaydet",
+    "savingObservation": "Gözlem kaydediliyor…",
+    "observationSaved": "Gözlem kaydedildi.",
+    "timelineTitle": "Tarla zaman çizelgesi",
+    "eventStage": "O andaki dönem: {{stage}}",
+    "learning": {
+      "title": "Tarlayı gözlemlemeyi öğrenin",
+      "body": "Tarla ziyaretini güvenilir bağlama dönüştürmek için basit bir döngü kullanın.",
+      "accessibilityLabel": "Gözlemleyin, kaydedin, karşılaştırın ve uzman desteği alın.",
+      "steps": {
+        "observe": {
+          "title": "Gözlemleyin",
+          "body": "Birden fazla noktaya bakın ve gördüğünüzü varsayımınızdan ayırın."
+        },
+        "record": {
+          "title": "Kaydedin",
+          "body": "Gözlem tazeyken durumu, yeri ve değişimi yazın."
+        },
+        "compare": {
+          "title": "Karşılaştırın",
+          "body": "Sonuca varmadan önce benzer koşullardaki ziyaretleri karşılaştırın."
+        },
+        "support": {
+          "title": "Destek alın",
+          "body": "Karar gerektiğinde geçmişi ve laboratuvar raporlarını yerel bir ziraat uzmanına götürün."
+        }
+      },
+      "genericTitle": "Genel öğrenme görseli",
+      "genericBody": "Çizim nereye bakılacağını öğretir. Bu ürünün fotoğrafı veya açıklaması değildir.",
+      "visuals": {
+        "phenology": {
+          "title": "Doğrulanmış ürün dönemi",
+          "body": "Yalnızca tarlada gözlemlenen ve doğrulanan dönemi kullanın; tarihten çıkarmayın."
+        },
+        "soil": {
+          "title": "Toprak profili ve örnekleme",
+          "body": "Açıklama gözlemi yönlendirir; karar için temsili örnekleme ve geçerli rapor gerekir."
+        },
+        "water": {
+          "title": "Yağmur → toprak → kök → karar",
+          "body": "Yağmur veya sulamayı kaydedin, toprağı ve kökleri kontrol edin, sonra sonraki adımı değerlendirin."
+        },
+        "nutrition": {
+          "title": "Tahmini doz olmadan N, P ve K",
+          "body": "Besin simgeleri kanıtı okumaya yardım eder; doz için analiz, hedef ve bölgesel kalibrasyon gerekir."
+        },
+        "mip": {
+          "title": "Örnekle, say, karşılaştır, karar ver",
+          "body": "Hedefi ve dönemi doğrulayın, temsili örnek alın ve kontrolden önce geçerli eşikle karşılaştırın."
+        }
+      }
+    },
+    "technicalStatusTitle": "Teknik kapsam",
+    "technicalVerifiedTitle": "Kesin teknik modüller mevcut",
+    "technicalVerifiedBody": "Kimlik ve güncel katalog aşağıdaki modülleri çözümler. Bunlar referanstır, otomatik reçete değildir.",
+    "technicalCatalogBody": "Bu bir editoryal katalog kaydıdır, fotoğraf teşhisi değildir. Yalnızca bu ürün için açıkça küratörlü modüller gösterilir.",
+    "noExactModulesTitle": "Kesin modül yok",
+    "noExactModulesBody": "Ürünün tarla rehberi var, ancak yayımlanmış sayısal tablo veya kesin izleme modülü yok.",
+    "technicalUnavailableTitle": "Teknik yönlendirme kullanılamıyor",
+    "technicalUnavailableBody": "Kimlik, katalog kapsamı veya yönlendirme yeterli değil. Teknik tablo gösterilmez.",
+    "modules": {
+      "pest": "Entegre zararlı izleme",
+      "fertilizer": "Toprak ve gübre tabloları"
+    },
+    "ruleCatalogTitle": "Kural kataloğu durumu",
+    "ruleCatalogGuideBody": "Motor yalnızca bir rehber kuralı çözümledi. Katalogda sayısal hesaplama kuralı yok.",
+    "ruleCatalogCatalogBody": "Editoryal katalog küratörlü modülleri açabilir, ancak kaydı fotoğraf teşhisine veya hesaplama kuralına dönüştürmez.",
+    "ruleCatalogUnavailableBody": "Kesin rehber kuralı çözümlenmedi. Uygulama bunu yaygın ad, familya veya eski alandan çıkarmaz.",
+    "sourcesTitle": "Resmî kaynaklar",
+    "sourcesBody": "Yalnızca şu anda yayımlanan modüllere bağlı kaynaklar listelenir.",
+    "officialSource": "Resmî kaynak · {{institution}}",
+    "openSource": "Resmî kaynağı aç: {{source}}",
+    "errors": {
+      "typeInvalid": "Geçerli bir kayıt türü seçin.",
+      "amountInvalid": "Desteklenen sınır içinde geçerli, negatif olmayan bir sayı girin.",
+      "unitNeedsValue": "Birim eklemeden önce değer girin.",
+      "unitRequired": "Her değer birim içermelidir.",
+      "emptyEvent": "Kaydetmeden önce not veya değer ekleyin.",
+      "saveFailed": "Kaydedilemedi. Hiçbir şey doğrulanmadı; tekrar deneyin."
+    },
+    "planningSourcesTitle": "Planlama kaynakları",
+    "planningSourcesBody": "Bu ürünle eşleştirilmiş resmî okuma. Teknik bir modülün veya önerinin yayımlandığı anlamına gelmez."
+  },
+  "observationWorkspace": {
+    "title": "Gelişmiş gözlem",
+    "loading": "Gözlemler yükleniyor…",
+    "unavailableTitle": "Gözlem alanı kullanılamıyor",
+    "unavailableBody": "Bu kategori için doğrulanmış bir gözlem yapılandırması yok; bu nedenle form gösterilmiyor.",
+    "openTitle": "Gelişmiş gözlem alanı",
+    "openBody": "Basit notlardan karşılaştırılabilir saha kanıtlarına kadar gerçekten gördüklerinizin açık bir kaydını oluşturun.",
+    "openAction": "Gözlem alanını aç",
+    "tabs": {
+      "essential": "Temel",
+      "learn": "Öğren",
+      "field": "Saha"
+    },
+    "setupTitle": "Gözlem bağlamını ayarlayın",
+    "setupBody": "Genel ortamı seçin ve bu kaydın nerede, nasıl başladığını yazın. Gözlemlemediğiniz sonuçları eklemeyin.",
+    "setupAction": "Bağlam oluştur",
+    "editProfile": "Bağlamı düzenle",
+    "saveProfile": "Bağlamı kaydet",
+    "contextLabel": "Gözlem bağlamı",
+    "placeLabel": "Yer",
+    "placePlaceholder": "Örnek: kuzey bahçesi, dere kıyısı veya balkon",
+    "baselineLabel": "Başlangıç noktası",
+    "baselinePlaceholder": "İlk gözlemdeki görünür durumu açıklayın",
+    "profileSaved": "Bağlam kaydedildi.",
+    "localOnly": "Yalnızca bu cihazda saklanır. Tanı veya bulut yedeği değildir.",
+    "addEvent": "Saha notu ekle",
+    "closeEvent": "Formu kapat",
+    "eventTypeLabel": "Gözlem türü",
+    "noteLabel": "Not",
+    "notePlaceholder": "Yalnızca gördüğünüzü veya duyduğunuzu açıklayın",
+    "countLabel": "Gözlenen sayı",
+    "measureLabel": "Gözlenen ölçüm",
+    "unitLabel": "Birim",
+    "optionalLabel": "İsteğe bağlı",
+    "saveEvent": "Kaydı sakla",
+    "eventSaved": "Kayıt saklandı.",
+    "emptyEvent": "Kaydetmeden önce not, sayı veya ölçüm ekleyin.",
+    "invalidCount": "Sıfır veya daha büyük bir tam sayı girin.",
+    "invalidMeasure": "Sıfır veya daha büyük geçerli bir ölçüm girin.",
+    "unitRequired": "Ölçüm için bir birim seçin.",
+    "saveFailed": "Bu kayıt kaydedilemedi. Yeniden deneyin.",
+    "timelineTitle": "Gözlem zaman çizelgesi",
+    "timelineEmpty": "Henüz kaydedilmiş gözlem yok.",
+    "fieldTitle": "Saha görünümü",
+    "fieldBody": "Benzer koşullarda yapılan kayıtları karşılaştırın ve karar gerektiğinde geçmişi nitelikli bir uzmana götürün.",
+    "progressLabel": "{{total}} gözlem noktasının {{done}} tanesi kaydedildi",
+    "recordedLabel": "{{date}} tarihinde kaydedildi",
+    "missingLabel": "Kaydedilmedi",
+    "evidenceNote": "Kayıtlar gözlemlediklerinizi açıklar. Kimliği, tanıyı, riski veya bir yönetim kararını doğrulamaz.",
+    "learningTitle": "Neyi gözlemleyeceğinizi öğrenin",
+    "learningBody": "Yararlı bir kayda nelerin dahil olduğunu anlamak için her görseli açın.",
+    "generalDiagram": "Genel gözlem şeması; fotoğraflanan canlının kimliğini kanıtlamaz.",
+    "mushroomSafety": "Bir mantarı asla fotoğrafa, uygulama tanımlamasına veya bu gözlem kaydına dayanarak tüketmeyin.",
+    "units": {
+      "millimetre": "milimetre (mm)",
+      "centimetre": "santimetre (cm)",
+      "metre": "metre (m)",
+      "second": "saniye (s)",
+      "minute": "dakika (min)",
+      "millilitre": "mililitre (ml)",
+      "litre": "litre (l)",
+      "celsius": "Santigrat derece (°C)",
+      "percent": "yüzde (%)",
+      "gram": "gram (g)",
+      "kilogram": "kilogram (kg)",
+      "ph": "pH",
+      "ppt": "binde bir (ppt)",
+      "ppm": "milyonda bir (ppm)",
+      "milligramPerLitre": "litre başına miligram (mg/L)",
+      "microsiemensPerCentimetre": "santimetre başına mikrosiemens (µS/cm)",
+      "hour": "saat (h)",
+      "hertz": "hertz (Hz)",
+      "kilohertz": "kilohertz (kHz)",
+      "decibel": "desibel (dB)",
+      "kilometre": "kilometre (km)"
+    },
+    "contexts": {
+      "plant": {
+        "indoor": "İç mekân",
+        "outdoor": "Dış mekân",
+        "container": "Kap",
+        "ground": "Toprakta"
+      },
+      "tree": {
+        "urban": "Kentsel alan",
+        "garden": "Bahçe",
+        "woodland": "Ağaçlık alan",
+        "orchard": "Meyve bahçesi"
+      },
+      "insect": {
+        "onPlant": "Bir bitki üzerinde",
+        "onSoil": "Toprak üzerinde",
+        "onStructure": "Bir yapı üzerinde",
+        "nearWater": "Su yakınında"
+      },
+      "mushroom": {
+        "soil": "Toprak üzerinde",
+        "wood": "Odun üzerinde",
+        "leafLitter": "Yaprak döküntüsünde",
+        "otherSubstrate": "Diğer alt tabaka"
+      },
+      "fish": {
+        "freshwater": "Tatlı su",
+        "marine": "Deniz ortamı",
+        "estuary": "Haliç",
+        "aquarium": "Akvaryum"
+      },
+      "bird": {
+        "urban": "Kentsel alan",
+        "forest": "Orman",
+        "wetland": "Sulak alan",
+        "openArea": "Açık alan"
+      },
+      "sound": {
+        "dawn": "Şafak",
+        "day": "Gündüz",
+        "dusk": "Alacakaranlık",
+        "night": "Gece"
+      }
+    },
+    "eventTypes": {
+      "plant": {
+        "observation": "Bitki ortamı",
+        "growth": "Bitki büyümesi",
+        "leafChange": "Bitki yaprağı değişimi",
+        "flowering": "Gözlenen çiçeklenme",
+        "fruiting": "Gözlenen meyve oluşumu",
+        "symptom": "Görünür bitki belirtisi",
+        "care": "Bitki bakımı kaydı"
+      },
+      "tree": {
+        "observation": "Ağaç ortamı",
+        "growth": "Ağaç büyümesi",
+        "leafChange": "Ağaç yaprağı değişimi",
+        "flowering": "Gözlenen ağaç çiçeklenmesi",
+        "fruiting": "Gözlenen ağaç meyve oluşumu",
+        "symptom": "Görünür ağaç belirtisi",
+        "habitat": "Ağaç yaşam alanı"
+      },
+      "insect": {
+        "observation": "Gözlem bağlamı",
+        "count": "Gözlenen sayı",
+        "lifeStage": "Gözlenen yaşam evresi",
+        "behavior": "Gözlenen davranış",
+        "interaction": "Gözlenen etkileşim",
+        "habitat": "Böcek yaşam alanı"
+      },
+      "mushroom": {
+        "observation": "Mantar gözlemi",
+        "emergence": "Gözlenen ortaya çıkış",
+        "morphology": "Görünür morfoloji",
+        "substrate": "Alt tabaka",
+        "colorChange": "Renk değişimi",
+        "sporePrint": "Spor izi kaydı"
+      },
+      "fish": {
+        "observation": "Gözlem bağlamı",
+        "count": "Gözlenen sayı",
+        "behavior": "Gözlenen davranış",
+        "habitat": "Yaşam alanı",
+        "waterReading": "Gözlenen su ölçümü",
+        "feeding": "Gözlenen beslenme"
+      },
+      "bird": {
+        "observation": "Kuş gözlemi",
+        "count": "Gözlenen sayı",
+        "behavior": "Gözlenen davranış",
+        "vocalization": "Gözlenen ötüş",
+        "nesting": "Gözlenen yuvalama",
+        "flight": "Gözlenen uçuş"
+      },
+      "sound": {
+        "observation": "Ses gözlemi",
+        "recording": "Kayıt",
+        "comparison": "Kayıt karşılaştırması",
+        "context": "Ses ortamı",
+        "frequency": "Gözlenen frekans",
+        "amplitude": "Gözlenen genlik"
+      }
+    },
+    "visuals": {
+      "plant": {
+        "environment": {
+          "title": "Bitki ortamı",
+          "body": "Canlının çevresini ve görünür her değişikliği kaydedin."
+        },
+        "light": {
+          "title": "Görünür ışık",
+          "body": "Ziyaretler arasındaki görünür ışık koşullarını, bir ihtiyaç çıkarmadan karşılaştırın."
+        },
+        "soil": {
+          "title": "Toprak gözlemi",
+          "body": "Toprağın veya alt tabakanın görünür yüzeyini ve nasıl değiştiğini açıklayın."
+        },
+        "growth": {
+          "title": "Bitki büyümesi",
+          "body": "Karşılaştırılabilir büyüme gözlemlerini bir zaman çizelgesine yerleştirin."
+        }
+      },
+      "tree": {
+        "environment": {
+          "title": "Ağaç ortamı",
+          "body": "Canlının çevresini ve görünür her değişikliği kaydedin."
+        },
+        "light": {
+          "title": "Görünür ışık",
+          "body": "Ziyaretler arasındaki görünür ışık koşullarını, bir ihtiyaç çıkarmadan karşılaştırın."
+        },
+        "soil": {
+          "title": "Toprak gözlemi",
+          "body": "Toprağın veya alt tabakanın görünür yüzeyini ve nasıl değiştiğini açıklayın."
+        },
+        "growth": {
+          "title": "Ağaç büyümesi",
+          "body": "Karşılaştırılabilir büyüme gözlemlerini bir zaman çizelgesine yerleştirin."
+        }
+      },
+      "insect": {
+        "anatomy": {
+          "title": "Görünür vücut özellikleri",
+          "body": "Yaşam evresi veya kimlik önermeden önce görünür vücut özelliklerini ayırın."
+        },
+        "stage": {
+          "title": "Gözlenen yaşam evresi",
+          "body": "Yalnızca gözlemleyebildiğiniz yaşam evresini kaydedin; emin değilseniz boş bırakın."
+        },
+        "count": {
+          "title": "Gözlenen sayı",
+          "body": "Sonraki ziyaretin karşılaştırılabilmesi için açıkça tanımlanmış bir yerde sayım yapın."
+        },
+        "behaviour": {
+          "title": "Gözlenen davranış",
+          "body": "Hareketi ve etkileşimi gözlendiği biçimde açıklayın; hayvanı zararlı olarak sınıflandırmayın."
+        }
+      },
+      "mushroom": {
+        "substrate": {
+          "title": "Alt tabaka",
+          "body": "Mantarın hemen altındaki malzemeyi ve çevresindeki yaşam alanını kaydedin."
+        },
+        "anatomy": {
+          "title": "Mantarın görünür bölümleri",
+          "body": "Şapka, alt yüzey, sap ve tabanı ayırın; fotoğraf belirleyici özellikleri gizleyebilir."
+        },
+        "underside": {
+          "title": "Görünür alt yüzey",
+          "body": "Görünür lamelleri, gözenekleri veya başka bir alt yüzeyi tahmin etmeden açıklayın."
+        },
+        "colourChange": {
+          "title": "Renk değişimi",
+          "body": "Renk değişiminin gerçekten görülüp görülmediğini ve nerede oluştuğunu kaydedin."
+        }
+      },
+      "fish": {
+        "habitat": {
+          "title": "Yaşam alanı",
+          "body": "Görünür su kütlesini ve balığın görüldüğü yeri açıklayın."
+        },
+        "anatomy": {
+          "title": "Balığın görünür özellikleri",
+          "body": "Gövde profilini, yüzgeçleri, işaretleri ve kuyruğu yalnızca her özellik görünüyorsa karşılaştırın."
+        },
+        "group": {
+          "title": "Birlikte görülen balıklar",
+          "body": "Gözlenen sayıyı ve görüş alanını kaydedin; popülasyon büyüklüğü çıkarmayın."
+        },
+        "behaviour": {
+          "title": "Gözlenen davranış",
+          "body": "Uzaktan gözlemleyin ve hareketi temas etmeden kaydedin."
+        }
+      },
+      "bird": {
+        "habitat": {
+          "title": "Yaşam alanı",
+          "body": "Görünür yaşam alanını ve kuşun bulunduğu konumu açıklayın."
+        },
+        "anatomy": {
+          "title": "Kuşun görünür özellikleri",
+          "body": "Gaga, gövde, kanat ve kuyruğu yalnızca görünür özelliklere göre karşılaştırın."
+        },
+        "group": {
+          "title": "Birlikte görülen kuşlar",
+          "body": "Gerçekten gördüğünüz grubu, görüş alanı dışındaki kuşları tahmin etmeden kaydedin."
+        },
+        "vocalisation": {
+          "title": "Gözlenen ötüş",
+          "body": "Sesi hangi türün çıkardığını varsaymadan perdeyi, ritmi ve tekrarı açıklayın."
+        }
+      },
+      "sound": {
+        "waveform": {
+          "title": "Görünür ses örüntüsü",
+          "body": "Şema kayıt örüntüsünü temsil eder; bir türün kanıtı değildir."
+        },
+        "rhythm": {
+          "title": "Ritim ve tekrar",
+          "body": "Tekrarlanan bölümleri ve duraklamaları duyulduğu gibi işaretleyin; ötüşe anlam yüklemeyin."
+        },
+        "environment": {
+          "title": "Ses ortamı",
+          "body": "Karşılaştırmayı etkileyebilecek zaman dilimini, yeri ve arka plan seslerini kaydedin."
+        },
+        "comparison": {
+          "title": "Kayıtları karşılaştır",
+          "body": "Bir farkı not etmeden önce benzer koşullarda yapılan kayıtları karşılaştırın."
+        }
+      }
+    }
+  },
+  "community": {
+    "title": "Topluluk",
+    "headline": "Bu keşfi faydalı bir ipucuna dönüştürün.",
+    "body": "Bir arkadaşınızı, çalışma arkadaşınızı veya saha grubunuzu NatureLens ile tanımlama yapmaya davet edin.",
+    "steps": {
+      "identify": "Bir canlıyı tanımla",
+      "save": "Önemli olanı kaydet",
+      "share": "Sonucu işine yarayacak birine gönder"
+    },
+    "inviteAction": "Arkadaş davet et",
+    "inviteMessage": "NatureLens ile doğayı tanımlıyor ve bitki bakımı deneyimleri paylaşıyorum: sulama, zararlılar, toparlanma ve keşifler. Buradan dene: {{url}}",
+    "screenTitle": "Topluluk",
+    "entryTitle": "Topluluk ligi",
+    "entrySubtitle": "Sıralamanı, görevlerini ve haftalık ilerlemeni gör.",
+    "localBadge": "Yerel lig",
+    "heroTitle": "NatureLens sıralaman",
+    "rankPosition": "güncel sıra",
+    "scoreLabel": "puan",
+    "leagues": {
+      "seed": "Tohum ligi — Bugün bir keşifle başlayın.",
+      "sprout": "Filiz ligi — Gerçek bir alışkanlık oluşturuyorsunuz.",
+      "guardian": "Koruyucu ligi — Saha kaydınız güçleniyor.",
+      "master": "Usta ligi — İleri düzey kâşif ritmi."
+    },
+    "photoRail": "En yeni keşiflerin liginin kapağı olur.",
+    "discoveriesLabel": "keşif",
+    "weeklyLabel": "bu hafta",
+    "categoriesLabel": "kategori",
+    "streakLabel": "günlük seri",
+    "rankingTitle": "Haftalık sıralama",
+    "rankingBody": "Uygulamadaki doğrulanmış etkinliğine dayalı yerel bir lig. Sahte küresel kullanıcılar yok: topluluk sunucusu bağlandığında gerçek ve herkese açık bir sıralama olacak.",
+    "leaderboard": {
+      "you": {
+        "name": "Sen",
+        "meta": "Doğrulanmış etkinliğin"
+      },
+      "next": {
+        "name": "Sonraki aşama",
+        "meta": "Bu hafta ulaşılabilir bir hedef"
+      },
+      "elite": {
+        "name": "Seçkin ölçüt",
+        "meta": "İleri düzey kullanıcı hedefi"
+      }
+    },
+    "milestonesTitle": "Sıralamanı yükseltenler",
+    "milestones": {
+      "first": "Gerçek keşifleri tanımla ve kaydet.",
+      "week": "Günlük görevleri tamamla ve seriyi sürdür.",
+      "allCategories": "Daha fazla kategori keşfet: bitkiler, böcekler, balıklar, kuşlar ve mantarlar."
+    },
+    "inviteTitle": "Keşfine birini davet et",
+    "inviteBody": "Uygulamayı paylaş, davet görevini tamamla ve deneyimi telefonun dışında da canlı tut.",
+    "scanAction": "Şimdi tara",
+    "reviewTitle": "NatureLens sana yardımcı oluyor mu?",
+    "reviewBody": "Uygulama keşfini daha anlaşılır kıldıysa değerlendirmen daha fazla kâşifin onu bulmasına yardımcı olur.",
+    "reviewAction": "Beğendim",
+    "reviewLater": "Şimdi değil",
+    "reviewThanks": "Teşekkürler — bu, NatureLens’i geliştirmeye devam etmemize yardımcı oluyor.",
+    "careExchangeTitle": "Bakım paylaşımı",
+    "careExchangeBody": "İşe yarayanları paylaşın: sulama, ışık, zararlılar, toparlanma ve bitkilerinizin önce/sonra halleri.",
+    "careShareAction": "Deneyim paylaş",
+    "careTopics": {
+      "watering": "Sulama rutini",
+      "pests": "Zararlılar ve belirtiler",
+      "recovery": "Önce ve sonra",
+      "questions": "Gruba sor"
+    }
+  },
+  "ipm": {
+    "title": "Entegre zararlı yönetimi",
+    "chooseCrop": "Bu böceğin görüldüğü ürünü seçin. Protokol yalnızca tam ve belgelenmiş bir eşleşme için açılır.",
+    "exactPair": "Kesin eşleşme: {{crop}} üzerinde {{insect}}",
+    "prevention": "Önleme",
+    "monitoring": "İzleme",
+    "threshold": "Belgelenmiş müdahale eşiği",
+    "cultural": "Kültürel mücadele",
+    "mechanical": "Mekanik mücadele",
+    "biological": "Biyolojik mücadele",
+    "chemical": "Kimyasal mücadele: yalnızca ruhsat kontrolü",
+    "chemicalReferral": "Burada ürün veya doz önerilmez. Ülkenizde tam bu ürün ve hedef için güncel etiketi kontrol edin ve kararı yerel bir ziraat mühendisiyle doğrulayın.",
+    "citationOnly": "olgusal atıf; kaynak metin yeniden yayımlanmaz",
+    "crops": {
+      "maize": "Mısır",
+      "tomato": "Domates",
+      "soybean": "Soya",
+      "uplandCotton": "Yayla pamuğu",
+      "commonBean": "Fasulye",
+      "arabicaCoffee": "Arabica kahvesi"
+    },
+    "actions": {
+      "avoidCalendarSprays": "Takvime göre ilaçlama yapmayın; kararı temsili izlemeye dayandırın.",
+      "checkRegisteredBiocontrol": "Tam bu ürün ve hedef için yerel olarak ruhsatlı biyolojik seçenekleri kontrol edin.",
+      "confirmDamageAndStage": "Uyumlu zararı doğrulayın ve böceğin yaşam evresini kaydedin.",
+      "inspectFruitDamage": "Meyvelerde giriş deliği ve iç zarar olup olmadığını inceleyin.",
+      "inspectLeafMines": "Genç yapraklarda etkin galeri ve larva arayın.",
+      "inspectTransplants": "Fideleri üretim alanına girmeden önce inceleyin.",
+      "inspectWhorl": "Mısır helezonunu açıp taze sıyrık ve larva açısından inceleyin.",
+      "manageCropResidue": "Hasattan sonra bulaşık bitki artıklarını kaldırın veya doğru yönetin.",
+      "preserveNaturalEnemies": "Parazitoitleri, avcıları ve diğer doğal düşmanları koruyun.",
+      "protectNursery": "Fidanlığı korunaklı ve bulaşık fidelerden arınmış tutun.",
+      "recordCropStage": "Her örneklemede ürün gelişme dönemini kaydedin.",
+      "removeEggMassesSmallPlots": "Küçük alanlarda erişilebilen yumurta kümelerini ve larvaları uzaklaştırın.",
+      "removeInfestedTissue": "Bulaşık yaprak ve meyveleri güvenle kaldırıp imha edin.",
+      "removeVolunteerHosts": "Zararlıyı dönemler arasında taşıyan gönüllü bitkileri kontrol edin.",
+      "rotateOutsideHostFamily": "Yerel olarak uygunsa konukçu ailesi dışındaki bir ürünle münavebe yapın.",
+      "sampleCoolHours": "Kokarcaların daha kolay bulunduğu serin saatlerde örnek alın.",
+      "sampleRepresentativePoints": "Örnekleme noktalarını tarlaya yayın; yalnızca kenarı kontrol etmeyin.",
+      "useBeatCloth": "Darbe bezini temsili noktalarda aynı yöntemle kullanın.",
+      "useInsectScreens": "Üretim sistemi uygunsa böcek tülü kullanın.",
+      "usePheromoneTraps": "Ergin uçuşunu izlemek için feromon tuzağı kullanın; yakalama sayısı tek başına zararı ölçmez.",
+      "avoidStaggeredPlanting": "Kademeli ekimden kaçının ve resmi yönlendirme gerektiğinde ekim aralığını bölgesel olarak koordine edin.",
+      "avoidOlderMaizeNearby": "Bodurluk belirtileri gösteren yaşlı mısır tarlalarının yanına yeni mısır ekmeyin.",
+      "removeAlternateHosts": "Alternatif konukçu bitkileri ve virüs belirtisi gösteren fasulye bitkilerini kaldırın.",
+      "inspectFieldEdges": "Kolonileşme ve zarar çoğu kez kenarlarda yoğunlaştığı için önce tarla çevresini inceleyin.",
+      "inspectFlowerBuds": "Pamuk çiçek tomurcuklarında beslenme ve yumurta bırakma deliklerini arayın.",
+      "completeSanitaryHarvest": "Hasadı eksiksiz yapın ve bitkide ya da yerde kalan kahve meyvelerini toplayın.",
+      "inspectLowerCanopy": "Yalancı tırtılların saklandığı soya kanopisinin orta ve alt bölümünü inceleyin."
+    },
+    "thresholds": {
+      "initialSymptomsHighYieldThreshold": "Yalnızca verim potansiyeli en az {{minimumYieldBagsPerHa}} çuval/ha olan tarlalarda: {{sampleAreaHa}} ha içinde {{samplePoints}} rastgele noktayı inceleyin. Yayımlanmış referans, ilk zarar belirtileri görülen bitkilerin %{{actionPercent}} oranıdır."
+    }
   }
 }

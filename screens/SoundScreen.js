@@ -1,5 +1,14 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, ScrollView, Animated, Platform } from 'react-native';
+import {
+  AppState,
+  View,
+  Text,
+  StyleSheet,
+  TouchableOpacity,
+  ScrollView,
+  Animated,
+  Platform,
+} from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useNavigation } from '@react-navigation/native';
 import { useTranslation } from 'react-i18next';
@@ -11,12 +20,17 @@ import { canRecord, startRecording, MAX_SECONDS } from '../components/audioRecor
 import { identifySound } from '../components/identify';
 import AlertModal from '../components/AlertModal';
 import { useAppAlert } from '../components/useAppAlert';
-import { recordIdentification, evaluateAchievements, addTokens } from '../components/achievements';
-import { recordMissionEvent, TOKENS_PER_MISSION } from '../components/missions';
+import {
+  candidateFact,
+  candidateIdentityKey,
+  createScanOutcomeRequest,
+} from '../components/scanOutcome';
 import { trackScanStarted, trackScanCompleted, trackScanFailed, trackPaywallShown } from '../components/tracking';
 import PaywallModal from '../components/PaywallModal';
 import { startCheckout } from '../components/subscription';
 import NatureScene from '../components/NatureScene';
+import { saveIdentificationAutomatically } from '../components/automaticCollection';
+import LensPulseButton from '../components/LensPulseButton';
 
 // Identification by SOUND - the one category with no camera.
 //
@@ -28,6 +42,17 @@ import NatureScene from '../components/NatureScene';
 // Bars in the live level meter. 5-7 reads as a meter; fewer reads as a blob.
 const BAR_COUNT = 6;
 
+function soundPlatformBodyKey(kind) {
+  if (kind === 'permission') {
+    return Platform.OS === 'android'
+      ? 'sound.permissionAndroidBody'
+      : 'sound.permissionWebBody';
+  }
+  if (Platform.OS === 'android') return 'sound.unsupportedAndroidBody';
+  if (Platform.OS === 'ios') return 'sound.unsupportedIosBody';
+  return 'sound.unsupportedWebBody';
+}
+
 export default function SoundScreen() {
   const navigation = useNavigation();
   const { t } = useTranslation();
@@ -37,18 +62,23 @@ export default function SoundScreen() {
   const [recording, setRecording] = useState(false);
   const [analysing, setAnalysing] = useState(false);
   const [elapsed, setElapsed] = useState(0);
+  const [clipReady, setClipReady] = useState(false);
   const [paywallVisible, setPaywallVisible] = useState(false);
   const [subscribing, setSubscribing] = useState(false);
 
   const handleRef = useRef(null);
   const tickRef = useRef(null);
+  const mountedRef = useRef(true);
+  const screenFocusedRef = useRef(true);
+  const appActiveRef = useRef(AppState.currentState === 'active');
   // Counts seconds outside React state, so the auto-stop can be decided in the
   // interval callback where side effects belong - see toggle().
   const elapsedRef = useRef(0);
+  const pendingClipRef = useRef(null);
   const pulse = useRef(new Animated.Value(1)).current;
   // Drives the decorative rings around the mic. Separate from `pulse` and on
-  // the JS driver (useNativeDriver: false - this screen is web-only, see
-  // canRecord). At 0 the rings sit static and faint; the loop only runs WHILE
+  // the JS driver because border colour cannot use the native driver. At 0 the
+  // rings sit static and faint; the loop only runs WHILE
   // recording, honouring the doctrine's "nunca loop infinito de decoração" -
   // the loop dies with the recording.
   const ringPulse = useRef(new Animated.Value(0)).current;
@@ -78,7 +108,7 @@ export default function SoundScreen() {
   //     claims to prevent (it only ever saw the second handle). The orphaned
   //     interval was worse: both incremented the same elapsedRef, so the
   //     countdown ran at 2/sec into negative numbers, and the leaked one went on
-  //     calling stopAndAnalyse() once a second forever - killing every later
+  //     calling stopAndPrepare() once a second forever - killing every later
   //     recording after ~1s with a bogus "too short" alert, even after navigating
   //     away.
   //
@@ -90,7 +120,7 @@ export default function SoundScreen() {
 
   // Runs `fn` only if nothing else is mid-transition. Every entry point into
   // start/stop goes through here, including the interval's auto-stop, which used
-  // to call stopAndAnalyse() directly and so bypassed every guard.
+  // to call stopAndPrepare() directly and so bypassed every guard.
   const runExclusive = useCallback(async (fn) => {
     if (busyRef.current) return;
     busyRef.current = true;
@@ -118,6 +148,30 @@ export default function SoundScreen() {
     setMeterOn(false);
     barLevels.forEach((v) => v.setValue(0));
   }, [barLevels]);
+
+  // Privacy boundary: a recording belongs only to the visible, foreground
+  // Sound screen. Changing tabs or putting the app in the background cancels
+  // the clip instead of analysing a capture the person can no longer see.
+  const cancelActiveRecording = useCallback(() => {
+    if (tickRef.current) {
+      clearInterval(tickRef.current);
+      tickRef.current = null;
+    }
+    handleRef.current?.cancel();
+    handleRef.current = null;
+    pulse.stopAnimation();
+    pulse.setValue(1);
+    ringPulse.stopAnimation();
+    ringPulse.setValue(0);
+    stopMeter();
+    elapsedRef.current = 0;
+    pendingClipRef.current = null;
+    if (mountedRef.current) {
+      setRecording(false);
+      setElapsed(0);
+      setClipReady(false);
+    }
+  }, [pulse, ringPulse, stopMeter]);
 
   const startMeter = useCallback(
     (stream) => {
@@ -164,16 +218,30 @@ export default function SoundScreen() {
   // Releasing the microphone on unmount is not optional tidiness: leaving the
   // track open keeps the browser's "recording" indicator lit for the rest of
   // the session, which is a privacy problem, not a cosmetic one.
-  useEffect(
-    () => () => {
-      if (tickRef.current) clearInterval(tickRef.current);
-      handleRef.current?.cancel();
-      stopMeter();
-    },
-    // eslint-disable-next-line react-hooks/exhaustive-deps -- stopMeter is
-    // identity-stable (useCallback over a ref-stable array); unmount-only.
-    []
-  );
+  useEffect(() => {
+    mountedRef.current = true;
+    screenFocusedRef.current = navigation.isFocused?.() !== false;
+    const removeFocus = navigation.addListener('focus', () => {
+      screenFocusedRef.current = true;
+    });
+    const removeBlur = navigation.addListener('blur', () => {
+      screenFocusedRef.current = false;
+      cancelActiveRecording();
+    });
+    const appStateSubscription = AppState.addEventListener('change', (nextState) => {
+      appActiveRef.current = nextState === 'active';
+      if (!appActiveRef.current) cancelActiveRecording();
+    });
+
+    return () => {
+      mountedRef.current = false;
+      screenFocusedRef.current = false;
+      removeFocus();
+      removeBlur();
+      appStateSubscription.remove();
+      cancelActiveRecording();
+    };
+  }, [cancelActiveRecording, navigation]);
 
   const runPulse = useCallback(() => {
     Animated.loop(
@@ -186,7 +254,7 @@ export default function SoundScreen() {
 
   // Subtle breathing of the decorative rings, slower than the button's own
   // pulse so the two don't strobe together. Started with the recording and
-  // stopped with it in stopAndAnalyse - decoration never loops while idle.
+  // stopped with it in stopAndPrepare - decoration never loops while idle.
   const runRingPulse = useCallback(() => {
     Animated.loop(
       Animated.sequence([
@@ -204,12 +272,23 @@ export default function SoundScreen() {
       Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
       trackScanCompleted({ category: 'sound', confidence: entity.confidence });
 
-      await recordIdentification();
-      const done = await recordMissionEvent('scan', { category: 'sound' });
-      if (done.length) await addTokens(done.length * TOKENS_PER_MISSION);
-      await evaluateAchievements();
+      const outcomeRequest = createScanOutcomeRequest({
+        category: 'sound',
+        fact: candidateFact({ category: 'sound', entity }),
+        identityKey: candidateIdentityKey(entity),
+      });
+      const savedEntry = await saveIdentificationAutomatically(entity, 'sound');
 
-      navigation.navigate('SoundDetail', { plant: entity, fromIdentify: true });
+      // Only the compact visual evidence crosses the route boundary. The PCM
+      // base64 was needed by the classifier, but it must never reach navigation
+      // state, the detail entity or collection storage.
+      navigation.navigate('SoundDetail', {
+        plant: savedEntry || entity,
+        fromIdentify: true,
+        waveform: clip.waveform,
+        durationSeconds: clip.durationSeconds,
+        scanOutcomeRequest: outcomeRequest,
+      });
     } catch (err) {
       Haptics.notificationAsync(Haptics.NotificationFeedbackType.Error);
       if (err.paymentRequired) {
@@ -230,7 +309,7 @@ export default function SoundScreen() {
     }
   };
 
-  const stopAndAnalyse = async () => {
+  const stopAndPrepare = async () => {
     if (tickRef.current) clearInterval(tickRef.current);
     pulse.stopAnimation();
     pulse.setValue(1);
@@ -252,7 +331,11 @@ export default function SoundScreen() {
         showAlert(t('sound.tooShortTitle'), t('sound.tooShortBody'));
         return;
       }
-      await analyse(clip);
+      // O clipe fica somente em memoria ate o Pulso Vivo terminar. Navegar,
+      // fechar ou mandar o app ao fundo chama cancelActiveRecording e o apaga.
+      pendingClipRef.current = clip;
+      setClipReady(true);
+      Haptics.selectionAsync();
     } catch (err) {
       const key =
         err.code === 'decode' || err.code === 'resample'
@@ -264,17 +347,29 @@ export default function SoundScreen() {
     }
   };
 
+  const revealPendingClip = useCallback(() => {
+    runExclusive(async () => {
+      const clip = pendingClipRef.current;
+      if (!clip || analysing || recording) return;
+      pendingClipRef.current = null;
+      setClipReady(false);
+      await analyse(clip);
+    });
+  }, [analysing, recording, runExclusive]);
+
   const toggle = () =>
     runExclusive(async () => {
       if (analysing) return;
 
       if (recording) {
-        await stopAndAnalyse();
+        await stopAndPrepare();
         return;
       }
 
       Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
       try {
+        pendingClipRef.current = null;
+        setClipReady(false);
         // Any leftover interval is cleared before a new one can be created, so
         // two timers can never share elapsedRef.
         if (tickRef.current) clearInterval(tickRef.current);
@@ -284,7 +379,14 @@ export default function SoundScreen() {
         // And a meter that somehow survived with it (stopMeter is idempotent).
         stopMeter();
 
-        handleRef.current = await startRecording();
+        const handle = await startRecording();
+        // O prompt nativo pode terminar depois que a pessoa ja saiu da tela.
+        // Nesse caso a limpeza anterior ainda nao conhecia o novo handle.
+        if (!mountedRef.current || !screenFocusedRef.current || !appActiveRef.current) {
+          handle.cancel();
+          return;
+        }
+        handleRef.current = handle;
         setRecording(true);
         elapsedRef.current = 0;
         setElapsed(0);
@@ -305,10 +407,10 @@ export default function SoundScreen() {
           // submit twice from inside one is the kind of bug that only shows up
           // under StrictMode or a future React version. It also goes through
           // runExclusive, so the auto-stop cannot race a tap on the button.
-          if (elapsedRef.current >= MAX_SECONDS) runExclusive(stopAndAnalyse);
+          if (elapsedRef.current >= MAX_SECONDS) runExclusive(stopAndPrepare);
         }, 1000);
       } catch (err) {
-        const key = err.code === 'permission' ? 'sound.permissionBody' : 'sound.unsupportedBody';
+        const key = soundPlatformBodyKey(err.code === 'permission' ? 'permission' : 'unsupported');
         showAlert(
           err.code === 'permission' ? t('sound.permissionTitle') : t('sound.unsupportedTitle'),
           t(key)
@@ -343,7 +445,7 @@ export default function SoundScreen() {
         {!supported ? (
           <View style={styles.warnBox}>
             <Ionicons name="alert-circle" size={18} color={colors.warning} />
-            <Text style={styles.warnText}>{t('sound.unsupportedBody')}</Text>
+            <Text style={styles.warnText}>{t(soundPlatformBodyKey('unsupported'))}</Text>
           </View>
         ) : (
           <>
@@ -424,11 +526,30 @@ export default function SoundScreen() {
               </View>
             )}
 
+            {clipReady && !recording && !analysing ? (
+              <View style={styles.soundPulse}>
+                <View style={styles.audioDisclosure}>
+                  <Ionicons name="shield-checkmark-outline" size={17} color={meta.accent} />
+                  <Text style={styles.audioDisclosureText}>{t('sound.uploadDisclosure')}</Text>
+                </View>
+                <LensPulseButton
+                  accent={meta.accent}
+                  eyebrow={t('identify.lensPulseEyebrow')}
+                  label={t('identify.holdToReveal')}
+                  holdingLabel={t('identify.keepHolding')}
+                  accessibilityHint={t('identify.holdToRevealHint')}
+                  onComplete={revealPendingClip}
+                />
+              </View>
+            ) : null}
+
             <Text style={styles.status}>
               {analysing
                 ? t('sound.analysing')
                 : recording
                 ? t('sound.recording', { seconds: MAX_SECONDS - elapsed })
+                : clipReady
+                ? t('identify.holdToReveal')
                 : t('sound.tapToRecord')}
             </Text>
 
@@ -505,6 +626,19 @@ const styles = StyleSheet.create({
     marginBottom: 12,
   },
   meterBar: { width: 5, borderRadius: 3 },
+  soundPulse: { width: '100%', gap: 10, marginBottom: 14 },
+  audioDisclosure: {
+    minHeight: 44,
+    flexDirection: 'row',
+    alignItems: 'flex-start',
+    gap: 9,
+    borderWidth: 1,
+    borderColor: colors.border,
+    borderRadius: 14,
+    backgroundColor: colors.surface,
+    padding: 12,
+  },
+  audioDisclosureText: { flex: 1, color: colors.textSecondary, fontSize: 12, lineHeight: 18 },
   micButton: {
     width: 116,
     height: 116,

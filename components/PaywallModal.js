@@ -23,18 +23,16 @@ export default function PaywallModal({ visible, title, body, categoryLabel, acce
   const symbol = '$';
   const configured = isCheckoutConfigured();
 
-  // Store builds must not render a purchase surface: Google Play's payments
-  // policy forbids prices/CTAs for a subscription sold outside Play Billing.
-  // What IS allowed (their FAQ, verbatim class of example: "Go to our website
-  // to upgrade your subscription") is plain text with no link - so the native
-  // modal explains the limit and mentions the website, and nothing more.
+  // No build de loja ate texto de direcionamento vira risco de politica quando
+  // o produto nao usa Play Billing. O limite aparece sem preco, plano, site ou
+  // verbo de compra; restauracao continua disponivel no Perfil.
   if (Platform.OS !== 'web') {
     return (
       <View style={styles.backdrop}>
         <View style={styles.card}>
-          <Text style={styles.title}>{title || t('paywall.title')}</Text>
-          <Text style={styles.body}>{body || t('paywall.body', { category: categoryLabel })}</Text>
-          <Text style={styles.body}>{t('paywall.webOnlyBody')}</Text>
+          {/* Titulo fixo e neutro: props vindas da web podem dizer "assine" ou
+              "desbloqueie". Reaproveita-las aqui recriaria a CTA sem botao. */}
+          <Text style={styles.title}>{t('paywall.title')}</Text>
           <TouchableOpacity
             style={styles.cancelBtn}
             onPress={onCancel}

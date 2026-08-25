@@ -1,28 +1,15 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import * as Crypto from 'expo-crypto';
 
 const DEVICE_ID_KEY = '@textmarker_device_id';
 
-// This id gates real entitlement (a Stripe subscription gets linked to it -
-// see api/auth.js/verify-code.js) so it needs to come from a
-// cryptographically secure source, not Math.random() (a plain, non-crypto
-// PRNG whose internal state is a documented, publicly-analyzed target on the
-// JS engines this app runs in). Web Crypto's getRandomValues is what's
-// actually live today (this app is currently web-only, see project memory);
-// Math.random() stays only as a fallback for a native build that isn't in
-// production use.
-function randomByte() {
-  if (typeof window !== 'undefined' && window.crypto?.getRandomValues) {
-    return window.crypto.getRandomValues(new Uint8Array(1))[0];
-  }
-  return Math.floor(Math.random() * 256);
-}
-
 function generateId() {
-  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, (c) => {
-    const r = randomByte() % 16;
-    const v = c === 'x' ? r : (r & 0x3) | 0x8;
-    return v.toString(16);
-  });
+  // Esse id protege vinculo pago, uso gratis e exclusao. Expo Crypto usa a
+  // fonte segura de cada sistema; cair para um gerador previsivel no Android tornaria a
+  // identidade previsivel justamente no binario publicado.
+  const id = Crypto.randomUUID?.();
+  if (typeof id !== 'string' || !id) throw new Error('Secure device id unavailable');
+  return id;
 }
 
 let cached = null;

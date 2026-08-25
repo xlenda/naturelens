@@ -27,6 +27,8 @@
     },
     "blueTang": {
       "overview": "Siyah “palet” deseni ve sarı kuyruğuyla göz alıcı, canlı lacivert bir resif balığı. Tüm cerrah balıkları gibi kuyruk dibinde neşter keskinliğinde bir diken taşır.",
+      "riskKey": "sharp_tail_spine",
+      "safety": "Siyah “palet” deseni ve sarı kuyruğuyla göz alıcı, canlı lacivert bir resif balığı. Tüm cerrah balıkları gibi kuyruk dibinde neşter keskinliğinde bir diken taşır.",
       "habitat": "Hint-Pasifik'in mercan resifleri; genellikle saklanabileceği dallı mercanların yakınında küçük gruplar hâlinde.",
       "curiosity": "Yavrular parlak sarıdır ve olgunlaştıkça maviye döner. Normalde yatık duran kuyruk dikeni ise balık tehdit altındayken yana doğru fırlar."
     },
@@ -47,6 +49,8 @@
     },
     "redLionfish": {
       "overview": "Kırmızı, beyaz ve kahverengi şeritli çarpıcı bir balık; yelpaze gibi açılan uzun yüzgeçlerinin arasında zehirli dikenler saklı. Güzel, ağır hareketli ve dokunulmaması gereken bir tür.",
+      "riskKey": "venomous_spines",
+      "safety": "Kırmızı, beyaz ve kahverengi şeritli çarpıcı bir balık; yelpaze gibi açılan uzun yüzgeçlerinin arasında zehirli dikenler saklı. Güzel, ağır hareketli ve dokunulmaması gereken bir tür.",
       "habitat": "Anavatanı Hint-Pasifik resifleri; bugün Karayipler ve batı Atlantik boyunca ciddi bir istilacı tür.",
       "curiosity": "İstila ettiği sularda neredeyse hiç avcısı yoktur ve ağzına sığan hemen her şeyi yer; bazı ülkelerin zıpkınla avlanıp yenmesini teşvik etmesinin sebebi budur."
     }

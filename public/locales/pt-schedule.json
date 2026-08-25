@@ -15,7 +15,8 @@
         "summer": "Mensal, meia dose",
         "autumn": "Parar",
         "winter": "Não adubar",
-        "note": "Pouco nitrogênio, de metade a um quarto da dose do rótulo. Excesso de N gera tecido mole que apodrece (Clemson, Iowa State)."
+        "note": "Pouco nitrogênio, de metade a um quarto da dose do rótulo. Excesso de N gera tecido mole que apodrece (Clemson, Iowa State).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "Replantio",
@@ -51,7 +52,8 @@
         "summer": "Mensal, diluído",
         "autumn": "Reduzir",
         "winter": "Não adubar",
-        "note": "Planta de interior só é adubada na estação de crescimento; nada nos meses de repouso (UConn)."
+        "note": "Planta de interior só é adubada na estação de crescimento; nada nos meses de repouso (UConn).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "Estacas",
@@ -79,7 +81,8 @@
         "summer": "Mensal, meia dose",
         "autumn": "Parar",
         "winter": "Não adubar",
-        "note": "Nada por 6 meses depois de dividir ou replantar; adubo demais queima a folhagem (Clemson, UConn)."
+        "note": "Nada por 6 meses depois de dividir ou replantar; adubo demais queima a folhagem (Clemson, UConn).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "Dividir e replantar",
@@ -115,7 +118,8 @@
         "summer": "Após a colheita",
         "autumn": "Parar",
         "winter": "Não adubar",
-        "note": "Fruta de caroço leva três parcelas e nada nas últimas semanas do verão, para o ramo amadurecer (Clemson)."
+        "note": "Fruta de caroço leva três parcelas e nada nas últimas semanas do verão, para o ramo amadurecer (Clemson).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "Poda",
@@ -143,7 +147,8 @@
         "summer": "A cada 6 semanas",
         "autumn": "Parar antes da geada",
         "winter": "Não adubar",
-        "note": "Roseira cai para meia dose no auge do calor e para 6 semanas antes da primeira geada esperada (Clemson)."
+        "note": "Roseira cai para meia dose no auge do calor e para 6 semanas antes da primeira geada esperada (Clemson).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "Flores gastas",
@@ -179,7 +184,8 @@
         "summer": "Parcelado",
         "autumn": "Parar",
         "winter": "Não adubar",
-        "note": "Planta madura precisa de pouca ou nenhuma. Adubo nitrogenado tardio atrasa a dormência (Clemson)."
+        "note": "Planta madura precisa de pouca ou nenhuma. Adubo nitrogenado tardio atrasa a dormência (Clemson).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "Poda",
@@ -215,7 +221,8 @@
         "summer": "Semanal, meia dose",
         "autumn": "Quinzenal",
         "winter": "Quinzenal",
-        "note": "Metade da dose do rótulo, pouca ou nenhuma ureia, e pular a cada 4ª rega para lixiviar sais (AOS, RHS)."
+        "note": "Metade da dose do rótulo, pouca ou nenhuma ureia, e pular a cada 4ª rega para lixiviar sais (AOS, RHS).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "Replantio",
@@ -251,7 +258,8 @@
         "summer": "Só se enfraquecer",
         "autumn": "Não adubar",
         "winter": "Não adubar",
-        "note": "Alecrim no solo não recebe nenhuma, e solo muito fértil prejudica o sabor (RHS, Clemson)."
+        "note": "Alecrim no solo não recebe nenhuma, e solo muito fértil prejudica o sabor (RHS, Clemson).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "Poda",

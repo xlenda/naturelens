@@ -50,10 +50,14 @@ export default function TopicDetailScreen({ route }) {
   const species = t(`discover.topics.${topicKey}.species`, { returnObjects: true });
 
   const isHerbs = topicKey === 'medicinalHerbs';
+  const isCropCollection = topicKey === 'fromFieldToPlate';
   // Collections whose species have a curated field-guide entry in
   // {code}-species.json. Listed explicitly rather than inferred, so a new
   // collection without content can never render tappable-but-empty cards.
-  const hasSpeciesDetail = topicKey === 'oceanAndRiverFish' || topicKey === 'birdsOfTheWorld';
+  const hasSpeciesDetail =
+    topicKey === 'oceanAndRiverFish' ||
+    topicKey === 'birdsOfTheWorld' ||
+    isCropCollection;
   const visibleSpecies = isHerbs && activeSymptom
     ? species.filter((s) => s.tags?.includes(activeSymptom))
     : species;
@@ -187,6 +191,20 @@ export default function TopicDetailScreen({ route }) {
                     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
                     if (isHerbs) {
                       navigation.navigate('HerbDetail', { herbId: s.id, color });
+                    } else if (isCropCollection) {
+                      // O catalogo abre a mesma ficha agronomica, mas marca que
+                      // nenhuma foto foi analisada. `disease: null` aqui nao e
+                      // um atestado de saude e o laudo fica corretamente oculto.
+                      navigation.navigate('CropDetail', {
+                        plant: {
+                          category: 'crop',
+                          id: s.id,
+                          name: s.name,
+                          scientific: s.sci,
+                          healthAssessed: false,
+                        },
+                        fromIdentify: false,
+                      });
                     } else {
                       navigation.navigate('FieldGuide', {
                         speciesId: s.id,
@@ -198,7 +216,7 @@ export default function TopicDetailScreen({ route }) {
                     }
                   },
                   accessibilityRole: 'button',
-                  accessibilityLabel: t('discover.viewHerbLabel', { name: s.name }),
+                  accessibilityLabel: t('discover.viewSpeciesLabel', { name: s.name }),
                 }
               : {};
             const card = (
@@ -222,7 +240,7 @@ export default function TopicDetailScreen({ route }) {
                   <Text style={styles.speciesSci}>{s.sci}</Text>
                   <Text style={styles.speciesNote}>{s.note}</Text>
                 </View>
-                {isHerbs && (
+                {tappable && (
                   <Ionicons
                     name="chevron-forward"
                     size={18}

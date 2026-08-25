@@ -47,6 +47,11 @@ function isIOS() {
 
 // Whether it is worth SHOWING the enable-notifications control at all.
 export function canUsePush() {
+  // A infraestrutura continua preservada, mas o produto ainda nao sabe se a
+  // pessoa tem uma tarefa contextual elegivel. Nao oferecer uma permissao que
+  // so produziria lembrete generico de sequencia.
+  return false;
+  /* istanbul ignore next -- reativar junto do estado de elegibilidade */
   if (Platform.OS !== 'web' || typeof window === 'undefined') return false;
   if (!('serviceWorker' in navigator)) return false;
   if (!('PushManager' in window)) return false;

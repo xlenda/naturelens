@@ -15,11 +15,18 @@ import * as Haptics from 'expo-haptics';
 import PlantHero from '../components/PlantHero';
 import SectionCard from '../components/SectionCard';
 import IdentificationExtras from '../components/IdentificationExtras';
+import DidacticFieldGuide from '../components/DidacticFieldGuide';
+import DiscoveryReceiptCard from '../components/DiscoveryReceiptCard';
+import { enrichmentTaxon } from '../components/taxonIdentity';
+import { insectRedListLabel } from '../components/insectRedList';
+import VendorSourceCredit from '../components/VendorSourceCredit';
+import TaxonomyTrail from '../components/TaxonomyTrail';
 import SeasonChart from '../components/SeasonChart';
 import { colors } from '../components/theme';
 import { getCollection, saveToCollection, removeFromCollection } from '../components/storage';
 import { CATEGORIES } from '../components/categories';
 import { getSpeciesGroup } from '../components/speciesGroup';
+import { getGroups } from '../components/groupContent';
 import { shareEntity } from '../components/share';
 import InstallNudgeCard from '../components/InstallNudgeCard';
 import CategoryIcon from '../components/CategoryIcon';
@@ -27,19 +34,42 @@ import AlertModal from '../components/AlertModal';
 import { useAppAlert } from '../components/useAppAlert';
 import { addTokens } from '../components/achievements';
 import { recordMissionEvent, TOKENS_PER_MISSION } from '../components/missions';
+import { trackResultSaved } from '../components/tracking';
 import NatureScene from '../components/NatureScene';
 import ZoneBand from '../components/ZoneBand';
 import PressScale from '../components/PressScale';
 import TopBar, { TopBarIcon } from '../components/TopBar';
 import Pronounce from '../components/Pronounce';
 import HelpfulRow from '../components/HelpfulRow';
-import SpeciesFaq from '../components/SpeciesFaq';
 import ShareSpeciesCard from '../components/ShareSpeciesCard';
+import CommunityInviteCard from '../components/CommunityInviteCard';
 import ResultActionBar from '../components/ResultActionBar';
 import QuickFactGrid from '../components/QuickFactGrid';
+import TopicNavigatorCard from '../components/TopicNavigatorCard';
+import { createSpeciesTopicResourceKey, usePublishSpeciesTopics } from '../components/speciesTopicResource';
 import shortFact from '../components/shortFact';
 import ExpandableText from '../components/ExpandableText';
 import DistributionMap from '../components/DistributionMap';
+import GroupGuideCard from '../components/GroupGuideCard';
+import ExactSpeciesGuide from '../components/ExactSpeciesGuide';
+import DynamicSpeciesDossier from '../components/DynamicSpeciesDossier';
+import DynamicPestManagementCard from '../components/DynamicPestManagementCard';
+import { API_BASE } from '../components/apiBase';
+import { getSpeciesDossier } from '../components/speciesDossier';
+import { buildInsectDossierTopics } from '../components/insectDossierTopics';
+import {
+  buildSourceGroundedTopics,
+  mergeSourceGroundedTopics,
+} from '../components/sourceGroundedTopics';
+import { getCuratedDetail } from '../components/curatedDetails';
+import LensRevealCard from '../components/LensRevealCard';
+import NextBestCaptureCard from '../components/NextBestCaptureCard';
+import { retakeResult } from '../components/resultRetake';
+import { RESULT_DEPTHS, ResultDepthLayer } from '../components/ResultDepthSwitcher';
+import {
+  observationSubjectKey,
+  moveObservationSubject,
+} from '../components/observationStorage';
 
 function Tag({ label, color }) {
   return (
@@ -49,24 +79,155 @@ function Tag({ label, color }) {
   );
 }
 
-const HIGH_RISK_TAGS = ['bites or stings', 'disease transmission', 'mildly venomous', 'highly venomous'];
+function technicalText(value) {
+  const values = Array.isArray(value) ? value : [value];
+  const clean = values
+    .filter((item) => typeof item === 'string')
+    .map((item) => item.trim())
+    .filter(Boolean);
+  return clean.length ? clean.join(', ') : null;
+}
+
+// Campos do insect.id normalmente chegam como arrays, mas uma colecao antiga,
+// um sync parcial ou uma mudanca de schema do fornecedor pode trazer uma string
+// ou um objeto. A tela nunca chama join/map/some antes de passar por esta borda.
+export function normaliseInsectTextList(value) {
+  const values = Array.isArray(value) ? value : [value];
+  return values
+    .filter((item) => typeof item === 'string')
+    .map((item) => item.trim())
+    .filter(Boolean);
+}
+
+// `translateEntity` falha aberto para nao perder o resultado da identificacao.
+// Isso e correto para a identidade, mas nao autoriza imprimir prosa inglesa no
+// meio de uma interface em outro idioma. `resultLanguage=en` e prova direta; os
+// marcadores cobrem o timeout em que a proveniencia ja tinha o idioma solicitado
+// mas role/dangerDescription continuaram intocados. Na duvida o campo some.
+export function readerSafeInsectText(value, language, resultLanguage) {
+  if (typeof value !== 'string' || !value.trim()) return null;
+  const text = value.trim();
+  const reader = String(language || 'en').trim().toLowerCase().replace('_', '-').split('-')[0];
+  const source = String(resultLanguage || '').trim().toLowerCase().replace('_', '-').split('-')[0];
+  if (reader === 'en') return text;
+  if (source === 'en') return null;
+
+  const rawEnglish = /\b(the|and|or|of|to|from|with|without|this|that|these|those|is|are|can|may|insect|species|adult|adults|larva|larvae|feeds?|lives?|found|common|pollinat(?:e|es|or|ors|ing)|predator|prey|pest|parasite|parasitoid|herbivore|carnivore|omnivore|decomposer|scavenger|allergenic|venomous|bites?|stings?|disease transmission)\b/i;
+  return rawEnglish.test(text) ? null : text;
+}
+
+const HIGH_RISK_TAGS = [
+  'bites or stings',
+  'bites pets',
+  'allergenic',
+  'disease transmission',
+  'mildly venomous',
+  'highly venomous',
+];
+
+const GROUP_TOPIC_META = Object.freeze([
+  Object.freeze({ key: 'safety', labelKey: 'detail.safetySection', icon: 'shield-checkmark-outline' }),
+  Object.freeze({ key: 'role', labelKey: 'detail.ecologicalRoleSection', icon: 'leaf-outline' }),
+  Object.freeze({ key: 'uses', labelKey: 'detail.fundamentals', icon: 'compass-outline' }),
+]);
+
+export function buildInsectGroupTopics(group, translate) {
+  if (!group?.topics || typeof translate !== 'function') return [];
+  return GROUP_TOPIC_META.flatMap((meta) => {
+    const value = group.topics[meta.key];
+    const advice = Array.isArray(value?.advice) ? value.advice : [];
+    const checklist = Array.isArray(value?.checklist) ? value.checklist : [];
+    const hasContent = advice.some((line) => typeof line === 'string' && line.trim())
+      || checklist.some((line) => typeof line === 'string' && line.trim());
+    if (!hasContent) return [];
+    return [{
+      key: meta.key,
+      label: translate(meta.labelKey),
+      icon: meta.icon,
+      text: null,
+      groupOnly: true,
+    }];
+  });
+}
+
+export function mergeInsectTopics(primary = [], groupTopics = []) {
+  const merged = primary.slice();
+  const keys = new Set(merged.map((topic) => topic?.key).filter(Boolean));
+  for (const topic of groupTopics) {
+    if (!topic?.key || keys.has(topic.key)) continue;
+    merged.push(topic);
+    keys.add(topic.key);
+  }
+  return merged;
+}
 
 export default function InsectDetailScreen({ route }) {
   const navigation = useNavigation();
-  const { plant, fromIdentify } = route.params;
+  const { plant, fromIdentify, scanOutcome, scanOutcomeRequest } = route.params;
   const meta = CATEGORIES.insect;
-  const { t } = useTranslation();
-  const [saved, setSaved] = useState(false);
+  const { t, i18n } = useTranslation();
+  const [saved, setSaved] = useState(Boolean(plant.savedId));
   const [savedEntryId, setSavedEntryId] = useState(plant.savedId || null);
+  const [curated, setCurated] = useState(null);
+  const [speciesDossier, setSpeciesDossier] = useState(null);
+  // undefined = carregando; null = carregou sem guia. A distincao impede que a
+  // ficha pareca definitivamente curta enquanto o manual localizado chega.
+  const [groupGuide, setGroupGuide] = useState(undefined);
+  // O dono escolheu uma ficha unica para insetos: Tecnico significa o conjunto
+  // completo e inclui as camadas essencial e visual. Nenhuma preferencia antiga
+  // do onboarding pode voltar a esconder o dossie nesta categoria.
+  const resultDepth = RESULT_DEPTHS.EXPERT;
+  const unsavedObservationKey = observationSubjectKey({ ...plant, savedId: null }, null);
+  const observationKey = savedEntryId
+    ? observationSubjectKey(plant, savedEntryId)
+    : unsavedObservationKey;
+  const detachedObservationKey = React.useRef(null);
   const { alertConfig, showAlert, hideAlert } = useAppAlert();
+  const enrichment = enrichmentTaxon(plant.identityV1, {
+    scientificName: plant.scientific,
+    gbifKey: plant.gbifId,
+  });
+  const enrichmentScientific = enrichment?.canonicalName || null;
+
+  useEffect(() => {
+    let alive = true;
+    setCurated(null);
+    // Curadoria por especie obedece ao mesmo portao do dossie dinamico. Um
+    // binomio candidato ou um genero visivel nunca destrava texto especifico.
+    getCuratedDetail(i18n.language, 'insect', enrichmentScientific).then((detail) => {
+      if (alive) setCurated(detail);
+    });
+    return () => {
+      alive = false;
+    };
+  }, [i18n.language, enrichmentScientific]);
+
+  useEffect(() => {
+    let alive = true;
+    setSpeciesDossier(null);
+    if (!enrichmentScientific) return () => { alive = false; };
+    getSpeciesDossier({
+      apiBase: API_BASE,
+      category: 'insect',
+      scientific: enrichmentScientific,
+      language: i18n.language,
+    }).then((value) => {
+      if (alive) setSpeciesDossier(value);
+    });
+    return () => { alive = false; };
+  }, [enrichmentScientific, i18n.language]);
 
   useEffect(() => {
     (async () => {
+      if (!plant.savedId) return;
       const list = await getCollection();
-      const found = list.find((p) => p.savedId === plant.savedId || p.id === plant.id);
+      const found = list.find((p) => p.savedId === plant.savedId);
       if (found) {
         setSaved(true);
         setSavedEntryId(found.savedId);
+      } else {
+        setSaved(false);
+        setSavedEntryId(null);
       }
     })();
   }, []);
@@ -74,16 +235,30 @@ export default function InsectDetailScreen({ route }) {
   const toggleSave = async () => {
     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
     if (saved && savedEntryId) {
+      const previousObservationKey = observationKey;
       const result = await removeFromCollection(savedEntryId);
       if (result) {
+        if (previousObservationKey && unsavedObservationKey) {
+          await moveObservationSubject(previousObservationKey, unsavedObservationKey);
+          detachedObservationKey.current = null;
+        } else if (previousObservationKey) {
+          detachedObservationKey.current = previousObservationKey;
+        }
         setSaved(false);
         setSavedEntryId(null);
       } else {
         showAlert(t('common.saveErrorTitle'), t('common.saveErrorBody'));
       }
     } else {
+      const previousObservationKey = observationKey || detachedObservationKey.current;
       const entry = await saveToCollection(plant);
       if (entry) {
+        const savedObservationKey = observationSubjectKey(entry, entry.savedId);
+        if (previousObservationKey && savedObservationKey) {
+          await moveObservationSubject(previousObservationKey, savedObservationKey);
+          detachedObservationKey.current = null;
+        }
+        trackResultSaved({ category: 'insect' });
         // Save-mission credit (idempotent - see components/missions.js).
         recordMissionEvent('save').then((done) => {
           if (done.length) addTokens(done.length * TOKENS_PER_MISSION);
@@ -96,41 +271,183 @@ export default function InsectDetailScreen({ route }) {
     }
   };
 
-  const hasDanger = plant.danger?.length > 0;
-  const dangerColor = plant.danger?.some((d) => HIGH_RISK_TAGS.includes(d)) ? colors.error : colors.warning;
+  const openObservationWorkspace = () => {
+    if (!observationKey) return;
+    navigation.navigate('ObservationWorkspace', {
+      entity: plant,
+      savedId: savedEntryId || null,
+    });
+  };
+
+  const rawDanger = normaliseInsectTextList(plant.danger);
+  const candidateDangerLabels = normaliseInsectTextList(plant.dangerLabel);
+  const rawRole = normaliseInsectTextList(plant.role);
+  const readerLanguage = i18n.language;
+  const resultLanguage = plant.resultLanguage;
+  const readerIsEnglish = String(readerLanguage || 'en').toLowerCase().split(/[-_]/)[0] === 'en';
+  const dangerLabelsByIndex = rawDanger.map((raw, index) => {
+    const candidate = candidateDangerLabels[index] || (readerIsEnglish ? raw : null);
+    if (!candidate) return null;
+    // Quando o tradutor falha depois de preparar os rotulos, dangerLabel e uma
+    // copia byte a byte da chave crua. Ela continua servindo para cor, nao texto.
+    if (!readerIsEnglish && candidate.toLocaleLowerCase() === raw.toLocaleLowerCase()) return null;
+    return readerSafeInsectText(candidate, readerLanguage, resultLanguage);
+  });
+  const visibleDangerLabels = dangerLabelsByIndex.filter(Boolean);
+  const visibleRole = rawRole
+    .map((value) => readerSafeInsectText(value, readerLanguage, resultLanguage))
+    .filter(Boolean);
+  const visibleDangerDescription = readerSafeInsectText(
+    plant.dangerDescription,
+    readerLanguage,
+    resultLanguage
+  );
+  const hasDanger = rawDanger.length > 0;
+  const dangerColor = rawDanger.some((d) => HIGH_RISK_TAGS.includes(d.toLowerCase()))
+    ? colors.error
+    : colors.warning;
+  const safetyFallback = hasDanger && visibleDangerLabels.length === 0 && !visibleDangerDescription
+    ? t('lensReveal.safetyFirst')
+    : null;
+  const safetyText = [
+    visibleDangerLabels.length ? '• ' + visibleDangerLabels.join('\n• ') : null,
+    visibleDangerDescription,
+    safetyFallback,
+  ].filter(Boolean).join('\n\n');
+  const hasSafetyEvidence = !!safetyText;
+  const dossierTaxonomy = speciesDossier?.taxonomy || {};
+  const groupKey = getSpeciesGroup({
+    ...plant,
+    // Um candidato nao ganha override por binomio. Familia e ordem continuam
+    // servindo apenas ao guia geral, que se declara nao especifico da especie.
+    scientific: enrichmentScientific,
+    family: plant.family || dossierTaxonomy.family || null,
+    ord: plant.ord || dossierTaxonomy.order || null,
+  });
+  // Insect.id also covers spiders, molluscs and other invertebrates. The broad
+  // label stays true for every result without guessing a class the API lacks.
+  const resultTypeLabel = t('detail.invertebrateLabel');
+  const conservationLabel = insectRedListLabel(plant.redList, t);
+
+  useEffect(() => {
+    let alive = true;
+    setGroupGuide(undefined);
+    if (!groupKey) {
+      setGroupGuide(null);
+      return () => { alive = false; };
+    }
+    getGroups(i18n.language).then((groups) => {
+      if (alive) setGroupGuide(groups?.[groupKey] || null);
+    });
+    return () => { alive = false; };
+  }, [groupKey, i18n.language]);
 
   const infoRows = [
-    { label: t('common.nativeOrigin'), value: plant.origin },
-    { label: t('detail.conservationStatus'), value: plant.redList },
+    { label: t('detail.family'), value: technicalText(plant.family || dossierTaxonomy.family) },
+    { label: t('detail.order'), value: technicalText(plant.ord || dossierTaxonomy.order) },
+    { label: t('detail.synonyms'), value: technicalText(plant.synonyms) },
+    // O enum cru continua sendo evidencia; somente o rotulo padronizado e
+    // traduzido pode chegar a interface. Objeto desconhecido falha fechado.
+    { label: t('detail.conservationStatus'), value: conservationLabel },
   ].filter((r) => r.value);
 
   const handleShare = () => {
     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
-    shareEntity(plant, t('categories.insect.label'));
+    shareEntity(plant, resultTypeLabel);
   };
 
   // Hub do resultado (video do concorrente): o texto longo vira topicos do
   // manual da especie (CareTopicsScreen). So entra topico com conteudo REAL -
   // campo ausente nao gera aba.
-  const topics = [
-    plant.role?.length > 0 && {
+  const overviewText = plant.overview || curated?.overview || null;
+  const roleText = visibleRole.length ? '\u2022 ' + visibleRole.join('\n\u2022 ') : null;
+  const habitatText = curated?.habitat || null;
+  const detailsTopicText = infoRows.length
+    ? infoRows.map((row) => `${row.label}: ${row.value}`).join('\n')
+    : null;
+  const evidenceTopicText = [
+    enrichmentScientific ? `${t('common.identified')}: ${enrichmentScientific}` : null,
+    Number.isFinite(plant.confidence) ? `${t('common.confidence')}: ${plant.confidence}%` : null,
+    plant.sourceProvider ? `${t('learning.provider')}: ${plant.sourceProvider}` : null,
+  ].filter(Boolean).join('\n');
+  const baseTopics = [
+    evidenceTopicText && {
+      key: 'evidence',
+      label: t('learning.evidenceTitle'),
+      text: evidenceTopicText,
+      icon: 'scan-outline',
+    },
+    roleText && {
       key: 'role',
       label: t('detail.ecologicalRoleSection'),
-      text: '• ' + plant.role.join('\n• '),
+      text: roleText,
     },
-    !!plant.dangerDescription && {
+    hasSafetyEvidence && {
       key: 'safety',
       label: t('detail.safetySection'),
-      text: plant.dangerDescription,
+      text: safetyText,
+    },
+    overviewText && {
+      key: 'overview',
+      label: t('common.overview'),
+      text: overviewText,
+    },
+    habitatText && {
+      key: 'habitat',
+      label: t('fieldGuide.habitat'),
+      text: habitatText,
+    },
+    curated?.curiosity && {
+      key: 'curiosity',
+      label: t('fieldGuide.curiosity'),
+      text: curated.curiosity,
+    },
+    detailsTopicText && {
+      key: 'details',
+      label: t('common.details'),
+      text: detailsTopicText,
     },
   ].filter(Boolean);
+  const speciesTopics = buildInsectDossierTopics({
+    scientific: enrichmentScientific,
+    dossier: speciesDossier,
+    order: plant.ord || dossierTaxonomy.order,
+    taxonClass: plant.taxonClass || dossierTaxonomy.className,
+    language: i18n.language,
+    translate: t,
+    baseTopics,
+  });
+  const sourceTopics = buildSourceGroundedTopics({
+    dossier: speciesDossier,
+    labels: {
+      feeding: t('speciesDossier.diet'),
+      reproduction: t('speciesDossier.reproduction'),
+      lifeCycle: t('speciesDossier.lifeCycle'),
+      habitat: t('fieldGuide.habitat'),
+      behavior: t('observationWorkspace.eventTypes.insect.behavior'),
+      ecology: t('detail.ecologicalRoleSection'),
+      conservation: t('detail.conservationStatus'),
+    },
+  });
+  const topics = mergeInsectTopics(
+    mergeSourceGroundedTopics(speciesTopics, sourceTopics),
+    buildInsectGroupTopics(groupGuide, t)
+  );
+  const topicResourceKey = createSpeciesTopicResourceKey({
+    category: 'insect',
+    language: i18n.language,
+    routeKey: route.key,
+    identity: plant.savedId || enrichmentScientific || plant.scientific || plant.name,
+  });
+  usePublishSpeciesTopics(topicResourceKey, topics);
 
-  const openTopic = (initialKey) =>
-    navigation.navigate('CareTopics', { groupKey: getSpeciesGroup(plant),
+  const openTopic = (initialKey, routeTopics = topics) =>
+    navigation.navigate('CareTopics', { groupKey,
       title: plant.name,
       accent: meta.accent,
       category: 'insect',
-      topics,
+      topics: routeTopics,
+      topicResourceKey,
       initialKey,
     });
 
@@ -144,16 +461,16 @@ export default function InsectDetailScreen({ route }) {
       icon: 'warning-outline',
       color: dangerColor,
       label: t('detail.safetySection'),
-      value: plant.danger?.length
-        ? plant.danger.join(', ')
-        : shortFact('toxicity', plant.dangerDescription, t),
+      value: visibleDangerLabels.length
+        ? visibleDangerLabels.join(', ')
+        : shortFact('toxicity', visibleDangerDescription, t) || safetyFallback,
     },
     topics.some((tp) => tp.key === 'role') && {
       key: 'role',
       icon: 'leaf-outline',
       color: colors.accent,
       label: t('detail.ecologicalRoleSection'),
-      value: plant.role.join(', '),
+      value: visibleRole.join(', '),
     },
   ];
 
@@ -165,7 +482,7 @@ export default function InsectDetailScreen({ route }) {
       <NatureScene accent={meta.accent} />
 
       <TopBar
-        title={t('detail.profileTitle', { category: t('categories.insect.label') })}
+        title={t('detail.profileTitle', { category: resultTypeLabel })}
         onBack={() => navigation.goBack()}
         right={
           <>
@@ -190,7 +507,8 @@ export default function InsectDetailScreen({ route }) {
         <PlantHero
           photoUri={plant.photoUri}
           similarImages={plant.similarImages}
-          scientific={plant.scientific}
+          scientific={enrichmentScientific}
+          identityV1={plant.identityV1}
           accent={meta.accent}
           icon={meta.tabIcon}
         />
@@ -213,10 +531,12 @@ export default function InsectDetailScreen({ route }) {
               </Text>
             )}
           </View>
-          <View style={styles.confidenceBadge}>
-            <Text style={styles.confidenceLabel}>{t('common.confidence')}</Text>
-            <Text style={styles.confidenceValue}>{plant.confidence}%</Text>
-          </View>
+          {Number.isFinite(plant.confidence) && (
+            <View style={styles.confidenceBadge}>
+              <Text style={styles.confidenceLabel}>{t('common.confidence')}</Text>
+              <Text style={styles.confidenceValue}>{plant.confidence}%</Text>
+            </View>
+          )}
         </View>
 
         <View style={[styles.typePill, { backgroundColor: meta.accent + '22' }]}>
@@ -227,25 +547,8 @@ export default function InsectDetailScreen({ route }) {
             accessibilityElementsHidden={true}
             importantForAccessibility="no-hide-descendants"
           />
-          <Text style={[styles.typePillText, { color: meta.accent }]}>{t('categories.insect.label')}</Text>
+          <Text style={[styles.typePillText, { color: meta.accent }]}>{resultTypeLabel}</Text>
         </View>
-
-        {/* Reference photos, runner-up species and a low-confidence warning -
-            all built from data the API already returned. */}
-        <IdentificationExtras entity={plant} accent={meta.accent} />
-
-        {/* Mapa de distribuicao REAL (GBIF) - tela principal rica (video do
-            concorrente, 20/08): o mesmo componente da tela de planta, e o GBIF
-            cobre fauna tambem. Some sozinho quando a especie nao tem match ou
-            o aparelho esta offline. */}
-        <DistributionMap scientific={plant.scientific} accent={meta.accent} />
-
-        {/* Destaque da estacao (paridade 120% - video do concorrente, 20/08):
-            onde ele desenha um grafico de estacao generico, aqui e o
-            histograma REAL de ocorrencias por mes da especie no GBIF. Inseto
-            tem sazonalidade forte (emergencia, voo), entao o mes de registro
-            diz muito. Some sozinho com menos de 30 registros datados. */}
-        <SeasonChart scientific={plant.scientific} accent={meta.accent} />
 
         {/* Safety leads ("quente primeiro"): for insects, "did the thing that
             just stung me matter?" is the question that opened the camera - it
@@ -254,49 +557,159 @@ export default function InsectDetailScreen({ route }) {
             in full-bleed bands one shade above the background; the gap between
             bands is the scene showing through. ZoneBand is a pure wrapper -
             the quente-primeiro order stays byte for byte. */}
+        {hasSafetyEvidence && (
         <ZoneBand gutter={20}>
           {/* Tela principal rica (video do concorrente, 20/08): a descricao de
               perigo agora abre a secao mesmo SEM tags - antes so existia
               acompanhando `danger`, entao um inseto com prosa de risco e
-              nenhuma tag nao mostrava nada aqui. Prosa longa vem colapsada
-              (ExpandableText corta por frase) para nao comer a primeira dobra.
-              Sem os dois campos, a secao inteira nao renderiza. */}
-          {(hasDanger || !!plant.dangerDescription) && (
+              nenhuma tag nao mostrava nada aqui. A prosa de risco vem inteira:
+              cortar pode esconder justamente a parte grave. Sem os dois campos,
+              a secao inteira nao renderiza. */}
+          {hasSafetyEvidence && (
             <SectionCard icon="warning-outline" title={t('detail.safetySection')} color={dangerColor}>
-              {hasDanger && (
+              {visibleDangerLabels.length > 0 && (
                 <View style={styles.tagRow}>
                   {/* Rotulo traduzido pareado por INDICE com a tag crua: a cor
                       de risco alto e escolhida casando o valor em ingles
                       (HIGH_RISK_TAGS), entao a tag crua tem que sobreviver
                       mesmo com a tela em outro idioma (auditoria 20/08). */}
-                  {plant.danger.map((d, i) => (
-                    <Tag key={d} label={plant.dangerLabel?.[i] || d} color={dangerColor} />
-                  ))}
+                  {dangerLabelsByIndex.map((label, i) => label ? (
+                    <Tag key={`${rawDanger[i]}-${i}`} label={label} color={dangerColor} />
+                  ) : null)}
                 </View>
               )}
-              {!!plant.dangerDescription && (
-                <View style={hasDanger ? { marginTop: 10 } : null}>
+              {!!visibleDangerDescription && (
+                <View style={visibleDangerLabels.length ? { marginTop: 10 } : null}>
                   {/* Inteiro, nunca colapsado: cortar um aviso de picada ou
                       veneno na primeira frase pode esconder justamente a parte
                       grave (auditoria 20/08). */}
-                  <Text style={styles.body}>{plant.dangerDescription}</Text>
+                  <Text style={styles.body}>{visibleDangerDescription}</Text>
                 </View>
               )}
+              {!!safetyFallback && <Text style={styles.body}>{safetyFallback}</Text>}
             </SectionCard>
           )}
-
-          <SectionCard icon="document-text-outline" title={t('common.overview')} color={meta.accent}>
-            <Text style={styles.body}>{plant.overview || t('sound.noContentBody')}</Text>
-          </SectionCard>
         </ZoneBand>
+        )}
 
-        {/* Fatos rapidos (auditoria de diagramacao 20/08): o bloco copiado nas
-            6 telas virou um componente so. Ele proprio descarta card sem valor
-            e nao renderiza nada quando a grade fica vazia. */}
+        <LensRevealCard
+          confidence={plant.confidence}
+          summary={plant.overview}
+          accent={meta.accent}
+          critical={dangerColor === colors.error}
+        />
+        <TopicNavigatorCard
+          topics={topics}
+          accent={meta.accent}
+          onOpen={openTopic}
+          title={t('speciesDossier.title')}
+          loading={Boolean(groupKey) && groupGuide === undefined}
+        />
+        <GroupGuideCard
+          groupKey={groupKey}
+          entityName={enrichmentScientific ? plant.name : null}
+          topics={topics}
+          accent={meta.accent}
+          onOpen={(guideTopics, key) => openTopic(key, guideTopics)}
+        />
+        {/* MIP e uma decisao de campo, nao curiosidade tecnica. Quando existe
+            um par exato inseto-cultura ele precisa ficar encontravel em
+            qualquer profundidade; o proprio card continua fechado quando o
+            par nao foi documentado. */}
+        <DynamicPestManagementCard
+          scientific={plant.scientific}
+          identityV1={plant.identityV1}
+          accent={colors.warning}
+        />
+        <NextBestCaptureCard
+          category="insect"
+          confidence={plant.confidence}
+          alternatives={plant.alternatives}
+          identityStatus={plant.identityV1?.status}
+          resultName={plant.name || plant.scientific}
+          fromIdentify={fromIdentify}
+          accent={meta.accent}
+          onRetake={() => retakeResult({ navigation, category: 'insect', fromIdentify })}
+        />
+
+        {/* Risco -> evidencia -> fatos: primeiro responde se o inseto exige
+            cautela, depois mostra por que a identidade e plausivel, e so entao
+            abre a leitura enciclopedica. */}
+        <ResultDepthLayer activeDepth={resultDepth} depth={RESULT_DEPTHS.VISUAL}>
+          <IdentificationExtras entity={plant} identityV1={plant.identityV1} accent={meta.accent} />
+        </ResultDepthLayer>
+
+        <ResultDepthLayer activeDepth={resultDepth} depth={RESULT_DEPTHS.ESSENTIAL}>
+          <DiscoveryReceiptCard
+            outcome={scanOutcome}
+            request={scanOutcomeRequest}
+            accent={meta.accent}
+            automaticSaveConfirmed={fromIdentify === true && !!plant.savedId}
+            riskLevel={dangerColor === colors.error ? 'danger' : null}
+          />
+        </ResultDepthLayer>
+
+        <ResultDepthLayer activeDepth={resultDepth} depth={RESULT_DEPTHS.VISUAL}>
+          <DidacticFieldGuide category="insect" entity={plant} accent={meta.accent} />
+        </ResultDepthLayer>
+
+        <ResultDepthLayer activeDepth={resultDepth} depth={RESULT_DEPTHS.ESSENTIAL}>
+          {observationKey ? (
+          <TouchableOpacity
+            style={[styles.observationCard, { borderColor: meta.accent + '66' }]}
+            onPress={openObservationWorkspace}
+            activeOpacity={0.8}
+            accessibilityRole="button"
+            accessibilityLabel={t('observationWorkspace.openAction')}
+          >
+            <View style={[styles.observationIcon, { backgroundColor: meta.accent + '20' }]}>
+              <Ionicons name="journal-outline" size={24} color={meta.accent} />
+            </View>
+            <View style={styles.observationCopy}>
+              <Text style={styles.observationTitle}>{t('observationWorkspace.openTitle')}</Text>
+              <Text style={styles.observationBody}>{t('observationWorkspace.openBody')}</Text>
+            </View>
+            <Ionicons name="chevron-forward" size={20} color={meta.accent} />
+          </TouchableOpacity>
+          ) : null}
+        </ResultDepthLayer>
+
+        <ResultDepthLayer activeDepth={resultDepth} depth={RESULT_DEPTHS.EXPERT}>
+
         <QuickFactGrid
           accent={meta.accent}
           facts={quickFacts.map((f) => f && { ...f, onPress: () => openTopic(f.key) })}
         />
+
+        {!!plant.overview && (
+          <ZoneBand gutter={20}>
+            <SectionCard icon="document-text-outline" title={t('common.overview')} color={meta.accent}>
+              <Text style={styles.body}>{plant.overview}</Text>
+              <VendorSourceCredit
+                provider={plant.sourceProvider}
+                citation={plant.overviewCitation}
+                licenseName={plant.overviewLicense}
+                licenseUrl={plant.overviewLicenseUrl}
+              />
+            </SectionCard>
+          </ZoneBand>
+        )}
+
+        <ExactSpeciesGuide
+          category="insect"
+          scientific={enrichmentScientific}
+          accent={meta.accent}
+          includeOverview={!plant.overview}
+        />
+        <DynamicSpeciesDossier
+          category="insect"
+          scientific={plant.scientific}
+          identityV1={plant.identityV1}
+          dossier={speciesDossier}
+          accent={meta.accent}
+        />
+        <DistributionMap scientific={plant.scientific} gbifId={plant.gbifId} identityV1={plant.identityV1} accent={meta.accent} />
+        <SeasonChart scientific={plant.scientific} gbifId={plant.gbifId} identityV1={plant.identityV1} accent={meta.accent} />
 
         {/* Ecology - tela principal rica (video do concorrente, 20/08): o papel
             ecologico era so um card-porta com uma linha truncada; agora a lista
@@ -304,14 +717,14 @@ export default function InsectDetailScreen({ route }) {
             resultado do concorrente. A porta pro manual nao se perdeu - o mesmo
             topico continua a um toque pelo fato rapido "Papel ecologico" acima.
             Guarded: campo ausente = banda inteira nao renderiza. */}
-        {plant.role?.length > 0 && (
+        {visibleRole.length > 0 && (
           <ZoneBand gutter={20}>
             <SectionCard
               icon="leaf-outline"
               title={t('detail.ecologicalRoleSection')}
               color={colors.accent}
             >
-              {plant.role.map((r) => (
+              {visibleRole.map((r) => (
                 <Text key={r} style={styles.bullet}>{'• ' + r}</Text>
               ))}
             </SectionCard>
@@ -320,49 +733,28 @@ export default function InsectDetailScreen({ route }) {
 
         {/* Ficha/recibo band: the technical rows close the screen as a
             receipt. Guarded like the band above. */}
-        {infoRows.length > 0 && (
+        {(!!technicalText(plant.family || dossierTaxonomy.family)
+          || !!technicalText(plant.ord || dossierTaxonomy.order)
+          || infoRows.length > 0) && (
           <ZoneBand gutter={20}>
-            <SectionCard icon="finger-print-outline" title={t('common.details')} color={colors.purple}>
-              {infoRows.map((row) => (
-                <View key={row.label} style={styles.infoRow}>
-                  <Text style={styles.infoLabel}>{row.label}</Text>
-                  <Text style={styles.infoValue}>{row.value}</Text>
-                </View>
-              ))}
-            </SectionCard>
+            <TaxonomyTrail
+              order={plant.ord || dossierTaxonomy.order}
+              family={plant.family || dossierTaxonomy.family}
+              scientific={enrichmentScientific}
+              accent={meta.accent}
+            />
+            {infoRows.length > 0 && (
+              <SectionCard icon="finger-print-outline" title={t('common.details')} color={colors.purple}>
+                {infoRows.map((row) => (
+                  <View key={row.label} style={styles.infoRow}>
+                    <Text style={styles.infoLabel}>{row.label}</Text>
+                    <Text style={styles.infoValue}>{row.value}</Text>
+                  </View>
+                ))}
+              </SectionCard>
+            )}
           </ZoneBand>
         )}
-
-        {/* Gancho da especialista - hub do resultado (video do concorrente):
-            leva a duvida pro tab do especialista COM o contexto da especie
-            (BotanistScreen le route.params.context). */}
-        <TouchableOpacity
-          style={styles.specialistCta}
-          activeOpacity={0.8}
-          onPress={() =>
-            navigation.navigate('Botanist', {
-              context: plant.name + ' (' + (plant.scientific || '') + ')',
-            })
-          }
-          accessibilityRole="button"
-          accessibilityLabel={t('detail.askSpecialistCta')}
-        >
-          <Ionicons
-            name="sparkles"
-            size={16}
-            color={meta.accent}
-            accessibilityElementsHidden={true}
-            importantForAccessibility="no-hide-descendants"
-          />
-          <Text style={styles.specialistText}>{t('detail.askSpecialistCta')}</Text>
-          <Ionicons
-            name="chevron-forward"
-            size={16}
-            color={colors.textMuted}
-            accessibilityElementsHidden={true}
-            importantForAccessibility="no-hide-descendants"
-          />
-        </TouchableOpacity>
 
         {!!plant.url && (
           <TouchableOpacity
@@ -370,7 +762,7 @@ export default function InsectDetailScreen({ route }) {
             activeOpacity={0.8}
             onPress={() => Linking.openURL(plant.url)}
             accessibilityRole="button"
-            accessibilityLabel={t('detail.readMoreLabel', { category: t('categories.insect.label').toLowerCase() })}
+            accessibilityLabel={t('detail.readMoreLabel', { category: resultTypeLabel.toLowerCase() })}
           >
             <Ionicons
               name="globe-outline"
@@ -413,24 +805,16 @@ export default function InsectDetailScreen({ route }) {
             da TopBar. Aqui ele vira convite, no fim da leitura. */}
         <ShareSpeciesCard
           entity={plant}
-          categoryLabel={t('categories.insect.label')}
+          categoryLabel={resultTypeLabel}
           accent={meta.accent}
         />
 
-        {/* "Duvidas frequentes" - paridade 120% (video do concorrente,
-            20/08): o FAQ fixo dele vira pergunta SUGERIDA que abre a
-            especialista ja com a duvida escrita e a especie como contexto. */}
-        <SpeciesFaq
-          category="insect"
-          name={plant.name}
-          scientific={plant.scientific}
-          accent={meta.accent}
-          navigation={navigation}
-        />
+        <CommunityInviteCard accent={meta.accent} />
 
         {/* Foi util? - hub do resultado (video do concorrente): fecha o
             scroll medindo a identificacao. */}
         <HelpfulRow category="insect" context="result" />
+        </ResultDepthLayer>
       </ScrollView>
 
       {/* Barra de acoes fixa - hub do resultado (video do concorrente):
@@ -442,6 +826,7 @@ export default function InsectDetailScreen({ route }) {
         onShare={handleShare}
         onSave={toggleSave}
         saved={saved}
+        savedId={savedEntryId}
         accent={meta.accent}
       />
 
@@ -485,6 +870,27 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   typePillText: { fontSize: 12.5, fontWeight: '700', marginLeft: 6 },
+  observationCard: {
+    minHeight: 82,
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 12,
+    borderWidth: 1,
+    borderRadius: 18,
+    backgroundColor: colors.surfaceElevated,
+    padding: 14,
+    marginBottom: 16,
+  },
+  observationIcon: {
+    width: 48,
+    height: 48,
+    borderRadius: 15,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  observationCopy: { flex: 1 },
+  observationTitle: { color: colors.text, fontSize: 16, lineHeight: 21, fontWeight: '900' },
+  observationBody: { color: colors.textSecondary, fontSize: 12.5, lineHeight: 18, marginTop: 3 },
   body: { color: colors.textSecondary, fontSize: 14, lineHeight: 21 },
   tagRow: { flexDirection: 'row', flexWrap: 'wrap', gap: 8 },
   tag: {

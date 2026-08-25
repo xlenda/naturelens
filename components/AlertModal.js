@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { Modal, View, Text, StyleSheet, TouchableOpacity, ScrollView } from 'react-native';
 import { useTranslation } from 'react-i18next';
 import { colors, shadow } from './theme';
 
@@ -8,56 +8,71 @@ export default function AlertModal({ visible, title, message, buttons, onRequest
   // hooks - the default button label was the one hardcoded-English string left
   // in a 17-language app (Fable review finding).
   const { t } = useTranslation();
-  if (!visible) return null;
-
   const list = buttons?.length ? buttons : [{ text: t('common.ok') }];
 
   return (
-    <View style={styles.backdrop}>
-      <View style={styles.card}>
-        {!!title && <Text style={styles.title}>{title}</Text>}
-        {!!message && <Text style={styles.message}>{message}</Text>}
-        <View style={styles.buttons}>
-          {list.map((btn, i) => (
-            <TouchableOpacity
-              key={i}
-              style={[
-                styles.btn,
-                btn.style === 'cancel' && styles.btnCancel,
-                btn.style === 'destructive' && styles.btnDestructive,
-              ]}
-              activeOpacity={0.8}
-              onPress={() => {
-                onRequestClose?.();
-                btn.onPress?.();
-              }}
-              accessibilityRole="button"
-              accessibilityLabel={btn.text}
+    <Modal
+      visible={visible}
+      transparent
+      animationType="fade"
+      statusBarTranslucent
+      onRequestClose={onRequestClose}
+    >
+      <View style={styles.backdrop}>
+        <View
+          style={styles.card}
+          accessibilityViewIsModal={true}
+          onAccessibilityEscape={onRequestClose}
+        >
+          {!!title && <Text style={styles.title} accessibilityRole="header">{title}</Text>}
+          {!!message && (
+            <ScrollView
+              style={styles.messageScroll}
+              contentContainerStyle={styles.messageScrollContent}
+              showsVerticalScrollIndicator
+              nestedScrollEnabled
             >
-              <Text
+              <Text style={styles.message}>{message}</Text>
+            </ScrollView>
+          )}
+          <View style={styles.buttons}>
+            {list.map((btn, i) => (
+              <TouchableOpacity
+                key={i}
                 style={[
-                  styles.btnText,
-                  btn.style === 'cancel' && styles.btnTextCancel,
-                  btn.style === 'destructive' && styles.btnTextDestructive,
+                  styles.btn,
+                  btn.style === 'cancel' && styles.btnCancel,
+                  btn.style === 'destructive' && styles.btnDestructive,
                 ]}
+                activeOpacity={0.8}
+                onPress={() => {
+                  onRequestClose?.();
+                  btn.onPress?.();
+                }}
+                accessibilityRole="button"
+                accessibilityLabel={btn.text}
               >
-                {btn.text}
-              </Text>
-            </TouchableOpacity>
-          ))}
+                <Text
+                  style={[
+                    styles.btnText,
+                    btn.style === 'cancel' && styles.btnTextCancel,
+                    btn.style === 'destructive' && styles.btnTextDestructive,
+                  ]}
+                >
+                  {btn.text}
+                </Text>
+              </TouchableOpacity>
+            ))}
+          </View>
         </View>
       </View>
-    </View>
+    </Modal>
   );
 }
 
 const styles = StyleSheet.create({
   backdrop: {
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    right: 0,
-    bottom: 0,
+    flex: 1,
     backgroundColor: 'rgba(0,0,0,0.6)',
     alignItems: 'center',
     justifyContent: 'center',
@@ -67,6 +82,7 @@ const styles = StyleSheet.create({
   card: {
     width: '100%',
     maxWidth: 340,
+    maxHeight: '88%',
     backgroundColor: colors.card,
     borderRadius: 18,
     padding: 22,
@@ -75,7 +91,9 @@ const styles = StyleSheet.create({
     ...shadow,
   },
   title: { fontSize: 17, fontWeight: '800', color: colors.text, marginBottom: 8, textAlign: 'center' },
-  message: { fontSize: 14, color: colors.textSecondary, lineHeight: 20, textAlign: 'center', marginBottom: 18 },
+  messageScroll: { flexShrink: 1, marginBottom: 18 },
+  messageScrollContent: { flexGrow: 1, justifyContent: 'center' },
+  message: { fontSize: 14, color: colors.textSecondary, lineHeight: 20, textAlign: 'center' },
   buttons: { gap: 8 },
   btn: {
     borderRadius: 12,

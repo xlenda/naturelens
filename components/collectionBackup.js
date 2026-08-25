@@ -1,6 +1,7 @@
 import { Platform } from 'react-native';
-import { getCollection } from './storage';
+import { COLLECTION_KEY, getCollection } from './storage';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+const { mergeCollections } = require('./collectionMerge');
 
 // Export and restore the collection.
 //
@@ -15,7 +16,6 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 // answer for subscribers and can come later - but a paying customer losing their
 // collection while waiting for the better answer is not acceptable.
 
-const COLLECTION_KEY = '@naturelens_collection';
 const FORMAT = 'naturelens-collection';
 const FORMAT_VERSION = 1;
 
@@ -105,26 +105,17 @@ export async function importCollection(fileText) {
   }
 
   const current = await getCollection();
-  // savedId is generated per save and is the only stable per-entry identifier;
-  // id alone would collide for two photos of the same species, which is a
-  // legitimate thing to have twice.
-  const existing = new Set(current.map((i) => i.savedId).filter(Boolean));
+  // O mesmo savedId pode estar mais novo no arquivo (apelido, comodo ou rega).
+  // O merge por updatedAt restaura essa edicao e preserva a foto do aparelho.
+  const merge = mergeCollections(current, parsed.items, new Set());
+  const applied = merge.added + merge.updated;
 
-  const incoming = parsed.items.filter(
-    (i) => i && typeof i === 'object' && i.savedId && !existing.has(i.savedId)
-  );
-
-  if (incoming.length === 0) {
+  if (applied === 0) {
     return { added: 0, skipped: parsed.items.length, total: current.length };
   }
 
-  // Newest first, matching how the Collection screen already orders things.
-  const merged = [...incoming, ...current].sort(
-    (a, b) => new Date(b.savedAt || 0) - new Date(a.savedAt || 0)
-  );
-
   try {
-    await AsyncStorage.setItem(COLLECTION_KEY, JSON.stringify(merged));
+    await AsyncStorage.setItem(COLLECTION_KEY, JSON.stringify(merge.entries));
   } catch (e) {
     // Storage quota is the realistic failure here: photo data URIs are heavy.
     const err = new Error('could not save');
@@ -133,9 +124,11 @@ export async function importCollection(fileText) {
   }
 
   return {
-    added: incoming.length,
-    skipped: parsed.items.length - incoming.length,
-    total: merged.length,
+    // A mensagem existente chama de "adicionado" todo item aplicado. Isso
+    // inclui uma versao mais nova restaurada no mesmo savedId.
+    added: applied,
+    skipped: parsed.items.length - applied,
+    total: merge.entries.length,
   };
 }
 

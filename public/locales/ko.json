@@ -33,7 +33,122 @@
     "translating": "번역 중…",
     "translateFailed": "지금은 번역할 수 없습니다.",
     "yes": "예",
-    "no": "아니요"
+    "no": "아니요",
+    "loading": "불러오는 중…"
+  },
+  "discoveryReceipt": {
+    "title": "식별이 완료되었습니다",
+    "ready": "결과를 확인할 준비가 되었습니다.",
+    "tokens": "+{{count}} 토큰 획득",
+    "streak": "현재 연속 기록 일수: {{count}}",
+    "achievement": "업적 달성: {{title}}",
+    "factTitle": "이 후보에 관하여",
+    "saveHint": "이 발견을 저장해 다시 확인하고 나만의 관찰 기록을 추가하세요."
+  },
+  "acquisition": {
+    "title": "NatureLens를 어떻게 알게 되셨나요?",
+    "subtitle": "짧은 답변 하나가 서비스 개선에 도움이 됩니다. 선택 사항입니다.",
+    "thanks": "감사합니다. NatureLens를 더 좋게 만드는 데 도움이 됩니다.",
+    "skip": "지금은 건너뛰기",
+    "options": {
+      "tiktok": "TikTok",
+      "instagram": "Instagram",
+      "youtube": "YouTube",
+      "search": "Google 또는 Play 스토어",
+      "friend": "친구",
+      "other": "기타"
+    }
+  },
+  "specimen": {
+    "title": "내 기록",
+    "notFoundTitle": "기록을 찾을 수 없음",
+    "notFoundBody": "저장한 이 발견이 더 이상 컬렉션에 없습니다.",
+    "returnToCollection": "컬렉션으로 돌아가기",
+    "openRecord": "내 기록 열기",
+    "savedOn": "{{date}}에 저장됨",
+    "todayTitle": "오늘",
+    "wateredAnnouncement": "물 주기를 기록했습니다.",
+    "personalizeTitle": "나만의 기록 만들기",
+    "observationTitle": "내 관찰",
+    "observationEmpty": "아직 관찰 내용이 없습니다. 눈에 띈 점, 발견한 장소 또는 달라진 점을 적어 보세요.",
+    "observationPlaceholder": "짧은 관찰 내용을 적어 보세요…",
+    "addObservation": "관찰 추가",
+    "editObservation": "관찰 수정",
+    "saveObservation": "관찰 저장",
+    "removeObservation": "관찰 삭제",
+    "characterCount": "{{count}}/{{max}}자",
+    "timelineTitle": "타임라인",
+    "timelineAdded": "컬렉션에 추가됨",
+    "timelineWatered": "물 주기 기록됨",
+    "timelineObservationUpdated": "최근 관찰 수정",
+    "guideTitle": "종 가이드",
+    "guideBody": "식별 정보와 이 종에 관해 제공되는 모든 세부 정보입니다.",
+    "openGuide": "가이드 열기",
+    "noteSavedAnnouncement": "관찰을 저장했습니다.",
+    "removeTitle": "기록을 삭제할까요?",
+    "removeBody": "컬렉션에서 {{name}}을(를) 삭제할까요? 이 작업은 되돌릴 수 없습니다.",
+    "removeAction": "삭제"
+  },
+  "localReminders": {
+    "title": "휴대전화 알림",
+    "body": "무엇을 언제 알릴지 직접 선택하세요. Android 권한과 시스템 설정에 따라 다른 앱을 사용하는 중에도 알림을 받을 수 있습니다.",
+    "loading": "알림을 불러오는 중…",
+    "loadError": "지금은 알림을 불러올 수 없습니다.",
+    "nextTitle": "예정된 알림",
+    "addAction": "알림 추가",
+    "empty": "이 기록에 예정된 알림이 없습니다.",
+    "unavailableTitle": "알림을 사용할 수 없음",
+    "unavailableBody": "이 Android 빌드에서는 알림을 예약할 수 없습니다. 알림을 사용하려면 호환되는 앱 빌드를 설치하세요.",
+    "modalTitle": "알림 만들기",
+    "reminderFor": "{{name}}용",
+    "taskLabel": "휴대전화가 어떤 기록을 알려 드릴까요?",
+    "startLabel": "첫 알림",
+    "timeLabel": "시간",
+    "repeatLabel": "반복",
+    "weekdayLabel": "요일",
+    "firstAt": "첫 알림: {{date}}",
+    "saveAction": "알림 예약",
+    "saving": "예약 중…",
+    "permissionDeniedTitle": "알림이 꺼져 있음",
+    "permissionDeniedBody": "Android에서 알림 권한이 허용되지 않았습니다. 시스템 설정에서 NatureLens 알림을 허용한 뒤 다시 시도하세요.",
+    "saveError": "알림이 저장되거나 예약되지 않았습니다. 선택한 내용을 확인하고 다시 시도하세요.",
+    "removeError": "이 알림을 삭제할 수 없습니다. 다시 시도하세요.",
+    "removeAction": "{{action}} 알림 삭제",
+    "removing": "삭제 중…",
+    "removedAnnouncement": "알림을 삭제했습니다.",
+    "scheduledSuccess": "{{date}}에 알림을 예약했습니다.",
+    "actionAnnouncement": "{{action}} 알림을 {{date}}에 예약했습니다.",
+    "recordFallback": "이 기록",
+    "notificationTitle": "NatureLens 알림 · {{name}}",
+    "notificationBody": "기록: {{action}} · {{name}}",
+    "nextAt": "다음: {{date}}",
+    "intervals": {
+      "day1": "1일 후",
+      "day3": "3일 후",
+      "day7": "7일 후",
+      "day14": "14일 후",
+      "day30": "30일 후"
+    },
+    "times": {
+      "at08": "08:00",
+      "at12": "12:00",
+      "at18": "18:00",
+      "at20": "20:00"
+    },
+    "weekdays": {
+      "sun": "일요일",
+      "mon": "월요일",
+      "tue": "화요일",
+      "wed": "수요일",
+      "thu": "목요일",
+      "fri": "금요일",
+      "sat": "토요일"
+    },
+    "repetitions": {
+      "once": "한 번",
+      "daily": "매일",
+      "weekly": "매주"
+    }
   },
   "auth": {
     "title": "로그인하고 식별하기",
@@ -153,17 +268,23 @@
       "label": "소리",
       "tabLabel": "소리",
       "title": "소리로 식별",
-      "subtitle": "새, 개구리, 곤충의 울음소리를 녹음해 무엇인지 알아보세요."
+      "subtitle": "새, 개구리, 곤충의 울음소리를 녹음해 무엇인지 알아보세요.",
+      "scanHint": "녹음의 선명도, 리듬, 음높이와 반복을 비교하세요. 서로 일치하는 여러 소리 패턴이 하나의 고립된 음보다 더 강한 근거입니다."
     }
   },
   "identify": {
     "identifierTitle": "{{category}} 식별기",
     "subtitle": "AI로 {{category}}을(를) 즉시 식별하세요",
+    "freePromise": "결정하기 전에 사용해 보세요: 계정이나 카드 없이 카테고리별 1회 무료 식별.",
     "readyToScan": "스캔 준비 완료",
     "didYouKnowTitle": "알고 계셨나요?",
     "continueLabel": "계속",
     "analyzing": "{{category}} 분석 중…",
     "tapToIdentify": "탭하여 식별하기",
+    "lensPulseEyebrow": "생명의 맥박",
+    "holdToReveal": "길게 눌러 확인하기",
+    "keepHolding": "계속 누르고 계세요…",
+    "holdToRevealHint": "맥박이 완료될 때까지 누르세요. 취소하려면 손을 떼세요.",
     "identifying": "식별 중…",
     "uploadPhoto": "사진 업로드",
     "myCollection": "내 컬렉션",
@@ -186,6 +307,14 @@
     "referenceImagesTitle": "참고 사진",
     "referenceImagesHint": "직접 찍은 사진과 비교해 일치 여부를 확인하세요.",
     "referenceImageLabel": "참고 사진 {{index}}",
+    "evidenceSimilar": "내 사진과 유사",
+    "evidenceRepresentative": "종 참고 사진",
+    "evidenceObservation": "현장 관찰 기록 · GBIF",
+    "comparePhotos": "사진 비교",
+    "comparePhotosHint": "내 사진과 참고 사진을 나란히 확인하세요.",
+    "sideBySide": "나란히",
+    "previousReference": "이전 참고 사진",
+    "nextReference": "다음 참고 사진",
     "alternativesTitle": "다른 후보",
     "alternativesHint": "위 결과가 맞지 않아 보인다면 이 중 하나일 수 있습니다.",
     "lowConfidenceBare": "신뢰도가 {{confidence}}%에 불과합니다 — 최종 답이 아닌 출발점으로 생각하세요.",
@@ -199,10 +328,54 @@
     "serviceDownBody": "이 식별 서비스에 일시적인 문제가 있습니다. 몇 분 뒤에 다시 시도해 주세요. 사진 문제가 아닙니다.",
     "poseWhole": "전체",
     "poseClose": "근접",
-    "poseOther": "다른 각도"
+    "poseOther": "다른 각도",
+    "photoConsentTitle": "사진을 보내기 전에",
+    "photoConsentKindwiseBody": "선택한 사진은 식별을 위해 Kindwise로 전송됩니다. 사진과 결과는 6개월 동안 Kindwise를 통해 접근 가능한 상태로 유지됩니다. Kindwise 약관에 따라 사진에는 학습 및 상업적 목적의 재사용, 다른 고객에 대한 제공, CC BY-SA에 따른 공유를 허용하는 취소 불가능한 라이선스가 적용됩니다. 동의하는 경우에만 보내세요.",
+    "photoConsentFishialBody": "선택한 사진은 식별을 위해 Fishial로 전송됩니다. Fishial은 자체 데이터 보관 관행에 따라 사진을 보관할 수 있으며, API로 전송된 사진의 구체적인 보관 기간을 공개하지 않습니다. 동의하는 경우에만 보내세요.",
+    "photoConsentNyckelBody": "선택한 사진은 Nyckel로 전송되어 식별 결과를 제공하기 위해 처리됩니다. 동의하는 경우에만 보내세요.",
+    "photoConsentBirdBody": "NatureLens가 비공개로 관리하는 보정된 전 세계 BioCLIP 서비스가 활성화되면 새 사진을 먼저 그곳에서 처리할 수 있습니다. BioCLIP에서는 사진이 요청 처리 동안에만 메모리에 머물며 보관되지 않습니다. BioCLIP이 비활성화된 동안이나 실패하거나 정확한 종을 입증하지 못한 경우, 동일한 사진이 샘플 수집을 끈 상태로 Nyckel에 전송될 수 있습니다. Nyckel은 요청 후 즉시 삭제되는 보관 방식을 보장하지 않습니다. 동의하는 경우에만 전송하세요.",
+    "photoConsentSend": "사진 보내기",
+    "centralCapture": "식별하기",
+    "photoReady": "사진 준비 완료",
+    "addOptionalAngles": "다른 각도 추가",
+    "hideOptionalAngles": "추가 각도 숨기기",
+    "captureDemo": {
+      "title": "작동 방식을 보세요",
+      "body": "{{category}}에 카메라를 맞추고 큰 카메라 영역을 누른 뒤 사진으로 결과를 확인하세요.",
+      "accessibility": "카메라로 {{category}}을 식별하는 과정을 보여 주는 애니메이션 예시입니다.",
+      "result": "사진과 다음 단계가 있는 결과",
+      "steps": {
+        "aim": "대상 하나를 프레임에 담기",
+        "tap": "카메라 영역 누르기",
+        "confirm": "참고 사진과 비교하기"
+      },
+      "subject": {
+        "plant": "잎 또는 꽃",
+        "tree": "잎, 껍질 또는 수관",
+        "insect": "초점이 맞은 곤충",
+        "mushroom": "갓과 아랫면",
+        "crop": "피해가 보이는 작물 잎",
+        "fish": "옆모습의 전체 물고기",
+        "bird": "프레임 안의 전체 새",
+        "sound": "선명한 소리 녹음"
+      }
+    },
+    "expeditionTitle": "탐험을 선택하세요",
+    "expeditionBody": "선택한 길에 따라 사진 촬영 후 앱이 먼저 보여 주는 정보가 달라집니다.",
+    "categoryPromise": {
+      "plant": "관리, 안전 및 시각적 단서",
+      "insect": "신체 특징, 위험 및 현장 기록",
+      "mushroom": "유사종과 안전 우선 정보",
+      "crop": "농학, 해충 및 토양 환경",
+      "fish": "수질, 서식지 및 식별 근거",
+      "bird": "식별 특징, 서식지 및 관찰 요령",
+      "sound": "소리를 듣고 비교하여 울음소리 식별"
+    }
   },
   "detail": {
     "profileTitle": "{{category}} 프로필",
+    "invertebrateLabel": "무척추동물",
+    "fungusLabel": "균류",
     "readMoreLabel": "이 {{category}}에 대해 온라인에서 더 알아보기",
     "markAsWatered": "물주기 완료로 표시",
     "markAsWateredLabel": "물주기 완료로 표시",
@@ -212,10 +385,24 @@
     "checkForDiseasesLabel": "질병 확인하기",
     "checkingForDiseasesLabel": "질병 확인 중",
     "healthCheckSection": "건강 점검",
+    "healthSpeciesMismatch": "건강 분석에서 같은 종을 인식하지 못했습니다. 이 식물을 더 선명하게 촬영해 주세요. 진단은 적용되지 않았습니다.",
     "edibleParts": "식용 부위",
     "propagation": "번식 방법",
     "wateringNeeds": "물주기 요구사항",
     "conservationStatus": "보전 상태",
+    "iucn": {
+      "extinct": "절멸",
+      "extinctInTheWild": "야생 절멸",
+      "regionallyExtinct": "지역 절멸",
+      "criticallyEndangered": "위급",
+      "endangered": "위기",
+      "vulnerable": "취약",
+      "nearThreatened": "준위협",
+      "leastConcern": "관심대상",
+      "dataDeficient": "정보부족",
+      "notApplicable": "해당 없음",
+      "notEvaluated": "미평가"
+    },
     "safetySection": "안전 정보",
     "ecologicalRoleSection": "생태적 역할",
     "frequentlyConfusedWith": "자주 혼동되는 종",
@@ -232,6 +419,10 @@
     "installNudgeBody": "다음번에 더 빠르게 식별하려면 홈 화면에 추가하세요.",
     "commonNames": "일반명",
     "synonyms": "학명 이명",
+    "family": "과",
+    "order": "목",
+    "taxonomyTitle": "분류",
+    "species": "종",
     "referencePhoto": "참고 사진",
     "referencePhotoAlt": "{{name}} 참고 사진",
     "coverageNoteTitle": "이 결과에 대하여",
@@ -242,6 +433,7 @@
     "quickFacts": "빠른 정보",
     "actionNew": "새 사진",
     "wasHelpful": "도움이 되었나요?",
+    "feedbackThanks": "의견을 보내 주셔서 감사합니다.",
     "pronounceLabel": "발음 듣기",
     "askSpecialistCta": "이 종에 대해 궁금한가요? 전문가에게 물어보세요",
     "tipLabel": "팁",
@@ -250,7 +442,7 @@
     "everyNDays": "{{count}}일마다",
     "gbifCredit": "데이터: GBIF.org",
     "seasonChart": "월별 관찰 기록",
-    "seasonChartNote": "전 세계 관찰 기록을 월별로 보여 줍니다. 관찰 노력을 반영할 뿐, 개화나 활동을 보장하지는 않습니다.",
+    "seasonChartNote": "전 세계의 관찰 기록을 월별로 보여 줍니다. 이 기록은 관찰 노력을 반영할 뿐, 해당 종이 언제 또는 왜 나타나는지를 확정적으로 보여 주지는 않습니다.",
     "tipWatering": "물을 주기 전에 흙을 만져 보세요. 겉흙 몇 센티미터가 말라 있다면 물을 줄 때입니다.",
     "tipLight": "하루 동안 빛이 공간을 어떻게 지나가는지 살펴보세요. 생각보다 많이 달라집니다.",
     "tipSoil": "좋은 배수는 좋은 비료만큼 중요합니다. 물에 잠긴 뿌리는 고통받는 뿌리입니다.",
@@ -334,6 +526,12 @@
     "scheduleNow": "지금",
     "scheduleGroupNote": "이 캘린더는 {{group}} 그룹 기준이며, 정확히 이 종에 대한 것은 아닙니다.",
     "scheduleGroupNoteShort": "이 캘린더는 해당 종이 속한 그룹 기준이며, 정확히 이 종에 대한 것은 아닙니다.",
+    "groupGuideNote": "{{group}} 그룹에 대한 일반적인 안내이며, 이 특정 종에 관한 정보는 아닙니다.",
+    "generalGuideNote": "일반적인 안내이며, 이 특정 종에 관한 정보는 아닙니다.",
+    "agronomySection": "현장 농업 관리",
+    "agronomyDecisionNote": "관찰과 측정부터 시작하세요. 현장에서 무엇을 바꿀지 결정하기 전에 각 절차를 확인하세요.",
+    "integratedManagementSection": "통합 관리",
+    "openFullProtocol": "전체 절차 열기",
     "scheduleNoLocation": "위치를 알 수 없어 현재 계절을 판단할 수 없으므로 강조된 열이 없습니다.",
     "careProfileTitle": "관리 프로필",
     "careLevelLabel": "관리 난이도",
@@ -348,9 +546,13 @@
     "speciesCareSection": "이 종의 관리",
     "speciesCareNote": "이 수치는 {{species}} 자체의 값이며, 소속 그룹의 값이 아닙니다.",
     "speciesCareSource": "출처: {{citation}}",
+    "wikipediaExcerptNotice": "이 발췌문은 이 섹션에 맞게 선별하고 줄였습니다.",
+    "wikipediaArticleLink": "위키백과 문서",
+    "wikipediaAuthorsLink": "문서 작성자 및 편집 기록",
+    "wikipediaLicenseLink": "CC BY-SA 4.0 라이선스",
     "usdaMoisture": "물 요구량",
     "usdaDrought": "가뭄 내성",
-    "usdaFertility": "비료 요구량",
+    "usdaFertility": "토양 비옥도 요구도",
     "usdaShade": "그늘 내성",
     "usdaPh": "토양 pH",
     "usdaTempMin": "견디는 최저 온도",
@@ -364,6 +566,171 @@
     "bloomMid": "{{season}} 중",
     "bloomLate": "{{season}} 말"
   },
+  "learning": {
+    "title": "관찰하는 법 배우기",
+    "basic": "기초",
+    "learn": "배우기",
+    "technical": "전문 정보",
+    "generalDiagram": "일반 도식",
+    "generalNote": "이 그림을 보고 어디를 살펴봐야 하는지 알아보세요. 일반적인 안내 그림이며, 식별된 종의 사진은 아닙니다.",
+    "illustrationAlt": "{{category}} 관찰을 위한 일반 그림",
+    "observeTitle": "한 번에 한 부분씩 살펴보세요",
+    "observeHint": "모양, 색, 크기와 위치를 비교하세요. 한 가지 특징보다 여러 특징이 일치할 때 더 강한 근거가 됩니다.",
+    "evidenceTitle": "식별 근거",
+    "technicalNote": "이 값은 식별 결과에서 가져왔습니다. 근거가 없는 항목은 숨기며, 추측으로 채우지 않습니다.",
+    "categoryMatch": "분류 일치도",
+    "provider": "식별 정보 출처",
+    "parts": {
+      "leaf": "잎 모양과 잎맥",
+      "stemNode": "줄기와 마디",
+      "flower": "꽃 구조",
+      "roots": "뿌리",
+      "canopy": "수관 모양",
+      "branches": "가지",
+      "trunkBark": "나무줄기와 나무껍질",
+      "youngOldLeaves": "어린잎과 오래된 잎",
+      "affectedArea": "영향을 받은 부위",
+      "stem": "줄기",
+      "antennae": "더듬이",
+      "head": "머리",
+      "bodySections": "몸의 여러 부분",
+      "wingsLegs": "날개와 다리",
+      "cap": "갓",
+      "underside": "주름살, 구멍 또는 아랫면",
+      "baseSubstrate": "밑부분과 기질",
+      "beak": "부리",
+      "wing": "날개",
+      "tail": "꼬리",
+      "feet": "발",
+      "headProfile": "머리 옆모습",
+      "bodyMarks": "몸의 무늬",
+      "fins": "지느러미",
+      "recording": "녹음 품질",
+      "rhythm": "리듬",
+      "pitch": "높거나 낮은 음",
+      "repetition": "반복",
+      "cephalothorax": "두흉부",
+      "abdomen": "배",
+      "eyes": "눈",
+      "eightLegs": "여덟 개의 다리",
+      "tentacles": "촉수",
+      "shell": "껍데기",
+      "muscularFoot": "근육질 발",
+      "anterior": "앞쪽 끝",
+      "segments": "몸마디",
+      "clitellum": "환대",
+      "posterior": "뒤쪽 끝"
+    }
+  },
+  "speciesDossier": {
+    "title": "과학 자료집",
+    "exactEvidence": "{{species}}에 대해 문서화됨",
+    "evidenceNote": "출처가 확인된 사실만 표시합니다. 없는 정보는 숨겨집니다.",
+    "environment": "기록된 수역 유형",
+    "diet": "문서화된 먹이",
+    "habitat": "문서화된 서식지",
+    "brackish": "기수",
+    "reproduction": "확인된 번식 정보",
+    "lifeCycle": "확인된 생활사",
+    "lifeStagesTitle": "확인된 생애 단계",
+    "larvalInstars": "유충 단계 {{count}}개",
+    "bodyLength": "몸길이",
+    "leafConsumption": "잎 섭식량",
+    "leafAreaPerLarva": "유충 한 마리당 섭식 잎 면적",
+    "lifeStages": { "egg": "알", "larva": "유충", "nymph": "약충", "pupa": "번데기", "adult": "성충" },
+    "measurements": {
+      "clutchSize": "한배 산란 수",
+      "incubationPeriod": "알 품기 기간",
+      "lifeExpectancy": "기대 수명",
+      "longestLifespan": "관찰된 최장 수명",
+      "gestationPeriod": "임신 기간"
+    }
+  },
+  "fertilizer": {
+    "title": "비료 의사결정",
+    "planningNote": "책임 있는 권고는 현장에서 측정한 자료로 시작합니다. 이 표는 각 자료가 어떤 판단에 쓰이는지 보여 주며, 살포 처방이 아닙니다.",
+    "input": "입력 자료",
+    "decisionUse": "판단에 쓰이는 내용",
+    "soilAnalysis": "토양 분석",
+    "soilAnalysisUse": "유효 양분, 산도, 염류도와 석회 시용 필요성.",
+    "plantAnalysis": "식물체 또는 조직 분석",
+    "plantAnalysisUse": "눈에 보이는 증상 전의 숨은 결핍을 포함한 현재 영양 상태.",
+    "targetDestination": "목표 수량과 수확 목적",
+    "targetDestinationUse": "예상 양분 반출량. 곡실 수확과 전 식물체 수확은 서로 다릅니다.",
+    "fieldHistory": "포장 이력과 작물 잔재",
+    "fieldHistoryUse": "토양에 투입되거나 반출되거나 되돌아간 것.",
+    "textureWater": "토성과 물",
+    "textureWaterUse": "용탈 위험과 나누어 시용할 필요가 있는지 여부.",
+    "diagnosisCaution": "눈에 보이는 증상은 단서일 뿐 확진이 아닙니다. 수분 스트레스, 병, 해충 또는 다른 양분이 증상을 가릴 수 있습니다.",
+    "maizeTitle": "옥수수 양분 반출량",
+    "maizeIntro": "수량과 수확 목적에 따라 작물이 반출한 평균 양입니다.",
+    "destination": "수확 목적",
+    "productivity": "수량(t/ha)",
+    "grain": "곡실",
+    "silage": "사일리지(건물)",
+    "tonnesPerHectare": "헥타르당 톤",
+    "kgPerHectare": "헥타르당 킬로그램",
+    "extractedUnit": "수량은 t/ha, 반출 양분은 kg/ha입니다.",
+    "notDoseWarning": "양분 반출량은 비료 시용량이 아닙니다. 권고에는 토양·조직 분석, 목표 수량, 지역 보정과 현지 농업 전문가가 필요합니다.",
+    "onionTitle": "양파: 양분 과다의 상호작용",
+    "onionIntro": "양파에서만 확인된 영향이며 다른 작물에 일반화하지 마세요.",
+    "excess": "과다 양분",
+    "possibleEffect": "가능한 영향",
+    "nitrogenEffect": "생육 기간 연장, 굵은 목, 과도한 잎, 잎 병해 증가와 수확 후 저장성 저하.",
+    "potassiumEffect": "마그네슘과 칼슘 결핍을 유발할 수 있습니다.",
+    "phosphorusEffect": "아연과 구리 결핍을 유발할 수 있습니다.",
+    "scrollHint": "모든 양분을 보려면 표를 옆으로 밀어 보세요.",
+    "botanicalTitle": "비료와 영양 관리",
+    "botanicalIntro": "출처가 있을 때 이 안내는 종 자료, 검증된 식물군 지침, 계절별 시기를 구분해 보여 줍니다. 사진만으로는 투입량을 정하지 않습니다.",
+    "unknownGroupNote": "이 식물군에는 아직 검증된 비료 안내가 없습니다. 판단 체크리스트는 제공하지만 식물군별 규칙이나 투입량을 추정하지 않습니다.",
+    "growthStress": "생육 단계와 스트레스",
+    "growthStressUse": "활착기, 생육기, 개화·결실기, 휴면기를 구분하세요. 비료를 주기 전에 건조, 과습, 뿌리 손상, 최근 분갈이 문제를 먼저 해결하세요.",
+    "labelHistory": "제품 라벨과 사용 이력",
+    "labelHistoryUse": "N-P-K, 방출 방식, 라벨 지침, 마지막 사용 시점, 배지에 이미 비료가 들어 있는지 확인하세요.",
+    "plantNoDoseWarning": "사진만으로 안전한 투입량을 정할 수 없습니다. 제품 라벨과 지역 분석을 따르고 다른 종, 기후, 화분 또는 밭의 양을 그대로 쓰지 마세요."
+  },
+  "pestManagement": {
+    "title": "해충 모니터링",
+    "decisionNote": "사진은 해충이나 피해의 단서가 될 수 있지만 포장 내 밀도를 측정하지는 않습니다. 방제 결정에는 대표성 있는 표본 조사가 필요합니다.",
+    "whatToCheck": "확인할 항목",
+    "fieldDecision": "포장 의사결정",
+    "identifyDamage": "대상 해충과 피해",
+    "identifyDamageUse": "해충, 발육 단계, 일치하는 피해 증상과 포장 내 분포를 확인하세요.",
+    "samplingPlan": "표본 조사 계획",
+    "samplingPlanUse": "작물과 생육 단계에 맞게 조사 단위, 방법, 지점과 빈도를 정하세요.",
+    "countStage": "개체 수와 단계",
+    "countStageUse": "각 지점, 해충의 크기 또는 단계, 작물 생육 단계와 천적을 기록한 뒤 방제 기준과 비교하세요.",
+    "noCountWarning": "대표성 있는 조사 수치와 적용 가능한 방제 기준이 없으면 모니터링을 계속해야 합니다. 달력에 맞춘 살포는 하지 마세요.",
+    "chemicalSafetyTitle": "화학적 방제가 필요한 경우",
+    "maizeTitle": "옥수수: 포장 방제 참고 기준",
+    "target": "대상",
+    "fieldProtocol": "표본 조사 및 방제 참고 기준",
+    "fallArmyworm": "열대거세미나방",
+    "fallArmywormProtocol": "수량 잠재력이 최소 100포대/ha인 포장에만 적용: {{sampleAreaHa}}ha에서 임의의 {{samplePoints}}개 지점을 조사하세요. 공개 기준은 초기 가해 증상이 있는 식물 {{actionPercent}}%입니다.",
+    "wireworm": "방아벌레 유충",
+    "wirewormProtocol": "파종 전에 {{sampleWidthCm}} × {{sampleLengthCm}} × {{sampleDepthCm}}cm 크기의 토양 시료를 체로 거르세요. 참고 기준: 시료당 최소 {{actionCount}}마리.",
+    "maizeThresholdNote": "옥수수 10% 기준은 잠재 수량이 최소 100포대인 포장을 대상으로 제시된 값입니다. 지역, 교잡종, 생육 단계와 생산 체계에 따라 현지 기준이 달라질 수 있습니다.",
+    "soyTitle": "대두: 표본 조사와 방제 수준",
+    "soySamplingTitle": "최소 조사지점 수",
+    "fieldArea": "포장 면적",
+    "minimumSamples": "최소",
+    "upToHectares": "{{count}}ha 이하",
+    "overHectares": "{{count}}ha 초과",
+    "samplePoints": "{{count}}개 지점",
+    "dividePlots": "{{count}}ha 이하 구획으로 나누기",
+    "soyThresholdTitle": "방제 참고 기준",
+    "situation": "상황",
+    "actionLevel": "참고 수준",
+    "defoliation": "잎 손실",
+    "defoliationLevel": "영양생장기에는 {{vegetativePercent}}% 초과, 개화 이후에는 {{reproductivePercent}}% 초과.",
+    "largeCaterpillars": "대형 식엽성 애벌레",
+    "largeCaterpillarsLevel": "두드림 천을 사용해 줄 1m당 길이 {{minimumLengthCm}}cm 초과 애벌레 {{countPerMeter}}마리.",
+    "grainStinkbugs": "노린재류 — 곡실 생산",
+    "grainStinkbugsLevel": "{{stageStart}}부터 {{stageEnd}}까지 줄 1m당 3령 이상 약충 또는 성충 {{countPerMeter}}마리.",
+    "seedStinkbugs": "노린재류 — 종자 생산",
+    "seedStinkbugsLevel": "{{stageStart}}부터 {{stageEnd}}까지 줄 1m당 3령 이상 약충 또는 성충 {{countPerMeter}}마리.",
+    "soyThresholdNote": "브라질 Embrapa의 참고 기준입니다. 중요 기간에는 매주 조사하고, 기온이 낮은 시간대에 노린재류를 평가하며, 지역 조정값은 현지 기술 지원을 통해 확인하세요."
+  },
   "disease": {
     "overviewSection": "개요",
     "symptomsSection": "증상",
@@ -375,7 +742,9 @@
     "healthStatusSection": "건강 상태",
     "noDiseaseDetected": "이 사진에서 질병이나 해충이 확실하게 감지되지 않았습니다.",
     "match": "일치도",
-    "severitySuffix": "{{severity}} 심각도"
+    "severitySuffix": "{{severity}} 심각도",
+    "diagnosisCaution": "사진은 선별 결과일 뿐 현장 진단이 아닙니다. 조치하기 전에 여러 개체를 확인하고 수분, 영양 및 약제 처리 피해 가능성을 배제하세요.",
+    "chemicalCaution": "해당 국가에서 이 작물과 방제 대상에 등록된 제품만 사용하세요. 라벨을 따르고 지역 농업 전문가와 결정을 확인하세요."
   },
   "collection": {
     "title": "내 컬렉션",
@@ -413,6 +782,11 @@
     "byCategory": "카테고리별",
     "privacyPolicy": "개인정보처리방침",
     "language": "언어",
+    "careRegionRow": "관리 계절",
+    "careRegionHint": "계절별 관리 일정과 개화에 사용할 반구를 설정합니다. 이 기기에만 저장됩니다.",
+    "careRegionAuto": "자동",
+    "careRegionSouth": "남반구",
+    "careRegionNorth": "북반구",
     "installApp": "앱 설치",
     "installAppIOSTitle": "NatureLens 설치",
     "installAppIOSBody": "공유 버튼을 탭한 다음 \"홈 화면에 추가\"를 탭하여 NatureLens를 휴대폰에 설치하세요.",
@@ -453,7 +827,7 @@
     "acceptanceTitle": "약관 동의",
     "acceptanceBody": "NatureLens를 사용함으로써 귀하는 본 이용약관에 동의하게 됩니다. 동의하지 않으시면 앱을 사용하지 마십시오.",
     "serviceTitle": "이 앱이 하는 일",
-    "serviceBody": "NatureLens로 식물, 곤충, 버섯, 농작물, 나무를 촬영해 식별할 수 있고, 기기에 따라 물고기, 새, 심지어 소리까지 식별할 수 있습니다. 식별에는 제3자 AI 서비스(Kindwise의 Plant.id, Insect.id, Mushroom.id, Crop.health, 물고기는 Fishial, 새는 Nyckel, 소리는 자체 모델)가 사용됩니다. 결과는 자동으로 생성되며 인간 전문가의 검토를 거치지 않습니다.",
+    "serviceBody": "NatureLens로 식물, 곤충, 버섯, 농작물, 나무를 촬영해 식별할 수 있고, 기기에 따라 물고기, 새, 심지어 소리까지 식별할 수 있습니다. 식별에는 제3자 AI 서비스(Kindwise의 Plant.id, Insect.id, Mushroom.id, Crop.health, 물고기는 Fishial, 새는 Nyckel, 소리는 자체 모델)가 사용됩니다. 결과는 자동으로 생성되며 인간 전문가의 검토를 거치지 않습니다. 보정된 전 세계 BioCLIP 서비스가 활성화되면 NatureLens가 비공개로 직접 관리하는 이 서비스를 새 식별에 먼저 사용할 수 있습니다. 비활성화된 동안이나 실패하거나 정확한 종을 입증하지 못한 경우에는 Nyckel을 대체 수단으로 사용합니다.",
     "accuracyTitle": "식별 정확도 — 꼭 읽어주세요",
     "accuracyBody": "AI 식별은 식물이나 버섯이 식용 가능한지, 독성이 있는지, 만지기에 안전한지를 포함해 틀릴 수 있습니다. 이 앱의 결과만을 근거로 야생 식물, 버섯 또는 균류를 절대 먹거나 채취하거나 사용하지 마십시오. 야생에서 발견한 것을 섭취하거나 사용하기 전에는 항상 자격을 갖춘 전문가(균류학자, 식물학자 또는 중독 관리 센터)의 확인을 받으십시오. 본 앱이 수행한 식별에 의존하여 발생한 피해에 대해 당사는 책임지지 않습니다.",
     "billingTitle": "구독 및 결제",
@@ -470,7 +844,7 @@
   "privacy": {
     "title": "개인정보처리방침",
     "collectTitle": "수집하는 정보",
-    "collectBody": "이 앱으로 식물, 나무, 곤충, 버섯, 작물, 물고기, 새를 촬영해 식별하고, 동물의 울음소리를 녹음해 소리로 식별할 수 있습니다. 식별은 AI 서비스가 수행합니다: Kindwise(식물·나무·곤충·버섯·작물), Fishial.AI(물고기), Nyckel(새). 소리는 저희 자체 서버에서 식별하므로 녹음이 제3자에게 전달되지 않습니다.",
+    "collectBody": "이 앱으로 식물, 나무, 곤충, 버섯, 작물, 물고기, 새를 촬영해 식별하고, 동물의 울음소리를 녹음해 소리로 식별할 수 있습니다. 식별은 AI 서비스가 수행합니다: Kindwise(식물·나무·곤충·버섯·작물), Fishial.AI(물고기), Nyckel(새). 소리는 저희 자체 서버에서 식별하므로 녹음이 제3자에게 전달되지 않습니다. NatureLens가 비공개로 관리하는 보정된 전 세계 BioCLIP 서비스가 활성화되면 새 사진을 먼저 그곳에서 처리할 수 있습니다. 사진은 요청 중에만 메모리에 머물며 보관되지 않습니다. 서비스가 비활성화된 동안이나 실패하거나 정확한 종을 입증하지 못한 경우에는 동일한 사진을 샘플 수집을 끈 상태로 Nyckel에 전송할 수 있으며, 이때 요청 후 즉시 삭제되는 보관 방식은 보장되지 않습니다.",
     "thirdPartyTitle": "타사 AI 서비스",
     "thirdPartyBody": "사진을 촬영하거나 업로드하면 해당 식별 서비스로 전송됩니다. 저희가 관리하는 어떤 서버에도 사진을 저장하지 않습니다. 참고 사진과 설명을 보여주기 위해 앱은 학명을 위키백과에 조회합니다 — 즉 위키백과는 어떤 종을 찾았는지 볼 수 있지만, 당신이 누구인지는 알 수 없습니다. 일부 업체는 영어로만 제공합니다. 그 텍스트를 번역하거나 앱의 전문가에게 질문하면 해당 텍스트가 Anthropic으로 전송됩니다.",
     "localStorageTitle": "로컬 저장만 사용",
@@ -2162,7 +2536,15 @@
     },
     "herbSubscribeCtaTitle": "이 가이드가 마음에 드시나요?",
     "herbSubscribeCtaBody": "구독하고 식물, 곤충, 버섯, 작물을 무제한으로 식별해보세요.",
-    "herbAlreadySubscribedCheck": "이미 구독 중이신가요? 다시 확인하려면 탭하세요"
+    "herbAlreadySubscribedCheck": "이미 구독 중이신가요? 다시 확인하려면 탭하세요",
+    "mascot": {
+      "kicker": "Your living guide",
+      "title": "Lino explores nature with you.",
+      "body": "Take a photo, record a sound or save a find. I start with the clearest next step.",
+      "photo": "Photo",
+      "sound": "Sound",
+      "journal": "Journal"
+    }
   },
   "botanist": {
     "headerTitle": "헬레나 마르케스 박사",
@@ -2296,6 +2678,9 @@
     "title": "오늘의 미션",
     "rewardEach": "각 +{{tokens}}",
     "allDone": "오늘은 모두 완료 — 내일 또 만나요!",
+    "completedAnnouncement": "미션 완료: {{mission}}",
+    "completedStatus": "완료",
+    "progressStatus": "{{target}}개 중 {{done}}개 완료",
     "pool": {
       "scanAny2": "오늘 2종 식별하기",
       "scanAny3": "오늘 3종 식별하기",
@@ -2310,14 +2695,117 @@
       "openDiscover": "발견 탭 방문하기"
     }
   },
+  "fishSafety": {
+    "unverifiedTitle": "안전성이 아직 확인되지 않았습니다",
+    "unverifiedBody": "이 종에 대한 구체적인 안전 기록을 찾지 못했습니다. 이 식별 결과만으로 물고기를 만지거나 다루거나 먹거나 방류하지 마세요."
+  },
+  "lensReveal": {
+    "title": "발견 결과가 준비됐어요",
+    "safetyFirst": "안전이 먼저예요"
+  },
+  "resultDepth": {
+    "label": "표시할 정보의 양을 선택하세요",
+    "essential": "핵심",
+    "visual": "시각 자료",
+    "expert": "전문가"
+  },
+  "nextBestCapture": {
+    "title": "이 식별 결과 개선하기",
+    "reasonLowConfidence": "신뢰도는 {{confidence}}%입니다. 다른 각도의 사진이 도움이 될 수 있습니다.",
+    "reasonAlternatives": "아직 {{count}}개의 다른 후보가 가능합니다.",
+    "reasonIdentityUnresolved": "결과가 {{name}} 단계에서 멈춰 아직 종을 확인하지 못했습니다. 따라서 종별 섹션은 숨겨진 상태로 유지됩니다.",
+    "action": "다른 각도 촬영",
+    "categories": {
+      "plant": "식물 전체를 촬영한 다음 잎이나 꽃에 초점을 맞춰 선명하게 촬영하세요.",
+      "tree": "나무 전체와 나무껍질, 잎 또는 열매를 선명하게 촬영하세요.",
+      "crop": "작물 전체와 증상을 가까이에서 촬영하고 주변 밭도 함께 보여 주세요.",
+      "mushroom": "불필요하게 만지지 말고 갓, 주름살 또는 관공, 자루 밑부분과 자라는 바닥을 촬영하세요.",
+      "insect": "몸 전체를 위와 옆에서 촬영하고 기주 식물이나 피해 흔적도 함께 보여 주세요.",
+      "fish": "선명한 옆모습과 지느러미, 주변 서식지 또는 수조를 보여 주세요.",
+      "bird": "새 전체와 부리, 날개 무늬를 보여 주거나 더 길고 깨끗한 울음소리를 녹음하세요.",
+      "sound": "바람, 말소리, 배경 소음을 줄이고 최소 10초 이상 더 녹음하세요."
+    }
+  },
   "share": {
     "message": "NatureLens로 {{category}}을(를) 식별했어요: {{name}}{{scientific}}{{confidence}}\n\n사진으로 식물, 곤충, 버섯, 물고기, 새를 식별해 보세요:\n{{url}}",
     "confidenceLine": "신뢰도 {{confidence}}%"
   },
   "onboarding": {
+    "media": { "play": "동영상 재생", "pause": "동영상 일시정지", "enableSound": "소리 켜기", "disableSound": "소리 끄기" },
     "skip": "건너뛰기",
     "next": "다음",
     "start": "식별 시작하기",
+    "progress": "{{total}}개 중 {{current}}",
+    "preparing": "NatureLens를 준비하고 있어요…",
+    "promiseKicker": "작동 방식을 확인하세요",
+    "personalizeKicker": "나에게 맞게 설정하세요",
+    "readyKicker": "탐색할 준비가 됐어요",
+    "promise": {
+      "body": "한 번의 촬영이 정체, 안전 정보, 명확한 다음 단계로 이어집니다.",
+      "demoNext": "다음 단계: 잎 뒷면을 촬영하세요"
+    },
+    "goal": {
+      "title": "NatureLens가 무엇을 도와드릴까요?",
+      "body": "답변에 따라 식별 후 가장 먼저 표시되는 내용이 달라집니다.",
+      "options": {
+        "identify": {
+          "title": "무엇인지 알아보기"
+        },
+        "safety": {
+          "title": "안전과 위험 확인하기"
+        },
+        "care": {
+          "title": "돌보고 관찰하기"
+        },
+        "field": {
+          "title": "농장과 생산"
+        },
+        "learn": {
+          "title": "자연에 대해 배우기"
+        }
+      }
+    },
+    "context": {
+      "title": "주로 어디에서 탐색하나요?",
+      "body": "카테고리와 안내 순서를 정하는 데만 사용됩니다. 나중에 변경할 수 있어요.",
+      "options": {
+        "home": {
+          "title": "집 또는 정원"
+        },
+        "field": {
+          "title": "밭 또는 농작물"
+        },
+        "nature": {
+          "title": "산책로 또는 자연"
+        },
+        "water": {
+          "title": "물 또는 수족관"
+        },
+        "study": {
+          "title": "학습 또는 전문 작업"
+        }
+      }
+    },
+    "depth": {
+      "title": "처음에 어느 정도의 세부 정보를 볼까요?",
+      "body": "모든 정보는 계속 이용할 수 있습니다. 이 선택은 첫 화면만 정합니다.",
+      "options": {
+        "essential": {
+          "title": "핵심"
+        },
+        "visual": {
+          "title": "시각 자료"
+        },
+        "technical": {
+          "title": "전문 정보"
+        }
+      }
+    },
+    "ready": {
+      "title": "NatureLens가 준비됐어요",
+      "body": "첫 결과는 선택에 맞춰 표시되며 안전 경고는 모두 유지됩니다.",
+      "promise": "없는 증거는 없는 그대로 둡니다. NatureLens는 확신을 꾸며내지 않고 더 나은 사진이나 녹음을 요청합니다."
+    },
     "what": {
       "title": "겨누고. 찍고. 알아보세요.",
       "body": "살아 있는 무엇이든 촬영하면 NatureLens가 몇 초 만에 알려드립니다 — 직접 확인할 수 있도록 참고 사진과 함께."
@@ -2329,6 +2817,20 @@
     "free": {
       "title": "첫 식별은 무료입니다",
       "body": "각 카테고리에서 한 번씩 무료로 사용해 보세요. 무제한 스캔이 필요할 때만 구독하시면 됩니다."
+    },
+    "reviewKicker": "작은 부탁",
+    "review": {
+      "title": "이미 유용해 보인다면 NatureLens가 힘차게 시작하도록 도와주세요.",
+      "body": "첫 사진을 찍기 전 간단히 확인할게요. 이 렌즈가 별 다섯 개짜리 경험처럼 느껴지나요?",
+      "quote": "쉽게 쓰고, 디테일은 아름답고, 근거가 없을 때는 정직한 렌즈.",
+      "yes": "네, 별 다섯 개 같아요",
+      "later": "먼저 써 볼게요",
+      "starsLabel": "별 다섯 개 평가",
+      "proofs": {
+        "simple": "간단함",
+        "safe": "안전함",
+        "useful": "유용함"
+      }
     }
   },
   "recap": {
@@ -2400,7 +2902,8 @@
     "recording": "녹음 중… {{seconds}}초 남음",
     "analysing": "듣고 있습니다…",
     "startLabel": "녹음 시작",
-    "stopLabel": "중지하고 식별",
+    "stopLabel": "녹음 중지",
+    "uploadDisclosure": "리빙 펄스를 완료한 뒤에만 오디오가 NatureLens 서버로 전송됩니다. 원본 녹음은 컬렉션에 저장되지 않습니다.",
     "tipsTitle": "더 좋은 결과를 위해",
     "tip1": "가능하면 더 가까이 가세요 — 거리가 가장 큰 요인입니다.",
     "tip2": "휴대폰을 소리 쪽으로 향하게 하고 움직이지 마세요.",
@@ -2411,8 +2914,13 @@
     "groupMammal": "포유류",
     "permissionTitle": "마이크가 차단됨",
     "permissionBody": "브라우저 설정에서 이 사이트의 마이크 접근을 허용한 뒤 다시 시도해 주세요.",
+    "permissionAndroidBody": "Android 설정에서 NatureLens의 마이크 사용을 허용하세요. 나머지 기능은 계속 사용할 수 있습니다.",
+    "permissionWebBody": "브라우저 설정에서 이 사이트의 마이크 접근을 허용한 후 다시 시도하세요.",
     "unsupportedTitle": "녹음할 수 없습니다",
     "unsupportedBody": "이 브라우저는 오디오를 녹음할 수 없습니다. 안드로이드에서는 Chrome을, iPhone에서는 앱을 홈 화면에 추가해 보세요.",
+    "unsupportedAndroidBody": "네이티브 녹음기가 시작되지 않았습니다. NatureLens를 업데이트하거나 다시 설치한 후 재시도하세요. 나머지 기능은 계속 사용할 수 있습니다.",
+    "unsupportedWebBody": "이 브라우저에서 오디오를 녹음하지 못했습니다. 호환되는 최신 버전의 브라우저를 사용하고 마이크 접근을 허용하세요.",
+    "unsupportedIosBody": "소리 식별은 Android와 웹사이트에서 사용할 수 있지만 이 iOS 앱에서는 사용할 수 없습니다. 다른 모든 식별 기능은 계속 사용할 수 있습니다.",
     "tooShortTitle": "녹음이 너무 짧습니다",
     "tooShortBody": "동물이 울고 있는 동안 최소 2초 이상 녹음해 주세요.",
     "failedTitle": "식별할 수 없습니다",
@@ -2420,7 +2928,11 @@
     "decodeFailedBody": "이 녹음을 읽을 수 없었습니다. 다시 시도해 주세요.",
     "notFoundBody": "이 녹음에서 알아볼 수 있는 것이 없습니다. 더 가까이 가거나 울고 있을 때 녹음해 보세요.",
     "noContentBody": "이 종에 대한 설명이 아직 없습니다.",
-    "notWildlifeBody": "동물이 아니라 차량, 기계 또는 사람 목소리처럼 들립니다. 더 조용한 곳에서 다시 녹음해 보세요."
+    "notWildlifeBody": "동물이 아니라 차량, 기계 또는 사람 목소리처럼 들립니다. 더 조용한 곳에서 다시 녹음해 보세요.",
+    "audioEvidenceTitle": "내 녹음",
+    "audioEvidenceBody": "이 식별에 사용된 오디오의 실제 진폭 피크입니다.",
+    "audioEvidenceDuration": "{{seconds}}초",
+    "audioEvidenceAlt": "{{seconds}}초 길이의 내 녹음에서 추출한 진폭 피크입니다."
   },
   "login": {
     "signInRow": "로그인",
@@ -2454,6 +2966,16 @@
     "tellFriends": "친구에게 알리기",
     "linkCopied": "링크가 복사되었습니다",
     "validUntil": "{{date}}까지 유효",
+    "replayOnboarding": "소개 다시 보기",
+    "replayOnboardingHint": "목표, 환경, 읽기 수준을 다시 확인하세요",
+    "sensoryTitle": "터치 및 모션",
+    "haptics": "진동 피드백",
+    "hapticsSubtitle": "선택, 촬영, 확인 및 경고 시 진동을 느낍니다",
+    "motion": "모션",
+    "motionSubtitle": "기기 설정을 따르거나 직접 선택하세요",
+    "motionSystem": "기기 설정",
+    "motionReduced": "줄이기",
+    "motionFull": "전체",
     "sectionAbout": "앱 정보"
   },
   "books": {
@@ -2470,7 +2992,674 @@
     "visitSite": "웹사이트 방문",
     "fullDocLabel": "전체 법적 문서",
     "whatBody": "NatureLens는 사진이나 녹음으로 식물, 곤충, 버섯, 농작물, 물고기, 새, 심지어 소리까지 식별하고, 발견한 것들을 나만의 자연 컬렉션으로 만들어 줍니다.",
-    "creditsBody": "식별은 Kindwise(식물, 곤충, 버섯, 농작물), Fishial(물고기), Nyckel(새) 및 자체 소리 모델이 담당합니다. 참고 사진은 Wikipedia / Wikimedia Commons에서 가져왔으며, 표시되는 곳에 출처를 밝힙니다. 전문가 채팅은 AI(Anthropic)가 답변합니다.",
+    "creditsBody": "식별은 Kindwise(식물, 곤충, 버섯, 농작물), Fishial(물고기), Nyckel(새) 및 자체 소리 모델이 담당합니다. 참고 사진은 Wikipedia / Wikimedia Commons에서 가져왔으며, 표시되는 곳에 출처를 밝힙니다. 전문가 채팅은 AI(Anthropic)가 답변합니다. 보정된 전 세계 BioCLIP 서비스가 활성화되면 NatureLens가 비공개로 직접 관리하는 이 서비스를 새 식별에 먼저 사용할 수 있습니다. 비활성화된 동안이나 실패하거나 정확한 종을 입증하지 못한 경우에는 Nyckel을 대체 수단으로 사용합니다.",
     "creditsGbif": "분포 지도와 계절 그래프는 GBIF.org에서 가져오며, 종의 학명으로만 조회합니다. 사용자에 대한 정보는 전송되지 않습니다."
+  },
+  "agronomyProfile": {
+    "eyebrow": "포장 프로필",
+    "title": "포장 프로필 만들기",
+    "subtitle": "기술적 해석에 앞서 포장 상태를 확인하세요.",
+    "stepCounter": "{{total}}단계 중 {{current}}단계",
+    "steps": {
+      "purpose": {
+        "title": "목적 및 재배 방식",
+        "body": "작물의 생산 목적과 포장 관리 방식을 알려 주세요."
+      },
+      "location": {
+        "title": "수동 위치",
+        "body": "기기 위치를 공유하지 않고 국가, 1단계 행정구역, 지역명을 입력하세요."
+      },
+      "planting": {
+        "title": "파종 및 생육 단계",
+        "body": "파종일과 포장에서 관찰한 생육 단계를 기록하세요."
+      },
+      "soil": {
+        "title": "토양 및 분석",
+        "body": "토양을 설명하고 실험실 보고서 보유 여부를 알려 주세요."
+      },
+      "summary": {
+        "title": "프로필 검토",
+        "body": "이 정보를 저장하기 전에 모든 항목을 확인하세요."
+      }
+    },
+    "purposeLabel": "생산 목적",
+    "systemLabel": "생산 방식",
+    "purposes": {
+      "grain": "곡물",
+      "fresh": "신선 시장",
+      "processing": "가공",
+      "forage": "사료",
+      "seed": "종자 생산",
+      "other": "기타"
+    },
+    "systems": {
+      "rainfed": "천수 재배",
+      "irrigated": "관개 재배",
+      "protected": "시설 재배",
+      "hydroponic": "수경 재배",
+      "other": "기타"
+    },
+    "manualLocationTitle": "직접 입력한 위치",
+    "manualLocationBody": "이 도우미는 GPS를 요청하지 않습니다. 국가를 선택하고, 해당되는 경우 시·도 또는 지역 코드를 입력한 뒤 지역명을 추가하세요.",
+    "countryCodeLabel": "국가",
+    "countryCodePlaceholder": "국가 선택",
+    "countryCodeHint": "이 경작지가 있는 국가를 선택하세요.",
+    "countryPickerTitle": "국가 선택",
+    "countrySearchPlaceholder": "국가 이름 또는 코드 검색",
+    "countryNotFound": "국가를 찾을 수 없습니다.",
+    "closeCountryPicker": "국가 선택기 닫기",
+    "localityLabel": "지역명",
+    "localityPlaceholder": "예: 서울",
+    "admin1CodeLabel": "시·도 또는 지역 코드",
+    "admin1CodePlaceholder": "예: KR-11",
+    "admin1CodeHint": "해당되는 경우 선택한 국가의 1단계 행정구역 코드를 사용하세요.",
+    "municipalityLabel": "지역명",
+    "municipalityPlaceholder": "예: 서울",
+    "stateLabel": "국가 행정구역",
+    "stateHint": "해당되는 경우 시·도 또는 지역 코드를 입력하세요.",
+    "plantingDateLabel": "파종일",
+    "plantingDatePlaceholder": "YYYY-MM-DD",
+    "plantingDateHint": "YYYY-MM-DD 형식을 사용하세요.",
+    "stageLabel": "관찰한 생육 단계",
+    "stagePlaceholder": "예: V6, 개화, 과실 비대",
+    "stageConfirmedLabel": "포장에서 이 단계를 확인했습니다",
+    "soilDescriptionLabel": "토양 설명",
+    "soilDescriptionPlaceholder": "예: 점질토, 완만한 경사, 배수 양호",
+    "hasReportLabel": "토양 분석 보고서가 있나요?",
+    "reportNoticeTitle": "보고서를 가까이 준비하세요",
+    "reportNoticeBody": "이 프로필은 보고서 존재 여부만 기록합니다. 결과를 읽거나 권장량을 계산하지 않습니다.",
+    "summary": {
+      "purpose": "목적",
+      "system": "방식",
+      "location": "국가 / 행정구역 / 지역명",
+      "planting": "파종일",
+      "stage": "확인된 단계",
+      "soil": "토양",
+      "report": "토양 분석 보고서"
+    },
+    "noCalculationTitle": "상황 정보 전용",
+    "noCalculationBody": "이 프로필을 저장해도 투입량을 계산하거나 비료, 관개, 농약 또는 기타 농업 권고를 제공하지 않습니다.",
+    "save": "프로필 저장",
+    "errors": {
+      "selectPurposeAndSystem": "생산 목적과 생산 방식을 선택하세요.",
+      "completeLocation": "국가를 선택하고 지역명을 입력한 뒤, 입력한 행정구역 코드가 올바른지 확인하세요.",
+      "completePlanting": "유효한 날짜와 관찰한 생육 단계를 입력하세요.",
+      "confirmStage": "포장에서 단계를 확인했음을 표시하세요.",
+      "completeSoil": "계속하기 전에 토양을 설명하세요.",
+      "chooseReport": "토양 분석 보고서 보유 여부를 알려 주세요.",
+      "formIncomplete": "필수 정보가 누락되었거나 올바르지 않습니다. 이전 단계를 검토하세요.",
+      "saveUnavailable": "이 양식에는 사용할 수 있는 저장 작업이 없습니다."
+    }
+  },
+  "agronomyWorkspace": {
+    "title": "포장 작업 공간",
+    "openTitle": "고급 포장 관리",
+    "openBody": "포장 프로필을 만들고 관찰을 기록하며 이 작물에 대해 검증된 기술 모듈만 여세요.",
+    "openAction": "포장 작업 공간 열기",
+    "tabs": {
+      "essential": "필수",
+      "learn": "학습",
+      "agronomist": "농업 전문가"
+    },
+    "unknownCrop": "정확한 정체가 확인되지 않은 작물",
+    "catalogBadge": "검수된 카탈로그 항목 · 사진 진단이 아님",
+    "loadingProfile": "포장 프로필 불러오는 중…",
+    "contextTitle": "포장 정보",
+    "contextBody": "이 포장에 대해 직접 확인한 정보입니다.",
+    "globalEvidence": {
+      "topicCount": "섹션 수: {{count}}",
+      "kicker": "전 세계 자료",
+      "title": "세계 자료가 기록한 내용",
+      "body": "정확한 종과 원출처에 연결된 {{scientific}} 관련 내용입니다.",
+      "exactSpecies": "정확한 종",
+      "traceableSource": "추적 가능한 출처",
+      "worldScope": "전 세계 범위",
+      "warningTitle": "지역별 권장 사항이 아닙니다",
+      "warningBody": "이 근거는 종을 설명할 뿐입니다. 비료 투입량, 시비 처방 또는 지역별 표를 허용하지 않습니다.",
+      "openSource": "위키백과에서 세계 자료 열기",
+      "topicsTitle": "전 세계 종 자료집"
+    },
+    "missingProfileTitle": "포장 정보 만들기",
+    "missingProfileBody": "현장 관찰을 기록하기 전에 위치, 파종, 생육 단계와 토양을 확인하세요.",
+    "profileUnavailableBody": "이 항목에는 포장 프로필을 위한 안전한 로컬 키가 없습니다.",
+    "createProfile": "프로필 만들기",
+    "editProfile": "프로필 편집",
+    "savingProfile": "프로필 저장 중…",
+    "profileSaved": "포장 프로필이 저장되었습니다.",
+    "observationTitle": "현장 관찰",
+    "observationBody": "실제로 관찰한 내용을 기록하세요. 이 일지는 진단이나 권고를 만들지 않습니다.",
+    "addObservation": "관찰 기록",
+    "eventTypeLabel": "기록 유형",
+    "eventTypes": {
+      "observation": "관찰",
+      "stage": "작물 생육 단계",
+      "rain": "강우",
+      "irrigation": "관개",
+      "fertilization": "시비",
+      "pestSample": "해충 표본 조사",
+      "diseaseCheck": "병해 확인",
+      "harvest": "수확"
+    },
+    "noteLabel": "메모",
+    "notePlaceholder": "보거나 수행한 내용을 적으세요",
+    "valueLabel": "값",
+    "valuePlaceholder": "예: 12.5",
+    "unitLabel": "단위",
+    "unitPlaceholder": "예: mm, kg, 식물 수",
+    "optionalFieldsHint": "메모와 값은 선택 사항이지만 하나 이상 입력하세요. 모든 값에는 단위가 필요합니다.",
+    "saveObservation": "관찰 저장",
+    "savingObservation": "관찰 저장 중…",
+    "observationSaved": "관찰이 저장되었습니다.",
+    "timelineTitle": "포장 타임라인",
+    "eventStage": "당시 생육 단계: {{stage}}",
+    "learning": {
+      "title": "포장 관찰 방법 배우기",
+      "body": "간단한 순환 과정을 이용해 현장 방문을 신뢰할 수 있는 정보로 바꾸세요.",
+      "accessibilityLabel": "관찰하고, 기록하고, 비교한 뒤 전문가의 도움을 받으세요.",
+      "steps": {
+        "observe": {
+          "title": "관찰",
+          "body": "여러 지점을 살피고 본 사실과 추측을 구분하세요."
+        },
+        "record": {
+          "title": "기록",
+          "body": "관찰이 생생할 때 상태, 위치와 변화를 적으세요."
+        },
+        "compare": {
+          "title": "비교",
+          "body": "결론을 내리기 전에 비슷한 조건에서의 방문 기록을 비교하세요."
+        },
+        "support": {
+          "title": "도움 요청",
+          "body": "결정이 필요하면 이력과 실험실 보고서를 지역 농업 전문가에게 가져가세요."
+        }
+      },
+      "genericTitle": "일반 학습 그림",
+      "genericBody": "이 그림은 살펴볼 위치를 안내합니다. 이 작물의 사진이나 설명이 아닙니다.",
+      "visuals": {
+        "phenology": {
+          "title": "확인된 작물 생육 단계",
+          "body": "현장에서 관찰하고 확인한 단계만 사용하며 날짜로 추정하지 마세요."
+        },
+        "soil": {
+          "title": "토양 단면과 표본 채취",
+          "body": "설명은 관찰 방향을 제시하지만 결정에는 대표성 있는 표본과 유효한 보고서가 필요합니다."
+        },
+        "water": {
+          "title": "강우 → 토양 → 뿌리 → 결정",
+          "body": "강우나 관개를 기록하고 토양과 뿌리를 확인한 다음에 다음 단계를 판단하세요."
+        },
+        "nutrition": {
+          "title": "추정 투입량 없는 N, P, K",
+          "body": "양분 기호는 자료를 읽는 데 도움을 줄 뿐, 투입량에는 분석·목표·지역 보정이 필요합니다."
+        },
+        "mip": {
+          "title": "표본 채취, 계수, 비교, 결정",
+          "body": "대상과 단계를 확인하고 대표성 있게 조사한 뒤 방제 전에 적용 가능한 기준과 비교하세요."
+        }
+      }
+    },
+    "technicalStatusTitle": "기술 자료 범위",
+    "technicalVerifiedTitle": "정확한 기술 모듈 사용 가능",
+    "technicalVerifiedBody": "정체와 현재 카탈로그가 아래 모듈을 정확히 연결했습니다. 참고 자료이며 자동 처방이 아닙니다.",
+    "technicalCatalogBody": "편집 검수를 거친 카탈로그 항목이며 사진 진단이 아닙니다. 이 작물에 명시적으로 검수된 모듈만 표시합니다.",
+    "noExactModulesTitle": "사용 가능한 정확한 모듈 없음",
+    "noExactModulesBody": "이 작물에는 현장 안내서가 있지만 공개된 수치 표나 정확한 모니터링 모듈은 없습니다.",
+    "technicalUnavailableTitle": "기술 연결을 사용할 수 없음",
+    "technicalUnavailableBody": "정체, 카탈로그 범위 또는 연결 조건이 충분하지 않아 기술 표를 표시하지 않습니다.",
+    "modules": {
+      "pest": "통합 해충 모니터링",
+      "fertilizer": "토양 및 비료 표"
+    },
+    "ruleCatalogTitle": "규칙 카탈로그 상태",
+    "ruleCatalogGuideBody": "엔진은 안내 규칙만 확인했습니다. 이 카탈로그에는 수치 계산 규칙이 없습니다.",
+    "ruleCatalogCatalogBody": "편집 카탈로그는 검수된 모듈을 열 수 있지만 사진 진단이나 계산 규칙으로 바꾸지 않습니다.",
+    "ruleCatalogUnavailableBody": "정확한 안내 규칙이 확인되지 않았습니다. 앱은 일반명, 과 또는 이전 필드에서 규칙을 추론하지 않습니다.",
+    "sourcesTitle": "공식 출처",
+    "sourcesBody": "현재 공개된 모듈과 연결된 출처만 표시합니다.",
+    "officialSource": "공식 출처 · {{institution}}",
+    "openSource": "공식 출처 열기: {{source}}",
+    "errors": {
+      "typeInvalid": "올바른 기록 유형을 선택하세요.",
+      "amountInvalid": "지원 범위 안의 유효한 음수가 아닌 수를 입력하세요.",
+      "unitNeedsValue": "단위를 추가하기 전에 값을 입력하세요.",
+      "unitRequired": "모든 값에는 단위가 있어야 합니다.",
+      "emptyEvent": "저장하기 전에 메모나 값을 추가하세요.",
+      "saveFailed": "저장하지 못했습니다. 확인된 내용은 없으며 다시 시도해 주세요."
+    },
+    "planningSourcesTitle": "계획 참고 출처",
+    "planningSourcesBody": "이 작물과 연결된 공식 자료입니다. 기술 모듈이나 권고가 공개되었다는 뜻은 아닙니다."
+  },
+  "observationWorkspace": {
+    "title": "고급 관찰",
+    "loading": "관찰 기록을 불러오는 중…",
+    "unavailableTitle": "관찰 공간을 사용할 수 없음",
+    "unavailableBody": "이 범주에는 검증된 관찰 설정이 없어 양식을 표시하지 않습니다.",
+    "openTitle": "고급 관찰 공간",
+    "openBody": "간단한 메모부터 비교 가능한 현장 증거까지 실제로 본 내용을 명확하게 기록하세요.",
+    "openAction": "관찰 공간 열기",
+    "tabs": {
+      "essential": "핵심",
+      "learn": "학습",
+      "field": "현장"
+    },
+    "setupTitle": "관찰 맥락 설정",
+    "setupBody": "전반적인 환경을 선택하고 이 기록이 어디에서 어떻게 시작되었는지 적으세요. 관찰하지 않은 결론은 추가하지 마세요.",
+    "setupAction": "맥락 만들기",
+    "editProfile": "맥락 수정",
+    "saveProfile": "맥락 저장",
+    "contextLabel": "관찰 맥락",
+    "placeLabel": "장소",
+    "placePlaceholder": "예: 북쪽 정원, 개울가 또는 발코니",
+    "baselineLabel": "시작 상태",
+    "baselinePlaceholder": "첫 관찰 때 보이는 상태를 설명하세요",
+    "profileSaved": "맥락을 저장했습니다.",
+    "localOnly": "이 기기에만 저장됩니다. 진단이나 클라우드 백업이 아닙니다.",
+    "addEvent": "현장 메모 추가",
+    "closeEvent": "양식 닫기",
+    "eventTypeLabel": "관찰 유형",
+    "noteLabel": "메모",
+    "notePlaceholder": "보거나 들은 내용만 설명하세요",
+    "countLabel": "관찰한 수량",
+    "measureLabel": "관찰한 측정값",
+    "unitLabel": "단위",
+    "optionalLabel": "선택 사항",
+    "saveEvent": "기록 저장",
+    "eventSaved": "기록을 저장했습니다.",
+    "emptyEvent": "저장하기 전에 메모, 수량 또는 측정값을 추가하세요.",
+    "invalidCount": "0 이상의 정수 수량을 입력하세요.",
+    "invalidMeasure": "0 이상의 올바른 측정값을 입력하세요.",
+    "unitRequired": "측정 단위를 선택하세요.",
+    "saveFailed": "이 기록을 저장하지 못했습니다. 다시 시도하세요.",
+    "timelineTitle": "관찰 타임라인",
+    "timelineEmpty": "아직 기록된 관찰이 없습니다.",
+    "fieldTitle": "현장 보기",
+    "fieldBody": "비슷한 조건에서 작성한 기록을 비교하고, 결정이 필요할 때는 기록 전체를 자격을 갖춘 전문가에게 보여 주세요.",
+    "progressLabel": "관찰 지점 {{total}}개 중 {{done}}개 기록",
+    "recordedLabel": "{{date}}에 기록",
+    "missingLabel": "기록되지 않음",
+    "evidenceNote": "기록은 관찰한 내용을 설명할 뿐입니다. 정체, 진단, 위험 또는 관리 결정을 확인하지 않습니다.",
+    "learningTitle": "관찰할 내용 알아보기",
+    "learningBody": "각 시각 자료를 열어 유용한 기록에 무엇이 포함되는지 알아보세요.",
+    "generalDiagram": "일반 관찰 도식이며, 사진 속 생물의 정체를 입증하지 않습니다.",
+    "mushroomSafety": "사진, 앱 식별 결과 또는 이 관찰 기록만을 근거로 버섯을 절대 섭취하지 마세요.",
+    "units": {
+      "millimetre": "밀리미터 (mm)",
+      "centimetre": "센티미터 (cm)",
+      "metre": "미터 (m)",
+      "second": "초 (s)",
+      "minute": "분 (min)",
+      "millilitre": "밀리리터 (ml)",
+      "litre": "리터 (l)",
+      "celsius": "섭씨 (°C)",
+      "percent": "퍼센트 (%)",
+      "gram": "그램 (g)",
+      "kilogram": "킬로그램 (kg)",
+      "ph": "pH",
+      "ppt": "천분율 (ppt)",
+      "ppm": "백만분율 (ppm)",
+      "milligramPerLitre": "리터당 밀리그램 (mg/L)",
+      "microsiemensPerCentimetre": "센티미터당 마이크로지멘스 (µS/cm)",
+      "hour": "시간 (h)",
+      "hertz": "헤르츠 (Hz)",
+      "kilohertz": "킬로헤르츠 (kHz)",
+      "decibel": "데시벨 (dB)",
+      "kilometre": "킬로미터 (km)"
+    },
+    "contexts": {
+      "plant": {
+        "indoor": "실내",
+        "outdoor": "실외",
+        "container": "용기",
+        "ground": "땅속"
+      },
+      "tree": {
+        "urban": "도시 지역",
+        "garden": "정원",
+        "woodland": "수림지",
+        "orchard": "과수원"
+      },
+      "insect": {
+        "onPlant": "식물 위",
+        "onSoil": "토양 위",
+        "onStructure": "구조물 위",
+        "nearWater": "물가"
+      },
+      "mushroom": {
+        "soil": "토양 위",
+        "wood": "나무 위",
+        "leafLitter": "낙엽층",
+        "otherSubstrate": "기타 기질"
+      },
+      "fish": {
+        "freshwater": "민물",
+        "marine": "바다",
+        "estuary": "하구",
+        "aquarium": "수족관"
+      },
+      "bird": {
+        "urban": "도시 지역",
+        "forest": "숲",
+        "wetland": "습지",
+        "openArea": "개방된 지역"
+      },
+      "sound": {
+        "dawn": "새벽",
+        "day": "낮",
+        "dusk": "해질녘",
+        "night": "밤"
+      }
+    },
+    "eventTypes": {
+      "plant": {
+        "observation": "식물 주변 환경",
+        "growth": "식물 성장",
+        "leafChange": "식물 잎 변화",
+        "flowering": "관찰한 개화",
+        "fruiting": "관찰한 결실",
+        "symptom": "식물의 가시적 증상",
+        "care": "식물 돌봄 기록"
+      },
+      "tree": {
+        "observation": "나무 주변 환경",
+        "growth": "나무 성장",
+        "leafChange": "나무 잎 변화",
+        "flowering": "관찰한 나무 개화",
+        "fruiting": "관찰한 나무 결실",
+        "symptom": "나무의 가시적 증상",
+        "habitat": "나무 서식 환경"
+      },
+      "insect": {
+        "observation": "관찰 맥락",
+        "count": "관찰한 수량",
+        "lifeStage": "관찰한 생활 단계",
+        "behavior": "관찰한 행동",
+        "interaction": "관찰한 상호작용",
+        "habitat": "곤충 서식지"
+      },
+      "mushroom": {
+        "observation": "버섯 관찰",
+        "emergence": "관찰한 출현",
+        "morphology": "보이는 형태",
+        "substrate": "기질",
+        "colorChange": "색 변화",
+        "sporePrint": "포자문 기록"
+      },
+      "fish": {
+        "observation": "관찰 맥락",
+        "count": "관찰한 수량",
+        "behavior": "관찰한 행동",
+        "habitat": "서식지",
+        "waterReading": "관찰한 수질 측정값",
+        "feeding": "관찰한 먹이 활동"
+      },
+      "bird": {
+        "observation": "새 관찰",
+        "count": "관찰한 수량",
+        "behavior": "관찰한 행동",
+        "vocalization": "관찰한 울음소리",
+        "nesting": "관찰한 둥지 활동",
+        "flight": "관찰한 비행"
+      },
+      "sound": {
+        "observation": "소리 관찰",
+        "recording": "녹음",
+        "comparison": "녹음 비교",
+        "context": "소리 환경",
+        "frequency": "관찰한 주파수",
+        "amplitude": "관찰한 진폭"
+      }
+    },
+    "visuals": {
+      "plant": {
+        "environment": {
+          "title": "식물 주변 환경",
+          "body": "생물 주변 환경과 눈에 보이는 변화를 기록하세요."
+        },
+        "light": {
+          "title": "보이는 빛",
+          "body": "필요를 추정하지 말고 방문 사이의 가시적인 빛 조건을 비교하세요."
+        },
+        "soil": {
+          "title": "토양 관찰",
+          "body": "눈에 보이는 토양 또는 기질 표면과 그 변화를 설명하세요."
+        },
+        "growth": {
+          "title": "식물 성장",
+          "body": "비교할 수 있는 성장 관찰을 타임라인에 놓으세요."
+        }
+      },
+      "tree": {
+        "environment": {
+          "title": "나무 주변 환경",
+          "body": "생물 주변 환경과 눈에 보이는 변화를 기록하세요."
+        },
+        "light": {
+          "title": "보이는 빛",
+          "body": "필요를 추정하지 말고 방문 사이의 가시적인 빛 조건을 비교하세요."
+        },
+        "soil": {
+          "title": "토양 관찰",
+          "body": "눈에 보이는 토양 또는 기질 표면과 그 변화를 설명하세요."
+        },
+        "growth": {
+          "title": "나무 성장",
+          "body": "비교할 수 있는 성장 관찰을 타임라인에 놓으세요."
+        }
+      },
+      "insect": {
+        "anatomy": {
+          "title": "보이는 몸 특징",
+          "body": "생활 단계나 정체를 제안하기 전에 보이는 몸 특징을 나누어 기록하세요."
+        },
+        "stage": {
+          "title": "관찰한 생활 단계",
+          "body": "직접 관찰할 수 있는 생활 단계만 기록하고, 확실하지 않으면 비워 두세요."
+        },
+        "count": {
+          "title": "관찰한 수량",
+          "body": "나중 방문과 비교할 수 있도록 장소를 명확히 설명한 뒤 수를 세세요."
+        },
+        "behaviour": {
+          "title": "관찰한 행동",
+          "body": "동물을 해충으로 분류하지 말고 관찰한 움직임과 상호작용을 그대로 설명하세요."
+        }
+      },
+      "mushroom": {
+        "substrate": {
+          "title": "기질",
+          "body": "버섯 바로 아래의 물질과 주변 서식지를 기록하세요."
+        },
+        "anatomy": {
+          "title": "버섯의 보이는 부분",
+          "body": "갓, 아랫면, 자루와 기부를 나누어 보세요. 사진에는 결정적인 특징이 가려질 수 있습니다."
+        },
+        "underside": {
+          "title": "보이는 아랫면",
+          "body": "보이는 주름, 구멍 또는 다른 아랫면을 추측 없이 설명하세요."
+        },
+        "colourChange": {
+          "title": "색 변화",
+          "body": "색 변화가 실제로 보였는지, 어디에서 일어났는지 기록하세요."
+        }
+      },
+      "fish": {
+        "habitat": {
+          "title": "서식지",
+          "body": "보이는 수역과 물고기를 본 위치를 설명하세요."
+        },
+        "anatomy": {
+          "title": "물고기의 보이는 특징",
+          "body": "각 특징이 보일 때만 몸 윤곽, 지느러미, 무늬와 꼬리를 비교하세요."
+        },
+        "group": {
+          "title": "함께 본 물고기",
+          "body": "관찰한 수량과 시야 범위를 기록하고 개체군 규모를 추정하지 마세요."
+        },
+        "behaviour": {
+          "title": "관찰한 행동",
+          "body": "멀리서 관찰하고 접촉 없이 움직임을 기록하세요."
+        }
+      },
+      "bird": {
+        "habitat": {
+          "title": "서식지",
+          "body": "보이는 서식지와 새가 있던 위치를 설명하세요."
+        },
+        "anatomy": {
+          "title": "새의 보이는 특징",
+          "body": "보이는 특징만으로 부리, 몸, 날개와 꼬리를 비교하세요."
+        },
+        "group": {
+          "title": "함께 본 새",
+          "body": "시야 밖의 새를 추정하지 말고 실제로 본 무리만 기록하세요."
+        },
+        "vocalisation": {
+          "title": "관찰한 울음소리",
+          "body": "어떤 종이 냈는지 가정하지 말고 음높이, 리듬과 반복을 설명하세요."
+        }
+      },
+      "sound": {
+        "waveform": {
+          "title": "보이는 소리 패턴",
+          "body": "도식은 녹음 패턴을 나타내며 특정 종의 증거가 아닙니다."
+        },
+        "rhythm": {
+          "title": "리듬과 반복",
+          "body": "울음의 의미를 지어내지 말고 들린 반복 구간과 쉼을 표시하세요."
+        },
+        "environment": {
+          "title": "소리 환경",
+          "body": "비교에 영향을 줄 수 있는 시간대, 장소와 배경음을 기록하세요."
+        },
+        "comparison": {
+          "title": "녹음 비교",
+          "body": "차이를 적기 전에 비슷한 조건에서 만든 녹음을 비교하세요."
+        }
+      }
+    }
+  },
+  "community": {
+    "title": "커뮤니티",
+    "headline": "이 발견을 유용한 팁으로 바꾸세요.",
+    "body": "친구, 공부 동료 또는 현장 모임을 초대해 NatureLens로 함께 식별해 보세요.",
+    "steps": {
+      "identify": "살아 있는 대상을 식별하기",
+      "save": "중요한 내용 저장하기",
+      "share": "도움 될 사람에게 결과 보내기"
+    },
+    "inviteAction": "친구 초대",
+    "inviteMessage": "NatureLens로 자연을 식별하고 식물 돌봄 경험을 공유하고 있어요: 물주기, 해충, 회복, 발견. 여기서 사용해 보세요: {{url}}",
+    "screenTitle": "커뮤니티",
+    "entryTitle": "커뮤니티 리그",
+    "entrySubtitle": "순위, 미션 및 주간 진행 상황을 확인하세요.",
+    "localBadge": "지역 리그",
+    "heroTitle": "내 NatureLens 순위",
+    "rankPosition": "현재 순위",
+    "scoreLabel": "점수",
+    "leagues": {
+      "seed": "씨앗 리그 — 오늘 발견 하나로 시작하세요.",
+      "sprout": "새싹 리그 — 진짜 습관을 만들고 있어요.",
+      "guardian": "수호자 리그 — 현장 기록이 탄탄해지고 있어요.",
+      "master": "마스터 리그 — 숙련 탐험가의 리듬입니다."
+    },
+    "photoRail": "최근 발견이 내 리그의 표지가 됩니다.",
+    "discoveriesLabel": "발견",
+    "weeklyLabel": "이번 주",
+    "categoriesLabel": "카테고리",
+    "streakLabel": "연속 일수",
+    "rankingTitle": "주간 순위",
+    "rankingBody": "확인된 앱 활동을 바탕으로 한 지역 리그입니다. 가짜 전 세계 사용자는 없으며, 커뮤니티 서버가 연결되면 실제 공개 순위가 됩니다.",
+    "leaderboard": {
+      "you": {
+        "name": "나",
+        "meta": "확인된 내 활동"
+      },
+      "next": {
+        "name": "다음 목표",
+        "meta": "이번 주에 달성할 수 있는 목표"
+      },
+      "elite": {
+        "name": "엘리트 기준",
+        "meta": "숙련 사용자를 위한 목표"
+      }
+    },
+    "milestonesTitle": "순위를 높이는 방법",
+    "milestones": {
+      "first": "실제 발견을 식별하고 저장하세요.",
+      "week": "매일 미션을 완료하고 연속 기록을 이어 가세요.",
+      "allCategories": "식물, 곤충, 물고기, 새, 균류 등 더 많은 카테고리를 탐색하세요."
+    },
+    "inviteTitle": "탐험에 누군가를 초대하세요",
+    "inviteBody": "앱을 공유하고 초대 미션을 완료해 휴대폰 밖에서도 경험을 이어 가세요.",
+    "scanAction": "지금 스캔",
+    "reviewTitle": "NatureLens가 도움이 되나요?",
+    "reviewBody": "앱이 발견을 더 명확하게 해 주었다면, 리뷰를 남겨 더 많은 탐험가가 찾도록 도와주세요.",
+    "reviewAction": "마음에 들어요",
+    "reviewLater": "나중에",
+    "reviewThanks": "고맙습니다 — NatureLens를 계속 개선하는 데 큰 도움이 됩니다.",
+    "careExchangeTitle": "돌봄 경험 공유",
+    "careExchangeBody": "효과가 있었던 물주기, 빛, 해충, 회복, 식물의 전후 변화를 공유하세요.",
+    "careShareAction": "경험 공유하기",
+    "careTopics": {
+      "watering": "물주기 루틴",
+      "pests": "해충과 증상",
+      "recovery": "전후 변화",
+      "questions": "그룹에 질문"
+    }
+  },
+  "ipm": {
+    "title": "통합 해충 관리",
+    "chooseCrop": "이 곤충이 관찰된 작물을 선택하세요. 정확히 문서화된 조합에서만 지침이 열립니다.",
+    "exactPair": "정확한 조합: {{crop}}의 {{insect}}",
+    "prevention": "예방",
+    "monitoring": "모니터링",
+    "threshold": "문서화된 조치 기준",
+    "cultural": "경종적 방제",
+    "mechanical": "기계적 방제",
+    "biological": "생물적 방제",
+    "chemical": "화학적 방제: 등록 확인만",
+    "chemicalReferral": "여기서는 제품이나 용량을 처방하지 않습니다. 해당 국가에서 이 작물과 대상에 등록된 최신 라벨을 확인하고 지역 농업 전문가와 결정하세요.",
+    "citationOnly": "사실 인용; 원문 미복제",
+    "crops": {
+      "maize": "옥수수",
+      "tomato": "토마토",
+      "soybean": "대두",
+      "uplandCotton": "육지면",
+      "commonBean": "강낭콩",
+      "arabicaCoffee": "아라비카 커피"
+    },
+    "actions": {
+      "avoidCalendarSprays": "달력에 따라 살포하지 말고 대표성 있는 조사 결과로 결정하세요.",
+      "checkRegisteredBiocontrol": "이 작물과 대상에 정확히 등록된 지역 생물적 방제 수단을 확인하세요.",
+      "confirmDamageAndStage": "일치하는 피해를 확인하고 곤충의 발육 단계를 기록하세요.",
+      "inspectFruitDamage": "과실의 침입 구멍과 내부 피해를 살펴보세요.",
+      "inspectLeafMines": "어린잎에서 활동 중인 굴과 유충을 살펴보세요.",
+      "inspectTransplants": "모종을 재배지로 옮기기 전에 검사하세요.",
+      "inspectWhorl": "옥수수 생장점을 열어 최근 갉은 흔적과 유충을 확인하세요.",
+      "manageCropResidue": "수확 후 감염된 잔재를 제거하거나 적절히 관리하세요.",
+      "preserveNaturalEnemies": "기생성 천적, 포식자 등 자연 천적을 보호하세요.",
+      "protectNursery": "육묘장을 보호하고 감염된 모종이 없도록 하세요.",
+      "recordCropStage": "매 조사마다 작물 생육 단계를 기록하세요.",
+      "removeEggMassesSmallPlots": "작은 구역에서는 닿을 수 있는 알덩이와 유충을 제거하세요.",
+      "removeInfestedTissue": "감염된 잎과 과실을 안전하게 제거하고 폐기하세요.",
+      "removeVolunteerHosts": "작기 사이 해충을 유지하는 자생 작물을 제거하세요.",
+      "rotateOutsideHostFamily": "지역 여건이 허용되면 기주과가 아닌 작물로 돌려짓기하세요.",
+      "sampleCoolHours": "노린재를 찾기 쉬운 서늘한 시간에 조사하세요.",
+      "sampleRepresentativePoints": "가장자리만 보지 말고 포장 전체에 조사 지점을 배치하세요.",
+      "useBeatCloth": "대표 지점에서 타락법을 같은 방식으로 사용하세요.",
+      "useInsectScreens": "재배 방식이 허용하면 방충망을 사용하세요.",
+      "usePheromoneTraps": "성충 비행은 페로몬 트랩으로 추적하되 포획 수만으로 피해를 판단하지 마세요.",
+      "avoidStaggeredPlanting": "시차 파종을 피하고 공식 지침이 요구하는 경우 지역 단위로 파종 기간을 조정하세요.",
+      "avoidOlderMaizeNearby": "왜화 증상이 있는 오래된 옥수수 포장 옆에 새 옥수수를 파종하지 마세요.",
+      "removeAlternateHosts": "대체 기주식물과 바이러스 증상을 보이는 콩 식물을 제거하세요.",
+      "inspectFieldEdges": "침입과 피해가 가장자리에 집중되는 경우가 많으므로 포장 둘레부터 조사하세요.",
+      "inspectFlowerBuds": "목화 꽃봉오리에서 섭식 및 산란 구멍을 확인하세요.",
+      "completeSanitaryHarvest": "꼼꼼히 수확하고 나무와 땅에 남은 커피 열매를 제거하세요.",
+      "inspectLowerCanopy": "콩자벌레 유충이 숨는 콩 군락의 중·하부를 조사하세요."
+    },
+    "thresholds": {
+      "initialSymptomsHighYieldThreshold": "수량 잠재력이 최소 {{minimumYieldBagsPerHa}}포대/ha인 포장에만 적용: {{sampleAreaHa}}ha에서 임의의 {{samplePoints}}개 지점을 조사하세요. 공개 기준은 초기 가해 증상이 있는 식물 {{actionPercent}}%입니다."
+    }
   }
 }

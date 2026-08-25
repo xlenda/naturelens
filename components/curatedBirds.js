@@ -1,4 +1,5 @@
 import { getSpeciesDetails } from './speciesDetails';
+import { curatedScientific } from './curatedDetails';
 
 // Curated field-guide content for identified birds.
 //
@@ -17,13 +18,11 @@ const BIRD_LABEL_TO_ID = {
   'Barn Swallow': 'barnSwallow',
   'House Sparrow': 'houseSparrow',
   'Common Kingfisher': 'commonKingfisher',
-  Kingfisher: 'commonKingfisher',
   'Peregrine Falcon': 'peregrineFalcon',
   'Great Blue Heron': 'greatBlueHeron',
   'Rock Pigeon': 'rockPigeon',
   'Rock Dove': 'rockPigeon',
   'European Robin': 'europeanRobin',
-  Robin: 'europeanRobin',
   Mallard: 'mallard',
   'Mallard Duck': 'mallard',
   'Scarlet Macaw': 'scarletMacaw',
@@ -36,9 +35,31 @@ const NORMALISED = new Map(
   Object.entries(BIRD_LABEL_TO_ID).map(([label, id]) => [label.toLowerCase().replace(/\s+/g, ' ').trim(), id])
 );
 
+// Apenas especies para as quais o contexto do dossie continua seguro sem
+// perguntar habitat. Kingfisher, pinguim, falcao e arara ficam fora: familia
+// ou fama nao prova que a foto foi feita em jardim ou mata.
+const BIRD_ID_TO_GROUP = Object.freeze({
+  barnSwallow: 'gardenBird',
+  houseSparrow: 'gardenBird',
+  greatBlueHeron: 'forestBird',
+  rockPigeon: 'gardenBird',
+  europeanRobin: 'gardenBird',
+  mallard: 'forestBird',
+});
+
 export function birdIdFromLabel(label) {
   if (typeof label !== 'string') return null;
   return NORMALISED.get(label.toLowerCase().replace(/\s+/g, ' ').trim()) || null;
+}
+
+export function scientificForBirdLabel(label) {
+  const id = birdIdFromLabel(label);
+  return id ? curatedScientific('bird', id) : null;
+}
+
+export function guideGroupForBirdLabel(label) {
+  const id = birdIdFromLabel(label);
+  return id ? BIRD_ID_TO_GROUP[id] || null : null;
 }
 
 export async function getCuratedBird(languageCode, label) {
@@ -46,7 +67,8 @@ export async function getCuratedBird(languageCode, label) {
   if (!id) return null;
   try {
     const data = await getSpeciesDetails(languageCode);
-    return data?.birdDetails?.[id] || null;
+    const detail = data?.birdDetails?.[id];
+    return detail ? { ...detail, id, scientific: curatedScientific('bird', id) } : null;
   } catch (e) {
     return null;
   }

@@ -15,7 +15,8 @@
         "summer": "Monatl., halbe Dosis",
         "autumn": "Stopp",
         "winter": "Nicht düngen",
-        "note": "Wenig Stickstoff, halbe bis viertel Dosis der Packungsangabe. Zu viel N bildet weiches Gewebe, das fault (Clemson, Iowa State)."
+        "note": "Wenig Stickstoff, halbe bis viertel Dosis der Packungsangabe. Zu viel N bildet weiches Gewebe, das fault (Clemson, Iowa State).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "Umtopfen",
@@ -51,7 +52,8 @@
         "summer": "Monatl., verdünnt",
         "autumn": "Reduzieren",
         "winter": "Nicht düngen",
-        "note": "Zimmerpflanzen werden nur in der Wachstumszeit gedüngt, in der Ruhezeit gar nicht (UConn)."
+        "note": "Zimmerpflanzen werden nur in der Wachstumszeit gedüngt, in der Ruhezeit gar nicht (UConn).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "Stecklinge",
@@ -79,7 +81,8 @@
         "summer": "Monatl., halbe Dosis",
         "autumn": "Stopp",
         "winter": "Nicht düngen",
-        "note": "Nach Teilen oder Umtopfen 6 Monate lang gar nichts; zu viel Dünger verbrennt die Wedel (Clemson, UConn)."
+        "note": "Nach Teilen oder Umtopfen 6 Monate lang gar nichts; zu viel Dünger verbrennt die Wedel (Clemson, UConn).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "Teilen & umtopfen",
@@ -115,7 +118,8 @@
         "summer": "Nach der Ernte",
         "autumn": "Stopp",
         "winter": "Nicht düngen",
-        "note": "Steinobst bekommt drei Teilgaben und nichts in den letzten Sommerwochen, damit das Holz ausreift (Clemson)."
+        "note": "Steinobst bekommt drei Teilgaben und nichts in den letzten Sommerwochen, damit das Holz ausreift (Clemson).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "Schnitt",
@@ -143,7 +147,8 @@
         "summer": "Alle 6 Wochen",
         "autumn": "Vor Frost stoppen",
         "winter": "Nicht düngen",
-        "note": "Rosen gehen in der größten Hitze auf halbe Dosis und hören 6 Wochen vor dem ersten erwarteten Frost auf (Clemson)."
+        "note": "Rosen gehen in der größten Hitze auf halbe Dosis und hören 6 Wochen vor dem ersten erwarteten Frost auf (Clemson).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "Ausputzen",
@@ -179,7 +184,8 @@
         "summer": "Geteilte Gaben",
         "autumn": "Stopp",
         "winter": "Nicht düngen",
-        "note": "Ein alter Baum braucht wenig bis gar nichts. Späte Stickstoffgaben verzögern die Winterruhe (Clemson)."
+        "note": "Ein alter Baum braucht wenig bis gar nichts. Späte Stickstoffgaben verzögern die Winterruhe (Clemson).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "Schnitt",
@@ -215,7 +221,8 @@
         "summer": "Wöchentl., halb",
         "autumn": "Alle 2 Wochen",
         "winter": "Alle 2 Wochen",
-        "note": "Halbe Dosis der Packungsangabe, wenig oder kein Harnstoff, und jede 4. Gabe auslassen, um Salze auszuspülen (AOS, RHS)."
+        "note": "Halbe Dosis der Packungsangabe, wenig oder kein Harnstoff, und jede 4. Gabe auslassen, um Salze auszuspülen (AOS, RHS).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "Umtopfen",
@@ -251,7 +258,8 @@
         "summer": "Nur bei Stillstand",
         "autumn": "Nicht düngen",
         "winter": "Nicht düngen",
-        "note": "Rosmarin im Beet bekommt gar nichts, und sehr nährstoffreicher Boden schwächt das Aroma (RHS, Clemson)."
+        "note": "Rosmarin im Beet bekommt gar nichts, und sehr nährstoffreicher Boden schwächt das Aroma (RHS, Clemson).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "Schnitt",

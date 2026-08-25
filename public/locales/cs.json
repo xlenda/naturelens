@@ -33,7 +33,122 @@
     "translating": "Překládám…",
     "translateFailed": "Teď se nepodařilo přeložit.",
     "yes": "Ano",
-    "no": "Ne"
+    "no": "Ne",
+    "loading": "Načítání…"
+  },
+  "discoveryReceipt": {
+    "title": "Identifikace dokončena",
+    "ready": "Výsledek je připraven ke kontrole.",
+    "tokens": "+{{count}} získaných žetonů",
+    "streak": "Počet dní v aktuální sérii: {{count}}",
+    "achievement": "Odemčený úspěch: {{title}}",
+    "factTitle": "O tomto kandidátovi",
+    "saveHint": "Uložte tento nález, abyste se k němu mohli vrátit a přidat vlastní pozorování."
+  },
+  "acquisition": {
+    "title": "Jak jste se dozvěděli o NatureLens?",
+    "subtitle": "Jedna rychlá odpověď nám pomůže aplikaci vylepšit. Nepovinné.",
+    "thanks": "Děkujeme — pomáháte nám zlepšovat NatureLens.",
+    "skip": "Teď ne",
+    "options": {
+      "tiktok": "TikTok",
+      "instagram": "Instagram",
+      "youtube": "YouTube",
+      "search": "Google nebo Obchod Play",
+      "friend": "Od přátel",
+      "other": "Jiné"
+    }
+  },
+  "specimen": {
+    "title": "Můj záznam",
+    "notFoundTitle": "Záznam nenalezen",
+    "notFoundBody": "Tento uložený nález už ve vaší sbírce není.",
+    "returnToCollection": "Zpět do sbírky",
+    "openRecord": "Otevřít můj záznam",
+    "savedOn": "Uloženo {{date}}",
+    "todayTitle": "Dnes",
+    "wateredAnnouncement": "Zálivka zaznamenána.",
+    "personalizeTitle": "Přizpůsobení",
+    "observationTitle": "Moje pozorování",
+    "observationEmpty": "Zatím bez pozorování. Zapište, čeho jste si všimli, kde jste nález objevili nebo co se změnilo.",
+    "observationPlaceholder": "Napište krátké pozorování…",
+    "addObservation": "Přidat pozorování",
+    "editObservation": "Upravit pozorování",
+    "saveObservation": "Uložit pozorování",
+    "removeObservation": "Odstranit pozorování",
+    "characterCount": "{{count}}/{{max}} znaků",
+    "timelineTitle": "Časová osa",
+    "timelineAdded": "Přidáno do sbírky",
+    "timelineWatered": "Zálivka zaznamenána",
+    "timelineObservationUpdated": "Poslední úprava pozorování",
+    "guideTitle": "Průvodce druhem",
+    "guideBody": "Určení a všechny dostupné informace o druhu.",
+    "openGuide": "Otevřít průvodce",
+    "noteSavedAnnouncement": "Pozorování uloženo.",
+    "removeTitle": "Odstranit záznam?",
+    "removeBody": "Odstranit {{name}} ze sbírky? Tuto akci nelze vrátit zpět.",
+    "removeAction": "Odstranit"
+  },
+  "localReminders": {
+    "title": "Připomenutí v telefonu",
+    "body": "Vyberte přesně, co a kdy připomenout. Android vás může upozornit i při používání jiné aplikace, podle oprávnění a nastavení systému.",
+    "loading": "Načítání připomenutí…",
+    "loadError": "Připomenutí teď nelze načíst.",
+    "nextTitle": "Nadcházející připomenutí",
+    "addAction": "Přidat připomenutí",
+    "empty": "Pro tento záznam není naplánováno žádné připomenutí.",
+    "unavailableTitle": "Připomenutí nejsou dostupná",
+    "unavailableBody": "Tato verze aplikace pro Android neumí plánovat oznámení. Pro připomenutí nainstalujte kompatibilní verzi.",
+    "modalTitle": "Vytvořit připomenutí",
+    "reminderFor": "Pro {{name}}",
+    "taskLabel": "Co vám má telefon připomenout zaznamenat?",
+    "startLabel": "První připomenutí",
+    "timeLabel": "Čas",
+    "repeatLabel": "Opakování",
+    "weekdayLabel": "Den v týdnu",
+    "firstAt": "První oznámení: {{date}}",
+    "saveAction": "Naplánovat připomenutí",
+    "saving": "Plánování…",
+    "permissionDeniedTitle": "Oznámení jsou vypnutá",
+    "permissionDeniedBody": "Android nepovolil oznámení. Povolte oznámení NatureLens v nastavení systému a zkuste to znovu.",
+    "saveError": "Připomenutí nebylo uloženo ani naplánováno. Zkontrolujte volby a zkuste to znovu.",
+    "removeError": "Toto připomenutí nelze odstranit. Zkuste to znovu.",
+    "removeAction": "Odstranit připomenutí: {{action}}",
+    "removing": "Odstraňování…",
+    "removedAnnouncement": "Připomenutí odstraněno.",
+    "scheduledSuccess": "Připomenutí naplánováno na {{date}}.",
+    "actionAnnouncement": "Připomenutí {{action}} naplánováno na {{date}}.",
+    "recordFallback": "tento záznam",
+    "notificationTitle": "Připomenutí NatureLens · {{name}}",
+    "notificationBody": "Zaznamenat: {{action}} · {{name}}",
+    "nextAt": "Další: {{date}}",
+    "intervals": {
+      "day1": "Za 1 den",
+      "day3": "Za 3 dny",
+      "day7": "Za 7 dní",
+      "day14": "Za 14 dní",
+      "day30": "Za 30 dní"
+    },
+    "times": {
+      "at08": "08:00",
+      "at12": "12:00",
+      "at18": "18:00",
+      "at20": "20:00"
+    },
+    "weekdays": {
+      "sun": "Neděle",
+      "mon": "Pondělí",
+      "tue": "Úterý",
+      "wed": "Středa",
+      "thu": "Čtvrtek",
+      "fri": "Pátek",
+      "sat": "Sobota"
+    },
+    "repetitions": {
+      "once": "Jednou",
+      "daily": "Každý den",
+      "weekly": "Každý týden"
+    }
   },
   "auth": {
     "title": "Přihlaste se k identifikaci",
@@ -153,17 +268,23 @@
       "label": "Zvuk",
       "tabLabel": "Zvuky",
       "title": "Určit podle zvuku",
-      "subtitle": "Nahraj ptáka, žábu nebo hmyz a zjisti, co to je."
+      "subtitle": "Nahraj ptáka, žábu nebo hmyz a zjisti, co to je.",
+      "scanHint": "Porovnejte čistotu nahrávky, rytmus, výšku tónu a opakování. Několik shodných zvukových vzorců je silnější důkaz než jeden izolovaný tón."
     }
   },
   "identify": {
     "identifierTitle": "Identifikátor: {{category}}",
     "subtitle": "Identifikujte {{category}} okamžitě pomocí AI",
+    "freePromise": "Vyzkoušejte před rozhodnutím: 1 bezplatné určení v každé kategorii, bez účtu a platební karty.",
     "readyToScan": "Připraveno ke skenování",
     "didYouKnowTitle": "Věděli jste, že...?",
     "continueLabel": "Pokračovat",
     "analyzing": "Analyzuji {{category}}…",
     "tapToIdentify": "Klepnutím identifikujte",
+    "lensPulseEyebrow": "ŽIVÝ PULZ",
+    "holdToReveal": "Podržte pro odhalení",
+    "keepHolding": "Držte dál…",
+    "holdToRevealHint": "Podržte, dokud se pulz nedokončí. Uvolněním zrušíte.",
     "identifying": "Identifikuji…",
     "uploadPhoto": "Nahrát fotku",
     "myCollection": "Moje sbírka",
@@ -186,6 +307,14 @@
     "referenceImagesTitle": "Referenční fotografie",
     "referenceImagesHint": "Porovnejte je s vlastní fotkou pro potvrzení.",
     "referenceImageLabel": "Referenční fotografie {{index}}",
+    "evidenceSimilar": "Podobná vaší fotografii",
+    "evidenceRepresentative": "Referenční snímek druhu",
+    "evidenceObservation": "Terénní záznam · GBIF",
+    "comparePhotos": "Porovnat fotografie",
+    "comparePhotosHint": "Prohlédněte si svou fotografii a referenci vedle sebe.",
+    "sideBySide": "Vedle sebe",
+    "previousReference": "Předchozí reference",
+    "nextReference": "Další reference",
     "alternativesTitle": "Další možné shody",
     "alternativesHint": "Pokud výsledek výše nevypadá správně, váš druh může být jeden z těchto.",
     "lowConfidenceBare": "Jistota jen {{confidence}} % — berte to jako výchozí bod, ne konečnou odpověď.",
@@ -199,10 +328,54 @@
     "serviceDownBody": "Tato určovací služba má problém. Zkus to za pár minut znovu - není to tvou fotkou.",
     "poseWhole": "Celek",
     "poseClose": "Detail",
-    "poseOther": "Jiný úhel"
+    "poseOther": "Jiný úhel",
+    "photoConsentTitle": "Než odešlete fotografie",
+    "photoConsentKindwiseBody": "Vybrané fotografie budou odeslány společnosti Kindwise k určení. Fotografie a výsledky zůstanou přístupné prostřednictvím Kindwise po dobu 6 měsíců. Podle podmínek společnosti Kindwise se na fotografie vztahuje neodvolatelná licence, která umožňuje jejich opětovné použití k trénování a komerčním účelům, poskytnutí jiným zákazníkům a sdílení pod licencí CC BY-SA. Odešlete je pouze tehdy, pokud s tím souhlasíte.",
+    "photoConsentFishialBody": "Vybrané fotografie budou odeslány společnosti Fishial k určení. Společnost Fishial je může uchovávat v souladu se svými postupy pro uchovávání dat a nezveřejňuje konkrétní dobu uchovávání fotografií odeslaných přes API. Odešlete je pouze tehdy, pokud s tím souhlasíte.",
+    "photoConsentNyckelBody": "Vybrané fotografie budou odeslány společnosti Nyckel a zpracovány za účelem poskytnutí identifikace. Odešlete je pouze tehdy, pokud s tím souhlasíte.",
+    "photoConsentBirdBody": "Až bude kalibrovaná celosvětová služba BioCLIP aktivní, mohou být fotografie ptáků nejprve zpracovány touto soukromou službou spravovanou NatureLens. V BioCLIP zůstávají pouze v paměti po dobu požadavku a neuchovávají se. Dokud je BioCLIP vypnutý, nebo pokud selže či nedoloží přesný druh, mohou být stejné fotografie odeslány do Nyckel s vypnutým zachycováním vzorků; Nyckel nezaručuje pouze dočasné uchování. Odešlete je jen tehdy, pokud souhlasíte.",
+    "photoConsentSend": "Odeslat fotografie",
+    "centralCapture": "Určit",
+    "photoReady": "Fotografie je připravena",
+    "addOptionalAngles": "Přidat další pohled",
+    "hideOptionalAngles": "Skrýt další pohledy",
+    "captureDemo": {
+      "title": "Podívejte se, jak to funguje",
+      "body": "Zamiřte na {{category}}, klepněte na velkou oblast kamery a výsledek ověřte podle obrázků.",
+      "accessibility": "Animovaný příklad ukazuje, jak určit {{category}} pomocí kamery.",
+      "result": "Výsledek s fotografiemi a dalším krokem",
+      "steps": {
+        "aim": "Zarámujte jeden objekt",
+        "tap": "Klepněte na oblast kamery",
+        "confirm": "Porovnejte reference"
+      },
+      "subject": {
+        "plant": "List nebo květ",
+        "tree": "List, kůra nebo koruna",
+        "insect": "Zaostřený hmyz",
+        "mushroom": "Klobouk a spodní strana",
+        "crop": "Poškozený list plodiny",
+        "fish": "Celá ryba z boku",
+        "bird": "Celý pták v záběru",
+        "sound": "Nahrajte čistý zvuk"
+      }
+    },
+    "expeditionTitle": "Vyberte si svou výpravu",
+    "expeditionBody": "Každá cesta mění to, co aplikace po pořízení fotografie zvýrazní.",
+    "categoryPromise": {
+      "plant": "Péče, bezpečnost a vizuální vodítka",
+      "insect": "Tělesné znaky, rizika a terénní poznámky",
+      "mushroom": "Podobné druhy a bezpečnost především",
+      "crop": "Agronomie, škůdci a stav půdy",
+      "fish": "Voda, prostředí a důkazy pro určení",
+      "bird": "Znaky, prostředí a tipy k pozorování",
+      "sound": "Poslouchejte, porovnávejte a určujte hlasy"
+    }
   },
   "detail": {
     "profileTitle": "Profil: {{category}}",
+    "invertebrateLabel": "Bezobratlý",
+    "fungusLabel": "Houba",
     "readMoreLabel": "Přečíst více online o tomto {{category}}",
     "markAsWatered": "Označit jako zalité",
     "markAsWateredLabel": "Označit jako zalité",
@@ -212,10 +385,24 @@
     "checkForDiseasesLabel": "Zkontrolovat nemoci",
     "checkingForDiseasesLabel": "Kontrola nemocí",
     "healthCheckSection": "Kontrola zdraví",
+    "healthSpeciesMismatch": "Kontrola zdravotního stavu nerozpoznala stejný druh. Pořiďte ostřejší fotografii této rostliny; žádná diagnóza nebyla použita.",
     "edibleParts": "Jedlé části",
     "propagation": "Množení",
     "wateringNeeds": "Nároky na zálivku",
     "conservationStatus": "Stav ochrany",
+    "iucn": {
+      "extinct": "Vyhynulý",
+      "extinctInTheWild": "Vyhynulý v přírodě",
+      "regionallyExtinct": "Regionálně vyhynulý",
+      "criticallyEndangered": "Kriticky ohrožený",
+      "endangered": "Ohrožený",
+      "vulnerable": "Zranitelný",
+      "nearThreatened": "Téměř ohrožený",
+      "leastConcern": "Málo dotčený",
+      "dataDeficient": "Nedostatek údajů",
+      "notApplicable": "Nevztahuje se",
+      "notEvaluated": "Nevyhodnocený"
+    },
     "safetySection": "Bezpečnost",
     "ecologicalRoleSection": "Ekologická role",
     "frequentlyConfusedWith": "Často zaměňováno s",
@@ -232,6 +419,10 @@
     "installNudgeBody": "Přidejte si ji na plochu, abyste příště identifikovali rychleji.",
     "commonNames": "Běžné názvy",
     "synonyms": "Vědecká synonyma",
+    "family": "Čeleď",
+    "order": "Řád",
+    "taxonomyTitle": "Klasifikace",
+    "species": "Druh",
     "referencePhoto": "Referenční fotografie",
     "referencePhotoAlt": "Referenční fotografie druhu {{name}}",
     "coverageNoteTitle": "O tomto výsledku",
@@ -250,7 +441,7 @@
     "everyNDays": "Každé {{count}} dny",
     "gbifCredit": "Data: GBIF.org",
     "seasonChart": "Záznamy podle měsíců",
-    "seasonChartNote": "Záznamy pozorování z celého světa, měsíc po měsíci. Odrážejí úsilí pozorovatelů, nikoli záruku kvetení nebo aktivity.",
+    "seasonChartNote": "Záznamy pozorování z celého světa, měsíc po měsíci. Odrážejí úsilí pozorovatelů a nezaručují, kdy ani proč se druh vyskytuje.",
     "tipWatering": "Než zalijete, sáhněte do půdy: pokud jsou vrchní centimetry suché, je čas.",
     "tipLight": "Sledujte, jak se světlo v prostoru během dne mění - proměňuje se víc, než se zdá.",
     "tipSoil": "Dobrá drenáž je stejně důležitá jako dobré hnojivo: promáčené kořeny jsou trpící kořeny.",
@@ -334,6 +525,12 @@
     "scheduleNow": "teď",
     "scheduleGroupNote": "Tento kalendář platí pro skupinu {{group}}, ne přesně pro tento druh.",
     "scheduleGroupNoteShort": "Tento kalendář platí pro skupinu daného druhu, ne přesně pro tento druh.",
+    "groupGuideNote": "Obecné pokyny pro skupinu {{group}}, nikoli údaj o tomto konkrétním druhu.",
+    "generalGuideNote": "Obecné pokyny, nikoli údaj o tomto konkrétním druhu.",
+    "agronomySection": "Polní agronomie",
+    "agronomyDecisionNote": "Začněte pozorováním a měřením. Než rozhodnete, co na poli změnit, otevřete celý postup.",
+    "integratedManagementSection": "Integrované řízení",
+    "openFullProtocol": "Otevřít celý postup",
     "scheduleNoLocation": "Bez vaší polohy nevíme, jaké je u vás roční období, proto není zvýrazněný žádný sloupec.",
     "careProfileTitle": "Profil péče",
     "careLevelLabel": "Náročnost péče",
@@ -348,9 +545,13 @@
     "speciesCareSection": "Péče o tento druh",
     "speciesCareNote": "Tyto hodnoty platí pro samotný druh {{species}}, ne pro jeho skupinu.",
     "speciesCareSource": "Zdroj: {{citation}}",
+    "wikipediaExcerptNotice": "Tento úryvek byl pro tuto část vybrán a zkrácen.",
+    "wikipediaArticleLink": "Článek na Wikipedii",
+    "wikipediaAuthorsLink": "Autoři a historie článku",
+    "wikipediaLicenseLink": "Licence CC BY-SA 4.0",
     "usdaMoisture": "Potřeba vody",
     "usdaDrought": "Odolnost vůči suchu",
-    "usdaFertility": "Potřeba hnojiva",
+    "usdaFertility": "Nároky na úrodnost půdy",
     "usdaShade": "Snášenlivost stínu",
     "usdaPh": "pH půdy",
     "usdaTempMin": "Snese až do",
@@ -362,7 +563,173 @@
     "levelNone": "Žádná",
     "bloomEarly": "{{season}} (začátek)",
     "bloomMid": "{{season}} (polovina)",
-    "bloomLate": "{{season}} (konec)"
+    "bloomLate": "{{season}} (konec)",
+    "feedbackThanks": "Děkujeme za zpětnou vazbu."
+  },
+  "learning": {
+    "title": "Naučte se pozorovat",
+    "basic": "Základní",
+    "learn": "Poznávat",
+    "technical": "Odborné",
+    "generalDiagram": "Obecné schéma",
+    "generalNote": "Podle této ilustrace zjistíte, čeho si všímat. Je to obecný průvodce, ne obrázek určeného druhu.",
+    "illustrationAlt": "Obecná pozorovací ilustrace pro kategorii {{category}}",
+    "observeTitle": "Prohlížejte jednu část po druhé",
+    "observeHint": "Porovnejte tvar, barvu, velikost a polohu. Shoda více znaků je silnější důkaz než jediný detail.",
+    "evidenceTitle": "Důkazy pro určení",
+    "technicalNote": "Tyto hodnoty pocházejí z výsledku určení. Chybějící důkazy zůstanou skryté a žádné pole se nedoplňuje odhadem.",
+    "categoryMatch": "Shoda kategorie",
+    "provider": "Zdroj určení",
+    "parts": {
+      "leaf": "Tvar a žilnatina listu",
+      "stemNode": "Stonek a uzel",
+      "flower": "Stavba květu",
+      "roots": "Kořeny",
+      "canopy": "Tvar koruny",
+      "branches": "Větve",
+      "trunkBark": "Kmen a kůra",
+      "youngOldLeaves": "Mladé a staré listy",
+      "affectedArea": "Zasažená oblast",
+      "stem": "Stonek",
+      "antennae": "Tykadla",
+      "head": "Hlava",
+      "bodySections": "Části těla",
+      "wingsLegs": "Křídla a nohy",
+      "cap": "Klobouk",
+      "underside": "Lupeny, póry nebo spodní strana",
+      "baseSubstrate": "Spodní část a substrát",
+      "beak": "Zobák",
+      "wing": "Křídlo",
+      "tail": "Ocas",
+      "feet": "Nohy",
+      "headProfile": "Profil hlavy",
+      "bodyMarks": "Znaky na těle",
+      "fins": "Ploutve",
+      "recording": "Kvalita nahrávky",
+      "rhythm": "Rytmus",
+      "pitch": "Vysoký nebo nízký tón",
+      "repetition": "Opakování",
+      "cephalothorax": "Hlavohruď",
+      "abdomen": "Zadeček",
+      "eyes": "Oči",
+      "eightLegs": "Osm nohou",
+      "tentacles": "Tykadla",
+      "shell": "Ulita",
+      "muscularFoot": "Svalnatá noha",
+      "anterior": "Přední konec",
+      "segments": "Tělní články",
+      "clitellum": "Opasek",
+      "posterior": "Zadní konec"
+    }
+  },
+  "speciesDossier": {
+    "title": "Vědecký profil",
+    "exactEvidence": "Doloženo pro {{species}}",
+    "evidenceNote": "Zobrazují se pouze fakta podložená zdroji. Chybějící informace zůstávají skryté.",
+    "environment": "Zaznamenané typy vod",
+    "diet": "Doložená potrava",
+    "habitat": "Doložené prostředí",
+    "brackish": "Brakická voda",
+    "reproduction": "Doložené rozmnožování",
+    "lifeCycle": "Doložený životní cyklus",
+    "lifeStagesTitle": "Doložená vývojová stadia",
+    "larvalInstars": "Počet larválních instarů: {{count}}",
+    "bodyLength": "Délka těla",
+    "leafConsumption": "Spotřeba listů",
+    "leafAreaPerLarva": "Listová plocha zkonzumovaná jednou larvou",
+    "lifeStages": { "egg": "Vajíčko", "larva": "Larva", "nymph": "Nymfa", "pupa": "Kukla", "adult": "Dospělec" },
+    "measurements": {
+      "clutchSize": "Velikost snůšky",
+      "incubationPeriod": "Doba inkubace vajec",
+      "lifeExpectancy": "Očekávaná délka života",
+      "longestLifespan": "Nejdelší pozorovaná délka života",
+      "gestationPeriod": "Délka březosti"
+    }
+  },
+  "fertilizer": {
+    "title": "Rozhodnutí o hnojení",
+    "planningNote": "Odpovědné doporučení začíná měřenými údaji z pole. Tabulka ukazuje, k čemu každý vstup slouží; není to návod k aplikaci.",
+    "input": "Vstup",
+    "decisionUse": "Co pomáhá určit",
+    "soilAnalysis": "Rozbor půdy",
+    "soilAnalysisUse": "Dostupné živiny, kyselost, zasolení a potřeba vápnění.",
+    "plantAnalysis": "Rozbor rostliny nebo pletiva",
+    "plantAnalysisUse": "Aktuální stav výživy včetně skrytého deficitu před viditelnými příznaky.",
+    "targetDestination": "Cílový výnos a způsob využití",
+    "targetDestinationUse": "Očekávaný odběr živin; sklizeň zrna a celé rostliny se liší.",
+    "fieldHistory": "Historie pozemku a posklizňové zbytky",
+    "fieldHistoryUse": "Co bylo dodáno, odvezeno nebo vráceno do půdy.",
+    "textureWater": "Půdní textura a voda",
+    "textureWaterUse": "Riziko vyplavování a zda je vhodné dávky rozdělit.",
+    "diagnosisCaution": "Viditelné příznaky jsou vodítko, ne potvrzení. Může je zakrýt vodní stres, choroba, hmyz nebo jiná živina.",
+    "maizeTitle": "Odběr živin kukuřicí",
+    "maizeIntro": "Průměrné množství odebrané porostem při různých výnosech a způsobech sklizně.",
+    "destination": "Využití",
+    "productivity": "Výnos (t/ha)",
+    "grain": "Zrno",
+    "silage": "Siláž (sušina)",
+    "tonnesPerHectare": "tun na hektar",
+    "kgPerHectare": "kilogramů na hektar",
+    "extractedUnit": "Výnos v t/ha; odebrané živiny v kg/ha.",
+    "notDoseWarning": "Odběr není dávka hnojiva. Doporučení vyžaduje rozbor půdy a pletiv, cílový výnos, regionální kalibraci a místního agronoma.",
+    "onionTitle": "Cibule: interakce při nadbytku živin",
+    "onionIntro": "Účinky zdokumentované pouze u cibule; nezobecňujte je na jiné plodiny.",
+    "excess": "Živina v nadbytku",
+    "possibleEffect": "Možný účinek",
+    "nitrogenEffect": "Delší vegetace, tlustý krček, nadměrná nať, více listových chorob a horší skladovatelnost po sklizni.",
+    "potassiumEffect": "Může vyvolat nedostatek hořčíku a vápníku.",
+    "phosphorusEffect": "Může vyvolat nedostatek zinku a mědi.",
+    "scrollHint": "Přejetím tabulky do strany zobrazíte všechny živiny.",
+    "botanicalTitle": "Hnojení a výživa",
+    "botanicalIntro": "Je-li k dispozici zdroj, průvodce odděluje údaje o druhu, doporučení pro ověřenou skupinu rostlin a sezónní načasování. Fotografie nikdy neurčuje dávku.",
+    "unknownGroupNote": "Pro tuto skupinu rostlin zatím neexistuje ověřený návod k hnojení. Kontrolní seznam zůstává k dispozici, ale žádné pravidlo ani dávka pro skupinu se neodvozuje.",
+    "growthStress": "Fáze růstu a stres",
+    "growthStressUse": "Rozlište ujímání, aktivní růst, kvetení nebo plodnost a dormanci. Před hnojením napravte sucho, přemokření, poškozené kořeny nebo čerstvé přesazení.",
+    "labelHistory": "Etiketa produktu a historie použití",
+    "labelHistoryUse": "Ověřte N-P-K, typ uvolňování, pokyny na etiketě, poslední aplikaci a zda substrát již obsahuje hnojivo.",
+    "plantNoDoseWarning": "Samotná fotografie neurčí bezpečnou dávku. Řiďte se etiketou a místním rozborem; nikdy nepřebírejte dávku od jiného druhu, klimatu, květináče nebo pole."
+  },
+  "pestManagement": {
+    "title": "Monitoring hmyzu",
+    "decisionNote": "Fotografie může naznačit hmyz nebo jeho poškození, ale nezměří populaci v porostu. Rozhodnutí o zásahu vyžaduje reprezentativní vzorkování.",
+    "whatToCheck": "Co ověřit",
+    "fieldDecision": "Rozhodnutí v porostu",
+    "identifyDamage": "Cílový druh a poškození",
+    "identifyDamageUse": "Potvrďte hmyz, vývojové stadium, odpovídající poškození a rozložení v porostu.",
+    "samplingPlan": "Plán vzorkování",
+    "samplingPlanUse": "Určete jednotku, metodu, body a četnost podle plodiny a jejího stadia.",
+    "countStage": "Počet a stadium",
+    "countStageUse": "Zapište každý bod, velikost nebo stadium škůdce, stadium plodiny a užitečné organismy; poté porovnejte s prahem zásahu.",
+    "noCountWarning": "Bez reprezentativního počtu a použitelného prahu zásahu se pokračuje v monitoringu — nikdy neošetřujte podle kalendáře.",
+    "chemicalSafetyTitle": "Je-li nutná chemická ochrana",
+    "maizeTitle": "Kukuřice: referenční hodnoty pro zásah",
+    "target": "Cílový škůdce",
+    "fieldProtocol": "Vzorkování a referenční práh",
+    "fallArmyworm": "Spodoptera frugiperda",
+    "fallArmywormProtocol": "Pouze pro porosty s výnosovým potenciálem nejméně 100 pytlů/ha: na {{sampleAreaHa}} ha zkontrolujte {{samplePoints}} náhodných bodů. Zveřejněná hodnota je {{actionPercent}} % rostlin s počátečními příznaky napadení.",
+    "wireworm": "Drátovec",
+    "wirewormProtocol": "Před setím prosejte vzorek půdy {{sampleWidthCm}} × {{sampleLengthCm}} × {{sampleDepthCm}} cm. Reference: nejméně {{actionCount}} jedinci na vzorek.",
+    "maizeThresholdNote": "Desetiprocentní reference pro kukuřici je ve zdroji určena porostům s potenciálem nejméně 100 pytlů. Region, hybrid, stadium a systém produkce mohou místní práh změnit.",
+    "soyTitle": "Sója: vzorkování a prahy zásahu",
+    "soySamplingTitle": "Minimální počet bodů",
+    "fieldArea": "Plocha pole",
+    "minimumSamples": "Minimum",
+    "upToHectares": "Do {{count}} ha",
+    "overHectares": "Nad {{count}} ha",
+    "samplePoints": "{{count}} bodů",
+    "dividePlots": "Rozdělit na bloky do {{count}} ha",
+    "soyThresholdTitle": "Referenční prahy zásahu",
+    "situation": "Situace",
+    "actionLevel": "Referenční práh",
+    "defoliation": "Defoliace",
+    "defoliationLevel": "Více než {{vegetativePercent}}% ve vegetativním stadiu nebo {{reproductivePercent}}% od kvetení.",
+    "largeCaterpillars": "Velké listožravé housenky",
+    "largeCaterpillarsLevel": "{{countPerMeter}} housenek větších než {{minimumLengthCm}} cm na metr řádku při sklepávání na plachtu.",
+    "grainStinkbugs": "Ploštice — produkce zrna",
+    "grainStinkbugsLevel": "{{countPerMeter}} dospělci nebo nymfy od 3. instaru na metr, od {{stageStart}} do {{stageEnd}}.",
+    "seedStinkbugs": "Ploštice — produkce osiva",
+    "seedStinkbugsLevel": "{{countPerMeter}} dospělec nebo nymfa od 3. instaru na metr, od {{stageStart}} do {{stageEnd}}.",
+    "soyThresholdNote": "Jde o brazilské referenční hodnoty Embrapy. V kritickém období vzorkujte týdně, ploštice počítejte v chladnějších hodinách a regionální úpravy potvrďte s místním poradcem."
   },
   "disease": {
     "overviewSection": "Přehled",
@@ -375,7 +742,9 @@
     "healthStatusSection": "Zdravotní stav",
     "noDiseaseDetected": "Na této fotce nebyla s jistotou zjištěna žádná nemoc ani škůdce.",
     "match": "Shoda",
-    "severitySuffix": "Závažnost: {{severity}}"
+    "severitySuffix": "Závažnost: {{severity}}",
+    "diagnosisCaution": "Fotografie slouží jen k orientačnímu posouzení, ne k polní diagnóze. Než zasáhnete, zkontrolujte více rostlin a vylučte problémy s vodou, výživou a poškození po aplikaci.",
+    "chemicalCaution": "Používejte pouze přípravky registrované ve vaší zemi pro danou plodinu a cílový organismus. Dodržujte etiketu a rozhodnutí ověřte s místním agronomem."
   },
   "collection": {
     "title": "Moje sbírka",
@@ -413,6 +782,11 @@
     "byCategory": "Podle kategorie",
     "privacyPolicy": "Zásady ochrany osobních údajů",
     "language": "Jazyk",
+    "careRegionRow": "Roční období péče",
+    "careRegionHint": "Nastaví polokouli pro sezónní plány a kvetení. Ukládá se pouze v tomto zařízení.",
+    "careRegionAuto": "Automaticky",
+    "careRegionSouth": "Jižní polokoule",
+    "careRegionNorth": "Severní polokoule",
     "installApp": "Nainstalovat aplikaci",
     "installAppIOSTitle": "Nainstalovat NatureLens",
     "installAppIOSBody": "Klepněte na tlačítko Sdílet, poté na „Přidat na plochu“ a nainstalujte NatureLens do telefonu.",
@@ -453,7 +827,7 @@
     "acceptanceTitle": "Přijetí podmínek",
     "acceptanceBody": "Používáním aplikace NatureLens souhlasíte s těmito Podmínkami použití. Pokud nesouhlasíte, aplikaci prosím nepoužívejte.",
     "serviceTitle": "Co tato aplikace dělá",
-    "serviceBody": "NatureLens vám umožňuje fotit rostliny, hmyz, houby, plodiny a stromy - a podle zařízení i ryby, ptáky a dokonce zvuky - a identifikovat je pomocí AI služeb třetích stran (Plant.id, Insect.id, Mushroom.id a Crop.health od Kindwise, Fishial pro ryby, Nyckel pro ptáky a náš vlastní zvukový model). Výsledky se generují automaticky a nekontroluje je lidský odborník.",
+    "serviceBody": "NatureLens vám umožňuje fotit rostliny, hmyz, houby, plodiny a stromy - a podle zařízení i ryby, ptáky a dokonce zvuky - a identifikovat je pomocí AI služeb třetích stran (Plant.id, Insect.id, Mushroom.id a Crop.health od Kindwise, Fishial pro ryby, Nyckel pro ptáky a náš vlastní zvukový model). Výsledky se generují automaticky a nekontroluje je lidský odborník. Až bude jeho kalibrovaná celosvětová služba BioCLIP aktivní, může NatureLens tuto soukromou, vlastní službu použít pro ptáky jako první; dokud je vypnutá, nebo pokud selže či nedoloží přesný druh, použije se jako záloha Nyckel.",
     "accuracyTitle": "Přesnost identifikace — přečtěte si prosím",
     "accuracyBody": "Identifikace pomocí AI se může mýlit, včetně toho, zda je rostlina nebo houba jedlá, jedovatá nebo bezpečná na dotek. Nikdy nejezte, nesbírejte ani nepoužívejte žádnou volně rostoucí rostlinu, houbu ani hřib pouze na základě výsledku této aplikace. Vždy si to ověřte u kvalifikovaného odborníka (mykologa, botanika nebo toxikologického centra), než něco nalezeného v přírodě sníte nebo použijete. Neneseme odpovědnost za újmu způsobenou spoléháním na identifikaci provedenou touto aplikací.",
     "billingTitle": "Předplatné a fakturace",
@@ -470,7 +844,7 @@
   "privacy": {
     "title": "Zásady ochrany osobních údajů",
     "collectTitle": "Co shromažďujeme",
-    "collectBody": "Tato aplikace umožňuje vyfotit rostlinu, strom, hmyz, houbu, plodinu, rybu nebo ptáka a určit je, a nahrát zvíře podle hlasu. Určování zajišťují AI služby: Kindwise (rostliny, stromy, hmyz, houby, plodiny), Fishial.AI (ryby) a Nyckel (ptáci). Zvuk určujeme na vlastním serveru, takže nahrávky se k třetím stranám nedostanou.",
+    "collectBody": "Tato aplikace umožňuje vyfotit rostlinu, strom, hmyz, houbu, plodinu, rybu nebo ptáka a určit je, a nahrát zvíře podle hlasu. Určování zajišťují AI služby: Kindwise (rostliny, stromy, hmyz, houby, plodiny), Fishial.AI (ryby) a Nyckel (ptáci). Zvuk určujeme na vlastním serveru, takže nahrávky se k třetím stranám nedostanou. Až bude kalibrovaná celosvětová, soukromá služba BioCLIP spravovaná NatureLens aktivní, mohou se fotografie ptáků nejprve zpracovat v ní: zůstávají pouze v paměti po dobu požadavku a neuchovávají se. Dokud je vypnutá, nebo pokud selže či nedoloží přesný druh, mohou být stejné fotografie odeslány do Nyckel s vypnutým zachycováním vzorků, bez záruky pouze dočasného uchování.",
     "thirdPartyTitle": "Identifikační služby AI třetích stran",
     "thirdPartyBody": "Když vyfotíš nebo nahraješ fotku, odejde odpovídající určovací službě. Tvoje fotky neukládáme na žádný náš server. Pro referenční snímek a popis se aplikace ptá Wikipedie na vědecký název — Wikipedie tedy vidí, jaký druh sis vyhledal, ale ne kdo jsi. Někteří dodavatelé píší jen anglicky; překlad toho textu a dotaz na odbornici v aplikaci ten text posílají do Anthropic.",
     "localStorageTitle": "Pouze lokální úložiště",
@@ -2162,7 +2536,15 @@
     },
     "herbSubscribeCtaTitle": "Líbí se vám tento průvodce?",
     "herbSubscribeCtaBody": "Předplaťte si aplikaci a odemkněte neomezenou identifikaci rostlin, hmyzu, hub a plodin.",
-    "herbAlreadySubscribedCheck": "Už jste předplatitel? Klepnutím zkontrolujte znovu"
+    "herbAlreadySubscribedCheck": "Už jste předplatitel? Klepnutím zkontrolujte znovu",
+    "mascot": {
+      "kicker": "Tvuj zivy pruvodce",
+      "title": "Lino pozoruje prirodu s tebou.",
+      "body": "Vyfot, nahraj zvuk nebo uloz nalez. Zacnu nejjasnejsim dalsim krokem.",
+      "photo": "Foto",
+      "sound": "Zvuk",
+      "journal": "Denik"
+    }
   },
   "botanist": {
     "headerTitle": "Dr. Helena Marques",
@@ -2296,6 +2678,9 @@
     "title": "Dnešní mise",
     "rewardEach": "+{{tokens}} za každou",
     "allDone": "Vše hotovo — vrať se zítra!",
+    "completedAnnouncement": "Mise splněna: {{mission}}",
+    "completedStatus": "Splněno",
+    "progressStatus": "Splněno {{done}} z {{target}}",
     "pool": {
       "scanAny2": "Urči dnes 2 druhy",
       "scanAny3": "Urči dnes 3 druhy",
@@ -2310,14 +2695,117 @@
       "openDiscover": "Navštiv záložku Objevovat"
     }
   },
+  "fishSafety": {
+    "unverifiedTitle": "Bezpečnost zatím nebyla ověřena",
+    "unverifiedBody": "Pro tento konkrétní druh jsme nenašli bezpečnostní záznam. Jen na základě této identifikace se ryby nedotýkejte, nemanipulujte s ní, nejezte ji ani ji nevypouštějte."
+  },
+  "lensReveal": {
+    "title": "Objev je připraven",
+    "safetyFirst": "Bezpečnost především"
+  },
+  "resultDepth": {
+    "label": "Zvolte množství detailů",
+    "essential": "Základní",
+    "visual": "Vizuální",
+    "expert": "Expertní"
+  },
+  "nextBestCapture": {
+    "title": "Zpřesnit toto určení",
+    "reasonLowConfidence": "Spolehlivost je {{confidence}} %. Další pohled může pomoci.",
+    "reasonAlternatives": "Počet stále možných alternativ: {{count}}.",
+    "reasonIdentityUnresolved": "Výsledek se zastavil na úrovni {{name}} a zatím nepotvrdil žádný druh. Proto zůstávají části určené pro konkrétní druh skryté.",
+    "action": "Pořídit další snímek",
+    "categories": {
+      "plant": "Vyfoťte celou rostlinu a potom ostře zaostřený list nebo květ.",
+      "tree": "Zachyťte celý strom, kůru a ostře zaostřený list nebo plod.",
+      "crop": "Zachyťte celou rostlinu, detail příznaku a okolní část pole.",
+      "mushroom": "Vyfoťte klobouk, lupeny nebo rourky, bázi třeně a substrát; zbytečně s houbou nemanipulujte.",
+      "insect": "Vyfoťte celé tělo shora i ze strany a také hostitelskou rostlinu nebo poškození.",
+      "fish": "Zachyťte zřetelný boční profil, ploutve a okolní prostředí nebo akvárium.",
+      "bird": "Zachyťte celého ptáka, zobák a kresbu křídel, nebo nahrajte delší čistý hlas.",
+      "sound": "Pořiďte alespoň dalších 10 sekund záznamu bez větru, řeči a hluku na pozadí."
+    }
+  },
   "share": {
     "message": "Určil/a jsem {{category}} pomocí NatureLens: {{name}}{{scientific}}{{confidence}}\n\nUrčuj rostliny, hmyz, houby, ryby a ptáky z fotky:\n{{url}}",
     "confidenceLine": "jistota {{confidence}}%"
   },
   "onboarding": {
+    "media": { "play": "Přehrát video", "pause": "Pozastavit video", "enableSound": "Zapnout zvuk", "disableSound": "Vypnout zvuk" },
     "skip": "Přeskočit",
     "next": "Další",
     "start": "Začít určovat",
+    "progress": "{{current}} z {{total}}",
+    "preparing": "Připravujeme NatureLens…",
+    "promiseKicker": "Podívejte se, jak to funguje",
+    "personalizeKicker": "Přizpůsobte si ho",
+    "readyKicker": "Připraveno k objevování",
+    "promise": {
+      "body": "Jeden snímek se promění v určení, kontrolu bezpečnosti a jasný další krok.",
+      "demoNext": "Další krok: vyfoťte spodní stranu listu"
+    },
+    "goal": {
+      "title": "S čím vám má NatureLens pomáhat?",
+      "body": "Odpověď mění to, co se po každém určení zobrazí jako první.",
+      "options": {
+        "identify": {
+          "title": "Zjistit, co to je"
+        },
+        "safety": {
+          "title": "Ověřit bezpečnost a rizika"
+        },
+        "care": {
+          "title": "Pečovat a sledovat"
+        },
+        "field": {
+          "title": "Pole a produkce"
+        },
+        "learn": {
+          "title": "Poznávat přírodu"
+        }
+      }
+    },
+    "context": {
+      "title": "Kde nejčastěji objevujete?",
+      "body": "Používáme to jen k seřazení kategorií a pokynů. Později to můžete změnit.",
+      "options": {
+        "home": {
+          "title": "Domov nebo zahrada"
+        },
+        "field": {
+          "title": "Pole nebo plodiny"
+        },
+        "nature": {
+          "title": "Stezka nebo příroda"
+        },
+        "water": {
+          "title": "Voda nebo akvárium"
+        },
+        "study": {
+          "title": "Studium nebo odborná práce"
+        }
+      }
+    },
+    "depth": {
+      "title": "Kolik podrobností chcete vidět nejdříve?",
+      "body": "Vše zůstane dostupné. Volba určuje jen první vrstvu.",
+      "options": {
+        "essential": {
+          "title": "Základní"
+        },
+        "visual": {
+          "title": "Vizuální"
+        },
+        "technical": {
+          "title": "Odborné"
+        }
+      }
+    },
+    "ready": {
+      "title": "NatureLens je připraven",
+      "body": "První výsledek se přizpůsobí vašim volbám a zachová všechna bezpečnostní varování.",
+      "promise": "Chybějící důkaz zůstane chybějící. NatureLens požádá o lepší fotografii nebo nahrávku, místo aby předstíral jistotu."
+    },
     "what": {
       "title": "Zamiř. Vyfoť. Zjisti.",
       "body": "Vyfoť cokoli živého a NatureLens ti během několika sekund řekne, co to je — s referenčními fotkami, abys to sám potvrdil."
@@ -2329,6 +2817,20 @@
     "free": {
       "title": "První určení je zdarma",
       "body": "Vyzkoušej jedno určení v každé kategorii zdarma. Předplatné až tehdy, když budeš chtít neomezené skenování."
+    },
+    "reviewKicker": "Krátká chvilka",
+    "review": {
+      "title": "Pokud vám už připadá užitečný, pomozte NatureLens dobře odstartovat.",
+      "body": "Ještě před první fotkou jedna rychlá otázka: působí tahle lupa jako zážitek na pět hvězdiček?",
+      "quote": "Lupa, která se snadno používá, je krásná v detailech a poctivá, když chybí důkaz.",
+      "yes": "Ano, působí na pět hvězdiček",
+      "later": "Nejdřív si to vyzkouším",
+      "starsLabel": "Pětihvězdičkové hodnocení",
+      "proofs": {
+        "simple": "Jednoduché",
+        "safe": "Bezpečné",
+        "useful": "Užitečné"
+      }
     }
   },
   "recap": {
@@ -2400,7 +2902,8 @@
     "recording": "Nahrávání… zbývá {{seconds}}s",
     "analysing": "Poslouchám…",
     "startLabel": "Začít nahrávat",
-    "stopLabel": "Zastavit a určit",
+    "stopLabel": "Zastavit nahrávání",
+    "uploadDisclosure": "Zvuk se odešle na server NatureLens až po dokončení Živého pulzu. Surová nahrávka se do sbírky neukládá.",
     "tipsTitle": "Pro lepší výsledek",
     "tip1": "Přijdi blíž, pokud můžeš — vzdálenost hraje největší roli.",
     "tip2": "Zamiř telefon na zvuk a nehýbej se.",
@@ -2411,8 +2914,13 @@
     "groupMammal": "Savec",
     "permissionTitle": "Mikrofon zablokován",
     "permissionBody": "Povol přístup k mikrofonu pro tento web v nastavení prohlížeče a zkus to znovu.",
+    "permissionAndroidBody": "V Nastavení Androidu povolte NatureLens přístup k mikrofonu. Ostatní funkce zůstávají dostupné.",
+    "permissionWebBody": "V nastavení prohlížeče povolte tomuto webu přístup k mikrofonu a zkuste to znovu.",
     "unsupportedTitle": "Nahrávání není dostupné",
     "unsupportedBody": "Tento prohlížeč neumí nahrávat zvuk. Zkus Chrome na Androidu, nebo si na iPhonu přidej aplikaci na plochu.",
+    "unsupportedAndroidBody": "Nativní záznamník se nespustil. Aktualizujte nebo přeinstalujte NatureLens a zkuste to znovu. Ostatní funkce zůstávají dostupné.",
+    "unsupportedWebBody": "Tento prohlížeč nedokázal nahrát zvuk. Použijte aktuální verzi kompatibilního prohlížeče a povolte přístup k mikrofonu.",
+    "unsupportedIosBody": "Určování podle zvuku je dostupné v Androidu a na webu, ale není dostupné v této aplikaci pro iOS. Všechny ostatní možnosti určování zůstávají dostupné.",
     "tooShortTitle": "Nahrávka je moc krátká",
     "tooShortBody": "Nahraj alespoň dvě sekundy, zatímco zvíře zpívá.",
     "failedTitle": "Nepodařilo se určit",
@@ -2420,7 +2928,11 @@
     "decodeFailedBody": "Tuto nahrávku nebylo možné přečíst. Zkus to znovu.",
     "notFoundBody": "V nahrávce není nic rozpoznatelného. Přijď blíž nebo nahrávej, když zpívá.",
     "noContentBody": "Pro tento druh zatím není popis.",
-    "notWildlifeBody": "To zní jako vozidlo, stroj nebo hlas, ne jako zvíře. Zkus nahrát znovu na tišším místě."
+    "notWildlifeBody": "To zní jako vozidlo, stroj nebo hlas, ne jako zvíře. Zkus nahrát znovu na tišším místě.",
+    "audioEvidenceTitle": "Vaše nahrávka",
+    "audioEvidenceBody": "Amplitudové špičky zvuku použitého pro toto určení.",
+    "audioEvidenceDuration": "{{seconds}} s",
+    "audioEvidenceAlt": "Amplitudové špičky vaší nahrávky o délce {{seconds}} sekund."
   },
   "login": {
     "signInRow": "Přihlásit se",
@@ -2454,7 +2966,17 @@
     "tellFriends": "Doporučit přátelům",
     "linkCopied": "Odkaz zkopírován",
     "validUntil": "Platné do {{date}}",
-    "sectionAbout": "O aplikaci"
+    "sectionAbout": "O aplikaci",
+    "replayOnboarding": "Znovu zobrazit úvod",
+    "replayOnboardingHint": "Připomeňte si svůj cíl, kontext a úroveň čtení",
+    "sensoryTitle": "Dotyk a pohyb",
+    "haptics": "Vibrační odezva",
+    "hapticsSubtitle": "Vibrace při výběru, fotografování, potvrzení a upozornění",
+    "motion": "Pohyb",
+    "motionSubtitle": "Použijte nastavení zařízení, nebo zvolte vlastní",
+    "motionSystem": "Nastavení zařízení",
+    "motionReduced": "Omezený",
+    "motionFull": "Plný"
   },
   "books": {
     "shelfTitle": "Knihy",
@@ -2470,7 +2992,674 @@
     "visitSite": "Navštívit web",
     "fullDocLabel": "Úplný právní dokument",
     "whatBody": "NatureLens rozpozná rostliny, hmyz, houby, plodiny, ryby, ptáky a dokonce i zvuky z fotografie nebo nahrávky a promění vaše nálezy v osobní přírodní sbírku.",
-    "creditsBody": "Identifikaci zajišťují Kindwise (rostliny, hmyz, houby, plodiny), Fishial (ryby), Nyckel (ptáci) a náš vlastní zvukový model. Referenční fotografie pocházejí z Wikipedia / Wikimedia Commons, s uvedením autora tam, kde se zobrazují. Chat se specialistkou zodpovídá AI (Anthropic).",
+    "creditsBody": "Identifikaci zajišťují Kindwise (rostliny, hmyz, houby, plodiny), Fishial (ryby), Nyckel (ptáci) a náš vlastní zvukový model. Referenční fotografie pocházejí z Wikipedia / Wikimedia Commons, s uvedením autora tam, kde se zobrazují. Chat se specialistkou zodpovídá AI (Anthropic). Až bude jeho kalibrovaná celosvětová služba BioCLIP aktivní, může NatureLens tuto soukromou, vlastní službu použít pro ptáky jako první; dokud je vypnutá, nebo pokud selže či nedoloží přesný druh, použije se jako záloha Nyckel.",
     "creditsGbif": "Mapy rozšíření a sezónní grafy z GBIF.org, dotazované podle vědeckého názvu druhu – žádné údaje o vás se neodesílají."
+  },
+  "agronomyProfile": {
+    "eyebrow": "Profil pole",
+    "title": "Vytvořit profil pole",
+    "subtitle": "Před odborným vyhodnocením potvrďte podmínky na poli.",
+    "stepCounter": "Krok {{current}} z {{total}}",
+    "steps": {
+      "purpose": {
+        "title": "Účel a systém",
+        "body": "Uveďte účel plodiny a způsob hospodaření na poli."
+      },
+      "location": {
+        "title": "Ruční poloha",
+        "body": "Zadejte zemi, správní jednotku první úrovně a lokalitu bez sdílení polohy zařízení."
+      },
+      "planting": {
+        "title": "Výsadba a fáze",
+        "body": "Zaznamenejte datum výsadby a fázi pozorovanou na poli."
+      },
+      "soil": {
+        "title": "Půda a analýza",
+        "body": "Popište půdu a uveďte, zda je k dispozici laboratorní zpráva."
+      },
+      "summary": {
+        "title": "Zkontrolovat profil",
+        "body": "Před uložením tohoto kontextu zkontrolujte každé pole."
+      }
+    },
+    "purposeLabel": "Účel produkce",
+    "systemLabel": "Produkční systém",
+    "purposes": {
+      "grain": "Zrno",
+      "fresh": "Čerstvý trh",
+      "processing": "Zpracování",
+      "forage": "Krmivo",
+      "seed": "Produkce osiva",
+      "other": "Jiné"
+    },
+    "systems": {
+      "rainfed": "Závislé na srážkách",
+      "irrigated": "Zavlažované",
+      "protected": "Chráněné pěstování",
+      "hydroponic": "Hydroponické",
+      "other": "Jiné"
+    },
+    "manualLocationTitle": "Vámi zadaná poloha",
+    "manualLocationBody": "Tento průvodce nevyžaduje GPS. Vyberte zemi, případně zadejte kód státu, provincie nebo regionu a doplňte lokalitu.",
+    "countryCodeLabel": "Země",
+    "countryCodePlaceholder": "Vyberte zemi",
+    "countryCodeHint": "Vyberte zemi, ve které se toto pole nachází.",
+    "countryPickerTitle": "Vyberte zemi",
+    "countrySearchPlaceholder": "Hledat podle názvu nebo kódu země",
+    "countryNotFound": "Nebyla nalezena žádná země.",
+    "closeCountryPicker": "Zavřít výběr země",
+    "localityLabel": "Lokalita",
+    "localityPlaceholder": "Příklad: Brno",
+    "admin1CodeLabel": "Kód státu, provincie nebo regionu",
+    "admin1CodePlaceholder": "Příklad: CZ-64",
+    "admin1CodeHint": "Případně použijte kód správní jednotky první úrovně vybrané země.",
+    "municipalityLabel": "Lokalita",
+    "municipalityPlaceholder": "Příklad: Brno",
+    "stateLabel": "Správní jednotka země",
+    "stateHint": "Případně zadejte kód státu, provincie nebo regionu.",
+    "plantingDateLabel": "Datum výsadby",
+    "plantingDatePlaceholder": "RRRR-MM-DD",
+    "plantingDateHint": "Použijte formát RRRR-MM-DD.",
+    "stageLabel": "Pozorovaná fáze plodiny",
+    "stagePlaceholder": "Příklad: V6, kvetení, nalévání plodů",
+    "stageConfirmedLabel": "Tuto fázi jsem zkontroloval(a) na poli",
+    "soilDescriptionLabel": "Popis půdy",
+    "soilDescriptionPlaceholder": "Příklad: jílovitá půda, mírný svah, dobré odvodnění",
+    "hasReportLabel": "Máte zprávu z rozboru půdy?",
+    "reportNoticeTitle": "Mějte zprávu po ruce",
+    "reportNoticeBody": "Tento profil pouze zaznamená, zda zpráva existuje. Nečte výsledky ani nepočítá doporučení.",
+    "summary": {
+      "purpose": "Účel",
+      "system": "Systém",
+      "location": "Země / správní jednotka / lokalita",
+      "planting": "Datum výsadby",
+      "stage": "Potvrzená fáze",
+      "soil": "Půda",
+      "report": "Zpráva z rozboru půdy"
+    },
+    "noCalculationTitle": "Pouze kontext",
+    "noCalculationBody": "Uložení profilu nepočítá dávky ani nevydává doporučení k hnojení, zavlažování, pesticidům či jiná agronomická doporučení.",
+    "save": "Uložit profil",
+    "errors": {
+      "selectPurposeAndSystem": "Vyberte účel a produkční systém.",
+      "completeLocation": "Vyberte zemi, zadejte lokalitu a zkontrolujte kód správní jednotky, pokud je vyplněn.",
+      "completePlanting": "Zadejte platné datum a pozorovanou fázi plodiny.",
+      "confirmStage": "Potvrďte, že jste fázi zkontrolovali na poli.",
+      "completeSoil": "Než budete pokračovat, popište půdu.",
+      "chooseReport": "Uveďte, zda máte zprávu z rozboru půdy.",
+      "formIncomplete": "Některé povinné údaje chybí nebo jsou neplatné. Zkontrolujte předchozí kroky.",
+      "saveUnavailable": "Pro tento formulář není k dispozici akce uložení."
+    }
+  },
+  "agronomyWorkspace": {
+    "title": "Pracovní prostor pole",
+    "openTitle": "Pokročilá správa pole",
+    "openBody": "Vytvořte profil pole, ukládejte pozorování a otevírejte pouze technické moduly ověřené pro tuto plodinu.",
+    "openAction": "Otevřít prostor pole",
+    "tabs": {
+      "essential": "Základní",
+      "learn": "Výuka",
+      "agronomist": "Agronom"
+    },
+    "unknownCrop": "Plodina bez potvrzené identity",
+    "catalogBadge": "Kurátorovaný záznam katalogu · nejde o diagnózu z fotografie",
+    "loadingProfile": "Načítání profilu pole…",
+    "contextTitle": "Kontext pole",
+    "contextBody": "Toto je kontext, který jste pro pole potvrdili.",
+    "globalEvidence": {
+      "topicCount": "Oddíly: {{count}}",
+      "kicker": "CELOSVĚTOVÁ VRSTVA",
+      "title": "Co dokládají celosvětové zdroje",
+      "body": "Obsah nalezený pro {{scientific}}, propojený s přesným druhem a původním zdrojem.",
+      "exactSpecies": "Přesný druh",
+      "traceableSource": "Dohledatelný zdroj",
+      "worldScope": "Celosvětový rozsah",
+      "warningTitle": "Nejde o místní doporučení",
+      "warningBody": "Tyto podklady popisují druh. Neopravňují k dávkování, hnojivému předpisu ani regionální tabulce.",
+      "openSource": "Otevřít celosvětový zdroj na Wikipedii",
+      "topicsTitle": "Celosvětová karta druhu"
+    },
+    "missingProfileTitle": "Vytvořit kontext pole",
+    "missingProfileBody": "Před ukládáním pozorování potvrďte polohu, výsadbu, fázi a půdu.",
+    "profileUnavailableBody": "Tato položka nemá bezpečný místní klíč pro profil pole.",
+    "createProfile": "Vytvořit profil",
+    "editProfile": "Upravit profil",
+    "savingProfile": "Ukládání profilu…",
+    "profileSaved": "Profil pole uložen.",
+    "observationTitle": "Pozorování v terénu",
+    "observationBody": "Zaznamenejte, co jste skutečně pozorovali. Deník nevytváří diagnózu ani doporučení.",
+    "addObservation": "Zaznamenat pozorování",
+    "eventTypeLabel": "Typ záznamu",
+    "eventTypes": {
+      "observation": "Pozorování",
+      "stage": "Fáze plodiny",
+      "rain": "Déšť",
+      "irrigation": "Zavlažování",
+      "fertilization": "Hnojení",
+      "pestSample": "Odběr škůdců",
+      "diseaseCheck": "Kontrola chorob",
+      "harvest": "Sklizeň"
+    },
+    "noteLabel": "Poznámka",
+    "notePlaceholder": "Popište, co jste viděli nebo udělali",
+    "valueLabel": "Hodnota",
+    "valuePlaceholder": "Příklad: 12,5",
+    "unitLabel": "Jednotka",
+    "unitPlaceholder": "Příklad: mm, kg, rostliny",
+    "optionalFieldsHint": "Poznámka a hodnota jsou volitelné, ale zadejte alespoň jednu. Každá hodnota potřebuje jednotku.",
+    "saveObservation": "Uložit pozorování",
+    "savingObservation": "Ukládání pozorování…",
+    "observationSaved": "Pozorování uloženo.",
+    "timelineTitle": "Časová osa pole",
+    "eventStage": "Fáze v danou chvíli: {{stage}}",
+    "learning": {
+      "title": "Naučte se pozorovat pole",
+      "body": "Jednoduchým cyklem proměňte návštěvu pole ve spolehlivý kontext.",
+      "accessibilityLabel": "Pozorujte, zapisujte, porovnávejte a vyhledejte odbornou pomoc.",
+      "steps": {
+        "observe": {
+          "title": "Pozorovat",
+          "body": "Zkontrolujte více než jedno místo a oddělte pozorování od domněnek."
+        },
+        "record": {
+          "title": "Zaznamenat",
+          "body": "Zapište stav, místo a změnu, dokud je pozorování čerstvé."
+        },
+        "compare": {
+          "title": "Porovnat",
+          "body": "Před závěrem porovnejte návštěvy v podobných podmínkách."
+        },
+        "support": {
+          "title": "Vyhledat pomoc",
+          "body": "Když je nutné rozhodnutí, vezměte historii a laboratorní zprávy k místnímu agronomovi."
+        }
+      },
+      "genericTitle": "Obecný výukový obrázek",
+      "genericBody": "Ilustrace ukazuje, kam se dívat. Není fotografií ani popisem této plodiny.",
+      "visuals": {
+        "phenology": {
+          "title": "Potvrzená fáze plodiny",
+          "body": "Použijte pouze fázi pozorovanou a potvrzenou na poli; neodvozujte ji z data."
+        },
+        "soil": {
+          "title": "Půdní profil a odběr vzorků",
+          "body": "Popis vede pozorování, ale rozhodnutí vyžaduje reprezentativní vzorek a platnou zprávu."
+        },
+        "water": {
+          "title": "Déšť → půda → kořen → rozhodnutí",
+          "body": "Zaznamenejte déšť nebo zavlažování, zkontrolujte půdu a kořeny a teprve potom posuďte další krok."
+        },
+        "nutrition": {
+          "title": "N, P a K bez odhadnuté dávky",
+          "body": "Symboly živin pomáhají číst údaje; dávka vyžaduje analýzu, cíl a regionální kalibraci."
+        },
+        "mip": {
+          "title": "Odebrat vzorek, spočítat, porovnat, rozhodnout",
+          "body": "Potvrďte cíl a fázi, odeberte reprezentativní vzorek a před zásahem porovnejte s platným prahem."
+        }
+      }
+    },
+    "technicalStatusTitle": "Technické pokrytí",
+    "technicalVerifiedTitle": "Přesné technické moduly jsou dostupné",
+    "technicalVerifiedBody": "Identita a aktuální katalog určily níže uvedené moduly. Jde o reference, nikoli automatický předpis.",
+    "technicalCatalogBody": "Toto je redakční záznam katalogu, ne diagnóza z fotografie. Zobrazují se pouze moduly výslovně připravené pro tuto plodinu.",
+    "noExactModulesTitle": "Přesný modul není dostupný",
+    "noExactModulesBody": "Plodina má terénního průvodce, ale nebyla vydána číselná tabulka ani přesný monitorovací modul.",
+    "technicalUnavailableTitle": "Technické směrování není dostupné",
+    "technicalUnavailableBody": "Identita, pokrytí katalogu nebo směrování nestačí. Technická tabulka se nezobrazí.",
+    "modules": {
+      "pest": "Integrované sledování škůdců",
+      "fertilizer": "Tabulky půdy a hnojiv"
+    },
+    "ruleCatalogTitle": "Stav katalogu pravidel",
+    "ruleCatalogGuideBody": "Modul vyřešil pouze pravidlo průvodce. Katalog neobsahuje pravidlo číselného výpočtu.",
+    "ruleCatalogCatalogBody": "Redakční katalog může otevřít připravené moduly, ale nemění záznam na diagnózu z fotografie ani výpočetní pravidlo.",
+    "ruleCatalogUnavailableBody": "Přesné pravidlo průvodce nebylo vyřešeno. Aplikace je neodvodí z běžného názvu, čeledi ani starého pole.",
+    "sourcesTitle": "Oficiální zdroje",
+    "sourcesBody": "Uvádějí se pouze zdroje propojené s aktuálně vydanými moduly.",
+    "officialSource": "Oficiální zdroj · {{institution}}",
+    "openSource": "Otevřít oficiální zdroj: {{source}}",
+    "errors": {
+      "typeInvalid": "Vyberte platný typ záznamu.",
+      "amountInvalid": "Zadejte platné nezáporné číslo v podporovaném rozsahu.",
+      "unitNeedsValue": "Před přidáním jednotky zadejte hodnotu.",
+      "unitRequired": "Každá hodnota musí obsahovat jednotku.",
+      "emptyEvent": "Před uložením přidejte poznámku nebo hodnotu.",
+      "saveFailed": "Uložení se nezdařilo. Nic nebylo potvrzeno; zkuste to znovu."
+    },
+    "planningSourcesTitle": "Zdroje pro plánování",
+    "planningSourcesBody": "Oficiální text přiřazený k této plodině. Neznamená to, že byl vydán technický modul nebo doporučení."
+  },
+  "observationWorkspace": {
+    "title": "Pokročilé pozorování",
+    "loading": "Načítání pozorování…",
+    "unavailableTitle": "Prostor pro pozorování není dostupný",
+    "unavailableBody": "Tato kategorie nemá ověřenou konfiguraci pozorování, proto se nezobrazuje žádný formulář.",
+    "openTitle": "Prostor pro pokročilé pozorování",
+    "openBody": "Vytvořte jasný záznam toho, co jste skutečně viděli, od jednoduchých poznámek po srovnatelné terénní údaje.",
+    "openAction": "Otevřít prostor pro pozorování",
+    "tabs": {
+      "essential": "Základní",
+      "learn": "Učení",
+      "field": "Terén"
+    },
+    "setupTitle": "Nastavte kontext pozorování",
+    "setupBody": "Vyberte obecné prostředí a napište, kde a jak tento záznam začal. Nepřidávejte závěry, které jste nepozorovali.",
+    "setupAction": "Vytvořit kontext",
+    "editProfile": "Upravit kontext",
+    "saveProfile": "Uložit kontext",
+    "contextLabel": "Kontext pozorování",
+    "placeLabel": "Místo",
+    "placePlaceholder": "Příklad: severní zahrada, břeh potoka nebo balkon",
+    "baselineLabel": "Výchozí stav",
+    "baselinePlaceholder": "Popište viditelný stav při prvním pozorování",
+    "profileSaved": "Kontext uložen.",
+    "localOnly": "Uloženo pouze v tomto zařízení. Nejde o diagnózu ani cloudovou zálohu.",
+    "addEvent": "Přidat terénní poznámku",
+    "closeEvent": "Zavřít formulář",
+    "eventTypeLabel": "Typ pozorování",
+    "noteLabel": "Poznámka",
+    "notePlaceholder": "Popište pouze to, co jste viděli nebo slyšeli",
+    "countLabel": "Pozorovaný počet",
+    "measureLabel": "Pozorovaná míra",
+    "unitLabel": "Jednotka",
+    "optionalLabel": "Volitelné",
+    "saveEvent": "Uložit záznam",
+    "eventSaved": "Záznam uložen.",
+    "emptyEvent": "Před uložením přidejte poznámku, počet nebo měření.",
+    "invalidCount": "Zadejte celé číslo rovné nule nebo větší.",
+    "invalidMeasure": "Zadejte platné měření rovné nule nebo větší.",
+    "unitRequired": "Vyberte jednotku měření.",
+    "saveFailed": "Záznam se nepodařilo uložit. Zkuste to znovu.",
+    "timelineTitle": "Časová osa pozorování",
+    "timelineEmpty": "Zatím nejsou zaznamenána žádná pozorování.",
+    "fieldTitle": "Terénní pohled",
+    "fieldBody": "Porovnávejte záznamy pořízené za podobných podmínek a při potřebě rozhodnutí předejte historii kvalifikovanému odborníkovi.",
+    "progressLabel": "Zaznamenáno {{done}} z {{total}} bodů pozorování",
+    "recordedLabel": "Zaznamenáno {{date}}",
+    "missingLabel": "Nezaznamenáno",
+    "evidenceNote": "Záznamy popisují vaše pozorování. Nepotvrzují identitu, diagnózu, riziko ani rozhodnutí o zásahu.",
+    "learningTitle": "Naučte se, co pozorovat",
+    "learningBody": "Otevřete každý vizuál a zjistěte, co patří do užitečného záznamu.",
+    "generalDiagram": "Obecné schéma pozorování; neprokazuje identitu fotografovaného organismu.",
+    "mushroomSafety": "Nikdy nekonzumujte houbu pouze na základě fotografie, určení aplikací nebo tohoto záznamu pozorování.",
+    "units": {
+      "millimetre": "milimetry (mm)",
+      "centimetre": "centimetry (cm)",
+      "metre": "metry (m)",
+      "second": "sekundy (s)",
+      "minute": "minuty (min)",
+      "millilitre": "mililitry (ml)",
+      "litre": "litry (l)",
+      "celsius": "stupně Celsia (°C)",
+      "percent": "procenta (%)",
+      "gram": "gramy (g)",
+      "kilogram": "kilogramy (kg)",
+      "ph": "pH",
+      "ppt": "části na tisíc (ppt)",
+      "ppm": "části na milion (ppm)",
+      "milligramPerLitre": "miligramy na litr (mg/L)",
+      "microsiemensPerCentimetre": "mikrosiemens na centimetr (µS/cm)",
+      "hour": "hodiny (h)",
+      "hertz": "hertzy (Hz)",
+      "kilohertz": "kilohertzy (kHz)",
+      "decibel": "decibely (dB)",
+      "kilometre": "kilometry (km)"
+    },
+    "contexts": {
+      "plant": {
+        "indoor": "Uvnitř",
+        "outdoor": "Venku",
+        "container": "Nádoba",
+        "ground": "V zemi"
+      },
+      "tree": {
+        "urban": "Městská oblast",
+        "garden": "Zahrada",
+        "woodland": "Lesní porost",
+        "orchard": "Sad"
+      },
+      "insect": {
+        "onPlant": "Na rostlině",
+        "onSoil": "Na půdě",
+        "onStructure": "Na konstrukci",
+        "nearWater": "U vody"
+      },
+      "mushroom": {
+        "soil": "Na půdě",
+        "wood": "Na dřevě",
+        "leafLitter": "V listovém opadu",
+        "otherSubstrate": "Jiný substrát"
+      },
+      "fish": {
+        "freshwater": "Sladká voda",
+        "marine": "Mořské prostředí",
+        "estuary": "Ústí řeky",
+        "aquarium": "Akvárium"
+      },
+      "bird": {
+        "urban": "Městská oblast",
+        "forest": "Les",
+        "wetland": "Mokřad",
+        "openArea": "Otevřená plocha"
+      },
+      "sound": {
+        "dawn": "Úsvit",
+        "day": "Den",
+        "dusk": "Soumrak",
+        "night": "Noc"
+      }
+    },
+    "eventTypes": {
+      "plant": {
+        "observation": "Prostředí rostliny",
+        "growth": "Růst rostliny",
+        "leafChange": "Změna listů rostliny",
+        "flowering": "Pozorované kvetení",
+        "fruiting": "Pozorovaná tvorba plodů",
+        "symptom": "Viditelný příznak rostliny",
+        "care": "Záznam péče o rostlinu"
+      },
+      "tree": {
+        "observation": "Prostředí stromu",
+        "growth": "Růst stromu",
+        "leafChange": "Změna listů stromu",
+        "flowering": "Pozorované kvetení stromu",
+        "fruiting": "Pozorovaná tvorba plodů stromu",
+        "symptom": "Viditelný příznak stromu",
+        "habitat": "Stanoviště stromu"
+      },
+      "insect": {
+        "observation": "Kontext pozorování",
+        "count": "Pozorovaný počet",
+        "lifeStage": "Pozorované životní stadium",
+        "behavior": "Pozorované chování",
+        "interaction": "Pozorovaná interakce",
+        "habitat": "Stanoviště hmyzu"
+      },
+      "mushroom": {
+        "observation": "Pozorování houby",
+        "emergence": "Pozorované objevení",
+        "morphology": "Viditelná morfologie",
+        "substrate": "Substrát",
+        "colorChange": "Změna barvy",
+        "sporePrint": "Záznam výtrusného otisku"
+      },
+      "fish": {
+        "observation": "Kontext pozorování",
+        "count": "Pozorovaný počet",
+        "behavior": "Pozorované chování",
+        "habitat": "Stanoviště",
+        "waterReading": "Pozorovaná hodnota vody",
+        "feeding": "Pozorované přijímání potravy"
+      },
+      "bird": {
+        "observation": "Pozorování ptáka",
+        "count": "Pozorovaný počet",
+        "behavior": "Pozorované chování",
+        "vocalization": "Pozorovaný hlas",
+        "nesting": "Pozorované hnízdění",
+        "flight": "Pozorovaný let"
+      },
+      "sound": {
+        "observation": "Pozorování zvuku",
+        "recording": "Nahrávka",
+        "comparison": "Porovnání nahrávek",
+        "context": "Zvukové prostředí",
+        "frequency": "Pozorovaná frekvence",
+        "amplitude": "Pozorovaná amplituda"
+      }
+    },
+    "visuals": {
+      "plant": {
+        "environment": {
+          "title": "Prostředí rostliny",
+          "body": "Zaznamenejte okolí organismu a každou viditelnou změnu."
+        },
+        "light": {
+          "title": "Viditelné světlo",
+          "body": "Porovnejte viditelné světelné podmínky mezi návštěvami, aniž byste z nich vyvozovali potřebu."
+        },
+        "soil": {
+          "title": "Pozorování půdy",
+          "body": "Popište viditelný povrch půdy nebo substrátu a jeho změnu."
+        },
+        "growth": {
+          "title": "Růst rostliny",
+          "body": "Umístěte srovnatelná pozorování růstu na časovou osu."
+        }
+      },
+      "tree": {
+        "environment": {
+          "title": "Prostředí stromu",
+          "body": "Zaznamenejte okolí organismu a každou viditelnou změnu."
+        },
+        "light": {
+          "title": "Viditelné světlo",
+          "body": "Porovnejte viditelné světelné podmínky mezi návštěvami, aniž byste z nich vyvozovali potřebu."
+        },
+        "soil": {
+          "title": "Pozorování půdy",
+          "body": "Popište viditelný povrch půdy nebo substrátu a jeho změnu."
+        },
+        "growth": {
+          "title": "Růst stromu",
+          "body": "Umístěte srovnatelná pozorování růstu na časovou osu."
+        }
+      },
+      "insect": {
+        "anatomy": {
+          "title": "Viditelné tělesné znaky",
+          "body": "Oddělte viditelné tělesné znaky, než navrhnete životní stadium nebo identitu."
+        },
+        "stage": {
+          "title": "Pozorované životní stadium",
+          "body": "Zaznamenejte pouze stadium, které lze pozorovat; při nejistotě jej nechte prázdné."
+        },
+        "count": {
+          "title": "Pozorovaný počet",
+          "body": "Počítejte na jasně popsaném místě, aby šla další návštěva porovnat."
+        },
+        "behaviour": {
+          "title": "Pozorované chování",
+          "body": "Popište pohyb a interakci tak, jak byly pozorovány, bez označení živočicha za škůdce."
+        }
+      },
+      "mushroom": {
+        "substrate": {
+          "title": "Substrát",
+          "body": "Zaznamenejte materiál přímo pod houbou a okolní stanoviště."
+        },
+        "anatomy": {
+          "title": "Viditelné části houby",
+          "body": "Oddělte klobouk, spodní stranu, třeň a bázi; fotografie může skrýt rozhodující znaky."
+        },
+        "underside": {
+          "title": "Viditelná spodní strana",
+          "body": "Popište viditelné lupeny, póry nebo jiný spodní povrch bez hádání."
+        },
+        "colourChange": {
+          "title": "Změna barvy",
+          "body": "Zaznamenejte, zda byla změna barvy skutečně viděna a kde nastala."
+        }
+      },
+      "fish": {
+        "habitat": {
+          "title": "Stanoviště",
+          "body": "Popište viditelnou vodní plochu a místo, kde byla ryba viděna."
+        },
+        "anatomy": {
+          "title": "Viditelné znaky ryby",
+          "body": "Porovnejte profil těla, ploutve, kresbu a ocas pouze tehdy, jsou-li všechny znaky viditelné."
+        },
+        "group": {
+          "title": "Společně pozorované ryby",
+          "body": "Zaznamenejte pozorovaný počet a zorné pole; neodvozujte velikost populace."
+        },
+        "behaviour": {
+          "title": "Pozorované chování",
+          "body": "Pozorujte z dálky a zaznamenejte pohyb bez kontaktu."
+        }
+      },
+      "bird": {
+        "habitat": {
+          "title": "Stanoviště",
+          "body": "Popište viditelné stanoviště a polohu ptáka."
+        },
+        "anatomy": {
+          "title": "Viditelné znaky ptáka",
+          "body": "Porovnejte zobák, tělo, křídla a ocas jen podle viditelných znaků."
+        },
+        "group": {
+          "title": "Společně pozorovaní ptáci",
+          "body": "Zaznamenejte skutečně viděnou skupinu bez odhadu ptáků mimo zorné pole."
+        },
+        "vocalisation": {
+          "title": "Pozorovaný hlas",
+          "body": "Popište výšku, rytmus a opakování bez předpokladu, který druh zvuk vydal."
+        }
+      },
+      "sound": {
+        "waveform": {
+          "title": "Viditelný zvukový vzorec",
+          "body": "Schéma představuje vzorec nahrávky, nikoli důkaz druhu."
+        },
+        "rhythm": {
+          "title": "Rytmus a opakování",
+          "body": "Označte slyšené opakované úseky a pauzy, aniž byste vymýšleli význam hlasu."
+        },
+        "environment": {
+          "title": "Zvukové prostředí",
+          "body": "Zaznamenejte období, místo a zvuky v pozadí, které mohou ovlivnit srovnání."
+        },
+        "comparison": {
+          "title": "Porovnat nahrávky",
+          "body": "Před zaznamenáním rozdílu porovnejte nahrávky pořízené za podobných podmínek."
+        }
+      }
+    }
+  },
+  "community": {
+    "title": "Komunita",
+    "headline": "Proměňte tento nález v užitečný tip.",
+    "body": "Pozvěte přítele, spolužáka nebo terénní skupinu, aby také určovali s NatureLens.",
+    "steps": {
+      "identify": "Určete živý organismus",
+      "save": "Uložte to podstatné",
+      "share": "Pošlete výsledek někomu, komu se může hodit"
+    },
+    "inviteAction": "Pozvat přítele",
+    "inviteMessage": "Používám NatureLens k určování přírody a sdílení péče o rostliny: zálivka, škůdci, zotavení a objevy. Zkuste zde: {{url}}",
+    "screenTitle": "Komunita",
+    "entryTitle": "Komunitní liga",
+    "entrySubtitle": "Podívejte se na své pořadí, mise a týdenní pokrok.",
+    "localBadge": "Místní liga",
+    "heroTitle": "Vaše pořadí v NatureLens",
+    "rankPosition": "aktuální pozice",
+    "scoreLabel": "body",
+    "leagues": {
+      "seed": "Liga Semínko — Začněte dnes jedním objevem.",
+      "sprout": "Liga Výhonek — Budujete si skutečný návyk.",
+      "guardian": "Liga Strážce — Váš terénní záznam sílí.",
+      "master": "Liga Mistr — Rytmus pokročilého průzkumníka."
+    },
+    "photoRail": "Vaše nejnovější nálezy se stanou obálkou vaší ligy.",
+    "discoveriesLabel": "nálezy",
+    "weeklyLabel": "tento týden",
+    "categoriesLabel": "kategorie",
+    "streakLabel": "dní v řadě",
+    "rankingTitle": "Týdenní žebříček",
+    "rankingBody": "Místní liga založená na vaší potvrzené aktivitě v aplikaci. Žádní falešní globální uživatelé: po připojení komunitního serveru se z ní stane skutečný veřejný žebříček.",
+    "leaderboard": {
+      "you": {
+        "name": "Vy",
+        "meta": "Vaše potvrzená aktivita"
+      },
+      "next": {
+        "name": "Další milník",
+        "meta": "Dosažitelný cíl pro tento týden"
+      },
+      "elite": {
+        "name": "Elitní měřítko",
+        "meta": "Cíl pro pokročilé uživatele"
+      }
+    },
+    "milestonesTitle": "Co zvyšuje vaše pořadí",
+    "milestones": {
+      "first": "Určujte a ukládejte skutečné nálezy.",
+      "week": "Plňte denní mise a udržujte sérii.",
+      "allCategories": "Prozkoumejte více kategorií: rostliny, hmyz, ryby, ptáky a houby."
+    },
+    "inviteTitle": "Pozvěte někoho na svou výpravu",
+    "inviteBody": "Sdílejte aplikaci, dokončete zvací misi a přeneste zážitek i mimo telefon.",
+    "scanAction": "Skenovat nyní",
+    "reviewTitle": "Pomáhá vám NatureLens?",
+    "reviewBody": "Pokud aplikace váš nález objasnila, vaše recenze ji pomůže najít dalším průzkumníkům.",
+    "reviewAction": "Líbí se mi",
+    "reviewLater": "Teď ne",
+    "reviewThanks": "Děkujeme — pomáhá nám to NatureLens dál zlepšovat.",
+    "careExchangeTitle": "Sdílení péče",
+    "careExchangeBody": "Sdílejte, co fungovalo: zálivku, světlo, škůdce, zotavení a před/po u vašich rostlin.",
+    "careShareAction": "Sdílet zkušenost",
+    "careTopics": {
+      "watering": "Režim zálivky",
+      "pests": "Škůdci a příznaky",
+      "recovery": "Před a po",
+      "questions": "Zeptat se skupiny"
+    }
+  },
+  "ipm": {
+    "title": "Integrovaná ochrana proti škůdcům",
+    "chooseCrop": "Vyberte plodinu, na které byl tento hmyz pozorován. Postup se otevře jen pro přesně doloženou dvojici.",
+    "exactPair": "Přesná dvojice: {{insect}} na {{crop}}",
+    "prevention": "Prevence",
+    "monitoring": "Sledování",
+    "threshold": "Doložený práh zásahu",
+    "cultural": "Agrotechnická ochrana",
+    "mechanical": "Mechanická ochrana",
+    "biological": "Biologická ochrana",
+    "chemical": "Chemická ochrana: pouze ověření registrace",
+    "chemicalReferral": "Zde není doporučen přípravek ani dávka. Ověřte aktuální etiketu pro tuto plodinu a škůdce ve své zemi a rozhodnutí potvrďte s místním agronomem.",
+    "citationOnly": "věcná citace; text zdroje není přebírán",
+    "crops": {
+      "maize": "Kukuřice",
+      "tomato": "Rajče",
+      "soybean": "Sója",
+      "uplandCotton": "Bavlník chlupatý",
+      "commonBean": "Fazol obecný",
+      "arabicaCoffee": "Kávovník arabský"
+    },
+    "actions": {
+      "avoidCalendarSprays": "Neošetřujte podle kalendáře; rozhodnutí založte na reprezentativním sledování.",
+      "checkRegisteredBiocontrol": "Ověřte místně registrované biologické možnosti pro přesně tuto plodinu a škůdce.",
+      "confirmDamageAndStage": "Potvrďte odpovídající poškození a zaznamenejte vývojové stadium hmyzu.",
+      "inspectFruitDamage": "Zkontrolujte plody na vstupní otvory a vnitřní poškození.",
+      "inspectLeafMines": "Zkontrolujte mladé listy na aktivní miny a larvy.",
+      "inspectTransplants": "Zkontrolujte sazenice před vstupem do produkční plochy.",
+      "inspectWhorl": "Otevřete a prohlédněte listovou růžici kukuřice na čerstvé požerky a larvy.",
+      "manageCropResidue": "Po sklizni odstraňte nebo správně ošetřete napadené zbytky.",
+      "preserveNaturalEnemies": "Chraňte parazitoidy, predátory a další přirozené nepřátele.",
+      "protectNursery": "Udržujte školku chráněnou a bez napadených sazenic.",
+      "recordCropStage": "Při každém odběru zaznamenejte stadium plodiny.",
+      "removeEggMassesSmallPlots": "Na malých plochách odstraňte dostupné snůšky a larvy.",
+      "removeInfestedTissue": "Bezpečně odstraňte a zlikvidujte napadené listy a plody.",
+      "removeVolunteerHosts": "Odstraňujte výdrol, který může škůdce udržovat mezi plodinami.",
+      "rotateOutsideHostFamily": "Je-li to možné, střídejte s plodinou mimo čeleď hostitelů.",
+      "sampleCoolHours": "Vzorkujte v chladnějších hodinách, kdy se ploštice lépe hledají.",
+      "sampleRepresentativePoints": "Rozmístěte body po poli, nekontrolujte jen okraj.",
+      "useBeatCloth": "Používejte sklepávací plachtu jednotně na reprezentativních místech.",
+      "useInsectScreens": "Použijte ochranné sítě, pokud to systém pěstování umožňuje.",
+      "usePheromoneTraps": "Feromonovými lapáky sledujte let; počet úlovků sám neměří poškození.",
+      "avoidStaggeredPlanting": "Vyhněte se postupně rozloženým výsevům a tam, kde to doporučuje úřad, slaďte termín setí v regionu.",
+      "avoidOlderMaizeNearby": "Nevysévejte novou kukuřici vedle starších porostů se symptomy zakrslosti.",
+      "removeAlternateHosts": "Odstraňte náhradní hostitelské rostliny a fazole s příznaky virózy.",
+      "inspectFieldEdges": "Nejprve kontrolujte obvod pole, protože kolonizace a poškození se často soustředí na okrajích.",
+      "inspectFlowerBuds": "Kontrolujte poupata bavlníku na vpichy po žíru a kladení vajíček.",
+      "completeSanitaryHarvest": "Sklizeň dokončete důkladně a odstraňte kávové plody ponechané na rostlinách i na zemi.",
+      "inspectLowerCanopy": "Kontrolujte střední a spodní patro sóji, kde se ukrývají housenky kovolesklece."
+    },
+    "thresholds": {
+      "initialSymptomsHighYieldThreshold": "Pouze pro porosty s výnosovým potenciálem nejméně {{minimumYieldBagsPerHa}} pytlů/ha: na {{sampleAreaHa}} ha zkontrolujte {{samplePoints}} náhodných bodů. Zveřejněná hodnota je {{actionPercent}} % rostlin s počátečními příznaky napadení."
+    }
   }
 }

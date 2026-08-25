@@ -27,6 +27,8 @@
     },
     "blueTang": {
       "overview": "Zářivě královsky modrá útesová ryba s černou kresbou připomínající malířskou paletu a se žlutým ocasem. Jako všichni bodloci nese u kořene ocasu trn ostrý jako skalpel.",
+      "riskKey": "sharp_tail_spine",
+      "safety": "Zářivě královsky modrá útesová ryba s černou kresbou připomínající malířskou paletu a se žlutým ocasem. Jako všichni bodloci nese u kořene ocasu trn ostrý jako skalpel.",
       "habitat": "Korálové útesy Indo-Pacifiku, obvykle v malých skupinkách u větvených korálů, do kterých se může schovat.",
       "curiosity": "Mláďata jsou jasně žlutá a modrá barva přichází až s dospělostí — a ocasní trn, běžně sklopený, vyskočí do strany, jakmile se ryba cítí ohrožená."
     },
@@ -47,6 +49,8 @@
     },
     "redLionfish": {
       "overview": "Nápadná ryba pruhovaná červenou, bílou a hnědou, s dlouhými vějířovitými ploutvemi, mezi nimiž se skrývají jedovaté ostny. Krásná, pomalá a rozhodně na nedotýkání.",
+      "riskKey": "venomous_spines",
+      "safety": "Nápadná ryba pruhovaná červenou, bílou a hnědou, s dlouhými vějířovitými ploutvemi, mezi nimiž se skrývají jedovaté ostny. Krásná, pomalá a rozhodně na nedotýkání.",
       "habitat": "Původem z útesů Indo-Pacifiku; dnes vážný invazní druh v celém Karibiku a v západním Atlantiku.",
       "curiosity": "V oblastech, které obsadil, nemá téměř žádné predátory a spolyká skoro cokoli, co se mu vejde do tlamy — proto některé země aktivně podporují jeho lov harpunou a konzumaci."
     }

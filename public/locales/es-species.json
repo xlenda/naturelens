@@ -27,6 +27,8 @@
     },
     "blueTang": {
       "overview": "Un pez de arrecife de un azul intenso, con una marca negra en forma de «paleta» y la cola amarilla. Como todos los peces cirujano, lleva una espina afilada como un bisturí junto a la base de la cola.",
+      "riskKey": "sharp_tail_spine",
+      "safety": "Un pez de arrecife de un azul intenso, con una marca negra en forma de «paleta» y la cola amarilla. Como todos los peces cirujano, lleva una espina afilada como un bisturí junto a la base de la cola.",
       "habitat": "Arrecifes de coral del Indopacífico, normalmente en grupos pequeños cerca de corales ramificados donde poder esconderse.",
       "curiosity": "Los juveniles son de un amarillo brillante y se vuelven azules al madurar. La espina de la cola, plegada en reposo, se despliega hacia los lados cuando el pez se siente amenazado."
     },
@@ -47,6 +49,8 @@
     },
     "redLionfish": {
       "overview": "Un pez llamativo con bandas rojas, blancas y marrones, y largas aletas en forma de abanico que esconden espinas venenosas. Precioso, de nado pausado y mejor no tocarlo.",
+      "riskKey": "venomous_spines",
+      "safety": "Un pez llamativo con bandas rojas, blancas y marrones, y largas aletas en forma de abanico que esconden espinas venenosas. Precioso, de nado pausado y mejor no tocarlo.",
       "habitat": "Nativo de los arrecifes del Indopacífico; hoy es una especie invasora grave en todo el Caribe y el Atlántico occidental.",
       "curiosity": "En las zonas que ha invadido casi no tiene depredadores y se come casi cualquier cosa que le quepa en la boca. Por eso varios países animan activamente a pescarlo con arpón y consumirlo."
     }

@@ -5,7 +5,7 @@ import SectionCard from './SectionCard';
 import { colors } from './theme';
 import { getSpeciesCare } from './speciesCare';
 import { getGroupTopic } from './groupContent';
-import { getApproximateLocation } from './deviceLocation';
+import { getCareLatitude, subscribeCareRegion } from './careRegion';
 import { firstSentence } from './sentences';
 
 // Cuidado por ESPECIE - a exigencia do dono: "a parte de rega tem que ser
@@ -100,7 +100,13 @@ const SHADE_KEY = {
 };
 const BLOOM_PART_KEY = { early: 'detail.bloomEarly', mid: 'detail.bloomMid', late: 'detail.bloomLate' };
 
-export default function SpeciesCareCard({ scientific, groupKey, accent = colors.accent }) {
+export default function SpeciesCareCard({
+  scientific,
+  groupKey,
+  entityName,
+  hideFertility = false,
+  accent = colors.accent,
+}) {
   const { t, i18n } = useTranslation();
   const [record, setRecord] = useState(null);
   const [group, setGroup] = useState(null);
@@ -134,11 +140,17 @@ export default function SpeciesCareCard({ scientific, groupKey, accent = colors.
 
   useEffect(() => {
     let alive = true;
-    getApproximateLocation().then((loc) => {
-      if (alive) setLatitude(loc?.latitude ?? null);
+    // A escolha manual resolve o hemisferio no Android sem pedir localizacao e
+    // nunca sai do aparelho; automatico continua usando a latitude aproximada
+    // apenas quando o navegador realmente a fornece.
+    const resolve = () => getCareLatitude().then((value) => {
+      if (alive) setLatitude(value);
     });
+    resolve();
+    const unsubscribe = subscribeCareRegion(resolve);
     return () => {
       alive = false;
+      unsubscribe();
     };
   }, []);
 
@@ -153,12 +165,16 @@ export default function SpeciesCareCard({ scientific, groupKey, accent = colors.
 
   const groupCard = () =>
     groupAdvice ? (
-      <SectionCard icon="flask-outline" title={t('detail.speciesCareSection')} color={accent}>
+      <SectionCard
+        icon="layers-outline"
+        title={group?.label || t('detail.fundamentals')}
+        color={accent}
+      >
         <Text style={styles.advice}>{groupAdvice}</Text>
         <Text style={styles.footer}>
           {group?.label
-            ? t('detail.scheduleGroupNote', { group: group.label })
-            : t('detail.scheduleGroupNoteShort')}
+            ? t('detail.groupGuideNote', { group: group.label })
+            : t('detail.generalGuideNote')}
         </Text>
       </SectionCard>
     ) : null;
@@ -230,7 +246,7 @@ export default function SpeciesCareCard({ scientific, groupKey, accent = colors.
           : t('detail.season.' + season)
         : null,
     },
-  ].filter((r) => r.value);
+  ].filter((r) => r.value && (!hideFertility || r.key !== 'fertility'));
 
   // Registro que existe mas nao rende linha nenhuma (o unico caso real: so
   // tem floracao, e a latitude nao resolveu) volta pro grupo em vez de sumir -
@@ -239,6 +255,9 @@ export default function SpeciesCareCard({ scientific, groupKey, accent = colors.
 
   return (
     <SectionCard icon="flask-outline" title={t('detail.speciesCareSection')} color={accent}>
+      {!!entityName && (
+        <Text style={styles.entityScope}>{t('common.identified')}: {entityName}</Text>
+      )}
       {rows.map((r, i) => (
         <View key={r.key} style={[styles.row, i > 0 && styles.divider]}>
           <Text style={styles.label} numberOfLines={2}>
@@ -270,6 +289,13 @@ export default function SpeciesCareCard({ scientific, groupKey, accent = colors.
 }
 
 const styles = StyleSheet.create({
+  entityScope: {
+    color: colors.text,
+    fontSize: 12.5,
+    lineHeight: 18,
+    fontWeight: '800',
+    marginBottom: 6,
+  },
   row: { flexDirection: 'row', alignItems: 'center', gap: 10, paddingVertical: 9 },
   divider: { borderTopWidth: StyleSheet.hairlineWidth, borderTopColor: colors.border },
   label: { fontSize: 13, color: colors.textMuted, flexShrink: 1 },

@@ -2,7 +2,7 @@
 //
 //   node scripts/check-species-care.js
 //
-// PROVA TRES COISAS, e as tres ja quebraram em app de planta:
+// PROVA QUATRO COISAS, e as quatro ja quebraram em app de planta:
 //
 //   1. CONVERSAO DE UNIDADE. O USDA publica em Fahrenheit e polegada. Mostrar
 //      "-43" para um leitor brasileiro achando que e Celsius nao e arredondar
@@ -16,6 +16,8 @@
 //   3. A CHAVE BINOMIAL. A regra existe em dois lugares (o script de build
 //      escreve, o loader le). Aqui ela e exercitada contra o arquivo GERADO de
 //      verdade, entao a checagem falha no dia em que as duas sairem de sincronia.
+//   4. O ROTULO AGRONOMICO. Fertility Requirement descreve a fertilidade do
+//      solo; chama-la de necessidade de adubo transforma um indicador em acao.
 //
 // Os modulos sao ESM e este arquivo e CommonJS, entao passam pelo babel do
 // proprio projeto: o que roda aqui e o arquivo de verdade, nao uma copia das
@@ -141,6 +143,8 @@ check('a chave do loader bate com o arquivo gerado', () => {
   assert.equal(loader.binomialKey('<i>Acer rubrum</i> L.'), 'acer rubrum');
   assert.equal(loader.binomialKey("Acer rubrum 'October Glory'"), 'acer rubrum');
   assert.equal(loader.binomialKey('  ACER   RUBRUM  '), 'acer rubrum');
+  assert.equal(loader.binomialKey('Citrus × sinensis'), 'citrus sinensis');
+  assert.equal(loader.binomialKey('Citrus x sinensis'), 'citrus sinensis');
   assert.equal(loader.binomialKey('Acer'), null, 'genero sozinho nao vira chave');
   assert.equal(loader.binomialKey(''), null);
   assert.equal(loader.binomialKey(null), null);
@@ -150,6 +154,13 @@ check('a chave do loader bate com o arquivo gerado', () => {
   // grupo. Se um dia isto falhar, a cobertura mudou e a copy pode mudar junto.
   assert.equal(data['plumeria rubra'], undefined, 'Plumeria rubra segue fora do banco');
   assert.ok(data['acer rubrum'], 'Acer rubrum segue dentro do banco');
+});
+
+check('fertilidade do solo nao vira recomendacao de adubo', () => {
+  const en = JSON.parse(fs.readFileSync(path.join(root, 'public', 'locales', 'en.json'), 'utf8'));
+  const pt = JSON.parse(fs.readFileSync(path.join(root, 'public', 'locales', 'pt.json'), 'utf8'));
+  assert.equal(en.detail.usdaFertility, 'Soil fertility requirement');
+  assert.equal(pt.detail.usdaFertility, 'Exigência de fertilidade do solo');
 });
 
 console.log('\nspecies-care: ' + checks + ' checagens passaram');

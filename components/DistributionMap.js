@@ -3,6 +3,7 @@ import { View, Text, StyleSheet, Image } from 'react-native';
 import { useTranslation } from 'react-i18next';
 import { colors } from './theme';
 import { getTaxonKey } from './gbifTaxonKey';
+import { enrichmentTaxon } from './taxonIdentity';
 
 // Real distribution map - the competitor DRAWS its map; ours is science.
 // GBIF's public map API renders every recorded occurrence of the species on
@@ -17,9 +18,15 @@ import { getTaxonKey } from './gbifTaxonKey';
 // Honesty: renders NOTHING when the name doesn't match a GBIF taxon or the
 // network fails - a map is either real or absent. The GBIF.org credit is
 // their stated attribution requirement for API use.
-export default function DistributionMap({ scientific, accent = colors.accent }) {
+export default function DistributionMap({ scientific, gbifId, identityV1, accent = colors.accent }) {
   const { t } = useTranslation();
   const [taxonKey, setTaxonKey] = useState(null);
+  const enrichment = enrichmentTaxon(identityV1, {
+    scientificName: scientific,
+    gbifKey: gbifId,
+  });
+  const resolvedScientific = enrichment?.canonicalName || null;
+  const resolvedGbifId = enrichment?.gbifKey || null;
 
   useEffect(() => {
     let alive = true;
@@ -29,13 +36,13 @@ export default function DistributionMap({ scientific, accent = colors.accent }) 
     setTaxonKey(null);
     // offline / GBIF down / sem match: getTaxonKey devolve null e a secao
     // simplesmente nao renderiza.
-    getTaxonKey(scientific).then((key) => {
+    getTaxonKey(resolvedScientific, resolvedGbifId).then((key) => {
       if (alive && key) setTaxonKey(key);
     });
     return () => {
       alive = false;
     };
-  }, [scientific]);
+  }, [resolvedScientific, resolvedGbifId]);
 
   if (!taxonKey) return null;
 

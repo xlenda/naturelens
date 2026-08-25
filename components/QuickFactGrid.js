@@ -55,7 +55,7 @@ export default function QuickFactGrid({ facts, accent }) {
                   {f.value}
                 </Text>
                 {!!f.label && (
-                  <Text style={styles.label} numberOfLines={1}>
+                  <Text style={styles.label} numberOfLines={2}>
                     {f.label}
                   </Text>
                 )}
@@ -95,5 +95,5 @@ const styles = StyleSheet.create({
   text: { flex: 1 },
   // O valor manda: 15.5/700 em branco. O rotulo e recibo: 12/500 em cinza.
   value: { fontSize: 15.5, fontWeight: '700', color: colors.text },
-  label: { fontSize: 12, fontWeight: '500', color: colors.textMuted, marginTop: 1 },
+  label: { fontSize: 12, lineHeight: 15, fontWeight: '500', color: colors.textMuted, marginTop: 1 },
 });

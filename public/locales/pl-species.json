@@ -27,6 +27,8 @@
     },
     "blueTang": {
       "overview": "Jaskrawo szafirowa ryba rafowa z czarnym rysunkiem przypominającym paletę malarską i żółtym ogonem. Jak wszystkie ryby chirurgi nosi przy nasadzie ogona kolec ostry niczym skalpel.",
+      "riskKey": "sharp_tail_spine",
+      "safety": "Jaskrawo szafirowa ryba rafowa z czarnym rysunkiem przypominającym paletę malarską i żółtym ogonem. Jak wszystkie ryby chirurgi nosi przy nasadzie ogona kolec ostry niczym skalpel.",
       "habitat": "Rafy koralowe Indo-Pacyfiku, zwykle w małych grupach przy rozgałęzionych koralowcach, w których może się schować.",
       "curiosity": "Młode są jaskrawożółte i błękitnieją z wiekiem, a złożony zwykle płasko kolec ogonowy wyskakuje na boki, gdy ryba poczuje zagrożenie."
     },
@@ -47,6 +49,8 @@
     },
     "redLionfish": {
       "overview": "Efektowna ryba w czerwono-biało-brązowe pasy, z długimi, wachlarzowatymi płetwami skrywającymi jadowe kolce. Piękna, powolna i lepiej jej nie dotykać.",
+      "riskKey": "venomous_spines",
+      "safety": "Efektowna ryba w czerwono-biało-brązowe pasy, z długimi, wachlarzowatymi płetwami skrywającymi jadowe kolce. Piękna, powolna i lepiej jej nie dotykać.",
       "habitat": "Pochodzi z raf Indo-Pacyfiku; dziś dotkliwy gatunek inwazyjny na całych Karaibach i w zachodnim Atlantyku.",
       "curiosity": "Na opanowanych terenach nie ma praktycznie żadnych wrogów i zjada niemal wszystko, co mieści się jej w pysku — dlatego niektóre kraje wprost zachęcają, żeby na nią polować z harpunem i podawać ją na stół."
     }

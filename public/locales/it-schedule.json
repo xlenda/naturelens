@@ -15,7 +15,8 @@
         "summer": "Mensile, mezza dose",
         "autumn": "Sospendere",
         "winter": "Nessuna",
-        "note": "Poco azoto, da metà a un quarto della dose in etichetta. L'eccesso di azoto crea tessuti molli che marciscono (Clemson, Iowa State)."
+        "note": "Poco azoto, da metà a un quarto della dose in etichetta. L'eccesso di azoto crea tessuti molli che marciscono (Clemson, Iowa State).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "Rinvaso",
@@ -51,7 +52,8 @@
         "summer": "Mensile, diluito",
         "autumn": "Ridurre",
         "winter": "Nessuna",
-        "note": "Le piante d'appartamento si concimano solo nella stagione di crescita, nulla durante il riposo (UConn)."
+        "note": "Le piante d'appartamento si concimano solo nella stagione di crescita, nulla durante il riposo (UConn).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "Talee",
@@ -79,7 +81,8 @@
         "summer": "Mensile, mezza dose",
         "autumn": "Sospendere",
         "winter": "Nessuna",
-        "note": "Nulla per 6 mesi dopo la divisione o il rinvaso; troppo concime brucia le fronde (Clemson, UConn)."
+        "note": "Nulla per 6 mesi dopo la divisione o il rinvaso; troppo concime brucia le fronde (Clemson, UConn).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "Divisione e rinvaso",
@@ -115,7 +118,8 @@
         "summer": "Dopo il raccolto",
         "autumn": "Sospendere",
         "winter": "Nessuna",
-        "note": "La drupacea prende tre dosi frazionate e nulla nelle ultime settimane d'estate, così il legno matura (Clemson)."
+        "note": "La drupacea prende tre dosi frazionate e nulla nelle ultime settimane d'estate, così il legno matura (Clemson).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "Potatura",
@@ -143,7 +147,8 @@
         "summer": "Ogni 6 settimane",
         "autumn": "Stop prima del gelo",
         "winter": "Nessuna",
-        "note": "Le rose scendono a mezza dose nel picco di caldo e si fermano 6 settimane prima della prima gelata attesa (Clemson)."
+        "note": "Le rose scendono a mezza dose nel picco di caldo e si fermano 6 settimane prima della prima gelata attesa (Clemson).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "Fiori appassiti",
@@ -179,7 +184,8 @@
         "summer": "Dosi frazionate",
         "autumn": "Sospendere",
         "winter": "Nessuna",
-        "note": "Un albero maturo ha bisogno di poco o nulla. Una concimazione azotata tardiva ritarda il riposo (Clemson)."
+        "note": "Un albero maturo ha bisogno di poco o nulla. Una concimazione azotata tardiva ritarda il riposo (Clemson).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "Potatura",
@@ -215,7 +221,8 @@
         "summer": "Settim., mezza dose",
         "autumn": "Ogni 2 settimane",
         "winter": "Ogni 2 settimane",
-        "note": "Metà della dose in etichetta, poca o nessuna urea, e salta una concimazione su 4 per dilavare i sali (AOS, RHS)."
+        "note": "Metà della dose in etichetta, poca o nessuna urea, e salta una concimazione su 4 per dilavare i sali (AOS, RHS).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "Rinvaso",
@@ -251,7 +258,8 @@
         "summer": "Solo se si ferma",
         "autumn": "Nessuna",
         "winter": "Nessuna",
-        "note": "Il rosmarino in piena terra non riceve nulla, e un terreno molto ricco spegne l'aroma (RHS, Clemson)."
+        "note": "Il rosmarino in piena terra non riceve nulla, e un terreno molto ricco spegne l'aroma (RHS, Clemson).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "Potatura",

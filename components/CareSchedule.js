@@ -5,7 +5,7 @@ import SectionCard from './SectionCard';
 import { colors } from './theme';
 import { getGroupSchedule } from './scheduleContent';
 import { getGroups } from './groupContent';
-import { getApproximateLocation } from './deviceLocation';
+import { getCareLatitude, subscribeCareRegion } from './careRegion';
 
 // CRONOGRAMA DE CUIDADO POR ESTACAO - paridade 120% (video do concorrente,
 // 20/08). O concorrente mostra uma tabela mes a mes de fertilizacao. Esta e a
@@ -49,7 +49,19 @@ export function seasonForMonth(month, latitude) {
   return latitude < 0 ? NORTHERN[(month + 6) % 12] : NORTHERN[month];
 }
 
-export default function CareSchedule({ groupKey, accent = colors.accent }) {
+export function currentSeasonActions(rows, season) {
+  if (!Array.isArray(rows) || !SEASONS.includes(season)) return [];
+  return rows
+    .filter((row) => row?.activity && typeof row[season] === 'string' && row[season].trim())
+    .map((row) => ({ activity: row.activity, value: row[season].trim() }));
+}
+
+export default function CareSchedule({
+  groupKey,
+  entityName,
+  hideFertilizing = false,
+  accent = colors.accent,
+}) {
   const { t, i18n } = useTranslation();
   const [rows, setRows] = useState(null);
   const [groupLabel, setGroupLabel] = useState(null);
@@ -78,23 +90,52 @@ export default function CareSchedule({ groupKey, accent = colors.accent }) {
 
   useEffect(() => {
     let alive = true;
-    // Nunca bloqueia e nunca insiste: deviceLocation ja respeita a recusa do
-    // usuario e o backoff de falha. Sem latitude o componente mostra as quatro
-    // colunas iguais - honesto - e explica no rodape por que.
-    getApproximateLocation().then((loc) => {
-      if (alive) setCurrent(seasonForMonth(new Date().getMonth(), loc?.latitude ?? null));
+    // No APK nao ha permissao de localizacao. A regiao manual conserva a
+    // estacao correta sem coletar coordenada; no modo automatico, a web ainda
+    // usa a localizacao aproximada existente. Sem nenhum dos dois, nenhuma
+    // coluna ganha destaque.
+    const resolve = () => getCareLatitude().then((latitude) => {
+      if (alive) setCurrent(seasonForMonth(new Date().getMonth(), latitude));
     });
+    resolve();
+    const unsubscribe = subscribeCareRegion(resolve);
     return () => {
       alive = false;
+      unsubscribe();
     };
   }, []);
 
   if (!rows) return null;
 
-  const notes = rows.filter((r) => r && r.note);
+  // The dedicated nutrition card owns the fertilizing row on botanical result
+  // screens. Keeping it out of this general calendar avoids showing the same
+  // group guidance twice in Expert mode while preserving every other task.
+  const visibleRows = hideFertilizing
+    ? rows.filter((row) => row?.activityKey !== 'fertilizing')
+    : rows;
+  if (visibleRows.length === 0) return null;
+
+  const notes = visibleRows.filter((r) => r && r.note);
+  const actionsNow = currentSeasonActions(visibleRows, current);
 
   return (
     <SectionCard icon="calendar-outline" title={t('detail.scheduleSection')} color={accent}>
+      {!!entityName && (
+        <Text style={styles.entityScope}>{t('common.identified')}: {entityName}</Text>
+      )}
+      {actionsNow.length > 0 && (
+        <View style={[styles.nowBlock, { borderColor: accent + '55', backgroundColor: accent + '12' }]}>
+          <Text style={[styles.nowTitle, { color: accent }]}>
+            {t('detail.season.' + current)} · {t('detail.scheduleNow')}
+          </Text>
+          {actionsNow.map((action) => (
+            <View key={action.activity} style={styles.nowRow}>
+              <Text style={styles.nowActivity}>{action.activity}</Text>
+              <Text style={styles.nowValue}>{action.value}</Text>
+            </View>
+          ))}
+        </View>
+      )}
       <View style={styles.table}>
         <View style={styles.headRow}>
           <Text style={[styles.cell, styles.activityCell, styles.headText]} numberOfLines={2}>
@@ -116,7 +157,7 @@ export default function CareSchedule({ groupKey, accent = colors.accent }) {
           })}
         </View>
 
-        {rows.map((row, i) => (
+        {visibleRows.map((row, i) => (
           <View key={row.activity || i} style={styles.row}>
             <Text style={[styles.cell, styles.activityCell, styles.activityText]}>{row.activity}</Text>
             {SEASONS.map((s) => {
@@ -158,6 +199,23 @@ export default function CareSchedule({ groupKey, accent = colors.accent }) {
 }
 
 const styles = StyleSheet.create({
+  entityScope: {
+    color: colors.text,
+    fontSize: 12.5,
+    lineHeight: 18,
+    fontWeight: '800',
+    marginBottom: 8,
+  },
+  nowBlock: {
+    borderWidth: 1,
+    borderRadius: 10,
+    padding: 10,
+    marginBottom: 12,
+  },
+  nowTitle: { fontSize: 11, fontWeight: '800', marginBottom: 7 },
+  nowRow: { flexDirection: 'row', alignItems: 'flex-start', gap: 10, marginTop: 4 },
+  nowActivity: { flex: 1, fontSize: 11.5, fontWeight: '700', color: colors.text },
+  nowValue: { flex: 1.4, fontSize: 11.5, lineHeight: 15, color: colors.textSecondary },
   table: {
     borderWidth: StyleSheet.hairlineWidth,
     borderColor: colors.border,

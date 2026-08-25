@@ -104,6 +104,9 @@ async function main() {
       ['share.message', j.share?.message],
       ['identify.lowConfidenceBare', j.identify?.lowConfidenceBare],
       ['identify.addAngle', j.identify?.addAngle],
+      ['speciesDossier.reproduction', j.speciesDossier?.reproduction],
+      ['speciesDossier.lifeCycle', j.speciesDossier?.lifeCycle],
+      ['ipm.title', j.ipm?.title],
     ];
     const missing = sentinels.filter(([, v]) => !v).map(([k]) => k);
     if (missing.length === 0) ok('pt.json sentinels', `${sentinels.length} keys`);
@@ -163,6 +166,24 @@ async function main() {
     else fail('legacy rewrite reaches handler', `status ${rLegacy.status} (404 = rewrite broken)`);
   } catch (e) {
     fail('identify API', e.message);
+  }
+
+  // 5b. Os dossies dinamicos sao funcoes separadas. Validar com entrada ruim
+  //      prova que chegaram ao deploy sem gastar cota nem consultar uma fonte.
+  try {
+    const dossier = await get(
+      '/api/species-dossier?category=fish&scientificName=nome-invalido&language=pt'
+    );
+    if (dossier.status === 400) ok('species dossier endpoint validates');
+    else fail('species dossier endpoint validates', `status ${dossier.status}`);
+
+    const ipm = await get(
+      '/api/ipm-dossier?insectScientific=nome-invalido&cropScientific=Zea%20mays&language=pt'
+    );
+    if (ipm.status === 400) ok('IPM endpoint validates');
+    else fail('IPM endpoint validates', `status ${ipm.status}`);
+  } catch (e) {
+    fail('dynamic dossier endpoints', e.message);
   }
 
   // 6. Hotmart webhook rejects a forged call. 401 is the ONE non-200 this

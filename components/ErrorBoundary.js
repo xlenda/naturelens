@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Platform } from 'react-native';
 import { colors } from './theme';
+import { recoverWebApp } from './appRecovery';
 
 // Crash umbrella around the whole <App />. Without one, any render-time
 // exception (a bad import, a hook misuse, an undefined field on a saved
@@ -59,9 +60,9 @@ export default class ErrorBoundary extends React.Component {
     console.error('[ErrorBoundary] app crashed:', error, info?.componentStack);
   }
 
-  handleReload = () => {
+  handleReload = async () => {
     if (Platform.OS === 'web' && typeof window !== 'undefined') {
-      window.location.reload();
+      await recoverWebApp();
     } else {
       // Native has no reload primitive here - clearing the error at least
       // re-attempts the render instead of leaving a dead screen.

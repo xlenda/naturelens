@@ -9,6 +9,8 @@ node_modules/
 dist/
 .expo/
 web-build/
+__pycache__/
+*.pyc
 
 # Ferramentas
 .vercel

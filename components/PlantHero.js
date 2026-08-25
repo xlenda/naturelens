@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, Image, TouchableOpacity, Linking } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
 import { useTranslation } from 'react-i18next';
 import { colors } from './theme';
 import CategoryIcon from './CategoryIcon';
 import { getSpeciesPhoto } from './speciesPhoto';
+import { enrichmentTaxon } from './taxonIdentity';
 
 // The hero image on every identification result.
 //
@@ -17,17 +18,15 @@ import { getSpeciesPhoto } from './speciesPhoto';
 //
 // States, in order of preference:
 //
-//   1. MOSAIC - the user's photo large on the left (~62%) with two reference
-//      photos stacked on the right, plus a "+N" badge when more references
-//      exist. Only when there IS a user photo AND >= 2 similar images; every
-//      state below is the fallback chain, so no screen can ever render broken.
-//   2. The user's own photo, side by side with a reference photo of the species.
-//      Seeing your shot next to the real thing is how a person actually
-//      confirms an identification.
-//   3. The user's photo alone, when no reference exists for that species.
-//   4. A reference photo alone - for a find restored from a backup, or one made
+//   1. The user's own photo as the full-width field observation.
+//   2. A reference photo alone - for a find restored from a backup, or one made
 //      by sound, where there never was a user photo.
-//   5. Icon on a gradient - when there is no photo at all.
+//   3. Icon on a gradient - when there is no photo at all.
+//
+// Reference photos used to be squeezed into the hero as a 62/38 mosaic. That
+// made the observation smaller and consumed the first two references before
+// the evidence section, leaving only tiny leftovers below. They now belong to
+// the large, swipeable comparison gallery; the hero owns one clear subject.
 //
 // `similarImages` is a NEW OPTIONAL prop (the entity's own array, shape
 // { url, full?, similarity? } - see IdentificationExtras). Every existing prop
@@ -43,54 +42,58 @@ import { getSpeciesPhoto } from './speciesPhoto';
 // The screens' horizontal padding, cancelled so the art reaches both edges.
 const GUTTER = 20;
 
-// How many reference photos the mosaic swallows - and which entries count.
-//
-// Exported because IdentificationExtras renders the SAME array a few hundred
-// pixels below: until now every result showed the first two references TWICE,
-// once inside the mosaic and once in the "Reference photos" card, in 100% of
-// results (auditoria de diagramacao 20/08 - a duplicata custava ~24% da
-// viewport). The count lives here, next to the code that consumes it, so the
-// two components can never drift apart again.
-const MOSAIC_REFS = 2;
-
 // The usable references: an entry without a url renders as a broken square.
 export function heroRefs(similarImages) {
   return Array.isArray(similarImages) ? similarImages.filter((s) => s && s.url) : [];
 }
 
-// How many of them THIS entity's hero already showed. Zero unless the mosaic
-// actually rendered - every other hero state (both-photos, single photo,
-// icon-on-gradient) consumes no reference from the array at all.
+// A live result keeps every vendor photo for the gallery because the hero is
+// the person's own observation. A restored record without that local photo
+// uses the first vendor image as its cover, so only that one is skipped below.
 export function heroRefCount(entity) {
-  return entity?.photoUri && heroRefs(entity.similarImages).length >= MOSAIC_REFS
-    ? MOSAIC_REFS
-    : 0;
+  const count = heroRefs(entity?.similarImages).length;
+  if (entity?.photoUri) return 0;
+  return count > 0 ? 1 : 0;
 }
 
 export default function PlantHero({
   photoUri,
   scientific,
+  identityV1,
   accent = colors.accent,
   icon = 'leaf',
-  height = 220,
+  height = 164,
   similarImages,
+  showIdentifiedBadge = true,
 }) {
   const { t, i18n } = useTranslation();
   const [reference, setReference] = useState(null);
+  const [failedReferenceUrl, setFailedReferenceUrl] = useState(null);
+  const refs = heroRefs(similarImages);
+  const vendorReference = refs.find((item) => item.url !== failedReferenceUrl) || null;
+  const enrichmentScientific = enrichmentTaxon(identityV1, {
+    scientificName: scientific,
+  })?.canonicalName || null;
 
   useEffect(() => {
-    if (!scientific) {
+    // A busca enciclopedica e fallback, nao uma chamada paralela obrigatoria.
+    // Com referencia do fornecedor ela so gastava rede e nunca era exibida.
+    if (!enrichmentScientific || vendorReference) {
       setReference(null);
       return undefined;
     }
     let alive = true;
-    getSpeciesPhoto(scientific, i18n.language).then((p) => {
+    getSpeciesPhoto(enrichmentScientific, i18n.language).then((p) => {
       if (alive) setReference(p);
     });
     return () => {
       alive = false;
     };
-  }, [scientific, i18n.language]);
+  }, [enrichmentScientific, i18n.language, vendorReference?.url]);
+
+  useEffect(() => {
+    setFailedReferenceUrl(null);
+  }, [similarImages]);
 
   const badge = (
     <View style={styles.badge}>
@@ -112,82 +115,75 @@ export default function PlantHero({
     />
   );
 
-  const refs = heroRefs(similarImages);
+  // A referencia devolvida junto da identificacao pertence ao mesmo registro
+  // taxonomico que venceu a foto. Ela tem prioridade sobre uma nova busca por
+  // nome na Wikipedia, que e apenas o fallback para resultados antigos.
+  const preferredReference = vendorReference?.url
+    ? {
+        url: vendorReference.url,
+        credit: [vendorReference.citation, vendorReference.licenseName].filter(Boolean).join(' · '),
+        sourceUrl:
+          vendorReference.sourceUrl ||
+          (/^https?:\/\//.test(vendorReference.citation || '') ? vendorReference.citation : null) ||
+          vendorReference.licenseUrl ||
+          null,
+      }
+    : reference
+    ? {
+        ...reference,
+        credit: [reference.imageCreator, reference.imageLicense].filter(Boolean).join(' · '),
+        sourceUrl: reference.imageSourceUrl || reference.sourceUrl || null,
+      }
+    : null;
 
-  // 1. Mosaic: your photo dominant, two references stacked beside it.
-  if (photoUri && refs.length >= MOSAIC_REFS) {
-    const extra = refs.length - MOSAIC_REFS;
-    return (
-      <View style={[styles.hero, styles.split, { height }]}>
-        <View style={styles.mosaicMain}>
-          <Image source={{ uri: photoUri }} style={StyleSheet.absoluteFill} resizeMode="cover" />
-        </View>
-        <View style={styles.divider} />
-        <View style={styles.mosaicSide}>
-          <View style={styles.mosaicCell}>
-            <Image source={{ uri: refs[0].url }} style={StyleSheet.absoluteFill} resizeMode="cover" />
-          </View>
-          <View style={styles.hDivider} />
-          <View style={styles.mosaicCell}>
-            <Image source={{ uri: refs[1].url }} style={StyleSheet.absoluteFill} resizeMode="cover" />
-            {extra > 0 && (
-              <View style={styles.moreBadge}>
-                <Text style={styles.moreText}>{`+${extra}`}</Text>
-              </View>
-            )}
-          </View>
-        </View>
-        {fade}
-        <View style={styles.labelRow} pointerEvents="none">
-          <Text style={[styles.halfLabel, styles.labelMain]}>{t('common.yourPhoto')}</Text>
-          <View style={styles.labelSideSpacer} />
-        </View>
-        {badge}
-      </View>
-    );
-  }
-
-  // 2. Both photos: yours on the left, the species on the right.
-  if (photoUri && reference?.url) {
-    return (
-      <View style={[styles.hero, styles.split, { height }]}>
-        <View style={styles.half}>
-          <Image source={{ uri: photoUri }} style={StyleSheet.absoluteFill} resizeMode="cover" />
-        </View>
-        <View style={styles.divider} />
-        <View style={styles.half}>
-          <Image source={{ uri: reference.url }} style={StyleSheet.absoluteFill} resizeMode="cover" />
-        </View>
-        {fade}
-        <View style={styles.labelRow} pointerEvents="none">
-          <Text style={[styles.halfLabel, styles.labelHalf]}>{t('common.yourPhoto')}</Text>
-          <View style={styles.labelGap} />
-          <Text style={[styles.halfLabel, styles.labelHalf]}>{t('common.referencePhoto')}</Text>
-        </View>
-        {badge}
-      </View>
-    );
-  }
-
-  // 3 & 4. Whichever single photo exists.
-  const single = photoUri || reference?.url;
+  // The live observation stays whole; references are compared at readable
+  // size immediately below. Restored records fall back to one reference here.
+  const single = photoUri || preferredReference?.url;
   if (single) {
     return (
       <View style={[styles.hero, { height }]}>
-        <Image source={{ uri: single }} style={StyleSheet.absoluteFill} resizeMode="cover" />
+        <Image
+          source={{ uri: single }}
+          style={StyleSheet.absoluteFill}
+          resizeMode="cover"
+          onError={() => {
+            if (!photoUri && vendorReference?.url) setFailedReferenceUrl(vendorReference.url);
+          }}
+        />
         {fade}
         {/* Credit is only owed when the picture is not the user's own. */}
-        {!photoUri && reference?.sourceUrl && (
-          <TouchableOpacity style={styles.credit} accessibilityRole="link">
+        {!photoUri && !!preferredReference?.credit && preferredReference?.sourceUrl && (
+          <TouchableOpacity
+            style={styles.credit}
+            accessibilityRole="link"
+            onPress={() => preferredReference.sourceUrl && Linking.openURL(preferredReference.sourceUrl)}
+          >
+            <Text style={styles.creditText} numberOfLines={1}>
+              {t('detail.speciesCareSource', { citation: preferredReference.credit })}
+            </Text>
+          </TouchableOpacity>
+        )}
+        {!photoUri && !!preferredReference?.credit && !preferredReference?.sourceUrl && (
+          <Text style={styles.creditTextOverlay} numberOfLines={1}>
+            {preferredReference.credit}
+          </Text>
+        )}
+        {!photoUri && !preferredReference?.credit && preferredReference?.sourceUrl && (
+          <TouchableOpacity
+            style={styles.credit}
+            accessibilityRole="link"
+            onPress={() => Linking.openURL(preferredReference.sourceUrl)}
+          >
             <Text style={styles.creditText}>{t('fieldGuide.photoCredit')}</Text>
           </TouchableOpacity>
         )}
-        {badge}
+        {!!photoUri && <Text style={styles.singleLabel}>{t('common.yourPhoto')}</Text>}
+        {showIdentifiedBadge && badge}
       </View>
     );
   }
 
-  // 5. No photo at all: the gradient-and-icon card of before, now full-bleed.
+  // 3. No photo at all: the gradient-and-icon card of before, now full-bleed.
   return (
     <LinearGradient
       colors={[accent + '55', colors.surfaceElevated, colors.background]}
@@ -201,7 +197,7 @@ export default function PlantHero({
         <CategoryIcon name={icon} size={height * 0.32} color={accent} />
       </View>
       {fade}
-      {badge}
+      {showIdentifiedBadge && badge}
     </LinearGradient>
   );
 }
@@ -226,45 +222,16 @@ const styles = StyleSheet.create({
     bottom: 0,
     height: '34%',
   },
-  split: { flexDirection: 'row', alignItems: 'stretch', justifyContent: 'flex-start' },
-  half: { flex: 1, height: '100%' },
-  // A hairline of background between photos, so they read as separate images
-  // rather than one badly-stitched panorama.
-  divider: { width: 2, height: '100%', backgroundColor: colors.background },
-  hDivider: { height: 2, backgroundColor: colors.background },
-  // Mosaic: user photo ~62%, references stacked in the remaining ~38%.
-  mosaicMain: { flex: 62, height: '100%' },
-  mosaicSide: { flex: 38, height: '100%' },
-  mosaicCell: { flex: 1, overflow: 'hidden' },
-  moreBadge: {
+  singleLabel: {
     position: 'absolute',
-    right: 8,
-    bottom: 8,
-    backgroundColor: 'rgba(0,0,0,0.55)',
-    borderRadius: 12,
-    paddingHorizontal: 8,
-    paddingVertical: 3,
-  },
-  moreText: { color: colors.white, fontSize: 11.5, fontWeight: '800' },
-  // Labels live on their own layer ABOVE the fade (they used to sit inside the
-  // halves, where the fade would wash them out).
-  labelRow: {
-    position: 'absolute',
-    left: 0,
-    right: 0,
-    bottom: 0,
-    flexDirection: 'row',
-  },
-  labelHalf: { flex: 1 },
-  labelGap: { width: 2 },
-  labelMain: { flex: 62 },
-  labelSideSpacer: { flex: 38 },
-  halfLabel: {
+    left: 14,
+    bottom: 10,
     color: colors.white,
-    fontSize: 10.5,
+    fontSize: 11,
     fontWeight: '700',
-    textAlign: 'center',
-    paddingVertical: 5,
+    paddingHorizontal: 9,
+    paddingVertical: 4,
+    borderRadius: 999,
     backgroundColor: 'rgba(0,0,0,0.55)',
   },
   pot: {
@@ -303,5 +270,17 @@ const styles = StyleSheet.create({
     color: 'rgba(255,255,255,0.75)',
     fontSize: 10,
     textAlign: 'center',
+  },
+  creditTextOverlay: {
+    position: 'absolute',
+    left: 12,
+    right: 12,
+    bottom: 8,
+    color: 'rgba(255,255,255,0.82)',
+    fontSize: 10,
+    textAlign: 'center',
+    textShadowColor: 'rgba(0,0,0,0.8)',
+    textShadowOffset: { width: 0, height: 1 },
+    textShadowRadius: 2,
   },
 });

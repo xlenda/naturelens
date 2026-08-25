@@ -18,10 +18,35 @@ import { getSpeciesPhoto } from './speciesPhoto';
 //
 // The reference fetch only fires when there is no user photo, so a normal
 // local collection renders instantly with zero network.
-export default function FindThumb({ photoUri, scientific, icon, accent, iconSize = 28, style }) {
+export default function FindThumb({
+  photoUri,
+  referenceUri,
+  referencePhoto,
+  similarImages,
+  scientific,
+  icon,
+  accent,
+  iconSize = 28,
+  style,
+}) {
   const { i18n } = useTranslation();
   const [reference, setReference] = useState(null);
-  const needsReference = !photoUri && !!scientific;
+  const [failedUris, setFailedUris] = useState([]);
+  const vendorReference =
+    referenceUri ||
+    referencePhoto ||
+    (Array.isArray(similarImages) ? similarImages.find((img) => img?.url)?.url : null);
+  const directCandidates = [photoUri, vendorReference].filter(Boolean);
+  const needsReference =
+    !!scientific && directCandidates.every((uri) => failedUris.includes(uri));
+
+  useEffect(() => {
+    // A blob URL pode morrer depois de um reload e um arquivo de cache pode ser
+    // limpo pelo sistema. Uma troca real de entidade deve tentar seus enderecos
+    // novamente; uma falha desta entidade, por outro lado, avanca para a foto
+    // de referencia sem deixar um quadrado quebrado na colecao.
+    setFailedUris([]);
+  }, [photoUri, vendorReference, scientific]);
 
   useEffect(() => {
     if (!needsReference) {
@@ -37,9 +62,20 @@ export default function FindThumb({ photoUri, scientific, icon, accent, iconSize
     };
   }, [needsReference, scientific, i18n.language]);
 
-  const uri = photoUri || reference?.url;
+  const uri = [...directCandidates, reference?.url].find(
+    (candidate) => candidate && !failedUris.includes(candidate)
+  );
   if (uri) {
-    return <Image source={{ uri }} style={[styles.image, style]} resizeMode="cover" />;
+    return (
+      <Image
+        source={{ uri }}
+        style={[styles.image, style]}
+        resizeMode="cover"
+        onError={() => setFailedUris((current) =>
+          current.includes(uri) ? current : [...current, uri]
+        )}
+      />
+    );
   }
 
   return (

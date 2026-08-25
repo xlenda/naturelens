@@ -28,7 +28,16 @@
 // no group: the reader would get confident, specific, irrelevant advice next to
 // the correct universal manual. `null` simply hides the extra card.
 
-const norm = (s) => (typeof s === 'string' ? s.trim().toLowerCase() : '');
+const norm = (s) =>
+  typeof s === 'string'
+    ? s.trim().toLowerCase().replace(/[×✕]/g, ' x ').replace(/\s+/g, ' ')
+    : '';
+
+const binomialOf = (scientific) => {
+  const parts = scientific.split(/\s+/);
+  if (parts[1] === 'x' && parts[2]) return `${parts[0]} ${parts[2]}`;
+  return parts.slice(0, 2).join(' ');
+};
 
 /**
  * Genus and binomial overrides, checked BEFORE family.
@@ -93,6 +102,42 @@ const TAXON = {
   'ficus carica': 'fruitVeg',
   vaccinium: 'fruitVeg', // Ericaceae, but grouped by the organ harvested
   artocarpus: 'fruitVeg',
+  // So taxons com cultivo alimentar comprovado. Familia nao abre este guia:
+  // Rosaceae tambem tem cerejeira ornamental e rosa, e Arecaceae tem palmeiras
+  // de paisagismo. O binomio exato leva a frutifera ao manejo de pomar sem
+  // transformar parentes ornamentais em lavoura. Desconhecida fica sem dose.
+  'malus domestica': 'fruitVeg',
+  'pyrus communis': 'fruitVeg',
+  'prunus persica': 'fruitVeg',
+  'prunus domestica': 'fruitVeg',
+  'prunus armeniaca': 'fruitVeg',
+  'prunus avium': 'fruitVeg',
+  'prunus cerasus': 'fruitVeg',
+  'citrus sinensis': 'fruitVeg',
+  'citrus limon': 'fruitVeg',
+  'citrus reticulata': 'fruitVeg',
+  'citrus aurantiifolia': 'fruitVeg',
+  'citrus latifolia': 'fruitVeg',
+  'citrus paradisi': 'fruitVeg',
+  'mangifera indica': 'fruitVeg',
+  'persea americana': 'fruitVeg',
+  'psidium guajava': 'fruitVeg',
+  'cocos nucifera': 'fruitVeg',
+  'carica papaya': 'fruitVeg',
+  'musa acuminata': 'fruitVeg',
+  'musa paradisiaca': 'fruitVeg',
+  'vitis vinifera': 'fruitVeg',
+  'punica granatum': 'fruitVeg',
+  'olea europaea': 'fruitVeg',
+  'annona muricata': 'fruitVeg',
+  'annona squamosa': 'fruitVeg',
+  'anacardium occidentale': 'fruitVeg',
+  'eugenia uniflora': 'fruitVeg',
+  'passiflora edulis': 'fruitVeg',
+  'fragaria ananassa': 'fruitVeg',
+  'theobroma cacao': 'fruitVeg',
+  'coffea arabica': 'fruitVeg',
+  'coffea canephora': 'fruitVeg',
   // Same "organ harvested" rule (frutiferas-e-hortalicas.md: "o discriminante e
   // o orgao colhido, nao o parentesco"). Ananas is the one Bromeliaceae the
   // dossiers file as food - lavouras-hortalicas-e-frutiferas.md lists
@@ -121,6 +166,17 @@ const TAXON = {
   triatoma: 'pestInsect',
   rhodnius: 'pestInsect',
   panstrongylus: 'pestInsect',
+  // O dossie cobre especificamente as formigas cortadeiras (Attini), nao a
+  // familia Formicidae inteira. Estes dois generos sao os taxons nomeados pela
+  // fonte da Embrapa; outras formigas falham fechado.
+  atta: 'pestInsect',
+  acromyrmex: 'pestInsect',
+  // Embrapa documenta este binomio como lagarta desfolhadora da soja. O
+  // override e exato porque Erebidae inteira nao define papel agronomico.
+  'anticarsia gemmatalis': 'pestInsect',
+  // Saturniidae mistura mariposas muito diferentes. O protocolo medico atual
+  // tem evidencia exata para Lonomia obliqua; a familia ampla fica sem guia.
+  'lonomia obliqua': 'pestInsect',
 
   // --- Fungi: the dossiers name GENERA, not families (see FAMILY note) -------
   // cogumelos-decompositores.md, taxonomy note: "as fontes de extensao
@@ -162,48 +218,39 @@ const TAXON = {
 };
 
 /**
- * Families that mean something different on the `crop` category (a commercial
- * field) than in a garden. Consulted first when category === 'crop'.
- * Split from the main table so both stay flat string maps.
+ * Culturas de lavoura cobertas explicitamente pelos dossies.
+ *
+ * O valor null e deliberado: cana, algodao e cafe sao culturas importantes,
+ * mas os dossies atuais nao cobrem seu sistema de producao. A familia nunca
+ * completa a classificacao: ela daria protocolo de graos para cana e de
+ * hortalicas para algodao. As entradas positivas sao uma allowlist exata.
  */
-const CROP_FAMILY = {
-  // lavouras-graos-e-cereais.md
-  poaceae: 'grainCrop',
-  fabaceae: 'grainCrop',
-  linaceae: 'grainCrop',
-  pedaliaceae: 'grainCrop',
-  polygonaceae: 'grainCrop',
-  // lavouras-hortalicas-e-frutiferas.md
-  solanaceae: 'vegCrop',
-  brassicaceae: 'vegCrop',
-  cucurbitaceae: 'vegCrop',
-  apiaceae: 'vegCrop',
-  amaryllidaceae: 'vegCrop',
-  asteraceae: 'vegCrop',
-  amaranthaceae: 'vegCrop',
-  convolvulaceae: 'vegCrop',
-  euphorbiaceae: 'vegCrop',
-  araceae: 'vegCrop',
-  malvaceae: 'vegCrop',
-  zingiberaceae: 'vegCrop',
-  rosaceae: 'vegCrop',
-  rutaceae: 'vegCrop',
-  musaceae: 'vegCrop',
-  anacardiaceae: 'vegCrop',
-  myrtaceae: 'vegCrop',
-  vitaceae: 'vegCrop',
-  bromeliaceae: 'vegCrop',
-  caricaceae: 'vegCrop',
-  lauraceae: 'vegCrop',
-  passifloraceae: 'vegCrop',
-  sapindaceae: 'vegCrop',
-  annonaceae: 'vegCrop',
-  arecaceae: 'vegCrop',
-  moraceae: 'vegCrop',
-  ebenaceae: 'vegCrop',
-  malpighiaceae: 'vegCrop',
-  oxalidaceae: 'vegCrop',
+const CROP_TAXON = {
+  'zea mays': 'grainCrop',
+  'glycine max': 'grainCrop',
+  'triticum aestivum': 'grainCrop',
+  'oryza sativa': 'grainCrop',
+  'helianthus annuus': 'grainCrop',
+  'brassica napus': 'grainCrop',
+  'brassica juncea': 'grainCrop',
+  'brassica oleracea': 'vegCrop',
+  'chenopodium quinoa': 'grainCrop',
+  'amaranthus caudatus': 'grainCrop',
+  'amaranthus cruentus': 'grainCrop',
+  'amaranthus hypochondriacus': 'grainCrop',
+  'manihot esculenta': 'vegCrop',
+  'solanum tuberosum': 'vegCrop',
+  'lactuca sativa': 'vegCrop',
+  'allium cepa': 'vegCrop',
+  'ananas comosus': 'vegCrop',
+  'musa acuminata': 'vegCrop',
+  'citrus sinensis': 'vegCrop',
+  saccharum: null,
+  gossypium: null,
+  coffea: null,
 };
+
+const hasOwn = (obj, key) => Object.prototype.hasOwnProperty.call(obj, key);
 
 /**
  * Families whose group only becomes single-valued once you know WHAT was
@@ -232,11 +279,11 @@ const FAMILY_BY_CATEGORY = {
  * not the fix:
  *  - Poaceae. Outside a field it is lawn, bamboo and ornamental grass, and the
  *    corpus has no dossier for any of those. Its only garden entry is sweet
- *    corn (frutiferas-e-hortalicas.md), handled by genus in TAXON; the cereals
- *    are handled by CROP_FAMILY.
+ *    corn (frutiferas-e-hortalicas.md), handled by genus in TAXON; field crops
+ *    are handled only by the exact CROP_TAXON allowlist.
  *  - Euphorbiaceae. The corpus scatters it across three groups: succulent
  *    *Euphorbia* (suculentas-e-cactos.md), *Manihot* as a crop
- *    (lavouras-hortalicas-e-frutiferas.md, reached through CROP_FAMILY) and
+ *    (lavouras-hortalicas-e-frutiferas.md, reached through CROP_TAXON) and
  *    *Ricinus* on the high-danger list of seguranca-plantas-toxicas.md. And
  *    the split is not even at genus level: the same *Euphorbia* covers the
  *    spiny succulents that "enganam muito" and the poinsettia, which is
@@ -396,7 +443,6 @@ const FAMILY = {
   chrysomelidae: 'pestInsect',
   curculionidae: 'pestInsect',
   elateridae: 'pestInsect',
-  scarabaeidae: 'pestInsect',
   cerambycidae: 'pestInsect',
   crambidae: 'pestInsect',
   pyralidae: 'pestInsect',
@@ -409,13 +455,11 @@ const FAMILY = {
   tephritidae: 'pestInsect',
   thripidae: 'pestInsect',
   tetranychidae: 'pestInsect',
-  formicidae: 'pestInsect', // leafcutters; "praga em plantio" per the dossier
   termitidae: 'pestInsect',
   // Stinging caterpillars: a MEDICAL problem filed here because this is where
   // someone looks after meeting one (insetos-praga-comuns.md, "Divergencias").
   megalopygidae: 'pestInsect',
   limacodidae: 'pestInsect',
-  saturniidae: 'pestInsect', // includes Lonomia - conservative on purpose
 
   // ---- Cogumelos -----------------------------------------------------------
   // Only the three families confirmed by a primary source in
@@ -610,6 +654,12 @@ const FAMILY = {
   cuculidae: 'forestBird',
 };
 
+// Estes dois grupos carregam semantica de cultivo e colheita. A familia nao
+// prova que a planta e alimento ou erva: Solanaceae inclui beladona e Datura;
+// Apiaceae inclui cicuta; Rosaceae inclui ornamentais. So uma entrada positiva
+// em TAXON pode abrir esses dossies.
+const TAXON_ONLY_GROUPS = new Set(['fruitVeg', 'herb']);
+
 /**
  * Order -> group, used only when the family is unknown or unmapped.
  * Fish orders carry real signal (peixes-de-agua-doce.md opens by saying the app
@@ -672,9 +722,10 @@ export function getSpeciesGroup(entity) {
   const category = norm(entity.category);
   const family = norm(entity.family);
   const ord = norm(entity.ord);
+  const scientific = norm(entity.scientific);
 
   // A commercial field is a different manual from a backyard bed, so `crop`
-  // answers from ONE table and stops there.
+  // answers from its OWN exact taxon allowlist and stops there.
   //
   // It has to run before TAXON, not after: TAXON only knows garden and
   // houseplant cases, and its `lactuca`, `daucus`, `apium`, `allium` and
@@ -684,23 +735,35 @@ export function getSpeciesGroup(entity) {
   // (lavouras-hortalicas-e-frutiferas.md) - different scale, different
   // irrigation, different rotation.
   //
-  // And when the family is missing the answer is `null`, deliberately: a crop
-  // with no taxonomy gets the universal manual, never the garden one.
-  if (category === 'crop') return CROP_FAMILY[family] || null;
+  // A curta CROP_TAXON e uma allowlist positiva: o nome cientifico precisa
+  // estar coberto pelo dossie. Familia nunca abre manejo de lavoura, porque
+  // Poaceae nao transforma cana em milho e Malvaceae nao transforma algodao
+  // em hortalica. Entradas null documentam vetos importantes.
+  if (category === 'crop') {
+    // Sem binomio nao ha como aplicar os vetos por cultura. Usar so familia
+    // faria cana virar cereal e algodao virar hortalica.
+    if (!scientific || scientific.split(/\s+/).length < 2) return null;
+    const binomial = binomialOf(scientific);
+    if (hasOwn(CROP_TAXON, binomial)) return CROP_TAXON[binomial];
+    const genus = scientific.split(/\s+/)[0];
+    if (hasOwn(CROP_TAXON, genus)) return CROP_TAXON[genus];
+    return null;
+  }
 
   // Binomial first, then genus. `scientific` is "Genus species" for every
   // category that sends it; anything else simply misses both lookups.
-  const scientific = norm(entity.scientific);
   if (scientific) {
-    const binomial = scientific.split(/\s+/).slice(0, 2).join(' ');
-    if (TAXON[binomial]) return TAXON[binomial];
+    const binomial = binomialOf(scientific);
+    if (hasOwn(TAXON, binomial)) return TAXON[binomial];
     const genus = scientific.split(/\s+/)[0];
-    if (TAXON[genus]) return TAXON[genus];
+    if (hasOwn(TAXON, genus)) return TAXON[genus];
   }
 
   if (FAMILY_BY_CATEGORY[family]) return FAMILY_BY_CATEGORY[family][category] || null;
 
-  if (FAMILY[family]) return FAMILY[family];
+  const familyGroup = FAMILY[family];
+  if (TAXON_ONLY_GROUPS.has(familyGroup)) return null;
+  if (familyGroup) return familyGroup;
   if (ORDER[ord]) return ORDER[ord];
 
   // Deliberately NO category fallback. A mushroom whose family is unknown is
@@ -746,10 +809,19 @@ export function selfCheck() {
     'pestInsect',
     'Triatominae'
   );
+  eq(getSpeciesGroup({ category: 'insect', family: 'Formicidae', scientific: 'Atta sexdens' }), 'pestInsect', 'leafcutter ant');
+  eq(getSpeciesGroup({ category: 'insect', family: 'Formicidae', scientific: 'Linepithema humile' }), null, 'other ants fail closed');
+  eq(getSpeciesGroup({ category: 'insect', family: 'Scarabaeidae', scientific: 'Scarabaeus sacer' }), null, 'scarabs fail closed');
+  eq(getSpeciesGroup({ category: 'insect', family: 'Saturniidae', scientific: 'Lonomia obliqua' }), 'pestInsect', 'Lonomia obliqua');
+  eq(getSpeciesGroup({ category: 'insect', family: 'Saturniidae', scientific: 'Automeris io' }), null, 'other saturniids fail closed');
 
   // Binomial beats genus (Ficus is a houseplant and a fruit tree).
   eq(getSpeciesGroup({ category: 'plant', family: 'Moraceae', scientific: 'Ficus lyrata' }), 'tropicalFoliage', 'Ficus houseplant');
   eq(getSpeciesGroup({ category: 'plant', family: 'Moraceae', scientific: 'Ficus carica' }), 'fruitVeg', 'Ficus fig');
+  eq(getSpeciesGroup({ category: 'plant', family: 'Rosaceae', scientific: 'Malus domestica' }), 'fruitVeg', 'apple');
+  eq(getSpeciesGroup({ category: 'tree', family: 'Anacardiaceae', scientific: 'Mangifera indica' }), 'fruitVeg', 'mango');
+  eq(getSpeciesGroup({ category: 'plant', family: 'Lauraceae', scientific: 'Persea americana' }), 'fruitVeg', 'avocado');
+  eq(getSpeciesGroup({ category: 'tree', family: 'Rosaceae', scientific: 'Prunus serrulata' }), null, 'ornamental cherry stays out');
 
   // An epiphytic cactus is NOT a desert cactus - same family, opposite water
   // regime (suculentas-e-cactos.md: "manejo oposto"). Both directions checked,
@@ -761,17 +833,38 @@ export function selfCheck() {
   if (desert === forest) throw new Error('epiphytic cactus resolved to the desert group');
   eq(getSpeciesGroup({ category: 'plant', family: 'Cactaceae', scientific: 'Rhipsalis baccifera' }), 'orchid', 'Rhipsalis');
 
-  // The crop table only applies on the crop category, and it wins over the
-  // garden genus overrides - a field of lettuce is not a backyard bed.
-  eq(getSpeciesGroup({ category: 'crop', family: 'Poaceae' }), 'grainCrop', 'crop poaceae');
-  eq(getSpeciesGroup({ category: 'crop', family: 'Solanaceae' }), 'vegCrop', 'crop solanaceae');
-  eq(getSpeciesGroup({ category: 'plant', family: 'Solanaceae' }), 'fruitVeg', 'garden solanaceae');
+  // Lavoura exige nome cientifico coberto. Familia sozinha nunca vira
+  // protocolo: e exatamente assim que cana parecia milho e algodao hortalica.
+  eq(getSpeciesGroup({ category: 'crop', family: 'Poaceae' }), null, 'crop family only');
+  eq(getSpeciesGroup({ category: 'crop', family: 'Solanaceae' }), null, 'crop solanaceae only');
+  eq(getSpeciesGroup({ category: 'crop', family: 'Lamiaceae' }), null, 'crop lamiaceae only');
+  eq(
+    getSpeciesGroup({ category: 'crop', family: 'Poaceae', scientific: 'Saccharum officinarum' }),
+    null,
+    'sugarcane is not a cereal'
+  );
+  eq(
+    getSpeciesGroup({ category: 'crop', family: 'Malvaceae', scientific: 'Gossypium hirsutum' }),
+    null,
+    'cotton is not a vegetable crop'
+  );
+  eq(
+    getSpeciesGroup({ category: 'crop', family: 'Asteraceae', scientific: 'Helianthus annuus' }),
+    'grainCrop',
+    'sunflower is an oilseed crop'
+  );
+  eq(
+    getSpeciesGroup({ category: 'crop', scientific: 'Manihot esculenta' }),
+    'vegCrop',
+    'known crop taxon works without family'
+  );
+  eq(getSpeciesGroup({ category: 'plant', family: 'Solanaceae' }), null, 'garden solanaceae needs taxon');
   eq(
     getSpeciesGroup({ category: 'crop', family: 'Asteraceae', scientific: 'Lactuca sativa' }),
     'vegCrop',
     'crop beats the garden genus'
   );
-  eq(getSpeciesGroup({ category: 'crop', scientific: 'Lactuca sativa' }), null, 'crop without family');
+  eq(getSpeciesGroup({ category: 'crop', scientific: 'Lactuca sativa' }), 'vegCrop', 'exact crop without family');
 
   // Waterfowl read the migratory manual, not the bird-feeder one.
   eq(getSpeciesGroup({ category: 'bird', family: 'Ardeidae' }), 'forestBird', 'heron');

@@ -3,6 +3,7 @@ const assert = require('node:assert');
 const fs = require('fs');
 const path = require('path');
 const i18next = require('i18next');
+const babel = require('@babel/core');
 const { supportedCodes } = require('./test-locales');
 
 // Os outros testes de i18n comparam ARQUIVOS JSON entre si. Nenhum liga o
@@ -15,6 +16,14 @@ const { supportedCodes } = require('./test-locales');
 
 const dir = path.join(__dirname, 'public', 'locales');
 const read = (code) => JSON.parse(fs.readFileSync(path.join(dir, `${code}.json`), 'utf8'));
+
+function loadExpoModule(relativePath) {
+  const file = path.join(__dirname, relativePath);
+  const { code } = babel.transformFileSync(file, { presets: ['babel-preset-expo'] });
+  const mod = { exports: {} };
+  new Function('module', 'exports', 'require', code)(mod, mod.exports, require);
+  return mod.exports;
+}
 
 // Espelha bundleCodeFor() do i18n.js. Se um dos dois mudar sem o outro, o
 // teste abaixo acusa.
@@ -74,4 +83,29 @@ test('formatLanguageCode realmente muda zh-hant (o motivo do fix existir)', asyn
     'zh-hant',
     'se o i18next parou de normalizar, bundleCodeFor virou codigo morto e pode sair'
   );
+});
+
+test('arquivos sob demanda e a API recebem o codigo canonico do app', () => {
+  const { normaliseAppLanguage } = loadExpoModule('components/appLanguage.js');
+  assert.equal(normaliseAppLanguage('zh-Hant'), 'zh-hant');
+  assert.equal(normaliseAppLanguage('PT-BR'), 'pt');
+  assert.equal(normaliseAppLanguage('en-US'), 'en');
+  assert.equal(normaliseAppLanguage(null), 'en');
+
+  for (const relativePath of [
+    'components/groupContent.js',
+    'components/scheduleContent.js',
+    'components/speciesDetails.js',
+    'components/manualContent.js',
+    'components/herbDetails.js',
+    'components/identify.js',
+    'i18n.js',
+  ]) {
+    const source = fs.readFileSync(path.join(__dirname, relativePath), 'utf8');
+    assert.match(
+      source,
+      /normaliseAppLanguage/,
+      `${relativePath}: every lazy file/request must normalise zh-Hant before using it`
+    );
+  }
 });

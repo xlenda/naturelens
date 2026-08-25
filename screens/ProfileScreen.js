@@ -317,6 +317,8 @@ export default function ProfileScreen() {
                   <FindThumb
                     key={item.savedId}
                     photoUri={item.photoUri}
+                    referencePhoto={item.referencePhoto}
+                    similarImages={item.similarImages}
                     style={[styles.totalStackPhoto, idx > 0 && styles.totalStackOverlap]}
                   />
                 ))}
@@ -393,6 +395,28 @@ export default function ProfileScreen() {
           </PressScale>
         </View>
         )}
+
+        <View style={[styles.recapRow, styles.communityRow]}>
+          <View style={styles.communityIcon}>
+            <Ionicons name="podium" size={20} color={colors.warning} />
+          </View>
+          <View style={{ flex: 1 }}>
+            <Text style={styles.recapTitle}>{t('community.entryTitle')}</Text>
+            <Text style={styles.recapSub}>{t('community.entrySubtitle')}</Text>
+            <PressScale style={styles.communityButtonWrap}>
+              <TouchableOpacity
+                style={styles.communityButton}
+                activeOpacity={0.85}
+                onPress={() => navigation.navigate('Community')}
+                accessibilityRole="button"
+                accessibilityLabel={t('community.screenTitle')}
+              >
+                <Text style={styles.communityButtonText}>{t('store.open')}</Text>
+                <Ionicons name="chevron-forward" size={15} color={colors.background} />
+              </TouchableOpacity>
+            </PressScale>
+          </View>
+        </View>
 
         {/* Monthly recap: a scoreboard of the current month, built from the
             collection that already exists. Placed right under the streak/token
@@ -536,10 +560,15 @@ export default function ProfileScreen() {
         <ZoneBand gutter={20} style={styles.zoneGap}>
           <Text style={styles.sectionLabel}>{t('profile.byCategory')}</Text>
 
-          {Object.values(CATEGORIES).map((meta) => {
-            const latest = latestByCategory[meta.key];
-            return (
-              <View key={meta.key} style={styles.categoryCard}>
+          {Object.values(CATEGORIES)
+            // No APK, uma categoria indisponivel so aparece se houver um
+            // registro antigo para abrir. Assim a estatistica nao promete um
+            // scanner que este dispositivo nao consegue iniciar.
+            .filter((meta) => meta.enabled !== false || counts[meta.key] > 0)
+            .map((meta) => {
+              const latest = latestByCategory[meta.key];
+              return (
+                <View key={meta.key} style={styles.categoryCard}>
                 {latest ? (
                   /* Foto real no lugar do selo de ícone (doutrina
                      diagramacao-premium: a foto é a arte da linha, ícone é o
@@ -553,6 +582,8 @@ export default function ProfileScreen() {
                      do speciesPhoto. */
                   <FindThumb
                     photoUri={latest.photoUri}
+                    referencePhoto={latest.referencePhoto}
+                    similarImages={latest.similarImages}
                     scientific={latest.scientific}
                     icon={meta.tabIcon}
                     accent={meta.accent}
@@ -572,9 +603,9 @@ export default function ProfileScreen() {
                 )}
                 <Text style={styles.categoryLabel}>{t(`categories.${meta.key}.tabLabel`)}</Text>
                 <Text style={styles.categoryCount}>{counts[meta.key] || 0}</Text>
-              </View>
-            );
-          })}
+                </View>
+              );
+            })}
         </ZoneBand>
 
       </ScrollView>
@@ -860,6 +891,31 @@ const styles = StyleSheet.create({
   },
   recapTitle: { color: colors.text, fontSize: 14, fontWeight: '700' },
   recapSub: { color: colors.textMuted, fontSize: 12, marginTop: 2 },
+  communityRow: {
+    alignItems: 'flex-start',
+    minHeight: 128,
+    borderColor: colors.warning + '66',
+    backgroundColor: colors.warning + '12',
+  },
+  communityIcon: {
+    width: 38,
+    height: 38,
+    borderRadius: 14,
+    backgroundColor: colors.warning + '22',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  communityButtonWrap: { alignSelf: 'flex-start', marginTop: 12 },
+  communityButton: {
+    minHeight: 36,
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 5,
+    borderRadius: 12,
+    backgroundColor: colors.warning,
+    paddingHorizontal: 13,
+  },
+  communityButtonText: { color: colors.background, fontSize: 12.5, lineHeight: 16, fontWeight: '900' },
   naturalistPill: {
     flexDirection: 'row',
     alignItems: 'center',

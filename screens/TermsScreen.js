@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet, ScrollView, TouchableOpacity, Linking } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, TouchableOpacity, Linking, Platform } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useNavigation } from '@react-navigation/native';
 import { useTranslation } from 'react-i18next';
@@ -96,13 +96,15 @@ export default function TermsScreen() {
         <LegalDocument langLabel="English" sections={termsEn} />
 
         {/* Versao web do mesmo documento — o proprio URL e o texto do link. */}
-        <TouchableOpacity
-          style={styles.webLink}
-          onPress={() => Linking.openURL(FULL_DOC_URL).catch(() => {})}
-          accessibilityRole="link"
-        >
-          <Text style={styles.webLinkText}>{FULL_DOC_URL}</Text>
-        </TouchableOpacity>
+        {Platform.OS === 'web' && (
+          <TouchableOpacity
+            style={styles.webLink}
+            onPress={() => Linking.openURL(FULL_DOC_URL).catch(() => {})}
+            accessibilityRole="link"
+          >
+            <Text style={styles.webLinkText}>{FULL_DOC_URL}</Text>
+          </TouchableOpacity>
+        )}
       </ScrollView>
     </SafeAreaView>
   );

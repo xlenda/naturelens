@@ -34,7 +34,10 @@ export function binomialKey(scientific) {
     .toLowerCase()
     .replace(/[^a-z\s]/g, ' ')
     .split(/\s+/)
-    .filter(Boolean);
+    .filter(Boolean)
+    // O contrato de identidade canoniza o sinal de hibrido como token "x".
+    // Ele separa genero e epiteto, mas nunca pode virar o epiteto da busca.
+    .filter((word, index) => index === 0 || word !== 'x');
   if (words.length < 2) return null;
   return words[0] + ' ' + words[1];
 }

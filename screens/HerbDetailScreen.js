@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, StyleSheet, ScrollView, TouchableOpacity, ActivityIndicator, Image, Linking } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, TouchableOpacity, ActivityIndicator, Image, Linking, Platform } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useNavigation } from '@react-navigation/native';
 import { useTranslation } from 'react-i18next';
@@ -178,7 +178,7 @@ export default function HerbDetailScreen({ route }) {
           </>
         )}
 
-        {!!details && !subLoading && subStatus !== 'active' && (
+        {Platform.OS === 'web' && !!details && !subLoading && subStatus !== 'active' && (
           <View style={styles.subscribeCard}>
             <Ionicons name="sparkles" size={22} color={colors.accent} />
             <Text style={styles.subscribeTitle}>{t('discover.herbSubscribeCtaTitle')}</Text>

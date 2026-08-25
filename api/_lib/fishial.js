@@ -87,7 +87,10 @@ async function fishialIdentify({ res, image, images }) {
   // failing a request the user thought would work.
   if (Array.isArray(images) && images.length > 0) image = images[0];
   if (typeof image !== 'string' || !image) {
-    res.status(400).json({ error: 'Missing "image" (base64) in request body' });
+    res.status(400).json({
+      error: 'Missing "image" (base64) in request body',
+      reason: 'identifyFailed',
+    });
     return null;
   }
 
@@ -95,7 +98,10 @@ async function fishialIdentify({ res, image, images }) {
   try {
     token = await getToken();
   } catch (err) {
-    res.status(500).json({ error: 'Fish identification is not configured on the server.' });
+    res.status(503).json({
+      error: 'Fish identification is not configured on the server.',
+      reason: 'serviceUnavailable',
+    });
     return null;
   }
 
@@ -126,14 +132,20 @@ async function fishialIdentify({ res, image, images }) {
     if (!uploadResp.ok) throw new Error(`upload handshake ${uploadResp.status}`);
     uploadInfo = await uploadResp.json();
   } catch (err) {
-    res.status(502).json({ error: 'Could not reach the identification service.' });
+    res.status(502).json({
+      error: 'Could not reach the identification service.',
+      reason: 'vendorError',
+    });
     return null;
   }
 
   const directUpload = uploadInfo?.['direct-upload'];
   const signedId = uploadInfo?.['signed-id'];
   if (!directUpload?.url || !signedId) {
-    res.status(502).json({ error: 'Could not reach the identification service.' });
+    res.status(502).json({
+      error: 'Could not reach the identification service.',
+      reason: 'vendorError',
+    });
     return null;
   }
 
@@ -148,7 +160,10 @@ async function fishialIdentify({ res, image, images }) {
     }));
     if (!putResp.ok) throw new Error(`upload ${putResp.status}`);
   } catch (err) {
-    res.status(502).json({ error: 'Could not upload the photo for identification.' });
+    res.status(502).json({
+      error: 'Could not upload the photo for identification.',
+      reason: 'vendorError',
+    });
     return null;
   }
 
@@ -161,12 +176,18 @@ async function fishialIdentify({ res, image, images }) {
     if (recogResp.status === 401) invalidateToken();
     const data = await recogResp.json();
     if (!recogResp.ok || data?.errors) {
-      res.status(502).json({ error: 'Could not identify this photo. Please try again.' });
+      res.status(502).json({
+        error: 'Could not identify this photo. Please try again.',
+        reason: 'vendorError',
+      });
       return null;
     }
     return data;
   } catch (err) {
-    res.status(502).json({ error: 'Could not reach the identification service.' });
+    res.status(502).json({
+      error: 'Could not reach the identification service.',
+      reason: 'vendorError',
+    });
     return null;
   }
 }

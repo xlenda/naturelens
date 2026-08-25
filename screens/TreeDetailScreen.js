@@ -5,6 +5,7 @@ import {
   StyleSheet,
   ScrollView,
   TouchableOpacity,
+  ActivityIndicator,
   Linking,
 } from 'react-native';
 import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context';
@@ -15,21 +16,38 @@ import { useTranslation } from 'react-i18next';
 import PlantHero from '../components/PlantHero';
 import SectionCard from '../components/SectionCard';
 import IdentificationExtras from '../components/IdentificationExtras';
+import DidacticFieldGuide from '../components/DidacticFieldGuide';
+import DiscoveryReceiptCard from '../components/DiscoveryReceiptCard';
+import { enrichmentTaxon } from '../components/taxonIdentity';
+import { canonicalBinomial } from '../components/curatedDetails';
+import VendorSourceCredit from '../components/VendorSourceCredit';
 import DistributionMap from '../components/DistributionMap';
 import SeasonChart from '../components/SeasonChart';
+import DiseaseReport from '../components/DiseaseReport';
 import { colors } from '../components/theme';
-import { getCollection, saveToCollection, removeFromCollection, updateCollectionEntry } from '../components/storage';
+import {
+  getCollection,
+  saveToCollection,
+  removeFromCollection,
+  markCollectionWatered,
+  updateCollectionEntry,
+} from '../components/storage';
 import { CATEGORIES } from '../components/categories';
 import { getSpeciesGroup } from '../components/speciesGroup';
+import { getGroups } from '../components/groupContent';
 import CareSchedule from '../components/CareSchedule';
 import SpeciesCareCard from '../components/SpeciesCareCard';
-import { getWateringStatus, WATER_INTERVAL_DAYS } from '../components/watering';
+import { getWateringStatus } from '../components/watering';
+import { identify } from '../components/identify';
 import { shareEntity } from '../components/share';
 import InstallNudgeCard from '../components/InstallNudgeCard';
+import PaywallModal from '../components/PaywallModal';
 import AlertModal from '../components/AlertModal';
 import { useAppAlert } from '../components/useAppAlert';
 import { addTokens } from '../components/achievements';
 import { recordMissionEvent, TOKENS_PER_MISSION } from '../components/missions';
+import { trackResultSaved } from '../components/tracking';
+import { startCheckout } from '../components/subscription';
 import NatureScene from '../components/NatureScene';
 import ZoneBand from '../components/ZoneBand';
 import PressScale from '../components/PressScale';
@@ -38,14 +56,32 @@ import Pronounce from '../components/Pronounce';
 import HelpfulRow from '../components/HelpfulRow';
 import SpeciesFaq from '../components/SpeciesFaq';
 import ShareSpeciesCard from '../components/ShareSpeciesCard';
+import CommunityInviteCard from '../components/CommunityInviteCard';
 import ResultActionBar from '../components/ResultActionBar';
 import QuickFactGrid from '../components/QuickFactGrid';
+import TopicNavigatorCard from '../components/TopicNavigatorCard';
+import { createSpeciesTopicResourceKey, usePublishSpeciesTopics } from '../components/speciesTopicResource';
+import { API_BASE } from '../components/apiBase';
+import { getSpeciesDossier } from '../components/speciesDossier';
+import {
+  buildSourceGroundedTopics,
+  mergeSourceGroundedTopics,
+} from '../components/sourceGroundedTopics';
 import CareConditions from '../components/CareConditions';
-import MonthInstructions from '../components/MonthInstructions';
 import CareProfile from '../components/CareProfile';
 import CommonProblems from '../components/CommonProblems';
+import PlantFertilizerCard from '../components/PlantFertilizerCard';
 import shortFact from '../components/shortFact';
 import ExpandableText from '../components/ExpandableText';
+import TaxonomyTrail from '../components/TaxonomyTrail';
+import LensRevealCard from '../components/LensRevealCard';
+import NextBestCaptureCard from '../components/NextBestCaptureCard';
+import { retakeResult } from '../components/resultRetake';
+import { RESULT_DEPTHS, ResultDepthLayer } from '../components/ResultDepthSwitcher';
+import {
+  observationSubjectKey,
+  moveObservationSubject,
+} from '../components/observationStorage';
 
 function InfoRow({ label, value, color }) {
   return (
@@ -56,6 +92,64 @@ function InfoRow({ label, value, color }) {
   );
 }
 
+function technicalText(value) {
+  const values = Array.isArray(value) ? value : [value];
+  const clean = values
+    .filter((item) => typeof item === 'string')
+    .map((item) => item.trim())
+    .filter(Boolean);
+  return clean.length ? clean.join(', ') : null;
+}
+
+const BOTANICAL_GROUP_TOPIC_DEFS = Object.freeze([
+  { key: 'watering', labelKey: 'detail.wateringGuideSection' },
+  { key: 'light', labelKey: 'detail.lightSection' },
+  { key: 'soil', labelKey: 'detail.soilSection' },
+  { key: 'safety', labelKey: 'detail.safetySection' },
+  { key: 'uses', labelKey: 'detail.commonUsesSection' },
+]);
+
+function availableGroupTopicKeys(groups, groupKey) {
+  const source = groups?.[groupKey]?.topics;
+  if (!source) return [];
+  return BOTANICAL_GROUP_TOPIC_DEFS
+    .filter(({ key }) => {
+      const topic = source[key];
+      return ['advice', 'checklist'].some((field) => (
+        Array.isArray(topic?.[field])
+          && topic[field].some((line) => typeof line === 'string' && line.trim())
+      ));
+    })
+    .map(({ key }) => key);
+}
+
+function healthResultFromEntry(entry) {
+  if (entry?.healthAssessed !== true) return null;
+  return {
+    healthAssessed: true,
+    scientific: entry.healthScientific || entry.scientific || null,
+    healthScientific: entry.healthScientific || entry.scientific || null,
+    healthCheckedAt: entry.healthCheckedAt || null,
+    sourceProvider: entry.healthSourceProvider || null,
+    resultLanguage: entry.healthResultLanguage || null,
+    disease: entry.disease ?? null,
+  };
+}
+
+function healthFields(result) {
+  if (!result) return {};
+  const fields = {
+    healthAssessed: true,
+    disease: result.disease ?? null,
+  };
+  const scientific = result.healthScientific || result.scientific;
+  if (scientific) fields.healthScientific = scientific;
+  if (result.healthCheckedAt) fields.healthCheckedAt = result.healthCheckedAt;
+  if (result.sourceProvider) fields.healthSourceProvider = result.sourceProvider;
+  if (result.resultLanguage) fields.healthResultLanguage = result.resultLanguage;
+  return fields;
+}
+
 // TopicDoor saiu daqui (tela principal rica - video do concorrente, 20/08):
 // Usos / Significado cultural / Partes comestiveis / Propagacao voltaram a ser
 // SectionCard inline com o texto real. As portas que restam sao os cards da
@@ -63,22 +157,87 @@ function InfoRow({ label, value, color }) {
 
 export default function TreeDetailScreen({ route }) {
   const navigation = useNavigation();
-  const { plant, fromIdentify } = route.params;
+  const { plant, photoBase64, fromIdentify, scanOutcome, scanOutcomeRequest } = route.params;
   const meta = CATEGORIES.tree;
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const insets = useSafeAreaInsets();
-  const [saved, setSaved] = useState(false);
+  const [saved, setSaved] = useState(Boolean(plant.savedId));
   const [savedEntryId, setSavedEntryId] = useState(plant.savedId || null);
-  const [lastWateredAt, setLastWateredAt] = useState(plant.lastWateredAt || plant.savedAt || null);
+  const unsavedObservationKey = observationSubjectKey({ ...plant, savedId: null }, null);
+  const observationKey = savedEntryId
+    ? observationSubjectKey(plant, savedEntryId)
+    : unsavedObservationKey;
+  const detachedObservationKey = React.useRef(null);
+  const [lastWateredAt, setLastWateredAt] = useState(plant.lastWateredAt || null);
+  const [wateringBusy, setWateringBusy] = useState(false);
+  const [healthChecking, setHealthChecking] = useState(false);
+  const [healthResult, setHealthResult] = useState(() => healthResultFromEntry(plant));
+  const [healthError, setHealthError] = useState(null);
+  const [paywallVisible, setPaywallVisible] = useState(false);
+  const [subscribing, setSubscribing] = useState(false);
+  // A ficha botanica sempre entrega todo o dossie verdadeiro. Os wrappers de
+  // profundidade continuam apenas para preservar a ordem editorial existente;
+  // com Expert fixo, nenhuma preferencia antiga do onboarding esconde dados.
+  const resultDepth = RESULT_DEPTHS.EXPERT;
   const { alertConfig, showAlert, hideAlert } = useAppAlert();
+  const enrichment = enrichmentTaxon(plant.identityV1, {
+    scientificName: plant.scientific,
+    gbifKey: plant.gbifId,
+  });
+  const enrichmentScientific = enrichment?.canonicalName || null;
+  const dossierLookupKey = `tree|${i18n.language}|${enrichmentScientific || ''}`;
+  const [speciesDossierState, setSpeciesDossierState] = useState({ key: null, dossier: null });
+  const speciesDossier = speciesDossierState.key === dossierLookupKey
+    ? speciesDossierState.dossier
+    : null;
+  const speciesDossierLoading = Boolean(enrichmentScientific)
+    && speciesDossierState.key !== dossierLookupKey;
+  // Familia e ordem sustentam apenas o guia geral. O binomio desta identidade
+  // continua nulo ate a confirmacao exata, impedindo que um palpite de especie
+  // libere USDA, GBIF, adubacao ou diagnostico especifico.
+  const groupGuideEntity = {
+    category: 'tree',
+    scientific: enrichmentScientific,
+    family: plant.family || null,
+    ord: plant.ord || null,
+  };
+
+  useEffect(() => {
+    let alive = true;
+    // Wikipedia so entra depois que identityV1 confirmou o binomio. O estado
+    // carrega a chave junto do resultado para uma arvore nunca herdar o texto
+    // da anterior durante troca de rota ou idioma.
+    if (!enrichmentScientific) return () => { alive = false; };
+    getSpeciesDossier({
+      apiBase: API_BASE,
+      category: 'tree',
+      scientific: enrichmentScientific,
+      language: i18n.language,
+    }).then(
+      (dossier) => {
+        if (alive) setSpeciesDossierState({ key: dossierLookupKey, dossier });
+      },
+      () => {
+        if (alive) setSpeciesDossierState({ key: dossierLookupKey, dossier: null });
+      }
+    );
+    return () => { alive = false; };
+  }, [dossierLookupKey, enrichmentScientific, i18n.language]);
 
   useEffect(() => {
     (async () => {
+      if (!plant.savedId) return;
       const list = await getCollection();
-      const found = list.find((p) => p.savedId === plant.savedId || p.id === plant.id);
+      const found = list.find((p) => p.savedId === plant.savedId);
       if (found) {
         setSaved(true);
         setSavedEntryId(found.savedId);
+        setLastWateredAt(found.lastWateredAt || null);
+        setHealthResult(healthResultFromEntry(found));
+      } else {
+        setSaved(false);
+        setSavedEntryId(null);
+        setLastWateredAt(null);
       }
     })();
   }, []);
@@ -86,34 +245,62 @@ export default function TreeDetailScreen({ route }) {
   const toggleSave = async () => {
     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
     if (saved && savedEntryId) {
+      const previousObservationKey = observationKey;
       const result = await removeFromCollection(savedEntryId);
       if (result) {
+        if (previousObservationKey && unsavedObservationKey) {
+          await moveObservationSubject(previousObservationKey, unsavedObservationKey);
+          detachedObservationKey.current = null;
+        } else if (previousObservationKey) {
+          detachedObservationKey.current = previousObservationKey;
+        }
         setSaved(false);
         setSavedEntryId(null);
       } else {
         showAlert(t('common.saveErrorTitle'), t('common.saveErrorBody'));
       }
     } else {
-      const entry = await saveToCollection(plant);
+      const previousObservationKey = observationKey || detachedObservationKey.current;
+      const entry = await saveToCollection({ ...plant, ...healthFields(healthResult) });
       if (entry) {
+        const savedObservationKey = observationSubjectKey(entry, entry.savedId);
+        if (previousObservationKey && savedObservationKey) {
+          await moveObservationSubject(previousObservationKey, savedObservationKey);
+          detachedObservationKey.current = null;
+        }
+        trackResultSaved({ category: 'tree' });
         // Save-mission credit (idempotent - see components/missions.js).
         recordMissionEvent('save').then((done) => {
           if (done.length) addTokens(done.length * TOKENS_PER_MISSION);
         });
         setSaved(true);
         setSavedEntryId(entry.savedId);
-        setLastWateredAt(entry.savedAt || null);
+        // Salvar identifica a arvore; nao prova que ela acabou de ser regada.
+        setLastWateredAt(entry.lastWateredAt || null);
       } else {
         showAlert(t('common.saveErrorTitle'), t('common.saveErrorBody'));
       }
     }
   };
 
+  const openObservationWorkspace = () => {
+    if (!observationKey) return;
+    navigation.navigate('ObservationWorkspace', {
+      entity: plant,
+      savedId: savedEntryId || null,
+    });
+  };
+
   // edibleParts/propagation nao voltam pra ficha: eles tem card proprio na
   // banda de baixo (tela principal rica - video do concorrente, 20/08).
+  const familyText = technicalText(plant.family);
+  const originText = technicalText(plant.origin);
   const infoRows = [
-    { label: t('common.nativeOrigin'), value: plant.origin },
-    { label: t('detail.wateringNeeds'), value: plant.waterLabel || plant.water },
+    // Identificacoes antigas salvaram "familia / genero" como se fosse origem
+    // nativa. Esse valor taxonomico nao e geografia e precisa ficar oculto.
+    { label: t('common.nativeOrigin'), value: familyText && originText?.toLowerCase().startsWith(familyText.toLowerCase() + ' /') ? null : originText },
+    { label: t('detail.wateringNeeds'), value: technicalText(plant.waterLabel || plant.water) },
+    { label: t('detail.synonyms'), value: technicalText(plant.synonyms) },
   ].filter((r) => r.value);
 
   // Auditoria de diagramacao 20/08: quando o vendor nao tem nome comum ele
@@ -122,24 +309,50 @@ export default function TreeDetailScreen({ route }) {
   // perde - ele encosta no proprio nome logo abaixo).
   const showScientific = !!plant.scientific && plant.scientific !== plant.name;
 
+  const groupKey = getSpeciesGroup(groupGuideEntity);
+  const groupTopicLookupKey = `${i18n.language}|${groupKey || ''}`;
+  const [groupTopicState, setGroupTopicState] = useState({ key: null, keys: [] });
+  const groupTopicKeys = groupTopicState.key === groupTopicLookupKey
+    ? groupTopicState.keys
+    : [];
+  const groupTopicsLoading = Boolean(groupKey) && groupTopicState.key !== groupTopicLookupKey;
+
+  useEffect(() => {
+    let alive = true;
+    if (!groupKey) {
+      setGroupTopicState({ key: groupTopicLookupKey, keys: [] });
+      return () => { alive = false; };
+    }
+    getGroups(i18n.language).then(
+      (groups) => {
+        if (alive) {
+          setGroupTopicState({
+            key: groupTopicLookupKey,
+            keys: availableGroupTopicKeys(groups, groupKey),
+          });
+        }
+      },
+      () => {
+        if (alive) setGroupTopicState({ key: groupTopicLookupKey, keys: [] });
+      }
+    );
+    return () => { alive = false; };
+  }, [groupKey, groupTopicLookupKey, i18n.language]);
+
   // Abas do manual CareTopics: APROFUNDAMENTO, nao o unico endereco do texto
   // (tela principal rica - video do concorrente, 20/08). Cada card da grade de
   // fatos abre a aba do seu topico; uses/cultural/edible/propagation continuam
   // na lista porque tambem sao abas la, mas agora vivem inline no resultado.
   // Only topics with real text ship - the manual filters again anyway.
   const listText = (v) => (Array.isArray(v) ? v.map((x) => '• ' + x).join('\n') : v);
-  const topics = [
+  const baseTopics = [
     {
       key: 'watering',
       label: t('detail.wateringGuideSection'),
       text: plant.bestWatering,
-      // Real structured data for the Needs block: the interval map's days and
-      // the 1..3 intensity from the raw Kindwise watering field. Compound
-      // values ("Low ... to Medium") have no interval entry - the label alone
-      // shows, honestly.
-      shortValue: WATER_INTERVAL_DAYS[plant.water]
-        ? t('detail.everyNDays', { count: WATER_INTERVAL_DAYS[plant.water] })
-        : plant.waterLabel || plant.water,
+      // O campo estruturado e intensidade. Ele alimenta o nivel visual, mas
+      // nao pode virar um intervalo que o fornecedor nunca informou.
+      shortValue: shortFact('water', plant.waterLabel || plant.water, t),
       level: /high/i.test(plant.water || '') ? 3 : /medium/i.test(plant.water || '') ? 2 : /low/i.test(plant.water || '') ? 1 : undefined,
     },
     { key: 'light', label: t('detail.lightSection'), text: plant.bestLightCondition },
@@ -151,10 +364,20 @@ export default function TreeDetailScreen({ route }) {
     { key: 'propagation', label: t('detail.propagation'), text: listText(plant.propagationMethods) },
     { key: 'overview', label: t('common.overview'), text: plant.overview },
   ].filter((tp) => tp.text);
-
-  // Grupo curado da especie - a base honesta do CareProfile (paridade 120%,
-  // video do concorrente, 20/08). Lookup puro em tabela, sem rede.
-  const groupKey = getSpeciesGroup(plant);
+  const sourceTopics = buildSourceGroundedTopics({ dossier: speciesDossier });
+  const topics = mergeSourceGroundedTopics(baseTopics, sourceTopics);
+  groupTopicKeys.forEach((key) => {
+    if (topics.some((topic) => topic.key === key)) return;
+    const definition = BOTANICAL_GROUP_TOPIC_DEFS.find((topic) => topic.key === key);
+    if (definition) topics.push({ key, label: t(definition.labelKey), groupOnly: true });
+  });
+  const topicResourceKey = createSpeciesTopicResourceKey({
+    category: 'tree',
+    language: i18n.language,
+    routeKey: route.key,
+    identity: plant.savedId || plant.scientific || plant.name,
+  });
+  usePublishSpeciesTopics(topicResourceKey, topics);
 
   // initialProblem: indice do acordeao de problemas, so quando a porta e um
   // card do carrossel "Problemas Comuns" (paridade 120%). undefined nas outras
@@ -166,6 +389,7 @@ export default function TreeDetailScreen({ route }) {
       accent: meta.accent,
       category: 'tree',
       topics,
+      topicResourceKey,
       initialKey,
       initialProblem,
     });
@@ -183,16 +407,80 @@ export default function TreeDetailScreen({ route }) {
   const wateringStatus = saved ? getWateringStatus({ ...plant, lastWateredAt }) : null;
 
   const handleMarkWatered = async () => {
-    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
-    if (!savedEntryId) return;
-    const nowIso = new Date().toISOString();
-    await updateCollectionEntry(savedEntryId, { lastWateredAt: nowIso });
-    setLastWateredAt(nowIso);
+    if (!savedEntryId || wateringBusy) return;
+    setWateringBusy(true);
+    let result = null;
+    try {
+      result = await markCollectionWatered(savedEntryId);
+    } catch (e) {
+      result = null;
+    } finally {
+      setWateringBusy(false);
+    }
+    if (result) {
+      setLastWateredAt(result.lastWateredAt);
+      Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
+    } else {
+      Haptics.notificationAsync(Haptics.NotificationFeedbackType.Error);
+      showAlert(t('common.saveErrorTitle'), t('common.saveErrorBody'));
+    }
   };
 
   const handleShare = () => {
     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
     shareEntity(plant, t('categories.tree.label'));
+  };
+
+  const handleCheckHealth = async () => {
+    if (!photoBase64 || healthChecking) return;
+    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
+    setHealthChecking(true);
+    setHealthError(null);
+    try {
+      const cropEntity = await identify('crop', photoBase64);
+      const expectedSpecies = canonicalBinomial(enrichmentScientific);
+      const checkedSpecies = canonicalBinomial(cropEntity?.scientific);
+      // O laudo secundario tambem identifica a especie. Sem a mesma arvore,
+      // o resultado nao pertence a esta ficha e precisa falhar fechado.
+      if (!expectedSpecies || !checkedSpecies || expectedSpecies !== checkedSpecies) {
+        setHealthResult(null);
+        setHealthError(t('detail.healthSpeciesMismatch'));
+        Haptics.notificationAsync(Haptics.NotificationFeedbackType.Error);
+        return;
+      }
+      const acceptedResult = {
+        ...cropEntity,
+        healthAssessed: true,
+        healthScientific: cropEntity.scientific,
+        healthCheckedAt: new Date().toISOString(),
+        disease: cropEntity.disease ?? null,
+      };
+      setHealthResult(acceptedResult);
+      if (savedEntryId) {
+        const updated = await updateCollectionEntry(savedEntryId, healthFields(acceptedResult));
+        if (!updated) showAlert(t('common.saveErrorTitle'), t('common.saveErrorBody'));
+      }
+      Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
+    } catch (err) {
+      Haptics.notificationAsync(Haptics.NotificationFeedbackType.Error);
+      if (err.paymentRequired) {
+        setPaywallVisible(true);
+        return;
+      }
+      setHealthError(err.message || t('identify.identificationFailedDefault'));
+    } finally {
+      setHealthChecking(false);
+    }
+  };
+
+  const handleSubscribe = async (plan) => {
+    setSubscribing(true);
+    try {
+      await startCheckout(plan);
+    } catch (e) {
+      setSubscribing(false);
+      showAlert(t('paywall.checkoutFailedTitle'), e.message || t('paywall.checkoutFailedBody'));
+    }
   };
 
   return (
@@ -238,7 +526,8 @@ export default function TreeDetailScreen({ route }) {
         <PlantHero
           photoUri={plant.photoUri}
           similarImages={plant.similarImages}
-          scientific={plant.scientific}
+          scientific={enrichmentScientific}
+          identityV1={plant.identityV1}
           accent={meta.accent}
           icon={meta.tabIcon}
           height={150}
@@ -268,17 +557,19 @@ export default function TreeDetailScreen({ route }) {
               </Text>
             )}
           </View>
-          <View style={styles.confidenceBadge}>
-            <Text style={styles.confidenceLabel}>{t('common.confidence')}</Text>
-            <Text style={styles.confidenceValue}>{plant.confidence}%</Text>
-          </View>
+          {Number.isFinite(plant.confidence) && (
+            <View style={styles.confidenceBadge}>
+              <Text style={styles.confidenceLabel}>{t('common.confidence')}</Text>
+              <Text style={styles.confidenceValue}>{plant.confidence}%</Text>
+            </View>
+          )}
         </View>
 
         {/* ORDEM DO SCROLL - auditoria de diagramacao 20/08 ("fato antes de
             prosa"): a primeira dobra entregava zero fato sobre a especie. O
             chip de categoria saiu daqui - o header ja diz "Perfil de Arvore" e
-            o dock repete; era ruido puro. Agora vem seguranca -> grade de
-            fatos, e extras/mapa/visao geral descem pra depois deles.
+            o dock repete; era ruido puro. Agora vem seguranca -> evidencia ->
+            fatos, e mapa/visao geral descem pra depois deles.
             "Quente primeiro": havendo toxicidade, ela abre ANTES da grade -
             responde o medo que trouxe o usuario aqui. Sem toxicidade a banda
             inteira nao renderiza (nunca um card vazio).
@@ -286,18 +577,90 @@ export default function TreeDetailScreen({ route }) {
         {!!plant.toxicity && (
           <ZoneBand gutter={20}>
             <SectionCard icon="warning-outline" title={t('detail.safetySection')} color={colors.error}>
-              {/* Aviso colapsado: quente-primeiro se mantem (o alerta abre a
-                  tela), mas o paragrafo inteiro do vendor comia a primeira
-                  dobra e empurrava os Fatos rapidos pra fora - auditoria de
-                  diagramacao 20/08. */}
-              <ExpandableText
-                text={plant.toxicity}
-                textStyle={styles.body}
-                accent={meta.accent}
-              />
+              {/* NUNCA colapsado. A primeira frase pode dizer que e segura para
+                  humanos e a seguinte que e fatal para animais; esconder a
+                  segunda inverte o aviso que o usuario le. */}
+              <Text style={styles.body}>{plant.toxicity}</Text>
             </SectionCard>
           </ZoneBand>
         )}
+
+        <LensRevealCard
+          confidence={plant.confidence}
+          summary={plant.overview}
+          accent={meta.accent}
+          critical={!!plant.toxicity}
+        />
+        <PlantFertilizerCard
+          category="tree"
+          scientific={enrichmentScientific}
+          groupKey={groupKey}
+          entityName={plant.name}
+          defaultExpanded={resultDepth === RESULT_DEPTHS.EXPERT}
+          accent={meta.accent}
+        />
+        <TopicNavigatorCard
+          topics={topics}
+          accent={meta.accent}
+          onOpen={openTopic}
+          loading={groupTopicsLoading || speciesDossierLoading}
+        />
+        <NextBestCaptureCard
+          category="tree"
+          confidence={plant.confidence}
+          alternatives={plant.alternatives}
+          identityStatus={plant.identityV1?.status}
+          resultName={plant.name || plant.scientific}
+          fromIdentify={fromIdentify}
+          accent={meta.accent}
+          onRetake={() => retakeResult({ navigation, category: 'tree', fromIdentify })}
+        />
+
+        {/* O dossie de 146 mil avaliacoes mostrou que confiar no resultado e
+            uma necessidade anterior ao cuidado. Fotos de referencia, especies
+            alternativas e o alerta de baixa confianca agora aparecem logo
+            depois do risco. Os dados ja vieram da identificacao; se nenhum
+            existir, o componente inteiro some. */}
+        <ResultDepthLayer activeDepth={resultDepth} depth={RESULT_DEPTHS.VISUAL}>
+          <IdentificationExtras entity={plant} identityV1={plant.identityV1} accent={meta.accent} />
+        </ResultDepthLayer>
+
+        <ResultDepthLayer activeDepth={resultDepth} depth={RESULT_DEPTHS.ESSENTIAL}>
+          <DiscoveryReceiptCard
+            outcome={scanOutcome}
+            request={scanOutcomeRequest}
+            accent={meta.accent}
+            automaticSaveConfirmed={fromIdentify === true && !!plant.savedId}
+            riskLevel={plant.toxicity ? 'danger' : null}
+          />
+        </ResultDepthLayer>
+
+        <ResultDepthLayer activeDepth={resultDepth} depth={RESULT_DEPTHS.VISUAL}>
+          <DidacticFieldGuide category="tree" entity={plant} accent={meta.accent} />
+        </ResultDepthLayer>
+
+        <ResultDepthLayer activeDepth={resultDepth} depth={RESULT_DEPTHS.ESSENTIAL}>
+          {observationKey ? (
+          <TouchableOpacity
+            style={[styles.observationCard, { borderColor: meta.accent + '66' }]}
+            onPress={openObservationWorkspace}
+            activeOpacity={0.8}
+            accessibilityRole="button"
+            accessibilityLabel={t('observationWorkspace.openAction')}
+          >
+            <View style={[styles.observationIcon, { backgroundColor: meta.accent + '20' }]}>
+              <Ionicons name="journal-outline" size={24} color={meta.accent} />
+            </View>
+            <View style={styles.observationCopy}>
+              <Text style={styles.observationTitle}>{t('observationWorkspace.openTitle')}</Text>
+              <Text style={styles.observationBody}>{t('observationWorkspace.openBody')}</Text>
+            </View>
+            <Ionicons name="chevron-forward" size={20} color={meta.accent} />
+          </TouchableOpacity>
+          ) : null}
+        </ResultDepthLayer>
+
+        <ResultDepthLayer activeDepth={resultDepth} depth={RESULT_DEPTHS.EXPERT}>
 
         {/* Quick facts (auditoria de diagramacao 20/08): componente unico
             (QuickFactGrid) e VALOR curto no lugar da prosa truncada. Sem
@@ -345,13 +708,16 @@ export default function TreeDetailScreen({ route }) {
           />
         )}
 
-        {/* Condicao de Cuidado + Instrucoes do mes - tela principal rica
-            (video do concorrente, 20/08). Mesmos dois blocos do
-            PlantDetailScreen: o cuidado empilhado AQUI (as abas viram
-            aprofundamento, nao o unico endereco do conteudo), so com dado que
-            a entidade ja tem e sumindo inteiro quando nao ha nada. */}
+        {/* Condicao + cronograma no ponto quente. O antigo card mensal colava o
+            mes atual em um METODO de propagacao e inventava quando propagar. O
+            cronograma usa o corpus por estacao e hemisferio; sem base, some. */}
         <CareConditions plant={plant} onOpenTopic={openTopic} />
-        <MonthInstructions plant={plant} />
+        <CareSchedule
+          groupKey={groupKey}
+          entityName={plant.name}
+          hideFertilizing
+          accent={meta.accent}
+        />
 
         {/* Perfil de cuidado + Problemas Comuns - paridade 120% (video do
             concorrente, 20/08). Mesma dupla do PlantDetailScreen: dificuldade
@@ -361,22 +727,22 @@ export default function TreeDetailScreen({ route }) {
             arvore isso e comum, porque lenhosa cai no grupo `woody` so quando a
             familia esta na tabela. */}
         <CareProfile groupKey={groupKey} plant={plant} accent={meta.accent} />
-        <CommonProblems topics={topics} accent={meta.accent} onOpen={openTopic} />
-
-        {/* Reference photos, runner-up species and a low-confidence warning -
-            all built from data the API already returned. Desceu pra depois da
-            grade de fatos (auditoria de diagramacao 20/08). */}
-        <IdentificationExtras entity={plant} accent={meta.accent} />
+        <CommonProblems
+          topics={topics}
+          entityName={plant.name}
+          accent={meta.accent}
+          onOpen={openTopic}
+        />
 
         {/* Mapa de distribuicao REAL (GBIF) - o concorrente desenha o dele;
             este e ciencia com credito. Some sozinho sem match/offline. */}
-        <DistributionMap scientific={plant.scientific} accent={meta.accent} />
+        <DistributionMap scientific={plant.scientific} gbifId={plant.gbifId} identityV1={plant.identityV1} accent={meta.accent} />
 
         {/* Destaque da estacao (paridade 120% - video do concorrente, 20/08):
             onde ele desenha um grafico de estacao generico, aqui e o
             histograma REAL de ocorrencias por mes da especie no GBIF. Some
             sozinho com menos de 30 registros datados. */}
-        <SeasonChart scientific={plant.scientific} accent={meta.accent} />
+        <SeasonChart scientific={plant.scientific} gbifId={plant.gbifId} identityV1={plant.identityV1} accent={meta.accent} />
 
         {/* Zona de cor (diagramacao-premium): thematic runs of sections live
             in full-bleed bands one shade above the background; the gap between
@@ -384,66 +750,105 @@ export default function TreeDetailScreen({ route }) {
             A visao geral e PROSA, entao vem depois do fato (auditoria de
             diagramacao 20/08); a seguranca continua sendo a unica prosa que
             abre a tela. */}
-        <ZoneBand gutter={20}>
-          <SectionCard icon="leaf-outline" title={t('common.overview')} color={meta.accent}>
-            <Text style={styles.body}>{plant.overview || t('sound.noContentBody')}</Text>
-          </SectionCard>
-        </ZoneBand>
+        {!!plant.overview && (
+          <ZoneBand gutter={20}>
+            <SectionCard icon="leaf-outline" title={t('common.overview')} color={meta.accent}>
+              <Text style={styles.body}>{plant.overview}</Text>
+              <VendorSourceCredit
+                provider={plant.sourceProvider}
+                citation={plant.overviewCitation}
+                licenseName={plant.overviewLicense}
+                licenseUrl={plant.overviewLicenseUrl}
+              />
+            </SectionCard>
+          </ZoneBand>
+        )}
 
-        {/* Care band. Guarded: every child is conditional, and an empty band
-            would render as a floating pill of nothing. Care prose became door
-            cards into the CareTopics manual (hub do resultado, video do
-            concorrente); watering status stays inline - it is action, not
-            reading. */}
-        {!!(plant.bestWatering || plant.bestLightCondition || plant.bestSoilType || wateringStatus || groupKey) && (
-        <ZoneBand gutter={20}>
-
-        {/* Cronograma por ESTACAO - a resposta a tabela mes a mes de
-            fertilizacao do concorrente (paridade 120%, video de 20/08). Abre a
-            banda de cuidados porque e a unica peca que responde "o que eu faco
-            AGORA". Devolve null sozinho quando o grupo nao tem cronograma
-            sustentado pelo corpus, entao nao precisa de guarda propria aqui. */}
-        <CareSchedule groupKey={groupKey} accent={meta.accent} />
-        {/* Depois do cronograma de proposito (quente-primeiro): o cronograma
-            responde "o que eu faco agora" e este card e ficha tecnica, entao
-            ele fecha como recibo. Cai pro grupo DIZENDO que e do grupo quando
-            a especie nao esta no banco do USDA - o que e o caso da maioria das
-            tropicais de vaso, e o card nunca finge o contrario. */}
-        <SpeciesCareCard scientific={plant.scientific} groupKey={groupKey} accent={meta.accent} />
+        {/* Monta sempre: a consulta USDA e exata por especie e nao pode ser
+            escondida por uma guarda baseada nos campos opcionais do vendor.
+            O proprio componente retorna null sem especie nem grupo. */}
+        <SpeciesCareCard
+          scientific={enrichmentScientific}
+          groupKey={groupKey}
+          entityName={plant.name}
+          hideFertility
+          accent={meta.accent}
+        />
 
         {!!wateringStatus && (
+        <ZoneBand gutter={20}>
           <SectionCard icon="water-outline" title={t('detail.wateringSection')} color={colors.info}>
             <View style={styles.wateringRow}>
-              <Text
-                style={[
-                  styles.wateringLabel,
-                  { color: wateringStatus.overdue ? colors.error : colors.textSecondary },
-                ]}
-              >
-                {wateringStatus.overdue
+              <Text style={[styles.wateringLabel, { color: colors.textSecondary }]}>
+                {wateringStatus.untracked
                   ? t('detail.waterCheckToday')
-                  : t('detail.waterCheckInDays', { count: wateringStatus.dueInDays })}
+                  : t('specimen.timelineWatered')}
               </Text>
               <TouchableOpacity
-                style={styles.waterBtn}
+                style={[styles.waterBtn, wateringBusy && { opacity: 0.55 }]}
                 activeOpacity={0.85}
                 onPress={handleMarkWatered}
+                disabled={wateringBusy}
                 accessibilityRole="button"
+                accessibilityState={{ busy: wateringBusy, disabled: wateringBusy }}
                 accessibilityLabel={t('detail.markAsWateredLabel')}
               >
-                <Ionicons
-                  name="water"
-                  size={16}
-                  color={colors.white}
-                  accessibilityElementsHidden={true}
-                  importantForAccessibility="no-hide-descendants"
-                />
+                {wateringBusy ? (
+                  <ActivityIndicator size="small" color={colors.white} />
+                ) : (
+                  <Ionicons
+                    name={wateringStatus.untracked ? 'water' : 'checkmark-circle'}
+                    size={16}
+                    color={colors.white}
+                    accessibilityElementsHidden={true}
+                    importantForAccessibility="no-hide-descendants"
+                  />
+                )}
                 <Text style={styles.waterBtnText}>{t('detail.markAsWatered')}</Text>
               </TouchableOpacity>
             </View>
           </SectionCard>
-        )}
         </ZoneBand>
+        )}
+
+        {!!(photoBase64 || healthResult || healthError) && (
+          <ZoneBand gutter={20}>
+            {!!photoBase64 && !healthResult && (
+              <PressScale>
+                <TouchableOpacity
+                  style={[styles.healthBtn, healthChecking && { opacity: 0.6 }]}
+                  activeOpacity={0.85}
+                  onPress={handleCheckHealth}
+                  disabled={healthChecking}
+                  accessibilityRole="button"
+                  accessibilityLabel={healthChecking ? t('detail.checkingForDiseasesLabel') : t('detail.checkForDiseasesLabel')}
+                >
+                  {healthChecking ? (
+                    <ActivityIndicator size="small" color={colors.white} />
+                  ) : (
+                    <Ionicons
+                      name="medkit-outline"
+                      size={18}
+                      color={colors.white}
+                      accessibilityElementsHidden={true}
+                      importantForAccessibility="no-hide-descendants"
+                    />
+                  )}
+                  <Text style={styles.healthBtnText}>
+                    {healthChecking ? t('detail.checkingForDiseases') : t('detail.checkForDiseases')}
+                  </Text>
+                </TouchableOpacity>
+              </PressScale>
+            )}
+
+            {!!healthError && <Text style={styles.healthErrorText}>{healthError}</Text>}
+
+            {!!healthResult && (
+              <SectionCard icon="medkit-outline" title={t('detail.healthCheckSection')} color={colors.info}>
+                <DiseaseReport disease={healthResult.disease} provider={healthResult.sourceProvider} />
+              </SectionCard>
+            )}
+          </ZoneBand>
         )}
 
         {/* Ficha/recibo band: story context and the technical rows close the
@@ -459,7 +864,7 @@ export default function TreeDetailScreen({ route }) {
             (grade de fatos acima), onde o manual profundo por topico e o
             valor da aba. Campo ausente = bloco nao renderiza; listText('')
             cobre tambem a lista vazia que o vendor as vezes devolve. */}
-        {!!(plant.commonUses || plant.culturalSignificance || listText(plant.edibleParts) || listText(plant.propagationMethods) || infoRows.length > 0) && (
+        {!!(plant.commonUses || plant.culturalSignificance || listText(plant.edibleParts) || listText(plant.propagationMethods) || familyText || technicalText(plant.ord) || infoRows.length > 0) && (
         <ZoneBand gutter={20}>
         {!!plant.commonUses && (
           <SectionCard icon="construct-outline" title={t('detail.commonUsesSection')} color={meta.accent}>
@@ -500,6 +905,13 @@ export default function TreeDetailScreen({ route }) {
             <ExpandableText text={listText(plant.propagationMethods)} textStyle={styles.body} accent={meta.accent} />
           </SectionCard>
         )}
+
+        <TaxonomyTrail
+          order={plant.ord}
+          family={plant.family}
+          scientific={plant.scientific}
+          accent={meta.accent}
+        />
 
         {infoRows.length > 0 && (
           <SectionCard icon="finger-print-outline" title={t('common.details')} color={colors.purple}>
@@ -572,6 +984,8 @@ export default function TreeDetailScreen({ route }) {
           accent={meta.accent}
         />
 
+        <CommunityInviteCard accent={meta.accent} mode="care" />
+
         {/* "Duvidas frequentes" - paridade 120% (video do concorrente,
             20/08): o FAQ fixo dele vira pergunta SUGERIDA que abre a
             especialista ja com a duvida escrita e a especie como contexto. */}
@@ -585,6 +999,7 @@ export default function TreeDetailScreen({ route }) {
 
         {/* Feedback no fim do scroll (hub do resultado, video do concorrente). */}
         <HelpfulRow category="tree" context="result" />
+        </ResultDepthLayer>
       </ScrollView>
 
       {/* Barra de acoes fixa do resultado (hub do resultado, video do
@@ -597,7 +1012,17 @@ export default function TreeDetailScreen({ route }) {
         onShare={handleShare}
         onSave={toggleSave}
         saved={saved}
+        savedId={savedEntryId}
         accent={meta.accent}
+      />
+
+      <PaywallModal
+        visible={paywallVisible}
+        categoryLabel={t('categories.crop.label').toLowerCase()}
+        accent={meta.accent}
+        subscribing={subscribing}
+        onSubscribe={handleSubscribe}
+        onCancel={() => setPaywallVisible(false)}
       />
 
       <AlertModal
@@ -633,6 +1058,27 @@ const styles = StyleSheet.create({
   },
   confidenceLabel: { fontSize: 10, color: colors.textMuted, fontWeight: '600' },
   confidenceValue: { fontSize: 18, color: colors.accentLight, fontWeight: '800' },
+  observationCard: {
+    minHeight: 82,
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 12,
+    borderWidth: 1,
+    borderRadius: 18,
+    backgroundColor: colors.surfaceElevated,
+    padding: 14,
+    marginBottom: 16,
+  },
+  observationIcon: {
+    width: 48,
+    height: 48,
+    borderRadius: 15,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  observationCopy: { flex: 1 },
+  observationTitle: { color: colors.text, fontSize: 16, lineHeight: 21, fontWeight: '900' },
+  observationBody: { color: colors.textSecondary, fontSize: 12.5, lineHeight: 18, marginTop: 3 },
   body: { color: colors.textSecondary, fontSize: 14, lineHeight: 21 },
   // Copia literal do aviso da tela de Cogumelo, para as duas lerem igual.
   edibilityNote: {
@@ -681,6 +1127,17 @@ const styles = StyleSheet.create({
     borderRadius: 10,
   },
   waterBtnText: { color: colors.white, fontWeight: '700', fontSize: 12.5, marginLeft: 6 },
+  healthBtn: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: colors.info,
+    borderRadius: 14,
+    paddingVertical: 15,
+    marginBottom: 16,
+  },
+  healthBtnText: { color: colors.white, fontWeight: '700', fontSize: 14.5, marginLeft: 8 },
+  healthErrorText: { color: colors.error, fontSize: 13, marginBottom: 16, textAlign: 'center' },
   linkBtn: {
     flexDirection: 'row',
     alignItems: 'center',

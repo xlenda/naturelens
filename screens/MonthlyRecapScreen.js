@@ -4,13 +4,14 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { useNavigation, useFocusEffect } from '@react-navigation/native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Ionicons } from '@expo/vector-icons';
-import * as Haptics from 'expo-haptics';
 import { useTranslation } from 'react-i18next';
 import BackChevron from '../components/BackChevron';
 import CategoryIcon from '../components/CategoryIcon';
+import PressScale from '../components/PressScale';
 import { colors, shadow } from '../components/theme';
 import { CATEGORIES } from '../components/categories';
 import { getMonthlyRecap } from '../components/monthlyRecap';
+import { sensoryFeedback } from '../components/sensoryFeedback';
 import { shareRecap } from '../components/share';
 
 // "Your month in nature" - the shareable summary.
@@ -49,7 +50,7 @@ export default function MonthlyRecapScreen() {
   const handleShare = async () => {
     if (sharing || !recap) return;
     setSharing(true);
-    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+    sensoryFeedback.open();
     try {
       await shareRecap(recap, {
         monthName,
@@ -58,6 +59,11 @@ export default function MonthlyRecapScreen() {
     } finally {
       setSharing(false);
     }
+  };
+
+  const handleStartDiscovery = () => {
+    sensoryFeedback.open();
+    navigation.getParent()?.navigate(CATEGORIES.plant.tabLabel, { screen: 'ScanHome' });
   };
 
   const header = (
@@ -73,7 +79,7 @@ export default function MonthlyRecapScreen() {
       <Text style={styles.topTitle} accessibilityRole="header">
         {t('recap.title')}
       </Text>
-      <View style={styles.iconBtn} />
+      <View style={styles.iconBtn} accessible={false} />
     </View>
   );
 
@@ -81,6 +87,20 @@ export default function MonthlyRecapScreen() {
     return (
       <SafeAreaView style={styles.container} edges={['top']}>
         {header}
+        <View
+          style={styles.loading}
+          accessibilityRole="progressbar"
+          accessibilityLabel={t('common.loading')}
+          accessibilityLiveRegion="polite"
+          accessibilityState={{ busy: true }}
+        >
+          <View style={styles.loadingHero} accessible={false} />
+          <View style={styles.loadingGrid} accessible={false}>
+            {[0, 1, 2, 3].map((key) => <View key={key} style={styles.loadingStat} />)}
+          </View>
+          <View style={styles.loadingLine} accessible={false} />
+          <View style={[styles.loadingLine, styles.loadingLineShort]} accessible={false} />
+        </View>
       </SafeAreaView>
     );
   }
@@ -89,11 +109,28 @@ export default function MonthlyRecapScreen() {
     return (
       <SafeAreaView style={styles.container} edges={['top']}>
         {header}
-        <View style={styles.empty}>
-          <Ionicons name="calendar-outline" size={44} color={colors.textMuted} />
-          <Text style={styles.emptyTitle}>{t('recap.emptyTitle')}</Text>
+        <ScrollView
+          contentContainerStyle={styles.empty}
+          showsVerticalScrollIndicator={false}
+        >
+          <View style={styles.emptyIcon} accessible={false}>
+            <Ionicons name="camera-outline" size={34} color={colors.accentLight} accessible={false} />
+          </View>
+          <Text style={styles.emptyTitle} accessibilityRole="header">{t('recap.emptyTitle')}</Text>
           <Text style={styles.emptyBody}>{t('recap.emptyBody')}</Text>
-        </View>
+          <PressScale style={styles.emptyButtonWrap}>
+            <TouchableOpacity
+              style={styles.emptyButton}
+              onPress={handleStartDiscovery}
+              activeOpacity={0.85}
+              accessibilityRole="button"
+              accessibilityLabel={t('collection.emptyCta')}
+            >
+              <Ionicons name="scan-outline" size={19} color={colors.white} accessible={false} />
+              <Text style={styles.emptyButtonText}>{t('collection.emptyCta')}</Text>
+            </TouchableOpacity>
+          </PressScale>
+        </ScrollView>
       </SafeAreaView>
     );
   }
@@ -166,7 +203,11 @@ export default function MonthlyRecapScreen() {
             <Text style={styles.sectionTitle}>{t('recap.highlight')}</Text>
             <View style={styles.highlightCard}>
               {!!recap.highlight.photoUri && (
-                <Image source={{ uri: recap.highlight.photoUri }} style={styles.highlightPhoto} />
+                <Image
+                  source={{ uri: recap.highlight.photoUri }}
+                  style={styles.highlightPhoto}
+                  accessible={false}
+                />
               )}
               <View style={{ flex: 1 }}>
                 <Text style={styles.highlightName}>{recap.highlight.name}</Text>
@@ -190,6 +231,7 @@ export default function MonthlyRecapScreen() {
           activeOpacity={0.85}
           accessibilityRole="button"
           accessibilityLabel={t('recap.share')}
+          accessibilityState={{ disabled: sharing, busy: sharing }}
         >
           <Ionicons name="share-social" size={19} color={colors.white} />
           <Text style={styles.shareBtnText}>{t('recap.share')}</Text>
@@ -209,8 +251,8 @@ const styles = StyleSheet.create({
     paddingBottom: 10,
   },
   iconBtn: {
-    width: 40,
-    height: 40,
+    width: 44,
+    height: 44,
     borderRadius: 12,
     backgroundColor: colors.surface,
     alignItems: 'center',
@@ -218,9 +260,56 @@ const styles = StyleSheet.create({
   },
   topTitle: { fontSize: 16, fontWeight: '700', color: colors.text },
   scroll: { padding: 20, paddingBottom: 40 },
-  empty: { flex: 1, alignItems: 'center', justifyContent: 'center', padding: 32, gap: 12 },
+  empty: { flexGrow: 1, alignItems: 'center', justifyContent: 'center', padding: 32, gap: 12 },
+  emptyIcon: {
+    width: 72,
+    height: 72,
+    borderRadius: 24,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: colors.accent + '1E',
+    borderWidth: 1,
+    borderColor: colors.accent + '44',
+    marginBottom: 4,
+  },
   emptyTitle: { color: colors.text, fontSize: 17, fontWeight: '700', textAlign: 'center' },
   emptyBody: { color: colors.textMuted, fontSize: 14, lineHeight: 21, textAlign: 'center' },
+  emptyButtonWrap: { marginTop: 8 },
+  emptyButton: {
+    minHeight: 48,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 9,
+    borderRadius: 15,
+    paddingHorizontal: 22,
+    backgroundColor: colors.accent,
+  },
+  emptyButtonText: { color: colors.white, fontSize: 14, fontWeight: '800' },
+  loading: { padding: 20 },
+  loadingHero: {
+    height: 132,
+    borderRadius: 20,
+    backgroundColor: colors.surfaceElevated,
+    marginBottom: 18,
+  },
+  loadingGrid: { flexDirection: 'row', flexWrap: 'wrap', gap: 10 },
+  loadingStat: {
+    flexGrow: 1,
+    flexBasis: '45%',
+    height: 94,
+    borderRadius: 14,
+    backgroundColor: colors.card,
+    borderWidth: 1,
+    borderColor: colors.border,
+  },
+  loadingLine: {
+    height: 13,
+    borderRadius: 7,
+    backgroundColor: colors.surfaceElevated,
+    marginTop: 24,
+  },
+  loadingLineShort: { width: '68%', marginTop: 12 },
   hero: { borderRadius: 20, padding: 24, marginBottom: 18, ...shadow },
   heroMonth: {
     color: 'rgba(255,255,255,0.85)',

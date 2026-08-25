@@ -1,5 +1,5 @@
-import React, { useState, useCallback } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import React, { useState, useCallback, useRef } from 'react';
+import { AccessibilityInfo, View, Text, StyleSheet } from 'react-native';
 import { useFocusEffect } from '@react-navigation/native';
 import { Ionicons } from '@expo/vector-icons';
 import { useTranslation } from 'react-i18next';
@@ -18,19 +18,65 @@ import { getTodaysMissions, TOKENS_PER_MISSION } from './missions';
 // very screen that completed it (Fable review finding).
 export default function DailyMissionsCard({ refreshKey = 0 }) {
   const { t } = useTranslation();
-  const [missions, setMissions] = useState([]);
+  const [missions, setMissions] = useState(undefined);
+  const previousCompletion = useRef(null);
 
   useFocusEffect(
     useCallback(() => {
       let alive = true;
-      getTodaysMissions().then((m) => {
-        if (alive) setMissions(m);
-      });
+      getTodaysMissions()
+        .then((nextMissions) => {
+          if (!alive) return;
+          if (previousCompletion.current) {
+            const completedNow = nextMissions.filter(
+              (mission) => mission.completed && previousCompletion.current.get(mission.id) === false
+            );
+            if (completedNow.length > 0) {
+              const missionNames = completedNow
+                .map((mission) => t(`missions.pool.${mission.id}`))
+                .join(', ');
+              try {
+                AccessibilityInfo.announceForAccessibility?.(
+                  t('missions.completedAnnouncement', { mission: missionNames })
+                );
+              } catch (e) {
+                // O anuncio e auxiliar; a missao confirmada continua visivel.
+              }
+            }
+          }
+          previousCompletion.current = new Map(
+            nextMissions.map((mission) => [mission.id, !!mission.completed])
+          );
+          setMissions(nextMissions);
+        })
+        .catch(() => {
+          if (alive) setMissions([]);
+        });
       return () => {
         alive = false;
       };
-    }, [refreshKey])
+    }, [refreshKey, t])
   );
+
+  if (missions === undefined) {
+    return (
+      <View
+        style={styles.card}
+        accessibilityRole="progressbar"
+        accessibilityLabel={t('common.loading')}
+        accessibilityLiveRegion="polite"
+        accessibilityState={{ busy: true }}
+      >
+        <View style={styles.loadingHeader} accessible={false} />
+        {[0, 1, 2].map((key) => (
+          <View key={key} style={styles.loadingRow} accessible={false}>
+            <View style={styles.loadingDot} />
+            <View style={styles.loadingLine} />
+          </View>
+        ))}
+      </View>
+    );
+  }
 
   if (!missions.length) return null;
 
@@ -40,11 +86,11 @@ export default function DailyMissionsCard({ refreshKey = 0 }) {
     <View style={styles.card}>
       <View style={styles.header}>
         <View style={styles.headerLeft}>
-          <Ionicons name="today-outline" size={16} color={colors.accentLight} />
-          <Text style={styles.title}>{t('missions.title')}</Text>
+          <Ionicons name="today-outline" size={16} color={colors.accentLight} accessible={false} />
+          <Text style={styles.title} accessibilityRole="header">{t('missions.title')}</Text>
         </View>
         <View style={styles.rewardPill}>
-          <Ionicons name="disc-outline" size={11} color={colors.accentLight} />
+          <Ionicons name="disc-outline" size={11} color={colors.accentLight} accessible={false} />
           <Text style={styles.rewardPillText}>
             {t('missions.rewardEach', { tokens: TOKENS_PER_MISSION })}
           </Text>
@@ -52,11 +98,23 @@ export default function DailyMissionsCard({ refreshKey = 0 }) {
       </View>
 
       {missions.map((m) => (
-        <View key={m.id} style={styles.row}>
+        <View
+          key={m.id}
+          style={styles.row}
+          accessible
+          accessibilityRole="text"
+          accessibilityLabel={m.completed
+            ? `${t(`missions.pool.${m.id}`)}. ${t('missions.completedStatus')}`
+            : `${t(`missions.pool.${m.id}`)}. ${t('missions.progressStatus', {
+                done: m.done,
+                target: m.target,
+              })}`}
+        >
           <Ionicons
             name={m.completed ? 'checkmark-circle' : 'ellipse-outline'}
             size={19}
             color={m.completed ? colors.accent : colors.textMuted}
+            accessible={false}
           />
           <Text style={[styles.rowText, m.completed && styles.rowTextDone]} numberOfLines={2}>
             {t(`missions.pool.${m.id}`)}
@@ -69,7 +127,11 @@ export default function DailyMissionsCard({ refreshKey = 0 }) {
         </View>
       ))}
 
-      {allDone && <Text style={styles.allDone}>{t('missions.allDone')}</Text>}
+      {allDone && (
+        <Text style={styles.allDone} accessibilityLiveRegion="polite">
+          {t('missions.allDone')}
+        </Text>
+      )}
     </View>
   );
 }
@@ -116,5 +178,30 @@ const styles = StyleSheet.create({
     fontWeight: '700',
     textAlign: 'center',
     marginTop: 8,
+  },
+  loadingHeader: {
+    width: '46%',
+    height: 16,
+    borderRadius: 8,
+    backgroundColor: colors.surfaceElevated,
+    marginBottom: 11,
+  },
+  loadingRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 9,
+    paddingVertical: 7,
+  },
+  loadingDot: {
+    width: 19,
+    height: 19,
+    borderRadius: 10,
+    backgroundColor: colors.surfaceElevated,
+  },
+  loadingLine: {
+    flex: 1,
+    height: 12,
+    borderRadius: 6,
+    backgroundColor: colors.surfaceElevated,
   },
 });

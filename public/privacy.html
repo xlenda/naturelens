@@ -49,9 +49,9 @@
 
 <p class="lang" style="margin-top:0" id="pt">Português · <a href="#en">English version below</a></p>
 <h1>Política de Privacidade — NatureLens</h1>
-<p class="meta">Vigente a partir de 19 de agosto de 2026 · <a href="https://naturelensapp.cloud">naturelensapp.cloud</a></p>
+<p class="meta">Vigente a partir de 24 de agosto de 2026 · <a href="https://naturelensapp.cloud">naturelensapp.cloud</a></p>
 
-<p>O NatureLens identifica plantas, árvores, insetos, cogumelos, lavouras, peixes e pássaros por foto, e sons de animais por gravação (versão web). Esta política explica, com honestidade, o que coletamos, por quê, com quem compartilhamos e como você exerce seus direitos, conforme a Lei Geral de Proteção de Dados (LGPD, Lei 13.709/2018) e o Regulamento Geral de Proteção de Dados europeu (GDPR).</p>
+<p>O NatureLens identifica plantas, árvores, insetos, cogumelos, lavouras, peixes e pássaros por foto, e sons de animais por gravação na web e no Android. A identificação por som não está disponível no iOS. Esta política explica, com honestidade, o que coletamos, por quê, com quem compartilhamos e como você exerce seus direitos, conforme a Lei Geral de Proteção de Dados (LGPD, Lei 13.709/2018) e o Regulamento Geral de Proteção de Dados europeu (GDPR).</p>
 
 <div class="aviso">
 <p><strong>Aviso importante:</strong> a identificação por IA pode errar. Nunca consuma um cogumelo, planta ou erva com base apenas no app. O conteúdo sobre ervas e usos tradicionais é educacional e não substitui orientação médica.</p>
@@ -63,8 +63,8 @@
 <li><a href="#pt-1">Quem somos</a></li>
 <li><a href="#pt-2">Dados que coletamos</a></li>
 <li><a href="#pt-3">Para que usamos e bases legais</a></li>
-<li><a href="#pt-4">Com quem compartilhamos (operadores)</a></li>
-<li><a href="#pt-5">Processamento efêmero de fotos e áudio</a></li>
+<li><a href="#pt-4">Quem recebe os dados (prestadores e outros destinatários)</a></li>
+<li><a href="#pt-5">Processamento de fotos, áudio, chat e denúncias</a></li>
 <li><a href="#pt-6">Retenção</a></li>
 <li><a href="#pt-7">Seus direitos e como exercê-los</a></li>
 <li><a href="#pt-8">Crianças</a></li>
@@ -84,18 +84,24 @@
 <div class="tablewrap">
 <table>
 <tr><th>Categoria</th><th>Exemplo</th><th>Obrigatório?</th></tr>
-<tr><td>Foto enviada para identificação</td><td>A foto da planta, inseto, cogumelo, peixe ou pássaro que você tirou</td><td>Sim, apenas para usar a identificação por foto (processada e descartada — seção 5)</td></tr>
-<tr><td>Gravação de áudio (só na versão web)</td><td>O canto de pássaro que você gravou</td><td>Sim, apenas para usar a identificação por som (processada no nosso servidor — seção 5)</td></tr>
+<tr><td>Foto enviada para identificação</td><td>A foto da planta, árvore, inseto, cogumelo, lavoura, peixe ou ave que você escolheu</td><td>Sim, apenas para usar a identificação por foto (transmitida ao serviço correspondente depois da sua confirmação — seção 5)</td></tr>
+<tr><td>Gravação de áudio (web e Android; indisponível no iOS)</td><td>O som da natureza que você escolheu gravar</td><td>Não — recurso opcional; somente quando você toca em gravar e, no Android, permite o microfone (processamento efêmero no nosso servidor — seção 5)</td></tr>
 <tr><td>Localização aproximada (~1&nbsp;km)</td><td>Região onde a foto foi tirada, com coordenadas arredondadas no seu aparelho</td><td>Não — opcional, desligável no Perfil; nunca armazenada por nós</td></tr>
-<tr><td>Identificador anônimo do aparelho</td><td>Um código aleatório (device_id), sem vínculo com seu nome</td><td>Sim — gerado automaticamente para controlar o uso gratuito e restaurar assinatura</td></tr>
+<tr><td>Identificador pseudonimizado do aparelho</td><td>Um código aleatório (device_id) que não contém seu nome, mas pode ser associado ao e-mail quando você entra como assinante</td><td>Sim — gerado automaticamente para controlar o uso gratuito, sincronizar dados e restaurar assinatura</td></tr>
+<tr><td>Registro técnico antiabuso</td><td>Token pseudonimizado calculado no servidor a partir do contexto da requisição, da rede e da janela de tempo; IP, e-mail e identificador não são gravados em texto aberto nesse registro</td><td>Sim — gerado automaticamente para segurança; fica elegível para exclusão após 24 horas e é removido na próxima operação ou limpeza diária, normalmente em até 48 horas</td></tr>
 <tr><td>E-mail</td><td>O e-mail usado no login de assinante</td><td>Não — só se você for assinante e optar por entrar na conta</td></tr>
 <tr><td>Token de notificação (push)</td><td>Código técnico que permite enviar notificações ao seu aparelho</td><td>Não — só se você ativar notificações</td></tr>
-<tr><td>Mensagens do chat da especialista e textos do botão Traduzir</td><td>A pergunta que você fez sobre uma espécie</td><td>Não — só se você usar esses recursos (processadas e descartadas — seção 5)</td></tr>
+<tr><td>Lembretes locais do Android</td><td>Tarefa escolhida, data, horário, repetição e identificador local do exemplar</td><td>Não — só se você criar; armazenados somente no aparelho, não sincronizados nem enviados</td></tr>
+<tr><td>Mensagens do chat da especialista e textos do botão Traduzir</td><td>A pergunta que você fez sobre uma espécie</td><td>Não — só se você usar esses recursos (retenção do operador descrita na seção 5)</td></tr>
+<tr><td>Denúncia de resposta da IA</td><td>O texto da resposta que você escolheu denunciar como incorreta ou ofensiva, ligado ao identificador pseudonimizado do aparelho</td><td>Não — só quando você toca em Denunciar; mantida até a exclusão da conta</td></tr>
+<tr><td>Idioma e categoria da identificação</td><td>O idioma da interface e se a consulta foi de planta, inseto, cogumelo, ave, peixe ou lavoura</td><td>Sim ao usar a identificação — necessários para responder no idioma e no modelo corretos</td></tr>
 <tr><td>Dados de texto da coleção sincronizada</td><td>Nome da espécie, anotações e datas (nunca as fotos)</td><td>Não — só assinante que faz login e sincroniza</td></tr>
+<tr><td>Perfil agronômico e diário local</td><td>País, subdivisão administrativa e localidade informados manualmente; finalidade, sistema, data de plantio, estádio confirmado, descrição do solo e indicador de existência de laudo; e eventos, valores e notas que você registrar</td><td>Não — só se você preencher; armazenado somente no aparelho, não sincronizado nem enviado</td></tr>
+<tr><td>Espaço de observação e diário local</td><td>Categoria, contexto escolhido, nome manual do local e nota de referência; tipos de evento, datas, contagens, medidas, unidades e notas que você registrar</td><td>Não — só se você preencher; armazenado somente no aparelho, não sincronizado nem enviado</td></tr>
 <tr><td>Analytics do site (só na versão web)</td><td>Páginas visitadas e origem da visita, via Google Tag Manager e Utmify</td><td>Só existe na versão web; o app Android não tem nenhum analytics ou rastreador</td></tr>
 </table>
 </div>
-<p>Suas fotos ficam no seu aparelho. A coleção salva localmente nunca é compartilhada com outros usuários. O pagamento de assinatura acontece somente no site, processado pela Hotmart (preços exibidos em dólar americano); no app Android nada é vendido.</p>
+<p>A cópia local das fotos fica no seu aparelho; ao confirmar uma identificação, as imagens selecionadas são transmitidas como descrito na seção 5, mas nunca entram na sincronização da coleção. A coleção salva localmente não é compartilhada com outros usuários. O pagamento de assinatura acontece somente no site, processado pela Hotmart (preços exibidos em dólar americano); no app Android nada é vendido.</p>
 
 <h2 id="pt-3">3. Para que usamos e bases legais</h2>
 <p>Cada finalidade tem uma base legal na LGPD (art. 7º) e no GDPR (art. 6):</p>
@@ -103,51 +109,67 @@
 <table>
 <tr><th>Finalidade</th><th>Base legal (LGPD / GDPR)</th></tr>
 <tr><td>Identificar a espécie a partir da sua foto ou gravação</td><td>Execução de contrato — é o serviço que você pediu</td></tr>
+<tr><td>Permitir que a Kindwise retenha e reutilize fotos enviadas nas categorias atendidas por ela para treinamento, melhoria, licenciamento e uso comercial de seus modelos</td><td>Consentimento — o app mostra essa informação e pede confirmação antes de cada envio; cancelar impede a transmissão</td></tr>
 <tr><td>Melhorar a precisão da identificação com a localização aproximada</td><td>Consentimento — você ativa e desativa no Perfil</td></tr>
-<tr><td>Controlar o uso gratuito por categoria (identificador anônimo)</td><td>Legítimo interesse — impedir abuso do plano gratuito, com dado anônimo e de baixo risco</td></tr>
+<tr><td>Controlar o uso gratuito por categoria (identificador pseudonimizado)</td><td>Legítimo interesse — impedir abuso do plano gratuito, com dado pseudonimizado e de baixo risco</td></tr>
 <tr><td>Reconhecer sua assinatura e restaurar seu acesso (e-mail e status vindos da Hotmart)</td><td>Execução de contrato</td></tr>
 <tr><td>Sincronizar os dados de texto da sua coleção entre aparelhos</td><td>Execução de contrato — recurso de assinante que você aciona ao fazer login</td></tr>
 <tr><td>Enviar notificações push</td><td>Consentimento — só se você ativar</td></tr>
+<tr><td>Agendar lembretes locais no Android</td><td>Consentimento — somente quando você cria um lembrete e permite notificações no sistema</td></tr>
 <tr><td>Responder no chat da especialista e traduzir descrições</td><td>Execução de contrato</td></tr>
+<tr><td>Receber e revisar denúncias de respostas da IA</td><td>Legítimo interesse — segurança, qualidade e conformidade do conteúdo gerado</td></tr>
 <tr><td>Medir visitas e assinaturas no site (só web)</td><td>Legítimo interesse (LGPD) / Consentimento quando exigido (GDPR)</td></tr>
 <tr><td>Manter a segurança do serviço e prevenir fraude</td><td>Legítimo interesse</td></tr>
 </table>
 </div>
 <p>Não usamos seus dados para publicidade, não criamos perfis de comportamento e não tomamos decisões automatizadas com efeito jurídico sobre você.</p>
 
-<h2 id="pt-4">4. Com quem compartilhamos (operadores)</h2>
+<h2 id="pt-4">4. Quem recebe os dados (prestadores e outros destinatários)</h2>
 <p>Não vendemos dados pessoais a ninguém. Compartilhamos apenas com os operadores abaixo, cada um estritamente para a função indicada:</p>
 <div class="tablewrap">
 <table>
-<tr><th>Operador</th><th>Papel</th><th>O que recebe</th></tr>
-<tr><td>Kindwise</td><td>Identificação de plantas, árvores, insetos, cogumelos e lavouras</td><td>A foto (e a localização aproximada, se ativada) — processamento efêmero</td></tr>
-<tr><td>Fishial</td><td>Identificação de peixes</td><td>A foto — processamento efêmero</td></tr>
-<tr><td>Nyckel</td><td>Identificação de pássaros</td><td>A foto — processamento efêmero</td></tr>
-<tr><td>Anthropic</td><td>Chat da especialista e botão Traduzir</td><td>O texto das mensagens ou o texto a traduzir — processamento efêmero</td></tr>
-<tr><td>Supabase</td><td>Banco de dados e autenticação</td><td>E-mail de assinante logado, identificador anônimo, dados de texto da coleção sincronizada, token de push</td></tr>
-<tr><td>Vercel</td><td>Hospedagem do site e das funções de servidor</td><td>Tráfego de rede necessário para servir o app e o site</td></tr>
+<tr><th>Serviço ou destinatário</th><th>Papel</th><th>O que recebe</th></tr>
+<tr><td>Kindwise</td><td>Identificação de plantas, árvores, insetos, cogumelos e lavouras; treinamento e melhoria dos modelos conforme os termos dela</td><td>A foto (e a localização aproximada, se ativada). A identificação fica recuperável por até seis meses e os termos concedem à Kindwise licença para treinamento, uso comercial, fornecimento a outros clientes e compartilhamento sob CC BY-SA</td></tr>
+<tr><td>Fishial</td><td>Identificação de peixes</td><td>A foto é enviada ao armazenamento indicado pela API; como o fornecedor não publica prazo específico suficiente para esse fluxo, não tratamos o envio como efêmero</td></tr>
+<tr><td>Servidor BioCLIP gerenciado pelo NatureLens</td><td>Identificação mundial de aves, somente quando o modelo calibrado estiver ativado</td><td>A foto fica apenas na memória durante a inferência solicitada, não entra em logs nem é retida; um resultado sem prova exata segue para o fallback Nyckel</td></tr>
+<tr><td>Nyckel</td><td>Identificação de pássaros</td><td>A foto é enviada para classificação com a captura de amostra desativada; ainda assim, não classificamos a transferência como efêmera sem garantia contratual específica</td></tr>
+<tr><td>Anthropic</td><td>Chat da especialista e botão Traduzir</td><td>O texto das mensagens ou o texto a traduzir; retenção padrão de até 30 dias, sujeita a exceções de segurança e legais</td></tr>
+<tr><td>Supabase</td><td>Banco de dados e autenticação</td><td>E-mail de assinante logado, identificador pseudonimizado, dados de texto da coleção sincronizada, token de push, denúncias de IA e registros antiabuso pseudonimizados</td></tr>
+<tr><td>Vercel</td><td>Hospedagem do site e das funções de servidor</td><td>Tráfego de rede necessário para servir o app e o site, incluindo o IP visto transitoriamente para segurança</td></tr>
 <tr><td>Hotmart</td><td>Venda e cobrança da assinatura (somente no site)</td><td>Seu e-mail e dados de pagamento, coletados diretamente por ela; nós recebemos de volta o status da assinatura e o e-mail</td></tr>
 <tr><td>Google Tag Manager <em>(só web)</em></td><td>Analytics do site</td><td>Eventos de navegação no site — não existe no app Android</td></tr>
 <tr><td>Utmify <em>(só web)</em></td><td>Atribuição de campanhas do site</td><td>Eventos de visita e assinatura no site — não existe no app Android</td></tr>
 </table>
 </div>
-<p>Para exibir a foto de referência e a descrição de uma espécie, o app também consulta a Wikipédia pelo nome científico: a Wikipédia vê qual espécie foi consultada, mas não quem você é.</p>
-<p>Para desenhar o mapa de distribuição e o gráfico de estação, o app consulta o GBIF (Global Biodiversity Information Facility) pelo nome científico da espécie. Isso acontece para todo usuário, com ou sem assinatura: o GBIF vê qual espécie foi consultada, mas não quem você é &mdash; nenhum identificador seu, nenhuma foto e nenhuma localização são enviados.</p>
-<p>O áudio da identificação por som não vai a nenhum terceiro: é processado no nosso próprio servidor (modelo Perch, só na versão web).</p>
+<p>Para exibir a foto de referência e a descrição de uma espécie, o app consulta a Wikipédia diretamente pelo nome científico. A Wikipédia recebe o nome consultado e os metadados normais da conexão, inclusive o endereço IP; o NatureLens não envia device_id, foto escolhida nem coordenadas.</p>
+<p>Para enriquecer o dossiê de uma espécie exata, uma função de servidor do NatureLens consulta a Wikipédia pelo nome científico confirmado e seleciona seções pertinentes do artigo. Nesse fluxo, a Wikipédia recebe o nome consultado e os metadados da conexão do servidor, não o endereço IP direto do usuário; não enviamos device_id, foto nem coordenadas. Os trechos selecionados e encurtados retornam ao app com links para o artigo, o histórico de autores e a licença oficial, e são reutilizados sob a CC BY-SA 4.0. Ao tocar nesses links, seu aparelho abre diretamente o respectivo site, que passa a receber os metadados normais da sua conexão.</p>
+<p>Para desenhar o mapa de distribuição e o gráfico de estação, o app consulta diretamente o GBIF (Global Biodiversity Information Facility) pelo nome científico. Isso acontece para todo usuário, com ou sem assinatura: o GBIF recebe o nome consultado e os metadados normais da conexão, inclusive o endereço IP; o NatureLens não envia device_id, foto escolhida nem coordenadas.</p>
+<p>O áudio da identificação por som não vai a nenhum terceiro: é processado de forma efêmera no nosso próprio servidor com o modelo Perch. O recurso existe na web e no Android, mas não no iOS.</p>
 
-<h2 id="pt-5">5. Processamento efêmero de fotos e áudio</h2>
-<p><strong>Fotos:</strong> quando você tira ou envia uma foto, ela é transmitida ao serviço de identificação correspondente apenas para gerar o resultado. Não armazenamos suas fotos em nenhum servidor sob nosso controle — elas existem no servidor apenas durante o processamento e permanecem guardadas somente no seu aparelho. Mesmo assinantes que sincronizam a coleção enviam apenas os dados de texto (nome da espécie, anotações, datas), nunca as fotos.</p>
-<p><strong>Áudio:</strong> a gravação de som (recurso da versão web) é processada no nosso próprio servidor apenas para gerar a identificação e não é compartilhada com terceiros nem retida após o processamento.</p>
+<h2 id="pt-5">5. Processamento de fotos, áudio, chat e denúncias</h2>
+<p><strong>Fotos:</strong> quando você tira ou escolhe fotos, elas permanecem no aparelho até você confirmar o aviso exibido antes do envio. O NatureLens não mantém uma cópia persistente em servidor próprio e a sincronização da coleção envia apenas dados de texto, nunca as fotos. Para plantas, árvores, insetos, cogumelos e lavouras, os <a href="https://www.kindwise.com/terms-and-conditions">termos da Kindwise</a> mantêm fotos e resultados acessíveis por seis meses e concedem licença irrevogável para treinamento, melhoria, uso comercial, fornecimento a outros clientes e compartilhamento sob CC BY-SA; por isso o app pede consentimento antes de cada transmissão e esse compartilhamento não é tratado como efêmero. A Fishial processa fotos de peixes no ambiente dela. Para aves, quando o classificador mundial BioCLIP calibrado estiver ativo, a foto passa primeiro por um servidor gerenciado pelo NatureLens, apenas em memória durante a solicitação, sem registro do corpo nem retenção; se o modelo estiver desativado, falhar ou não comprovar uma espécie exata, a mesma foto pode ser enviada à Nyckel. O NatureLens desativa a captura de amostra da Nyckel, mas não chama essa transferência de efêmera sem garantia contratual específica.</p>
+<p><strong>Áudio:</strong> o recurso está disponível na web e no Android, mas não no iOS. No Android, a permissão RECORD_AUDIO é solicitada somente no primeiro toque em gravar; negar a permissão não impede o uso dos demais recursos. O app cria um arquivo temporário, converte WAV/PCM localmente e envia a evidência de áudio por HTTPS ao servidor Perch controlado pelo NatureLens apenas para a inferência pedida. O áudio bruto é processado de forma efêmera, não é compartilhado com terceiros nem retido depois da resposta; o arquivo temporário é apagado e o áudio não entra na coleção. O app não grava em segundo plano nem solicita acesso a chamadas, estado do telefone ou Bluetooth para esse recurso.</p>
 <p><strong>Localização:</strong> quando ativada, as coordenadas são arredondadas para cerca de 1&nbsp;km ainda no seu aparelho — o suficiente para situar uma espécie, insuficiente para identificar um endereço — e nunca são armazenadas por nós.</p>
-<p><strong>Chat e tradução:</strong> os textos enviados à Anthropic servem apenas para gerar a resposta ou a tradução daquele momento.</p>
+<p><strong>Chat e tradução:</strong> o NatureLens não mantém um histórico do chat no servidor, mas os textos enviados à API da Anthropic podem ser retidos por até 30 dias no regime padrão e por mais tempo quando necessário para segurança, política de uso ou obrigação legal.</p>
+<p><strong>Denúncias de IA:</strong> quando você escolhe denunciar uma resposta, armazenamos o texto denunciado e o identificador pseudonimizado do aparelho para análise de segurança e qualidade. Esse registro é apagado com a conta.</p>
+<p><strong>Perfil agronômico e diário local:</strong> esses dados são digitados por você e ficam somente no armazenamento local do aparelho. Eles não entram na sincronização da coleção e não são enviados ao NatureLens, aos serviços de identificação nem a terceiros.</p>
+<p><strong>Espaço de observação e diário local:</strong> o contexto, o nome manual do local, as notas, contagens, medidas e unidades que você registrar ficam somente no armazenamento local do aparelho. Esses dados não entram na sincronização da coleção e não são enviados ao NatureLens, aos serviços de identificação nem a terceiros.</p>
+<p><strong>Lembretes locais do Android:</strong> a tarefa, data, horário, repetição e o identificador local do exemplar ficam no próprio aparelho e são agendados pelo sistema Android. Esse recurso não cria token de push, não usa FCM nem Expo Push, não envia a agenda ao servidor e só pede a permissão de notificações quando você decide criar o primeiro lembrete.</p>
 
 <h2 id="pt-6">6. Retenção</h2>
 <ul>
-<li><strong>Fotos e áudio:</strong> não retidos em nossos servidores (seção 5).</li>
+<li><strong>Fotos:</strong> não retidas em servidores controlados pelo NatureLens; os serviços externos de identificação aplicam a própria retenção. A Kindwise mantém fotos e resultados acessíveis por seis meses e pode continuar usando imagens sob a licença descrita na seção 5.</li>
+<li><strong>Áudio bruto:</strong> mantido somente durante o processamento efêmero da solicitação em tempo real no servidor Perch controlado pelo NatureLens e não retido depois da resposta. No Android, o arquivo temporário local é apagado e nunca entra na coleção.</li>
 <li><strong>Localização aproximada:</strong> nunca armazenada.</li>
-<li><strong>Identificador anônimo e contadores de uso gratuito:</strong> mantidos enquanto necessários para operar o plano gratuito; apagados quando você exclui a conta.</li>
+<li><strong>Registros antiabuso:</strong> buckets pseudonimizados, sem IP, e-mail ou identificador em texto aberto, tornam-se elegíveis para exclusão após 24 horas e são removidos na próxima operação de limite ou limpeza diária, normalmente em até 48 horas.</li>
+<li><strong>Chat e tradução:</strong> não mantidos como histórico pelo NatureLens; a Anthropic aplica retenção padrão de até 30 dias, com as exceções de segurança e legais descritas na seção 5.</li>
+<li><strong>Denúncias de respostas da IA:</strong> mantidas enquanto a conta ou o identificador relacionado existir e apagadas na exclusão da conta.</li>
+<li><strong>Identificador pseudonimizado e contadores de uso gratuito:</strong> mantidos enquanto necessários para operar o plano gratuito; apagados quando você exclui a conta.</li>
 <li><strong>Dados de conta de assinante</strong> (e-mail, dados de texto da coleção sincronizada, token de push): mantidos enquanto a conta existir; apagados na exclusão da conta (seção 7).</li>
 <li><strong>Coleção local:</strong> fica só no seu aparelho. Se você limpar os dados do navegador ou desinstalar o app sem ser assinante sincronizado, ela é perdida permanentemente — nada é copiado remotamente.</li>
+<li><strong>Perfil agronômico e diário local:</strong> os dados são removidos quando você limpa os dados do app, exclui a conta dentro do app ou desinstala o aplicativo. Como não são sincronizados nem enviados e não têm cópia de segurança remota, podem ser perdidos sem backup.</li>
+<li><strong>Espaço de observação e diário local:</strong> os dados são removidos quando você limpa os dados do app, exclui a conta dentro do app ou desinstala o aplicativo. Como não são sincronizados nem enviados e não têm cópia de segurança remota, podem ser perdidos sem backup.</li>
+<li><strong>Lembretes locais do Android:</strong> são cancelados quando você remove o lembrete ou o exemplar correspondente, limpa os dados do app, exclui a conta dentro do app ou desinstala o aplicativo. Não são sincronizados nem têm cópia de segurança remota.</li>
 <li><strong>Registros de pagamento:</strong> mantidos pela Hotmart conforme as políticas dela e as obrigações fiscais aplicáveis.</li>
 <li><strong>Analytics do site (só web):</strong> retidos conforme a configuração das ferramentas (Google Tag Manager e Utmify).</li>
 </ul>
@@ -156,27 +178,27 @@
 <p>A LGPD (art. 18) e o GDPR (arts. 15 a 21) garantem a você, entre outros: confirmação de tratamento, <strong>acesso</strong>, <strong>correção</strong>, anonimização, <strong>portabilidade</strong>, <strong>exclusão</strong>, informação sobre compartilhamentos, revogação do consentimento e oposição a tratamentos baseados em legítimo interesse.</p>
 <p>Como quase tudo fica no seu aparelho, a maior parte dos direitos você exerce diretamente:</p>
 <ul>
-<li><strong>Excluir a conta e os dados no servidor:</strong> no app, em <strong>Perfil &gt; Configurações &gt; Conta &gt; Excluir conta</strong>, ou pela página <a href="https://naturelensapp.cloud/account-deletion.html">naturelensapp.cloud/account-deletion.html</a>. A exclusão apaga a conta, o vínculo da assinatura, a coleção sincronizada, o token de push e os contadores de uso.</li>
+<li><strong>Excluir a conta e os dados no servidor:</strong> no app, em <strong>Perfil &gt; Configurações &gt; Conta &gt; Excluir conta</strong>, ou pelo recurso web da página <a href="https://naturelensapp.cloud/account-deletion.html">naturelensapp.cloud/account-deletion.html</a>. A exclusão apaga a conta, os vínculos da assinatura em todos os aparelhos, a coleção sincronizada, os tokens de push, os contadores de uso e as denúncias de IA vinculadas. Como os buckets antiabuso não contêm um identificador reversível da conta, eles seguem a limpeza descrita na seção 6, normalmente em até 48 horas.</li>
 <li><strong>Atenção:</strong> excluir a conta <strong>não cancela a cobrança da assinatura</strong> na Hotmart. Para parar de pagar, cancele em <a href="https://consumer.hotmart.com">consumer.hotmart.com</a>.</li>
 <li><strong>Revogar a localização:</strong> desligue no Perfil, a qualquer momento; a identificação continua funcionando.</li>
 <li><strong>Revogar notificações:</strong> desative nas configurações do app ou do sistema.</li>
 <li><strong>Acesso e correção da coleção:</strong> seus dados estão visíveis e editáveis dentro do próprio app.</li>
-<li><strong>Dados que não temos:</strong> se você não é assinante logado, não temos nada que identifique você — apagar os dados do aparelho (ou desinstalar) remove tudo.</li>
+<li><strong>Uso sem login:</strong> não recebemos seu nome ou e-mail, mas ainda usamos o identificador pseudonimizado do aparelho, os contadores de uso e os registros antiabuso descritos acima. Apagar os dados do aparelho remove a cópia local; a exclusão no app remove os registros vinculados no servidor.</li>
 </ul>
 <p>Titulares no Brasil podem ainda peticionar à Autoridade Nacional de Proteção de Dados (ANPD); titulares na União Europeia, à autoridade de proteção de dados do seu país.</p>
 
 <h2 id="pt-8">8. Crianças</h2>
-<p>O NatureLens não é dirigido a menores de 13 anos e não coletamos conscientemente dados de crianças. O app não exige conta nem coleta identificadores pessoais no uso comum. Se um responsável acredita que uma criança criou uma conta de assinante, pode excluí-la pelos canais da seção 7.</p>
+<p>O NatureLens não é dirigido a menores de 13 anos e não coletamos conscientemente dados de crianças. No uso comum, o app não exige conta, nome nem e-mail, mas utiliza o identificador pseudonimizado do aparelho e os registros técnicos descritos nesta política. Se um responsável acredita que uma criança criou uma conta de assinante, pode excluí-la pelos canais da seção 7.</p>
 
 <h2 id="pt-9">9. Segurança</h2>
 <ul>
 <li>Todo o tráfego entre o app, o site e os servidores usa <strong>HTTPS</strong> (criptografia em trânsito).</li>
-<li>O banco de dados usa <strong>Row Level Security (RLS)</strong> no Supabase: cada usuário só consegue acessar os próprios registros.</li>
-<li>A melhor proteção é estrutural: não guardamos fotos, não guardamos localização e não temos conta para a maioria dos usuários — o que não é coletado não pode vazar.</li>
+<li>O acesso direto pelas funções <em>anon</em> e <em>authenticated</em> do Supabase é bloqueado por <strong>Row Level Security (RLS)</strong>. Os registros são acessados somente pelas funções de servidor com <em>service_role</em>, após validação do aparelho ou da conta.</li>
+<li>A melhor proteção é estrutural: não mantemos cópias das fotos nem retemos o áudio bruto depois da inferência em servidores sob nosso controle, não guardamos localização e não exigimos conta para o uso comum.</li>
 </ul>
 
 <h2 id="pt-10">10. Transferências internacionais</h2>
-<p>Os operadores listados na seção 4 estão total ou parcialmente localizados fora do Brasil (por exemplo, nos Estados Unidos e na Europa). Ao usar o app, seus dados podem ser processados nesses países. Essas transferências se apoiam nas garantias contratuais e nos mecanismos de conformidade oferecidos por cada operador (como cláusulas contratuais padrão), e limitamos o que cada um recebe ao mínimo descrito nesta política.</p>
+<p>Os serviços e destinatários listados na seção 4 estão total ou parcialmente localizados fora do Brasil (por exemplo, nos Estados Unidos e na Europa). Ao usar o app, seus dados podem ser processados nesses países. Essas transferências se apoiam nos mecanismos legais e contratuais aplicáveis, e limitamos o que cada destinatário recebe ao descrito nesta política.</p>
 
 <h2 id="pt-11">11. Mudanças nesta política</h2>
 <p>Podemos atualizar esta política para refletir mudanças no app ou na legislação. A versão vigente fica sempre nesta página, com a data de vigência no topo e no rodapé. Mudanças relevantes serão sinalizadas no app ou no site antes de entrarem em vigor.</p>
@@ -199,9 +221,9 @@
 
 <p class="lang" id="en">English · <a href="#pt">Versão em português acima</a></p>
 <h1>Privacy Policy — NatureLens</h1>
-<p class="meta">Effective August 19, 2026 · <a href="https://naturelensapp.cloud">naturelensapp.cloud</a></p>
+<p class="meta">Effective August 24, 2026 · <a href="https://naturelensapp.cloud">naturelensapp.cloud</a></p>
 
-<p>NatureLens identifies plants, trees, insects, mushrooms, crops, fish and birds from photos, and animal sounds from recordings (web version). This policy explains, honestly, what we collect, why, who we share it with, and how you exercise your rights, under Brazil's General Data Protection Law (LGPD, Law 13,709/2018) and the EU General Data Protection Regulation (GDPR).</p>
+<p>NatureLens identifies plants, trees, insects, mushrooms, crops, fish and birds from photos, and animal sounds from recordings on the web and Android. Sound identification is not available on iOS. This policy explains, honestly, what we collect, why, who we share it with, and how you exercise your rights, under Brazil's General Data Protection Law (LGPD, Law 13,709/2018) and the EU General Data Protection Regulation (GDPR).</p>
 
 <div class="aviso">
 <p><strong>Important notice:</strong> AI identification can be wrong. Never eat a mushroom, plant or herb based on the app alone. Content about herbs and traditional uses is educational and is not medical advice.</p>
@@ -213,8 +235,8 @@
 <li><a href="#en-1">Who we are</a></li>
 <li><a href="#en-2">Data we collect</a></li>
 <li><a href="#en-3">Why we use it and legal bases</a></li>
-<li><a href="#en-4">Who we share it with (processors)</a></li>
-<li><a href="#en-5">Ephemeral processing of photos and audio</a></li>
+<li><a href="#en-4">Who receives data (providers and other recipients)</a></li>
+<li><a href="#en-5">Processing of photos, audio, chat and reports</a></li>
 <li><a href="#en-6">Retention</a></li>
 <li><a href="#en-7">Your rights and how to exercise them</a></li>
 <li><a href="#en-8">Children</a></li>
@@ -234,18 +256,24 @@
 <div class="tablewrap">
 <table>
 <tr><th>Category</th><th>Example</th><th>Required?</th></tr>
-<tr><td>Photo submitted for identification</td><td>The photo you took of a plant, insect, mushroom, fish or bird</td><td>Yes, only to use photo identification (processed and discarded — section 5)</td></tr>
-<tr><td>Audio recording (web version only)</td><td>The bird call you recorded</td><td>Yes, only to use sound identification (processed on our own server — section 5)</td></tr>
+<tr><td>Photo submitted for identification</td><td>The photo you chose of a plant, tree, insect, mushroom, crop, fish or bird</td><td>Yes, only to use photo identification (sent to the matching service after you confirm — section 5)</td></tr>
+<tr><td>Audio recording (web and Android; unavailable on iOS)</td><td>The nature sound you chose to record</td><td>No — optional feature; only when you tap record and, on Android, allow microphone access (processed ephemerally on our own server — section 5)</td></tr>
 <tr><td>Approximate location (~1&nbsp;km)</td><td>The region where the photo was taken, with coordinates rounded on your device</td><td>No — optional, can be turned off in Profile; never stored by us</td></tr>
-<tr><td>Anonymous device identifier</td><td>A random code (device_id), not linked to your name</td><td>Yes — generated automatically to manage free usage and restore subscriptions</td></tr>
+<tr><td>Pseudonymous device identifier</td><td>A random code (device_id) that does not contain your name but may be associated with your e-mail when you sign in as a subscriber</td><td>Yes — generated automatically to manage free usage, sync data and restore subscriptions</td></tr>
+<tr><td>Technical anti-abuse record</td><td>A pseudonymized token computed on the server from request context, network and time window; the IP address, e-mail and identifier are not written in plain text to this record</td><td>Yes — generated automatically for security; eligible for deletion after 24 hours and removed by the next operation or daily cleanup, normally within 48 hours</td></tr>
 <tr><td>Email</td><td>The email used for subscriber sign-in</td><td>No — only if you are a subscriber and choose to sign in</td></tr>
 <tr><td>Push notification token</td><td>Technical code that lets us send notifications to your device</td><td>No — only if you enable notifications</td></tr>
-<tr><td>Specialist chat messages and Translate button texts</td><td>The question you asked about a species</td><td>No — only if you use those features (processed and discarded — section 5)</td></tr>
+<tr><td>Local Android reminders</td><td>Selected task, date, time, repeat rule and the specimen's local identifier</td><td>No — only if you create one; stored only on the device, not synced or sent</td></tr>
+<tr><td>Specialist chat messages and Translate button texts</td><td>The question you asked about a species</td><td>No — only if you use those features (processor retention is described in section 5)</td></tr>
+<tr><td>AI-answer report</td><td>The answer text you chose to report as wrong or offensive, linked to the pseudonymous device identifier</td><td>No — only when you tap Report; kept until account deletion</td></tr>
+<tr><td>Identification language and category</td><td>The interface language and whether the request concerns a plant, insect, mushroom, bird, fish or crop</td><td>Yes when using identification — needed to use the correct language and model</td></tr>
 <tr><td>Text data of the synced collection</td><td>Species name, notes and dates (never your photos)</td><td>No — only subscribers who sign in and sync</td></tr>
+<tr><td>Local agronomic profile and journal</td><td>Country, administrative subdivision and locality entered manually; purpose, system, planting date, confirmed stage, soil description and indicator of whether a soil report exists; and events, values and notes you record</td><td>No — only if you fill it in; stored only on the device, not synced or sent</td></tr>
+<tr><td>Local observation workspace and journal</td><td>Category, selected context, manually entered place name and baseline note; event types, dates, counts, measurements, units and notes you record</td><td>No — only if you fill it in; stored only on the device, not synced or sent</td></tr>
 <tr><td>Website analytics (web version only)</td><td>Pages visited and visit source, via Google Tag Manager and Utmify</td><td>Only exists on the web version; the Android app has no analytics or trackers</td></tr>
 </table>
 </div>
-<p>Your photos stay on your device. Your locally saved collection is never shared with other users. Subscription payments happen only on the website, processed by Hotmart (prices shown in US dollars); nothing is sold inside the Android app.</p>
+<p>A local copy of your photos stays on your device; when you confirm an identification, the selected images are transmitted as described in section 5, but they never enter collection sync. Your locally saved collection is not shared with other users. Subscription payments happen only on the website, processed by Hotmart (prices shown in US dollars); nothing is sold inside the Android app.</p>
 
 <h2 id="en-3">3. Why we use it and legal bases</h2>
 <p>Each purpose has a legal basis under the LGPD (art. 7) and the GDPR (art. 6):</p>
@@ -253,51 +281,67 @@
 <table>
 <tr><th>Purpose</th><th>Legal basis (LGPD / GDPR)</th></tr>
 <tr><td>Identify the species from your photo or recording</td><td>Performance of a contract — it is the service you requested</td></tr>
+<tr><td>Allow Kindwise to retain and reuse photos submitted in the categories it serves for model training, improvement, licensing and commercial use</td><td>Consent — the app displays this information and asks for confirmation before every upload; canceling prevents transmission</td></tr>
 <tr><td>Improve identification accuracy with approximate location</td><td>Consent — you turn it on and off in Profile</td></tr>
-<tr><td>Manage free usage per category (anonymous identifier)</td><td>Legitimate interest — preventing abuse of the free tier, using anonymous, low-risk data</td></tr>
+<tr><td>Manage free usage per category (pseudonymous identifier)</td><td>Legitimate interest — preventing abuse of the free tier, using pseudonymous, low-risk data</td></tr>
 <tr><td>Recognize your subscription and restore your access (email and status from Hotmart)</td><td>Performance of a contract</td></tr>
 <tr><td>Sync your collection's text data across devices</td><td>Performance of a contract — a subscriber feature you trigger by signing in</td></tr>
 <tr><td>Send push notifications</td><td>Consent — only if you enable them</td></tr>
+<tr><td>Schedule local reminders on Android</td><td>Consent — only when you create a reminder and allow notifications in system settings</td></tr>
 <tr><td>Answer in the specialist chat and translate descriptions</td><td>Performance of a contract</td></tr>
+<tr><td>Receive and review reports about AI answers</td><td>Legitimate interest — safety, quality and generated-content compliance</td></tr>
 <tr><td>Measure website visits and subscriptions (web only)</td><td>Legitimate interest (LGPD) / Consent where required (GDPR)</td></tr>
 <tr><td>Keep the service secure and prevent fraud</td><td>Legitimate interest</td></tr>
 </table>
 </div>
 <p>We do not use your data for advertising, we do not build behavioral profiles, and we make no automated decisions with legal effect about you.</p>
 
-<h2 id="en-4">4. Who we share it with (processors)</h2>
+<h2 id="en-4">4. Who receives data (providers and other recipients)</h2>
 <p>We sell personal data to no one. We share only with the processors below, each strictly for the role stated:</p>
 <div class="tablewrap">
 <table>
-<tr><th>Processor</th><th>Role</th><th>What it receives</th></tr>
-<tr><td>Kindwise</td><td>Identification of plants, trees, insects, mushrooms and crops</td><td>The photo (and approximate location, if enabled) — ephemeral processing</td></tr>
-<tr><td>Fishial</td><td>Fish identification</td><td>The photo — ephemeral processing</td></tr>
-<tr><td>Nyckel</td><td>Bird identification</td><td>The photo — ephemeral processing</td></tr>
-<tr><td>Anthropic</td><td>Specialist chat and Translate button</td><td>The message text or the text to translate — ephemeral processing</td></tr>
-<tr><td>Supabase</td><td>Database and authentication</td><td>Signed-in subscriber email, anonymous identifier, synced collection text data, push token</td></tr>
-<tr><td>Vercel</td><td>Hosting of the website and server functions</td><td>Network traffic needed to serve the app and website</td></tr>
+<tr><th>Service or recipient</th><th>Role</th><th>What it receives</th></tr>
+<tr><td>Kindwise</td><td>Identification of plants, trees, insects, mushrooms and crops; model training and improvement under its terms</td><td>The photo (and approximate location, if enabled). The identification remains retrievable for up to six months, and Kindwise's terms grant it a license for training, commercial use, supply to other customers and CC BY-SA sharing</td></tr>
+<tr><td>Fishial</td><td>Fish identification</td><td>The photo is uploaded to storage designated by the API; because the provider publishes no sufficiently specific retention period for this flow, we do not treat the transfer as ephemeral</td></tr>
+<tr><td>NatureLens-managed BioCLIP server</td><td>Worldwide bird identification, only when the calibrated model is enabled</td><td>The photo exists only in memory during the requested inference, is neither logged nor retained, and a result without exact proof proceeds to the Nyckel fallback</td></tr>
+<tr><td>Nyckel</td><td>Bird identification</td><td>The photo is sent for classification with sample capture disabled; even so, we do not call the transfer ephemeral without a specific contractual guarantee</td></tr>
+<tr><td>Anthropic</td><td>Specialist chat and Translate button</td><td>The message text or text to translate; standard retention of up to 30 days, subject to safety and legal exceptions</td></tr>
+<tr><td>Supabase</td><td>Database and authentication</td><td>Signed-in subscriber email, pseudonymous identifier, synced collection text data, push token, AI reports and pseudonymized anti-abuse records</td></tr>
+<tr><td>Vercel</td><td>Hosting of the website and server functions</td><td>Network traffic needed to serve the app and website, including the IP address seen transiently for security</td></tr>
 <tr><td>Hotmart</td><td>Subscription sale and billing (website only)</td><td>Your email and payment details, collected directly by Hotmart; we receive back the subscription status and email</td></tr>
 <tr><td>Google Tag Manager <em>(web only)</em></td><td>Website analytics</td><td>Browsing events on the website — does not exist in the Android app</td></tr>
 <tr><td>Utmify <em>(web only)</em></td><td>Website campaign attribution</td><td>Visit and subscription events on the website — does not exist in the Android app</td></tr>
 </table>
 </div>
-<p>To show a reference picture and species description, the app also queries Wikipedia by scientific name: Wikipedia sees which species was looked up, but not who you are.</p>
-<p>To draw the distribution map and the seasonal chart, the app queries GBIF (the Global Biodiversity Information Facility) by the species' scientific name. This happens for every user, subscriber or not: GBIF sees which species was looked up, but not who you are &mdash; none of your identifiers, photos or location are sent.</p>
-<p>Sound identification audio never reaches a third party: it is processed on our own server (Perch model, web version only).</p>
+<p>To show a reference picture and species description, the app queries Wikipedia directly by scientific name. Wikipedia receives the queried name and normal connection metadata, including the IP address; NatureLens does not send the device_id, selected photo or coordinates.</p>
+<p>To enrich the dossier of an exact species, a NatureLens server function queries Wikipedia using the confirmed scientific name and selects relevant sections of the article. In this flow, Wikipedia receives the queried name and the server's connection metadata, not the user's direct IP address; we do not send the device_id, photo or coordinates. The selected and shortened excerpts return to the app with links to the article, author history and official license, and are reused under CC BY-SA 4.0. When you tap those links, your device opens the respective website directly, which then receives your connection's normal metadata.</p>
+<p>To draw the distribution map and seasonal chart, the app queries GBIF (the Global Biodiversity Information Facility) directly by scientific name. This happens for every user, subscriber or not: GBIF receives the queried name and normal connection metadata, including the IP address; NatureLens does not send the device_id, selected photo or coordinates.</p>
+<p>Sound identification audio never reaches a third party: it is processed ephemerally on our own server using the Perch model. The feature is available on the web and Android, but not on iOS.</p>
 
-<h2 id="en-5">5. Ephemeral processing of photos and audio</h2>
-<p><strong>Photos:</strong> when you take or upload a photo, it is transmitted to the matching identification service only to produce the result. We do not store your photos on any server we control — they exist on the server only during processing and remain stored only on your device. Even subscribers who sync their collection upload only text data (species name, notes, dates), never the photos.</p>
-<p><strong>Audio:</strong> the sound recording (a web-version feature) is processed on our own server only to produce the identification and is neither shared with third parties nor retained after processing.</p>
+<h2 id="en-5">5. Processing of photos, audio, chat and reports</h2>
+<p><strong>Photos:</strong> when you take or choose photos, they stay on the device until you confirm the notice shown before upload. NatureLens keeps no persistent copy on a server it controls, and collection sync uploads text data only, never photos. For plants, trees, insects, mushrooms and crops, the <a href="https://www.kindwise.com/terms-and-conditions">Kindwise terms</a> keep photos and results accessible for six months and grant an irrevocable license for training, improvement, commercial use, supply to other customers and CC BY-SA sharing; the app therefore requests consent before every transmission, and this sharing is not treated as ephemeral. Fishial processes fish photos in its environment. For birds, when the calibrated worldwide BioCLIP classifier is enabled, the photo first passes through a NatureLens-managed server, only in memory during the request, without request-body logging or retention; if the model is disabled, fails, or cannot prove an exact species, the same photo may be sent to Nyckel. NatureLens disables Nyckel sample capture but does not call that transfer ephemeral without a specific contractual guarantee.</p>
+<p><strong>Audio:</strong> the feature is available on the web and Android, but not on iOS. On Android, RECORD_AUDIO permission is requested only when you first tap record; denying it does not prevent use of other features. The app creates a temporary file, converts WAV/PCM locally, and sends the audio evidence over HTTPS to the NatureLens-controlled Perch server solely for the requested inference. Raw audio is processed ephemerally, is neither shared with third parties nor retained after the response; the temporary file is deleted and audio never enters the collection. The app does not record in the background or request access to calls, phone state, or Bluetooth for this feature.</p>
 <p><strong>Location:</strong> when enabled, coordinates are rounded to about 1&nbsp;km on your device — enough to place a species, not enough to identify an address — and are never stored by us.</p>
-<p><strong>Chat and translation:</strong> texts sent to Anthropic are used only to generate that moment's answer or translation.</p>
+<p><strong>Chat and translation:</strong> NatureLens keeps no server-side chat history, but texts sent to the Anthropic API may be retained for up to 30 days under the standard policy and longer when required for safety, usage-policy enforcement or law.</p>
+<p><strong>AI reports:</strong> when you choose to report an answer, we store the reported text and pseudonymous device identifier for safety and quality review. This record is deleted with the account.</p>
+<p><strong>Local agronomic profile and journal:</strong> you enter these data, and they remain only in the device's local storage. They are not included in collection sync and are not sent to NatureLens, identification services, or third parties.</p>
+<p><strong>Local observation workspace and journal:</strong> the context, manually entered place name, notes, counts, measurements and units you record remain only in the device's local storage. These data are not included in collection sync and are not sent to NatureLens, identification services, or third parties.</p>
+<p><strong>Local Android reminders:</strong> the task, date, time, repeat rule and the specimen's local identifier stay on the device and are scheduled by Android itself. This feature creates no push token, uses neither FCM nor Expo Push, sends no schedule to a server, and asks for notification permission only when you choose to create the first reminder.</p>
 
 <h2 id="en-6">6. Retention</h2>
 <ul>
-<li><strong>Photos and audio:</strong> not retained on our servers (section 5).</li>
+<li><strong>Photos:</strong> not retained on servers controlled by NatureLens; external identification services apply their own retention. Kindwise keeps photos and results accessible for six months and may continue using images under the license described in section 5.</li>
+<li><strong>Raw audio:</strong> held only during ephemeral processing of the real-time request on the NatureLens-controlled Perch server and not retained after the response. On Android, the local temporary file is deleted and never enters the collection.</li>
 <li><strong>Approximate location:</strong> never stored.</li>
-<li><strong>Anonymous identifier and free-usage counters:</strong> kept as long as needed to operate the free tier; deleted when you delete your account.</li>
+<li><strong>Anti-abuse records:</strong> pseudonymized buckets with no plain-text IP address, e-mail or identifier become eligible for deletion after 24 hours and are removed by the next limit operation or daily cleanup, normally within 48 hours.</li>
+<li><strong>Chat and translation:</strong> not kept as history by NatureLens; Anthropic applies its standard retention of up to 30 days, subject to the safety and legal exceptions in section 5.</li>
+<li><strong>AI-answer reports:</strong> kept while the related account or identifier exists and deleted upon account deletion.</li>
+<li><strong>Pseudonymous identifier and free-usage counters:</strong> kept as long as needed to operate the free tier; deleted when you delete your account.</li>
 <li><strong>Subscriber account data</strong> (email, synced collection text data, push token): kept while the account exists; deleted upon account deletion (section 7).</li>
 <li><strong>Local collection:</strong> lives only on your device. If you clear browser data or uninstall the app without being a synced subscriber, it is permanently lost — nothing is backed up remotely.</li>
+<li><strong>Local agronomic profile and journal:</strong> the data are removed when you clear the app's data, delete your account in the app, or uninstall the application. Because they are neither synced nor sent and have no remote backup copy, they may be lost without a backup.</li>
+<li><strong>Local observation workspace and journal:</strong> the data are removed when you clear the app's data, delete your account in the app, or uninstall the application. Because they are neither synced nor sent and have no remote backup copy, they may be lost without a backup.</li>
+<li><strong>Local Android reminders:</strong> canceled when you remove the reminder or its specimen, clear the app's data, delete your account in the app, or uninstall the application. They are neither synced nor remotely backed up.</li>
 <li><strong>Payment records:</strong> kept by Hotmart under its own policies and applicable tax obligations.</li>
 <li><strong>Website analytics (web only):</strong> retained per the tools' configuration (Google Tag Manager and Utmify).</li>
 </ul>
@@ -306,27 +350,27 @@
 <p>The LGPD (art. 18) and the GDPR (arts. 15–21) grant you, among others: confirmation of processing, <strong>access</strong>, <strong>correction</strong>, anonymization, <strong>portability</strong>, <strong>deletion</strong>, information about sharing, withdrawal of consent, and objection to processing based on legitimate interest.</p>
 <p>Because almost everything stays on your device, you exercise most rights directly:</p>
 <ul>
-<li><strong>Delete your account and server-side data:</strong> in the app, under <strong>Profile &gt; Settings &gt; Account &gt; Delete account</strong>, or via <a href="https://naturelensapp.cloud/account-deletion.html">naturelensapp.cloud/account-deletion.html</a>. Deletion erases the account, the linked subscription record, the synced collection, the push token and the usage counters.</li>
+<li><strong>Delete your account and server-side data:</strong> in the app, under <strong>Profile &gt; Settings &gt; Account &gt; Delete account</strong>, or through the web resource at <a href="https://naturelensapp.cloud/account-deletion.html">naturelensapp.cloud/account-deletion.html</a>. Deletion erases the account, subscription links on every device, the synced collection, push tokens, usage counters and linked AI reports. Because anti-abuse buckets contain no reversible account identifier, they follow the cleanup described in section 6, normally within 48 hours.</li>
 <li><strong>Note:</strong> deleting the account <strong>does not cancel the subscription billing</strong> at Hotmart. To stop payments, cancel at <a href="https://consumer.hotmart.com">consumer.hotmart.com</a>.</li>
 <li><strong>Withdraw location consent:</strong> turn it off in Profile at any time; identification keeps working.</li>
 <li><strong>Withdraw notifications:</strong> disable them in the app or system settings.</li>
 <li><strong>Access and correct your collection:</strong> your data is visible and editable inside the app itself.</li>
-<li><strong>Data we do not have:</strong> if you are not a signed-in subscriber, we hold nothing that identifies you — clearing the device data (or uninstalling) removes everything.</li>
+<li><strong>Use without sign-in:</strong> we receive no name or e-mail, but still use the pseudonymous device identifier, usage counters and anti-abuse records described above. Clearing app data removes the local copy; deletion in the app removes linked server records.</li>
 </ul>
 <p>Data subjects in Brazil may also petition the national authority (ANPD); data subjects in the EU, their national data protection authority.</p>
 
 <h2 id="en-8">8. Children</h2>
-<p>NatureLens is not directed at children under 13 and we do not knowingly collect data from children. The app requires no account and collects no personal identifiers in ordinary use. If a guardian believes a child created a subscriber account, it can be deleted through the channels in section 7.</p>
+<p>NatureLens is not directed at children under 13 and we do not knowingly collect data from children. In ordinary use, the app requires no account, name or e-mail, but it uses the pseudonymous device identifier and technical records described in this policy. If a guardian believes a child created a subscriber account, it can be deleted through the channels in section 7.</p>
 
 <h2 id="en-9">9. Security</h2>
 <ul>
 <li>All traffic between the app, the website and the servers uses <strong>HTTPS</strong> (encryption in transit).</li>
-<li>The database uses <strong>Row Level Security (RLS)</strong> on Supabase: each user can only access their own records.</li>
-<li>The best protection is structural: we store no photos, we store no location, and most users have no account — what is not collected cannot leak.</li>
+<li>Direct access through Supabase's <em>anon</em> and <em>authenticated</em> roles is blocked by <strong>Row Level Security (RLS)</strong>. Records are accessed only by server functions using <em>service_role</em> after device or account validation.</li>
+<li>The best protection is structural: we keep no copies of photos and retain no raw audio after inference on servers we control, store no location and require no account for ordinary use.</li>
 </ul>
 
 <h2 id="en-10">10. International transfers</h2>
-<p>The processors listed in section 4 are fully or partly located outside Brazil (for example, in the United States and Europe). By using the app, your data may be processed in those countries. These transfers rely on the contractual safeguards and compliance mechanisms each processor offers (such as standard contractual clauses), and we limit what each one receives to the minimum described in this policy.</p>
+<p>The services and recipients listed in section 4 are fully or partly located outside Brazil (for example, in the United States and Europe). By using the app, your data may be processed in those countries. These transfers rely on applicable legal and contractual mechanisms, and we limit what each recipient receives to what is described in this policy.</p>
 
 <h2 id="en-11">11. Changes to this policy</h2>
 <p>We may update this policy to reflect changes in the app or in the law. The current version always lives on this page, with the effective date at the top and in the footer. Material changes will be signaled in the app or on the website before taking effect.</p>
@@ -341,7 +385,7 @@
 
 </section>
 
-<footer>Última atualização / Last updated: 19 de agosto de 2026 · August 19, 2026</footer>
+<footer>Última atualização / Last updated: 24 de agosto de 2026 · August 24, 2026</footer>
 
 </main>
 </body>

@@ -15,7 +15,8 @@
         "summer": "Mensual, media dosis",
         "autumn": "Parar",
         "winter": "No abonar",
-        "note": "Poco nitrógeno, de la mitad a un cuarto de la dosis de la etiqueta. El exceso de N genera tejido blando que se pudre (Clemson, Iowa State)."
+        "note": "Poco nitrógeno, de la mitad a un cuarto de la dosis de la etiqueta. El exceso de N genera tejido blando que se pudre (Clemson, Iowa State).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "Trasplante",
@@ -51,7 +52,8 @@
         "summer": "Mensual, diluido",
         "autumn": "Reducir",
         "winter": "No abonar",
-        "note": "Las plantas de interior solo se abonan durante la temporada de crecimiento, nada en el reposo (UConn)."
+        "note": "Las plantas de interior solo se abonan durante la temporada de crecimiento, nada en el reposo (UConn).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "Esquejes",
@@ -79,7 +81,8 @@
         "summer": "Mensual, media dosis",
         "autumn": "Parar",
         "winter": "No abonar",
-        "note": "Nada durante 6 meses tras dividir o trasplantar; el exceso de abono quema las frondes (Clemson, UConn)."
+        "note": "Nada durante 6 meses tras dividir o trasplantar; el exceso de abono quema las frondes (Clemson, UConn).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "Dividir y trasplantar",
@@ -115,7 +118,8 @@
         "summer": "Tras la cosecha",
         "autumn": "Parar",
         "winter": "No abonar",
-        "note": "La fruta de hueso lleva tres dosis fraccionadas y ninguna en las últimas semanas del verano, para que la madera madure (Clemson)."
+        "note": "La fruta de hueso lleva tres dosis fraccionadas y ninguna en las últimas semanas del verano, para que la madera madure (Clemson).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "Poda",
@@ -143,7 +147,8 @@
         "summer": "Cada 6 semanas",
         "autumn": "Parar antes de helar",
         "winter": "No abonar",
-        "note": "Los rosales bajan a media dosis en el pico de calor y paran 6 semanas antes de la primera helada esperada (Clemson)."
+        "note": "Los rosales bajan a media dosis en el pico de calor y paran 6 semanas antes de la primera helada esperada (Clemson).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "Descabezado",
@@ -179,7 +184,8 @@
         "summer": "Dosis fraccionadas",
         "autumn": "Parar",
         "winter": "No abonar",
-        "note": "Un árbol maduro necesita poco o nada. Abonar tarde con mucho nitrógeno retrasa el reposo (Clemson)."
+        "note": "Un árbol maduro necesita poco o nada. Abonar tarde con mucho nitrógeno retrasa el reposo (Clemson).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "Poda",
@@ -215,7 +221,8 @@
         "summer": "Semanal, media dosis",
         "autumn": "Cada 2 semanas",
         "winter": "Cada 2 semanas",
-        "note": "La mitad de la dosis de la etiqueta, poca o ninguna urea, y saltarse cada 4.º abonado para lavar sales (AOS, RHS)."
+        "note": "La mitad de la dosis de la etiqueta, poca o ninguna urea, y saltarse cada 4.º abonado para lavar sales (AOS, RHS).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "Trasplante",
@@ -251,7 +258,8 @@
         "summer": "Solo si se estanca",
         "autumn": "No abonar",
         "winter": "No abonar",
-        "note": "El romero en suelo no recibe nada, y un suelo muy rico apaga el sabor (RHS, Clemson)."
+        "note": "El romero en suelo no recibe nada, y un suelo muy rico apaga el sabor (RHS, Clemson).",
+        "activityKey": "fertilizing"
       },
       {
         "activity": "Poda",
