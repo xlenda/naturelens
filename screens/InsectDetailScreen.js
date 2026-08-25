@@ -168,11 +168,9 @@ export default function InsectDetailScreen({ route }) {
   const { t, i18n } = useTranslation();
   const [saved, setSaved] = useState(Boolean(plant.savedId));
   const [savedEntryId, setSavedEntryId] = useState(plant.savedId || null);
-  const [curated, setCurated] = useState(null);
-  const [speciesDossier, setSpeciesDossier] = useState(null);
-  // undefined = carregando; null = carregou sem guia. A distincao impede que a
-  // ficha pareca definitivamente curta enquanto o manual localizado chega.
-  const [groupGuide, setGroupGuide] = useState(undefined);
+  // A chave do snapshot impede que o guia do grupo anterior seja tratado como
+  // pronto enquanto taxonomia e idioma ainda estao mudando.
+  const [groupGuideState, setGroupGuideState] = useState({ key: null, guide: null });
   // O dono escolheu uma ficha unica para insetos: Tecnico significa o conjunto
   // completo e inclui as camadas essencial e visual. Nenhuma preferencia antiga
   // do onboarding pode voltar a esconder o dossie nesta categoria.
@@ -188,34 +186,54 @@ export default function InsectDetailScreen({ route }) {
     gbifKey: plant.gbifId,
   });
   const enrichmentScientific = enrichment?.canonicalName || null;
+  const dossierLookupKey = `insect|${i18n.language}|${enrichmentScientific || ''}`;
+  const [curatedState, setCuratedState] = useState({ key: null, detail: null });
+  const [speciesDossierState, setSpeciesDossierState] = useState({ key: null, dossier: null });
+  const curated = curatedState.key === dossierLookupKey ? curatedState.detail : null;
+  const speciesDossier = speciesDossierState.key === dossierLookupKey
+    ? speciesDossierState.dossier
+    : null;
+  const curatedLoading = Boolean(enrichmentScientific)
+    && curatedState.key !== dossierLookupKey;
+  const speciesDossierLoading = Boolean(enrichmentScientific)
+    && speciesDossierState.key !== dossierLookupKey;
 
   useEffect(() => {
     let alive = true;
-    setCurated(null);
     // Curadoria por especie obedece ao mesmo portao do dossie dinamico. Um
     // binomio candidato ou um genero visivel nunca destrava texto especifico.
-    getCuratedDetail(i18n.language, 'insect', enrichmentScientific).then((detail) => {
-      if (alive) setCurated(detail);
-    });
+    if (!enrichmentScientific) return () => { alive = false; };
+    getCuratedDetail(i18n.language, 'insect', enrichmentScientific).then(
+      (detail) => {
+        if (alive) setCuratedState({ key: dossierLookupKey, detail });
+      },
+      () => {
+        if (alive) setCuratedState({ key: dossierLookupKey, detail: null });
+      }
+    );
     return () => {
       alive = false;
     };
-  }, [i18n.language, enrichmentScientific]);
+  }, [dossierLookupKey, i18n.language, enrichmentScientific]);
 
   useEffect(() => {
     let alive = true;
-    setSpeciesDossier(null);
     if (!enrichmentScientific) return () => { alive = false; };
     getSpeciesDossier({
       apiBase: API_BASE,
       category: 'insect',
       scientific: enrichmentScientific,
       language: i18n.language,
-    }).then((value) => {
-      if (alive) setSpeciesDossier(value);
-    });
+    }).then(
+      (dossier) => {
+        if (alive) setSpeciesDossierState({ key: dossierLookupKey, dossier });
+      },
+      () => {
+        if (alive) setSpeciesDossierState({ key: dossierLookupKey, dossier: null });
+      }
+    );
     return () => { alive = false; };
-  }, [enrichmentScientific, i18n.language]);
+  }, [dossierLookupKey, enrichmentScientific, i18n.language]);
 
   useEffect(() => {
     (async () => {
@@ -324,6 +342,12 @@ export default function InsectDetailScreen({ route }) {
     family: plant.family || dossierTaxonomy.family || null,
     ord: plant.ord || dossierTaxonomy.order || null,
   });
+  const groupGuideLookupKey = `${i18n.language}|${groupKey || ''}`;
+  const groupGuide = groupGuideState.key === groupGuideLookupKey
+    ? groupGuideState.guide
+    : null;
+  const groupGuideLoading = Boolean(groupKey)
+    && groupGuideState.key !== groupGuideLookupKey;
   // Insect.id also covers spiders, molluscs and other invertebrates. The broad
   // label stays true for every result without guessing a class the API lacks.
   const resultTypeLabel = t('detail.invertebrateLabel');
@@ -331,16 +355,23 @@ export default function InsectDetailScreen({ route }) {
 
   useEffect(() => {
     let alive = true;
-    setGroupGuide(undefined);
     if (!groupKey) {
-      setGroupGuide(null);
+      setGroupGuideState({ key: groupGuideLookupKey, guide: null });
       return () => { alive = false; };
     }
-    getGroups(i18n.language).then((groups) => {
-      if (alive) setGroupGuide(groups?.[groupKey] || null);
-    });
+    getGroups(i18n.language).then(
+      (groups) => {
+        if (alive) setGroupGuideState({
+          key: groupGuideLookupKey,
+          guide: groups?.[groupKey] || null,
+        });
+      },
+      () => {
+        if (alive) setGroupGuideState({ key: groupGuideLookupKey, guide: null });
+      }
+    );
     return () => { alive = false; };
-  }, [groupKey, i18n.language]);
+  }, [groupGuideLookupKey, groupKey, i18n.language]);
 
   const infoRows = [
     { label: t('detail.family'), value: technicalText(plant.family || dossierTaxonomy.family) },
@@ -433,13 +464,16 @@ export default function InsectDetailScreen({ route }) {
     mergeSourceGroundedTopics(speciesTopics, sourceTopics),
     buildInsectGroupTopics(groupGuide, t)
   );
+  const topicsLoading = curatedLoading
+    || speciesDossierLoading
+    || groupGuideLoading;
   const topicResourceKey = createSpeciesTopicResourceKey({
     category: 'insect',
     language: i18n.language,
     routeKey: route.key,
     identity: plant.savedId || enrichmentScientific || plant.scientific || plant.name,
   });
-  usePublishSpeciesTopics(topicResourceKey, topics);
+  usePublishSpeciesTopics(topicResourceKey, topics, topicsLoading);
 
   const openTopic = (initialKey, routeTopics = topics) =>
     navigation.navigate('CareTopics', { groupKey,
@@ -447,6 +481,7 @@ export default function InsectDetailScreen({ route }) {
       accent: meta.accent,
       category: 'insect',
       topics: routeTopics,
+      topicsLoading,
       topicResourceKey,
       initialKey,
     });
@@ -603,7 +638,7 @@ export default function InsectDetailScreen({ route }) {
           accent={meta.accent}
           onOpen={openTopic}
           title={t('speciesDossier.title')}
-          loading={Boolean(groupKey) && groupGuide === undefined}
+          loading={topicsLoading}
         />
         <GroupGuideCard
           groupKey={groupKey}

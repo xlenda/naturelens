@@ -42,6 +42,15 @@ const META = Object.freeze({
 // Indice honesto do manual: cada linha e uma porta, nunca um "fato rapido"
 // com CTA fingindo ser valor. O conteudo continua no CareTopics e a lista so
 // mostra topicos que realmente carregam texto.
+export function settledTopicRows(topics = [], loading = false) {
+  // Nenhuma categoria deve publicar a primeira aba que chegou enquanto as
+  // demais fontes ainda estao em voo. Isso parecia uma ficha definitiva de uma
+  // aba e deixava a pessoa sair antes de o dossie real terminar de carregar.
+  if (loading) return [];
+  return topics.filter((topic) => topic?.key && topic?.label
+    && (topic.text || topic.groupOnly || topic.stageProfile || topic.orderStageProfile));
+}
+
 export default function TopicNavigatorCard({
   topics = [],
   accent = colors.accent,
@@ -50,8 +59,7 @@ export default function TopicNavigatorCard({
   loading = false,
 }) {
   const { t } = useTranslation();
-  const visible = topics.filter((topic) => topic?.key && topic?.label
-    && (topic.text || topic.groupOnly || topic.stageProfile || topic.orderStageProfile));
+  const visible = settledTopicRows(topics, loading);
   // Uma especie fora do catalogo curado pode ter apenas um bloco verificado.
   // Esconder a porta inteira nesse caso fazia a ficha parecer vazia, apesar de
   // existir conteudo real. Uma unica aba honesta e melhor que nenhuma entrada.

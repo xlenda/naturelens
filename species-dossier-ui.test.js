@@ -345,6 +345,70 @@ test('a richer retry completes the same fish visit and is cached', async () => {
   assert.equal(new URL(urls[1]).searchParams.get('refresh'), '3');
 });
 
+test('complementary retries keep every validated fact instead of replacing the first response', async () => {
+  clearSpeciesDossierCache();
+  let calls = 0;
+  const partial = {
+    scientific,
+    taxonomy: { sourceId: 'worms', species: scientific, family: 'Salmonidae' },
+    diet: [
+      { id: 'Q1', label: 'Crustaceos' },
+      { id: 'Q2', label: 'Insetos aquaticos' },
+    ],
+    habitat: [],
+    sources,
+    partial: true,
+  };
+  const complete = {
+    scientific,
+    taxonomy: { sourceId: 'worms', species: scientific, family: 'Salmonidae' },
+    diet: [],
+    habitat: [{ id: 'Q3', label: 'Rios frios' }],
+    sources,
+    partial: false,
+  };
+  const fetchImpl = async () => ({
+    ok: true,
+    status: 200,
+    json: async () => (++calls === 1 ? partial : complete),
+  });
+
+  const dossier = await getSpeciesDossier({
+    category: 'fish', scientific, language: 'pt', fetchImpl,
+  });
+  assert.equal(calls, 2);
+  assert.equal(dossier.partial, false);
+  assert.deepEqual(dossier.diet.map((fact) => fact.id), ['Q1', 'Q2']);
+  assert.deepEqual(dossier.habitat.map((fact) => fact.id), ['Q3']);
+});
+
+test('a raw partial response retries even when its first payload has no renderable evidence', async () => {
+  clearSpeciesDossierCache();
+  let calls = 0;
+  const emptyPartial = { scientific, sources: [], partial: true };
+  const recovered = {
+    scientific,
+    taxonomy: { sourceId: 'worms', species: scientific, family: 'Salmonidae' },
+    environment: { marine: false, brackish: false, freshwater: true },
+    diet: [{ id: 'Q1', label: 'Crustaceos' }],
+    sources,
+    partial: false,
+  };
+  const fetchImpl = async () => ({
+    ok: true,
+    status: 200,
+    json: async () => (++calls === 1 ? emptyPartial : recovered),
+  });
+
+  const dossier = await getSpeciesDossier({
+    category: 'fish', scientific, language: 'pt', fetchImpl,
+  });
+  assert.equal(calls, 2);
+  assert.equal(dossier.partial, false);
+  assert.equal(dossier.environment.freshwater, true);
+  assert.deepEqual(dossier.diet.map((fact) => fact.id), ['Q1']);
+});
+
 test('a 404 expires, retries once per key and bypasses an old CDN miss', async () => {
   clearSpeciesDossierCache();
   let calls = 0;

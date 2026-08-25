@@ -1,4 +1,4 @@
-const { cleanWikiSections } = require('./speciesDossier');
+const { cleanWikiSections, richerDossier } = require('./speciesDossier');
 
 const VALID_MEASUREMENT_IDS = new Set([
   'clutchSize',
@@ -20,6 +20,7 @@ const WIKIPEDIA_HOSTS = new Set([
 ]);
 const memoryCache = new Map();
 const inflight = new Map();
+const retryAfterNotFound = new Set();
 
 function isPlainObject(value) {
   if (!value || typeof value !== 'object' || Array.isArray(value)) return false;
@@ -169,12 +170,15 @@ function normaliseBirdDossier(value, expectedScientific) {
   };
 }
 
-function birdDossierUrl(apiBase, scientific, language) {
+function birdDossierUrl(apiBase, scientific, language, refreshToken = null) {
   const base = typeof apiBase === 'string' ? apiBase.replace(/\/$/, '') : '';
+  const refresh = Number.isInteger(refreshToken) && refreshToken >= 0
+    ? `&refresh=${refreshToken}`
+    : '';
   return `${base}/api/species-dossier?category=bird` +
     `&scientificName=${encodeURIComponent(scientific)}` +
     `&language=${encodeURIComponent(language)}` +
-    '&wiki=1';
+    '&wiki=1' + refresh;
 }
 
 async function getBirdSpeciesDossier({ apiBase = '', scientific, language, fetchImpl } = {}) {
@@ -186,21 +190,44 @@ async function getBirdSpeciesDossier({ apiBase = '', scientific, language, fetch
   const key = `${cleanName}:${cleanLocale}`;
   if (memoryCache.has(key)) return memoryCache.get(key);
   if (inflight.has(key)) return inflight.get(key);
+  const refreshToken = retryAfterNotFound.has(key)
+    ? Math.floor(Date.now() / 15000)
+    : null;
 
   const pending = (async () => {
     try {
-      const response = await request(birdDossierUrl(apiBase, cleanName, cleanLocale), {
-        headers: { Accept: 'application/json' },
-      });
+      const load = async (refreshToken = null) => {
+        const response = await request(
+          birdDossierUrl(apiBase, cleanName, cleanLocale, refreshToken),
+          { headers: { Accept: 'application/json' } }
+        );
+        if (!response?.ok) return { response, dossier: null, partial: false };
+        const payload = await response.json();
+        return {
+          response,
+          dossier: normaliseBirdDossier(payload, cleanName),
+          partial: isPlainObject(payload) && payload.partial === true,
+        };
+      };
+      const first = await load(refreshToken);
+      const response = first.response;
       if (response?.status === 404) {
         // The dossier backend can become complete after this request (or a
         // transient deployment may briefly answer 404). Absence is therefore
         // not durable; a later opening gets a fresh chance, like partial data.
+        retryAfterNotFound.add(key);
         return null;
       }
       if (!response?.ok) return null;
-      const dossier = normaliseBirdDossier(await response.json(), cleanName);
-      if (dossier && !dossier.partial) memoryCache.set(key, dossier);
+      let dossier = first.dossier;
+      if (first.partial) {
+        const second = await load(Math.floor(Date.now() / 15000));
+        dossier = normaliseBirdDossier(richerDossier(dossier, second.dossier), cleanName);
+      }
+      if (dossier && !dossier.partial) {
+        memoryCache.set(key, dossier);
+        retryAfterNotFound.delete(key);
+      }
       return dossier;
     } catch (error) {
       return null;
@@ -216,6 +243,7 @@ async function getBirdSpeciesDossier({ apiBase = '', scientific, language, fetch
 function clearBirdSpeciesDossierCache() {
   memoryCache.clear();
   inflight.clear();
+  retryAfterNotFound.clear();
 }
 
 module.exports = {

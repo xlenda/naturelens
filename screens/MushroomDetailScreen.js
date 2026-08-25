@@ -305,13 +305,14 @@ export default function MushroomDetailScreen({ route }) {
   });
   const sourceTopics = buildSourceGroundedTopics({ dossier: speciesDossier });
   const topics = mergeSourceGroundedTopics(baseTopics, sourceTopics);
+  const topicsLoading = curatedLoading || dossierLoading;
   const topicResourceKey = createSpeciesTopicResourceKey({
     category: 'mushroom',
     language: i18n.language,
     routeKey: route.key,
     identity: plant.savedId || plant.scientific || plant.name,
   });
-  usePublishSpeciesTopics(topicResourceKey, topics);
+  usePublishSpeciesTopics(topicResourceKey, topics, topicsLoading);
 
   const openTopic = (initialKey, routeTopics = topics) =>
     navigation.navigate('CareTopics', { groupKey,
@@ -319,6 +320,7 @@ export default function MushroomDetailScreen({ route }) {
       accent: meta.accent,
       category: 'mushroom',
       topics: routeTopics,
+      topicsLoading,
       topicResourceKey,
       initialKey,
     });

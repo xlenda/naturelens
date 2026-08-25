@@ -371,13 +371,14 @@ export default function PlantDetailScreen({ route }) {
     const definition = BOTANICAL_GROUP_TOPIC_DEFS.find((topic) => topic.key === key);
     if (definition) topics.push({ key, label: t(definition.labelKey), groupOnly: true });
   });
+  const topicsLoading = groupTopicsLoading || speciesDossierLoading;
   const topicResourceKey = createSpeciesTopicResourceKey({
     category: 'plant',
     language: i18n.language,
     routeKey: route.key,
     identity: plant.savedId || plant.scientific || plant.name,
   });
-  usePublishSpeciesTopics(topicResourceKey, topics);
+  usePublishSpeciesTopics(topicResourceKey, topics, topicsLoading);
 
   // initialProblem: indice do acordeao de problemas, so quando a porta e um
   // card do carrossel "Problemas Comuns" (paridade 120%). undefined nas outras
@@ -389,6 +390,7 @@ export default function PlantDetailScreen({ route }) {
       accent: meta.accent,
       category: 'plant',
       topics,
+      topicsLoading,
       topicResourceKey,
       initialKey,
       initialProblem,

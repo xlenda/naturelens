@@ -45,7 +45,7 @@ test('fish and bird always expose the complete truthful depth without a switcher
     assert.match(source, /const resultDepth = RESULT_DEPTHS\.EXPERT;/, category);
     assert.doesNotMatch(source, /<ResultDepthSwitcher|useResultDepthPreference/, category);
     assert.match(source, /<ResultDepthLayer activeDepth=\{resultDepth\} depth=\{RESULT_DEPTHS\.EXPERT\}>/, category);
-    assert.match(source, /<TopicNavigatorCard[\s\S]*?loading=\{(?:\(|dossierLoading)/, category);
+    assert.match(source, /<TopicNavigatorCard[\s\S]*?loading=\{(?:topicsLoading|dossierLoading|\()/, category);
   }
 });
 
@@ -91,9 +91,10 @@ test('dossier and localized group loading remain visible in the topic navigator'
 
   assert.match(fish, /setSpeciesDossier\(enrichmentScientific \? undefined : null\)/);
   assert.match(fish, /speciesDossier === undefined/);
-  assert.match(fish, /groupGuide === undefined/);
+  assert.match(fish, /groupGuideLoading/);
 
   assert.match(bird, /setBirdDossier\(resolvedScientific \? undefined : null\)/);
   assert.match(bird, /birdDossier === undefined/);
-  assert.match(bird, /groupGuide === undefined/);
+  assert.match(bird, /groupGuideLoading/);
+  assert.match(bird, /const groupGuideLookupKey = `\$\{i18n\.language\}\|\$\{guideGroupKey \|\| ''\}`/);
 });

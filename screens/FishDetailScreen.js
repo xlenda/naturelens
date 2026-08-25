@@ -168,42 +168,65 @@ export default function FishDetailScreen({ route }) {
     ? observationSubjectKey(plant, savedEntryId)
     : unsavedObservationKey;
   const detachedObservationKey = React.useRef(null);
-  const [localised, setLocalised] = useState(null);
+  const presentationLookupKey = `fish|${i18n.language}|${enrichmentScientific || ''}`;
+  const [localisedState, setLocalisedState] = useState({ key: null, value: null });
+  const localised = localisedState.key === presentationLookupKey
+    ? localisedState.value
+    : null;
+  const localisedLoading = Boolean(enrichmentScientific)
+    && localisedState.key !== presentationLookupKey;
   const localisedDisplayName = localised?.localised && localised.title
     ? localised.title
     : null;
   const displayName = curatedName || localisedDisplayName || plant.displayName || plant.name;
-  const [curated, setCurated] = useState(null);
+  const curatedLookupKey = `fish|${i18n.language}|${enrichmentScientific || ''}`;
+  const [curatedState, setCuratedState] = useState({ key: null, value: null });
+  const curated = curatedState.key === curatedLookupKey
+    ? curatedState.value
+    : null;
+  const curatedLoading = Boolean(enrichmentScientific)
+    && curatedState.key !== curatedLookupKey;
   // undefined = carregando; null = consulta concluida sem dossie.
   const [speciesDossier, setSpeciesDossier] = useState(undefined);
-  const [groupGuide, setGroupGuide] = useState(undefined);
+  const [groupGuideState, setGroupGuideState] = useState({ key: null, guide: null });
   const [safetyRiskLevel, setSafetyRiskLevel] = useState(null);
   const [safetyLookupDone, setSafetyLookupDone] = useState(false);
   const { alertConfig, showAlert, hideAlert } = useAppAlert();
 
   useEffect(() => {
     let alive = true;
+    if (!enrichmentScientific) {
+      setLocalisedState({ key: presentationLookupKey, value: null });
+      return () => { alive = false; };
+    }
     getLocalisedOverview({
       scientific: enrichmentScientific,
       language: i18n.language,
     }).then((r) => {
-      if (alive) setLocalised(r);
+      if (alive) setLocalisedState({ key: presentationLookupKey, value: r });
+    }).catch(() => {
+      if (alive) setLocalisedState({ key: presentationLookupKey, value: null });
     });
     return () => {
       alive = false;
     };
-  }, [enrichmentScientific, i18n.language]);
+  }, [enrichmentScientific, i18n.language, presentationLookupKey]);
 
   useEffect(() => {
     let alive = true;
-    setCurated(null);
+    if (!enrichmentScientific) {
+      setCuratedState({ key: curatedLookupKey, value: null });
+      return () => { alive = false; };
+    }
     getCuratedDetail(i18n.language, 'fish', enrichmentScientific).then((detail) => {
-      if (alive) setCurated(detail);
+      if (alive) setCuratedState({ key: curatedLookupKey, value: detail });
+    }).catch(() => {
+      if (alive) setCuratedState({ key: curatedLookupKey, value: null });
     });
     return () => {
       alive = false;
     };
-  }, [enrichmentScientific, i18n.language]);
+  }, [curatedLookupKey, enrichmentScientific, i18n.language]);
 
   useEffect(() => {
     let alive = true;
@@ -388,19 +411,32 @@ export default function FishDetailScreen({ route }) {
     || (groupKey === 'marineFish' && REEF_GUIDE_SPECIES.has(binomial))
     ? groupKey
     : null;
+  const groupGuideLookupKey = `${i18n.language}|${guideGroupKey || ''}`;
+  const groupGuide = groupGuideState.key === groupGuideLookupKey
+    ? groupGuideState.guide
+    : null;
+  const groupGuideLoading = Boolean(guideGroupKey)
+    && groupGuideState.key !== groupGuideLookupKey;
 
   useEffect(() => {
     let alive = true;
-    setGroupGuide(undefined);
     if (!guideGroupKey) {
-      setGroupGuide(null);
+      setGroupGuideState({ key: groupGuideLookupKey, guide: null });
       return () => { alive = false; };
     }
-    getGroups(i18n.language).then((groups) => {
-      if (alive) setGroupGuide(groups?.[guideGroupKey] || null);
-    });
+    getGroups(i18n.language).then(
+      (groups) => {
+        if (alive) setGroupGuideState({
+          key: groupGuideLookupKey,
+          guide: groups?.[guideGroupKey] || null,
+        });
+      },
+      () => {
+        if (alive) setGroupGuideState({ key: groupGuideLookupKey, guide: null });
+      }
+    );
     return () => { alive = false; };
-  }, [guideGroupKey, i18n.language]);
+  }, [groupGuideLookupKey, guideGroupKey, i18n.language]);
 
   const dynamicTopics = buildFishDossierTopics({
     dossier: speciesDossier,
@@ -471,15 +507,17 @@ export default function FishDetailScreen({ route }) {
     mergeSourceGroundedTopics(speciesTopics, sourceTopics),
     buildFishGroupTopics(groupGuide, t)
   );
-  const dossierLoading = (Boolean(enrichmentScientific) && speciesDossier === undefined)
-    || (Boolean(guideGroupKey) && groupGuide === undefined);
+  const topicsLoading = curatedLoading
+    || localisedLoading
+    || (Boolean(enrichmentScientific) && speciesDossier === undefined)
+    || groupGuideLoading;
   const topicResourceKey = createSpeciesTopicResourceKey({
     category: 'fish',
     language: i18n.language,
     routeKey: route.key,
     identity: plant.savedId || enrichmentScientific || plant.scientific || plant.name,
   });
-  usePublishSpeciesTopics(topicResourceKey, topics);
+  usePublishSpeciesTopics(topicResourceKey, topics, topicsLoading);
 
   const openTopic = (initialKey, routeTopics = topics) =>
     navigation.navigate('CareTopics', {
@@ -488,6 +526,7 @@ export default function FishDetailScreen({ route }) {
       accent: meta.accent,
       category: 'fish',
       topics: routeTopics,
+      topicsLoading,
       topicResourceKey,
       initialKey,
     });
@@ -612,11 +651,11 @@ export default function FishDetailScreen({ route }) {
             critical={safetyRiskLevel === 'danger'}
           />
         )}
-        <TopicNavigatorCard topics={dossierLoading ? [] : topics}
+        <TopicNavigatorCard topics={topicsLoading ? [] : topics}
           accent={meta.accent}
           onOpen={openTopic}
           title={t('speciesDossier.title')}
-          loading={dossierLoading}
+          loading={topicsLoading}
         />
         <NextBestCaptureCard
           category="fish"

@@ -64,20 +64,22 @@ function sameTopics(left, right) {
   });
 }
 
-export function publishSpeciesTopics(key, topics) {
+export function publishSpeciesTopics(key, topics, loading = false) {
   if (!key || !Array.isArray(topics)) return undefined;
+  const nextLoading = loading === true;
   let resource = resources.get(key);
   if (!resource) {
-    resource = { topics: undefined, listeners: new Set(), lastAccess: 0 };
+    resource = { topics: undefined, loading: false, listeners: new Set(), lastAccess: 0 };
     resources.set(key, resource);
   }
   touch(resource);
-  if (sameTopics(resource.topics, topics)) {
+  if (sameTopics(resource.topics, topics) && resource.loading === nextLoading) {
     pruneResources();
     return resource.topics;
   }
   resource.topics = topics.slice();
-  for (const listener of [...resource.listeners]) listener(resource.topics);
+  resource.loading = nextLoading;
+  for (const listener of [...resource.listeners]) listener(resource.topics, resource.loading);
   pruneResources();
   return resource.topics;
 }
@@ -90,11 +92,19 @@ export function readSpeciesTopics(key) {
   return resource.topics;
 }
 
+export function readSpeciesTopicLoading(key) {
+  if (!key) return false;
+  const resource = resources.get(key);
+  if (!resource) return false;
+  touch(resource);
+  return resource.loading === true;
+}
+
 export function subscribeSpeciesTopics(key, listener) {
   if (!key || typeof listener !== 'function') return () => {};
   let resource = resources.get(key);
   if (!resource) {
-    resource = { topics: undefined, listeners: new Set(), lastAccess: 0 };
+    resource = { topics: undefined, loading: false, listeners: new Set(), lastAccess: 0 };
     resources.set(key, resource);
   }
   touch(resource);
@@ -127,26 +137,45 @@ export function clearSpeciesTopicResources() {
   accessClock = 0;
 }
 
-export function usePublishSpeciesTopics(key, topics) {
+export function usePublishSpeciesTopics(key, topics, loading = false) {
   useEffect(() => {
-    publishSpeciesTopics(key, topics);
-  }, [key, topics]);
+    publishSpeciesTopics(key, topics, loading);
+  }, [key, loading, topics]);
+}
+
+export function useSpeciesTopicState(key, fallbackTopics = [], fallbackLoading = false) {
+  const [snapshot, setSnapshot] = useState(() => {
+    const topics = readSpeciesTopics(key);
+    return {
+      key,
+      topics,
+      loading: topics === undefined ? fallbackLoading === true : readSpeciesTopicLoading(key),
+    };
+  });
+
+  useEffect(() => {
+    const resourceTopics = readSpeciesTopics(key);
+    setSnapshot({
+      key,
+      topics: resourceTopics,
+      loading: resourceTopics === undefined
+        ? fallbackLoading === true
+        : readSpeciesTopicLoading(key),
+    });
+    return subscribeSpeciesTopics(key, (topics, loading) => setSnapshot({ key, topics, loading }));
+  }, [fallbackLoading, key]);
+
+  const resourceTopics = snapshot.key === key ? snapshot.topics : undefined;
+  const loading = snapshot.key === key ? snapshot.loading === true : fallbackLoading === true;
+  return useMemo(
+    () => ({
+      loading,
+      topics: loading ? [] : mergeSpeciesTopics(fallbackTopics, resourceTopics),
+    }),
+    [fallbackTopics, loading, resourceTopics]
+  );
 }
 
 export function useSpeciesTopics(key, fallbackTopics = []) {
-  const [snapshot, setSnapshot] = useState(() => ({
-    key,
-    topics: readSpeciesTopics(key),
-  }));
-
-  useEffect(() => {
-    setSnapshot({ key, topics: readSpeciesTopics(key) });
-    return subscribeSpeciesTopics(key, (topics) => setSnapshot({ key, topics }));
-  }, [key]);
-
-  const resourceTopics = snapshot.key === key ? snapshot.topics : undefined;
-  return useMemo(
-    () => mergeSpeciesTopics(fallbackTopics, resourceTopics),
-    [fallbackTopics, resourceTopics]
-  );
+  return useSpeciesTopicState(key, fallbackTopics).topics;
 }

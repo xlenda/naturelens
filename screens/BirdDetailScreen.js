@@ -178,17 +178,9 @@ export default function BirdDetailScreen({ route }) {
     : unsavedObservationKey;
   const detachedObservationKey = React.useRef(null);
   const { alertConfig, showAlert, hideAlert } = useAppAlert();
-  // A curadoria editorial ainda casa pelo rotulo do modelo; o dossie dinamico
-  // abaixo usa somente a identidade taxonomica provada e nao depende deste mapa.
-  const [curated, setCurated] = useState(null);
-  const [localised, setLocalised] = useState(null);
   // undefined = carregando; null = consulta concluida sem dossie.
   const [birdDossier, setBirdDossier] = useState(undefined);
-  const [groupGuide, setGroupGuide] = useState(undefined);
-  const localisedDisplayName = localised?.localised && localised.title
-    ? localised.title
-    : null;
-  const displayName = curatedName || localisedDisplayName || plant.name;
+  const [groupGuideState, setGroupGuideState] = useState({ key: null, guide: null });
   // Ave usa uma ficha unica: Tecnico inclui as camadas essencial e visual.
   // A divulgacao progressiva continua nos blocos expansivos dentro da ficha.
   const resultDepth = RESULT_DEPTHS.EXPERT;
@@ -205,6 +197,26 @@ export default function BirdDetailScreen({ route }) {
     : null;
   const resolvedScientific = providerTaxon?.canonicalName || legacyScientific;
   const identityScientific = resolvedScientific;
+  const presentationLookupKey = `bird|${i18n.language}|${resolvedScientific || ''}|${plant.name || ''}`;
+  // Curadoria e artigo localizado so existem quando a chave inteira coincide.
+  // Isso impede um idioma/especie anterior de reaparecer durante uma troca
+  // rapida de rota, mesmo antes de o effect da nova consulta executar.
+  const [presentationState, setPresentationState] = useState({
+    key: null,
+    curated: null,
+    localised: null,
+  });
+  const presentation = presentationState.key === presentationLookupKey
+    ? presentationState
+    : null;
+  const curated = presentation?.curated || null;
+  const localised = presentation?.localised || null;
+  const presentationLoading = Boolean(resolvedScientific)
+    && presentationState.key !== presentationLookupKey;
+  const localisedDisplayName = localised?.localised && localised.title
+    ? localised.title
+    : null;
+  const displayName = curatedName || localisedDisplayName || plant.name;
   // Nyckel/BioCLIP deliberately return overview:null. Curated/Wikipedia prose
   // is presentation in the active reader language and must never be frozen in
   // the stable collection entity.
@@ -212,27 +224,40 @@ export default function BirdDetailScreen({ route }) {
 
   useEffect(() => {
     let alive = true;
-    setCurated(null);
-    setLocalised(null);
-    if (!resolvedScientific) return () => { alive = false; };
-    getCuratedBird(i18n.language, plant.name).then((c) => {
-      if (!alive) return;
-      const exactCurated = c?.scientific === resolvedScientific ? c : null;
-      setCurated(exactCurated);
-      // Only worth fetching when there is no curated text - the curated file is
-      // already written in the reader's language and is better than a Wikipedia
-      // lead paragraph.
-      if (!exactCurated) {
-        getLocalisedOverview({ scientific: resolvedScientific, language: i18n.language })
-          .then((r) => {
-            if (alive) setLocalised(r);
-          });
-      }
-    });
+    const settlePresentation = (curatedValue = null, localisedValue = null) => {
+      if (alive) setPresentationState({
+        key: presentationLookupKey,
+        curated: curatedValue,
+        localised: localisedValue,
+      });
+    };
+    if (!resolvedScientific) {
+      settlePresentation();
+      return () => { alive = false; };
+    }
+    getCuratedBird(i18n.language, plant.name).then(
+      (c) => {
+        if (!alive) return;
+        const exactCurated = c?.scientific === resolvedScientific ? c : null;
+        // Only worth fetching when there is no curated text - the curated file is
+        // already written in the reader's language and is better than a Wikipedia
+        // lead paragraph.
+        if (!exactCurated) {
+          getLocalisedOverview({ scientific: resolvedScientific, language: i18n.language })
+            .then(
+              (r) => settlePresentation(null, r),
+              () => settlePresentation()
+            );
+        } else {
+          settlePresentation(exactCurated, null);
+        }
+      },
+      () => settlePresentation()
+    );
     return () => {
       alive = false;
     };
-  }, [i18n.language, plant.name, resolvedScientific]);
+  }, [i18n.language, plant.name, presentationLookupKey, resolvedScientific]);
 
   useEffect(() => {
     let alive = true;
@@ -348,19 +373,32 @@ export default function BirdDetailScreen({ route }) {
     ord: plant.ord || birdDossier?.taxonomy?.order || null,
   });
   const guideGroupKey = taxonomyGroupKey || guideGroupForBirdLabel(plant.name);
+  const groupGuideLookupKey = `${i18n.language}|${guideGroupKey || ''}`;
+  const groupGuide = groupGuideState.key === groupGuideLookupKey
+    ? groupGuideState.guide
+    : null;
+  const groupGuideLoading = Boolean(guideGroupKey)
+    && groupGuideState.key !== groupGuideLookupKey;
 
   useEffect(() => {
     let alive = true;
-    setGroupGuide(undefined);
     if (!guideGroupKey) {
-      setGroupGuide(null);
+      setGroupGuideState({ key: groupGuideLookupKey, guide: null });
       return () => { alive = false; };
     }
-    getGroups(i18n.language).then((groups) => {
-      if (alive) setGroupGuide(groups?.[guideGroupKey] || null);
-    });
+    getGroups(i18n.language).then(
+      (groups) => {
+        if (alive) setGroupGuideState({
+          key: groupGuideLookupKey,
+          guide: groups?.[guideGroupKey] || null,
+        });
+      },
+      () => {
+        if (alive) setGroupGuideState({ key: groupGuideLookupKey, guide: null });
+      }
+    );
     return () => { alive = false; };
-  }, [guideGroupKey, i18n.language]);
+  }, [groupGuideLookupKey, guideGroupKey, i18n.language]);
 
   // A mesma resposta normalizada alimenta o card tecnico e as abas. Assim a
   // tela faz uma unica consulta e nenhum campo cru do servidor contorna a
@@ -408,6 +446,9 @@ export default function BirdDetailScreen({ route }) {
     mergeSourceGroundedTopics(speciesTopics, sourceTopics),
     buildBirdGroupTopics(groupGuide, t)
   );
+  const topicsLoading = presentationLoading
+    || (Boolean(resolvedScientific) && birdDossier === undefined)
+    || groupGuideLoading;
   const topicResourceKey = createSpeciesTopicResourceKey({
     category: 'bird',
     language: i18n.language,
@@ -416,7 +457,7 @@ export default function BirdDetailScreen({ route }) {
     // keyed only by the saved specimen or the taxon that the bridge proved.
     identity: plant.savedId || resolvedScientific || null,
   });
-  usePublishSpeciesTopics(topicResourceKey, topics);
+  usePublishSpeciesTopics(topicResourceKey, topics, topicsLoading);
   const hasManual = topics.length >= 2;
 
   const openTopic = (initialKey, routeTopics = topics) => {
@@ -426,6 +467,7 @@ export default function BirdDetailScreen({ route }) {
       accent: meta.accent,
       category: 'bird',
       topics: routeTopics,
+      topicsLoading,
       topicResourceKey,
       initialKey,
     });
@@ -520,8 +562,7 @@ export default function BirdDetailScreen({ route }) {
           accent={meta.accent}
           onOpen={openTopic}
           title={t('speciesDossier.title')}
-          loading={(Boolean(resolvedScientific) && birdDossier === undefined)
-            || (Boolean(guideGroupKey) && groupGuide === undefined)}
+          loading={topicsLoading}
         />
         <NextBestCaptureCard
           category="bird"

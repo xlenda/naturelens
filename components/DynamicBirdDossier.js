@@ -143,7 +143,7 @@ export default function DynamicBirdDossier({ dossier, accent = colors.accent }) 
           const label = t('detail.speciesCareSource', { citation });
           return (
             <Pressable
-              key={source.id}
+              key={`${source.id}:${source.url}`}
               style={({ pressed }) => [styles.source, pressed && styles.sourcePressed]}
               onPress={() => Linking.openURL(source.url)}
               accessibilityRole="link"

@@ -181,7 +181,7 @@ test('group guides are explicit and never mix the plant manual into fauna or cro
   assert.match(careTopics, /\[initialKey, topics, category\]/, 'topic changes must resynchronise the active tab');
   assert.match(
     careTopics,
-    /\[activeKey, canonKey, i18nLang, groupKey, initialKey, initialProblem, category\]/,
+    /\[resolvedActiveKey, canonKey, i18nLang, groupKey, initialKey, initialProblem, category\]/,
     'changing category must clear the previous universal manual'
   );
 
@@ -425,10 +425,14 @@ test('fish keeps evidence, ecology and the complete taxonomy without plant care'
     'exact curated ecology must lead over occurrence science');
   assert.match(screen, /<GroupGuideCard[\s\S]{0,120}groupKey=\{guideGroupKey\}/,
     'fish group guidance must use the fail-closed guide key');
-  assert.match(screen, /<TopicNavigatorCard topics=\{dossierLoading \? \[\] : topics\}/,
+  assert.match(screen, /<TopicNavigatorCard topics=\{topicsLoading \? \[\] : topics\}/,
     'fish must expose its exact manual only after the asynchronous dossier settles');
-  assert.match(screen, /loading=\{dossierLoading\}/,
+  assert.match(screen, /loading=\{topicsLoading\}/,
     'fish must show loading instead of a misleading one-tab manual');
+  assert.match(screen, /const topicsLoading = curatedLoading[\s\S]{0,100}localisedLoading[\s\S]{0,180}speciesDossier === undefined[\s\S]{0,180}groupGuideLoading/,
+    'fish must wait for curated, localised, species and group enrichment');
+  assert.match(screen, /const groupGuideLookupKey = `\$\{i18n\.language\}\|\$\{guideGroupKey \|\| ''\}`/,
+    'fish group enrichment must be isolated by language and group');
 
   const sync = read('api/collection.js');
   for (const field of ["'family'", "'ord'", "'commonNames'", "'synonyms'"]) {
@@ -490,8 +494,12 @@ test('insect manual has fauna tabs instead of only two cards', () => {
     'the permanent technical insect dossier must keep species and group manuals visible');
   assert.doesNotMatch(insect, /<ResultDepthSwitcher|useResultDepthPreference/,
     'an old visual preference must never hide insect dossier sections again');
-  assert.match(insect, /loading=\{Boolean\(groupKey\) && groupGuide === undefined\}/,
-    'the technical guide must announce its localized loading state instead of looking permanently short');
+  assert.match(insect, /const topicsLoading = curatedLoading[\s\S]{0,160}speciesDossierLoading[\s\S]{0,160}groupGuideLoading/,
+    'the insect manual must wait for curated, species and group enrichment');
+  assert.match(insect, /const groupGuideLookupKey = `\$\{i18n\.language\}\|\$\{groupKey \|\| ''\}`/,
+    'a dossier-derived insect group must not publish the previous guide while it changes');
+  assert.match(insect, /loading=\{topicsLoading\}/,
+    'the technical guide must announce the complete loading state instead of looking permanently short');
   assert.match(identify, /category !== 'insect'[\s\S]*getGroups\(i18n\.language\)/,
     'the localized insect guide should preload while the user prepares the photo');
   assert.match(groupLoader, /if \(pending\[code\]\) return pending\[code\];/,
@@ -500,6 +508,37 @@ test('insect manual has fauna tabs instead of only two cards', () => {
     'order-level technical evidence must be an explicit navigator contract');
   assert.match(topicNavigator, /visible\.length === 0/,
     'one verified topic must remain reachable instead of hiding the whole manual');
+  assert.match(topicNavigator, /if \(loading\) return \[\];/,
+    'no category may expose a misleading partial manual while its sources are loading');
+});
+
+test('the shared manual hides every partial row until enrichment settles', () => {
+  const { settledTopicRows } = loadExpoModule('components/TopicNavigatorCard.js', {
+    'react-native': {
+      ActivityIndicator: () => null,
+      Pressable: () => null,
+      StyleSheet: { create: (styles) => styles },
+      Text: () => null,
+      View: () => null,
+    },
+    '@expo/vector-icons': { Ionicons: () => null },
+    'react-i18next': { useTranslation: () => ({ t: (key) => key }) },
+    './SectionCard': () => null,
+    './theme': {
+      colors: {
+        accent: '#54AD7A', warning: '#F5B942', info: '#4AA8D8', purple: '#9A7BD8',
+        textMuted: '#7B8781', border: '#23372D', surface: '#102119',
+        text: '#FFFFFF', textSecondary: '#B8C4BE',
+      },
+    },
+  });
+  const rows = [
+    { key: 'overview', label: 'Visao geral', text: 'Conteudo verificado' },
+    { key: 'empty', label: 'Sem dado', text: '' },
+  ];
+
+  assert.deepEqual(settledTopicRows(rows, true), []);
+  assert.deepEqual(settledTopicRows(rows, false), [rows[0]]);
 });
 
 test('every identification category exposes its truthful manual at fixed Expert depth', () => {
@@ -537,7 +576,7 @@ test('every identification category exposes its truthful manual at fixed Expert 
       assert.match(topicDefinitions, new RegExp(definition), `${file}: missing ${key}`);
     }
     const manualTopics = file.includes('Fish')
-      ? /<TopicNavigatorCard\s+topics=\{dossierLoading \? \[\] : topics\}/
+      ? /<TopicNavigatorCard\s+topics=\{topicsLoading \? \[\] : topics\}/
       : /<TopicNavigatorCard\s+topics=\{(?:topics|TOPICS)\}/;
     assert.match(source, manualTopics, `${file}: manual tabs need a visible entry point`);
     const manualDoor = source.indexOf('<TopicNavigatorCard');

@@ -43,6 +43,10 @@ test('bird enrichment accepts a curated label fallback only for legacy records',
   assert.doesNotMatch(bird, /resolvedScientific \|\| plant\.name/);
   assert.match(bird, /const exactCurated = c\?\.scientific === resolvedScientific \? c : null;/);
   assert.match(bird, /if \(!exactCurated\) \{[\s\S]{0,260}getLocalisedOverview\(\{ scientific: resolvedScientific, language:/);
+  assert.match(bird, /const presentation = presentationState\.key === presentationLookupKey/,
+    'bird presentation must never reuse another species or language while loading');
+  assert.match(bird, /key: presentationLookupKey,[\s\S]{0,100}curated: curatedValue,[\s\S]{0,100}localised: localisedValue/,
+    'bird presentation must settle as one keyed snapshot');
   for (const external of [
     /<PlantHero[\s\S]{0,160}scientific=\{resolvedScientific\}/,
     /<IdentificationExtras[\s\S]{0,100}entity=\{\{ \.\.\.plant, scientific: resolvedScientific \}\}[\s\S]{0,100}scientific=\{resolvedScientific\}/,

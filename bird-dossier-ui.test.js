@@ -126,7 +126,76 @@ test('a partial bird dossier is usable once but never pinned in memory', async (
   const args = { scientific, language: 'pt', fetchImpl };
   assert.equal((await getBirdSpeciesDossier(args)).partial, true);
   assert.equal((await getBirdSpeciesDossier(args)).partial, true);
+  assert.equal(calls, 4);
+});
+
+test('a partial bird dossier retries immediately and keeps complementary evidence', async () => {
+  clearBirdSpeciesDossierCache();
+  let calls = 0;
+  const first = {
+    scientific,
+    diet: [{ id: 'Q25349', label: 'insetos' }],
+    habitat: [],
+    reproduction: [],
+    lifeCycle: [],
+    conservation: null,
+    sources,
+    partial: true,
+  };
+  const second = {
+    ...first,
+    diet: [],
+    habitat: [{ id: 'Q4421', label: 'floresta' }],
+    partial: false,
+  };
+  const urls = [];
+  const fetchImpl = async (url) => {
+    urls.push(url);
+    calls += 1;
+    return { ok: true, status: 200, json: async () => (calls === 1 ? first : second) };
+  };
+
+  const dossier = await getBirdSpeciesDossier({ scientific, language: 'pt', fetchImpl });
   assert.equal(calls, 2);
+  assert.equal(dossier.partial, false);
+  assert.deepEqual(dossier.diet.map((fact) => fact.id), ['Q25349']);
+  assert.deepEqual(dossier.habitat.map((fact) => fact.id), ['Q4421']);
+  assert.ok(new URL(urls[1], 'https://naturelensapp.cloud').searchParams.has('refresh'));
+});
+
+test('a raw partial bird response retries even before it has a renderable fact', async () => {
+  clearBirdSpeciesDossierCache();
+  let calls = 0;
+  const emptyPartial = {
+    scientific,
+    diet: [],
+    habitat: [],
+    reproduction: [],
+    lifeCycle: [],
+    conservation: null,
+    sources: [sources[0]],
+    partial: true,
+  };
+  const recovered = {
+    scientific,
+    diet: [{ id: 'Q25349', label: 'insetos' }],
+    habitat: [],
+    reproduction: [],
+    lifeCycle: [],
+    conservation: null,
+    sources,
+    partial: false,
+  };
+  const fetchImpl = async () => ({
+    ok: true,
+    status: 200,
+    json: async () => (++calls === 1 ? emptyPartial : recovered),
+  });
+
+  const dossier = await getBirdSpeciesDossier({ scientific, language: 'pt', fetchImpl });
+  assert.equal(calls, 2);
+  assert.equal(dossier.partial, false);
+  assert.deepEqual(dossier.diet.map((fact) => fact.id), ['Q25349']);
 });
 
 test('a bird dossier retries after a 404 instead of pinning absence forever', async () => {
@@ -142,7 +211,9 @@ test('a bird dossier retries after a 404 instead of pinning absence forever', as
     sources,
     partial: false,
   };
-  const fetchImpl = async () => {
+  const urls = [];
+  const fetchImpl = async (url) => {
+    urls.push(url);
     calls += 1;
     return calls === 1
       ? { ok: false, status: 404, json: async () => ({}) }
@@ -153,6 +224,9 @@ test('a bird dossier retries after a 404 instead of pinning absence forever', as
   assert.equal(await getBirdSpeciesDossier(args), null);
   assert.deepEqual(await getBirdSpeciesDossier(args), normaliseBirdDossier(payload, scientific));
   assert.equal(calls, 2);
+  assert.equal(new URL(urls[0], 'https://naturelensapp.cloud').searchParams.has('refresh'), false);
+  assert.equal(new URL(urls[1], 'https://naturelensapp.cloud').searchParams.has('refresh'), true,
+    'the retry URL must bypass a transient CDN-cached 404');
 });
 
 test('bird expert view mounts the dynamic dossier beyond curated entries', () => {

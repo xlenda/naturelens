@@ -353,7 +353,7 @@ export default function SoundDetailScreen({ route }) {
     // to bind asynchronously enriched species topics.
     identity: plant.savedId || enrichmentScientific || null,
   });
-  usePublishSpeciesTopics(topicResourceKey, topics);
+  usePublishSpeciesTopics(topicResourceKey, topics, topicsLoading);
 
   const quickFacts = [
     hasAudioEvidence && {
@@ -375,6 +375,7 @@ export default function SoundDetailScreen({ route }) {
       accent: meta.accent,
       category: 'sound',
       topics,
+      topicsLoading,
       topicResourceKey,
       initialKey: key,
     });

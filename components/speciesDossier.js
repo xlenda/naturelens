@@ -368,11 +368,80 @@ function dossierEvidenceScore(dossier) {
   return listEvidence + environmentEvidence + conservationEvidence + taxonomyEvidence;
 }
 
+function mergeUniqueEvidence(first, second, keyOf, limit) {
+  const merged = [];
+  const seen = new Set();
+  for (const item of [...(first || []), ...(second || [])]) {
+    const key = keyOf(item);
+    if (!key || seen.has(key)) continue;
+    seen.add(key);
+    merged.push(item);
+    if (merged.length >= limit) break;
+  }
+  return merged;
+}
+
+function richerObject(first, second) {
+  if (!isPlainObject(first)) return isPlainObject(second) ? second : null;
+  if (!isPlainObject(second)) return first;
+  const evidence = (value) => Object.values(value).filter((item) => item !== null && item !== undefined).length;
+  return evidence(second) > evidence(first) ? second : first;
+}
+
 function richerDossier(first, second) {
   if (!first) return second;
   if (!second) return first;
-  if (first.partial !== second.partial) return first.partial ? second : first;
-  return dossierEvidenceScore(second) > dossierEvidenceScore(first) ? second : first;
+  // Cada tentativa pode concluir uma fonte diferente. Escolher a resposta
+  // marcada como completa antes de comparar evidencias descartava fatos reais
+  // da tentativa parcial (por exemplo, dieta na primeira e habitat na segunda).
+  // Os dois objetos ja passaram pelo normalizador estrito; aqui apenas unimos
+  // evidencias validadas, deduplicamos e mantemos os mesmos limites de schema.
+  const preferred = dossierEvidenceScore(second) > dossierEvidenceScore(first)
+    ? second
+    : first;
+  const alternate = preferred === first ? second : first;
+  const factKey = (item) => item?.id;
+  const measurementKey = (item) => item?.id && `${item.id}:${item.amount}:${item.unit}`;
+  const interactionKey = (item) => item?.id;
+
+  return {
+    ...alternate,
+    ...preferred,
+    scientific: preferred.scientific || alternate.scientific,
+    taxonomy: richerObject(preferred.taxonomy, alternate.taxonomy),
+    environment: richerObject(preferred.environment, alternate.environment),
+    diet: mergeUniqueEvidence(preferred.diet, alternate.diet, factKey, MAX_FACTS),
+    habitat: mergeUniqueEvidence(preferred.habitat, alternate.habitat, factKey, MAX_FACTS),
+    reproduction: mergeUniqueEvidence(
+      preferred.reproduction, alternate.reproduction, measurementKey, MAX_MEASUREMENTS
+    ),
+    lifeCycle: mergeUniqueEvidence(
+      preferred.lifeCycle, alternate.lifeCycle, measurementKey, MAX_MEASUREMENTS
+    ),
+    conservation: preferred.conservation || alternate.conservation || null,
+    feeding: mergeUniqueEvidence(
+      preferred.feeding, alternate.feeding, interactionKey, MAX_INTERACTIONS
+    ),
+    plantAssociations: mergeUniqueEvidence(
+      preferred.plantAssociations, alternate.plantAssociations, interactionKey, MAX_INTERACTIONS
+    ),
+    ecologicalRelations: mergeUniqueEvidence(
+      preferred.ecologicalRelations, alternate.ecologicalRelations, interactionKey, MAX_INTERACTIONS
+    ),
+    documentedLifeStages: mergeUniqueEvidence(
+      preferred.documentedLifeStages, alternate.documentedLifeStages, (stage) => stage, LIFE_STAGE_IDS.size
+    ),
+    wikiSections: mergeUniqueEvidence(
+      preferred.wikiSections, alternate.wikiSections, (section) => section?.key, WIKI_SECTION_KEYS.size
+    ),
+    sources: mergeUniqueEvidence(
+      preferred.sources,
+      alternate.sources,
+      (source) => source?.id && `${source.id}:${source.url}:${source.license}`,
+      8
+    ),
+    partial: first.partial === true && second.partial === true,
+  };
 }
 
 async function getSpeciesDossier({
@@ -415,10 +484,12 @@ async function getSpeciesDossier({
           language: cleanLocale,
           refreshToken: token,
         }), { headers: { Accept: 'application/json' } });
-        if (!response?.ok) return { response, dossier: null };
+        if (!response?.ok) return { response, dossier: null, partial: false };
+        const payload = await response.json();
         return {
           response,
-          dossier: normaliseSpeciesDossier(await response.json(), cleanName),
+          dossier: normaliseSpeciesDossier(payload, cleanName),
+          partial: isPlainObject(payload) && payload.partial === true,
         };
       };
       const first = await load(refreshToken);
@@ -435,7 +506,7 @@ async function getSpeciesDossier({
       }
       if (!response?.ok) return null;
       let dossier = first.dossier;
-      if (dossier?.partial) {
+      if (first.partial) {
         // Fontes de fauna falham de forma independente. Mostrar apenas o resumo
         // na primeira visita fazia a pessoa concluir que as abas nao existiam;
         // uma unica segunda consulta, com URL nova para contornar a CDN parcial,

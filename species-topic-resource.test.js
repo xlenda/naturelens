@@ -153,6 +153,31 @@ test('equivalent publications do not rerender subscribers and old idle routes ar
   assert.equal(resource.readSpeciesTopics(firstKey), undefined);
 });
 
+test('a loading resource hides route snapshots until the complete publication arrives', () => {
+  const key = resource.createSpeciesTopicResourceKey({
+    category: 'insect', language: 'pt', routeKey: 'insect-settled-1',
+  });
+  const partial = [{ key: 'overview', label: 'Visao geral', text: 'Resumo.' }];
+  const complete = [
+    ...partial,
+    { key: 'lifeStages', label: 'Estagios', text: 'Ovo, larva, pupa e adulto.' },
+  ];
+  const observed = [];
+  const unsubscribe = resource.subscribeSpeciesTopics(key, (topics, loading) => {
+    observed.push({ keys: topics.map((topic) => topic.key), loading });
+  });
+
+  resource.publishSpeciesTopics(key, partial, true);
+  assert.equal(resource.readSpeciesTopicLoading(key), true);
+  resource.publishSpeciesTopics(key, complete, false);
+  assert.equal(resource.readSpeciesTopicLoading(key), false);
+  assert.deepEqual(observed, [
+    { keys: ['overview'], loading: true },
+    { keys: ['overview', 'lifeStages'], loading: false },
+  ]);
+  unsubscribe();
+});
+
 test('all eight result screens publish and forward their live topic key', () => {
   const screens = {
     plant: 'PlantDetailScreen.js',
@@ -170,13 +195,19 @@ test('all eight result screens publish and forward their live topic key', () => 
     assert.match(source, /createSpeciesTopicResourceKey/);
     assert.match(source, new RegExp(`category: '${category}'`));
     assert.match(source, /routeKey: route\.key/);
-    assert.match(source, /usePublishSpeciesTopics\(topicResourceKey, (?:topics|TOPICS)\)/);
+    assert.match(source, /usePublishSpeciesTopics\(topicResourceKey, (?:topics|TOPICS), (?:topicsLoading|dossierLoading)\)/);
     assert.match(source, /navigation\.navigate\('CareTopics',[\s\S]*?topicResourceKey,/);
+    assert.match(source, /navigation\.navigate\('CareTopics',[\s\S]*?topicsLoading[\s\S]*?topicResourceKey,/);
   }
 
   const manual = fs.readFileSync(path.join(__dirname, 'screens', 'CareTopicsScreen.js'), 'utf8');
-  assert.match(manual, /useSpeciesTopics\(\s*topicResourceKey,/);
+  assert.match(manual, /useSpeciesTopicState\(\s*topicResourceKey,/);
   assert.match(manual, /Array\.isArray\(routeTopics\) \? routeTopics : EMPTY_TOPICS/);
+  assert.match(manual, /routeTopicsLoading/);
+  assert.match(manual, /accessibilityRole="progressbar"/);
+  assert.match(manual, /accessibilityElementsHidden=\{topicsLoading\}/);
+  assert.match(manual, /importantForAccessibility=\{topicsLoading \? 'no-hide-descendants' : 'auto'\}/,
+    'loading content behind the progress overlay must not remain focusable');
 });
 
 test('all result screens bind i18n before reading the active language', () => {

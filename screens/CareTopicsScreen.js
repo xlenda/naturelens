@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { View, Text, StyleSheet, ScrollView, TouchableOpacity, Image, Linking } from 'react-native';
+import { ActivityIndicator, View, Text, StyleSheet, ScrollView, TouchableOpacity, Image, Linking } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Ionicons } from '@expo/vector-icons';
@@ -15,7 +15,7 @@ import { splitSentences } from '../components/sentences';
 import { getTopicManual, manualKeyFor } from '../components/manualContent';
 import { getGroupTopic } from '../components/groupContent';
 import { canonicalTopicKey } from '../components/topicKey';
-import { useSpeciesTopics } from '../components/speciesTopicResource';
+import { useSpeciesTopicState } from '../components/speciesTopicResource';
 
 // The species MANUAL, diagrammed like the competitor's (studied frame by
 // frame from the owner's 6-minute video) instead of "um monte de texto em
@@ -242,14 +242,16 @@ export default function CareTopicsScreen() {
     accent = colors.accent,
     category = 'plant',
     topics: routeTopics,
+    topicsLoading: routeTopicsLoading = false,
     topicResourceKey,
     initialKey,
     initialProblem,
     groupKey,
   } = route.params || {};
-  const topics = useSpeciesTopics(
+  const { topics, loading: topicsLoading } = useSpeciesTopicState(
     topicResourceKey,
-    Array.isArray(routeTopics) ? routeTopics : EMPTY_TOPICS
+    Array.isArray(routeTopics) ? routeTopics : EMPTY_TOPICS,
+    routeTopicsLoading
   );
 
   const valid = topics.filter((tp) => tp && tp.key
@@ -257,9 +259,15 @@ export default function CareTopicsScreen() {
   const [activeKey, setActiveKey] = useState(
     valid.some((tp) => tp.key === initialKey) ? initialKey : valid[0]?.key
   );
-  const active = valid.find((tp) => tp.key === activeKey);
-  const canonKey = canonicalTopicKey(activeKey);
-  const meta = TOPIC_META[activeKey] || TOPIC_META[canonKey] || {};
+  // Quando o manual e aberto durante o enriquecimento, a primeira lista e
+  // vazia. Assim que o snapshot completo chega, derive a aba no mesmo render;
+  // esperar o effect deixava um quadro com abas visiveis e corpo vazio.
+  const resolvedActiveKey = valid.some((tp) => tp.key === activeKey)
+    ? activeKey
+    : (valid.some((tp) => tp.key === initialKey) ? initialKey : valid[0]?.key);
+  const active = valid.find((tp) => tp.key === resolvedActiveKey);
+  const canonKey = canonicalTopicKey(resolvedActiveKey);
+  const meta = TOPIC_META[resolvedActiveKey] || TOPIC_META[canonKey] || {};
   const bodyRef = useRef(null);
 
   useEffect(() => {
@@ -329,7 +337,7 @@ export default function CareTopicsScreen() {
     setManual(null);
     // Trocou de aba, o acordeao volta ao primeiro; na aba que veio pelo deep
     // link ele mantem o problema pedido.
-    setOpenProblem(activeKey === initialKey ? initialProblem || 0 : 0);
+    setOpenProblem(resolvedActiveKey === initialKey ? initialProblem || 0 : 0);
     const manualKey = manualKeyFor(canonKey);
     setGroupManual(null);
     if (UNIVERSAL_MANUAL_CATEGORIES.has(category)) {
@@ -341,13 +349,13 @@ export default function CareTopicsScreen() {
       if (alive) setGroupManual(g);
     });
     return () => { alive = false; };
-  }, [activeKey, canonKey, i18nLang, groupKey, initialKey, initialProblem, category]);
+  }, [resolvedActiveKey, canonKey, i18nLang, groupKey, initialKey, initialProblem, category]);
 
   const openLesson = Math.min(
-    openLessonByTopic[activeKey] || 0,
+    openLessonByTopic[resolvedActiveKey] || 0,
     Math.max(0, (manual?.advice?.length || 1) - 1)
   );
-  const stepId = (scope, index) => `${activeKey}:${scope}:${index}`;
+  const stepId = (scope, index) => `${resolvedActiveKey}:${scope}:${index}`;
   const isStepChecked = (scope, index) => checkedSteps.has(stepId(scope, index));
   const toggleStepChecked = (scope, index) => {
     const id = stepId(scope, index);
@@ -436,7 +444,11 @@ export default function CareTopicsScreen() {
       <TopBar title={title || ''} onBack={() => navigation.goBack()} />
 
       {/* Tab bar horizontal rolavel - underline curto na ativa. */}
-      <View style={styles.tabsWrap}>
+      <View
+        style={styles.tabsWrap}
+        accessibilityElementsHidden={topicsLoading}
+        importantForAccessibility={topicsLoading ? 'no-hide-descendants' : 'auto'}
+      >
         <ScrollView
           horizontal
           showsHorizontalScrollIndicator={false}
@@ -447,7 +459,7 @@ export default function CareTopicsScreen() {
           scrollEventThrottle={16}
         >
           {valid.map((tp) => {
-            const isActive = tp.key === activeKey;
+            const isActive = tp.key === resolvedActiveKey;
             return (
               <TouchableOpacity
                 key={tp.key}
@@ -474,7 +486,13 @@ export default function CareTopicsScreen() {
         )}
       </View>
 
-      <ScrollView ref={bodyRef} contentContainerStyle={styles.scroll} showsVerticalScrollIndicator={false}>
+      <ScrollView
+        ref={bodyRef}
+        contentContainerStyle={styles.scroll}
+        showsVerticalScrollIndicator={false}
+        accessibilityElementsHidden={topicsLoading}
+        importantForAccessibility={topicsLoading ? 'no-hide-descendants' : 'auto'}
+      >
         {/* As artes atuais mostram casa, vaso e cultivo vegetal. Em fauna,
             fungos e lavoura elas mudariam o dominio visual antes do aviso de
             escopo; ate existir arte propria por categoria, ficam so em planta
@@ -531,7 +549,7 @@ export default function CareTopicsScreen() {
                     largura dentro da RangeBar, nunca de um numero inventado
                     sobre a especie. Sem level (ou fora de 1..3) o bloco
                     simplesmente nao existe. */}
-                {activeKey === 'watering' && active.level >= 1 && active.level <= 3 && (
+                {resolvedActiveKey === 'watering' && active.level >= 1 && active.level <= 3 && (
                   <View style={styles.needsRuler}>
                     <RangeBar
                       min={1}
@@ -786,7 +804,7 @@ export default function CareTopicsScreen() {
                       styles.lessonStep,
                       expanded && { borderColor: accent + '88', backgroundColor: accent + '0D' },
                     ]}
-                    onPress={() => setOpenLessonByTopic((current) => ({ ...current, [activeKey]: i }))}
+                    onPress={() => setOpenLessonByTopic((current) => ({ ...current, [resolvedActiveKey]: i }))}
                     activeOpacity={0.78}
                     accessibilityRole="button"
                     accessibilityState={{ expanded }}
@@ -912,14 +930,33 @@ export default function CareTopicsScreen() {
           </View>
         )}
 
-        <HelpfulRow category={category} context={`topic:${activeKey}`} />
+        {!topicsLoading && active
+          ? <HelpfulRow category={category} context={`topic:${resolvedActiveKey}`} />
+          : null}
       </ScrollView>
+
+      {topicsLoading ? (
+        <View style={styles.loadingOverlay} accessibilityRole="progressbar">
+          <ActivityIndicator size="large" color={accent} />
+          <Text style={styles.loadingText}>{t('common.loading')}</Text>
+        </View>
+      ) : null}
     </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: colors.background },
+  loadingOverlay: {
+    ...StyleSheet.absoluteFillObject,
+    top: 54,
+    zIndex: 20,
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 12,
+    backgroundColor: colors.background,
+  },
+  loadingText: { color: colors.textSecondary, fontSize: 14, lineHeight: 20, fontWeight: '800' },
   tabsWrap: { borderBottomWidth: 1, borderBottomColor: colors.border },
   // Fade da borda direita das abas. colors.sky (nao background) porque e o
   // tom que o NatureScene pinta no ALTO da tela - fundir com o fundo errado

@@ -233,13 +233,14 @@ export default function CropDetailScreen({ route }) {
   ].filter((tp) => !!tp.text);
   const sourceTopics = buildSourceGroundedTopics({ dossier: speciesDossier });
   const TOPICS = mergeSourceGroundedTopics(baseTopics, sourceTopics);
+  const topicsLoading = curatedLoading || speciesDossierLoading;
   const topicResourceKey = createSpeciesTopicResourceKey({
     category: 'crop',
     language: i18n.language,
     routeKey: route.key,
     identity: plant.savedId || plant.scientific || plant.name,
   });
-  usePublishSpeciesTopics(topicResourceKey, TOPICS);
+  usePublishSpeciesTopics(topicResourceKey, TOPICS, topicsLoading);
   const hasPestManagement = !!getPestManagementProfile({ scientific: enrichmentScientific, groupKey });
   const showFertilizerPlanner = groupKey === 'grainCrop' || groupKey === 'vegCrop';
   const hasAgronomyModules = hasPestManagement || showFertilizerPlanner;
@@ -267,6 +268,7 @@ export default function CropDetailScreen({ route }) {
       accent: meta.accent,
       category: 'crop',
       topics: routeTopics,
+      topicsLoading,
       topicResourceKey,
       initialKey: key,
     });
