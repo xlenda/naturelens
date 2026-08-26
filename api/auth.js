@@ -311,7 +311,18 @@ async function handleDelete(req, res, deviceId) {
     }
   }
 
-  // Estes quatro conjuntos sao idempotentes. subscriptions fica por ultimo:
+  // A comunidade usa o device_id como credencial pseudonima. Apagar o perfil
+  // remove em cascata posts, comentarios, reacoes, denuncias e bloqueios.
+  const { error: communityError } = await admin
+    .from('community_profiles')
+    .delete()
+    .in('device_id', deviceIds);
+  if (communityError) {
+    deleteFailed('community deletion', communityError);
+    return;
+  }
+
+  // Estes conjuntos sao idempotentes. subscriptions fica por ultimo:
   // se qualquer etapa falhar, uma nova tentativa ainda consegue reencontrar o
   // email e todos os aparelhos em vez de perder a unica chave da conta.
   for (const table of ['push_subscriptions', 'category_usage', 'ai_reports']) {

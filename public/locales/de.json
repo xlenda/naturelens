@@ -3229,7 +3229,21 @@
     },
     "planningSourcesTitle": "Quellen zur Planung",
     "planningSourcesBody": "Offizielle Lektüre, die dieser Kultur zugeordnet ist. Das bedeutet nicht, dass ein Fachmodul oder eine Empfehlung freigegeben wurde."
-  },
+  ,
+    "climate": {
+    "kicker": "LOKALES KLIMA",
+    "title": "Klimaverlauf an diesem Ort",
+    "body": "Prüfe die monatliche Klimatologie, bevor du Feldbeobachtungen vergleichst. Sie beschreibt das Klima und ist keine Bewässerungs- oder Düngeempfehlung.",
+    "rain": "Niederschlag",
+    "temperature": "Mittlere Temperatur",
+    "rainValue": "{{value}} mm",
+    "temperatureValue": "{{value}} °C",
+    "privacy": "Nur ein ungefähres {{precision}}°-Raster wird gesendet und gespeichert. Dein genauer Standort wird nicht gespeichert.",
+    "source": "Offizielle NASA-POWER-Quelle öffnen",
+    "permission": "Der Standort wurde nicht geteilt. Aktiviere ihn in den Geräteeinstellungen und versuche es erneut.",
+    "error": "Klimadaten sind vorübergehend nicht verfügbar.",
+    "action": "Ungefähren Standort verwenden"
+  }},
   "observationWorkspace": {
     "title": "Erweiterte Beobachtung",
     "loading": "Beobachtungen werden geladen…",
@@ -3607,6 +3621,13 @@
       "recovery": "Vorher und nachher",
       "questions": "Gruppe fragen"
     }
+ ,
+    "onlineBadge": "Online-Community",
+    "feedTitle": "Feldnotizen",
+    "commentAction": "Kommentieren",
+    "reportAndBlock": "Melden und blockieren",
+    "deletePost": "Beitrag löschen",
+    "unavailable": "Community nicht verfügbar"
   },
   "ipm": {
     "title": "Integrierter Pflanzenschutz",

@@ -1,0 +1,43 @@
+{
+  "_count": 4,
+  "monstera deliciosa": {
+    "moisture": "medium",
+    "drought": "medium",
+    "fertility": "low",
+    "shade": "tolerant",
+    "phMin": 4,
+    "phMax": 8.5,
+    "source": "UF/IFAS Extension HS311",
+    "sourceUrl": "https://edis.ifas.ufl.edu/publication/HS311"
+  },
+  "zamioculcas zamiifolia": {
+    "moisture": "medium",
+    "drought": "high",
+    "fertility": "low",
+    "shade": "tolerant",
+    "phMin": 6,
+    "phMax": 7,
+    "tempMinF": 50,
+    "source": "UF/IFAS Extension EP480 and EP252",
+    "sourceUrl": "https://edis.ifas.ufl.edu/publication/EP480"
+  },
+  "epipremnum aureum": {
+    "moisture": "medium",
+    "drought": "medium",
+    "fertility": "medium",
+    "shade": "tolerant",
+    "phMin": 6.5,
+    "phMax": 7,
+    "tempMinF": 65,
+    "source": "UF/IFAS Extension EP151",
+    "sourceUrl": "https://edis.ifas.ufl.edu/publication/EP151"
+  },
+  "mangifera indica": {
+    "moisture": "medium",
+    "drought": "high",
+    "fertility": "medium",
+    "shade": "intolerant",
+    "source": "UF/IFAS Extension MG216",
+    "sourceUrl": "https://edis.ifas.ufl.edu/publication/MG216"
+  }
+}

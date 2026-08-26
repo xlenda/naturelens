@@ -23,11 +23,26 @@
       "allowBackup": false,
       "blockedPermissions": [
         "android.permission.SYSTEM_ALERT_WINDOW",
+        "android.permission.ACCESS_FINE_LOCATION",
         "android.permission.SCHEDULE_EXACT_ALARM",
         "android.permission.USE_EXACT_ALARM"
       ]
     },
     "plugins": [
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "Allow NatureLens to use your approximate location only while you identify nature or request local climate context."
+        }
+      ],
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow NatureLens to use your camera only when you choose to photograph nature.",
+          "microphonePermission": false,
+          "recordAudioAndroid": false
+        }
+      ],
       [
         "expo-image-picker",
         {

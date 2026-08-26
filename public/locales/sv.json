@@ -3229,7 +3229,21 @@
     },
     "planningSourcesTitle": "Källor för planering",
     "planningSourcesBody": "Officiell läsning kopplad till grödan. Det betyder inte att en teknisk modul eller rekommendation har publicerats."
-  },
+  ,
+    "climate": {
+    "kicker": "LOKALT KLIMAT",
+    "title": "Klimatets rytm på platsen",
+    "body": "Se månatlig klimatologi innan du jämför fältobservationer. Den beskriver klimatet och är ingen bevattnings- eller gödslingsrekommendation.",
+    "rain": "Regn",
+    "temperature": "Medeltemperatur",
+    "rainValue": "{{value}} mm",
+    "temperatureValue": "{{value}} °C",
+    "privacy": "Endast ett ungefärligt rutnät på {{precision}}° skickas och sparas. Din exakta position lagras inte.",
+    "source": "Öppna officiell NASA POWER-källa",
+    "permission": "Platsen delades inte. Aktivera den i enhetens inställningar och försök igen.",
+    "error": "Klimatdata är tillfälligt otillgängliga.",
+    "action": "Använd ungefärlig plats"
+  }},
   "observationWorkspace": {
     "title": "Avancerad observation",
     "loading": "Läser in observationer…",
@@ -3607,6 +3621,13 @@
       "recovery": "Före och efter",
       "questions": "Fråga gruppen"
     }
+ ,
+    "onlineBadge": "Onlinegemenskap",
+    "feedTitle": "Fältanteckningar",
+    "commentAction": "Kommentera",
+    "reportAndBlock": "Anmäl och blockera",
+    "deletePost": "Ta bort inlägg",
+    "unavailable": "Gemenskapen är inte tillgänglig"
   },
   "ipm": {
     "title": "Integrerat växtskydd",

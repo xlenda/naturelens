@@ -1,6 +1,6 @@
 # Segurança dos dados — respostas para o Google Play
 
-Estas respostas descrevem o **AAB Android** auditado em 23/08/2026. Elas incluem o reconhecimento de som nativo e os lembretes locais opcionais, agendados pelo próprio Android. Não incluem recursos que existem apenas na versão web, como localização, push remoto e checkout.
+Estas respostas descrevem o **AAB Android** auditado em 25/08/2026. Elas incluem reconhecimento de som, câmera própria, localização aproximada sob demanda, comunidade e lembretes locais agendados pelo próprio Android. Push remoto e checkout continuam fora do AAB.
 
 ## Respostas gerais
 
@@ -19,12 +19,13 @@ Estas respostas descrevem o **AAB Android** auditado em 23/08/2026. Elas incluem
 | Tipo no formulário | Coletado | Compartilhado | Opcional | Efêmero | Finalidade |
 | --- | --- | --- | --- | --- | --- |
 | Fotos e vídeos > Fotos | Sim | **Sim** | Sim; só ao identificar por foto | **Não** | Funcionalidade do app e analytics/melhoria do identificador |
+| Localização > Localização aproximada | **Sim** | **Sim** | **Sim**; apenas ao identificar com contexto ou pedir clima local | **Não** | Funcionalidade e personalização |
 | Arquivos de áudio > Gravações de voz ou som | **Sim** | Não | **Sim**; só quando o usuário toca em gravar e permite o microfone | **Sim** | Funcionalidade do app |
 | Informações pessoais > Endereço de e-mail | Sim | Não* | Sim; conta e restauração são opcionais | Não | Gerenciamento da conta, funcionalidade e prevenção a fraude |
 | Informações pessoais > Outras informações | Sim | **Sim** | Não ao usar identificação online; inclui idioma da interface | Não | Funcionalidade e personalização |
 | Mensagens > Outras mensagens no app | Sim | Não* | Sim; apenas ao perguntar ao assistente | Não | Funcionalidade do app |
 | Atividade no app > Interações no app | Sim | **Sim** | Não durante os recursos online que dependem delas | Não | Funcionalidade e prevenção a fraude |
-| Atividade no app > Outro conteúdo gerado pelo usuário | Sim | Não* | Sim; apelidos, cômodos e observações são opcionais | Não | Funcionalidade do app |
+| Atividade no app > Outro conteúdo gerado pelo usuário | Sim | **Sim** | Sim; perfil, publicações e comentários da comunidade são opcionais | Não | Funcionalidade, recursos sociais, segurança e conformidade |
 | Atividade no app > Outras ações | Sim | Não* | Sim; apenas ao denunciar uma resposta de IA | Não | Funcionalidade, prevenção a fraude, segurança e conformidade |
 | Identificadores do dispositivo ou outros identificadores | Sim | **Sim** | Não durante recursos online | Não | Funcionalidade, gerenciamento da conta e prevenção a fraude |
 
@@ -47,9 +48,23 @@ Para aves há dois caminhos possíveis, ambos cobertos pelo aviso específico an
 - O áudio bruto é transitório: não é retido depois da resposta, o arquivo temporário local é apagado e o áudio nunca entra na coleção.
 - Não há compartilhamento do áudio com terceiros, gravação em segundo plano, acesso a chamadas ou estado do telefone, nem acesso a Bluetooth.
 
+### Localização aproximada no Android
+
+- A permissão é pedida somente quando o usuário toca em um recurso que usa localização; negar não bloqueia o restante do app.
+- Para identificação, o aparelho arredonda para aproximadamente 1 km antes do envio e o NatureLens não persiste a coordenada.
+- Para clima agronômico, o servidor reduz novamente para uma grade de 0,5 grau antes da NASA POWER; somente a grade e a resposta climática ficam em cache por até sete dias.
+- Nunca é publicada na comunidade nem ligada a uma publicação.
+
+### Comunidade
+
+- Apelido pseudônimo, biografia, publicações e comentários são conteúdo público iniciado pelo usuário.
+- Reações alimentam ranking calculado no servidor. Denúncias e bloqueios são privados.
+- O usuário pode excluir as próprias publicações e a exclusão da conta remove perfil, publicações, comentários, reações, denúncias e bloqueios ligados ao aparelho.
+- A comunidade não aceita upload de foto ou URL arbitrária nesta versão.
+
 ### O que não marcar para o AAB
 
-Não marcar localização, contatos, calendário, **dados de saúde do usuário**, informações financeiras, histórico de navegação, lista de apps instalados, falhas, diagnósticos ou desempenho do app: a versão Android auditada não coleta esses tipos nem contém telemetria de analytics/tracking. Isso é diferente de marcar o áudio opcional e efêmero descrito acima, de selecionar “Analytics” como finalidade secundária da foto reutilizada para melhorar o identificador e da declaração de conteúdo de saúde exigida pela biblioteca educativa de ervas. Revalidar após qualquer nova biblioteca, permissão ou SDK.
+Não marcar localização precisa, contatos, calendário, **dados de saúde do usuário**, informações financeiras, histórico de navegação, lista de apps instalados, falhas, diagnósticos ou desempenho do app. Marcar localização **aproximada** conforme o fluxo acima. A versão Android auditada não contém telemetria de analytics/tracking. Revalidar após qualquer nova biblioteca, permissão ou SDK.
 
 ### Lembretes locais do Android
 
@@ -65,6 +80,7 @@ Não marcar localização, contatos, calendário, **dados de saúde do usuário*
 - Conteúdo de saúde: **Sim — Medical Reference and Education**. A biblioteca sobre ervas e usos tradicionais é educativa. O NatureLens não é um dispositivo médico, não diagnostica, trata, cura nem previne condições médicas e orienta consultar um profissional de saúde.
 - Recursos financeiros: **Não** no AAB.
 - Permissão de fotos/câmera: usada somente para a ação iniciada pelo usuário de fotografar ou escolher imagens para identificação.
+- Permissão de localização aproximada: usada somente na ação iniciada pelo usuário para melhorar a identificação ou consultar clima local; negar mantém o app funcional.
 - Permissão de microfone: usada somente para a ação iniciada pelo usuário de gravar uma evidência sonora para identificação; não é usada em segundo plano.
 
 ## Antes de enviar a ficha
@@ -74,7 +90,7 @@ Não marcar localização, contatos, calendário, **dados de saúde do usuário*
 3. Testar em navegador anônimo que a página de exclusão leva ao fluxo web de login e exclusão sem exigir reinstalação.
 4. Reabrir este arquivo e conferir as respostas contra o AAB final; o formulário deve representar o binário realmente enviado.
 5. Em um aparelho Android 13 a 16, testar a permissão de notificação aceita/negada, app em segundo plano/fechado, reinício, toque abrindo o exemplar e cancelamento ao remover o exemplar.
-6. No AAB final, testar a permissão de microfone aceita e negada, uma identificação por som completa, a exclusão do arquivo temporário e a ausência do áudio na coleção. Conferir no manifesto mesclado que existem `RECORD_AUDIO`, `POST_NOTIFICATIONS` e `RECEIVE_BOOT_COMPLETED`, sem permissões de telefone, Bluetooth ou áudio em segundo plano.
+6. No AAB final, testar a permissão de microfone aceita e negada, uma identificação por som completa, a exclusão do arquivo temporário e a ausência do áudio na coleção. Conferir no manifesto mesclado que existem `RECORD_AUDIO`, `ACCESS_COARSE_LOCATION`, `POST_NOTIFICATIONS` e `RECEIVE_BOOT_COMPLETED`, sem permissões de telefone, Bluetooth ou áudio em segundo plano; também sem localização precisa ou em segundo plano.
 
 ## Referências usadas na auditoria
 

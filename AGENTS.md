@@ -9,7 +9,7 @@ https://naturelensapp.cloud e vai para a Play Store como `app.naturelens`.
 
     npm run deploy
 
-Isso roda, nesta ordem: 708 testes + 5 checagens de cuidado por especie -> `expo export -p web` -> `patch-pwa.js` ->
+Isso roda, nesta ordem: 726 testes + 6 checagens de cuidado por especie -> `expo export -p web` -> `patch-pwa.js` ->
 `vercel deploy --prod` -> 5 portoes contra a producao ja publicada.
 
 NUNCA rode `vercel deploy` direto. O app vive num sub-caminho e o deploy cru
@@ -85,8 +85,9 @@ que nascia quebrado e passava verde a toa.
   possuem testes proprios. O resultado recebe NaturePrint deterministica e e
   salvo automaticamente antes de abrir a ficha. Risco conhecido suprime
   celebracao; peixe sem registro especifico mostra seguranca nao verificada.
-  A versao cinematografica dentro da camera continua futura: exige expo-camera,
-  permissao e novo build Android.
+  O visor cinematografico nativo usa `expo-camera`, moldura propria e permissao
+  contextual; o PWA preserva o seletor do navegador. O fluxo nativo ainda exige
+  validacao no aparelho real e novo build Android antes de ser chamado de pronto.
 
 - **MATRIZ DAS OITO CATEGORIAS IMPLEMENTADA, COBERTURA AINDA PARCIAL.** Todas as
   oito categorias enriquecem dinamicamente pelo binomio confirmado e exibem a
@@ -109,19 +110,21 @@ que nascia quebrado e passava verde a toa.
   camada e descritiva e nunca libera dose ou tabela regional. Regras brasileiras
   continuam presas a BR-UF. O registro comercial permite GBIF, SoilGrids,
   AgERA5 e NASA POWER apenas nos usos auditados; WorldClim, EcoCrop e GAEZ v4
-  ficam bloqueados, e fontes FAO ambiguas ficam em quarentena. Clima e solo
-  mundiais por coordenada ainda nao estao ativos: exigem ETL/cache e decisao de
-  privacidade, portanto nao adicione GPS nativo para simular essa cobertura.
+  ficam bloqueados, e fontes FAO ambiguas ficam em quarentena. Clima mensal
+  oficial da NASA POWER foi ativado sob demanda com `expo-location`, localizacao
+  aproximada, arredondamento para grade de 0,5 grau antes do envio e cache de sete
+  dias. A camada e descritiva, nunca prescreve dose. Solo mundial por coordenada
+  continua bloqueado enquanto a API publica do SoilGrids estiver indisponivel.
 
-- **Cuidado por especie cobre 2% das tropicais.** O USDA PLANTS (dominio
+- **Cuidado tropical exato continua parcial.** O USDA PLANTS (dominio
   publico, uso comercial livre) traz 2.135 especies, mas e banco de conservacao
   norte-americana: Monstera, jiboia, orquidea e suculenta de vaso ficam de fora
-  e caem pro conselho do GRUPO — o card diz isso, nunca finge. Cobrir tropical
-  exige curadoria propria, especie por especie.
-- **Localizacao nao funciona no APK.** `navigator.geolocation` nao existe em
-  React Native. Religar exige `expo-location`, a permissao
-  ACCESS_COARSE_LOCATION e declaracao no formulario de Seguranca de Dados do
-  Google. Nao instale "so pra resolver o aviso".
+  e caem pro conselho do GRUPO — o card diz isso, nunca finge. A camada tropical
+  propria comecou por Monstera deliciosa, zamioculca, jiboia e manga, sempre com
+  fonte UF/IFAS por especie. Expandir apenas por curadoria exata, nunca por palpite.
+- **Localizacao aproximada funciona no APK sob demanda.** Usa `expo-location`
+  com `ACCESS_COARSE_LOCATION`; `ACCESS_FINE_LOCATION` esta bloqueada. O app nao
+  guarda a coordenada exata e a declaracao da Play precisa permanecer sincronizada.
 - **Telefone de emergencia saiu dos 17 idiomas** (dava numero brasileiro e
   americano pra todo mundo). Numero certo por pais exige detectar PAIS, nao
   idioma.

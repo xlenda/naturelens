@@ -32,7 +32,7 @@ Use este arquivo junto de `data-safety.md`. Ele registra as respostas coerentes 
 Responder pelo comportamento real, sem tentar forçar uma faixa menor:
 
 - Violência, sexo, drogas, apostas e linguagem ofensiva produzidos pelo app: **Não**.
-- Compartilhamento público entre usuários: **Não**.
+- Compartilhamento público entre usuários: **Sim** — apelido, biografia, publicações e comentários enviados à Comunidade. Há exclusão, denúncia, bloqueio e quarentena automática para revisão.
 - Compras digitais dentro do Android: **Não**.
 - Localização compartilhada com outros usuários: **Não**.
 - Conteúdo online: **Sim** — resultados, textos e imagens educacionais vêm de serviços online.

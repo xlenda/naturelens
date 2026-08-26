@@ -44,6 +44,11 @@ const STUBS = {
     setItem: async () => {},
   },
   '@expo/vector-icons': { Ionicons: 'Ionicons' },
+  'expo-location': {
+    Accuracy: { Balanced: 3 },
+    requestForegroundPermissionsAsync: async () => ({ status: 'denied' }),
+    getCurrentPositionAsync: async () => null,
+  },
 };
 
 function load(relative) {

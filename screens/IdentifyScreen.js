@@ -51,6 +51,7 @@ import { saveIdentificationAutomatically } from '../components/automaticCollecti
 import LensPulseButton from '../components/LensPulseButton';
 import { sensoryFeedback } from '../components/sensoryFeedback';
 import useReducedMotion from '../components/useReducedMotion';
+import NativeLensCamera from '../components/NativeLensCamera';
 
 // A divulgacao precisa nomear o fornecedor real antes de cada envio. A lista
 // explicita tambem falha fechada se uma nova categoria fotografica for criada
@@ -166,6 +167,7 @@ export default function IdentifyScreen() {
   const visiblePhotoSlots = supportsMultiplePhotos ? MAX_PHOTOS : 1;
   const [photoSlots, setPhotoSlots] = useState([null, null, null]);
   const [showExtraAngles, setShowExtraAngles] = useState(false);
+  const [nativeCameraSlot, setNativeCameraSlot] = useState(null);
   const photoSlotsRef = useRef(photoSlots);
   const handledCaptureRequest = useRef(null);
 
@@ -321,20 +323,26 @@ export default function IdentifyScreen() {
     if (slot < 0 || slot >= visiblePhotoSlots) return;
     try {
       if (Platform.OS !== 'web') {
-        const { status } = await ImagePicker.requestCameraPermissionsAsync();
-        if (status !== 'granted') {
-          showAlert(
-            t('identify.cameraPermissionTitle'),
-            t('identify.cameraPermissionMessage', { category: t(`categories.${category}.label`).toLowerCase() })
-          );
-          return;
-        }
+        setNativeCameraSlot(slot);
+        return;
       }
       const result = await ImagePicker.launchCameraAsync({ quality: 0.7, base64: true });
       if (result.canceled || !result.assets?.[0]) return;
       const prepared = await prepareForUpload(result.assets[0]);
       storePhotoInSlot(slot, prepared, false);
     } catch (err) {
+      showAlert(t('identify.identificationFailedTitle'), t('identify.photoProcessingFailed'));
+    }
+  };
+
+  const acceptNativePhoto = async (asset) => {
+    const slot = nativeCameraSlot;
+    setNativeCameraSlot(null);
+    if (slot === null) return;
+    try {
+      const prepared = await prepareForUpload(asset);
+      storePhotoInSlot(slot, prepared, false);
+    } catch (error) {
       showAlert(t('identify.identificationFailedTitle'), t('identify.photoProcessingFailed'));
     }
   };
@@ -410,6 +418,16 @@ export default function IdentifyScreen() {
 
   return (
     <SafeAreaView style={styles.container} edges={['top']}>
+      {Platform.OS !== 'web' ? <NativeLensCamera
+        visible={nativeCameraSlot !== null}
+        accent={meta.accent}
+        title={t('identify.takePhotoLabel', { category: t(`categories.${category}.label`).toLowerCase() })}
+        hint={t(`categories.${category}.scanHint`)}
+        cancelLabel={t('common.cancel')}
+        onCancel={() => setNativeCameraSlot(null)}
+        onCapture={acceptNativePhoto}
+        onError={() => { setNativeCameraSlot(null); showAlert(t('identify.cameraPermissionTitle'), t('identify.cameraPermissionMessage', { category: t(`categories.${category}.label`).toLowerCase() })); }}
+      /> : null}
       {/* Cenário em camadas: FIRST child of the root, pointerEvents="none"
           inside the component, and the root keeps backgroundColor underneath
           (see NatureScene.js / diagramacao-premium doctrine). */}

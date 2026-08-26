@@ -1,4 +1,6 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { Platform } from 'react-native';
+import * as Location from 'expo-location';
 
 // Approximate location, used to make identifications more accurate.
 //
@@ -54,20 +56,12 @@ const FAILURE_BACKOFF_MS = 5 * 60 * 1000;
 // and not a permanent flag.
 const DENIED_RETRY_MS = 24 * 60 * 60 * 1000;
 
-// ATENCAO (auditoria 20/08): no build NATIVO isto e sempre false. O React
-// Native nao tem navigator.geolocation - ele so existe no navegador. Ou seja,
-// no APK a localizacao nunca liga, e com ela caem tres coisas: o destaque de
-// estacao do cronograma (o usuario do hemisferio sul ve as 4 colunas iguais),
-// o contexto "perto de voce" do mapa, e a dica de local mandada ao Kindwise.
-//
-// Nao esta "quebrado em silencio": cada tela que depende disso ja trata o null
-// e explica na tela por que nao ha destaque. Mas so volta a funcionar no APK
-// com expo-location, e isso e DECISAO do dono, nao correcao tecnica: ligar
-// localizacao no Android adiciona a permissao ACCESS_COARSE_LOCATION e obriga
-// a declarar coleta de localizacao no formulario de Seguranca de Dados do
-// Google Play. Enquanto essa decisao nao for tomada, a degradacao honesta e o
-// comportamento certo - nao instale expo-location "so pra resolver o aviso".
+// No nativo, expo-location e o adaptador explicito. A decisao foi tomada pelo
+// dono em 25/08/2026 junto da atualizacao da politica e da ficha Play. O pedido
+// continua contextual, baixa precisao e recusavel; web conserva a API do
+// navegador. Nenhuma das duas plataformas bloqueia a identificacao sem fix.
 export function canUseLocation() {
+  if (Platform.OS === 'android' || Platform.OS === 'ios') return true;
   return typeof navigator !== 'undefined' && !!navigator.geolocation;
 }
 
@@ -109,6 +103,30 @@ function readPosition() {
     const guard = setTimeout(() => done(null), TIMEOUT_MS + 500);
 
     try {
+      if (Platform.OS === 'android' || Platform.OS === 'ios') {
+        Location.requestForegroundPermissionsAsync().then((permission) => {
+          if (permission.status !== 'granted') {
+            clearTimeout(guard);
+            AsyncStorage.setItem(DENIED_KEY, String(Date.now())).catch(() => {});
+            done(null);
+            return;
+          }
+          Location.getCurrentPositionAsync({
+            accuracy: Location.Accuracy.Balanced,
+            mayShowUserSettingsDialog: true,
+          }).then((position) => {
+            clearTimeout(guard);
+            done(position);
+          }).catch(() => {
+            clearTimeout(guard);
+            done(null);
+          });
+        }).catch(() => {
+          clearTimeout(guard);
+          done(null);
+        });
+        return;
+      }
       navigator.geolocation.getCurrentPosition(
         (position) => {
           clearTimeout(guard);

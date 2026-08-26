@@ -3229,7 +3229,21 @@
     },
     "planningSourcesTitle": "Sources pour la planification",
     "planningSourcesBody": "Lecture officielle associée à cette culture. Cela ne signifie pas qu’un module technique ou une recommandation est publié."
-  },
+  ,
+    "climate": {
+    "kicker": "CLIMAT LOCAL",
+    "title": "Rythme climatique de ce lieu",
+    "body": "Consultez la climatologie mensuelle avant de comparer les observations de terrain. Elle décrit le climat, sans prescrire irrigation ni fertilisation.",
+    "rain": "Pluie",
+    "temperature": "Température moyenne",
+    "rainValue": "{{value}} mm",
+    "temperatureValue": "{{value}} °C",
+    "privacy": "Seule une grille approximative de {{precision}}° est envoyée et mise en cache. Votre position exacte n’est pas stockée.",
+    "source": "Ouvrir la source officielle NASA POWER",
+    "permission": "La position n’a pas été partagée. Activez-la dans les réglages de l’appareil puis réessayez.",
+    "error": "Les données climatiques sont temporairement indisponibles.",
+    "action": "Utiliser la position approximative"
+  }},
   "observationWorkspace": {
     "title": "Observation avancée",
     "loading": "Chargement des observations…",
@@ -3607,6 +3621,13 @@
       "recovery": "Avant et après",
       "questions": "Demander au groupe"
     }
+ ,
+    "onlineBadge": "Communauté en ligne",
+    "feedTitle": "Carnet de terrain",
+    "commentAction": "Commenter",
+    "reportAndBlock": "Signaler et bloquer",
+    "deletePost": "Supprimer la publication",
+    "unavailable": "Communauté indisponible"
   },
   "ipm": {
     "title": "Protection intégrée contre les ravageurs",

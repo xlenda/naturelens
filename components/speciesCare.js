@@ -45,10 +45,23 @@ export function binomialKey(scientific) {
 async function loadAll() {
   if (memory) return memory;
   try {
-    const response = await fetch(`${API_BASE}/locales/species-care.json`);
-    if (response.ok) {
-      const data = await response.json();
-      if (data && data._count) memory = data;
+    // Os arquivos sao independentes: uma CDN antiga ainda sem o complemento
+    // tropical nunca pode derrubar os 2.135 registros USDA que ja funcionam.
+    const [usdaResult, tropicalResult] = await Promise.allSettled([
+      fetch(`${API_BASE}/locales/species-care.json`).then((response) => (response.ok ? response.json() : null)),
+      fetch(`${API_BASE}/locales/tropical-care.json`).then((response) => (response.ok ? response.json() : null)),
+    ]);
+    const usda = usdaResult.status === 'fulfilled' ? usdaResult.value : null;
+    const tropical = tropicalResult.status === 'fulfilled' ? tropicalResult.value : null;
+    if (usda?._count || tropical?._count) {
+      // Tropical vem depois de proposito: uma curadoria exata e mais recente
+      // pode substituir a linha USDA da mesma especie, nunca o contrario.
+      memory = {
+        ...(usda || {}),
+        ...(tropical || {}),
+        _count: Number(usda?._count || 0) + Number(tropical?._count || 0),
+        _source: usda?._source || null,
+      };
     }
   } catch (e) {
     memory = null;
@@ -71,7 +84,7 @@ export async function getSpeciesCare(scientific) {
 
   const all = await loadAll();
   if (all && all[key]) {
-    const record = { ...all[key], source: all._source };
+    const record = { ...all[key], source: all[key].source || all._source };
     // Guarda offline por ESPECIE, e nao o arquivo inteiro como fazem
     // groupContent/manualContent. Diferenca deliberada: na web o AsyncStorage e
     // o localStorage, o arquivo tem ~460 KB (o dobro disso em UTF-16) e estourar

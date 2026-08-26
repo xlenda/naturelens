@@ -3229,7 +3229,21 @@
     },
     "planningSourcesTitle": "Bronnen voor planning",
     "planningSourcesBody": "Officiële informatie die aan dit gewas is gekoppeld. Dit betekent niet dat een technische module of advies is vrijgegeven."
-  },
+  ,
+    "climate": {
+    "kicker": "LOKAAL KLIMAAT",
+    "title": "Klimaatritme op deze locatie",
+    "body": "Bekijk de maandelijkse klimatologie voordat je veldwaarnemingen vergelijkt. Dit beschrijft het klimaat en is geen irrigatie- of bemestingsadvies.",
+    "rain": "Regen",
+    "temperature": "Gemiddelde temperatuur",
+    "rainValue": "{{value}} mm",
+    "temperatureValue": "{{value}} °C",
+    "privacy": "Alleen een globaal raster van {{precision}}° wordt verzonden en bewaard. Je exacte locatie wordt niet opgeslagen.",
+    "source": "Officiële NASA POWER-bron openen",
+    "permission": "Locatie is niet gedeeld. Schakel die in bij de apparaatinstellingen en probeer opnieuw.",
+    "error": "Klimaatgegevens zijn tijdelijk niet beschikbaar.",
+    "action": "Globale locatie gebruiken"
+  }},
   "observationWorkspace": {
     "title": "Geavanceerde observatie",
     "loading": "Observaties laden…",
@@ -3607,6 +3621,13 @@
       "recovery": "Voor en na",
       "questions": "Vraag de groep"
     }
+ ,
+    "onlineBadge": "Onlinegemeenschap",
+    "feedTitle": "Veldnotities",
+    "commentAction": "Reageren",
+    "reportAndBlock": "Melden en blokkeren",
+    "deletePost": "Bericht verwijderen",
+    "unavailable": "Community niet beschikbaar"
   },
   "ipm": {
     "title": "Geïntegreerde plaagbestrijding",

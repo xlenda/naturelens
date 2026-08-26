@@ -3229,7 +3229,21 @@
     },
     "planningSourcesTitle": "Zdroje pro plánování",
     "planningSourcesBody": "Oficiální text přiřazený k této plodině. Neznamená to, že byl vydán technický modul nebo doporučení."
-  },
+  ,
+    "climate": {
+    "kicker": "MÍSTNÍ KLIMA",
+    "title": "Klimatický rytmus tohoto místa",
+    "body": "Před porovnáním terénních pozorování si prohlédněte měsíční klimatologii. Popisuje klima, ale neurčuje zavlažování ani hnojení.",
+    "rain": "Srážky",
+    "temperature": "Průměrná teplota",
+    "rainValue": "{{value}} mm",
+    "temperatureValue": "{{value}} °C",
+    "privacy": "Odesílá a ukládá se pouze přibližná mřížka {{precision}}°. Přesná poloha se neukládá.",
+    "source": "Otevřít oficiální zdroj NASA POWER",
+    "permission": "Poloha nebyla sdílena. Povolte ji v nastavení zařízení a zkuste to znovu.",
+    "error": "Klimatická data jsou dočasně nedostupná.",
+    "action": "Použít přibližnou polohu"
+  }},
   "observationWorkspace": {
     "title": "Pokročilé pozorování",
     "loading": "Načítání pozorování…",
@@ -3607,6 +3621,13 @@
       "recovery": "Před a po",
       "questions": "Zeptat se skupiny"
     }
+ ,
+    "onlineBadge": "Online komunita",
+    "feedTitle": "Terénní zápisník",
+    "commentAction": "Komentovat",
+    "reportAndBlock": "Nahlásit a zablokovat",
+    "deletePost": "Smazat příspěvek",
+    "unavailable": "Komunita není dostupná"
   },
   "ipm": {
     "title": "Integrovaná ochrana proti škůdcům",

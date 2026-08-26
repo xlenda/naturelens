@@ -3229,7 +3229,21 @@
     },
     "planningSourcesTitle": "계획 참고 출처",
     "planningSourcesBody": "이 작물과 연결된 공식 자료입니다. 기술 모듈이나 권고가 공개되었다는 뜻은 아닙니다."
-  },
+  ,
+    "climate": {
+    "kicker": "지역 기후",
+    "title": "이 위치의 기후 흐름",
+    "body": "현장 관찰을 비교하기 전에 월별 기후 자료를 확인하세요. 기후 설명이며 관개나 비료 처방이 아닙니다.",
+    "rain": "강수량",
+    "temperature": "평균 기온",
+    "rainValue": "{{value}} mm",
+    "temperatureValue": "{{value}} °C",
+    "privacy": "약 {{precision}}° 격자만 전송하고 저장합니다. 정확한 위치는 저장하지 않습니다.",
+    "source": "NASA POWER 공식 출처 열기",
+    "permission": "위치가 공유되지 않았습니다. 기기 설정에서 허용한 뒤 다시 시도하세요.",
+    "error": "기후 데이터를 일시적으로 사용할 수 없습니다.",
+    "action": "대략적인 위치 사용"
+  }},
   "observationWorkspace": {
     "title": "고급 관찰",
     "loading": "관찰 기록을 불러오는 중…",
@@ -3607,6 +3621,13 @@
       "recovery": "전후 변화",
       "questions": "그룹에 질문"
     }
+ ,
+    "onlineBadge": "온라인 커뮤니티",
+    "feedTitle": "현장 기록",
+    "commentAction": "댓글 달기",
+    "reportAndBlock": "신고 및 차단",
+    "deletePost": "게시물 삭제",
+    "unavailable": "커뮤니티를 사용할 수 없습니다"
   },
   "ipm": {
     "title": "통합 해충 관리",

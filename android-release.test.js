@@ -26,14 +26,22 @@ test('release Android mantem pacote, AAB e versionamento remoto', () => {
   assert.equal(eas.build.production.android.buildType, 'app-bundle');
 });
 
-test('release Android nao reabre permissoes nativas sem uso', () => {
+test('release Android limita cada permissao nativa ao recurso declarado', () => {
   const imagePicker = pluginConfig('expo-image-picker');
+  const camera = pluginConfig('expo-camera');
+  const location = pluginConfig('expo-location');
   const notifications = pluginConfig('expo-notifications');
   const audioStudio = pluginConfig('@siteed/audio-studio');
   assert.ok(imagePicker, 'expo-image-picker precisa de configuracao explicita');
   assert.match(imagePicker.microphonePermission, /NatureLens/);
   assert.match(imagePicker.cameraPermission, /NatureLens/);
   assert.match(imagePicker.photosPermission, /NatureLens/);
+  assert.ok(camera, 'o visor nativo precisa do plugin de camera');
+  assert.match(camera.cameraPermission, /NatureLens/);
+  assert.equal(camera.recordAudioAndroid, false);
+  assert.ok(location, 'clima e identificacao aproximada precisam do plugin de localizacao');
+  assert.match(location.locationWhenInUsePermission, /approximate location/);
+  assert.ok(app.android.blockedPermissions.includes('android.permission.ACCESS_FINE_LOCATION'));
   assert.ok(notifications, 'lembretes locais precisam do plugin nativo');
   assert.equal(notifications.defaultChannel, 'naturelens-reminders-v1');
   assert.match(notifications.color, /^#[0-9A-F]{6}$/i);
@@ -69,7 +77,6 @@ test('release Android nao reabre permissoes nativas sem uso', () => {
 
   const explicitPermissions = app.android.permissions || [];
   for (const permission of [
-    'android.permission.ACCESS_COARSE_LOCATION',
     'android.permission.ACCESS_FINE_LOCATION',
     'android.permission.READ_MEDIA_IMAGES',
     'android.permission.READ_MEDIA_VIDEO',
@@ -78,6 +85,16 @@ test('release Android nao reabre permissoes nativas sem uso', () => {
   ]) {
     assert.ok(!explicitPermissions.includes(permission), `${permission} nao deve ser solicitado`);
   }
+});
+
+test('visor cinematografico fica no binario nativo sem entrar no bundle web', () => {
+  const webCamera = fs.readFileSync(path.join(root, 'components', 'NativeLensCamera.js'), 'utf8');
+  const nativeCamera = fs.readFileSync(path.join(root, 'components', 'NativeLensCamera.native.js'), 'utf8');
+  assert.doesNotMatch(webCamera, /from ['"]expo-camera['"]/);
+  assert.match(nativeCamera, /from ['"]expo-camera['"]/);
+  assert.match(nativeCamera, /CameraView/);
+  assert.match(nativeCamera, /takePictureAsync/);
+  assert.match(nativeCamera, /requestPermission/);
 });
 
 test('fontes dos icones Android tem resolucao segura para gerar os assets', async () => {

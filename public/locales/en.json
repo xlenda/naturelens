@@ -3229,7 +3229,21 @@
     },
     "planningSourcesTitle": "Planning sources",
     "planningSourcesBody": "Official reading mapped to this crop. It does not mean that a technical module or recommendation has been released."
-  },
+  ,
+    "climate": {
+    "kicker": "LOCAL CLIMATE",
+    "title": "Climate rhythm at this location",
+    "body": "See monthly climatology before comparing field observations. This describes climate; it is not an irrigation or fertilizer prescription.",
+    "rain": "Rain",
+    "temperature": "Mean temperature",
+    "rainValue": "{{value}} mm",
+    "temperatureValue": "{{value}} °C",
+    "privacy": "Only a {{precision}}° approximate grid is sent and cached. Your exact position is not stored.",
+    "source": "Open official NASA POWER source",
+    "permission": "Location was not shared. You can enable it in the device settings and try again.",
+    "error": "Climate data is temporarily unavailable.",
+    "action": "Use approximate location"
+  }},
   "observationWorkspace": {
     "title": "Advanced observation",
     "loading": "Loading observations…",
@@ -3607,6 +3621,13 @@
       "recovery": "Before and after",
       "questions": "Ask the group"
     }
+ ,
+    "onlineBadge": "Online community",
+    "feedTitle": "Field notes",
+    "commentAction": "Comment",
+    "reportAndBlock": "Report and block",
+    "deletePost": "Delete post",
+    "unavailable": "Community unavailable"
   },
   "ipm": {
     "title": "Integrated pest management",

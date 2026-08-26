@@ -3229,7 +3229,21 @@
     },
     "planningSourcesTitle": "Kilder til planlægning",
     "planningSourcesBody": "Officiel læsning knyttet til afgrøden. Det betyder ikke, at et teknisk modul eller en anbefaling er udgivet."
-  },
+  ,
+    "climate": {
+    "kicker": "LOKALT KLIMA",
+    "title": "Klimaets rytme på stedet",
+    "body": "Se den månedlige klimatologi, før du sammenligner feltobservationer. Den beskriver klimaet og er ikke en vandings- eller gødningsanbefaling.",
+    "rain": "Regn",
+    "temperature": "Middeltemperatur",
+    "rainValue": "{{value}} mm",
+    "temperatureValue": "{{value}} °C",
+    "privacy": "Kun et omtrentligt gitter på {{precision}}° sendes og gemmes. Din præcise placering lagres ikke.",
+    "source": "Åbn officiel NASA POWER-kilde",
+    "permission": "Placeringen blev ikke delt. Aktivér den i enhedens indstillinger, og prøv igen.",
+    "error": "Klimadata er midlertidigt utilgængelige.",
+    "action": "Brug omtrentlig placering"
+  }},
   "observationWorkspace": {
     "title": "Avanceret observation",
     "loading": "Indlæser observationer…",
@@ -3607,6 +3621,13 @@
       "recovery": "Før og efter",
       "questions": "Spørg gruppen"
     }
+ ,
+    "onlineBadge": "Onlinefællesskab",
+    "feedTitle": "Feltnoter",
+    "commentAction": "Kommenter",
+    "reportAndBlock": "Anmeld og blokér",
+    "deletePost": "Slet opslag",
+    "unavailable": "Fællesskabet er ikke tilgængeligt"
   },
   "ipm": {
     "title": "Integreret skadedyrsbekæmpelse",

@@ -3229,7 +3229,21 @@
     },
     "planningSourcesTitle": "Fuentes para planificación",
     "planningSourcesBody": "Lectura oficial asociada a este cultivo. No significa que se haya publicado un módulo técnico o una recomendación."
-  },
+  ,
+    "climate": {
+    "kicker": "CLIMA LOCAL",
+    "title": "Ritmo climático de este lugar",
+    "body": "Consulta la climatología mensual antes de comparar observaciones de campo. Describe el clima; no es una receta de riego ni fertilización.",
+    "rain": "Lluvia",
+    "temperature": "Temperatura media",
+    "rainValue": "{{value}} mm",
+    "temperatureValue": "{{value}} °C",
+    "privacy": "Solo se envía y guarda una cuadrícula aproximada de {{precision}}°. Tu posición exacta no se almacena.",
+    "source": "Abrir fuente oficial NASA POWER",
+    "permission": "No se compartió la ubicación. Puedes activarla en los ajustes del dispositivo e intentarlo de nuevo.",
+    "error": "Los datos climáticos no están disponibles temporalmente.",
+    "action": "Usar ubicación aproximada"
+  }},
   "observationWorkspace": {
     "title": "Observación avanzada",
     "loading": "Cargando observaciones…",
@@ -3607,6 +3621,13 @@
       "recovery": "Antes y después",
       "questions": "Preguntar al grupo"
     }
+ ,
+    "onlineBadge": "Comunidad en línea",
+    "feedTitle": "Cuaderno de campo",
+    "commentAction": "Comentar",
+    "reportAndBlock": "Denunciar y bloquear",
+    "deletePost": "Eliminar publicación",
+    "unavailable": "Comunidad no disponible"
   },
   "ipm": {
     "title": "Manejo integrado de plagas",

@@ -49,6 +49,7 @@ import {
   usePublishSpeciesTopics,
 } from '../components/speciesTopicResource';
 import GlobalAgronomyEvidenceCard from '../components/GlobalAgronomyEvidenceCard';
+import SiteClimateCard from '../components/SiteClimateCard';
 import {
   globalAgronomyDossierKey,
   globalAgronomyWikipediaSource,
@@ -911,6 +912,7 @@ export default function AgronomyWorkspaceScreen({ route }) {
 
   const renderAgronomist = () => (
     <>
+      <SiteClimateCard />
       <SectionCard icon="shield-checkmark-outline" title={t('agronomyWorkspace.technicalStatusTitle')} color={colors.warning}>
         <View style={styles.statusHeader}>
           <View style={[

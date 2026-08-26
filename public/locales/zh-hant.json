@@ -3229,7 +3229,21 @@
     },
     "planningSourcesTitle": "規劃參考來源",
     "planningSourcesBody": "與該作物對應的官方閱讀資料。這不表示技術模組或建議已經發布。"
-  },
+  ,
+    "climate": {
+    "kicker": "當地氣候",
+    "title": "此地的氣候節律",
+    "body": "比較田野觀察之前，先查看每月氣候資料。這只是氣候描述，並非灌溉或施肥處方。",
+    "rain": "降雨",
+    "temperature": "平均氣溫",
+    "rainValue": "{{value}} 毫米",
+    "temperatureValue": "{{value}} °C",
+    "privacy": "僅傳送並快取約 {{precision}}° 的網格，不會儲存你的精確位置。",
+    "source": "開啟 NASA POWER 官方來源",
+    "permission": "未分享位置。你可以在裝置設定中啟用後重試。",
+    "error": "氣候資料暫時無法使用。",
+    "action": "使用大致位置"
+  }},
   "observationWorkspace": {
     "title": "進階觀察",
     "loading": "正在載入觀察記錄…",
@@ -3607,6 +3621,13 @@
       "recovery": "前後對比",
       "questions": "向小組提問"
     }
+ ,
+    "onlineBadge": "線上社群",
+    "feedTitle": "野外筆記",
+    "commentAction": "留言",
+    "reportAndBlock": "檢舉並封鎖",
+    "deletePost": "刪除貼文",
+    "unavailable": "社群暫時無法使用"
   },
   "ipm": {
     "title": "害蟲綜合管理",

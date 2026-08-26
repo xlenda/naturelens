@@ -3229,7 +3229,21 @@
     },
     "planningSourcesTitle": "Źródła do planowania",
     "planningSourcesBody": "Oficjalna lektura przypisana do tej uprawy. Nie oznacza to wydania modułu technicznego ani zalecenia."
-  },
+  ,
+    "climate": {
+    "kicker": "KLIMAT LOKALNY",
+    "title": "Rytm klimatu w tej lokalizacji",
+    "body": "Sprawdź miesięczną klimatologię przed porównaniem obserwacji terenowych. Opisuje klimat, ale nie zaleca nawadniania ani nawożenia.",
+    "rain": "Opad",
+    "temperature": "Średnia temperatura",
+    "rainValue": "{{value}} mm",
+    "temperatureValue": "{{value}} °C",
+    "privacy": "Wysyłana i zapisywana jest tylko przybliżona siatka {{precision}}°. Dokładna pozycja nie jest przechowywana.",
+    "source": "Otwórz oficjalne źródło NASA POWER",
+    "permission": "Lokalizacja nie została udostępniona. Włącz ją w ustawieniach urządzenia i spróbuj ponownie.",
+    "error": "Dane klimatyczne są chwilowo niedostępne.",
+    "action": "Użyj przybliżonej lokalizacji"
+  }},
   "observationWorkspace": {
     "title": "Zaawansowana obserwacja",
     "loading": "Wczytywanie obserwacji…",
@@ -3607,6 +3621,13 @@
       "recovery": "Przed i po",
       "questions": "Zapytaj grupę"
     }
+ ,
+    "onlineBadge": "Społeczność online",
+    "feedTitle": "Notatnik terenowy",
+    "commentAction": "Skomentuj",
+    "reportAndBlock": "Zgłoś i zablokuj",
+    "deletePost": "Usuń wpis",
+    "unavailable": "Społeczność niedostępna"
   },
   "ipm": {
     "title": "Integrowana ochrona przed szkodnikami",

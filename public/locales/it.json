@@ -3229,7 +3229,21 @@
     },
     "planningSourcesTitle": "Fonti per la pianificazione",
     "planningSourcesBody": "Lettura ufficiale associata a questa coltura. Non significa che sia stato pubblicato un modulo tecnico o una raccomandazione."
-  },
+  ,
+    "climate": {
+    "kicker": "CLIMA LOCALE",
+    "title": "Ritmo climatico di questo luogo",
+    "body": "Consulta la climatologia mensile prima di confrontare le osservazioni sul campo. Descrive il clima, non prescrive irrigazione o concimazione.",
+    "rain": "Pioggia",
+    "temperature": "Temperatura media",
+    "rainValue": "{{value}} mm",
+    "temperatureValue": "{{value}} °C",
+    "privacy": "Viene inviata e memorizzata solo una griglia approssimativa di {{precision}}°. La posizione esatta non viene salvata.",
+    "source": "Apri la fonte ufficiale NASA POWER",
+    "permission": "La posizione non è stata condivisa. Attivala nelle impostazioni del dispositivo e riprova.",
+    "error": "I dati climatici non sono temporaneamente disponibili.",
+    "action": "Usa posizione approssimativa"
+  }},
   "observationWorkspace": {
     "title": "Osservazione avanzata",
     "loading": "Caricamento delle osservazioni…",
@@ -3607,6 +3621,13 @@
       "recovery": "Prima e dopo",
       "questions": "Chiedi al gruppo"
     }
+ ,
+    "onlineBadge": "Comunità online",
+    "feedTitle": "Taccuino sul campo",
+    "commentAction": "Commenta",
+    "reportAndBlock": "Segnala e blocca",
+    "deletePost": "Elimina post",
+    "unavailable": "Comunità non disponibile"
   },
   "ipm": {
     "title": "Gestione integrata dei parassiti",
