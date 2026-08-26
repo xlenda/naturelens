@@ -136,7 +136,6 @@ test('no email lookup uses ilike (LIKE wildcards would match another customer)',
   const fs = require('node:fs');
   const files = [
     'api/hotmart-webhook.js',
-    'api/restore/verify-code.js',
     'api/auth.js',
   ];
   for (const f of files) {
@@ -153,7 +152,6 @@ test('every subscription write checks the error supabase-js returns instead of t
   const fs = require('node:fs');
   const checks = [
     ['api/hotmart-webhook.js', /const \{ error/],
-    ['api/restore/verify-code.js', /const \{ error: linkError \}/],
     ['api/auth.js', /const \{ error: linkError \}/],
   ];
   for (const [f, pattern] of checks) {

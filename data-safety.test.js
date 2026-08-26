@@ -592,3 +592,22 @@ test('Nyckel bird invoke explicitly disables sample capture', async () => {
     else process.env.NYCKEL_CLIENT_SECRET = previousSecret;
   }
 });
+
+test('web push registry rejects arbitrary destinations and scopes deletion to its device', () => {
+  const source = fs.readFileSync(path.join(__dirname, 'api', 'push.js'), 'utf8');
+  assert.match(source, /const PUSH_HOSTS = \[/);
+  assert.match(source, /url\.protocol !== 'https:'/);
+  assert.match(source, /scope: 'push-registry'/);
+  assert.match(source, /\.eq\('endpoint', endpoint\)[\s\S]*\.eq\('device_id', deviceId\)/);
+  assert.doesNotMatch(source, /fetch\(sub\.endpoint/);
+});
+
+test('Vercel Hobby deployment stays within twelve serverless functions', () => {
+  const apiRoot = path.join(__dirname, 'api');
+  const walk = (dir) => fs.readdirSync(dir, { withFileTypes: true }).flatMap((entry) => {
+    const full = path.join(dir, entry.name);
+    if (entry.isDirectory()) return entry.name === '_lib' ? [] : walk(full);
+    return entry.isFile() && entry.name.endsWith('.js') ? [full] : [];
+  });
+  assert.ok(walk(apiRoot).length <= 12, 'Vercel Hobby accepts at most 12 API functions');
+});

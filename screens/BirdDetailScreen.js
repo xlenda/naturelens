@@ -581,6 +581,7 @@ export default function BirdDetailScreen({ route }) {
         <ResultDepthLayer activeDepth={resultDepth} depth={RESULT_DEPTHS.VISUAL}>
           <IdentificationExtras
             entity={{ ...plant, scientific: resolvedScientific }}
+            savedId={savedEntryId || plant.savedId || null}
             scientific={resolvedScientific}
             accent={meta.accent}
           />

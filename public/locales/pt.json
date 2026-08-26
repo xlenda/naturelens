@@ -3682,5 +3682,97 @@
     "thresholds": {
       "initialSymptomsHighYieldThreshold": "Somente para lavouras com potencial de pelo menos {{minimumYieldBagsPerHa}} sacas/ha: em {{sampleAreaHa}} ha, examine {{samplePoints}} pontos ao acaso. A referência publicada é {{actionPercent}}% das plantas com sintomas iniciais de ataque."
     }
+  },
+  "petGuardian": {
+    "kicker": "SEGURANÇA EM CASA",
+    "title": "Guardião Pet",
+    "severity": {
+      "emergency": "Risco urgente",
+      "warning": "Atenção",
+      "safe": "Segurança documentada",
+      "unknown": "Não confirmado"
+    },
+    "exactBody": "Este resultado possui evidência específica para pets ligada exatamente ao táxon exibido.",
+    "generalWarningBody": "O resultado contém alerta de toxicidade, mas a segurança para cães e gatos não foi confirmada separadamente.",
+    "unknownBody": "Não encontramos registro confiável e específico para pets neste táxon exato.",
+    "animals": {
+      "dog": "Cães",
+      "cat": "Gatos"
+    },
+    "status": {
+      "toxic": "Tóxica",
+      "safe": "Não tóxica",
+      "unknown": "Não confirmado"
+    },
+    "toxicParts": "Partes preocupantes",
+    "parts": {
+      "all": "Toda a planta",
+      "foliage": "Folhas e tecidos da planta"
+    },
+    "signsTitle": "Possíveis sinais de alerta",
+    "signs": {
+      "oral": "Irritação na boca",
+      "gastro": "Vômito ou diarreia",
+      "lethargy": "Letargia",
+      "liver": "Lesão no fígado",
+      "bleeding": "Sangramento",
+      "cardiac": "Ritmo cardíaco anormal",
+      "kidney": "Lesão nos rins"
+    },
+    "contactAction": "Meu pet pode ter tocado ou ingerido",
+    "sourceExact": "Táxon exato conferido com {{source}}.",
+    "sourceMissing": "A segurança para pets continua não verificada.",
+    "openSource": "Ver fonte",
+    "emergencyTitle": "Procure um veterinário agora",
+    "emergencyBody": "Não espere surgirem sintomas e não provoque vômito. Afaste o animal da planta, guarde uma amostra ou foto e procure imediatamente um veterinário ou serviço de toxicologia animal da sua região. O aplicativo não substitui avaliação veterinária.",
+    "profile": {
+      "title": "Animais da minha casa",
+      "body": "Personalize os alertas de segurança das plantas para os animais que vivem com você.",
+      "both": "Cães e gatos",
+      "none": "Nenhum animal selecionado"
+    }
+  },
+  "identityReview": {
+    "kicker": "SUA CONFIRMAÇÃO",
+    "title": "Este resultado confere?",
+    "body": "Confirme o primeiro resultado ou veja as alternativas sem apagar o palpite original.",
+    "confirmedTitle": "Resultado confirmado por você",
+    "confirmedBody": "O resultado original e sua confirmação foram salvos juntos.",
+    "correctedTitle": "Alternativa salva",
+    "correctedBody": "Você escolheu {{name}}. Tire outra foto antes de confiar em cuidados ou segurança específicos da espécie.",
+    "yesAction": "Sim, confere",
+    "changeAction": "Ver opções",
+    "retakeAction": "Tirar foto de validação",
+    "sheetTitle": "O que você observou?",
+    "sheetBody": "Sua escolha nunca apaga a resposta original do modelo.",
+    "noAlternatives": "Nenhum outro candidato confiável foi retornado nesta captura."
+  },
+  "checkIn": {
+    "kicker": "PASSAPORTE DA NATUREZA",
+    "title": "Adicionar check-in da cidade",
+    "body": "Lembre onde encontrou sem guardar uma coordenada exata.",
+    "savedBody": "Observado em {{habitat}}. Apenas a localização em nível de cidade é guardada.",
+    "addAction": "Adicionar check-in",
+    "editAction": "Editar",
+    "communityAction": "Compartilhar experiência",
+    "sheetTitle": "Registrar este encontro",
+    "privacyBody": "O NatureLens guarda cidade, país e habitat. A coordenada exata não é armazenada.",
+    "suggestAction": "Sugerir cidade pela localização aproximada",
+    "locating": "Buscando cidade…",
+    "city": "Cidade",
+    "country": "País",
+    "habitat": "Habitat",
+    "note": "Nota de campo",
+    "noteHint": "O que você percebeu?",
+    "habitats": {
+      "home": "Casa",
+      "garden": "Jardim",
+      "trail": "Trilha",
+      "farm": "Campo ou lavoura",
+      "water": "Água",
+      "urban": "Área urbana",
+      "other": "Outro"
+    },
+    "communityDraft": "Observei {{name}} em {{city}}, {{country}}, no ambiente {{habitat}}. Salvei este encontro no meu passaporte NatureLens."
   }
 }

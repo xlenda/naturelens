@@ -115,12 +115,16 @@ const SYNCED_FIELDS = [
   // nickname on restore would make the recovered collection feel like
   // someone else's.
   'nickname',
+  // Escolha humana e diario de cidade sao metadados pequenos. A coordenada
+  // nunca entra no checkIn: o cliente persiste somente cidade/pais/habitat.
+  'identityReview',
+  'checkIn',
 ];
 
 // Nesses campos null e uma exclusao deliberada, nao ausencia de dado. Sem o
 // valor explicito, limpar comodo/apelido ou substituir um laudo por "saudavel"
 // faria a versao antiga reaparecer no aparelho seguinte.
-const NULLABLE_FIELDS = new Set(['room', 'nickname', 'disease']);
+const NULLABLE_FIELDS = new Set(['room', 'nickname', 'disease', 'checkIn']);
 
 function sanitiseValue(value, depth = 0) {
   if (typeof value === 'string') return value.slice(0, 2000);
@@ -154,6 +158,75 @@ function sanitiseTimestamp(value) {
   return new Date(Math.min(parsed, Date.now())).toISOString();
 }
 
+function cleanShortText(value, limit) {
+  if (typeof value !== 'string') return null;
+  const clean = value.trim().replace(/\s+/g, ' ').slice(0, limit);
+  return clean || null;
+}
+
+function sanitiseReviewChoice(value) {
+  if (!value || typeof value !== 'object' || Array.isArray(value)) return null;
+  const name = cleanShortText(value.name, 160);
+  if (!name) return null;
+  const confidence = typeof value.confidence === 'number'
+    && Number.isFinite(value.confidence)
+    && value.confidence >= 0
+    && value.confidence <= 100
+    ? Math.round(value.confidence)
+    : null;
+  return {
+    name,
+    scientific: cleanShortText(value.scientific, 160),
+    confidence,
+    provider: cleanShortText(value.provider, 80),
+  };
+}
+
+// Human review is deliberately not a new scientific verdict. Rebuild the
+// tiny contract instead of accepting arbitrary nested fields (for example a
+// forged `verified: true`) from a modified client.
+function sanitiseIdentityReview(value) {
+  if (!value || typeof value !== 'object' || value.schemaVersion !== 1) return null;
+  if (value.decision !== 'confirmed' && value.decision !== 'alternative') return null;
+  const original = sanitiseReviewChoice(value.original);
+  const finalChoice = sanitiseReviewChoice(value.finalChoice);
+  const reviewedAt = sanitiseTimestamp(value.reviewedAt);
+  if (!original || !finalChoice || !reviewedAt) return null;
+  return {
+    schemaVersion: 1,
+    decision: value.decision,
+    original,
+    finalChoice,
+    requiresRecapture: value.decision === 'alternative',
+    reviewedAt,
+  };
+}
+
+const CHECK_IN_HABITATS = new Set(['home', 'garden', 'trail', 'farm', 'water', 'urban', 'other']);
+
+// This allowlist is the server-side privacy boundary. Even a tampered build
+// cannot sync latitude, longitude, street, postal code or a device location.
+function sanitiseCheckIn(value) {
+  if (!value || typeof value !== 'object' || value.schemaVersion !== 1) return null;
+  const city = cleanShortText(value.city, 80);
+  const country = cleanShortText(value.country, 80);
+  const habitat = CHECK_IN_HABITATS.has(value.habitat) ? value.habitat : null;
+  const observedAt = sanitiseTimestamp(value.observedAt);
+  if (!city || !country || !habitat || !observedAt) return null;
+  const code = cleanShortText(value.countryCode, 2);
+  return {
+    schemaVersion: 1,
+    city,
+    country,
+    countryCode: code ? code.toUpperCase() : null,
+    region: cleanShortText(value.region, 80),
+    habitat,
+    note: cleanShortText(value.note, 240),
+    observedAt,
+    precision: 'city',
+  };
+}
+
 function sanitiseEntry(entry) {
   if (!entry || typeof entry !== 'object') return null;
   const savedId = typeof entry.savedId === 'string' ? entry.savedId.slice(0, 64) : null;
@@ -166,6 +239,19 @@ function sanitiseEntry(entry) {
     if (field === 'identityV1') {
       const clean = sanitiseIdentityV1(value);
       if (clean) payload[field] = clean;
+      continue;
+    }
+    if (field === 'identityReview') {
+      const clean = sanitiseIdentityReview(value);
+      if (clean) payload[field] = clean;
+      continue;
+    }
+    if (field === 'checkIn') {
+      if (value === null) payload[field] = null;
+      else {
+        const clean = sanitiseCheckIn(value);
+        if (clean) payload[field] = clean;
+      }
       continue;
     }
     if (field === 'specimenNote') {

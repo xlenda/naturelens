@@ -3682,5 +3682,97 @@
     "thresholds": {
       "initialSymptomsHighYieldThreshold": "Endast för fält med en avkastningspotential på minst {{minimumYieldBagsPerHa}} säckar/ha: på {{sampleAreaHa}} ha kontrolleras {{samplePoints}} slumpmässiga punkter. Den publicerade referensen är {{actionPercent}}% plantor med tidiga angreppssymtom."
     }
+  },
+  "petGuardian": {
+    "kicker": "HEMSÄKERHET",
+    "title": "Husdjursvakten",
+    "severity": {
+      "emergency": "Akut risk",
+      "warning": "Varning",
+      "safe": "Dokumenterad säker",
+      "unknown": "Ej bekräftad"
+    },
+    "exactBody": "Detta resultat har husdjursspecifika bevis för det exakta taxon som visas.",
+    "generalWarningBody": "Resultatet innehåller en toxicitetsvarning, men hund- och kattsäkerhet bekräftades inte separat.",
+    "unknownBody": "Ingen tillförlitlig husdjursspecifik post hittades för denna exakta taxon.",
+    "animals": {
+      "dog": "Hundar",
+      "cat": "Katter"
+    },
+    "status": {
+      "toxic": "Giftigt",
+      "safe": "Giftfritt",
+      "unknown": "Ej bekräftad"
+    },
+    "toxicParts": "Delar av oro",
+    "parts": {
+      "all": "Alla växtdelar",
+      "foliage": "Blad och växtvävnad"
+    },
+    "signsTitle": "Möjliga varningsskyltar",
+    "signs": {
+      "oral": "Munirritation",
+      "gastro": "Kräkningar eller diarré",
+      "lethargy": "Letargi",
+      "liver": "Leverskada",
+      "bleeding": "Blödning",
+      "cardiac": "Onormal hjärtrytm",
+      "kidney": "Njurskada"
+    },
+    "contactAction": "Mitt husdjur kan ha rört eller ätit det",
+    "sourceExact": "Exakt taxon kontrolleras mot {{source}}.",
+    "sourceMissing": "Husdjurssäkerhet förblir overifierad.",
+    "openSource": "Visa källa",
+    "emergencyTitle": "Kontakta en veterinär nu",
+    "emergencyBody": "Vänta inte på symtom och framkalla inte kräkningar. Ta bort tillgången till växten, behåll ett prov eller foto och kontakta omedelbart en lokal veterinär eller djurgifttjänst. Appen ersätter inte veterinärbedömning.",
+    "profile": {
+      "title": "Djur i mitt hem",
+      "body": "Anpassa växtsäkerhetsvarningar för djuren som lever med dig.",
+      "both": "Hundar och katter",
+      "none": "Inga djur har valts"
+    }
+  },
+  "identityReview": {
+    "kicker": "DIN BEKRÄFTELSE",
+    "title": "Stämmer detta resultat?",
+    "body": "Bekräfta det första resultatet eller granska alternativen utan att förlora den ursprungliga gissningen.",
+    "confirmedTitle": "Resultat bekräftat av dig",
+    "confirmedBody": "Det ursprungliga resultatet och din bekräftelse sparas tillsammans.",
+    "correctedTitle": "Alternativet sparat",
+    "correctedBody": "Du valde {{name}}. Ta ytterligare ett foto innan du förlitar dig på artspecifik vård eller säkerhet.",
+    "yesAction": "Ja, det stämmer",
+    "changeAction": "Granska val",
+    "retakeAction": "Ta ett valideringsfoto",
+    "sheetTitle": "Vad observerade du?",
+    "sheetBody": "Ditt val raderar aldrig modellens ursprungliga svar.",
+    "noAlternatives": "Ingen annan pålitlig kandidat returnerades för denna fångst."
+  },
+  "checkIn": {
+    "kicker": "NATURPASS",
+    "title": "Lägg till en stadsincheckning",
+    "body": "Kom ihåg var du hittade den utan att spara en exakt koordinat.",
+    "savedBody": "Observerad i {{habitat}}. Endast plats på stadsnivå lagras.",
+    "addAction": "Lägg till incheckning",
+    "editAction": "Redigera",
+    "communityAction": "Dela erfarenheter",
+    "sheetTitle": "Spela in det här mötet",
+    "privacyBody": "NatureLens lagrar stad, land och livsmiljö. Den lagrar inte den exakta koordinaten.",
+    "suggestAction": "Föreslå stad från ungefärlig plats",
+    "locating": "Hittar stad …",
+    "city": "Stad",
+    "country": "Land",
+    "habitat": "Habitat",
+    "note": "Fältanteckning",
+    "noteHint": "Vad märkte du?",
+    "habitats": {
+      "home": "Hem",
+      "garden": "Trädgård",
+      "trail": "Vandringsled",
+      "farm": "Gård eller gröda",
+      "water": "Vatten",
+      "urban": "Stadsområde",
+      "other": "Annat"
+    },
+    "communityDraft": "Jag observerade {{name}} i {{city}}, {{country}}, i {{habitat}}. Jag sparade det här mötet i mitt NatureLens-pass."
   }
 }

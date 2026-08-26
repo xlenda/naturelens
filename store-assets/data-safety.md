@@ -53,7 +53,8 @@ Para aves há dois caminhos possíveis, ambos cobertos pelo aviso específico an
 - A permissão é pedida somente quando o usuário toca em um recurso que usa localização; negar não bloqueia o restante do app.
 - Para identificação, o aparelho arredonda para aproximadamente 1 km antes do envio e o NatureLens não persiste a coordenada.
 - Para clima agronômico, o servidor reduz novamente para uma grade de 0,5 grau antes da NASA POWER; somente a grade e a resposta climática ficam em cache por até sete dias.
-- Nunca é publicada na comunidade nem ligada a uma publicação.
+- Se o usuário criar um check-in, somente cidade, país, habitat, data e nota entram na coleção e podem sincronizar; a coordenada usada para sugerir a cidade é descartada.
+- Um check-in por cidade só entra numa publicação quando o usuário toca em compartilhar e confirma o texto da comunidade.
 
 ### Comunidade
 
@@ -61,6 +62,7 @@ Para aves há dois caminhos possíveis, ambos cobertos pelo aviso específico an
 - Reações alimentam ranking calculado no servidor. Denúncias e bloqueios são privados.
 - O usuário pode excluir as próprias publicações e a exclusão da conta remove perfil, publicações, comentários, reações, denúncias e bloqueios ligados ao aparelho.
 - A comunidade não aceita upload de foto ou URL arbitrária nesta versão.
+- Cidade e país de um check-in podem integrar o texto público apenas por ação explícita de compartilhamento; coordenadas nunca integram a publicação.
 
 ### O que não marcar para o AAB
 

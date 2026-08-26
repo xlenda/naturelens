@@ -3682,5 +3682,97 @@
     "thresholds": {
       "initialSymptomsHighYieldThreshold": "Alleen voor percelen met een opbrengstpotentieel van minstens {{minimumYieldBagsPerHa}} zakken/ha: controleer op {{sampleAreaHa}} ha {{samplePoints}} willekeurige punten. De gepubliceerde referentie is {{actionPercent}}% planten met eerste aantastingssymptomen."
     }
+  },
+  "petGuardian": {
+    "kicker": "VEILIGHEID IN HUIS",
+    "title": "Dierenbeschermer",
+    "severity": {
+      "emergency": "Dringend risico",
+      "warning": "Let op",
+      "safe": "Gedocumenteerd veilig",
+      "unknown": "Niet bevestigd"
+    },
+    "exactBody": "Dit resultaat levert huisdierspecifiek bewijs voor het exacte getoonde taxon.",
+    "generalWarningBody": "Het resultaat bevat een toxiciteitswaarschuwing, maar de veiligheid voor honden en katten is niet afzonderlijk bevestigd.",
+    "unknownBody": "Er zijn geen betrouwbare huisdierspecifieke gegevens gevonden voor dit exacte taxon.",
+    "animals": {
+      "dog": "Honden",
+      "cat": "Katten"
+    },
+    "status": {
+      "toxic": "Giftig",
+      "safe": "Niet giftig",
+      "unknown": "Niet bevestigd"
+    },
+    "toxicParts": "Onderdelen van zorg",
+    "parts": {
+      "all": "Alle plantendelen",
+      "foliage": "Bladeren en plantenweefsel"
+    },
+    "signsTitle": "Mogelijke waarschuwingssignalen",
+    "signs": {
+      "oral": "Mondirritatie",
+      "gastro": "Braken of diarree",
+      "lethargy": "Lethargie",
+      "liver": "Leverbeschadiging",
+      "bleeding": "Bloeden",
+      "cardiac": "Abnormaal hartritme",
+      "kidney": "Nierblessure"
+    },
+    "contactAction": "Mijn huisdier heeft het misschien aangeraakt of opgegeten",
+    "sourceExact": "Exact taxon gecontroleerd aan de hand van {{source}}.",
+    "sourceMissing": "De veiligheid van huisdieren is nog steeds niet geverifieerd.",
+    "openSource": "Bron bekijken",
+    "emergencyTitle": "Neem nu contact op met een dierenarts",
+    "emergencyBody": "Wacht niet op symptomen en wek geen braken op. Verwijder de toegang tot de plant, bewaar een monster of foto en neem onmiddellijk contact op met een plaatselijke dierenarts of dierengifdienst. De app vervangt geen veterinaire beoordeling.",
+    "profile": {
+      "title": "Dieren in mijn huis",
+      "body": "Personaliseer veiligheidswaarschuwingen voor de dieren die bij u wonen.",
+      "both": "Honden en katten",
+      "none": "Geen dieren geselecteerd"
+    }
+  },
+  "identityReview": {
+    "kicker": "UW BEVESTIGING",
+    "title": "Komt dit resultaat overeen?",
+    "body": "Bevestig het eerste resultaat of bekijk de alternatieven zonder de oorspronkelijke inschatting te verliezen.",
+    "confirmedTitle": "Resultaat door u bevestigd",
+    "confirmedBody": "Het originele resultaat en uw bevestiging worden samen opgeslagen.",
+    "correctedTitle": "Alternatief opgeslagen",
+    "correctedBody": "Je hebt {{name}} geselecteerd. Maak nog een foto voordat u vertrouwt op soortspecifieke zorg of veiligheid.",
+    "yesAction": "Ja, het komt overeen",
+    "changeAction": "Beoordeel keuzes",
+    "retakeAction": "Maak een validatiefoto",
+    "sheetTitle": "Wat heb je waargenomen?",
+    "sheetBody": "Uw keuze wist nooit het oorspronkelijke antwoord van het model.",
+    "noAlternatives": "Voor deze gevangenneming werd geen enkele andere betrouwbare kandidaat teruggestuurd."
+  },
+  "checkIn": {
+    "kicker": "NATUUR PASPOORT",
+    "title": "Voeg een stadscheck-in toe",
+    "body": "Onthoud waar je het hebt gevonden zonder een exacte coördinaat op te slaan.",
+    "savedBody": "Waargenomen in {{habitat}}. Alleen locatie op stadsniveau wordt opgeslagen.",
+    "addAction": "Inchecken toevoegen",
+    "editAction": "Bewerken",
+    "communityAction": "Deel ervaring",
+    "sheetTitle": "Registreer deze ontmoeting",
+    "privacyBody": "NatureLens slaat stad, land en leefgebied op. Het slaat niet de exacte coördinaat op.",
+    "suggestAction": "Stel een stad voor vanaf een geschatte locatie",
+    "locating": "Stad zoeken…",
+    "city": "Stad",
+    "country": "Land",
+    "habitat": "Habitat",
+    "note": "Veldnotitie",
+    "noteHint": "Wat is je opgevallen?",
+    "habitats": {
+      "home": "Thuis",
+      "garden": "Tuin",
+      "trail": "Parcours",
+      "farm": "Boerderij of gewas",
+      "water": "Water",
+      "urban": "Stedelijk gebied",
+      "other": "Anders"
+    },
+    "communityDraft": "Ik heb {{name}} waargenomen in {{city}}, {{country}}, in {{habitat}}. Deze ontmoeting heb ik opgeslagen in mijn NatureLens-paspoort."
   }
 }

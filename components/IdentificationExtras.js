@@ -11,6 +11,9 @@ import { canonicalEvidenceKey, evidenceLabelKey, mergeEvidencePhotos } from './e
 import PhotoComparisonModal from './PhotoComparisonModal';
 import { colors, control, radius, space, type } from './theme';
 import { enrichmentTaxon } from './taxonIdentity';
+import PetGuardianCard from './PetGuardianCard';
+import IdentityReviewCard from './IdentityReviewCard';
+import NatureCheckInCard from './NatureCheckInCard';
 
 // Three things every detail screen should show and none of them used to.
 //
@@ -37,6 +40,7 @@ const PHOTO_GAP = 12;
 // sites. Pass it explicitly only for a screen with a different hero.
 export default function IdentificationExtras({
   entity,
+  savedId,
   accent = colors.accent,
   onPickAlternative,
   skipImages,
@@ -71,6 +75,13 @@ export default function IdentificationExtras({
 
   if (!entity) return null;
 
+  // Keep the provider entity immutable for evidence/gallery contracts while
+  // handing the current collection identity to interactive metadata cards.
+  // Manual save updates this prop without rewriting the vendor result object.
+  const interactiveEntity = savedId && savedId !== entity.savedId
+    ? { ...entity, savedId }
+    : entity;
+
   const { confidence, alternatives, similarImages } = entity;
   const isLowConfidence = typeof confidence === 'number' && confidence < LOW_CONFIDENCE;
   const hasAlternatives = Boolean(alternatives?.length);
@@ -102,6 +113,16 @@ export default function IdentificationExtras({
 
   return (
     <>
+      <PetGuardianCard entity={interactiveEntity} />
+
+      <IdentityReviewCard
+        entity={interactiveEntity}
+        alternatives={alternatives}
+        accent={accent}
+      />
+
+      <NatureCheckInCard entity={interactiveEntity} accent={accent} />
+
       {isLowConfidence && (
         <View style={styles.warnBox}>
           <Ionicons name="alert-circle" size={18} color={colors.warning} />

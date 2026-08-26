@@ -333,6 +333,12 @@ export function clearCollection() {
       } catch (e) {
         // ignore
       }
+      try {
+        const { clearPetProfile } = require('./petProfile');
+        await clearPetProfile();
+      } catch (e) {
+        // ignore
+      }
       return true;
     } catch (e) {
       return false;

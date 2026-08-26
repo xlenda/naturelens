@@ -3682,5 +3682,97 @@
     "thresholds": {
       "initialSymptomsHighYieldThreshold": "Nur für Bestände mit einem Ertragspotenzial von mindestens {{minimumYieldBagsPerHa}} Säcken/ha: Auf {{sampleAreaHa}} ha {{samplePoints}} zufällige Punkte prüfen. Die veröffentlichte Referenz sind {{actionPercent}} % Pflanzen mit ersten Befallssymptomen."
     }
+  },
+  "petGuardian": {
+    "kicker": "SICHERHEIT ZU HAUSE",
+    "title": "Haustierwächter",
+    "severity": {
+      "emergency": "Dringendes Risiko",
+      "warning": "Achtung",
+      "safe": "Dokumentiert sicher",
+      "unknown": "Nicht bestätigt"
+    },
+    "exactBody": "Dieses Ergebnis enthält haustierspezifische Hinweise auf das exakt gezeigte Taxon.",
+    "generalWarningBody": "Das Ergebnis enthält eine Toxizitätswarnung, die Sicherheit von Hunden und Katzen wurde jedoch nicht separat bestätigt.",
+    "unknownBody": "Für genau dieses Taxon wurde kein verlässlicher haustierspezifischer Datensatz gefunden.",
+    "animals": {
+      "dog": "Hunde",
+      "cat": "Katzen"
+    },
+    "status": {
+      "toxic": "Giftig",
+      "safe": "Ungiftig",
+      "unknown": "Nicht bestätigt"
+    },
+    "toxicParts": "Teile, die Anlass zur Sorge geben",
+    "parts": {
+      "all": "Alle Pflanzenteile",
+      "foliage": "Blätter und Pflanzengewebe"
+    },
+    "signsTitle": "Mögliche Warnzeichen",
+    "signs": {
+      "oral": "Mundreizung",
+      "gastro": "Erbrechen oder Durchfall",
+      "lethargy": "Lethargie",
+      "liver": "Leberschädigung",
+      "bleeding": "Blutung",
+      "cardiac": "Abnormaler Herzrhythmus",
+      "kidney": "Nierenverletzung"
+    },
+    "contactAction": "Möglicherweise hat mein Haustier es berührt oder gefressen",
+    "sourceExact": "Genaues Taxon gegen {{source}} geprüft.",
+    "sourceMissing": "Die Sicherheit von Haustieren bleibt ungeprüft.",
+    "openSource": "Quelle ansehen",
+    "emergencyTitle": "Kontaktieren Sie jetzt einen Tierarzt",
+    "emergencyBody": "Warten Sie nicht auf Symptome und lösen Sie kein Erbrechen aus. Entfernen Sie den Zugang zur Pflanze, bewahren Sie eine Probe oder ein Foto auf und wenden Sie sich umgehend an einen örtlichen Tierarzt oder Tiervergiftungsdienst. Die App ersetzt nicht die tierärztliche Beurteilung.",
+    "profile": {
+      "title": "Tiere in meinem Zuhause",
+      "body": "Personalisieren Sie Pflanzensicherheitswarnungen für die Tiere, die bei Ihnen leben.",
+      "both": "Hunde und Katzen",
+      "none": "Keine Tiere ausgewählt"
+    }
+  },
+  "identityReview": {
+    "kicker": "IHRE BESTÄTIGUNG",
+    "title": "Stimmt dieses Ergebnis überein?",
+    "body": "Bestätigen Sie das erste Ergebnis oder prüfen Sie die Alternativen, ohne die ursprüngliche Vermutung zu verlieren.",
+    "confirmedTitle": "Ergebnis von Ihnen bestätigt",
+    "confirmedBody": "Das Originalergebnis und Ihre Bestätigung werden zusammen gespeichert.",
+    "correctedTitle": "Alternative gespeichert",
+    "correctedBody": "Sie haben {{name}} ausgewählt. Machen Sie ein weiteres Foto, bevor Sie sich auf artspezifische Pflege oder Sicherheit verlassen.",
+    "yesAction": "Ja, es passt",
+    "changeAction": "Überprüfungsoptionen",
+    "retakeAction": "Machen Sie ein Bestätigungsfoto",
+    "sheetTitle": "Was haben Sie beobachtet?",
+    "sheetBody": "Ihre Wahl löscht niemals die ursprüngliche Antwort des Modells.",
+    "noAlternatives": "Für diese Gefangennahme wurde kein anderer verlässlicher Kandidat zurückgegeben."
+  },
+  "checkIn": {
+    "kicker": "NATURPASS",
+    "title": "Fügen Sie einen Check-in in der Stadt hinzu",
+    "body": "Merken Sie sich, wo Sie es gefunden haben, ohne eine genaue Koordinate zu speichern.",
+    "savedBody": "Beobachtet in {{habitat}}. Es wird nur der Standort auf Stadtebene gespeichert.",
+    "addAction": "Check-in hinzufügen",
+    "editAction": "Bearbeiten",
+    "communityAction": "Erfahrungen teilen",
+    "sheetTitle": "Zeichnen Sie diese Begegnung auf",
+    "privacyBody": "NatureLens speichert Stadt, Land und Lebensraum. Die genaue Koordinate wird nicht gespeichert.",
+    "suggestAction": "Schlagen Sie eine Stadt anhand des ungefähren Standorts vor",
+    "locating": "Stadt finden…",
+    "city": "Stadt",
+    "country": "Land",
+    "habitat": "Lebensraum",
+    "note": "Feldnotiz",
+    "noteHint": "Was ist dir aufgefallen?",
+    "habitats": {
+      "home": "Zuhause",
+      "garden": "Garten",
+      "trail": "Weg",
+      "farm": "Bauernhof oder Ernte",
+      "water": "Wasser",
+      "urban": "Stadtgebiet",
+      "other": "Andere"
+    },
+    "communityDraft": "Ich habe {{name}} in {{city}}, {{country}}, in {{habitat}} beobachtet. Ich habe diese Begegnung in meinem NatureLens-Pass gespeichert."
   }
 }

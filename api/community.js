@@ -147,18 +147,6 @@ async function readCommunity(admin, profile, res) {
   });
 }
 
-async function quarantine(admin, targetType, targetId) {
-  const { count, error } = await admin.from('community_reports')
-    .select('id', { count: 'exact', head: true }).eq('target_type', targetType).eq('target_id', targetId);
-  if (error || count < 3) return;
-  if (targetType === 'profile') {
-    await admin.from('community_profiles').update({ status: 'suspended' }).eq('public_id', targetId);
-  } else {
-    const table = targetType === 'post' ? 'community_posts' : 'community_comments';
-    await admin.from(table).update({ moderation_state: 'review' }).eq('id', targetId);
-  }
-}
-
 module.exports = async function handler(req, res) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const deviceId = requireDeviceId(req, res);
@@ -268,7 +256,10 @@ module.exports = async function handler(req, res) {
         reporter_device_id: deviceId, target_type: targetType, target_id: targetId, reason,
       }, { onConflict: 'reporter_device_id,target_type,target_id' });
       if (error) throw error;
-      await quarantine(admin, targetType, targetId);
+      // deviceId e autoemitido: qualquer pessoa consegue criar varios UUIDs.
+      // Portanto, uma denuncia nunca pode suspender perfil nem esconder
+      // conteudo automaticamente. Ela entra na fila para revisao humana; a
+      // decisao de moderacao acontece apenas no painel administrativo.
       return res.status(200).json({ reported: true });
     }
 

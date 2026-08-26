@@ -3682,5 +3682,97 @@
     "thresholds": {
       "initialSymptomsHighYieldThreshold": "Yalnızca verim potansiyeli en az {{minimumYieldBagsPerHa}} çuval/ha olan tarlalarda: {{sampleAreaHa}} ha içinde {{samplePoints}} rastgele noktayı inceleyin. Yayımlanmış referans, ilk zarar belirtileri görülen bitkilerin %{{actionPercent}} oranıdır."
     }
+  },
+  "petGuardian": {
+    "kicker": "EV GÜVENLİĞİ",
+    "title": "Evcil Hayvan Muhafızı",
+    "severity": {
+      "emergency": "Acil risk",
+      "warning": "Dikkat",
+      "safe": "Belgelenmiş kasa",
+      "unknown": "Onaylanmadı"
+    },
+    "exactBody": "Bu sonuç, gösterilen tam takson için evcil hayvana özgü kanıtlara sahiptir.",
+    "generalWarningBody": "Sonuç bir toksisite uyarısı içeriyor ancak köpek ve kedi güvenliği ayrı ayrı doğrulanmadı.",
+    "unknownBody": "Tam olarak bu takson için evcil hayvana özel güvenilir bir kayıt bulunamadı.",
+    "animals": {
+      "dog": "Köpekler",
+      "cat": "Kediler"
+    },
+    "status": {
+      "toxic": "Zehirli",
+      "safe": "Toksik olmayan",
+      "unknown": "Onaylanmadı"
+    },
+    "toxicParts": "Endişe verici kısımlar",
+    "parts": {
+      "all": "Tüm bitki parçaları",
+      "foliage": "Yapraklar ve bitki dokusu"
+    },
+    "signsTitle": "Olası uyarı işaretleri",
+    "signs": {
+      "oral": "Ağız tahrişi",
+      "gastro": "Kusma veya ishal",
+      "lethargy": "Uyuşukluk",
+      "liver": "Karaciğer hasarı",
+      "bleeding": "Kanama",
+      "cardiac": "Anormal kalp ritmi",
+      "kidney": "Böbrek hasarı"
+    },
+    "contactAction": "Evcil hayvanım ona dokunmuş ya da yemiş olabilir",
+    "sourceExact": "Tam takson {{source}} ile karşılaştırılarak kontrol edildi.",
+    "sourceMissing": "Evcil hayvan güvenliği doğrulanmadı.",
+    "openSource": "Kaynağı görüntüle",
+    "emergencyTitle": "Hemen bir veterinere başvurun",
+    "emergencyBody": "Semptomları beklemeyin ve kusturmaya çalışmayın. Tesise erişimi kaldırın, bir numuneyi veya fotoğrafı saklayın ve derhal yerel bir veteriner veya hayvan zehiri servisiyle iletişime geçin. Uygulama veteriner değerlendirmesinin yerini almaz.",
+    "profile": {
+      "title": "Evimdeki hayvanlar",
+      "body": "Sizinle birlikte yaşayan hayvanlar için bitki güvenliği uyarılarını kişiselleştirin.",
+      "both": "Köpekler ve kediler",
+      "none": "Hiçbir hayvan seçilmedi"
+    }
+  },
+  "identityReview": {
+    "kicker": "ONAYINIZ",
+    "title": "Bu sonuç eşleşiyor mu?",
+    "body": "Orijinal tahmini kaybetmeden ilk sonucu onaylayın veya alternatifleri inceleyin.",
+    "confirmedTitle": "Sonuç sizin tarafınızdan onaylandı",
+    "confirmedBody": "Orijinal sonuç ve onayınız birlikte kaydedilir.",
+    "correctedTitle": "Alternatif kaydedildi",
+    "correctedBody": "{{name}}'yi seçtiniz. Türe özel bakım veya güvenliğe güvenmeden önce başka bir fotoğraf çekin.",
+    "yesAction": "Evet eşleşiyor",
+    "changeAction": "Seçimleri inceleyin",
+    "retakeAction": "Doğrulama fotoğrafı çekin",
+    "sheetTitle": "Ne gözlemledin?",
+    "sheetBody": "Seçiminiz asla modelin orijinal cevabını silmez.",
+    "noAlternatives": "Bu yakalama için başka güvenilir aday döndürülmedi."
+  },
+  "checkIn": {
+    "kicker": "DOĞA PASAPORTU",
+    "title": "Şehir check-in'i ekleyin",
+    "body": "Tam bir koordinat kaydetmeden onu nerede bulduğunuzu hatırlayın.",
+    "savedBody": "{{habitat}}'da gözlemlendi. Yalnızca şehir düzeyinde konum saklanır.",
+    "addAction": "Giriş ekle",
+    "editAction": "Düzenle",
+    "communityAction": "Deneyimi paylaşın",
+    "sheetTitle": "Bu karşılaşmayı kaydedin",
+    "privacyBody": "NatureLens şehri, ülkeyi ve yaşam alanını saklar. Tam koordinatı saklamaz.",
+    "suggestAction": "Yaklaşık konuma göre şehir öner",
+    "locating": "Şehir aranıyor…",
+    "city": "Şehir",
+    "country": "Ülke",
+    "habitat": "Habitat",
+    "note": "Alan notu",
+    "noteHint": "Ne fark ettin?",
+    "habitats": {
+      "home": "Ana sayfa",
+      "garden": "Bahçe",
+      "trail": "Yol",
+      "farm": "Çiftlik veya mahsul",
+      "water": "Su",
+      "urban": "Kentsel alan",
+      "other": "Diğer"
+    },
+    "communityDraft": "{{name}}'yi {{city}}, {{country}} ve {{habitat}}'da gözlemledim. Bu karşılaşmayı NatureLens pasaportuma kaydettim."
   }
 }

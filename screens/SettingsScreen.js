@@ -37,6 +37,7 @@ import {
 import { sensoryFeedback } from '../components/sensoryFeedback';
 import { exportCollection, pickAndImport } from '../components/collectionBackup';
 import { canUseLocation, isLocationEnabled, setLocationEnabled } from '../components/deviceLocation';
+import { getPetProfile, setPetProfile } from '../components/petProfile';
 import {
   CARE_REGION,
   getCareRegionPreference,
@@ -122,6 +123,7 @@ export default function SettingsScreen() {
   const [pushOn, setPushOn] = useState(false);
   const [pushBusy, setPushBusy] = useState(false);
   const [locationOn, setLocationOn] = useState(true);
+  const [petProfile, setPetProfileState] = useState({ dog: false, cat: false });
   const [careRegion, setCareRegion] = useState(CARE_REGION.AUTO);
   const [discoveryPreferences, setDiscoveryPreferences] = useState(
     DEFAULT_DISCOVERY_PREFERENCES
@@ -142,6 +144,7 @@ export default function SettingsScreen() {
     setAccountEmail(getLinkedEmail());
     setPushOn(await isPushEnabled());
     setLocationOn(await isLocationEnabled());
+    setPetProfileState(await getPetProfile());
     setCareRegion(await getCareRegionPreference());
     setDiscoveryPreferences(await getDiscoveryPreferences());
     setSensoryPreferences(await getSensoryPreferences());
@@ -167,6 +170,34 @@ export default function SettingsScreen() {
   const careRegionLabel = t(`profile.careRegion${
     careRegion === CARE_REGION.SOUTH ? 'South' : careRegion === CARE_REGION.NORTH ? 'North' : 'Auto'
   }`);
+  const petProfileLabel = petProfile.dog && petProfile.cat
+    ? t('petGuardian.profile.both')
+    : petProfile.dog
+    ? t('petGuardian.animals.dog')
+    : petProfile.cat
+    ? t('petGuardian.animals.cat')
+    : t('petGuardian.profile.none');
+
+  const applyPetProfile = async (value) => {
+    const previous = petProfile;
+    setPetProfileState(value);
+    try {
+      setPetProfileState(await setPetProfile(value));
+    } catch (e) {
+      setPetProfileState(previous);
+      showAlert(t('common.saveErrorTitle'), t('common.saveErrorBody'));
+    }
+  };
+
+  const choosePetProfile = () => {
+    showAlert(t('petGuardian.profile.title'), t('petGuardian.profile.body'), [
+      { text: t('petGuardian.animals.dog'), onPress: () => applyPetProfile({ dog: true, cat: false }) },
+      { text: t('petGuardian.animals.cat'), onPress: () => applyPetProfile({ dog: false, cat: true }) },
+      { text: t('petGuardian.profile.both'), onPress: () => applyPetProfile({ dog: true, cat: true }) },
+      { text: t('petGuardian.profile.none'), onPress: () => applyPetProfile({ dog: false, cat: false }) },
+      { text: t('common.cancel'), style: 'cancel' },
+    ]);
+  };
 
   const handleTogglePush = async () => {
     if (pushBusy) return;
@@ -477,6 +508,13 @@ export default function SettingsScreen() {
               'onboarding.depth.title',
               'onboarding.depth.body'
             )}
+          />
+          <Row
+            icon="paw-outline"
+            label={t('petGuardian.profile.title')}
+            hint={t('petGuardian.profile.body')}
+            value={petProfileLabel}
+            onPress={choosePetProfile}
           />
           <Row
             icon="play-circle-outline"

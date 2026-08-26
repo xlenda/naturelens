@@ -3682,5 +3682,97 @@
     "thresholds": {
       "initialSymptomsHighYieldThreshold": "僅適用於產量潛力至少 {{minimumYieldBagsPerHa}} 袋/公頃的田區：在 {{sampleAreaHa}} 公頃內檢查 {{samplePoints}} 個隨機點。公開參考值為出現初期危害症狀的植株達 {{actionPercent}}%。"
     }
+  },
+  "petGuardian": {
+    "kicker": "居家安全",
+    "title": "寵物守護者",
+    "severity": {
+      "emergency": "緊急風險",
+      "warning": "注意事項",
+      "safe": "記錄安全",
+      "unknown": "未確認"
+    },
+    "exactBody": "该结果具有所显示的确切分类单元的宠物特异性证据。",
+    "generalWarningBody": "结果包含毒性警告，但狗和猫的安全性并未单独得到确认。",
+    "unknownBody": "对于这个确切的分类单元，没有找到可靠的宠物特定记录。",
+    "animals": {
+      "dog": "狗",
+      "cat": "貓"
+    },
+    "status": {
+      "toxic": "有毒",
+      "safe": "無毒",
+      "unknown": "未確認"
+    },
+    "toxicParts": "關注的部分",
+    "parts": {
+      "all": "所有植物部分",
+      "foliage": "葉子和植物組織"
+    },
+    "signsTitle": "可能的警訊",
+    "signs": {
+      "oral": "口腔刺激",
+      "gastro": "嘔吐或腹瀉",
+      "lethargy": "嗜睡",
+      "liver": "肝損傷",
+      "bleeding": "出血",
+      "cardiac": "心律異常",
+      "kidney": "腎臟損傷"
+    },
+    "contactAction": "我的寵物可能接觸過或吃了它",
+    "sourceExact": "根據 {{source}} 檢查確切的分類單元。",
+    "sourceMissing": "寵物安全尚未得到證實。",
+    "openSource": "查看原始碼",
+    "emergencyTitle": "立即聯繫獸醫",
+    "emergencyBody": "不要等待出現症狀，也不要催吐。移除工廠的通道，保留樣本或照片，並立即聯繫當地獸醫或動物毒物服務機構。該應用程式不能取代獸醫評估。",
+    "profile": {
+      "title": "我家的動物",
+      "body": "為與您生活在一起的動物提供個人化的植物安全警告。",
+      "both": "狗和貓",
+      "none": "沒有選擇動物"
+    }
+  },
+  "identityReview": {
+    "kicker": "您的確認",
+    "title": "這個結果匹配嗎？",
+    "body": "確認第一個結果或查看替代結果，而不會失去最初的猜測。",
+    "confirmedTitle": "結果經您確認",
+    "confirmedBody": "原始結果和您的確認資訊會一起保存。",
+    "correctedTitle": "已保存替代方案",
+    "correctedBody": "您選擇了{{name}}。在依賴特定物種的護理或安全之前再拍一張照片。",
+    "yesAction": "是的，它匹配",
+    "changeAction": "審查選擇",
+    "retakeAction": "拍攝驗證照片",
+    "sheetTitle": "你觀察到了什麼？",
+    "sheetBody": "你的選擇永遠不會抹去模型的原始答案。",
+    "noAlternatives": "這次捕獲沒有返回其他可靠的候選人。"
+  },
+  "checkIn": {
+    "kicker": "自然护照",
+    "title": "添加城市值机",
+    "body": "记住您找到它的位置，而无需保存确切的坐标。",
+    "savedBody": "在 {{habitat}} 中观察到。仅存储城市级位置。",
+    "addAction": "添加签到",
+    "editAction": "編輯",
+    "communityAction": "分享经验",
+    "sheetTitle": "记录下这次的邂逅",
+    "privacyBody": "NatureLens 儲存城市、鄉村和棲息地。它不儲存確切的座標。",
+    "suggestAction": "從大概位置建議城市",
+    "locating": "尋找城市...",
+    "city": "城市",
+    "country": "國家",
+    "habitat": "棲息地",
+    "note": "現場筆記",
+    "noteHint": "你注意到了什麼？",
+    "habitats": {
+      "home": "首頁",
+      "garden": "花園",
+      "trail": "蹤跡",
+      "farm": "農場或農作物",
+      "water": "水",
+      "urban": "市區",
+      "other": "其他"
+    },
+    "communityDraft": "我觀察到了 {{name}}，地點是 {{city}}、{{country}}，環境為 {{habitat}}。我把這次相遇保存在 NatureLens 護照中。"
   }
 }

@@ -3682,5 +3682,97 @@
     "thresholds": {
       "initialSymptomsHighYieldThreshold": "Kun for marker med et udbyttepotentiale på mindst {{minimumYieldBagsPerHa}} sække/ha: På {{sampleAreaHa}} ha undersøges {{samplePoints}} tilfældige punkter. Den offentliggjorte reference er {{actionPercent}} % planter med tidlige angrebssymptomer."
     }
+  },
+  "petGuardian": {
+    "kicker": "HJEMMESIKKERHED",
+    "title": "Kæledyrsværge",
+    "severity": {
+      "emergency": "Akut risiko",
+      "warning": "Forsigtig",
+      "safe": "Dokumenteret pengeskab",
+      "unknown": "Ikke bekræftet"
+    },
+    "exactBody": "Dette resultat har kæledyrsspecifikke beviser for det nøjagtige viste taxon.",
+    "generalWarningBody": "Resultatet indeholder en toksicitetsadvarsel, men hunde- og kattes sikkerhed blev ikke bekræftet separat.",
+    "unknownBody": "Der blev ikke fundet nogen pålidelig kæledyrsspecifik registrering for denne nøjagtige taxon.",
+    "animals": {
+      "dog": "Hunde",
+      "cat": "Katte"
+    },
+    "status": {
+      "toxic": "Giftig",
+      "safe": "Ikke giftig",
+      "unknown": "Ikke bekræftet"
+    },
+    "toxicParts": "Dele af bekymring",
+    "parts": {
+      "all": "Alle plantedele",
+      "foliage": "Blade og plantevæv"
+    },
+    "signsTitle": "Mulige advarselstegn",
+    "signs": {
+      "oral": "Mund irritation",
+      "gastro": "Opkastning eller diarré",
+      "lethargy": "Sløvhed",
+      "liver": "Leverskade",
+      "bleeding": "Blødning",
+      "cardiac": "Unormal hjerterytme",
+      "kidney": "Nyreskade"
+    },
+    "contactAction": "Mit kæledyr kan have rørt eller spist det",
+    "sourceExact": "Præcis taxon kontrolleret mod {{source}}.",
+    "sourceMissing": "Kæledyrs sikkerhed forbliver ubekræftet.",
+    "openSource": "Se kilde",
+    "emergencyTitle": "Kontakt en dyrlæge nu",
+    "emergencyBody": "Vent ikke på symptomer og fremkald ikke opkastning. Fjern adgangen til planten, behold en prøve eller et billede, og kontakt en lokal dyrlæge eller dyregifttjeneste med det samme. Appen erstatter ikke veterinærvurdering.",
+    "profile": {
+      "title": "Dyr i mit hjem",
+      "body": "Tilpas plantesikkerhedsadvarsler til de dyr, der bor hos dig.",
+      "both": "Hunde og katte",
+      "none": "Ingen dyr valgt"
+    }
+  },
+  "identityReview": {
+    "kicker": "DIN BEKRÆFTELSE",
+    "title": "Stemmer dette resultat?",
+    "body": "Bekræft det første resultat eller gennemgå alternativerne uden at miste det oprindelige gæt.",
+    "confirmedTitle": "Resultat bekræftet af dig",
+    "confirmedBody": "Det originale resultat og din bekræftelse gemmes sammen.",
+    "correctedTitle": "Alternativet er gemt",
+    "correctedBody": "Du valgte {{name}}. Tag endnu et billede, før du stoler på artsspecifik pleje eller sikkerhed.",
+    "yesAction": "Ja, det passer",
+    "changeAction": "Gennemgå valg",
+    "retakeAction": "Tag et valideringsbillede",
+    "sheetTitle": "Hvad observerede du?",
+    "sheetBody": "Dit valg sletter aldrig modellens originale svar.",
+    "noAlternatives": "Ingen anden pålidelig kandidat blev returneret til denne fangst."
+  },
+  "checkIn": {
+    "kicker": "NATURPAS",
+    "title": "Tilføj en by check-in",
+    "body": "Husk, hvor du fandt det uden at gemme en nøjagtig koordinat.",
+    "savedBody": "Observeret i {{habitat}}. Kun placering på byniveau gemmes.",
+    "addAction": "Tilføj check-in",
+    "editAction": "Rediger",
+    "communityAction": "Del erfaring",
+    "sheetTitle": "Optag dette møde",
+    "privacyBody": "NatureLens gemmer by, land og habitat. Den gemmer ikke den nøjagtige koordinat.",
+    "suggestAction": "Foreslå by fra omtrentlig placering",
+    "locating": "Finder by...",
+    "city": "By",
+    "country": "Land",
+    "habitat": "Habitat",
+    "note": "Feltnotat",
+    "noteHint": "Hvad lagde du mærke til?",
+    "habitats": {
+      "home": "Hjem",
+      "garden": "Have",
+      "trail": "Sti",
+      "farm": "Gård eller afgrøde",
+      "water": "Vand",
+      "urban": "Byområde",
+      "other": "Andet"
+    },
+    "communityDraft": "Jeg observerede {{name}} i {{city}}, {{country}}, i {{habitat}}. Jeg gemte dette møde i mit NatureLens-pas."
   }
 }

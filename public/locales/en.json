@@ -3682,5 +3682,97 @@
     "thresholds": {
       "initialSymptomsHighYieldThreshold": "Only for fields with a yield potential of at least {{minimumYieldBagsPerHa}} bags/ha: in {{sampleAreaHa}} ha, inspect {{samplePoints}} random points. The published reference is {{actionPercent}}% of plants with initial attack symptoms."
     }
+  },
+  "petGuardian": {
+    "kicker": "HOME SAFETY",
+    "title": "Pet Guardian",
+    "severity": {
+      "emergency": "Urgent risk",
+      "warning": "Caution",
+      "safe": "Documented safe",
+      "unknown": "Not confirmed"
+    },
+    "exactBody": "This result has pet-specific evidence for the exact taxon shown.",
+    "generalWarningBody": "The result contains a toxicity warning, but dog and cat safety was not confirmed separately.",
+    "unknownBody": "No reliable pet-specific record was found for this exact taxon.",
+    "animals": {
+      "dog": "Dogs",
+      "cat": "Cats"
+    },
+    "status": {
+      "toxic": "Toxic",
+      "safe": "Non-toxic",
+      "unknown": "Not confirmed"
+    },
+    "toxicParts": "Parts of concern",
+    "parts": {
+      "all": "All plant parts",
+      "foliage": "Leaves and plant tissue"
+    },
+    "signsTitle": "Possible warning signs",
+    "signs": {
+      "oral": "Mouth irritation",
+      "gastro": "Vomiting or diarrhea",
+      "lethargy": "Lethargy",
+      "liver": "Liver injury",
+      "bleeding": "Bleeding",
+      "cardiac": "Abnormal heart rhythm",
+      "kidney": "Kidney injury"
+    },
+    "contactAction": "My pet may have touched or eaten it",
+    "sourceExact": "Exact taxon checked against {{source}}.",
+    "sourceMissing": "Pet safety remains unverified.",
+    "openSource": "View source",
+    "emergencyTitle": "Contact a veterinarian now",
+    "emergencyBody": "Do not wait for symptoms and do not induce vomiting. Remove access to the plant, keep a sample or photo, and contact a local veterinarian or animal poison service immediately. The app does not replace veterinary assessment.",
+    "profile": {
+      "title": "Animals in my home",
+      "body": "Personalize plant safety warnings for the animals that live with you.",
+      "both": "Dogs and cats",
+      "none": "No animals selected"
+    }
+  },
+  "identityReview": {
+    "kicker": "YOUR CONFIRMATION",
+    "title": "Does this result match?",
+    "body": "Confirm the first result or review the alternatives without losing the original guess.",
+    "confirmedTitle": "Result confirmed by you",
+    "confirmedBody": "The original result and your confirmation are saved together.",
+    "correctedTitle": "Alternative saved",
+    "correctedBody": "You selected {{name}}. Take another photo before relying on species-specific care or safety.",
+    "yesAction": "Yes, it matches",
+    "changeAction": "Review choices",
+    "retakeAction": "Take a validation photo",
+    "sheetTitle": "What did you observe?",
+    "sheetBody": "Your choice never erases the model’s original answer.",
+    "noAlternatives": "No other reliable candidate was returned for this capture."
+  },
+  "checkIn": {
+    "kicker": "NATURE PASSPORT",
+    "title": "Add a city check-in",
+    "body": "Remember where you found it without saving an exact coordinate.",
+    "savedBody": "Observed in {{habitat}}. Only city-level location is stored.",
+    "addAction": "Add check-in",
+    "editAction": "Edit",
+    "communityAction": "Share experience",
+    "sheetTitle": "Record this encounter",
+    "privacyBody": "NatureLens stores city, country and habitat. It does not store the exact coordinate.",
+    "suggestAction": "Suggest city from approximate location",
+    "locating": "Finding city…",
+    "city": "City",
+    "country": "Country",
+    "habitat": "Habitat",
+    "note": "Field note",
+    "noteHint": "What did you notice?",
+    "habitats": {
+      "home": "Home",
+      "garden": "Garden",
+      "trail": "Trail",
+      "farm": "Farm or crop",
+      "water": "Water",
+      "urban": "Urban area",
+      "other": "Other"
+    },
+    "communityDraft": "I observed {{name}} in {{city}}, {{country}}, in {{habitat}}. I saved this encounter in my NatureLens passport."
   }
 }

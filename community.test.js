@@ -15,15 +15,16 @@ test('community score is server-derived and cannot be submitted by the client', 
   assert.doesNotMatch(api, /req\.body\?\.score/);
 });
 
-test('community has reports, blocks, deletion and automatic review', () => {
+test('community has reports, blocks and deletion without Sybil auto-moderation', () => {
   assert.match(migration, /community_reports/);
   assert.match(migration, /community_blocks/);
   assert.match(api, /action === 'report'/);
   assert.match(api, /action === 'block'/);
   assert.match(api, /action === 'delete'/);
   assert.match(api, /from\(table\)\.delete\(\)/);
-  assert.match(api, /count < 3/);
-  assert.match(api, /moderation_state: 'review'/);
+  assert.doesNotMatch(api, /async function quarantine/);
+  assert.doesNotMatch(api, /count < 3/);
+  assert.doesNotMatch(api, /await quarantine/);
 });
 
 test('community never uploads user photos or accepts arbitrary links', () => {

@@ -1,6 +1,6 @@
 import React, { memo, useCallback, useEffect, useMemo, useState } from 'react';
 import { Alert, FlatList, Modal, Platform, Pressable, StyleSheet, Text, TextInput, View } from 'react-native';
-import { useFocusEffect, useNavigation } from '@react-navigation/native';
+import { useFocusEffect, useNavigation, useRoute } from '@react-navigation/native';
 import { Ionicons } from '@expo/vector-icons';
 import * as Haptics from 'expo-haptics';
 import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -70,6 +70,7 @@ const PostCard = memo(function PostCard({ item, date, t, commentOpen, commentBod
 
 export default function CommunityScreen() {
   const navigation = useNavigation();
+  const route = useRoute();
   const { t, i18n } = useTranslation();
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -89,6 +90,18 @@ export default function CommunityScreen() {
   useEffect(() => {
     AsyncStorage.getItem(COMMUNITY_TERMS_KEY).then((value) => setTermsAccepted(value === '1')).catch(() => {});
   }, []);
+
+  useEffect(() => {
+    const preset = route.params?.checkInDraft;
+    if (!preset?.body) return;
+    setPostBody(String(preset.body).slice(0, 1200));
+    if (COMMUNITY_CATEGORIES.some((entry) => entry.key === preset.category)) {
+      setCategory(preset.category);
+    }
+    setKind('observation');
+    setSheet('post');
+    navigation.setParams({ checkInDraft: undefined });
+  }, [navigation, route.params?.checkInDraft]);
 
   const refresh = useCallback(async () => {
     setLoading(true); setFailed(false);

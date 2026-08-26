@@ -3682,5 +3682,97 @@
     "thresholds": {
       "initialSymptomsHighYieldThreshold": "Tylko dla pól o potencjale plonowania co najmniej {{minimumYieldBagsPerHa}} worków/ha: na {{sampleAreaHa}} ha sprawdź {{samplePoints}} losowych punktów. Opublikowana wartość to {{actionPercent}}% roślin z początkowymi objawami żerowania."
     }
+  },
+  "petGuardian": {
+    "kicker": "BEZPIECZEŃSTWO W DOMU",
+    "title": "Opiekun zwierząt",
+    "severity": {
+      "emergency": "Pilne ryzyko",
+      "warning": "Uwaga",
+      "safe": "Udokumentowany sejf",
+      "unknown": "Nie potwierdzono"
+    },
+    "exactBody": "Wynik ten zawiera dowody specyficzne dla zwierzęcia dla dokładnie pokazanego taksonu.",
+    "generalWarningBody": "Wynik zawiera ostrzeżenie o toksyczności, ale bezpieczeństwo psów i kotów nie zostało osobno potwierdzone.",
+    "unknownBody": "Nie znaleziono żadnych wiarygodnych danych dotyczących konkretnego zwierzęcia dla tego dokładnego taksonu.",
+    "animals": {
+      "dog": "Psy",
+      "cat": "Koty"
+    },
+    "status": {
+      "toxic": "Toksyczny",
+      "safe": "Nietoksyczny",
+      "unknown": "Nie potwierdzono"
+    },
+    "toxicParts": "Części budzące obawy",
+    "parts": {
+      "all": "Wszystkie części roślin",
+      "foliage": "Liście i tkanki roślinne"
+    },
+    "signsTitle": "Możliwe znaki ostrzegawcze",
+    "signs": {
+      "oral": "Podrażnienie ust",
+      "gastro": "Wymioty lub biegunka",
+      "lethargy": "Letarg",
+      "liver": "Uszkodzenie wątroby",
+      "bleeding": "Krwawienie",
+      "cardiac": "Nieprawidłowy rytm serca",
+      "kidney": "Uraz nerek"
+    },
+    "contactAction": "Mój zwierzak mógł go dotknąć lub zjeść",
+    "sourceExact": "Dokładny takson sprawdzony względem {{source}}.",
+    "sourceMissing": "Bezpieczeństwo zwierząt pozostaje niezweryfikowane.",
+    "openSource": "Zobacz źródło",
+    "emergencyTitle": "Skontaktuj się teraz z weterynarzem",
+    "emergencyBody": "Nie czekaj na objawy i nie prowokuj wymiotów. Usuń dostęp do rośliny, zachowaj próbkę lub zdjęcie i natychmiast skontaktuj się z lokalnym lekarzem weterynarii lub służbą ds. trucizn dla zwierząt. Aplikacja nie zastępuje oceny weterynaryjnej.",
+    "profile": {
+      "title": "Zwierzęta w moim domu",
+      "body": "Spersonalizuj ostrzeżenia dotyczące bezpieczeństwa roślin dla zwierząt, które mieszkają z Tobą.",
+      "both": "Psy i koty",
+      "none": "Nie wybrano zwierząt"
+    }
+  },
+  "identityReview": {
+    "kicker": "TWOJE POTWIERDZENIE",
+    "title": "Czy ten wynik się zgadza?",
+    "body": "Potwierdź pierwszy wynik lub przejrzyj alternatywy, nie tracąc pierwotnego przypuszczenia.",
+    "confirmedTitle": "Wynik potwierdzony przez Ciebie",
+    "confirmedBody": "Oryginalny wynik i Twoje potwierdzenie zostaną zapisane razem.",
+    "correctedTitle": "Alternatywa zapisana",
+    "correctedBody": "Wybrałeś {{name}}. Zrób kolejne zdjęcie, zanim zaczniesz polegać na opiece lub bezpieczeństwie specyficznym dla gatunku.",
+    "yesAction": "Tak, pasuje",
+    "changeAction": "Przejrzyj wybory",
+    "retakeAction": "Zrób zdjęcie weryfikacyjne",
+    "sheetTitle": "Co zaobserwowałeś?",
+    "sheetBody": "Twój wybór nigdy nie wymazuje oryginalnej odpowiedzi modela.",
+    "noAlternatives": "Żaden inny wiarygodny kandydat nie został zwrócony do tego schwytania."
+  },
+  "checkIn": {
+    "kicker": "PASZPORT NATURY",
+    "title": "Dodaj zameldowanie w mieście",
+    "body": "Zapamiętaj, gdzie go znalazłeś, bez zapisywania dokładnych współrzędnych.",
+    "savedBody": "Zaobserwowano w {{habitat}}. Zapisana jest tylko lokalizacja na poziomie miasta.",
+    "addAction": "Dodaj zameldowanie",
+    "editAction": "Edytuj",
+    "communityAction": "Podziel się doświadczeniem",
+    "sheetTitle": "Nagraj to spotkanie",
+    "privacyBody": "NatureLens przechowuje miasto, kraj i siedlisko. Nie przechowuje dokładnych współrzędnych.",
+    "suggestAction": "Zaproponuj miasto na podstawie przybliżonej lokalizacji",
+    "locating": "Znajdowanie miasta…",
+    "city": "Miasto",
+    "country": "Kraj",
+    "habitat": "Siedlisko",
+    "note": "Notatka terenowa",
+    "noteHint": "Co zauważyłeś?",
+    "habitats": {
+      "home": "Dom",
+      "garden": "Ogród",
+      "trail": "Szlak",
+      "farm": "Gospodarstwo lub uprawa",
+      "water": "Woda",
+      "urban": "Obszar miejski",
+      "other": "Inne"
+    },
+    "communityDraft": "Zaobserwowałem {{name}} w {{city}}, {{country}}, w {{habitat}}. Zapisałem to spotkanie w paszporcie NatureLens."
   }
 }

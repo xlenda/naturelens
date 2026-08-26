@@ -512,7 +512,7 @@ export default function SoundDetailScreen({ route }) {
         />
 
         <ResultDepthLayer activeDepth={resultDepth} depth={RESULT_DEPTHS.VISUAL}>
-          <IdentificationExtras entity={plant} identityV1={plant.identityV1} accent={meta.accent} />
+          <IdentificationExtras entity={plant} savedId={savedEntryId || plant.savedId || null} identityV1={plant.identityV1} accent={meta.accent} />
         </ResultDepthLayer>
 
         <ResultDepthLayer activeDepth={resultDepth} depth={RESULT_DEPTHS.ESSENTIAL}>

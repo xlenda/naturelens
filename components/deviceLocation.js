@@ -199,6 +199,34 @@ export async function getApproximateLocation() {
   return { latitude, longitude, datetime: localIsoNow() };
 }
 
+// Sugere apenas cidade/regiao/pais e descarta a coordenada logo depois. No
+// navegador nao enviamos a posicao a um geocodificador publico: o preenchimento
+// fica manual para manter a promessa de privacidade. O Android/iOS usa o
+// geocodificador do proprio sistema depois do pedido contextual de permissao.
+export async function suggestCheckInPlace() {
+  if (Platform.OS !== 'android' && Platform.OS !== 'ios') return null;
+  const point = await getApproximateLocation();
+  if (!point) return null;
+  try {
+    const places = await Location.reverseGeocodeAsync({
+      latitude: point.latitude,
+      longitude: point.longitude,
+    });
+    const place = Array.isArray(places) ? places[0] : null;
+    const city = place?.city || place?.subregion || place?.district || null;
+    const country = place?.country || null;
+    if (!city || !country) return null;
+    return {
+      city: String(city),
+      region: place?.region ? String(place.region) : null,
+      country: String(country),
+      countryCode: place?.isoCountryCode ? String(place.isoCountryCode).toUpperCase() : null,
+    };
+  } catch (e) {
+    return null;
+  }
+}
+
 /**
  * "2026-07-30T17:52:58" - ISO without milliseconds and without a Z.
  *

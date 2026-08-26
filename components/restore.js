@@ -32,10 +32,10 @@ function serverError(data, fallbackKey) {
 
 
 export async function requestRestoreCode(email) {
-  const response = await fetch(`${API_BASE}/api/restore/request-code`, {
+  const response = await fetch(`${API_BASE}/api/auth`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ email }),
+    body: JSON.stringify({ action: 'request-code', email }),
   });
 
   const data = await response.json();
@@ -47,10 +47,10 @@ export async function requestRestoreCode(email) {
 export async function verifyRestoreCode(email, code) {
   const deviceId = await getDeviceId();
 
-  const response = await fetch(`${API_BASE}/api/restore/verify-code`, {
+  const response = await fetch(`${API_BASE}/api/auth`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ email, code, deviceId }),
+    body: JSON.stringify({ action: 'verify-code', email, code, deviceId }),
   });
 
   const data = await response.json();

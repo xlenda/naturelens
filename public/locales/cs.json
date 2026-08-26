@@ -3682,5 +3682,97 @@
     "thresholds": {
       "initialSymptomsHighYieldThreshold": "Pouze pro porosty s výnosovým potenciálem nejméně {{minimumYieldBagsPerHa}} pytlů/ha: na {{sampleAreaHa}} ha zkontrolujte {{samplePoints}} náhodných bodů. Zveřejněná hodnota je {{actionPercent}} % rostlin s počátečními příznaky napadení."
     }
+  },
+  "petGuardian": {
+    "kicker": "BEZPEČNOST DOMA",
+    "title": "Strážce mazlíčků",
+    "severity": {
+      "emergency": "Naléhavé riziko",
+      "warning": "Pozor",
+      "safe": "Zdokumentovaný trezor",
+      "unknown": "Nepotvrzeno"
+    },
+    "exactBody": "Tento výsledek má důkazy specifické pro domácí mazlíčky pro přesný zobrazený taxon.",
+    "generalWarningBody": "Výsledek obsahuje varování o toxicitě, ale bezpečnost psů a koček nebyla potvrzena samostatně.",
+    "unknownBody": "Pro tento přesný taxon nebyl nalezen žádný spolehlivý záznam specifický pro domácí zvířata.",
+    "animals": {
+      "dog": "Psi",
+      "cat": "Kočky"
+    },
+    "status": {
+      "toxic": "Toxický",
+      "safe": "Netoxický",
+      "unknown": "Nepotvrzeno"
+    },
+    "toxicParts": "Části zájmu",
+    "parts": {
+      "all": "Všechny části rostlin",
+      "foliage": "Listy a rostlinné pletivo"
+    },
+    "signsTitle": "Možné varovné signály",
+    "signs": {
+      "oral": "Podráždění úst",
+      "gastro": "Zvracení nebo průjem",
+      "lethargy": "Letargie",
+      "liver": "Poranění jater",
+      "bleeding": "Krvácení",
+      "cardiac": "Abnormální srdeční rytmus",
+      "kidney": "Poranění ledvin"
+    },
+    "contactAction": "Můj mazlíček se ho možná dotkl nebo ho snědl",
+    "sourceExact": "Přesný taxon zkontrolován proti {{source}}.",
+    "sourceMissing": "Bezpečnost domácích zvířat zůstává neověřená.",
+    "openSource": "Zobrazit zdroj",
+    "emergencyTitle": "Kontaktujte veterináře hned teď",
+    "emergencyBody": "Nečekejte na příznaky a nevyvolávejte zvracení. Odstraňte přístup k rostlině, uschovejte si vzorek nebo fotografii a okamžitě kontaktujte místního veterináře nebo službu pro otravu zvířat. Aplikace nenahrazuje veterinární posouzení.",
+    "profile": {
+      "title": "Zvířata v mém domě",
+      "body": "Přizpůsobte si bezpečnostní varování rostlin pro zvířata, která s vámi žijí.",
+      "both": "Psi a kočky",
+      "none": "Nebyla vybrána žádná zvířata"
+    }
+  },
+  "identityReview": {
+    "kicker": "VAŠE POTVRZENÍ",
+    "title": "Odpovídá tento výsledek?",
+    "body": "Potvrďte první výsledek nebo zkontrolujte alternativy, aniž byste ztratili původní odhad.",
+    "confirmedTitle": "Vámi potvrzený výsledek",
+    "confirmedBody": "Původní výsledek a vaše potvrzení se uloží společně.",
+    "correctedTitle": "Alternativa uložena",
+    "correctedBody": "Vybrali jste {{name}}. Než se budete spoléhat na péči nebo bezpečnost specifickou pro daný druh, pořiďte další fotografii.",
+    "yesAction": "Ano, odpovídá",
+    "changeAction": "Zkontrolujte volby",
+    "retakeAction": "Pořiďte ověřovací fotografii",
+    "sheetTitle": "co jsi pozoroval?",
+    "sheetBody": "Vaše volba nikdy nevymaže původní odpověď modelu.",
+    "noAlternatives": "Pro toto zajetí nebyl vrácen žádný jiný spolehlivý kandidát."
+  },
+  "checkIn": {
+    "kicker": "PAS PŘÍRODY",
+    "title": "Přidejte odbavení ve městě",
+    "body": "Zapamatujte si, kde jste to našli, aniž byste ukládali přesné souřadnice.",
+    "savedBody": "Pozorováno v {{habitat}}. Ukládá se pouze poloha na úrovni města.",
+    "addAction": "Přidat odbavení",
+    "editAction": "Upravit",
+    "communityAction": "Podělte se o zkušenosti",
+    "sheetTitle": "Zaznamenejte toto setkání",
+    "privacyBody": "NatureLens ukládá město, zemi a lokalitu. Neukládá přesné souřadnice.",
+    "suggestAction": "Navrhněte město z přibližné polohy",
+    "locating": "Hledání města…",
+    "city": "město",
+    "country": "země",
+    "habitat": "Habitat",
+    "note": "Terénní poznámka",
+    "noteHint": "čeho sis všiml?",
+    "habitats": {
+      "home": "Domů",
+      "garden": "Zahrada",
+      "trail": "Stezka",
+      "farm": "Farma nebo plodina",
+      "water": "Voda",
+      "urban": "Městská oblast",
+      "other": "Jiné"
+    },
+    "communityDraft": "Pozoroval jsem {{name}} v {{city}}, {{country}}, v {{habitat}}. Toto setkání jsem si uložil do pasu NatureLens."
   }
 }

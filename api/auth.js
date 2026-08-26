@@ -31,6 +31,29 @@ async function verifySupabaseAccessToken(accessToken) {
   return payload;
 }
 
+async function handleRequestRestoreCode(req, res) {
+  if (!(await checkRateLimit(req, res, {
+    scope: 'restore-request',
+    limit: 3,
+    windowSeconds: 3600,
+  }))) return;
+
+  const email = req.body?.email;
+  if (!email || typeof email !== 'string' || !email.includes('@')) {
+    res.status(400).json({ error: 'Please enter a valid email address.', reason: 'badEmail' });
+    return;
+  }
+
+  const supabase = getSupabaseAnon();
+  const { error } = await supabase.auth.signInWithOtp({ email: email.trim().toLowerCase() });
+  if (error) {
+    res.status(500).json({ error: error.message, reason: 'codeSendFailed' });
+    return;
+  }
+
+  res.status(200).json({ sent: true });
+}
+
 // Combined into one file (rather than api/auth/signup.js + api/auth/signin.js)
 // to stay within Vercel's Hobby-plan 12-serverless-function-per-deployment
 // limit - dispatches on req.body.action instead of the URL path.
@@ -141,6 +164,41 @@ async function linkDeviceToEmail(res, deviceId, normalizedEmail) {
   }
 
   res.status(200).json({ status: existing.status });
+}
+
+async function handleVerifyRestoreCode(req, res, deviceId) {
+  const email = req.body?.email;
+  const code = req.body?.code;
+  if (!email || typeof email !== 'string' || !code || typeof code !== 'string') {
+    res.status(400).json({ error: 'Missing email or code', reason: 'missingCredentials' });
+    return;
+  }
+
+  const normalizedEmail = email.trim().toLowerCase();
+  if (!(await checkRateLimit(req, res, {
+    scope: 'restore-verify',
+    limit: 10,
+    windowSeconds: 3600,
+  }))) return;
+  if (!(await checkRateLimit(req, res, {
+    scope: `restore-verify-email:${normalizedEmail}`,
+    limit: 10,
+    windowSeconds: 3600,
+    ignoreIp: true,
+  }))) return;
+
+  const supabaseAnon = getSupabaseAnon();
+  const { error: verifyError } = await supabaseAnon.auth.verifyOtp({
+    email: normalizedEmail,
+    token: code.trim(),
+    type: 'email',
+  });
+  if (verifyError) {
+    res.status(400).json({ error: 'That code is invalid or expired.', reason: 'badCode' });
+    return;
+  }
+
+  await linkDeviceToEmail(res, deviceId, normalizedEmail);
 }
 
 // Mirrors api/restore/verify-code.js's device-linking logic exactly, just
@@ -402,8 +460,18 @@ async function handleSignOut(req, res, deviceId) {
 module.exports = async (req, res) => {
   if (!requireMethod(req, res, 'POST')) return;
 
+  if (req.body?.action === 'request-code') {
+    await handleRequestRestoreCode(req, res);
+    return;
+  }
+
   const deviceId = requireDeviceId(req, res);
   if (!deviceId) return;
+
+  if (req.body?.action === 'verify-code') {
+    await handleVerifyRestoreCode(req, res, deviceId);
+    return;
+  }
 
   if (req.body?.action === 'signup') {
     await handleSignup(req, res, deviceId);

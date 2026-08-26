@@ -61,7 +61,7 @@ export default function PrivacyScreen() {
         {/* Location leaves the device and goes to a third party. That has to be
             stated, in its own section, not buried in a sentence about photos. */}
         <Section title={t('privacy.locationTitle')}>
-          {t('privacy.locationBody')}
+          {`${t('privacy.locationBody')}\n\n${t('checkIn.privacyBody')}`}
         </Section>
 
         <Section title={t('privacy.localStorageTitle')}>

@@ -3682,5 +3682,97 @@
     "thresholds": {
       "initialSymptomsHighYieldThreshold": "수량 잠재력이 최소 {{minimumYieldBagsPerHa}}포대/ha인 포장에만 적용: {{sampleAreaHa}}ha에서 임의의 {{samplePoints}}개 지점을 조사하세요. 공개 기준은 초기 가해 증상이 있는 식물 {{actionPercent}}%입니다."
     }
+  },
+  "petGuardian": {
+    "kicker": "가정의 안전",
+    "title": "애완동물 보호자",
+    "severity": {
+      "emergency": "긴급한 위험",
+      "warning": "주의",
+      "safe": "문서화된 금고",
+      "unknown": "확인되지 않음"
+    },
+    "exactBody": "이 결과에는 표시된 정확한 분류군에 대한 애완동물 관련 증거가 있습니다.",
+    "generalWarningBody": "결과에는 독성 경고가 포함되어 있으나 개와 고양이에 대한 안전성은 별도로 확인되지 않았습니다.",
+    "unknownBody": "이 정확한 분류군에 대해 신뢰할 수 있는 애완동물 관련 기록을 찾을 수 없습니다.",
+    "animals": {
+      "dog": "개",
+      "cat": "고양이"
+    },
+    "status": {
+      "toxic": "독성",
+      "safe": "무독성",
+      "unknown": "확인되지 않음"
+    },
+    "toxicParts": "우려되는 부분",
+    "parts": {
+      "all": "모든 식물 부품",
+      "foliage": "잎과 식물 조직"
+    },
+    "signsTitle": "가능한 경고 신호",
+    "signs": {
+      "oral": "구강 자극",
+      "gastro": "구토 또는 설사",
+      "lethargy": "무기력",
+      "liver": "간 손상",
+      "bleeding": "출혈",
+      "cardiac": "비정상적인 심장 박동",
+      "kidney": "신장 손상"
+    },
+    "contactAction": "내 애완동물이 그것을 만졌거나 먹었을 수도 있습니다.",
+    "sourceExact": "{{source}}에 대해 정확한 분류가 확인되었습니다.",
+    "sourceMissing": "애완동물의 안전성은 아직 검증되지 않은 상태입니다.",
+    "openSource": "소스 보기",
+    "emergencyTitle": "지금 수의사에게 연락하세요",
+    "emergencyBody": "증상이 나타날 때까지 기다리지 말고 구토를 유도하지 마십시오. 식물에 대한 접근을 차단하고 샘플이나 사진을 보관한 후 즉시 지역 수의사 또는 동물 독극물 관리 서비스에 연락하십시오. 이 앱은 수의학 평가를 대체하지 않습니다.",
+    "profile": {
+      "title": "내 집에 있는 동물들",
+      "body": "당신과 함께 사는 동물에 대한 식물 안전 경고를 개인화하십시오.",
+      "both": "개와 고양이",
+      "none": "선택한 동물이 없습니다."
+    }
+  },
+  "identityReview": {
+    "kicker": "귀하의 확인",
+    "title": "이 결과가 일치합니까?",
+    "body": "첫 번째 결과를 확인하거나 원래 추측을 잃지 않고 대안을 검토하세요.",
+    "confirmedTitle": "귀하가 확인한 결과",
+    "confirmedBody": "원본 결과와 확인 내용이 함께 저장됩니다.",
+    "correctedTitle": "대안이 저장되었습니다",
+    "correctedBody": "{{name}}을(를) 선택했습니다. 종별 관리나 안전에 의존하기 전에 사진을 한 번 더 찍어보세요.",
+    "yesAction": "네, 일치해요",
+    "changeAction": "선택사항 검토",
+    "retakeAction": "인증 사진을 찍으세요",
+    "sheetTitle": "무엇을 관찰했나요?",
+    "sheetBody": "귀하의 선택은 모델의 원래 답변을 결코 지우지 않습니다.",
+    "noAlternatives": "이 캡처에 대해 다른 신뢰할 수 있는 후보는 반환되지 않았습니다."
+  },
+  "checkIn": {
+    "kicker": "네이처 패스포트",
+    "title": "도시 체크인 추가",
+    "body": "정확한 좌표를 저장하지 않고 어디서 찾았는지 기억해 보세요.",
+    "savedBody": "{{habitat}}에서 관찰되었습니다. 도시 수준 위치만 저장됩니다.",
+    "addAction": "체크인 추가",
+    "editAction": "편집",
+    "communityAction": "경험 공유",
+    "sheetTitle": "이 만남을 기록해 보세요",
+    "privacyBody": "NatureLens는 도시, 국가 및 서식지를 저장합니다. 정확한 좌표를 저장하지 않습니다.",
+    "suggestAction": "대략적인 위치에서 도시 제안",
+    "locating": "도시를 찾는 중…",
+    "city": "도시",
+    "country": "국가",
+    "habitat": "서식지",
+    "note": "필드노트",
+    "noteHint": "무엇을 알아차렸나요?",
+    "habitats": {
+      "home": "홈",
+      "garden": "정원",
+      "trail": "트레일",
+      "farm": "농장 또는 작물",
+      "water": "물",
+      "urban": "도시 지역",
+      "other": "기타"
+    },
+    "communityDraft": "{{name}}을(를) {{city}}, {{country}}의 {{habitat}}에서 관찰했습니다. 이 만남을 NatureLens 여권에 저장했습니다."
   }
 }

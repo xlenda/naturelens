@@ -222,12 +222,12 @@ test('a translation never outlives the text it was made from', () => {
 });
 
 test('the Hotmart-unlock flow explains what actually failed', () => {
-  // verify-code.js and request-code.js sent no reason at all, so a wrong code,
+  // The restore actions sent no reason at all, so a wrong code,
   // an unknown email and a failed device link all rendered as the same
   // "Something went wrong. Please try again." - in the flow someone uses
   // precisely because something already went wrong with their purchase.
-  const verify = read('api/restore/verify-code.js');
-  const request = read('api/restore/request-code.js');
+  const verify = read('api/auth.js');
+  const request = verify;
   assert.match(verify, /reason: 'badCode'/);
   assert.match(verify, /reason: 'noSubscription'/);
   assert.match(verify, /reason: 'linkFailed'/);

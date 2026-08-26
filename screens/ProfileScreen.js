@@ -396,6 +396,25 @@ export default function ProfileScreen() {
         </View>
         )}
 
+        <PressScale>
+          <TouchableOpacity
+            style={[styles.recapRow, styles.passportRow]}
+            activeOpacity={0.85}
+            onPress={() => navigation.navigate('NaturePassport')}
+            accessibilityRole="button"
+            accessibilityLabel={t('checkIn.kicker')}
+          >
+            <View style={styles.passportIcon}>
+              <Ionicons name="earth" size={20} color={colors.accentLight} />
+            </View>
+            <View style={{ flex: 1 }}>
+              <Text style={styles.recapTitle}>{t('checkIn.kicker')}</Text>
+              <Text style={styles.recapSub}>{t('checkIn.body')}</Text>
+            </View>
+            <Ionicons name="chevron-forward" size={17} color={colors.textMuted} />
+          </TouchableOpacity>
+        </PressScale>
+
         <View style={[styles.recapRow, styles.communityRow]}>
           <View style={styles.communityIcon}>
             <Ionicons name="podium" size={20} color={colors.warning} />
@@ -897,6 +916,8 @@ const styles = StyleSheet.create({
     borderColor: colors.warning + '66',
     backgroundColor: colors.warning + '12',
   },
+  passportRow: { borderColor: colors.accent + '55', backgroundColor: colors.accent + '0D' },
+  passportIcon: { width: 38, height: 38, borderRadius: 14, borderWidth: 1, borderStyle: 'dashed', borderColor: colors.accentLight, alignItems: 'center', justifyContent: 'center', transform: [{ rotate: '-4deg' }] },
   communityIcon: {
     width: 38,
     height: 38,

@@ -1,5 +1,29 @@
 const { getSupabaseAdmin, requireDeviceId } = require('./_lib/supabaseAdmin');
 const { sendPush } = require('./_lib/webpush');
+const { checkRateLimit } = require('./_lib/rateLimit');
+
+const PUSH_HOSTS = [
+  'fcm.googleapis.com',
+  'push.services.mozilla.com',
+  'web.push.apple.com',
+  'notify.windows.com',
+];
+
+function validPushEndpoint(value) {
+  if (typeof value !== 'string' || value.length > 2048) return false;
+  try {
+    const url = new URL(value);
+    if (url.protocol !== 'https:' || url.username || url.password || url.port) return false;
+    const host = url.hostname.toLowerCase();
+    return PUSH_HOSTS.some((suffix) => host === suffix || host.endsWith(`.${suffix}`));
+  } catch {
+    return false;
+  }
+}
+
+function validSubscriptionKey(value, max) {
+  return typeof value === 'string' && value.length >= 16 && value.length <= max && /^[A-Za-z0-9_-]+$/.test(value);
+}
 
 // Web Push subscription registry.
 //
@@ -109,6 +133,12 @@ module.exports = async (req, res) => {
   const deviceId = requireDeviceId(req, res);
   if (!deviceId) return;
 
+  if (!(await checkRateLimit(req, res, {
+    scope: 'push-registry',
+    limit: 20,
+    windowSeconds: 3600,
+  }))) return;
+
   const action = req.body?.action;
   const admin = getSupabaseAdmin();
 
@@ -117,7 +147,11 @@ module.exports = async (req, res) => {
       const sub = req.body?.subscription;
       // A subscription without its keys cannot be encrypted to - storing it
       // would just make the sender fail later, on a row that looks valid.
-      if (!sub?.endpoint || !sub?.keys?.p256dh || !sub?.keys?.auth) {
+      if (
+        !validPushEndpoint(sub?.endpoint) ||
+        !validSubscriptionKey(sub?.keys?.p256dh, 512) ||
+        !validSubscriptionKey(sub?.keys?.auth, 256)
+      ) {
         res.status(400).json({ error: 'Invalid subscription' });
         return;
       }
@@ -155,11 +189,13 @@ module.exports = async (req, res) => {
 
     if (action === 'unsubscribe') {
       const endpoint = req.body?.endpoint;
-      if (!endpoint) {
+      if (!validPushEndpoint(endpoint)) {
         res.status(400).json({ error: 'Missing endpoint' });
         return;
       }
-      await admin.from('push_subscriptions').delete().eq('endpoint', endpoint);
+      await admin.from('push_subscriptions').delete()
+        .eq('endpoint', endpoint)
+        .eq('device_id', deviceId);
       res.status(200).json({ unsubscribed: true });
       return;
     }

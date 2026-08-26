@@ -43,6 +43,7 @@ import TermsScreen from './screens/TermsScreen';
 import HelpScreen from './screens/HelpScreen';
 import RestoreAccessScreen from './screens/RestoreAccessScreen';
 import SettingsScreen from './screens/SettingsScreen';
+import NaturePassportScreen from './screens/NaturePassportScreen';
 import LanguageScreen from './screens/LanguageScreen';
 import CareTopicsScreen from './screens/CareTopicsScreen';
 import AboutScreen from './screens/AboutScreen';
@@ -195,6 +196,7 @@ function ProfileStackNav() {
       <ProfileStack.Screen name="Help" component={HelpScreen} />
       <ProfileStack.Screen name="RestoreAccess" component={RestoreAccessScreen} />
       <ProfileStack.Screen name="Settings" component={SettingsScreen} />
+      <ProfileStack.Screen name="NaturePassport" component={NaturePassportScreen} />
       <ProfileStack.Screen name="Language" component={LanguageScreen} />
       <ProfileStack.Screen name="About" component={AboutScreen} />
     </ProfileStack.Navigator>
