@@ -8,10 +8,15 @@ create table if not exists public.community_profiles (
   nickname text not null check (char_length(nickname) between 3 and 30),
   bio text check (bio is null or char_length(bio) <= 180),
   locale text,
+  terms_version integer,
+  terms_accepted_at timestamptz,
   status text not null default 'active' check (status in ('active','suspended','deleted')),
   created_at timestamptz not null default now(),
   updated_at timestamptz not null default now()
 );
+
+alter table public.community_profiles add column if not exists terms_version integer;
+alter table public.community_profiles add column if not exists terms_accepted_at timestamptz;
 
 create table if not exists public.community_posts (
   id uuid primary key default gen_random_uuid(),
@@ -51,9 +56,16 @@ create table if not exists public.community_reports (
   target_type text not null check (target_type in ('post','comment','profile')),
   target_id text not null,
   reason text not null check (reason in ('unsafe','spam','harassment','false_information','other')),
+  status text not null default 'pending' check (status in ('pending','resolved','dismissed')),
+  reviewed_at timestamptz,
+  moderator_note text check (moderator_note is null or char_length(moderator_note) <= 500),
   created_at timestamptz not null default now(),
   unique (reporter_device_id, target_type, target_id)
 );
+
+alter table public.community_reports add column if not exists status text not null default 'pending';
+alter table public.community_reports add column if not exists reviewed_at timestamptz;
+alter table public.community_reports add column if not exists moderator_note text;
 
 create table if not exists public.community_blocks (
   blocker_device_id text not null references public.community_profiles(device_id) on delete cascade,

@@ -1,6 +1,8 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import * as Crypto from 'expo-crypto';
 import { getWateringStatus } from './watering';
+import { deletePersistentCollectionPhoto } from './persistentCollectionPhoto';
+const { normaliseCollectionEntry } = require('./collectionEntrySchema');
 
 export const COLLECTION_KEY = '@plantid_collection';
 const PROFILE_PHOTO_KEY = '@naturelens_profile_photo';
@@ -75,23 +77,24 @@ function repairCollectionEntries(list) {
   const entries = [];
 
   for (const entry of list) {
-    if (!isCollectionObject(entry)) {
+    const normalised = normaliseCollectionEntry(entry);
+    if (!normalised) {
       changed = true;
       continue;
     }
 
-    const savedId = typeof entry.savedId === 'string' ? entry.savedId.trim() : '';
+    const savedId = typeof normalised.savedId === 'string' ? normalised.savedId.trim() : '';
     if (savedId && !seen.has(savedId)) {
       seen.add(savedId);
-      entries.push(savedId === entry.savedId ? entry : { ...entry, savedId });
-      changed = changed || savedId !== entry.savedId;
+      entries.push(savedId === normalised.savedId ? normalised : { ...normalised, savedId });
+      changed = changed || savedId !== entry.savedId || JSON.stringify(normalised) !== JSON.stringify(entry);
       continue;
     }
 
     const replacement = uniqueSavedIdFromSet(reserved);
     reserved.add(replacement);
     seen.add(replacement);
-    entries.push({ ...entry, savedId: replacement });
+    entries.push({ ...normalised, savedId: replacement });
     changed = true;
   }
 
@@ -188,6 +191,7 @@ export function removeFromCollection(savedId) {
       const next = list.slice();
       next.splice(index, 1);
       await AsyncStorage.setItem(COLLECTION_KEY, JSON.stringify(next));
+      await deletePersistentCollectionPhoto(list[index]?.photoUri);
       // Remember the deletion so cloud sync can carry it to the user's other
       // devices. Without a tombstone the next sync would pull this find straight
       // back from another device and the app would look like it refuses
@@ -316,11 +320,13 @@ export async function clearProfilePhoto() {
 
 // Used by account deletion to wipe all locally saved personal data (the
 // collection itself, never just the server-side subscription link).
-export function clearCollection() {
+export function clearCollection({ skipReminderCleanup = false } = {}) {
   return queueCollectionWrite(async () => {
     try {
-      if (!await cancelAllLocalReminders()) return false;
+      if (!skipReminderCleanup && !await cancelAllLocalReminders()) return false;
+      const collection = await getCollection();
       await AsyncStorage.removeItem(COLLECTION_KEY);
+      await Promise.all(collection.map((entry) => deletePersistentCollectionPhoto(entry?.photoUri)));
       try {
         const { clearAgronomyData } = require('./agronomyStorage');
         await clearAgronomyData();

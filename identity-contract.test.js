@@ -43,7 +43,7 @@ function loadIdentifyHarness() {
     './_lib/supabaseAdmin': { requireDeviceId: () => 'test-device' },
     './_lib/entitlement': {
       checkEntitlement: async () => ({ allowed: true, subscribed: true }),
-      recordUsage: async () => {},
+      releaseUsage: async () => {},
     },
     './_lib/rateLimit': { checkRateLimit: async () => true },
     './_lib/translateEntity': { translateEntity: async (entity) => entity },

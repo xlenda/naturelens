@@ -2,16 +2,16 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Platform } from 'react-native';
 import * as StoreReview from 'expo-store-review';
 
-const KEY = '@naturelens_store_review_v1';
-const REQUIRED_POSITIVE_SIGNALS = 2;
+const KEY = '@naturelens_store_review_v2';
+const REQUIRED_COMPLETED_DISCOVERIES = 3;
 
 let queue = Promise.resolve();
 
 function safeState(value) {
   return {
-    version: 1,
-    positiveSignals: Number.isInteger(value?.positiveSignals)
-      ? Math.max(0, value.positiveSignals)
+    version: 2,
+    completedDiscoveries: Number.isInteger(value?.completedDiscoveries)
+      ? Math.max(0, value.completedDiscoveries)
       : 0,
     requestedAt: typeof value?.requestedAt === 'string' ? value.requestedAt : null,
   };
@@ -35,15 +35,15 @@ async function writeState(value) {
   }
 }
 
-async function recordSignal() {
+async function recordCompletedDiscovery() {
   const current = await readState();
   if (current.requestedAt) return false;
 
   const next = {
     ...current,
-    positiveSignals: current.positiveSignals + 1,
+    completedDiscoveries: current.completedDiscoveries + 1,
   };
-  if (next.positiveSignals < REQUIRED_POSITIVE_SIGNALS) {
+  if (next.completedDiscoveries < REQUIRED_COMPLETED_DISCOVERIES) {
     await writeState(next);
     return false;
   }
@@ -59,8 +59,8 @@ async function recordSignal() {
       await writeState(next);
       return false;
     }
-    // Marca antes de abrir: o sistema pode decidir nao exibir a caixa e nao
-    // existe retorno confiavel. Repetir a cada toque seria assedio, nao retencao.
+    // O sistema decide se/quando mostra o cartao. Nao fazemos triagem da pessoa
+    // e marcamos antes para nunca insistir a cada descoberta.
     const requested = { ...next, requestedAt: new Date().toISOString() };
     if (!(await writeState(requested))) return false;
     await StoreReview.requestReview();
@@ -70,8 +70,8 @@ async function recordSignal() {
   }
 }
 
-export function recordPositiveReviewSignal() {
-  const task = queue.then(recordSignal);
+export function recordReviewEligibleMoment() {
+  const task = queue.then(recordCompletedDiscovery);
   queue = task.catch(() => false);
   return task;
 }

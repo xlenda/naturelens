@@ -6,7 +6,6 @@ import { colors } from './theme';
 import { trackResultFeedback } from './tracking';
 import PressScale from './PressScale';
 import { sensoryFeedback } from './sensoryFeedback';
-import { recordPositiveReviewSignal } from './storeReview';
 
 // "Was this helpful? Yes/No" - the competitor asks it at the end of every
 // content surface; it is the denominator of wrong identifications the app
@@ -21,7 +20,6 @@ export default function HelpfulRow({ category, context }) {
     sensoryFeedback.selection();
     setAnswered(true);
     trackResultFeedback({ category, context, useful });
-    if (useful) recordPositiveReviewSignal().catch(() => undefined);
   };
 
   if (answered) {

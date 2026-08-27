@@ -434,7 +434,7 @@ test('fish keeps evidence, ecology and the complete taxonomy without plant care'
   assert.match(screen, /const groupGuideLookupKey = `\$\{i18n\.language\}\|\$\{guideGroupKey \|\| ''\}`/,
     'fish group enrichment must be isolated by language and group');
 
-  const sync = read('api/collection.js');
+  const sync = read('components/collectionSyncSchema.js');
   for (const field of ["'family'", "'ord'", "'commonNames'", "'synonyms'"]) {
     assert.match(sync, new RegExp(field), `fish field ${field} must survive cloud sync`);
   }

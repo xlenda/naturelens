@@ -3,6 +3,7 @@ import { getCollection, replaceCollection } from './storage';
 import { getDeviceId } from './deviceId';
 import { API_BASE } from './apiBase';
 const { mergeCollections } = require('./collectionMerge');
+const { projectCollectionForSync } = require('./collectionSyncSchema');
 
 // Keeps the collection in step across a subscriber's devices.
 //
@@ -105,10 +106,14 @@ export async function syncCollection({ force = false } = {}) {
       getDeviceId(),
     ]);
 
+    // A fronteira de privacidade precisa existir ANTES da rede. O servidor
+    // repete a allowlist porque clientes adulterados existem, mas ele nao pode
+    // apagar uma foto que ja atravessou a infraestrutura.
+    const syncEntries = projectCollectionForSync(local);
     const response = await fetch(`${API_BASE}/api/collection`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ deviceId, entries: local, deletedIds: pendingDeletes }),
+      body: JSON.stringify({ deviceId, entries: syncEntries, deletedIds: pendingDeletes }),
     });
 
     if (!response.ok) return { synced: false, added: 0, updated: 0, removed: 0, changed: false };

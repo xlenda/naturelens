@@ -1,6 +1,7 @@
 import { CATEGORIES } from './categories';
 import { saveToCollection } from './storage';
 import { trackResultSaved } from './tracking';
+import { recordReviewEligibleMoment } from './storeReview';
 
 // A identificacao paga ja terminou aqui. Persistir antes de abrir a ficha evita
 // perder o achado se a pessoa fechar a tela, apertar Voltar ou o sistema matar o
@@ -18,6 +19,7 @@ export async function saveIdentificationAutomatically(entity, category) {
   // transformar um sucesso local em falso erro para a pessoa.
   try {
     trackResultSaved({ category: safeCategory });
+    recordReviewEligibleMoment().catch(() => undefined);
   } catch (e) {
     // sem telemetria, o exemplar continua salvo
   }

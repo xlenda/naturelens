@@ -278,12 +278,16 @@ export default function SoundScreen() {
         identityKey: candidateIdentityKey(entity),
       });
       const savedEntry = await saveIdentificationAutomatically(entity, 'sound');
+      if (!savedEntry) {
+        showAlert(t('common.saveErrorTitle'), t('common.saveErrorBody'));
+        return;
+      }
 
       // Only the compact visual evidence crosses the route boundary. The PCM
       // base64 was needed by the classifier, but it must never reach navigation
       // state, the detail entity or collection storage.
       navigation.navigate('SoundDetail', {
-        plant: savedEntry || entity,
+        plant: savedEntry,
         fromIdentify: true,
         waveform: clip.waveform,
         durationSeconds: clip.durationSeconds,

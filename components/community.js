@@ -24,6 +24,7 @@ async function request(action, payload = {}) {
 }
 
 export function loadCommunity() { return request('read'); }
+export function acceptCommunityTerms() { return request('accept_terms', { termsVersion: 1 }); }
 export function saveCommunityProfile(profile) { return request('profile', profile); }
 export function createCommunityPost(post) { return request('post', post); }
 export function createCommunityComment(postId, body) { return request('comment', { postId, body }); }

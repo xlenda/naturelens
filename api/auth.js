@@ -47,7 +47,8 @@ async function handleRequestRestoreCode(req, res) {
   const supabase = getSupabaseAnon();
   const { error } = await supabase.auth.signInWithOtp({ email: email.trim().toLowerCase() });
   if (error) {
-    res.status(500).json({ error: error.message, reason: 'codeSendFailed' });
+    console.error('handleRequestRestoreCode: send failed', error.message);
+    res.status(503).json({ error: 'Could not send the access code.', reason: 'codeSendFailed' });
     return;
   }
 

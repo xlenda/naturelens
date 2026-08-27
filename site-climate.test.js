@@ -37,3 +37,10 @@ test('climate cache is server-only and the UI states the agronomic boundary', ()
     assert.ok(typeof body === 'string' && body.length > 30, locale);
   }
 });
+
+test('site climate cannot renew its primary limit by rotating device UUIDs', () => {
+  assert.match(source, /scope: 'site-climate',[\s\S]{0,100}limit: 60/);
+  assert.match(source, /scope: `site-climate-device:\$\{deviceId\}`/);
+  const primary = source.slice(source.indexOf("scope: 'site-climate'"), source.indexOf('}))) return;', source.indexOf("scope: 'site-climate'")));
+  assert.doesNotMatch(primary, /ignoreIp:\s*true/);
+});

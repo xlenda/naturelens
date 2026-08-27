@@ -2,6 +2,7 @@ import { Platform } from 'react-native';
 import { COLLECTION_KEY, getCollection } from './storage';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 const { mergeCollections } = require('./collectionMerge');
+const { normaliseCollectionEntry } = require('./collectionEntrySchema');
 
 // Export and restore the collection.
 //
@@ -18,6 +19,19 @@ const { mergeCollections } = require('./collectionMerge');
 
 const FORMAT = 'naturelens-collection';
 const FORMAT_VERSION = 1;
+const MAX_BACKUP_BYTES = 64 * 1024 * 1024;
+const MAX_BACKUP_ITEMS = 500;
+
+function backupByteLength(value) {
+  if (typeof TextEncoder !== 'undefined') return new TextEncoder().encode(value).length;
+  return value.length * 2;
+}
+
+function invalidBackup(code = 'invalid_file') {
+  const err = new Error('invalid backup');
+  err.code = code;
+  return err;
+}
 
 function timestampForFilename() {
   const d = new Date();
@@ -81,6 +95,9 @@ export async function exportCollection() {
  * @returns { added, skipped, total } or throws with .code
  */
 export async function importCollection(fileText) {
+  if (typeof fileText !== 'string' || backupByteLength(fileText) > MAX_BACKUP_BYTES) {
+    throw invalidBackup('file_too_large');
+  }
   let parsed;
   try {
     parsed = JSON.parse(fileText);
@@ -104,10 +121,14 @@ export async function importCollection(fileText) {
     throw err;
   }
 
+  if (parsed.items.length > MAX_BACKUP_ITEMS) throw invalidBackup('too_many_items');
+  const importedItems = parsed.items.map((item) => normaliseCollectionEntry(item, { strict: true }));
+  if (importedItems.some((item) => !item)) throw invalidBackup('invalid_item');
+
   const current = await getCollection();
   // O mesmo savedId pode estar mais novo no arquivo (apelido, comodo ou rega).
   // O merge por updatedAt restaura essa edicao e preserva a foto do aparelho.
-  const merge = mergeCollections(current, parsed.items, new Set());
+  const merge = mergeCollections(current, importedItems, new Set());
   const applied = merge.added + merge.updated;
 
   if (applied === 0) {
@@ -152,6 +173,10 @@ export function pickAndImport() {
         resolve(null);
         return;
       }
+      if (file.size > MAX_BACKUP_BYTES) {
+        reject(invalidBackup('file_too_large'));
+        return;
+      }
       const reader = new FileReader();
       reader.onload = () => {
         importCollection(String(reader.result)).then(resolve).catch(reject);
@@ -170,3 +195,5 @@ export function pickAndImport() {
     input.click();
   });
 }
+
+export { MAX_BACKUP_BYTES, MAX_BACKUP_ITEMS };

@@ -21,7 +21,7 @@ function loadExpoModule(relative, stubs = {}) {
 
 test('onboarding faz somente tres perguntas que mudam a experiencia', () => {
   const source = read('screens/OnboardingScreen.js');
-  assert.match(source, /const STEPS = \['intro', 'promise', 'goal', 'context', 'depth', 'ready', 'review'\]/);
+  assert.match(source, /const STEPS = \['intro', 'promise', 'goal', 'context', 'depth', 'ready'\]/);
   assert.deepEqual(
     [...source.matchAll(/^  ([a-z]+): \[$/gm)].map((match) => match[1]),
     ['goal', 'context', 'depth']
@@ -33,6 +33,8 @@ test('onboarding faz somente tres perguntas que mudam a experiencia', () => {
 
 test('onboarding abre com o video do mascote antes das perguntas', () => {
   const source = read('screens/OnboardingScreen.js');
+  const webVideo = read('components/IntroMascotVideo.js');
+  const nativeVideo = read('components/IntroMascotVideo.native.js');
   const videoPath = path.join(__dirname, 'assets/art/naturelens-mascot-intro-fast.mp4');
   const posterPath = path.join(__dirname, 'assets/art/naturelens-mascot-intro-poster.jpg');
   const videoBytes = fs.readFileSync(videoPath);
@@ -46,24 +48,22 @@ test('onboarding abre com o video do mascote antes das perguntas', () => {
     videoBytes.indexOf(Buffer.from('moov')) < videoBytes.indexOf(Buffer.from('mdat')),
     'fast-start precisa publicar o indice antes dos quadros'
   );
-  assert.match(source, /const INTRO_POSTER = require\('\.\.\/assets\/art\/naturelens-mascot-intro-poster\.jpg'\)/);
-  assert.match(source, /const INTRO_VIDEO = require\('\.\.\/assets\/art\/naturelens-mascot-intro-fast\.mp4'\)/);
-  assert.match(source, /const assetUri = \(asset\) => \(typeof asset === 'string' \? asset : asset\?\.uri \|\| null\)/);
-  assert.match(source, /function IntroVideo/);
-  assert.match(source, /const \[muted, setMuted\] = useState\(true\)/);
-  assert.match(source, /const allowMotion = !reduceMotion && !savesData/);
-  assert.match(source, /Platform\.OS === 'web' && allowMotion && introVideoUri/);
-  assert.match(source, /onPlaying: \(\) => \{/);
-  assert.match(source, /preload: 'auto'/);
-  assert.match(source, /<Image source=\{INTRO_POSTER\}/);
+  assert.match(source, /import IntroMascotVideo from '\.\.\/components\/IntroMascotVideo'/);
+  assert.match(webVideo, /const POSTER = require\('\.\.\/assets\/art\/naturelens-mascot-intro-poster\.jpg'\)/);
+  assert.match(webVideo, /const VIDEO = require\('\.\.\/assets\/art\/naturelens-mascot-intro-fast\.mp4'\)/);
+  assert.match(webVideo, /const \[muted, setMuted\] = useState\(true\)/);
+  assert.match(webVideo, /const allowMotion = !reduceMotion && !savesData/);
+  assert.match(webVideo, /onPlaying: \(\) => \{/);
+  assert.match(webVideo, /preload: 'auto'/);
+  assert.match(webVideo, /<Image source=\{POSTER\}/);
   assert.match(source, /const isIntro = current === 'intro'/);
-  assert.match(source, /current === 'intro' && <IntroVideo/);
+  assert.match(source, /current === 'intro' && <IntroMascotVideo/);
   assert.match(source, /current === 'promise' && <PromiseDemo/);
-  assert.match(source, /React\.createElement\('video'/);
-  assert.match(source, /Platform\.OS === 'web'/);
+  assert.match(webVideo, /React\.createElement\('video'/);
+  assert.match(nativeVideo, /useVideoPlayer/);
+  assert.match(nativeVideo, /<VideoView/);
   assert.match(source, /styles\.introFooter/);
-  assert.doesNotMatch(source, /resolveAssetSource/);
-  assert.match(source, /const canContinue = isReview \? true : \(!isQuestion \|\| Boolean\(answers\[current\]\)\)/);
+  assert.match(source, /const canContinue = !isQuestion \|\| Boolean\(answers\[current\]\)/);
   assert.match(source, /<Image source=\{SCENES\.promise\} style=\{styles\.demoImage\}/);
 
   const vercel = JSON.parse(read('vercel.json'));
@@ -77,25 +77,11 @@ test('onboarding abre com o video do mascote antes das perguntas', () => {
   );
 });
 
-test('onboarding pede avaliacao como ultimo convite antes de entrar no app', () => {
+test('onboarding nao condiciona entrada a avaliacao nem pede estrelas antes do uso', () => {
   const source = read('screens/OnboardingScreen.js');
-  const pt = JSON.parse(read('public/locales/pt.json'));
-  const en = JSON.parse(read('public/locales/en.json'));
-
-  assert.match(source, /function ReviewPrelude/);
-  assert.match(source, /recordPositiveReviewSignal\(\)\.catch/);
-  assert.match(source, /current === 'review'/);
-  assert.match(source, /const canContinue = isReview \? true/);
-  assert.match(source, /setReviewAnswer\('later'\)/);
-  assert.match(source, /if \(step === STEPS\.length - 1\) \{\s*finish\(\)\.catch/);
-  assert.match(source, /onboarding\.review\.yes/);
-  assert.match(source, /onboarding\.review\.later/);
-  assert.doesNotMatch(source, /StoreReview\.requestReview/);
-  assert.match(pt.onboarding.review.yes, /5 estrelas/);
-  assert.match(pt.onboarding.review.later, /testar/);
-  assert.doesNotMatch(JSON.stringify(pt.onboarding.review), /j\?|r\?|experi\?|evid\?|\?til|Pr\?via/);
-  assert.match(pt.onboarding.ready.promise, /celular pedir[aá] permiss/);
-  assert.match(en.onboarding.review.yes, /five-star/);
+  assert.doesNotMatch(source, /ReviewPrelude|recordPositiveReviewSignal|current === 'review'/);
+  assert.doesNotMatch(source, /5 estrelas|five-star|requestReview/i);
+  assert.match(source, /if \(isLast\) \{\s*await finish\(\)/);
 });
 
 test('preferencias de descoberta persistem somente valores validos', async () => {

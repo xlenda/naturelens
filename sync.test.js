@@ -34,6 +34,10 @@ function loadStorage(initial, extraRequires = {}, storageOptions = {}) {
     if (name === '@react-native-async-storage/async-storage') return asyncStorage;
     if (name === 'expo-crypto') return { randomUUID: require('node:crypto').randomUUID };
     if (name === './localReminders') return { isNativeReminderAvailable: () => false };
+    if (name === './collectionEntrySchema') return require('./components/collectionEntrySchema');
+    if (name === './persistentCollectionPhoto') {
+      return { deletePersistentCollectionPhoto: async () => true };
+    }
     if (name === './watering') {
       return {
         getWateringStatus: (entry) => (
@@ -46,6 +50,30 @@ function loadStorage(initial, extraRequires = {}, storageOptions = {}) {
   };
   new Function('module', 'exports', 'require', code)(mod, mod.exports, fakeRequire);
   return { storage: mod.exports, read: () => (value ? JSON.parse(value) : []), writes: () => writes };
+}
+
+function loadCollectionBackup(initial = []) {
+  const babel = require('@babel/core');
+  let stored = JSON.stringify(initial);
+  const asyncStorage = {
+    setItem: async (_key, value) => { stored = value; },
+  };
+  const { code } = babel.transformFileSync(path.join(__dirname, 'components', 'collectionBackup.js'), {
+    presets: ['babel-preset-expo'],
+  });
+  const mod = { exports: {} };
+  const fakeRequire = (name) => {
+    if (name === 'react-native') return { Platform: { OS: 'web' } };
+    if (name === '@react-native-async-storage/async-storage') return asyncStorage;
+    if (name === './storage') {
+      return { COLLECTION_KEY: '@plantid_collection', getCollection: async () => JSON.parse(stored) };
+    }
+    if (name === './collectionMerge') return require('./components/collectionMerge');
+    if (name === './collectionEntrySchema') return require('./components/collectionEntrySchema');
+    return require(name);
+  };
+  new Function('module', 'exports', 'require', code)(mod, mod.exports, fakeRequire);
+  return { backup: mod.exports, read: () => JSON.parse(stored) };
 }
 
 function loadCollectionSync({ local = [], pending = [], replaceResult = [], responseData, beforeResponse }) {
@@ -90,6 +118,7 @@ function loadCollectionSync({ local = [], pending = [], replaceResult = [], resp
     if (name === './deviceId') return { getDeviceId: async () => 'device-test' };
     if (name === './apiBase') return { API_BASE: 'https://example.test' };
     if (name === './collectionMerge') return require('./components/collectionMerge');
+    if (name === './collectionSyncSchema') return require('./components/collectionSyncSchema');
     return require(name);
   };
   new Function('module', 'exports', 'require', 'fetch', code)(mod, mod.exports, fakeRequire, fakeFetch);
@@ -111,6 +140,7 @@ function loadCollectionApi(admin) {
     if (name === './_lib/rateLimit') return { checkRateLimit: async () => true };
     if (name === '../components/collectionMerge') return require('./components/collectionMerge');
     if (name === '../components/taxonIdentity') return require('./components/taxonIdentity');
+    if (name === '../components/collectionSyncSchema') return require('./components/collectionSyncSchema');
     return require(name);
   };
   new Function('module', 'exports', 'require', source)(mod, mod.exports, fakeRequire);
@@ -279,10 +309,31 @@ test("the user's own photo is never uploaded", () => {
   // server, not the client, decides what is kept - so a modified or buggy client
   // cannot upload what the policy says is never uploaded.
   const api = read('api/collection.js');
-  const start = api.indexOf('const SYNCED_FIELDS');
-  const fields = api.slice(start, api.indexOf('];', start));
-  assert.doesNotMatch(fields, /photoUri/, 'photoUri must never be in the synced field list');
+  const { COLLECTION_SYNC_FIELDS } = require('./components/collectionSyncSchema');
+  assert.equal(COLLECTION_SYNC_FIELDS.includes('photoUri'), false);
   assert.match(api, /function sanitiseEntry/, 'entries must be filtered server-side, not trusted');
+  assert.match(api, /COLLECTION_SYNC_FIELDS/, 'server and client must share one allowlist');
+});
+
+test('the client removes private fields before the request crosses the network', async () => {
+  const harness = loadCollectionSync({
+    local: [{
+      savedId: 'private-photo',
+      category: 'plant',
+      name: 'Fern',
+      photoUri: `data:image/jpeg;base64,${'A'.repeat(4096)}`,
+      latitude: -23.5,
+      longitude: -46.5,
+    }],
+    responseData: { synced: true, entries: [], deletedIds: [] },
+  });
+  await harness.sync.syncCollection({ force: true });
+  const [sent] = harness.requestBody().entries;
+  assert.equal(sent.name, 'Fern');
+  assert.equal(sent.photoUri, undefined);
+  assert.equal(sent.latitude, undefined);
+  assert.equal(sent.longitude, undefined);
+  assert.doesNotMatch(JSON.stringify(harness.requestBody()), /data:image|AAAA/);
 });
 
 test('backup restore writes the same collection the app reads', () => {
@@ -291,17 +342,60 @@ test('backup restore writes the same collection the app reads', () => {
   assert.match(storage, /export const COLLECTION_KEY = '@plantid_collection'/);
   assert.match(backup, /import \{ COLLECTION_KEY, getCollection \} from '\.\/storage'/);
   assert.doesNotMatch(backup, /@naturelens_collection/);
-  assert.match(backup, /mergeCollections\(current, parsed\.items, new Set\(\)\)/);
+  assert.match(backup, /mergeCollections\(current, importedItems, new Set\(\)\)/);
+  assert.match(backup, /normaliseCollectionEntry\(item, \{ strict: true \}\)/);
+});
+
+test('backup rejects malformed field types before they become persistent', async () => {
+  const { backup, read: readStored } = loadCollectionBackup([]);
+  const malicious = JSON.stringify({
+    format: 'naturelens-collection',
+    version: 1,
+    items: [{ savedId: 'evil', category: 'plant', name: {}, scientific: {} }],
+  });
+  await assert.rejects(
+    () => backup.importCollection(malicious),
+    (error) => error?.code === 'invalid_item'
+  );
+  assert.deepEqual(readStored(), []);
+});
+
+test('backup import is bounded by bytes and item count', async () => {
+  const { backup } = loadCollectionBackup([]);
+  const tooMany = JSON.stringify({
+    format: 'naturelens-collection',
+    version: 1,
+    items: Array.from({ length: backup.MAX_BACKUP_ITEMS + 1 }, (_, index) => ({
+      savedId: `id-${index}`,
+      category: 'plant',
+      name: 'Fern',
+    })),
+  });
+  await assert.rejects(() => backup.importCollection(tooMany), (error) => error?.code === 'too_many_items');
+  await assert.rejects(
+    () => backup.importCollection('x'.repeat(backup.MAX_BACKUP_BYTES + 1)),
+    (error) => error?.code === 'file_too_large'
+  );
+});
+
+test('stored collection repairs object values used as visible text', async () => {
+  const { storage, read: readStored } = loadStorage([
+    { savedId: 'broken', category: 'plant', name: {}, scientific: {}, nickname: [] },
+  ]);
+  const [entry] = await storage.getCollection();
+  assert.equal(entry.savedId, 'broken');
+  assert.equal(entry.name, undefined);
+  assert.equal(entry.scientific, undefined);
+  assert.equal(entry.nickname, undefined);
+  assert.deepEqual(readStored(), [entry]);
 });
 
 test('a nickname survives sync', () => {
   // The nickname is the user's own name for a find ("the balcony fern"). If
   // the server filter strips it, a restore on a new device silently returns a
   // collection that no longer feels like theirs - and nothing would error.
-  const api = read('api/collection.js');
-  const start = api.indexOf('const SYNCED_FIELDS');
-  const fields = api.slice(start, api.indexOf('];', start));
-  assert.match(fields, /'nickname'/, 'nickname must be in the synced field list');
+  const { COLLECTION_SYNC_FIELDS } = require('./components/collectionSyncSchema');
+  assert.ok(COLLECTION_SYNC_FIELDS.includes('nickname'), 'nickname must be in the synced field list');
 
   // And the collection screen must actually let the user search by it - a
   // nickname that cannot find its own find defeats the point of naming it.
@@ -310,11 +404,9 @@ test('a nickname survives sync', () => {
 });
 
 test('garden metadata survives the server filter', () => {
-  const api = read('api/collection.js');
-  const start = api.indexOf('const SYNCED_FIELDS');
-  const fields = api.slice(start, api.indexOf('];', start));
+  const { COLLECTION_SYNC_FIELDS } = require('./components/collectionSyncSchema');
   for (const field of ['room', 'lastWateredAt', 'updatedAt']) {
-    assert.match(fields, new RegExp(`'${field}'`), `${field} must survive sync`);
+    assert.ok(COLLECTION_SYNC_FIELDS.includes(field), `${field} must survive sync`);
   }
 });
 
@@ -596,6 +688,14 @@ test('clearing personal data cancels every local reminder first', async () => {
   assert.equal(await env.storage.clearCollection(), false);
   assert.deepEqual(calls, ['clear-reminders']);
   assert.equal(env.read().length, 1, 'personal data remains until reminder cleanup can be confirmed');
+});
+
+test('account deletion reaches the server before fallible local cleanup', () => {
+  const settings = read('screens/SettingsScreen.js');
+  const start = settings.indexOf('const handleDeleteAccount');
+  const flow = settings.slice(start, settings.indexOf('const confirmDeleteAccount', start));
+  assert.ok(flow.indexOf('await deleteAccount()') < flow.indexOf('await clearLocalReminders()'));
+  assert.match(flow, /clearCollection\(\{ skipReminderCleanup: true \}\)/);
 });
 
 test('newer remote metadata wins without losing local-only data', () => {

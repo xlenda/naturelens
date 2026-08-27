@@ -46,6 +46,8 @@ function loadStorage(initial, { failWrites = false } = {}) {
     if (name === './collectionSync') return { rememberDeletion: async () => {} };
     if (name === './localReminders') return { isNativeReminderAvailable: () => false };
     if (name === './watering') return { getWateringStatus: (entry) => (entry?.water ? {} : null) };
+    if (name === './persistentCollectionPhoto') return { deletePersistentCollectionPhoto: async () => {} };
+    if (name === './collectionEntrySchema') return { normaliseCollectionEntry: (entry) => entry };
     return require(name);
   };
   new Function('module', 'exports', 'require', code)(mod, mod.exports, fakeRequire);

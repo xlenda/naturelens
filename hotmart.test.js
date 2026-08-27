@@ -189,35 +189,32 @@ test('the product id is extracted so cross-product purchases can be filtered', (
   assert.equal(parseWebhookEvent(payload('PURCHASE_APPROVED')).productId, null);
 });
 
-test('free-use counting is atomic, not read-then-write', () => {
-  // Two scans from the same device arriving together both read used_count 0 and
-  // both wrote 1, so the person got two free identifications instead of one.
-  // Not exotic: it is what a double tap, or an app retry on a flaky connection,
-  // produces. increment_category_usage does insert-or-increment in a single
-  // statement, which Postgres serialises on the row lock. Verified live: 6
-  // concurrent calls returned 1..6 and the stored counter was exactly 6.
+test('free use is reserved atomically before the paid provider', () => {
   const fs = require('node:fs');
   const path = require('node:path');
   const src = fs.readFileSync(path.join(__dirname, 'api/_lib/entitlement.js'), 'utf8');
   assert.match(
     src,
-    /admin\.rpc\('increment_category_usage'/,
-    'recordUsage must call the atomic function, not SELECT-then-upsert'
+    /admin\.rpc\('reserve_category_usage'/,
+    'authorization must reserve the free use before returning allowed'
   );
-  // The function has to exist in the migration, or the call 404s on every scan.
+  const identify = fs.readFileSync(path.join(__dirname, 'api/identify.js'), 'utf8');
+  assert.ok(
+    identify.indexOf('await checkEntitlement') < identify.indexOf('await config.run'),
+    'reservation must happen before the vendor call'
+  );
   const sql = fs.readFileSync(path.join(__dirname, 'supabase-migration-hotmart.sql'), 'utf8');
-  assert.match(sql, /create or replace function public\.increment_category_usage/);
-  assert.match(sql, /on conflict \(device_id, category\)/);
+  assert.match(sql, /create or replace function public\.reserve_category_usage/);
+  assert.match(sql, /where public\.category_usage\.used_count < 1/);
+  assert.match(sql, /create or replace function public\.release_category_usage/);
 });
 
-test('a failed usage write is logged, never swallowed', () => {
-  // supabase-js resolves with {data:null,error} instead of throwing, so an
-  // unchecked write is silent. That is precisely how fish, bird and sound stayed
-  // free and unlimited for days while every request returned 200.
+test('a failed reservation fails closed for free users', () => {
   const fs = require('node:fs');
   const path = require('node:path');
   const src = fs.readFileSync(path.join(__dirname, 'api/_lib/entitlement.js'), 'utf8');
-  assert.match(src, /console\.error\('recordUsage: increment failed'/);
+  assert.match(src, /console\.error\('checkEntitlement: reservation failed'/);
+  assert.match(src, /res\.status\(503\)/);
 });
 
 test('native screens expose restore access but no external-purchase CTA', () => {

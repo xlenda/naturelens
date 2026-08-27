@@ -9,7 +9,7 @@ const { resolveExactBirdLabel } = require('./_lib/birdDossier');
 const { perchIdentify } = require('./_lib/perch');
 const { translateVendorText, looksLikeProse, normaliseLanguage } = require('./_lib/translate');
 const { requireDeviceId } = require('./_lib/supabaseAdmin');
-const { checkEntitlement, recordUsage } = require('./_lib/entitlement');
+const { checkEntitlement, releaseUsage } = require('./_lib/entitlement');
 const { checkRateLimit } = require('./_lib/rateLimit');
 const { translateEntity } = require('./_lib/translateEntity');
 const { buildIdentityV1 } = require('../components/taxonIdentity');
@@ -1015,8 +1015,9 @@ module.exports = async (req, res) => {
   const deviceId = requireDeviceId(req, res);
   if (!deviceId) return;
 
+  let entitlement = null;
   try {
-    const entitlement = await checkEntitlement(res, deviceId, category);
+    entitlement = await checkEntitlement(res, deviceId, category);
     if (!entitlement.allowed) return;
 
     const result = await config.run({
@@ -1037,7 +1038,10 @@ module.exports = async (req, res) => {
       datetime: req.body?.datetime,
     });
     // A null result means the vendor helper already wrote an error response.
-    if (!result) return;
+    if (!result) {
+      if (entitlement.reserved) await releaseUsage(deviceId, category);
+      return;
+    }
 
     // English-only vendor fields (care, toxicity, uses, disease text) get
     // translated server-side in one Haiku call - the owner caught the result
@@ -1047,7 +1051,8 @@ module.exports = async (req, res) => {
       await translateEntity(result.entity, req.body?.language);
     }
 
-    // Only a real identification costs a free use.
+    // A reserva aconteceu antes do fornecedor para fechar a corrida. Somente
+    // um resultado real a conserva; notFound devolve a tentativa.
     //
     // A notFound result is the vendor saying "there is nothing here" - a silent
     // recording, a photo of a wall, a car engine. Charging for it meant someone's
@@ -1056,15 +1061,15 @@ module.exports = async (req, res) => {
     // as the app cheating them, and it is the worst possible first impression of
     // a category.
     //
-    // The vendor call was still made, so this does cost the owner an API credit.
-    // That is the right side to absorb it: the alternative is charging a user for
-    // an answer they did not get.
-    if (!entitlement.subscribed && !result.notFound) {
-      await recordUsage(deviceId, category);
+    // O fornecedor ainda custou credito ao dono, mas o usuario nao perde sua
+    // unica tentativa por uma evidencia que nao gerou identificacao.
+    if (entitlement.reserved && result.notFound) {
+      await releaseUsage(deviceId, category);
     }
 
     res.status(200).json(result);
   } catch (err) {
+    if (entitlement?.reserved) await releaseUsage(deviceId, category);
     if (!res.headersSent) {
       // `reason` is what the client actually shows - it maps to a translated
       // string. `error` stays for the logs and for anyone calling the API

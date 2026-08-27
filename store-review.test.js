@@ -13,7 +13,7 @@ function loadStoreReview(stubs) {
   return mod.exports;
 }
 
-test('avaliacao nativa so e solicitada depois de dois sinais positivos', async () => {
+test('avaliacao nativa so e solicitada depois de tres descobertas salvas', async () => {
   const memory = new Map();
   let requests = 0;
   const review = loadStoreReview({
@@ -28,15 +28,17 @@ test('avaliacao nativa so e solicitada depois de dois sinais positivos', async (
     },
   });
 
-  assert.equal(await review.recordPositiveReviewSignal(), false);
+  assert.equal(await review.recordReviewEligibleMoment(), false);
   assert.equal(requests, 0);
-  assert.equal(await review.recordPositiveReviewSignal(), true);
+  assert.equal(await review.recordReviewEligibleMoment(), false);
+  assert.equal(requests, 0);
+  assert.equal(await review.recordReviewEligibleMoment(), true);
   assert.equal(requests, 1);
-  assert.equal(await review.recordPositiveReviewSignal(), false);
+  assert.equal(await review.recordReviewEligibleMoment(), false);
   assert.equal(requests, 1);
 
   const stored = JSON.parse([...memory.values()][0]);
-  assert.equal(stored.positiveSignals, 2);
+  assert.equal(stored.completedDiscoveries, 3);
   assert.ok(stored.requestedAt);
 });
 
@@ -55,7 +57,18 @@ test('web nunca abre avaliacao nem quebra o feedback', async () => {
     },
   });
 
-  await review.recordPositiveReviewSignal();
-  assert.equal(await review.recordPositiveReviewSignal(), false);
+  await review.recordReviewEligibleMoment();
+  await review.recordReviewEligibleMoment();
+  assert.equal(await review.recordReviewEligibleMoment(), false);
   assert.equal(requests, 0);
+});
+
+test('pedido de avaliacao nao depende de sentimento, estrelas ou onboarding', () => {
+  const fs = require('node:fs');
+  const store = fs.readFileSync(path.join(__dirname, 'components/storeReview.js'), 'utf8');
+  const onboarding = fs.readFileSync(path.join(__dirname, 'screens/OnboardingScreen.js'), 'utf8');
+  const helpful = fs.readFileSync(path.join(__dirname, 'components/HelpfulRow.js'), 'utf8');
+  assert.doesNotMatch(store, /positiveSignal|sentiment|five.?star|5.?star/i);
+  assert.doesNotMatch(onboarding, /storeReview|recordReview|ReviewPrelude|current === 'review'/);
+  assert.doesNotMatch(helpful, /storeReview|recordReview/);
 });

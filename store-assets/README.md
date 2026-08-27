@@ -14,6 +14,8 @@
 - `aso-experiments.csv`: registro versionado dos experimentos da ficha.
 - `data-safety.md`: respostas auditadas para Segurança dos dados e declarações relacionadas.
 - `play-console-checklist.md`: respostas dos demais formulários e ordem de lançamento.
+- `app-store-checklist.md`: configuração, privacidade e ordem de validação para iOS.
+- `app-store-screenshots/`: cinco capturas 1290 x 2796 em pt-BR e en-US.
 
 As capturas não têm moldura de navegador e representam a mesma interface React Native usada no Android. Antes de promover a versão de teste para produção, confira as cinco no AAB instalado em um aparelho real.
 
@@ -68,7 +70,7 @@ O primeiro envio do `.aab` pode ser feito manualmente no Play Console. Ative o P
 4. Fornecer ao revisor acesso de demonstração caso recursos restaurados de assinante precisem ser avaliados.
 5. Preencher `Segurança dos dados` a partir de `data-safety.md`, além de `Classificação de conteúdo`, `Público-alvo` e a declaração de conteúdo gerado por IA.
 6. Se a conta pessoal da Play foi criada depois de 13/11/2023, concluir o teste fechado exigido antes de pedir acesso à produção.
-7. Executar `supabase-migration-ratelimit.sql` no Supabase e publicar as páginas legais atualizadas antes de enviar a ficha para revisão.
+7. Executar as migrações de Comunidade, clima e uso atômico indicadas por `npm run verify:db`, manter a rotina de `docs/COMMUNITY_MODERATION.md` e publicar as páginas legais atualizadas antes de enviar a ficha para revisão.
 
 ## ASO
 

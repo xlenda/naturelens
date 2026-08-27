@@ -9,7 +9,7 @@ https://naturelensapp.cloud e vai para a Play Store como `app.naturelens`.
 
     npm run deploy
 
-Isso roda, nesta ordem: 735 testes + 6 checagens de cuidado por especie -> `expo export -p web` -> `patch-pwa.js` ->
+Isso roda, nesta ordem: 751 testes + 6 checagens de cuidado por especie -> preflight do banco -> `expo export -p web` -> `patch-pwa.js` ->
 `vercel deploy --prod` -> 5 portoes contra a producao ja publicada.
 
 NUNCA rode `vercel deploy` direto. O app vive num sub-caminho e o deploy cru

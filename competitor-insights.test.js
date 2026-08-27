@@ -37,8 +37,8 @@ test('a promessa gratis aparece antes da camera e continua verdadeira no servido
 
   assert.ok(promise > 0 && promise < camera, 'a regra comercial precisa ser visivel antes da primeira foto');
   assert.match(screen, /freePromise:[\s\S]{0,100}minHeight: 44/);
-  assert.match(entitlement, /\(usage\?\.used_count \|\| 0\) >= 1/,
-    'se o limite mudar, a promessa de uma identificacao precisa mudar junto');
+  assert.match(entitlement, /reserve_category_usage/,
+    'a promessa de uma identificacao exige reserva atomica no servidor');
 });
 
 test('os 17 idiomas explicam gratuidade e regiao sem fallback', () => {

@@ -7,6 +7,8 @@ require('./tropical-care.test');
 const api = fs.readFileSync('api/community.js', 'utf8');
 const migration = fs.readFileSync('supabase-migration-community.sql', 'utf8');
 const client = fs.readFileSync('components/community.js', 'utf8');
+const screen = fs.readFileSync('screens/CommunityScreen.js', 'utf8');
+const moderation = fs.readFileSync('scripts/community-moderation.js', 'utf8');
 
 test('community score is server-derived and cannot be submitted by the client', () => {
   assert.match(migration, /community_leaderboard/);
@@ -25,6 +27,30 @@ test('community has reports, blocks and deletion without Sybil auto-moderation',
   assert.doesNotMatch(api, /async function quarantine/);
   assert.doesNotMatch(api, /count < 3/);
   assert.doesNotMatch(api, /await quarantine/);
+});
+
+test('community requires server-side terms and supports moderation of comments', () => {
+  assert.match(migration, /terms_accepted_at/);
+  assert.match(api, /action === 'accept_terms'/);
+  assert.match(api, /Community terms must be accepted/);
+  assert.match(screen, /reportCommunityTarget\('comment'/);
+  assert.match(screen, /deleteCommunityTarget\('comment'/);
+  assert.match(screen, /accessibilityRole="checkbox"/);
+});
+
+test('community has independent network and device rate limits', () => {
+  assert.match(api, /scope: `community-\$\{rateKind\}`/);
+  assert.match(api, /scope: `community-\$\{rateKind\}-device:\$\{deviceId\}`/);
+  assert.match(api, /ignoreIp: true/);
+});
+
+test('reported content has a human moderation queue and auditable resolution', () => {
+  assert.match(migration, /status text not null default 'pending'/);
+  assert.match(migration, /reviewed_at/);
+  assert.match(moderation, /eq\('status', 'pending'\)/);
+  assert.match(moderation, /moderation_state/);
+  assert.match(moderation, /community_profiles/);
+  assert.doesNotMatch(moderation, /SUPABASE_SERVICE_ROLE_KEY\s*=/);
 });
 
 test('community never uploads user photos or accepts arbitrary links', () => {

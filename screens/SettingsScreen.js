@@ -404,14 +404,16 @@ export default function SettingsScreen() {
   const handleDeleteAccount = async () => {
     setDeletingAccount(true);
     try {
-      // Cancela primeiro: depois que a conta some do servidor nao ha como
-      // desfazer a exclusao se o Android ainda mantiver um alarme local.
+      // A exclusao legal no servidor nunca depende de uma API local. Permissao
+      // revogada, storage cheio ou um alarme corrompido nao podem manter a conta
+      // viva contra a vontade da pessoa.
+      const { billingStillActive } = await deleteAccount();
+      let localCleanupComplete = true;
       if (isNativeReminderAvailable()) {
         const remindersCleared = await clearLocalReminders();
-        if (!remindersCleared?.ok) throw new Error(t('common.saveErrorBody'));
+        localCleanupComplete = remindersCleared?.ok === true;
       }
-      const { billingStillActive } = await deleteAccount();
-      if (!await clearCollection()) throw new Error(t('common.saveErrorBody'));
+      if (!await clearCollection({ skipReminderCleanup: true })) localCleanupComplete = false;
       await clearProfilePhoto();
       await clearAchievements();
       await clearRewards();
@@ -420,9 +422,9 @@ export default function SettingsScreen() {
       await resetDeviceId();
       showAlert(
         t('profile.deleteAccountDoneTitle'),
-        billingStillActive
+        `${billingStillActive
           ? t('profile.deleteAccountDoneBillingBody')
-          : t('profile.deleteAccountDoneBody'),
+          : t('profile.deleteAccountDoneBody')}${localCleanupComplete ? '' : `\n\n${t('common.saveErrorBody')}`}`,
         [{ text: t('common.ok'), onPress: () => navigation.navigate('Collection') }]
       );
     } catch (e) {

@@ -33,7 +33,7 @@ Use este arquivo junto de `data-safety.md`. Ele registra as respostas coerentes 
 Responder pelo comportamento real, sem tentar forçar uma faixa menor:
 
 - Violência, sexo, drogas, apostas e linguagem ofensiva produzidos pelo app: **Não**.
-- Compartilhamento público entre usuários: **Sim** — apelido, biografia, publicações e comentários enviados à Comunidade. Há exclusão, denúncia, bloqueio e quarentena automática para revisão.
+- Compartilhamento público entre usuários: **Sim** — apelido, biografia, publicações e comentários enviados à Comunidade. Há aceite de regras, exclusão, denúncia, bloqueio e fila de revisão humana. Uma denúncia isolada não remove conteúdo automaticamente.
 - Compras digitais dentro do Android: **Não**.
 - Localização compartilhada com outros usuários: **Não**.
 - Conteúdo online: **Sim** — resultados, textos e imagens educacionais vêm de serviços online.
@@ -65,6 +65,6 @@ Responder pelo comportamento real, sem tentar forçar uma faixa menor:
 - Login na conta Expo/EAS e vínculo do projeto para gerar o AAB assinado.
 - Conta Google Play Console verificada.
 - E-mail público de suporte real e monitorado.
-- Execução da migração `supabase-migration-ratelimit.sql`.
+- Execução de `supabase-migration-community.sql`, `supabase-migration-site-climate.sql` e das funções novas em `supabase-migration-hotmart.sql`; `npm run verify:db` precisa ficar verde.
 - Publicação das páginas legais atualizadas pelo comando autorizado `npm run deploy`.
 - Conta de demonstração, caso o revisor precise acessar recursos de assinante.

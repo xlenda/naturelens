@@ -3,22 +3,19 @@ import { Alert, FlatList, Modal, Platform, Pressable, StyleSheet, Text, TextInpu
 import { useFocusEffect, useNavigation, useRoute } from '@react-navigation/native';
 import { Ionicons } from '@expo/vector-icons';
 import * as Haptics from 'expo-haptics';
-import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useTranslation } from 'react-i18next';
 import BackChevron from '../components/BackChevron';
 import CategoryIcon from '../components/CategoryIcon';
 import NatureScene from '../components/NatureScene';
 import { CATEGORIES } from '../components/categories';
 import {
-  blockCommunityProfile, createCommunityComment, createCommunityPost,
+  acceptCommunityTerms, blockCommunityProfile, createCommunityComment, createCommunityPost,
   deleteCommunityTarget, loadCommunity, reportCommunityTarget,
   saveCommunityProfile, toggleCommunityReaction,
 } from '../components/community';
 import { colors, control, radius, shadow, space, type } from '../components/theme';
 
 const KIND_COPY = { care: 'watering', observation: 'pests', recovery: 'recovery', question: 'questions' };
-const COMMUNITY_TERMS_KEY = '@naturelens/community_terms_v1';
-
 const COMMUNITY_CATEGORIES = Object.values(CATEGORIES);
 
 function confirm(title, cancel, action, onPress) {
@@ -29,7 +26,7 @@ function confirm(title, cancel, action, onPress) {
   }
 }
 
-const PostCard = memo(function PostCard({ item, date, t, commentOpen, commentBody, setCommentBody, onComment, onSend, onReact, onMenu }) {
+const PostCard = memo(function PostCard({ item, date, t, commentOpen, commentBody, setCommentBody, onComment, onSend, onReact, onMenu, onCommentMenu, termsAccepted, onToggleTerms }) {
   const meta = CATEGORIES[item.category] || CATEGORIES.plant;
   return (
     <View style={styles.post}>
@@ -49,13 +46,24 @@ const PostCard = memo(function PostCard({ item, date, t, commentOpen, commentBod
         {item.scientificName ? <Text style={styles.scientific}>{item.scientificName}</Text> : null}
         <Text style={styles.body}>{item.body}</Text>
         {(item.comments || []).slice(-3).map((comment) => (
-          <View key={comment.id} style={styles.comment}><Text style={styles.commentText}><Text style={styles.commentAuthor}>{comment.author.nickname} · </Text>{comment.body}</Text></View>
+          <View key={comment.id} style={[styles.comment, styles.commentRow]}>
+            <Text style={[styles.commentText, styles.grow]}><Text style={styles.commentAuthor}>{comment.author.nickname} · </Text>{comment.body}</Text>
+            <Pressable style={styles.commentMenu} onPress={() => onCommentMenu(comment)} accessibilityRole="button" accessibilityLabel={comment.mine ? t('community.deletePost') : t('community.reportAndBlock')}>
+              <Ionicons name="ellipsis-horizontal" size={17} color={colors.textMuted} />
+            </Pressable>
+          </View>
         ))}
         {commentOpen ? (
-          <View style={[styles.row, styles.commentComposer]}>
-            <TextInput style={styles.commentInput} value={commentBody} onChangeText={setCommentBody} maxLength={500} multiline placeholder={t('community.careTopics.questions')} placeholderTextColor={colors.textMuted} />
-            <Pressable style={styles.send} disabled={commentBody.trim().length < 2} onPress={() => onSend(item.id)} accessibilityRole="button"><Ionicons name="arrow-up" size={18} color={colors.white} /></Pressable>
-          </View>
+          <>
+            {!termsAccepted ? <Pressable style={styles.terms} onPress={onToggleTerms} accessibilityRole="checkbox" accessibilityState={{ checked: termsAccepted }} accessibilityLabel={t('terms.acceptanceTitle')}>
+              <Ionicons name="square-outline" size={21} color={colors.textMuted} />
+              <View style={styles.grow}><Text style={styles.termsTitle}>{t('terms.acceptanceTitle')}</Text><Text style={styles.termsBody}>{t('terms.acceptanceBody')}</Text></View>
+            </Pressable> : null}
+            <View style={[styles.row, styles.commentComposer]}>
+              <TextInput style={styles.commentInput} value={commentBody} onChangeText={setCommentBody} maxLength={500} multiline placeholder={t('community.careTopics.questions')} placeholderTextColor={colors.textMuted} />
+              <Pressable style={[styles.send, commentBody.trim().length < 2 || !termsAccepted ? styles.disabled : null]} disabled={commentBody.trim().length < 2 || !termsAccepted} onPress={() => onSend(item.id)} accessibilityRole="button" accessibilityLabel={t('community.commentAction')}><Ionicons name="arrow-up" size={18} color={colors.white} /></Pressable>
+            </View>
+          </>
         ) : null}
         <View style={[styles.row, styles.actions]}>
           <Pressable style={[styles.action, item.reacted ? { borderColor: meta.accent, backgroundColor: `${meta.accent}14` } : null]} onPress={() => onReact(item.id)} accessibilityRole="button" accessibilityState={{ selected: item.reacted }}>
@@ -75,6 +83,7 @@ export default function CommunityScreen() {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [failed, setFailed] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
   const [tab, setTab] = useState('feed');
   const [sheet, setSheet] = useState(null);
   const [busy, setBusy] = useState(false);
@@ -86,10 +95,6 @@ export default function CommunityScreen() {
   const [commentPost, setCommentPost] = useState(null);
   const [commentBody, setCommentBody] = useState('');
   const [termsAccepted, setTermsAccepted] = useState(false);
-
-  useEffect(() => {
-    AsyncStorage.getItem(COMMUNITY_TERMS_KEY).then((value) => setTermsAccepted(value === '1')).catch(() => {});
-  }, []);
 
   useEffect(() => {
     const preset = route.params?.checkInDraft;
@@ -104,12 +109,13 @@ export default function CommunityScreen() {
   }, [navigation, route.params?.checkInDraft]);
 
   const refresh = useCallback(async () => {
-    setLoading(true); setFailed(false);
+    setLoading(true); setFailed(false); setErrorMessage('');
     try {
       const result = await loadCommunity();
       setData(result); setNickname(result.profile?.nickname || ''); setBio(result.profile?.bio || '');
-    } catch (e) { setFailed(true); } finally { setLoading(false); }
-  }, []);
+      setTermsAccepted(result.profile?.termsAccepted === true);
+    } catch (e) { setFailed(true); setErrorMessage(t('community.unavailable')); } finally { setLoading(false); }
+  }, [t]);
   useFocusEffect(useCallback(() => { refresh(); }, [refresh]));
 
   const formatter = useMemo(() => {
@@ -121,14 +127,17 @@ export default function CommunityScreen() {
     if (busy) return;
     setBusy(true);
     try { await task(); await refresh(); Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success).catch(() => undefined); }
-    catch (e) { Haptics.notificationAsync(Haptics.NotificationFeedbackType.Error).catch(() => undefined); }
+    catch (e) {
+      setErrorMessage(t('community.unavailable'));
+      Haptics.notificationAsync(Haptics.NotificationFeedbackType.Error).catch(() => undefined);
+    }
     finally { setBusy(false); }
-  }, [busy, refresh]);
+  }, [busy, refresh, t]);
 
   const publish = useCallback(() => run(async () => {
     if (!termsAccepted) return;
+    await acceptCommunityTerms();
     await createCommunityPost({ category, kind, body: postBody });
-    await AsyncStorage.setItem(COMMUNITY_TERMS_KEY, '1');
     setPostBody(''); setSheet(null);
   }), [category, kind, postBody, run, termsAccepted]);
   const saveProfile = useCallback(() => run(async () => {
@@ -137,15 +146,29 @@ export default function CommunityScreen() {
   const react = useCallback((id) => run(() => toggleCommunityReaction(id)), [run]);
   const openComment = useCallback((id) => { setCommentPost((current) => current === id ? null : id); setCommentBody(''); }, []);
   const sendComment = useCallback((id) => run(async () => {
+    if (!termsAccepted) return;
+    await acceptCommunityTerms();
     await createCommunityComment(id, commentBody); setCommentBody(''); setCommentPost(null);
-  }), [commentBody, run]);
+  }), [commentBody, run, termsAccepted]);
   const menu = useCallback((post) => {
     if (post.mine) {
       confirm(t('community.deletePost'), t('common.cancel'), t('community.deletePost'), () => run(() => deleteCommunityTarget('post', post.id)));
     } else {
       confirm(t('community.reportAndBlock'), t('common.cancel'), t('community.reportAndBlock'), () => run(async () => {
         await reportCommunityTarget('post', post.id, 'other');
+        await reportCommunityTarget('profile', post.author.publicId, 'other');
         await blockCommunityProfile(post.author.publicId);
+      }));
+    }
+  }, [run, t]);
+  const commentMenu = useCallback((comment) => {
+    if (comment.mine) {
+      confirm(t('community.deletePost'), t('common.cancel'), t('community.deletePost'), () => run(() => deleteCommunityTarget('comment', comment.id)));
+    } else {
+      confirm(t('community.reportAndBlock'), t('common.cancel'), t('community.reportAndBlock'), () => run(async () => {
+        await reportCommunityTarget('comment', comment.id, 'other');
+        await reportCommunityTarget('profile', comment.author.publicId, 'other');
+        await blockCommunityProfile(comment.author.publicId);
       }));
     }
   }, [run, t]);
@@ -154,7 +177,8 @@ export default function CommunityScreen() {
     item={item} date={formatter ? formatter.format(new Date(item.createdAt)) : ''} t={t}
     commentOpen={commentPost === item.id} commentBody={commentPost === item.id ? commentBody : ''}
     setCommentBody={setCommentBody} onComment={openComment} onSend={sendComment} onReact={react} onMenu={menu}
-  />, [commentBody, commentPost, formatter, menu, openComment, react, sendComment, t]);
+    onCommentMenu={commentMenu} termsAccepted={termsAccepted} onToggleTerms={() => setTermsAccepted((value) => !value)}
+  />, [commentBody, commentMenu, commentPost, formatter, menu, openComment, react, sendComment, t, termsAccepted]);
   const renderRank = useCallback(({ item }) => (
     <View style={[styles.rank, item.mine ? styles.rankMine : null]}><Text style={styles.rankPosition}>#{item.position}</Text><View style={styles.rankIcon}><Ionicons name="leaf" size={17} color={item.mine ? colors.accentLight : colors.warning} /></View><View style={styles.grow}><Text style={styles.author}>{item.nickname}</Text><Text style={styles.caption}>{item.posts} · {item.comments} · {item.helpful}</Text></View><Text style={styles.rankScore}>{item.score}</Text></View>
   ), []);
@@ -162,9 +186,10 @@ export default function CommunityScreen() {
   const header = <>
     <View style={styles.identity}>
       <View style={styles.live}><View style={styles.liveDot} /></View>
-      <View style={styles.grow}><Text style={styles.online}>{t('community.onlineBadge')}</Text><Pressable onPress={() => setSheet('profile')}><Text style={styles.nickname}>{data?.profile?.nickname || 'NatureLens'}</Text></Pressable></View>
-      <Pressable style={styles.iconButton} onPress={() => setSheet('profile')}><Ionicons name="create-outline" size={19} color={colors.accentLight} /></Pressable>
+      <View style={styles.grow}><Text style={[styles.online, failed ? styles.offline : null]}>{data && !failed ? t('community.onlineBadge') : t('community.unavailable')}</Text><Pressable onPress={() => setSheet('profile')} accessibilityRole="button" accessibilityLabel={t('community.entryTitle')}><Text style={styles.nickname}>{data?.profile?.nickname || 'NatureLens'}</Text></Pressable></View>
+      <Pressable style={styles.iconButton} onPress={() => setSheet('profile')} accessibilityRole="button" accessibilityLabel={t('community.entryTitle')}><Ionicons name="create-outline" size={19} color={colors.accentLight} /></Pressable>
     </View>
+    {errorMessage ? <Text style={styles.errorMessage} accessibilityRole="alert">{errorMessage}</Text> : null}
     <View style={styles.tabs}>
       <Pressable style={[styles.tab, tab === 'feed' ? styles.tabActive : null]} onPress={() => setTab('feed')}><Ionicons name="book-outline" size={17} color={tab === 'feed' ? colors.background : colors.textSecondary} /><Text style={[styles.tabText, tab === 'feed' ? styles.tabTextActive : null]}>{t('community.feedTitle')}</Text></Pressable>
       <Pressable style={[styles.tab, tab === 'rank' ? styles.tabActive : null]} onPress={() => setTab('rank')}><Ionicons name="podium-outline" size={17} color={tab === 'rank' ? colors.background : colors.textSecondary} /><Text style={[styles.tabText, tab === 'rank' ? styles.tabTextActive : null]}>{t('community.rankingTitle')}</Text></Pressable>
@@ -204,9 +229,9 @@ const styles = StyleSheet.create({
   tabs: { flexDirection: 'row', backgroundColor: colors.surface, borderRadius: radius.md, padding: 4, marginTop: space.md }, tab: { flex: 1, minHeight: control.minTouch, borderRadius: radius.sm, flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 7 }, tabActive: { backgroundColor: colors.accentLight }, tabText: { color: colors.textSecondary, fontSize: 13, fontWeight: '800' }, tabTextActive: { color: colors.background },
   composer: { backgroundColor: colors.card, borderRadius: radius.lg, borderWidth: 1, borderColor: `${colors.accent}55`, padding: space.md, marginTop: space.md }, seal: { width: 42, height: 42, borderRadius: radius.md, backgroundColor: colors.accent, alignItems: 'center', justifyContent: 'center', marginRight: space.sm }, composerTitle: { ...type.cardTitle }, primary: { minHeight: control.primaryHeight, borderRadius: radius.md, backgroundColor: colors.accentLight, flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 7, marginTop: space.md }, primaryText: { color: colors.background, fontSize: 13.5, fontWeight: '900' },
   post: { flexDirection: 'row', backgroundColor: colors.card, borderRadius: radius.lg, borderWidth: 1, borderColor: colors.border, overflow: 'hidden', marginTop: space.md }, spine: { width: 5 }, postInner: { flex: 1, padding: space.md }, avatar: { width: 38, height: 38, borderRadius: 19, alignItems: 'center', justifyContent: 'center', marginRight: space.sm }, author: { color: colors.text, fontSize: 14, lineHeight: 19, fontWeight: '900' }, evidence: { marginTop: space.sm }, kind: { fontSize: 11.5, lineHeight: 16, fontWeight: '900', textTransform: 'uppercase' }, subject: { flex: 1, textAlign: 'right' }, scientific: { color: colors.textMuted, fontSize: 11.5, lineHeight: 16, fontStyle: 'italic' },
-  comment: { backgroundColor: colors.surface, borderRadius: radius.sm, padding: space.sm, marginTop: space.xs }, commentText: { color: colors.textSecondary, fontSize: 12.5, lineHeight: 18 }, commentAuthor: { color: colors.text, fontWeight: '900' }, commentComposer: { alignItems: 'flex-end', gap: space.xs, marginTop: space.sm }, commentInput: { flex: 1, minHeight: control.minTouch, maxHeight: 100, borderRadius: radius.md, backgroundColor: colors.surface, color: colors.text, paddingHorizontal: space.sm, paddingVertical: 10 }, send: { width: control.minTouch, height: control.minTouch, borderRadius: 22, backgroundColor: colors.accent, alignItems: 'center', justifyContent: 'center' }, actions: { gap: space.xs, marginTop: space.sm }, action: { minHeight: 38, borderRadius: radius.pill, borderWidth: 1, borderColor: colors.border, flexDirection: 'row', alignItems: 'center', gap: 6, paddingHorizontal: space.sm }, actionText: { color: colors.textSecondary, fontSize: 12, fontWeight: '800' },
+  comment: { backgroundColor: colors.surface, borderRadius: radius.sm, padding: space.sm, marginTop: space.xs }, commentRow: { flexDirection: 'row', alignItems: 'flex-start', gap: space.xs }, commentMenu: { width: 32, height: 32, marginRight: -6, marginTop: -6, alignItems: 'center', justifyContent: 'center' }, commentText: { color: colors.textSecondary, fontSize: 12.5, lineHeight: 18 }, commentAuthor: { color: colors.text, fontWeight: '900' }, commentComposer: { alignItems: 'flex-end', gap: space.xs, marginTop: space.sm }, commentInput: { flex: 1, minHeight: control.minTouch, maxHeight: 100, borderRadius: radius.md, backgroundColor: colors.surface, color: colors.text, paddingHorizontal: space.sm, paddingVertical: 10 }, send: { width: control.minTouch, height: control.minTouch, borderRadius: 22, backgroundColor: colors.accent, alignItems: 'center', justifyContent: 'center' }, actions: { gap: space.xs, marginTop: space.sm }, action: { minHeight: 38, borderRadius: radius.pill, borderWidth: 1, borderColor: colors.border, flexDirection: 'row', alignItems: 'center', gap: 6, paddingHorizontal: space.sm }, actionText: { color: colors.textSecondary, fontSize: 12, fontWeight: '800' },
   rank: { minHeight: 68, flexDirection: 'row', alignItems: 'center', backgroundColor: colors.card, borderRadius: radius.md, borderWidth: 1, borderColor: colors.border, padding: space.sm, marginTop: space.sm }, rankMine: { borderColor: colors.accentLight, backgroundColor: `${colors.accent}12` }, rankPosition: { width: 44, color: colors.text, fontSize: 17, fontWeight: '900' }, rankIcon: { width: 34, height: 34, borderRadius: 17, backgroundColor: colors.surface, alignItems: 'center', justifyContent: 'center', marginRight: space.sm }, rankScore: { color: colors.accentLight, fontSize: 15, fontWeight: '900' }, empty: { minHeight: 220, alignItems: 'center', justifyContent: 'center', padding: space.xl }, emptyTitle: { color: colors.text, fontSize: 16, lineHeight: 21, fontWeight: '900', textAlign: 'center', marginTop: space.sm }, emptyBody: { ...type.body, textAlign: 'center', marginTop: space.xs },
   shade: { flex: 1, backgroundColor: '#000000B8', justifyContent: 'flex-end' }, sheet: { backgroundColor: colors.card, borderTopLeftRadius: radius.xl, borderTopRightRadius: radius.xl, borderWidth: 1, borderColor: colors.border, padding: space.lg, paddingBottom: space.xxl }, handle: { width: 44, height: 4, borderRadius: 2, backgroundColor: colors.border, alignSelf: 'center', marginBottom: space.lg }, sheetTitle: { color: colors.text, fontSize: 20, lineHeight: 25, fontWeight: '900' }, choices: { flexDirection: 'row', flexWrap: 'wrap', gap: space.xs, marginTop: space.md }, category: { width: 42, height: 42, borderRadius: radius.sm, borderWidth: 1, borderColor: colors.border, backgroundColor: colors.surface, alignItems: 'center', justifyContent: 'center' }, kindChoice: { minHeight: 36, borderRadius: radius.pill, borderWidth: 1, borderColor: colors.border, justifyContent: 'center', paddingHorizontal: space.sm }, choiceActive: { borderColor: colors.accentLight, backgroundColor: `${colors.accent}1A` }, choiceText: { color: colors.textSecondary, fontSize: 11.5, fontWeight: '800' },
   postInput: { minHeight: 150, maxHeight: 260, borderRadius: radius.md, borderWidth: 1, borderColor: colors.border, backgroundColor: colors.surface, color: colors.text, padding: space.md, textAlignVertical: 'top', marginTop: space.md }, profileInput: { minHeight: control.primaryHeight, borderRadius: radius.md, borderWidth: 1, borderColor: colors.border, backgroundColor: colors.surface, color: colors.text, paddingHorizontal: space.md, marginTop: space.md }, bio: { minHeight: 100, paddingTop: space.sm, textAlignVertical: 'top' }, sheetActions: { flexDirection: 'row', gap: space.sm, marginTop: space.md }, secondary: { flex: 1, minHeight: control.primaryHeight, borderRadius: radius.md, borderWidth: 1, borderColor: colors.border, alignItems: 'center', justifyContent: 'center' }, secondaryText: { color: colors.textSecondary, fontSize: 13, fontWeight: '900' }, confirm: { flex: 2, minHeight: control.primaryHeight, borderRadius: radius.md, backgroundColor: colors.accent, alignItems: 'center', justifyContent: 'center' }, confirmText: { color: colors.white, fontSize: 13, fontWeight: '900' }, disabled: { opacity: 0.45 },
-  terms: { flexDirection: 'row', alignItems: 'flex-start', gap: space.sm, borderRadius: radius.md, backgroundColor: colors.surface, padding: space.sm, marginTop: space.sm }, termsTitle: { color: colors.text, fontSize: 12, lineHeight: 17, fontWeight: '900' }, termsBody: { color: colors.textMuted, fontSize: 10.5, lineHeight: 15, marginTop: 2 },
+  terms: { flexDirection: 'row', alignItems: 'flex-start', gap: space.sm, borderRadius: radius.md, backgroundColor: colors.surface, padding: space.sm, marginTop: space.sm }, termsTitle: { color: colors.text, fontSize: 12, lineHeight: 17, fontWeight: '900' }, termsBody: { color: colors.textMuted, fontSize: 10.5, lineHeight: 15, marginTop: 2 }, offline: { color: colors.error }, errorMessage: { color: colors.error, fontSize: 12, lineHeight: 18, fontWeight: '700', marginTop: space.sm, paddingHorizontal: space.xs },
 });

@@ -30,7 +30,7 @@ function defaultNickname() {
 }
 
 async function ensureProfile(admin, deviceId, locale) {
-  const fields = 'device_id,public_id,nickname,bio,locale,status';
+  const fields = 'device_id,public_id,nickname,bio,locale,status,terms_version,terms_accepted_at';
   const { data: existing, error: readError } = await admin
     .from('community_profiles').select(fields).eq('device_id', deviceId).maybeSingle();
   if (readError) throw readError;
@@ -132,7 +132,12 @@ async function readCommunity(admin, profile, res) {
   ]);
   if (ranking.error) throw ranking.error;
   res.status(200).json({
-    profile: { publicId: profile.public_id, nickname: profile.nickname, bio: profile.bio || '' },
+    profile: {
+      publicId: profile.public_id,
+      nickname: profile.nickname,
+      bio: profile.bio || '',
+      termsAccepted: profile.terms_version === 1 && Boolean(profile.terms_accepted_at),
+    },
     feed,
     leaderboard: (ranking.data || []).map((row, index) => ({
       position: index + 1,
@@ -152,8 +157,14 @@ module.exports = async function handler(req, res) {
   const deviceId = requireDeviceId(req, res);
   if (!deviceId) return;
   const action = oneLine(req.body?.action, 30);
+  const rateKind = action === 'read' ? 'read' : 'write';
   if (!(await checkRateLimit(req, res, {
-    scope: `community-${action === 'read' ? 'read' : 'write'}:${deviceId}`,
+    scope: `community-${rateKind}`,
+    limit: action === 'read' ? 180 : 40,
+    windowSeconds: 600,
+  }))) return;
+  if (!(await checkRateLimit(req, res, {
+    scope: `community-${rateKind}-device:${deviceId}`,
     limit: action === 'read' ? 120 : 30,
     windowSeconds: 600,
     ignoreIp: true,
@@ -164,6 +175,22 @@ module.exports = async function handler(req, res) {
     const profile = await ensureProfile(admin, deviceId, req.body?.locale);
     if (profile.status !== 'active') return res.status(403).json({ error: 'Community profile unavailable' });
     if (action === 'read') return await readCommunity(admin, profile, res);
+
+    if (action === 'accept_terms') {
+      if (req.body?.termsVersion !== 1) return res.status(400).json({ error: 'Invalid terms version' });
+      const { error } = await admin.from('community_profiles').update({
+        terms_version: 1,
+        terms_accepted_at: new Date().toISOString(),
+        updated_at: new Date().toISOString(),
+      }).eq('device_id', deviceId);
+      if (error) throw error;
+      return res.status(200).json({ accepted: true, termsVersion: 1 });
+    }
+
+    if (['post', 'comment'].includes(action)
+      && (profile.terms_version !== 1 || !profile.terms_accepted_at)) {
+      return res.status(403).json({ error: 'Community terms must be accepted' });
+    }
 
     if (action === 'profile') {
       const nickname = oneLine(req.body?.nickname, 30);

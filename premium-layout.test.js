@@ -100,7 +100,8 @@ test('identification entry reviews a vertical 1-to-3 photo plan before upload', 
   assert.doesNotMatch(identify, /<ScrollView\s+horizontal/);
   assert.match(identify, /expo-file-system\/legacy/);
   assert.match(identify, /photo\.uri\.startsWith\(FileSystem\.cacheDirectory\)/);
-  assert.match(identify, /photos\.slice\(1\)\.forEach\(discardPreparedPhoto\)/);
+  assert.match(identify, /photos\.forEach\(discardPreparedPhoto\)/);
+  assert.match(identify, /await persistCollectionPhoto\(primaryPhoto\.uri\)/);
 });
 
 test('the large identification stage captures the primary photo then reveals intentionally', () => {

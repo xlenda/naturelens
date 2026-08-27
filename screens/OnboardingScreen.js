@@ -3,7 +3,6 @@ import {
   Animated,
   Dimensions,
   Image,
-  Platform,
   ScrollView,
   StyleSheet,
   Text,
@@ -25,36 +24,24 @@ import {
 } from '../components/discoveryPreferences';
 import { sensoryFeedback } from '../components/sensoryFeedback';
 import useReducedMotion from '../components/useReducedMotion';
+import IntroMascotVideo from '../components/IntroMascotVideo';
 import {
   trackOnboardingChoice,
   trackOnboardingCompleted,
   trackOnboardingSkipped,
   trackOnboardingStepViewed,
 } from '../components/tracking';
-import { recordPositiveReviewSignal } from '../components/storeReview';
 
 const { width, height } = Dimensions.get('window');
 const isCompactViewport = height < 780 || width < 390;
 const demoHeight = isCompactViewport ? 226 : 252;
 const readyArtHeight = isCompactViewport ? 176 : 214;
-const introVideoWebStyle = {
-  position: 'absolute',
-  inset: 0,
-  width: '100%',
-  height: '100%',
-  objectFit: 'cover',
-  display: 'block',
-  backgroundColor: 'rgba(7,11,9,0.28)',
-};
-
 const SCENES = {
   promise: require('../assets/art/onboarding-identify-wide.jpg'),
   ready: require('../assets/art/onboarding-collect-wide.jpg'),
 };
 
 const MASCOT = require('../assets/art/naturelens-mascot.jpg');
-const INTRO_POSTER = require('../assets/art/naturelens-mascot-intro-poster.jpg');
-const INTRO_VIDEO = require('../assets/art/naturelens-mascot-intro-fast.mp4');
 
 const ICONS = {
   goalIdentify: require('../assets/onboarding/icons/goal-identify.png'),
@@ -97,106 +84,7 @@ const QUESTIONS = {
   ],
 };
 
-const STEPS = ['intro', 'promise', 'goal', 'context', 'depth', 'ready', 'review'];
-
-const assetUri = (asset) => (typeof asset === 'string' ? asset : asset?.uri || null);
-
-function IntroVideo({ reduceMotion, t }) {
-  const videoRef = useRef(null);
-  const [videoReady, setVideoReady] = useState(false);
-  const [videoFailed, setVideoFailed] = useState(false);
-  const [videoPlaying, setVideoPlaying] = useState(false);
-  const [muted, setMuted] = useState(true);
-  const introVideoUri = assetUri(INTRO_VIDEO);
-  const introPosterUri = assetUri(INTRO_POSTER);
-  const savesData = Platform.OS === 'web'
-    && typeof navigator !== 'undefined'
-    && navigator.connection?.saveData === true;
-  const allowMotion = !reduceMotion && !savesData;
-
-  const toggleSound = () => {
-    const player = videoRef.current;
-    if (!player) return;
-    const nextMuted = !muted;
-    player.muted = nextMuted;
-    setMuted(nextMuted);
-    if (!nextMuted) {
-      const playback = player.play();
-      playback?.catch?.(() => {
-        player.muted = true;
-        setMuted(true);
-      });
-    }
-  };
-
-  const togglePlayback = () => {
-    const player = videoRef.current;
-    if (!player) return;
-    if (player.paused) {
-      const playback = player.play();
-      playback?.catch?.(() => setVideoPlaying(false));
-      return;
-    }
-    player.pause();
-  };
-
-  return (
-    <View style={styles.introStage} accessibilityLabel={t('onboarding.promise.body')}>
-      <Image source={INTRO_POSTER} style={styles.introPoster} resizeMode="cover" />
-      {Platform.OS === 'web' && allowMotion && introVideoUri && !videoFailed
-        ? React.createElement('video', {
-            ref: videoRef,
-            src: introVideoUri,
-            autoPlay: true,
-            muted,
-            loop: true,
-            playsInline: true,
-            poster: introPosterUri,
-            preload: 'auto',
-            onPlaying: () => {
-              setVideoReady(true);
-              setVideoPlaying(true);
-            },
-            onPause: () => setVideoPlaying(false),
-            onError: () => setVideoFailed(true),
-            style: {
-              ...introVideoWebStyle,
-              opacity: videoReady ? 1 : 0,
-              transition: 'opacity 180ms ease-out',
-            },
-            'aria-label': t('onboarding.promise.body'),
-          })
-        : null}
-      <LinearGradient
-        colors={['rgba(7,11,9,0.02)', 'rgba(7,11,9,0.2)', 'rgba(7,11,9,0.86)']}
-        style={styles.introShade}
-      />
-      {Platform.OS === 'web' && allowMotion && introVideoUri && !videoFailed ? (
-        <View style={styles.introMediaControls}>
-          <TouchableOpacity
-            style={styles.introMediaButton}
-            onPress={togglePlayback}
-            accessibilityRole="button"
-            accessibilityLabel={t(videoPlaying ? 'onboarding.media.pause' : 'onboarding.media.play')}
-            hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
-          >
-            <Ionicons name={videoPlaying ? 'pause' : 'play'} size={21} color={colors.white} />
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={styles.introMediaButton}
-            onPress={toggleSound}
-            accessibilityRole="switch"
-            accessibilityState={{ checked: !muted }}
-            accessibilityLabel={t(muted ? 'onboarding.media.enableSound' : 'onboarding.media.disableSound')}
-            hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
-          >
-            <Ionicons name={muted ? 'volume-mute' : 'volume-high'} size={21} color={colors.white} />
-          </TouchableOpacity>
-        </View>
-      ) : null}
-    </View>
-  );
-}
+const STEPS = ['intro', 'promise', 'goal', 'context', 'depth', 'ready'];
 
 function PromiseDemo({ reduceMotion, t }) {
   const scan = useRef(new Animated.Value(0)).current;
@@ -267,75 +155,6 @@ function PromisePath({ t }) {
           </View>
         </View>
       ))}
-    </View>
-  );
-}
-
-function ReviewPrelude({ answer, onAnswer, t }) {
-  return (
-    <View style={styles.reviewWrap}>
-      <View style={styles.reviewHero}>
-        <View style={styles.reviewMascotHalo}>
-          <Image source={MASCOT} style={styles.reviewMascot} resizeMode="cover" />
-        </View>
-        <View style={styles.starRail} accessibilityLabel={t('onboarding.review.starsLabel')}>
-          {[0, 1, 2, 3, 4].map((index) => (
-            <View key={index} style={[styles.starTile, index === 2 && styles.starTilePrime]}>
-              <Ionicons
-                name="star"
-                size={index === 2 ? 23 : 19}
-                color={index === 2 ? colors.background : colors.warning}
-              />
-            </View>
-          ))}
-        </View>
-      </View>
-
-      <View style={styles.reviewCard}>
-        <Text style={styles.reviewQuote}>{t('onboarding.review.quote')}</Text>
-        <View style={styles.reviewProofRow}>
-          {['simple', 'safe', 'useful'].map((item) => (
-            <View key={item} style={styles.reviewProofPill}>
-              <Ionicons name="checkmark" size={13} color={colors.accentLight} />
-              <Text style={styles.reviewProofText}>{t(`onboarding.review.proofs.${item}`)}</Text>
-            </View>
-          ))}
-        </View>
-      </View>
-
-      <View style={styles.reviewActions}>
-        <PressScale style={styles.reviewActionWrap}>
-          <TouchableOpacity
-            style={[
-              styles.reviewAction,
-              styles.reviewActionPrimary,
-              answer === 'positive' && styles.reviewActionSelected,
-            ]}
-            onPress={() => onAnswer('positive')}
-            activeOpacity={0.82}
-            accessibilityRole="button"
-            accessibilityLabel={t('onboarding.review.yes')}
-          >
-            <Text style={styles.reviewActionPrimaryText}>{t('onboarding.review.yes')}</Text>
-            <Ionicons name="sparkles" size={17} color={colors.background} />
-          </TouchableOpacity>
-        </PressScale>
-        <PressScale style={styles.reviewActionWrap}>
-          <TouchableOpacity
-            style={[
-              styles.reviewAction,
-              styles.reviewActionSecondary,
-              answer === 'later' && styles.reviewActionSecondarySelected,
-            ]}
-            onPress={() => onAnswer('later')}
-            activeOpacity={0.82}
-            accessibilityRole="button"
-            accessibilityLabel={t('onboarding.review.later')}
-          >
-            <Text style={styles.reviewActionSecondaryText}>{t('onboarding.review.later')}</Text>
-          </TouchableOpacity>
-        </PressScale>
-      </View>
     </View>
   );
 }
@@ -439,15 +258,13 @@ export default function OnboardingScreen({ onDone }) {
   const reduceMotion = useReducedMotion();
   const [step, setStep] = useState(0);
   const [saving, setSaving] = useState(false);
-  const [reviewAnswer, setReviewAnswer] = useState(null);
   const [answers, setAnswers] = useState({ goal: null, context: null, depth: null });
   const slideIn = useRef(new Animated.Value(1)).current;
   const current = STEPS[step];
   const isIntro = current === 'intro';
   const isLast = step === STEPS.length - 1;
   const isQuestion = Boolean(QUESTIONS[current]);
-  const isReview = current === 'review';
-  const canContinue = isReview ? true : (!isQuestion || Boolean(answers[current]));
+  const canContinue = !isQuestion || Boolean(answers[current]);
 
   useEffect(() => {
     trackOnboardingStepViewed({ step: current, position: step + 1 });
@@ -493,29 +310,8 @@ export default function OnboardingScreen({ onDone }) {
     trackOnboardingChoice({ step: current, value });
   };
 
-  const answerReview = async (value) => {
-    if (reviewAnswer) return;
-    setReviewAnswer(value);
-    sensoryFeedback.selection();
-    trackOnboardingChoice({ step: current, value });
-    if (value === 'positive') {
-      recordPositiveReviewSignal().catch(() => undefined);
-    }
-    setTimeout(() => {
-      if (step === STEPS.length - 1) {
-        finish().catch(() => undefined);
-        return;
-      }
-      setStep((previous) => (previous === step ? Math.min(previous + 1, STEPS.length - 1) : previous));
-    }, reduceMotion ? 80 : 280);
-  };
-
   const next = async () => {
     if (!canContinue || saving) return;
-    if (isReview && !reviewAnswer) {
-      setReviewAnswer('later');
-      trackOnboardingChoice({ step: current, value: 'later' });
-    }
     if (isLast) {
       await finish();
       return;
@@ -530,8 +326,7 @@ export default function OnboardingScreen({ onDone }) {
   return (
     <SafeAreaView style={styles.container}>
       <NatureScene />
-      {!isIntro && (
-        <>
+      <>
           <View style={styles.topRow}>
             <View style={styles.brandMark}>
               <Image source={MASCOT} style={styles.brandMascot} resizeMode="cover" />
@@ -556,8 +351,7 @@ export default function OnboardingScreen({ onDone }) {
           <View style={styles.progressTrack} accessibilityRole="progressbar">
             <View style={[styles.progressFill, { width: `${((step + 1) / STEPS.length) * 100}%` }]} />
           </View>
-        </>
-      )}
+      </>
 
       <ScrollView
         style={[styles.scroller, isIntro && styles.introScroller, isLast && styles.scrollerTight]}
@@ -579,14 +373,8 @@ export default function OnboardingScreen({ onDone }) {
             },
           ]}
         >
-          {current === 'intro' && <IntroVideo reduceMotion={reduceMotion} t={t} />}
+          {current === 'intro' && <IntroMascotVideo reduceMotion={reduceMotion} t={t} />}
           {current === 'promise' && <PromiseDemo reduceMotion={reduceMotion} t={t} />}
-          {current === 'review' && (
-            <View style={styles.reviewStageMini}>
-              <Image source={SCENES.ready} style={styles.reviewStageImage} resizeMode="cover" />
-              <LinearGradient colors={['transparent', colors.background + 'F2']} style={styles.reviewStageShade} />
-            </View>
-          )}
           {!isIntro && (
             <>
               <Text style={styles.kicker}>
@@ -595,8 +383,6 @@ export default function OnboardingScreen({ onDone }) {
                     ? 'onboarding.promiseKicker'
                     : current === 'ready'
                     ? 'onboarding.readyKicker'
-                    : current === 'review'
-                    ? 'onboarding.reviewKicker'
                     : 'onboarding.personalizeKicker'
                 )}
               </Text>
@@ -606,10 +392,6 @@ export default function OnboardingScreen({ onDone }) {
           )}
 
           {current === 'promise' && <PromisePath t={t} />}
-
-          {current === 'review' && (
-            <ReviewPrelude answer={reviewAnswer} onAnswer={answerReview} t={t} />
-          )}
 
           {isQuestion && (
             <>
@@ -720,39 +502,7 @@ const styles = StyleSheet.create({
   content: { width: '100%', maxWidth: 520, alignSelf: 'center' },
   introContent: {
     width: '100%',
-    minHeight: height,
-  },
-  introStage: {
-    flex: 1,
-    minHeight: height,
-    width: '100%',
-    overflow: 'hidden',
-    backgroundColor: colors.background,
-  },
-  introPoster: {
-    ...StyleSheet.absoluteFillObject,
-    width: '100%',
-    height: '100%',
-    backgroundColor: colors.background,
-  },
-  introShade: { ...StyleSheet.absoluteFillObject },
-  introMediaControls: {
-    position: 'absolute',
-    zIndex: 3,
-    top: space.lg,
-    right: space.lg,
-    flexDirection: 'row',
-    gap: space.sm,
-  },
-  introMediaButton: {
-    width: 46,
-    height: 46,
-    borderRadius: 23,
-    alignItems: 'center',
-    justifyContent: 'center',
-    borderWidth: 1,
-    borderColor: colors.white + '55',
-    backgroundColor: 'rgba(7,11,9,0.68)',
+    minHeight: Math.max(360, height - 150),
   },
   kicker: {
     ...type.caption,
@@ -865,156 +615,6 @@ const styles = StyleSheet.create({
   demoResultCopy: { flex: 1 },
   demoResultTitle: { ...type.cardTitle },
   demoResultBody: { ...type.caption, marginTop: 1 },
-  reviewStageMini: {
-    height: isCompactViewport ? 118 : 136,
-    borderRadius: radius.xl,
-    overflow: 'hidden',
-    borderWidth: 1,
-    borderColor: colors.border,
-    backgroundColor: colors.surface,
-  },
-  reviewStageImage: {
-    width: '100%',
-    height: '100%',
-    opacity: 0.86,
-  },
-  reviewStageShade: { ...StyleSheet.absoluteFillObject },
-  reviewWrap: {
-    marginTop: isCompactViewport ? space.sm : space.md,
-    gap: isCompactViewport ? space.sm : space.md,
-  },
-  reviewHero: {
-    minHeight: isCompactViewport ? 124 : 144,
-    borderRadius: radius.xl,
-    borderWidth: 1,
-    borderColor: colors.accentLight + '44',
-    backgroundColor: 'rgba(127,199,154,0.09)',
-    alignItems: 'center',
-    justifyContent: 'center',
-    overflow: 'hidden',
-  },
-  reviewMascotHalo: {
-    width: isCompactViewport ? 76 : 88,
-    height: isCompactViewport ? 76 : 88,
-    borderRadius: isCompactViewport ? 28 : 32,
-    borderWidth: 1,
-    borderColor: colors.accentLight + '88',
-    backgroundColor: colors.surface,
-    overflow: 'hidden',
-    shadowColor: colors.accentLight,
-    shadowOpacity: 0.34,
-    shadowRadius: 18,
-    elevation: 5,
-  },
-  reviewMascot: {
-    width: '100%',
-    height: '100%',
-  },
-  starRail: {
-    position: 'absolute',
-    bottom: space.sm,
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 6,
-  },
-  starTile: {
-    width: 31,
-    height: 31,
-    borderRadius: 12,
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: 'rgba(224,169,81,0.13)',
-    borderWidth: 1,
-    borderColor: 'rgba(224,169,81,0.28)',
-  },
-  starTilePrime: {
-    width: 39,
-    height: 39,
-    borderRadius: 15,
-    backgroundColor: colors.warning,
-    borderColor: colors.warning,
-    transform: [{ translateY: -2 }],
-  },
-  reviewCard: {
-    borderRadius: radius.xl,
-    backgroundColor: 'rgba(22,31,27,0.9)',
-    borderWidth: 1,
-    borderColor: colors.border,
-    padding: space.md,
-  },
-  reviewQuote: {
-    color: colors.text,
-    fontSize: isCompactViewport ? 16 : 17,
-    lineHeight: isCompactViewport ? 22 : 24,
-    fontWeight: '900',
-  },
-  reviewProofRow: {
-    marginTop: space.sm,
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    gap: 8,
-  },
-  reviewProofPill: {
-    minHeight: 32,
-    borderRadius: radius.pill,
-    paddingHorizontal: 10,
-    borderWidth: 1,
-    borderColor: colors.accentLight + '33',
-    backgroundColor: colors.accentLight + '10',
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 5,
-  },
-  reviewProofText: {
-    color: colors.textSecondary,
-    fontSize: 12,
-    lineHeight: 16,
-    fontWeight: '800',
-  },
-  reviewActions: {
-    gap: 9,
-  },
-  reviewActionWrap: { width: '100%' },
-  reviewAction: {
-    minHeight: 50,
-    borderRadius: radius.lg,
-    paddingHorizontal: space.md,
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
-    gap: 8,
-    borderWidth: 1,
-  },
-  reviewActionPrimary: {
-    backgroundColor: colors.accentLight,
-    borderColor: colors.accentLight,
-  },
-  reviewActionSelected: {
-    shadowColor: colors.accentLight,
-    shadowOpacity: 0.38,
-    shadowRadius: 16,
-    elevation: 4,
-  },
-  reviewActionSecondary: {
-    backgroundColor: 'rgba(255,255,255,0.035)',
-    borderColor: colors.border,
-  },
-  reviewActionSecondarySelected: {
-    borderColor: colors.textMuted,
-    backgroundColor: colors.surfaceElevated,
-  },
-  reviewActionPrimaryText: {
-    color: colors.background,
-    fontSize: 15,
-    lineHeight: 20,
-    fontWeight: '900',
-  },
-  reviewActionSecondaryText: {
-    color: colors.textSecondary,
-    fontSize: 14,
-    lineHeight: 20,
-    fontWeight: '800',
-  },
   choices: { gap: isCompactViewport ? 8 : 10, marginTop: isCompactViewport ? space.sm : space.md },
   choice: {
     minHeight: isCompactViewport ? 64 : 68,

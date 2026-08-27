@@ -52,6 +52,10 @@ import LensPulseButton from '../components/LensPulseButton';
 import { sensoryFeedback } from '../components/sensoryFeedback';
 import useReducedMotion from '../components/useReducedMotion';
 import NativeLensCamera from '../components/NativeLensCamera';
+import {
+  persistCollectionPhoto,
+  deletePersistentCollectionPhoto,
+} from '../components/persistentCollectionPhoto';
 
 // A divulgacao precisa nomear o fornecedor real antes de cada envio. A lista
 // explicita tambem falha fechada se uma nova categoria fotografica for criada
@@ -239,14 +243,21 @@ export default function IdentifyScreen() {
         fact,
         identityKey: candidateIdentityKey(entity),
       });
-      const identifiedEntity = { ...entity, photoUri: primaryPhoto.uri };
+      const persistentPhotoUri = await persistCollectionPhoto(primaryPhoto.uri);
+      const identifiedEntity = { ...entity, photoUri: persistentPhotoUri };
       const savedEntry = await saveIdentificationAutomatically(identifiedEntity, category);
+
+      if (!savedEntry) {
+        await deletePersistentCollectionPhoto(persistentPhotoUri);
+        showAlert(t('common.saveErrorTitle'), t('common.saveErrorBody'));
+        return;
+      }
 
       // A escrita local termina antes da navegacao. Assim a foto nao depende de
       // a pessoa encontrar um icone de salvar nem se perde ao fechar a ficha.
       // Recompensas continuam assincronas dentro do helper e nao atrasam a tela.
       navigation.navigate(meta.detailRoute, {
-        plant: savedEntry || identifiedEntity,
+        plant: savedEntry,
         photoBase64: primaryPhoto.base64,
         fromIdentify: true,
         scanOutcomeRequest: outcomeRequest,
@@ -283,7 +294,7 @@ export default function IdentifyScreen() {
       if (completed) {
         // The primary photo continues into the result/collection. Extra
         // evidence is no longer needed once the provider has answered.
-        photos.slice(1).forEach(discardPreparedPhoto);
+        photos.forEach(discardPreparedPhoto);
         setPhotoSlots([null, null, null]);
         setShowExtraAngles(false);
       }

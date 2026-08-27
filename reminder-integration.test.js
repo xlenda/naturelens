@@ -26,7 +26,7 @@ test('resposta antiga e consumida e reconciliacao acontece depois do cold start'
   assert.match(app, /getInitialReminderResponse\(\)[\s\S]{0,300}reconcileLocalReminders\(\)/);
 });
 
-test('remocao cancela lembretes antes de apagar o exemplar ou os dados pessoais', () => {
+test('remocao cancela lembretes e exclusao legal chega ao servidor antes da limpeza local', () => {
   const storage = read('components/storage.js');
   const removeStart = storage.indexOf('export function removeFromCollection');
   const cancelOne = storage.indexOf('cancelLocalRemindersForEntry(savedId)', removeStart);
@@ -37,11 +37,12 @@ test('remocao cancela lembretes antes de apagar o exemplar ou os dados pessoais'
   const cancelAll = storage.indexOf('cancelAllLocalReminders()', clearStart);
   const collectionClear = storage.indexOf('AsyncStorage.removeItem(COLLECTION_KEY)', cancelAll);
   assert.ok(clearStart >= 0 && cancelAll > clearStart && collectionClear > cancelAll);
-  assert.match(storage, /if \(!await cancelAllLocalReminders\(\)\) return false/);
+  assert.match(storage, /if \(!skipReminderCleanup && !await cancelAllLocalReminders\(\)\) return false/);
 
   const settings = read('screens/SettingsScreen.js');
-  const reminderClear = settings.indexOf('await clearLocalReminders()');
-  const accountDelete = settings.indexOf('await deleteAccount()', reminderClear);
-  assert.ok(reminderClear >= 0 && accountDelete > reminderClear, 'account deletion cancels native alarms first');
-  assert.match(settings, /if \(!await clearCollection\(\)\) throw/);
+  const accountDelete = settings.indexOf('await deleteAccount()');
+  const reminderClear = settings.indexOf('await clearLocalReminders()', accountDelete);
+  const localClear = settings.indexOf('await clearCollection({ skipReminderCleanup: true })', reminderClear);
+  assert.ok(accountDelete >= 0 && reminderClear > accountDelete, 'exclusao remota nao depende da API local');
+  assert.ok(localClear > reminderClear, 'a colecao e apagada apenas depois da tentativa de cancelar alarmes');
 });

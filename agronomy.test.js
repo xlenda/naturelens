@@ -395,7 +395,7 @@ test('catalog crops open the agronomy screen without claiming a photo diagnosis'
 
   const api = read('api/identify.js');
   assert.match(api, /healthAssessed: true/);
-  assert.match(read('api/collection.js'), /'healthAssessed'/);
+  assert.match(read('components/collectionSyncSchema.js'), /'healthAssessed'/);
   const crop = read('screens/CropDetailScreen.js');
   assert.match(crop, /plant\.healthAssessed === true/,
     'resultado sem avaliacao explicita nao pode virar laudo de planta saudavel');

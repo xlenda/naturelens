@@ -90,6 +90,12 @@ test('rate-limit buckets HMAC IP, email and device targets before persistence', 
   }
 });
 
+test('authentication never exposes provider diagnostics to the client', () => {
+  const auth = fs.readFileSync(path.join(__dirname, 'api', 'auth.js'), 'utf8');
+  assert.doesNotMatch(auth, /json\(\{\s*error:\s*error\.message/);
+  assert.match(auth, /reason: 'codeSendFailed'/);
+});
+
 test('missing HMAC secret fails open without attempting a raw database write', async () => {
   const previousHmac = process.env.RATE_LIMIT_HMAC_SECRET;
   const previousService = process.env.SUPABASE_SERVICE_ROLE_KEY;

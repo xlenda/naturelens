@@ -150,6 +150,49 @@ begin
 end;
 $$;
 
+-- Reserva o unico uso gratis ANTES de chamar o fornecedor. O WHERE no conflito
+-- faz apenas a primeira requisicao retornar linha; concorrentes observam false
+-- sem incrementar e sem consumir credito externo.
+create or replace function public.reserve_category_usage(
+  p_device_id text,
+  p_category text
+) returns boolean
+language plpgsql
+as $$
+declare
+  v_count integer;
+begin
+  insert into public.category_usage (device_id, category, used_count, updated_at)
+  values (p_device_id, p_category, 1, now())
+  on conflict (device_id, category)
+  do update set
+    used_count = 1,
+    updated_at = now()
+  where public.category_usage.used_count < 1
+  returning used_count into v_count;
+
+  return v_count = 1;
+end;
+$$;
+
+-- Um resultado notFound nao deve gastar a unica tentativa. A exclusao e
+-- condicional para nunca apagar uso consolidado maior que um de bases antigas.
+create or replace function public.release_category_usage(
+  p_device_id text,
+  p_category text
+) returns boolean
+language plpgsql
+as $$
+declare
+  v_deleted integer;
+begin
+  delete from public.category_usage
+  where device_id = p_device_id and category = p_category and used_count = 1;
+  get diagnostics v_deleted = row_count;
+  return v_deleted = 1;
+end;
+$$;
+
 -- ----------------------------------------------------------------------------
 -- 6. push_subscriptions: notificações do PWA (Android + iPhone iOS 16.4+)
 -- ----------------------------------------------------------------------------

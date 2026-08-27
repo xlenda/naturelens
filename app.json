@@ -12,7 +12,15 @@
     },
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "app.naturelens"
+      "bundleIdentifier": "app.naturelens",
+      "config": {
+        "usesNonExemptEncryption": false
+      },
+      "infoPlist": {
+        "NSCameraUsageDescription": "NatureLens uses the camera only when you choose to photograph nature for identification.",
+        "NSPhotoLibraryUsageDescription": "NatureLens accesses only the photos you choose for nature identification.",
+        "NSLocationWhenInUseUsageDescription": "NatureLens uses approximate location only when you request local climate context."
+      }
     },
     "android": {
       "adaptiveIcon": {
@@ -24,11 +32,14 @@
       "blockedPermissions": [
         "android.permission.SYSTEM_ALERT_WINDOW",
         "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
         "android.permission.SCHEDULE_EXACT_ALARM",
         "android.permission.USE_EXACT_ALARM"
       ]
     },
     "plugins": [
+      "./plugins/withNatureLensLeastPrivilege",
       [
         "expo-location",
         {
@@ -48,7 +59,7 @@
         {
           "cameraPermission": "Allow NatureLens to use your camera to identify nature.",
           "photosPermission": "Allow NatureLens to access photos you choose for nature identification.",
-          "microphonePermission": "Allow NatureLens to record nature sounds for identification."
+          "microphonePermission": false
         }
       ],
       "expo-localization",
@@ -67,7 +78,8 @@
           "enableBackgroundAudio": false,
           "enableDeviceDetection": false
         }
-      ]
+      ],
+      "expo-video"
     ],
     "extra": {
       "eas": {

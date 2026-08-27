@@ -287,7 +287,8 @@ test('foto e som persistem o achado antes de abrir o resultado com o mesmo recib
   const photoSave = identify.indexOf('await saveIdentificationAutomatically(identifiedEntity, category)', photoRequest);
   const photoNavigation = identify.indexOf('navigation.navigate(meta.detailRoute', photoRequest);
   assert.ok(photoRequest > 0 && photoSave > photoRequest && photoNavigation > photoSave);
-  assert.match(identify, /plant: savedEntry \|\| identifiedEntity/);
+  assert.match(identify, /plant: savedEntry/);
+  assert.doesNotMatch(identify, /plant: savedEntry \|\| identifiedEntity/);
   assert.match(identify, /const scanInFlightRef = useRef\(false\)/);
   assert.match(identify, /if \(!primaryPhoto \|\| scanning \|\| scanInFlightRef\.current\) return/);
   assert.match(identify, /scanInFlightRef\.current = false;[\s\S]*setScanning\(false\)/);
@@ -300,7 +301,8 @@ test('foto e som persistem o achado antes de abrir o resultado com o mesmo recib
   const soundSave = sound.indexOf("await saveIdentificationAutomatically(entity, 'sound')", soundRequest);
   const soundNavigation = sound.indexOf("navigation.navigate('SoundDetail'", soundRequest);
   assert.ok(soundRequest > 0 && soundSave > soundRequest && soundNavigation > soundSave);
-  assert.match(sound, /plant: savedEntry \|\| entity/);
+  assert.match(sound, /plant: savedEntry/);
+  assert.doesNotMatch(sound, /plant: savedEntry \|\| entity/);
   assert.doesNotMatch(sound.slice(soundRequest, soundSave), /clip\.base64/);
   assert.match(sound, /if \(err\.paymentRequired\)/);
 
@@ -328,6 +330,7 @@ test('salvamento automatico persiste a categoria sem liberar recompensa antes da
       },
     },
     './tracking': { trackResultSaved: (args) => calls.push(['tracking', args.category]) },
+    './storeReview': { recordReviewEligibleMoment: async () => {} },
     './missions': {
       TOKENS_PER_MISSION: 10,
       recordMissionEvent: async (event) => {
@@ -358,6 +361,7 @@ test('falha ou categoria invalida nunca finge salvamento automatico', async () =
       },
     },
     './tracking': { trackResultSaved: () => { sideEffects += 1; } },
+    './storeReview': { recordReviewEligibleMoment: async () => { sideEffects += 1; } },
     './missions': { TOKENS_PER_MISSION: 10, recordMissionEvent: async () => { sideEffects += 1; return []; } },
     './achievements': { addTokens: () => { sideEffects += 1; } },
   });

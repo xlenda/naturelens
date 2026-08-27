@@ -26,6 +26,24 @@ test('release Android mantem pacote, AAB e versionamento remoto', () => {
   assert.equal(eas.build.production.android.buildType, 'app-bundle');
 });
 
+test('release iOS mantem bundle, versao remota e permissoes minimas', () => {
+  assert.equal(app.ios.bundleIdentifier, 'app.naturelens');
+  assert.equal(app.ios.config.usesNonExemptEncryption, false);
+  assert.equal(eas.cli.appVersionSource, 'remote');
+  assert.equal(eas.build.production.autoIncrement, true);
+  assert.match(app.ios.infoPlist.NSCameraUsageDescription, /NatureLens/);
+  assert.match(app.ios.infoPlist.NSPhotoLibraryUsageDescription, /photos you choose/i);
+  assert.match(app.ios.infoPlist.NSLocationWhenInUseUsageDescription, /approximate location/i);
+  assert.equal(pluginConfig('expo-image-picker').microphonePermission, false);
+  assert.equal(app.plugins[0], './plugins/withNatureLensLeastPrivilege');
+  const leastPrivilege = fs.readFileSync(path.join(root, 'plugins', 'withNatureLensLeastPrivilege.js'), 'utf8');
+  assert.match(leastPrivilege, /delete mod\.modResults\.NSMicrophoneUsageDescription/);
+  assert.match(leastPrivilege, /delete mod\.modResults\.NSLocationAlwaysUsageDescription/);
+  assert.match(leastPrivilege, /NSAllowsArbitraryLoads: false/);
+  assert.match(leastPrivilege, /android\.permission\.RECORD_AUDIO/);
+  assert.match(pkg.dependencies['expo-video'], /3\.0\./);
+});
+
 test('release Android limita cada permissao nativa ao recurso declarado', () => {
   const imagePicker = pluginConfig('expo-image-picker');
   const camera = pluginConfig('expo-camera');
@@ -33,7 +51,7 @@ test('release Android limita cada permissao nativa ao recurso declarado', () => 
   const notifications = pluginConfig('expo-notifications');
   const audioStudio = pluginConfig('@siteed/audio-studio');
   assert.ok(imagePicker, 'expo-image-picker precisa de configuracao explicita');
-  assert.match(imagePicker.microphonePermission, /NatureLens/);
+  assert.equal(imagePicker.microphonePermission, false);
   assert.match(imagePicker.cameraPermission, /NatureLens/);
   assert.match(imagePicker.photosPermission, /NatureLens/);
   assert.ok(camera, 'o visor nativo precisa do plugin de camera');
@@ -66,6 +84,8 @@ test('release Android limita cada permissao nativa ao recurso declarado', () => 
     'o app nao usa sobreposicao sobre outros apps'
   );
   for (const permission of [
+    'android.permission.READ_EXTERNAL_STORAGE',
+    'android.permission.WRITE_EXTERNAL_STORAGE',
     'android.permission.SCHEDULE_EXACT_ALARM',
     'android.permission.USE_EXACT_ALARM',
   ]) {
@@ -87,6 +107,20 @@ test('release Android limita cada permissao nativa ao recurso declarado', () => 
   }
 });
 
+test('foto salva usa armazenamento persistente no Android e iOS', () => {
+  const nativePhoto = fs.readFileSync(
+    path.join(root, 'components', 'persistentCollectionPhoto.native.js'),
+    'utf8'
+  );
+  const identify = fs.readFileSync(path.join(root, 'screens', 'IdentifyScreen.js'), 'utf8');
+  assert.match(nativePhoto, /FileSystem\.documentDirectory/);
+  assert.match(nativePhoto, /FileSystem\.copyAsync/);
+  assert.match(nativePhoto, /Crypto\.randomUUID/);
+  assert.match(identify, /await persistCollectionPhoto\(primaryPhoto\.uri\)/);
+  assert.match(identify, /if \(!savedEntry\)/, 'falha de auto-save precisa ser visivel');
+  assert.doesNotMatch(identify, /plant:\s*savedEntry\s*\|\|/, 'resultado nao pode fingir auto-save');
+});
+
 test('visor cinematografico fica no binario nativo sem entrar no bundle web', () => {
   const webCamera = fs.readFileSync(path.join(root, 'components', 'NativeLensCamera.js'), 'utf8');
   const nativeCamera = fs.readFileSync(path.join(root, 'components', 'NativeLensCamera.native.js'), 'utf8');
@@ -95,6 +129,19 @@ test('visor cinematografico fica no binario nativo sem entrar no bundle web', ()
   assert.match(nativeCamera, /CameraView/);
   assert.match(nativeCamera, /takePictureAsync/);
   assert.match(nativeCamera, /requestPermission/);
+});
+
+test('video de abertura tem player nativo e respeita reducao de movimento', () => {
+  const onboarding = fs.readFileSync(path.join(root, 'screens', 'OnboardingScreen.js'), 'utf8');
+  const nativeVideo = fs.readFileSync(path.join(root, 'components', 'IntroMascotVideo.native.js'), 'utf8');
+  const webVideo = fs.readFileSync(path.join(root, 'components', 'IntroMascotVideo.js'), 'utf8');
+  assert.match(onboarding, /<IntroMascotVideo reduceMotion=\{reduceMotion\}/);
+  assert.match(nativeVideo, /from 'expo-video'/);
+  assert.match(nativeVideo, /instance\.loop = true/);
+  assert.match(nativeVideo, /instance\.muted = true/);
+  assert.match(nativeVideo, /!reduceMotion/);
+  assert.match(webVideo, /loop: true/);
+  assert.match(webVideo, /navigator\.connection\?\.saveData/);
 });
 
 test('fontes dos icones Android tem resolucao segura para gerar os assets', async () => {
@@ -202,6 +249,24 @@ test('capturas editoriais nao fabricam score do identificador', () => {
   assert.match(capture, /Network\.setBlockedURLs/);
   assert.match(capture, /if \(!\(await scrollToText/);
   assert.match(capture, /window\.scrollY \|\| document\.documentElement\.scrollTop/);
+});
+
+test('pacote iOS tem icone sem alpha e capturas 6,7 polegadas', async () => {
+  const icon = await sharp(path.join(root, app.icon)).metadata();
+  assert.equal(icon.width, 1024);
+  assert.equal(icon.height, 1024);
+  assert.equal(icon.hasAlpha, false);
+  for (const locale of ['pt-BR', 'en-US']) {
+    const directory = path.join(root, 'store-assets', 'app-store-screenshots', locale);
+    const files = fs.readdirSync(directory).filter((name) => /\.png$/i.test(name)).sort();
+    assert.equal(files.length, 5);
+    for (const file of files) {
+      const metadata = await sharp(path.join(directory, file)).metadata();
+      assert.equal(metadata.width, 1290);
+      assert.equal(metadata.height, 2796);
+      assert.equal(metadata.hasAlpha, false);
+    }
+  }
 });
 
 test('ASO localizado respeita limites e cobre os 17 idiomas do app', () => {

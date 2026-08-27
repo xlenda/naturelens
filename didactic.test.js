@@ -129,7 +129,7 @@ test('invertebrate learning follows documented class and never guesses Insecta',
   const identify = read('api/identify.js');
   assert.match(identify, /taxonClass: details\.taxonomy\?\.class \|\| null/);
   assert.match(identify, /taxonPhylum: details\.taxonomy\?\.phylum \|\| null/);
-  const collection = read('api/collection.js');
+  const collection = read('components/collectionSyncSchema.js');
   assert.match(collection, /'taxonClass'/);
   assert.match(collection, /'taxonPhylum'/);
 

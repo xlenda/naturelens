@@ -32,14 +32,32 @@ const MESSAGES = {
     hint: 'Recargar suele solucionarlo. Tu colección guardada está en este dispositivo y no se ha perdido.',
     reload: 'Recargar la app',
   },
+  de: { title: 'Etwas ist schiefgelaufen', hint: 'Ein Neustart behebt das meist. Deine gespeicherte Sammlung bleibt auf diesem Gerät erhalten.', reload: 'App neu laden' },
+  fr: { title: 'Un problème est survenu', hint: 'Recharger résout généralement le problème. Votre collection enregistrée reste sur cet appareil.', reload: "Recharger l’application" },
+  it: { title: 'Qualcosa è andato storto', hint: 'Ricaricare di solito risolve il problema. La raccolta salvata resta su questo dispositivo.', reload: "Ricarica l’app" },
+  nl: { title: 'Er is iets misgegaan', hint: 'Opnieuw laden lost dit meestal op. Je opgeslagen verzameling blijft op dit apparaat bewaard.', reload: 'App opnieuw laden' },
+  pl: { title: 'Coś poszło nie tak', hint: 'Ponowne uruchomienie zwykle pomaga. Zapisana kolekcja pozostaje na tym urządzeniu.', reload: 'Uruchom aplikację ponownie' },
+  sv: { title: 'Något gick fel', hint: 'En omladdning löser oftast problemet. Din sparade samling finns kvar på enheten.', reload: 'Ladda om appen' },
+  da: { title: 'Noget gik galt', hint: 'En genindlæsning løser som regel problemet. Din gemte samling bliver på denne enhed.', reload: 'Genindlæs appen' },
+  cs: { title: 'Něco se pokazilo', hint: 'Opětovné načtení obvykle pomůže. Uložená sbírka zůstává v tomto zařízení.', reload: 'Načíst aplikaci znovu' },
+  tr: { title: 'Bir sorun oluştu', hint: 'Yeniden yüklemek genellikle sorunu çözer. Kaydedilen koleksiyonunuz bu cihazda kalır.', reload: 'Uygulamayı yeniden yükle' },
+  ko: { title: '문제가 발생했습니다', hint: '앱을 다시 불러오면 대부분 해결됩니다. 저장한 컬렉션은 이 기기에 그대로 있습니다.', reload: '앱 다시 불러오기' },
+  zh: { title: '出现了问题', hint: '重新加载通常可以解决。已保存的收藏仍保留在此设备上。', reload: '重新加载应用' },
+  'zh-hant': { title: '發生問題', hint: '重新載入通常可以解決。已儲存的收藏仍保留在此裝置上。', reload: '重新載入應用程式' },
+  hi: { title: 'कुछ गड़बड़ हुई', hint: 'ऐप दोबारा लोड करने से आम तौर पर समस्या ठीक हो जाती है। आपका संग्रह इसी डिवाइस पर सुरक्षित है।', reload: 'ऐप दोबारा लोड करें' },
+  ar: { title: 'حدث خطأ ما', hint: 'إعادة تحميل التطبيق تحل المشكلة غالبًا. تبقى مجموعتك المحفوظة على هذا الجهاز.', reload: 'إعادة تحميل التطبيق' },
 };
 
 function crashLanguage() {
-  if (Platform.OS !== 'web' || typeof navigator === 'undefined') return 'en';
   try {
-    const locale = (navigator.language || '').toLowerCase();
-    if (locale.startsWith('pt')) return 'pt';
-    if (locale.startsWith('es')) return 'es';
+    const locale = String(
+      Platform.OS === 'web' && typeof navigator !== 'undefined'
+        ? navigator.language
+        : Intl.DateTimeFormat().resolvedOptions().locale,
+    ).toLowerCase();
+    if (locale.startsWith('zh-hant') || locale.startsWith('zh-tw') || locale.startsWith('zh-hk')) return 'zh-hant';
+    const primary = locale.split('-')[0];
+    if (MESSAGES[primary]) return primary;
   } catch {}
   return 'en';
 }
@@ -78,9 +96,6 @@ export default class ErrorBoundary extends React.Component {
           <Text style={styles.title} accessibilityRole="header">
             {copy.title}
           </Text>
-          {!!this.state.error?.message && (
-            <Text style={styles.message}>{String(this.state.error.message)}</Text>
-          )}
           <Text style={styles.hint}>{copy.hint}</Text>
           <TouchableOpacity
             style={styles.button}
@@ -112,12 +127,6 @@ const styles = StyleSheet.create({
     fontWeight: '800',
     marginBottom: 12,
     textAlign: 'center',
-  },
-  message: {
-    color: colors.textSecondary,
-    fontSize: 13.5,
-    textAlign: 'center',
-    marginBottom: 10,
   },
   hint: {
     color: colors.textMuted,

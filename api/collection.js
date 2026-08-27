@@ -2,6 +2,7 @@ const { getSupabaseAdmin, requireDeviceId } = require('./_lib/supabaseAdmin');
 const { checkRateLimit } = require('./_lib/rateLimit');
 const { entryTimestamp, mergeCollectionEntries } = require('../components/collectionMerge');
 const { sanitiseIdentityV1 } = require('../components/taxonIdentity');
+const { COLLECTION_SYNC_FIELDS } = require('../components/collectionSyncSchema');
 
 // Cloud sync of the collection, for signed-in subscribers.
 //
@@ -37,89 +38,6 @@ const READ_PAGE_SIZE = 500;
 const ID_QUERY_SIZE = 100;
 const WRITE_CONCURRENCY = 12;
 const ISO_TIMESTAMP = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d{1,3})?(?:Z|[+-]\d{2}:\d{2})$/;
-
-// Fields worth carrying across devices. Everything else - photoUri above all -
-// is dropped here, on the server, so a buggy or modified client cannot upload
-// what the privacy policy says is never uploaded.
-const SYNCED_FIELDS = [
-  'id',
-  'name',
-  'scientific',
-  'category',
-  'confidence',
-  'overview',
-  'overviewOriginal',
-  'overviewIsProse',
-  'overviewCitation',
-  'overviewLicense',
-  'overviewLicenseUrl',
-  'sourceProvider',
-  'resultLanguage',
-  'identityV1',
-  'subjectProbability',
-  'gbifId',
-  'displayName',
-  'origin',
-  'taxonClass',
-  'taxonPhylum',
-  'family',
-  'ord',
-  'group',
-  'url',
-  'commonNames',
-  'synonyms',
-  'water',
-  'waterLabel',
-  'edibleParts',
-  'toxicity',
-  'bestWatering',
-  'bestLightCondition',
-  'bestSoilType',
-  'commonUses',
-  'culturalSignificance',
-  'propagationMethods',
-  // Seguranca de fungos e insetos: o valor cru escolhe a cor e o Label e o
-  // texto traduzido. Os dois precisam atravessar o sync juntos.
-  'edibility',
-  'edibilityLabel',
-  'psychoactive',
-  'lookAlike',
-  'lookAlikeDetails',
-  'danger',
-  'dangerLabel',
-  'dangerDescription',
-  'role',
-  'redList',
-  // Laudo de lavoura e metadados de peixe sao conteudo pequeno, nao foto do
-  // usuario. Sem eles, reabrir a mesma descoberta em outro aparelho mudava o
-  // resultado e podia apagar o tratamento ou a decisao de traducao.
-  'healthAssessed',
-  'healthScientific',
-  'healthCheckedAt',
-  'healthSourceProvider',
-  'healthResultLanguage',
-  'disease',
-  'referencePhoto',
-  'detectionScore',
-  'alternatives',
-  'similarImages',
-  'savedAt',
-  'room',
-  'lastWateredAt',
-  'updatedAt',
-  'specimenNote',
-  'specimenNoteUpdatedAt',
-  // The user's own pet name for the find ("the balcony fern"). Affective
-  // metadata, tiny, and the whole point of cloud sync is that a rebuilt
-  // device gets the collection back AS THE USER KNOWS IT - losing every
-  // nickname on restore would make the recovered collection feel like
-  // someone else's.
-  'nickname',
-  // Escolha humana e diario de cidade sao metadados pequenos. A coordenada
-  // nunca entra no checkIn: o cliente persiste somente cidade/pais/habitat.
-  'identityReview',
-  'checkIn',
-];
 
 // Nesses campos null e uma exclusao deliberada, nao ausencia de dado. Sem o
 // valor explicito, limpar comodo/apelido ou substituir um laudo por "saudavel"
@@ -234,7 +152,7 @@ function sanitiseEntry(entry) {
   if (!savedId || !category) return null;
 
   const payload = {};
-  for (const field of SYNCED_FIELDS) {
+  for (const field of COLLECTION_SYNC_FIELDS) {
     const value = entry[field];
     if (field === 'identityV1') {
       const clean = sanitiseIdentityV1(value);

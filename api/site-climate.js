@@ -74,8 +74,16 @@ module.exports = async function handler(req, res) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const deviceId = requireDeviceId(req, res);
   if (!deviceId) return;
+  // A cota primaria usa a origem de rede: deviceId e autoemitido e pode ser
+  // trocado a cada request. A segunda cota evita que um aparelho legitimo
+  // monopolize uma rede compartilhada sem transformar UUID em defesa unica.
   if (!(await checkRateLimit(req, res, {
-    scope: `site-climate:${deviceId}`,
+    scope: 'site-climate',
+    limit: 60,
+    windowSeconds: 3600,
+  }))) return;
+  if (!(await checkRateLimit(req, res, {
+    scope: `site-climate-device:${deviceId}`,
     limit: 20,
     windowSeconds: 3600,
     ignoreIp: true,

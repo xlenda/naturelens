@@ -14,6 +14,16 @@ function loadRecovery() {
 }
 
 const { recoverWebApp, recoveryUrl } = loadRecovery();
+const boundary = require('node:fs').readFileSync('components/ErrorBoundary.js', 'utf8');
+
+test('tela de recuperacao cobre os 17 idiomas e nao expoe erros internos', () => {
+  for (const code of ['en', 'pt', 'es', 'de', 'fr', 'it', 'nl', 'pl', 'sv', 'da', 'cs', 'tr', 'ko', 'zh', 'zh-hant', 'hi', 'ar']) {
+    assert.match(boundary, new RegExp(`(?:^|\\s|')${code.replace('-', '\\-')}(?:'|:)`));
+  }
+  assert.doesNotMatch(boundary, /String\(this\.state\.error\.message\)/);
+  assert.doesNotMatch(boundary, /styles\.message/);
+  assert.match(boundary, /Intl\.DateTimeFormat\(\)\.resolvedOptions\(\)\.locale/);
+});
 
 test('recuperacao online busca a versao atual sem apagar dados nem caches', async () => {
   const calls = { fetch: [], update: 0, replace: [], reload: 0 };

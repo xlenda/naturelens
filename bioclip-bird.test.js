@@ -330,7 +330,7 @@ function loadBirdHarness({ bioclipResult, bioclipError, nyckelResult }) {
     './_lib/supabaseAdmin': { requireDeviceId: () => 'device' },
     './_lib/entitlement': {
       checkEntitlement: async () => ({ allowed: true }),
-      recordUsage: async () => {},
+      releaseUsage: async () => {},
     },
     './_lib/rateLimit': { checkRateLimit: async () => true },
     './_lib/translateEntity': { translateEntity: async (entity) => entity },

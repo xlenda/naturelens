@@ -220,7 +220,7 @@ test('a notFound result does not spend a free use', () => {
   const src = fs.readFileSync(path.join(__dirname, 'api/identify.js'), 'utf8');
   assert.match(
     src,
-    /!entitlement\.subscribed && !result\.notFound/,
+    /entitlement\.reserved && result\.notFound[\s\S]{0,120}releaseUsage/,
     'charging for "nothing found" spends someone\'s only free scan on a silent ' +
       'recording, and the retry that would have worked hits the paywall'
   );
@@ -404,7 +404,7 @@ test('Android exposes the PCM recorder and requests only foreground microphone p
   const imagePicker = appConfig.expo.plugins.find(
     (plugin) => Array.isArray(plugin) && plugin[0] === 'expo-image-picker'
   );
-  assert.match(imagePicker?.[1]?.microphonePermission, /NatureLens/);
+  assert.equal(imagePicker?.[1]?.microphonePermission, false);
   const audioPlugin = appConfig.expo.plugins.find(
     (plugin) => Array.isArray(plugin) && plugin[0] === '@siteed/audio-studio'
   );
