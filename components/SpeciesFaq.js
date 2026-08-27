@@ -55,7 +55,12 @@ export default function SpeciesFaq({ category, name, scientific, accent, navigat
     // (BotanistScreen le route.params.prefill e route.params.context).
     navigation.navigate('Botanist', {
       prefill: question,
-      context: name + ' (' + (scientific || '') + ')',
+      context: {
+        display: name + ' (' + (scientific || '') + ')',
+        name,
+        scientific: scientific || '',
+        category,
+      },
     });
   };
 

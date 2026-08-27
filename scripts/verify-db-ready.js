@@ -23,6 +23,9 @@ async function main() {
     ['community profiles', '/rest/v1/community_profiles?select=public_id,terms_version,terms_accepted_at&limit=1'],
     ['community moderation', '/rest/v1/community_reports?select=status,reviewed_at,moderator_note&limit=1'],
     ['climate cache', '/rest/v1/site_climate_cache?select=grid_key&limit=1'],
+    ['AI reports', '/rest/v1/ai_reports?select=id&limit=1'],
+    ['knowledge documents', '/rest/v1/knowledge_documents?select=id,slug,content_hash&status=eq.published&limit=1'],
+    ['knowledge chunks', '/rest/v1/knowledge_chunks?select=id,document_id,source_urls&limit=1'],
   ]) {
     try { await request(path); } catch (error) { failures.push(`${label}: ${error.message}`); }
   }
@@ -49,9 +52,19 @@ async function main() {
     await request(`/rest/v1/rate_limits?bucket_key=eq.${bucket}`, { method: 'DELETE' });
   } catch (error) { failures.push(`atomic rate limit: ${error.message}`); }
 
+  try {
+    const documents = await request('/rest/v1/knowledge_documents?select=id&status=eq.published&limit=1');
+    if (!Array.isArray(documents) || documents.length !== 1) throw new Error('no published curated document was ingested');
+    const chunks = await request('/rest/v1/rpc/search_knowledge_chunks', {
+      method: 'POST',
+      body: JSON.stringify({ p_query: 'planta solo agua', p_categories: ['plant'], p_scientific: null, p_limit: 1 }),
+    });
+    if (!Array.isArray(chunks) || chunks.length !== 1) throw new Error('retrieval RPC returned no curated evidence');
+  } catch (error) { failures.push(`knowledge retrieval: ${error.message}`); }
+
   if (failures.length) throw new Error(`\n- ${failures.join('\n- ')}`);
 
-  console.log('DB preflight passed: entitlement, climate and community schemas are ready.');
+  console.log('DB preflight passed: entitlement, climate, community, AI reports and curated knowledge are ready.');
 }
 
 main().catch((error) => {

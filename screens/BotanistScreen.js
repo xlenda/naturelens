@@ -7,6 +7,7 @@ import {
   TouchableOpacity,
   FlatList,
   KeyboardAvoidingView,
+  Linking,
   Platform,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -77,8 +78,10 @@ export default function BotanistScreen({ route }) {
       .map((m) => ({ role: m.role === 'user' ? 'user' : 'assistant', content: m.text }));
 
     try {
-      const { text: reply } = await askSpecialist(history, route.params?.context);
-      setMessages((m) => [...m, { id: Date.now().toString() + 'b', role: 'bot', text: reply }]);
+      const { text: reply, sources } = await askSpecialist(history, route.params?.context);
+      setMessages((m) => [...m, {
+        id: Date.now().toString() + 'b', role: 'bot', text: reply, sources,
+      }]);
       Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
     } catch (err) {
       // Each failure gets its own honest sentence. A single generic "something
@@ -123,6 +126,25 @@ export default function BotanistScreen({ route }) {
         )}
         <View style={[styles.bubble, isUser ? styles.userBubble : styles.botBubble]}>
           <Text style={[styles.msgText, isUser && { color: colors.white }]}>{item.text}</Text>
+          {!isUser && item.sources?.length > 0 && (
+            <View style={styles.sourceList}>
+              <Text style={styles.sourceTitle}>{t('agronomyWorkspace.sourcesTitle')}</Text>
+              {item.sources.map((source) => (
+                <TouchableOpacity
+                  key={source.url}
+                  style={styles.sourceLink}
+                  onPress={() => Linking.openURL(source.url).catch(() => {})}
+                  accessibilityRole="link"
+                  accessibilityLabel={`${t('agronomyWorkspace.sourcesTitle')}: ${source.title}`}
+                >
+                  <Ionicons name="open-outline" size={12} color={colors.accentLight} />
+                  <Text style={styles.sourceLinkText} numberOfLines={2}>
+                    {source.marker ? `[${source.marker}] ` : ''}{source.title}
+                  </Text>
+                </TouchableOpacity>
+              ))}
+            </View>
+          )}
           {/* AI answers can be reported (Google Play AI-content policy asks
               for an in-app flag). Not on the intro (UI copy, not the model)
               and not on error bubbles (nothing generated to report). */}
@@ -167,6 +189,10 @@ export default function BotanistScreen({ route }) {
         <View>
           <Text style={styles.headerTitle} accessibilityRole="header">{t('botanist.headerTitle')}</Text>
           <Text style={styles.headerSub}>{t('botanist.headerSubtitle')}</Text>
+          <View style={styles.aiDisclosure}>
+            <Ionicons name="sparkles" size={10} color={colors.accentLight} />
+            <Text style={styles.aiDisclosureText}>{t('botanist.aiDisclosure')}</Text>
+          </View>
         </View>
       </View>
 
@@ -277,6 +303,8 @@ const styles = StyleSheet.create({
   },
   headerTitle: { fontSize: 17, fontWeight: '800', color: colors.text },
   headerSub: { fontSize: 12, color: colors.textMuted },
+  aiDisclosure: { alignSelf: 'flex-start', flexDirection: 'row', alignItems: 'center', gap: 4, marginTop: 3 },
+  aiDisclosureText: { color: colors.accentLight, fontSize: 10.5, fontWeight: '800' },
   list: { padding: 16, paddingBottom: 8 },
   msgRow: { flexDirection: 'row', marginBottom: 14, alignItems: 'flex-end' },
   rowLeft: { justifyContent: 'flex-start' },
@@ -294,6 +322,10 @@ const styles = StyleSheet.create({
   botBubble: { backgroundColor: colors.card, borderBottomLeftRadius: 4, borderWidth: 1, borderColor: colors.border },
   userBubble: { backgroundColor: colors.accent, borderBottomRightRadius: 4 },
   msgText: { color: colors.text, fontSize: 14.5, lineHeight: 21 },
+  sourceList: { marginTop: 10, paddingTop: 8, borderTopWidth: 1, borderTopColor: colors.border, gap: 6 },
+  sourceTitle: { color: colors.textMuted, fontSize: 10.5, fontWeight: '800', textTransform: 'uppercase' },
+  sourceLink: { flexDirection: 'row', alignItems: 'flex-start', gap: 5, minHeight: 28, paddingVertical: 4 },
+  sourceLinkText: { flex: 1, color: colors.accentLight, fontSize: 11.5, lineHeight: 16 },
   reportBtn: {
     flexDirection: 'row',
     alignItems: 'center',

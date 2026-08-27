@@ -402,7 +402,12 @@ export default function TreeDetailScreen({ route }) {
   const openSpecialist = () => {
     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
     navigation.navigate('Botanist', {
-      context: plant.name + ' (' + (plant.scientific || '') + ')',
+      context: {
+        display: plant.name + ' (' + (plant.scientific || '') + ')',
+        name: plant.name,
+        scientific: plant.scientific || '',
+        category: 'tree',
+      },
     });
   };
 

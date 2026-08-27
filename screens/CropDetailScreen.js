@@ -575,7 +575,12 @@ export default function CropDetailScreen({ route }) {
           style={styles.specialistCta}
           onPress={() =>
             navigation.navigate('Botanist', {
-              context: plant.name + ' (' + (plant.scientific || '') + ')',
+              context: {
+                display: plant.name + ' (' + (plant.scientific || '') + ')',
+                name: plant.name,
+                scientific: plant.scientific || '',
+                category: 'crop',
+              },
             })
           }
           activeOpacity={0.8}

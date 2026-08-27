@@ -68,7 +68,17 @@ export async function askSpecialist(history, context) {
     throw err;
   }
 
-  return { text: data.text };
+  const sources = Array.isArray(data.sources)
+    ? data.sources.filter((source) => {
+      if (typeof source?.title !== 'string' || !source.title.trim() || typeof source?.url !== 'string') return false;
+      try { return new URL(source.url).protocol === 'https:'; } catch (e) { return false; }
+    }).slice(0, 8).map((source) => ({
+      marker: /^K[1-5]$/.test(source.marker) ? source.marker : '',
+      title: source.title.trim().slice(0, 240),
+      url: source.url.slice(0, 1000),
+    }))
+    : [];
+  return { text: data.text, sources };
 }
 
 /**
