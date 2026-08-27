@@ -203,3 +203,30 @@ test('capturas editoriais nao fabricam score do identificador', () => {
   assert.match(capture, /if \(!\(await scrollToText/);
   assert.match(capture, /window\.scrollY \|\| document\.documentElement\.scrollTop/);
 });
+
+test('ASO localizado respeita limites e cobre os 17 idiomas do app', () => {
+  const metadataRoot = path.join(root, 'store-assets', 'metadata');
+  const expectedLocales = [
+    'ar', 'cs-CZ', 'da-DK', 'de-DE', 'en-US', 'es-419', 'fr-FR', 'hi-IN',
+    'it-IT', 'ko-KR', 'nl-NL', 'pl-PL', 'pt-BR', 'sv-SE', 'tr-TR',
+    'zh-CN', 'zh-TW',
+  ];
+  const actualLocales = fs.readdirSync(metadataRoot)
+    .filter((entry) => fs.statSync(path.join(metadataRoot, entry)).isDirectory())
+    .sort();
+  assert.deepEqual(actualLocales, expectedLocales);
+
+  for (const locale of expectedLocales) {
+    const readMetadata = (file) => fs.readFileSync(path.join(metadataRoot, locale, file), 'utf8').trim();
+    const title = readMetadata('title.txt');
+    const shortDescription = readMetadata('short-description.txt');
+    const fullDescription = readMetadata('full-description.txt');
+    const count = (value) => Array.from(value).length;
+
+    assert.ok(count(title) <= 30, `${locale}: titulo excede 30 caracteres`);
+    assert.ok(count(shortDescription) <= 80, `${locale}: descricao curta excede 80 caracteres`);
+    assert.ok(count(fullDescription) <= 4000, `${locale}: descricao completa excede 4000 caracteres`);
+    assert.match(title, /^NatureLens[:：]/, `${locale}: marca ausente do titulo`);
+    assert.ok(fullDescription.includes('NatureLens'), `${locale}: marca ausente da descricao completa`);
+  }
+});

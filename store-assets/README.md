@@ -9,7 +9,9 @@
 - `screenshots-listing/pt-BR/` e `screenshots-listing/en-US/`: capturas finais
   diagramadas para a ficha, com manchetes localizadas e a interface real dentro
   de uma moldura editorial consistente.
-- `metadata/pt-BR/` e `metadata/en-US/`: título, descrição curta e descrição completa.
+- `metadata/`: título, descrição curta e descrição completa nos mesmos 17 idiomas do app.
+- `aso-strategy.md`: posicionamento, arquitetura de busca, ordem das capturas e testes A/B.
+- `aso-experiments.csv`: registro versionado dos experimentos da ficha.
 - `data-safety.md`: respostas auditadas para Segurança dos dados e declarações relacionadas.
 - `play-console-checklist.md`: respostas dos demais formulários e ordem de lançamento.
 
@@ -37,7 +39,8 @@ node scripts/build-play-listing.js
 
 ## Campos da ficha
 
-- Nome do app: `NatureLens`
+- Nome pt-BR: `NatureLens: Identifica Plantas`
+- Nome en-US: `NatureLens: Plant Identifier`
 - Idioma padrão: `Português (Brasil)`
 - Categoria sugerida: `Educação`
 - Contém anúncios: `Não`
@@ -66,6 +69,18 @@ O primeiro envio do `.aab` pode ser feito manualmente no Play Console. Ative o P
 5. Preencher `Segurança dos dados` a partir de `data-safety.md`, além de `Classificação de conteúdo`, `Público-alvo` e a declaração de conteúdo gerado por IA.
 6. Se a conta pessoal da Play foi criada depois de 13/11/2023, concluir o teste fechado exigido antes de pedir acesso à produção.
 7. Executar `supabase-migration-ratelimit.sql` no Supabase e publicar as páginas legais atualizadas antes de enviar a ficha para revisão.
+
+## ASO
+
+O título da ficha combina a marca provisória com a principal intenção de busca.
+Não altere o identificador `app.naturelens` se a marca mudar. Os limites de
+30 caracteres no título, 80 na descrição curta e 4.000 na completa são
+protegidos por `android-release.test.js` para todos os 17 locales.
+
+Português e inglês possuem capturas localizadas. Os outros 15 locales já têm
+metadados completos e podem reutilizar temporariamente a arte padrão; só
+localize todas as imagens depois de um experimento confirmar a mensagem
+vencedora. Veja `aso-strategy.md` antes de alterar título, textos ou ordem.
 
 Referências oficiais: [recursos gráficos](https://support.google.com/googleplay/android-developer/answer/9866151), [nível de API](https://support.google.com/googleplay/android-developer/answer/11926878), [teste para contas pessoais novas](https://support.google.com/googleplay/android-developer/answer/14151465), [Play App Signing](https://support.google.com/googleplay/android-developer/answer/9842756) e [primeiro envio de um AAB Expo](https://docs.expo.dev/submit/android-manual/).
 

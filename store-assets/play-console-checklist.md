@@ -4,7 +4,8 @@ Use este arquivo junto de `data-safety.md`. Ele registra as respostas coerentes 
 
 ## Configuração inicial
 
-- Nome do app: **NatureLens**
+- Nome do app pt-BR: **NatureLens: Identifica Plantas**
+- Nome do app en-US: **NatureLens: Plant Identifier**
 - Idioma padrão: **Português (Brasil)**
 - App ou jogo: **App**
 - Gratuito ou pago: **Gratuito**
@@ -42,7 +43,7 @@ Responder pelo comportamento real, sem tentar forçar uma faixa menor:
 ## Ficha principal
 
 - Copiar título e descrições de `metadata/pt-BR/`.
-- Adicionar a tradução de inglês dos arquivos `metadata/en-US/`.
+- Adicionar os outros 16 idiomas a partir das pastas de `metadata/`.
 - Ícone: `play-icon-512.png`.
 - Imagem de destaque: `feature-graphic-1024x500.png`.
 - Capturas: os cinco arquivos localizados de `screenshots-listing/pt-BR/` ou
