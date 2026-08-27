@@ -3,7 +3,7 @@ import { Platform } from 'react-native';
 // Funnel tracking.
 //
 // Built because of the single most expensive mistake from the sibling app: it
-// was advertised, dozens of people came in, ZERO reached checkout, and there
+// was advertised, dozens of people came in, ZERO reached the conversion step, and there
 // was no way to know where they dropped off. Without a funnel, improving the
 // app is guesswork - you can only see that it isn't working, never why.
 //
@@ -133,10 +133,8 @@ export function trackPaywallDismissed({ trigger, plan }) {
 // Access recovery - the step most likely to lose a paying customer
 // ---------------------------------------------------------------------------
 
-// With Hotmart the buyer pays on another site and MUST come back and confirm
-// their email to unlock this device. That handoff is the most fragile point in
-// the whole flow, so it is measured on its own: someone who paid and never
-// completed this is a customer with no product.
+// Account access is independent from future store receipt restoration. These
+// events measure optional sign-in used for cross-device collection sync.
 export function trackRestoreStarted({ method }) {
   push('restore_started', { method }); // 'code' | 'password' | 'google'
 }

@@ -164,28 +164,8 @@
   },
   "paywall": {
     "title": "免費次數已使用",
-    "body": "您已使用過 {{category}} 的免費辨識次數。訂閱即可無限次辨識。",
-    "subscribe": "訂閱",
-    "subscribing": "跳轉中…",
     "subscribed": "已訂閱",
-    "manage": "管理訂閱",
-    "annualPlan": "年付",
-    "perYear": "/年",
-    "saveBadge": "節省 {{percent}}%",
-    "genericTitle": "解鎖全部功能",
-    "genericBody": "無限識別植物、昆蟲、菇類和農作物，並可完整查看藥用植物詳情。",
-    "subscriptionConfirmedTitle": "訂閱成功！",
-    "subscriptionConfirmedBody": "感謝您的訂閱，現在您可以無限次辨識了。盡情探索吧！",
-    "subscriptionPendingTitle": "已收到付款",
-    "subscriptionPendingBody": "已收到付款。請開啟「我的 → 恢復存取」並確認你付款時使用的信箱，以解鎖此裝置。",
-    "checkoutFailedTitle": "結帳失敗",
-    "checkoutFailedBody": "無法開始結帳，請稍後再試一次。",
-    "monthlyPlan": "月付",
-    "quarterlyPlan": "季付",
-    "perMonth": "每月",
-    "perQuarter": "每季",
-    "notAvailableYet": "支付功能正在設定中——請稍後再試。",
-    "webOnlyBody": "進階版可在 NatureLens 網站訂閱。已經是訂閱者？登入後在這裡同樣可以使用。"
+    "notAvailableYet": "支付功能正在設定中——請稍後再試。"
   },
   "restore": {
     "title": "登入",
@@ -637,7 +617,13 @@
     "bodyLength": "體長",
     "leafConsumption": "葉片取食量",
     "leafAreaPerLarva": "每隻幼蟲取食葉面積",
-    "lifeStages": { "egg": "卵", "larva": "幼蟲", "nymph": "若蟲", "pupa": "蛹", "adult": "成蟲" },
+    "lifeStages": {
+      "egg": "卵",
+      "larva": "幼蟲",
+      "nymph": "若蟲",
+      "pupa": "蛹",
+      "adult": "成蟲"
+    },
     "measurements": {
       "clutchSize": "每窩產卵數",
       "incubationPeriod": "孵卵期",
@@ -815,7 +801,7 @@
     "helpAndSupport": "說明與支援",
     "rewardsStore": "獎勵商店",
     "naturalistBadge": "博物學家",
-    "deleteAccountDoneBillingBody": "你的帳戶和資料已刪除。重要：這不會取消訂閱——你必須在 Hotmart 帳戶中取消，否則將繼續扣款。",
+    "deleteAccountDoneBillingBody": "你的帳戶和資料已刪除。重要：這不會取消訂閱——你必須在 Google Play / App Store 帳戶中取消，否則將繼續扣款。",
     "locationRow": "使用我的大致位置",
     "locationHint": "將答案限定在你附近出現的物種，從而提高準確度。精度約 1 公里，且從不保存。",
     "emptyTitle": "你的收藏從這裡開始",
@@ -831,7 +817,7 @@
     "accuracyTitle": "辨識準確性 — 請務必詳讀",
     "accuracyBody": "AI 辨識可能出錯，包括判斷植物或菇類是否可食用、有毒或可安全觸摸。請勿僅憑本應用程式的結果食用、採集或使用任何野生植物、菇類或真菌。在食用或使用在野外發現的任何東西之前，請務必諮詢合格的專家（真菌學家、植物學家或中毒控制中心）。我們不對因依賴本應用程式所做辨識而造成的傷害負責。",
     "billingTitle": "訂閱與計費",
-    "billingBody": "付費訂閱透過 Hotmart 按您訂閱時顯示的價格扣款，並自動續訂，直到您在 Hotmart 帳戶中取消為止。您可以隨時取消；存取權會保留到已付費週期結束。除法律要求外，我們不為未使用的時間提供按比例退款。在行動應用程式商店中，如果那裡提供訂閱，則透過商店自身的付款系統扣款。",
+    "billingBody": "付費訂閱透過 Google Play / App Store 按您訂閱時顯示的價格扣款，並自動續訂，直到您在 Google Play / App Store 帳戶中取消為止。您可以隨時取消；存取權會保留到已付費週期結束。除法律要求外，我們不為未使用的時間提供按比例退款。在行動應用程式商店中，如果那裡提供訂閱，則透過商店自身的付款系統扣款。",
     "accountTitle": "帳戶與密碼",
     "accountBody": "使用免費功能無需帳戶。訂閱者可以選擇建立密碼以登入並在裝置間同步訂閱。您需自行負責密碼安全，並對透過您帳戶發生的一切行為負責。",
     "liabilityTitle": "不提供保證，責任限制",
@@ -850,7 +836,7 @@
     "localStorageTitle": "僅限本機儲存",
     "localStorageBody": "您儲存的收藏——已辨識的物種、備註與時間戳記——透過瀏覽器或應用程式的本機儲存空間保存在您自己的裝置上，絕不會與其他使用者分享。如果您是訂閱者並已登入，收藏中的文字資料（絕不包括您的照片）也會同步到我們的伺服器，方便您在多部裝置間使用；刪除帳戶後，這些資料會從我們的伺服器移除。",
     "noAccountsTitle": "無帳號，無追蹤",
-    "noAccountsBody": "使用這個應用程式不需要註冊帳戶——您的裝置會取得一個隨機的匿名識別碼（只儲存在您的裝置上），用來判斷每個類別的一次免費辨識是否已被使用。如果您訂閱，Hotmart 會直接收集您的電子郵件和付款資訊來處理扣款——我們只會收到與該識別碼關聯的訂閱狀態和電子郵件，用於恢復您的存取權。訂閱者可以選擇透過電子郵件驗證碼或 Google 登入，在多部裝置間同步訂閱和收藏；使用應用程式從不強制登入。在網頁版中，我們使用基本的分析工具（Google Tag Manager 和 Utmify）統計造訪量和訂閱量；我們絕不出售個人資料。",
+    "noAccountsBody": "使用本應用程式無需註冊帳號。裝置會取得一個只儲存在本機的隨機匿名識別碼，用來記錄各類別的免費辨識次數。未來的購買將只由 Google Play 或 App Store 處理；NatureLens 只會接收訂閱狀態，以及去識別化的交易與商品識別碼。我們不會出售個人資料。",
     "dataLossTitle": "資料遺失風險",
     "dataLossBody": "如果您清除瀏覽器資料或解除安裝應用程式，本機儲存的收藏將會永久遺失，因為沒有任何資料會備份至遠端伺服器。",
     "contactTitle": "聯絡我們",
@@ -2627,7 +2613,7 @@
     "freeTitle": "NatureLens是免費的嗎？",
     "freeBody": "每個類別（植物、昆蟲、菇類、農作物、樹木）都可免費辨識一次。之後，訂閱即可解鎖所有類別的無限次辨識。",
     "cancelTitle": "如何取消訂閱？",
-    "cancelBody": "開啟「我的」>「我的訂閱」，點選「管理或取消」——它會帶您前往您的 Hotmart 帳戶（consumer.hotmart.com），訂閱在那裡扣款，也可以在那裡幾個步驟完成取消。您的存取權會保留到已付費週期結束。刪除 NatureLens 帳戶並不會停止扣款。",
+    "cancelBody": "開啟「我的」>「我的訂閱」，點選「管理或取消」——它會帶您前往您的 Google Play / App Store 帳戶（Google Play / App Store），訂閱在那裡扣款，也可以在那裡幾個步驟完成取消。您的存取權會保留到已付費週期結束。刪除 NatureLens 帳戶並不會停止扣款。",
     "restoreTitle": "我換了手機或清除了瀏覽器資料——該如何找回我的訂閱？",
     "restoreBody": "前往「個人資料」→「恢復存取」。您可以透過電子郵件要求一次性驗證碼，或者，如果您已設定密碼，也可以使用密碼或Google帳戶登入。",
     "tokensTitle": "點數是什麼？可以用來兌換東西嗎？",
@@ -2635,7 +2621,7 @@
     "privacyTitle": "我的資料私密嗎？",
     "privacyBody": "使用NatureLens不需要註冊帳戶。您大部分的資料（收藏、照片）僅保存在您的裝置上。詳情請參閱完整的《隱私權政策》。",
     "deleteTitle": "如何刪除我的帳戶與資料？",
-    "deleteBody": "前往「我的」，點選底部的「刪除帳戶」。這會從我們的伺服器永久刪除您的帳戶和資料，並清除儲存在此裝置上的所有內容。重要：這不會取消進行中的訂閱——請先在您的 Hotmart 帳戶中取消（「我的」>「我的訂閱」>「管理或取消」），否則扣款會繼續。",
+    "deleteBody": "前往「我的」，點選底部的「刪除帳戶」。這會從我們的伺服器永久刪除您的帳戶和資料，並清除儲存在此裝置上的所有內容。重要：這不會取消進行中的訂閱——請先在您的 Google Play / App Store 帳戶中取消（「我的」>「我的訂閱」>「管理或取消」），否則扣款會繼續。",
     "offlineTitle": "這款應用程式可以離線使用嗎？",
     "offlineBody": "不行——辨識物種需要連接網際網路，以存取我們的AI服務。",
     "languageTitle": "我可以使用其他語言嗎？",
@@ -2732,7 +2718,12 @@
     "confidenceLine": "信心度 {{confidence}}%"
   },
   "onboarding": {
-    "media": { "play": "播放影片", "pause": "暫停影片", "enableSound": "開啟聲音", "disableSound": "關閉聲音" },
+    "media": {
+      "play": "播放影片",
+      "pause": "暫停影片",
+      "enableSound": "開啟聲音",
+      "disableSound": "關閉聲音"
+    },
     "skip": "跳過",
     "next": "下一步",
     "start": "開始辨識",
@@ -2864,8 +2855,8 @@
     "unknownBody": "未能連線伺服器。如果你已訂閱，使用不受影響——請稍後再試。",
     "plansTitle": "方案",
     "manageTitle": "管理或取消",
-    "manageBody": "你的訂閱由 Hotmart 收款，因此取消需在你的 Hotmart 帳戶中操作，而不是這裡。在那裡取消後將停止後續扣款，你的權限會保留到已付費週期結束。",
-    "openHotmart": "開啟我的 Hotmart 帳戶"
+    "manageBody": "你的訂閱由 Google Play / App Store 收款，因此取消需在你的 Google Play / App Store 帳戶中操作，而不是這裡。在那裡取消後將停止後續扣款，你的權限會保留到已付費週期結束。",
+    "manageStore": "開啟我的 Google Play / App Store 帳戶"
   },
   "notifications": {
     "row": "通知",
@@ -3229,22 +3220,22 @@
       "saveFailed": "無法儲存。沒有任何內容被確認，請重試。"
     },
     "planningSourcesTitle": "規劃參考來源",
-    "planningSourcesBody": "與該作物對應的官方閱讀資料。這不表示技術模組或建議已經發布。"
-  ,
+    "planningSourcesBody": "與該作物對應的官方閱讀資料。這不表示技術模組或建議已經發布。",
     "climate": {
-    "kicker": "當地氣候",
-    "title": "此地的氣候節律",
-    "body": "比較田野觀察之前，先查看每月氣候資料。這只是氣候描述，並非灌溉或施肥處方。",
-    "rain": "降雨",
-    "temperature": "平均氣溫",
-    "rainValue": "{{value}} 毫米",
-    "temperatureValue": "{{value}} °C",
-    "privacy": "僅傳送並快取約 {{precision}}° 的網格，不會儲存你的精確位置。",
-    "source": "開啟 NASA POWER 官方來源",
-    "permission": "未分享位置。你可以在裝置設定中啟用後重試。",
-    "error": "氣候資料暫時無法使用。",
-    "action": "使用大致位置"
-  }},
+      "kicker": "當地氣候",
+      "title": "此地的氣候節律",
+      "body": "比較田野觀察之前，先查看每月氣候資料。這只是氣候描述，並非灌溉或施肥處方。",
+      "rain": "降雨",
+      "temperature": "平均氣溫",
+      "rainValue": "{{value}} 毫米",
+      "temperatureValue": "{{value}} °C",
+      "privacy": "僅傳送並快取約 {{precision}}° 的網格，不會儲存你的精確位置。",
+      "source": "開啟 NASA POWER 官方來源",
+      "permission": "未分享位置。你可以在裝置設定中啟用後重試。",
+      "error": "氣候資料暫時無法使用。",
+      "action": "使用大致位置"
+    }
+  },
   "observationWorkspace": {
     "title": "進階觀察",
     "loading": "正在載入觀察記錄…",
@@ -3621,8 +3612,7 @@
       "pests": "蟲害和症狀",
       "recovery": "前後對比",
       "questions": "向小組提問"
-    }
- ,
+    },
     "onlineBadge": "線上社群",
     "feedTitle": "野外筆記",
     "commentAction": "留言",

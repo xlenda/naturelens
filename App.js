@@ -49,7 +49,6 @@ import CareTopicsScreen from './screens/CareTopicsScreen';
 import AboutScreen from './screens/AboutScreen';
 import { colors } from './components/theme';
 import { CATEGORIES } from './components/categories';
-import { pollSubscriptionStatus, PLAN_PRICES } from './components/subscription';
 import { completeGoogleSignIn } from './components/restore';
 import AlertModal from './components/AlertModal';
 import ErrorBoundary from './components/ErrorBoundary';
@@ -343,15 +342,8 @@ function AppContent() {
 
 function AppNavigator({ initialCategoryKey, onPreferredCategoryChange }) {
   const { t } = useTranslation();
-  // 'confirmed' | 'pending' | null - drives the post-checkout AlertModal.
-  // Entitlement depends on Stripe's webhook landing before the user's next
-  // request, which can lose that race - so instead of trusting a single
-  // immediate check (or showing nothing at all), poll briefly and give the
-  // user an explicit confirmation either way, so a real payment never *looks*
-  // like it silently did nothing.
-  const [checkoutResult, setCheckoutResult] = useState(null);
   // 'active' | 'other' | 'error' | null - drives the post-Google-sign-in
-  // AlertModal, mirroring the checkout flow above. PKCE returns a one-time
+  // AlertModal. PKCE returns a one-time
   // `code` in the query string (never a raw token) - completeGoogleSignIn
   // exchanges it server-side using the code_verifier stashed earlier in
   // sessionStorage (see components/restore.js).
@@ -488,50 +480,6 @@ function AppNavigator({ initialCategoryKey, onPreferredCategoryChange }) {
       .catch(() => setGoogleSignInResult('error'));
   }, []);
 
-  // Return-from-checkout handling.
-  //
-  // With Hotmart the buyer pays on Hotmart's own page and comes back manually,
-  // so there is no session id to look up and no guarantee the return URL
-  // carries anything. This still runs when Hotmart is configured to redirect
-  // back with ?checkout=success, and degrades to doing nothing when it is not.
-  //
-  // The conversion event fires from the plan the user chose (kept in session
-  // storage when checkout started) rather than from a server lookup, because
-  // Hotmart gives the client nothing to look the purchase up with.
-  useEffect(() => {
-    if (Platform.OS !== 'web') return;
-    const params = new URLSearchParams(window.location.search);
-    if (params.get('checkout') !== 'success') return;
-
-    try {
-      const plan = window.sessionStorage?.getItem('naturelens_checkout_plan');
-      if (plan && window.dataLayer) {
-        window.dataLayer.push({
-          event: 'subscription_completed',
-          plan,
-          currency: 'USD',
-          value: PLAN_PRICES[plan],
-        });
-      }
-      window.sessionStorage?.removeItem('naturelens_checkout_plan');
-    } catch (e) {
-      // sessionStorage can throw in private-mode browsers; tracking is never
-      // allowed to break the return flow.
-    }
-
-    const cleanUrl = new URL(window.location.href);
-    cleanUrl.searchParams.delete('checkout');
-    window.history.replaceState({}, '', cleanUrl.pathname + cleanUrl.search);
-
-    // 'pending' is the expected outcome far more often than with Stripe: the
-    // webhook grants access against the buyer's EMAIL, and this device is only
-    // linked once they confirm that email through Restore Access. The pending
-    // dialog is what points them there.
-    pollSubscriptionStatus().then((status) => {
-      setCheckoutResult(status === 'active' ? 'confirmed' : 'pending');
-    });
-  }, []);
-
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
       <SafeAreaProvider>
@@ -637,19 +585,6 @@ function AppNavigator({ initialCategoryKey, onPreferredCategoryChange }) {
             />
           </Tab.Navigator>
         </NavigationContainer>
-
-        <AlertModal
-          visible={checkoutResult === 'confirmed'}
-          title={t('paywall.subscriptionConfirmedTitle')}
-          message={t('paywall.subscriptionConfirmedBody')}
-          onRequestClose={() => setCheckoutResult(null)}
-        />
-        <AlertModal
-          visible={checkoutResult === 'pending'}
-          title={t('paywall.subscriptionPendingTitle')}
-          message={t('paywall.subscriptionPendingBody')}
-          onRequestClose={() => setCheckoutResult(null)}
-        />
 
         <AlertModal
           visible={googleSignInResult === 'active'}

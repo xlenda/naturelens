@@ -87,11 +87,8 @@ export default function AboutScreen() {
         </View>
 
         <View style={styles.card}>
-          {/* O site tem checkout Hotmart a dois toques da home, entao no build
-              de loja ele nao pode ser um LINK - politica de pagamentos do
-              Play. Vira o endereco como texto morto: sem toque, sem chevron,
-              sem window.open. Mesmo recurso do PaywallModal, que cita o site
-              em texto e nao oferece caminho de compra nenhum no APK. */}
+          {/* O site continua informativo; pagamentos pertencem exclusivamente
+              as lojas nativas quando a integracao estiver ativa. */}
           {Platform.OS === 'web' ? (
             <LinkRow icon="globe-outline" label={t('about.visitSite')} onPress={openSite} />
           ) : (

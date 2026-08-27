@@ -179,7 +179,7 @@ export async function completeGoogleSignIn(code) {
   return data.status;
 }
 
-// Cancels any live Stripe subscription and deletes all server-side data tied
+// Deletes all server-side NatureLens data tied
 // to this device (see api/auth.js's handleDelete). Does NOT clear local
 // storage itself - callers must also clear the collection/profile
 // photo/device id on success (see ProfileScreen.js's handleDeleteAccount).
@@ -219,8 +219,7 @@ export async function deleteAccount() {
   if (!response.ok) {
     throw serverError(data, 'restore.genericError');
   }
-  // true when a Hotmart subscription is still live. The caller MUST surface
-  // this: unlike the old Stripe flow, deleting the account here does NOT stop
-  // the recurring charge - only Hotmart can.
+  // Store billing lives outside NatureLens account storage. The caller must
+  // surface that deleting app data does not cancel a store subscription.
   return { billingStillActive: Boolean(data?.billingStillActive) };
 }

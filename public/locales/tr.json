@@ -164,28 +164,8 @@
   },
   "paywall": {
     "title": "Ücretsiz hakkın kullanıldı",
-    "body": "Ücretsiz {{category}} tanımlama hakkını zaten kullandın. Sınırsız tanımlama için abone ol.",
-    "subscribe": "Abone ol",
-    "subscribing": "Yönlendiriliyor…",
     "subscribed": "Abone olundu",
-    "manage": "Aboneliği yönet",
-    "annualPlan": "Yıllık",
-    "perYear": "/yıl",
-    "saveBadge": "%{{percent}} tasarruf edin",
-    "genericTitle": "Her şeyin kilidini aç",
-    "genericBody": "Bitkiler, böcekler, mantarlar ve ürünler için sınırsız tanımlama, ayrıca şifalı bitki detaylarına tam erişim.",
-    "subscriptionConfirmedTitle": "Abone oldunuz!",
-    "subscriptionConfirmedBody": "Abone olduğunuz için teşekkürler — artık sınırsız tanımlama hakkınız var. Keyfini çıkarın!",
-    "subscriptionPendingTitle": "Ödeme alındı",
-    "subscriptionPendingBody": "Ödeme alındı. Profil → Erişimi geri yükle bölümünü açın ve bu cihazın kilidini açmak için ödeme yaptığınız e-postayı onaylayın.",
-    "checkoutFailedTitle": "Ödeme başarısız oldu",
-    "checkoutFailedBody": "Ödeme işlemini başlatamadık. Lütfen biraz sonra tekrar deneyin.",
-    "monthlyPlan": "Aylık",
-    "quarterlyPlan": "Üç aylık",
-    "perMonth": "ayda",
-    "perQuarter": "üç ayda bir",
-    "notAvailableYet": "Ödeme kurulumu yapılıyor — birazdan tekrar deneyin.",
-    "webOnlyBody": "Premium, NatureLens web sitesinde mevcut. Zaten abone misiniz? Giriş yapın, erişiminiz burada da geçerli."
+    "notAvailableYet": "Ödeme kurulumu yapılıyor — birazdan tekrar deneyin."
   },
   "restore": {
     "title": "Giriş yap",
@@ -637,7 +617,13 @@
     "bodyLength": "Vücut uzunluğu",
     "leafConsumption": "Yaprak tüketimi",
     "leafAreaPerLarva": "Larva başına tüketilen yaprak alanı",
-    "lifeStages": { "egg": "Yumurta", "larva": "Larva", "nymph": "Nimf", "pupa": "Pupa", "adult": "Ergin" },
+    "lifeStages": {
+      "egg": "Yumurta",
+      "larva": "Larva",
+      "nymph": "Nimf",
+      "pupa": "Pupa",
+      "adult": "Ergin"
+    },
     "measurements": {
       "clutchSize": "Yumurta sayısı",
       "incubationPeriod": "Kuluçka süresi",
@@ -815,7 +801,7 @@
     "helpAndSupport": "Yardım ve Destek",
     "rewardsStore": "Ödül mağazası",
     "naturalistBadge": "Doğa Gözlemcisi",
-    "deleteAccountDoneBillingBody": "Hesabınız ve verileriniz silindi. ÖNEMLİ: bu aboneliğinizi iptal etmez — Hotmart hesabınızdan iptal etmeniz gerekir, aksi halde tahsilat devam eder.",
+    "deleteAccountDoneBillingBody": "Hesabınız ve verileriniz silindi. ÖNEMLİ: bu aboneliğinizi iptal etmez — Google Play / App Store hesabınızdan iptal etmeniz gerekir, aksi halde tahsilat devam eder.",
     "locationRow": "Yaklaşık konumumu kullan",
     "locationHint": "Yanıtı çevrendeki türlerle sınırlayarak doğruluğu artırır. Yaklaşık 1 km’ye yuvarlanır ve asla saklanmaz.",
     "emptyTitle": "Koleksiyonun burada başlıyor",
@@ -831,7 +817,7 @@
     "accuracyTitle": "Tanımlama doğruluğu — lütfen okuyun",
     "accuracyBody": "Yapay zeka tanımlaması, bir bitkinin veya mantarın yenilebilir, zehirli veya dokunması güvenli olup olmadığı konusunda da dahil olmak üzere yanlış olabilir. Sadece bu uygulamanın sonucuna dayanarak asla yabani bir bitki, mantar veya fungus yemeyin, toplamayın veya kullanmayın. Doğada bulduğunuz bir şeyi tüketmeden veya kullanmadan önce her zaman nitelikli bir uzmana (mikolog, botanikçi veya zehir kontrol merkezi) danışın. Bu uygulama tarafından yapılan bir tanımlamaya güvenmenin neden olduğu zararlardan sorumlu değiliz.",
     "billingTitle": "Abonelikler ve faturalandırma",
-    "billingBody": "Ücretli abonelikler, abone olurken gösterilen fiyat üzerinden Hotmart aracılığıyla faturalandırılır ve siz Hotmart hesabınızdan iptal edene kadar otomatik olarak yenilenir. İstediğiniz zaman iptal edebilirsiniz; erişiminiz, ödemesini yaptığınız dönemin sonuna kadar devam eder. Yasaların gerektirdiği durumlar dışında, kullanılmayan süre için orantılı iade sunmuyoruz. Mobil uygulama mağazalarında abonelikler - orada sunulduklarında - mağazanın kendi faturalandırma sistemi üzerinden alınır.",
+    "billingBody": "Ücretli abonelikler, abone olurken gösterilen fiyat üzerinden Google Play / App Store aracılığıyla faturalandırılır ve siz Google Play / App Store hesabınızdan iptal edene kadar otomatik olarak yenilenir. İstediğiniz zaman iptal edebilirsiniz; erişiminiz, ödemesini yaptığınız dönemin sonuna kadar devam eder. Yasaların gerektirdiği durumlar dışında, kullanılmayan süre için orantılı iade sunmuyoruz. Mobil uygulama mağazalarında abonelikler - orada sunulduklarında - mağazanın kendi faturalandırma sistemi üzerinden alınır.",
     "accountTitle": "Hesaplar ve şifreler",
     "accountBody": "Ücretsiz özellikleri kullanmak için hesaba ihtiyacınız yoktur. Aboneler isterlerse, oturum açmak ve aboneliklerini cihazlar arasında senkronize etmek için bir şifre oluşturabilir. Şifrenizi güvende tutmaktan ve hesabınız aracılığıyla gerçekleşen her şeyden siz sorumlusunuz.",
     "liabilityTitle": "Garanti yok, sorumluluk sınırlaması",
@@ -850,7 +836,7 @@
     "localStorageTitle": "Sadece yerel depolama",
     "localStorageBody": "Kaydedilen koleksiyonunuz - tanımlanan türler, notlar ve tarih bilgileri - tarayıcının veya uygulamanın yerel depolamasında, kendi cihazınızda saklanır ve asla diğer kullanıcılarla paylaşılmaz. Aboneyseniz ve giriş yaparsanız, koleksiyonun metin verileri (fotoğraflarınız asla) cihazlar arasında sizinle gelebilmesi için sunucumuzla da senkronize edilir; hesabınızı silmek bunları sunucularımızdan kaldırır.",
     "noAccountsTitle": "Hesap yok, takip yok",
-    "noAccountsBody": "Bu uygulamayı kullanmak için hesap gerekmez - cihazınıza (yalnızca cihazınızda saklanan) rastgele bir anonim tanımlayıcı verilir; böylece her kategorideki bir ücretsiz tanımlama hakkının ne zaman kullanıldığını anlayabiliriz. Abone olursanız Hotmart, ödemeyi işlemek için e-postanızı ve ödeme bilgilerinizi doğrudan toplar - biz de erişiminizi geri yükleyebilmek için aynı tanımlayıcıya bağlı abonelik durumunuzu ve e-postanızı alırız. Aboneler, abonelik ve koleksiyonlarını cihazlar arasında senkronize etmek için isteğe bağlı olarak e-posta kodu veya Google ile giriş yapabilir; uygulamayı kullanmak için bu hiçbir zaman zorunlu değildir. Web sürümünde ziyaretleri ve abonelikleri ölçmek için temel analiz araçları (Google Tag Manager ve Utmify) kullanırız; kişisel verileri asla satmayız.",
+    "noAccountsBody": "Bu uygulamayı kullanmak için hesap gerekmez - cihazınıza (yalnızca cihazınızda saklanan) rastgele bir anonim tanımlayıcı verilir; böylece her kategorideki bir ücretsiz tanımlama hakkının ne zaman kullanıldığını anlayabiliriz. Aboneler, abonelik ve koleksiyonlarını cihazlar arasında senkronize etmek için isteğe bağlı olarak e-posta kodu veya Google ile giriş yapabilir; uygulamayı kullanmak için bu hiçbir zaman zorunlu değildir. Web sürümünde ziyaretleri ve abonelikleri ölçmek için temel analiz araçları (Google Tag Manager ve Utmify) kullanırız; kişisel verileri asla satmayız.",
     "dataLossTitle": "Veri kaybı riski",
     "dataLossBody": "Tarayıcı verilerini temizlersen veya uygulamayı kaldırırsan, hiçbir şey uzaktan yedeklenmediği için yerel olarak kaydedilmiş koleksiyonun kalıcı olarak kaybolur.",
     "contactTitle": "İletişim",
@@ -2627,7 +2613,7 @@
     "freeTitle": "NatureLens ücretsiz mi?",
     "freeBody": "Her kategori (bitkiler, böcekler, mantarlar, ürünler, ağaçlar) için bir ücretsiz tanımlama hakkınız vardır. Bundan sonra bir abonelik tüm kategorilerde sınırsız tanımlamanın kilidini açar.",
     "cancelTitle": "Aboneliğimi nasıl iptal ederim?",
-    "cancelBody": "Profil > Aboneliğim bölümünü açın ve 'Yönet veya iptal et' seçeneğine dokunun - sizi aboneliğin faturalandırıldığı ve birkaç dokunuşla iptal edilebildiği Hotmart hesabınıza (consumer.hotmart.com) yönlendirir. Erişiminiz, ödemesini yaptığınız dönemin sonuna kadar aktif kalır. NatureLens hesabınızı silmek faturalandırmayı DURDURMAZ.",
+    "cancelBody": "Profil > Aboneliğim bölümünü açın ve 'Yönet veya iptal et' seçeneğine dokunun - sizi aboneliğin faturalandırıldığı ve birkaç dokunuşla iptal edilebildiği Google Play / App Store hesabınıza yönlendirir. Erişiminiz, ödemesini yaptığınız dönemin sonuna kadar aktif kalır. NatureLens hesabınızı silmek faturalandırmayı DURDURMAZ.",
     "restoreTitle": "Telefon değiştirdim veya tarayıcımı temizledim — aboneliğimi nasıl geri alabilirim?",
     "restoreBody": "Profil → Erişimi Geri Yükle bölümüne gidin. E-posta ile tek seferlik bir kod isteyebilir veya daha önce oluşturduysanız bir şifre ya da Google hesabınızla giriş yapabilirsiniz.",
     "tokensTitle": "Token nedir? Onları bir şeyle değiştirebilir miyim?",
@@ -2635,7 +2621,7 @@
     "privacyTitle": "Verilerim gizli mi?",
     "privacyBody": "NatureLens'i kullanmak için hesap gerekmez. Verilerinizin çoğu (koleksiyon, fotoğraflar) yalnızca cihazınızda kalır. Ayrıntılar için tam Gizlilik Politikasına bakın.",
     "deleteTitle": "Hesabımı ve verilerimi nasıl silerim?",
-    "deleteBody": "Profil bölümüne gidin ve en alttaki Hesabı sil seçeneğine dokunun. Bu, hesabınızı ve verilerinizi sunucularımızdan kalıcı olarak kaldırır ve bu cihazda saklanan her şeyi temizler. Önemli: aktif bir aboneliği iptal ETMEZ - önce Hotmart hesabınızdan iptal edin (Profil > Aboneliğim > Yönet veya iptal et), yoksa faturalandırma devam eder.",
+    "deleteBody": "Profil bölümüne gidin ve en alttaki Hesabı sil seçeneğine dokunun. Bu, hesabınızı ve verilerinizi sunucularımızdan kalıcı olarak kaldırır ve bu cihazda saklanan her şeyi temizler. Önemli: aktif bir aboneliği iptal ETMEZ - önce Google Play / App Store hesabınızdan iptal edin (Profil > Aboneliğim > Yönet veya iptal et), yoksa faturalandırma devam eder.",
     "offlineTitle": "Uygulama çevrimdışı çalışır mı?",
     "offlineBody": "Hayır — bir türü tanımlamak, yapay zeka hizmetimize ulaşmak için internet bağlantısı gerektirir.",
     "languageTitle": "Uygulamayı başka bir dilde kullanabilir miyim?",
@@ -2732,7 +2718,12 @@
     "confidenceLine": "%{{confidence}} güven"
   },
   "onboarding": {
-    "media": { "play": "Videoyu oynat", "pause": "Videoyu duraklat", "enableSound": "Sesi aç", "disableSound": "Sesi kapat" },
+    "media": {
+      "play": "Videoyu oynat",
+      "pause": "Videoyu duraklat",
+      "enableSound": "Sesi aç",
+      "disableSound": "Sesi kapat"
+    },
     "skip": "Atla",
     "next": "İleri",
     "start": "Tanımlamaya başla",
@@ -2864,8 +2855,8 @@
     "unknownBody": "Sunucuya ulaşamadık. Aboneysen erişimin etkilenmedi — birazdan tekrar dene.",
     "plansTitle": "Planlar",
     "manageTitle": "Yönet veya iptal et",
-    "manageBody": "Aboneliğin Hotmart tarafından tahsil ediliyor, bu yüzden iptal burada değil Hotmart hesabında yapılır. Orada iptal edersen sonraki tahsilatlar durur ve erişimin ödenmiş dönem sonuna kadar sürer.",
-    "openHotmart": "Hotmart hesabımı aç"
+    "manageBody": "Aboneliğin Google Play / App Store tarafından tahsil ediliyor, bu yüzden iptal burada değil Google Play / App Store hesabında yapılır. Orada iptal edersen sonraki tahsilatlar durur ve erişimin ödenmiş dönem sonuna kadar sürer.",
+    "manageStore": "Google Play / App Store hesabımı aç"
   },
   "notifications": {
     "row": "Bildirimler",
@@ -3229,22 +3220,22 @@
       "saveFailed": "Kaydedilemedi. Hiçbir şey doğrulanmadı; tekrar deneyin."
     },
     "planningSourcesTitle": "Planlama kaynakları",
-    "planningSourcesBody": "Bu ürünle eşleştirilmiş resmî okuma. Teknik bir modülün veya önerinin yayımlandığı anlamına gelmez."
-  ,
+    "planningSourcesBody": "Bu ürünle eşleştirilmiş resmî okuma. Teknik bir modülün veya önerinin yayımlandığı anlamına gelmez.",
     "climate": {
-    "kicker": "YEREL İKLİM",
-    "title": "Bu konumun iklim ritmi",
-    "body": "Saha gözlemlerini karşılaştırmadan önce aylık klimatolojiyi görün. Bu iklimi tanımlar; sulama veya gübreleme reçetesi değildir.",
-    "rain": "Yağış",
-    "temperature": "Ortalama sıcaklık",
-    "rainValue": "{{value}} mm",
-    "temperatureValue": "{{value}} °C",
-    "privacy": "Yalnızca yaklaşık {{precision}}° ızgara gönderilir ve önbelleğe alınır. Kesin konumunuz saklanmaz.",
-    "source": "Resmî NASA POWER kaynağını aç",
-    "permission": "Konum paylaşılmadı. Cihaz ayarlarından etkinleştirip yeniden deneyebilirsiniz.",
-    "error": "İklim verileri geçici olarak kullanılamıyor.",
-    "action": "Yaklaşık konumu kullan"
-  }},
+      "kicker": "YEREL İKLİM",
+      "title": "Bu konumun iklim ritmi",
+      "body": "Saha gözlemlerini karşılaştırmadan önce aylık klimatolojiyi görün. Bu iklimi tanımlar; sulama veya gübreleme reçetesi değildir.",
+      "rain": "Yağış",
+      "temperature": "Ortalama sıcaklık",
+      "rainValue": "{{value}} mm",
+      "temperatureValue": "{{value}} °C",
+      "privacy": "Yalnızca yaklaşık {{precision}}° ızgara gönderilir ve önbelleğe alınır. Kesin konumunuz saklanmaz.",
+      "source": "Resmî NASA POWER kaynağını aç",
+      "permission": "Konum paylaşılmadı. Cihaz ayarlarından etkinleştirip yeniden deneyebilirsiniz.",
+      "error": "İklim verileri geçici olarak kullanılamıyor.",
+      "action": "Yaklaşık konumu kullan"
+    }
+  },
   "observationWorkspace": {
     "title": "Gelişmiş gözlem",
     "loading": "Gözlemler yükleniyor…",
@@ -3621,8 +3612,7 @@
       "pests": "Zararlılar ve belirtiler",
       "recovery": "Önce ve sonra",
       "questions": "Gruba sor"
-    }
- ,
+    },
     "onlineBadge": "Çevrimiçi topluluk",
     "feedTitle": "Saha notları",
     "commentAction": "Yorum yap",

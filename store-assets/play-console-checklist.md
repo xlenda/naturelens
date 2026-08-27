@@ -65,6 +65,6 @@ Responder pelo comportamento real, sem tentar forçar uma faixa menor:
 - Login na conta Expo/EAS e vínculo do projeto para gerar o AAB assinado.
 - Conta Google Play Console verificada.
 - E-mail público de suporte real e monitorado.
-- Execução de `supabase-migration-community.sql`, `supabase-migration-site-climate.sql` e das funções novas em `supabase-migration-hotmart.sql`; `npm run verify:db` precisa ficar verde.
+- Execução de `supabase-migration-community.sql`, `supabase-migration-site-climate.sql` e `supabase-migration-platform-core.sql`; `npm run verify:db` precisa ficar verde.
 - Publicação das páginas legais atualizadas pelo comando autorizado `npm run deploy`.
 - Conta de demonstração, caso o revisor precise acessar recursos de assinante.

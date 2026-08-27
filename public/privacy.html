@@ -102,7 +102,7 @@
 <tr><td>Analytics do site (só na versão web)</td><td>Páginas visitadas e origem da visita, via Google Tag Manager e Utmify</td><td>Só existe na versão web; o app Android não tem nenhum analytics ou rastreador</td></tr>
 </table>
 </div>
-<p>A cópia local das fotos fica no seu aparelho; ao confirmar uma identificação, as imagens selecionadas são transmitidas como descrito na seção 5, mas nunca entram na sincronização da coleção. A coleção salva localmente não é compartilhada com outros usuários. O pagamento de assinatura acontece somente no site, processado pela Hotmart (preços exibidos em dólar americano); no app Android nada é vendido.</p>
+<p>A cópia local das fotos fica no seu aparelho; ao confirmar uma identificação, as imagens selecionadas são transmitidas como descrito na seção 5, mas nunca entram na sincronização da coleção. A coleção salva localmente não é compartilhada com outros usuários. Quando as assinaturas forem disponibilizadas, a cobrança ocorrerá somente pelo Google Play ou pela App Store, com preço e moeda mostrados pela própria loja; o site não vende assinaturas.</p>
 
 <h2 id="pt-3">3. Para que usamos e bases legais</h2>
 <p>Cada finalidade tem uma base legal na LGPD (art. 7º) e no GDPR (art. 6):</p>
@@ -114,7 +114,7 @@
 <tr><td>Melhorar a precisão da identificação com a localização aproximada</td><td>Consentimento — você ativa e desativa no Perfil</td></tr>
 <tr><td>Exibir climatologia mensal para uma grade aproximada</td><td>Consentimento — somente quando você toca em usar localização no módulo agronômico</td></tr>
 <tr><td>Controlar o uso gratuito por categoria (identificador pseudonimizado)</td><td>Legítimo interesse — impedir abuso do plano gratuito, com dado pseudonimizado e de baixo risco</td></tr>
-<tr><td>Reconhecer sua assinatura e restaurar seu acesso (e-mail e status vindos da Hotmart)</td><td>Execução de contrato</td></tr>
+<tr><td>Reconhecer e restaurar sua assinatura (identificador pseudônimo da loja, produto e status)</td><td>Execução de contrato</td></tr>
 <tr><td>Sincronizar os dados de texto da sua coleção entre aparelhos</td><td>Execução de contrato — recurso de assinante que você aciona ao fazer login</td></tr>
 <tr><td>Operar a comunidade, moderação e ranking</td><td>Execução de contrato e legítimo interesse — publicar o conteúdo solicitado, combater abuso e manter a segurança</td></tr>
 <tr><td>Enviar notificações push</td><td>Consentimento — só se você ativar</td></tr>
@@ -140,7 +140,7 @@
 <tr><td>Supabase</td><td>Banco de dados, autenticação e comunidade</td><td>E-mail de assinante logado, identificador pseudonimizado, dados de texto da coleção sincronizada, token de push, conteúdo e moderação da comunidade, cache climático por grade, denúncias de IA e registros antiabuso pseudonimizados</td></tr>
 <tr><td>NASA POWER</td><td>Climatologia mensal sob demanda no módulo agronômico</td><td>Coordenadas arredondadas para uma grade de 0,5 grau e metadados normais da conexão do servidor; não recebe device_id, foto nem a posição exata</td></tr>
 <tr><td>Vercel</td><td>Hospedagem do site e das funções de servidor</td><td>Tráfego de rede necessário para servir o app e o site, incluindo o IP visto transitoriamente para segurança</td></tr>
-<tr><td>Hotmart</td><td>Venda e cobrança da assinatura (somente no site)</td><td>Seu e-mail e dados de pagamento, coletados diretamente por ela; nós recebemos de volta o status da assinatura e o e-mail</td></tr>
+<tr><td>Google Play e App Store</td><td>Venda, cobrança e gestão da assinatura no aplicativo móvel</td><td>Dados de pagamento ficam com a loja; recebemos identificadores pseudônimos da transação, produto e status necessários para liberar o acesso</td></tr>
 <tr><td>Google Tag Manager <em>(só web)</em></td><td>Analytics do site</td><td>Eventos de navegação no site — não existe no app Android</td></tr>
 <tr><td>Utmify <em>(só web)</em></td><td>Atribuição de campanhas do site</td><td>Eventos de visita e assinatura no site — não existe no app Android</td></tr>
 </table>
@@ -176,7 +176,7 @@
 <li><strong>Perfil agronômico e diário local:</strong> os dados são removidos quando você limpa os dados do app, exclui a conta dentro do app ou desinstala o aplicativo. Como não são sincronizados nem enviados e não têm cópia de segurança remota, podem ser perdidos sem backup.</li>
 <li><strong>Espaço de observação e diário local:</strong> os dados são removidos quando você limpa os dados do app, exclui a conta dentro do app ou desinstala o aplicativo. Como não são sincronizados nem enviados e não têm cópia de segurança remota, podem ser perdidos sem backup.</li>
 <li><strong>Lembretes locais do Android:</strong> são cancelados quando você remove o lembrete ou o exemplar correspondente, limpa os dados do app, exclui a conta dentro do app ou desinstala o aplicativo. Não são sincronizados nem têm cópia de segurança remota.</li>
-<li><strong>Registros de pagamento:</strong> mantidos pela Hotmart conforme as políticas dela e as obrigações fiscais aplicáveis.</li>
+<li><strong>Registros de pagamento:</strong> mantidos pelo Google Play ou pela App Store conforme as políticas da loja e as obrigações fiscais aplicáveis.</li>
 <li><strong>Analytics do site (só web):</strong> retidos conforme a configuração das ferramentas (Google Tag Manager e Utmify).</li>
 </ul>
 
@@ -185,7 +185,7 @@
 <p>Como quase tudo fica no seu aparelho, a maior parte dos direitos você exerce diretamente:</p>
 <ul>
 <li><strong>Excluir a conta e os dados no servidor:</strong> no app, em <strong>Perfil &gt; Configurações &gt; Conta &gt; Excluir conta</strong>, ou pelo recurso web da página <a href="https://naturelensapp.cloud/account-deletion.html">naturelensapp.cloud/account-deletion.html</a>. A exclusão apaga a conta, os vínculos da assinatura em todos os aparelhos, a coleção sincronizada, o perfil e o conteúdo da comunidade, os tokens de push, os contadores de uso e as denúncias vinculadas. Como os buckets antiabuso não contêm um identificador reversível da conta, eles seguem a limpeza descrita na seção 6, normalmente em até 48 horas.</li>
-<li><strong>Atenção:</strong> excluir a conta <strong>não cancela a cobrança da assinatura</strong> na Hotmart. Para parar de pagar, cancele em <a href="https://consumer.hotmart.com">consumer.hotmart.com</a>.</li>
+<li><strong>Atenção:</strong> excluir a conta <strong>não cancela uma assinatura da loja</strong>. Para interromper a renovação, gerencie-a no Google Play ou na App Store.</li>
 <li><strong>Revogar a localização:</strong> desligue no Perfil, a qualquer momento; a identificação continua funcionando.</li>
 <li><strong>Revogar notificações:</strong> desative nas configurações do app ou do sistema.</li>
 <li><strong>Acesso e correção da coleção:</strong> seus dados estão visíveis e editáveis dentro do próprio app.</li>
@@ -280,7 +280,7 @@
 <tr><td>Website analytics (web version only)</td><td>Pages visited and visit source, via Google Tag Manager and Utmify</td><td>Only exists on the web version; the Android app has no analytics or trackers</td></tr>
 </table>
 </div>
-<p>A local copy of your photos stays on your device; when you confirm an identification, the selected images are transmitted as described in section 5, but they never enter collection sync. Your locally saved collection is not shared with other users. Subscription payments happen only on the website, processed by Hotmart (prices shown in US dollars); nothing is sold inside the Android app.</p>
+<p>A local copy of your photos stays on your device; when you confirm an identification, the selected images are transmitted as described in section 5, but they never enter collection sync. Your locally saved collection is not shared with other users. When subscriptions become available, billing will occur only through Google Play or the App Store at the price and currency shown by the store; the website does not sell subscriptions.</p>
 
 <h2 id="en-3">3. Why we use it and legal bases</h2>
 <p>Each purpose has a legal basis under the LGPD (art. 7) and the GDPR (art. 6):</p>
@@ -292,7 +292,7 @@
 <tr><td>Improve identification accuracy with approximate location</td><td>Consent — you turn it on and off in Profile</td></tr>
 <tr><td>Show monthly climatology for an approximate grid</td><td>Consent — only when you tap to use location in the agronomy module</td></tr>
 <tr><td>Manage free usage per category (pseudonymous identifier)</td><td>Legitimate interest — preventing abuse of the free tier, using pseudonymous, low-risk data</td></tr>
-<tr><td>Recognize your subscription and restore your access (email and status from Hotmart)</td><td>Performance of a contract</td></tr>
+<tr><td>Recognize and restore your subscription (pseudonymous store identifier, product and status)</td><td>Performance of a contract</td></tr>
 <tr><td>Sync your collection's text data across devices</td><td>Performance of a contract — a subscriber feature you trigger by signing in</td></tr>
 <tr><td>Operate Community, moderation and ranking</td><td>Performance of a contract and legitimate interest — publishing requested content, preventing abuse and maintaining safety</td></tr>
 <tr><td>Send push notifications</td><td>Consent — only if you enable them</td></tr>
@@ -318,7 +318,7 @@
 <tr><td>Supabase</td><td>Database, authentication and Community</td><td>Signed-in subscriber email, pseudonymous identifier, synced collection text data, push token, Community content and moderation, grid-level climate cache, AI reports and pseudonymized anti-abuse records</td></tr>
 <tr><td>NASA POWER</td><td>On-demand monthly climatology in the agronomy module</td><td>Coordinates rounded to a 0.5-degree grid and the server's normal connection metadata; it receives no device_id, photo or precise position</td></tr>
 <tr><td>Vercel</td><td>Hosting of the website and server functions</td><td>Network traffic needed to serve the app and website, including the IP address seen transiently for security</td></tr>
-<tr><td>Hotmart</td><td>Subscription sale and billing (website only)</td><td>Your email and payment details, collected directly by Hotmart; we receive back the subscription status and email</td></tr>
+<tr><td>Google Play and App Store</td><td>Subscription sale, billing and management in the mobile app</td><td>Payment details remain with the store; we receive pseudonymous transaction identifiers, product and status needed to grant access</td></tr>
 <tr><td>Google Tag Manager <em>(web only)</em></td><td>Website analytics</td><td>Browsing events on the website — does not exist in the Android app</td></tr>
 <tr><td>Utmify <em>(web only)</em></td><td>Website campaign attribution</td><td>Visit and subscription events on the website — does not exist in the Android app</td></tr>
 </table>
@@ -354,7 +354,7 @@
 <li><strong>Local agronomic profile and journal:</strong> the data are removed when you clear the app's data, delete your account in the app, or uninstall the application. Because they are neither synced nor sent and have no remote backup copy, they may be lost without a backup.</li>
 <li><strong>Local observation workspace and journal:</strong> the data are removed when you clear the app's data, delete your account in the app, or uninstall the application. Because they are neither synced nor sent and have no remote backup copy, they may be lost without a backup.</li>
 <li><strong>Local Android reminders:</strong> canceled when you remove the reminder or its specimen, clear the app's data, delete your account in the app, or uninstall the application. They are neither synced nor remotely backed up.</li>
-<li><strong>Payment records:</strong> kept by Hotmart under its own policies and applicable tax obligations.</li>
+<li><strong>Payment records:</strong> kept by Google Play or the App Store under the store's policies and applicable tax obligations.</li>
 <li><strong>Website analytics (web only):</strong> retained per the tools' configuration (Google Tag Manager and Utmify).</li>
 </ul>
 
@@ -363,7 +363,7 @@
 <p>Because almost everything stays on your device, you exercise most rights directly:</p>
 <ul>
 <li><strong>Delete your account and server-side data:</strong> in the app, under <strong>Profile &gt; Settings &gt; Account &gt; Delete account</strong>, or through the web resource at <a href="https://naturelensapp.cloud/account-deletion.html">naturelensapp.cloud/account-deletion.html</a>. Deletion erases the account, subscription links on every device, the synced collection, Community profile and content, push tokens, usage counters and linked reports. Because anti-abuse buckets contain no reversible account identifier, they follow the cleanup described in section 6, normally within 48 hours.</li>
-<li><strong>Note:</strong> deleting the account <strong>does not cancel the subscription billing</strong> at Hotmart. To stop payments, cancel at <a href="https://consumer.hotmart.com">consumer.hotmart.com</a>.</li>
+<li><strong>Note:</strong> deleting the account <strong>does not cancel a store subscription</strong>. Manage it in Google Play or the App Store to stop renewal.</li>
 <li><strong>Withdraw location consent:</strong> turn it off in Profile at any time; identification keeps working.</li>
 <li><strong>Withdraw notifications:</strong> disable them in the app or system settings.</li>
 <li><strong>Access and correct your collection:</strong> your data is visible and editable inside the app itself.</li>

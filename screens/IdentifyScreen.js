@@ -28,7 +28,6 @@ import {
   trackPaywallDismissed,
 } from '../components/tracking';
 import { CATEGORIES } from '../components/categories';
-import { startCheckout } from '../components/subscription';
 import PaywallModal from '../components/PaywallModal';
 import AlertModal from '../components/AlertModal';
 import {
@@ -37,7 +36,6 @@ import {
   createScanOutcomeRequest,
 } from '../components/scanOutcome';
 import { useAppAlert } from '../components/useAppAlert';
-import { usePageShowReset } from '../components/usePageShowReset';
 import CategoryIcon from '../components/CategoryIcon';
 import NatureScene from '../components/NatureScene';
 import PressScale from '../components/PressScale';
@@ -79,7 +77,6 @@ export default function IdentifyScreen() {
 
   const [scanning, setScanning] = useState(false);
   const [paywallVisible, setPaywallVisible] = useState(false);
-  const [subscribing, setSubscribing] = useState(false);
   // Foto no palco: the uri of the photo being analysed RIGHT NOW, staged inside
   // the viewfinder under the scan overlay - "analysing YOUR photo", not a
   // generic animation. Null (no uri available) falls back to the previous
@@ -92,9 +89,6 @@ export default function IdentifyScreen() {
   const scanLoopRef = useRef(null);
   const reduceMotion = useReducedMotion();
   const { alertConfig, showAlert, hideAlert } = useAppAlert();
-  // Un-freezes the subscribe button when the page is restored from bfcache
-  // after coming back from Hotmart's checkout (see usePageShowReset).
-  usePageShowReset(useCallback(() => setSubscribing(false), []));
 
   // Achados recentes DESTA categoria, for the compact grid above the footer tip.
   // Loaded on focus, not on mount: a scan saved moments ago on the detail
@@ -408,16 +402,6 @@ export default function IdentifyScreen() {
     setPhotoSlots((current) => current.map((photo, i) => (i === index ? null : photo)));
   };
 
-  const handleSubscribe = async (plan) => {
-    setSubscribing(true);
-    try {
-      await startCheckout(plan);
-    } catch (e) {
-      setSubscribing(false);
-      showAlert(t('identify.identificationFailedTitle'), e.message);
-    }
-  };
-
   const scanTranslate = scanAnim.interpolate({
     inputRange: [0, 1],
     outputRange: [0, 240],
@@ -453,7 +437,7 @@ export default function IdentifyScreen() {
             <>
             {/* Settings pinned to every main screen's header, like the
                 competitor's ever-present gear. Nested navigate bubbles to the
-                tab navigator (same proven pattern as SubscribeFab). */}
+                tab navigator without stealing the capture gesture. */}
             <TopBarIcon
               onPress={() => navigation.navigate('Profile', { screen: 'Settings' })}
               label={t('settings.title')}
@@ -926,8 +910,6 @@ export default function IdentifyScreen() {
         visible={paywallVisible}
         categoryLabel={t(`categories.${category}.label`).toLowerCase()}
         accent={meta.accent}
-        subscribing={subscribing}
-        onSubscribe={handleSubscribe}
         onCancel={() => {
           trackPaywallDismissed({ trigger: 'free_limit' });
           setPaywallVisible(false);

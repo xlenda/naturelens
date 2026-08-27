@@ -47,7 +47,6 @@ import { useAppAlert } from '../components/useAppAlert';
 import { addTokens } from '../components/achievements';
 import { recordMissionEvent, TOKENS_PER_MISSION } from '../components/missions';
 import { trackResultSaved } from '../components/tracking';
-import { startCheckout } from '../components/subscription';
 import NatureScene from '../components/NatureScene';
 import ZoneBand from '../components/ZoneBand';
 import PressScale from '../components/PressScale';
@@ -174,7 +173,6 @@ export default function TreeDetailScreen({ route }) {
   const [healthResult, setHealthResult] = useState(() => healthResultFromEntry(plant));
   const [healthError, setHealthError] = useState(null);
   const [paywallVisible, setPaywallVisible] = useState(false);
-  const [subscribing, setSubscribing] = useState(false);
   // A ficha botanica sempre entrega todo o dossie verdadeiro. Os wrappers de
   // profundidade continuam apenas para preservar a ordem editorial existente;
   // com Expert fixo, nenhuma preferencia antiga do onboarding esconde dados.
@@ -477,16 +475,6 @@ export default function TreeDetailScreen({ route }) {
       setHealthError(err.message || t('identify.identificationFailedDefault'));
     } finally {
       setHealthChecking(false);
-    }
-  };
-
-  const handleSubscribe = async (plan) => {
-    setSubscribing(true);
-    try {
-      await startCheckout(plan);
-    } catch (e) {
-      setSubscribing(false);
-      showAlert(t('paywall.checkoutFailedTitle'), e.message || t('paywall.checkoutFailedBody'));
     }
   };
 
@@ -1027,8 +1015,6 @@ export default function TreeDetailScreen({ route }) {
         visible={paywallVisible}
         categoryLabel={t('categories.crop.label').toLowerCase()}
         accent={meta.accent}
-        subscribing={subscribing}
-        onSubscribe={handleSubscribe}
         onCancel={() => setPaywallVisible(false)}
       />
 

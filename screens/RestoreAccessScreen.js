@@ -55,10 +55,7 @@ export default function RestoreAccessScreen() {
     trackRestoreStarted({ method: 'code' });
     try {
       const status = await verifyRestoreCode(email.trim(), code.trim());
-      // This step is the most fragile handoff in the whole purchase flow (the
-      // Hotmart buyer MUST pass through here to unlock the device), so success
-      // and failure are both measured - a paid customer stuck here is the worst
-      // silent outcome the funnel can have.
+      // Account recovery is measured independently from store receipt restore.
       trackRestoreCompleted({ method: 'code', status });
       setRestoredStatus(status);
       setStep('done');

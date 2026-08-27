@@ -174,7 +174,7 @@ module.exports = async (req, res) => {
       );
 
       if (error) {
-        // The table only exists after supabase-migration-hotmart.sql is run.
+        // The table only exists after the platform-core migration is run.
         // Report it plainly rather than pretending the subscription worked -
         // the client uses this to avoid showing "notifications on" when they
         // are not.

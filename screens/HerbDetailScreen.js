@@ -10,8 +10,7 @@ import SectionCard from '../components/SectionCard';
 import { colors, shadow } from '../components/theme';
 import { getSpeciesPhoto } from '../components/speciesPhoto';
 import { getHerbDetails } from '../components/herbDetails';
-import { getSubscriptionStatus, startCheckout } from '../components/subscription';
-import PaywallModal from '../components/PaywallModal';
+import { getSubscriptionStatus } from '../components/subscription';
 import AlertModal from '../components/AlertModal';
 import { useAppAlert } from '../components/useAppAlert';
 
@@ -24,8 +23,6 @@ export default function HerbDetailScreen({ route }) {
   const [loadError, setLoadError] = useState(false);
   const [subStatus, setSubStatus] = useState(null);
   const [subLoading, setSubLoading] = useState(true);
-  const [checkingOut, setCheckingOut] = useState(false);
-  const [paywallVisible, setPaywallVisible] = useState(false);
   const { alertConfig, showAlert, hideAlert } = useAppAlert();
 
   const allHerbs = t('discover.topics.medicinalHerbs.species', { returnObjects: true });
@@ -71,16 +68,6 @@ export default function HerbDetailScreen({ route }) {
       cancelled = true;
     };
   }, [herbId, i18n.language]);
-
-  const handleSubscribe = async (plan) => {
-    setCheckingOut(true);
-    try {
-      await startCheckout(plan);
-    } catch (e) {
-      setCheckingOut(false);
-      showAlert(t('paywall.checkoutFailedTitle'), e.message || t('paywall.checkoutFailedBody'));
-    }
-  };
 
   const handleRetryStatus = () => {
     setSubLoading(true);
@@ -183,18 +170,7 @@ export default function HerbDetailScreen({ route }) {
             <Ionicons name="sparkles" size={22} color={colors.accent} />
             <Text style={styles.subscribeTitle}>{t('discover.herbSubscribeCtaTitle')}</Text>
             <Text style={styles.subscribeBody}>{t('discover.herbSubscribeCtaBody')}</Text>
-            <TouchableOpacity
-              style={[styles.subscribeBtn, checkingOut && { opacity: 0.6 }]}
-              onPress={() => setPaywallVisible(true)}
-              disabled={checkingOut}
-              activeOpacity={0.85}
-              accessibilityRole="button"
-              accessibilityLabel={t('paywall.subscribe')}
-            >
-              <Text style={styles.subscribeBtnText}>
-                {checkingOut ? t('paywall.subscribing') : t('paywall.subscribe')}
-              </Text>
-            </TouchableOpacity>
+            <Text style={styles.subscribeBody}>{t('paywall.notAvailableYet')}</Text>
             <TouchableOpacity
               style={styles.retryStatusBtn}
               onPress={handleRetryStatus}
@@ -216,15 +192,6 @@ export default function HerbDetailScreen({ route }) {
         onRequestClose={hideAlert}
       />
 
-      <PaywallModal
-        visible={paywallVisible}
-        title={t('discover.herbSubscribeCtaTitle')}
-        body={t('discover.herbSubscribeCtaBody')}
-        accent={color || colors.error}
-        subscribing={checkingOut}
-        onSubscribe={handleSubscribe}
-        onCancel={() => setPaywallVisible(false)}
-      />
     </SafeAreaView>
   );
 }

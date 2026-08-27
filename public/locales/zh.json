@@ -164,28 +164,8 @@
   },
   "paywall": {
     "title": "免费次数已用完",
-    "body": "你已经使用过免费的 {{category}} 识别次数。订阅后即可无限次识别。",
-    "subscribe": "订阅",
-    "subscribing": "跳转中…",
     "subscribed": "已订阅",
-    "manage": "管理订阅",
-    "annualPlan": "年付",
-    "perYear": "/年",
-    "saveBadge": "节省 {{percent}}%",
-    "genericTitle": "解锁全部功能",
-    "genericBody": "无限识别植物、昆虫、蘑菇和农作物，并可完整查看药用植物详情。",
-    "subscriptionConfirmedTitle": "订阅成功！",
-    "subscriptionConfirmedBody": "感谢您的订阅，现在您可以无限次识别了。尽情探索吧！",
-    "subscriptionPendingTitle": "已收到付款",
-    "subscriptionPendingBody": "已收到付款。请打开「我的 → 恢复访问」并确认你付款时使用的邮箱，以解锁此设备。",
-    "checkoutFailedTitle": "结账失败",
-    "checkoutFailedBody": "无法开始结账，请稍后重试。",
-    "monthlyPlan": "月付",
-    "quarterlyPlan": "季付",
-    "perMonth": "每月",
-    "perQuarter": "每季度",
-    "notAvailableYet": "支付功能正在配置中——请稍后再试。",
-    "webOnlyBody": "高级版可在 NatureLens 网站订阅。已经是订阅用户？登录后在这里同样可以使用。"
+    "notAvailableYet": "支付功能正在配置中——请稍后再试。"
   },
   "restore": {
     "title": "登录",
@@ -637,7 +617,13 @@
     "bodyLength": "体长",
     "leafConsumption": "叶片取食量",
     "leafAreaPerLarva": "每只幼虫取食叶面积",
-    "lifeStages": { "egg": "卵", "larva": "幼虫", "nymph": "若虫", "pupa": "蛹", "adult": "成虫" },
+    "lifeStages": {
+      "egg": "卵",
+      "larva": "幼虫",
+      "nymph": "若虫",
+      "pupa": "蛹",
+      "adult": "成虫"
+    },
     "measurements": {
       "clutchSize": "每窝产卵数",
       "incubationPeriod": "孵卵期",
@@ -815,7 +801,7 @@
     "helpAndSupport": "帮助与支持",
     "rewardsStore": "奖励商店",
     "naturalistBadge": "博物学家",
-    "deleteAccountDoneBillingBody": "你的账户和数据已删除。重要：这不会取消订阅——你必须在 Hotmart 账户中取消，否则将继续扣款。",
+    "deleteAccountDoneBillingBody": "你的账户和数据已删除。重要：这不会取消订阅——你必须在 Google Play / App Store 账户中取消，否则将继续扣款。",
     "locationRow": "使用我的大致位置",
     "locationHint": "将答案限定在你附近出现的物种，从而提高准确度。精度约 1 公里，且从不保存。",
     "emptyTitle": "你的收藏从这里开始",
@@ -831,7 +817,7 @@
     "accuracyTitle": "识别准确性 — 请仔细阅读",
     "accuracyBody": "AI 识别可能出错，包括判断植物或蘑菇是否可食用、有毒或可安全触摸。切勿仅凭本应用的结果食用、采摘或使用任何野生植物、蘑菇或真菌。在食用或使用在野外发现的任何东西之前，请务必咨询合格的专家（真菌学家、植物学家或中毒控制中心）。我们不对因依赖本应用所做识别而造成的伤害负责。",
     "billingTitle": "订阅与计费",
-    "billingBody": "付费订阅通过 Hotmart 按你订阅时显示的价格扣费，并自动续订，直到你在 Hotmart 账户中取消为止。你可以随时取消；访问权限会保留到已付费周期结束。除法律要求外，我们不为未使用的时间提供按比例退款。在移动应用商店中，如果那里提供订阅，则通过商店自身的支付系统扣费。",
+    "billingBody": "付费订阅通过 Google Play / App Store 按你订阅时显示的价格扣费，并自动续订，直到你在 Google Play / App Store 账户中取消为止。你可以随时取消；访问权限会保留到已付费周期结束。除法律要求外，我们不为未使用的时间提供按比例退款。在移动应用商店中，如果那里提供订阅，则通过商店自身的支付系统扣费。",
     "accountTitle": "账户与密码",
     "accountBody": "使用免费功能无需账户。订阅者可以选择创建密码以登录并在设备间同步订阅。您需自行负责密码安全，并对通过您账户发生的一切行为负责。",
     "liabilityTitle": "不作担保，责任限制",
@@ -850,7 +836,7 @@
     "localStorageTitle": "仅本地存储",
     "localStorageBody": "你保存的收藏——已识别的物种、备注和时间戳——通过浏览器或应用的本地存储保存在你自己的设备上，绝不会与其他用户共享。如果你是订阅用户并已登录，收藏中的文本数据（绝不包括你的照片）也会同步到我们的服务器，方便你在多台设备间使用；删除账户后，这些数据会从我们的服务器上移除。",
     "noAccountsTitle": "无账户，无追踪",
-    "noAccountsBody": "使用这个应用不需要注册账户——你的设备会获得一个随机的匿名标识符（只保存在你的设备上），用来判断每个类别的一次免费识别是否已被使用。如果你订阅，Hotmart 会直接收集你的邮箱和支付信息来处理扣款——我们只会收到与该标识符关联的订阅状态和邮箱，用于恢复你的访问权限。订阅用户可以选择通过邮箱验证码或 Google 登录，在多台设备间同步订阅和收藏；使用应用从不强制登录。在网页版中，我们使用基础分析工具（Google Tag Manager 和 Utmify）统计访问量和订阅量；我们绝不出售个人数据。",
+    "noAccountsBody": "使用本应用无需注册账号。设备会获得一个仅保存在本机的随机匿名标识符，用于记录各类别的免费识别次数。未来的购买将仅由 Google Play 或 App Store 处理；NatureLens 只接收订阅状态以及经过匿名化处理的交易和商品标识。我们不会出售个人数据。",
     "dataLossTitle": "数据丢失风险",
     "dataLossBody": "如果你清除浏览器数据或卸载应用，本地保存的收藏将永久丢失，因为没有任何数据会被远程备份。",
     "contactTitle": "联系方式",
@@ -2627,7 +2613,7 @@
     "freeTitle": "NatureLens是免费的吗？",
     "freeBody": "每个类别（植物、昆虫、蘑菇、农作物、树木）您都可以免费识别一次。之后，订阅即可解锁所有类别的无限次识别。",
     "cancelTitle": "如何取消订阅？",
-    "cancelBody": "打开「我的」>「我的订阅」，点击「管理或取消」——它会带你进入你的 Hotmart 账户（consumer.hotmart.com），订阅在那里扣费，也可以在那里几步完成取消。你的访问权限会保留到已付费周期结束。删除 NatureLens 账户并不会停止扣费。",
+    "cancelBody": "打开「我的」>「我的订阅」，点击「管理或取消」——它会带你进入你的 Google Play / App Store 账户（Google Play / App Store），订阅在那里扣费，也可以在那里几步完成取消。你的访问权限会保留到已付费周期结束。删除 NatureLens 账户并不会停止扣费。",
     "restoreTitle": "我换了手机或清除了浏览器数据——如何找回我的订阅？",
     "restoreBody": "前往「个人资料」→「恢复访问」。您可以通过电子邮件请求一次性验证码，或者，如果您已设置密码，也可以使用密码或Google账户登录。",
     "tokensTitle": "什么是积分？可以兑换东西吗？",
@@ -2635,7 +2621,7 @@
     "privacyTitle": "我的数据是私密的吗？",
     "privacyBody": "使用NatureLens无需注册账户。您的大部分数据（收藏、照片）仅保存在您的设备上。详情请参阅完整的《隐私政策》。",
     "deleteTitle": "如何删除我的账户和数据？",
-    "deleteBody": "进入「我的」，点击底部的「删除账户」。这会从我们的服务器上永久删除你的账户和数据，并清除保存在此设备上的所有内容。重要：这不会取消进行中的订阅——请先在你的 Hotmart 账户中取消（「我的」>「我的订阅」>「管理或取消」），否则扣费会继续。",
+    "deleteBody": "进入「我的」，点击底部的「删除账户」。这会从我们的服务器上永久删除你的账户和数据，并清除保存在此设备上的所有内容。重要：这不会取消进行中的订阅——请先在你的 Google Play / App Store 账户中取消（「我的」>「我的订阅」>「管理或取消」），否则扣费会继续。",
     "offlineTitle": "该应用可以离线使用吗？",
     "offlineBody": "不可以——识别物种需要连接互联网以访问我们的AI服务。",
     "languageTitle": "我可以使用其他语言吗？",
@@ -2732,7 +2718,12 @@
     "confidenceLine": "置信度 {{confidence}}%"
   },
   "onboarding": {
-    "media": { "play": "播放视频", "pause": "暂停视频", "enableSound": "开启声音", "disableSound": "关闭声音" },
+    "media": {
+      "play": "播放视频",
+      "pause": "暂停视频",
+      "enableSound": "开启声音",
+      "disableSound": "关闭声音"
+    },
     "skip": "跳过",
     "next": "下一步",
     "start": "开始识别",
@@ -2864,8 +2855,8 @@
     "unknownBody": "未能连接服务器。如果你已订阅，使用不受影响——请稍后再试。",
     "plansTitle": "方案",
     "manageTitle": "管理或取消",
-    "manageBody": "你的订阅由 Hotmart 收款，因此取消需在你的 Hotmart 账户中操作，而不是这里。在那里取消后将停止后续扣款，你的权限会保留到已付费周期结束。",
-    "openHotmart": "打开我的 Hotmart 账户"
+    "manageBody": "你的订阅由 Google Play / App Store 收款，因此取消需在你的 Google Play / App Store 账户中操作，而不是这里。在那里取消后将停止后续扣款，你的权限会保留到已付费周期结束。",
+    "manageStore": "打开我的 Google Play / App Store 账户"
   },
   "notifications": {
     "row": "通知",
@@ -3229,22 +3220,22 @@
       "saveFailed": "无法保存。没有任何内容被确认，请重试。"
     },
     "planningSourcesTitle": "规划参考来源",
-    "planningSourcesBody": "与该作物对应的官方阅读资料。这不表示技术模块或建议已经发布。"
-  ,
+    "planningSourcesBody": "与该作物对应的官方阅读资料。这不表示技术模块或建议已经发布。",
     "climate": {
-    "kicker": "当地气候",
-    "title": "此地的气候节律",
-    "body": "比较野外观察之前，先查看逐月气候资料。这只是气候描述，并非灌溉或施肥处方。",
-    "rain": "降雨",
-    "temperature": "平均气温",
-    "rainValue": "{{value}} 毫米",
-    "temperatureValue": "{{value}} °C",
-    "privacy": "仅发送并缓存约 {{precision}}° 的网格，不会保存你的精确位置。",
-    "source": "打开 NASA POWER 官方来源",
-    "permission": "未共享位置。你可以在设备设置中启用后重试。",
-    "error": "气候数据暂时不可用。",
-    "action": "使用大致位置"
-  }},
+      "kicker": "当地气候",
+      "title": "此地的气候节律",
+      "body": "比较野外观察之前，先查看逐月气候资料。这只是气候描述，并非灌溉或施肥处方。",
+      "rain": "降雨",
+      "temperature": "平均气温",
+      "rainValue": "{{value}} 毫米",
+      "temperatureValue": "{{value}} °C",
+      "privacy": "仅发送并缓存约 {{precision}}° 的网格，不会保存你的精确位置。",
+      "source": "打开 NASA POWER 官方来源",
+      "permission": "未共享位置。你可以在设备设置中启用后重试。",
+      "error": "气候数据暂时不可用。",
+      "action": "使用大致位置"
+    }
+  },
   "observationWorkspace": {
     "title": "高级观察",
     "loading": "正在加载观察记录…",
@@ -3621,8 +3612,7 @@
       "pests": "虫害和症状",
       "recovery": "前后对比",
       "questions": "向小组提问"
-    }
- ,
+    },
     "onlineBadge": "在线社区",
     "feedTitle": "野外笔记",
     "commentAction": "评论",

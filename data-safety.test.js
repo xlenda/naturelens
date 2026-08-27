@@ -268,9 +268,9 @@ test('daily push cron reports an unavailable prune RPC without failing reminders
 function createDeletionAdmin({ email = 'owner@example.test', failTable = null } = {}) {
   const subscriptions = email
     ? [
-        { device_id: 'device-a', email, provider: 'hotmart', provider_subscription_id: 'sub-1' },
-        { device_id: 'device-b', email, provider: 'hotmart', provider_subscription_id: 'sub-1' },
-        { device_id: 'hotmart:sub-1', email, provider: 'hotmart', provider_subscription_id: 'sub-1' },
+        { device_id: 'device-a', email, status: 'active', current_period_end: '2099-01-01T00:00:00Z' },
+        { device_id: 'device-b', email, status: 'active', current_period_end: '2099-01-01T00:00:00Z' },
+        { device_id: 'store:sub-1', email, status: 'active', current_period_end: '2099-01-01T00:00:00Z' },
         { device_id: 'someone-else', email: 'other@example.test', provider: null, provider_subscription_id: null },
       ]
     : [];
@@ -369,7 +369,7 @@ test('account deletion removes every device linked to the same email', async () 
 
   assert.equal(result.statusCode, 200);
   assert.equal(result.body.deleted, true);
-  const expectedIds = ['device-a', 'device-b', 'hotmart:sub-1'];
+  const expectedIds = ['device-a', 'device-b', 'store:sub-1'];
   for (const table of ['push_subscriptions', 'category_usage', 'ai_reports']) {
     const deletion = fake.calls.find((call) => call.table === table);
     assert.deepEqual(deletion?.filters, [{ kind: 'in', field: 'device_id', value: expectedIds }]);

@@ -18,7 +18,6 @@ import FindThumb from '../components/FindThumb';
 import NatureScene from '../components/NatureScene';
 import ZoneBand from '../components/ZoneBand';
 import PressScale from '../components/PressScale';
-import SubscribeFab from '../components/SubscribeFab';
 import { addTokens } from '../components/achievements';
 import { recordMissionEvent, TOKENS_PER_MISSION } from '../components/missions';
 import { BOOKS } from '../components/books';
@@ -418,7 +417,6 @@ export default function DiscoverScreen() {
 
       {/* Floating subscribe pill - see CollectionScreen for why it is the last
           child and why it can refuse to render. */}
-      <SubscribeFab />
     </SafeAreaView>
   );
 }

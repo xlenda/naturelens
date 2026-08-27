@@ -150,28 +150,8 @@
   },
   "paywall": {
     "title": "Kostenlose Nutzung bereits aufgebraucht",
-    "body": "Du hast deine kostenlose {{category}}-Identifizierung bereits genutzt. Abonniere, um ohne Einschränkungen weiter zu identifizieren.",
-    "subscribe": "Abonnieren",
-    "subscribing": "Weiterleitung…",
     "subscribed": "Abonniert",
-    "manage": "Abo verwalten",
-    "annualPlan": "Jährlich",
-    "perYear": "/Jahr",
-    "saveBadge": "{{percent}}% sparen",
-    "genericTitle": "Alles freischalten",
-    "genericBody": "Unbegrenzte Bestimmungen für Pflanzen, Insekten, Pilze und Nutzpflanzen sowie voller Zugriff auf Heilkräuter-Details.",
-    "subscriptionConfirmedTitle": "Du bist abonniert!",
-    "subscriptionConfirmedBody": "Danke für dein Abo – du hast jetzt unbegrenzte Bestimmungen. Viel Spaß!",
-    "subscriptionPendingTitle": "Zahlung erhalten",
-    "subscriptionPendingBody": "Zahlung erhalten. Öffne Profil → Zugang wiederherstellen und bestätige die E-Mail, mit der du bezahlt hast, um dieses Gerät freizuschalten.",
-    "checkoutFailedTitle": "Checkout fehlgeschlagen",
-    "checkoutFailedBody": "Der Checkout konnte nicht gestartet werden. Bitte versuchen Sie es gleich noch einmal.",
-    "monthlyPlan": "Monatlich",
-    "quarterlyPlan": "Vierteljährlich",
-    "perMonth": "pro Monat",
-    "perQuarter": "pro Quartal",
-    "notAvailableYet": "Die Kasse wird gerade eingerichtet — bitte gleich erneut versuchen.",
-    "webOnlyBody": "Premium ist auf der NatureLens-Website erhältlich. Schon Abonnent? Melde dich an - dein Zugang gilt auch hier."
+    "notAvailableYet": "Die Kasse wird gerade eingerichtet — bitte gleich erneut versuchen."
   },
   "restore": {
     "title": "Anmelden",
@@ -623,7 +603,13 @@
     "bodyLength": "Körperlänge",
     "leafConsumption": "Blattfraß",
     "leafAreaPerLarva": "Verzehrte Blattfläche pro Larve",
-    "lifeStages": { "egg": "Ei", "larva": "Larve", "nymph": "Nymphe", "pupa": "Puppe", "adult": "Adulttier" },
+    "lifeStages": {
+      "egg": "Ei",
+      "larva": "Larve",
+      "nymph": "Nymphe",
+      "pupa": "Puppe",
+      "adult": "Adulttier"
+    },
     "measurements": {
       "clutchSize": "Gelegegröße",
       "incubationPeriod": "Brutdauer",
@@ -801,7 +787,7 @@
     "helpAndSupport": "Hilfe & Support",
     "rewardsStore": "Belohnungs-Shop",
     "naturalistBadge": "Naturforscher",
-    "deleteAccountDoneBillingBody": "Dein Konto und deine Daten wurden gelöscht. WICHTIG: Das kündigt dein Abo NICHT — du musst es in deinem Hotmart-Konto kündigen, sonst läuft die Abbuchung weiter.",
+    "deleteAccountDoneBillingBody": "Dein Konto und deine Daten wurden gelöscht. WICHTIG: Das kündigt dein Abo NICHT — du musst es in deinem Google Play / App Store-Konto kündigen, sonst läuft die Abbuchung weiter.",
     "locationRow": "Meinen ungefähren Standort verwenden",
     "locationHint": "Verbessert die Genauigkeit, indem nur Arten aus deiner Umgebung infrage kommen. Auf etwa 1 km gerundet und nie gespeichert.",
     "emptyTitle": "Hier beginnt deine Sammlung",
@@ -817,7 +803,7 @@
     "accuracyTitle": "Genauigkeit der Identifizierung — bitte lesen",
     "accuracyBody": "Die KI-Identifizierung kann falsch sein, auch bei der Frage, ob eine Pflanze oder ein Pilz essbar, giftig oder ungefährlich zu berühren ist. Iss, sammle oder verwende niemals eine Wildpflanze, einen Pilz oder Fungus allein basierend auf dem Ergebnis dieser App. Bestätige immer mit einem qualifizierten Experten (Mykologe, Botaniker oder Giftnotruf), bevor du etwas isst oder verwendest, das du in der Natur gefunden hast. Wir haften nicht für Schäden, die durch das Vertrauen auf eine Identifizierung dieser App entstehen.",
     "billingTitle": "Abonnements und Abrechnung",
-    "billingBody": "Bezahlte Abos werden über Hotmart zu dem Preis abgerechnet, der beim Abschluss angezeigt wird, und verlängern sich automatisch, bis du sie in deinem Hotmart-Konto kündigst. Du kannst jederzeit kündigen; dein Zugang bleibt bis zum Ende des bereits bezahlten Zeitraums bestehen. Anteilige Erstattungen für ungenutzte Zeit bieten wir nicht an, außer wo gesetzlich vorgeschrieben. In mobilen App-Stores werden Abos - sofern dort angeboten - über das Abrechnungssystem des jeweiligen Stores abgewickelt.",
+    "billingBody": "Bezahlte Abos werden über Google Play / App Store zu dem Preis abgerechnet, der beim Abschluss angezeigt wird, und verlängern sich automatisch, bis du sie in deinem Google Play / App Store-Konto kündigst. Du kannst jederzeit kündigen; dein Zugang bleibt bis zum Ende des bereits bezahlten Zeitraums bestehen. Anteilige Erstattungen für ungenutzte Zeit bieten wir nicht an, außer wo gesetzlich vorgeschrieben. In mobilen App-Stores werden Abos - sofern dort angeboten - über das Abrechnungssystem des jeweiligen Stores abgewickelt.",
     "accountTitle": "Konten und Passwörter",
     "accountBody": "Du brauchst kein Konto, um die kostenlosen Funktionen zu nutzen. Abonnenten können optional ein Passwort erstellen, um sich anzumelden und ihr Abo geräteübergreifend zu synchronisieren. Du bist dafür verantwortlich, dein Passwort sicher aufzubewahren und für alles, was über dein Konto geschieht.",
     "liabilityTitle": "Kein Gewährleistung, Haftungsbeschränkung",
@@ -836,7 +822,7 @@
     "localStorageTitle": "Nur lokale Speicherung",
     "localStorageBody": "Deine gespeicherte Sammlung - identifizierte Arten, Notizen und Zeitstempel - wird lokal auf deinem eigenen Gerät im Browser- oder App-Speicher abgelegt und niemals mit anderen Nutzern geteilt. Wenn du Abonnent bist und dich anmeldest, werden die Textdaten der Sammlung (niemals deine Fotos) zusätzlich mit unserem Server synchronisiert, damit sie dich geräteübergreifend begleiten; beim Löschen deines Kontos werden sie von unseren Servern entfernt.",
     "noAccountsTitle": "Keine Konten, kein Tracking",
-    "noAccountsBody": "Diese App erfordert kein Konto - dein Gerät erhält eine zufällige anonyme Kennung (nur auf deinem Gerät gespeichert), damit wir erkennen, wann die eine kostenlose Identifizierung pro Kategorie genutzt wurde. Wenn du abonnierst, erfasst Hotmart deine E-Mail-Adresse und Zahlungsdaten direkt, um die Zahlung abzuwickeln - wir erhalten den Abo-Status und die E-Mail-Adresse, verknüpft mit derselben Kennung, um deinen Zugang wiederherzustellen. Abonnenten können sich optional per E-Mail-Code oder Google anmelden, um Abo und Sammlung geräteübergreifend zu synchronisieren; das ist zur Nutzung der App nie erforderlich. In der Web-Version nutzen wir einfache Analysen (Google Tag Manager und Utmify), um Besuche und Abos zu messen; wir verkaufen niemals persönliche Daten.",
+    "noAccountsBody": "Diese App erfordert kein Konto - dein Gerät erhält eine zufällige anonyme Kennung (nur auf deinem Gerät gespeichert), damit wir erkennen, wann die eine kostenlose Identifizierung pro Kategorie genutzt wurde. Abonnenten können sich optional per E-Mail-Code oder Google anmelden, um Abo und Sammlung geräteübergreifend zu synchronisieren; das ist zur Nutzung der App nie erforderlich. In der Web-Version nutzen wir einfache Analysen (Google Tag Manager und Utmify), um Besuche und Abos zu messen; wir verkaufen niemals persönliche Daten.",
     "dataLossTitle": "Risiko von Datenverlust",
     "dataLossBody": "Wenn du deine Browserdaten löschst oder die App deinstallierst, geht deine lokal gespeicherte Sammlung dauerhaft verloren, da nichts extern gesichert wird.",
     "contactTitle": "Kontakt",
@@ -2613,7 +2599,7 @@
     "freeTitle": "Ist NatureLens kostenlos?",
     "freeBody": "Du erhältst eine kostenlose Bestimmung pro Kategorie (Pflanzen, Insekten, Pilze, Nutzpflanzen, Bäume). Danach schaltet ein Abonnement unbegrenzte Bestimmungen in allen Kategorien frei.",
     "cancelTitle": "Wie kündige ich mein Abonnement?",
-    "cancelBody": "Öffne Profil > Mein Abo und tippe auf 'Verwalten oder kündigen' - du gelangst zu deinem Hotmart-Konto (consumer.hotmart.com), wo das Abo abgerechnet wird und sich mit wenigen Fingertipps kündigen lässt. Dein Zugang bleibt bis zum Ende des bereits bezahlten Zeitraums aktiv. Das Löschen deines NatureLens-Kontos stoppt die Abbuchung NICHT.",
+    "cancelBody": "Öffne Profil > Mein Abo und tippe auf 'Verwalten oder kündigen' - du gelangst zu deinem Google Play / App Store-Konto, wo das Abo abgerechnet wird und sich mit wenigen Fingertipps kündigen lässt. Dein Zugang bleibt bis zum Ende des bereits bezahlten Zeitraums aktiv. Das Löschen deines NatureLens-Kontos stoppt die Abbuchung NICHT.",
     "restoreTitle": "Ich habe das Telefon gewechselt oder meinen Browser geleert – wie bekomme ich mein Abonnement zurück?",
     "restoreBody": "Gehe zu Profil → Zugriff wiederherstellen. Du kannst entweder einen einmaligen Code per E-Mail anfordern oder dich, falls du eines erstellt hast, mit einem Passwort oder deinem Google-Konto anmelden.",
     "tokensTitle": "Was sind Tokens? Kann ich sie gegen etwas eintauschen?",
@@ -2621,7 +2607,7 @@
     "privacyTitle": "Sind meine Daten privat?",
     "privacyBody": "Für die Nutzung von NatureLens ist kein Konto erforderlich. Die meisten deiner Daten (Sammlung, Fotos) bleiben ausschließlich auf deinem Gerät. Alle Details findest du in der vollständigen Datenschutzrichtlinie.",
     "deleteTitle": "Wie lösche ich mein Konto und meine Daten?",
-    "deleteBody": "Gehe zu Profil und tippe ganz unten auf Konto löschen. Das entfernt dein Konto und deine Daten dauerhaft von unseren Servern und löscht alles, was auf diesem Gerät gespeichert ist. Wichtig: Ein aktives Abo wird dadurch NICHT gekündigt - kündige es zuerst in deinem Hotmart-Konto (Profil > Mein Abo > Verwalten oder kündigen), sonst läuft die Abbuchung weiter.",
+    "deleteBody": "Gehe zu Profil und tippe ganz unten auf Konto löschen. Das entfernt dein Konto und deine Daten dauerhaft von unseren Servern und löscht alles, was auf diesem Gerät gespeichert ist. Wichtig: Ein aktives Abo wird dadurch NICHT gekündigt - kündige es zuerst in deinem Google Play / App Store-Konto (Profil > Mein Abo > Verwalten oder kündigen), sonst läuft die Abbuchung weiter.",
     "offlineTitle": "Funktioniert die App offline?",
     "offlineBody": "Nein – für die Bestimmung einer Art ist eine Internetverbindung erforderlich, um unseren KI-Dienst zu erreichen.",
     "languageTitle": "Kann ich die App in einer anderen Sprache verwenden?",
@@ -2687,7 +2673,12 @@
     "confidenceLine": "{{confidence}}% sicher"
   },
   "onboarding": {
-    "media": { "play": "Video abspielen", "pause": "Video pausieren", "enableSound": "Ton einschalten", "disableSound": "Ton ausschalten" },
+    "media": {
+      "play": "Video abspielen",
+      "pause": "Video pausieren",
+      "enableSound": "Ton einschalten",
+      "disableSound": "Ton ausschalten"
+    },
     "skip": "Überspringen",
     "next": "Weiter",
     "start": "Loslegen",
@@ -2819,8 +2810,8 @@
     "unknownBody": "Der Server war nicht erreichbar. Falls du abonniert hast, ist dein Zugang unberührt — versuche es gleich noch einmal.",
     "plansTitle": "Tarife",
     "manageTitle": "Verwalten oder kündigen",
-    "manageBody": "Dein Abo wird von Hotmart abgerechnet, die Kündigung erfolgt daher in deinem Hotmart-Konto — nicht hier. Nach der Kündigung dort enden künftige Abbuchungen, und dein Zugang bleibt bis zum Ende des bezahlten Zeitraums bestehen.",
-    "openHotmart": "Mein Hotmart-Konto öffnen"
+    "manageBody": "Dein Abo wird von Google Play / App Store abgerechnet, die Kündigung erfolgt daher in deinem Google Play / App Store-Konto — nicht hier. Nach der Kündigung dort enden künftige Abbuchungen, und dein Zugang bleibt bis zum Ende des bezahlten Zeitraums bestehen.",
+    "manageStore": "Mein Google Play / App Store-Konto öffnen"
   },
   "notifications": {
     "row": "Benachrichtigungen",
@@ -3229,22 +3220,22 @@
       "saveFailed": "Speichern nicht möglich. Nichts wurde bestätigt; versuchen Sie es erneut."
     },
     "planningSourcesTitle": "Quellen zur Planung",
-    "planningSourcesBody": "Offizielle Lektüre, die dieser Kultur zugeordnet ist. Das bedeutet nicht, dass ein Fachmodul oder eine Empfehlung freigegeben wurde."
-  ,
+    "planningSourcesBody": "Offizielle Lektüre, die dieser Kultur zugeordnet ist. Das bedeutet nicht, dass ein Fachmodul oder eine Empfehlung freigegeben wurde.",
     "climate": {
-    "kicker": "LOKALES KLIMA",
-    "title": "Klimaverlauf an diesem Ort",
-    "body": "Prüfe die monatliche Klimatologie, bevor du Feldbeobachtungen vergleichst. Sie beschreibt das Klima und ist keine Bewässerungs- oder Düngeempfehlung.",
-    "rain": "Niederschlag",
-    "temperature": "Mittlere Temperatur",
-    "rainValue": "{{value}} mm",
-    "temperatureValue": "{{value}} °C",
-    "privacy": "Nur ein ungefähres {{precision}}°-Raster wird gesendet und gespeichert. Dein genauer Standort wird nicht gespeichert.",
-    "source": "Offizielle NASA-POWER-Quelle öffnen",
-    "permission": "Der Standort wurde nicht geteilt. Aktiviere ihn in den Geräteeinstellungen und versuche es erneut.",
-    "error": "Klimadaten sind vorübergehend nicht verfügbar.",
-    "action": "Ungefähren Standort verwenden"
-  }},
+      "kicker": "LOKALES KLIMA",
+      "title": "Klimaverlauf an diesem Ort",
+      "body": "Prüfe die monatliche Klimatologie, bevor du Feldbeobachtungen vergleichst. Sie beschreibt das Klima und ist keine Bewässerungs- oder Düngeempfehlung.",
+      "rain": "Niederschlag",
+      "temperature": "Mittlere Temperatur",
+      "rainValue": "{{value}} mm",
+      "temperatureValue": "{{value}} °C",
+      "privacy": "Nur ein ungefähres {{precision}}°-Raster wird gesendet und gespeichert. Dein genauer Standort wird nicht gespeichert.",
+      "source": "Offizielle NASA-POWER-Quelle öffnen",
+      "permission": "Der Standort wurde nicht geteilt. Aktiviere ihn in den Geräteeinstellungen und versuche es erneut.",
+      "error": "Klimadaten sind vorübergehend nicht verfügbar.",
+      "action": "Ungefähren Standort verwenden"
+    }
+  },
   "observationWorkspace": {
     "title": "Erweiterte Beobachtung",
     "loading": "Beobachtungen werden geladen…",
@@ -3621,8 +3612,7 @@
       "pests": "Schädlinge und Symptome",
       "recovery": "Vorher und nachher",
       "questions": "Gruppe fragen"
-    }
- ,
+    },
     "onlineBadge": "Online-Community",
     "feedTitle": "Feldnotizen",
     "commentAction": "Kommentieren",

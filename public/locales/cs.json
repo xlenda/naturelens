@@ -164,28 +164,8 @@
   },
   "paywall": {
     "title": "Bezplatné použití již vyčerpáno",
-    "body": "Svou bezplatnou identifikaci kategorie {{category}} jste už využili. Předplaťte si aplikaci a identifikujte bez omezení.",
-    "subscribe": "Předplatit",
-    "subscribing": "Přesměrování…",
     "subscribed": "Předplaceno",
-    "manage": "Spravovat předplatné",
-    "annualPlan": "Roční",
-    "perYear": "/rok",
-    "saveBadge": "Ušetřete {{percent}} %",
-    "genericTitle": "Odemkněte vše",
-    "genericBody": "Neomezená identifikace rostlin, hmyzu, hub a plodin a plný přístup k informacím o léčivých bylinách.",
-    "subscriptionConfirmedTitle": "Předplatné je aktivní!",
-    "subscriptionConfirmedBody": "Děkujeme za předplatné – nyní máte neomezené rozpoznávání. Užijte si to!",
-    "subscriptionPendingTitle": "Platba přijata",
-    "subscriptionPendingBody": "Platba přijata. Otevřete Profil → Obnovit přístup a potvrďte e-mail, kterým jste platili, abyste odemkli toto zařízení.",
-    "checkoutFailedTitle": "Platba se nezdařila",
-    "checkoutFailedBody": "Nepodařilo se spustit platbu. Zkuste to prosím za chvíli znovu.",
-    "monthlyPlan": "Měsíčně",
-    "quarterlyPlan": "Čtvrtletně",
-    "perMonth": "měsíčně",
-    "perQuarter": "čtvrtletně",
-    "notAvailableYet": "Platba se právě nastavuje — zkuste to prosím za chvíli znovu.",
-    "webOnlyBody": "Premium je dostupné na webu NatureLens. Už máte předplatné? Přihlaste se a váš přístup platí i tady."
+    "notAvailableYet": "Platba se právě nastavuje — zkuste to prosím za chvíli znovu."
   },
   "restore": {
     "title": "Přihlásit se",
@@ -637,7 +617,13 @@
     "bodyLength": "Délka těla",
     "leafConsumption": "Spotřeba listů",
     "leafAreaPerLarva": "Listová plocha zkonzumovaná jednou larvou",
-    "lifeStages": { "egg": "Vajíčko", "larva": "Larva", "nymph": "Nymfa", "pupa": "Kukla", "adult": "Dospělec" },
+    "lifeStages": {
+      "egg": "Vajíčko",
+      "larva": "Larva",
+      "nymph": "Nymfa",
+      "pupa": "Kukla",
+      "adult": "Dospělec"
+    },
     "measurements": {
       "clutchSize": "Velikost snůšky",
       "incubationPeriod": "Doba inkubace vajec",
@@ -815,7 +801,7 @@
     "helpAndSupport": "Nápověda a podpora",
     "rewardsStore": "Obchod s odměnami",
     "naturalistBadge": "Přírodovědec",
-    "deleteAccountDoneBillingBody": "Váš účet a data byly smazány. DŮLEŽITÉ: tím se předplatné neruší — musíte ho zrušit ve svém účtu Hotmart, jinak bude strhávání pokračovat.",
+    "deleteAccountDoneBillingBody": "Váš účet a data byly smazány. DŮLEŽITÉ: tím se předplatné neruší — musíte ho zrušit ve svém účtu Google Play / App Store, jinak bude strhávání pokračovat.",
     "locationRow": "Používat mou přibližnou polohu",
     "locationHint": "Zpřesňuje výsledek tím, že bere v úvahu jen druhy z tvého okolí. Zaokrouhlená asi na 1 km a nikdy se neukládá.",
     "emptyTitle": "Tady začíná tvoje sbírka",
@@ -831,7 +817,7 @@
     "accuracyTitle": "Přesnost identifikace — přečtěte si prosím",
     "accuracyBody": "Identifikace pomocí AI se může mýlit, včetně toho, zda je rostlina nebo houba jedlá, jedovatá nebo bezpečná na dotek. Nikdy nejezte, nesbírejte ani nepoužívejte žádnou volně rostoucí rostlinu, houbu ani hřib pouze na základě výsledku této aplikace. Vždy si to ověřte u kvalifikovaného odborníka (mykologa, botanika nebo toxikologického centra), než něco nalezeného v přírodě sníte nebo použijete. Neneseme odpovědnost za újmu způsobenou spoléháním na identifikaci provedenou touto aplikací.",
     "billingTitle": "Předplatné a fakturace",
-    "billingBody": "Placená předplatná se účtují přes Hotmart za cenu zobrazenou při objednání a automaticky se obnovují, dokud je nezrušíte ve svém účtu Hotmart. Zrušit můžete kdykoli; přístup vám zůstane do konce už zaplaceného období. Poměrné vrácení peněz za nevyužitý čas nenabízíme, pokud to nevyžaduje zákon. V mobilních obchodech s aplikacemi se předplatná - pokud se tam nabízejí - účtují přes vlastní platební systém obchodu.",
+    "billingBody": "Placená předplatná se účtují přes Google Play / App Store za cenu zobrazenou při objednání a automaticky se obnovují, dokud je nezrušíte ve svém účtu Google Play / App Store. Zrušit můžete kdykoli; přístup vám zůstane do konce už zaplaceného období. Poměrné vrácení peněz za nevyužitý čas nenabízíme, pokud to nevyžaduje zákon. V mobilních obchodech s aplikacemi se předplatná - pokud se tam nabízejí - účtují přes vlastní platební systém obchodu.",
     "accountTitle": "Účty a hesla",
     "accountBody": "K používání bezplatných funkcí nepotřebujete účet. Předplatitelé si mohou volitelně vytvořit heslo, aby se mohli přihlásit a synchronizovat předplatné napříč zařízeními. Jste zodpovědní za zabezpečení svého hesla a za vše, co se stane prostřednictvím vašeho účtu.",
     "liabilityTitle": "Žádná záruka, omezení odpovědnosti",
@@ -850,7 +836,7 @@
     "localStorageTitle": "Pouze lokální úložiště",
     "localStorageBody": "Vaše uložená sbírka - identifikované druhy, poznámky a časové údaje - je uložena lokálně ve vašem vlastním zařízení, v úložišti prohlížeče nebo aplikace, a nikdy se nesdílí s ostatními uživateli. Pokud jste předplatitel a přihlásíte se, textová data sbírky (nikdy vaše fotky) se také synchronizují s naším serverem, aby vás mohla provázet mezi zařízeními; smazáním účtu se z našich serverů odstraní.",
     "noAccountsTitle": "Žádné účty, žádné sledování",
-    "noAccountsBody": "Tato aplikace nevyžaduje účet - vaše zařízení dostane náhodný anonymní identifikátor (uložený jen ve vašem zařízení), abychom poznali, kdy byla využita jedna bezplatná identifikace v každé kategorii. Pokud si předplatné pořídíte, Hotmart shromažďuje váš e-mail a platební údaje přímo, aby zpracoval platbu - my dostáváme stav předplatného a e-mail, propojené se stejným identifikátorem, abychom mohli obnovit váš přístup. Předplatitelé se mohou volitelně přihlásit kódem z e-mailu nebo přes Google a synchronizovat předplatné a sbírku mezi zařízeními; k používání aplikace to nikdy není nutné. Ve webové verzi používáme základní analytiku (Google Tag Manager a Utmify) k měření návštěv a předplatných; osobní údaje nikdy neprodáváme.",
+    "noAccountsBody": "Tato aplikace nevyžaduje účet - vaše zařízení dostane náhodný anonymní identifikátor (uložený jen ve vašem zařízení), abychom poznali, kdy byla využita jedna bezplatná identifikace v každé kategorii. Předplatitelé se mohou volitelně přihlásit kódem z e-mailu nebo přes Google a synchronizovat předplatné a sbírku mezi zařízeními; k používání aplikace to nikdy není nutné. Ve webové verzi používáme základní analytiku (Google Tag Manager a Utmify) k měření návštěv a předplatných; osobní údaje nikdy neprodáváme.",
     "dataLossTitle": "Riziko ztráty dat",
     "dataLossBody": "Pokud vymažete data prohlížeče nebo aplikaci odinstalujete, vaše lokálně uložená sbírka bude trvale ztracena, protože se nikde vzdáleně nezálohuje.",
     "contactTitle": "Kontakt",
@@ -2627,7 +2613,7 @@
     "freeTitle": "Je NatureLens zdarma?",
     "freeBody": "Máte k dispozici jednu bezplatnou identifikaci v každé kategorii (rostliny, hmyz, houby, plodiny, stromy). Poté odemkne předplatné neomezené identifikace ve všech kategoriích.",
     "cancelTitle": "Jak zruším předplatné?",
-    "cancelBody": "Otevřete Profil > Moje předplatné a klepněte na 'Spravovat nebo zrušit' - dostanete se do svého účtu Hotmart (consumer.hotmart.com), kde se předplatné účtuje a dá se zrušit na pár klepnutí. Váš přístup zůstává aktivní do konce už zaplaceného období. Smazání účtu NatureLens účtování NEZASTAVÍ.",
+    "cancelBody": "Otevřete Profil > Moje předplatné a klepněte na 'Spravovat nebo zrušit' - dostanete se do svého účtu Google Play / App Store, kde se předplatné účtuje a dá se zrušit na pár klepnutí. Váš přístup zůstává aktivní do konce už zaplaceného období. Smazání účtu NatureLens účtování NEZASTAVÍ.",
     "restoreTitle": "Vyměnil jsem telefon nebo vymazal prohlížeč — jak obnovím své předplatné?",
     "restoreBody": "Přejděte do Profil → Obnovit přístup. Můžete si nechat poslat jednorázový kód e-mailem, nebo se, pokud jste si ho vytvořili, přihlásit pomocí hesla či účtu Google.",
     "tokensTitle": "Co jsou tokeny? Můžu je za něco vyměnit?",
@@ -2635,7 +2621,7 @@
     "privacyTitle": "Jsou moje data soukromá?",
     "privacyBody": "Používání NatureLens nevyžaduje účet. Většina vašich dat (sbírka, fotografie) zůstává pouze ve vašem zařízení. Podrobnosti najdete v úplných Zásadách ochrany osobních údajů.",
     "deleteTitle": "Jak smažu svůj účet a data?",
-    "deleteBody": "Přejděte do sekce Profil a dole klepněte na Smazat účet. Tím se váš účet a data trvale odstraní z našich serverů a vymaže se vše uložené v tomto zařízení. Důležité: NEZRUŠÍ se tím aktivní předplatné - nejdřív ho zrušte ve svém účtu Hotmart (Profil > Moje předplatné > Spravovat nebo zrušit), jinak účtování pokračuje.",
+    "deleteBody": "Přejděte do sekce Profil a dole klepněte na Smazat účet. Tím se váš účet a data trvale odstraní z našich serverů a vymaže se vše uložené v tomto zařízení. Důležité: NEZRUŠÍ se tím aktivní předplatné - nejdřív ho zrušte ve svém účtu Google Play / App Store (Profil > Moje předplatné > Spravovat nebo zrušit), jinak účtování pokračuje.",
     "offlineTitle": "Funguje aplikace offline?",
     "offlineBody": "Ne — identifikace druhu vyžaduje internetové připojení k naší službě AI.",
     "languageTitle": "Můžu aplikaci používat v jiném jazyce?",
@@ -2732,7 +2718,12 @@
     "confidenceLine": "jistota {{confidence}}%"
   },
   "onboarding": {
-    "media": { "play": "Přehrát video", "pause": "Pozastavit video", "enableSound": "Zapnout zvuk", "disableSound": "Vypnout zvuk" },
+    "media": {
+      "play": "Přehrát video",
+      "pause": "Pozastavit video",
+      "enableSound": "Zapnout zvuk",
+      "disableSound": "Vypnout zvuk"
+    },
     "skip": "Přeskočit",
     "next": "Další",
     "start": "Začít určovat",
@@ -2864,8 +2855,8 @@
     "unknownBody": "Nepodařilo se spojit se serverem. Pokud máš předplatné, tvůj přístup to neovlivní — zkus to za chvíli znovu.",
     "plansTitle": "Tarify",
     "manageTitle": "Spravovat nebo zrušit",
-    "manageBody": "Tvé předplatné účtuje Hotmart, takže zrušení probíhá ve tvém účtu Hotmart, ne tady. Po zrušení tam se další platby zastaví a přístup zůstane do konce zaplaceného období.",
-    "openHotmart": "Otevřít můj účet Hotmart"
+    "manageBody": "Tvé předplatné účtuje Google Play / App Store, takže zrušení probíhá ve tvém účtu Google Play / App Store, ne tady. Po zrušení tam se další platby zastaví a přístup zůstane do konce zaplaceného období.",
+    "manageStore": "Otevřít můj účet Google Play / App Store"
   },
   "notifications": {
     "row": "Oznámení",
@@ -3229,22 +3220,22 @@
       "saveFailed": "Uložení se nezdařilo. Nic nebylo potvrzeno; zkuste to znovu."
     },
     "planningSourcesTitle": "Zdroje pro plánování",
-    "planningSourcesBody": "Oficiální text přiřazený k této plodině. Neznamená to, že byl vydán technický modul nebo doporučení."
-  ,
+    "planningSourcesBody": "Oficiální text přiřazený k této plodině. Neznamená to, že byl vydán technický modul nebo doporučení.",
     "climate": {
-    "kicker": "MÍSTNÍ KLIMA",
-    "title": "Klimatický rytmus tohoto místa",
-    "body": "Před porovnáním terénních pozorování si prohlédněte měsíční klimatologii. Popisuje klima, ale neurčuje zavlažování ani hnojení.",
-    "rain": "Srážky",
-    "temperature": "Průměrná teplota",
-    "rainValue": "{{value}} mm",
-    "temperatureValue": "{{value}} °C",
-    "privacy": "Odesílá a ukládá se pouze přibližná mřížka {{precision}}°. Přesná poloha se neukládá.",
-    "source": "Otevřít oficiální zdroj NASA POWER",
-    "permission": "Poloha nebyla sdílena. Povolte ji v nastavení zařízení a zkuste to znovu.",
-    "error": "Klimatická data jsou dočasně nedostupná.",
-    "action": "Použít přibližnou polohu"
-  }},
+      "kicker": "MÍSTNÍ KLIMA",
+      "title": "Klimatický rytmus tohoto místa",
+      "body": "Před porovnáním terénních pozorování si prohlédněte měsíční klimatologii. Popisuje klima, ale neurčuje zavlažování ani hnojení.",
+      "rain": "Srážky",
+      "temperature": "Průměrná teplota",
+      "rainValue": "{{value}} mm",
+      "temperatureValue": "{{value}} °C",
+      "privacy": "Odesílá a ukládá se pouze přibližná mřížka {{precision}}°. Přesná poloha se neukládá.",
+      "source": "Otevřít oficiální zdroj NASA POWER",
+      "permission": "Poloha nebyla sdílena. Povolte ji v nastavení zařízení a zkuste to znovu.",
+      "error": "Klimatická data jsou dočasně nedostupná.",
+      "action": "Použít přibližnou polohu"
+    }
+  },
   "observationWorkspace": {
     "title": "Pokročilé pozorování",
     "loading": "Načítání pozorování…",
@@ -3621,8 +3612,7 @@
       "pests": "Škůdci a příznaky",
       "recovery": "Před a po",
       "questions": "Zeptat se skupiny"
-    }
- ,
+    },
     "onlineBadge": "Online komunita",
     "feedTitle": "Terénní zápisník",
     "commentAction": "Komentovat",

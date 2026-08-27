@@ -31,7 +31,6 @@ import AlertModal from '../components/AlertModal';
 import { useAppAlert } from '../components/useAppAlert';
 import CategoryIcon from '../components/CategoryIcon';
 import FindThumb from '../components/FindThumb';
-import SubscribeFab from '../components/SubscribeFab';
 import NatureScene from '../components/NatureScene';
 import ZoneBand from '../components/ZoneBand';
 import PressScale from '../components/PressScale';
@@ -643,7 +642,6 @@ export default function CollectionScreen() {
         </View>
       </Modal>
 
-      <SubscribeFab />
     </SafeAreaView>
   );
 }

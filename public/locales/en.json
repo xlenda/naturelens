@@ -164,28 +164,8 @@
   },
   "paywall": {
     "title": "Free use already used",
-    "body": "You've already used your free {{category}} identification. Subscribe to keep identifying without limits.",
-    "subscribe": "Subscribe",
-    "subscribing": "Redirecting…",
     "subscribed": "Subscribed",
-    "manage": "Manage subscription",
-    "annualPlan": "Annual",
-    "perYear": "/year",
-    "saveBadge": "Save {{percent}}%",
-    "genericTitle": "Unlock everything",
-    "genericBody": "Unlimited identifications for plants, insects, mushrooms and crops, plus full access to medicinal herb details.",
-    "subscriptionConfirmedTitle": "You're subscribed!",
-    "subscriptionConfirmedBody": "Thanks for subscribing — you now have unlimited identifications. Enjoy!",
-    "subscriptionPendingTitle": "Payment received",
-    "subscriptionPendingBody": "Payment received. Open Profile → Restore access and confirm the email you paid with to unlock this device.",
-    "checkoutFailedTitle": "Checkout failed",
-    "checkoutFailedBody": "We couldn't start checkout. Please try again in a moment.",
-    "monthlyPlan": "Monthly",
-    "quarterlyPlan": "Quarterly",
-    "perMonth": "per month",
-    "perQuarter": "per quarter",
-    "notAvailableYet": "Checkout is being set up — try again shortly.",
-    "webOnlyBody": "Premium is available on the NatureLens website. Already a subscriber? Sign in and your access works here too."
+    "notAvailableYet": "Subscriptions will become available in the mobile app after Google Play and App Store setup is complete."
   },
   "restore": {
     "title": "Sign in",
@@ -687,7 +667,13 @@
     "bodyLength": "Body length",
     "leafConsumption": "Leaf consumption",
     "leafAreaPerLarva": "Leaf area consumed per larva",
-    "lifeStages": { "egg": "Egg", "larva": "Larva", "nymph": "Nymph", "pupa": "Pupa", "adult": "Adult" },
+    "lifeStages": {
+      "egg": "Egg",
+      "larva": "Larva",
+      "nymph": "Nymph",
+      "pupa": "Pupa",
+      "adult": "Adult"
+    },
     "measurements": {
       "clutchSize": "Clutch size",
       "incubationPeriod": "Egg incubation",
@@ -865,7 +851,7 @@
     "deleteAccountFailedBody": "Something went wrong. Please try again.",
     "rewardsStore": "Rewards store",
     "naturalistBadge": "Naturalist",
-    "deleteAccountDoneBillingBody": "Your account and data were deleted. IMPORTANT: this does not cancel your subscription — you must cancel it in your Hotmart account, or the charge continues.",
+    "deleteAccountDoneBillingBody": "Your account and data were deleted. IMPORTANT: this does not cancel your subscription — you must cancel it in your Google Play / App Store account, or the charge continues.",
     "locationRow": "Use my approximate location",
     "locationHint": "Improves accuracy by narrowing the answer to species found near you. Rounded to about 1 km and never stored.",
     "emptyTitle": "Your collection starts here",
@@ -881,7 +867,7 @@
     "accuracyTitle": "Identification accuracy — please read",
     "accuracyBody": "AI identification can be wrong, including about whether a plant or mushroom is edible, poisonous, or safe to touch. Never eat, forage, or use any wild plant, mushroom or fungus based solely on this app's result. Always confirm with a qualified expert (a mycologist, botanist, or poison control service) before consuming or using anything you found in the wild. We are not responsible for harm caused by relying on an identification made by this app.",
     "billingTitle": "Subscriptions and billing",
-    "billingBody": "Paid subscriptions are billed through Hotmart at the price shown when you subscribe, and renew automatically until you cancel in your Hotmart account. You can cancel anytime; your access continues until the end of the period you already paid for. We don't offer prorated refunds for unused time, except where required by law. On mobile app stores, subscriptions - when offered there - are billed through the store's own billing system.",
+    "billingBody": "Paid subscriptions are billed through Google Play / App Store at the price shown when you subscribe, and renew automatically until you cancel in your Google Play / App Store account. You can cancel anytime; your access continues until the end of the period you already paid for. We don't offer prorated refunds for unused time, except where required by law. On mobile app stores, subscriptions - when offered there - are billed through the store's own billing system.",
     "accountTitle": "Accounts and passwords",
     "accountBody": "You don't need an account to use the free features. Subscribers may optionally create a password to sign in and sync their subscription across devices. You're responsible for keeping your password secure and for anything that happens through your account.",
     "liabilityTitle": "No warranty, limitation of liability",
@@ -900,7 +886,7 @@
     "freeTitle": "Is NatureLens free?",
     "freeBody": "You get one free identification per category (plants, insects, mushrooms, crops, trees). After that, a subscription unlocks unlimited identifications in every category.",
     "cancelTitle": "How do I cancel my subscription?",
-    "cancelBody": "Open Profile > My subscription and tap 'Manage or cancel' - it takes you to your Hotmart account (consumer.hotmart.com), where the subscription is billed and can be cancelled in a few taps. Your access stays active until the end of the period you already paid for. Deleting your NatureLens account does NOT stop the billing.",
+    "cancelBody": "Open Profile > My subscription and tap 'Manage or cancel' - it takes you to your Google Play / App Store account, where the subscription is billed and can be cancelled in a few taps. Your access stays active until the end of the period you already paid for. Deleting your NatureLens account does NOT stop the billing.",
     "restoreTitle": "I switched phones or cleared my browser — how do I get my subscription back?",
     "restoreBody": "Go to Profile → Restore Access. You can either request a one-time code by email or, if you created one, sign in with a password or your Google account.",
     "tokensTitle": "What are tokens? Can I redeem them for something?",
@@ -908,7 +894,7 @@
     "privacyTitle": "Is my data private?",
     "privacyBody": "NatureLens doesn't require an account to use. Most of your data (collection, photos) stays only on your device. See the full Privacy Policy for details.",
     "deleteTitle": "How do I delete my account and data?",
-    "deleteBody": "Go to Profile and tap Delete Account at the bottom. This permanently removes your account and data from our servers and clears everything stored on this device. Important: it does NOT cancel an active subscription - cancel it first in your Hotmart account (Profile > My subscription > Manage or cancel), otherwise the billing continues.",
+    "deleteBody": "Go to Profile and tap Delete Account at the bottom. This permanently removes your account and data from our servers and clears everything stored on this device. Important: it does NOT cancel an active subscription - cancel it first in your Google Play / App Store account (Profile > My subscription > Manage or cancel), otherwise the billing continues.",
     "offlineTitle": "Does the app work offline?",
     "offlineBody": "No — identifying a species requires an internet connection to reach our AI service.",
     "languageTitle": "Can I use the app in another language?",
@@ -923,7 +909,7 @@
     "localStorageTitle": "Local storage only",
     "localStorageBody": "Your saved collection - identified species, notes, and timestamps - is stored locally on your own device using browser or app local storage, and it is never shared with other users. If you are a subscriber and sign in, the collection's text data (never your photos) is also synced to our server so it can follow you across devices; deleting your account removes it from our servers.",
     "noAccountsTitle": "No accounts, no tracking",
-    "noAccountsBody": "This app doesn't require an account to use - your device is given a random anonymous identifier (stored only on your device) so we can tell when its one free identification per category has been used. If you subscribe, Hotmart collects your email and payment details directly to process the charge - we receive your subscription status and email, linked to that same identifier, so we can restore your access. Subscribers can optionally sign in by email code or Google to sync their subscription and collection across devices; this is never required to use the app. On the web version we use basic analytics (Google Tag Manager and Utmify) to measure visits and subscriptions; we never sell personal data.",
+    "noAccountsBody": "This app doesn't require an account to use - your device is given a random anonymous identifier (stored only on your device) so we can tell when its one free identification per category has been used. Subscribers can optionally sign in by email code or Google to sync their subscription and collection across devices; this is never required to use the app. On the web version we use basic analytics (Google Tag Manager and Utmify) to measure visits and subscriptions; we never sell personal data.",
     "dataLossTitle": "Data loss risk",
     "dataLossBody": "If you clear your browser data or uninstall the app, your locally saved collection will be permanently lost, since nothing is backed up remotely.",
     "contactTitle": "Contact",
@@ -2732,7 +2718,12 @@
     "confidenceLine": "{{confidence}}% confidence"
   },
   "onboarding": {
-    "media": { "play": "Play video", "pause": "Pause video", "enableSound": "Turn sound on", "disableSound": "Turn sound off" },
+    "media": {
+      "play": "Play video",
+      "pause": "Pause video",
+      "enableSound": "Turn sound on",
+      "disableSound": "Turn sound off"
+    },
     "skip": "Skip",
     "next": "Next",
     "start": "Start identifying",
@@ -2864,8 +2855,8 @@
     "unknownBody": "We could not reach the server. If you are subscribed, your access is unaffected — try again in a moment.",
     "plansTitle": "Plans",
     "manageTitle": "Manage or cancel",
-    "manageBody": "Your subscription is billed by Hotmart, so cancellation happens in your Hotmart account — not here. Cancelling there stops future charges and your access stays active until the end of the paid period.",
-    "openHotmart": "Open my Hotmart account"
+    "manageBody": "Your subscription is billed by Google Play / App Store, so cancellation happens in your Google Play / App Store account — not here. Cancelling there stops future charges and your access stays active until the end of the paid period.",
+    "manageStore": "Open my Google Play / App Store account"
   },
   "notifications": {
     "row": "Notifications",
@@ -3229,22 +3220,22 @@
       "saveFailed": "Could not save. Nothing was confirmed; please try again."
     },
     "planningSourcesTitle": "Planning sources",
-    "planningSourcesBody": "Official reading mapped to this crop. It does not mean that a technical module or recommendation has been released."
-  ,
+    "planningSourcesBody": "Official reading mapped to this crop. It does not mean that a technical module or recommendation has been released.",
     "climate": {
-    "kicker": "LOCAL CLIMATE",
-    "title": "Climate rhythm at this location",
-    "body": "See monthly climatology before comparing field observations. This describes climate; it is not an irrigation or fertilizer prescription.",
-    "rain": "Rain",
-    "temperature": "Mean temperature",
-    "rainValue": "{{value}} mm",
-    "temperatureValue": "{{value}} °C",
-    "privacy": "Only a {{precision}}° approximate grid is sent and cached. Your exact position is not stored.",
-    "source": "Open official NASA POWER source",
-    "permission": "Location was not shared. You can enable it in the device settings and try again.",
-    "error": "Climate data is temporarily unavailable.",
-    "action": "Use approximate location"
-  }},
+      "kicker": "LOCAL CLIMATE",
+      "title": "Climate rhythm at this location",
+      "body": "See monthly climatology before comparing field observations. This describes climate; it is not an irrigation or fertilizer prescription.",
+      "rain": "Rain",
+      "temperature": "Mean temperature",
+      "rainValue": "{{value}} mm",
+      "temperatureValue": "{{value}} °C",
+      "privacy": "Only a {{precision}}° approximate grid is sent and cached. Your exact position is not stored.",
+      "source": "Open official NASA POWER source",
+      "permission": "Location was not shared. You can enable it in the device settings and try again.",
+      "error": "Climate data is temporarily unavailable.",
+      "action": "Use approximate location"
+    }
+  },
   "observationWorkspace": {
     "title": "Advanced observation",
     "loading": "Loading observations…",
@@ -3621,8 +3612,7 @@
       "pests": "Pests and symptoms",
       "recovery": "Before and after",
       "questions": "Ask the group"
-    }
- ,
+    },
     "onlineBadge": "Online community",
     "feedTitle": "Field notes",
     "commentAction": "Comment",

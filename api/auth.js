@@ -124,11 +124,8 @@ async function handleSignup(req, res, deviceId) {
 // methods.
 async function linkDeviceToEmail(res, deviceId, normalizedEmail) {
   const admin = getSupabaseAdmin();
-  // Provider-neutral. The old version required `stripe_customer_id IS NOT
-  // NULL`, which after the move to Hotmart would find nothing for a real buyer
-  // and answer "no subscription found for that account" to someone who had
-  // just paid - the paid-but-no-access failure, arriving through the Google
-  // sign-in door instead of the OTP one.
+  // Provider-neutral: account linking copies only a server-verified entitlement
+  // and never trusts a purchase claim supplied by the client.
   const { data: existing } = await admin
     .from('subscriptions')
     .select('*')
@@ -298,16 +295,14 @@ async function handleGoogle(req, res, deviceId) {
 // id. Local data is cleared client-side afterward; this endpoint only touches
 // server-side state.
 //
-// Under Stripe this also cancelled billing automatically. Hotmart offers no
-// equivalent call from here, so instead it returns `billingStillActive` and the
-// client is responsible for saying, in plain words, that the charge continues
-// and where to stop it. Deleting data while a card keeps being charged, without
-// telling the person, is the dark pattern the old auto-cancel prevented.
+// Deleting NatureLens data cannot cancel a store subscription. The response
+// reports a still-live entitlement so the client can direct the user to the
+// store that owns billing instead of implying that the charge stopped.
 async function handleDelete(req, res, deviceId) {
   const admin = getSupabaseAdmin();
   const { data: sub, error: subError } = await admin
     .from('subscriptions')
-    .select('email, provider, provider_subscription_id')
+    .select('email, status, current_period_end')
     .eq('device_id', deviceId)
     .maybeSingle();
 
@@ -319,21 +314,9 @@ async function handleDelete(req, res, deviceId) {
     return;
   }
 
-  // IMPORTANT BEHAVIOUR CHANGE vs the Stripe version, which cancelled billing
-  // automatically before deleting the data.
-  //
-  // Hotmart has no equivalent server-side cancel we can call with the webhook
-  // token alone - cancelling a Hotmart subscription requires the buyer to do it
-  // in their own Hotmart account (or the seller to do it in the Hotmart panel).
-  // Silently deleting someone's data while their card keeps being charged is
-  // exactly the dark pattern the automatic Stripe cancel existed to avoid.
-  //
-  // So this endpoint reports back whether billing is still live, and the client
-  // MUST tell the user in plain words that deleting here does not stop the
-  // charge and where to cancel it. Never let this become a silent deletion.
-  const billingStillActive = Boolean(
-    sub?.provider === 'hotmart' && sub?.provider_subscription_id
-  );
+  const periodEnd = sub?.current_period_end ? new Date(sub.current_period_end).getTime() : 0;
+  const billingStillActive = sub?.status === 'active'
+    || (sub?.status === 'canceled' && Number.isFinite(periodEnd) && periodEnd > Date.now());
 
   const normalizedEmail = sub?.email ? sub.email.trim().toLowerCase() : null;
   let deviceIds = [deviceId];
@@ -421,8 +404,6 @@ async function handleDelete(req, res, deviceId) {
     return;
   }
 
-  // billingStillActive tells the client to warn that the Hotmart charge keeps
-  // running and must be cancelled there. See the comment above the lookup.
   res.status(200).json({ deleted: true, billingStillActive });
 }
 
@@ -434,9 +415,9 @@ async function handleDelete(req, res, deviceId) {
 // disproportionate answer to "I am selling this phone" or "I signed in on my
 // sister's tablet".
 //
-// It deletes only the subscriptions row for this device_id. The account, its
-// password, its Hotmart billing and every OTHER device stay exactly as they
-// were - so signing in again on this device restores access normally.
+// It deletes only the subscriptions row for this device_id. The account, store
+// billing and every OTHER device stay exactly as they were, so signing in again
+// on this device can restore server-verified access normally.
 //
 // Deliberately NOT touched: category_usage. That row is the free-use counter,
 // and clearing it on sign-out would turn this into a one-tap way to reset the
@@ -481,7 +462,7 @@ module.exports = async (req, res) => {
   if (req.body?.action === 'signin') {
     // Sign-in had NO rate limit, no attempt counter and no lockout, which made
     // this an unlimited online password-guessing oracle: anyone holding a
-    // subscriber's email address - a Hotmart buyer list, a credential-stuffing
+    // subscriber's email address - a leaked customer list, a credential-stuffing
     // dump, or just knowing the person - could try passwords in a loop against
     // an account whose only requirement is 8 characters.
     //

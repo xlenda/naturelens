@@ -1,6 +1,6 @@
 # Segurança dos dados — respostas para o Google Play
 
-Estas respostas descrevem o **AAB Android** auditado em 25/08/2026. Elas incluem reconhecimento de som, câmera própria, localização aproximada sob demanda, comunidade e lembretes locais agendados pelo próprio Android. Push remoto e checkout continuam fora do AAB.
+Estas respostas descrevem o **AAB Android** auditado em 25/08/2026. Elas incluem reconhecimento de som, câmera própria, localização aproximada sob demanda, comunidade e lembretes locais agendados pelo próprio Android. Push remoto e compras nativas ainda não estão disponíveis no AAB.
 
 ## Respostas gerais
 

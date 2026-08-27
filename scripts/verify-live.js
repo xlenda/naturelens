@@ -186,22 +186,7 @@ async function main() {
     fail('dynamic dossier endpoints', e.message);
   }
 
-  // 6. Hotmart webhook rejects a forged call. 401 is the ONE non-200 this
-  //    endpoint must return - answering 200 to no token would let anyone mint
-  //    subscriptions.
-  try {
-    const r = await get('/api/hotmart-webhook', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ event: 'PURCHASE_APPROVED' }),
-    });
-    if (r.status === 401) ok('webhook rejects missing hottok');
-    else fail('webhook rejects missing hottok', `status ${r.status}`);
-  } catch (e) {
-    fail('webhook', e.message);
-  }
-
-  // 7. Push endpoint exists and validates. (A 404 here means the function was
+  // 6. Push endpoint exists and validates. (A 404 here means the function was
   //    dropped, e.g. by hitting the Hobby function cap.)
   try {
     const r = await get('/api/push', {
@@ -215,29 +200,22 @@ async function main() {
     fail('push endpoint', e.message);
   }
 
-  // 8. Stripe stays dead. A resurrected endpoint means a deploy from an old tree.
-  try {
-    const r = await get('/api/stripe/create-checkout-session', { method: 'POST' });
-    if (r.status === 404) ok('stripe endpoints gone');
-    else fail('stripe endpoints gone', `status ${r.status}`);
-  } catch (e) {
-    fail('stripe check', e.message);
-  }
-
-  // 9. Landing page carries the subscription disclosures Google Ads requires on
-  //    the destination page of a subscription ad. Missing them = ad rejected.
+  // 8. The public Premium page must remain fail-closed while native store
+  //    billing is not configured. It explains where future purchases will live
+  //    without exposing a web checkout or a price that can diverge from stores.
   try {
     const r = await get('/premium/');
     const html = await r.text();
-    const needed = ['Renova', 'Cancele quando quiser', 'Assinar'];
+    const needed = ['Google Play', 'App Store', 'não vende assinaturas'];
     const missing = needed.filter((n) => !html.includes(n));
-    if (r.status === 200 && missing.length === 0) ok('landing /premium');
+    const hasPurchaseCta = /href=["'][^"']*(checkout|buy|purchase|subscribe)/i.test(html);
+    if (r.status === 200 && missing.length === 0 && !hasPurchaseCta) ok('landing /premium fail-closed');
     else fail('landing /premium', `status ${r.status}, missing: ${missing.join(', ') || 'none'}`);
   } catch (e) {
     fail('landing /premium', e.message);
   }
 
-  // 10. Open Graph tag + image. Without these, every shared link is a bare URL
+  // 9. Open Graph tag + image. Without these, every shared link is a bare URL
   //     with no preview card.
   try {
     const html = await (await get('/')).text();
@@ -401,7 +379,7 @@ async function main() {
         fail(
           'db accepts every category',
           `${rejected.join(', ')} rejected - these are FREE AND UNLIMITED right now; ` +
-            'run supabase-migration-hotmart.sql'
+            'run supabase-migration-platform-core.sql'
         );
       }
     }

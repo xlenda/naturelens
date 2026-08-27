@@ -221,7 +221,7 @@ test('a translation never outlives the text it was made from', () => {
   assert.match(src, /const currentRef = useRef\(/, 'must be a ref - state would be stale in the callback');
 });
 
-test('the Hotmart-unlock flow explains what actually failed', () => {
+test('the account-linking flow explains what actually failed', () => {
   // The restore actions sent no reason at all, so a wrong code,
   // an unknown email and a failed device link all rendered as the same
   // "Something went wrong. Please try again." - in the flow someone uses
@@ -251,7 +251,7 @@ test('creating a password twice does not report a false success', () => {
 });
 
 test('the delete-account dialogs do not promise a cancellation that never happens', () => {
-  // handleDelete deliberately does not cancel Hotmart billing - deleting data
+  // handleDelete deliberately does not cancel store billing - deleting data
   // while a card keeps being charged, silently, is the dark pattern it avoids.
   // The copy said the opposite.
   const api = read('api/auth.js');

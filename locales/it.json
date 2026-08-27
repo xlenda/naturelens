@@ -187,7 +187,7 @@
     "localStorageTitle": "Solo archiviazione locale",
     "localStorageBody": "La tua collezione salvata — specie identificate, note e date — viene archiviata solo localmente sul tuo dispositivo, tramite l'archiviazione locale del browser o dell'app. Non viene mai caricata su alcun server cloud da noi gestito e non viene mai condivisa con altri utenti.",
     "noAccountsTitle": "Nessun account, nessun tracciamento",
-    "noAccountsBody": "Questa app non prevede account, accessi o password. Al tuo dispositivo viene assegnato un identificatore anonimo casuale (conservato solo sul tuo dispositivo) così possiamo sapere quando è stata utilizzata l'unica identificazione gratuita per categoria. Se ti abboni, Stripe raccoglie direttamente la tua email e i dati di pagamento per elaborare l'addebito — noi riceviamo solo lo stato del tuo abbonamento, collegato a quello stesso identificatore anonimo. Non utilizziamo strumenti di analisi o tracciamento pubblicitario.",
+    "noAccountsBody": "Questa app non prevede account, accessi o password. Al tuo dispositivo viene assegnato un identificatore anonimo casuale, conservato solo sul dispositivo, per registrare l'utilizzo gratuito per categoria. Gli acquisti futuri saranno elaborati esclusivamente da Google Play o App Store; NatureLens riceverà soltanto lo stato dell'abbonamento e riferimenti pseudonimi della transazione. Non utilizziamo strumenti di analisi o tracciamento pubblicitario.",
     "dataLossTitle": "Rischio di perdita dei dati",
     "dataLossBody": "Se cancelli i dati del browser o disinstalli l'app, la tua collezione salvata localmente andrà persa in modo permanente, poiché nulla viene salvato da remoto.",
     "contactTitle": "Contatti",

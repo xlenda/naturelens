@@ -164,28 +164,8 @@
   },
   "paywall": {
     "title": "Bezpłatne użycie już wykorzystane",
-    "body": "Wykorzystałeś już swoją bezpłatną identyfikację w kategorii {{category}}. Subskrybuj, aby identyfikować bez ograniczeń.",
-    "subscribe": "Subskrybuj",
-    "subscribing": "Przekierowywanie…",
     "subscribed": "Subskrybowano",
-    "manage": "Zarządzaj subskrypcją",
-    "annualPlan": "Roczny",
-    "perYear": "/rok",
-    "saveBadge": "Oszczędź {{percent}}%",
-    "genericTitle": "Odblokuj wszystko",
-    "genericBody": "Nieograniczona liczba identyfikacji roślin, owadów, grzybów i upraw oraz pełny dostęp do informacji o ziołach leczniczych.",
-    "subscriptionConfirmedTitle": "Masz subskrypcję!",
-    "subscriptionConfirmedBody": "Dziękujemy za subskrypcję — masz teraz nieograniczoną liczbę identyfikacji. Miłego korzystania!",
-    "subscriptionPendingTitle": "Płatność otrzymana",
-    "subscriptionPendingBody": "Płatność otrzymana. Otwórz Profil → Przywróć dostęp i potwierdź e-mail użyty przy płatności, aby odblokować to urządzenie.",
-    "checkoutFailedTitle": "Płatność nie powiodła się",
-    "checkoutFailedBody": "Nie udało się rozpocząć płatności. Spróbuj ponownie za chwilę.",
-    "monthlyPlan": "Miesięcznie",
-    "quarterlyPlan": "Kwartalnie",
-    "perMonth": "miesięcznie",
-    "perQuarter": "kwartalnie",
-    "notAvailableYet": "Płatność jest konfigurowana — spróbuj ponownie za chwilę.",
-    "webOnlyBody": "Premium jest dostępne na stronie NatureLens. Masz już subskrypcję? Zaloguj się, a Twój dostęp działa też tutaj."
+    "notAvailableYet": "Płatność jest konfigurowana — spróbuj ponownie za chwilę."
   },
   "restore": {
     "title": "Zaloguj się",
@@ -637,7 +617,13 @@
     "bodyLength": "Długość ciała",
     "leafConsumption": "Zużycie liści",
     "leafAreaPerLarva": "Powierzchnia liści zjedzona przez jedną larwę",
-    "lifeStages": { "egg": "Jajo", "larva": "Larwa", "nymph": "Nimfa", "pupa": "Poczwarka", "adult": "Postać dorosła" },
+    "lifeStages": {
+      "egg": "Jajo",
+      "larva": "Larwa",
+      "nymph": "Nimfa",
+      "pupa": "Poczwarka",
+      "adult": "Postać dorosła"
+    },
     "measurements": {
       "clutchSize": "Wielkość lęgu",
       "incubationPeriod": "Okres inkubacji jaj",
@@ -815,7 +801,7 @@
     "helpAndSupport": "Pomoc i wsparcie",
     "rewardsStore": "Sklep z nagrodami",
     "naturalistBadge": "Przyrodnik",
-    "deleteAccountDoneBillingBody": "Twoje konto i dane zostały usunięte. WAŻNE: to nie anuluje subskrypcji — musisz anulować ją na swoim koncie Hotmart, inaczej opłata będzie pobierana dalej.",
+    "deleteAccountDoneBillingBody": "Twoje konto i dane zostały usunięte. WAŻNE: to nie anuluje subskrypcji — musisz anulować ją na swoim koncie Google Play / App Store, inaczej opłata będzie pobierana dalej.",
     "locationRow": "Używaj mojej przybliżonej lokalizacji",
     "locationHint": "Zwiększa trafność, ograniczając odpowiedź do gatunków występujących w pobliżu. Zaokrąglona do około 1 km i nigdy nie zapisywana.",
     "emptyTitle": "Tu zaczyna się Twoja kolekcja",
@@ -831,7 +817,7 @@
     "accuracyTitle": "Dokładność identyfikacji — proszę przeczytać",
     "accuracyBody": "Identyfikacja AI może się mylić, także co do tego, czy roślina lub grzyb są jadalne, trujące lub bezpieczne w dotyku. Nigdy nie jedz, nie zbieraj ani nie używaj żadnej dzikiej rośliny, grzyba czy grzybni wyłącznie na podstawie wyniku tej aplikacji. Zawsze potwierdź to u wykwalifikowanego eksperta (mykologa, botanika lub centrum kontroli zatruć), zanim spożyjesz lub użyjesz czegoś znalezionego w naturze. Nie ponosimy odpowiedzialności za szkody wynikające z polegania na identyfikacji wykonanej przez tę aplikację.",
     "billingTitle": "Subskrypcje i płatności",
-    "billingBody": "Płatne subskrypcje są rozliczane przez Hotmart w cenie pokazanej w momencie subskrypcji i odnawiają się automatycznie, dopóki nie anulujesz ich na swoim koncie Hotmart. Możesz anulować w każdej chwili; Twój dostęp trwa do końca już opłaconego okresu. Nie oferujemy proporcjonalnych zwrotów za niewykorzystany czas, chyba że wymaga tego prawo. W mobilnych sklepach z aplikacjami subskrypcje - jeśli są tam oferowane - są rozliczane przez system płatności samego sklepu.",
+    "billingBody": "Płatne subskrypcje są rozliczane przez Google Play / App Store w cenie pokazanej w momencie subskrypcji i odnawiają się automatycznie, dopóki nie anulujesz ich na swoim koncie Google Play / App Store. Możesz anulować w każdej chwili; Twój dostęp trwa do końca już opłaconego okresu. Nie oferujemy proporcjonalnych zwrotów za niewykorzystany czas, chyba że wymaga tego prawo. W mobilnych sklepach z aplikacjami subskrypcje - jeśli są tam oferowane - są rozliczane przez system płatności samego sklepu.",
     "accountTitle": "Konta i hasła",
     "accountBody": "Nie potrzebujesz konta, aby korzystać z bezpłatnych funkcji. Subskrybenci mogą opcjonalnie utworzyć hasło, aby zalogować się i zsynchronizować subskrypcję między urządzeniami. Jesteś odpowiedzialny za bezpieczeństwo swojego hasła i za wszystko, co dzieje się za pośrednictwem Twojego konta.",
     "liabilityTitle": "Brak gwarancji, ograniczenie odpowiedzialności",
@@ -850,7 +836,7 @@
     "localStorageTitle": "Tylko przechowywanie lokalne",
     "localStorageBody": "Twoja zapisana kolekcja - zidentyfikowane gatunki, notatki i daty - jest przechowywana lokalnie na Twoim własnym urządzeniu, w pamięci przeglądarki lub aplikacji, i nigdy nie jest udostępniana innym użytkownikom. Jeśli masz subskrypcję i się zalogujesz, dane tekstowe kolekcji (nigdy Twoje zdjęcia) są też synchronizowane z naszym serwerem, aby towarzyszyły Ci na różnych urządzeniach; usunięcie konta usuwa je z naszych serwerów.",
     "noAccountsTitle": "Brak kont, brak śledzenia",
-    "noAccountsBody": "Ta aplikacja nie wymaga konta - Twoje urządzenie otrzymuje losowy anonimowy identyfikator (przechowywany tylko na Twoim urządzeniu), abyśmy wiedzieli, kiedy darmowa identyfikacja w danej kategorii została wykorzystana. Jeśli wykupisz subskrypcję, Hotmart zbiera Twój e-mail i dane płatności bezpośrednio, aby przetworzyć opłatę - my otrzymujemy status subskrypcji i e-mail, powiązane z tym samym identyfikatorem, aby przywrócić Twój dostęp. Subskrybenci mogą opcjonalnie zalogować się kodem z e-maila lub przez Google, aby synchronizować subskrypcję i kolekcję między urządzeniami; nigdy nie jest to wymagane do korzystania z aplikacji. W wersji webowej używamy podstawowej analityki (Google Tag Manager i Utmify) do mierzenia wizyt i subskrypcji; nigdy nie sprzedajemy danych osobowych.",
+    "noAccountsBody": "Ta aplikacja nie wymaga konta - Twoje urządzenie otrzymuje losowy anonimowy identyfikator (przechowywany tylko na Twoim urządzeniu), abyśmy wiedzieli, kiedy darmowa identyfikacja w danej kategorii została wykorzystana. Subskrybenci mogą opcjonalnie zalogować się kodem z e-maila lub przez Google, aby synchronizować subskrypcję i kolekcję między urządzeniami; nigdy nie jest to wymagane do korzystania z aplikacji. W wersji webowej używamy podstawowej analityki (Google Tag Manager i Utmify) do mierzenia wizyt i subskrypcji; nigdy nie sprzedajemy danych osobowych.",
     "dataLossTitle": "Ryzyko utraty danych",
     "dataLossBody": "Jeśli wyczyścisz dane przeglądarki lub odinstalujesz aplikację, Twoja lokalnie zapisana kolekcja zostanie trwale utracona, ponieważ nic nie jest tworzone zdalnie jako kopia zapasowa.",
     "contactTitle": "Kontakt",
@@ -2627,7 +2613,7 @@
     "freeTitle": "Czy NatureLens jest darmowa?",
     "freeBody": "Otrzymujesz jedno darmowe rozpoznanie w każdej kategorii (rośliny, owady, grzyby, uprawy, drzewa). Później subskrypcja odblokowuje nieograniczoną liczbę rozpoznań we wszystkich kategoriach.",
     "cancelTitle": "Jak anulować subskrypcję?",
-    "cancelBody": "Otwórz Profil > Moja subskrypcja i stuknij 'Zarządzaj lub anuluj' - przeniesie Cię to do Twojego konta Hotmart (consumer.hotmart.com), gdzie subskrypcja jest rozliczana i można ją anulować w kilku dotknięciach. Twój dostęp pozostaje aktywny do końca już opłaconego okresu. Usunięcie konta NatureLens NIE zatrzymuje naliczania opłat.",
+    "cancelBody": "Otwórz Profil > Moja subskrypcja i stuknij 'Zarządzaj lub anuluj' - przeniesie Cię to do Twojego konta Google Play / App Store, gdzie subskrypcja jest rozliczana i można ją anulować w kilku dotknięciach. Twój dostęp pozostaje aktywny do końca już opłaconego okresu. Usunięcie konta NatureLens NIE zatrzymuje naliczania opłat.",
     "restoreTitle": "Zmieniłem telefon lub wyczyściłem przeglądarkę — jak odzyskać subskrypcję?",
     "restoreBody": "Przejdź do Profil → Przywróć dostęp. Możesz poprosić o jednorazowy kod e-mailem lub, jeśli je utworzyłeś, zalogować się hasłem albo kontem Google.",
     "tokensTitle": "Czym są tokeny? Czy mogę je za coś wymienić?",
@@ -2635,7 +2621,7 @@
     "privacyTitle": "Czy moje dane są prywatne?",
     "privacyBody": "Korzystanie z NatureLens nie wymaga konta. Większość Twoich danych (kolekcja, zdjęcia) pozostaje wyłącznie na Twoim urządzeniu. Szczegóły znajdziesz w pełnej Polityce prywatności.",
     "deleteTitle": "Jak usunąć konto i dane?",
-    "deleteBody": "Wejdź w Profil i stuknij Usuń konto na dole ekranu. To trwale usuwa Twoje konto i dane z naszych serwerów oraz czyści wszystko zapisane na tym urządzeniu. Ważne: NIE anuluje to aktywnej subskrypcji - najpierw anuluj ją na swoim koncie Hotmart (Profil > Moja subskrypcja > Zarządzaj lub anuluj), inaczej opłaty będą naliczane dalej.",
+    "deleteBody": "Wejdź w Profil i stuknij Usuń konto na dole ekranu. To trwale usuwa Twoje konto i dane z naszych serwerów oraz czyści wszystko zapisane na tym urządzeniu. Ważne: NIE anuluje to aktywnej subskrypcji - najpierw anuluj ją na swoim koncie Google Play / App Store (Profil > Moja subskrypcja > Zarządzaj lub anuluj), inaczej opłaty będą naliczane dalej.",
     "offlineTitle": "Czy aplikacja działa offline?",
     "offlineBody": "Nie — rozpoznanie gatunku wymaga połączenia z internetem, aby uzyskać dostęp do naszej usługi AI.",
     "languageTitle": "Czy mogę korzystać z aplikacji w innym języku?",
@@ -2732,7 +2718,12 @@
     "confidenceLine": "{{confidence}}% pewności"
   },
   "onboarding": {
-    "media": { "play": "Odtwórz film", "pause": "Wstrzymaj film", "enableSound": "Włącz dźwięk", "disableSound": "Wyłącz dźwięk" },
+    "media": {
+      "play": "Odtwórz film",
+      "pause": "Wstrzymaj film",
+      "enableSound": "Włącz dźwięk",
+      "disableSound": "Wyłącz dźwięk"
+    },
     "skip": "Pomiń",
     "next": "Dalej",
     "start": "Zacznij rozpoznawać",
@@ -2864,8 +2855,8 @@
     "unknownBody": "Nie udało się połączyć z serwerem. Jeśli masz subskrypcję, Twój dostęp nie jest zagrożony — spróbuj za chwilę.",
     "plansTitle": "Plany",
     "manageTitle": "Zarządzaj lub anuluj",
-    "manageBody": "Twoja subskrypcja jest rozliczana przez Hotmart, więc anulowanie odbywa się na Twoim koncie Hotmart, nie tutaj. Po anulowaniu tam kolejne opłaty ustają, a dostęp trwa do końca opłaconego okresu.",
-    "openHotmart": "Otwórz moje konto Hotmart"
+    "manageBody": "Twoja subskrypcja jest rozliczana przez Google Play / App Store, więc anulowanie odbywa się na Twoim koncie Google Play / App Store, nie tutaj. Po anulowaniu tam kolejne opłaty ustają, a dostęp trwa do końca opłaconego okresu.",
+    "manageStore": "Otwórz moje konto Google Play / App Store"
   },
   "notifications": {
     "row": "Powiadomienia",
@@ -3229,22 +3220,22 @@
       "saveFailed": "Nie udało się zapisać. Niczego nie potwierdzono; spróbuj ponownie."
     },
     "planningSourcesTitle": "Źródła do planowania",
-    "planningSourcesBody": "Oficjalna lektura przypisana do tej uprawy. Nie oznacza to wydania modułu technicznego ani zalecenia."
-  ,
+    "planningSourcesBody": "Oficjalna lektura przypisana do tej uprawy. Nie oznacza to wydania modułu technicznego ani zalecenia.",
     "climate": {
-    "kicker": "KLIMAT LOKALNY",
-    "title": "Rytm klimatu w tej lokalizacji",
-    "body": "Sprawdź miesięczną klimatologię przed porównaniem obserwacji terenowych. Opisuje klimat, ale nie zaleca nawadniania ani nawożenia.",
-    "rain": "Opad",
-    "temperature": "Średnia temperatura",
-    "rainValue": "{{value}} mm",
-    "temperatureValue": "{{value}} °C",
-    "privacy": "Wysyłana i zapisywana jest tylko przybliżona siatka {{precision}}°. Dokładna pozycja nie jest przechowywana.",
-    "source": "Otwórz oficjalne źródło NASA POWER",
-    "permission": "Lokalizacja nie została udostępniona. Włącz ją w ustawieniach urządzenia i spróbuj ponownie.",
-    "error": "Dane klimatyczne są chwilowo niedostępne.",
-    "action": "Użyj przybliżonej lokalizacji"
-  }},
+      "kicker": "KLIMAT LOKALNY",
+      "title": "Rytm klimatu w tej lokalizacji",
+      "body": "Sprawdź miesięczną klimatologię przed porównaniem obserwacji terenowych. Opisuje klimat, ale nie zaleca nawadniania ani nawożenia.",
+      "rain": "Opad",
+      "temperature": "Średnia temperatura",
+      "rainValue": "{{value}} mm",
+      "temperatureValue": "{{value}} °C",
+      "privacy": "Wysyłana i zapisywana jest tylko przybliżona siatka {{precision}}°. Dokładna pozycja nie jest przechowywana.",
+      "source": "Otwórz oficjalne źródło NASA POWER",
+      "permission": "Lokalizacja nie została udostępniona. Włącz ją w ustawieniach urządzenia i spróbuj ponownie.",
+      "error": "Dane klimatyczne są chwilowo niedostępne.",
+      "action": "Użyj przybliżonej lokalizacji"
+    }
+  },
   "observationWorkspace": {
     "title": "Zaawansowana obserwacja",
     "loading": "Wczytywanie obserwacji…",
@@ -3621,8 +3612,7 @@
       "pests": "Szkodniki i objawy",
       "recovery": "Przed i po",
       "questions": "Zapytaj grupę"
-    }
- ,
+    },
     "onlineBadge": "Społeczność online",
     "feedTitle": "Notatnik terenowy",
     "commentAction": "Skomentuj",

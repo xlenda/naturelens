@@ -7,19 +7,20 @@ drop table if exists public.subscriptions;
 -- Tracks how many times each anonymous device has used each identification category.
 create table public.category_usage (
   device_id text not null,
-  category text not null check (category in ('plant', 'insect', 'mushroom', 'crop')),
+  category text not null check (category in ('plant', 'insect', 'mushroom', 'crop', 'tree', 'fish', 'bird', 'sound')),
   used_count integer not null default 0,
   updated_at timestamptz not null default now(),
   primary key (device_id, category)
 );
 
--- Tracks each device's Stripe subscription status, synced by the webhook handler.
--- A single Stripe subscription can have multiple rows here (one per device_id) once
--- a customer restores access on a second device via email OTP (components/restore.js).
+-- Store entitlements are written only after server-side verification. A single
+-- subscription can have multiple rows here (one per linked device_id).
 create table public.subscriptions (
   device_id text primary key,
-  stripe_customer_id text,
-  stripe_subscription_id text,
+  provider text,
+  provider_subscription_id text,
+  provider_transaction_id text,
+  product_id text,
   email text,
   status text not null default 'inactive',
   current_period_end timestamptz,

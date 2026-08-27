@@ -27,7 +27,6 @@ import {
 } from '../components/scanOutcome';
 import { trackScanStarted, trackScanCompleted, trackScanFailed, trackPaywallShown } from '../components/tracking';
 import PaywallModal from '../components/PaywallModal';
-import { startCheckout } from '../components/subscription';
 import NatureScene from '../components/NatureScene';
 import { saveIdentificationAutomatically } from '../components/automaticCollection';
 import LensPulseButton from '../components/LensPulseButton';
@@ -64,7 +63,6 @@ export default function SoundScreen() {
   const [elapsed, setElapsed] = useState(0);
   const [clipReady, setClipReady] = useState(false);
   const [paywallVisible, setPaywallVisible] = useState(false);
-  const [subscribing, setSubscribing] = useState(false);
 
   const handleRef = useRef(null);
   const tickRef = useRef(null);
@@ -422,16 +420,6 @@ export default function SoundScreen() {
       }
     });
 
-  const handleSubscribe = async (plan) => {
-    setSubscribing(true);
-    try {
-      await startCheckout(plan);
-    } catch (e) {
-      setSubscribing(false);
-      showAlert(t('paywall.checkoutFailedTitle'), e.message || t('paywall.checkoutFailedBody'));
-    }
-  };
-
   const supported = canRecord();
 
   return (
@@ -579,8 +567,6 @@ export default function SoundScreen() {
         visible={paywallVisible}
         categoryLabel={t('categories.sound.label')}
         accent={meta.accent}
-        subscribing={subscribing}
-        onSubscribe={handleSubscribe}
         onCancel={() => setPaywallVisible(false)}
       />
 

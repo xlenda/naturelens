@@ -164,28 +164,8 @@
   },
   "paywall": {
     "title": "Gratis brug er allerede brugt",
-    "body": "Du har allerede brugt din gratis {{category}}-identifikation. Abonner for at blive ved med at identificere uden begrænsninger.",
-    "subscribe": "Abonner",
-    "subscribing": "Omdirigerer…",
     "subscribed": "Abonneret",
-    "manage": "Administrer abonnement",
-    "annualPlan": "Årlig",
-    "perYear": "/år",
-    "saveBadge": "Spar {{percent}}%",
-    "genericTitle": "Lås alt op",
-    "genericBody": "Ubegrænsede identifikationer af planter, insekter, svampe og afgrøder, plus fuld adgang til oplysninger om lægeplanter.",
-    "subscriptionConfirmedTitle": "Du abonnerer nu!",
-    "subscriptionConfirmedBody": "Tak for dit abonnement – du har nu ubegrænsede identifikationer. God fornøjelse!",
-    "subscriptionPendingTitle": "Betaling modtaget",
-    "subscriptionPendingBody": "Betaling modtaget. Åbn Profil → Gendan adgang, og bekræft den e-mail, du betalte med, for at låse denne enhed op.",
-    "checkoutFailedTitle": "Betaling mislykkedes",
-    "checkoutFailedBody": "Vi kunne ikke starte betalingen. Prøv igen om lidt.",
-    "monthlyPlan": "Månedligt",
-    "quarterlyPlan": "Kvartalsvis",
-    "perMonth": "pr. måned",
-    "perQuarter": "pr. kvartal",
-    "notAvailableYet": "Betalingen er ved at blive sat op — prøv igen om lidt.",
-    "webOnlyBody": "Premium er tilgængeligt på NatureLens' hjemmeside. Allerede abonnent? Log ind, så virker din adgang også her."
+    "notAvailableYet": "Betalingen er ved at blive sat op — prøv igen om lidt."
   },
   "restore": {
     "title": "Log ind",
@@ -637,7 +617,13 @@
     "bodyLength": "Kropslængde",
     "leafConsumption": "Bladforbrug",
     "leafAreaPerLarva": "Bladareal ædt pr. larve",
-    "lifeStages": { "egg": "Æg", "larva": "Larve", "nymph": "Nymfe", "pupa": "Puppe", "adult": "Voksen" },
+    "lifeStages": {
+      "egg": "Æg",
+      "larva": "Larve",
+      "nymph": "Nymfe",
+      "pupa": "Puppe",
+      "adult": "Voksen"
+    },
     "measurements": {
       "clutchSize": "Kuldstørrelse",
       "incubationPeriod": "Rugetid",
@@ -815,7 +801,7 @@
     "helpAndSupport": "Hjælp og support",
     "rewardsStore": "Belønningsbutik",
     "naturalistBadge": "Naturalist",
-    "deleteAccountDoneBillingBody": "Din konto og dine data er slettet. VIGTIGT: dette opsiger ikke dit abonnement — du skal opsige det i din Hotmart-konto, ellers fortsætter betalingen.",
+    "deleteAccountDoneBillingBody": "Din konto og dine data er slettet. VIGTIGT: dette opsiger ikke dit abonnement — du skal opsige det i din Google Play / App Store-konto, ellers fortsætter betalingen.",
     "locationRow": "Brug min omtrentlige placering",
     "locationHint": "Forbedrer præcisionen ved kun at medregne arter i nærheden af dig. Afrundet til cirka 1 km og gemmes aldrig.",
     "emptyTitle": "Din samling starter her",
@@ -831,7 +817,7 @@
     "accuracyTitle": "Identifikationens nøjagtighed — læs venligst",
     "accuracyBody": "AI-identifikation kan tage fejl, også om hvorvidt en plante eller svamp er spiselig, giftig eller sikker at røre ved. Spis, saml eller brug aldrig en vild plante, svamp eller organisme udelukkende baseret på resultatet fra denne app. Bekræft altid med en kvalificeret ekspert (mykolog, botaniker eller giftlinje), før du indtager eller bruger noget, du har fundet i naturen. Vi er ikke ansvarlige for skader forårsaget af at stole på en identifikation lavet af denne app.",
     "billingTitle": "Abonnementer og fakturering",
-    "billingBody": "Betalte abonnementer opkræves via Hotmart til den pris, der vises, når du tegner dem, og fornyes automatisk, indtil du opsiger dem på din Hotmart-konto. Du kan opsige når som helst; din adgang fortsætter indtil udgangen af den periode, du allerede har betalt for. Vi tilbyder ikke forholdsmæssig refusion for ubrugt tid, medmindre loven kræver det. I mobilappbutikker opkræves abonnementer - når de tilbydes dér - via butikkens eget betalingssystem.",
+    "billingBody": "Betalte abonnementer opkræves via Google Play / App Store til den pris, der vises, når du tegner dem, og fornyes automatisk, indtil du opsiger dem på din Google Play / App Store-konto. Du kan opsige når som helst; din adgang fortsætter indtil udgangen af den periode, du allerede har betalt for. Vi tilbyder ikke forholdsmæssig refusion for ubrugt tid, medmindre loven kræver det. I mobilappbutikker opkræves abonnementer - når de tilbydes dér - via butikkens eget betalingssystem.",
     "accountTitle": "Konti og adgangskoder",
     "accountBody": "Du behøver ikke en konto for at bruge de gratis funktioner. Abonnenter kan valgfrit oprette en adgangskode for at logge ind og synkronisere deres abonnement på tværs af enheder. Du er ansvarlig for at holde din adgangskode sikker og for alt, der sker via din konto.",
     "liabilityTitle": "Ingen garanti, ansvarsbegrænsning",
@@ -850,7 +836,7 @@
     "localStorageTitle": "Kun lokal lagring",
     "localStorageBody": "Din gemte samling - identificerede arter, noter og tidsstempler - gemmes lokalt på din egen enhed i browserens eller appens lokale lager og deles aldrig med andre brugere. Hvis du er abonnent og logger ind, synkroniseres samlingens tekstdata (aldrig dine fotos) også til vores server, så den kan følge dig på tværs af enheder; sletter du din konto, fjernes den fra vores servere.",
     "noAccountsTitle": "Ingen konti, ingen sporing",
-    "noAccountsBody": "Appen kræver ikke en konto - din enhed får en tilfældig anonym identifikator (som kun gemmes på din enhed), så vi kan se, hvornår den gratis identifikation pr. kategori er brugt. Hvis du tegner abonnement, indsamler Hotmart din e-mail og dine betalingsoplysninger direkte for at behandle betalingen - vi modtager din abonnementsstatus og e-mail, knyttet til samme identifikator, så vi kan gendanne din adgang. Abonnenter kan valgfrit logge ind med e-mailkode eller Google for at synkronisere abonnement og samling på tværs af enheder; det kræves aldrig for at bruge appen. I webversionen bruger vi basal analyse (Google Tag Manager og Utmify) til at måle besøg og abonnementer; vi sælger aldrig persondata.",
+    "noAccountsBody": "Appen kræver ikke en konto - din enhed får en tilfældig anonym identifikator (som kun gemmes på din enhed), så vi kan se, hvornår den gratis identifikation pr. kategori er brugt. Abonnenter kan valgfrit logge ind med e-mailkode eller Google for at synkronisere abonnement og samling på tværs af enheder; det kræves aldrig for at bruge appen. I webversionen bruger vi basal analyse (Google Tag Manager og Utmify) til at måle besøg og abonnementer; vi sælger aldrig persondata.",
     "dataLossTitle": "Risiko for datatab",
     "dataLossBody": "Hvis du rydder dine browserdata eller afinstallerer appen, går din lokalt gemte samling permanent tabt, da intet bliver sikkerhedskopieret eksternt.",
     "contactTitle": "Kontakt",
@@ -2627,7 +2613,7 @@
     "freeTitle": "Er NatureLens gratis?",
     "freeBody": "Du får én gratis identifikation pr. kategori (planter, insekter, svampe, afgrøder, træer). Derefter låser et abonnement op for ubegrænsede identifikationer i alle kategorier.",
     "cancelTitle": "Hvordan opsiger jeg mit abonnement?",
-    "cancelBody": "Åbn Profil > Mit abonnement og tryk på 'Administrér eller opsig' - det fører dig til din Hotmart-konto (consumer.hotmart.com), hvor abonnementet opkræves og kan opsiges med få tryk. Din adgang forbliver aktiv indtil udgangen af den periode, du allerede har betalt for. Sletning af din NatureLens-konto stopper IKKE opkrævningen.",
+    "cancelBody": "Åbn Profil > Mit abonnement og tryk på 'Administrér eller opsig' - det fører dig til din Google Play / App Store-konto, hvor abonnementet opkræves og kan opsiges med få tryk. Din adgang forbliver aktiv indtil udgangen af den periode, du allerede har betalt for. Sletning af din NatureLens-konto stopper IKKE opkrævningen.",
     "restoreTitle": "Jeg har skiftet telefon eller ryddet min browser — hvordan får jeg mit abonnement tilbage?",
     "restoreBody": "Gå til Profil → Gendan adgang. Du kan enten anmode om en engangskode via e-mail eller, hvis du har oprettet en, logge ind med en adgangskode eller din Google-konto.",
     "tokensTitle": "Hvad er tokens? Kan jeg indløse dem til noget?",
@@ -2635,7 +2621,7 @@
     "privacyTitle": "Er mine data private?",
     "privacyBody": "NatureLens kræver ikke en konto for at kunne bruges. Det meste af dine data (samling, billeder) forbliver kun på din enhed. Se hele Privatlivspolitikken for flere detaljer.",
     "deleteTitle": "Hvordan sletter jeg min konto og mine data?",
-    "deleteBody": "Gå til Profil og tryk på Slet konto nederst. Det fjerner permanent din konto og dine data fra vores servere og rydder alt, der er gemt på denne enhed. Vigtigt: det opsiger IKKE et aktivt abonnement - opsig det først på din Hotmart-konto (Profil > Mit abonnement > Administrér eller opsig), ellers fortsætter opkrævningen.",
+    "deleteBody": "Gå til Profil og tryk på Slet konto nederst. Det fjerner permanent din konto og dine data fra vores servere og rydder alt, der er gemt på denne enhed. Vigtigt: det opsiger IKKE et aktivt abonnement - opsig det først på din Google Play / App Store-konto (Profil > Mit abonnement > Administrér eller opsig), ellers fortsætter opkrævningen.",
     "offlineTitle": "Virker appen offline?",
     "offlineBody": "Nej — at identificere en art kræver en internetforbindelse for at nå vores AI-tjeneste.",
     "languageTitle": "Kan jeg bruge appen på et andet sprog?",
@@ -2732,7 +2718,12 @@
     "confidenceLine": "{{confidence}}% sikkerhed"
   },
   "onboarding": {
-    "media": { "play": "Afspil video", "pause": "Sæt video på pause", "enableSound": "Slå lyd til", "disableSound": "Slå lyd fra" },
+    "media": {
+      "play": "Afspil video",
+      "pause": "Sæt video på pause",
+      "enableSound": "Slå lyd til",
+      "disableSound": "Slå lyd fra"
+    },
     "skip": "Spring over",
     "next": "Næste",
     "start": "Kom i gang",
@@ -2864,8 +2855,8 @@
     "unknownBody": "Vi kunne ikke nå serveren. Hvis du abonnerer, er din adgang uændret — prøv igen om lidt.",
     "plansTitle": "Planer",
     "manageTitle": "Administrér eller opsig",
-    "manageBody": "Dit abonnement opkræves af Hotmart, så opsigelsen sker på din Hotmart-konto — ikke her. Opsiger du der, stopper fremtidige betalinger, og din adgang varer perioden ud.",
-    "openHotmart": "Åbn min Hotmart-konto"
+    "manageBody": "Dit abonnement opkræves af Google Play / App Store, så opsigelsen sker på din Google Play / App Store-konto — ikke her. Opsiger du der, stopper fremtidige betalinger, og din adgang varer perioden ud.",
+    "manageStore": "Åbn min Google Play / App Store-konto"
   },
   "notifications": {
     "row": "Notifikationer",
@@ -3229,22 +3220,22 @@
       "saveFailed": "Kunne ikke gemme. Intet blev bekræftet; prøv igen."
     },
     "planningSourcesTitle": "Kilder til planlægning",
-    "planningSourcesBody": "Officiel læsning knyttet til afgrøden. Det betyder ikke, at et teknisk modul eller en anbefaling er udgivet."
-  ,
+    "planningSourcesBody": "Officiel læsning knyttet til afgrøden. Det betyder ikke, at et teknisk modul eller en anbefaling er udgivet.",
     "climate": {
-    "kicker": "LOKALT KLIMA",
-    "title": "Klimaets rytme på stedet",
-    "body": "Se den månedlige klimatologi, før du sammenligner feltobservationer. Den beskriver klimaet og er ikke en vandings- eller gødningsanbefaling.",
-    "rain": "Regn",
-    "temperature": "Middeltemperatur",
-    "rainValue": "{{value}} mm",
-    "temperatureValue": "{{value}} °C",
-    "privacy": "Kun et omtrentligt gitter på {{precision}}° sendes og gemmes. Din præcise placering lagres ikke.",
-    "source": "Åbn officiel NASA POWER-kilde",
-    "permission": "Placeringen blev ikke delt. Aktivér den i enhedens indstillinger, og prøv igen.",
-    "error": "Klimadata er midlertidigt utilgængelige.",
-    "action": "Brug omtrentlig placering"
-  }},
+      "kicker": "LOKALT KLIMA",
+      "title": "Klimaets rytme på stedet",
+      "body": "Se den månedlige klimatologi, før du sammenligner feltobservationer. Den beskriver klimaet og er ikke en vandings- eller gødningsanbefaling.",
+      "rain": "Regn",
+      "temperature": "Middeltemperatur",
+      "rainValue": "{{value}} mm",
+      "temperatureValue": "{{value}} °C",
+      "privacy": "Kun et omtrentligt gitter på {{precision}}° sendes og gemmes. Din præcise placering lagres ikke.",
+      "source": "Åbn officiel NASA POWER-kilde",
+      "permission": "Placeringen blev ikke delt. Aktivér den i enhedens indstillinger, og prøv igen.",
+      "error": "Klimadata er midlertidigt utilgængelige.",
+      "action": "Brug omtrentlig placering"
+    }
+  },
   "observationWorkspace": {
     "title": "Avanceret observation",
     "loading": "Indlæser observationer…",
@@ -3621,8 +3612,7 @@
       "pests": "Skadedyr og symptomer",
       "recovery": "Før og efter",
       "questions": "Spørg gruppen"
-    }
- ,
+    },
     "onlineBadge": "Onlinefællesskab",
     "feedTitle": "Feltnoter",
     "commentAction": "Kommenter",

@@ -130,5 +130,7 @@ que nascia quebrado e passava verde a toa.
   idioma.
 - **Falta conta Expo** para `eas build -p android --profile preview` (o APK de
   teste) e a conta Google Play (US$ 25).
-- **Ofertas na Hotmart** precisam ser criadas em exatamente US$ 5 / 11 / 33 —
-  a tela promete esses valores e nada e buscado dinamicamente.
+- **Pagamento antigo removido.** Nao existe checkout web nem preco hardcoded.
+  Compras futuras devem usar exclusivamente Google Play Billing / App Store,
+  com produtos e precos vindos da loja e validacao server-side antes de liberar
+  `subscriptions`. Ate isso existir, a venda permanece desativada sem CTA falsa.

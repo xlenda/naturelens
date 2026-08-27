@@ -9,15 +9,13 @@ import * as ImageManipulator from 'expo-image-manipulator';
 import { colors, shadow } from '../components/theme';
 import { getCollection, getProfilePhoto, saveProfilePhoto } from '../components/storage';
 import { CATEGORIES } from '../components/categories';
-import { startCheckout, getSubscriptionStatus, getLinkedEmail } from '../components/subscription';
+import { getSubscriptionStatus, getLinkedEmail } from '../components/subscription';
 import { createPassword } from '../components/restore';
 import { getStreakInfo, evaluateAchievements } from '../components/achievements';
 import { hasReward } from '../components/rewardOwnership';
-import PaywallModal from '../components/PaywallModal';
 import AlertModal from '../components/AlertModal';
 import PasswordInput from '../components/PasswordInput';
 import { useAppAlert } from '../components/useAppAlert';
-import { usePageShowReset } from '../components/usePageShowReset';
 import CategoryIcon from '../components/CategoryIcon';
 import FindThumb from '../components/FindThumb';
 import NatureScene from '../components/NatureScene';
@@ -47,8 +45,6 @@ export default function ProfileScreen() {
   // SubscriptionScreen.
   const [subStatus, setSubStatus] = useState(undefined);
   const [accountEmail, setAccountEmail] = useState(null);
-  const [checkingOut, setCheckingOut] = useState(false);
-  const [paywallVisible, setPaywallVisible] = useState(false);
   const [passwordInput, setPasswordInput] = useState('');
   const [creatingPassword, setCreatingPassword] = useState(false);
   const [photoUri, setPhotoUri] = useState(null);
@@ -59,9 +55,6 @@ export default function ProfileScreen() {
 
 
   const { alertConfig, showAlert, hideAlert } = useAppAlert();
-  // Un-freezes the subscribe button when the page is restored from bfcache
-  // after coming back from Hotmart's checkout (see usePageShowReset).
-  usePageShowReset(useCallback(() => setCheckingOut(false), []));
 
   const load = useCallback(async () => {
     const list = await getCollection();
@@ -127,15 +120,6 @@ export default function ProfileScreen() {
 
 
 
-
-  const handleSubscribe = async (plan) => {
-    setCheckingOut(true);
-    try {
-      await startCheckout(plan);
-    } catch (e) {
-      setCheckingOut(false);
-    }
-  };
 
   const handlePickPhoto = async () => {
     try {
@@ -510,37 +494,12 @@ export default function ProfileScreen() {
           </TouchableOpacity>
         </PressScale>
 
-        {/* Duas portas fechadas de proposito, e o card inteiro some quando
-            nenhuma se aplica:
-            - build de loja (Platform.OS !== 'web'): CTA de compra nao pode
-              existir num APK, e aqui ela era morta de qualquer jeito -
-              startCheckout lanca fora da web. Politica de pagamentos do Play.
-            - subStatus undefined: "nao sei" nao vira "nao assina". */}
-        {(subStatus === 'active' || (subStatus === null && Platform.OS === 'web')) && (
+        {subStatus === 'active' && (
           <View style={styles.accountCard}>
-            {subStatus === 'active' ? (
-              <View style={styles.subscribedPill}>
-                <Ionicons name="checkmark-circle" size={16} color={colors.accent} />
-                <Text style={styles.subscribedText}>{t('paywall.subscribed')}</Text>
-              </View>
-            ) : (
-              <TouchableOpacity
-                style={[styles.subscribeBtn, checkingOut && { opacity: 0.6 }]}
-                onPress={() => setPaywallVisible(true)}
-                disabled={checkingOut}
-                activeOpacity={0.85}
-                accessibilityRole="button"
-                accessibilityLabel={t('paywall.subscribe')}
-              >
-                <Text style={styles.subscribeBtnText}>
-                  {checkingOut ? t('paywall.subscribing') : t('paywall.subscribe')}
-                </Text>
-              </TouchableOpacity>
-            )}
-            {/* The old "already subscribed on another device? Restore access"
-                link lived here. It is now the account row at the top of this
-                screen, where signing in belongs - repeating it inside the
-                subscription card would offer the same door twice. */}
+            <View style={styles.subscribedPill}>
+              <Ionicons name="checkmark-circle" size={16} color={colors.accent} />
+              <Text style={styles.subscribedText}>{t('paywall.subscribed')}</Text>
+            </View>
           </View>
         )}
 
@@ -628,17 +587,6 @@ export default function ProfileScreen() {
         </ZoneBand>
 
       </ScrollView>
-
-      <PaywallModal
-        visible={paywallVisible}
-        title={t('paywall.genericTitle')}
-        body={t('paywall.genericBody')}
-        subscribing={checkingOut}
-        onSubscribe={async (plan) => {
-          await handleSubscribe(plan);
-        }}
-        onCancel={() => setPaywallVisible(false)}
-      />
 
       <AlertModal
         visible={!!alertConfig}

@@ -150,28 +150,8 @@
   },
   "paywall": {
     "title": "Gratis gebruik al benut",
-    "body": "Je hebt je gratis {{category}}-identificatie al gebruikt. Abonneer je om onbeperkt te blijven identificeren.",
-    "subscribe": "Abonneren",
-    "subscribing": "Doorverwijzen…",
     "subscribed": "Geabonneerd",
-    "manage": "Abonnement beheren",
-    "annualPlan": "Jaarlijks",
-    "perYear": "/jaar",
-    "saveBadge": "Bespaar {{percent}}%",
-    "genericTitle": "Alles ontgrendelen",
-    "genericBody": "Onbeperkte identificaties van planten, insecten, paddenstoelen en gewassen, plus volledige toegang tot informatie over medicinale kruiden.",
-    "subscriptionConfirmedTitle": "Je bent geabonneerd!",
-    "subscriptionConfirmedBody": "Bedankt voor je abonnement – je hebt nu een onbeperkt aantal identificaties. Veel plezier!",
-    "subscriptionPendingTitle": "Betaling ontvangen",
-    "subscriptionPendingBody": "Betaling ontvangen. Open Profiel → Toegang herstellen en bevestig het e-mailadres waarmee je betaalde om dit apparaat te ontgrendelen.",
-    "checkoutFailedTitle": "Afrekenen mislukt",
-    "checkoutFailedBody": "We konden het afrekenen niet starten. Probeer het straks opnieuw.",
-    "monthlyPlan": "Maandelijks",
-    "quarterlyPlan": "Per kwartaal",
-    "perMonth": "per maand",
-    "perQuarter": "per kwartaal",
-    "notAvailableYet": "De betaling wordt nog ingesteld — probeer het zo opnieuw.",
-    "webOnlyBody": "Premium is beschikbaar op de NatureLens-website. Al abonnee? Log in en je toegang werkt hier ook."
+    "notAvailableYet": "De betaling wordt nog ingesteld — probeer het zo opnieuw."
   },
   "restore": {
     "title": "Inloggen",
@@ -623,7 +603,13 @@
     "bodyLength": "Lichaamslengte",
     "leafConsumption": "Bladconsumptie",
     "leafAreaPerLarva": "Gegeten bladoppervlak per larve",
-    "lifeStages": { "egg": "Ei", "larva": "Larve", "nymph": "Nimf", "pupa": "Pop", "adult": "Volwassen" },
+    "lifeStages": {
+      "egg": "Ei",
+      "larva": "Larve",
+      "nymph": "Nimf",
+      "pupa": "Pop",
+      "adult": "Volwassen"
+    },
     "measurements": {
       "clutchSize": "Legselgrootte",
       "incubationPeriod": "Broedduur",
@@ -801,7 +787,7 @@
     "helpAndSupport": "Hulp en ondersteuning",
     "rewardsStore": "Beloningswinkel",
     "naturalistBadge": "Naturalist",
-    "deleteAccountDoneBillingBody": "Je account en gegevens zijn verwijderd. BELANGRIJK: dit zegt je abonnement niet op — dat moet je in je Hotmart-account doen, anders loopt de afschrijving door.",
+    "deleteAccountDoneBillingBody": "Je account en gegevens zijn verwijderd. BELANGRIJK: dit zegt je abonnement niet op — dat moet je in je Google Play / App Store-account doen, anders loopt de afschrijving door.",
     "locationRow": "Mijn geschatte locatie gebruiken",
     "locationHint": "Verbetert de nauwkeurigheid door alleen soorten uit jouw omgeving te overwegen. Afgerond op ongeveer 1 km en nooit opgeslagen.",
     "emptyTitle": "Hier begint je collectie",
@@ -817,7 +803,7 @@
     "accuracyTitle": "Nauwkeurigheid van identificatie — lees dit aandachtig",
     "accuracyBody": "AI-identificatie kan fout zijn, ook over de vraag of een plant of paddenstoel eetbaar, giftig of veilig om aan te raken is. Eet, verzamel of gebruik nooit een wilde plant, paddenstoel of schimmel alleen op basis van het resultaat van deze app. Raadpleeg altijd een gekwalificeerde expert (mycoloog, botanicus of vergiftigingsinformatiecentrum) voordat je iets consumeert of gebruikt dat je in de natuur hebt gevonden. Wij zijn niet aansprakelijk voor schade veroorzaakt door het vertrouwen op een identificatie van deze app.",
     "billingTitle": "Abonnementen en facturering",
-    "billingBody": "Betaalde abonnementen worden via Hotmart afgeschreven tegen de prijs die bij het abonneren wordt getoond, en verlengen automatisch totdat je opzegt in je Hotmart-account. Je kunt op elk moment opzeggen; je toegang loopt door tot het einde van de periode die je al hebt betaald. We bieden geen evenredige terugbetaling voor ongebruikte tijd, behalve waar de wet dat vereist. In mobiele appstores worden abonnementen - wanneer ze daar worden aangeboden - afgeschreven via het betaalsysteem van de store zelf.",
+    "billingBody": "Betaalde abonnementen worden via Google Play / App Store afgeschreven tegen de prijs die bij het abonneren wordt getoond, en verlengen automatisch totdat je opzegt in je Google Play / App Store-account. Je kunt op elk moment opzeggen; je toegang loopt door tot het einde van de periode die je al hebt betaald. We bieden geen evenredige terugbetaling voor ongebruikte tijd, behalve waar de wet dat vereist. In mobiele appstores worden abonnementen - wanneer ze daar worden aangeboden - afgeschreven via het betaalsysteem van de store zelf.",
     "accountTitle": "Accounts en wachtwoorden",
     "accountBody": "Je hebt geen account nodig om de gratis functies te gebruiken. Abonnees kunnen optioneel een wachtwoord aanmaken om in te loggen en hun abonnement te synchroniseren tussen apparaten. Jij bent verantwoordelijk voor het veilig houden van je wachtwoord en voor alles wat via je account gebeurt.",
     "liabilityTitle": "Geen garantie, beperking van aansprakelijkheid",
@@ -836,7 +822,7 @@
     "localStorageTitle": "Alleen lokale opslag",
     "localStorageBody": "Je opgeslagen collectie - geïdentificeerde soorten, notities en datums - wordt lokaal op je eigen apparaat bewaard, in de opslag van de browser of de app, en wordt nooit gedeeld met andere gebruikers. Ben je abonnee en log je in, dan worden de tekstgegevens van de collectie (nooit je foto's) ook gesynchroniseerd met onze server zodat ze met je meegaan tussen apparaten; als je je account verwijdert, worden ze van onze servers gewist.",
     "noAccountsTitle": "Geen accounts, geen tracking",
-    "noAccountsBody": "Deze app vereist geen account - je apparaat krijgt een willekeurige anonieme identificatie (alleen op je apparaat opgeslagen), zodat we weten wanneer de ene gratis identificatie per categorie is gebruikt. Als je je abonneert, verzamelt Hotmart rechtstreeks je e-mailadres en betaalgegevens om de betaling te verwerken - wij ontvangen de abonnementsstatus en het e-mailadres, gekoppeld aan diezelfde identificatie, om je toegang te herstellen. Abonnees kunnen optioneel inloggen met een e-mailcode of Google om hun abonnement en collectie tussen apparaten te synchroniseren; dit is nooit verplicht om de app te gebruiken. In de webversie gebruiken we basisanalyses (Google Tag Manager en Utmify) om bezoeken en abonnementen te meten; we verkopen nooit persoonsgegevens.",
+    "noAccountsBody": "Deze app vereist geen account - je apparaat krijgt een willekeurige anonieme identificatie (alleen op je apparaat opgeslagen), zodat we weten wanneer de ene gratis identificatie per categorie is gebruikt. Abonnees kunnen optioneel inloggen met een e-mailcode of Google om hun abonnement en collectie tussen apparaten te synchroniseren; dit is nooit verplicht om de app te gebruiken. In de webversie gebruiken we basisanalyses (Google Tag Manager en Utmify) om bezoeken en abonnementen te meten; we verkopen nooit persoonsgegevens.",
     "dataLossTitle": "Risico op gegevensverlies",
     "dataLossBody": "Als je je browsergegevens wist of de app verwijdert, gaat je lokaal opgeslagen collectie permanent verloren, omdat er geen back-up op afstand wordt gemaakt.",
     "contactTitle": "Contact",
@@ -2613,7 +2599,7 @@
     "freeTitle": "Is NatureLens gratis?",
     "freeBody": "Je krijgt één gratis identificatie per categorie (planten, insecten, paddenstoelen, gewassen, bomen). Daarna ontgrendelt een abonnement onbeperkte identificaties in alle categorieën.",
     "cancelTitle": "Hoe zeg ik mijn abonnement op?",
-    "cancelBody": "Open Profiel > Mijn abonnement en tik op 'Beheren of opzeggen' - je komt in je Hotmart-account (consumer.hotmart.com), waar het abonnement wordt afgeschreven en in een paar tikken kan worden opgezegd. Je toegang blijft actief tot het einde van de periode die je al hebt betaald. Je NatureLens-account verwijderen stopt de afschrijving NIET.",
+    "cancelBody": "Open Profiel > Mijn abonnement en tik op 'Beheren of opzeggen' - je komt in je Google Play / App Store-account, waar het abonnement wordt afgeschreven en in een paar tikken kan worden opgezegd. Je toegang blijft actief tot het einde van de periode die je al hebt betaald. Je NatureLens-account verwijderen stopt de afschrijving NIET.",
     "restoreTitle": "Ik ben van telefoon gewisseld of heb mijn browser gewist – hoe krijg ik mijn abonnement terug?",
     "restoreBody": "Ga naar Profiel → Toegang herstellen. Je kunt een eenmalige code per e-mail aanvragen of, als je er een hebt aangemaakt, inloggen met een wachtwoord of je Google-account.",
     "tokensTitle": "Wat zijn tokens? Kan ik ze ergens voor inwisselen?",
@@ -2621,7 +2607,7 @@
     "privacyTitle": "Zijn mijn gegevens privé?",
     "privacyBody": "Voor het gebruik van NatureLens is geen account vereist. Het grootste deel van je gegevens (collectie, foto's) blijft alleen op je apparaat staan. Bekijk het volledige privacybeleid voor meer details.",
     "deleteTitle": "Hoe verwijder ik mijn account en gegevens?",
-    "deleteBody": "Ga naar Profiel en tik onderaan op Account verwijderen. Dit verwijdert je account en gegevens permanent van onze servers en wist alles wat op dit apparaat is opgeslagen. Belangrijk: het zegt een actief abonnement NIET op - zeg het eerst op in je Hotmart-account (Profiel > Mijn abonnement > Beheren of opzeggen), anders loopt de afschrijving door.",
+    "deleteBody": "Ga naar Profiel en tik onderaan op Account verwijderen. Dit verwijdert je account en gegevens permanent van onze servers en wist alles wat op dit apparaat is opgeslagen. Belangrijk: het zegt een actief abonnement NIET op - zeg het eerst op in je Google Play / App Store-account (Profiel > Mijn abonnement > Beheren of opzeggen), anders loopt de afschrijving door.",
     "offlineTitle": "Werkt de app offline?",
     "offlineBody": "Nee – voor het identificeren van een soort is een internetverbinding nodig om onze AI-service te bereiken.",
     "languageTitle": "Kan ik de app in een andere taal gebruiken?",
@@ -2687,7 +2673,12 @@
     "confidenceLine": "{{confidence}}% zeker"
   },
   "onboarding": {
-    "media": { "play": "Video afspelen", "pause": "Video pauzeren", "enableSound": "Geluid aanzetten", "disableSound": "Geluid uitzetten" },
+    "media": {
+      "play": "Video afspelen",
+      "pause": "Video pauzeren",
+      "enableSound": "Geluid aanzetten",
+      "disableSound": "Geluid uitzetten"
+    },
     "skip": "Overslaan",
     "next": "Volgende",
     "start": "Beginnen",
@@ -2819,8 +2810,8 @@
     "unknownBody": "We konden de server niet bereiken. Als je geabonneerd bent, blijft je toegang gewoon werken — probeer het zo opnieuw.",
     "plansTitle": "Plannen",
     "manageTitle": "Beheren of opzeggen",
-    "manageBody": "Je abonnement wordt door Hotmart geïncasseerd, dus opzeggen doe je in je Hotmart-account, niet hier. Zeg je daar op, dan stoppen toekomstige afschrijvingen en blijft je toegang tot het einde van de betaalde periode.",
-    "openHotmart": "Mijn Hotmart-account openen"
+    "manageBody": "Je abonnement wordt door Google Play / App Store geïncasseerd, dus opzeggen doe je in je Google Play / App Store-account, niet hier. Zeg je daar op, dan stoppen toekomstige afschrijvingen en blijft je toegang tot het einde van de betaalde periode.",
+    "manageStore": "Mijn Google Play / App Store-account openen"
   },
   "notifications": {
     "row": "Meldingen",
@@ -3229,22 +3220,22 @@
       "saveFailed": "Opslaan mislukt. Niets is bevestigd; probeer het opnieuw."
     },
     "planningSourcesTitle": "Bronnen voor planning",
-    "planningSourcesBody": "Officiële informatie die aan dit gewas is gekoppeld. Dit betekent niet dat een technische module of advies is vrijgegeven."
-  ,
+    "planningSourcesBody": "Officiële informatie die aan dit gewas is gekoppeld. Dit betekent niet dat een technische module of advies is vrijgegeven.",
     "climate": {
-    "kicker": "LOKAAL KLIMAAT",
-    "title": "Klimaatritme op deze locatie",
-    "body": "Bekijk de maandelijkse klimatologie voordat je veldwaarnemingen vergelijkt. Dit beschrijft het klimaat en is geen irrigatie- of bemestingsadvies.",
-    "rain": "Regen",
-    "temperature": "Gemiddelde temperatuur",
-    "rainValue": "{{value}} mm",
-    "temperatureValue": "{{value}} °C",
-    "privacy": "Alleen een globaal raster van {{precision}}° wordt verzonden en bewaard. Je exacte locatie wordt niet opgeslagen.",
-    "source": "Officiële NASA POWER-bron openen",
-    "permission": "Locatie is niet gedeeld. Schakel die in bij de apparaatinstellingen en probeer opnieuw.",
-    "error": "Klimaatgegevens zijn tijdelijk niet beschikbaar.",
-    "action": "Globale locatie gebruiken"
-  }},
+      "kicker": "LOKAAL KLIMAAT",
+      "title": "Klimaatritme op deze locatie",
+      "body": "Bekijk de maandelijkse klimatologie voordat je veldwaarnemingen vergelijkt. Dit beschrijft het klimaat en is geen irrigatie- of bemestingsadvies.",
+      "rain": "Regen",
+      "temperature": "Gemiddelde temperatuur",
+      "rainValue": "{{value}} mm",
+      "temperatureValue": "{{value}} °C",
+      "privacy": "Alleen een globaal raster van {{precision}}° wordt verzonden en bewaard. Je exacte locatie wordt niet opgeslagen.",
+      "source": "Officiële NASA POWER-bron openen",
+      "permission": "Locatie is niet gedeeld. Schakel die in bij de apparaatinstellingen en probeer opnieuw.",
+      "error": "Klimaatgegevens zijn tijdelijk niet beschikbaar.",
+      "action": "Globale locatie gebruiken"
+    }
+  },
   "observationWorkspace": {
     "title": "Geavanceerde observatie",
     "loading": "Observaties laden…",
@@ -3621,8 +3612,7 @@
       "pests": "Plagen en symptomen",
       "recovery": "Voor en na",
       "questions": "Vraag de groep"
-    }
- ,
+    },
     "onlineBadge": "Onlinegemeenschap",
     "feedTitle": "Veldnotities",
     "commentAction": "Reageren",

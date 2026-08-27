@@ -150,28 +150,8 @@
   },
   "paywall": {
     "title": "Utilisation gratuite déjà utilisée",
-    "body": "Vous avez déjà utilisé votre identification gratuite de {{category}}. Abonnez-vous pour continuer à identifier sans limites.",
-    "subscribe": "S'abonner",
-    "subscribing": "Redirection…",
     "subscribed": "Abonné",
-    "manage": "Gérer l'abonnement",
-    "annualPlan": "Annuel",
-    "perYear": "/an",
-    "saveBadge": "Économisez {{percent}} %",
-    "genericTitle": "Tout débloquer",
-    "genericBody": "Identifications illimitées de plantes, insectes, champignons et cultures, ainsi qu'un accès complet aux détails des herbes médicinales.",
-    "subscriptionConfirmedTitle": "Vous êtes abonné !",
-    "subscriptionConfirmedBody": "Merci pour votre abonnement : vous avez désormais des identifications illimitées. Profitez-en bien !",
-    "subscriptionPendingTitle": "Paiement reçu",
-    "subscriptionPendingBody": "Paiement reçu. Ouvrez Profil → Restaurer l’accès et confirmez l’e-mail utilisé pour payer afin de débloquer cet appareil.",
-    "checkoutFailedTitle": "Échec du paiement",
-    "checkoutFailedBody": "Impossible de démarrer le paiement. Veuillez réessayer dans un instant.",
-    "monthlyPlan": "Mensuel",
-    "quarterlyPlan": "Trimestriel",
-    "perMonth": "par mois",
-    "perQuarter": "par trimestre",
-    "notAvailableYet": "Le paiement est en cours de configuration — réessayez dans un instant.",
-    "webOnlyBody": "Premium est disponible sur le site web de NatureLens. Déjà abonné ? Connectez-vous et votre accès fonctionne ici aussi."
+    "notAvailableYet": "Le paiement est en cours de configuration — réessayez dans un instant."
   },
   "restore": {
     "title": "Se connecter",
@@ -623,7 +603,13 @@
     "bodyLength": "Longueur du corps",
     "leafConsumption": "Consommation foliaire",
     "leafAreaPerLarva": "Surface foliaire consommée par larve",
-    "lifeStages": { "egg": "Œuf", "larva": "Larve", "nymph": "Nymphe", "pupa": "Chrysalide", "adult": "Adulte" },
+    "lifeStages": {
+      "egg": "Œuf",
+      "larva": "Larve",
+      "nymph": "Nymphe",
+      "pupa": "Chrysalide",
+      "adult": "Adulte"
+    },
     "measurements": {
       "clutchSize": "Taille de la ponte",
       "incubationPeriod": "Durée d'incubation",
@@ -801,7 +787,7 @@
     "helpAndSupport": "Aide et assistance",
     "rewardsStore": "Boutique de récompenses",
     "naturalistBadge": "Naturaliste",
-    "deleteAccountDoneBillingBody": "Votre compte et vos données ont été supprimés. IMPORTANT : cela n’annule pas votre abonnement — vous devez l’annuler dans votre compte Hotmart, sinon le prélèvement continue.",
+    "deleteAccountDoneBillingBody": "Votre compte et vos données ont été supprimés. IMPORTANT : cela n’annule pas votre abonnement — vous devez l’annuler dans votre compte Google Play / App Store, sinon le prélèvement continue.",
     "locationRow": "Utiliser ma position approximative",
     "locationHint": "Améliore la précision en limitant la réponse aux espèces présentes près de vous. Arrondie à environ 1 km et jamais conservée.",
     "emptyTitle": "Votre collection commence ici",
@@ -817,7 +803,7 @@
     "accuracyTitle": "Précision de l'identification — à lire absolument",
     "accuracyBody": "L'identification par IA peut se tromper, y compris sur le fait qu'une plante ou un champignon soit comestible, toxique ou sans danger au toucher. Ne mangez, ne cueillez et n'utilisez jamais une plante, un champignon ou un fungus sauvage en vous basant uniquement sur le résultat de cette application. Confirmez toujours auprès d'un expert qualifié (mycologue, botaniste ou centre antipoison) avant de consommer ou d'utiliser quelque chose trouvé dans la nature. Nous ne sommes pas responsables des dommages causés par le fait de se fier à une identification faite par cette application.",
     "billingTitle": "Abonnements et facturation",
-    "billingBody": "Les abonnements payants sont facturés via Hotmart au prix affiché au moment de l'abonnement, et se renouvellent automatiquement jusqu'à ce que vous résiliiez dans votre compte Hotmart. Vous pouvez résilier à tout moment ; votre accès continue jusqu'à la fin de la période déjà payée. Nous n'offrons pas de remboursement au prorata du temps non utilisé, sauf lorsque la loi l'exige. Sur les boutiques d'applications mobiles, les abonnements - lorsqu'ils y sont proposés - sont facturés via le système de facturation de la boutique elle-même.",
+    "billingBody": "Les abonnements payants sont facturés via Google Play / App Store au prix affiché au moment de l'abonnement, et se renouvellent automatiquement jusqu'à ce que vous résiliiez dans votre compte Google Play / App Store. Vous pouvez résilier à tout moment ; votre accès continue jusqu'à la fin de la période déjà payée. Nous n'offrons pas de remboursement au prorata du temps non utilisé, sauf lorsque la loi l'exige. Sur les boutiques d'applications mobiles, les abonnements - lorsqu'ils y sont proposés - sont facturés via le système de facturation de la boutique elle-même.",
     "accountTitle": "Comptes et mots de passe",
     "accountBody": "Vous n'avez pas besoin de compte pour utiliser les fonctionnalités gratuites. Les abonnés peuvent, s'ils le souhaitent, créer un mot de passe pour se connecter et synchroniser leur abonnement entre appareils. Vous êtes responsable de la sécurité de votre mot de passe et de tout ce qui se passe via votre compte.",
     "liabilityTitle": "Aucune garantie, limitation de responsabilité",
@@ -836,7 +822,7 @@
     "localStorageTitle": "Stockage local uniquement",
     "localStorageBody": "Votre collection enregistrée - espèces identifiées, notes et dates - est stockée localement sur votre propre appareil, dans le stockage du navigateur ou de l'appli, et n'est jamais partagée avec d'autres utilisateurs. Si vous êtes abonné et connecté, les données textuelles de la collection (jamais vos photos) sont aussi synchronisées avec notre serveur pour vous suivre d'un appareil à l'autre ; supprimer votre compte les efface de nos serveurs.",
     "noAccountsTitle": "Pas de comptes, pas de suivi",
-    "noAccountsBody": "Cette appli ne demande aucun compte pour être utilisée - votre appareil reçoit un identifiant anonyme aléatoire (stocké uniquement sur votre appareil) pour que nous sachions quand l'identification gratuite de chaque catégorie a été utilisée. Si vous vous abonnez, Hotmart collecte directement votre e-mail et vos données de paiement pour traiter le paiement - nous recevons le statut de l'abonnement et l'e-mail, liés à ce même identifiant, afin de restaurer votre accès. Les abonnés peuvent, en option, se connecter par code e-mail ou via Google pour synchroniser leur abonnement et leur collection entre appareils ; ce n'est jamais obligatoire pour utiliser l'appli. Sur la version web, nous utilisons des statistiques basiques (Google Tag Manager et Utmify) pour mesurer les visites et les abonnements ; nous ne vendons jamais de données personnelles.",
+    "noAccountsBody": "Cette appli ne demande aucun compte pour être utilisée - votre appareil reçoit un identifiant anonyme aléatoire (stocké uniquement sur votre appareil) pour que nous sachions quand l'identification gratuite de chaque catégorie a été utilisée. Les abonnés peuvent, en option, se connecter par code e-mail ou via Google pour synchroniser leur abonnement et leur collection entre appareils ; ce n'est jamais obligatoire pour utiliser l'appli. Sur la version web, nous utilisons des statistiques basiques (Google Tag Manager et Utmify) pour mesurer les visites et les abonnements ; nous ne vendons jamais de données personnelles.",
     "dataLossTitle": "Risque de perte de données",
     "dataLossBody": "Si vous effacez les données de votre navigateur ou désinstallez l'application, votre collection enregistrée localement sera définitivement perdue, car rien n'est sauvegardé à distance.",
     "contactTitle": "Contact",
@@ -2613,7 +2599,7 @@
     "freeTitle": "NatureLens est-elle gratuite ?",
     "freeBody": "Vous bénéficiez d'une identification gratuite par catégorie (plantes, insectes, champignons, cultures, arbres). Ensuite, un abonnement débloque des identifications illimitées dans toutes les catégories.",
     "cancelTitle": "Comment annuler mon abonnement ?",
-    "cancelBody": "Ouvrez Profil > Mon abonnement et touchez 'Gérer ou résilier' - vous arrivez sur votre compte Hotmart (consumer.hotmart.com), où l'abonnement est facturé et peut être résilié en quelques gestes. Votre accès reste actif jusqu'à la fin de la période déjà payée. Supprimer votre compte NatureLens n'arrête PAS la facturation.",
+    "cancelBody": "Ouvrez Profil > Mon abonnement et touchez 'Gérer ou résilier' - vous arrivez sur votre compte Google Play / App Store, où l'abonnement est facturé et peut être résilié en quelques gestes. Votre accès reste actif jusqu'à la fin de la période déjà payée. Supprimer votre compte NatureLens n'arrête PAS la facturation.",
     "restoreTitle": "J'ai changé de téléphone ou effacé mon navigateur : comment récupérer mon abonnement ?",
     "restoreBody": "Allez dans Profil → Restaurer l'accès. Vous pouvez demander un code à usage unique par e-mail ou, si vous en avez créé un, vous connecter avec un mot de passe ou votre compte Google.",
     "tokensTitle": "Que sont les tokens ? Puis-je les échanger contre quelque chose ?",
@@ -2621,7 +2607,7 @@
     "privacyTitle": "Mes données sont-elles privées ?",
     "privacyBody": "NatureLens ne nécessite pas de compte pour être utilisée. La plupart de vos données (collection, photos) restent uniquement sur votre appareil. Consultez la politique de confidentialité complète pour plus de détails.",
     "deleteTitle": "Comment supprimer mon compte et mes données ?",
-    "deleteBody": "Allez dans Profil et touchez Supprimer le compte, en bas de l'écran. Cela supprime définitivement votre compte et vos données de nos serveurs et efface tout ce qui est stocké sur cet appareil. Important : cela n'annule PAS un abonnement actif - résiliez-le d'abord dans votre compte Hotmart (Profil > Mon abonnement > Gérer ou résilier), sinon la facturation continue.",
+    "deleteBody": "Allez dans Profil et touchez Supprimer le compte, en bas de l'écran. Cela supprime définitivement votre compte et vos données de nos serveurs et efface tout ce qui est stocké sur cet appareil. Important : cela n'annule PAS un abonnement actif - résiliez-le d'abord dans votre compte Google Play / App Store (Profil > Mon abonnement > Gérer ou résilier), sinon la facturation continue.",
     "offlineTitle": "L'application fonctionne-t-elle hors ligne ?",
     "offlineBody": "Non : l'identification d'une espèce nécessite une connexion internet pour accéder à notre service d'IA.",
     "languageTitle": "Puis-je utiliser l'application dans une autre langue ?",
@@ -2687,7 +2673,12 @@
     "confidenceLine": "{{confidence}}% de confiance"
   },
   "onboarding": {
-    "media": { "play": "Lire la vidéo", "pause": "Mettre la vidéo en pause", "enableSound": "Activer le son", "disableSound": "Couper le son" },
+    "media": {
+      "play": "Lire la vidéo",
+      "pause": "Mettre la vidéo en pause",
+      "enableSound": "Activer le son",
+      "disableSound": "Couper le son"
+    },
     "skip": "Passer",
     "next": "Suivant",
     "start": "Commencer",
@@ -2819,8 +2810,8 @@
     "unknownBody": "Nous n’avons pas pu joindre le serveur. Si vous êtes abonné, votre accès n’est pas affecté — réessayez dans un instant.",
     "plansTitle": "Formules",
     "manageTitle": "Gérer ou résilier",
-    "manageBody": "Votre abonnement est facturé par Hotmart : la résiliation se fait donc dans votre compte Hotmart, pas ici. En résiliant là-bas, les prélèvements futurs s’arrêtent et votre accès reste actif jusqu’à la fin de la période payée.",
-    "openHotmart": "Ouvrir mon compte Hotmart"
+    "manageBody": "Votre abonnement est facturé par Google Play / App Store : la résiliation se fait donc dans votre compte Google Play / App Store, pas ici. En résiliant là-bas, les prélèvements futurs s’arrêtent et votre accès reste actif jusqu’à la fin de la période payée.",
+    "manageStore": "Ouvrir mon compte Google Play / App Store"
   },
   "notifications": {
     "row": "Notifications",
@@ -3229,22 +3220,22 @@
       "saveFailed": "Enregistrement impossible. Rien n’a été confirmé ; réessayez."
     },
     "planningSourcesTitle": "Sources pour la planification",
-    "planningSourcesBody": "Lecture officielle associée à cette culture. Cela ne signifie pas qu’un module technique ou une recommandation est publié."
-  ,
+    "planningSourcesBody": "Lecture officielle associée à cette culture. Cela ne signifie pas qu’un module technique ou une recommandation est publié.",
     "climate": {
-    "kicker": "CLIMAT LOCAL",
-    "title": "Rythme climatique de ce lieu",
-    "body": "Consultez la climatologie mensuelle avant de comparer les observations de terrain. Elle décrit le climat, sans prescrire irrigation ni fertilisation.",
-    "rain": "Pluie",
-    "temperature": "Température moyenne",
-    "rainValue": "{{value}} mm",
-    "temperatureValue": "{{value}} °C",
-    "privacy": "Seule une grille approximative de {{precision}}° est envoyée et mise en cache. Votre position exacte n’est pas stockée.",
-    "source": "Ouvrir la source officielle NASA POWER",
-    "permission": "La position n’a pas été partagée. Activez-la dans les réglages de l’appareil puis réessayez.",
-    "error": "Les données climatiques sont temporairement indisponibles.",
-    "action": "Utiliser la position approximative"
-  }},
+      "kicker": "CLIMAT LOCAL",
+      "title": "Rythme climatique de ce lieu",
+      "body": "Consultez la climatologie mensuelle avant de comparer les observations de terrain. Elle décrit le climat, sans prescrire irrigation ni fertilisation.",
+      "rain": "Pluie",
+      "temperature": "Température moyenne",
+      "rainValue": "{{value}} mm",
+      "temperatureValue": "{{value}} °C",
+      "privacy": "Seule une grille approximative de {{precision}}° est envoyée et mise en cache. Votre position exacte n’est pas stockée.",
+      "source": "Ouvrir la source officielle NASA POWER",
+      "permission": "La position n’a pas été partagée. Activez-la dans les réglages de l’appareil puis réessayez.",
+      "error": "Les données climatiques sont temporairement indisponibles.",
+      "action": "Utiliser la position approximative"
+    }
+  },
   "observationWorkspace": {
     "title": "Observation avancée",
     "loading": "Chargement des observations…",
@@ -3621,8 +3612,7 @@
       "pests": "Ravageurs et symptômes",
       "recovery": "Avant et après",
       "questions": "Demander au groupe"
-    }
- ,
+    },
     "onlineBadge": "Communauté en ligne",
     "feedTitle": "Carnet de terrain",
     "commentAction": "Commenter",
