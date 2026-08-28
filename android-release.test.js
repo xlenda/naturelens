@@ -124,6 +124,9 @@ test('arquivo enviado ao EAS exclui segredos, dossies e auditorias locais', () =
     '/ios/',
     'CONTEXTO/',
     'audits/',
+    'docs/',
+    'store-assets/',
+    'assets/art/naturelens-mascot-intro.mp4',
   ]) {
     assert.ok(easIgnore.split(/\r?\n/).includes(pattern), `${pattern} precisa ficar fora do upload EAS`);
   }

@@ -23,3 +23,10 @@ Thumbs.db
 # Dossies e auditorias pertencem ao dono, nao ao binario enviado ao EAS.
 CONTEXTO/
 audits/
+
+# Materiais de servidor e de ficha ficam no repositorio, nao no app nativo.
+docs/
+store-assets/
+
+# Arquivo bruto substituido pela versao curta usada pelo onboarding.
+assets/art/naturelens-mascot-intro.mp4
