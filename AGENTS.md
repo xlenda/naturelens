@@ -139,8 +139,9 @@ que nascia quebrado e passava verde a toa.
 - **Telefone de emergencia saiu dos 17 idiomas** (dava numero brasileiro e
   americano pra todo mundo). Numero certo por pais exige detectar PAIS, nao
   idioma.
-- **EAS esta ligado ao projeto**, com perfis de development fisico, simulator,
-  preview e production. O lancamento inicial iOS e somente iPhone; iPad fica
+- **EAS esta ligado ao projeto**, com perfis de development fisico, development
+  simulator, preview fisico, preview simulator e production. O lancamento inicial
+  iOS e somente iPhone; iPad fica
   desativado ate existir layout e capturas validados. Ainda faltam a equipe Apple
   Developer da organizacao, registro do iPhone e validacao fisica; no Android
   ainda falta a conta Google Play e a validacao do AAB em aparelho real.

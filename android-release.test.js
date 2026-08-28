@@ -64,6 +64,9 @@ test('release iOS mantem bundle, versao remota e permissoes minimas', () => {
   assert.equal(eas.build.development.distribution, 'internal');
   assert.equal(eas.build['development-simulator'].extends, 'development');
   assert.equal(eas.build['development-simulator'].ios.simulator, true);
+  assert.equal(eas.build['preview-simulator'].extends, 'preview');
+  assert.equal(eas.build['preview-simulator'].ios.simulator, true);
+  assert.equal(eas.build.preview.distribution, 'internal');
   assert.equal(pkg.dependencies['expo-build-properties'], '~1.0.10');
   assert.deepEqual(pluginConfig('expo-build-properties'), {
     ios: { deploymentTarget: '16.4' },
