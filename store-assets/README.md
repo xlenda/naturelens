@@ -15,6 +15,8 @@
 - `data-safety.md`: respostas auditadas para Segurança dos dados e declarações relacionadas.
 - `play-console-checklist.md`: respostas dos demais formulários e ordem de lançamento.
 - `app-store-checklist.md`: configuração, privacidade e ordem de validação para iOS.
+- `native-release-audit-2026-08-28.md`: prova do primeiro build iOS no EAS e
+  separação explícita dos testes que ainda exigem aparelho, conta ou contrato.
 - `app-store-screenshots/`: cinco capturas 1290 x 2796 em pt-BR e en-US.
 
 As capturas não têm moldura de navegador e representam a mesma interface React Native usada no Android. Antes de promover a versão de teste para produção, confira as cinco no AAB instalado em um aparelho real.
