@@ -1,37 +1,92 @@
+diff --git a/node_modules/@siteed/audio-studio/android/src/main/java/net/siteed/audiostudio/AudioRecorderManager.kt b/node_modules/@siteed/audio-studio/android/src/main/java/net/siteed/audiostudio/AudioRecorderManager.kt
+index 7d1e913..3acd31c 100644
+--- a/node_modules/@siteed/audio-studio/android/src/main/java/net/siteed/audiostudio/AudioRecorderManager.kt
++++ b/node_modules/@siteed/audio-studio/android/src/main/java/net/siteed/audiostudio/AudioRecorderManager.kt
+@@ -234 +234 @@ class AudioRecorderManager(
+-                override fun reject(code: String?, message: String?, cause: Throwable?) {
++                override fun reject(code: String, message: String?, cause: Throwable?) {
+@@ -246 +246 @@ class AudioRecorderManager(
+-                    override fun reject(code: String?, message: String?, cause: Throwable?) {}
++                    override fun reject(code: String, message: String?, cause: Throwable?) {}
+@@ -262 +262 @@ class AudioRecorderManager(
+-                        override fun reject(code: String?, message: String?, cause: Throwable?) {}
++                        override fun reject(code: String, message: String?, cause: Throwable?) {}
+@@ -306 +306 @@ class AudioRecorderManager(
+-                override fun reject(code: String?, message: String?, cause: Throwable?) {}
++                override fun reject(code: String, message: String?, cause: Throwable?) {}
+@@ -426 +426 @@ class AudioRecorderManager(
+-                            override fun reject(code: String?, message: String?, cause: Throwable?) {
++                            override fun reject(code: String, message: String?, cause: Throwable?) {
+@@ -453 +453 @@ class AudioRecorderManager(
+-                                override fun reject(code: String?, message: String?, cause: Throwable?) {
++                                override fun reject(code: String, message: String?, cause: Throwable?) {
+@@ -815 +815 @@ class AudioRecorderManager(
+-                override fun reject(code: String?, message: String?, cause: Throwable?) {
++                override fun reject(code: String, message: String?, cause: Throwable?) {
+@@ -1354 +1354 @@ class AudioRecorderManager(
+-                    override fun reject(code: String?, message: String?, cause: Throwable?) {
++                    override fun reject(code: String, message: String?, cause: Throwable?) {
+@@ -2069 +2069 @@ class AudioRecorderManager(
+-                                override fun reject(code: String?, message: String?, cause: Throwable?) {
++                                override fun reject(code: String, message: String?, cause: Throwable?) {
+@@ -2092 +2092 @@ class AudioRecorderManager(
+-                                override fun reject(code: String?, message: String?, cause: Throwable?) {
++                                override fun reject(code: String, message: String?, cause: Throwable?) {
+@@ -2139 +2139 @@ class AudioRecorderManager(
+-                                override fun reject(code: String?, message: String?, cause: Throwable?) {
++                                override fun reject(code: String, message: String?, cause: Throwable?) {
+@@ -2166 +2166 @@ class AudioRecorderManager(
+-                                override fun reject(code: String?, message: String?, cause: Throwable?) {
++                                override fun reject(code: String, message: String?, cause: Throwable?) {
+@@ -2272 +2272 @@ class AudioRecorderManager(
+-                override fun reject(code: String?, message: String?, cause: Throwable?) {
++                override fun reject(code: String, message: String?, cause: Throwable?) {
+diff --git a/node_modules/@siteed/audio-studio/android/src/main/java/net/siteed/audiostudio/AudioRecordingService.kt b/node_modules/@siteed/audio-studio/android/src/main/java/net/siteed/audiostudio/AudioRecordingService.kt
+index 1eba4c8..a6c1d5a 100644
+--- a/node_modules/@siteed/audio-studio/android/src/main/java/net/siteed/audiostudio/AudioRecordingService.kt
++++ b/node_modules/@siteed/audio-studio/android/src/main/java/net/siteed/audiostudio/AudioRecordingService.kt
+@@ -104 +104 @@ class AudioRecordingService : Service() {
+-                    override fun reject(code: String?, message: String?, cause: Throwable?) {
++                    override fun reject(code: String, message: String?, cause: Throwable?) {
+diff --git a/node_modules/@siteed/audio-studio/android/src/main/java/net/siteed/audiostudio/AudioStudioModule.kt b/node_modules/@siteed/audio-studio/android/src/main/java/net/siteed/audiostudio/AudioStudioModule.kt
+index c28099f..964299a 100644
+--- a/node_modules/@siteed/audio-studio/android/src/main/java/net/siteed/audiostudio/AudioStudioModule.kt
++++ b/node_modules/@siteed/audio-studio/android/src/main/java/net/siteed/audiostudio/AudioStudioModule.kt
+@@ -256 +256 @@ class AudioStudioModule : Module(), EventSender, AudioStreamDecoderDelegate {
+-                    override fun reject(code: String?, message: String?, cause: Throwable?) {
++                    override fun reject(code: String, message: String?, cause: Throwable?) {
+@@ -1298 +1298 @@ class AudioStudioModule : Module(), EventSender, AudioStreamDecoderDelegate {
+-                            override fun reject(code: String?, message: String?, cause: Throwable?) {
++                            override fun reject(code: String, message: String?, cause: Throwable?) {
+@@ -1318 +1318 @@ class AudioStudioModule : Module(), EventSender, AudioStreamDecoderDelegate {
+-                        override fun reject(code: String?, message: String?, cause: Throwable?) {
++                        override fun reject(code: String, message: String?, cause: Throwable?) {
+@@ -1340 +1340 @@ class AudioStudioModule : Module(), EventSender, AudioStreamDecoderDelegate {
+-                    override fun reject(code: String?, message: String?, cause: Throwable?) {
++                    override fun reject(code: String, message: String?, cause: Throwable?) {
+diff --git a/node_modules/@siteed/audio-studio/android/src/main/java/net/siteed/audiostudio/RecordingActionReceiver.kt b/node_modules/@siteed/audio-studio/android/src/main/java/net/siteed/audiostudio/RecordingActionReceiver.kt
+index e45b20a..eb871c5 100644
+--- a/node_modules/@siteed/audio-studio/android/src/main/java/net/siteed/audiostudio/RecordingActionReceiver.kt
++++ b/node_modules/@siteed/audio-studio/android/src/main/java/net/siteed/audiostudio/RecordingActionReceiver.kt
+@@ -44 +44 @@ class RecordingActionReceiver : BroadcastReceiver() {
+-                override fun reject(code: String?, message: String?, cause: Throwable?) {
++                override fun reject(code: String, message: String?, cause: Throwable?) {
 diff --git a/node_modules/@siteed/audio-studio/android/src/main/java/net/siteed/audiostudio/RecordingConfig.kt b/node_modules/@siteed/audio-studio/android/src/main/java/net/siteed/audiostudio/RecordingConfig.kt
 index a060b2c..3f90762 100644
 --- a/node_modules/@siteed/audio-studio/android/src/main/java/net/siteed/audiostudio/RecordingConfig.kt
 +++ b/node_modules/@siteed/audio-studio/android/src/main/java/net/siteed/audiostudio/RecordingConfig.kt
-@@ -111,7 +111,6 @@ data class RecordingConfig(
-                 // Clean up the directory path by removing file:// protocol and normalizing
-                 val cleanDirectory = outputDirectory
-                     .replace(Regex("^file://"), "")
+@@ -114 +113,0 @@ data class RecordingConfig(
 -                    .trim('/')
-                     .replace("//", "/")
- 
-                 val directory = File(cleanDirectory)
-@@ -153,7 +152,6 @@ data class RecordingConfig(
-                 autoResumeAfterInterruption = options.getBooleanOrDefault("autoResumeAfterInterruption", false),
-                 outputDirectory = outputDirectory?.let {
-                     it.replace(Regex("^file://"), "")
+@@ -156 +154,0 @@ data class RecordingConfig(
 -                        .trim('/')
-                         .replace("//", "/")
-                 },
-                 filename = options["filename"] as? String,
 diff --git a/node_modules/@siteed/audio-studio/ios/RecordingSettings.swift b/node_modules/@siteed/audio-studio/ios/RecordingSettings.swift
 index e4544b9..1cee9f8 100644
 --- a/node_modules/@siteed/audio-studio/ios/RecordingSettings.swift
 +++ b/node_modules/@siteed/audio-studio/ios/RecordingSettings.swift
-@@ -279,9 +279,10 @@ struct RecordingSettings {
-             let fileManager = FileManager.default
-             var isDirectory: ObjCBool = false
- 
+@@ -282 +282,3 @@ struct RecordingSettings {
 -            // Clean up the directory path by removing file:// protocol if present
 +            // Keep the leading slash of an absolute sandbox path. Trimming it
 +            // turns file:///var/... into var/... and makes cache directories
 +            // fail validation (or depend on the process working directory).
-             let cleanDirectory = directory.replacingOccurrences(of: "file://", with: "")
+@@ -284 +285,0 @@ struct RecordingSettings {
 -                .trimmingCharacters(in: CharacterSet(charactersIn: "/"))
-                 .replacingOccurrences(of: "//", with: "/")
- 
-             if !fileManager.fileExists(atPath: cleanDirectory, isDirectory: &isDirectory) {

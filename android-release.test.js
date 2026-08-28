@@ -260,6 +260,20 @@ test('patch-package preserva o caminho absoluto do cache no Android e iOS', () =
   const patchPath = path.join(root, 'patches', '@siteed+audio-studio+3.2.1.patch');
   assert.ok(fs.existsSync(patchPath), 'o patch precisa acompanhar a versao fixada da dependencia');
   const patch = fs.readFileSync(patchPath, 'utf8');
+  const androidPatch = patch
+    .split(/^diff --git /m)
+    .filter((section) => section.includes('node_modules/@siteed/audio-studio/android/'))
+    .join('\n');
+  const nullableRejects = androidPatch.match(/^-\s*override fun reject\(code: String\?/gm) || [];
+  const nonNullRejects = androidPatch.match(/^\+\s*override fun reject\(code: String,/gm) || [];
+  assert.ok(nullableRejects.length > 0, 'o patch precisa registrar os callbacks Android incompatíveis');
+  assert.equal(nullableRejects.length, 19, 'os 19 callbacks Android da versao fixada precisam ser corrigidos');
+  assert.equal(
+    nonNullRejects.length,
+    nullableRejects.length,
+    'cada callback Android nullable precisa virar a assinatura nao nula exigida pelo React Native'
+  );
+  assert.doesNotMatch(androidPatch, /^\+\s*override fun reject\(code: String\?/m);
   assert.match(patch, /android\/src\/main\/java\/net\/siteed\/audiostudio\/RecordingConfig\.kt/);
   assert.match(patch, /ios\/RecordingSettings\.swift/);
   assert.match(patch, /^-\s*\.trim\('\/'\)/m);
