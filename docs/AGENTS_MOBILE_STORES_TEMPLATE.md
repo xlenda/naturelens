@@ -45,11 +45,16 @@ credenciais ou o `projectId` de outro app.
   - `development`: `developmentClient: true`, `distribution: internal`;
   - `development-simulator`: herda `development` e usa `ios.simulator: true`;
   - `preview`: distribuição interna para QA;
+  - `preview-simulator`: herda `preview`, usa `ios.simulator: true` e leva o
+    bundle final embutido para validar uma abertura autonoma em iOS;
   - `production`: artefato de loja, versão remota e incremento automático.
 
 - Registrar o iPhone com `eas device:create` antes do build ad hoc.
 - Development build exige Apple Developer ativa, Apple ID com 2FA, equipe Apple
   correta e UDID incluído no provisioning profile.
+- O simulador remoto do EAS pode nao estar liberado para todas as contas. Um
+  build de simulador concluido prova Xcode/link/bundle, mas nao prova que a tela
+  montou enquanto uma sessao real ou remota nao for executada.
 - `eas build` só compila. `eas submit` envia à loja. Publicar para usuários é uma
   terceira decisão; nunca confundir esses três passos.
 - Nunca enviar à revisão ou liberar produção sem autorização explícita do dono.
