@@ -145,6 +145,11 @@ que nascia quebrado e passava verde a toa.
   desativado ate existir layout e capturas validados. Ainda faltam a equipe Apple
   Developer da organizacao, registro do iPhone e validacao fisica; no Android
   ainda falta a conta Google Play e a validacao do AAB em aparelho real.
+- **Desenvolvimento Android no Windows usa D:.** O Android Studio portatil fica em
+  `D:\Android\android-studio`; SDK, AVD e caches ficam em `D:\Android` e
+  `D:\DevCache`. Depois do assistente/licencas oficiais e de instalar o development
+  build, `npm run android` entrega mudancas JS/UI por Fast Refresh. Mudanca em
+  modulo nativo, plugin, permissao ou `app.json` exige novo development build.
 - **Pagamento antigo removido.** Nao existe checkout web nem preco hardcoded.
   Compras futuras devem usar exclusivamente Google Play Billing / Apple IAP,
   com produtos e precos vindos da loja e validacao server-side antes de liberar

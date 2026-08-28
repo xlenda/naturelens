@@ -39,6 +39,12 @@ credenciais ou o `projectId` de outro app.
 
 - Xcode e o simulador oficial de iOS exigem macOS. No Windows, usar EAS Build e
   instalar um development build no iPhone físico.
+- Para Android no Windows, usar Android Studio + Android Emulator com o SDK e os
+  AVDs em D: quando esse disco existir. Instalar no emulador um development build
+  do mesmo commit e executar `npm run android` para Metro + Fast Refresh.
+- Alterações somente em JavaScript, TypeScript, estilos e assets entram por Fast
+  Refresh. Mudanças em módulo nativo, plugin Expo, permissões, `app.json` ou versão
+  do SDK exigem um novo development build.
 - `expo-dev-client` deve ser compatível com o SDK instalado.
 - Perfis mínimos esperados em `eas.json`:
 
@@ -173,7 +179,9 @@ Executar antes de qualquer build de loja:
 5. Configure uma ficha separada no Play Console e no App Store Connect.
 6. Repita build e teste físico: um build aprovado em um app não valida os outros.
 
-No Windows, o equivalente ao simulador que aparece nos vídeos da mentoria é o
-development build instalado no iPhone via EAS. Ele mostra o app em tamanho real,
-aceita Fast Refresh e testa o hardware verdadeiro — com a diferença de que cada
-alteração em módulo/configuração nativa exige um novo build.
+No Windows, o equivalente visual mais direto ao simulador dos vídeos é o Android
+Emulator com um development build: ele fica ao lado do editor e recebe mudanças
+de interface por Fast Refresh. Para iPhone, o equivalente é o development build
+instalado no aparelho físico via EAS. O iPhone valida hardware real; o emulador
+Android acelera o ciclo de interface. Ambos exigem novo build quando muda código
+ou configuração nativa.

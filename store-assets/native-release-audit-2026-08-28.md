@@ -29,6 +29,36 @@
 - O `.app` de previa extraido ocupa 72,5 MB; o antigo video bruto de 41,5 MB nao
   faz parte do fluxo nem do upload EAS.
 
+## Provas no artefato Android
+
+- Build de producao: commit `bf915dbe9feae99b39f884361a2d3d2089a7aedf`,
+  EAS `391ce28c-e8e0-417e-aca8-b35c62a72e4a`, perfil `production`; status
+  concluido. O resultado e um AAB assinado, ainda nao enviado ao Google Play.
+- Pacote `app.naturelens`; versao `1.0.0`; version code `5`; Expo SDK `54.0.0`.
+- AAB local:
+  `D:\\Projetos\\NatureLensBuilds\\2026-08-28\\NatureLens-1.0.0-vc5-bf915db.aab`,
+  77.169.371 bytes, SHA-256
+  `003CE6FDF44049E8FD987C21CCB2F40C9CCBC9B468633E6E7E1D5F2BF9E01B41`.
+- O `bundletool 1.18.3` oficial validou o AAB sem erro. O modulo base contem a
+  biblioteca nativa `libaudio-studio-cpp.so` para Android, confirmando que a
+  captura de som nativa entrou no pacote.
+- O manifesto final contem camera, microfone, notificacoes, boot para lembretes e
+  somente localizacao aproximada. Nao contem localizacao precisa/em segundo plano,
+  leitura do telefone, Bluetooth, sobreposicao, alarme exato nem armazenamento amplo.
+- Build de desenvolvimento para aparelho/emulador: EAS
+  `c90052be-37b2-476b-bb73-a856809e180b`, mesmo commit e version code; status
+  concluido. APK local:
+  `D:\\Projetos\\NatureLensBuilds\\2026-08-28\\NatureLens-dev-bf915db.apk`,
+  171.296.845 bytes, SHA-256
+  `A8798DC4D7574058D9716A4CF953453BB978917B5DA18AEB57591494A53953E4`.
+- O APK abre como ZIP valido, inclui quatro ABIs (`arm64-v8a`, `armeabi-v7a`,
+  `x86`, `x86_64`) e inclui `libaudio-studio-cpp.so` em `arm64-v8a`, `x86` e
+  `x86_64`, inclusive a arquitetura usada pelo emulador no Windows.
+- Android Studio Quail 3 Feature Drop `2026.1.3 Patch 1` foi preparado em
+  `D:\\Android\\android-studio`. SDK, AVD, Gradle e caches foram direcionados a D:.
+  A aceitacao pessoal dos termos do Google e a criacao do primeiro AVD continuam
+  como etapa interativa do proprietario antes da instalacao do APK.
+
 ## Portoes executados
 
 - `npm test`: 768 testes aprovados, alem de 6 checagens de cuidado por especie.
@@ -37,6 +67,8 @@
 - `expo-doctor --verbose`: 18/18.
 - `expo-modules-autolinking verify --platform both --verbose`: 34 modulos, sem conflito.
 - EAS/Xcode: compilacoes Debug e Release de simulador concluidas.
+- EAS/Gradle: compilacoes Android de desenvolvimento e producao concluidas.
+- `bundletool validate`: AAB Android aprovado.
 
 ## O que esta prova nao substitui
 
