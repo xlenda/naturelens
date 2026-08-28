@@ -1,0 +1,25 @@
+# Segredos e saidas locais. Este arquivo precisa repetir .gitignore porque o
+# EAS prioriza .easignore quando ele existe.
+.env
+.env.*
+!.env.example
+
+node_modules/
+dist/
+.expo/
+web-build/
+/android/
+/ios/
+__pycache__/
+*.pyc
+
+.vercel
+*.log
+npm-debug.log*
+
+Thumbs.db
+.DS_Store
+
+# Dossies e auditorias pertencem ao dono, nao ao binario enviado ao EAS.
+CONTEXTO/
+audits/

@@ -30,7 +30,7 @@
       "backgroundColor": "#0E1512"
     },
     "ios": {
-      "supportsTablet": true,
+      "supportsTablet": false,
       "bundleIdentifier": "app.naturelens",
       "config": {
         "usesNonExemptEncryption": false

@@ -140,9 +140,10 @@ que nascia quebrado e passava verde a toa.
   americano pra todo mundo). Numero certo por pais exige detectar PAIS, nao
   idioma.
 - **EAS esta ligado ao projeto**, com perfis de development fisico, simulator,
-  preview e production. Ainda faltam a equipe Apple Developer da organizacao,
-  registro do iPhone e validacao fisica; no Android ainda falta a conta Google
-  Play e a validacao do AAB em aparelho real.
+  preview e production. O lancamento inicial iOS e somente iPhone; iPad fica
+  desativado ate existir layout e capturas validados. Ainda faltam a equipe Apple
+  Developer da organizacao, registro do iPhone e validacao fisica; no Android
+  ainda falta a conta Google Play e a validacao do AAB em aparelho real.
 - **Pagamento antigo removido.** Nao existe checkout web nem preco hardcoded.
   Compras futuras devem usar exclusivamente Google Play Billing / Apple IAP,
   com produtos e precos vindos da loja e validacao server-side antes de liberar

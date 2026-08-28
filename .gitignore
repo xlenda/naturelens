@@ -9,6 +9,8 @@ node_modules/
 dist/
 .expo/
 web-build/
+/android/
+/ios/
 __pycache__/
 *.pyc
 

@@ -51,6 +51,11 @@ test('release Android mantem pacote, AAB e versionamento remoto', () => {
 
 test('release iOS mantem bundle, versao remota e permissoes minimas', () => {
   assert.equal(app.ios.bundleIdentifier, 'app.naturelens');
+  assert.equal(
+    app.ios.supportsTablet,
+    false,
+    'o lancamento inicial e somente iPhone ate existir prova real de layout e capturas para iPad'
+  );
   assert.equal(app.ios.config.usesNonExemptEncryption, false);
   assert.equal(eas.cli.appVersionSource, 'remote');
   assert.equal(eas.build.production.autoIncrement, true);
@@ -106,6 +111,23 @@ test('release iOS mantem bundle, versao remota e permissoes minimas', () => {
     'utf8'
   );
   assert.match(audioPodspec, /:ios\s*=>\s*'16\.4'/);
+});
+
+test('arquivo enviado ao EAS exclui segredos, dossies e auditorias locais', () => {
+  const easIgnore = fs.readFileSync(path.join(root, '.easignore'), 'utf8');
+  for (const pattern of [
+    '.env',
+    '.env.*',
+    'node_modules/',
+    '.vercel',
+    '/android/',
+    '/ios/',
+    'CONTEXTO/',
+    'audits/',
+  ]) {
+    assert.ok(easIgnore.split(/\r?\n/).includes(pattern), `${pattern} precisa ficar fora do upload EAS`);
+  }
+  assert.match(easIgnore, /!\.env\.example/);
 });
 
 test('release Android limita cada permissao nativa ao recurso declarado', () => {

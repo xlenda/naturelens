@@ -30,10 +30,9 @@
 - Exclusão: `https://naturelensapp.cloud/account-deletion.html`.
 - Capturas 6,7 polegadas: `app-store-screenshots/pt-BR/` e `en-US/`, cinco
   arquivos 1290 x 2796 sem moldura de navegador.
-- `supportsTablet` ainda está ativo. Antes da submissão, validar o layout em iPad
-  real/simulador macOS e preparar as capturas exigidas para iPad; se o produto
-  decidir ser somente iPhone, desativar esse alvo antes do build final em vez de
-  enviar uma experiência de tablet sem revisão.
+- O lançamento inicial é somente iPhone (`supportsTablet: false`). Ativar iPad
+  apenas em uma versão futura, depois de validar o layout em aparelho/simulador
+  e preparar as capturas próprias exigidas pela ficha.
 - Descrição: usar a mesma base localizada de `metadata/`, removendo qualquer
   frase exclusiva da Play Store.
 - Informar um e-mail de suporte real e uma URL de suporte monitorada.
@@ -67,15 +66,13 @@
 2. `npm run verify:db`.
 3. `npx expo-doctor`.
 4. Build production no EAS e instalação em iPhone real/TestFlight.
-5. Enquanto `supportsTablet` estiver ativo, validar também iPad e anexar as
-   capturas correspondentes na ficha.
-6. Validar câmera, galeria, idioma do aparelho, salvamento/restauração, exclusão
+5. Validar câmera, galeria, idioma do aparelho, salvamento/restauração, exclusão
    de conta, Comunidade, localização aproximada e pedido de avaliação após uso real.
-7. Em iPhone real, validar que o microfone é solicitado somente no primeiro toque
+6. Em iPhone real, validar que o microfone é solicitado somente no primeiro toque
    em gravar, que a captura para ao tirar o app do primeiro plano e que nenhum
    áudio aparece na coleção. Confirmar também que o WAV temporário já foi
    apagado antes de a função Vercel receber o upload.
-8. Validar e arquivar as configurações efetivas de retenção, access/application
+7. Validar e arquivar as configurações efetivas de retenção, access/application
    logs, APM, log drains, backups e subprocessadores da Vercel e do host Perch.
    Sem essa prova, não declarar o áudio efêmero ou não coletado à Apple.
 
