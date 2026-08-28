@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { Dimensions, Image, StyleSheet, TouchableOpacity, View } from 'react-native';
+import { Asset } from 'expo-asset';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Ionicons } from '@expo/vector-icons';
 import { colors } from './theme';
@@ -15,8 +16,8 @@ export default function IntroMascotVideo({ reduceMotion, t }) {
   const [videoFailed, setVideoFailed] = useState(false);
   const [videoPlaying, setVideoPlaying] = useState(false);
   const [muted, setMuted] = useState(true);
-  const videoUri = Image.resolveAssetSource(VIDEO)?.uri;
-  const posterUri = Image.resolveAssetSource(POSTER)?.uri;
+  const videoUri = Asset.fromModule(VIDEO).uri;
+  const posterUri = Asset.fromModule(POSTER).uri;
   const savesData = typeof navigator !== 'undefined' && navigator.connection?.saveData === true;
   const allowMotion = !reduceMotion && !savesData;
 

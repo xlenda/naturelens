@@ -51,6 +51,10 @@ test('onboarding abre com o video do mascote antes das perguntas', () => {
   assert.match(source, /import IntroMascotVideo from '\.\.\/components\/IntroMascotVideo'/);
   assert.match(webVideo, /const POSTER = require\('\.\.\/assets\/art\/naturelens-mascot-intro-poster\.jpg'\)/);
   assert.match(webVideo, /const VIDEO = require\('\.\.\/assets\/art\/naturelens-mascot-intro-fast\.mp4'\)/);
+  assert.match(webVideo, /import \{ Asset \} from 'expo-asset'/);
+  assert.match(webVideo, /Asset\.fromModule\(VIDEO\)\.uri/);
+  assert.match(webVideo, /Asset\.fromModule\(POSTER\)\.uri/);
+  assert.doesNotMatch(webVideo, /Image\.resolveAssetSource/);
   assert.match(webVideo, /const \[muted, setMuted\] = useState\(true\)/);
   assert.match(webVideo, /const allowMotion = !reduceMotion && !savesData/);
   assert.match(webVideo, /onPlaying: \(\) => \{/);
