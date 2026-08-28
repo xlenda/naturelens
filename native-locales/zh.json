@@ -1,0 +1,8 @@
+{
+  "ios": {
+    "NSCameraUsageDescription": "NatureLens 仅在您选择拍摄自然对象以进行识别时使用相机。",
+    "NSPhotoLibraryUsageDescription": "NatureLens 仅访问您为识别自然对象而选择的照片。",
+    "NSLocationWhenInUseUsageDescription": "NatureLens 仅在您请求当地气候信息时使用大致位置。",
+    "NSMicrophoneUsageDescription": "NatureLens 仅在您选择录制自然声音以进行识别时使用麦克风。"
+  }
+}

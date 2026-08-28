@@ -1,0 +1,8 @@
+{
+  "ios": {
+    "NSCameraUsageDescription": "NatureLens kamerayı yalnızca tanımlama amacıyla doğanın fotoğrafını çekmeyi seçtiğinizde kullanır.",
+    "NSPhotoLibraryUsageDescription": "NatureLens yalnızca doğayı tanımlamak için seçtiğiniz fotoğraflara erişir.",
+    "NSLocationWhenInUseUsageDescription": "NatureLens yaklaşık konumunuzu yalnızca yerel iklim bilgisi istediğinizde kullanır.",
+    "NSMicrophoneUsageDescription": "NatureLens mikrofonu yalnızca tanımlama amacıyla bir doğa sesi kaydetmeyi seçtiğinizde kullanır."
+  }
+}

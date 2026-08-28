@@ -20,6 +20,12 @@ const { buildWaveformPeaks } = require('./audioWaveform');
 const TARGET_SAMPLE_RATE = 32000;
 export const MAX_SECONDS = 10;
 
+// Native platforms sweep an app-owned recording cache at launch. The web
+// recorder never creates a filesystem WAV, so this implementation is a no-op.
+export function cleanupAbandonedNativeAudio() {
+  return true;
+}
+
 export function canRecord() {
   if (Platform.OS !== 'web' || typeof navigator === 'undefined') return false;
   if (!navigator.mediaDevices?.getUserMedia) return false;

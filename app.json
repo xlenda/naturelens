@@ -7,6 +7,25 @@
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "automatic",
     "scheme": "naturelens",
+    "locales": {
+      "ar": "./native-locales/ar.json",
+      "cs": "./native-locales/cs.json",
+      "da": "./native-locales/da.json",
+      "de": "./native-locales/de.json",
+      "en": "./native-locales/en.json",
+      "es": "./native-locales/es.json",
+      "fr": "./native-locales/fr.json",
+      "hi": "./native-locales/hi.json",
+      "it": "./native-locales/it.json",
+      "ko": "./native-locales/ko.json",
+      "nl": "./native-locales/nl.json",
+      "pl": "./native-locales/pl.json",
+      "pt": "./native-locales/pt.json",
+      "sv": "./native-locales/sv.json",
+      "tr": "./native-locales/tr.json",
+      "zh": "./native-locales/zh.json",
+      "zh-Hant": "./native-locales/zh-Hant.json"
+    },
     "splash": {
       "backgroundColor": "#0E1512"
     },
@@ -17,9 +36,11 @@
         "usesNonExemptEncryption": false
       },
       "infoPlist": {
+        "CFBundleAllowMixedLocalizations": true,
         "NSCameraUsageDescription": "NatureLens uses the camera only when you choose to photograph nature for identification.",
         "NSPhotoLibraryUsageDescription": "NatureLens accesses only the photos you choose for nature identification.",
-        "NSLocationWhenInUseUsageDescription": "NatureLens uses approximate location only when you request local climate context."
+        "NSLocationWhenInUseUsageDescription": "NatureLens uses approximate location only when you request local climate context.",
+        "NSMicrophoneUsageDescription": "NatureLens uses the microphone only when you choose to record a nature sound for identification."
       }
     },
     "android": {
@@ -50,7 +71,7 @@
         "expo-camera",
         {
           "cameraPermission": "Allow NatureLens to use your camera only when you choose to photograph nature.",
-          "microphonePermission": false,
+          "microphonePermission": "NatureLens uses the microphone only when you choose to record a nature sound for identification.",
           "recordAudioAndroid": false
         }
       ],
@@ -59,7 +80,7 @@
         {
           "cameraPermission": "Allow NatureLens to use your camera to identify nature.",
           "photosPermission": "Allow NatureLens to access photos you choose for nature identification.",
-          "microphonePermission": false
+          "microphonePermission": "NatureLens uses the microphone only when you choose to record a nature sound for identification."
         }
       ],
       "expo-localization",
@@ -76,10 +97,21 @@
           "enablePhoneStateHandling": false,
           "enableNotifications": false,
           "enableBackgroundAudio": false,
-          "enableDeviceDetection": false
+          "enableDeviceDetection": false,
+          "iosConfig": {
+            "microphoneUsageDescription": "NatureLens uses the microphone only when you choose to record a nature sound for identification."
+          }
         }
       ],
-      "expo-video"
+      "expo-video",
+      [
+        "expo-build-properties",
+        {
+          "ios": {
+            "deploymentTarget": "16.4"
+          }
+        }
+      ]
     ],
     "extra": {
       "eas": {

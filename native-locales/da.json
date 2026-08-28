@@ -1,0 +1,8 @@
+{
+  "ios": {
+    "NSCameraUsageDescription": "NatureLens bruger kun kameraet, når du vælger at fotografere naturen til identifikation.",
+    "NSPhotoLibraryUsageDescription": "NatureLens får kun adgang til de fotos, du vælger til identifikation af naturen.",
+    "NSLocationWhenInUseUsageDescription": "NatureLens bruger kun din omtrentlige placering, når du anmoder om oplysninger om det lokale klima.",
+    "NSMicrophoneUsageDescription": "NatureLens bruger kun mikrofonen, når du vælger at optage en naturlyd til identifikation."
+  }
+}

@@ -24,13 +24,16 @@
 #   * Hugging Face Space, Docker SDK          - see Dockerfile next to this file
 #   * Fly.io / Render / Railway               - same Dockerfile
 #   * A VPS with >= 2 GB free RAM             - uvicorn app:app --port 8000
-# Set PERCH_ENDPOINT in Vercel to the resulting URL, and PERCH_AUTH_TOKEN to the
-# same value as AUTH_TOKEN here if you want the endpoint protected.
+# Set PERCH_ENDPOINT in Vercel to the resulting HTTPS URL, and
+# PERCH_AUTH_TOKEN to the same 32+-character AUTH_TOKEN here. The host refuses
+# to start without that boundary.
 
 import base64
 import os
 import csv
 import io
+import hashlib
+import hmac
 import threading
 
 import numpy as np
@@ -38,11 +41,14 @@ import onnxruntime as ort
 from fastapi import FastAPI, HTTPException, Header
 from pydantic import BaseModel
 from huggingface_hub import hf_hub_download
+from starlette.responses import JSONResponse
 
 MODEL_REPO = "justinchuby/Perch-onnx"
 # The _no_dft variant replaces the DFT node with a MatMul, which the author
 # reports as faster. Same weights, same outputs.
 MODEL_FILE = "perch_v2_no_dft.onnx"
+MODEL_REVISION = "da88bf8c37c0b3068fc706fe509f633b9fbd28c1"
+MODEL_SHA256 = "4dcf71c18a147198545944bb5149697e89e3ad2e16637fa8f0edf6d13035a017"
 
 # The ONNX repo ships weights ONLY - no label list, so a raw model answers with
 # a class index like "4821". The labels live with the original saved_model
@@ -59,6 +65,9 @@ MODEL_FILE = "perch_v2_no_dft.onnx"
 LABEL_REPO = "cgeorgiaw/Perch"
 LABEL_FILE = "assets/labels.csv"
 EBIRD_FILE = "assets/perch_v2_ebird_classes.csv"
+LABEL_REVISION = "c3c3c816976a6c1bb75140b8fbaef7397a6f708f"
+LABEL_SHA256 = "e4d5c0397d8fb08bf90c6b13a34810af53504faad927e472fcc567793c9de057"
+EBIRD_SHA256 = "861aef71b679d8dcf07c0c71375188c46b680bd808c61a539f254dc21319bcc9"
 
 # Perch's class list is not purely taxonomic. 9,706 classes carry an eBird code
 # (eBird covers birds and nothing else, so that code IS the bird test), 4,891
@@ -78,10 +87,17 @@ NOISE_GROUP = "noise"
 SAMPLE_RATE = 32000
 WINDOW = 5 * SAMPLE_RATE
 
-# Ceiling on how much of a recording is analysed, so an oversized upload cannot
-# turn into an unbounded batch on a 2-core box. The app records 10 seconds, so 6
-# windows (30s) is generous headroom rather than a limit anyone will hit.
-MAX_WINDOWS = 6
+# Ceiling on how much of a recording is analysed, aligned with the Vercel hop.
+# The app records 10 seconds; 12 seconds leaves device-timing headroom without
+# letting a direct caller multiply inference work behind Vercel's stricter gate.
+MAX_AUDIO_SECONDS = 12
+MAX_WINDOWS = 3
+MAX_AUDIO_BYTES = MAX_AUDIO_SECONDS * SAMPLE_RATE * 4
+MAX_AUDIO_BASE64_CHARS = ((MAX_AUDIO_BYTES + 2) // 3) * 4
+# JSON field names, sample rate and top_k need only a few dozen bytes. Keep a
+# small explicit envelope while rejecting oversized bodies before Pydantic
+# allocates the full base64 string.
+MAX_REQUEST_BYTES = MAX_AUDIO_BASE64_CHARS + 4096
 
 # The classifier head. Perch also returns `embedding` (1536), `spatial_embedding`
 # and `spectrogram`; selecting by NAME matters because an earlier version picked
@@ -127,8 +143,81 @@ def _calibrate(logit: float) -> float:
     return float(min(1.0, max(0.0, (logit - NOISE_FLOOR) / span)))
 
 AUTH_TOKEN = os.getenv("AUTH_TOKEN", "").strip()
+if len(AUTH_TOKEN) < 32:
+    raise RuntimeError("AUTH_TOKEN must contain at least 32 characters")
 
 app = FastAPI()
+
+
+class SecurityBoundaryMiddleware:
+    """Authenticate and cap the POST body before FastAPI/Pydantic reads it."""
+
+    def __init__(self, app):
+        self.inner = app
+
+    async def __call__(self, scope, receive, send):
+        if (
+            scope.get("type") != "http"
+            or scope.get("method") != "POST"
+            or scope.get("path") != "/"
+        ):
+            await self.inner(scope, receive, send)
+            return
+
+        headers = {key.lower(): value for key, value in scope.get("headers", [])}
+        supplied = headers.get(b"authorization", b"").decode("utf-8", "ignore")
+        if not hmac.compare_digest(supplied, f"Bearer {AUTH_TOKEN}"):
+            await JSONResponse({"detail": "unauthorized"}, status_code=401)(scope, receive, send)
+            return
+
+        content_length = headers.get(b"content-length")
+        if content_length:
+            try:
+                if int(content_length) > MAX_REQUEST_BYTES:
+                    await JSONResponse({"detail": "request too large"}, status_code=413)(scope, receive, send)
+                    return
+            except ValueError:
+                await JSONResponse({"detail": "invalid content length"}, status_code=400)(scope, receive, send)
+                return
+
+        # Read at most the accepted envelope before handing control to FastAPI.
+        # Raising from a wrapped receive() is not reliable here: Starlette's
+        # body parser translates that exception into its generic HTTP 400, so
+        # the middleware never gets a chance to send the intended 413. A body
+        # of this size is small enough to buffer once, and Pydantic still never
+        # sees (or allocates a string for) an oversized base64 payload.
+        chunks = []
+        received = 0
+        while True:
+            message = await receive()
+            if message.get("type") == "http.disconnect":
+                return
+            if message.get("type") != "http.request":
+                continue
+            chunk = message.get("body", b"")
+            received += len(chunk)
+            if received > MAX_REQUEST_BYTES:
+                await JSONResponse({"detail": "request too large"}, status_code=413)(scope, receive, send)
+                return
+            if chunk:
+                chunks.append(chunk)
+            if not message.get("more_body", False):
+                break
+
+        body = b"".join(chunks)
+        replayed = False
+
+        async def replay_receive():
+            nonlocal replayed
+            if not replayed:
+                replayed = True
+                return {"type": "http.request", "body": body, "more_body": False}
+            return {"type": "http.disconnect"}
+
+        await self.inner(scope, replay_receive, send)
+
+
+app.add_middleware(SecurityBoundaryMiddleware)
 
 # Loaded lazily on the first request, not at import: a platform that health-checks
 # the port before the 390 MB model finishes loading would otherwise mark the
@@ -164,16 +253,37 @@ def _is_species(label: str) -> bool:
     return "_" not in label and len(label.split(" ")) == 2
 
 
+def _verify_sha256(path: str, expected: str) -> None:
+    digest = hashlib.sha256()
+    with open(path, "rb") as artifact:
+        for chunk in iter(lambda: artifact.read(1024 * 1024), b""):
+            digest.update(chunk)
+    actual = digest.hexdigest()
+    if not hmac.compare_digest(actual, expected):
+        raise RuntimeError(
+            f"artifact integrity check failed for {os.path.basename(path)}"
+        )
+
+
 def _load_labels():
     """Class index -> {scientific, code, group}, or None if unavailable.
 
-    Returning None is a real outcome, not a failure: the caller then reports the
-    raw class index, which is useless to a person but keeps the endpoint honest
-    rather than inventing a name.
+    None makes the endpoint fail closed with 503. A numeric class index is not
+    an identity and must never become a species card while taxonomy is missing.
     """
     try:
-        label_path = hf_hub_download(repo_id=LABEL_REPO, filename=LABEL_FILE)
-        ebird_path = hf_hub_download(repo_id=LABEL_REPO, filename=EBIRD_FILE)
+        label_path = hf_hub_download(
+            repo_id=LABEL_REPO,
+            filename=LABEL_FILE,
+            revision=LABEL_REVISION,
+        )
+        ebird_path = hf_hub_download(
+            repo_id=LABEL_REPO,
+            filename=EBIRD_FILE,
+            revision=LABEL_REVISION,
+        )
+        _verify_sha256(label_path, LABEL_SHA256)
+        _verify_sha256(ebird_path, EBIRD_SHA256)
 
         def read(path):
             with open(path, newline="", encoding="utf-8") as f:
@@ -213,7 +323,8 @@ def _load_labels():
                 }
             )
         return out
-    except Exception:
+    except Exception as error:
+        print(f"perch: label load failed ({type(error).__name__})", flush=True)
         return None
 
 
@@ -241,21 +352,25 @@ def _get_session():
        their own retry flag, so a later request tries again.
     """
     global _session, _labels, _labels_failed
-    # Ready means BOTH loaded - or labels tried and known-unavailable, in which
-    # case serving index labels is at least a deliberate degraded mode rather
-    # than a race.
-    if _session is not None and (_labels is not None or _labels_failed):
+    # Ready means both loaded. A transient Hub/DNS failure must not latch an
+    # index-only mode forever; the next request retries the pinned labels.
+    if _session is not None and _labels is not None:
         return _session
 
     with _lock:
         # Re-check inside the lock: another thread may have finished while this
         # one waited.
-        if _session is not None and (_labels is not None or _labels_failed):
+        if _session is not None and _labels is not None:
             return _session
 
         session = _session
         if session is None:
-            model_path = hf_hub_download(repo_id=MODEL_REPO, filename=MODEL_FILE)
+            model_path = hf_hub_download(
+                repo_id=MODEL_REPO,
+                filename=MODEL_FILE,
+                revision=MODEL_REVISION,
+            )
+            _verify_sha256(model_path, MODEL_SHA256)
             opts = ort.SessionOptions()
             # One thread per core is the default and it thrashes on small shared
             # hosts; 2 is enough for a single 5-second window.
@@ -269,8 +384,8 @@ def _get_session():
                 # Record the failure so the next request retries instead of
                 # inheriting it silently.
                 _labels_failed = True
-                print("perch: label load FAILED - responses will name species by "
-                      "class index until a later request succeeds", flush=True)
+                print("perch: label load FAILED - taxonomy unavailable; retrying "
+                      "on a later request", flush=True)
             else:
                 _labels_failed = False
 
@@ -355,7 +470,10 @@ def health():
 
 @app.post("/")
 def identify(req: Request, authorization: str = Header(default="")):
-    if AUTH_TOKEN and authorization != f"Bearer {AUTH_TOKEN}":
+    global _labels, _labels_failed
+    # Middleware performs this check before body parsing; keep it here as a
+    # defence-in-depth invariant if the route is mounted differently in tests.
+    if not hmac.compare_digest(authorization, f"Bearer {AUTH_TOKEN}"):
         raise HTTPException(status_code=401, detail="unauthorized")
 
     try:
@@ -374,12 +492,12 @@ def identify(req: Request, authorization: str = Header(default="")):
     # the per-request cost sixfold against a 2-core box that also serves the
     # owner's production dashboard. Checking the byte length is exact and free:
     # 4 bytes per sample, so the ceiling is arithmetic, not a guess.
-    max_samples = MAX_WINDOWS * WINDOW
+    max_samples = MAX_AUDIO_SECONDS * SAMPLE_RATE
     if len(raw) // 4 > max_samples:
         raise HTTPException(
             status_code=413,
             detail=(
-                f"audio is longer than {MAX_WINDOWS * WINDOW // SAMPLE_RATE}s "
+                f"audio is longer than {MAX_AUDIO_SECONDS}s "
                 f"({len(raw) // 4} samples, limit {max_samples})"
             ),
         )
@@ -405,6 +523,8 @@ def identify(req: Request, authorization: str = Header(default="")):
     batch = _windows(samples)
 
     session = _get_session()
+    if _labels is None:
+        raise HTTPException(status_code=503, detail="taxonomy unavailable, try again")
     input_name = session.get_inputs()[0].name
     names = [o.name for o in session.get_outputs()]
     if LOGITS_OUTPUT not in names:
@@ -428,10 +548,8 @@ def identify(req: Request, authorization: str = Header(default="")):
     # check that catches a mismatch; without it a shifted or resized class list
     # would rename every species to a neighbour and still look plausible.
     #
-    # A mismatch is treated as a permanent, LOGGED degradation rather than a
-    # silent one: _labels_failed stops _get_session() from retrying a load that
-    # will fail the same way, and the print is the only record anyone will have.
-    global _labels, _labels_failed
+    # A mismatch fails closed. The next request reloads the pinned taxonomy;
+    # serving raw numeric class IDs would be useless and risks mislabelling.
     if _labels is not None and len(_labels) != logits.shape[-1]:
         print(
             f"perch: label/model width mismatch ({len(_labels)} labels vs "
@@ -440,6 +558,7 @@ def identify(req: Request, authorization: str = Header(default="")):
         )
         _labels = None
         _labels_failed = True
+        raise HTTPException(status_code=503, detail="taxonomy/model mismatch")
 
     # Best window per class, on the raw logits. A call heard clearly once should
     # not be averaged down by the seconds of silence around it.

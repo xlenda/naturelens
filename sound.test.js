@@ -29,7 +29,9 @@ const {
   resampleLinear,
   float32ToBase64,
 } = require('./components/audioPcm');
+const { pcm16FromWavBytes } = require('./components/audioWav');
 const { fromByteArray, toByteArray } = require('base64-js');
+const { isPerchConfigured } = require('./api/_lib/perch');
 
 const identifySrc = fs.readFileSync(path.join(__dirname, 'api/identify.js'), 'utf8');
 const perchSrc = fs.readFileSync(path.join(__dirname, 'api/_lib/perch.js'), 'utf8');
@@ -155,19 +157,19 @@ test('the whole recording is analysed, not just a centre crop', () => {
     /logits\.max\(axis=0\)/,
     'a call heard clearly in one window must not be averaged down by silence'
   );
-  assert.match(hostSrc, /MAX_WINDOWS = 6/, 'an oversized upload must not become an unbounded batch');
+  assert.match(hostSrc, /MAX_AUDIO_SECONDS = 12/);
+  assert.match(hostSrc, /MAX_WINDOWS = 3/, 'an oversized upload must not become an unbounded batch');
 });
 
 test('a label list of the wrong width is discarded instead of mislabelling species', () => {
   // The CSVs come from a different repo than the weights, so a width mismatch
   // must disable them rather than rename every species to its alphabetical
-  // neighbour. The discard is also LOGGED and latched: silently degrading is how
-  // this class of bug survives, and retrying a load that will fail identically
-  // just burns Hub requests.
+  // neighbour. The request fails closed and the next request retries the pinned
+  // taxonomy; serving raw numeric ids is not a safe degraded mode.
   assert.match(
     hostSrc,
-    /len\(_labels\) != logits\.shape\[-1\][\s\S]{0,400}_labels = None[\s\S]{0,40}_labels_failed = True/,
-    'a width mismatch must discard the labels, log it, and not retry forever'
+    /len\(_labels\) != logits\.shape\[-1\][\s\S]{0,400}_labels = None[\s\S]{0,80}_labels_failed = True[\s\S]{0,120}status_code=503/,
+    'a width mismatch must discard the labels, fail closed, and permit a later retry'
   );
 });
 
@@ -259,6 +261,26 @@ test('the recorder never leaves the microphone open', () => {
   );
 });
 
+test('sound uploads have lifecycle cancellation and bounded timeouts at both hops', () => {
+  const screen = fs.readFileSync(path.join(__dirname, 'screens/SoundScreen.js'), 'utf8');
+  const client = fs.readFileSync(path.join(__dirname, 'components/identify.js'), 'utf8');
+  const analyse = screen.slice(screen.indexOf('const analyse = async'), screen.indexOf('const stopAndPrepare'));
+
+  assert.match(analyse, /const controller = new AbortController\(\)/);
+  assert.match(analyse, /identifySound\(clip\.base64, clip\.sampleRate, \{\s*signal: controller\.signal/);
+  assert.match(screen, /cancelActiveRecording[\s\S]{0,180}analysisAbortRef\.current\?\.abort\(\)/);
+
+  assert.match(client, /SOUND_REQUEST_TIMEOUT_MS = 60000/);
+  assert.match(client, /const controller = new AbortController\(\)/);
+  assert.match(client, /const timeout = setTimeout\([\s\S]{0,160}controller\.abort\(\)/);
+  assert.match(client, /fetch\([\s\S]{0,500}signal: controller\.signal/);
+  assert.match(client, /finally \{\s*\n\s*clearTimeout\(timeout\)/);
+  assert.match(client, /removeEventListener\?\.\('abort', abortFromLifecycle\)/);
+
+  assert.match(perchSrc, /STEP_TIMEOUT_MS = 45000/);
+  assert.match(perchSrc, /signal: AbortSignal\.timeout\(STEP_TIMEOUT_MS\)/);
+});
+
 test('a double-tap cannot start two recordings', () => {
   const screen = fs.readFileSync(path.join(__dirname, 'screens/SoundScreen.js'), 'utf8');
   assert.match(screen, /busyRef = useRef\(false\)/, 'a ref, not state: a double-tap lands in one React batch');
@@ -304,6 +326,41 @@ test('leaving during the native permission prompt cancels the late recorder', ()
   );
 });
 
+test('Perch artifacts are locked to reviewed revisions and byte hashes', () => {
+  const expectedPins = {
+    MODEL_REVISION: 'da88bf8c37c0b3068fc706fe509f633b9fbd28c1',
+    MODEL_SHA256: '4dcf71c18a147198545944bb5149697e89e3ad2e16637fa8f0edf6d13035a017',
+    LABEL_REVISION: 'c3c3c816976a6c1bb75140b8fbaef7397a6f708f',
+    LABEL_SHA256: 'e4d5c0397d8fb08bf90c6b13a34810af53504faad927e472fcc567793c9de057',
+    EBIRD_SHA256: '861aef71b679d8dcf07c0c71375188c46b680bd808c61a539f254dc21319bcc9',
+  };
+  for (const [name, expected] of Object.entries(expectedPins)) {
+    const match = hostSrc.match(new RegExp(`^${name} = "([0-9a-f]+)"$`, 'm'));
+    assert.ok(match, `${name} must be a literal reviewed pin`);
+    assert.equal(match[1], expected, `${name} changed without updating the reviewed artifact gate`);
+  }
+
+  const downloads = hostSrc.match(/hf_hub_download\([\s\S]*?\n\s*\)/g) || [];
+  assert.equal(downloads.length, 3, 'model and both taxonomy files must be explicit downloads');
+  assert.ok(downloads.every((call) => /revision=(?:MODEL|LABEL)_REVISION/.test(call)));
+
+  const labelLoad = hostSrc.slice(hostSrc.indexOf('def _load_labels'), hostSrc.indexOf('def _get_session'));
+  assert.ok(labelLoad.indexOf('_verify_sha256(label_path, LABEL_SHA256)') > 0);
+  assert.ok(labelLoad.indexOf('_verify_sha256(ebird_path, EBIRD_SHA256)') > 0);
+  assert.ok(
+    labelLoad.indexOf('_verify_sha256(ebird_path, EBIRD_SHA256)') < labelLoad.indexOf('def read(path)'),
+    'taxonomy bytes must be verified before either CSV is parsed'
+  );
+
+  const modelLoad = hostSrc.slice(hostSrc.indexOf('if session is None:'), hostSrc.indexOf('labels = _labels'));
+  assert.ok(modelLoad.indexOf('_verify_sha256(model_path, MODEL_SHA256)') > 0);
+  assert.ok(
+    modelLoad.indexOf('_verify_sha256(model_path, MODEL_SHA256)') < modelLoad.indexOf('ort.InferenceSession'),
+    'the model must be verified before ONNX Runtime parses it'
+  );
+  assert.match(hostSrc, /actual = digest\.hexdigest\(\)[\s\S]{0,100}hmac\.compare_digest\(actual, expected\)/);
+});
+
 test('recording is cancelled when the sound screen blurs or the app leaves foreground', () => {
   const screen = fs.readFileSync(path.join(__dirname, 'screens/SoundScreen.js'), 'utf8');
   assert.match(screen, /AppState\.addEventListener\('change'/);
@@ -317,17 +374,25 @@ test('recording is cancelled when the sound screen blurs or the app leaves foreg
     /navigation\.addListener\('blur',[\s\S]{0,160}cancelActiveRecording\(\)/,
     'changing tabs must release the microphone even when React keeps the screen mounted'
   );
+  const permissionResult = screen.slice(
+    screen.indexOf('const handle = await startRecording()'),
+    screen.indexOf('handleRef.current = handle')
+  );
+  assert.match(permissionResult, /sessionId !== recordingSessionRef\.current/);
+  assert.match(permissionResult, /!screenFocusedRef\.current/);
+  assert.match(permissionResult, /!appActiveRef\.current/);
   assert.match(
-    screen,
-    /!screenFocusedRef\.current \|\| !appActiveRef\.current[\s\S]{0,100}handle\.cancel\(\)/,
-    'a late permission result must not reopen the microphone off-screen'
+    permissionResult,
+    /handle\.cancel\(\)/,
+    'a stale permission result must not reopen the microphone off-screen'
   );
 });
 
-test('microphone errors give Android instructions in the APK and browser instructions on web', () => {
+test('microphone errors give Android, iOS and browser-specific instructions', () => {
   const screen = fs.readFileSync(path.join(__dirname, 'screens/SoundScreen.js'), 'utf8');
   for (const key of [
     'permissionAndroidBody',
+    'permissionIosBody',
     'permissionWebBody',
     'unsupportedAndroidBody',
     'unsupportedWebBody',
@@ -352,15 +417,26 @@ test('the host publishes labels before the session and can retry a failed load',
   // still-None _labels and answer with a class index; a failed load then latched
   // forever because the fast path short-circuited on _session alone.
   assert.match(hostSrc, /_labels_failed/, 'a failed label load must be retryable');
-  assert.match(
-    hostSrc,
-    /_session is not None and \(_labels is not None or _labels_failed\)/,
-    'the fast path must require labels, not just a session'
-  );
   const body = hostSrc.slice(hostSrc.indexOf('def _get_session'), hostSrc.indexOf('class Request'));
+  assert.match(
+    body,
+    /_session is not None and _labels is not None/,
+    'the fast path must require a real taxonomy, not a previous failure flag'
+  );
+  assert.doesNotMatch(
+    body,
+    /_session is not None and \([^\n]*_labels_failed/,
+    'a transient label failure must not latch until process restart'
+  );
+  assert.match(body, /if labels is None:\s*\n\s*labels = _load_labels\(\)/);
   assert.ok(
     body.indexOf('_labels = labels') < body.indexOf('_session = session'),
     'labels must be published BEFORE the session so no reader sees one without the other'
+  );
+  assert.match(
+    hostSrc,
+    /session = _get_session\(\)\s*\n\s*if _labels is None:\s*\n\s*raise HTTPException\(status_code=503/,
+    'a failed taxonomy retry must fail closed instead of returning a numeric class id'
   );
 });
 
@@ -383,28 +459,93 @@ test('non-finite audio samples are refused', () => {
   assert.match(hostSrc, /np\.all\(np\.isfinite\(samples\)\)/);
 });
 
-test('the endpoint stays disabled until a host is configured', () => {
+test('the endpoint requires a long token and HTTPS outside local development', () => {
   assert.match(
     identifySrc,
-    /category === 'sound'[\s\S]{0,80}PERCH_ENDPOINT/,
-    'with no PERCH_ENDPOINT the category must report itself unavailable'
+    /category === 'sound'[\s\S]{0,80}isPerchConfigured\(\)/,
+    'the category gate must validate the complete secure Perch configuration'
   );
-  assert.match(perchSrc, /PERCH_AUTH_TOKEN/, 'the host must be protected by a bearer token');
+  const token = 't'.repeat(32);
+  const keys = ['NODE_ENV', 'PERCH_ENDPOINT', 'PERCH_AUTH_TOKEN'];
+  const previous = Object.fromEntries(keys.map((key) => [key, process.env[key]]));
+  const configured = (endpoint, authToken, nodeEnv = 'production') => {
+    process.env.NODE_ENV = nodeEnv;
+    if (endpoint === undefined) delete process.env.PERCH_ENDPOINT;
+    else process.env.PERCH_ENDPOINT = endpoint;
+    if (authToken === undefined) delete process.env.PERCH_AUTH_TOKEN;
+    else process.env.PERCH_AUTH_TOKEN = authToken;
+    return isPerchConfigured();
+  };
+
+  try {
+    assert.equal(configured('https://perch.example.com/', token), true);
+    assert.equal(configured('https://perch.example.com/', undefined), false);
+    assert.equal(configured('https://perch.example.com/', 'too-short'), false);
+    assert.equal(configured('http://perch.example.com/', token), false);
+    assert.equal(configured('https://user:password@perch.example.com/', token), false);
+    assert.equal(configured('http://127.0.0.1:7860/', token, 'development'), true);
+  } finally {
+    for (const key of keys) {
+      if (previous[key] === undefined) delete process.env[key];
+      else process.env[key] = previous[key];
+    }
+  }
+
+  assert.match(perchSrc, /Authorization: `Bearer \$\{config\.token\}`/);
+  assert.match(hostSrc, /if len\(AUTH_TOKEN\) < 32:[\s\S]{0,100}raise RuntimeError/);
+  assert.match(hostSrc, /hmac\.compare_digest\(supplied, f"Bearer \{AUTH_TOKEN\}"\)/);
 });
 
-test('Android exposes the PCM recorder and requests only foreground microphone permission', () => {
+test('native recordings stay in an owned cache and startup removes legacy WAVs', () => {
+  const native = fs.readFileSync(path.join(__dirname, 'components/audioRecorderNative.js'), 'utf8');
+  const appSource = fs.readFileSync(path.join(__dirname, 'App.js'), 'utf8');
+
+  assert.match(native, /AUDIO_CACHE_DIRECTORY = 'naturelens-audio-v1'/);
+  assert.match(native, /new Directory\(Paths\.cache, AUDIO_CACHE_DIRECTORY\)/);
+  const prepare = native.slice(
+    native.indexOf('function prepareAudioOutputDirectory'),
+    native.indexOf('export function canRecord')
+  );
+  assert.match(prepare, /resetOwnedAudioCache\(\)/);
+  assert.match(prepare, /deleteLegacyPersistentWavs\(\)/);
+  assert.match(prepare, /return directory\.uri/);
+
+  const start = native.slice(native.indexOf('export async function startRecording'));
+  assert.match(start, /const outputDirectory = prepareAudioOutputDirectory\(\)/);
+  assert.match(start, /startRecording\(\{[\s\S]*?outputDirectory,/);
+
+  const legacy = native.slice(
+    native.indexOf('function deleteLegacyPersistentWavs'),
+    native.indexOf('function resetOwnedAudioCache')
+  );
+  assert.match(native, /LEGACY_AUDIO_FILE = \/\^\[0-9a-f\]/i);
+  assert.match(legacy, /Paths\.document/);
+  assert.match(legacy, /LEGACY_AUDIO_FILE\.test\(entry\.name \|\| ''\)/);
+  assert.match(legacy, /typeof entry\.delete === 'function'/);
+
+  const cleanup = native.slice(
+    native.indexOf('export function cleanupAbandonedNativeAudio'),
+    native.indexOf('function prepareAudioOutputDirectory')
+  );
+  assert.match(cleanup, /resetOwnedAudioCache\(\)/);
+  assert.match(cleanup, /deleteLegacyPersistentWavs\(\)/);
+  assert.match(appSource, /import \{ cleanupAbandonedNativeAudio \} from '\.\/components\/audioRecorder'/);
+  assert.match(appSource, /useEffect\(\(\) => \{[\s\S]{0,220}cleanupAbandonedNativeAudio\(\);[\s\S]{0,40}\}, \[\]\)/);
+});
+
+test('Android and iOS expose one foreground-only native PCM recorder', () => {
   const categories = fs.readFileSync(path.join(__dirname, 'components/categories.js'), 'utf8');
   assert.match(
     categories,
-    /sound:\s*\{[\s\S]*?enabled: Platform\.OS === 'web' \|\| Platform\.OS === 'android'/,
-    'sound identification must be visible on Android and web'
+    /sound:\s*\{[\s\S]*?enabled: Platform\.OS === 'web' \|\| Platform\.OS === 'android' \|\| Platform\.OS === 'ios'/,
+    'sound identification must be visible on Android, iOS and web'
   );
 
   const appConfig = JSON.parse(fs.readFileSync(path.join(__dirname, 'app.json'), 'utf8'));
   const imagePicker = appConfig.expo.plugins.find(
     (plugin) => Array.isArray(plugin) && plugin[0] === 'expo-image-picker'
   );
-  assert.equal(imagePicker?.[1]?.microphonePermission, false);
+  assert.match(imagePicker?.[1]?.microphonePermission || '', /only when you choose to record/i);
   const audioPlugin = appConfig.expo.plugins.find(
     (plugin) => Array.isArray(plugin) && plugin[0] === '@siteed/audio-studio'
   );
@@ -414,14 +555,61 @@ test('Android exposes the PCM recorder and requests only foreground microphone p
     enableNotifications: false,
     enableBackgroundAudio: false,
     enableDeviceDetection: false,
+    iosConfig: {
+      microphoneUsageDescription: 'NatureLens uses the microphone only when you choose to record a nature sound for identification.',
+    },
   });
 
-  const native = fs.readFileSync(path.join(__dirname, 'components/audioRecorder.android.js'), 'utf8');
+  const android = fs.readFileSync(path.join(__dirname, 'components/audioRecorder.android.js'), 'utf8');
+  const ios = fs.readFileSync(path.join(__dirname, 'components/audioRecorder.ios.js'), 'utf8');
+  const native = fs.readFileSync(path.join(__dirname, 'components/audioRecorderNative.js'), 'utf8');
+  assert.match(android, /audioRecorderNative/);
+  assert.match(ios, /audioRecorderNative/);
+  assert.match(native, /Platform\.OS === 'android' \|\| Platform\.OS === 'ios'/);
   assert.match(native, /sampleRate: NATIVE_SAMPLE_RATE/);
   assert.match(native, /channels: 1/);
   assert.match(native, /encoding: 'pcm_16bit'/);
   assert.match(native, /requestPermissionsAsync/);
+  assert.match(native, /category: 'Record'/);
+  assert.match(native, /mode: 'Measurement'/);
+  assert.match(native, /const file = new File\(uri\)/);
+  assert.match(native, /await file\.bytes\(\)/);
+  assert.match(native, /bytes\.length === previousLength/);
   assert.match(native, /deleteTemporaryFile\(uri\)/, 'temporary raw audio must be deleted after use');
+});
+
+test('native WAV decoding accepts both finalized and not-yet-finalized iOS headers', () => {
+  const samples = [0, 16384, -16384, 32767, -32768, 8192];
+  const wav = Buffer.alloc(44 + samples.length * 2);
+  wav.write('RIFF', 0, 'ascii');
+  wav.writeUInt32LE(wav.length - 8, 4);
+  wav.write('WAVE', 8, 'ascii');
+  wav.write('fmt ', 12, 'ascii');
+  wav.writeUInt32LE(16, 16);
+  wav.writeUInt16LE(1, 20);
+  wav.writeUInt16LE(1, 22);
+  wav.writeUInt32LE(48000, 24);
+  wav.writeUInt32LE(48000 * 2, 28);
+  wav.writeUInt16LE(2, 32);
+  wav.writeUInt16LE(16, 34);
+  wav.write('data', 36, 'ascii');
+  wav.writeUInt32LE(samples.length * 2, 40);
+  samples.forEach((sample, index) => wav.writeInt16LE(sample, 44 + index * 2));
+
+  const finalized = pcm16FromWavBytes(wav);
+  assert.equal(finalized.sampleRate, 48000);
+  assert.equal(finalized.byteLength, samples.length * 2);
+  assert.deepEqual(Array.from(toByteArray(finalized.base64)), Array.from(wav.subarray(44)));
+
+  const pendingHeader = Buffer.from(wav);
+  pendingHeader.writeUInt32LE(0, 4);
+  pendingHeader.writeUInt32LE(0, 40);
+  assert.deepEqual(pcm16FromWavBytes(pendingHeader), finalized);
+
+  const stereo = Buffer.from(wav);
+  stereo.writeUInt16LE(2, 22);
+  assert.throws(() => pcm16FromWavBytes(stereo), /unsupported_wav_format/);
+  assert.throws(() => pcm16FromWavBytes(new Uint8Array(44)), /invalid_wav/);
 });
 
 test('Android PCM is decoded little-endian and resampled to Perch 32 kHz without changing time', () => {

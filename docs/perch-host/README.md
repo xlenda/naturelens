@@ -53,18 +53,24 @@ Na Vercel, duas variáveis:
 
 ```
 PERCH_ENDPOINT    = https://seu-host/            (obrigatória)
-PERCH_AUTH_TOKEN  = uma-senha-qualquer           (opcional, protege o endpoint)
+PERCH_AUTH_TOKEN  = segredo-aleatorio-com-32-ou-mais-caracteres (obrigatorio)
 ```
 
-Se usar o token, defina `AUTH_TOKEN` com o **mesmo valor** no servidor.
+Defina `AUTH_TOKEN` com o **mesmo valor** no servidor. O host se recusa a
+iniciar sem um segredo de pelo menos 32 caracteres, e a Vercel se recusa a
+habilitar Som sem endpoint HTTPS + token.
 
-E no build do app:
-```
-EXPO_PUBLIC_SOUND_ENABLED = 1
-```
+O host fixa revisões completas e SHA-256 do modelo e das duas tabelas de
+taxonomia. Divergência de hash ou de quantidade de classes interrompe a
+inferência; nunca substitua esses valores por `main` nem atualize somente um dos
+três artefatos. O corpo também é autenticado e limitado antes de o Pydantic
+materializar o áudio.
 
-Sem `PERCH_ENDPOINT`, a categoria simplesmente não existe — nada quebra, a aba
-não aparece. Mesmo padrão do pássaro por foto antes da função Nyckel existir.
+Não existe chave pública no build para liberar o recurso: o botão permanece
+coerente entre web, Android e iOS. Sem endpoint HTTPS **e** token válido, a API
+responde que a identificação por som está indisponível sem encaminhar áudio ao
+host. Assim, uma configuração incompleta falha fechada em vez de criar um fluxo
+sem autenticação.
 
 ## Contrato
 

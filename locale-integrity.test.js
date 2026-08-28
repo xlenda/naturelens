@@ -108,6 +108,7 @@ test('platform-specific sound guidance is localized in every locale', () => {
   const english = load('en.json');
   const keys = [
     'permissionAndroidBody',
+    'permissionIosBody',
     'permissionWebBody',
     'unsupportedAndroidBody',
     'unsupportedWebBody',

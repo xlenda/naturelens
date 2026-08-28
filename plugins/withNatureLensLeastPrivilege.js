@@ -2,10 +2,10 @@ const { withAndroidManifest, withInfoPlist } = require('@expo/config-plugins');
 
 module.exports = function withNatureLensLeastPrivilege(config) {
   config = withInfoPlist(config, (mod) => {
-    // O gravador PCM foi validado apenas no Android e a categoria fica oculta
-    // no iOS. O plugin da biblioteca inclui microfone por padrao; removemos a
-    // finalidade para o binario iOS nao declarar um acesso sem interface.
-    delete mod.modResults.NSMicrophoneUsageDescription;
+    // Camera, microfone e localizacao aproximada sao descritos explicitamente
+    // em app.json. Permissoes permanentes de localizacao continuam proibidas.
+    mod.modResults.NSMicrophoneUsageDescription =
+      'NatureLens uses the microphone only when you choose to record a nature sound for identification.';
     delete mod.modResults.NSLocationAlwaysUsageDescription;
     delete mod.modResults.NSLocationAlwaysAndWhenInUseUsageDescription;
     mod.modResults.NSAppTransportSecurity = {

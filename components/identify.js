@@ -10,6 +10,7 @@ import { normaliseAppLanguage } from './appLanguage';
 // politica publicada promete; assim eles tambem nao esperam por uma permissao
 // que nao melhora a resposta deles.
 const LOCATION_CATEGORIES = new Set(['plant', 'tree', 'insect', 'mushroom', 'crop']);
+const SOUND_REQUEST_TIMEOUT_MS = 60000;
 
 
 /**
@@ -115,7 +116,7 @@ export async function identify(category, photos) {
  * a sample rate, no photo - and folding it in would mean a function whose
  * arguments contradict each other depending on the category.
  */
-export async function identifySound(audioBase64, sampleRate) {
+export async function identifySound(audioBase64, sampleRate, { signal } = {}) {
   const deviceId = await getDeviceId();
 
   if (typeof navigator !== 'undefined' && navigator.onLine === false) {
@@ -124,23 +125,57 @@ export async function identifySound(audioBase64, sampleRate) {
     throw err;
   }
 
-  const response = await fetch(`${API_BASE}/api/identify`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      category: 'sound',
-      audio: audioBase64,
-      sampleRate,
-      language: normaliseAppLanguage(i18n.language),
-      deviceId,
-    }),
-  });
+  const controller = new AbortController();
+  let timedOut = false;
+  const abortFromLifecycle = () => controller.abort();
+  if (signal?.aborted) abortFromLifecycle();
+  else signal?.addEventListener?.('abort', abortFromLifecycle, { once: true });
+  const timeout = setTimeout(() => {
+    timedOut = true;
+    controller.abort();
+  }, SOUND_REQUEST_TIMEOUT_MS);
 
+  let response;
   let data = null;
   try {
-    data = await response.json();
-  } catch (e) {
-    data = null;
+    response = await fetch(`${API_BASE}/api/identify`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        category: 'sound',
+        audio: audioBase64,
+        sampleRate,
+        language: normaliseAppLanguage(i18n.language),
+        deviceId,
+      }),
+      signal: controller.signal,
+    });
+
+    // fetch() resolves when response headers arrive. Keep both the lifecycle
+    // cancellation and the deadline armed while the body is still streaming;
+    // otherwise a stalled inference proxy can leave response.json() pending
+    // forever after the visible screen has already gone away.
+    try {
+      data = await response.json();
+    } catch (cause) {
+      if (controller.signal.aborted) throw cause;
+      data = null;
+    }
+    if (controller.signal.aborted) {
+      const cause = new Error('aborted');
+      cause.name = 'AbortError';
+      throw cause;
+    }
+  } catch (cause) {
+    const err = new Error(i18n.t('identify.serviceDownBody'));
+    err.aborted = controller.signal.aborted;
+    err.timedOut = timedOut;
+    err.serviceDown = true;
+    err.cause = cause;
+    throw err;
+  } finally {
+    clearTimeout(timeout);
+    signal?.removeEventListener?.('abort', abortFromLifecycle);
   }
 
   if (!response.ok) {

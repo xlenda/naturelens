@@ -39,7 +39,10 @@ function loadIdentifyHarness() {
       isBioClipConfigured: () => false,
     },
     './_lib/birdDossier': { resolveExactBirdLabel: async () => null },
-    './_lib/perch': { perchIdentify: nextFixture('perch') },
+    './_lib/perch': {
+      isPerchConfigured: () => true,
+      perchIdentify: nextFixture('perch'),
+    },
     './_lib/translate': {
       translateVendorText: async (value) => value,
       looksLikeProse: () => false,

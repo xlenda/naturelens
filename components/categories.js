@@ -118,10 +118,9 @@ export const CATEGORIES = {
     // the build runs locally, so a env-gated tab would silently vanish for
     // everyone the first time someone deployed without the .env file present.
     //
-    // Android has a platform adapter that records real mono PCM and resamples it
-    // to Perch's 32 kHz contract. iOS stays hidden until that binary path is
-    // exercised on hardware instead of advertising an unverified scanner.
-    enabled: Platform.OS === 'web' || Platform.OS === 'android',
+    // Android and iOS use the native PCM adapter; web negotiates the browser's
+    // codec. Every path becomes the same mono 32 kHz contract before Perch.
+    enabled: Platform.OS === 'web' || Platform.OS === 'android' || Platform.OS === 'ios',
   },
 };
 

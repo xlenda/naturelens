@@ -17,12 +17,13 @@
 // on a separate inference host and this file just talks to it - the same shape
 // as the Kindwise/Fishial/Nyckel integrations already here.
 //
-// The host is configured, not hardcoded: PERCH_ENDPOINT (+ optional
-// PERCH_AUTH_TOKEN). With no endpoint set the category is simply unavailable,
+// The host is configured, not hardcoded: PERCH_ENDPOINT plus a mandatory
+// PERCH_AUTH_TOKEN. With either missing the category is simply unavailable,
 // exactly like the bird-photo category before its Nyckel function existed. See
 // docs/perch-host/ for a ready-to-deploy inference server.
 
 const STEP_TIMEOUT_MS = 45000; // audio inference is slower than an image call
+const MIN_AUTH_TOKEN_LENGTH = 32;
 
 // Perch's input contract, confirmed from the model card: mono 32 kHz, 5-second
 // window = exactly 160,000 float32 samples. The CLIENT does the resampling,
@@ -46,9 +47,31 @@ const MAX_AUDIO_SECONDS = 12;
 // base64 is 4 characters per 3 bytes; float32 is 4 bytes per sample.
 const MAX_AUDIO_BASE64_CHARS = Math.ceil((MAX_AUDIO_SECONDS * EXPECTED_SAMPLE_RATE * 4) / 3) * 4;
 
-async function perchIdentify({ res, audio, sampleRate, topK = 3 }) {
+function securePerchConfig() {
   const endpoint = process.env.PERCH_ENDPOINT?.trim();
-  if (!endpoint) {
+  const token = process.env.PERCH_AUTH_TOKEN?.trim();
+  if (!endpoint || !token || token.length < MIN_AUTH_TOKEN_LENGTH) return null;
+
+  try {
+    const parsed = new URL(endpoint);
+    const localDevelopment =
+      process.env.NODE_ENV !== 'production'
+      && ['localhost', '127.0.0.1', '::1'].includes(parsed.hostname);
+    if (parsed.username || parsed.password) return null;
+    if (parsed.protocol !== 'https:' && !localDevelopment) return null;
+    return { endpoint: parsed.toString(), token };
+  } catch (e) {
+    return null;
+  }
+}
+
+function isPerchConfigured() {
+  return securePerchConfig() !== null;
+}
+
+async function perchIdentify({ res, audio, sampleRate, topK = 3 }) {
+  const config = securePerchConfig();
+  if (!config) {
     res.status(503).json({ error: 'Sound identification is not configured on the server.' });
     return null;
   }
@@ -79,12 +102,13 @@ async function perchIdentify({ res, audio, sampleRate, topK = 3 }) {
     return null;
   }
 
-  const headers = { 'Content-Type': 'application/json' };
-  const token = process.env.PERCH_AUTH_TOKEN?.trim();
-  if (token) headers.Authorization = `Bearer ${token}`;
+  const headers = {
+    'Content-Type': 'application/json',
+    Authorization: `Bearer ${config.token}`,
+  };
 
   try {
-    const response = await fetch(endpoint, {
+    const response = await fetch(config.endpoint, {
       method: 'POST',
       headers,
       body: JSON.stringify({
@@ -116,4 +140,9 @@ async function perchIdentify({ res, audio, sampleRate, topK = 3 }) {
   }
 }
 
-module.exports = { perchIdentify, EXPECTED_SAMPLE_RATE, WINDOW_SECONDS };
+module.exports = {
+  isPerchConfigured,
+  perchIdentify,
+  EXPECTED_SAMPLE_RATE,
+  WINDOW_SECONDS,
+};

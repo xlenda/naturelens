@@ -1,0 +1,8 @@
+{
+  "ios": {
+    "NSCameraUsageDescription": "NatureLens používá fotoaparát pouze tehdy, když se rozhodnete vyfotit přírodu za účelem určení.",
+    "NSPhotoLibraryUsageDescription": "NatureLens má přístup pouze k fotografiím, které vyberete pro určování přírody.",
+    "NSLocationWhenInUseUsageDescription": "NatureLens používá přibližnou polohu pouze tehdy, když si vyžádáte místní klimatické souvislosti.",
+    "NSMicrophoneUsageDescription": "NatureLens používá mikrofon pouze tehdy, když se rozhodnete nahrát zvuk přírody k identifikaci."
+  }
+}

@@ -43,9 +43,9 @@ const BAR_COUNT = 6;
 
 function soundPlatformBodyKey(kind) {
   if (kind === 'permission') {
-    return Platform.OS === 'android'
-      ? 'sound.permissionAndroidBody'
-      : 'sound.permissionWebBody';
+    if (Platform.OS === 'android') return 'sound.permissionAndroidBody';
+    if (Platform.OS === 'ios') return 'sound.permissionIosBody';
+    return 'sound.permissionWebBody';
   }
   if (Platform.OS === 'android') return 'sound.unsupportedAndroidBody';
   if (Platform.OS === 'ios') return 'sound.unsupportedIosBody';
@@ -69,10 +69,15 @@ export default function SoundScreen() {
   const mountedRef = useRef(true);
   const screenFocusedRef = useRef(true);
   const appActiveRef = useRef(AppState.currentState === 'active');
+  // Invalidates a permission prompt or WAV flush that finishes after blur,
+  // backgrounding or unmount. Visibility can become true again before an old
+  // promise settles, so checking visibility alone is not enough.
+  const recordingSessionRef = useRef(0);
   // Counts seconds outside React state, so the auto-stop can be decided in the
   // interval callback where side effects belong - see toggle().
   const elapsedRef = useRef(0);
   const pendingClipRef = useRef(null);
+  const analysisAbortRef = useRef(null);
   const pulse = useRef(new Animated.Value(1)).current;
   // Drives the decorative rings around the mic. Separate from `pulse` and on
   // the JS driver because border colour cannot use the native driver. At 0 the
@@ -151,6 +156,9 @@ export default function SoundScreen() {
   // Sound screen. Changing tabs or putting the app in the background cancels
   // the clip instead of analysing a capture the person can no longer see.
   const cancelActiveRecording = useCallback(() => {
+    recordingSessionRef.current += 1;
+    analysisAbortRef.current?.abort();
+    analysisAbortRef.current = null;
     if (tickRef.current) {
       clearInterval(tickRef.current);
       tickRef.current = null;
@@ -166,6 +174,7 @@ export default function SoundScreen() {
     pendingClipRef.current = null;
     if (mountedRef.current) {
       setRecording(false);
+      setAnalysing(false);
       setElapsed(0);
       setClipReady(false);
     }
@@ -263,10 +272,23 @@ export default function SoundScreen() {
   }, [ringPulse]);
 
   const analyse = async (clip) => {
+    const sessionId = recordingSessionRef.current;
+    const controller = new AbortController();
+    analysisAbortRef.current?.abort();
+    analysisAbortRef.current = controller;
+    const sessionIsVisible = () =>
+      sessionId === recordingSessionRef.current
+      && mountedRef.current
+      && screenFocusedRef.current
+      && appActiveRef.current;
+
     setAnalysing(true);
     trackScanStarted({ category: 'sound', source: 'microphone' });
     try {
-      const entity = await identifySound(clip.base64, clip.sampleRate);
+      const entity = await identifySound(clip.base64, clip.sampleRate, {
+        signal: controller.signal,
+      });
+      if (!sessionIsVisible()) return;
       Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
       trackScanCompleted({ category: 'sound', confidence: entity.confidence });
 
@@ -276,6 +298,7 @@ export default function SoundScreen() {
         identityKey: candidateIdentityKey(entity),
       });
       const savedEntry = await saveIdentificationAutomatically(entity, 'sound');
+      if (!sessionIsVisible()) return;
       if (!savedEntry) {
         showAlert(t('common.saveErrorTitle'), t('common.saveErrorBody'));
         return;
@@ -292,6 +315,7 @@ export default function SoundScreen() {
         scanOutcomeRequest: outcomeRequest,
       });
     } catch (err) {
+      if (!sessionIsVisible()) return;
       Haptics.notificationAsync(Haptics.NotificationFeedbackType.Error);
       if (err.paymentRequired) {
         trackScanFailed({ category: 'sound', reason: 'payment_required' });
@@ -305,9 +329,12 @@ export default function SoundScreen() {
         err.offline ? t('identify.offlineBody') : err.message || t('sound.failedBody')
       );
     } finally {
-      setAnalysing(false);
-      elapsedRef.current = 0;
-      setElapsed(0);
+      if (analysisAbortRef.current === controller) analysisAbortRef.current = null;
+      if (sessionIsVisible()) {
+        setAnalysing(false);
+        elapsedRef.current = 0;
+        setElapsed(0);
+      }
     }
   };
 
@@ -323,9 +350,18 @@ export default function SoundScreen() {
     const handle = handleRef.current;
     handleRef.current = null;
     if (!handle) return;
+    const sessionId = recordingSessionRef.current;
 
     try {
       const clip = await handle.stop();
+      if (
+        sessionId !== recordingSessionRef.current
+        || !mountedRef.current
+        || !screenFocusedRef.current
+        || !appActiveRef.current
+      ) {
+        return;
+      }
       // Under ~1.5s there is rarely a full call in the clip, and Perch pads
       // short input with silence - better to say so than to return a confident
       // guess built mostly from nothing.
@@ -345,7 +381,14 @@ export default function SoundScreen() {
           : err.code === 'empty'
           ? 'sound.tooShortBody'
           : 'sound.failedBody';
-      showAlert(t('sound.failedTitle'), t(key));
+      if (
+        sessionId === recordingSessionRef.current
+        && mountedRef.current
+        && screenFocusedRef.current
+        && appActiveRef.current
+      ) {
+        showAlert(t('sound.failedTitle'), t(key));
+      }
     }
   };
 
@@ -381,10 +424,17 @@ export default function SoundScreen() {
         // And a meter that somehow survived with it (stopMeter is idempotent).
         stopMeter();
 
+        const sessionId = recordingSessionRef.current + 1;
+        recordingSessionRef.current = sessionId;
         const handle = await startRecording();
         // O prompt nativo pode terminar depois que a pessoa ja saiu da tela.
         // Nesse caso a limpeza anterior ainda nao conhecia o novo handle.
-        if (!mountedRef.current || !screenFocusedRef.current || !appActiveRef.current) {
+        if (
+          sessionId !== recordingSessionRef.current
+          || !mountedRef.current
+          || !screenFocusedRef.current
+          || !appActiveRef.current
+        ) {
           handle.cancel();
           return;
         }

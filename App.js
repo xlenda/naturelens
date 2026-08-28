@@ -66,6 +66,7 @@ import {
   reconcileLocalReminders,
   subscribeReminderResponses,
 } from './components/localReminders';
+import { cleanupAbandonedNativeAudio } from './components/audioRecorder';
 
 const Tab = createBottomTabNavigator();
 const ScanStack = createStackNavigator();
@@ -252,6 +253,12 @@ function AppContent() {
   // initialRouteName once, so mounting early would always flash/open Plants
   // even when the person last identified a bird, fish or mushroom.
   const [initialCategoryKey, setInitialCategoryKey] = useState(null);
+
+  useEffect(() => {
+    // A force-close cannot execute the recorder's finally block. Native builds
+    // remove only NatureLens-owned cache/legacy WAVs on the next app launch.
+    cleanupAbandonedNativeAudio();
+  }, []);
 
   useEffect(() => {
     let active = true;

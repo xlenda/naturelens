@@ -1,0 +1,8 @@
+{
+  "ios": {
+    "NSCameraUsageDescription": "لا يستخدم NatureLens الكاميرا إلا عندما تختار تصوير كائن من الطبيعة للتعرّف عليه.",
+    "NSPhotoLibraryUsageDescription": "لا يصل NatureLens إلا إلى الصور التي تختارها للتعرّف على عناصر من الطبيعة.",
+    "NSLocationWhenInUseUsageDescription": "لا يستخدم NatureLens موقعك التقريبي إلا عندما تطلب معلومات عن المناخ المحلي.",
+    "NSMicrophoneUsageDescription": "لا يستخدم NatureLens الميكروفون إلا عندما تختار تسجيل صوت من الطبيعة للتعرّف عليه."
+  }
+}

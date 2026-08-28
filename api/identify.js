@@ -6,7 +6,7 @@ const {
   isBioClipConfigured,
 } = require('./_lib/bioclipBird');
 const { resolveExactBirdLabel } = require('./_lib/birdDossier');
-const { perchIdentify } = require('./_lib/perch');
+const { isPerchConfigured, perchIdentify } = require('./_lib/perch');
 const { translateVendorText, looksLikeProse, normaliseLanguage } = require('./_lib/translate');
 const { requireDeviceId } = require('./_lib/supabaseAdmin');
 const { checkEntitlement, releaseUsage } = require('./_lib/entitlement');
@@ -983,7 +983,7 @@ function isEnabled(category) {
     return isBioClipConfigured() || Boolean(process.env.NYCKEL_BIRD_FUNCTION_ID?.trim());
   }
   // Sound needs a Perch inference host (the 390 MB model cannot live here).
-  if (category === 'sound') return Boolean(process.env.PERCH_ENDPOINT?.trim());
+  if (category === 'sound') return isPerchConfigured();
   return true;
 }
 

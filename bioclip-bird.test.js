@@ -321,7 +321,10 @@ function loadBirdHarness({ bioclipResult, bioclipError, nyckelResult }) {
       },
     },
     './_lib/birdDossier': { resolveExactBirdLabel: async () => null },
-    './_lib/perch': { perchIdentify: async () => null },
+    './_lib/perch': {
+      isPerchConfigured: () => false,
+      perchIdentify: async () => null,
+    },
     './_lib/translate': {
       translateVendorText: async (value) => value,
       looksLikeProse: () => false,

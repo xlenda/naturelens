@@ -261,7 +261,7 @@ test('lembretes Android sao locais, opcionais e nao usam push remoto', () => {
   assert.match(safety, /Alarmes exatos permanecem bloqueados/i);
 });
 
-test('som Android e descrito como opcional, efemero e limitado ao primeiro plano', () => {
+test('som web, Android e iOS descreve limpeza local, fluxo Vercel-Perch e limites reais', () => {
   const politicas = [
     ['components/legalTexts.js', fs.readFileSync(path.join(raizProjeto, 'components', 'legalTexts.js'), 'utf8')],
     ['public/privacy.html', fs.readFileSync(path.join(raizProjeto, 'public', 'privacy.html'), 'utf8')],
@@ -272,27 +272,41 @@ test('som Android e descrito como opcional, efemero e limitado ao primeiro plano
   ];
 
   for (const [nome, texto] of politicas) {
-    assert.match(texto, /web e no Android|web and Android/i, `${nome} omite as plataformas com som`);
-    assert.match(texto, /(?:n[aã]o (?:est[aá] dispon[ií]vel|existe) no iOS|not available on iOS|but not on iOS)/i, `${nome} promete som no iOS`);
+    assert.match(texto, /web, no Android e no iOS/i, `${nome} omite as plataformas com som em PT`);
+    assert.match(texto, /web, Android, and iOS/i, `${nome} omite as plataformas com som em EN`);
+    assert.doesNotMatch(texto, /(?:n[aã]o (?:est[aá] dispon[ií]vel|existe) no iOS|not available on iOS|but not on iOS|unavailable on iOS)/i, `${nome} ainda chama o som de indisponivel no iOS`);
     assert.match(texto, /RECORD_AUDIO[^\n]{0,180}(?:primeiro toque|first tap)/i, `${nome} omite o momento da permissao`);
+    assert.match(texto, /iOS[^\n]{0,100}(?:permiss[aã]o de microfone do sistema|system microphone permission)[^\n]{0,100}(?:primeiro toque|first tap)/i, `${nome} omite a permissao contextual do iOS`);
     assert.match(texto, /(?:converte WAV\/PCM localmente|converts WAV\/PCM locally)/i, `${nome} omite a conversao local`);
-    assert.match(texto, /HTTPS[^\n]{0,100}(?:servidor Perch|Perch server)/i, `${nome} omite o destino do audio`);
-    assert.match(texto, /(?:áudio bruto|raw audio)[^\n]{0,240}(?:ef[eê]mer|ephemeral)/i, `${nome} omite o processamento efemero`);
-    assert.match(texto, /(?:arquivo temporário é apagado|temporary file is deleted)/i, `${nome} omite a limpeza local`);
+    assert.match(texto, /WAV[^\n]{0,220}(?:apag(?:a|ado)|deletes?)[^\n]{0,140}(?:antes (?:de|do) (?:qualquer )?upload|before (?:any )?upload)/i, `${nome} erra o momento da limpeza local`);
+    assert.match(texto, /(?:função Vercel|Vercel function)[^\n]{0,300}(?:host Perch|Perch host)/i, `${nome} omite o fluxo Vercel-Perch`);
+    assert.match(texto, /(?:requisição HTTPS autenticada|authenticated HTTPS request)/i, `${nome} omite a autenticacao do hop Perch`);
+    assert.match(texto, /(?:sem venda nem uso independente|no sale or independent use)/i, `${nome} omite o limite dos operadores`);
+    assert.match(texto, /logs[^\n]{0,120}APM[^\n]{0,120}log drains/i, `${nome} inventa garantia sem ressalva operacional`);
     assert.match(texto, /(?:áudio não entra na coleção|audio never enters the collection)/i, `${nome} promete salvar audio`);
+    assert.match(texto, /(?:somente com o app em primeiro plano|only while the app is in the foreground)/i, `${nome} omite o limite ao primeiro plano`);
     assert.match(texto, /(?:não grava em segundo plano|does not record in the background)/i, `${nome} omite a ausencia de gravacao em background`);
     assert.match(texto, /(?:chamadas, estado do telefone ou Bluetooth|calls, phone state, or Bluetooth)/i, `${nome} omite limites de permissao`);
+    assert.doesNotMatch(texto, /(?:não vai a nenhum terceiro|never reaches a third party|nosso próprio servidor|our own server)/i, `${nome} esconde os operadores de infraestrutura`);
   }
 
   for (const [nome, texto] of termos) {
     assert.doesNotMatch(texto, /(?:sons? \(somente na versão web\)|sound identification \(web version only\))/i, `${nome} ainda chama o som de web-only`);
-    assert.match(texto, /(?:web e Android|web and Android)/i, `${nome} omite som no Android`);
-    assert.match(texto, /(?:processad[oa] de forma ef[eê]mera|processed ephemerally)/i, `${nome} omite a transitoriedade`);
+    assert.match(texto, /(?:web, Android e iOS|web, Android, and iOS)/i, `${nome} omite som no iOS`);
+    assert.doesNotMatch(texto, /(?:n[aã]o (?:est[aá] dispon[ií]vel|existe) no iOS|not available on iOS|but not on iOS|unavailable on iOS)/i, `${nome} ainda chama o som de indisponivel no iOS`);
+    assert.match(texto, /iOS[^\n]{0,100}(?:permiss[aã]o de microfone do sistema|system microphone permission)[^\n]{0,100}(?:primeiro toque|first tap)/i, `${nome} omite a permissao contextual do iOS`);
+    assert.match(texto, /(?:apenas com o app em primeiro plano|only while the app is in the foreground)/i, `${nome} omite o limite ao primeiro plano`);
+    assert.match(texto, /WAV[^\n]{0,220}(?:apagado|deleted)[^\n]{0,140}(?:antes (?:de|do) (?:qualquer )?upload|before (?:any )?upload)/i, `${nome} erra o momento da limpeza local`);
+    assert.match(texto, /(?:função Vercel|Vercel function)[^\n]{0,300}(?:host Perch|Perch host)/i, `${nome} omite o fluxo Vercel-Perch`);
+    assert.match(texto, /(?:com autenticação|with authentication)/i, `${nome} omite a autenticacao do hop Perch`);
+    assert.match(texto, /(?:sem venda nem uso independente|no sale or independent use)/i, `${nome} omite o limite dos operadores`);
     assert.match(texto, /(?:não entra na coleção|never enters the collection)/i, `${nome} promete salvar audio`);
+    assert.match(texto, /(?:logs e APM|logs and APM)/i, `${nome} omite a ressalva operacional`);
+    assert.doesNotMatch(texto, /(?:arquivo temporário nativo é apagado depois da resposta|native temporary file is deleted after the response)/i, `${nome} ainda descreve a ordem local errada`);
   }
 });
 
-test('ficha Data Safety declara audio coletado, opcional, efemero e nao compartilhado', () => {
+test('ficha Data Safety declara audio e condiciona as excecoes aos operadores reais', () => {
   const safety = fs.readFileSync(path.join(raizProjeto, 'store-assets', 'data-safety.md'), 'utf8');
   const linha = safety.split(/\r?\n/).find((item) => item.includes('Arquivos de áudio > Gravações de voz ou som'));
 
@@ -301,8 +315,23 @@ test('ficha Data Safety declara audio coletado, opcional, efemero e nao comparti
   assert.match(linha, /\| \*\*Sim\*\* \| Funcionalidade do app \|$/, 'audio deve ser efemero e servir apenas a funcionalidade');
   assert.doesNotMatch(safety, /Não marcar[^\n]{0,80}\báudio\b/i, 'audio nativo nao pode continuar excluido da ficha');
   assert.match(safety, /RECORD_AUDIO[^\n]{0,180}primeira vez/i);
-  assert.match(safety, /não há compartilhamento do áudio com terceiros/i);
+  assert.match(safety, /prestador de serviço[^\n]{0,180}Vercel[^\n]{0,180}host Perch/i);
+  assert.match(safety, /função Vercel[^\n]{0,240}requisição autenticada[^\n]{0,180}host Perch/i);
+  assert.match(safety, /sem venda nem uso independente/i);
+  assert.match(safety, /logs de acesso ou aplicação, APM, log drains, backups ou subprocessadores/i);
   assert.match(safety, /sem permissões de telefone, Bluetooth ou áudio em segundo plano/i);
+});
+
+test('checklist iOS bloqueia declaracao efemera sem prova de logs e APM', () => {
+  const checklist = fs.readFileSync(
+    path.join(raizProjeto, 'store-assets', 'app-store-checklist.md'),
+    'utf8'
+  );
+  assert.match(checklist, /não copiar mecanicamente `data-safety\.md`/i);
+  assert.match(checklist, /antes de deixar\s+`User Content > Audio Data`\s+desmarcado[\s\S]{0,100}efêmero à Apple/i);
+  assert.match(checklist, /logs de acesso ou aplicação, APM, log drains, backups ou subprocessadores/i);
+  assert.match(checklist, /se qualquer camada não puder ser validada, bloquear a declaração de\s+efemeridade/i);
+  assert.match(checklist, /sem essa prova, não declarar o áudio efêmero ou não coletado à Apple/i);
 });
 
 test('rota mundial de aves divulga BioCLIP efemero e fallback Nyckel antes de ativar', () => {

@@ -1,0 +1,37 @@
+diff --git a/node_modules/@siteed/audio-studio/android/src/main/java/net/siteed/audiostudio/RecordingConfig.kt b/node_modules/@siteed/audio-studio/android/src/main/java/net/siteed/audiostudio/RecordingConfig.kt
+index a060b2c..3f90762 100644
+--- a/node_modules/@siteed/audio-studio/android/src/main/java/net/siteed/audiostudio/RecordingConfig.kt
++++ b/node_modules/@siteed/audio-studio/android/src/main/java/net/siteed/audiostudio/RecordingConfig.kt
+@@ -111,7 +111,6 @@ data class RecordingConfig(
+                 // Clean up the directory path by removing file:// protocol and normalizing
+                 val cleanDirectory = outputDirectory
+                     .replace(Regex("^file://"), "")
+-                    .trim('/')
+                     .replace("//", "/")
+ 
+                 val directory = File(cleanDirectory)
+@@ -153,7 +152,6 @@ data class RecordingConfig(
+                 autoResumeAfterInterruption = options.getBooleanOrDefault("autoResumeAfterInterruption", false),
+                 outputDirectory = outputDirectory?.let {
+                     it.replace(Regex("^file://"), "")
+-                        .trim('/')
+                         .replace("//", "/")
+                 },
+                 filename = options["filename"] as? String,
+diff --git a/node_modules/@siteed/audio-studio/ios/RecordingSettings.swift b/node_modules/@siteed/audio-studio/ios/RecordingSettings.swift
+index e4544b9..1cee9f8 100644
+--- a/node_modules/@siteed/audio-studio/ios/RecordingSettings.swift
++++ b/node_modules/@siteed/audio-studio/ios/RecordingSettings.swift
+@@ -279,9 +279,10 @@ struct RecordingSettings {
+             let fileManager = FileManager.default
+             var isDirectory: ObjCBool = false
+ 
+-            // Clean up the directory path by removing file:// protocol if present
++            // Keep the leading slash of an absolute sandbox path. Trimming it
++            // turns file:///var/... into var/... and makes cache directories
++            // fail validation (or depend on the process working directory).
+             let cleanDirectory = directory.replacingOccurrences(of: "file://", with: "")
+-                .trimmingCharacters(in: CharacterSet(charactersIn: "/"))
+                 .replacingOccurrences(of: "//", with: "/")
+ 
+             if !fileManager.fileExists(atPath: cleanDirectory, isDirectory: &isDirectory) {

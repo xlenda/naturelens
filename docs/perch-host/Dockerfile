@@ -16,6 +16,11 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY app.py .
 
+# The inference service does not need root. Its only writable state is the
+# reviewed Hugging Face cache under /tmp.
+RUN useradd --create-home --uid 10001 naturelens
+USER naturelens
+
 # The 390 MB model is downloaded on first request, not baked into the image:
 # a 390 MB layer makes every deploy slow, and platforms cache the HF download
 # between restarts anyway. HF_HOME points at a writable path - Hugging Face

@@ -2,14 +2,14 @@
 
 App de identificacao de natureza (plantas, arvores, cogumelos, insetos, peixes,
 aves, lavoura, som). React Native / Expo SDK 54, roda como PWA em
-https://naturelensapp.cloud e vai para a Play Store como `app.naturelens`.
+https://naturelensapp.cloud e vai para Play Store e App Store como `app.naturelens`.
 17 idiomas. Tem assinante pagando.
 
 ## A unica forma de publicar
 
     npm run deploy
 
-Isso roda, nesta ordem: 760 testes + 6 checagens de cuidado por especie -> preflight do banco -> `expo export -p web` -> `patch-pwa.js` ->
+Isso roda, nesta ordem: 767 testes + 6 checagens de cuidado por especie -> preflight do banco -> `expo export -p web` -> `patch-pwa.js` ->
 `vercel deploy --prod` -> 5 portoes contra a producao ja publicada.
 
 NUNCA rode `vercel deploy` direto. O app vive num sub-caminho e o deploy cru
@@ -57,8 +57,8 @@ que nascia quebrado e passava verde a toa.
 
 - **Dado ausente = bloco NAO renderiza.** Nunca placeholder, nunca inventar.
 - **App inteiro no mesmo idioma.** Nada cai pro ingles no meio de uma tela.
-- **Build NATIVO nao pode ter preco, link ou CTA de pagamento** fora do Play
-  Billing. Consumo de quem ja pagou no site e permitido.
+- **Build NATIVO nao pode ter preco, link ou CTA de pagamento** fora do Google
+  Play Billing / Apple In-App Purchase. Consumo de acesso ja validado e permitido.
 - **`@textmarker_device_id` e `@textmarker_language` NUNCA mudam de nome** —
   quebra o vinculo de assinatura paga.
 - **Quente primeiro, ficha depois.** Aplicacao abre a tela, dado tecnico fecha.
@@ -79,15 +79,26 @@ que nascia quebrado e passava verde a toa.
 ## Estado do 3S e da profundidade por categoria
 
 - **PULSO VIVO IMPLEMENTADO.** Foto revisada exige segurar por 820 ms antes do
-  consentimento do fornecedor; audio gravado fica apenas em memoria e exige o
-  mesmo gesto antes do envio ao servidor NatureLens. Timer, cancelamento ao
+  consentimento do fornecedor; audio web fica em memoria e audio nativo usa
+  apenas o cache temporario exclusivo do app. Ambos exigem o mesmo gesto antes
+  do envio ao servidor NatureLens. Timer, cancelamento ao
   perder foco, movimento reduzido, teclado/leitor de tela e haptica opcional
   possuem testes proprios. O resultado recebe NaturePrint deterministica e e
   salvo automaticamente antes de abrir a ficha. Risco conhecido suprime
   celebracao; peixe sem registro especifico mostra seguranca nao verificada.
   O visor cinematografico nativo usa `expo-camera`, moldura propria e permissao
   contextual; o PWA preserva o seletor do navegador. O fluxo nativo ainda exige
-  validacao no aparelho real e novo build Android antes de ser chamado de pronto.
+  validacao em aparelhos Android e iPhone reais antes de ser chamado de pronto.
+
+- **SOM NATIVO IMPLEMENTADO EM ANDROID E IOS, AINDA SEM PROVA EM IPHONE REAL.**
+  `@siteed/audio-studio` grava PCM16 mono em primeiro plano; o adaptador valida o
+  WAV no cache exclusivo, converte para o contrato Perch de 32 kHz e apaga o
+  arquivo antes do upload. O app limpa esse cache ao abrir e antes de gravar;
+  tambem remove apenas WAVs UUID legados que a dependencia deixava em Documents.
+  Blur, bloqueio e app em segundo plano cancelam a captura. O iOS minimo e 16.4
+  porque o pod 3.2.1 exige esse target. A permissao de microfone e contextual e
+  localizada nos 17 idiomas. Nao declarar background audio, telefone ou Bluetooth.
+  Expo Go e simulador nao validam esse caminho: usar development build em iPhone.
 
 - **MATRIZ DAS OITO CATEGORIAS IMPLEMENTADA, COBERTURA AINDA PARCIAL.** Todas as
   oito categorias enriquecem dinamicamente pelo binomio confirmado e exibem a
@@ -128,9 +139,11 @@ que nascia quebrado e passava verde a toa.
 - **Telefone de emergencia saiu dos 17 idiomas** (dava numero brasileiro e
   americano pra todo mundo). Numero certo por pais exige detectar PAIS, nao
   idioma.
-- **Falta conta Expo** para `eas build -p android --profile preview` (o APK de
-  teste) e a conta Google Play (US$ 25).
+- **EAS esta ligado ao projeto**, com perfis de development fisico, simulator,
+  preview e production. Ainda faltam a equipe Apple Developer da organizacao,
+  registro do iPhone e validacao fisica; no Android ainda falta a conta Google
+  Play e a validacao do AAB em aparelho real.
 - **Pagamento antigo removido.** Nao existe checkout web nem preco hardcoded.
-  Compras futuras devem usar exclusivamente Google Play Billing / App Store,
+  Compras futuras devem usar exclusivamente Google Play Billing / Apple IAP,
   com produtos e precos vindos da loja e validacao server-side antes de liberar
   `subscriptions`. Ate isso existir, a venda permanece desativada sem CTA falsa.

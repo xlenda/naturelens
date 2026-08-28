@@ -29,11 +29,11 @@ Estas respostas descrevem o **AAB Android** auditado em 25/08/2026. Elas incluem
 | Atividade no app > Outras ações | Sim | Não* | Sim; apenas ao denunciar uma resposta de IA | Não | Funcionalidade, prevenção a fraude, segurança e conformidade |
 | Identificadores do dispositivo ou outros identificadores | Sim | **Sim** | Não durante recursos online | Não | Funcionalidade, gerenciamento da conta e prevenção a fraude |
 
-\* “Não compartilhado” usa a exceção de **prestador de serviço** do formulário: Supabase, Vercel e Anthropic processam os dados para operar o NatureLens, sem venda pelo app. Se um contrato, configuração ou finalidade desses fornecedores mudar, reavalie a resposta antes da próxima versão.
+\* “Não compartilhado” usa a exceção de **prestador de serviço** do formulário: Supabase, Vercel, o host Perch operado para o NatureLens e Anthropic processam dados para operar o NatureLens, sem venda nem uso independente para finalidade própria. Se um contrato, configuração ou finalidade desses fornecedores mudar, reavalie a resposta antes da próxima versão.
 
 “Identificadores do dispositivo ou outros identificadores” fica como compartilhado porque consultas diretas à Wikipédia e ao GBIF expõem a esses serviços os metadados normais da conexão, inclusive o IP. O NatureLens não envia a eles o `device_id`, a foto escolhida nem coordenadas.
 
-“Arquivos de áudio” precisa constar na resposta do formulário porque a evidência sai do aparelho. Marcar **Efêmero = Sim** porque o áudio bruto fica somente na memória durante a solicitação em tempo real e não é retido depois da resposta. A orientação do Google Play exige informar esse fluxo no formulário mesmo quando o processamento é efêmero; se ele cumprir esse padrão, o tipo pode não ser exibido na seção pública da loja.
+“Arquivos de áudio” precisa constar na resposta do formulário porque a evidência sai do aparelho. **Efêmero = Sim** descreve o fluxo pretendido, no qual Vercel e o host Perch tratam a evidência somente durante a solicitação para gerar o resultado, sem armazenamento intencional pelo NatureLens, venda ou uso independente. Antes de enviar a ficha, confirmar nas configurações e contratos de produção que o corpo não permanece em logs de acesso ou aplicação, APM, log drains, backups ou subprocessadores; sem essa prova, revisar a resposta. A orientação do Google Play exige informar esse fluxo mesmo quando o processamento atende à definição de efêmero.
 
 ### Por que Fotos = compartilhadas e não efêmeras
 
@@ -44,9 +44,10 @@ Para aves há dois caminhos possíveis, ambos cobertos pelo aviso específico an
 ### Som nativo do Android
 
 - `RECORD_AUDIO` é solicitado somente quando o usuário toca em gravar pela primeira vez. Negar a permissão mantém os demais recursos disponíveis.
-- O arquivo temporário é convertido de WAV/PCM no aparelho. A evidência de áudio é enviada por HTTPS ao servidor Perch controlado pelo NatureLens apenas para gerar a identificação solicitada.
-- O áudio bruto é transitório: não é retido depois da resposta, o arquivo temporário local é apagado e o áudio nunca entra na coleção.
-- Não há compartilhamento do áudio com terceiros, gravação em segundo plano, acesso a chamadas ou estado do telefone, nem acesso a Bluetooth.
+- No fluxo concluído, o WAV nativo temporário é convertido no aparelho e apagado logo após a conversão local, antes de qualquer upload.
+- A evidência convertida segue por HTTPS para uma função Vercel do NatureLens e depois, em requisição autenticada, para o host Perch operado para o NatureLens. O áudio nunca entra na coleção, em banco ou em armazenamento de objetos do NatureLens.
+- Vercel e o host Perch atuam como prestadores de serviço transitórios, somente para gerar a identificação solicitada, sem venda nem uso independente. Essa relação sustenta “Não compartilhado” apenas enquanto satisfizer a exceção de operador do formulário.
+- O recurso não grava em segundo plano e não acessa chamadas, estado do telefone ou Bluetooth.
 
 ### Localização aproximada no Android
 
@@ -92,7 +93,8 @@ Não marcar localização precisa, contatos, calendário, **dados de saúde do u
 3. Testar em navegador anônimo que a página de exclusão leva ao fluxo web de login e exclusão sem exigir reinstalação.
 4. Reabrir este arquivo e conferir as respostas contra o AAB final; o formulário deve representar o binário realmente enviado.
 5. Em um aparelho Android 13 a 16, testar a permissão de notificação aceita/negada, app em segundo plano/fechado, reinício, toque abrindo o exemplar e cancelamento ao remover o exemplar.
-6. No AAB final, testar a permissão de microfone aceita e negada, uma identificação por som completa, a exclusão do arquivo temporário e a ausência do áudio na coleção. Conferir no manifesto mesclado que existem `RECORD_AUDIO`, `ACCESS_COARSE_LOCATION`, `POST_NOTIFICATIONS` e `RECEIVE_BOOT_COMPLETED`, sem permissões de telefone, Bluetooth ou áudio em segundo plano; também sem localização precisa ou em segundo plano.
+6. No AAB final, testar a permissão de microfone aceita e negada, uma identificação por som completa, a exclusão do WAV temporário antes do upload e a ausência do áudio na coleção. Conferir no manifesto mesclado que existem `RECORD_AUDIO`, `ACCESS_COARSE_LOCATION`, `POST_NOTIFICATIONS` e `RECEIVE_BOOT_COMPLETED`, sem permissões de telefone, Bluetooth ou áudio em segundo plano; também sem localização precisa ou em segundo plano.
+7. Validar e arquivar as configurações e os contratos de produção da Vercel e do host Perch para retenção, logs de acesso/aplicação, APM, log drains, backups e subprocessadores. Reabrir as respostas de áudio se qualquer camada retiver o corpo ou permitir venda ou uso independente.
 
 ## Referências usadas na auditoria
 
