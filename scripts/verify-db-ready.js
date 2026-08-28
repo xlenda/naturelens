@@ -22,7 +22,7 @@ async function main() {
   for (const [label, path] of [
     ['community profiles', '/rest/v1/community_profiles?select=public_id,terms_version,terms_accepted_at&limit=1'],
     ['community moderation', '/rest/v1/community_reports?select=status,reviewed_at,moderator_note&limit=1'],
-    ['climate cache', '/rest/v1/site_climate_cache?select=grid_key&limit=1'],
+    ['climate cache', '/rest/v1/site_climate_cache?select=grid_latitude,grid_longitude,fetched_at&limit=1'],
     ['AI reports', '/rest/v1/ai_reports?select=id&limit=1'],
     ['knowledge documents', '/rest/v1/knowledge_documents?select=id,slug,content_hash&status=eq.published&limit=1'],
     ['knowledge chunks', '/rest/v1/knowledge_chunks?select=id,document_id,source_urls&limit=1'],

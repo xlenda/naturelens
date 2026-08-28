@@ -16,7 +16,7 @@ function filesUnder(directory) {
 }
 
 function slugFor(file) {
-  return path.relative(knowledgeRoot, file).replace(/\\/g, '/').replace(/\.md$/i, '').replace(/\//g, '-');
+  return path.relative(knowledgeRoot, file).replace(/\\/g, '/').replace(/\.md$/i, '').replace(/\//g, '-').toLowerCase();
 }
 
 function scopesFor(slug) {
@@ -173,4 +173,4 @@ if (require.main === module) {
   main().catch((error) => { console.error(error.message); process.exitCode = 1; });
 }
 
-module.exports = { chunksFor, cleanMarkdown, scientificNames, scopesFor, sourceUrls };
+module.exports = { chunksFor, cleanMarkdown, scientificNames, scopesFor, slugFor, sourceUrls };

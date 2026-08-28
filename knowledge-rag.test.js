@@ -15,6 +15,7 @@ test('ingestao aceita somente o acervo cientifico e nunca concorrentes ou contex
   assert.doesNotMatch(script, /CONTEXTO|CONCORRENTES|dossie-competitivo|audits/);
   assert.deepEqual(ingestion.scopesFor('grupos-peixes-de-agua-doce'), ['fish']);
   assert.deepEqual(ingestion.scopesFor('grupos-insetos-polinizadores'), ['insect']);
+  assert.equal(ingestion.slugFor(path.join(root, 'docs', 'agronomia', 'solo-e-pH.md')), 'solo-e-ph');
 });
 
 test('parser conserva fatos, fontes e binomios sem mandar markdown cru', () => {
